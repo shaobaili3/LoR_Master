@@ -8,9 +8,11 @@ matchIds = match.getMatchs(PPID_KEY)
 
 winNum = 0
 matchNum = 0
-for matchNum, matchid in enumerate(matchIds):
+for matchid in matchIds:
     details = match.getDetails(matchid)
     if details['info']['game_type'] != 'Ranked':
+
+
         continue
     else:
         matchNum += 1
@@ -18,7 +20,7 @@ for matchNum, matchid in enumerate(matchIds):
     for count, ppid in enumerate(ppids):
         if ppid != PPID_KEY:
             #print(ppid)
-            print(str(matchNum + 1) + ". " + match.getPlayerName(ppid))
+            print(str(matchNum) + ". " + match.getPlayerName(ppid))
             oppentDetails = details['info']['players'][count]
             if oppentDetails["game_outcome"] == 'loss':
                 winNum += 1

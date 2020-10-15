@@ -17,7 +17,7 @@ def getDetails(matchid):
     detailsRequest = requests.get(detailsLink)
     details = detailsRequest.json()
     #print(detailsLink)
-    #print(str(detailsRequest.status_code) + 'details matchid:' + matchid)
+    print(str(detailsRequest.status_code) + 'details matchid:' + matchid)
     return details
 
 
