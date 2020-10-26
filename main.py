@@ -1,9 +1,12 @@
-from constant import PPID_KEY
 import match
 import constant
+from match import getPlayerPUUID
 
 
-matchIds = match.getMatchs(PPID_KEY)
+id = getPlayerPUUID('storm', '5961')
+
+
+matchIds = match.getMatchs(id)
 #print(matchIds)
 
 winNum = 0
@@ -17,8 +20,11 @@ for matchid in matchIds:
     else:
         matchNum += 1
     ppids = details['metadata']['participants']
+    outcome = None
+    oppentDetails = None
+    myDetials = None
     for count, ppid in enumerate(ppids):
-        if ppid != PPID_KEY:
+        if ppid != id:
             #print(ppid)
             print(str(matchNum) + ". " + match.getPlayerName(ppid))
             oppentDetails = details['info']['players'][count]
@@ -27,7 +33,9 @@ for matchid in matchIds:
                 outcome = 'Win'
             else:
                 outcome = 'Loss'
-            print(outcome + "   " + str(oppentDetails["factions"]) + " " + oppentDetails['deck_code'])
+        else:
+            myDetials = details['info']['players'][count]
+    print(outcome + "   " + str(myDetials["factions"]) + str(oppentDetails["factions"]) + " " + oppentDetails['deck_code'])
 
 print("Win rate: " + str(winNum/matchNum * 100) + "%" )
 

@@ -1,7 +1,7 @@
 import constant
 import requests
 
-from constant import getDetailsLink, getMatchsLink, getNameLink
+from constant import getDetailsLink, getMatchsLink, getNameLink, getPUUID
 
 def getMatchs(ppid):
     matchLink = getMatchsLink(ppid)
@@ -17,7 +17,7 @@ def getDetails(matchid):
     detailsRequest = requests.get(detailsLink)
     details = detailsRequest.json()
     #print(detailsLink)
-    print(str(detailsRequest.status_code) + 'details matchid:' + matchid)
+    #print(str(detailsRequest.status_code) + 'details matchid:' + matchid)
     return details
 
 
@@ -28,6 +28,14 @@ def getPlayerName(ppid):
     #print(nameRequest.status_code)
     return name['gameName'] + "#" + name['tagLine']
 
+
+def getPlayerPUUID(name, tag):
+    puuidLink = getPUUID(name, tag)
+    puuidRequest =requests.get(puuidLink)
+    id = puuidRequest.json()
+    print(puuidLink)
+    print(id)
+    return id['puuid']
 
 
 
