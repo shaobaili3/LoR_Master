@@ -14,8 +14,6 @@ def checkMatchDetails():
     for matchid in matchIds:
         details = match.getDetails(matchid)
         if details['info']['game_type'] != 'Ranked':
-
-
             continue
         else:
             matchNum += 1
