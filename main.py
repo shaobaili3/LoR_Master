@@ -35,7 +35,7 @@ def checkMatchDetails():
                     outcome = 'Loss'
             else:
                 myDetials = details['info']['players'][count]
-        print(outcome + "   " + str(myDetials["factions"]) + str(oppentDetails["factions"]) + " " + oppentDetails['deck_code'])
+        print(outcome + "   " + str(myDetials["factions"]) + myDetials['deck_code'] + str(oppentDetails["factions"]) + " " + oppentDetails['deck_code'])
 
     print("Win rate: " + str(winNum/matchNum * 100) + "%" )
 

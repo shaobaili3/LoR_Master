@@ -1,5 +1,6 @@
 import constant
 import requests
+import pip._vendor.requests
 
 from constant import getDetailsLink, getMatchsLink, getNameLink, getPUUID
 
