@@ -1,12 +1,7 @@
 import constant as cs
 import requests
-import match
 
-import re
-import json
-import webbrowser
-
-class LocalInfo:    
+class Local:    
     
     def __init__(self):
         self.opponentName = None
@@ -20,7 +15,7 @@ class LocalInfo:
             localRequest = requests.get(localLink)
             self.isClientRuning = True
         except requests.exceptions.RequestException as e:
-            isClientRuning = False
+            self.isClientRuning = False
             return          
         details = localRequest.json()
         
@@ -28,7 +23,7 @@ class LocalInfo:
         if gameState == 'InProgress':
             isInProgress = True
             name = details['OpponentName']
-            if name != None:
+            if name is not None:
                 if name != self.opponentName:
                     self.opponentName = name
                     self.getTagByName(self.opponentName)
@@ -76,64 +71,4 @@ class LocalInfo:
     
 
 
-class opponent:
-    def checkOpponent(self, name, tag):
-        puuid = match.getPlayerPUUID(name, tag)
-        matchIds = match.getMatchs(puuid)
-        deckCodes = []
-        for matchid in matchIds:
-            details = match.getDetails(matchid)
-            if details['info']['game_type'] != 'Ranked':
-                continue
-            ppids = details['metadata']['participants']
-            myDetials = None
-
-            if len(deckCodes) >= 5:
-                break
-
-            for count, ppid in enumerate(ppids):
-                if ppid == puuid:
-                    myDetials = details['info']['players'][count]
-                    deckCodes.append(myDetials['deck_code'])
-                    print(str(myDetials["factions"]) + myDetials['deck_code'])
-        Deckslist = dict(zip(list(deckCodes),[list(deckCodes).count(i) for i in list(deckCodes)]))
-        sortedDecksCode = sorted(Deckslist, key = Deckslist.get, reverse=True)
-        countNum = 0
-        for code in sortedDecksCode:
-            webbrowser.open('https://www.yaytears.com/runeterra/deck/' + code)
-            if countNum >= 2:
-                break
-            countNum += 1
-
-
-    # def load():
-    #     playerName = getOpponentName()
-    #     if playerName == 'Missing Client 3':
-    #         return
-    #     elif playerName != None:
-    #         playerTag = getTagByName(playerName)
-    #         if playerTag != None:
-    #             checkOpponent(playerName, playerTag)
-    #         else:
-    #             print("Cannot find player tag 数据库找不到用户名字")
-    #     else :
-    #         print("Rank game is not start yet, please start the game after matching. 比赛尚未开始, 匹配到对手后点击开始查询.")
-
-
-    # def start():
-    #     while True:
-    #         a = input('Press Enter to start search opponent decks 按Enter回车开始对手套牌查询： ')
-    #         load()
-    #     return start
-
-
-
-def start():
-    local = LocalInfo()
-    check = opponent()
-    while True:
-        local.updateStatus(check.checkOpponent)
-
-
-start()
 

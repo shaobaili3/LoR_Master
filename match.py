@@ -1,45 +1,81 @@
 import constant
 import requests
-import pip._vendor.requests
-
 import constant as cs
 
+import aiohttp
+import asyncio
+
+class Match():
+    def __init__(self) -> None:
+        return
+
+    def getMatchDetails(self, matchId):
+        return
+
+    def getPlayerPUUID(self, name, tag):
+        puuidLink = cs.getPUUID(name, tag)
+        try:
+            puuidRequest =requests.get(puuidLink)
+        except requests.exceptions.RequestException as e:
+            print(puuidLink)
+            print(e)
+            print('无法连接PUUID服务器')
+            return None
+        idDetails = puuidRequest.json()
+        status = idDetails.get('status')
+        if status is not None:
+            print('PUUID服务器错误: ', status)
+            return None
+        return idDetails.get('puuid')
+
+    def getMatchs(self, ppid):
+        matchLink = cs.getMatchsLink(ppid)
+        try:
+            matchRequest =requests.get(matchLink)
+        except requests.exceptions.RequestException as e:
+            print(matchLink)
+            print(e)
+            print('无法连接比赛ID服务器')
+            return None
+        matchIds = matchRequest.json()
+        status = matchIds.get('status')
+        if status is not None:
+            print('比赛ID服务器错误: ', status)
+            return None
+        return matchIds
+
+    def getDetails(self, matchId):
+        detailsLink = cs.getDetailsLink(matchId)
+        try:
+            detailsRequest = requests.get(detailsLink)
+        except requests.exceptions.RequestException as e:
+            print(detailsLink)
+            print(e)
+            print('无法连接比赛内容服务器')
+            return None
+        details = detailsRequest.json()
+        status = details.get('status')
+        if status is not None:
+            print('比赛内容服务器错误: ', status)
+            return None
+        return details
 
 
-
-def getMatchs(ppid):
-    matchLink = cs.getMatchsLink(ppid)
-    #print(matchLink)
-    matchRequest =requests.get(matchLink)
-    #print(matchRequest.status_code)
-    matchs = matchRequest.json()
-    return matchs
-
-
-def getDetails(matchid):
-    detailsLink = cs.getDetailsLink(matchid)
-    detailsRequest = requests.get(detailsLink)
-    details = detailsRequest.json()
-    #print(detailsLink)
-    #print(str(detailsRequest.status_code) + 'details matchid:' + matchid)
-    return details
-
-
-def getPlayerName(ppid):
-    nameLink = cs.getNameLink(ppid)
-    nameRequest =requests.get(nameLink)
-    name = nameRequest.json()
-    #print(nameRequest.status_code)
-    return name['gameName'] + "#" + name['tagLine']
-
-
-def getPlayerPUUID(name, tag):
-    puuidLink = cs.getPUUID(name, tag)
-    puuidRequest =requests.get(puuidLink)
-    id = puuidRequest.json()
-    print(puuidLink)
-    print(id)
-    return id['puuid']
+    def getPlayerName(self, ppid):
+        nameLink = cs.getNameLink(ppid)
+        try:
+            nameRequest =requests.get(nameLink)
+        except requests.exceptions.RequestException as e:
+            print(nameLink)
+            print(e)
+            print('无法连接用户名字 by PPID服务器')
+            return '名字Unknow'
+        name = nameRequest.json()
+        status = name.get('status')
+        if status is not None:
+            print('用户名字 by PPID服务器错误: ', status)
+            return '名字Unknow'
+        return name['gameName'] + "#" + name['tagLine']
 
 
 

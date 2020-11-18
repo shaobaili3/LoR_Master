@@ -1,6 +1,3 @@
-from typing import DefaultDict
-
-
 API_KEY = '?api_key=' + 'RGAPI-3b5bde16-66b4-4943-b8fa-241d27b29344'
 MATCH_KEY = 'https://americas.api.riotgames.com/lor/match/v1/matches/by-puuid/'
 DETAILS_KEY = 'https://americas.api.riotgames.com/lor/match/v1/matches/'

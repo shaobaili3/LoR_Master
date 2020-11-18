@@ -1,12 +1,9 @@
-import match
+from match import Match
 import constant
-from match import getPlayerPUUID
 
-
-puuid = getPlayerPUUID('storm', '5961')
+match = Match()
+puuid = match.getPlayerPUUID('storm', '5961')
 #puuid = getPlayerPUUID('虎牙Aipotu', '123')
-#puuid = getPlayerPUUID('MreMOEtional', '1738')
-#puuid = getPlayerPUUID('UCG Neukkim', '0303')
 
 def checkMatchDetails():
     matchIds = match.getMatchs(puuid)
@@ -25,6 +22,8 @@ def checkMatchDetails():
         oppentDetails = None
         myDetials = None
         for count, ppid in enumerate(ppids):
+
+
             if ppid != puuid:
                 #print(ppid)
                 print(str(matchNum) + ". " + match.getPlayerName(ppid))
