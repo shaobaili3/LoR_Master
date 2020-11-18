@@ -9,6 +9,10 @@ PUUID_KEY = 'https://americas.api.riotgames.com/riot/account/v1/accounts/by-riot
 LOCAL_KEY = '/positional-rectangles'
 IP_KEY = 'http://127.0.0.1:'
 
+PORT_NUM = '21337'
+
+PLAYER_NA_PATH = 'playerNames.txt'
+
 def getMatchsLink(ppid):
     return MATCH_KEY  + ppid + '/ids' + API_KEY
 

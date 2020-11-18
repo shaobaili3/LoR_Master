@@ -3,10 +3,10 @@ import constant
 from match import getPlayerPUUID
 
 
-#puuid = getPlayerPUUID('storm', '5961')
+puuid = getPlayerPUUID('storm', '5961')
 #puuid = getPlayerPUUID('虎牙Aipotu', '123')
-puuid = getPlayerPUUID('MreMOEtional', '1738')
-# puuid = getPlayerPUUID('Hexdrinker', 'OCE')
+#puuid = getPlayerPUUID('MreMOEtional', '1738')
+#puuid = getPlayerPUUID('UCG Neukkim', '0303')
 
 def checkMatchDetails():
     matchIds = match.getMatchs(puuid)

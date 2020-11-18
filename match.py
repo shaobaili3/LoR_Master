@@ -2,10 +2,13 @@ import constant
 import requests
 import pip._vendor.requests
 
-from constant import getDetailsLink, getMatchsLink, getNameLink, getPUUID
+import constant as cs
+
+
+
 
 def getMatchs(ppid):
-    matchLink = getMatchsLink(ppid)
+    matchLink = cs.getMatchsLink(ppid)
     #print(matchLink)
     matchRequest =requests.get(matchLink)
     #print(matchRequest.status_code)
@@ -14,7 +17,7 @@ def getMatchs(ppid):
 
 
 def getDetails(matchid):
-    detailsLink = getDetailsLink(matchid)
+    detailsLink = cs.getDetailsLink(matchid)
     detailsRequest = requests.get(detailsLink)
     details = detailsRequest.json()
     #print(detailsLink)
@@ -23,7 +26,7 @@ def getDetails(matchid):
 
 
 def getPlayerName(ppid):
-    nameLink = getNameLink(ppid)
+    nameLink = cs.getNameLink(ppid)
     nameRequest =requests.get(nameLink)
     name = nameRequest.json()
     #print(nameRequest.status_code)
@@ -31,7 +34,7 @@ def getPlayerName(ppid):
 
 
 def getPlayerPUUID(name, tag):
-    puuidLink = getPUUID(name, tag)
+    puuidLink = cs.getPUUID(name, tag)
     puuidRequest =requests.get(puuidLink)
     id = puuidRequest.json()
     print(puuidLink)
