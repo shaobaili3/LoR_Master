@@ -45,28 +45,6 @@ class Local:
         return
 
 
-    #def statusListener(checkOpponent()):
-
-
-
-
-
-# def getOpponentName():
-#     localLink = cs.geLocalLink(cs.PORT_NUM)
-#     try:
-#         localRequest = requests.get(localLink)
-
-
-
-#     except requests.exceptions.RequestException as e:
-#         # print("Connection Error:", e)
-#         print("游戏未启动")
-#         return "Missing Client 3"  
-#     details = localRequest.json()
-#     #print(details)
-#     return details['OpponentName']
-
-
 
     
 

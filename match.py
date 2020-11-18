@@ -22,10 +22,11 @@ class Match():
             print('无法连接PUUID服务器')
             return None
         idDetails = puuidRequest.json()
-        status = idDetails.get('status')
-        if status is not None:
-            print('PUUID服务器错误: ', status)
-            return None
+        if idDetails is dict:
+            status = idDetails.get('status')
+            if status is not None:
+                print('PUUID服务器错误: ', status)
+                return None
         return idDetails.get('puuid')
 
     def getMatchs(self, ppid):
@@ -38,10 +39,12 @@ class Match():
             print('无法连接比赛ID服务器')
             return None
         matchIds = matchRequest.json()
-        status = matchIds.get('status')
-        if status is not None:
-            print('比赛ID服务器错误: ', status)
-            return None
+
+        if matchIds is dict:
+            status = matchIds.get('status')
+            if status is not None:
+                print('比赛ID服务器错误: ', status)
+                return None
         return matchIds
 
     def getDetails(self, matchId):
@@ -54,10 +57,11 @@ class Match():
             print('无法连接比赛内容服务器')
             return None
         details = detailsRequest.json()
-        status = details.get('status')
-        if status is not None:
-            print('比赛内容服务器错误: ', status)
-            return None
+        if details is dict:
+            status = details.get('status')
+            if status is not None:
+                print('比赛内容服务器错误: ', status)
+                return None
         return details
 
 
@@ -71,10 +75,11 @@ class Match():
             print('无法连接用户名字 by PPID服务器')
             return '名字Unknow'
         name = nameRequest.json()
-        status = name.get('status')
-        if status is not None:
-            print('用户名字 by PPID服务器错误: ', status)
-            return '名字Unknow'
+        if name is dict:
+            status = name.get('status')
+            if status is not None:
+                print('用户名字 by PPID服务器错误: ', status)
+                return '名字Unknow'
         return name['gameName'] + "#" + name['tagLine']
 
 
