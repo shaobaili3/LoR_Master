@@ -6,4 +6,4 @@
 @MobalyticsHQ
 
 
-# nuitka --mingw64 --standalone --show-progress --show-memory --plugin-enable=pylint-warnings --recurse-all --output-dir=final local.py
+# nuitka --mingw64 --standalone --show-progress --show-memory --plugin-enable=pylint-warnings --recurse-all --output-dir=final --windows-icon=icon.ico --windows-disable-console LORmaster.py

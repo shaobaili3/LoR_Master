@@ -2,17 +2,29 @@ from match import Match
 import constant
 
 match = Match()
-puuid = match.getPlayerPUUID('storm', '5961')
-#puuid = getPlayerPUUID('虎牙Aipotu', '123')
+puuid = match.getPlayerPUUID('jodeln', 'moc')
 
-def checkMatchDetails():
+#print(puuid)
+#puuid = match.getPlayerPUUID('虎牙Aipotu', '123')
+
+def checkPlayerDetails():
     matchIds = match.getMatchs(puuid)
     print(matchIds)
 
     winNum = 0
     matchNum = 0
+
+    print(matchIds)
+
+    if matchIds is None:
+        print("查询失败")
+        return
     for matchid in matchIds:
         details = match.getDetails(matchid)
+
+        if details is None:
+            continue
+
         if details['info']['game_type'] != 'Ranked':
             continue
         else:
@@ -41,4 +53,4 @@ def checkMatchDetails():
 
     print(str(winNum) + ' out of ' + str(matchNum))
 
-checkMatchDetails()
+checkPlayerDetails()

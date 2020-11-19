@@ -2,8 +2,8 @@ import constant
 import requests
 import constant as cs
 
-import aiohttp
-import asyncio
+#import aiohttp
+#import asyncio
 
 class Match():
     def __init__(self) -> None:
@@ -14,6 +14,7 @@ class Match():
 
     def getPlayerPUUID(self, name, tag):
         puuidLink = cs.getPUUID(name, tag)
+        print(puuidLink)
         try:
             puuidRequest =requests.get(puuidLink)
         except requests.exceptions.RequestException as e:
@@ -22,11 +23,10 @@ class Match():
             print('无法连接PUUID服务器')
             return None
         idDetails = puuidRequest.json()
-        if idDetails is dict:
-            status = idDetails.get('status')
-            if status is not None:
-                print('PUUID服务器错误: ', status)
-                return None
+        if 'status' in idDetails:
+            status = idDetails['status']
+            print('PUUID服务器错误: ', status)
+            return None
         return idDetails.get('puuid')
 
     def getMatchs(self, ppid):
@@ -39,16 +39,15 @@ class Match():
             print('无法连接比赛ID服务器')
             return None
         matchIds = matchRequest.json()
-
-        if matchIds is dict:
-            status = matchIds.get('status')
-            if status is not None:
-                print('比赛ID服务器错误: ', status)
-                return None
+        if 'status' in matchIds:
+            status = matchIds['status']
+            print('比赛ID服务器错误: ', status)
+            return None
         return matchIds
 
     def getDetails(self, matchId):
         detailsLink = cs.getDetailsLink(matchId)
+        print(detailsLink)
         try:
             detailsRequest = requests.get(detailsLink)
         except requests.exceptions.RequestException as e:
@@ -57,11 +56,11 @@ class Match():
             print('无法连接比赛内容服务器')
             return None
         details = detailsRequest.json()
-        if details is dict:
-            status = details.get('status')
-            if status is not None:
-                print('比赛内容服务器错误: ', status)
-                return None
+        if 'status' in details:
+            status = details['status']
+            print("match details server Error")
+            print('比赛内容服务器错误: ', status)
+            return None
         return details
 
 
@@ -75,11 +74,10 @@ class Match():
             print('无法连接用户名字 by PPID服务器')
             return '名字Unknow'
         name = nameRequest.json()
-        if name is dict:
-            status = name.get('status')
-            if status is not None:
-                print('用户名字 by PPID服务器错误: ', status)
-                return '名字Unknow'
+        if 'status' in name:
+            status = name['status']
+            print('用户名字 by PPID服务器错误: ', status)
+            return '名字Unknow'
         return name['gameName'] + "#" + name['tagLine']
 
 
