@@ -5,13 +5,6 @@
 @PlayRuneterra
 @MobalyticsHQ
 
-
-# nuitka --mingw64 --standalone --show-progress --show-memory --plugin-enable=pylint-warnings --recurse-all --output-dir=final --windows-icon=icon.ico --windows-disable-console LORmaster.py
-
-
-
-
-
 # nuitka --mingw64 --standalone --show-progress --show-memory --plugin-enable=pylint-warnings --recurse-all --output-dir=final --windows-icon=image.ico --nofollow-import-to=pystray,PIL LORmaster.py
 
 # nuitka --mingw64 --standalone --show-progress --show-memory --plugin-enable=pylint-warnings --recurse-all --output-dir=app --windows-icon=image.ico --nofollow-import-to=pystray,PIL --windows-disable-console LORmaster.py
