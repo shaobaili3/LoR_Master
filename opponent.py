@@ -9,8 +9,6 @@ from PIL import Image
 match = Match()
 
 class Opponent:
-    
-
     def __init__(self):
         self.sortedDecksCode = None
         #self.toaster = ToastNotifier()
@@ -26,6 +24,7 @@ class Opponent:
                 continue
             else:
                 if details['info']['game_type'] != 'Ranked':
+                    print(details['info']['game_type'])
                     continue
             ppids = details['metadata']['participants']
             myDetials = None
