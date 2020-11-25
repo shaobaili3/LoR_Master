@@ -15,7 +15,15 @@ class Opponent:
 
     def checkOpponent(self, name, tag):
         puuid = match.getPlayerPUUID(name, tag)
+        if puuid is None:
+            print("无法获取对手puuid")
+            return
+
         matchIds = match.getMatchs(puuid)
+        if matchIds is None:
+            print("无法获取对手最近对战ids")
+            return
+
         deckCodes = []
         
         for matchid in matchIds:
