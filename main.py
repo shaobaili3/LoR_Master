@@ -2,7 +2,7 @@ from match import Match
 import constant
 
 match = Match()
-puuid = match.getPlayerPUUID('jodeln', 'moc')
+puuid = match.getPlayerPUUID('storm', '5961')
 
 #print(puuid)
 #puuid = match.getPlayerPUUID('虎牙Aipotu', '123')
