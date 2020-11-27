@@ -30,7 +30,11 @@ def writeMatchs(name, tag):
             break
         else:
             print(u'No such document!')
-        db.collection(u'players').document(puuid).collection(u'matchs').document(matchId).set(getDetails(matchId))
+        details = getDetails(matchId)
+        # print(details)
+        # print(matchId)
+        if details['info']['game_type'] == 'Ranked': 
+            db.collection(u'players').document(puuid).collection(u'matchs').document(matchId).set(details)
 
 
 def readMatchs(name, tag):
@@ -64,6 +68,8 @@ def readMatchs(name, tag):
             else:
                 myDetials = details['info']['players'][count]
         print(outcome + "   " + str(myDetials["factions"]) + myDetials['deck_code'] + str(oppentDetails["factions"]) + " " + oppentDetails['deck_code'])
+    print("Win rate: " + str(winNum/matchNum * 100) + "%" )
+    print(str(winNum) + ' out of ' + str(matchNum))
 
 
 db = initialFirebase()
