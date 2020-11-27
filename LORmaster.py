@@ -26,6 +26,7 @@ with open('image.png', 'rb') as f:
 
 def work(stray):
     stray.visible = True
+    stray.notify("对手套牌查询已启动", title="LOR大师")
     while stray.visible:
         #print("xxxx")
         time.sleep(1)
@@ -55,5 +56,11 @@ itemVersion = item('版本V0.2测试版', versionApp)
 itemQuit = item('退出', quitApp)
 
 menuWithItems = menu(itemCheckAgain, itemVersion, itemQuit)
-icon('LOR Master Tracker', image, title = "LOR Master Tracker V0.2", menu=menuWithItems).run(work)
+
+
+print(local)
+
+icon('LOR Master Tracker', image, title = "LOR Master Tracker V0.22", menu=menuWithItems).run(work)
+
+
 
