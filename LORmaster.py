@@ -1,4 +1,3 @@
-
 from network import Network
 from pystray import Icon as icon, Menu as menu, MenuItem as item
 import sys
@@ -16,13 +15,11 @@ network = Network()
 match = Match(network)
 check = Opponent(match)
 
-
 ImageFile.LOAD_TRUNCATED_IMAGES = True
 
-with open('image.png', 'rb') as f:
+with open('Resource/image.png', 'rb') as f:
     b = BytesIO()
     b.write(f.read())
-
     image = Image.open(b)
     image.load()
 

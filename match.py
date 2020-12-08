@@ -1,8 +1,6 @@
 import requests
-from network import Network
 #import aiohttp
 #import asyncio
-
 
 class Match():
     def __init__(self, network):

@@ -10,7 +10,7 @@ IP_KEY = 'http://127.0.0.1:'
 
 PORT_NUM = '21337'
 
-PLAYER_NA_PATH = 'playerNames.txt'
+PLAYER_NA_PATH = 'Resource/playerNames.txt'
 
 
 def geLocalLink(port):
@@ -33,7 +33,4 @@ class Network():
 
     def getPUUID(self, name, tag):
         return self.headLink + PUUID_KEY + name + '/' + tag + API_KEY
-
-
-    
 
