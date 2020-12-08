@@ -1,19 +1,16 @@
-import constant
 import requests
-import constant as cs
-
+from network import Network
 #import aiohttp
 #import asyncio
 
-class Match():
-    def __init__(self) -> None:
-        return
 
-    def getMatchDetails(self, matchId):
+class Match():
+    def __init__(self, network):
+        self.network = network
         return
 
     def getPlayerPUUID(self, name, tag):
-        puuidLink = cs.getPUUID(name, tag)
+        puuidLink = self.network.getPUUID(name, tag)
         print(puuidLink)
         try:
             puuidRequest =requests.get(puuidLink)
@@ -30,7 +27,7 @@ class Match():
         return idDetails.get('puuid')
 
     def getMatchs(self, ppid):
-        matchLink = cs.getMatchsLink(ppid)
+        matchLink = self.network.getMatchsLink(ppid)
         try:
             matchRequest =requests.get(matchLink)
         except requests.exceptions.RequestException as e:
@@ -46,7 +43,7 @@ class Match():
         return matchIds
 
     def getDetails(self, matchId):
-        detailsLink = cs.getDetailsLink(matchId)
+        detailsLink = self.network.getDetailsLink(matchId)
         print(detailsLink)
         try:
             detailsRequest = requests.get(detailsLink)
@@ -65,7 +62,7 @@ class Match():
 
 
     def getPlayerName(self, ppid):
-        nameLink = cs.getNameLink(ppid)
+        nameLink = self.network.getNameLink(ppid)
         try:
             nameRequest =requests.get(nameLink)
         except requests.exceptions.RequestException as e:

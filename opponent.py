@@ -1,22 +1,18 @@
-from local import Local
-from match import Match
 import json
 import webbrowser
-from PIL import Image
-
-match = Match()
 
 class Opponent:
-    def __init__(self):
+    def __init__(self, match):
         self.sortedDecksCode = None
+        self.match = match
 
     def checkOpponent(self, name, tag):
-        puuid = match.getPlayerPUUID(name, tag)
+        puuid = self.match.getPlayerPUUID(name, tag)
         if puuid is None:
             print("无法获取对手puuid")
             return
 
-        matchIds = match.getMatchs(puuid)
+        matchIds = self.match.getMatchs(puuid)
         if matchIds is None:
             print("无法获取对手最近对战ids")
             return
@@ -24,7 +20,7 @@ class Opponent:
         deckCodes = []
         
         for matchid in matchIds:
-            details = match.getDetails(matchid)
+            details = self.match.getDetails(matchid)
             if details is None:
                 continue
             else:
@@ -32,11 +28,8 @@ class Opponent:
                     print(details['info']['game_type'])
                     continue
             ppids = details['metadata']['participants']
-            myDetials = None
-
             if len(deckCodes) == 5:
                 break
-
             for count, ppid in enumerate(ppids):
                 if ppid == puuid:
                     myDetials = details['info']['players'][count]

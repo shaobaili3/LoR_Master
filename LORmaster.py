@@ -1,4 +1,5 @@
 
+from network import Network
 from pystray import Icon as icon, Menu as menu, MenuItem as item
 import sys
 import time
@@ -11,9 +12,10 @@ from match import Match
 from opponent import Opponent
 
 local = Local()
-check = Opponent()
+network = Network()
+match = Match(network)
+check = Opponent(match)
 
-state = False
 
 ImageFile.LOAD_TRUNCATED_IMAGES = True
 
@@ -27,22 +29,18 @@ with open('image.png', 'rb') as f:
 def work(stray):
     stray.visible = True
     if stray.HAS_NOTIFICATION:
-        stray.notify("对手套牌查询已启动", title="LOR大师")
+        stray.notify("对手套牌查询已启动", title="LOR大师") #LOR Master Tracker is running 
     while stray.visible:
         #print("xxxx")
         time.sleep(1)
         local.updateStatus(check.checkOpponent)
-        print(stray.visible)
+        #print(stray.visible)
     sys.exit()
 
 def checkAgain(stray):
     check.showOpponentAgain()
-    #stray.update_menu
-    #stray.visible = True
 
 def quitApp(stray):
-    print("hehe")
-    state = True
     stray.visible = False
     stray.stop()
     sys.exit()
@@ -52,9 +50,9 @@ def versionApp(stray):
     link = "https://github.com/shaobaili3/lor_master/releases"
     webbrowser.open(link)
 
-itemCheckAgain = item('重新显示牌组', checkAgain)
-itemVersion = item('v0.2.3测试版', versionApp)
-itemQuit = item('退出', quitApp)
+itemCheckAgain = item('重新显示牌组', checkAgain) # Reopen latest decks
+itemVersion = item('v0.2.3测试版', versionApp) #Check for update
+itemQuit = item('退出', quitApp) # Quit
 
 menuWithItems = menu(itemCheckAgain, itemVersion, itemQuit)
 

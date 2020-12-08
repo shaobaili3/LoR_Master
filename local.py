@@ -1,5 +1,6 @@
-import constant as cs
+from match import Match
 import requests
+import network as cs
 
 class Local:    
     
@@ -13,25 +14,36 @@ class Local:
         localLink = cs.geLocalLink(cs.PORT_NUM)
         try:
             localRequest = requests.get(localLink)
-            self.isClientRuning = True
+            if not self.isClientRuning:
+                print("LoR客户端已启动")
+                self.isClientRuning = True
         except requests.exceptions.RequestException as e:
-            self.isClientRuning = False
+            if self.isClientRuning:
+                print('LoR客户端已关闭')
+                self.isClientRuning = False
             return          
         details = localRequest.json()
         
         gameState = details['GameState']
         if gameState == 'InProgress':
-            isInProgress = True
+            if self.isInProgress == False:
+                print('新对局开始')
+                self.isInProgress = True
             name = details['OpponentName']
             if name is not None:
                 if name != self.opponentName:
                     self.opponentName = name
                     self.getTagByName(self.opponentName)
-
-                    print(self.opponentName, self.opponentTag)
-                    checkOpponent(self.opponentName, self.opponentTag)
+                    if self.opponentTag is None:
+                        print('玩家姓名：' , self.opponentName , '，无法找到Tag')
+                        return  
+                    else:
+                        print('已找到对手：', self.opponentName, self.opponentTag)
+                        checkOpponent(self.opponentName, self.opponentTag)
         else:
-            isInProgress = False
+            if self.isInProgress == True:
+                print(self.opponentName, ' 对局结束')
+                self.isInProgress = False
 
     def getTagByName(self, name):
         with open(cs.PLAYER_NA_PATH, encoding="utf8") as search:
@@ -42,6 +54,7 @@ class Local:
                     self.opponentTag = fullName[1]
                     return
         print("Cannot find Opponent Tag")
+        self.opponentTag = None
         return
 
 

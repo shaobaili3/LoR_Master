@@ -1,11 +1,13 @@
 from match import Match
-import constant
+from network import Network
 
-match = Match()
-puuid = match.getPlayerPUUID('storm', '5961')
+network = Network('europe')
+match = Match(network)
 
-#print(puuid)
+puuid = match.getPlayerPUUID('ScorpGame', '1234')
+#asia europe americas
 #puuid = match.getPlayerPUUID('虎牙Aipotu', '123')
+
 
 def checkPlayerDetails():
     matchIds = match.getMatchs(puuid)
