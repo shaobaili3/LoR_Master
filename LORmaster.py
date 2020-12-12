@@ -10,6 +10,13 @@ from local import Local
 from match import Match
 from opponent import Opponent
 
+# orig_stdout = sys.stdout
+# f = open('history.log', 'a')
+# sys.stdout = f
+# print(time.localtime())
+# #sys.stdout = orig_stdout
+# #f.close()
+
 local = Local()
 network = Network()
 match = Match(network)
@@ -26,7 +33,7 @@ with open('Resource/image.png', 'rb') as f:
 def work(stray):
     stray.visible = True
     if stray.HAS_NOTIFICATION:
-        stray.notify("对手套牌查询已启动", title="LOR大师") #LOR Master Tracker is running 
+        stray.notify("对手套牌查询已启动", title="LOR大师") #LoR Master Tracker is running 
     while stray.visible:
         #print("xxxx")
         time.sleep(1)
@@ -48,15 +55,11 @@ def versionApp(stray):
     webbrowser.open(link)
 
 itemCheckAgain = item('重新显示牌组', checkAgain) # Reopen latest decks
-itemVersion = item('v0.2.3测试版', versionApp) #Check for update
+itemVersion = item('v0.3.0测试版', versionApp) #Check for update
 itemQuit = item('退出', quitApp) # Quit
 
 menuWithItems = menu(itemCheckAgain, itemVersion, itemQuit)
 
-
 print(local)
 
 icon('LOR Master Tracker', image, title = "LOR Master Tracker V0.2.3", menu=menuWithItems).run(work)
-
-
-

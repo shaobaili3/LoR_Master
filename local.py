@@ -2,8 +2,7 @@ from match import Match
 import requests
 import network as cs
 
-class Local:    
-    
+class Local: 
     def __init__(self):
         self.opponentName = None
         self.opponentTag = None

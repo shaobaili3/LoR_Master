@@ -1,10 +1,10 @@
 from match import Match
 from network import Network
 
-network = Network('europe')
+network = Network('americas')
 match = Match(network)
 
-puuid = match.getPlayerPUUID('ScorpGame', '1234')
+puuid = match.getPlayerPUUID('Storm', '5961')
 #asia europe americas
 #puuid = match.getPlayerPUUID('虎牙Aipotu', '123')
 
