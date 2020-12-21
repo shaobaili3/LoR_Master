@@ -9,7 +9,7 @@ class Match():
 
     def getPlayerPUUID(self, name, tag):
         puuidLink = self.network.getPUUID(name, tag)
-        print(puuidLink)
+        #print(puuidLink)
         try:
             puuidRequest =requests.get(puuidLink)
         except requests.exceptions.RequestException as e:
@@ -42,7 +42,7 @@ class Match():
 
     def getDetails(self, matchId):
         detailsLink = self.network.getDetailsLink(matchId)
-        print(detailsLink)
+        # print(detailsLink)
         try:
             detailsRequest = requests.get(detailsLink)
         except requests.exceptions.RequestException as e:
@@ -58,20 +58,20 @@ class Match():
             return None
         return details
 
-
-    def getPlayerName(self, ppid):
-        nameLink = self.network.getNameLink(ppid)
+    #仅仅在main中使用
+    def getPlayerName(self, puuid):
+        nameLink = self.network.getNameLink(puuid)
         try:
             nameRequest =requests.get(nameLink)
         except requests.exceptions.RequestException as e:
             print(nameLink)
             print(e)
-            print('无法连接用户名字 by PPID服务器')
+            print('无法连接用户名puuid服务器')
             return '名字Unknow'
         name = nameRequest.json()
         if 'status' in name:
             status = name['status']
-            print('用户名字 by PPID服务器错误: ', status)
+            print('用户名puuid服务器错误: ', status)
             return '名字Unknow'
         return name['gameName'] + "#" + name['tagLine']
 

@@ -10,7 +10,7 @@ IP_KEY = 'http://127.0.0.1:'
 
 PORT_NUM = '21337'
 
-PLAYER_NA_PATH = 'Resource/playerNames.txt'
+PLAYER_NA_PATH = 'Resource/NA.dat'
 
 
 def geLocalLink(port):

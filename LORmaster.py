@@ -54,7 +54,6 @@ def versionApp(stray):
     link = "https://github.com/shaobaili3/lor_master/releases"
     webbrowser.open(link)
 
-
 state = 'americas'
 
 def set_state(v):

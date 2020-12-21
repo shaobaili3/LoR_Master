@@ -37,11 +37,11 @@ class Local:
                         print('玩家姓名：' , self.opponentName , '，无法找到Tag') # Play Tag does not exist
                         return  
                     else:
-                        print('已找到对手：', self.opponentName, self.opponentTag) # Opponent tag found: 
+                        print('已找到对手：', self.opponentName, '#', self.opponentTag) # Opponent tag found: 
                         checkOpponent(self.opponentName, self.opponentTag)
         else:
             if self.isInProgress == True:
-                print(self.opponentName, ' 对局结束')
+                print(self.opponentName, '#', self.opponentTag, ' 对局结束')
                 self.isInProgress = False
 
     def getTagByName(self, name):
