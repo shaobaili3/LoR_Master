@@ -14,11 +14,11 @@ class Local:
         try:
             localRequest = requests.get(localLink)
             if not self.isClientRuning:
-                print("LoR客户端已启动")
+                print("LoR客户端已启动") # LoR client lanuched
                 self.isClientRuning = True
         except requests.exceptions.RequestException as e:
             if self.isClientRuning:
-                print('LoR客户端已关闭')
+                print('LoR客户端已关闭') # LoR client exited
                 self.isClientRuning = False
             return          
         details = localRequest.json()
@@ -26,7 +26,7 @@ class Local:
         gameState = details['GameState']
         if gameState == 'InProgress':
             if self.isInProgress == False:
-                print('新对局开始')
+                print('新对局开始') # New Match Found
                 self.isInProgress = True
             name = details['OpponentName']
             if name is not None:
@@ -34,10 +34,10 @@ class Local:
                     self.opponentName = name
                     self.getTagByName(self.opponentName)
                     if self.opponentTag is None:
-                        print('玩家姓名：' , self.opponentName , '，无法找到Tag')
+                        print('玩家姓名：' , self.opponentName , '，无法找到Tag') # Play Tag does not exist
                         return  
                     else:
-                        print('已找到对手：', self.opponentName, self.opponentTag)
+                        print('已找到对手：', self.opponentName, self.opponentTag) # Opponent tag found: 
                         checkOpponent(self.opponentName, self.opponentTag)
         else:
             if self.isInProgress == True:

@@ -54,12 +54,48 @@ def versionApp(stray):
     link = "https://github.com/shaobaili3/lor_master/releases"
     webbrowser.open(link)
 
+
+state = 'americas'
+
+def set_state(v):
+    def inner():
+        global state
+        state = v
+    return inner
+
+def get_state(v):
+    def inner(item):
+        return state == v
+    return inner
+
+def show(v):
+    return '服务器: ' + str(state)
+
+
 itemCheckAgain = item('重新显示牌组', checkAgain) # Reopen latest decks
-itemVersion = item('v0.3.0测试版', versionApp) #Check for update
+itemVersion = item('版本: 0.3.0内测', versionApp) #Check for update
 itemQuit = item('退出', quitApp) # Quit
 
-menuWithItems = menu(itemCheckAgain, itemVersion, itemQuit)
+
+
+americasItem = item('americas (NA美服)',
+        set_state('americas'),
+        checked=get_state('americas'),
+        radio=True)
+europeItem = item('europe (EU欧服)',
+        set_state('europe'),
+        checked=get_state('europe'),
+        radio=True)
+asiaItem = item('asia (ASIA亚服)',
+        set_state('asia'),
+        checked=get_state('asia'),
+        radio=True)
+
+
+subMenu = item(show, menu(americasItem, europeItem, asiaItem))
+
+menuWithItems = menu(itemCheckAgain, itemVersion, subMenu, itemQuit)
 
 print(local)
 
-icon('LOR Master Tracker', image, title = "LOR Master Tracker V0.2.3", menu=menuWithItems).run(work)
+icon('LOR Master Tracker', image, title = "LOR Master Tracker V0.3.0", menu=menuWithItems).run(work)

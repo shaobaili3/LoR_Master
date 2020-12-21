@@ -10,10 +10,10 @@ with open('Resource/image.png', 'rb') as f:
     image.load()
 
 
-state = 0
+state = 'americas'
 
 def set_state(v):
-    def inner(icon, item):
+    def inner():
         global state
         state = v
     return inner
@@ -23,12 +23,33 @@ def get_state(v):
         return state == v
     return inner
 
+def show(v):
+    return '服务器: ' + str(state)
+
 # Let the menu items be a callable returning a sequence of menu
 # items to allow the menu to grow
-icon('test', image, menu=menu(lambda: (
-    item(
-        'State %d' % i,
-        set_state(i),
-        checked=get_state(i),
+
+americasItem = item('americas (NA美服)',
+        set_state('americas'),
+        checked=get_state('americas'),
         radio=True)
-    for i in range(max(2, state + 2))))).run()
+
+europeItem = item('europe (EU欧服)',
+        set_state('europe'),
+        checked=get_state('europe'),
+        radio=True)
+
+asiaItem = item('asia (ASIA亚服)',
+        set_state('asia'),
+        checked=get_state('asia'),
+        radio=True)
+
+
+subMenu = item(show, menu(americasItem, europeItem, asiaItem))
+
+menuWithItems = menu(subMenu)
+
+icon('LOR Master Tracker', image, title = "LOR Master Tracker V0.2.3", menu=menuWithItems).run()
+
+
+#asia europe americas

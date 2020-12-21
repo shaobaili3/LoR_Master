@@ -8,7 +8,6 @@ puuid = match.getPlayerPUUID('Storm', '5961')
 #asia europe americas
 #puuid = match.getPlayerPUUID('虎牙Aipotu', '123')
 
-
 def checkPlayerDetails():
     matchIds = match.getMatchs(puuid)
     print(matchIds)
@@ -36,8 +35,6 @@ def checkPlayerDetails():
         oppentDetails = None
         myDetials = None
         for count, ppid in enumerate(ppids):
-
-
             if ppid != puuid:
                 #print(ppid)
                 print(str(matchNum) + ". " + match.getPlayerName(ppid))
