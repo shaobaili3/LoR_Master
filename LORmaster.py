@@ -1,3 +1,4 @@
+from threading import local
 from network import Network
 from pystray import Icon as icon, Menu as menu, MenuItem as item
 import sys
@@ -11,18 +12,19 @@ from match import Match
 from opponent import Opponent
 from setting import Setting, Server
 
-orig_stdout = sys.stdout
-f = open('history.log', 'a')
-sys.stdout = f
-print(time.localtime())
-#sys.stdout = orig_stdout
-#f.close()
+# orig_stdout = sys.stdout
+# f = open('history.log', 'a')
+# sys.stdout = f
+# print(time.localtime())
+# #sys.stdout = orig_stdout
+# #f.close()
+
 setting = Setting()
-local = Local(setting)
 network = Network(setting)
 match = Match(network)
 check = Opponent(match)
 state = setting.getServer()
+local
 
 ImageFile.LOAD_TRUNCATED_IMAGES = True
 with open('Resource/image.png', 'rb') as f:
@@ -33,11 +35,13 @@ with open('Resource/image.png', 'rb') as f:
 
 def work(stray):
     stray.visible = True
+    global local
+    local = Local(setting)
     if stray.HAS_NOTIFICATION:
         stray.notify("对手套牌查询已启动", title="LOR大师") #LoR Master Tracker is running 
     while stray.visible:
         #print("xxxx")
-        time.sleep(1)
+        time.sleep(1)        
         local.updateStatus(check.checkOpponent)
         #print(stray.visible)
     sys.exit()
@@ -88,11 +92,8 @@ asiaItem = item('asia (ASIA亚服)',
         checked=get_state('asia'),
         radio=True)
 
-
 subMenu = item(show, menu(americasItem, europeItem, asiaItem))
 
 menuWithItems = menu(itemCheckAgain, itemVersion, subMenu, itemQuit)
-
-print(local)
 
 icon('LOR Master Tracker', image, title = "LOR Master Tracker V0.3.0", menu=menuWithItems).run(work)

@@ -28,7 +28,6 @@ class Local:
                 self.isClientRuning = False
             return          
         details = localRequest.json()
-        
         gameState = details['GameState']
         if gameState == 'InProgress':
             if self.isInProgress == False:
@@ -51,7 +50,6 @@ class Local:
                 self.isInProgress = False
 
     def getTagByName(self, name):
-
         with open(('Resource/' + self.setting.getServer() + '.dat'), encoding="utf8") as search:
             for line in search:
                 fullName = line.rstrip().split('#')

@@ -11,14 +11,11 @@ class Opponent:
         if puuid is None:
             print("无法获取对手puuid")
             return
-
         matchIds = self.match.getMatchs(puuid)
         if matchIds is None:
             print("无法获取对手最近对战记录")
             return
-
         deckCodes = []
-        
         for matchid in matchIds:
             details = self.match.getDetails(matchid)
             if details is None:
@@ -40,13 +37,10 @@ class Opponent:
         self.showOpponentAgain()
 
     def showOpponentAgain(self):
-        
         if self.sortedDecksCode is None:
             print("没有相关套牌")
             return
-
         print("正在启动浏览器...(如果等待过长，请手动重启默认浏览器后，点击重新显示套牌按钮)")
-
         for index, code in enumerate(self.sortedDecksCode):
             print('套牌', index + 1, '代码:' ,code)
             webbrowser.open('https://www.yaytears.com/runeterra/deck/' + code)

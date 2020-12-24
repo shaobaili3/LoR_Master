@@ -21,10 +21,8 @@ def checkPlayerDetails():
         return
     for matchid in matchIds:
         details = match.getDetails(matchid)
-
         if details is None:
             continue
-
         if details['info']['game_type'] != 'Ranked':
             continue
         else:
@@ -46,9 +44,7 @@ def checkPlayerDetails():
             else:
                 myDetials = details['info']['players'][count]
         print(outcome + "   " + str(myDetials["factions"]) + myDetials['deck_code'] + str(oppentDetails["factions"]) + " " + oppentDetails['deck_code'])
-
     print("Win rate: " + str(winNum/matchNum * 100) + "%" )
-
     print(str(winNum) + ' out of ' + str(matchNum))
 
 checkPlayerDetails()
