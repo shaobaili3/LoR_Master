@@ -11,12 +11,12 @@ from match import Match
 from opponent import Opponent
 from setting import Setting, Server
 
-# orig_stdout = sys.stdout
-# f = open('history.log', 'a')
-# sys.stdout = f
-# print(time.localtime())
-# #sys.stdout = orig_stdout
-# #f.close()
+orig_stdout = sys.stdout
+f = open('history.log', 'a')
+sys.stdout = f
+print(time.localtime())
+#sys.stdout = orig_stdout
+#f.close()
 setting = Setting()
 local = Local(setting)
 network = Network(setting)
