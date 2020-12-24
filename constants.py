@@ -1,0 +1,6 @@
+PORT_IP = '21337'
+LOCAL_KEY = '/positional-rectangles'
+IP_KEY = 'http://127.0.0.1:'
+# PLAYERS_NA_PATH = 'Resource/NA.dat'
+# PLAYERS_EU_PATH = 'Resource/EU.dat'
+# PLAYERS_ASIA_PATH = 'Resource/ASIA.dat'

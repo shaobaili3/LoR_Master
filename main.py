@@ -6,7 +6,6 @@ match = Match(network)
 
 puuid = match.getPlayerPUUID('Storm', '5961')
 #asia europe americas
-#puuid = match.getPlayerPUUID('虎牙Aipotu', '123')
 
 def checkPlayerDetails():
     matchIds = match.getMatchs(puuid)

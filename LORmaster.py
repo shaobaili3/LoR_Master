@@ -9,6 +9,7 @@ from PIL import Image, ImageFile
 from local import Local
 from match import Match
 from opponent import Opponent
+from setting import Setting, Server
 
 # orig_stdout = sys.stdout
 # f = open('history.log', 'a')
@@ -16,14 +17,14 @@ from opponent import Opponent
 # print(time.localtime())
 # #sys.stdout = orig_stdout
 # #f.close()
-
-local = Local()
-network = Network()
+setting = Setting()
+local = Local(setting)
+network = Network(setting)
 match = Match(network)
 check = Opponent(match)
+state = setting.getServer()
 
 ImageFile.LOAD_TRUNCATED_IMAGES = True
-
 with open('Resource/image.png', 'rb') as f:
     b = BytesIO()
     b.write(f.read())
@@ -54,12 +55,12 @@ def versionApp(stray):
     link = "https://github.com/shaobaili3/lor_master/releases"
     webbrowser.open(link)
 
-state = 'americas'
-
-def set_state(v):
+def set_state(server):
     def inner():
+        setting.setServer(server)
+        local.reset()
         global state
-        state = v
+        state = server.value
     return inner
 
 def get_state(v):
@@ -70,23 +71,20 @@ def get_state(v):
 def show(v):
     return '服务器: ' + str(state)
 
-
 itemCheckAgain = item('重新显示牌组', checkAgain) # Reopen latest decks
 itemVersion = item('版本: 0.3.0内测', versionApp) #Check for update
 itemQuit = item('退出', quitApp) # Quit
 
-
-
 americasItem = item('americas (NA美服)',
-        set_state('americas'),
+        set_state(Server.NA),
         checked=get_state('americas'),
         radio=True)
 europeItem = item('europe (EU欧服)',
-        set_state('europe'),
+        set_state(Server.EU),
         checked=get_state('europe'),
         radio=True)
 asiaItem = item('asia (ASIA亚服)',
-        set_state('asia'),
+        set_state(Server.ASIA),
         checked=get_state('asia'),
         radio=True)
 

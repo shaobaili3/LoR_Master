@@ -1,20 +1,26 @@
-from match import Match
 import requests
-import network as cs
+from setting import Server
+import constants as cs
 
 class Local: 
-    def __init__(self):
+    def __init__(self, setting):
+        self.opponentName = None
+        self.opponentTag = None
+        self.isClientRuning = False
+        self.isInProgress = False
+        self.setting = setting
+
+    def reset(self):
         self.opponentName = None
         self.opponentTag = None
         self.isClientRuning = False
         self.isInProgress = False
 
     def updateStatus(self, checkOpponent):
-        localLink = cs.geLocalLink(cs.PORT_NUM)
         try:
-            localRequest = requests.get(localLink)
+            localRequest = requests.get(self.getLocalLink())
             if not self.isClientRuning:
-                print("LoR客户端已启动") # LoR client lanuched
+                print('LoR客户端已启动', '当前服务器:', self.setting.getServer()) # LoR client lanuched
                 self.isClientRuning = True
         except requests.exceptions.RequestException as e:
             if self.isClientRuning:
@@ -45,7 +51,8 @@ class Local:
                 self.isInProgress = False
 
     def getTagByName(self, name):
-        with open(cs.PLAYER_NA_PATH, encoding="utf8") as search:
+
+        with open(('Resource/' + self.setting.getServer() + '.dat'), encoding="utf8") as search:
             for line in search:
                 fullName = line.rstrip().split('#')
                 if name == fullName[0]:
@@ -55,6 +62,9 @@ class Local:
         print("Cannot find Opponent Tag")
         self.opponentTag = None
         return
+
+    def getLocalLink(self):
+        return cs.IP_KEY + self.setting.getPort() + cs.LOCAL_KEY
 
 
 

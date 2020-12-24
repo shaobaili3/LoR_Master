@@ -45,10 +45,10 @@ class Opponent:
             print("没有相关套牌")
             return
 
-        print("正在启动浏览器...(如果等待过长，请手动重启默认浏览器，点击重新显示套牌按钮)")
+        print("正在启动浏览器...(如果等待过长，请手动重启默认浏览器后，点击重新显示套牌按钮)")
 
         for index, code in enumerate(self.sortedDecksCode):
-            print('套牌', index + 1, '代码: ' ,code)
+            print('套牌', index + 1, '代码:' ,code)
             webbrowser.open('https://www.yaytears.com/runeterra/deck/' + code)
             if index == 0:
                 pass
