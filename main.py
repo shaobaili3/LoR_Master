@@ -1,7 +1,11 @@
 from match import Match
 from network import Network
+from setting import Setting, Server
 
-network = Network('americas')
+setting = Setting()
+setting.setServer(Server.NA)
+
+network = Network(setting)
 match = Match(network)
 
 puuid = match.getPlayerPUUID('Storm', '5961')
