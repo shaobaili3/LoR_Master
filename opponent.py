@@ -3,7 +3,7 @@ import webbrowser
 
 class Opponent:
     def __init__(self, match):
-        self.sortedDecksCode = None
+        self.sortedDecksCode = []
         self.match = match
 
     def checkOpponent(self, name, tag):
@@ -73,8 +73,8 @@ class Opponent:
     #     self.showOpponentAgain()        
 
     def showOpponentAgain(self):
-        if self.sortedDecksCode is None:
-            print("没有相关套牌")
+        if not self.sortedDecksCode:
+            print("对手最近没有Rank记录")
             return
         print("已找到卡组:")
         for index, code in enumerate(self.sortedDecksCode):
