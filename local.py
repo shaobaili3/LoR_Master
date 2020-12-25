@@ -42,7 +42,7 @@ class Local:
                         print('玩家姓名：' , self.opponentName , '，无法找到Tag') # Play Tag does not exist
                         return  
                     else:
-                        print('已找到对手：', self.opponentName, '#', self.opponentTag) # Opponent tag found: 
+                        print('发现对手：', self.opponentName, '#', self.opponentTag, "正在载入卡组...") # Opponent tag found: 
                         checkOpponent(self.opponentName, self.opponentTag)
         else:
             if self.isInProgress == True:

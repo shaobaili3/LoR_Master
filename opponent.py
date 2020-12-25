@@ -16,8 +16,10 @@ class Opponent:
             print("无法获取对手最近对战记录")
             return
         else:
-            if len(matchIds) > 10:
-                matchIds = matchIds[0:9]
+            #print(len(matchIds))
+            if len(matchIds) > 8:
+                matchIds = matchIds[0:8]
+                #print(len(matchIds))
         deckCodes = []
         loop = self.match.asyncio.new_event_loop()
         self.match.asyncio.set_event_loop(loop)
@@ -35,7 +37,7 @@ class Opponent:
                 if ppid == puuid:
                     myDetials = detail['info']['players'][count]
                     deckCodes.append(myDetials['deck_code'])
-                    print(str(myDetials["factions"]) + myDetials['deck_code'])
+                    # print(str(myDetials["factions"]) + myDetials['deck_code'])
         Deckslist = dict(zip(list(deckCodes),[list(deckCodes).count(i) for i in list(deckCodes)]))
         self.sortedDecksCode = sorted(Deckslist, key = Deckslist.get, reverse=True)
         self.showOpponentAgain()
@@ -74,11 +76,14 @@ class Opponent:
         if self.sortedDecksCode is None:
             print("没有相关套牌")
             return
+        print("已找到卡组:")
+        for index, code in enumerate(self.sortedDecksCode):
+            print('卡组', index + 1, '代码:' ,code)
         print("正在启动浏览器...(如果等待过长，请手动重启默认浏览器后，点击重新显示套牌按钮)")
         for index, code in enumerate(self.sortedDecksCode):
-            print('套牌', index + 1, '代码:' ,code)
             webbrowser.open('https://www.yaytears.com/runeterra/deck/' + code)
             if index == 0:
                 pass
             if index == 2:
                 break
+        print("卡组查询已完成")
