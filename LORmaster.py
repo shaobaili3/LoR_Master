@@ -1,3 +1,4 @@
+from asyncio.windows_events import NULL
 from network import Network
 from pystray import Icon as icon, Menu as menu, MenuItem as item
 import sys
@@ -22,9 +23,11 @@ import constants as cs
 setting = Setting()
 network = Network(setting)
 match = Match(network)
-check = Opponent(match)
+opponent = Opponent(match)
 state = setting.getServer()
-local
+local = NULL
+
+# opponent.checkOpponent('Storm', '5961')
 
 ImageFile.LOAD_TRUNCATED_IMAGES = True
 with open('Resource/image.png', 'rb') as f:
@@ -42,12 +45,12 @@ def work(stray):
     while stray.visible:
         #print("xxxx")
         time.sleep(1)        
-        local.updateStatus(check.checkOpponent)
+        local.updateStatus(opponent.checkOpponent)
         #print(stray.visible)
     sys.exit()
 
 def checkAgain(stray):
-    check.showOpponentAgain()
+    opponent.showOpponentAgain()
 
 def quitApp(stray):
     stray.visible = False

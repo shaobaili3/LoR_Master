@@ -5,8 +5,8 @@ import asyncio
 class Match():
     def __init__(self, network):
         self.network = network
-        self.loop = asyncio.get_event_loop()
         self.asyncio = asyncio
+        self.loop = self.asyncio.get_event_loop()
         return
 
     def getPlayerPUUID(self, name, tag):

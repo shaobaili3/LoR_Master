@@ -15,26 +15,60 @@ class Opponent:
         if matchIds is None:
             print("无法获取对手最近对战记录")
             return
+        else:
+            if len(matchIds) > 10:
+                matchIds = matchIds[0:9]
         deckCodes = []
-        for matchid in matchIds:
-            details = self.match.getDetails(matchid)
-            if details is None:
+        loop = self.match.asyncio.new_event_loop()
+        self.match.asyncio.set_event_loop(loop)
+        tasks = [self.match.aioGetDetail(id) for id in matchIds]
+        details = loop.run_until_complete(self.match.asyncio.gather(*tasks))
+        for detail in details:
+            if detail is None:
                 continue
             else:
-                if details['info']['game_type'] != 'Ranked':
-                    print(details['info']['game_type'])
+                if detail['info']['game_type'] != 'Ranked':
+                    print(detail['info']['game_type'])
                     continue
-            ppids = details['metadata']['participants']
-            if len(deckCodes) == 10:
-                break
+            ppids = detail['metadata']['participants']
             for count, ppid in enumerate(ppids):
                 if ppid == puuid:
-                    myDetials = details['info']['players'][count]
+                    myDetials = detail['info']['players'][count]
                     deckCodes.append(myDetials['deck_code'])
                     print(str(myDetials["factions"]) + myDetials['deck_code'])
         Deckslist = dict(zip(list(deckCodes),[list(deckCodes).count(i) for i in list(deckCodes)]))
         self.sortedDecksCode = sorted(Deckslist, key = Deckslist.get, reverse=True)
         self.showOpponentAgain()
+
+    # def checkOpponent(self, name, tag):
+    #     puuid = self.match.getPlayerPUUID(name, tag)
+    #     if puuid is None:
+    #         print("无法获取对手puuid")
+    #         return
+    #     matchIds = self.match.getMatchs(puuid)
+    #     if matchIds is None:
+    #         print("无法获取对手最近对战记录")
+    #         return
+    #     deckCodes = []
+    #     for matchid in matchIds:
+    #         details = self.match.getDetails(matchid)
+    #         if details is None:
+    #             continue
+    #         else:
+    #             if details['info']['game_type'] != 'Ranked':
+    #                 print(details['info']['game_type'])
+    #                 continue
+    #         ppids = details['metadata']['participants']
+    #         if len(deckCodes) == 10:
+    #             break
+    #         for count, ppid in enumerate(ppids):
+    #             if ppid == puuid:
+    #                 myDetials = details['info']['players'][count]
+    #                 deckCodes.append(myDetials['deck_code'])
+    #                 print(str(myDetials["factions"]) + myDetials['deck_code'])
+    #     Deckslist = dict(zip(list(deckCodes),[list(deckCodes).count(i) for i in list(deckCodes)]))
+    #     self.sortedDecksCode = sorted(Deckslist, key = Deckslist.get, reverse=True)
+    #     self.showOpponentAgain()        
 
     def showOpponentAgain(self):
         if self.sortedDecksCode is None:
