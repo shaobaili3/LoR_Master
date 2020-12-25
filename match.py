@@ -1,10 +1,11 @@
 import requests
-#import aiohttp
-#import asyncio
+import aiohttp
+import asyncio
 
 class Match():
     def __init__(self, network):
         self.network = network
+        self.loop = asyncio.get_event_loop()
         return
 
     def getPlayerPUUID(self, name, tag):
@@ -40,7 +41,21 @@ class Match():
             return None
         return matchIds
 
-    def getDetails(self, matchId):
+    async def aioGetDetail(self, id):
+        async with aiohttp.ClientSession() as session:
+            detailsLink = self.network.getDetailsLink(id)
+            async with session.get(detailsLink) as resp:
+                print(resp.status)
+                detail = await resp.json()
+        if 'status' in detail:
+            status = detail['status']
+            print("match details server Error")
+            print('比赛内容服务器错误: ', status)
+            return None
+        return detail
+
+
+    def getDetail(self, matchId):
         detailsLink = self.network.getDetailsLink(matchId)
         # print(detailsLink)
         try:
@@ -50,13 +65,13 @@ class Match():
             print(e)
             print('无法连接比赛内容服务器')
             return None
-        details = detailsRequest.json()
-        if 'status' in details:
-            status = details['status']
+        detail = detailsRequest.json()
+        if 'status' in detail:
+            status = detail['status']
             print("match details server Error")
             print('比赛内容服务器错误: ', status)
             return None
-        return details
+        return detail
 
     #仅仅在main中使用
     def getPlayerName(self, puuid):
