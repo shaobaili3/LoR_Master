@@ -1,7 +1,6 @@
 from match import Match
 from network import Network
 from setting import Setting, Server
-import asyncio
 
 setting = Setting()
 setting.setServer(Server.NA)
@@ -26,7 +25,7 @@ def checkPlayerDetails():
         return
 
     tasks = [match.aioGetDetail(id) for id in matchIds]
-    details = match.loop.run_until_complete(asyncio.gather(*tasks))
+    details = match.loop.run_until_complete(match.asyncio.gather(*tasks))
     print(details)
 
 

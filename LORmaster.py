@@ -1,4 +1,3 @@
-from threading import local
 from network import Network
 from pystray import Icon as icon, Menu as menu, MenuItem as item
 import sys
@@ -11,6 +10,7 @@ from local import Local
 from match import Match
 from opponent import Opponent
 from setting import Setting, Server
+import constants as cs
 
 # orig_stdout = sys.stdout
 # f = open('history.log', 'a')
@@ -38,7 +38,7 @@ def work(stray):
     global local
     local = Local(setting)
     if stray.HAS_NOTIFICATION:
-        stray.notify("对手套牌查询已启动", title="LOR大师") #LoR Master Tracker is running 
+        stray.notify("对手套牌查询已启动", title=cs.DISPLAY_TITLE) #LoR Master Tracker is running 
     while stray.visible:
         #print("xxxx")
         time.sleep(1)        
@@ -76,7 +76,7 @@ def show(v):
     return '服务器: ' + str(state)
 
 itemCheckAgain = item('重新显示牌组', checkAgain) # Reopen latest decks
-itemVersion = item('版本: 0.3.0内测', versionApp) #Check for update
+itemVersion = item('版本: ' + cs.VERSION_NUM + '内测', versionApp) #Check for update
 itemQuit = item('退出', quitApp) # Quit
 
 americasItem = item('americas (NA美服)',
@@ -96,4 +96,4 @@ subMenu = item(show, menu(americasItem, europeItem, asiaItem))
 
 menuWithItems = menu(itemCheckAgain, itemVersion, subMenu, itemQuit)
 
-icon('LOR Master Tracker', image, title = "LOR Master Tracker V0.3.0", menu=menuWithItems).run(work)
+icon('LOR Master Tracker', image, title = "LOR Master Tracker v" + cs.VERSION_NUM, menu=menuWithItems).run(work)

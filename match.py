@@ -6,6 +6,7 @@ class Match():
     def __init__(self, network):
         self.network = network
         self.loop = asyncio.get_event_loop()
+        self.asyncio = asyncio
         return
 
     def getPlayerPUUID(self, name, tag):
@@ -45,7 +46,11 @@ class Match():
         async with aiohttp.ClientSession() as session:
             detailsLink = self.network.getDetailsLink(id)
             async with session.get(detailsLink) as resp:
-                print(resp.status)
+                #print(resp.status)
+                #print(type(resp.status))
+                if resp.status == 429:
+                    print("429")
+                    self.network.switchAPIKey()
                 detail = await resp.json()
         if 'status' in detail:
             status = detail['status']
