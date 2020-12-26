@@ -47,7 +47,7 @@ def work(stray):
         time.sleep(1)        
         local.updateStatus(opponent.checkOpponent)
         #print(stray.visible)
-    sys.exit()
+    sys.exit(stray.stop())
 
 def checkAgain(stray):
     opponent.showOpponentAgain()

@@ -1,15 +1,18 @@
 from match import Match
 from network import Network
 from setting import Setting, Server
+from opponent import Opponent
 
 setting = Setting()
 setting.setServer(Server.NA)
-
 network = Network(setting)
 match = Match(network)
+opponent = Opponent(match)
 
 puuid = match.getPlayerPUUID('Storm', '5961')
 #asia europe americas
+
+
 
 def checkPlayerDetails():
     matchIds = match.getMatchs(puuid)
@@ -96,5 +99,6 @@ def checkPlayerDetails():
 #         print(outcome + "   " + str(myDetials["factions"]) + myDetials['deck_code'] + str(oppentDetails["factions"]) + " " + oppentDetails['deck_code'])
 #     print("Win rate: " + str(winNum/matchNum * 100) + "%" )
 #     print(str(winNum) + ' out of ' + str(matchNum))
+opponent.checkOpponent('Storm', '5961')
+#checkPlayerDetails()
 
-checkPlayerDetails()

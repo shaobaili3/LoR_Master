@@ -46,11 +46,8 @@ class Match():
         async with aiohttp.ClientSession() as session:
             detailsLink = self.network.getDetailsLink(id)
             async with session.get(detailsLink) as resp:
-                #print(resp.status)
-                #print(type(resp.status))
                 if resp.status == 429:
                     print("429")
-                    self.network.switchAPIKey()
                 detail = await resp.json()
         if 'status' in detail:
             status = detail['status']

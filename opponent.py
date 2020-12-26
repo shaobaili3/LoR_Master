@@ -86,4 +86,4 @@ class Opponent:
                 pass
             if index == 2:
                 break
-        print("卡组查询已完成")
+        print("卡组已在默认浏览器中显示, 请在浏览器中查看")
