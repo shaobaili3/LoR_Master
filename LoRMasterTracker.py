@@ -47,7 +47,6 @@ def work(stray):
         time.sleep(1)        
         local.updateStatus(opponent.checkOpponent)
         #print(stray.visible)
-    sys.exit(stray.stop())
 
 def checkAgain(stray):
     opponent.showOpponentAgain()
@@ -56,7 +55,6 @@ def quitApp(stray):
     stray.visible = False
     stray.stop()
     sys.exit()
-    return
 
 def versionApp(stray):
     link = "https://github.com/shaobaili3/lor_master/releases"
@@ -100,3 +98,4 @@ subMenu = item(show, menu(americasItem, europeItem, asiaItem))
 menuWithItems = menu(itemCheckAgain, itemVersion, subMenu, itemQuit)
 
 icon('LOR Master Tracker', image, title = "LOR Master Tracker v" + cs.VERSION_NUM, menu=menuWithItems).run(work)
+
