@@ -36,29 +36,35 @@ with open('Resource/image.png', 'rb') as f:
     image = Image.open(b)
     image.load()
 
+
 def work(stray):
     stray.visible = True
     global local
     local = Local(setting)
     if stray.HAS_NOTIFICATION:
-        stray.notify("对手套牌查询已启动", title=cs.DISPLAY_TITLE) #LoR Master Tracker is running 
+        # LoR Master Tracker is running
+        stray.notify("对手套牌查询已启动", title=cs.DISPLAY_TITLE)
     while stray.visible:
-        #print("xxxx")
-        time.sleep(1)        
+        # print("xxxx")
+        time.sleep(1)
         local.updateStatus(opponent.checkOpponent)
-        #print(stray.visible)
+        # print(stray.visible)
+
 
 def checkAgain(stray):
     opponent.showOpponentAgain()
+
 
 def quitApp(stray):
     stray.visible = False
     stray.stop()
     sys.exit()
 
+
 def versionApp(stray):
     link = "https://github.com/shaobaili3/lor_master/releases"
     webbrowser.open(link)
+
 
 def set_state(server):
     def inner():
@@ -68,34 +74,38 @@ def set_state(server):
         state = server.value
     return inner
 
+
 def get_state(v):
     def inner(item):
         return state == v
     return inner
 
+
 def show(v):
     return '服务器: ' + str(state)
 
-itemCheckAgain = item('重新显示牌组', checkAgain) # Reopen latest decks
-itemVersion = item('版本: ' + cs.VERSION_NUM + '内测', versionApp) #Check for update
-itemQuit = item('退出', quitApp) # Quit
+
+itemCheckAgain = item('重新显示牌组', checkAgain)  # Reopen latest decks
+itemVersion = item('版本: ' + cs.VERSION_NUM + '内测',
+                   versionApp)  # Check for update
+itemQuit = item('退出', quitApp)  # Quit
 
 americasItem = item('americas (NA美服)',
-        set_state(Server.NA),
-        checked=get_state('americas'),
-        radio=True)
+                    set_state(Server.NA),
+                    checked=get_state('americas'),
+                    radio=True)
 europeItem = item('europe (EU欧服)',
-        set_state(Server.EU),
-        checked=get_state('europe'),
-        radio=True)
+                  set_state(Server.EU),
+                  checked=get_state('europe'),
+                  radio=True)
 asiaItem = item('asia (ASIA亚服)',
-        set_state(Server.ASIA),
-        checked=get_state('asia'),
-        radio=True)
+                set_state(Server.ASIA),
+                checked=get_state('asia'),
+                radio=True)
 
 subMenu = item(show, menu(americasItem, europeItem, asiaItem))
 
 menuWithItems = menu(itemCheckAgain, itemVersion, subMenu, itemQuit)
 
-icon('LOR Master Tracker', image, title = "LOR Master Tracker v" + cs.VERSION_NUM, menu=menuWithItems).run(work)
-
+icon('LOR Master Tracker', image, title="LOR Master Tracker v" +
+     cs.VERSION_NUM, menu=menuWithItems).run(work)

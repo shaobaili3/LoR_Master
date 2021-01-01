@@ -1,6 +1,7 @@
 import json
 import webbrowser
 
+
 class Opponent:
     def __init__(self, match):
         self.sortedDecksCode = []
@@ -16,10 +17,10 @@ class Opponent:
             print("无法获取对手最近对战记录")
             return
         else:
-            #print(len(matchIds))
+            # print(len(matchIds))
             if len(matchIds) > 8:
                 matchIds = matchIds[0:8]
-                #print(len(matchIds))
+                # print(len(matchIds))
         deckCodes = []
         loop = self.match.asyncio.new_event_loop()
         self.match.asyncio.set_event_loop(loop)
@@ -38,8 +39,10 @@ class Opponent:
                     myDetials = detail['info']['players'][count]
                     deckCodes.append(myDetials['deck_code'])
                     # print(str(myDetials["factions"]) + myDetials['deck_code'])
-        Deckslist = dict(zip(list(deckCodes),[list(deckCodes).count(i) for i in list(deckCodes)]))
-        self.sortedDecksCode = sorted(Deckslist, key = Deckslist.get, reverse=True)
+        Deckslist = dict(
+            zip(list(deckCodes), [list(deckCodes).count(i) for i in list(deckCodes)]))
+        self.sortedDecksCode = sorted(
+            Deckslist, key=Deckslist.get, reverse=True)
         self.showOpponentAgain()
 
     # def checkOpponent(self, name, tag):
@@ -70,7 +73,7 @@ class Opponent:
     #                 print(str(myDetials["factions"]) + myDetials['deck_code'])
     #     Deckslist = dict(zip(list(deckCodes),[list(deckCodes).count(i) for i in list(deckCodes)]))
     #     self.sortedDecksCode = sorted(Deckslist, key = Deckslist.get, reverse=True)
-    #     self.showOpponentAgain()        
+    #     self.showOpponentAgain()
 
     def showOpponentAgain(self):
         if not self.sortedDecksCode:
@@ -78,7 +81,7 @@ class Opponent:
             return
         print("已找到卡组:")
         for index, code in enumerate(self.sortedDecksCode):
-            print('卡组', index + 1, '代码:' ,code)
+            print('卡组', index + 1, '代码:', code)
         print("正在启动浏览器...(如果等待过长，请手动重启默认浏览器后，点击重新显示套牌按钮)")
         for index, code in enumerate(self.sortedDecksCode):
             webbrowser.open('https://www.yaytears.com/runeterra/deck/' + code)

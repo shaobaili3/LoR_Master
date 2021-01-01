@@ -9,10 +9,9 @@ network = Network(setting)
 match = Match(network)
 opponent = Opponent(match)
 
-#ShogoPASS#EUW
+# ShogoPASS#EUW
 puuid = match.getPlayerPUUID('ShogoPASS', 'EUW')
-#asia europe americas
-
+# asia europe americas
 
 
 def checkPlayerDetails():
@@ -32,7 +31,6 @@ def checkPlayerDetails():
     details = match.loop.run_until_complete(match.asyncio.gather(*tasks))
     print(details)
 
-
     for detail in details:
         if detail is None:
             continue
@@ -46,7 +44,7 @@ def checkPlayerDetails():
         myDetials = None
         for count, ppid in enumerate(ppids):
             if ppid != puuid:
-                #print(ppid)
+                # print(ppid)
                 print(str(matchNum) + ". " + match.getPlayerName(ppid))
                 oppentDetails = detail['info']['players'][count]
                 if oppentDetails["game_outcome"] == 'loss':
@@ -56,8 +54,9 @@ def checkPlayerDetails():
                     outcome = 'Loss'
             else:
                 myDetials = detail['info']['players'][count]
-        print(outcome + "   " + str(myDetials["factions"]) + myDetials['deck_code'] + str(oppentDetails["factions"]) + " " + oppentDetails['deck_code'])
-    print("Win rate: " + str(winNum/matchNum * 100) + "%" )
+        print(outcome + "   " + str(myDetials["factions"]) + myDetials['deck_code'] + str(
+            oppentDetails["factions"]) + " " + oppentDetails['deck_code'])
+    print("Win rate: " + str(winNum/matchNum * 100) + "%")
     print(str(winNum) + ' out of ' + str(matchNum))
 
 
@@ -103,4 +102,3 @@ def checkPlayerDetails():
 
 #opponent.checkOpponent('Storm', '5961')
 checkPlayerDetails()
-

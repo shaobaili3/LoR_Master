@@ -2,6 +2,7 @@ import requests
 import aiohttp
 import asyncio
 
+
 class Match():
     def __init__(self, network):
         self.network = network
@@ -11,9 +12,9 @@ class Match():
 
     def getPlayerPUUID(self, name, tag):
         puuidLink = self.network.getPUUID(name, tag)
-        #print(puuidLink)
+        # print(puuidLink)
         try:
-            puuidRequest =requests.get(puuidLink)
+            puuidRequest = requests.get(puuidLink)
         except requests.exceptions.RequestException as e:
             print(puuidLink)
             print(e)
@@ -29,7 +30,7 @@ class Match():
     def getMatchs(self, ppid):
         matchLink = self.network.getMatchsLink(ppid)
         try:
-            matchRequest =requests.get(matchLink)
+            matchRequest = requests.get(matchLink)
         except requests.exceptions.RequestException as e:
             print(matchLink)
             print(e)
@@ -56,7 +57,6 @@ class Match():
             return None
         return detail
 
-
     def getDetail(self, matchId):
         detailsLink = self.network.getDetailsLink(matchId)
         # print(detailsLink)
@@ -75,11 +75,11 @@ class Match():
             return None
         return detail
 
-    #仅仅在main中使用
+    # 仅仅在main中使用
     def getPlayerName(self, puuid):
         nameLink = self.network.getNameLink(puuid)
         try:
-            nameRequest =requests.get(nameLink)
+            nameRequest = requests.get(nameLink)
         except requests.exceptions.RequestException as e:
             print(nameLink)
             print(e)
@@ -91,6 +91,3 @@ class Match():
             print('用户名puuid服务器错误: ', status)
             return '名字Unknow'
         return name['gameName'] + "#" + name['tagLine']
-
-
-

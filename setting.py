@@ -2,6 +2,7 @@ from enum import Enum
 import configparser
 import constants as c
 
+
 class Setting():
 
     def __init__(self):
@@ -31,7 +32,7 @@ class Setting():
         self.config['network']['server'] = server.value
         self.check()
         self.writeConfig()
-    
+
     def setPort(self, port):
         self.config['local']['port'] = port
         self.check()
@@ -48,6 +49,7 @@ class Setting():
 
     def getPort(self):
         return self.config.get('local', 'port')
+
 
 class Server(str, Enum):
     NA = 'americas'

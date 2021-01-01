@@ -2,7 +2,8 @@ import requests
 from setting import Server
 import constants as cs
 
-class Local: 
+
+class Local:
     def __init__(self, setting):
         self.opponentName = None
         self.opponentTag = None
@@ -20,18 +21,19 @@ class Local:
         try:
             localRequest = requests.get(self.getLocalLink())
             if not self.isClientRuning:
-                print('LoR客户端已启动', '当前服务器:', self.setting.getServer()) # LoR client lanuched
+                # LoR client lanuched
+                print('LoR客户端已启动', '当前服务器:', self.setting.getServer())
                 self.isClientRuning = True
         except requests.exceptions.RequestException as e:
             if self.isClientRuning:
-                print('LoR客户端已关闭') # LoR client exited
+                print('LoR客户端已关闭')  # LoR client exited
                 self.isClientRuning = False
-            return          
+            return
         details = localRequest.json()
         gameState = details['GameState']
         if gameState == 'InProgress':
             if self.isInProgress == False:
-                print('新对局开始') # New Match Found
+                print('新对局开始')  # New Match Found
                 self.isInProgress = True
             name = details['OpponentName']
             if name is not None:
@@ -39,10 +41,13 @@ class Local:
                     self.opponentName = name
                     self.getTagByName(self.opponentName)
                     if self.opponentTag is None:
-                        print('玩家姓名：' , self.opponentName , '，无法找到Tag') # Play Tag does not exist
-                        return  
+                        # Play Tag does not exist
+                        print('玩家姓名：', self.opponentName, '，无法找到Tag')
+                        return
                     else:
-                        print('发现对手：', self.opponentName, '#', self.opponentTag, "正在载入卡组...") # Opponent tag found: 
+                        # Opponent tag found:
+                        print('发现对手：', self.opponentName, '#',
+                              self.opponentTag, "正在载入卡组...")
                         checkOpponent(self.opponentName, self.opponentTag)
         else:
             if self.isInProgress == True:
@@ -63,10 +68,3 @@ class Local:
 
     def getLocalLink(self):
         return cs.IP_KEY + self.setting.getPort() + cs.LOCAL_KEY
-
-
-
-    
-
-
-

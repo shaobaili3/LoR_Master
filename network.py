@@ -5,6 +5,7 @@ DETAILS_KEY = '.api.riotgames.com/lor/match/v1/matches/'
 NAME_KEY = '.api.riotgames.com/riot/account/v1/accounts/by-puuid/'
 PUUID_KEY = '.api.riotgames.com/riot/account/v1/accounts/by-riot-id/'
 
+
 class Network():
     def __init__(self, setting) -> None:
         self.setting = setting
@@ -15,7 +16,7 @@ class Network():
         return 'https://' + self.setting.getServer()
 
     def getMatchsLink(self, ppid):
-        return self.getHeadLink() + MATCH_KEY  + ppid + '/ids' + self.key
+        return self.getHeadLink() + MATCH_KEY + ppid + '/ids' + self.key
 
     def getDetailsLink(self, matchId):
         return self.getHeadLink() + DETAILS_KEY + matchId + self.key
@@ -31,8 +32,3 @@ class Network():
             self.key = API_KEY2
         else:
             self.key = API_KEY
-    
-
-
-
-
