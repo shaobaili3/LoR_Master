@@ -88,10 +88,12 @@ def addTray():
     sys.exit(app.exec_())
 
 
-def showTrigger():
-    window.show()
-    window.setWindowState(window.windowState() & ~QtCore.Qt.WindowMinimized | QtCore.Qt.WindowActive)
-    window.activateWindow()
+def showTrigger(reason):
+    # 鼠标点击icon传递的信号会带有一个整形的值，1是表示单击右键，2是双击，3是单击左键，4是用鼠标中键点击
+    if reason == 2 or reason == 3:
+        window.show()
+        window.setWindowState(window.windowState() & ~QtCore.Qt.WindowMinimized | QtCore.Qt.WindowActive)
+        window.activateWindow()
 
 def quitTrigger():
     QCoreApplication.instance().quit()
