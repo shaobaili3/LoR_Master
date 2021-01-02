@@ -35,24 +35,39 @@ class Window(QWidget):
         completer = QCompleter(local.playernames)
         completer.setCaseSensitivity(QtCore.Qt.CaseInsensitive)
         self.idLineEdit.setCompleter(completer)
-        defaultPushButton = QPushButton("Inspect")
-        defaultPushButton.setDefault(True)
+        self.inspectPushButton = QPushButton("Inspect")
+        self.inspectPushButton.setDefault(True)
+        self.inspectPushButton.clicked.connect(self.inspectPushButtonClicked)
         topLayout.addWidget(styleLabel)
         topLayout.addWidget(styleComboBox)
         topLayout.addWidget(idLabel)
         topLayout.addWidget(self.idLineEdit)
-        topLayout.addWidget(defaultPushButton)
+        topLayout.addWidget(self.inspectPushButton)
         textLayout = QHBoxLayout()
         self.textEdit = QPlainTextEdit()
         self.textEdit.setReadOnly(True)
         textLayout.addWidget(self.textEdit)
-        self.textEdit.appendPlainText("new content")
-        self.textEdit.appendHtml(
-            "<font color = \"IndianRed\"> Sample Text</font><font color = \"DarkOrange\"> Sample Text</font>")
         outerLayout.addLayout(topLayout)
         outerLayout.addLayout(textLayout)
         self.setLayout(outerLayout)
     
+    def inspectPushButtonClicked(self):
+        fullname = self.idLineEdit.text().strip().split('#')
+        player.inspectPlayer(fullname[0], fullname[1], self.showlog)
+
+    def showlog(self, opponentName, outcome, deckCode):
+        print('call showlog')
+        htmlOpponentName = self.getHtml(opponentName ,'Black')
+        htmlDeckCode = self.getHtml(deckCode, 'DarkOrange')
+        htmlOutcome = self.getHtml(outcome, 'IndianRed')
+        if outcome == 'win':
+            htmlOutcome = self.getHtml(outcome, 'Green')
+        self.textEdit.appendHtml(htmlOutcome + htmlOpponentName + htmlDeckCode)
+
+
+    def getHtml(self, text, color):
+        return' <font color = \"' + color + '\">' + text + '</font>'
+
     def idLineEditChanged(self):
         pass
 
@@ -90,7 +105,7 @@ setting = Setting()
 setting.setServer(Server.NA)
 network = Network(setting)
 match = Match(network)
-opponent = Player(match)
+player = Player(match)
 local = Local(setting)
 
 os.environ["QT_AUTO_SCREEN_SCALE_FACTOR"] = "1"
