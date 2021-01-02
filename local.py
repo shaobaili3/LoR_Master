@@ -10,7 +10,9 @@ class Local:
         self.isClientRuning = False
         self.isInProgress = False
         self.setting = setting
+        self.playernames = []
 
+    #call this funtion after changes server in the tracker
     def reset(self):
         self.opponentName = None
         self.opponentTag = None
@@ -39,7 +41,7 @@ class Local:
             if name is not None:
                 if name != self.opponentName:
                     self.opponentName = name
-                    self.getTagByName(self.opponentName)
+                    self.updateTagByName(self.opponentName)
                     if self.opponentTag is None:
                         # Play Tag does not exist
                         print('玩家姓名：', self.opponentName, '，无法找到Tag')
@@ -47,26 +49,42 @@ class Local:
                     else:
                         # Opponent tag found:
                         print('发现对手：', self.opponentName, '#',
-                              self.opponentTag, "正在载入卡组...")
+                            self.opponentTag, "正在载入卡组...")
                         checkOpponent(self.opponentName, self.opponentTag)
         else:
             if self.isInProgress == True:
                 print(self.opponentName, '#', self.opponentTag, ' 对局结束')
                 self.isInProgress = False
 
-    def getTagByName(self, name):
-        print(name)
-        print(self.setting.getServer())
+    def updateTagByName(self, name):
         with open(('Resource/' + self.setting.getServer() + '.dat'), encoding="utf8") as search:
             for line in search:
                 fullName = line.rstrip().split('#')
                 if name == fullName[0]:
                     # print(fullName)
                     self.opponentTag = fullName[1]
-                    return self.opponentTag
-        print("Cannot find Opponent Tag")
         self.opponentTag = None
-        return self.opponentTag
+
+    def updatePlayernames(self, server):
+        print(server)
+        self.playernames = []
+        with open(('Resource/' + self.setting.getServer() + '.dat'), encoding="utf8") as search:
+            for line in search:
+                fullName = line.strip()
+                self.playernames.append(fullName)
+
+    # def getTagByName(self, name):
+    #     print(self.setting.getServer())
+    #     with open(('Resource/' + self.setting.getServer() + '.dat'), encoding="utf8") as search:
+    #         for line in search:
+    #             fullName = line.rstrip().split('#')
+    #             if name == fullName[0]:
+    #                 # print(fullName)
+    #                 self.opponentTag = fullName[1]
+    #                 return self.opponentTag
+    #     print("Cannot find Opponent Tag")
+    #     self.opponentTag = None
+    #     return self.opponentTag
 
     def getLocalLink(self):
         return cs.IP_KEY + self.setting.getPort() + cs.LOCAL_KEY

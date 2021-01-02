@@ -59,7 +59,7 @@ class Match():
 
     def getDetail(self, matchId):
         detailsLink = self.network.getDetailsLink(matchId)
-        # print(detailsLink)
+        print(detailsLink)
         try:
             detailsRequest = requests.get(detailsLink)
         except requests.exceptions.RequestException as e:
@@ -73,6 +73,8 @@ class Match():
             print("match details server Error")
             print('比赛内容服务器错误: ', status)
             return None
+        if detail is None:
+            print('比赛内容服务返回空')
         return detail
 
     # 仅仅在main中使用

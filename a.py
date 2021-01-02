@@ -13,7 +13,7 @@ from PyQt5 import QtGui
 from local import Local
 from match import Match
 from network import Network
-from opponent import Opponent
+from player import Player
 
 class Window(QWidget):
     def __init__(self):
@@ -29,28 +29,19 @@ class Window(QWidget):
         styleLabel.setBuddy(styleComboBox)
         idLabel = QLabel("Riot ID:")
         self.idLineEdit = QLineEdit(self)
-        self.idLineEdit.textChanged.connect(self.idLineEditChanged)
-        tagLabel = QLabel("#")
-        self.tagLineEdit = QLineEdit(self)
-        
-        #self.tagLineEdit.setReadOnly(True)
-        #self.tagLineEdit.textChanged.connect(self.tagLineEditChanged)
+        #self.idLineEdit.textChanged.connect(self.idLineEditChanged)
+        local.updatePlayernames('americas')
 
+        completer = QCompleter(local.playernames)
+        completer.setCaseSensitivity(QtCore.Qt.CaseInsensitive)
+        self.idLineEdit.setCompleter(completer)
         defaultPushButton = QPushButton("Inspect")
         defaultPushButton.setDefault(True)
         topLayout.addWidget(styleLabel)
         topLayout.addWidget(styleComboBox)
-
         topLayout.addWidget(idLabel)
         topLayout.addWidget(self.idLineEdit)
-
-        topLayout.addWidget(tagLabel)
-        topLayout.addWidget(self.tagLineEdit)
-
-        topLayout.addStretch(1)
-
         topLayout.addWidget(defaultPushButton)
-
         textLayout = QHBoxLayout()
         self.textEdit = QPlainTextEdit()
         self.textEdit.setReadOnly(True)
@@ -63,18 +54,7 @@ class Window(QWidget):
         self.setLayout(outerLayout)
     
     def idLineEditChanged(self):
-        print(self.idLineEdit.text().strip())
-        tag = local.getTagByName(self.idLineEdit.text().strip())
-        print(tag, '!!!!!!!!!!!!!!!!!')
-        if tag is None:
-            self.textEdit.appendPlainText('id: ' + self.idLineEdit.text().strip() +  '找不到tag, 请手动输入...')
-        else:
-            self.textEdit.appendPlainText('发现玩家:' + self.idLineEdit.text().strip() + '#' + tag + '正在查询对局信息...' )
-
-    def tagLineEditChanged(self):
-        print(self.tagLineEdit.text())
         pass
-
 
 def addTray():
     tray.setIcon(QIcon('test.jpg'))
@@ -89,8 +69,7 @@ def addTray():
     tray.setToolTip(cs.DISPLAY_TITLE)
     tray.show()
     tray.activated.connect(showTrigger)
-    app_icon = QIcon('test.jpg')
-    tray.showMessage(cs.DISPLAY_TITLE, "LoR大师已启动",app_icon)
+    # tray.showMessage(cs.DISPLAY_TITLE, "LoR大师已启动", QIcon('test.jpg'))
     sys.exit(app.exec_())
 
 
@@ -107,14 +86,12 @@ def versionTrigger():
     link = "https://github.com/shaobaili3/lor_master/releases"
     webbrowser.open(link)
 
-
 setting = Setting()
 setting.setServer(Server.NA)
 network = Network(setting)
 match = Match(network)
-opponent = Opponent(match)
+opponent = Player(match)
 local = Local(setting)
-
 
 os.environ["QT_AUTO_SCREEN_SCALE_FACTOR"] = "1"
 app = QApplication(sys.argv)

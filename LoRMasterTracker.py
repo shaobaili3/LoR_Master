@@ -9,7 +9,7 @@ from PIL import Image, ImageFile
 
 from local import Local
 from match import Match
-from opponent import Opponent
+from player import Player
 from setting import Setting, Server
 import constants as cs
 
@@ -23,7 +23,7 @@ import constants as cs
 setting = Setting()
 network = Network(setting)
 match = Match(network)
-opponent = Opponent(match)
+opponent = Player(match)
 state = setting.getServer()
 local = NULL
 
