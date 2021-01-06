@@ -68,19 +68,23 @@ class Player:
         if matchIds is None:
             print("查询失败")
             return
-        for matchid in matchIds:
+        loop = self.match.asyncio.new_event_loop()
+        self.match.asyncio.set_event_loop(loop)
+        tasks = [self.match.aioGetDetail(id) for id in matchIds]
+        details = loop.run_until_complete(self.match.asyncio.gather(*tasks))
+        for detail in details:
             if matchNum == 10:
                 break
-            details = self.match.getDetail(matchid)
-            if details is None:
+            #details = self.match.getDetail(matchid)
+            if detail is None:
                 continue
-            startTime = details['info']['game_start_time_utc']
-            if details['info']['game_type'] != 'Ranked':
-                print(details['info']['game_type'], details['info']['game_mode'],  utility.tolocalTimeString(startTime))
+            startTime = detail['info']['game_start_time_utc']
+            if detail['info']['game_type'] != 'Ranked':
+                print(detail['info']['game_type'], detail['info']['game_mode'],  utility.tolocalTimeString(startTime))
                 continue
             else:
                 matchNum += 1
-            ppids = details['metadata']['participants']
+            ppids = detail['metadata']['participants']
             outcome = None
             opponentDetail = None
             myDetials = None
@@ -88,9 +92,9 @@ class Player:
                 if ppid != puuid:
                     #print(ppid)
                     print(str(matchNum) + ". " + self.match.getPlayerName(ppid) + ' ' + utility.tolocalTimeString(startTime))
-                    opponentDetail = details['info']['players'][count]
+                    opponentDetail = detail['info']['players'][count]
                 else:
-                    myDetials = details['info']['players'][count]
+                    myDetials = detail['info']['players'][count]
                     outcome = myDetials["game_outcome"]
                     if outcome == 'win':
                         winNum += 1
