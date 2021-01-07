@@ -11,6 +11,7 @@ class Local:
         self.isInProgress = False
         self.setting = setting
         self.playernames = []
+        #self.updatePlayernames()
 
     #call this funtion after changes server in the tracker
     def reset(self):
@@ -65,8 +66,7 @@ class Local:
                     self.opponentTag = fullName[1]
         self.opponentTag = None
 
-    def updatePlayernames(self, server):
-        print(server)
+    def updatePlayernames(self):
         self.playernames = []
         with open(('Resource/' + self.setting.getServer() + '.dat'), encoding="utf8") as search:
             for line in search:

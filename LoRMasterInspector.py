@@ -13,6 +13,7 @@ from local import Local
 from match import Match
 from network import Network
 from player import Player
+from loadThread import LoadThread
 
 #from loadThread import LoadThread
 
@@ -21,18 +22,23 @@ class Window(QWidget):
         super().__init__()
         self.setWindowTitle(cs.DISPLAY_TITLE + ' v' + cs.VERSION_NUM)
         self.setWindowIcon(QIcon('test.jpg'))
-        self.resize(840, 512)
+        self.resize(900, 512)
         outerLayout = QVBoxLayout()
         topLayout = QHBoxLayout()
         styleComboBox = QComboBox()
-        styleComboBox.addItems(list(map(str, Server)))
+        allServers = [Server.NA.value, Server.EU.value, Server.ASIA.value]
+        styleComboBox.addItems(allServers)
+        for index, oneServer in enumerate(allServers):
+            if oneServer == setting.getServer():
+                styleComboBox.setCurrentIndex(index)
+            local.updatePlayernames()
+
+        styleComboBox.activated[str].connect(self.changeServer)
         styleLabel = QLabel("Server:")
         styleLabel.setBuddy(styleComboBox)
         idLabel = QLabel("Riot ID:")
         self.idLineEdit = QLineEdit(self)
         #self.idLineEdit.textChanged.connect(self.idLineEditChanged)
-        local.updatePlayernames('americas')
-
         completer = QCompleter(local.playernames)
         completer.setCaseSensitivity(QtCore.Qt.CaseInsensitive)
         self.idLineEdit.setCompleter(completer)
@@ -50,14 +56,26 @@ class Window(QWidget):
         textLayout.addWidget(self.textEdit)
         outerLayout.addLayout(topLayout)
         outerLayout.addLayout(textLayout)
+
+        buttomLayout = QVBoxLayout()
+        self.progressBar = QProgressBar()
+        self.progressBar.setRange(0, 10000)
+        self.progressBar.setValue(0)
+        buttomLayout.addWidget(self.progressBar)
+        outerLayout.addLayout(buttomLayout)
+
         self.setLayout(outerLayout)
+        self.work = LoadThread()
+        self.work.player = player
+        self.work.trigger.connect(self.showlog)
+        
     
     def inspectPushButtonClicked(self):
-        fullname = self.idLineEdit.text().strip().split('#')
-        print(fullname)
-        player.inspectPlayer(fullname[0], fullname[1], self.showlog)
+        print('start button pushed')
+        self.work.start()
+        self.work.plaerName = self.idLineEdit.text().strip()
 
-    def showlog(self, opponentName, outcome, deckCode):
+    def showlog(self, opponentName = '', outcome = '', deckCode = ''):
         print('call showlog')
         htmlOpponentName = self.getHtml(opponentName ,'Black')
         htmlDeckCode = self.getHtml(deckCode, 'DarkOrange')
@@ -66,24 +84,34 @@ class Window(QWidget):
             htmlOutcome = self.getHtml(outcome, 'Green')
         self.textEdit.appendHtml(htmlOutcome + htmlOpponentName + htmlDeckCode)
 
-
     def getHtml(self, text, color):
         return' <font color = \"' + color + '\">' + text + '</font>'
 
-    def idLineEditChanged(self):
-        pass
+    def changeServer(self, serverName):
+        print('changeSever call')
+        #completer = QCompleter(local.playernames)
+        setting.setServer(Server._value2member_map_[serverName])
+        local.updatePlayernames()
+        completer = QCompleter(local.playernames)
+        completer.setCaseSensitivity(QtCore.Qt.CaseInsensitive)
+        self.idLineEdit.setCompleter(completer)
+        self.idLineEdit.setText('')
+
 
 setting = Setting()
-setting.setServer(Server.NA)
 network = Network(setting)
 match = Match(network)
 player = Player(match)
 local = Local(setting)
 
+#local.updatePlayernames()
 os.environ["QT_AUTO_SCREEN_SCALE_FACTOR"] = "1"
 app = QApplication(sys.argv)
 app.setApplicationName(cs.DISPLAY_TITLE + '#')
 app.setWindowIcon(QIcon('test.jpg'))
+app.setStyle('Fusion')
 window = Window()
 window.show()
+#print(QStyleFactory.keys())
+#window.setStyle(QStyle)
 sys.exit(app.exec_())

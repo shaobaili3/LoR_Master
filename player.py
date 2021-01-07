@@ -66,16 +66,16 @@ class Player:
         winNum = 0
         matchNum = 0
         if matchIds is None:
-            print("查询失败")
+            print("查询失败, matchid为空")
             return
-        loop = self.match.asyncio.new_event_loop()
-        self.match.asyncio.set_event_loop(loop)
-        tasks = [self.match.aioGetDetail(id) for id in matchIds]
-        details = loop.run_until_complete(self.match.asyncio.gather(*tasks))
-        for detail in details:
-            if matchNum == 10:
+        # loop = self.match.asyncio.new_event_loop()
+        # self.match.asyncio.set_event_loop(loop)
+        # tasks = [self.match.aioGetDetail(id) for id in matchIds]
+        # details = loop.run_until_complete(self.match.asyncio.gather(*tasks))
+        for matchId in matchIds:
+            if matchNum == 5:
                 break
-            #details = self.match.getDetail(matchid)
+            detail = self.match.getDetail(matchId)
             if detail is None:
                 continue
             startTime = detail['info']['game_start_time_utc']
