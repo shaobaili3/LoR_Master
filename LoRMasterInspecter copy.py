@@ -20,9 +20,9 @@ from loadThread import LoadThread
 class Window(QWidget):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle(cs.DISPLAY_TITLE + ' v' + cs.VERSION_NUM)
-        self.setWindowIcon(QIcon('test.jpg'))
-        self.resize(840, 512)
+        # self.setWindowTitle(cs.DISPLAY_TITLE + ' v' + cs.VERSION_NUM)
+        # self.setWindowIcon(QIcon('test.jpg'))
+        # self.resize(840, 512)
         outerLayout = QVBoxLayout()
         topLayout = QHBoxLayout()
         styleComboBox = QComboBox()
