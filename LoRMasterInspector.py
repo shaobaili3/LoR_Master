@@ -22,8 +22,13 @@ class Window(QMainWindow):
 
 
 class Inspector(InspectorWidget):
+    def __init__(self, window):
+        super().__init__()
+        self.parentWindow = window
+
     def showlog(self, opponentName, outcome, deckCode):
         super().showlog(opponentName=opponentName, outcome=outcome, deckCode=deckCode)
+        window.progressBar.setFormat(deckCode)
         print('InspectorWidget son called')
 
 app = QApplication(sys.argv)
@@ -33,7 +38,7 @@ app.setApplicationName(cs.DISPLAY_TITLE)
 app.setWindowIcon(QIcon('test.jpg'))
 app.setStyle('Fusion')
 window = Window()
-inspectorWidget = Inspector()
+inspectorWidget = Inspector(window)
 window.setCentralWidget(inspectorWidget)
 window.show()
 sys.exit(app.exec())
