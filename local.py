@@ -64,6 +64,7 @@ class Local:
                 if name == fullName[0]:
                     # print(fullName)
                     self.opponentTag = fullName[1]
+                    return
         self.opponentTag = None
 
     def updatePlayernames(self):
