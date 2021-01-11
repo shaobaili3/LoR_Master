@@ -60,17 +60,17 @@ class Player:
                 break
         print("卡组已在默认浏览器中显示, 请在浏览器中查看")
 
-    def inspectPlayer(self, name, tag, showlog):
+    def inspectPlayer(self, name, tag, showlog, finishTrigger):
         puuid = self.match.getPlayerPUUID(name, tag)
         if puuid is None:
             print('查询失败, puuid为空')
-            return
+            return finishTrigger('Couldn\'t find player ' + name + '#' + tag )
         matchIds = self.match.getMatchs(puuid)
         winNum = 0
         matchNum = 0
         if matchIds is None:
             print('查询失败, matchid为空')
-            return
+            return finishTrigger(name + '#' + tag + ' has no recent match records')
         # loop = self.match.asyncio.new_event_loop()
         # self.match.asyncio.set_event_loop(loop)
         # tasks = [self.match.aioGetDetail(id) for id in matchIds]
@@ -107,8 +107,11 @@ class Player:
         if matchNum != 0:
             print(str(winNum) + ' wins' + ' out of ' + str(matchNum) + ' rank matchs')
             print("Win rate: " + str(int(winNum/matchNum * 100)) + "%" )
+            return finishTrigger(None)
         else:
             print('无法获取对战历史数据')
+            return finishTrigger(name + '#' + tag + ' has no recent rank match records')
+            
 
     # def checkOpponent(self, name, tag):
     #     puuid = self.match.getPlayerPUUID(name, tag)

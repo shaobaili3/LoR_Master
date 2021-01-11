@@ -64,20 +64,28 @@ class InspectorWidget(QWidget):
         self.work = LoadThread()
         self.work.player = player
         self.work.trigger.connect(self.showlog)
+        self.work.finishTrigger.connect(self.showFinish)
 
     def inspectPushButtonClicked(self):
-        print('start button pushed')
-        fullName = self.idLineEdit.text().strip()
-        self.work.plaerName = fullName
+        pass
+        # print('start button pushed')
+        # fullName = self.idLineEdit.text().strip()
+        # self.work.plaerName = fullName
         
 
-        if '#' in fullName:
-            if len(fullName) >= 5:
-                self.work.start()
-                self.textEdit.appendHtml(self.getHtml(fullName, 'OrangeRed'))
-                return
+        # if '#' in fullName:
+        #     if len(fullName) >= 5:
+        #         self.work.start()
+        #         self.textEdit.appendHtml(self.getHtml(fullName, 'OrangeRed'))
+        #         return
         
-        self.textEdit.appendHtml(self.getHtml(fullName + ' is invalid!', 'OrangeRed')) 
+        # self.textEdit.appendHtml(self.getHtml(fullName + ' is invalid, please input name and tag seperated by # eg: storm#5961', 'OrangeRed')) 
+
+    def showFinish(self, text):
+        if text is None:
+            pass
+        else:
+            self.textEdit.appendHtml(self.getHtml(text, 'OrangeRed'))
 
 
     def showlog(self, opponentName, outcome, deckCode, factions,opDeckCode, opFactions, totalTurn, num):
