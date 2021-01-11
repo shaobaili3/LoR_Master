@@ -1,2 +1,0 @@
-LoRmaster.exe
-pause

@@ -67,17 +67,35 @@ class InspectorWidget(QWidget):
 
     def inspectPushButtonClicked(self):
         print('start button pushed')
-        self.work.start()
-        self.work.plaerName = self.idLineEdit.text().strip()
+        fullName = self.idLineEdit.text().strip()
+        self.work.plaerName = fullName
+        
 
-    def showlog(self, opponentName='', outcome='', deckCode=''):
+        if '#' in fullName:
+            if len(fullName) >= 5:
+                self.work.start()
+                self.textEdit.appendHtml(self.getHtml(fullName, 'OrangeRed'))
+                return
+        
+        self.textEdit.appendHtml(self.getHtml(fullName + ' is invalid!', 'OrangeRed')) 
+
+
+    def showlog(self, opponentName, outcome, deckCode, factions,opDeckCode, opFactions, totalTurn, num):
+
         print('call showlog')
         htmlOpponentName = self.getHtml(opponentName, 'Black')
         htmlDeckCode = self.getHtml(deckCode, 'DarkOrange')
         htmlOutcome = self.getHtml(outcome, 'IndianRed')
+        htmlFactions = self.getHtml(factions, 'Black')
+        htmlTotalturn = self.getHtml('Turn: ' + str(totalTurn), 'Gold')
+        htmlopDeckCode = self.getHtml(opDeckCode, 'DarkOrange')
+        htmlopFactions = self.getHtml(opFactions, 'Black')
         if outcome == 'win':
             htmlOutcome = self.getHtml(outcome, 'Green')
-        self.textEdit.appendHtml(htmlOutcome + htmlOpponentName + htmlDeckCode)
+        self.textEdit.appendHtml(htmlOutcome + htmlOpponentName + htmlTotalturn)
+        self.textEdit.appendHtml(htmlFactions + htmlDeckCode)
+        self.textEdit.appendHtml(htmlopFactions + htmlopDeckCode)
+        self.textEdit.appendHtml(' ')
 
     def getHtml(self, text, color):
         return' <font color = \"' + color + '\">' + text + '</font>'

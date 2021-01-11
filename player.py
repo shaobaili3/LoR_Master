@@ -62,11 +62,14 @@ class Player:
 
     def inspectPlayer(self, name, tag, showlog):
         puuid = self.match.getPlayerPUUID(name, tag)
+        if puuid is None:
+            print('查询失败, puuid为空')
+            return
         matchIds = self.match.getMatchs(puuid)
         winNum = 0
         matchNum = 0
         if matchIds is None:
-            print("查询失败, matchid为空")
+            print('查询失败, matchid为空')
             return
         # loop = self.match.asyncio.new_event_loop()
         # self.match.asyncio.set_event_loop(loop)
@@ -88,6 +91,7 @@ class Player:
             outcome = None
             opponentDetail = None
             myDetials = None
+            totalTurn = detail['info']['total_turn_count']
             for count, ppid in enumerate(ppids):
                 if ppid != puuid:
                     #print(ppid)
@@ -99,7 +103,7 @@ class Player:
                     if outcome == 'win':
                         winNum += 1
             print(outcome + "   " + str(myDetials["factions"]) + myDetials['deck_code'] + str(opponentDetail["factions"]) + " " + opponentDetail['deck_code'])
-            showlog(self.match.getPlayerName(opponentDetail['puuid']) + ' ' + utility.tolocalTimeString(startTime), outcome, myDetials['deck_code'])
+            showlog(self.match.getPlayerName(opponentDetail['puuid']) + ' ' + utility.tolocalTimeString(startTime), outcome, myDetials['deck_code'], utility.getFactionString(myDetials["factions"]),opponentDetail['deck_code'],utility.getFactionString(opponentDetail["factions"]), totalTurn, matchNum)
         if matchNum != 0:
             print(str(winNum) + ' wins' + ' out of ' + str(matchNum) + ' rank matchs')
             print("Win rate: " + str(int(winNum/matchNum * 100)) + "%" )

@@ -1,17 +1,20 @@
-from asyncio.windows_events import NULL
-from network import Network
-from pystray import Icon as icon, Menu as menu, MenuItem as item
 import sys
 import time
 import webbrowser
+from asyncio.windows_events import NULL
 from io import BytesIO
-from PIL import Image, ImageFile
 
+from PIL import Image, ImageFile
+from pystray import Icon as icon
+from pystray import Menu as menu
+from pystray import MenuItem as item
+
+import constants as cs
 from local import Local
 from match import Match
+from network import Network
 from player import Player
-from setting import Setting, Server
-import constants as cs
+from setting import Server, Setting
 
 # orig_stdout = sys.stdout
 # f = open('history.log', 'a')
@@ -28,7 +31,6 @@ state = setting.getServer()
 local = NULL
 
 # opponent.checkOpponent('Storm', '5961')
-
 ImageFile.LOAD_TRUNCATED_IMAGES = True
 with open('Resource/image.png', 'rb') as f:
     b = BytesIO()
@@ -86,26 +88,15 @@ def show(v):
 
 
 itemCheckAgain = item('重新显示牌组', checkAgain)  # Reopen latest decks
-itemVersion = item('版本: ' + cs.VERSION_NUM + '内测',
-                   versionApp)  # Check for update
+itemVersion = item('版本: ' + cs.VERSION_NUM + '内测', versionApp)  # Check for update
 itemQuit = item('退出', quitApp)  # Quit
 
-americasItem = item('americas (NA美服)',
-                    set_state(Server.NA),
-                    checked=get_state('americas'),
-                    radio=True)
-europeItem = item('europe (EU欧服)',
-                  set_state(Server.EU),
-                  checked=get_state('europe'),
-                  radio=True)
-asiaItem = item('asia (ASIA亚服)',
-                set_state(Server.ASIA),
-                checked=get_state('asia'),
-                radio=True)
+americasItem = item('americas (NA美服)', set_state(Server.NA), checked=get_state('americas'), radio=True)
+europeItem = item('europe (EU欧服)', set_state(Server.EU), checked=get_state('europe'), radio=True)
+asiaItem = item('asia (ASIA亚服)', set_state(Server.ASIA), checked=get_state('asia'), radio=True)
 
 subMenu = item(show, menu(americasItem, europeItem, asiaItem))
 
 menuWithItems = menu(itemCheckAgain, itemVersion, subMenu, itemQuit)
 
-icon('LOR Master Tracker', image, title="LOR Master Tracker v" +
-     cs.VERSION_NUM, menu=menuWithItems).run(work)
+icon('LOR Master Tracker', image, title="LOR Master Tracker v" + cs.VERSION_NUM, menu=menuWithItems).run(work)
