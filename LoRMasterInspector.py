@@ -26,9 +26,25 @@ class Inspector(InspectorWidget):
         self.parentWindow = window
 
     def inspectPushButtonClicked(self):
+        print('inspectPushButtonClicked called')
         self.parentWindow.progressBar.setValue(0)
-        self.parentWindow.progressBar.setHidden(False)
+        
+        fullName = self.idLineEdit.text().strip()
+        self.work.plaerName = fullName
+        
+        if '#' in fullName:
+            if len(fullName) >= 5:
+                self.work.start()
+                self.textEdit.appendHtml(self.getHtml(fullName, 'OrangeRed'))
+                self.parentWindow.progressBar.setHidden(False)
+                return
+        
+        self.textEdit.appendHtml(self.getHtml(fullName + ' is invalid, please input name and tag seperated by # eg: storm#5961', 'OrangeRed')) 
         return super().inspectPushButtonClicked()
+
+    def showFinish(self, text):
+        self.parentWindow.progressBar.setHidden(True)
+        return super().showFinish(text)
 
     def showlog(self, opponentName, outcome, deckCode, factions, opDeckCode, opFactions, totalTurn, num):
         self.parentWindow.progressBar.setValue(num)
