@@ -107,5 +107,5 @@ def checkPlayerDetails2(name, tag):
     else:
         print('无法获取对战历史数据')
 
-
-checkPlayerDetails2('虎牙ace', '123')
+checkPlayerDetails()
+#checkPlayerDetails2('虎牙ace', '123')

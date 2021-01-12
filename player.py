@@ -79,8 +79,14 @@ class Player:
             if matchNum == 5:
                 break
             detail = self.match.getDetail(matchId)
+            #print('type:', str(type(detail)))
+            if detail.isdigit():
+                print('Retry after '+ str(detail) +', Riot server is busy.')
+                finishTrigger('Retry after '+ str(detail) + ' seconds, Riot server is busy.')
+                return 
             if detail is None:
                 continue
+            print('detail', detail)
             startTime = detail['info']['game_start_time_utc']
             if detail['info']['game_type'] != 'Ranked':
                 print(detail['info']['game_type'], detail['info']['game_mode'],  utility.tolocalTimeString(startTime))

@@ -21,9 +21,11 @@ class Match():
             print('无法连接PUUID服务器')
             return None
         idDetails = puuidRequest.json()
-        if 'status' in idDetails:
-            status = idDetails['status']
-            print('PUUID服务器错误: ', status)
+        if not puuidRequest.ok:
+            print(puuidLink)
+            print(puuidRequest.headers)
+            print(puuidRequest.status_code)
+            print('PUUID服务器错误')
             return None
         return idDetails.get('puuid')
 
@@ -37,9 +39,11 @@ class Match():
             print('无法连接比赛ID服务器')
             return None
         matchIds = matchRequest.json()
-        if 'status' in matchIds:
-            status = matchIds['status']
-            print('比赛ID服务器错误: ', status)
+        if not matchRequest.ok:
+            print(matchLink)
+            print(matchRequest.headers)
+            print(matchRequest.status_code)
+            print('比赛ID服务器错误')
             return None
         return matchIds
 
@@ -59,7 +63,6 @@ class Match():
 
     def getDetail(self, matchId):
         detailsLink = self.network.getDetailsLink(matchId)
-        print(detailsLink)
         try:
             detailsRequest = requests.get(detailsLink)
         except requests.exceptions.RequestException as e:
@@ -68,16 +71,21 @@ class Match():
             print('无法连接比赛内容服务器')
             return None
         detail = detailsRequest.json()
-        if 'status' in detail:
-            status = detail['status']
-            print("match details server Error")
-            print('比赛内容服务器错误: ', status)
+        if not detailsRequest.ok:
+            header = detailsRequest.headers
+            print(detailsLink)
+            print(header)
+            print(detailsRequest.status_code)
+            print('比赛内容服务器错误')
+            if 'Retry-After' in header:
+                print('服务器正忙,请等待',header['Retry-After'],'秒')    
+                return header['Retry-After']
             return None
         if detail is None:
             print('比赛内容服务返回空')
         return detail
 
-    # 仅仅在main中使用
+    # 仅仅在main中使用和inspector中使用
     def getPlayerName(self, puuid):
         nameLink = self.network.getNameLink(puuid)
         try:
@@ -88,8 +96,12 @@ class Match():
             print('无法连接用户名puuid服务器')
             return '名字Unknow'
         name = nameRequest.json()
-        if 'status' in name:
-            status = name['status']
-            print('用户名puuid服务器错误: ', status)
+        #headers = nameRequest.headers
+        #print(headers)
+        if not nameRequest.ok:
+            print(nameLink)
+            print(nameRequest.headers)
+            print(nameRequest.status_code)
+            print('用户名puuid服务器错误:')
             return '名字Unknow'
         return name['gameName'] + "#" + name['tagLine']

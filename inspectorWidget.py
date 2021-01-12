@@ -107,7 +107,7 @@ class InspectorWidget(QWidget):
 
     def getHtml(self, text, color):
         return' <font color = \"' + color + '\">' + text + '</font>'
-
+    
     def changeServer(self, serverName):
         print('changeSever call')
         #completer = QCompleter(local.playernames)
