@@ -33,7 +33,8 @@ class Inspector(InspectorWidget):
         self.work.plaerName = fullName
         
         if '#' in fullName:
-            if len(fullName) >= cs.MAX_NUM_DETAILS:
+            #检查名字是否过短
+            if len(fullName) >= 5:
                 self.work.start()
                 self.textEdit.appendHtml(self.getHtml(fullName, 'OrangeRed'))
                 self.parentWindow.progressBar.setHidden(False)

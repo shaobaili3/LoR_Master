@@ -113,7 +113,7 @@ class Player:
         if matchNum != 0:
             print(str(winNum) + ' wins' + ' out of ' + str(matchNum) + ' rank matchs')
             print("Win rate: " + str(int(winNum/matchNum * 100)) + "%" )
-            return finishTrigger('Win rate: ' + str(int(winNum/matchNum * 100)) + "%  " + str(winNum) + ' wins' + ' out of ' + str(matchNum) + ' rank matchs')
+            return finishTrigger(name + '#' + tag + ' win rate: ' + str(int(winNum/matchNum * 100)) + "%  " + str(winNum) + ' wins' + ' out of ' + str(matchNum) + ' rank matchs')
         else:
             print('无法获取对战历史数据')
             return finishTrigger(name + '#' + tag + ' has no recent rank match records')
