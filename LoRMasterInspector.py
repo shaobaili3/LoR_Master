@@ -13,10 +13,10 @@ class Window(QMainWindow):
         # setting status bar message
         self.statusBar().showMessage("Version: " + cs.VERSION_NUM_INSPECTOR)
         self.progressBar = QProgressBar()
-        self.progressBar.setRange(0, 5)
+        self.progressBar.setRange(0, cs.MAX_NUM_DETAILS)
         #self.progressBar.setFormat('Connected')
         #self.progressBar.setTextVisible(False)
-        self.progressBar.setValue(5)
+        #self.progressBar.setValue(5)
         self.progressBar.setHidden(True)
         self.statusBar().addPermanentWidget(self.progressBar)
 
@@ -33,7 +33,7 @@ class Inspector(InspectorWidget):
         self.work.plaerName = fullName
         
         if '#' in fullName:
-            if len(fullName) >= 5:
+            if len(fullName) >= cs.MAX_NUM_DETAILS:
                 self.work.start()
                 self.textEdit.appendHtml(self.getHtml(fullName, 'OrangeRed'))
                 self.parentWindow.progressBar.setHidden(False)

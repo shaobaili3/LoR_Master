@@ -1,7 +1,7 @@
 import json
 import webbrowser
 import utility
-
+import constants as cs
 
 class Player:
     def __init__(self, match):
@@ -76,7 +76,7 @@ class Player:
         # tasks = [self.match.aioGetDetail(id) for id in matchIds]
         # details = loop.run_until_complete(self.match.asyncio.gather(*tasks))
         for matchId in matchIds:
-            if matchNum == 10:
+            if matchNum == cs.MAX_NUM_DETAILS:
                 break
             detail = self.match.getDetail(matchId)
             #print('type:', str(type(detail)))
