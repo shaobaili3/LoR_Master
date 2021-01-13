@@ -76,11 +76,11 @@ class Player:
         # tasks = [self.match.aioGetDetail(id) for id in matchIds]
         # details = loop.run_until_complete(self.match.asyncio.gather(*tasks))
         for matchId in matchIds:
-            if matchNum == 5:
+            if matchNum == 10:
                 break
             detail = self.match.getDetail(matchId)
             #print('type:', str(type(detail)))
-            if detail.isdigit():
+            if str(detail).isdigit():
                 print('Retry after '+ str(detail) +', Riot server is busy.')
                 finishTrigger('Retry after '+ str(detail) + ' seconds, Riot server is busy.')
                 return 
@@ -113,7 +113,7 @@ class Player:
         if matchNum != 0:
             print(str(winNum) + ' wins' + ' out of ' + str(matchNum) + ' rank matchs')
             print("Win rate: " + str(int(winNum/matchNum * 100)) + "%" )
-            return finishTrigger(None)
+            return finishTrigger('Win rate: ' + str(int(winNum/matchNum * 100)) + "%  " + str(winNum) + ' wins' + ' out of ' + str(matchNum) + ' rank matchs')
         else:
             print('无法获取对战历史数据')
             return finishTrigger(name + '#' + tag + ' has no recent rank match records')

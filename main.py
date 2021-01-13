@@ -5,7 +5,7 @@ from player import Player
 import utility
 
 setting = Setting()
-setting.setServer(Server.NA)
+setting.setServer(Server.EU)
 network = Network(setting)
 match = Match(network)
 opponent = Player(match)
@@ -16,7 +16,7 @@ opponent = Player(match)
 
 def checkPlayerDetails():
     
-    puuid = match.getPlayerPUUID('虎牙ace', '123')
+    puuid = match.getPlayerPUUID('HueCicero', 'EUW')
     matchIds = match.getMatchs(puuid)
     print(matchIds)
 
