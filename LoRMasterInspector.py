@@ -11,7 +11,7 @@ class Window(QMainWindow):
         super().__init__()
         self.resize(800, 450)
         # setting status bar message
-        self.statusBar().showMessage("Version: 0.1.0 beta")
+        self.statusBar().showMessage("Version: " + cs.VERSION_NUM_INSPECTOR)
         self.progressBar = QProgressBar()
         self.progressBar.setRange(0, 5)
         #self.progressBar.setFormat('Connected')
