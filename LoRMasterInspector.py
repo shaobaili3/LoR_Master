@@ -30,13 +30,13 @@ class Inspector(InspectorWidget):
         self.parentWindow.progressBar.setValue(0)
         
         fullName = self.idLineEdit.text().strip()
-        self.work.plaerName = fullName
+        self.work.playerName = fullName
         
         if '#' in fullName:
             #检查名字是否过短
             if len(fullName) >= 5:
                 self.work.start()
-                self.textEdit.appendHtml(self.getHtml(fullName, 'OrangeRed'))
+                self.textEdit.appendHtml(self.getHtml(fullName, 'OrangeRed') + ' (' + self.setting.getServer() + ')')
                 self.parentWindow.progressBar.setHidden(False)
                 return
         

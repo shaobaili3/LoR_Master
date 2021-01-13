@@ -6,13 +6,13 @@ class LoadThread(QThread):
     finishTrigger = pyqtSignal(str)
 
     def __int__(self):
-        super(LoadThread, self).__init__()
-        self.plaerName = ''
+        super().__init__()
+        self.playerName = ''
         self.player = None
 
     def run(self):
         print('running')
-        fullname = self.plaerName.strip().split('#')
+        fullname = self.playerName.strip().split('#')
         try:
             self.player.inspectPlayer(fullname[0], fullname[1], self.trigger.emit, self.finishTrigger.emit)
         except IndexError:
