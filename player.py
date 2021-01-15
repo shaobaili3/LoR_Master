@@ -53,7 +53,7 @@ class Player:
             print('卡组', index + 1, '代码:', code)
         print("正在启动浏览器...(如果等待过长，请手动重启默认浏览器后，点击重新显示套牌按钮)")
         for index, code in enumerate(self.sortedDecksCode):
-            webbrowser.open('https://www.yaytears.com/runeterra/deck/' + code)
+            webbrowser.open('https://lor.mobalytics.gg/decks/code/' + code)
             if index == 0:
                 pass
             if index == 2:

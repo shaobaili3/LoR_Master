@@ -71,8 +71,10 @@ class Match():
             print('无法连接比赛内容服务器')
             return None
         detail = detailsRequest.json()
+        header = detailsRequest.headers
+        if 'X-Method-Rate-Limit-Count' in header:
+            print('X-Method-Rate-Limit-Count: ', header['X-Method-Rate-Limit-Count'])
         if not detailsRequest.ok:
-            header = detailsRequest.headers
             print(detailsLink)
             print(header)
             print(detailsRequest.status_code)

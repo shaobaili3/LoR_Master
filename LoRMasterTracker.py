@@ -1,102 +1,64 @@
-import sys
-import time
-import webbrowser
-from asyncio.windows_events import NULL
-from io import BytesIO
-
-from PIL import Image, ImageFile
-from pystray import Icon as icon
-from pystray import Menu as menu
-from pystray import MenuItem as item
-
+from PyQt5.QtCore import *
+from PyQt5.QtGui import *
+from PyQt5.QtWidgets import *
 import constants as cs
-from local import Local
-from match import Match
-from network import Network
-from player import Player
-from setting import Server, Setting
+import os
+import sys
+from inspectorWidget import InspectorWidget
 
-# orig_stdout = sys.stdout
-# f = open('history.log', 'a')
-# sys.stdout = f
-# print(time.localtime())
-# #sys.stdout = orig_stdout
-# #f.close()
+class Window(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        self.resize(800, 450)
+        # setting status bar message
+        self.statusBar().showMessage("Version: " + cs.VERSION_NUM_INSPECTOR)
+        self.progressBar = QProgressBar()
+        self.progressBar.setRange(0, cs.MAX_NUM_DETAILS)
+        #self.progressBar.setFormat('Connected')
+        #self.progressBar.setTextVisible(False)
+        #self.progressBar.setValue(5)
+        self.progressBar.setHidden(True)
+        self.statusBar().addPermanentWidget(self.progressBar)
 
-setting = Setting()
-network = Network(setting)
-match = Match(network)
-opponent = Player(match)
-state = setting.getServer()
-local = NULL
+class Inspector(InspectorWidget):
+    def __init__(self, window):
+        super().__init__()
+        self.parentWindow = window
 
-# opponent.checkOpponent('Storm', '5961')
-ImageFile.LOAD_TRUNCATED_IMAGES = True
-with open('Resource/image.png', 'rb') as f:
-    b = BytesIO()
-    b.write(f.read())
-    image = Image.open(b)
-    image.load()
+    def inspectPushButtonClicked(self):
+        print('inspectPushButtonClicked called')
+        self.parentWindow.progressBar.setValue(0)
+        
+        fullName = self.idLineEdit.text().strip()
+        self.work.playerName = fullName
+        
+        if '#' in fullName:
+            #检查名字是否过短
+            if len(fullName) >= 5:
+                self.work.start()
+                self.textEdit.appendHtml(self.getHtml(fullName, 'OrangeRed') + ' (' + self.setting.getServer() + ')')
+                self.parentWindow.progressBar.setHidden(False)
+                return
+        
+        self.textEdit.appendHtml(self.getHtml(fullName + ' is invalid, please input name and tag seperated by # eg: storm#5961', 'OrangeRed')) 
+        return super().inspectPushButtonClicked()
 
+    def showFinish(self, text):
+        self.parentWindow.progressBar.setHidden(True)
+        return super().showFinish(text)
 
-def work(stray):
-    stray.visible = True
-    global local
-    local = Local(setting)
-    if stray.HAS_NOTIFICATION:
-        # LoR Master Tracker is running
-        stray.notify("对手套牌查询已启动", title=cs.DISPLAY_TITLE)
-    while stray.visible:
-        # print("xxxx")
-        time.sleep(1)
-        local.updateStatus(opponent.checkOpponent)
-        # print(stray.visible)
-
-
-def checkAgain(stray):
-    opponent.showOpponentAgain()
-
-
-def quitApp(stray):
-    stray.visible = False
-    stray.stop()
-    sys.exit()
+    def showlog(self, opponentName, outcome, deckCode, factions, opDeckCode, opFactions, totalTurn, num):
+        self.parentWindow.progressBar.setValue(num)
+        return super().showlog(opponentName, outcome, deckCode, factions, opDeckCode, opFactions, totalTurn, num)
 
 
-def versionApp(stray):
-    link = "https://github.com/shaobaili3/lor_master/releases"
-    webbrowser.open(link)
-
-
-def set_state(server):
-    def inner():
-        setting.setServer(server)
-        local.reset()
-        global state
-        state = server.value
-    return inner
-
-
-def get_state(v):
-    def inner(item):
-        return state == v
-    return inner
-
-
-def show(v):
-    return '服务器: ' + str(state)
-
-
-itemCheckAgain = item('重新显示牌组', checkAgain)  # Reopen latest decks
-itemVersion = item('版本: ' + cs.VERSION_NUM + '内测', versionApp)  # Check for update
-itemQuit = item('退出', quitApp)  # Quit
-
-americasItem = item('americas (NA美服)', set_state(Server.NA), checked=get_state('americas'), radio=True)
-europeItem = item('europe (EU欧服)', set_state(Server.EU), checked=get_state('europe'), radio=True)
-asiaItem = item('asia (ASIA亚服)', set_state(Server.ASIA), checked=get_state('asia'), radio=True)
-
-subMenu = item(show, menu(americasItem, europeItem, asiaItem))
-
-menuWithItems = menu(itemCheckAgain, itemVersion, subMenu, itemQuit)
-
-icon('LOR Master Tracker', image, title="LOR Master Tracker v" + cs.VERSION_NUM, menu=menuWithItems).run(work)
+app = QApplication(sys.argv)
+os.environ["QT_AUTO_SCREEN_SCALE_FACTOR"] = "1"
+app.setApplicationName(cs.DISPLAY_TITLE)
+app.setWindowIcon(QIcon('test.jpg'))
+app.setStyle('Fusion')
+window = Window()
+inspectorWidget = Inspector(window)
+window.setCentralWidget(inspectorWidget)
+window.show()
+sys.exit(app.exec())

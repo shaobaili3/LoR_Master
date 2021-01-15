@@ -83,6 +83,8 @@ class InspectorWidget(QWidget):
             pass
         else:
             self.textEdit.appendHtml(self.getHtml(text, 'OrangeRed'))
+            #为了美观最后空一行
+            self.textEdit.appendHtml('')
 
 
     def showlog(self, opponentName, outcome, deckCode, factions,opDeckCode, opFactions, totalTurn, num):
