@@ -9,7 +9,7 @@ from inspectorWidget import InspectorWidget
 class Window(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.resize(800, 450)
+        self.resize(1024, 768)
         # setting status bar message
         self.statusBar().showMessage("Version: " + cs.VERSION_NUM_INSPECTOR)
         self.progressBar = QProgressBar()
@@ -39,7 +39,6 @@ class Inspector(InspectorWidget):
                 self.textEdit.appendHtml(self.getHtml(fullName, 'OrangeRed') + ' (' + self.setting.getServer() + ')')
                 self.parentWindow.progressBar.setHidden(False)
                 return
-        
         self.textEdit.appendHtml(self.getHtml(fullName + ' is invalid, please input name and tag seperated by # eg: storm#5961', 'OrangeRed')) 
         return super().inspectPushButtonClicked()
 
@@ -50,7 +49,6 @@ class Inspector(InspectorWidget):
     def showlog(self, opponentName, outcome, deckCode, factions, opDeckCode, opFactions, totalTurn, num):
         self.parentWindow.progressBar.setValue(num)
         return super().showlog(opponentName, outcome, deckCode, factions, opDeckCode, opFactions, totalTurn, num)
-
 
 app = QApplication(sys.argv)
 os.environ["QT_AUTO_SCREEN_SCALE_FACTOR"] = "1"
