@@ -109,7 +109,7 @@ class Player:
                     if outcome == 'win':
                         winNum += 1
             print(outcome + "   " + str(myDetials["factions"]) + myDetials['deck_code'] + str(opponentDetail["factions"]) + " " + opponentDetail['deck_code'])
-            showlog(self.match.getPlayerName(opponentDetail['puuid']) + ' ' + utility.tolocalTimeString(startTime), outcome, myDetials['deck_code'], utility.getFactionString(myDetials["factions"]),opponentDetail['deck_code'],utility.getFactionString(opponentDetail["factions"]), totalTurn, matchNum)
+            showlog(self.match.getPlayerName(opponentDetail['puuid']), utility.tolocalTimeString(startTime), outcome, myDetials['deck_code'], utility.getFactionString(myDetials["factions"]),opponentDetail['deck_code'],utility.getFactionString(opponentDetail["factions"]), totalTurn, matchNum)
         if matchNum != 0:
             print(str(winNum) + ' wins' + ' out of ' + str(matchNum) + ' rank matchs')
             print("Win rate: " + str(int(winNum/matchNum * 100)) + "%" )
