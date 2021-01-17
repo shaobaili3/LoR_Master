@@ -1,0 +1,2 @@
+LoRmasterTracker.exe
+pause
