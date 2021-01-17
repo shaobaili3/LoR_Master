@@ -18,7 +18,7 @@ LoR Master Tracker is a history tracker and deck inspector for League of Runeter
 ## Installation
 
 * Requirements: Windows 7 or higher
-* [Download](https://github.com/shaobaili3/lor_master/releases/download/v0.5.0-beta/LoRMasterTracker-v0.5.0-beta.zip)
+* [Click here to download](https://github.com/shaobaili3/lor_master/releases/download/v0.5.0-beta/LoRMasterTracker-v0.5.0-beta.zip)
 * [Release page](https://github.com/shaobaili3/lor_master/releases)
 
 ## Features
