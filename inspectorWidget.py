@@ -46,15 +46,24 @@ class InspectorWidget(QWidget):
         self.inspectPushButton = QPushButton("Inspect")
         self.inspectPushButton.setDefault(True)
         self.inspectPushButton.clicked.connect(self.inspectPushButtonClicked)
+
+
+        self.clearButton = QPushButton()
+        self.clearButton.setDefault(True)
+        self.clearButton.clicked.connect(self.clearButtonCliked)
+        self.clearButton.setIcon(QIcon('Resource/button.png'))
+
         topLayout.addWidget(styleLabel)
         topLayout.addWidget(styleComboBox)
         topLayout.addWidget(idLabel)
         topLayout.addWidget(self.idLineEdit)
         topLayout.addWidget(self.inspectPushButton)
+        topLayout.addWidget(self.clearButton)
         textLayout = QHBoxLayout()
-        self.textEdit = QPlainTextEdit()
-        self.textEdit.setReadOnly(True)
-        textLayout.addWidget(self.textEdit)
+        self.textBrowser = QTextBrowser()
+        self.textBrowser.setAcceptRichText(True)
+        self.textBrowser.setOpenExternalLinks(True)
+        textLayout.addWidget(self.textBrowser)
         outerLayout.addLayout(topLayout)
         outerLayout.addLayout(textLayout)
         self.setLayout(outerLayout)
@@ -63,6 +72,9 @@ class InspectorWidget(QWidget):
         self.work.trigger.connect(self.showlog)
         self.work.finishTrigger.connect(self.showFinish)
 
+    def clearButtonCliked(self):
+        self.textBrowser.clear()
+    
     def inspectPushButtonClicked(self):
         pass
         # print('start button pushed')
@@ -82,12 +94,12 @@ class InspectorWidget(QWidget):
         if text is None:
             pass
         else:
-            self.textEdit.appendHtml(self.getHtml(text, 'OrangeRed'))
+            self.textBrowser.append(self.getHtml(text, 'OrangeRed'))
             #为了美观最后空一行
-            self.textEdit.appendHtml('')
+            self.textBrowser.append('')
 
 
-    def showlog(self, opponentName, outcome, deckCode, factions,opDeckCode, opFactions, totalTurn, num):
+    def showlog(self, opponentName, timeStr, outcome, deckCode, factions,opDeckCode, opFactions, totalTurn, num):
 
         print('call showlog')
         htmlOpponentName = self.getHtml(opponentName, 'Black')
@@ -99,10 +111,16 @@ class InspectorWidget(QWidget):
         htmlopFactions = self.getHtml(opFactions, 'Black')
         if outcome == 'win':
             htmlOutcome = self.getHtml(outcome, 'Green')
-        self.textEdit.appendHtml(htmlOutcome + htmlOpponentName + htmlTotalturn)
-        self.textEdit.appendHtml(htmlFactions + htmlDeckCode)
-        self.textEdit.appendHtml(htmlopFactions + htmlopDeckCode)
-        self.textEdit.appendHtml(' ')
+        self.textBrowser.append(htmlOutcome + htmlOpponentName) 
+        self.textBrowser.append(timeStr + ' ' + htmlTotalturn)
+        self.textBrowser.append(htmlFactions)
+        self.textBrowser.append(self.getDeckCodeHtml(deckCode))
+        self.textBrowser.append(htmlopFactions)
+        self.textBrowser.append(self.getDeckCodeHtml(opDeckCode))
+        self.textBrowser.append(' ')
+
+    def getDeckCodeHtml(self, text):
+        return "<a href=\"https://lor.mobalytics.gg/decks/code/" + text + "\">" + text + "</a>"
 
     def getHtml(self, text, color):
         return' <font color = \"' + color + '\">' + text + '</font>'

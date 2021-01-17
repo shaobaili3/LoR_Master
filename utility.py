@@ -13,7 +13,7 @@ def tolocalTimeString(dateString):
     #print(new_ts.tzname()) #Show time zone
     #print(relativedelta(datetime.now(tz.tzlocal()), new_ts))
     timeAgoStr = timeago.format(new_ts, datetime.now(tz.tzlocal()))
-    return str(new_ts.date().isoformat()) + ' ' + str(new_ts.time().strftime('%H:%M')) + ' ' + timeAgoStr
+    return timeAgoStr + ' · ' + str(new_ts.date().isoformat()) + ' ' + str(new_ts.time().strftime('%H:%M'))
 
 #print(tolocalTimeString('2020-10-28T06:14:11.2469379+00:00'))
 

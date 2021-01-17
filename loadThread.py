@@ -2,7 +2,7 @@ from PyQt5.QtCore import QThread, pyqtSignal
 
 
 class LoadThread(QThread):
-    trigger = pyqtSignal(str, str, str, str, str, str, int, int)
+    trigger = pyqtSignal(str, str, str, str, str, str, str, int, int)
     finishTrigger = pyqtSignal(str)
 
     def __int__(self):
