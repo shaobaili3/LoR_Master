@@ -38,7 +38,7 @@ LoR Master Tracker is a history tracker and deck inspector for League of Runeter
 
 ## Development & Contribution
 
-LoR Master Tracker is written by pure [Python3](https://www.python.org/downloads/) for cross-platform and local port retrieval. So it can be easily migrated to any different platform. The Interface is built by [PyQt5](https://riverbankcomputing.com/software/pyqt/download)(No interface builder). I am planning to use Firebase as database and Vue/React as Front-end, besides Electron and Django/Flask framework is used to generate both Desktop application and web application. This project will be open source before the first stable release(v1.0.0) in the [new repo](https://github.com/shaobaili3/LoR-Master-Tracker). If you want to contribute the project early, feel free to contact me to add you to my private repo.
+LoR Master Tracker is written by pure [Python3](https://www.python.org/downloads/) for cross-platform and local port retrieval. So it can be easily migrated to any different platforms. The Interface is built by [PyQt5](https://riverbankcomputing.com/software/pyqt/download)(No interface builder). I am planning to use Firebase as database and Vue/React as Front-end, besides Electron and Django/Flask framework is used to generate both Desktop application and web application. This project will be open source before the first stable release(v1.0.0) in the [new repo](https://github.com/shaobaili3/LoR-Master-Tracker). If you want to contribute the project early, feel free to contact me to add you to my private repo.
 
 ## FAQ
 
