@@ -59,11 +59,11 @@ def time_ago(time=False):
         if second_diff < 10:
             return "just now"
         if second_diff < 60:
-            return str(second_diff) + " seconds ago"
+            return str(int(second_diff)) + " seconds ago"
         if second_diff < 120:
             return  "a minute ago"
         if second_diff < 3600:
-            return str( second_diff / 60 ) + " minutes ago"
+            return str( int(second_diff / 60) ) + " minutes ago"
         if second_diff < 7200:
             return "an hour ago"
         if second_diff < 86400:
