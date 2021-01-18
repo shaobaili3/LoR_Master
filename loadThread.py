@@ -2,8 +2,9 @@ from PyQt5.QtCore import QThread, pyqtSignal
 
 
 class LoadThread(QThread):
-    trigger = pyqtSignal(str, str, str, str, str, str, str, int, int)
+    showLogtrigger = pyqtSignal(str, str, str, str, str, str, str, int, int)
     finishTrigger = pyqtSignal(str)
+    summaryTigger = pyqtSignal(dict)
 
     def __int__(self):
         super().__init__()
@@ -14,7 +15,7 @@ class LoadThread(QThread):
         print('running')
         fullname = self.playerName.strip().split('#')
         try:
-            self.player.inspectPlayer(fullname[0], fullname[1], self.trigger.emit, self.finishTrigger.emit)
+            self.player.inspectPlayer(fullname[0], fullname[1], self.showLogtrigger.emit,self.summaryTigger.emit, self.finishTrigger.emit)
         except IndexError:
             return
         

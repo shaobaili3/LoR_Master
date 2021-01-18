@@ -26,6 +26,7 @@ class Match():
             print(puuidRequest.headers)
             print(puuidRequest.status_code)
             print('PUUID服务器错误')
+            print(idDetails)
             return None
         return idDetails.get('puuid')
 
@@ -44,6 +45,7 @@ class Match():
             print(matchRequest.headers)
             print(matchRequest.status_code)
             print('比赛ID服务器错误')
+            print(matchIds)
             return None
         return matchIds
 
@@ -78,6 +80,7 @@ class Match():
             print(detailsLink)
             print(header)
             print(detailsRequest.status_code)
+            print(detail)
             print('比赛内容服务器错误')
             if 'Retry-After' in header:
                 print('服务器正忙,请等待',header['Retry-After'],'秒')    
@@ -104,6 +107,7 @@ class Match():
             print(nameLink)
             print(nameRequest.headers)
             print(nameRequest.status_code)
+            print(name)
             print('用户名puuid服务器错误:')
             return '名字Unknow'
         return name['gameName'] + "#" + name['tagLine']

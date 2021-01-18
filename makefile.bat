@@ -9,4 +9,4 @@ nuitka --mingw64 --standalone --show-progress --show-memory --plugin-enable=pyli
 
 
 
-pyinstaller.exe --onefile --icon=test.ico --noconsole LoRMasterInspector.py
+pyinstaller.exe --onefile --icon=test.ico --noconsole LoRMasterTracker.py

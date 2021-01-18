@@ -69,8 +69,9 @@ class InspectorWidget(QWidget):
         self.setLayout(outerLayout)
         self.work = LoadThread()
         self.work.player = self.player
-        self.work.trigger.connect(self.showlog)
+        self.work.showLogtrigger.connect(self.showlog)
         self.work.finishTrigger.connect(self.showFinish)
+        self.work.summaryTigger.connect(self.showSummary)
 
         #self.textBrowser.setHtml("""My image :<br /><img src="test.ico"/  height=10 width=20>""")
 
@@ -100,6 +101,7 @@ class InspectorWidget(QWidget):
             self.textBrowser.append(self.getHtml(text, 'OrangeRed'))
             #为了美观最后空一行
             self.textBrowser.append('')
+        self.textBrowser.moveCursor(QTextCursor.End)
         
 
 
@@ -108,14 +110,14 @@ class InspectorWidget(QWidget):
         print('call showlog')
         htmlOpponentName = self.getHtml(opponentName, 'Black')
         htmlOutcome = self.getHtml(outcome.capitalize(), 'IndianRed')
-        htmlFactions = self.getHtml(factions, 'Black')
+        htmlFactions = self.getHtml(factions, 'OrangeRed')
         htmlTotalturn = self.getHtml('Turn: ' + str(totalTurn), 'DarkGray')
         htmlopFactions = self.getHtml(opFactions, 'Black')
         if outcome == 'win':
-            htmlOutcome = self.getHtml(outcome, 'Green')
+            htmlOutcome = self.getHtml(outcome.capitalize(), 'Green')
 
-        htmlHeros = self.getHtml(deck.getChampion(deckCode), 'OrangeRed')
-        htmlOpHeros = self.getHtml(deck.getChampion(opDeckCode), 'DarkGreen')
+        htmlHeros = self.getHtml(deck.getChampion(deckCode), 'DarkRed')
+        htmlOpHeros = self.getHtml(deck.getChampion(opDeckCode), 'black')
 
         self.textBrowser.append(htmlOutcome + htmlOpponentName) 
         self.textBrowser.append(self.getHtml(timeStr, 'DarkOrange') + ' ' + htmlTotalturn)
@@ -125,6 +127,14 @@ class InspectorWidget(QWidget):
         self.textBrowser.append(htmlopFactions + htmlOpHeros)
         self.textBrowser.append(self.getDeckCodeHtml(opDeckCode))
         self.textBrowser.append(' ')
+
+
+    def showSummary(self, deckdict):
+        self.textBrowser.append(self.getHtml('Summary:' , 'OrangeRed'))
+        for deckCode, usedTime in deckdict.items():
+            #print(deckCode, usedTime)
+            self.textBrowser.append(self.getHtml(deck.getChampion(deckCode), 'DarkRed') + ' ' + self.getDeckCodeHtml(deckCode) + ' ' + str(usedTime) + ' times')
+        self.textBrowser.append('')
 
     def getDeckCodeHtml(self, text):
         return "<a href=\"https://lor.mobalytics.gg/decks/code/" + text + "\">" + text + "</a>"

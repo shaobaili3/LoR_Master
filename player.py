@@ -38,11 +38,19 @@ class Player:
                     myDetials = detail['info']['players'][count]
                     deckCodes.append(myDetials['deck_code'])
                     # print(str(myDetials["factions"]) + myDetials['deck_code'])
-        Deckslist = dict(
+        deckslist = dict(
             zip(list(deckCodes), [list(deckCodes).count(i) for i in list(deckCodes)]))
         self.sortedDecksCode = sorted(
-            Deckslist, key=Deckslist.get, reverse=True)
+            deckslist, key=deckslist.get, reverse=True)
         self.showOpponentAgain()
+
+    def getNoDuplicate(self, deckCodes):
+            deckslist = dict(zip(list(deckCodes), [list(deckCodes).count(i) for i in list(deckCodes)]))
+            #sortedDecksCode = sorted(deckslist, key=deckslist.get, reverse=True)
+
+            deckslist = dict(sorted(deckslist.items(), key=lambda item: item[1], reverse=True))
+            #print(deckslist)
+            return deckslist
 
     def showOpponentAgain(self):
         if not self.sortedDecksCode:
@@ -60,7 +68,7 @@ class Player:
                 break
         print("卡组已在默认浏览器中显示, 请在浏览器中查看")
 
-    def inspectPlayer(self, name, tag, showlog, finishTrigger):
+    def inspectPlayer(self, name, tag, showlog, showSummary ,finishTrigger):
         puuid = self.match.getPlayerPUUID(name, tag)
         if puuid is None:
             print('查询失败, puuid为空')
@@ -75,6 +83,7 @@ class Player:
         # self.match.asyncio.set_event_loop(loop)
         # tasks = [self.match.aioGetDetail(id) for id in matchIds]
         # details = loop.run_until_complete(self.match.asyncio.gather(*tasks))
+        deckCodes = []
         for matchId in matchIds:
             if matchNum == cs.MAX_NUM_DETAILS:
                 break
@@ -109,11 +118,13 @@ class Player:
                     if outcome == 'win':
                         winNum += 1
             print(outcome + "   " + str(myDetials["factions"]) + myDetials['deck_code'] + str(opponentDetail["factions"]) + " " + opponentDetail['deck_code'])
+            deckCodes.append(myDetials['deck_code'])
             showlog(self.match.getPlayerName(opponentDetail['puuid']), utility.tolocalTimeString(startTime), outcome, myDetials['deck_code'], utility.getFactionString(myDetials["factions"]),opponentDetail['deck_code'],utility.getFactionString(opponentDetail["factions"]), totalTurn, matchNum)
         if matchNum != 0:
             print(str(winNum) + ' wins' + ' out of ' + str(matchNum) + ' rank matchs')
             print("Win rate: " + str(int(winNum/matchNum * 100)) + "%" )
-            return finishTrigger(name + '#' + tag + ' win rate: ' + str(int(winNum/matchNum * 100)) + "%  " + str(winNum) + ' wins' + ' out of ' + str(matchNum) + ' rank matchs')
+            showSummary(self.getNoDuplicate(deckCodes))
+            return finishTrigger(name + '#' + tag + ' win rate: ' + str(int(winNum/matchNum * 100)) + "%  " + str(winNum) + ' wins' + ' out of ' + str(matchNum) + ' rank matchs')     
         else:
             print('无法获取对战历史数据')
             return finishTrigger(name + '#' + tag + ' has no recent rank match records')
