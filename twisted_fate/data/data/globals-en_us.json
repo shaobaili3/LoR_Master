@@ -1,0 +1,469 @@
+{
+  "vocabTerms": [
+    {
+      "description": "When you summon this, it gets its allegiance bonus if the top card of your deck matches its region.",
+      "name": "Allegiance",
+      "nameRef": "Allegiance"
+    },
+    {
+      "description": "Create a random Blade Fragment still needed to restore the blade. Once you’ve cast all 3, create the Blade of the Exile.",
+      "name": "Reforge",
+      "nameRef": "Reforge"
+    },
+    {
+      "description": "Attacking with a support unit will buff the unit to its right.",
+      "name": "Support",
+      "nameRef": "Support"
+    },
+    {
+      "description": "Highest Power, with ties broken by highest Health then highest Cost.",
+      "name": "Strongest",
+      "nameRef": "Strongest"
+    },
+    {
+      "description": "Obliterate X non-champion cards from the bottom of your deck.",
+      "name": "Toss",
+      "nameRef": "Toss"
+    },
+    {
+      "description": "You behold something if you have it in play or hand.",
+      "name": "Behold",
+      "nameRef": "Behold"
+    },
+    {
+      "description": "Get this effect when the round ends.",
+      "name": "Round End",
+      "nameRef": "RoundEnd"
+    },
+    {
+      "description": "Get this effect when this unit attacks.",
+      "name": "Attack",
+      "nameRef": "Attack"
+    },
+    {
+      "description": "A unit is buffed when its Power or Health is increased or it gains a new keyword.",
+      "name": "Buffed",
+      "nameRef": "Buffed"
+    },
+    {
+      "description": "Get this effect when a unit attempts to deal damage using its Power, either at the end of battle or with spells. Units with 0 Power can't strike.",
+      "name": "Strike",
+      "nameRef": "Strike"
+    },
+    {
+      "description": "Effect when unit Strikes the enemy Nexus.",
+      "name": "Nexus Strike",
+      "nameRef": "NexusStrike"
+    },
+    {
+      "description": "Get this effect when the round starts.",
+      "name": "Round Start",
+      "nameRef": "RoundStart"
+    },
+    {
+      "description": "Get this effect when you play this unit from hand.",
+      "name": "Play",
+      "nameRef": "Play"
+    },
+    {
+      "description": "In play, in hand, in deck, in discard, and even if created/summoned later.",
+      "name": "Everywhere",
+      "nameRef": "Everywhere"
+    },
+    {
+      "description": "If you don't have one, gain the attack token. You can attack this round.",
+      "name": "Rally",
+      "nameRef": "Rally"
+    },
+    {
+      "description": "Remove all keywords, abilities, and ongoing effects. Doesn't affect damage or subtype.",
+      "name": "Silence",
+      "nameRef": "Silence"
+    },
+    {
+      "description": "A card triggers its plunder ability when played if you damaged the enemy Nexus this round.",
+      "name": "Plunder",
+      "nameRef": "Plunder"
+    }
+  ],
+  "keywords": [
+    {
+      "description": "Completely removed from the game. Doesn't cause Last Breath and can't be revived.",
+      "name": "Obliterate",
+      "nameRef": "Obliterate"
+    },
+    {
+      "description": " ",
+      "name": "Targon",
+      "nameRef": "MtTargon"
+    },
+    {
+      "description": "A unit's spell-like effect that allows enemy reactions.",
+      "name": "Skill",
+      "nameRef": "Skill"
+    },
+    {
+      "description": "While attacking, it strikes both before AND at the same time as its blocker.",
+      "name": "Double Attack",
+      "nameRef": "DoubleStrike"
+    },
+    {
+      "description": "Bonus if this is the FIRST card you play in a round.",
+      "name": "Daybreak",
+      "nameRef": "Daybreak"
+    },
+    {
+      "description": "Lowest Power, with ties broken by lowest Health then lowest Cost",
+      "name": "Weakest",
+      "nameRef": "Weakest"
+    },
+    {
+      "description": "The enemy can challenge this unit, forcing it to block.",
+      "name": "Vulnerable",
+      "nameRef": "Vulnerable"
+    },
+    {
+      "description": "Get this effect when this unit attacks.",
+      "name": "Attack",
+      "nameRef": "AttackSkillMark"
+    },
+    {
+      "description": "Can only be blocked by an Elusive unit.",
+      "name": "Elusive",
+      "nameRef": "Elusive"
+    },
+    {
+      "description": "Heal your Nexus for the amount of damage dealt",
+      "name": "Drain",
+      "nameRef": "Drain"
+    },
+    {
+      "description": "Remove a unit from combat. It can't attack or block for the rest of the round.",
+      "name": "Stun",
+      "nameRef": "Stun"
+    },
+    {
+      "description": "Attaches to another card, trapping it. When the trapped card is drawn, perform the effect.",
+      "name": "Trap",
+      "nameRef": "Autoplay"
+    },
+    {
+      "description": " ",
+      "name": "Piltover & Zaun",
+      "nameRef": "PiltoverZaun"
+    },
+    {
+      "description": " ",
+      "name": "Demacia",
+      "nameRef": "Demacia"
+    },
+    {
+      "description": "Missing Translation",
+      "name": "Can block Elusives",
+      "nameRef": "BlockElusive"
+    },
+    {
+      "description": " ",
+      "name": "Shadow Isles",
+      "nameRef": "ShadowIsles"
+    },
+    {
+      "description": "When I kill a unit, grant me +1|+1.",
+      "name": "Fury",
+      "nameRef": "Fury"
+    },
+    {
+      "description": "Inflicts damage beyond what would kill the target(s) to the enemy Nexus.",
+      "name": "Overwhelm",
+      "nameRef": "SpellOverwhelm"
+    },
+    {
+      "description": "When I'm summoned, refill 1 spell mana.",
+      "name": "Attune",
+      "nameRef": "Attune"
+    },
+    {
+      "description": "Landmarks take up a space on the board. They can't attack, block, or take damage.",
+      "name": "Landmark",
+      "nameRef": "LandmarkVisualOnly"
+    },
+    {
+      "description": "Negates the next damage the unit would take. Lasts one round.",
+      "name": "Barrier",
+      "nameRef": "Barrier"
+    },
+    {
+      "description": "Can't attack or block.",
+      "name": "Immobile",
+      "nameRef": "Immobile"
+    },
+    {
+      "description": "A Captured card is removed from the game. It returns when the Capturing unit leaves play.",
+      "name": "Capture",
+      "nameRef": "Capture"
+    },
+    {
+      "description": "Set a unit's Power to 0 this round. It can be changed after.",
+      "name": "Frostbite",
+      "nameRef": "Frostbite"
+    },
+    {
+      "description": "Burst spells resolve instantly. The enemy can't act before it finishes.",
+      "name": "Burst",
+      "nameRef": "Burst"
+    },
+    {
+      "description": "Fleeting cards discard from hand when the round ends.",
+      "name": "Fleeting",
+      "nameRef": "Fleeting"
+    },
+    {
+      "description": "Fast spells can be played at any time, but allow the opponent to respond.",
+      "name": "Fast",
+      "nameRef": "Fast"
+    },
+    {
+      "description": "Excess damage I deal to my blocker is dealt to the enemy Nexus.",
+      "name": "Overwhelm",
+      "nameRef": "Overwhelm"
+    },
+    {
+      "description": "Get this effect when you play this unit from hand.",
+      "name": "Play",
+      "nameRef": "PlaySkillMark"
+    },
+    {
+      "description": "While attacking, strikes before its blocker.",
+      "name": "Quick Attack",
+      "nameRef": "QuickStrike"
+    },
+    {
+      "description": "Takes 1 less damage from all sources.",
+      "name": "Tough",
+      "nameRef": "Tough"
+    },
+    {
+      "description": "Return a unit to hand and remove all effects applied to it.",
+      "name": "Recall",
+      "nameRef": "Recall"
+    },
+    {
+      "description": " ",
+      "name": "Ionia",
+      "nameRef": "Ionia"
+    },
+    {
+      "description": "Heals fully at the end of each round.",
+      "name": "Regeneration",
+      "nameRef": "Regeneration"
+    },
+    {
+      "description": "Removes all text and keywords from a unit.",
+      "name": "Silenced",
+      "nameRef": "Silenced"
+    },
+    {
+      "description": "Negates the next enemy spell or skill that would affect me.",
+      "name": "SpellShield",
+      "nameRef": "SpellShield"
+    },
+    {
+      "description": "Damage this unit deals heals its Nexus that amount.",
+      "name": "Lifesteal",
+      "nameRef": "Lifesteal"
+    },
+    {
+      "description": "Bonus if this is NOT the first card you play in a round.",
+      "name": "Nightfall",
+      "nameRef": "Nightfall"
+    },
+    {
+      "description": "You're Enlightened when you have 10 max mana.",
+      "name": "Enlightened",
+      "nameRef": "Enlightened"
+    },
+    {
+      "description": "A champion levels up once this condition is met, even in hand or deck.",
+      "name": "Level Up",
+      "nameRef": "LevelUp"
+    },
+    {
+      "description": "Slow spells can be cast outside of combat and other casting. The enemy can respond.",
+      "name": "Slow",
+      "nameRef": "Slow"
+    },
+    {
+      "description": " ",
+      "name": "Noxus",
+      "nameRef": "Noxus"
+    },
+    {
+      "description": "Pick a Celestial card from among 3 to create in hand.",
+      "name": "Invoke",
+      "nameRef": "Invoke"
+    },
+    {
+      "description": "When you play a created card, grant me +1|+0.",
+      "name": "Augment",
+      "nameRef": "Augment"
+    },
+    {
+      "description": "The first time only Scout units attack each round, ready your attack.",
+      "name": "Scout",
+      "nameRef": "Scout"
+    },
+    {
+      "description": "This unit dies when it strikes or when the round ends.",
+      "name": "Ephemeral",
+      "nameRef": "Ephemeral"
+    },
+    {
+      "description": " ",
+      "name": "Freljord",
+      "nameRef": "Freljord"
+    },
+    {
+      "description": "These abilities take effect when the unit dies.",
+      "name": "Last Breath",
+      "nameRef": "LastBreath"
+    },
+    {
+      "description": " ",
+      "name": "Bilgewater",
+      "nameRef": "Bilgewater"
+    },
+    {
+      "description": "Draw a non-champion card from the bottom of the enemy deck",
+      "name": "Nab",
+      "nameRef": "Nab"
+    },
+    {
+      "description": "Can choose which enemy unit blocks.",
+      "name": "Challenger",
+      "nameRef": "Challenger"
+    },
+    {
+      "description": "These abilities trigger when you resolve a spell.",
+      "name": "Imbue",
+      "nameRef": "Imbue"
+    },
+    {
+      "description": "Can only be blocked by enemies with 3 or more Power.",
+      "name": "Fearsome",
+      "nameRef": "Fearsome"
+    },
+    {
+      "description": " ",
+      "name": "Can't Block",
+      "nameRef": "CantBlock"
+    },
+    {
+      "description": "",
+      "name": "Deep",
+      "nameRef": "Deep"
+    }
+  ],
+  "regions": [
+    {
+      "abbreviation": "MT",
+      "iconAbsolutePath": "http://dd.b.pvp.net/2_0_0/core/en_us/img/regions/icon-targon.png",
+      "name": "Targon",
+      "nameRef": "Targon"
+    },
+    {
+      "abbreviation": "NX",
+      "iconAbsolutePath": "http://dd.b.pvp.net/2_0_0/core/en_us/img/regions/icon-noxus.png",
+      "name": "Noxus",
+      "nameRef": "Noxus"
+    },
+    {
+      "abbreviation": "DE",
+      "iconAbsolutePath": "http://dd.b.pvp.net/2_0_0/core/en_us/img/regions/icon-demacia.png",
+      "name": "Demacia",
+      "nameRef": "Demacia"
+    },
+    {
+      "abbreviation": "FR",
+      "iconAbsolutePath": "http://dd.b.pvp.net/2_0_0/core/en_us/img/regions/icon-freljord.png",
+      "name": "Freljord",
+      "nameRef": "Freljord"
+    },
+    {
+      "abbreviation": "SI",
+      "iconAbsolutePath": "http://dd.b.pvp.net/2_0_0/core/en_us/img/regions/icon-shadowisles.png",
+      "name": "Shadow Isles",
+      "nameRef": "ShadowIsles"
+    },
+    {
+      "abbreviation": "IO",
+      "iconAbsolutePath": "http://dd.b.pvp.net/2_0_0/core/en_us/img/regions/icon-ionia.png",
+      "name": "Ionia",
+      "nameRef": "Ionia"
+    },
+    {
+      "abbreviation": "BW",
+      "iconAbsolutePath": "http://dd.b.pvp.net/2_0_0/core/en_us/img/regions/icon-bilgewater.png",
+      "name": "Bilgewater",
+      "nameRef": "Bilgewater"
+    },
+    {
+      "abbreviation": "PZ",
+      "iconAbsolutePath": "http://dd.b.pvp.net/2_0_0/core/en_us/img/regions/icon-piltoverzaun.png",
+      "name": "Piltover & Zaun",
+      "nameRef": "PiltoverZaun"
+    }
+  ],
+  "spellSpeeds": [
+    {
+      "name": "Slow",
+      "nameRef": "Slow"
+    },
+    {
+      "name": "Burst",
+      "nameRef": "Burst"
+    },
+    {
+      "name": "Fast",
+      "nameRef": "Fast"
+    }
+  ],
+  "rarities": [
+    {
+      "name": "COMMON",
+      "nameRef": "Common"
+    },
+    {
+      "name": "RARE",
+      "nameRef": "Rare"
+    },
+    {
+      "name": "EPIC",
+      "nameRef": "Epic"
+    },
+    {
+      "name": "Champion",
+      "nameRef": "Champion"
+    },
+    {
+      "name": "None",
+      "nameRef": "None"
+    }
+  ],
+  "sets": [
+    {
+      "iconAbsolutePath": "http://dd.b.pvp.net/2_0_0/core/en_us/img/sets/set3.png",
+      "name": "Call of the Mountain",
+      "nameRef": "Set3"
+    },
+    {
+      "iconAbsolutePath": "http://dd.b.pvp.net/2_0_0/core/en_us/img/sets/set1.png",
+      "name": "Foundations",
+      "nameRef": "Set1"
+    },
+    {
+      "iconAbsolutePath": "http://dd.b.pvp.net/2_0_0/core/en_us/img/sets/set2.png",
+      "name": "Rising Tides",
+      "nameRef": "Set2"
+    }
+  ]
+}

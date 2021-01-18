@@ -12,7 +12,7 @@ from match import Match
 from network import Network
 from player import Player
 from loadThread import LoadThread
-
+import deck
 
 class InspectorWidget(QWidget):
     def __init__(self):
@@ -72,7 +72,7 @@ class InspectorWidget(QWidget):
         self.work.trigger.connect(self.showlog)
         self.work.finishTrigger.connect(self.showFinish)
 
-        self.textBrowser.setHtml("""My image :<br /><img src="test.ico"/  height=10 width=20>""")
+        #self.textBrowser.setHtml("""My image :<br /><img src="test.ico"/  height=10 width=20>""")
 
     def clearButtonCliked(self):
         self.textBrowser.clear()
@@ -107,19 +107,22 @@ class InspectorWidget(QWidget):
 
         print('call showlog')
         htmlOpponentName = self.getHtml(opponentName, 'Black')
-        htmlDeckCode = self.getHtml(deckCode, 'DarkOrange')
         htmlOutcome = self.getHtml(outcome.capitalize(), 'IndianRed')
         htmlFactions = self.getHtml(factions, 'Black')
-        htmlTotalturn = self.getHtml('Turn: ' + str(totalTurn), 'Gold')
-        htmlopDeckCode = self.getHtml(opDeckCode, 'DarkOrange')
+        htmlTotalturn = self.getHtml('Turn: ' + str(totalTurn), 'DarkGray')
         htmlopFactions = self.getHtml(opFactions, 'Black')
         if outcome == 'win':
             htmlOutcome = self.getHtml(outcome, 'Green')
+
+        htmlHeros = self.getHtml(deck.getChampion(deckCode), 'OrangeRed')
+        htmlOpHeros = self.getHtml(deck.getChampion(opDeckCode), 'DarkGreen')
+
         self.textBrowser.append(htmlOutcome + htmlOpponentName) 
-        self.textBrowser.append(timeStr + ' ' + htmlTotalturn)
-        self.textBrowser.append(htmlFactions)
+        self.textBrowser.append(self.getHtml(timeStr, 'DarkOrange') + ' ' + htmlTotalturn)
+        self.textBrowser.append(htmlFactions + htmlHeros)
         self.textBrowser.append(self.getDeckCodeHtml(deckCode))
-        self.textBrowser.append(htmlopFactions)
+        
+        self.textBrowser.append(htmlopFactions + htmlOpHeros)
         self.textBrowser.append(self.getDeckCodeHtml(opDeckCode))
         self.textBrowser.append(' ')
 
