@@ -72,6 +72,8 @@ class InspectorWidget(QWidget):
         self.work.trigger.connect(self.showlog)
         self.work.finishTrigger.connect(self.showFinish)
 
+        self.textBrowser.setHtml("""My image :<br /><img src="test.ico"/  height=10 width=20>""")
+
     def clearButtonCliked(self):
         self.textBrowser.clear()
     
@@ -91,12 +93,14 @@ class InspectorWidget(QWidget):
         # self.textEdit.appendHtml(self.getHtml(fullName + ' is invalid, please input name and tag seperated by # eg: storm#5961', 'OrangeRed')) 
 
     def showFinish(self, text):
+        self.inspectPushButton.setText('Inspect')
         if text is None:
             pass
         else:
             self.textBrowser.append(self.getHtml(text, 'OrangeRed'))
             #为了美观最后空一行
             self.textBrowser.append('')
+        
 
 
     def showlog(self, opponentName, timeStr, outcome, deckCode, factions,opDeckCode, opFactions, totalTurn, num):
@@ -104,7 +108,7 @@ class InspectorWidget(QWidget):
         print('call showlog')
         htmlOpponentName = self.getHtml(opponentName, 'Black')
         htmlDeckCode = self.getHtml(deckCode, 'DarkOrange')
-        htmlOutcome = self.getHtml(outcome, 'IndianRed')
+        htmlOutcome = self.getHtml(outcome.capitalize(), 'IndianRed')
         htmlFactions = self.getHtml(factions, 'Black')
         htmlTotalturn = self.getHtml('Turn: ' + str(totalTurn), 'Gold')
         htmlopDeckCode = self.getHtml(opDeckCode, 'DarkOrange')

@@ -26,6 +26,12 @@ class Inspector(InspectorWidget):
         self.parentWindow = window
 
     def inspectPushButtonClicked(self):
+        super().inspectPushButtonClicked()
+        if self.work.isRunning():
+            self.work.terminate()
+            self.showFinish(self.work.playerName + ' inspection stopped')
+            return
+        
         print('inspectPushButtonClicked called')
         self.parentWindow.progressBar.setValue(0)
         
@@ -36,11 +42,12 @@ class Inspector(InspectorWidget):
             #检查名字是否过短
             if len(fullName) >= 5:
                 self.work.start()
-                self.textBrowser.append(self.getHtml(fullName, 'OrangeRed') + ' (' + self.setting.getServer() + ')')
+                self.textBrowser.append(self.getHtml(fullName, 'OrangeRed') + ' (' + self.setting.getServer().capitalize() + ')')
                 self.parentWindow.progressBar.setHidden(False)
+                self.inspectPushButton.setText('Stop')
                 return
         self.textBrowser.append(self.getHtml(fullName + ' is invalid, please input name and tag seperated by # eg: storm#5961', 'OrangeRed')) 
-        return super().inspectPushButtonClicked()
+        return
 
     def showFinish(self, text):
         self.parentWindow.progressBar.setHidden(True)
