@@ -8,7 +8,7 @@ setting = Setting()
 setting.setServer(Server.EU)
 network = Network(setting)
 riot = Riot(network)
-opponent = Player(riot)
+player = Player(riot)
 
 # ShogoPASS#EUW
 # asia europe americas

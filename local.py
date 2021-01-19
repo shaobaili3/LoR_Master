@@ -59,7 +59,7 @@ class Local:
                 self.isInProgress = False
 
     def updateTagByName(self, name):
-        with open(('Resource/' + self.setting.getServer() + '.dat'), encoding="utf8") as search:
+        with open(('Resource/' + self.setting.clientServer + '.dat'), encoding="utf8") as search:
             for line in search:
                 fullName = line.rstrip().split('#')
                 if name == fullName[0]:

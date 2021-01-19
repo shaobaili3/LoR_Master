@@ -12,6 +12,7 @@ from riot import Riot
 from network import Network
 from player import Player
 from inspectThread import InspectThread
+from trackThread import TrackThread
 import deck
 
 class InspectorWidget(QWidget):
@@ -67,11 +68,15 @@ class InspectorWidget(QWidget):
         outerLayout.addLayout(topLayout)
         outerLayout.addLayout(textLayout)
         self.setLayout(outerLayout)
-        self.work = InspectThread()
-        self.work.player = self.player
-        self.work.showLogtrigger.connect(self.showlog)
-        self.work.finishTrigger.connect(self.showFinish)
-        self.work.summaryTigger.connect(self.showSummary)
+        self.inspectWork = InspectThread()
+        self.inspectWork.player = self.player
+        self.inspectWork.showLogtrigger.connect(self.showlog)
+        self.inspectWork.finishTrigger.connect(self.showFinish)
+        self.inspectWork.summaryTigger.connect(self.showSummary)
+
+        self.trackWork = TrackThread()
+        self.trackWork.local = self.local
+        self.trackWork.player = self.player
 
         #self.textBrowser.setHtml("""My image :<br /><img src="test.ico"/  height=10 width=20>""")
 

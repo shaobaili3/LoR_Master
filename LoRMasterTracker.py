@@ -25,24 +25,29 @@ class Inspector(InspectorWidget):
         super().__init__()
         self.parentWindow = window
 
+        if not self.inspectWork.isRunning():
+            self.trackWork.start()
+            
+
     def inspectPushButtonClicked(self):
         super().inspectPushButtonClicked()
-        if self.work.isRunning():
-            self.work.terminate()
-            self.showFinish(self.work.playerName + ' inspection stopped')
+        if self.inspectWork.isRunning():
+            self.inspectWork.terminate()
+            self.showFinish(self.inspectWork.playerName + ' inspection has been terminated')
             return
         
         print('inspectPushButtonClicked called')
         self.parentWindow.progressBar.setValue(0)
         
         fullName = self.idLineEdit.text().strip()
-        self.work.playerName = fullName
+        self.inspectWork.playerName = fullName
         
         if '#' in fullName:
             #检查名字是否过短
             if len(fullName) >= 5:
-                self.work.start()
+                self.inspectWork.start()
                 self.textBrowser.append(self.getHtml(fullName, 'OrangeRed') + ' (' + self.setting.getServer().capitalize() + ')')
+                self.textBrowser.append('')
                 self.parentWindow.progressBar.setHidden(False)
                 self.inspectPushButton.setText('Stop')
                 return

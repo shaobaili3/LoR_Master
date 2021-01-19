@@ -3,6 +3,11 @@ import configparser
 import constants as c
 
 
+class Server(str, Enum):
+    NA = 'americas'
+    EU = 'europe'
+    ASIA = 'asia'
+
 class Setting():
 
     def __init__(self):
@@ -11,6 +16,7 @@ class Setting():
         self.config.read('config.ini')
         self.check()
         self.writeConfig()
+        self.clientServer = Server.NA.value
         return
 
     def check(self):
@@ -36,8 +42,3 @@ class Setting():
 
     def getPort(self):
         return self.port
-
-class Server(str, Enum):
-    NA = 'americas'
-    EU = 'europe'
-    ASIA = 'asia'

@@ -10,18 +10,15 @@ class Player:
     def __init__(self, riot):
         self.sortedDecksCode = []
         self.riot = riot
-        # self.naBoard = None
-        # self.euBoard = None
-        # self.asianBoard = None
-        self.boardDetails = []
+        self.leaderboardDetails = []
         self.updateLeaderBoard()
 
     def updateLeaderBoard(self):
         loop = self.riot.asyncio.new_event_loop()
         self.riot.asyncio.set_event_loop(loop)
         tasks = [self.riot.aioLeaderboard(server) for server in [Server.NA.value, Server.EU.value, Server.ASIA.value]]
-        self.boardDetails = loop.run_until_complete(self.riot.asyncio.gather(*tasks))
-        print(self.boardDetails)
+        self.leaderboardDetails = loop.run_until_complete(self.riot.asyncio.gather(*tasks))
+        print(self.leaderboardDetails)
         # self.naBoard = details[0]['players']
         # self.euBoard = details[1]['players']
         # self.asianBoard = details[2]['players']
@@ -37,8 +34,8 @@ class Player:
             print("无法获取对手最近对战记录")
             return
         else:
-            if len(matchIds) > 8:
-                matchIds = matchIds[0:8]
+            if len(matchIds) > cs.MAX_NUM_DETAILS:
+                matchIds = matchIds[0:cs.MAX_NUM_DETAILS]
         deckCodes = []
         loop = self.riot.asyncio.new_event_loop()
         self.riot.asyncio.set_event_loop(loop)
@@ -57,18 +54,16 @@ class Player:
                     myDetials = detail['info']['players'][count]
                     deckCodes.append(myDetials['deck_code'])
                     # print(str(myDetials["factions"]) + myDetials['deck_code'])
-        deckslist = dict(
-            zip(list(deckCodes), [list(deckCodes).count(i) for i in list(deckCodes)]))
-        self.sortedDecksCode = sorted(
-            deckslist, key=deckslist.get, reverse=True)
+        #deckslist = dict(zip(list(deckCodes), [list(deckCodes).count(i) for i in list(deckCodes)]))
+        #self.sortedDecksCode = sorted(deckslist, key=deckslist.get, reverse=True)
+        print(self.getNoDuplicate(deckCodes))
         self.showOpponentAgain()
 
     def getNoDuplicate(self, deckCodes):
             deckslist = dict(zip(list(deckCodes), [list(deckCodes).count(i) for i in list(deckCodes)]))
-            #sortedDecksCode = sorted(deckslist, key=deckslist.get, reverse=True)
-
             deckslist = dict(sorted(deckslist.items(), key=lambda item: item[1], reverse=True))
-            #print(deckslist)
+            # to-do
+            self.sortedDecksCode = sorted(deckslist, key=deckslist.get, reverse=True)
             return deckslist
 
     def showOpponentAgain(self):
@@ -147,13 +142,13 @@ class Player:
             deckCodes.append(myDetials['deck_code'])
             settingServer = self.riot.network.setting.getServer()
             
-            board = self.boardDetails[0]['players']
+            board = self.leaderboardDetails[0]['players']
             if  settingServer == Server.NA.value:
-                board = self.boardDetails[0]['players']
+                board = self.leaderboardDetails[0]['players']
             elif settingServer == Server.EU.value:
-                board = self.boardDetails[1]['players']
+                board = self.leaderboardDetails[1]['players']
             elif settingServer == Server.ASIA.value:
-                board = self.boardDetails[2]['players']
+                board = self.leaderboardDetails[2]['players']
             print(settingServer)
             print(board)
             for playerInfo in board:
