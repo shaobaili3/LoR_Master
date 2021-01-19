@@ -8,10 +8,10 @@ from PyQt5 import QtCore
 from PyQt5 import QtGui
 
 from local import Local
-from match import Match
+from riot import Riot
 from network import Network
 from player import Player
-from loadThread import LoadThread
+from inspectThread import InspectThread
 import deck
 
 class InspectorWidget(QWidget):
@@ -19,8 +19,8 @@ class InspectorWidget(QWidget):
         super().__init__()
         self.setting = Setting()
         self.network = Network(self.setting)
-        self.match = Match(self.network)
-        self.player = Player(self.match)
+        self.riot = Riot(self.network)
+        self.player = Player(self.riot)
         self.local = Local(self.setting)
         self.setWindowTitle(cs.DISPLAY_TITLE + ' v' + cs.VERSION_NUM)
         #self.setWindowIcon(QIcon('test.jpg'))
@@ -67,7 +67,7 @@ class InspectorWidget(QWidget):
         outerLayout.addLayout(topLayout)
         outerLayout.addLayout(textLayout)
         self.setLayout(outerLayout)
-        self.work = LoadThread()
+        self.work = InspectThread()
         self.work.player = self.player
         self.work.showLogtrigger.connect(self.showlog)
         self.work.finishTrigger.connect(self.showFinish)

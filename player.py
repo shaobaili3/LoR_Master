@@ -1,19 +1,38 @@
 import json
+from setting import Setting
 import webbrowser
 import utility
 import constants as cs
 
+from setting import Server
+
 class Player:
-    def __init__(self, match):
+    def __init__(self, riot):
         self.sortedDecksCode = []
-        self.match = match
+        self.riot = riot
+        # self.naBoard = None
+        # self.euBoard = None
+        # self.asianBoard = None
+        self.boardDetails = []
+        self.updateLeaderBoard()
+
+    def updateLeaderBoard(self):
+        loop = self.riot.asyncio.new_event_loop()
+        self.riot.asyncio.set_event_loop(loop)
+        tasks = [self.riot.aioLeaderboard(server) for server in [Server.NA.value, Server.EU.value, Server.ASIA.value]]
+        self.boardDetails = loop.run_until_complete(self.riot.asyncio.gather(*tasks))
+        print(self.boardDetails)
+        # self.naBoard = details[0]['players']
+        # self.euBoard = details[1]['players']
+        # self.asianBoard = details[2]['players']
+    
 
     def checkOpponent(self, name, tag):
-        puuid = self.match.getPlayerPUUID(name, tag)
+        puuid = self.riot.getPlayerPUUID(name, tag)
         if puuid is None:
             print("无法获取对手puuid")
             return
-        matchIds = self.match.getMatchs(puuid)
+        matchIds = self.riot.getMatchs(puuid)
         if matchIds is None:
             print("无法获取对手最近对战记录")
             return
@@ -21,10 +40,10 @@ class Player:
             if len(matchIds) > 8:
                 matchIds = matchIds[0:8]
         deckCodes = []
-        loop = self.match.asyncio.new_event_loop()
-        self.match.asyncio.set_event_loop(loop)
-        tasks = [self.match.aioGetDetail(id) for id in matchIds]
-        details = loop.run_until_complete(self.match.asyncio.gather(*tasks))
+        loop = self.riot.asyncio.new_event_loop()
+        self.riot.asyncio.set_event_loop(loop)
+        tasks = [self.riot.aioMatchDetail(id) for id in matchIds]
+        details = loop.run_until_complete(self.riot.asyncio.gather(*tasks))
         for detail in details:
             if detail is None:
                 continue
@@ -69,11 +88,11 @@ class Player:
         print("卡组已在默认浏览器中显示, 请在浏览器中查看")
 
     def inspectPlayer(self, name, tag, showlog, showSummary ,finishTrigger):
-        puuid = self.match.getPlayerPUUID(name, tag)
+        puuid = self.riot.getPlayerPUUID(name, tag)
         if puuid is None:
             print('查询失败, puuid为空')
             return finishTrigger('Couldn\'t find player ' + name + '#' + tag )
-        matchIds = self.match.getMatchs(puuid)
+        matchIds = self.riot.getMatchs(puuid)
         winNum = 0
         matchNum = 0
         if matchIds is None:
@@ -87,7 +106,7 @@ class Player:
         for matchId in matchIds:
             if matchNum == cs.MAX_NUM_DETAILS:
                 break
-            detail = self.match.getDetail(matchId)
+            detail = self.riot.getDetail(matchId)
             #print('type:', str(type(detail)))
             if str(detail).isdigit():
                 print('Retry after '+ str(detail) +', Riot server is busy.')
@@ -107,19 +126,42 @@ class Player:
             opponentDetail = None
             myDetials = None
             totalTurn = detail['info']['total_turn_count']
+            opName = ['', '']
+            fullName = ''
             for count, ppid in enumerate(ppids):
+                #to check if this is oppoent record
                 if ppid != puuid:
                     #print(ppid)
-                    print(str(matchNum) + ". " + self.match.getPlayerName(ppid) + ' ' + utility.tolocalTimeString(startTime))
+                    opName = self.riot.getPlayerName(ppid)
+                    fullName = opName[0] +'#' +opName[1]
+                    print(str(matchNum) + ". " + fullName + ' ' + utility.tolocalTimeString(startTime))
                     opponentDetail = detail['info']['players'][count]
                 else:
                     myDetials = detail['info']['players'][count]
                     outcome = myDetials["game_outcome"]
                     if outcome == 'win':
                         winNum += 1
+            #opName = self.riot.getPlayerName(opponentDetail['puuid'])[0]
+            rank = ''
             print(outcome + "   " + str(myDetials["factions"]) + myDetials['deck_code'] + str(opponentDetail["factions"]) + " " + opponentDetail['deck_code'])
             deckCodes.append(myDetials['deck_code'])
-            showlog(self.match.getPlayerName(opponentDetail['puuid']), utility.tolocalTimeString(startTime), outcome, myDetials['deck_code'], utility.getFactionString(myDetials["factions"]),opponentDetail['deck_code'],utility.getFactionString(opponentDetail["factions"]), totalTurn, matchNum)
+            settingServer = self.riot.network.setting.getServer()
+            
+            board = self.boardDetails[0]['players']
+            if  settingServer == Server.NA.value:
+                board = self.boardDetails[0]['players']
+            elif settingServer == Server.EU.value:
+                board = self.boardDetails[1]['players']
+            elif settingServer == Server.ASIA.value:
+                board = self.boardDetails[2]['players']
+            print(settingServer)
+            print(board)
+            for playerInfo in board:
+                if opName[0] == playerInfo['name']:
+                    rank = ' [Rank: ' + str(playerInfo['rank'] + 1) + ' lp: ' + str(int(playerInfo['lp'])) + ']'
+                    print('rank: ', playerInfo['rank'])
+                    print('lp: ', playerInfo['lp'])
+            showlog(fullName + rank, utility.tolocalTimeString(startTime), outcome, myDetials['deck_code'], utility.getFactionString(myDetials["factions"]),opponentDetail['deck_code'],utility.getFactionString(opponentDetail["factions"]), totalTurn, matchNum)
         if matchNum != 0:
             print(str(winNum) + ' wins' + ' out of ' + str(matchNum) + ' rank matchs')
             print("Win rate: " + str(int(winNum/matchNum * 100)) + "%" )

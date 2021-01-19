@@ -11,7 +11,7 @@ from pystray import MenuItem as item
 
 import constants as cs
 from local import Local
-from match import Match
+from riot import Riot
 from network import Network
 from player import Player
 from setting import Server, Setting
@@ -25,8 +25,8 @@ from setting import Server, Setting
 
 setting = Setting()
 network = Network(setting)
-match = Match(network)
-opponent = Player(match)
+riot = Riot(network)
+opponent = Player(riot)
 state = setting.getServer()
 local = NULL
 

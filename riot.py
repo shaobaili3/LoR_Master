@@ -3,7 +3,7 @@ import aiohttp
 import asyncio
 
 
-class Match():
+class Riot():
     def __init__(self, network):
         self.network = network
         self.asyncio = asyncio
@@ -49,7 +49,7 @@ class Match():
             return None
         return matchIds
 
-    async def aioGetDetail(self, id):
+    async def aioMatchDetail(self, id):
         async with aiohttp.ClientSession() as session:
             detailsLink = self.network.getDetailsLink(id)
             async with session.get(detailsLink) as resp:
@@ -62,6 +62,21 @@ class Match():
             print('比赛内容服务器错误: ', status)
             return None
         return detail
+
+    async def aioLeaderboard(self, server):
+        async with aiohttp.ClientSession() as session:
+            link = self.network.getLeaderboard(server)
+            async with session.get(link) as resp:
+                if resp.status == 429:
+                    print("429")
+                detail = await resp.json()
+        if 'status' in detail:
+            status = detail['status']
+            print("match details server Error")
+            print('排行榜服务器错误: ', status)
+            print(detail)
+            return None
+        return detail   
 
     def getDetail(self, matchId):
         detailsLink = self.network.getDetailsLink(matchId)
@@ -90,7 +105,7 @@ class Match():
             print('比赛内容服务返回空')
         return detail
 
-    # 仅仅在main中使用和inspector中使用
+    # 在main中使用和inspector中使用
     def getPlayerName(self, puuid):
         nameLink = self.network.getNameLink(puuid)
         try:
@@ -99,7 +114,7 @@ class Match():
             print(nameLink)
             print(e)
             print('无法连接用户名puuid服务器')
-            return '名字Unknow'
+            return '名字Unknow', 'unknow'
         name = nameRequest.json()
         #headers = nameRequest.headers
         #print(headers)
@@ -109,5 +124,5 @@ class Match():
             print(nameRequest.status_code)
             print(name)
             print('用户名puuid服务器错误:')
-            return '名字Unknow'
-        return name['gameName'] + "#" + name['tagLine']
+            return '名字Unknow', 'unknow'
+        return name['gameName'], name['tagLine']

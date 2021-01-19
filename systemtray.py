@@ -11,11 +11,11 @@ from PyQt5 import QtCore
 from PyQt5 import QtGui
 
 from local import Local
-from match import Match
+from riot import Riot
 from network import Network
 from player import Player
 
-from loadThread import LoadThread
+from inspectThread import InspectThread
 
 class Window(QWidget):
     def __init__(self):
@@ -109,8 +109,8 @@ def versionTrigger():
 setting = Setting()
 setting.setServer(Server.NA)
 network = Network(setting)
-match = Match(network)
-player = Player(match)
+riot = Riot(network)
+player = Player(riot)
 local = Local(setting)
 
 os.environ["QT_AUTO_SCREEN_SCALE_FACTOR"] = "1"

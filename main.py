@@ -1,4 +1,4 @@
-from match import Match
+from riot import Riot
 from network import Network
 from setting import Setting, Server
 from player import Player
@@ -7,8 +7,8 @@ import utility
 setting = Setting()
 setting.setServer(Server.EU)
 network = Network(setting)
-match = Match(network)
-opponent = Player(match)
+riot = Riot(network)
+opponent = Player(riot)
 
 # ShogoPASS#EUW
 # asia europe americas
@@ -16,8 +16,8 @@ opponent = Player(match)
 
 def checkPlayerDetails():
     
-    puuid = match.getPlayerPUUID('HueCicero', 'EUW')
-    matchIds = match.getMatchs(puuid)
+    puuid = riot.getPlayerPUUID('HueCicero', 'EUW')
+    matchIds = riot.getMatchs(puuid)
     print(matchIds)
 
     winNum = 0
@@ -29,8 +29,8 @@ def checkPlayerDetails():
         print("查询失败")
         return
 
-    tasks = [match.aioGetDetail(id) for id in matchIds]
-    details = match.loop.run_until_complete(match.asyncio.gather(*tasks))
+    tasks = [riot.aioMatchDetail(id) for id in matchIds]
+    details = riot.loop.run_until_complete(riot.asyncio.gather(*tasks))
     print(details)
 
     for detail in details:
@@ -47,7 +47,7 @@ def checkPlayerDetails():
         for count, ppid in enumerate(ppids):
             if ppid != puuid:
                 # print(ppid)
-                print(str(matchNum) + ". " + match.getPlayerName(ppid))
+                print(str(matchNum) + ". " + riot.getPlayerName(ppid)[0])
                 oppentDetails = detail['info']['players'][count]
                 if oppentDetails["game_outcome"] == 'loss':
                     winNum += 1
@@ -63,8 +63,8 @@ def checkPlayerDetails():
 
 
 def checkPlayerDetails2(name, tag):
-    puuid = match.getPlayerPUUID(name, tag)
-    matchIds = match.getMatchs(puuid)
+    puuid = riot.getPlayerPUUID(name, tag)
+    matchIds = riot.getMatchs(puuid)
     winNum = 0
     matchNum = 0
     if matchIds is None:
@@ -91,7 +91,7 @@ def checkPlayerDetails2(name, tag):
         for count, ppid in enumerate(ppids):
             if ppid != puuid:
                 #print(ppid)
-                print(str(matchNum) + ". " + match.getPlayerName(ppid) + ' ' + utility.tolocalTimeString(startTime))
+                print(str(matchNum) + ". " + riot.getPlayerName(ppid)[0] + ' ' + utility.tolocalTimeString(startTime))
                 oppentDetails = details['info']['players'][count]
                 if oppentDetails["game_outcome"] == 'loss':
                     winNum += 1

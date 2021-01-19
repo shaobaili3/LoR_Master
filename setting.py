@@ -31,6 +31,7 @@ class Setting():
             configfile.close()
 
     def getServer(self):
+        #return self.config['network']['server']
         return self.config.get('network', 'server')
 
     def getPort(self):
