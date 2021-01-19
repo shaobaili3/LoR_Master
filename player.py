@@ -19,10 +19,6 @@ class Player:
         tasks = [self.riot.aioLeaderboard(server) for server in [Server.NA.value, Server.EU.value, Server.ASIA.value]]
         self.leaderboardDetails = loop.run_until_complete(self.riot.asyncio.gather(*tasks))
         print(self.leaderboardDetails)
-        # self.naBoard = details[0]['players']
-        # self.euBoard = details[1]['players']
-        # self.asianBoard = details[2]['players']
-    
 
     def checkOpponent(self, name, tag):
         puuid = self.riot.getPlayerPUUID(name, tag)
@@ -53,9 +49,6 @@ class Player:
                 if ppid == puuid:
                     myDetials = detail['info']['players'][count]
                     deckCodes.append(myDetials['deck_code'])
-                    # print(str(myDetials["factions"]) + myDetials['deck_code'])
-        #deckslist = dict(zip(list(deckCodes), [list(deckCodes).count(i) for i in list(deckCodes)]))
-        #self.sortedDecksCode = sorted(deckslist, key=deckslist.get, reverse=True)
         print(self.getNoDuplicate(deckCodes))
         self.showOpponentAgain()
 
@@ -93,10 +86,6 @@ class Player:
         if matchIds is None:
             print('查询失败, matchid为空')
             return finishTrigger(name + '#' + tag + ' has no recent match records')
-        # loop = self.match.asyncio.new_event_loop()
-        # self.match.asyncio.set_event_loop(loop)
-        # tasks = [self.match.aioGetDetail(id) for id in matchIds]
-        # details = loop.run_until_complete(self.match.asyncio.gather(*tasks))
         deckCodes = []
         for matchId in matchIds:
             if matchNum == cs.MAX_NUM_DETAILS:

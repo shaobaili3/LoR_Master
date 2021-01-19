@@ -15,6 +15,6 @@ class TrackThread(QThread):
         print('tracker running')
         while(True):
             self.local.updateStatus(self.player.checkOpponent)
-            if self.isRunning() is False:
+            if not self.isRunning():
                 return
         
