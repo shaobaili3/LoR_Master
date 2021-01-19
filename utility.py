@@ -1,7 +1,6 @@
 from dateutil.parser import parse
 from dateutil import tz
 from datetime import *
-#import timeago
 from dateutil.relativedelta import *
 import os
 import sys
