@@ -46,7 +46,8 @@ class Inspector(InspectorWidget):
             #检查名字是否过短
             if len(fullName) >= 5:
                 self.inspectWork.start()
-                self.textBrowser.append(self.getHtml(fullName, 'OrangeRed') + ' (' + self.setting.getServer().capitalize() + ')')
+                rank = self.riot.getRankStr(fullName.split('#')[0], self.setting.getServer())
+                self.textBrowser.append(self.getHtml(fullName, 'OrangeRed') + ' ' + rank + ' (' + self.setting.getServer().capitalize() + ')')
                 self.textBrowser.append('')
                 self.parentWindow.progressBar.setHidden(False)
                 self.inspectPushButton.setText('Stop')
