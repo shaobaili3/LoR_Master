@@ -6,23 +6,18 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5 import QtCore
 from PyQt5 import QtGui
-
-from local import Local
-from riot import Riot
-from network import Network
-from player import Player
 from inspectThread import InspectThread
 from trackThread import TrackThread
 import deck
 
 class InspectorWidget(QWidget):
-    def __init__(self):
+    def __init__(self, setting, network, riot, player, local):
         super().__init__()
-        self.setting = Setting()
-        self.network = Network(self.setting)
-        self.riot = Riot(self.network)
-        self.player = Player(self.riot)
-        self.local = Local(self.setting)
+        self.setting = setting
+        self.network = network
+        self.riot = riot
+        self.player = player
+        self.local = local
         self.setWindowTitle(cs.DISPLAY_TITLE + ' v' + cs.VERSION_NUM)
         #self.setWindowIcon(QIcon('test.jpg'))
         # self.resize(900, 512)
@@ -77,6 +72,7 @@ class InspectorWidget(QWidget):
         self.trackWork = TrackThread()
         self.trackWork.local = self.local
         self.trackWork.player = self.player
+        self.trackWork.showDecks.connect(self.showSummary)
 
         #self.textBrowser.setHtml("""My image :<br /><img src="test.ico"/  height=10 width=20>""")
 

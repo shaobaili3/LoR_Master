@@ -21,7 +21,7 @@ class Local:
         self.isClientRuning = False
         self.isInProgress = False
 
-    def updateStatus(self, checkOpponent):
+    def updateStatus(self, checkOpponent, show):
         try:
             localRequest = requests.get(self.getLocalLink())
             if not self.isClientRuning:
@@ -52,7 +52,7 @@ class Local:
                         # Opponent tag found:
                         print('发现对手：', self.opponentName, '#',
                             self.opponentTag, "正在载入卡组...")
-                        checkOpponent(self.opponentName, self.opponentTag)
+                        checkOpponent(self.opponentName, self.opponentTag, show)
         else:
             if self.isInProgress == True:
                 print(self.opponentName, '#', self.opponentTag, ' 对局结束')

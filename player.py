@@ -10,17 +10,8 @@ class Player:
     def __init__(self, riot):
         self.sortedDecksCode = []
         self.riot = riot
-        self.leaderboardDetails = []
-        self.updateLeaderBoard()
 
-    def updateLeaderBoard(self):
-        loop = self.riot.asyncio.new_event_loop()
-        self.riot.asyncio.set_event_loop(loop)
-        tasks = [self.riot.aioLeaderboard(server) for server in [Server.NA.value, Server.EU.value, Server.ASIA.value]]
-        self.leaderboardDetails = loop.run_until_complete(self.riot.asyncio.gather(*tasks))
-        print(self.leaderboardDetails)
-
-    def checkOpponent(self, name, tag):
+    def checkOpponent(self, name, tag, show):
         puuid = self.riot.getPlayerPUUID(name, tag)
         if puuid is None:
             print("无法获取对手puuid")
@@ -50,6 +41,7 @@ class Player:
                     myDetials = detail['info']['players'][count]
                     deckCodes.append(myDetials['deck_code'])
         print(self.getNoDuplicate(deckCodes))
+        show(self.getNoDuplicate(deckCodes))
         self.showOpponentAgain()
 
     def getNoDuplicate(self, deckCodes):
@@ -130,22 +122,8 @@ class Player:
             print(outcome + "   " + str(myDetials["factions"]) + myDetials['deck_code'] + str(opponentDetail["factions"]) + " " + opponentDetail['deck_code'])
             deckCodes.append(myDetials['deck_code'])
             settingServer = self.riot.network.setting.getServer()
-            
-            board = self.leaderboardDetails[0]['players']
-            if  settingServer == Server.NA.value:
-                board = self.leaderboardDetails[0]['players']
-            elif settingServer == Server.EU.value:
-                board = self.leaderboardDetails[1]['players']
-            elif settingServer == Server.ASIA.value:
-                board = self.leaderboardDetails[2]['players']
-            print(settingServer)
-            print(board)
-            for playerInfo in board:
-                if opName[0] == playerInfo['name']:
-                    rank = ' [Rank: ' + str(playerInfo['rank'] + 1) + ' lp: ' + str(int(playerInfo['lp'])) + ']'
-                    print('rank: ', playerInfo['rank'])
-                    print('lp: ', playerInfo['lp'])
-            showlog(fullName + rank, utility.tolocalTimeString(startTime), outcome, myDetials['deck_code'], utility.getFactionString(myDetials["factions"]),opponentDetail['deck_code'],utility.getFactionString(opponentDetail["factions"]), totalTurn, matchNum)
+            rank = self.riot.getRankStr(opName[0], settingServer)
+            showlog(fullName + ' ' + rank, utility.tolocalTimeString(startTime), outcome, myDetials['deck_code'], utility.getFactionString(myDetials["factions"]),opponentDetail['deck_code'],utility.getFactionString(opponentDetail["factions"]), totalTurn, matchNum)
         if matchNum != 0:
             print(str(winNum) + ' wins' + ' out of ' + str(matchNum) + ' rank matchs')
             print("Win rate: " + str(int(winNum/matchNum * 100)) + "%" )
