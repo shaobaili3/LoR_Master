@@ -15,7 +15,7 @@ player = Player(riot)
 
 
 def checkPlayerDetails():
-    
+
     puuid = riot.getPlayerPUUID('HueCicero', 'EUW')
     matchIds = riot.getMatchs(puuid)
     print(matchIds)
@@ -56,9 +56,10 @@ def checkPlayerDetails():
                     outcome = 'Loss'
             else:
                 myDetials = detail['info']['players'][count]
-        print(outcome + "   " + str(myDetials["factions"]) + myDetials['deck_code'] + str(
-            oppentDetails["factions"]) + " " + oppentDetails['deck_code'])
-    print("Win rate: " + str(winNum/matchNum * 100) + "%")
+        print(outcome + "   " + str(myDetials["factions"]) +
+              myDetials['deck_code'] + str(oppentDetails["factions"]) + " " +
+              oppentDetails['deck_code'])
+    print("Win rate: " + str(winNum / matchNum * 100) + "%")
     print(str(winNum) + ' out of ' + str(matchNum))
 
 
@@ -74,13 +75,14 @@ def checkPlayerDetails2(name, tag):
         if matchNum == 5:
             break
         details = match.getDetail(matchid)
-        
+
         if details is None:
             continue
 
         startTime = details['info']['game_start_time_utc']
         if details['info']['game_type'] != 'Ranked':
-            print(details['info']['game_type'], details['info']['game_mode'],  utility.toLocalTimeString(startTime))
+            print(details['info']['game_type'], details['info']['game_mode'],
+                  utility.toLocalTimeString(startTime))
             continue
         else:
             matchNum += 1
@@ -91,7 +93,9 @@ def checkPlayerDetails2(name, tag):
         for count, ppid in enumerate(ppids):
             if ppid != puuid:
                 #print(ppid)
-                print(str(matchNum) + ". " + riot.getPlayerName(ppid)[0] + ' ' + utility.toLocalTimeString(startTime))
+                print(
+                    str(matchNum) + ". " + riot.getPlayerName(ppid)[0] + ' ' +
+                    utility.toLocalTimeString(startTime))
                 oppentDetails = details['info']['players'][count]
                 if oppentDetails["game_outcome"] == 'loss':
                     winNum += 1
@@ -100,12 +104,17 @@ def checkPlayerDetails2(name, tag):
                     outcome = 'Loss'
             else:
                 myDetials = details['info']['players'][count]
-        print(outcome + "   " + str(myDetials["factions"]) + myDetials['deck_code'] + str(oppentDetails["factions"]) + " " + oppentDetails['deck_code'])
+        print(outcome + "   " + str(myDetials["factions"]) +
+              myDetials['deck_code'] + str(oppentDetails["factions"]) + " " +
+              oppentDetails['deck_code'])
     if matchNum != 0:
-        print(str(winNum) + ' wins' + ' out of ' + str(matchNum) + ' rank matchs')
-        print("Win rate: " + str(int(winNum/matchNum * 100)) + "%" )
+        print(
+            str(winNum) + ' wins' + ' out of ' + str(matchNum) +
+            ' rank matchs')
+        print("Win rate: " + str(int(winNum / matchNum * 100)) + "%")
     else:
         print('无法获取对战历史数据')
+
 
 checkPlayerDetails()
 #checkPlayerDetails2('虎牙ace', '123')

@@ -8,8 +8,8 @@ class Server(str, Enum):
     EU = 'europe'
     ASIA = 'asia'
 
-class Setting():
 
+class Setting():
     def __init__(self):
         self.config = configparser.ConfigParser()
         self.port = c.PORT_IP

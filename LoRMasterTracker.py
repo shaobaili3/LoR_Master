@@ -46,7 +46,7 @@ class Inspector(InspectorWidget):
         self.inspectWork.playerName = fullName
 
         if '#' in fullName:
-            #检查名字是否过短
+            # 检查名字是否过短
             if len(fullName) >= 5:
                 self.inspectWork.start()
                 rank = self.riot.getRankStr(

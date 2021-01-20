@@ -1,23 +1,25 @@
-from network import Network
-from setting import Setting
 import requests
 import aiohttp
 import asyncio
 from setting import Server
 
+
 class Riot():
     def __init__(self, network):
         self.network = network
         self.asyncio = asyncio
-        #self.loop = self.asyncio.get_event_loop()
+        # self.loop = self.asyncio.get_event_loop()
         self.leaderboards = [None, None, None]
         return
 
     def updateLeaderBoard(self):
-        #loop = self.asyncio.get_event_loop()
+        # loop = self.asyncio.get_event_loop()
         loop = self.asyncio.new_event_loop()
         self.asyncio.set_event_loop(loop)
-        tasks = [self.aioLeaderboard(server) for server in [Server.NA.value, Server.EU.value, Server.ASIA.value]]
+        tasks = [
+            self.aioLeaderboard(server) for server in
+            [Server.NA.value, Server.EU.value, Server.ASIA.value]
+        ]
         leaderboards = loop.run_until_complete(self.asyncio.gather(*tasks))
         for index, leaderboard in enumerate(leaderboards):
             if leaderboard is not None:
@@ -45,8 +47,8 @@ class Riot():
     def getRankStr(self, name, server):
         rank, lp = self.checkRank(name, server)
         if rank != '':
-            return  '[Rank: ' + rank + ' lp: ' + lp + ']'
-        else: 
+            return '[Rank: ' + rank + ' lp: ' + lp + ']'
+        else:
             return ''
 
     def getPlayerPUUID(self, name, tag):
@@ -95,7 +97,7 @@ class Riot():
                 if resp.status == 429:
                     print("429")
                 detail = await resp.json()
-        
+
         if 'status' in detail:
             status = detail['status']
             print("match details server Error")
@@ -111,9 +113,9 @@ class Riot():
                 detail = await resp.json()
         print('status:', resp.status)
         if resp.ok:
-            return detail  
+            return detail
         else:
-            print('排行榜服务器错误: ', server,  resp.status)
+            print('排行榜服务器错误: ', server, resp.status)
             print(detail)
             return None
 
@@ -129,7 +131,8 @@ class Riot():
         detail = detailsRequest.json()
         header = detailsRequest.headers
         if 'X-Method-Rate-Limit-Count' in header:
-            print('X-Method-Rate-Limit-Count: ', header['X-Method-Rate-Limit-Count'])
+            print('X-Method-Rate-Limit-Count: ',
+                  header['X-Method-Rate-Limit-Count'])
         if not detailsRequest.ok:
             print(detailsLink)
             print(header)
@@ -137,7 +140,7 @@ class Riot():
             print(detail)
             print('比赛内容服务器错误')
             if 'Retry-After' in header:
-                print('服务器正忙,请等待',header['Retry-After'],'秒')    
+                print('服务器正忙,请等待', header['Retry-After'], '秒')
                 return header['Retry-After']
             return None
         if detail is None:

@@ -74,12 +74,14 @@ def set_state(server):
         local.reset()
         global state
         state = server.value
+
     return inner
 
 
 def get_state(v):
     def inner(item):
         return state == v
+
     return inner
 
 
@@ -88,15 +90,28 @@ def show(v):
 
 
 itemCheckAgain = item('重新显示牌组', checkAgain)  # Reopen latest decks
-itemVersion = item('版本: ' + cs.VERSION_NUM + '内测', versionApp)  # Check for update
+itemVersion = item('版本: ' + cs.VERSION_NUM + '内测',
+                   versionApp)  # Check for update
 itemQuit = item('退出', quitApp)  # Quit
 
-americasItem = item('americas (NA美服)', set_state(Server.NA), checked=get_state('americas'), radio=True)
-europeItem = item('europe (EU欧服)', set_state(Server.EU), checked=get_state('europe'), radio=True)
-asiaItem = item('asia (ASIA亚服)', set_state(Server.ASIA), checked=get_state('asia'), radio=True)
+americasItem = item('americas (NA美服)',
+                    set_state(Server.NA),
+                    checked=get_state('americas'),
+                    radio=True)
+europeItem = item('europe (EU欧服)',
+                  set_state(Server.EU),
+                  checked=get_state('europe'),
+                  radio=True)
+asiaItem = item('asia (ASIA亚服)',
+                set_state(Server.ASIA),
+                checked=get_state('asia'),
+                radio=True)
 
 subMenu = item(show, menu(americasItem, europeItem, asiaItem))
 
 menuWithItems = menu(itemCheckAgain, itemVersion, subMenu, itemQuit)
 
-icon('LOR Master Tracker', image, title="LOR Master Tracker v" + cs.VERSION_NUM, menu=menuWithItems).run(work)
+icon('LOR Master Tracker',
+     image,
+     title="LOR Master Tracker v" + cs.VERSION_NUM,
+     menu=menuWithItems).run(work)

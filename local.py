@@ -51,15 +51,17 @@ class Local:
                     else:
                         # Opponent tag found:
                         print('发现对手：', self.opponentName, '#',
-                            self.opponentTag, "正在载入卡组...")
-                        checkOpponent(self.opponentName, self.opponentTag, show)
+                              self.opponentTag, "正在载入卡组...")
+                        checkOpponent(self.opponentName, self.opponentTag,
+                                      show)
         else:
-            if self.isInProgress == True:
+            if self.isInProgress:
                 print(self.opponentName, '#', self.opponentTag, ' 对局结束')
                 self.isInProgress = False
 
     def updateTagByName(self, name):
-        with open(('Resource/' + self.setting.clientServer + '.dat'), encoding="utf8") as search:
+        with open(('Resource/' + self.setting.clientServer + '.dat'),
+                  encoding="utf8") as search:
             for line in search:
                 fullName = line.rstrip().split('#')
                 if name == fullName[0]:
@@ -71,7 +73,8 @@ class Local:
     def updatePlayernames(self):
         self.playernames = []
         #with open(utility.resource_path('Resource/' + self.setting.getServer() + '.dat'), encoding="utf8") as search:
-        with open(('Resource/' + self.setting.getServer() + '.dat'), encoding="utf8") as search:
+        with open(('Resource/' + self.setting.getServer() + '.dat'),
+                  encoding="utf8") as search:
             for line in search:
                 fullName = line.strip()
                 self.playernames.append(fullName)

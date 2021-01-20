@@ -1,5 +1,6 @@
 from twisted_fate import Deck
 
+
 def getChampion(deckCode):
     cards = Deck.decode(deckCode).cards
     heros = ''
@@ -11,8 +12,6 @@ def getChampion(deckCode):
         heros = 'No champion '
     print(heros)
     return heros
-
-
 
 
 #print(getChampion('CICACAQDBEAQGBARAIAQGFBOAQAQIAJEGQ5AIAIDAMGQCAYEAUBACAZTG'))
