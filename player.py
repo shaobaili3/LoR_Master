@@ -1,10 +1,7 @@
-import json
-from setting import Setting
 import webbrowser
 import utility
 import constants as cs
 
-from setting import Server
 
 class Player:
     def __init__(self, riot):
@@ -35,21 +32,26 @@ class Player:
                 if detail['info']['game_type'] != 'Ranked':
                     print(detail['info']['game_type'])
                     continue
-            ppids = detail['metadata']['participants']
-            for count, ppid in enumerate(ppids):
-                if ppid == puuid:
-                    myDetials = detail['info']['players'][count]
-                    deckCodes.append(myDetials['deck_code'])
+            riotId = detail['metadata']['participants']
+            for count, riotId in enumerate(riotId):
+                if riotId == puuid:
+                    myDetails = detail['info']['players'][count]
+                    deckCodes.append(myDetails['deck_code'])
         print(self.getNoDuplicate(deckCodes))
         show(self.getNoDuplicate(deckCodes))
         self.showOpponentAgain()
 
     def getNoDuplicate(self, deckCodes):
-            deckslist = dict(zip(list(deckCodes), [list(deckCodes).count(i) for i in list(deckCodes)]))
-            deckslist = dict(sorted(deckslist.items(), key=lambda item: item[1], reverse=True))
-            # to-do
-            self.sortedDecksCode = sorted(deckslist, key=deckslist.get, reverse=True)
-            return deckslist
+        deckslist = dict(
+            zip(list(deckCodes),
+                [list(deckCodes).count(i) for i in list(deckCodes)]))
+        deckslist = dict(
+            sorted(deckslist.items(), key=lambda item: item[1], reverse=True))
+        # to-do
+        self.sortedDecksCode = sorted(deckslist,
+                                      key=deckslist.get,
+                                      reverse=True)
+        return deckslist
 
     def showOpponentAgain(self):
         if not self.sortedDecksCode:
@@ -67,99 +69,86 @@ class Player:
                 break
         print("卡组已在默认浏览器中显示, 请在浏览器中查看")
 
-    def inspectPlayer(self, name, tag, showlog, showSummary ,finishTrigger):
+    def inspectPlayer(self, name, tag, showlog, showSummary, finishTrigger):
         puuid = self.riot.getPlayerPUUID(name, tag)
         if puuid is None:
             print('查询失败, puuid为空')
-            return finishTrigger('Couldn\'t find player ' + name + '#' + tag )
+            return finishTrigger('Couldn\'t find player ' + name + '#' + tag)
         matchIds = self.riot.getMatchs(puuid)
         winNum = 0
         matchNum = 0
         if matchIds is None:
             print('查询失败, matchid为空')
-            return finishTrigger(name + '#' + tag + ' has no recent match records')
+            return finishTrigger(name + '#' + tag +
+                                 ' has no recent match records')
         deckCodes = []
         for matchId in matchIds:
             if matchNum == cs.MAX_NUM_DETAILS:
                 break
             detail = self.riot.getDetail(matchId)
-            #print('type:', str(type(detail)))
+            # print('type:', str(type(detail)))
             if str(detail).isdigit():
-                print('Retry after '+ str(detail) +', Riot server is busy.')
-                finishTrigger('Retry after '+ str(detail) + ' seconds, Riot server is busy.')
-                return 
+                print('Retry after ' + str(detail) + ', Riot server is busy.')
+                finishTrigger('Retry after ' + str(detail) +
+                              ' seconds, Riot server is busy.')
+                return
             if detail is None:
                 continue
             print('detail', detail)
             startTime = detail['info']['game_start_time_utc']
             if detail['info']['game_type'] != 'Ranked':
-                print(detail['info']['game_type'], detail['info']['game_mode'],  utility.tolocalTimeString(startTime))
+                print(detail['info']['game_type'], detail['info']['game_mode'],
+                      utility.toLocalTimeString(startTime))
                 continue
             else:
                 matchNum += 1
-            ppids = detail['metadata']['participants']
+            riotId = detail['metadata']['participants']
             outcome = None
             opponentDetail = None
-            myDetials = None
+            myDetails = None
             totalTurn = detail['info']['total_turn_count']
             opName = ['', '']
             fullName = ''
-            for count, ppid in enumerate(ppids):
-                #to check if this is oppoent record
-                if ppid != puuid:
-                    #print(ppid)
-                    opName = self.riot.getPlayerName(ppid)
-                    fullName = opName[0] +'#' +opName[1]
-                    print(str(matchNum) + ". " + fullName + ' ' + utility.tolocalTimeString(startTime))
+            for count, riotId in enumerate(riotId):
+                # to check if this is opponent record
+                if riotId != puuid:
+                    opName = self.riot.getPlayerName(riotId)
+                    fullName = opName[0] + '#' + opName[1]
+                    print(
+                        str(matchNum) + ". " + fullName + ' ' +
+                        utility.toLocalTimeString(startTime))
                     opponentDetail = detail['info']['players'][count]
                 else:
-                    myDetials = detail['info']['players'][count]
-                    outcome = myDetials["game_outcome"]
+                    myDetails = detail['info']['players'][count]
+                    outcome = myDetails["game_outcome"]
                     if outcome == 'win':
                         winNum += 1
-            #opName = self.riot.getPlayerName(opponentDetail['puuid'])[0]
+            # opName = self.riot.getPlayerName(opponentDetail['puuid'])[0]
             rank = ''
-            print(outcome + "   " + str(myDetials["factions"]) + myDetials['deck_code'] + str(opponentDetail["factions"]) + " " + opponentDetail['deck_code'])
-            deckCodes.append(myDetials['deck_code'])
+            print(outcome + "   " + str(myDetails["factions"]) +
+                  myDetails['deck_code'] + str(opponentDetail["factions"]) +
+                  " " + opponentDetail['deck_code'])
+            deckCodes.append(myDetails['deck_code'])
             settingServer = self.riot.network.setting.getServer()
             rank = self.riot.getRankStr(opName[0], settingServer)
-            showlog(fullName + ' ' + rank, utility.tolocalTimeString(startTime), outcome, myDetials['deck_code'], utility.getFactionString(myDetials["factions"]),opponentDetail['deck_code'],utility.getFactionString(opponentDetail["factions"]), totalTurn, matchNum)
+            showlog(fullName + ' ' + rank,
+                    utility.toLocalTimeString(startTime), outcome,
+                    myDetails['deck_code'],
+                    utility.getFactionString(myDetails["factions"]),
+                    opponentDetail['deck_code'],
+                    utility.getFactionString(opponentDetail["factions"]),
+                    totalTurn, matchNum)
         if matchNum != 0:
-            print(str(winNum) + ' wins' + ' out of ' + str(matchNum) + ' rank matchs')
-            print("Win rate: " + str(int(winNum/matchNum * 100)) + "%" )
+            print(
+                str(winNum) + ' wins' + ' out of ' + str(matchNum) +
+                ' rank matchs')
+            print("Win rate: " + str(int(winNum / matchNum * 100)) + "%")
             showSummary(self.getNoDuplicate(deckCodes))
-            return finishTrigger(name + '#' + tag + ' win rate: ' + str(int(winNum/matchNum * 100)) + "%  " + str(winNum) + ' wins' + ' out of ' + str(matchNum) + ' rank matchs')     
+            return finishTrigger(name + '#' + tag + ' win rate: ' +
+                                 str(int(winNum / matchNum * 100)) + "%  " +
+                                 str(winNum) + ' wins' + ' out of ' +
+                                 str(matchNum) + ' rank matchs')
         else:
             print('无法获取对战历史数据')
-            return finishTrigger(name + '#' + tag + ' has no recent rank match records')
-            
-
-    # def checkOpponent(self, name, tag):
-    #     puuid = self.match.getPlayerPUUID(name, tag)
-    #     if puuid is None:
-    #         print("无法获取对手puuid")
-    #         return
-    #     matchIds = self.match.getMatchs(puuid)
-    #     if matchIds is None:
-    #         print("无法获取对手最近对战记录")
-    #         return
-    #     deckCodes = []
-    #     for matchid in matchIds:
-    #         details = self.match.getDetails(matchid)
-    #         if details is None:
-    #             continue
-    #         else:
-    #             if details['info']['game_type'] != 'Ranked':
-    #                 print(details['info']['game_type'])
-    #                 continue
-    #         ppids = details['metadata']['participants']
-    #         if len(deckCodes) == 10:
-    #             break
-    #         for count, ppid in enumerate(ppids):
-    #             if ppid == puuid:
-    #                 myDetials = details['info']['players'][count]
-    #                 deckCodes.append(myDetials['deck_code'])
-    #                 print(str(myDetials["factions"]) + myDetials['deck_code'])
-    #     Deckslist = dict(zip(list(deckCodes),[list(deckCodes).count(i) for i in list(deckCodes)]))
-    #     self.sortedDecksCode = sorted(Deckslist, key = Deckslist.get, reverse=True)
-    #     self.showOpponentAgain()
+            return finishTrigger(name + '#' + tag +
+                                 ' has no recent rank match records')

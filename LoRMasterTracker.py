@@ -11,6 +11,7 @@ from network import Network
 from player import Player
 from inspectorWidget import InspectorWidget
 
+
 class Window(QMainWindow):
     def __init__(self):
         super().__init__()
@@ -21,47 +22,60 @@ class Window(QMainWindow):
         self.progressBar.setHidden(True)
         self.statusBar().addPermanentWidget(self.progressBar)
 
+
 class Inspector(InspectorWidget):
-    def __init__(self, window,  setting, network, riot, player, local):
+    def __init__(self, window, setting, network, riot, player, local):
         super().__init__(setting, network, riot, player, local)
         self.parentWindow = window
 
         if not self.inspectWork.isRunning():
             self.trackWork.start()
-            
+
     def inspectPushButtonClicked(self):
         super().inspectPushButtonClicked()
         if self.inspectWork.isRunning():
             self.inspectWork.terminate()
-            self.showFinish(self.inspectWork.playerName + ' inspection has been terminated')
+            self.showFinish(self.inspectWork.playerName +
+                            ' inspection has been terminated')
             return
-        
+
         print('inspectPushButtonClicked called')
         self.parentWindow.progressBar.setValue(0)
-        
+
         fullName = self.idLineEdit.text().strip()
         self.inspectWork.playerName = fullName
-        
+
         if '#' in fullName:
             #检查名字是否过短
             if len(fullName) >= 5:
                 self.inspectWork.start()
-                rank = self.riot.getRankStr(fullName.split('#')[0], self.setting.getServer())
-                self.textBrowser.append(self.getHtml(fullName, 'OrangeRed') + ' ' + rank + ' (' + self.setting.getServer().capitalize() + ')')
+                rank = self.riot.getRankStr(
+                    fullName.split('#')[0], self.setting.getServer())
+                self.textBrowser.append(
+                    self.getHtml(fullName, 'OrangeRed') + ' ' + rank + ' (' +
+                    self.setting.getServer().capitalize() + ')')
                 self.textBrowser.append('')
                 self.parentWindow.progressBar.setHidden(False)
                 self.inspectPushButton.setText('Stop')
                 return
-        self.textBrowser.append(self.getHtml(fullName + ' is invalid, please input name and tag seperated by # eg: storm#5961', 'OrangeRed')) 
+        self.textBrowser.append(
+            self.getHtml(
+                fullName +
+                ' is invalid, please input name and tag seperated by # eg: storm#5961',
+                'OrangeRed'))
         return
 
     def showFinish(self, text):
         self.parentWindow.progressBar.setHidden(True)
         return super().showFinish(text)
 
-    def showlog(self, opponentName,timeStr, outcome, deckCode, factions, opDeckCode, opFactions, totalTurn, num):
+    def showlog(self, opponentName, timeStr, outcome, deckCode, factions,
+                opDeckCode, opFactions, totalTurn, num):
         self.parentWindow.progressBar.setValue(num)
-        return super().showlog(opponentName,timeStr, outcome, deckCode, factions, opDeckCode, opFactions, totalTurn, num)
+        return super().showlog(opponentName, timeStr, outcome, deckCode,
+                               factions, opDeckCode, opFactions, totalTurn,
+                               num)
+
 
 setting = Setting()
 network = Network(setting)

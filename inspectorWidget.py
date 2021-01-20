@@ -4,11 +4,11 @@ from setting import Setting, Server
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
-from PyQt5 import QtCore
-from PyQt5 import QtGui
+from PyQt5 import *
 from inspectThread import InspectThread
 from trackThread import TrackThread
 import deck
+
 
 class InspectorWidget(QWidget):
     def __init__(self, setting, network, riot, player, local):
@@ -42,7 +42,6 @@ class InspectorWidget(QWidget):
         self.inspectPushButton = QPushButton("Inspect")
         self.inspectPushButton.setDefault(True)
         self.inspectPushButton.clicked.connect(self.inspectPushButtonClicked)
-
 
         self.clearButton = QPushButton()
         self.clearButton.setDefault(True)
@@ -78,21 +77,20 @@ class InspectorWidget(QWidget):
 
     def clearButtonCliked(self):
         self.textBrowser.clear()
-    
+
     def inspectPushButtonClicked(self):
         pass
         # print('start button pushed')
         # fullName = self.idLineEdit.text().strip()
         # self.work.plaerName = fullName
-        
 
         # if '#' in fullName:
         #     if len(fullName) >= 5:
         #         self.work.start()
         #         self.textEdit.appendHtml(self.getHtml(fullName, 'OrangeRed'))
         #         return
-        
-        # self.textEdit.appendHtml(self.getHtml(fullName + ' is invalid, please input name and tag seperated by # eg: storm#5961', 'OrangeRed')) 
+
+        # self.textEdit.appendHtml(self.getHtml(fullName + ' is invalid, please input name and tag seperated by # eg: storm#5961', 'OrangeRed'))
 
     def showFinish(self, text):
         self.inspectPushButton.setText('Inspect')
@@ -103,10 +101,9 @@ class InspectorWidget(QWidget):
             #为了美观最后空一行
             self.textBrowser.append('')
         self.textBrowser.moveCursor(QTextCursor.End)
-        
 
-
-    def showlog(self, opponentName, timeStr, outcome, deckCode, factions,opDeckCode, opFactions, totalTurn, num):
+    def showlog(self, opponentName, timeStr, outcome, deckCode, factions,
+                opDeckCode, opFactions, totalTurn, num):
 
         print('call showlog')
         htmlOpponentName = self.getHtml(opponentName, 'Black')
@@ -120,29 +117,32 @@ class InspectorWidget(QWidget):
         htmlHeros = self.getHtml(deck.getChampion(deckCode), 'DarkRed')
         htmlOpHeros = self.getHtml(deck.getChampion(opDeckCode), 'black')
 
-        self.textBrowser.append(htmlOutcome + htmlOpponentName) 
-        self.textBrowser.append(self.getHtml(timeStr, 'DarkOrange') + ' ' + htmlTotalturn)
+        self.textBrowser.append(htmlOutcome + htmlOpponentName)
+        self.textBrowser.append(
+            self.getHtml(timeStr, 'DarkOrange') + ' ' + htmlTotalturn)
         self.textBrowser.append(htmlFactions + htmlHeros)
         self.textBrowser.append(self.getDeckCodeHtml(deckCode))
-        
+
         self.textBrowser.append(htmlopFactions + htmlOpHeros)
         self.textBrowser.append(self.getDeckCodeHtml(opDeckCode))
         self.textBrowser.append(' ')
 
-
     def showSummary(self, deckdict):
-        self.textBrowser.append(self.getHtml('Summary:' , 'OrangeRed'))
+        self.textBrowser.append(self.getHtml('Summary:', 'OrangeRed'))
         for deckCode, usedTime in deckdict.items():
             #print(deckCode, usedTime)
-            self.textBrowser.append(self.getHtml(deck.getChampion(deckCode), 'DarkRed') + ' ' + self.getDeckCodeHtml(deckCode) + ' ' + str(usedTime) + ' times')
+            self.textBrowser.append(
+                self.getHtml(deck.getChampion(deckCode), 'DarkRed') + ' ' +
+                self.getDeckCodeHtml(deckCode) + ' ' + str(usedTime) +
+                ' times')
         self.textBrowser.append('')
 
     def getDeckCodeHtml(self, text):
         return "<a href=\"https://lor.mobalytics.gg/decks/code/" + text + "\">" + text + "</a>"
 
     def getHtml(self, text, color):
-        return' <font color = \"' + color + '\">' + text + '</font>'
-    
+        return ' <font color = \"' + color + '\">' + text + '</font>'
+
     def changeServer(self, serverName):
         print('changeSever call')
         #completer = QCompleter(local.playernames)
@@ -152,7 +152,6 @@ class InspectorWidget(QWidget):
         completer.setCaseSensitivity(QtCore.Qt.CaseInsensitive)
         self.idLineEdit.setCompleter(completer)
         self.idLineEdit.setText('')
-
 
 
 os.environ["QT_AUTO_SCREEN_SCALE_FACTOR"] = "1"

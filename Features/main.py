@@ -80,7 +80,7 @@ def checkPlayerDetails2(name, tag):
 
         startTime = details['info']['game_start_time_utc']
         if details['info']['game_type'] != 'Ranked':
-            print(details['info']['game_type'], details['info']['game_mode'],  utility.tolocalTimeString(startTime))
+            print(details['info']['game_type'], details['info']['game_mode'],  utility.toLocalTimeString(startTime))
             continue
         else:
             matchNum += 1
@@ -91,7 +91,7 @@ def checkPlayerDetails2(name, tag):
         for count, ppid in enumerate(ppids):
             if ppid != puuid:
                 #print(ppid)
-                print(str(matchNum) + ". " + riot.getPlayerName(ppid)[0] + ' ' + utility.tolocalTimeString(startTime))
+                print(str(matchNum) + ". " + riot.getPlayerName(ppid)[0] + ' ' + utility.toLocalTimeString(startTime))
                 oppentDetails = details['info']['players'][count]
                 if oppentDetails["game_outcome"] == 'loss':
                     winNum += 1

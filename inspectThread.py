@@ -15,7 +15,9 @@ class InspectThread(QThread):
         print('running')
         fullname = self.playerName.strip().split('#')
         try:
-            self.player.inspectPlayer(fullname[0], fullname[1], self.showLogtrigger.emit,self.summaryTigger.emit, self.finishTrigger.emit)
+            self.player.inspectPlayer(fullname[0], fullname[1],
+                                      self.showLogtrigger.emit,
+                                      self.summaryTigger.emit,
+                                      self.finishTrigger.emit)
         except IndexError:
             return
-        
