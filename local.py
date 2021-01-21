@@ -21,7 +21,7 @@ class Local:
         self.isClientRuning = False
         self.isInProgress = False
 
-    def updateStatus(self, checkOpponent):
+    def updateStatus(self, checkOpponent, show):
         try:
             localRequest = requests.get(self.getLocalLink())
             if not self.isClientRuning:
@@ -79,18 +79,6 @@ class Local:
                 fullName = line.strip()
                 self.playernames.append(fullName)
 
-    # def getTagByName(self, name):
-    #     print(self.setting.getServer())
-    #     with open(('Resource/' + self.setting.getServer() + '.dat'), encoding="utf8") as search:
-    #         for line in search:
-    #             fullName = line.rstrip().split('#')
-    #             if name == fullName[0]:
-    #                 # print(fullName)
-    #                 self.opponentTag = fullName[1]
-    #                 return self.opponentTag
-    #     print("Cannot find Opponent Tag")
-    #     self.opponentTag = None
-    #     return self.opponentTag
-
     def getLocalLink(self):
         return cs.IP_KEY + self.setting.getPort() + cs.LOCAL_KEY
+
