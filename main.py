@@ -5,33 +5,34 @@ from player import Player
 import utility
 
 setting = Setting()
-setting.setServer(Server.EU)
+setting.setServer(Server.NA)
 network = Network(setting)
 riot = Riot(network)
 player = Player(riot)
 
-# ShogoPASS#EUW
+# J01#EU1
 # asia europe americas
 
 
 def checkPlayerDetails():
 
-    puuid = riot.getPlayerPUUID('HueCicero', 'EUW')
+    puuid = riot.getPlayerPUUID('storm', '5961')
     matchIds = riot.getMatchs(puuid)
     print(matchIds)
 
     winNum = 0
     matchNum = 0
 
-    print(matchIds)
+    #print(matchIds)
 
     if matchIds is None:
         print("查询失败")
         return
-
+    loop = riot.asyncio.new_event_loop()
+    riot.asyncio.set_event_loop(loop)
     tasks = [riot.aioMatchDetail(id) for id in matchIds]
-    details = riot.loop.run_until_complete(riot.asyncio.gather(*tasks))
-    print(details)
+    details = loop.run_until_complete(riot.asyncio.gather(*tasks))
+    #print(details)
 
     for detail in details:
         if detail is None:
@@ -47,7 +48,7 @@ def checkPlayerDetails():
         for count, ppid in enumerate(ppids):
             if ppid != puuid:
                 # print(ppid)
-                print(str(matchNum) + ". " + riot.getPlayerName(ppid)[0])
+                #print(str(matchNum) + ". " + riot.getPlayerName(ppid)[0])
                 oppentDetails = detail['info']['players'][count]
                 if oppentDetails["game_outcome"] == 'loss':
                     winNum += 1

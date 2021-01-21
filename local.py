@@ -36,11 +36,11 @@ class Local:
         details = localRequest.json()
         gameState = details['GameState']
         if gameState == 'InProgress':
-            if self.isInProgress == False:
+            if not self.isInProgress:
                 print('新对局开始')  # New Match Found
                 self.isInProgress = True
             name = details['OpponentName']
-            if name is not None:
+            if name:
                 if name != self.opponentName:
                     self.opponentName = name
                     self.updateTagByName(self.opponentName)

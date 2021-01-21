@@ -7,7 +7,9 @@ from .utils import read_json_file, get_lor_globals
 from collections import Counter
 
 try:
-    globals_file = Path("./data/data/globals-en_us.json")
+    # globals_file = Path("./Resource/globals-en_us.json")
+    globals_file = Path(__file__).parent.parent.parent / "Resource/globals-en_us.json"
+    print('globals_file:', globals_file)
     data_globals = read_json_file(globals_file)
 except:
     data_globals = get_lor_globals()

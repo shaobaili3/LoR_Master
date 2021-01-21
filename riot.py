@@ -27,17 +27,28 @@ class Riot():
 
     def checkRank(self, name, server):
         print('rank search:', name, server)
+
         if None in self.leaderboards:
             self.updateLeaderBoard()
-        board = self.leaderboards[0]['players']
+        if None in self.leaderboards:
+            self.updateLeaderBoard()
+        board = None
+        if server == Server.NA.value:
+            ab = self.leaderboards[0]
+            if ab:
+                board = ab.get('players')
         if server == Server.EU.value:
-            board = self.leaderboards[1]['players']
+            ab = self.leaderboards[1]
+            if ab:
+                board = ab.get('players')
         elif server == Server.ASIA.value:
-            board = self.leaderboards[2]['players']
-
+            ab = self.leaderboards[2]
+            if ab:
+                board = ab.get('players')
+        if not board:
+            return
         rank = ''
         lp = ''
-        print(board)
         for playerRank in board:
             if playerRank['name'] == name:
                 rank = str(playerRank['rank'] + 1)
@@ -66,7 +77,7 @@ class Riot():
             print(puuidLink)
             print(puuidRequest.headers)
             print(puuidRequest.status_code)
-            print('PUUID服务器错误')
+            print('userId -> PUUID服务器错误')
             print(idDetails)
             return None
         return idDetails.get('puuid')
@@ -94,22 +105,27 @@ class Riot():
         async with aiohttp.ClientSession() as session:
             detailsLink = self.network.getDetailsLink(id)
             async with session.get(detailsLink) as resp:
-                if resp.status == 429:
-                    print("429")
                 detail = await resp.json()
 
-        if 'status' in detail:
-            status = detail['status']
-            print("match details server Error")
-            print('比赛内容服务器错误: ', status)
+        header = resp.headers
+        if 'X-Method-Rate-Limit-Count' in header:
+            print('X-Method-Rate-Limit-Count: ',
+                  header['X-Method-Rate-Limit-Count'])
+            print('X-App-Rate-Limit', header['X-App-Rate-Limit'])
+
+        if resp.ok:
+            return detail
+        else:
+            print('AIO比赛内容服务器错误: ', resp.status)
+            print(detailsLink)
+            print(detail)
             return None
-        return detail
 
     async def aioLeaderboard(self, server):
         async with aiohttp.ClientSession() as session:
             link = self.network.getLeaderboard(server)
             async with session.get(link) as resp:
-                print(resp.status)
+                #print(resp.status)
                 detail = await resp.json()
         print('status:', resp.status)
         if resp.ok:
@@ -133,6 +149,7 @@ class Riot():
         if 'X-Method-Rate-Limit-Count' in header:
             print('X-Method-Rate-Limit-Count: ',
                   header['X-Method-Rate-Limit-Count'])
+            print('X-App-Rate-Limit', header['X-App-Rate-Limit'])
         if not detailsRequest.ok:
             print(detailsLink)
             print(header)
@@ -155,7 +172,7 @@ class Riot():
         except requests.exceptions.RequestException as e:
             print(nameLink)
             print(e)
-            print('无法连接用户名puuid服务器')
+            print('无法连接puuid->userId服务器')
             return '名字Unknow', 'unknow'
         name = nameRequest.json()
         #headers = nameRequest.headers
@@ -165,7 +182,7 @@ class Riot():
             print(nameRequest.headers)
             print(nameRequest.status_code)
             print(name)
-            print('用户名puuid服务器错误:')
+            print('puuid->userid服务器错误:')
             return '名字Unknow', 'unknow'
         return name['gameName'], name['tagLine']
 

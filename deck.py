@@ -1,4 +1,4 @@
-from twisted_fate import Deck
+from decoder import Deck
 
 
 def getChampion(deckCode):
