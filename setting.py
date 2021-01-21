@@ -16,7 +16,7 @@ class Setting():
         self.config.read('config.ini')
         self.check()
         self.writeConfig()
-        self.clientServer = Server.NA.value
+        self.riotServer = self.config['network']['server']
         return
 
     def check(self):
@@ -26,7 +26,10 @@ class Setting():
             self.config['network']['server'] = Server.NA.value
 
     def setServer(self, server):
-        self.config['network']['server'] = server.value
+        self.riotServer = server.value
+
+    def saveServer(self):
+        self.config['network']['server'] = self.riotServer
         self.check()
         self.writeConfig()
 
@@ -38,7 +41,8 @@ class Setting():
 
     def getServer(self):
         #return self.config['network']['server']
-        return self.config.get('network', 'server')
+        #return self.config.get('network', 'server')
+        return self.riotServer
 
     def getPort(self):
         return self.port

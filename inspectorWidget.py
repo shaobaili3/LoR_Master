@@ -67,12 +67,6 @@ class InspectorWidget(QWidget):
         self.inspectWork.showLogtrigger.connect(self.showlog)
         self.inspectWork.finishTrigger.connect(self.showFinish)
         self.inspectWork.summaryTigger.connect(self.showSummary)
-
-        self.trackWork = TrackThread()
-        self.trackWork.local = self.local
-        self.trackWork.player = self.player
-        self.trackWork.showDecks.connect(self.showSummary)
-
         #self.textBrowser.setHtml("""My image :<br /><img src="test.ico"/  height=10 width=20>""")
 
     def clearButtonCliked(self):
@@ -147,6 +141,7 @@ class InspectorWidget(QWidget):
         print('changeSever call')
         #completer = QCompleter(local.playernames)
         self.setting.setServer(Server._value2member_map_[serverName])
+        self.setting.saveServer()
         self.local.updatePlayernames()
         completer = QCompleter(self.local.playernames)
         completer.setCaseSensitivity(QtCore.Qt.CaseInsensitive)

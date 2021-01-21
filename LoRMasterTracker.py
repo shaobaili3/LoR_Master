@@ -4,16 +4,18 @@ from PyQt5.QtWidgets import *
 import constants as cs
 import os
 import sys
-from setting import Setting
+from setting import Setting, Server
 from local import Local
 from riot import Riot
 from network import Network
 from player import Player
 from inspectorWidget import InspectorWidget
+from serverThread import ServerThread
+from trackThread import TrackThread
 
 
 class Window(QMainWindow):
-    def __init__(self):
+    def __init__(self, local, player):
         super().__init__()
         self.resize(1024, 768)
         self.statusBar().showMessage("v" + cs.VERSION_NUM_INSPECTOR)
@@ -21,15 +23,17 @@ class Window(QMainWindow):
         self.progressBar.setRange(0, cs.MAX_NUM_DETAILS)
         self.progressBar.setHidden(True)
         self.statusBar().addPermanentWidget(self.progressBar)
+        self.serverWork = ServerThread()
+        self.trackWork = TrackThread()
+        self.trackWork.local = local
+        self.trackWork.player = player
 
 
 class Inspector(InspectorWidget):
     def __init__(self, window, setting, network, riot, player, local):
         super().__init__(setting, network, riot, player, local)
         self.parentWindow = window
-
-        if not self.inspectWork.isRunning():
-            self.trackWork.start()
+            
 
     def inspectPushButtonClicked(self):
         super().inspectPushButtonClicked()
@@ -77,18 +81,31 @@ class Inspector(InspectorWidget):
                                num)
 
 
-setting = Setting()
-network = Network(setting)
-riot = Riot(network)
-player = Player(riot)
-local = Local(setting)
+settingTracker = Setting()
+networkTracker = Network(settingTracker)
+riotTracker = Riot(networkTracker)
+playerTracker = Player(riotTracker)
+localTracker = Local(settingTracker)
+
+settingInspect = Setting()
+networkInspect = Network(settingInspect)
+riotInspect = Riot(networkInspect)
+playerInspect = Player(riotInspect)
+localInspect = Local(settingInspect)
+
+
+
 app = QApplication(sys.argv)
 os.environ["QT_AUTO_SCREEN_SCALE_FACTOR"] = "1"
 app.setApplicationName(cs.DISPLAY_TITLE)
 app.setWindowIcon(QIcon('Resource/logo.jpg'))
 app.setStyle('Fusion')
-window = Window()
-inspectorWidget = Inspector(window, setting, network, riot, player, local)
+window = Window(localTracker, playerTracker)
+window.serverWork.setting = settingTracker
+window.serverWork.start()
+window.trackWork.start()
+inspectorWidget = Inspector(window, settingInspect, networkInspect, riotInspect, playerInspect, localInspect)
+window.trackWork.showDecks.connect(inspectorWidget.showSummary)
 window.setCentralWidget(inspectorWidget)
 window.show()
 sys.exit(app.exec())

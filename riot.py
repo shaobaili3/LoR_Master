@@ -4,7 +4,7 @@ import asyncio
 from setting import Server
 
 
-class Riot():
+class Riot:
     def __init__(self, network):
         self.network = network
         self.asyncio = asyncio

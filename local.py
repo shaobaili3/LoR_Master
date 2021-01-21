@@ -60,7 +60,7 @@ class Local:
                 self.isInProgress = False
 
     def updateTagByName(self, name):
-        with open(('Resource/' + self.setting.clientServer + '.dat'),
+        with open(('Resource/' + self.setting.getServer() + '.dat'),
                   encoding="utf8") as search:
             for line in search:
                 fullName = line.rstrip().split('#')
