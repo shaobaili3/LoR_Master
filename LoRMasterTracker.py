@@ -19,7 +19,7 @@ class Window(QMainWindow):
     def __init__(self, local, player):
         super().__init__()
         self.resize(1024, 768)
-        self.statusBar().showMessage("v" + cs.VERSION_NUM_INSPECTOR)
+        self.statusBar().showMessage('LoR Disconnected')
         self.progressBar = QProgressBar()
         self.progressBar.setRange(0, cs.MAX_NUM_DETAILS)
         self.progressBar.setHidden(True)
@@ -28,6 +28,10 @@ class Window(QMainWindow):
         self.trackWork = TrackThread()
         self.trackWork.local = local
         self.trackWork.player = player
+        self.trackWork.showStatusTrigger.connect(self.showStatus)
+
+    def showStatus(self, text):
+        self.statusBar().showMessage(text)
 
 
 class Inspector(InspectorWidget):
@@ -95,7 +99,7 @@ localInspect = Local(settingInspect)
 
 app = QApplication(sys.argv)
 os.environ["QT_AUTO_SCREEN_SCALE_FACTOR"] = "1"
-app.setApplicationName(cs.DISPLAY_TITLE)
+app.setApplicationName(cs.DISPLAY_TITLE + " v" + cs.VERSION_NUM_INSPECTOR)
 app.setWindowIcon(QIcon('Resource/logo.jpg'))
 app.setStyle('Fusion')
 window = Window(localTracker, playerTracker)
@@ -104,7 +108,7 @@ window.serverWork.start()
 window.trackWork.start()
 inspectorWidget = Inspector(window, settingInspect, networkInspect,
                             riotInspect, playerInspect, localInspect)
-window.trackWork.showDecks.connect(inspectorWidget.showSummary)
+window.trackWork.showDecksTrigger.connect(inspectorWidget.showSummary)
 window.setCentralWidget(inspectorWidget)
 window.show()
 sys.exit(app.exec())

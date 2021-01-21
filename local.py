@@ -2,6 +2,7 @@ import requests
 from setting import Server
 import constants as cs
 import utility
+from leaderboard import getRankStr
 
 
 class Local:
@@ -21,16 +22,18 @@ class Local:
         self.isClientRuning = False
         self.isInProgress = False
 
-    def updateStatus(self, checkOpponent, show):
+    def updateStatus(self, checkOpponent, showStatus, showDecks):
         try:
             localRequest = requests.get(self.getLocalLink())
             if not self.isClientRuning:
                 # LoR client launched
                 print('LoR客户端已启动', '当前服务器:', self.setting.getServer())
+                showStatus('LoR Connected: ' + self.setting.getServer())
                 self.isClientRuning = True
         except requests.exceptions.RequestException:
             if self.isClientRuning:
                 print('LoR客户端已关闭')  # LoR client exited
+                showStatus('LoR Disconnected')
                 self.isClientRuning = False
             return
         details = localRequest.json()
@@ -42,6 +45,8 @@ class Local:
             name = details['OpponentName']
             if name:
                 if name != self.opponentName:
+                    showStatus('Opponent: ' + name + ' ' +
+                               getRankStr(name, self.setting.getServer()))
                     self.opponentName = name
                     self.updateTagByName(self.opponentName)
                     if self.opponentTag is None:
@@ -53,10 +58,12 @@ class Local:
                         print('发现对手：', self.opponentName, '#',
                               self.opponentTag, "正在载入卡组...")
                         checkOpponent(self.opponentName, self.opponentTag,
-                                      show)
+                                      showDecks)
         else:
             if self.isInProgress:
                 print(self.opponentName, '#', self.opponentTag, ' 对局结束')
+                showStatus('LoR Connected: ' + self.setting.getServer())
+                self.opponentName = None
                 self.isInProgress = False
 
     def updateTagByName(self, name):
@@ -81,4 +88,3 @@ class Local:
 
     def getLocalLink(self):
         return cs.IP_KEY + self.setting.getPort() + cs.LOCAL_KEY
-
