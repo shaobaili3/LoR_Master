@@ -14,21 +14,21 @@ class Local:
         self.playernames = []
         #self.updatePlayernames()
 
-    #call this funtion after changes server in the tracker
+    # call this function after changes server in the tracker
     def reset(self):
         self.opponentName = None
         self.opponentTag = None
         self.isClientRuning = False
         self.isInProgress = False
 
-    def updateStatus(self, checkOpponent, show):
+    def updateStatus(self, checkOpponent):
         try:
             localRequest = requests.get(self.getLocalLink())
             if not self.isClientRuning:
-                # LoR client lanuched
+                # LoR client launched
                 print('LoR客户端已启动', '当前服务器:', self.setting.getServer())
                 self.isClientRuning = True
-        except requests.exceptions.RequestException as e:
+        except requests.exceptions.RequestException:
             if self.isClientRuning:
                 print('LoR客户端已关闭')  # LoR client exited
                 self.isClientRuning = False

@@ -4,7 +4,7 @@ MATCH_KEY = '.api.riotgames.com/lor/match/v1/matches/by-puuid/'
 DETAILS_KEY = '.api.riotgames.com/lor/match/v1/matches/'
 NAME_KEY = '.api.riotgames.com/riot/account/v1/accounts/by-puuid/'
 PUUID_KEY = '.api.riotgames.com/riot/account/v1/accounts/by-riot-id/'
-LEADERBOARD_KEY = '.api.riotgames.com/lor/ranked/v1/leaderboards/'
+
 
 
 class Network():
@@ -27,9 +27,6 @@ class Network():
 
     def getPUUID(self, name, tag):
         return self.getHeadLink() + PUUID_KEY + name + '/' + tag + self.key
-
-    def getLeaderboard(self, server):
-        return 'https://' + server + LEADERBOARD_KEY + self.key
 
     def switchAPIKey(self):
         if self.key == API_KEY:

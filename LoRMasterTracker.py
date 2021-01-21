@@ -12,6 +12,7 @@ from player import Player
 from inspectorWidget import InspectorWidget
 from serverThread import ServerThread
 from trackThread import TrackThread
+from leaderboard import getRankStr
 
 
 class Window(QMainWindow):
@@ -33,7 +34,6 @@ class Inspector(InspectorWidget):
     def __init__(self, window, setting, network, riot, player, local):
         super().__init__(setting, network, riot, player, local)
         self.parentWindow = window
-            
 
     def inspectPushButtonClicked(self):
         super().inspectPushButtonClicked()
@@ -53,7 +53,7 @@ class Inspector(InspectorWidget):
             # 检查名字是否过短
             if len(fullName) >= 5:
                 self.inspectWork.start()
-                rank = self.riot.getRankStr(
+                rank = getRankStr(
                     fullName.split('#')[0], self.setting.getServer())
                 self.textBrowser.append(
                     self.getHtml(fullName, 'OrangeRed') + ' ' + rank + ' (' +
@@ -93,8 +93,6 @@ riotInspect = Riot(networkInspect)
 playerInspect = Player(riotInspect)
 localInspect = Local(settingInspect)
 
-
-
 app = QApplication(sys.argv)
 os.environ["QT_AUTO_SCREEN_SCALE_FACTOR"] = "1"
 app.setApplicationName(cs.DISPLAY_TITLE)
@@ -104,7 +102,8 @@ window = Window(localTracker, playerTracker)
 window.serverWork.setting = settingTracker
 window.serverWork.start()
 window.trackWork.start()
-inspectorWidget = Inspector(window, settingInspect, networkInspect, riotInspect, playerInspect, localInspect)
+inspectorWidget = Inspector(window, settingInspect, networkInspect,
+                            riotInspect, playerInspect, localInspect)
 window.trackWork.showDecks.connect(inspectorWidget.showSummary)
 window.setCentralWidget(inspectorWidget)
 window.show()

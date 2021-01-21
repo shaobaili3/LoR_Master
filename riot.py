@@ -1,66 +1,14 @@
 import requests
 import aiohttp
 import asyncio
-from setting import Server
 
 
 class Riot:
     def __init__(self, network):
         self.network = network
         self.asyncio = asyncio
-        # self.loop = self.asyncio.get_event_loop()
-        self.leaderboards = [None, None, None]
+        self.loop = None
         return
-
-    def updateLeaderBoard(self):
-        # loop = self.asyncio.get_event_loop()
-        loop = self.asyncio.new_event_loop()
-        self.asyncio.set_event_loop(loop)
-        tasks = [
-            self.aioLeaderboard(server) for server in
-            [Server.NA.value, Server.EU.value, Server.ASIA.value]
-        ]
-        leaderboards = loop.run_until_complete(self.asyncio.gather(*tasks))
-        for index, leaderboard in enumerate(leaderboards):
-            if leaderboard is not None:
-                self.leaderboards[index] = leaderboard
-
-    def checkRank(self, name, server):
-        print('rank search:', name, server)
-
-        if None in self.leaderboards:
-            self.updateLeaderBoard()
-        if None in self.leaderboards:
-            self.updateLeaderBoard()
-        board = None
-        if server == Server.NA.value:
-            ab = self.leaderboards[0]
-            if ab:
-                board = ab.get('players')
-        if server == Server.EU.value:
-            ab = self.leaderboards[1]
-            if ab:
-                board = ab.get('players')
-        elif server == Server.ASIA.value:
-            ab = self.leaderboards[2]
-            if ab:
-                board = ab.get('players')
-        if not board:
-            return
-        rank = ''
-        lp = ''
-        for playerRank in board:
-            if playerRank['name'] == name:
-                rank = str(playerRank['rank'] + 1)
-                lp = str(int(playerRank['lp']))
-        return rank, lp
-
-    def getRankStr(self, name, server):
-        rank, lp = self.checkRank(name, server)
-        if rank != '':
-            return '[Rank: ' + rank + ' lp: ' + lp + ']'
-        else:
-            return ''
 
     def getPlayerPUUID(self, name, tag):
         puuidLink = self.network.getPUUID(name, tag)
@@ -118,20 +66,6 @@ class Riot:
         else:
             print('AIO比赛内容服务器错误: ', resp.status)
             print(detailsLink)
-            print(detail)
-            return None
-
-    async def aioLeaderboard(self, server):
-        async with aiohttp.ClientSession() as session:
-            link = self.network.getLeaderboard(server)
-            async with session.get(link) as resp:
-                #print(resp.status)
-                detail = await resp.json()
-        print('status:', resp.status)
-        if resp.ok:
-            return detail
-        else:
-            print('排行榜服务器错误: ', server, resp.status)
             print(detail)
             return None
 

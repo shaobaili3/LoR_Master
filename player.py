@@ -1,6 +1,7 @@
 import webbrowser
 import utility
 import constants as cs
+from leaderboard import getRankStr
 
 
 class Player:
@@ -130,7 +131,7 @@ class Player:
                   " " + opponentDetail['deck_code'])
             deckCodes.append(myDetails['deck_code'])
             settingServer = self.riot.network.setting.getServer()
-            rank = self.riot.getRankStr(opName[0], settingServer)
+            rank = getRankStr(opName[0], settingServer)
             showlog(fullName + ' ' + rank,
                     utility.toLocalTimeString(startTime), outcome,
                     myDetails['deck_code'],
