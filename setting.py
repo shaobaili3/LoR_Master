@@ -17,6 +17,7 @@ class Setting():
         self.check()
         self.writeConfig()
         self.riotServer = self.config['network']['server']
+        self.autoOpenDeck = self.config['track'].getboolean('isAutoOpenDeck')
         return
 
     def check(self):
@@ -24,6 +25,16 @@ class Setting():
         if 'network' not in section:
             self.config.add_section('network')
             self.config['network']['server'] = Server.NA.value
+        if 'track' not in section:
+            self.config.add_section('track')
+            self.config['track']['isAutoOpenDeck'] = 'false'
+
+    def saveAutoOpenDeck(self):
+        if self.autoOpenDeck:
+            self.config['track']['isAutoOpenDeck'] = 'true'
+        else:
+            self.config['track']['isAutoOpenDeck'] = 'false'
+        self.writeConfig()
 
     def setServer(self, server):
         self.riotServer = server.value

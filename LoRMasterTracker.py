@@ -23,13 +23,31 @@ class Window(QMainWindow):
         self.progressBar = QProgressBar()
         self.progressBar.setRange(0, cs.MAX_NUM_DETAILS)
         self.progressBar.setHidden(True)
-        self.statusBar().addPermanentWidget(self.progressBar)
+        self.player = player
         self.serverWork = ServerThread()
         self.trackWork = TrackThread()
         self.trackWork.local = local
         self.trackWork.player = player
         self.trackWork.showStatusTrigger.connect(self.showStatus)
 
+        self.enableTrackCheckBox = QCheckBox("auto open decks")
+        self.enableTrackCheckBox.setChecked(player.riot.network.setting.autoOpenDeck)
+        self.enableTrackCheckBox.stateChanged.connect(self.changeEnableTrackCheckBox)
+
+        #self.autoBrowserCheckBox = QCheckBox("Auto open opponent Decks")
+        #self.autoBrowserCheckBox.setChecked(True)
+
+        self.statusBar().addPermanentWidget(self.enableTrackCheckBox)
+        #self.statusBar().addPermanentWidget(self.autoBrowserCheckBox)
+        self.statusBar().addPermanentWidget(self.progressBar)
+
+    def changeEnableTrackCheckBox(self, state):
+        if state == Qt.Checked:
+            self.player.riot.network.setting.autoOpenDeck = True
+            self.player.riot.network.setting.saveAutoOpenDeck()
+        else:
+            self.player.riot.network.setting.autoOpenDeck = False
+            self.player.riot.network.setting.saveAutoOpenDeck()
     def showStatus(self, text):
         self.statusBar().showMessage(text)
 

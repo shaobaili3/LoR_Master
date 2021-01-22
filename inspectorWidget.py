@@ -39,6 +39,7 @@ class InspectorWidget(QWidget):
         completer = QCompleter(self.local.playernames)
         completer.setCaseSensitivity(QtCore.Qt.CaseInsensitive)
         self.idLineEdit.setCompleter(completer)
+        self.idLineEdit.editingFinished.connect(self.enterIdLineEdit)
         self.inspectPushButton = QPushButton("Inspect")
         self.inspectPushButton.setDefault(True)
         self.inspectPushButton.clicked.connect(self.inspectPushButtonClicked)
@@ -68,6 +69,9 @@ class InspectorWidget(QWidget):
         self.inspectWork.finishTrigger.connect(self.showFinish)
         self.inspectWork.summaryTigger.connect(self.showSummary)
         #self.textBrowser.setHtml("""My image :<br /><img src="test.ico"/  height=10 width=20>""")
+
+    def enterIdLineEdit(self):
+        self.inspectPushButtonClicked()
 
     def clearButtonCliked(self):
         self.textBrowser.clear()

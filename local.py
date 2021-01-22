@@ -13,11 +13,13 @@ class Local:
         self.isInProgress = False
         self.setting = setting
         self.playernames = []
+        self.playername = None
         #self.updatePlayernames()
 
     # call this function after changes server in the tracker
     def reset(self):
         self.opponentName = None
+        self.playername = None
         self.opponentTag = None
         self.isClientRuning = False
         self.isInProgress = False
@@ -35,6 +37,7 @@ class Local:
                 print('LoR客户端已关闭')  # LoR client exited
                 showStatus('LoR Disconnected')
                 self.isClientRuning = False
+                self.reset()
             return
         details = localRequest.json()
         gameState = details['GameState']
@@ -42,12 +45,16 @@ class Local:
             if not self.isInProgress:
                 print('新对局开始')  # New Match Found
                 self.isInProgress = True
-            name = details['OpponentName']
-            if name:
-                if name != self.opponentName:
-                    showStatus('Opponent: ' + name + ' ' +
-                               getRankStr(name, self.setting.getServer()))
-                    self.opponentName = name
+            opName = details['OpponentName']
+            playerName = details['PlayerName']
+            if opName:
+                if opName != self.opponentName:
+                    if not playerName:
+                        return
+                    showStatus(opName + ' ' +
+                               getRankStr(opName.strip(), self.setting.getServer()) + ' vs ' + playerName.strip() + ' ' +
+                               getRankStr(playerName, self.setting.getServer()))
+                    self.opponentName = opName
                     self.updateTagByName(self.opponentName)
                     if self.opponentTag is None:
                         # Play Tag does not exist
@@ -63,8 +70,7 @@ class Local:
             if self.isInProgress:
                 print(self.opponentName, '#', self.opponentTag, ' 对局结束')
                 showStatus('LoR Connected: ' + self.setting.getServer())
-                self.opponentName = None
-                self.isInProgress = False
+                self.reset()
 
     def updateTagByName(self, name):
         with open(('Resource/' + self.setting.getServer() + '.dat'),

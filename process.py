@@ -32,8 +32,7 @@ def getPort(setting):
                         setting.setServer(Server._value2member_map_[line.split()[-1]])
                     if 'Server opened successfully at port: ' in line:
                         # print('port:', line.split()[-1])
-                        setting.port = line.split()[-1]
-                        
+                        setting.port = line.split()[-1]                       
         except IOError:
             print('log file not accessible: ', path)
 

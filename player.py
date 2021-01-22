@@ -55,6 +55,8 @@ class Player:
         return deckslist
 
     def showOpponentAgain(self):
+        if not self.riot.network.setting.autoOpenDeck:
+            return
         if not self.sortedDecksCode:
             print("对手最近没有Rank记录")
             return
