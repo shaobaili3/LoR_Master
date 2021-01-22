@@ -9,7 +9,7 @@ class Player:
         self.sortedDecksCode = []
         self.riot = riot
 
-    def checkOpponent(self, name, tag, show):
+    def checkOpponent(self, name, tag, showMatchs, showDecks):
         puuid = self.riot.getPlayerPUUID(name, tag)
         if puuid is None:
             print("无法获取对手puuid")
@@ -38,8 +38,13 @@ class Player:
                 if riotId == puuid:
                     myDetails = detail['info']['players'][count]
                     deckCodes.append(myDetails['deck_code'])
+                    startTime = detail['info']['game_start_time_utc']
+                    outcome = myDetails["game_outcome"]
+                    showMatchs(utility.toLocalTimeString(startTime, True),
+                               utility.getFactionString(myDetails["factions"]),
+                               myDetails['deck_code'], outcome)
         print(self.getNoDuplicate(deckCodes))
-        show(self.getNoDuplicate(deckCodes))
+        showDecks(self.getNoDuplicate(deckCodes))
         self.showOpponentAgain()
 
     def getNoDuplicate(self, deckCodes):

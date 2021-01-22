@@ -7,13 +7,15 @@ import sys
 
 
 #example: '2020-10-28T06:14:11.2469379+00:00'
-def toLocalTimeString(dateString):
+def toLocalTimeString(dateString, isTimeAgo=False):
     dt = parse(dateString)
     new_ts = dt.astimezone(tz.tzlocal())
     #print(new_ts.tzname()) #Show time zone
     #print(relativedelta(datetime.now(tz.tzlocal()), new_ts))
     #timeAgoStr = timeago.format(new_ts, datetime.now(tz.tzlocal()))
     timeAgoStr = time_ago(new_ts)
+    if isTimeAgo:
+        return timeAgoStr
     return timeAgoStr + ' · ' + str(new_ts.date().isoformat()) + ' ' + str(
         new_ts.time().strftime('%H:%M'))
 

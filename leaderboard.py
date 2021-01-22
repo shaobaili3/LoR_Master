@@ -7,7 +7,14 @@ leaderboards = [None, None, None]
 LEADERBOARD_KEY = '.api.riotgames.com/lor/ranked/v1/leaderboards/'
 
 
-def updateLeaderBoard():
+def updateLeaderboard():
+    if None in leaderboards:
+        updateAll()
+    if None in leaderboards:
+        updateAll()
+
+
+def updateAll():
     # loop = self.asyncio.get_event_loop()
     loop = asyncio.new_event_loop()
     asyncio.set_event_loop(loop)
@@ -25,9 +32,8 @@ def checkRank(name, server):
     print('rank search:', name, server)
 
     if None in leaderboards:
-        updateLeaderBoard()
-    if None in leaderboards:
-        updateLeaderBoard()
+        updateAll()
+
     board = None
     if server == Server.NA.value:
         ab = leaderboards[0]

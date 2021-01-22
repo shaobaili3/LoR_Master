@@ -6,8 +6,8 @@ def getChampion(deckCode):
     heros = ''
     for card in cards:
         if card.isChampion:
-            heros += '(' + str(card.count) + ') '
             heros += card.name + ' '
+            heros += '(' + str(card.count) + ') '     
     if heros == '':
         heros = 'No champion '
     print(heros)

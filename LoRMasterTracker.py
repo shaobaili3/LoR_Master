@@ -1,3 +1,4 @@
+from PyQt5 import QtCore
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
@@ -13,6 +14,7 @@ from inspectorWidget import InspectorWidget
 from serverThread import ServerThread
 from trackThread import TrackThread
 from leaderboard import getRankStr
+import deck
 
 
 class Window(QMainWindow):
@@ -21,7 +23,7 @@ class Window(QMainWindow):
         self.resize(1024, 768)
         self.statusBar().showMessage('LoR Disconnected')
         self.progressBar = QProgressBar()
-        self.progressBar.setRange(0, cs.MAX_NUM_DETAILS)
+        self.progressBar.setRange(0, cs.MAX_NUM_DETAILS + 1)
         self.progressBar.setHidden(True)
         self.player = player
         self.serverWork = ServerThread()
@@ -31,8 +33,10 @@ class Window(QMainWindow):
         self.trackWork.showStatusTrigger.connect(self.showStatus)
 
         self.enableTrackCheckBox = QCheckBox("auto open decks")
-        self.enableTrackCheckBox.setChecked(player.riot.network.setting.autoOpenDeck)
-        self.enableTrackCheckBox.stateChanged.connect(self.changeEnableTrackCheckBox)
+        self.enableTrackCheckBox.setChecked(
+            player.riot.network.setting.autoOpenDeck)
+        self.enableTrackCheckBox.stateChanged.connect(
+            self.changeEnableTrackCheckBox)
 
         #self.autoBrowserCheckBox = QCheckBox("Auto open opponent Decks")
         #self.autoBrowserCheckBox.setChecked(True)
@@ -48,6 +52,7 @@ class Window(QMainWindow):
         else:
             self.player.riot.network.setting.autoOpenDeck = False
             self.player.riot.network.setting.saveAutoOpenDeck()
+
     def showStatus(self, text):
         self.statusBar().showMessage(text)
 
@@ -56,6 +61,11 @@ class Inspector(InspectorWidget):
     def __init__(self, window, setting, network, riot, player, local):
         super().__init__(setting, network, riot, player, local)
         self.parentWindow = window
+        self.idLineEdit.editingFinished.connect(self.enterIdLineEdit)
+
+    def enterIdLineEdit(self):
+        if not self.inspectWork.isRunning():
+            self.inspectPushButtonClicked()
 
     def inspectPushButtonClicked(self):
         super().inspectPushButtonClicked()
@@ -66,7 +76,7 @@ class Inspector(InspectorWidget):
             return
 
         print('inspectPushButtonClicked called')
-        self.parentWindow.progressBar.setValue(0)
+        self.parentWindow.progressBar.setValue(1)
 
         fullName = self.idLineEdit.text().strip()
         self.inspectWork.playerName = fullName
@@ -97,10 +107,37 @@ class Inspector(InspectorWidget):
 
     def showlog(self, opponentName, timeStr, outcome, deckCode, factions,
                 opDeckCode, opFactions, totalTurn, num):
-        self.parentWindow.progressBar.setValue(num)
+        self.parentWindow.progressBar.setValue(num + 1)
         return super().showlog(opponentName, timeStr, outcome, deckCode,
                                factions, opDeckCode, opFactions, totalTurn,
                                num)
+
+    def showMatchs(self, timeAgo, factions, deckCode, outcome):
+        htmlFactions = self.getHtml(factions, 'OrangeRed')
+        htmlOutcome = self.getHtml(outcome.capitalize(), 'IndianRed')
+        if outcome == 'win':
+            htmlOutcome = self.getHtml(outcome.capitalize(), 'Green')
+        htmlHeros = self.getHtml(deck.getChampion(deckCode), 'DarkRed')
+        htmlTimeAgo = self.getHtml(timeAgo, 'DarkOrange')
+        htmlDeckCode = self.getDeckCodeHtml(deckCode)
+        self.textBrowser.append(htmlOutcome + ' ' + htmlTimeAgo +
+                                htmlFactions + htmlHeros + ' ' + htmlDeckCode)
+
+    def showSummary(self, deckdict):
+        activeWindow()
+        app.alert(self)
+        return super().showSummary(deckdict)
+
+
+def activeWindow():
+    #if not window.isActiveWindow():
+    #window.showNormal()
+    #window.setWindowState(window.windowState() & ~QtCore.Qt.WindowMinimized | QtCore.Qt.WindowActive)
+    if not window.isActiveWindow():
+        window.showMinimized()
+    window.showNormal()
+    window.activateWindow()
+    #window.raise_()
 
 
 settingTracker = Setting()
@@ -120,13 +157,16 @@ os.environ["QT_AUTO_SCREEN_SCALE_FACTOR"] = "1"
 app.setApplicationName(cs.DISPLAY_TITLE + " v" + cs.VERSION_NUM_INSPECTOR)
 app.setWindowIcon(QIcon('Resource/logo.jpg'))
 app.setStyle('Fusion')
+
 window = Window(localTracker, playerTracker)
+inspectorWidget = Inspector(window, settingInspect, networkInspect,
+                            riotInspect, playerInspect, localInspect)
+window.setCentralWidget(inspectorWidget)
+window.show()
 window.serverWork.setting = settingTracker
 window.serverWork.start()
 window.trackWork.start()
-inspectorWidget = Inspector(window, settingInspect, networkInspect,
-                            riotInspect, playerInspect, localInspect)
+
 window.trackWork.showDecksTrigger.connect(inspectorWidget.showSummary)
-window.setCentralWidget(inspectorWidget)
-window.show()
+window.trackWork.showMatchsTrigger.connect(inspectorWidget.showMatchs)
 sys.exit(app.exec())

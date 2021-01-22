@@ -39,7 +39,7 @@ class InspectorWidget(QWidget):
         completer = QCompleter(self.local.playernames)
         completer.setCaseSensitivity(QtCore.Qt.CaseInsensitive)
         self.idLineEdit.setCompleter(completer)
-        self.idLineEdit.editingFinished.connect(self.enterIdLineEdit)
+        
         self.inspectPushButton = QPushButton("Inspect")
         self.inspectPushButton.setDefault(True)
         self.inspectPushButton.clicked.connect(self.inspectPushButtonClicked)
@@ -70,9 +70,6 @@ class InspectorWidget(QWidget):
         self.inspectWork.summaryTigger.connect(self.showSummary)
         #self.textBrowser.setHtml("""My image :<br /><img src="test.ico"/  height=10 width=20>""")
 
-    def enterIdLineEdit(self):
-        self.inspectPushButtonClicked()
-
     def clearButtonCliked(self):
         self.textBrowser.clear()
 
@@ -96,7 +93,7 @@ class InspectorWidget(QWidget):
             pass
         else:
             self.textBrowser.append(self.getHtml(text, 'OrangeRed'))
-            #为了美观最后空一行
+            # 为了美观最后空一行
             self.textBrowser.append('')
         self.textBrowser.moveCursor(QTextCursor.End)
 
@@ -105,13 +102,12 @@ class InspectorWidget(QWidget):
 
         print('call showlog')
         htmlOpponentName = self.getHtml(opponentName, 'Black')
-        htmlOutcome = self.getHtml(outcome.capitalize(), 'IndianRed')
         htmlFactions = self.getHtml(factions, 'OrangeRed')
         htmlTotalturn = self.getHtml('Turn: ' + str(totalTurn), 'DarkGray')
-        htmlopFactions = self.getHtml(opFactions, 'Black')
+        htmlOpFactions = self.getHtml(opFactions, 'Black')
+        htmlOutcome = self.getHtml(outcome.capitalize(), 'IndianRed')
         if outcome == 'win':
             htmlOutcome = self.getHtml(outcome.capitalize(), 'Green')
-
         htmlHeros = self.getHtml(deck.getChampion(deckCode), 'DarkRed')
         htmlOpHeros = self.getHtml(deck.getChampion(opDeckCode), 'black')
 
@@ -121,7 +117,7 @@ class InspectorWidget(QWidget):
         self.textBrowser.append(htmlFactions + htmlHeros)
         self.textBrowser.append(self.getDeckCodeHtml(deckCode))
 
-        self.textBrowser.append(htmlopFactions + htmlOpHeros)
+        self.textBrowser.append(htmlOpFactions + htmlOpHeros)
         self.textBrowser.append(self.getDeckCodeHtml(opDeckCode))
         self.textBrowser.append(' ')
 

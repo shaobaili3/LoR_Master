@@ -2,7 +2,7 @@ import requests
 from setting import Server
 import constants as cs
 import utility
-from leaderboard import getRankStr
+from leaderboard import getRankStr, updateLeaderboard
 
 
 class Local:
@@ -24,7 +24,7 @@ class Local:
         self.isClientRuning = False
         self.isInProgress = False
 
-    def updateStatus(self, checkOpponent, showStatus, showDecks):
+    def updateStatus(self, checkOpponent, showStatus, showMatchs, showDecks):
         try:
             localRequest = requests.get(self.getLocalLink())
             if not self.isClientRuning:
@@ -65,12 +65,13 @@ class Local:
                         print('发现对手：', self.opponentName, '#',
                               self.opponentTag, "正在载入卡组...")
                         checkOpponent(self.opponentName, self.opponentTag,
-                                      showDecks)
+                                      showMatchs, showDecks)
         else:
             if self.isInProgress:
                 print(self.opponentName, '#', self.opponentTag, ' 对局结束')
-                showStatus('LoR Connected: ' + self.setting.getServer())
                 self.reset()
+                showStatus('LoR Connected: ' + self.setting.getServer())
+                updateLeaderboard
 
     def updateTagByName(self, name):
         with open(('Resource/' + self.setting.getServer() + '.dat'),
