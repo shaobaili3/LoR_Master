@@ -5,7 +5,7 @@ import time
 
 
 class TrackThread(QThread):
-    showDecksTrigger = pyqtSignal(dict)
+    showDecksTrigger = pyqtSignal(dict, int)
     showStatusTrigger = pyqtSignal(str)
     showMatchsTrigger = pyqtSignal(str, str, str, str)
     showMessageTrigger = pyqtSignal(str)
@@ -22,6 +22,7 @@ class TrackThread(QThread):
             time.sleep(1)
             # print('tracking detecting')
             self.local.updateStatus(self.player.checkOpponent,
+                                    self.showMessageTrigger.emit,
                                     self.showStatusTrigger.emit,
                                     self.showMatchsTrigger.emit,
                                     self.showDecksTrigger.emit)

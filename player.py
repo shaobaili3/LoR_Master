@@ -44,7 +44,7 @@ class Player:
                                utility.getFactionString(myDetails["factions"]),
                                myDetails['deck_code'], outcome)
         print(self.getNoDuplicate(deckCodes))
-        showDecks(self.getNoDuplicate(deckCodes))
+        showDecks(self.getNoDuplicate(deckCodes), len(deckCodes))
         self.showOpponentAgain()
 
     def getNoDuplicate(self, deckCodes):

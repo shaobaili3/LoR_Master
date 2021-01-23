@@ -5,8 +5,7 @@ from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5 import *
-from inspectThread import InspectThread
-from trackThread import TrackThread
+from Threads.inspectThread import InspectThread
 import deck
 
 
@@ -129,7 +128,7 @@ class InspectorWidget(QWidget):
                 self.getHtml(deck.getChampion(deckCode), 'DarkRed') + ' ' +
                 self.getDeckCodeHtml(deckCode) + ' ' + str(usedTime) +
                 ' times')
-        self.textBrowser.append('')
+        #self.textBrowser.append('')
 
     def getDeckCodeHtml(self, text):
         return "<a href=\"https://lor.mobalytics.gg/decks/code/" + text + "\">" + text + "</a>"

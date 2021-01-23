@@ -24,7 +24,8 @@ class Local:
         self.isClientRuning = False
         self.isInProgress = False
 
-    def updateStatus(self, checkOpponent, showStatus, showMatchs, showDecks):
+    def updateStatus(self, checkOpponent, showMessage, showStatus, showMatchs,
+                     showDecks):
         try:
             localRequest = requests.get(self.getLocalLink())
             if not self.isClientRuning:
@@ -41,6 +42,7 @@ class Local:
             return
         details = localRequest.json()
         gameState = details['GameState']
+        vsPlayerStr = ''
         if gameState == 'InProgress':
             if not self.isInProgress:
                 print('新对局开始')  # New Match Found
@@ -51,27 +53,38 @@ class Local:
                 if opName != self.opponentName:
                     if not playerName:
                         return
-                    showStatus(opName + ' ' +
-                               getRankStr(opName.strip(), self.setting.getServer()) + ' vs ' + playerName.strip() + ' ' +
-                               getRankStr(playerName, self.setting.getServer()))
+                    vsPlayerStr = getRankStr(opName.strip(
+                    ), self.setting.getServer()) + ' vs ' + playerName.strip()
+                    showStatus(
+                        opName + ' ' + vsPlayerStr + ' ' +
+                        getRankStr(playerName, self.setting.getServer()))
+
                     self.opponentName = opName
                     self.updateTagByName(self.opponentName)
+                    showMessage(
+                        opName + ' ' + vsPlayerStr + ' ' +
+                        getRankStr(playerName, self.setting.getServer()))
                     if self.opponentTag is None:
                         # Play Tag does not exist
                         print('玩家姓名：', self.opponentName, '，无法找到Tag')
+                        showMessage('Cannot find opponent tag')
+                        showMessage('')
                         return
                     else:
                         # Opponent tag found:
                         print('发现对手：', self.opponentName, '#',
                               self.opponentTag, "正在载入卡组...")
+                        showMessage(self.opponentName + '#' + self.opponentTag)
                         checkOpponent(self.opponentName, self.opponentTag,
                                       showMatchs, showDecks)
         else:
             if self.isInProgress:
                 print(self.opponentName, '#', self.opponentTag, ' 对局结束')
+                showMessage(self.opponentName + '#' + self.opponentTag + ' match finished')
+                showMessage('')
                 self.reset()
                 showStatus('LoR Connected: ' + self.setting.getServer())
-                updateLeaderboard
+                updateLeaderboard()
 
     def updateTagByName(self, name):
         with open(('Resource/' + self.setting.getServer() + '.dat'),

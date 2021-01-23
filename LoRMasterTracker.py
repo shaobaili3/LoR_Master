@@ -11,8 +11,8 @@ from riot import Riot
 from network import Network
 from player import Player
 from inspectorWidget import InspectorWidget
-from serverThread import ServerThread
-from trackThread import TrackThread
+from Threads.serverThread import ServerThread
+from Threads.trackThread import TrackThread
 from leaderboard import getRankStr
 import deck
 
@@ -128,16 +128,27 @@ class Inspector(InspectorWidget):
         app.alert(self)
         return super().showSummary(deckdict)
 
+    def showMessage(self, text):
+        self.textBrowser.append(self.getHtml(text, 'OrangeRed'))
+
+    def showDecks(self, deckdict, num):
+        self.textBrowser.append(self.getHtml('Deck List:', 'OrangeRed'))
+        for deckCode, usedTime in deckdict.items():
+            #print(deckCode, usedTime)
+            self.textBrowser.append(
+                self.getHtml(
+                    self.getHtml(str(int(usedTime / num * 100)) + '%', 'Green') + ' ' +
+                    deck.getChampion(deckCode), 'DarkRed') + ' ' +
+                self.getDeckCodeHtml(deckCode))
+
 
 def activeWindow():
-    #if not window.isActiveWindow():
-    #window.showNormal()
-    #window.setWindowState(window.windowState() & ~QtCore.Qt.WindowMinimized | QtCore.Qt.WindowActive)
+    # if not window.isActiveWindow():
     if not window.isActiveWindow():
         window.showMinimized()
     window.showNormal()
     window.activateWindow()
-    #window.raise_()
+    # window.raise_()
 
 
 settingTracker = Setting()
@@ -167,6 +178,7 @@ window.serverWork.setting = settingTracker
 window.serverWork.start()
 window.trackWork.start()
 
-window.trackWork.showDecksTrigger.connect(inspectorWidget.showSummary)
+window.trackWork.showDecksTrigger.connect(inspectorWidget.showDecks)
 window.trackWork.showMatchsTrigger.connect(inspectorWidget.showMatchs)
+window.trackWork.showMessageTrigger.connect(inspectorWidget.showMessage)
 sys.exit(app.exec())
