@@ -29,10 +29,11 @@ def getPort(setting):
                     line = line.strip()
                     if '[TrySetShardDnsLive] setting dns data by affinity' in line:
                         # print('server:', line.split()[-1])
-                        setting.setServer(Server._value2member_map_[line.split()[-1]])
+                        # setting.setServer(Server._value2member_map_[line.split()[-1]])
+                        setting.riotServer = line.split()[-1].lower()
                     if 'Server opened successfully at port: ' in line:
                         # print('port:', line.split()[-1])
-                        setting.port = line.split()[-1]                       
+                        setting.port = line.split()[-1]
         except IOError:
             print('log file not accessible: ', path)
 

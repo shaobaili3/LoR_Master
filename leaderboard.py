@@ -3,7 +3,7 @@ import aiohttp
 import asyncio
 from network import API_KEY
 
-leaderboards = [None, None, None]
+leaderboards = [None, None, None, None]
 LEADERBOARD_KEY = '.api.riotgames.com/lor/ranked/v1/leaderboards/'
 
 
@@ -20,7 +20,7 @@ def updateAll():
     asyncio.set_event_loop(loop)
     tasks = [
         aioLeaderboard(server)
-        for server in [Server.NA.value, Server.EU.value, Server.ASIA.value]
+        for server in [Server.NA.value, Server.EU.value, Server.ASIA.value, 'sea']
     ]
     boards = loop.run_until_complete(asyncio.gather(*tasks))
     for index, board in enumerate(boards):
@@ -45,6 +45,10 @@ def checkRank(name, server):
             board = ab.get('players')
     elif server == Server.ASIA.value:
         ab = leaderboards[2]
+        if ab:
+            board = ab.get('players')
+    elif server == 'sea':
+        ab = leaderboards[3]
         if ab:
             board = ab.get('players')
     if not board:
