@@ -75,13 +75,14 @@ class Local:
                         print('发现对手：', self.opponentName, '#',
                               self.opponentTag, "正在载入卡组...")
                         showMessage(self.opponentName + '#' + self.opponentTag)
-                        checkOpponent(self.opponentName, self.opponentTag,
+                        checkOpponent(self.opponentName, self.opponentTag, showMessage,
                                       showMatchs, showDecks)
         else:
             if self.isInProgress:
-                print(self.opponentName, '#', self.opponentTag, ' 对局结束')
-                showMessage(self.opponentName + '#' + self.opponentTag + ' match finished')
-                showMessage('')
+                if None not in (self.opponentName, self.opponentTag):
+                    print(self.opponentName, '#', self.opponentTag, ' 对局结束')
+                    showMessage(self.opponentName + '#' + self.opponentTag + ' match finished')
+                    showMessage('')
                 self.reset()
                 showStatus('LoR Connected: ' + self.setting.getServer())
                 updateLeaderboard()

@@ -126,18 +126,25 @@ class Inspector(InspectorWidget):
     def showSummary(self, deckdict):
         activeWindow()
         app.alert(self)
+
         return super().showSummary(deckdict)
 
     def showMessage(self, text):
         self.textBrowser.append(self.getHtml(text, 'OrangeRed'))
 
     def showDecks(self, deckdict, num):
+        if num == 0:
+            self.textBrowser.append(
+                self.getHtml('No recent rank records:', 'OrangeRed'))
+        activeWindow()
+        app.alert(self)
         self.textBrowser.append(self.getHtml('Deck List:', 'OrangeRed'))
         for deckCode, usedTime in deckdict.items():
             #print(deckCode, usedTime)
             self.textBrowser.append(
                 self.getHtml(
-                    self.getHtml(str(int(usedTime / num * 100)) + '%', 'Green') + ' ' +
+                    self.getHtml(
+                        str(int(usedTime / num * 100)) + '%', 'Green') + ' ' +
                     deck.getChampion(deckCode), 'DarkRed') + ' ' +
                 self.getDeckCodeHtml(deckCode))
 

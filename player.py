@@ -9,7 +9,7 @@ class Player:
         self.sortedDecksCode = []
         self.riot = riot
 
-    def checkOpponent(self, name, tag, showMatchs, showDecks):
+    def checkOpponent(self, name, tag, showMessage, showMatchs, showDecks):
         puuid = self.riot.getPlayerPUUID(name, tag)
         if puuid is None:
             print("无法获取对手puuid")
@@ -27,6 +27,10 @@ class Player:
         tasks = [self.riot.aioMatchDetail(id) for id in matchIds]
         details = loop.run_until_complete(self.riot.asyncio.gather(*tasks))
         for detail in details:
+            if str(detail).isdigit():
+                print('Retry after ' + str(detail) + ', Riot server is busy.')
+                showMessage('Riot server is busy, will restore in ' + str(detail) + ' seconds.')
+                return
             if detail is None:
                 continue
             else:
@@ -97,8 +101,7 @@ class Player:
             # print('type:', str(type(detail)))
             if str(detail).isdigit():
                 print('Retry after ' + str(detail) + ', Riot server is busy.')
-                finishTrigger('Retry after ' + str(detail) +
-                              ' seconds, Riot server is busy.')
+                finishTrigger('Riot server is busy, will restore in ' + str(detail) + ' seconds.')
                 return
             if detail is None:
                 continue

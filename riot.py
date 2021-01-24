@@ -61,6 +61,10 @@ class Riot:
                   header['X-Method-Rate-Limit-Count'])
             print('X-App-Rate-Limit', header['X-App-Rate-Limit'])
 
+        if 'Retry-After' in header:
+                print('aio服务器正忙,请等待', header['Retry-After'], '秒')
+                return header['Retry-After']
+
         if resp.ok:
             return detail
         else:
