@@ -136,6 +136,7 @@ class Inspector(InspectorWidget):
         if num == 0:
             self.textBrowser.append(
                 self.getHtml('No recent rank records:', 'OrangeRed'))
+            return
         activeWindow()
         app.alert(self)
         self.textBrowser.append(self.getHtml('Deck List:', 'OrangeRed'))

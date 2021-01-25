@@ -12,8 +12,11 @@ def getLoRLogFile():
                 logFilePath = proc.cmdline()[4]
         except psutil.AccessDenied:
             print("Permission error or access denied on process")
-
-    if logFilePath:
+            return None
+        except IndexError:
+            print('Index error')
+            return None
+    if logFilePath is not None:
         return logFilePath
     else:
         #print('LoR not started')
@@ -22,25 +25,25 @@ def getLoRLogFile():
 
 def getPort(setting):
     path = getLoRLogFile()
-    if path:
+    if path is not None:
         try:
             with open(path, 'r') as lorLog:
-                for line in lorLog:
+                for line in lorLog.readlines():
                     line = line.strip()
                     if '[TrySetShardDnsLive] setting dns data by affinity' in line:
                         # print('server:', line.split()[-1])
                         # setting.setServer(Server._value2member_map_[line.split()[-1]])
-                        setting.riotServer = line.split()[-1].lower()
+                        setting.riotServer = str(line).split().pop()
                     if 'Server opened successfully at port: ' in line:
                         # print('port:', line.split()[-1])
-                        setting.port = line.split()[-1]
+                        setting.port = str(line).split().pop()
         except IOError:
             print('log file not accessible: ', path)
 
 
 def updateTrackServer(setting):
     while (True):
-        time.sleep(1)
+        time.sleep(2)
         getPort(setting)
 
 
