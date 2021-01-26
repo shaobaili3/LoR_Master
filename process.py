@@ -27,7 +27,7 @@ def getPort(setting):
     path = getLoRLogFile()
     if path is not None:
         try:
-            with open(path, 'r') as lorLog:
+            with open(path, 'rt', encoding='utf-8') as lorLog:
                 for line in lorLog.readlines():
                     line = line.strip()
                     if '[TrySetShardDnsLive] setting dns data by affinity' in line:
@@ -39,6 +39,8 @@ def getPort(setting):
                         setting.port = str(line).split().pop()
         except IOError:
             print('log file not accessible: ', path)
+        except BaseException as error:
+            print('An exception occurred: {}'.format(error))
 
 
 def updateTrackServer(setting):
