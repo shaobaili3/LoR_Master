@@ -61,7 +61,7 @@ class Inspector(InspectorWidget):
     def __init__(self, window, setting, network, riot, player, local):
         super().__init__(setting, network, riot, player, local)
         self.parentWindow = window
-        self.idLineEdit.editingFinished.connect(self.enterIdLineEdit)
+        self.idLineEdit.returnPressed.connect(self.enterIdLineEdit)
 
     def enterIdLineEdit(self):
         if not self.inspectWork.isRunning():
