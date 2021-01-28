@@ -21,6 +21,7 @@ class Window(QMainWindow):
     def __init__(self, local, player):
         super().__init__()
         self.resize(1024, 768)
+        self.setWindowTitle(cs.DISPLAY_TITLE + " v" + cs.VERSION_NUM_INSPECTOR)
         self.statusBar().showMessage('LoR Disconnected')
         self.progressBar = QProgressBar()
         self.progressBar.setRange(0, cs.MAX_NUM_DETAILS + 1)
@@ -173,14 +174,13 @@ localInspect = Local(settingInspect)
 
 app = QApplication(sys.argv)
 os.environ["QT_AUTO_SCREEN_SCALE_FACTOR"] = "1"
-app.setApplicationName(cs.DISPLAY_TITLE + " v" + cs.VERSION_NUM_INSPECTOR)
+app.setApplicationName(cs.DISPLAY_TITLE)
 app.setWindowIcon(QIcon('Resource/logo.jpg'))
 app.setStyle('Fusion')
 
 
 
 window = Window(localTracker, playerTracker)
-window.setWindowTitle(cs.DISPLAY_TITLE )
 inspectorWidget = Inspector(window, settingInspect, networkInspect,
                             riotInspect, playerInspect, localInspect)
 window.setCentralWidget(inspectorWidget)
