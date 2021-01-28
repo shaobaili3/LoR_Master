@@ -177,7 +177,10 @@ app.setApplicationName(cs.DISPLAY_TITLE + " v" + cs.VERSION_NUM_INSPECTOR)
 app.setWindowIcon(QIcon('Resource/logo.jpg'))
 app.setStyle('Fusion')
 
+
+
 window = Window(localTracker, playerTracker)
+window.setWindowTitle(cs.DISPLAY_TITLE )
 inspectorWidget = Inspector(window, settingInspect, networkInspect,
                             riotInspect, playerInspect, localInspect)
 window.setCentralWidget(inspectorWidget)
