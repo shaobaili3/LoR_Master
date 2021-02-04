@@ -228,8 +228,9 @@ class VarIntTransformer:
                 return result
 
             current_shift += 7
-
-        raise Exception("Byte array did not contain valid variants.")
+        
+        print(bytearray(_bytes))
+        #raise Exception("Byte array did not contain valid variants.")
 
     @staticmethod
     def getVarInt(value):
