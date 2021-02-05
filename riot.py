@@ -1,16 +1,47 @@
 import requests
 import aiohttp
 import asyncio
-
+import json
 
 class Riot:
     def __init__(self, network):
         self.network = network
         self.asyncio = asyncio
         self.loop = None
+        self.matchDetails = {}
+        self.riotIds = {}
+        self.playerNames = {}
+        self.loadJson()
         return
 
+    def loadJson(self):
+        try:
+            with open('Resource/matchDetails.json', 'r') as fp:
+                self.matchDetails = json.load(fp)
+            with open('Resource/riotIds.json', 'r') as fp:
+                self.riotIds = json.load(fp)
+            with open('Resource/playerNames.json', 'r') as fp:
+                self.playerNames = json.load(fp)
+        except IOError:
+            return
+
+
+    def save(self):
+        with open('Resource/matchDetails.json', 'w+') as fp:
+            json.dump(self.matchDetails, fp)
+        with open('Resource/riotIds.json', 'w+') as fp:
+            json.dump(self.riotIds, fp)
+        with open('Resource/playerNames.json', 'w+') as fp:
+            json.dump(self.playerNames, fp)
+
+
     def getPlayerPUUID(self, name, tag):
+
+        masterId = self.network.setting.riotServer + name + tag
+
+        if masterId in self.riotIds:
+            return self.riotIds[masterId]
+
         puuidLink = self.network.getPUUID(name, tag)
         # print(puuidLink)
         try:
@@ -28,7 +59,13 @@ class Riot:
             print('userId -> PUUID服务器错误')
             print(idDetails)
             return None
-        return idDetails.get('puuid')
+        else:
+            if idDetails.get('puuid') is not None:
+                self.riotIds[masterId] = idDetails.get('puuid')
+                self.save()
+            return idDetails.get('puuid')
+
+        
 
     def getMatchs(self, ppid):
         matchLink = self.network.getMatchsLink(ppid)
@@ -49,9 +86,11 @@ class Riot:
             return None
         return matchIds
 
-    async def aioMatchDetail(self, id):
+    async def aioMatchDetail(self, matchId):
+        if matchId in self.matchDetails.keys:
+            return self.matchDetails[matchId]
         async with aiohttp.ClientSession() as session:
-            detailsLink = self.network.getDetailsLink(id)
+            detailsLink = self.network.getDetailsLink(matchId)
             async with session.get(detailsLink) as resp:
                 detail = await resp.json()
 
@@ -66,6 +105,8 @@ class Riot:
                 return header['Retry-After']
 
         if resp.ok:
+            self.matchDetails[matchId] = detail
+            self.save()
             return detail
         else:
             print('AIO比赛内容服务器错误: ', resp.status)
@@ -74,6 +115,8 @@ class Riot:
             return None
 
     def getDetail(self, matchId):
+        if matchId in self.matchDetails:
+            return self.matchDetails[matchId]
         detailsLink = self.network.getDetailsLink(matchId)
         try:
             detailsRequest = requests.get(detailsLink)
@@ -98,12 +141,17 @@ class Riot:
                 print('服务器正忙,请等待', header['Retry-After'], '秒')
                 return header['Retry-After']
             return None
+        else:
+            self.matchDetails[matchId] = detail
+            self.save()
         if detail is None:
             print('比赛内容服务返回空')
         return detail
 
     # 在main中使用和inspector中使用
     def getPlayerName(self, puuid):
+        if puuid in self.playerNames:
+            return self.playerNames[puuid]
         nameLink = self.network.getNameLink(puuid)
         try:
             nameRequest = requests.get(nameLink)
@@ -122,17 +170,7 @@ class Riot:
             print(name)
             print('puuid->userid服务器错误:')
             return '名字Unknow', 'unknow'
+        else:
+            self.playerNames[puuid] = name['gameName'], name['tagLine']
+            self.save()
         return name['gameName'], name['tagLine']
-
-
-# setting = Setting()
-# network = Network(setting)
-# riot = Riot(network)
-# loop = asyncio.new_event_loop()
-# asyncio.set_event_loop(loop)
-# tasks = [riot.aioLeaderboard(server) for server in [Server.NA.value, Server.EU.value, Server.ASIA.value]]
-# ap = loop.run_until_complete(riot.asyncio.gather(*tasks))
-
-# for aps in ap:
-#     if aps is None:
-#         print('lolololol')
