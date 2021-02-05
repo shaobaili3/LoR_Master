@@ -12,6 +12,7 @@ class Riot:
         self.riotIds = {}
         self.playerNames = {}
         self.loadJson()
+        self.session = requests.Session()
         return
 
     def loadJson(self):
@@ -45,7 +46,7 @@ class Riot:
         puuidLink = self.network.getPUUID(name, tag)
         # print(puuidLink)
         try:
-            puuidRequest = requests.get(puuidLink)
+            puuidRequest = self.session.get(puuidLink)
         except requests.exceptions.RequestException as e:
             print(puuidLink)
             print(e)
@@ -70,7 +71,7 @@ class Riot:
     def getMatchs(self, ppid):
         matchLink = self.network.getMatchsLink(ppid)
         try:
-            matchRequest = requests.get(matchLink)
+            matchRequest = self.session.get(matchLink)
         except requests.exceptions.RequestException as e:
             print(matchLink)
             print(e)
@@ -119,7 +120,7 @@ class Riot:
             return self.matchDetails[matchId]
         detailsLink = self.network.getDetailsLink(matchId)
         try:
-            detailsRequest = requests.get(detailsLink)
+            detailsRequest = self.session.get(detailsLink)
         except requests.exceptions.RequestException as e:
             print(detailsLink)
             print(e)
@@ -154,7 +155,7 @@ class Riot:
             return self.playerNames[puuid]
         nameLink = self.network.getNameLink(puuid)
         try:
-            nameRequest = requests.get(nameLink)
+            nameRequest = self.session.get(nameLink)
         except requests.exceptions.RequestException as e:
             print(nameLink)
             print(e)
