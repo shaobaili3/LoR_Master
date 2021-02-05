@@ -1,8 +1,8 @@
 # Credit to @stelar7, this python implementation is a port of his original javascript implementation
 
 from base64 import b32decode, b32encode
-
-MAX_KNOWN_VERSION = 2
+from io import BytesIO
+MAX_KNOWN_VERSION = 20
 
 
 class Base32:
@@ -159,26 +159,17 @@ class DeckCode:
     @staticmethod
     def decode_deck(string):
         result = {}
-
-        byte_list = bytearray(Base32.decode(string))
-        # print(type(byte_list))
-
-        _format = byte_list[0] >> 4
-        version = byte_list[0] & 0xF
-        byte_list = byte_list[1:]
-
+        data = Base32.decode(string)
+        byte_list = BytesIO(data)
+        version = VarIntTransformer.popVarInt(byte_list)     
         if version > MAX_KNOWN_VERSION:
-            raise ValueError(
-                "Please update to the latest version of twisted_fate")
-
+            raise ValueError("Please update to the latest version of twisted_fate")
         for i in range(3, 0, -1):
             numGroupOfs = VarIntTransformer.popVarInt(byte_list)
-
             for __ in range(numGroupOfs):
                 numOfsInThisGroup = VarIntTransformer.popVarInt(byte_list)
                 setNum = VarIntTransformer.popVarInt(byte_list)
                 faction = VarIntTransformer.popVarInt(byte_list)
-
                 for ___ in range(numOfsInThisGroup):
                     card = VarIntTransformer.popVarInt(byte_list)
 
@@ -189,7 +180,7 @@ class DeckCode:
                     card_code = setString + factionString + cardString
                     result[card_code] = i
 
-        while len(byte_list) > 0:
+        while len(bytearray(byte_list)) > 0:
             fpc = VarIntTransformer.popVarInt(byte_list)
             fps = VarIntTransformer.popVarInt(byte_list)
             fpf = VarIntTransformer.popVarInt(byte_list)
@@ -201,36 +192,26 @@ class DeckCode:
 
             card_code = fpss + fpfs + fpns
             result[card_code] = fpc
-
         return result
 
 
 class VarIntTransformer:
     @staticmethod
-    def popVarInt(_bytes: bytes):
-
-        # _bytes = bytearray(_bytes)
-        AllButMSB = 0x7F
-        JustMSB = 0x80
-
+    def popVarInt(stream):
+        #data = BytesIO(_bytes)
+        shift = 0
         result = 0
-        current_shift = 0
-        bytes_popped = 0
+        while True:
+            c = stream.read(1)
+            if c == b"" or c == "":
+                raise EOFError("Unexpected EOF while reading varint")
+            i = ord(c)
+            result |= (i & 0x7f) << shift
+            shift += 7
+            if not (i & 0x80):
+                break
 
-        for i in range(len(_bytes)):
-            bytes_popped += 1
-            # print(len(_bytes))
-            current = _bytes[i] & AllButMSB
-            result |= current << current_shift
-
-            if (i & JustMSB) != JustMSB:
-                del _bytes[:bytes_popped]
-                return result
-
-            current_shift += 7
-        
-        print(bytearray(_bytes))
-        #raise Exception("Byte array did not contain valid variants.")
+        return result
 
     @staticmethod
     def getVarInt(value):
