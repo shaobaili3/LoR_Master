@@ -131,6 +131,12 @@ class Inspector(InspectorWidget):
         return super().showSummary(deckdict)
 
     def showMessage(self, text):
+        # if text in ' match finished':
+        #     print(text)
+        #     playerName = text.replace(' match finished', ' [')
+        #     print(playerName)
+        #     self.textBrowser.append(self.getVivoHtml(playerName, 'OrangeRed') + ' match finished')
+
         self.textBrowser.append(self.getHtml(text, 'OrangeRed'))
 
     def showDecks(self, deckdict, num):
@@ -146,7 +152,7 @@ class Inspector(InspectorWidget):
             self.textBrowser.append(
                 self.getHtml(
                     self.getHtml(
-                        str(int(usedTime / num * 100)) + '%', 'Green') + ' ' +
+                        str(int(usedTime / num * 100)) + '%', 'Black') + ' ' +
                     deck.getChampion(deckCode), 'DarkRed') + ' ' +
                 self.getDeckCodeHtml(deckCode))
 

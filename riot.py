@@ -88,7 +88,7 @@ class Riot:
         return matchIds
 
     async def aioMatchDetail(self, matchId):
-        if matchId in self.matchDetails.keys:
+        if matchId in self.matchDetails:
             return self.matchDetails[matchId]
         async with aiohttp.ClientSession() as session:
             detailsLink = self.network.getDetailsLink(matchId)
