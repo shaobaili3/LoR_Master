@@ -29,6 +29,9 @@ def updateAll():
 
 
 def checkRank(name, server):
+    rank = ''
+    lp = ''
+
     print('rank search:', name, server)
 
     if None in leaderboards:
@@ -52,9 +55,8 @@ def checkRank(name, server):
         if ab:
             board = ab.get('players')
     if not board:
-        return
-    rank = ''
-    lp = ''
+        return rank, lp
+
     for playerRank in board:
         if playerRank['name'] == name:
             rank = str(playerRank['rank'] + 1)
