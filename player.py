@@ -155,11 +155,11 @@ class Player:
                 ' rank matchs')
             print("Win rate: " + str(int(winNum / matchNum * 100)) + "%")
             showSummary(self.getNoDuplicate(deckCodes))
-            return finishTrigger(name + '#' + tag + ' win rate: ' +
+            return finishTrigger(name + '#' + tag, ' win rate: ' +
                                  str(int(winNum / matchNum * 100)) + "%  " +
                                  str(winNum) + ' wins' + ' out of ' +
                                  str(matchNum) + ' rank matchs')
         else:
             print('无法获取对战历史数据')
-            return finishTrigger(name + '#' + tag +
+            return finishTrigger(name + '#' + tag,
                                  ' has no recent rank match records')

@@ -86,12 +86,12 @@ class InspectorWidget(QWidget):
 
         # self.textEdit.appendHtml(self.getHtml(fullName + ' is invalid, please input name and tag seperated by # eg: storm#5961', 'OrangeRed'))
 
-    def showFinish(self, text):
+    def showFinish(self, name, text):
         self.inspectPushButton.setText('Inspect')
         if text is None:
             pass
         else:
-            self.textBrowser.append(self.getHtml(text, 'OrangeRed'))
+            self.textBrowser.append(self.getVivoHtml(name, 'OrangeRed') + self.getHtml(text, 'OrangeRed'))
             # 为了美观最后空一行
             self.textBrowser.append('')
         self.textBrowser.moveCursor(QTextCursor.End)
@@ -100,7 +100,7 @@ class InspectorWidget(QWidget):
                 opDeckCode, opFactions, totalTurn, num):
 
         print('call showlog')
-        htmlOpponentName = self.getHtml(opponentName, 'Black')
+        htmlOpponentName = self.getVivoHtml(opponentName, 'MidnightBlue')
         htmlFactions = self.getHtml(factions, 'OrangeRed')
         htmlTotalturn = self.getHtml('Turn: ' + str(totalTurn), 'DarkGray')
         htmlOpFactions = self.getHtml(opFactions, 'Black')
@@ -110,7 +110,7 @@ class InspectorWidget(QWidget):
         htmlHeros = self.getHtml(deck.getChampion(deckCode), 'DarkRed')
         htmlOpHeros = self.getHtml(deck.getChampion(opDeckCode), 'black')
 
-        self.textBrowser.append(htmlOutcome + htmlOpponentName)
+        self.textBrowser.append(htmlOutcome + ' ' + htmlOpponentName)
         self.textBrowser.append(
             self.getHtml(timeStr, 'DarkOrange') + ' ' + htmlTotalturn)
         self.textBrowser.append(htmlFactions + htmlHeros)
@@ -130,8 +130,14 @@ class InspectorWidget(QWidget):
                 ' times')
         #self.textBrowser.append('')
 
+    def getVivoHtml(self, name, color):
+        #https://lor.runeterra.ar/Matches/Americas/HiddenValley/2860
+        id = name.split('#')[0]
+        tag = name.split('#')[1].split('[')[0]
+        return "<a href=\"https://lor.runeterra.ar/Matches/" + self.setting.riotServer.capitalize() + "/" + id + "/" + tag + "\" style=\"color:" + color + "\">" + name + "</a>" 
+
     def getDeckCodeHtml(self, text):
-        return "<a href=\"https://lor.mobalytics.gg/decks/code/" + text + "\">" + text + "</a>"
+        return "<a href=\"https://lor.mobalytics.gg/decks/code" + text + "\" style=\"color:DodgerBlue\">" + text + "</a>"
 
     def getHtml(self, text, color):
         return ' <font color = \"' + color + '\">' + text + '</font>'

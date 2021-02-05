@@ -102,9 +102,9 @@ class Inspector(InspectorWidget):
                 'OrangeRed'))
         return
 
-    def showFinish(self, text):
+    def showFinish(self, name, text):
         self.parentWindow.progressBar.setHidden(True)
-        return super().showFinish(text)
+        return super().showFinish(name, text)
 
     def showlog(self, opponentName, timeStr, outcome, deckCode, factions,
                 opDeckCode, opFactions, totalTurn, num):
