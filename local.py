@@ -81,7 +81,7 @@ class Local:
             if self.isInProgress:
                 if None not in (self.opponentName, self.opponentTag):
                     print(self.opponentName, '#', self.opponentTag, ' 对局结束')
-                    showMessage(self.opponentName + '#' + self.opponentTag + ' match finished')
+                    # showMessage(self.opponentName + '#' + self.opponentTag + ' match finished')
                     showMessage('')
                 self.reset()
                 showStatus('LoR Connected: ' + self.setting.getServer())

@@ -2,6 +2,7 @@ import requests
 import aiohttp
 import asyncio
 import json
+import os
 
 class Riot:
     def __init__(self, network):
@@ -17,22 +18,23 @@ class Riot:
 
     def loadJson(self):
         try:
-            with open('Resource/matchDetails.json', 'r') as fp:
+            with open('data/matchDetails.json', 'r') as fp:
                 self.matchDetails = json.load(fp)
-            with open('Resource/riotIds.json', 'r') as fp:
+            with open('data/riotIds.json', 'r') as fp:
                 self.riotIds = json.load(fp)
-            with open('Resource/playerNames.json', 'r') as fp:
+            with open('data/playerNames.json', 'r') as fp:
                 self.playerNames = json.load(fp)
         except IOError:
             return
 
 
     def save(self):
-        with open('Resource/matchDetails.json', 'w+') as fp:
+        os.makedirs('data', exist_ok=True)
+        with open('data/matchDetails.json', 'w+') as fp:
             json.dump(self.matchDetails, fp)
-        with open('Resource/riotIds.json', 'w+') as fp:
+        with open('data/riotIds.json', 'w+') as fp:
             json.dump(self.riotIds, fp)
-        with open('Resource/playerNames.json', 'w+') as fp:
+        with open('data/playerNames.json', 'w+') as fp:
             json.dump(self.playerNames, fp)
 
 

@@ -72,7 +72,7 @@ class Inspector(InspectorWidget):
         super().inspectPushButtonClicked()
         if self.inspectWork.isRunning():
             self.inspectWork.terminate()
-            self.showFinish(self.inspectWork.playerName +
+            self.showFinish('', self.inspectWork.playerName +
                             ' inspection has been terminated')
             return
 
@@ -131,12 +131,10 @@ class Inspector(InspectorWidget):
         return super().showSummary(deckdict)
 
     def showMessage(self, text):
-        # if text in ' match finished':
-        #     print(text)
-        #     playerName = text.replace(' match finished', ' [')
-        #     print(playerName)
-        #     self.textBrowser.append(self.getVivoHtml(playerName, 'OrangeRed') + ' match finished')
-
+        if '#' in text:
+            id = text.split('#')[0]
+            tag = text.split('#')[1].split('[')[0]
+            return self.textBrowser.append("<a href=\"https://lor.runeterra.ar/Matches/" + settingTracker.riotServer.capitalize() + "/" + id + "/" + tag + "\" style=\"color:" + 'OrangeRed' + "\">" + text + "</a>")
         self.textBrowser.append(self.getHtml(text, 'OrangeRed'))
 
     def showDecks(self, deckdict, num):
@@ -155,6 +153,7 @@ class Inspector(InspectorWidget):
                         str(int(usedTime / num * 100)) + '%', 'Black') + ' ' +
                     deck.getChampion(deckCode), 'DarkRed') + ' ' +
                 self.getDeckCodeHtml(deckCode))
+        self.textBrowser.append('')
 
 
 def activeWindow():

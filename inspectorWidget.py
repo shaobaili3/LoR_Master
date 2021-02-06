@@ -88,12 +88,11 @@ class InspectorWidget(QWidget):
 
     def showFinish(self, name, text):
         self.inspectPushButton.setText('Inspect')
-        if text is None:
-            pass
+        if name is None or name == "":
+            self.textBrowser.append(self.getHtml(text, 'OrangeRed'))
         else:
             self.textBrowser.append(self.getVivoHtml(name, 'OrangeRed') + self.getHtml(text, 'OrangeRed'))
-            # 为了美观最后空一行
-            self.textBrowser.append('')
+        self.textBrowser.append('')
         self.textBrowser.moveCursor(QTextCursor.End)
 
     def showlog(self, opponentName, timeStr, outcome, deckCode, factions,
@@ -137,7 +136,7 @@ class InspectorWidget(QWidget):
         return "<a href=\"https://lor.runeterra.ar/Matches/" + self.setting.riotServer.capitalize() + "/" + id + "/" + tag + "\" style=\"color:" + color + "\">" + name + "</a>" 
 
     def getDeckCodeHtml(self, text):
-        return "<a href=\"https://lor.mobalytics.gg/decks/code" + text + "\" style=\"color:DodgerBlue\">" + text + "</a>"
+        return "<a href=\"https://lor.mobalytics.gg/decks/code/" + text + "\" style=\"color:DodgerBlue\">" + text + "</a>"
 
     def getHtml(self, text, color):
         return ' <font color = \"' + color + '\">' + text + '</font>'

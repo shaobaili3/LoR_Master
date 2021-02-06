@@ -19,8 +19,8 @@ class Player:
             print("无法获取对手最近对战记录")
             return
         else:
-            if len(matchIds) > cs.MAX_NUM_DETAILS:
-                matchIds = matchIds[0:cs.MAX_NUM_DETAILS]
+            if len(matchIds) > cs.MAX_NUM_TRACK:
+                matchIds = matchIds[0:cs.MAX_NUM_TRACK]
         deckCodes = []
         loop = self.riot.asyncio.new_event_loop()
         self.riot.asyncio.set_event_loop(loop)
@@ -85,13 +85,13 @@ class Player:
         puuid = self.riot.getPlayerPUUID(name, tag)
         if puuid is None:
             print('查询失败, puuid为空')
-            return finishTrigger('Couldn\'t find player ' + name + '#' + tag)
+            return finishTrigger('', name + '#' + tag + ' is not exist or changed name')
         matchIds = self.riot.getMatchs(puuid)
         winNum = 0
         matchNum = 0
         if matchIds is None:
             print('查询失败, matchid为空')
-            return finishTrigger(name + '#' + tag +
+            return finishTrigger(name + '#' + tag,
                                  ' has no recent match records')
         deckCodes = []
         for matchId in matchIds:
@@ -100,8 +100,8 @@ class Player:
             detail = self.riot.getDetail(matchId)
             # print('type:', str(type(detail)))
             if str(detail).isdigit():
-                print('Retry after ' + str(detail) + ', Riot server is busy.')
-                finishTrigger('Riot server is busy, will restore in ' + str(detail) + ' seconds.')
+                print('Retry after ', str(detail), ', Riot server is busy.')
+                finishTrigger(name + '#' + tag, 'Riot server is busy, will restore in ' + str(detail) + ' seconds.')
                 return
             if detail is None:
                 continue
@@ -120,25 +120,27 @@ class Player:
             totalTurn = detail['info']['total_turn_count']
             opName = ['', '']
             fullName = ''
-            for count, riotId in enumerate(riotId):
-                # to check if this is opponent record
-                if riotId != puuid:
-                    opName = self.riot.getPlayerName(riotId)
-                    fullName = opName[0] + '#' + opName[1]
-                    print(
-                        str(matchNum) + ". " + fullName + ' ' +
-                        utility.toLocalTimeString(startTime))
-                    opponentDetail = detail['info']['players'][count]
-                else:
-                    myDetails = detail['info']['players'][count]
-                    outcome = myDetails["game_outcome"]
-                    if outcome == 'win':
-                        winNum += 1
+            myIndex = 1
+            opponentIndex = 0
+            if riotId[0] == puuid:
+                myIndex = 0
+                opponentIndex = 1
+            opName = self.riot.getPlayerName(riotId[opponentIndex])
+            fullName = opName[0] + '#' + opName[1]
+            print(
+                str(matchNum) + ". " + fullName + ' ' +
+                utility.toLocalTimeString(startTime))
+            opponentDetail = detail['info']['players'][opponentIndex]
+            myDetails = detail['info']['players'][myIndex]
+            outcome = myDetails["game_outcome"]
+            if outcome == 'win':
+                winNum += 1
             # opName = self.riot.getPlayerName(opponentDetail['puuid'])[0]
             rank = ''
-            print(outcome + "   " + str(myDetails["factions"]) +
-                  myDetails['deck_code'] + str(opponentDetail["factions"]) +
-                  " " + opponentDetail['deck_code'])
+            print('@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@')
+            print(detail)
+            print(str(outcome), str(myDetails["factions"]),
+                  str(myDetails['deck_code']), str(opponentDetail["factions"]), str(opponentDetail['deck_code']))
             deckCodes.append(myDetails['deck_code'])
             settingServer = self.riot.network.setting.getServer()
             rank = getRankStr(opName[0], settingServer)
@@ -153,7 +155,7 @@ class Player:
             print(
                 str(winNum) + ' wins' + ' out of ' + str(matchNum) +
                 ' rank matchs')
-            print("Win rate: " + str(int(winNum / matchNum * 100)) + "%")
+            print("Win rate:", str(int(winNum / matchNum * 100)) + "%")
             showSummary(self.getNoDuplicate(deckCodes))
             return finishTrigger(name + '#' + tag, ' win rate: ' +
                                  str(int(winNum / matchNum * 100)) + "%  " +
