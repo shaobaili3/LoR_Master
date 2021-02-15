@@ -19,8 +19,8 @@ def updateAll():
     loop = asyncio.new_event_loop()
     asyncio.set_event_loop(loop)
     tasks = [
-        aioLeaderboard(server)
-        for server in [Server.NA.value, Server.EU.value, Server.ASIA.value, 'sea']
+        aioLeaderboard(server) for server in
+        [Server.NA.value, Server.EU.value, Server.ASIA.value, 'sea']
     ]
     boards = loop.run_until_complete(asyncio.gather(*tasks))
     for index, board in enumerate(boards):
@@ -75,9 +75,14 @@ def getRankStr(name, server):
 async def aioLeaderboard(server):
     async with aiohttp.ClientSession() as session:
         link = getLeaderboard(server)
-        async with session.get(link) as resp:
-            # print(resp.status)
-            detail = await resp.json()
+        try:
+            async with session.get(link) as resp:
+                # print(resp.status)
+                detail = await resp.json()
+        except aiohttp.ClientConnectionError as e:
+            print('aioLeaderboard Error: ', str(e))
+            return None
+
     print('status:', resp.status)
     if resp.ok:
         return detail

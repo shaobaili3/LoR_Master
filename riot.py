@@ -4,6 +4,7 @@ import asyncio
 import json
 import os
 
+
 class Riot:
     def __init__(self, network):
         self.network = network
@@ -27,7 +28,6 @@ class Riot:
         except IOError:
             return
 
-
     def save(self):
         os.makedirs('data', exist_ok=True)
         with open('data/matchDetails.json', 'w+') as fp:
@@ -36,7 +36,6 @@ class Riot:
             json.dump(self.riotIds, fp)
         with open('data/playerNames.json', 'w+') as fp:
             json.dump(self.playerNames, fp)
-
 
     def getPlayerPUUID(self, name, tag):
 
@@ -68,8 +67,6 @@ class Riot:
                 self.save()
             return idDetails.get('puuid')
 
-        
-
     def getMatchs(self, ppid):
         matchLink = self.network.getMatchsLink(ppid)
         try:
@@ -93,10 +90,13 @@ class Riot:
         if matchId in self.matchDetails:
             return self.matchDetails[matchId]
         async with aiohttp.ClientSession() as session:
-            detailsLink = self.network.getDetailsLink(matchId)
-            async with session.get(detailsLink) as resp:
-                detail = await resp.json()
-
+            try:
+                detailsLink = self.network.getDetailsLink(matchId)
+                async with session.get(detailsLink) as resp:
+                    detail = await resp.json()
+            except aiohttp.ClientConnectionError as e:
+                print('aioMatchDetail Error: ', str(e))
+                return None
         header = resp.headers
         if 'X-Method-Rate-Limit-Count' in header:
             print('X-Method-Rate-Limit-Count: ',
@@ -104,8 +104,8 @@ class Riot:
             print('X-App-Rate-Limit', header['X-App-Rate-Limit'])
 
         if 'Retry-After' in header:
-                print('aio服务器正忙,请等待', header['Retry-After'], '秒')
-                return header['Retry-After']
+            print('aio服务器正忙,请等待', header['Retry-After'], '秒')
+            return header['Retry-After']
 
         if resp.ok:
             self.matchDetails[matchId] = detail

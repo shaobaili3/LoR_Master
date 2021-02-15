@@ -75,8 +75,8 @@ class Local:
                         print('发现对手：', self.opponentName, '#',
                               self.opponentTag, "正在载入卡组...")
                         showMessage(self.opponentName + '#' + self.opponentTag)
-                        checkOpponent(self.opponentName, self.opponentTag, showMessage,
-                                      showMatchs, showDecks)
+                        checkOpponent(self.opponentName, self.opponentTag,
+                                      showMessage, showMatchs, showDecks)
         else:
             if self.isInProgress:
                 if None not in (self.opponentName, self.opponentTag):
