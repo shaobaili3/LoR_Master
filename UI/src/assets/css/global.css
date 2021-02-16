@@ -1,0 +1,55 @@
+p {
+    color: white;
+}
+
+/* @import url('https://fonts.googleapis.com/css2?family=Kelly+Slab&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Squada+One&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap');
+/* @import url(http://db.onlinewebfonts.com/c/12420e8c141ca7c3dff41de2d59df13e?family=BeaufortforLOL-Bold); */
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Noto+Sans+KR&family=Noto+Sans+SC&family=Noto+Sans+TC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@700&display=swap');
+
+@font-face {
+    font-family: "BeaufortforLOL-Bold";
+    src: url('../fonts/BeaufortforLOL-Bold.woff.ttf') format('truetype');
+}
+
+:root {
+    --col-gold: rgb(224, 171, 24);
+    --col-dark-gold: rgb(158, 114, 18);
+    
+    --col-background: rgb(28, 28, 31);
+
+    --col-grey: rgb(78, 78, 78);
+    --col-light-grey: rgb(94, 94, 94);
+    --col-dark-grey: rgb(65, 65, 65);
+}
+
+body {
+    background-color: var(--col-background);
+}
+
+.flex {
+    display: flex;
+}
+
+.title, #title {
+    /* font-family: 'BeaufortforLOL-Bold', Arial, Helvetica, sans-serif; */
+    font-family: 'Averia Serif Libre', Arial, Helvetica, sans-serif;
+    /* font-family: 'Squada One', Arial, Helvetica, sans-serif; */
+}
+
+* {
+    font-family: 'Quicksand', 'Noto Sans SC', 'Noto Sans KR', 'Noto Sans TC', 'Noto Sans JP', sans-serif;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+
+    align-items: center;
+    color: white;
+}
