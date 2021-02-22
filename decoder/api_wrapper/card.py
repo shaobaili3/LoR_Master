@@ -16,7 +16,7 @@ try:
         f_json = read_json_file(f)
         cards += f_json
 except Exception as e:
-    print("Could not load card data")
+    print("Could not load card data:", e)
 
 
 class Card:
@@ -27,10 +27,11 @@ class Card:
         self.count = int(kwargs.get("count", 1))
         self._card_data = self.card_info()
 
-        self.image_path = f"/img/cards/{self.cardCode}.png"
-        self.image_path_full = f"./static/img/cards/{self.cardCode}-full.png"
+        # self.image_path = f"/img/cards/{self.cardCode}.png"
+        # self.image_path_full = f"./static/img/cards/{self.cardCode}-full.png"
 
-        self.image_online = f"https://raw.githubusercontent.com/pedrofracassi/lor-bundles/master/set{self.card_set}/en_us/img/cards/{self.cardCode}.png"
+        self.image_online = f"https://dd.b.pvp.net/latest/set{self.card_set}/en_us/img/cards/{self.cardCode}.png"
+
         self.image_online_full = self.image_online.replace(".png", "-full.png")
 
     def card_info(self):

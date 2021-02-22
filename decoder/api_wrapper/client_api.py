@@ -23,8 +23,10 @@ class GameStatus:
     def result(self):
         if self.game_id == -1:
             return "No games played yet this session"
-        if self.is_winner: return "Win"
-        else: return "Loss"
+        if self.is_winner: 
+            return "Win"
+        else: 
+            return "Loss"
 
     def serialize(self, to_dict=False):
         data = {"game_id": self.game_id, "result": self.result}
