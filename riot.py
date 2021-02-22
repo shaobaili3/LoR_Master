@@ -95,7 +95,7 @@ class Riot:
                 async with session.get(detailsLink) as resp:
                     detail = await resp.json()
             except aiohttp.ClientConnectionError as e:
-                print('aioMatchDetail Error: ', str(e))
+                print('aioMatchDetail Error: ', e)
                 return None
         header = resp.headers
         if 'X-Method-Rate-Limit-Count' in header:
