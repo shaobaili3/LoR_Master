@@ -19,3 +19,7 @@ def get_lor_globals(region="en_us"):
     print('Loading: ', url)
     r = requests.get(url)
     return r.json()
+
+def write_json_file(json_data,json_path):
+    with open(json_path, 'w', encoding='utf-8') as f:
+        json.dump(json_data, f, ensure_ascii=False, indent=4)

@@ -2,7 +2,7 @@ from pathlib import Path
 import json
 from .card import Card
 from ..deck_coder.deckCoder import DeckCode
-from .utils import read_json_file, get_lor_globals
+from .utils import read_json_file, get_lor_globals, write_json_file
 from collections import Counter
 
 try:
@@ -14,6 +14,7 @@ try:
 except Exception as e:
     print('Start running data_globals:', e)
     data_globals = get_lor_globals()
+    write_json_file(data_globals, globals_file)
 
 
 class Deck:
