@@ -6096,5 +6096,653 @@
         "type": "Unit",
         "collectible": true,
         "set": "Set4"
+    },
+    {
+        "associatedCards": [],
+        "associatedCardRefs": [
+            "04SH003T3",
+            "04SH003T2",
+            "04SH003T4",
+            "04SH003T1",
+            "04SH062",
+            "04SH003T14"
+        ],
+        "assets": [
+            {
+                "gameAbsolutePath": "http://dd.b.pvp.net/2_3_0/set4/en_us/img/cards/04SH003.png",
+                "fullAbsolutePath": "http://dd.b.pvp.net/2_3_0/set4/en_us/img/cards/04SH003-full.png"
+            }
+        ],
+        "region": "Shurima",
+        "regionRef": "Shurima",
+        "attack": 1,
+        "cost": 3,
+        "health": 5,
+        "description": "When allies attack, summon an attacking <link=card.summon><style=AssociatedCard>Sand Soldier</style></link>.",
+        "descriptionRaw": "When allies attack, summon an attacking Sand Soldier.",
+        "levelupDescription": "You've summoned 10 units<style=Variable></style>.",
+        "levelupDescriptionRaw": "You've summoned 10 units.",
+        "flavorText": "\"When Azir took up the mantle as emperor of Shurima, he was arrogant. Blind. He accumulated power and planned his Ascension so that he might stand as ruler over not just Shurima, but the entire world.\" - Scribe Kah'nir, History of the Ascended Host",
+        "artistName": "SIXMOREVODKA",
+        "name": "Azir",
+        "cardCode": "04SH003",
+        "keywords": [],
+        "keywordRefs": [],
+        "spellSpeed": "",
+        "spellSpeedRef": "",
+        "rarity": "Champion",
+        "rarityRef": "Champion",
+        "subtype": "ASCENDED",
+        "subtypes": [
+            "ASCENDED"
+        ],
+        "supertype": "Champion",
+        "type": "Unit",
+        "collectible": true,
+        "set": "Set4"
+    },
+    {
+        "associatedCards": [],
+        "associatedCardRefs": [
+            "04SH003",
+            "04SH003T2",
+            "04SH003T4",
+            "04SH003T1",
+            "04SH062",
+            "04SH003T14"
+        ],
+        "assets": [
+            {
+                "gameAbsolutePath": "http://dd.b.pvp.net/2_3_0/set4/en_us/img/cards/04SH003T3.png",
+                "fullAbsolutePath": "http://dd.b.pvp.net/2_3_0/set4/en_us/img/cards/04SH003T3-full.png"
+            }
+        ],
+        "region": "Shurima",
+        "regionRef": "Shurima",
+        "attack": 2,
+        "cost": 3,
+        "health": 6,
+        "description": "When allies attack, summon an attacking <link=card.summon><style=AssociatedCard>Sand Soldier</style></link>.\r\nWhen you summon an ally, give us both +1|+0 this round.",
+        "descriptionRaw": "When allies attack, summon an attacking Sand Soldier.\r\nWhen you summon an ally, give us both +1|+0 this round.",
+        "levelupDescription": "You've <link=vocab.SunDiscRestore><style=Vocab>restored the Sun Disc</style></link>.",
+        "levelupDescriptionRaw": "You've restored the Sun Disc.",
+        "flavorText": "\"Short of fulfilling his destiny, Azir's lifelong friend - and newly named brother - hatefully cast him off the dais. In that fateful moment Shurima was cursed, doomed to ruin for thousands of years to follow.\" - Scribe Kah'nir, History of the Ascended Host",
+        "artistName": "SIXMOREVODKA",
+        "name": "Azir",
+        "cardCode": "04SH003T3",
+        "keywords": [],
+        "keywordRefs": [],
+        "spellSpeed": "",
+        "spellSpeedRef": "",
+        "rarity": "None",
+        "rarityRef": "None",
+        "subtype": "ASCENDED",
+        "subtypes": [
+            "ASCENDED"
+        ],
+        "supertype": "Champion",
+        "type": "Unit",
+        "collectible": false,
+        "set": "Set4"
+    },
+    {
+        "associatedCards": [],
+        "associatedCardRefs": [
+            "04SH003",
+            "04SH003T3",
+            "04SH003T4",
+            "04SH003T14",
+            "04SH003T1"
+        ],
+        "assets": [
+            {
+                "gameAbsolutePath": "http://dd.b.pvp.net/2_3_0/set4/en_us/img/cards/04SH003T2.png",
+                "fullAbsolutePath": "http://dd.b.pvp.net/2_3_0/set4/en_us/img/cards/04SH003T2-full.png"
+            }
+        ],
+        "region": "Shurima",
+        "regionRef": "Shurima",
+        "attack": 6,
+        "cost": 3,
+        "health": 6,
+        "description": "When I level up, replace your deck with the Emperor's Deck, then draw 1.\r\nWhen allies attack, summon an attacking <link=card.summon><style=AssociatedCard>Sandstone Charger</style></link>.",
+        "descriptionRaw": "When I level up, replace your deck with the Emperor's Deck, then draw 1.\r\nWhen allies attack, summon an attacking Sandstone Charger.",
+        "levelupDescription": "",
+        "levelupDescriptionRaw": "",
+        "flavorText": "\"The Emperor Azir, though haughty, is generous. Above all, he cares deeply for those who would march alongside him into Shurima's golden future, as the nation rises anew, its people once again united under his rule.\" \n- Scribe Kah'nir, History of the Ascended Host",
+        "artistName": "SIXMOREVODKA",
+        "name": "Azir",
+        "cardCode": "04SH003T2",
+        "keywords": [],
+        "keywordRefs": [],
+        "spellSpeed": "",
+        "spellSpeedRef": "",
+        "rarity": "None",
+        "rarityRef": "None",
+        "subtype": "ASCENDED",
+        "subtypes": [
+            "ASCENDED"
+        ],
+        "supertype": "Champion",
+        "type": "Unit",
+        "collectible": false,
+        "set": "Set4"
+    },
+    {
+        "associatedCards": [],
+        "associatedCardRefs": [
+            "04SH003T1",
+            "04SH003",
+            "04SH003T3",
+            "04SH003T2"
+        ],
+        "assets": [
+            {
+                "gameAbsolutePath": "http://dd.b.pvp.net/2_3_0/set4/en_us/img/cards/04SH003T4.png",
+                "fullAbsolutePath": "http://dd.b.pvp.net/2_3_0/set4/en_us/img/cards/04SH003T4-full.png"
+            }
+        ],
+        "region": "Shurima",
+        "regionRef": "Shurima",
+        "attack": 0,
+        "cost": 3,
+        "health": 0,
+        "description": "Summon a <link=card.summon><style=AssociatedCard>Sand Soldier</style></link>.\r\nCreate a <link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>Fleeting</style></link> <link=card.selfRef><style=AssociatedCard>Arise!</style></link> in hand.\r\nCreate a <link=card.level1><style=AssociatedCard>Azir</style></link> in your deck.",
+        "descriptionRaw": "Summon a Sand Soldier.\r\nCreate a Fleeting Arise! in hand.\r\nCreate a Azir in your deck.",
+        "levelupDescription": "",
+        "levelupDescriptionRaw": "",
+        "flavorText": "\"The order is given.\" - Azir",
+        "artistName": "Kudos Productions",
+        "name": "Azir's Arise!",
+        "cardCode": "04SH003T4",
+        "keywords": [
+            "Burst"
+        ],
+        "keywordRefs": [
+            "Burst"
+        ],
+        "spellSpeed": "Burst",
+        "spellSpeedRef": "Burst",
+        "rarity": "None",
+        "rarityRef": "None",
+        "subtype": "",
+        "subtypes": [],
+        "supertype": "Champion",
+        "type": "Spell",
+        "collectible": false,
+        "set": "Set4"
+    },
+    {
+        "associatedCards": [],
+        "associatedCardRefs": [
+            "04SH003T1"
+        ],
+        "assets": [
+            {
+                "gameAbsolutePath": "http://dd.b.pvp.net/2_3_0/set4/en_us/img/cards/04SH099.png",
+                "fullAbsolutePath": "http://dd.b.pvp.net/2_3_0/set4/en_us/img/cards/04SH099-full.png"
+            }
+        ],
+        "region": "Shurima",
+        "regionRef": "Shurima",
+        "attack": 0,
+        "cost": 3,
+        "health": 0,
+        "description": "Summon a <link=card.summon><style=AssociatedCard>Sand Soldier</style></link>.\r\nCreate a <link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>Fleeting</style></link> <link=card.selfRef><style=AssociatedCard>Arise!</style></link> in hand.",
+        "descriptionRaw": "Summon a Sand Soldier.\r\nCreate a Fleeting Arise! in hand.",
+        "levelupDescription": "",
+        "levelupDescriptionRaw": "",
+        "flavorText": "\"The order is given.\" - Azir",
+        "artistName": "Kudos Productions",
+        "name": "Arise!",
+        "cardCode": "04SH099",
+        "keywords": [
+            "Burst"
+        ],
+        "keywordRefs": [
+            "Burst"
+        ],
+        "spellSpeed": "Burst",
+        "spellSpeedRef": "Burst",
+        "rarity": "RARE",
+        "rarityRef": "Rare",
+        "subtype": "",
+        "subtypes": [],
+        "supertype": "",
+        "type": "Spell",
+        "collectible": true,
+        "set": "Set4"
+    },
+    {
+        "associatedCards": [],
+        "associatedCardRefs": [
+            "04SH003T1"
+        ],
+        "assets": [
+            {
+                "gameAbsolutePath": "http://dd.b.pvp.net/2_3_0/set4/en_us/img/cards/04SH075.png",
+                "fullAbsolutePath": "http://dd.b.pvp.net/2_3_0/set4/en_us/img/cards/04SH075-full.png"
+            }
+        ],
+        "region": "Shurima",
+        "regionRef": "Shurima",
+        "attack": 3,
+        "cost": 7,
+        "health": 7,
+        "description": "Give enemies <link=keyword.Vulnerable><sprite name=Vulnerable><style=Keyword>Vulnerable</style></link> this round and summon 6 <link=card.summon><style=AssociatedCard>Sand Soldiers</style></link>.",
+        "descriptionRaw": "Give enemies Vulnerable this round and summon 6 Sand Soldiers.",
+        "levelupDescription": "",
+        "levelupDescriptionRaw": "",
+        "flavorText": "\"My soldiers march on.\" - Azir",
+        "artistName": "Kudos Productions",
+        "name": "Emperor's Divide",
+        "cardCode": "04SH075",
+        "keywords": [
+            "Slow"
+        ],
+        "keywordRefs": [
+            "Slow"
+        ],
+        "spellSpeed": "Slow",
+        "spellSpeedRef": "Slow",
+        "rarity": "EPIC",
+        "rarityRef": "Epic",
+        "subtype": "",
+        "subtypes": [],
+        "supertype": "",
+        "type": "Spell",
+        "collectible": true,
+        "set": "Set4"
+    },
+    {
+        "associatedCards": [],
+        "associatedCardRefs": [],
+        "assets": [
+            {
+                "gameAbsolutePath": "http://dd.b.pvp.net/2_3_0/set4/en_us/img/cards/04SH059.png",
+                "fullAbsolutePath": "http://dd.b.pvp.net/2_3_0/set4/en_us/img/cards/04SH059-full.png"
+            }
+        ],
+        "region": "Shurima",
+        "regionRef": "Shurima",
+        "attack": 0,
+        "cost": 4,
+        "health": 0,
+        "description": "Kill an ally or destroy one of your mana gems to stop all enemy <link=keyword.Fast><sprite name=Fast><style=Keyword>Fast</style></link> spells, <link=keyword.Slow><sprite name=Slow><style=Keyword>Slow</style></link> spells, and <link=keyword.Skill><sprite name=PlaySkillMark><style=Keyword>Skills</style></link>.",
+        "descriptionRaw": "Kill an ally or destroy one of your mana gems to stop all enemy Fast spells, Slow spells, and Skills.",
+        "levelupDescription": "",
+        "levelupDescriptionRaw": "",
+        "flavorText": "Analysis is a mainstay of chronomancy, as many actions must be halted to consider future solutions.",
+        "artistName": "Kudos Productions",
+        "name": "Rite of Negation",
+        "cardCode": "04SH059",
+        "keywords": [
+            "Fast"
+        ],
+        "keywordRefs": [
+            "Fast"
+        ],
+        "spellSpeed": "Fast",
+        "spellSpeedRef": "Fast",
+        "rarity": "EPIC",
+        "rarityRef": "Epic",
+        "subtype": "",
+        "subtypes": [],
+        "supertype": "",
+        "type": "Spell",
+        "collectible": true,
+        "set": "Set4"
+    },
+    {
+        "associatedCards": [],
+        "associatedCardRefs": [],
+        "assets": [
+            {
+                "gameAbsolutePath": "http://dd.b.pvp.net/2_3_0/set4/en_us/img/cards/04SH003T6.png",
+                "fullAbsolutePath": "http://dd.b.pvp.net/2_3_0/set4/en_us/img/cards/04SH003T6-full.png"
+            }
+        ],
+        "region": "Shurima",
+        "regionRef": "Shurima",
+        "attack": 0,
+        "cost": 4,
+        "health": 0,
+        "description": "<link=keyword.Obliterate><style=Keyword>Obliterate</style></link> an enemy follower.\r\nDraw 1.",
+        "descriptionRaw": "Obliterate an enemy follower.\r\nDraw 1.",
+        "levelupDescription": "",
+        "levelupDescriptionRaw": "",
+        "flavorText": "\"Those who oppose us will be reduced to dust.\" - Azir",
+        "artistName": "Kudos Productions",
+        "name": "Crumbling Sands",
+        "cardCode": "04SH003T6",
+        "keywords": [
+            "Fast"
+        ],
+        "keywordRefs": [
+            "Fast"
+        ],
+        "spellSpeed": "Fast",
+        "spellSpeedRef": "Fast",
+        "rarity": "None",
+        "rarityRef": "None",
+        "subtype": "",
+        "subtypes": [],
+        "supertype": "",
+        "type": "Spell",
+        "collectible": false,
+        "set": "Set4"
+    },
+    {
+        "associatedCards": [],
+        "associatedCardRefs": [],
+        "assets": [
+            {
+                "gameAbsolutePath": "http://dd.b.pvp.net/2_3_0/set4/en_us/img/cards/04SH003T11.png",
+                "fullAbsolutePath": "http://dd.b.pvp.net/2_3_0/set4/en_us/img/cards/04SH003T11-full.png"
+            }
+        ],
+        "region": "Shurima",
+        "regionRef": "Shurima",
+        "attack": 5,
+        "cost": 2,
+        "health": 4,
+        "description": "When I'm summoned, draw 1.",
+        "descriptionRaw": "When I'm summoned, draw 1.",
+        "levelupDescription": "",
+        "levelupDescriptionRaw": "",
+        "flavorText": "The emperor's golden guard moves as one, a succession of regimented warriors that is as terrifying as it is impressive to behold.",
+        "artistName": "Kudos Productions",
+        "name": "Emperor's Guard",
+        "cardCode": "04SH003T11",
+        "keywords": [
+            "Fearsome"
+        ],
+        "keywordRefs": [
+            "Fearsome"
+        ],
+        "spellSpeed": "",
+        "spellSpeedRef": "",
+        "rarity": "None",
+        "rarityRef": "None",
+        "subtype": "",
+        "subtypes": [],
+        "supertype": "",
+        "type": "Unit",
+        "collectible": false,
+        "set": "Set4"
+    },
+    {
+        "associatedCards": [],
+        "associatedCardRefs": [],
+        "assets": [
+            {
+                "gameAbsolutePath": "http://dd.b.pvp.net/2_3_0/set4/en_us/img/cards/04SH003T8.png",
+                "fullAbsolutePath": "http://dd.b.pvp.net/2_3_0/set4/en_us/img/cards/04SH003T8-full.png"
+            }
+        ],
+        "region": "Shurima",
+        "regionRef": "Shurima",
+        "attack": 10,
+        "cost": 7,
+        "health": 7,
+        "description": "When I'm summoned, draw 1.\r\n<link=vocab.RoundEnd><style=Vocab>Round End</style></link>: The <link=vocab.Strongest><style=Vocab>Strongest</style></link> enemy and I <link=vocab.Strike><style=Vocab>strike</style></link> each other.",
+        "descriptionRaw": "When I'm summoned, draw 1.\r\nRound End: The Strongest enemy and I strike each other.",
+        "levelupDescription": "",
+        "levelupDescriptionRaw": "",
+        "flavorText": "\"Behold! See how our champion sits astride the lion? Even the king of beasts would yield to his power, for he is the Will of Azir!\" - Voice of the Risen",
+        "artistName": "Kudos Productions",
+        "name": "Eternal Gladiator",
+        "cardCode": "04SH003T8",
+        "keywords": [
+            "Barrier"
+        ],
+        "keywordRefs": [
+            "Barrier"
+        ],
+        "spellSpeed": "",
+        "spellSpeedRef": "",
+        "rarity": "None",
+        "rarityRef": "None",
+        "subtype": "",
+        "subtypes": [],
+        "supertype": "",
+        "type": "Unit",
+        "collectible": false,
+        "set": "Set4"
+    },
+    {
+        "associatedCards": [],
+        "associatedCardRefs": [],
+        "assets": [
+            {
+                "gameAbsolutePath": "http://dd.b.pvp.net/2_3_0/set4/en_us/img/cards/04SH003T10.png",
+                "fullAbsolutePath": "http://dd.b.pvp.net/2_3_0/set4/en_us/img/cards/04SH003T10-full.png"
+            }
+        ],
+        "region": "Shurima",
+        "regionRef": "Shurima",
+        "attack": 0,
+        "cost": 5,
+        "health": 0,
+        "description": "Enemies are <link=keyword.Vulnerable><sprite name=Vulnerable><style=Keyword>Vulnerable</style></link>.\r\n<link=vocab.RoundStart><style=Vocab>Round Start</style></link>: <link=vocab.Rally><style=Vocab>Rally</style></link>.",
+        "descriptionRaw": "Enemies are Vulnerable.\r\nRound Start: Rally.",
+        "levelupDescription": "",
+        "levelupDescriptionRaw": "",
+        "flavorText": "\"Observe our god-emperor! He knows the power of these lands better than any, and his army only grows. Shurima is risen, and it shall never fall again!\" - Voice of the Risen",
+        "artistName": "Kudos Productions",
+        "name": "General's Palace",
+        "cardCode": "04SH003T10",
+        "keywords": [
+            "Landmark"
+        ],
+        "keywordRefs": [
+            "LandmarkVisualOnly"
+        ],
+        "spellSpeed": "",
+        "spellSpeedRef": "",
+        "rarity": "None",
+        "rarityRef": "None",
+        "subtype": "",
+        "subtypes": [],
+        "supertype": "",
+        "type": "Landmark",
+        "collectible": false,
+        "set": "Set4"
+    },
+    {
+        "associatedCards": [],
+        "associatedCardRefs": [
+            "04SH003T1"
+        ],
+        "assets": [
+            {
+                "gameAbsolutePath": "http://dd.b.pvp.net/2_3_0/set4/en_us/img/cards/04SH003T5.png",
+                "fullAbsolutePath": "http://dd.b.pvp.net/2_3_0/set4/en_us/img/cards/04SH003T5-full.png"
+            }
+        ],
+        "region": "Shurima",
+        "regionRef": "Shurima",
+        "attack": 6,
+        "cost": 5,
+        "health": 6,
+        "description": "<link=vocab.Play><style=Vocab>Play</style></link> and <link=vocab.RoundStart><style=Vocab>Round Start</style></link>: Summon 2 <link=card.summon><style=AssociatedCard>Sand Soldiers</style></link> and grant them +2|+2.",
+        "descriptionRaw": "Play and Round Start: Summon 2 Sand Soldiers and grant them +2|+2.",
+        "levelupDescription": "",
+        "levelupDescriptionRaw": "",
+        "flavorText": "Now more powerful than ever, Azir has raised his most loyal soldiers to lead his armies.",
+        "artistName": "Kudos Productions",
+        "name": "Golden Herald",
+        "cardCode": "04SH003T5",
+        "keywords": [],
+        "keywordRefs": [],
+        "spellSpeed": "",
+        "spellSpeedRef": "",
+        "rarity": "None",
+        "rarityRef": "None",
+        "subtype": "",
+        "subtypes": [],
+        "supertype": "",
+        "type": "Unit",
+        "collectible": false,
+        "set": "Set4"
+    },
+    {
+        "associatedCards": [],
+        "associatedCardRefs": [
+            "04SH067",
+            "04SH047"
+        ],
+        "assets": [
+            {
+                "gameAbsolutePath": "http://dd.b.pvp.net/2_3_0/set4/en_us/img/cards/04SH003T13.png",
+                "fullAbsolutePath": "http://dd.b.pvp.net/2_3_0/set4/en_us/img/cards/04SH003T13-full.png"
+            }
+        ],
+        "region": "Shurima",
+        "regionRef": "Shurima",
+        "attack": 0,
+        "cost": 10,
+        "health": 0,
+        "description": "<link=vocab.Rally><style=Vocab>Rally</style></link>.\r\nSummon <link=card.create><style=AssociatedCard>Renekton</style></link> and <link=card.create2><style=AssociatedCard>Nasus</style></link>. Immediately level them up to level 3.",
+        "descriptionRaw": "Rally.\r\nSummon Renekton and Nasus. Immediately level them up to level 3.",
+        "levelupDescription": "",
+        "levelupDescriptionRaw": "",
+        "flavorText": "\"They will serve their emperor. My generals will make sure of it.\" - Azir",
+        "artistName": "Kudos Productions",
+        "name": "Ascended's Call",
+        "cardCode": "04SH003T13",
+        "keywords": [
+            "Slow"
+        ],
+        "keywordRefs": [
+            "Slow"
+        ],
+        "spellSpeed": "Slow",
+        "spellSpeedRef": "Slow",
+        "rarity": "None",
+        "rarityRef": "None",
+        "subtype": "",
+        "subtypes": [],
+        "supertype": "",
+        "type": "Spell",
+        "collectible": false,
+        "set": "Set4"
+    },
+    {
+        "associatedCards": [],
+        "associatedCardRefs": [],
+        "assets": [
+            {
+                "gameAbsolutePath": "http://dd.b.pvp.net/2_3_0/set4/en_us/img/cards/04SH003T12.png",
+                "fullAbsolutePath": "http://dd.b.pvp.net/2_3_0/set4/en_us/img/cards/04SH003T12-full.png"
+            }
+        ],
+        "region": "Shurima",
+        "regionRef": "Shurima",
+        "attack": 0,
+        "cost": 9,
+        "health": 0,
+        "description": "<link=keyword.Obliterate><style=Keyword>Obliterate</style></link> 3 enemy units or landmarks.",
+        "descriptionRaw": "Obliterate 3 enemy units or landmarks.",
+        "levelupDescription": "",
+        "levelupDescriptionRaw": "",
+        "flavorText": "The storm rolls in with a peal like thunder, and when it passes, it leaves nothing behind.",
+        "artistName": "Kudos Productions",
+        "name": "Sandstorm",
+        "cardCode": "04SH003T12",
+        "keywords": [
+            "Slow"
+        ],
+        "keywordRefs": [
+            "Slow"
+        ],
+        "spellSpeed": "Slow",
+        "spellSpeedRef": "Slow",
+        "rarity": "None",
+        "rarityRef": "None",
+        "subtype": "",
+        "subtypes": [],
+        "supertype": "",
+        "type": "Spell",
+        "collectible": false,
+        "set": "Set4"
+    },
+    {
+        "associatedCards": [],
+        "associatedCardRefs": [],
+        "assets": [
+            {
+                "gameAbsolutePath": "http://dd.b.pvp.net/2_3_0/set4/en_us/img/cards/04SH003T7.png",
+                "fullAbsolutePath": "http://dd.b.pvp.net/2_3_0/set4/en_us/img/cards/04SH003T7-full.png"
+            }
+        ],
+        "region": "Shurima",
+        "regionRef": "Shurima",
+        "attack": 0,
+        "cost": 3,
+        "health": 0,
+        "description": "Summon an exact copy of an ally. It's <link=keyword.Ephemeral><sprite name=Ephemeral><style=Keyword>Ephemeral</style></link>.\r\nDraw 1.",
+        "descriptionRaw": "Summon an exact copy of an ally. It's Ephemeral.\r\nDraw 1.",
+        "levelupDescription": "",
+        "levelupDescriptionRaw": "",
+        "flavorText": "Between the sand, the sun, and the heat, it can be difficult to tell what is real, and what is merely a mirage.",
+        "artistName": "Kudos Productions",
+        "name": "Shimmering Mirage",
+        "cardCode": "04SH003T7",
+        "keywords": [
+            "Burst"
+        ],
+        "keywordRefs": [
+            "Burst"
+        ],
+        "spellSpeed": "Burst",
+        "spellSpeedRef": "Burst",
+        "rarity": "None",
+        "rarityRef": "None",
+        "subtype": "",
+        "subtypes": [],
+        "supertype": "",
+        "type": "Spell",
+        "collectible": false,
+        "set": "Set4"
+    },
+    {
+        "associatedCards": [],
+        "associatedCardRefs": [],
+        "assets": [
+            {
+                "gameAbsolutePath": "http://dd.b.pvp.net/2_3_0/set4/en_us/img/cards/04SH003T9.png",
+                "fullAbsolutePath": "http://dd.b.pvp.net/2_3_0/set4/en_us/img/cards/04SH003T9-full.png"
+            }
+        ],
+        "region": "Shurima",
+        "regionRef": "Shurima",
+        "attack": 0,
+        "cost": 2,
+        "health": 0,
+        "description": "Draw 2.",
+        "descriptionRaw": "Draw 2.",
+        "levelupDescription": "",
+        "levelupDescriptionRaw": "",
+        "flavorText": "Birds found in the desert climes are all considered symbols of Azir, and Shurimans find their presence a good omen.",
+        "artistName": "Kudos Productions",
+        "name": "Emperor's Prosperity",
+        "cardCode": "04SH003T9",
+        "keywords": [
+            "Burst"
+        ],
+        "keywordRefs": [
+            "Burst"
+        ],
+        "spellSpeed": "Burst",
+        "spellSpeedRef": "Burst",
+        "rarity": "None",
+        "rarityRef": "None",
+        "subtype": "",
+        "subtypes": [],
+        "supertype": "",
+        "type": "Spell",
+        "collectible": false,
+        "set": "Set4"
     }
 ]
