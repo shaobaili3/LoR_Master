@@ -1,5 +1,5 @@
 <template>
-    <div class="row deck btn">
+    <div class="row deck btn" :class="{won: won, loss: !won}">
         <div class="region-icon icon faction" v-for="(faction, index) in factions" :key="index"
         :style=" {backgroundImage: getRegionImgUrl(faction)}"></div>
         <!-- <div class="region-icon icon faction" :style=" {backgroundImage: getRegionImgUrl(0)}"></div> -->
@@ -33,6 +33,7 @@ export default {
     },
     props: {
         deck: String,
+        won: Boolean,
     },
     computed: {
         factions() {
@@ -164,8 +165,18 @@ export default {
         border: 2px solid rgba(255, 255, 255, 1);
     }
 
-    .btn:hover {
-        background-color: rgba(0, 0, 0, 0.2);
+    .btn.won:hover {
+        /* mix-blend-mode: normal; */
+        background-color: var(--col-gold);
+        /* box-shadow: -1px 1px 2px 0px rgba(43, 38, 27, 0.7), 1px -1px 2px 0px rgba(255, 255, 255, 0.3);
+        transform: translate(2px, -2px); */
+        cursor: pointer;
+        /* border: 2px solid white; */
+    }
+
+    .btn.loss:hover {
+        /* mix-blend-mode: normal; */
+        background-color: var(--col-lighter-grey);
         /* box-shadow: -1px 1px 2px 0px rgba(43, 38, 27, 0.7), 1px -1px 2px 0px rgba(255, 255, 255, 0.3);
         transform: translate(2px, -2px); */
         cursor: pointer;

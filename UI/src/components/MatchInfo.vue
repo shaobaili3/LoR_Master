@@ -7,11 +7,14 @@
             <p class="match-info-title">
                 {{winrate}}
             </p>
+            <div class="match-info-badge" v-for="(badge, index) in badges" :key="index">
+                <span class="match-info-badge-icon fa" :class="{'fa-clock': badge=='recent', 'fa-angle-double-up': badge=='frequent'}"></span>
+                {{badge}}</div>
             <div class="history-info">{{time}}</div>
             <div class="history-info">{{matches}} Games</div>
         </div>
         <div class="row decklist">
-            <deck-preview @click="showDeck" :deck="deck"></deck-preview>
+            <deck-preview @click="showDeck" :deck="deck" :won="won"></deck-preview>
             <!-- <div class="text-vs">VS</div> -->
             <!-- <deck-preview @click="showDeck" :deck="deck"></deck-preview> -->
         </div>
@@ -40,6 +43,7 @@ export default {
         winrate: String,
         time: String,
         matches: Number,
+        badges: Array,
     },
     computed: {
         opponentLink() {
@@ -99,15 +103,39 @@ export default {
     
     }
 
+    .match-info-badge-icon {
+        /* margin-right: 3px; */
+        /* width: 10px; */
+        /* display: flex; */
+        /* align-content: center; */
+        /* justify-content: center; */
+    }
+
+    .match-info-badge {
+        font-size: 0.8em;
+        color: rgba(255, 255, 255, 0.8);
+        background: rgba(255, 255, 255, 0.2);
+        padding: 5px 10px;
+        margin-right: 5px;
+        border-radius: 50px;
+        cursor: default;
+    }
+
+    .match-info-badge:hover {
+        color: rgba(255, 255, 255, 1);
+        background: rgba(255, 255, 255, 0.3);
+    }
+
     .history-info {
         font-size: 0.8em;
-        color: rgba(255, 255, 255, 0.5);
-        padding: 10px;
+        color: rgba(255, 255, 255, 0.7);
+        padding: 8px 5px;
+        cursor: default;
     }
 
     .history-info:hover {
         color: rgba(255, 255, 255, 1);
-        cursor: default;
+        
     }
     
     .row {
@@ -126,6 +154,7 @@ export default {
         padding: 5px 5px 5px 5px;
         margin: 0;
         margin-left: 8px;
+        margin-right: 5px;
         
         /* padding-bottom: 5px; */
         /* border-radius: 6px; */
@@ -137,28 +166,11 @@ export default {
         cursor: default;
     }
 
-    .match-info-title:hover {
-        /* border-bottom: 2px solid white; */
-    }
-
     .btn:hover {
         /* background-color: rgba(255, 255, 255, 0.5); */
         /* text-decoration: underline; */
         /* border-bottom: 1px solid white; */
         cursor: pointer;
-    }
-
-    @media only screen and (max-width: 768px) {
-        .row.decklist {
-            /* display: flex; */
-            flex-wrap: wrap;
-            
-        }
-
-        .text-vs {
-            /* display: block; */
-            /* flex-basis: 2; */
-        }
     }
 
 </style>

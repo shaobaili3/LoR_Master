@@ -1,5 +1,5 @@
 <template>
-    <!-- <base-navbar></base-navbar> -->
+    <base-window-controls :playerName="playerName" :playerRank="playerRank"></base-window-controls>
     <div id="content">
 
         <!-- <div id="history-stats"> -->
@@ -26,6 +26,7 @@
                 :time="match.time"
                 :matches="match.matches"
                 :winrate="match.winrate"
+                :badges="match.badge"
                 :opponentDeck="match.opponentDeck" 
                 :deck="match.deck"
             ></match-info>
@@ -40,9 +41,10 @@
 
 <script>
 
-// import BaseNavbar from '../components/BaseNavbar.vue'
+// import WindowControl from '../components/BaseWindowControl.vue'
 import MatchInfo from '../components/MatchInfo.vue'
 import axios from 'axios'
+import BaseWindowControls from '../components/BaseWindowControls.vue'
 
 export default {
     mounted() {
@@ -53,18 +55,15 @@ export default {
     data() {
         return {
             matchInfos: [],
-            request: null
+            request: null,
+            playerName: null,
+            playerRank: null,
         }
     },
     computed: {
-        playerName() {
-            if (this.$route.params.name)
-                return this.$route.params.name
-            return "Unknown Player"
-        }
     },
     components: { 
-        // BaseNavbar,
+        BaseWindowControls,
         MatchInfo,
     },
     methods: {
@@ -73,7 +72,10 @@ export default {
             // const APILink = "https://run.mocky.io/v3/ed5ffaec-c040-4a62-839c-e52966cae1d6"
             
             // winrate
-            const APILink = "https://run.mocky.io/v3/398d0013-e591-4175-9d42-15fc34b383be"
+            // const APILink = "https://run.mocky.io/v3/febc2c8b-4437-4dea-92f0-8c3384a8adf5"
+            
+            // Name, winrate, extra player and match infos
+            const APILink = "https://run.mocky.io/v3/1b944261-e5c2-4071-bf22-a8c5e509edeb"
             
             
             if (this.request) this.cancelLeaderboard()
@@ -88,6 +90,8 @@ export default {
             axios.get(APILink, {cancelToken: axiosSource.token} )
             .then((data) => {
                 this.matchInfos = data.data.matches;
+                this.playerName = data.data.name;
+                this.playerRank = data.data.rank;
                 // console.log(this.matchInfos);
             })
             .catch((e) => {

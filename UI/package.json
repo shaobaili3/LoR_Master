@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "SET NODE_ENV=DEV vue-cli-service serve && electron app.js",
+    "dev": "vue-cli-service build && electron app.js",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
