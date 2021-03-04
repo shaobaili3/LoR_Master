@@ -2,7 +2,7 @@
     <div class="deck-detail">
         <div class="deck-code">
             <a :href="deckDetailLink" target="_blank">
-                {{deck}}
+                {{deck}} &nbsp;-->
             </a>
         </div>
     </div>
@@ -26,11 +26,12 @@ export default {
 
 <style>
     .deck-detail {
-        width: 500px;
+        width: 270px;
         /* height: 100px; */
         word-wrap: break-word;
         padding: 10px;
         background-color: var(--col-dark-grey);
+        font-size: 0.9em;
     }
 
     a {
@@ -38,10 +39,13 @@ export default {
         text-decoration: none;
     }
 
-    @media only screen and (max-width: 768px) {
-        .deck-detail {
-            /* display: flex; */
-            width: 360px;
-        }
+    a:hover {
+        text-decoration: underline;
     }
+
+    /* @media only screen and (max-width: 768px) {
+        .deck-detail {
+            width: 280px;
+        }
+    } */
 </style>

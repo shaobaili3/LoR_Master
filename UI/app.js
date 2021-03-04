@@ -22,13 +22,14 @@ const path = require('path')
 
 let mainWindow = null
 const createWindow = () => {
-  mainWindow = new BrowserWindow({width: 800, height: 600})
+  mainWindow = new BrowserWindow({width: 360, height: 600, frame: true})
   mainWindow.loadURL(require('url').format({
     pathname: path.join(__dirname, 'dist/index.html'),
     protocol: 'file:',
     slashes: true
   }))
-  mainWindow.webContents.openDevTools()
+  // mainWindow.webContents.openDevTools()
+  mainWindow.removeMenu()
   mainWindow.on('closed', () => {
     mainWindow = null
   })
@@ -44,3 +45,5 @@ app.on('activate', () => {
     createWindow()
   }
 })
+
+// console.log("Activated Electron");

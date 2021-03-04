@@ -1,20 +1,24 @@
 <template>
     <div class="match" :class="{won: won, loss: !won}">
         <div class="row opponent">
-            <router-link class="opponent-name btn" :to="opponentLink">
+            <!-- <router-link class="opponent-name btn" :to="opponentLink">
                 {{opponentName}}
-            </router-link>
-            <div class="history-info">{{rounds}} Rounds</div>
+            </router-link> -->
+            <p class="match-info-title">
+                {{winrate}}
+            </p>
+            <div class="history-info">{{time}}</div>
+            <div class="history-info">{{matches}} Games</div>
         </div>
         <div class="row decklist">
-            <deck-preview @click="showOpponentDeck" :deck="opponentDeck"></deck-preview>
-            <div class="text-vs">VS</div>
             <deck-preview @click="showDeck" :deck="deck"></deck-preview>
+            <!-- <div class="text-vs">VS</div> -->
+            <!-- <deck-preview @click="showDeck" :deck="deck"></deck-preview> -->
         </div>
     </div>
 
     <deck-detail v-if="visibleDeck == 1" :deck="deck"></deck-detail>
-    <deck-detail v-if="visibleDeck == 2" :deck="opponentDeck"></deck-detail>
+    <!-- <deck-detail v-if="visibleDeck == 2" :deck="opponentDeck"></deck-detail> -->
 
 </template>
 
@@ -33,21 +37,28 @@ export default {
         rounds: Number,
         deck: String,
         opponentDeck: String,
-        won: Boolean,
+        winrate: String,
+        time: String,
+        matches: Number,
     },
     computed: {
         opponentLink() {
             return "/profile/" + this.opponentName
         },
+        won() {
+            return parseFloat(this.winrate) > 50;
+        }
     }, 
     methods: {
         showDeck() {
+            // console.log("Show Deck")
             if (this.visibleDeck == 1)
                 this.visibleDeck = 0
             else
                 this.visibleDeck = 1
         },
         showOpponentDeck() {
+            // console.log("Show Oppo Deck")
             if (this.visibleDeck == 2)
                 this.visibleDeck = 0
             else
@@ -68,7 +79,7 @@ export default {
         width: 100%;
         flex-direction: column;
         background: linear-gradient(60deg, var(--col-grey), var(--col-light-grey));
-        padding: 10px;
+        padding: 5px;
         border-radius: 6px;
         margin-top: 10px;
     }
@@ -93,6 +104,11 @@ export default {
         color: rgba(255, 255, 255, 0.5);
         padding: 10px;
     }
+
+    .history-info:hover {
+        color: rgba(255, 255, 255, 1);
+        cursor: default;
+    }
     
     .row {
         display: flex;
@@ -100,24 +116,29 @@ export default {
     }
 
     .row.decklist {
-        justify-content: space-between;
+        /* justify-content: space-between; */
+        justify-content: center;
         align-items: center;
     }
 
-    .opponent-name {
+    .match-info-title {
         /* display: block; */
-        padding: 10px 5px 5px 5px;
+        padding: 5px 5px 5px 5px;
+        margin: 0;
         margin-left: 8px;
+        
         /* padding-bottom: 5px; */
         /* border-radius: 6px; */
         text-decoration: none;
 
-        border-bottom: 2px solid transparent;
+        /* border-bottom: 2px solid transparent; */
         border-radius: 0px;
+
+        cursor: default;
     }
 
-    .opponent-name:hover {
-        border-bottom: 2px solid white;
+    .match-info-title:hover {
+        /* border-bottom: 2px solid white; */
     }
 
     .btn:hover {

@@ -10,6 +10,8 @@
             <!-- <img :src="getChampionImgUrl(champ)" alt=""> -->
         </div>
         <!-- <div class="champion-icon icon">TF</div> -->
+        <!-- <div class="fa fa-ellipsis-h"></div> -->
+        <div class="icon cheveron fa fa-chevron-down"></div>
     </div>
 </template>
 
@@ -90,12 +92,13 @@ export default {
     }
 
     .row.deck {
-        width: 40%;
-        padding: 10px;
-        justify-content: center;
+        /* width: 40%; */
+        width: 100%;
+        padding: 7px 15px;
+        justify-content: flex-start;
         border-radius: 6px;
         align-items: center;
-        gap: 10px;
+        gap: 5px;
     }
 
     .row.opponent {
@@ -106,6 +109,8 @@ export default {
     .icon {
         
         display: block;
+        margin-right: 0;
+        margin-left: 0;
 
         padding: 10px;
         text-align: center;
@@ -113,7 +118,7 @@ export default {
         /* vertical-align: middle; */
         width: 20px;
         height: 20px;
-        color: black;
+        color: white;
 
         /* background-color: white; */
         
@@ -122,6 +127,12 @@ export default {
         background-size: cover;
 
         /* background-image: url('../assets/images/cards/cropped/01DE012-cropped.png'); */
+    }
+
+    .icon.cheveron {
+        width: 10px;
+        padding: 5px;
+        margin-left: auto;
     }
 
     .icon.faction {

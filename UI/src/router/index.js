@@ -10,7 +10,7 @@ import Home from '../pages/Home.vue'
 const routerHistory = createWebHistory('')
 const routes = [
   {
-    path: "/",
+    path: "/:name",
     name: "Home",
     component: Home,
     // component: Leaderboard,
