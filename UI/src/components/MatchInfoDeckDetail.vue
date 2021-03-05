@@ -9,6 +9,9 @@
 </template>
 
 <script>
+
+const { DeckEncoder } = require('runeterra')
+
 export default {
     data() {
         return {}

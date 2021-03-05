@@ -89,6 +89,8 @@ export default {
 
             axios.get(APILink, {cancelToken: axiosSource.token} )
             .then((data) => {
+                // Testing Shurima expansion
+                // data.data.matches[0].deck = "CECQMBAHAMNBYJRTLUAQCAAWAEBQADQBAQAAGAICAAEQGAQCAABAQAQBAAETGAIEA44QA";
                 this.matchInfos = data.data.matches;
                 this.playerName = data.data.name;
                 this.playerRank = data.data.rank;

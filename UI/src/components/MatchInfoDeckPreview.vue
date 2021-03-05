@@ -19,6 +19,7 @@
 
 const { DeckEncoder } = require('runeterra')
 import championCards from '../assets/data/champion.js'
+//https://painttist.github.io/lor-champ-icons/data/champion.js
 
 export default {
     data() {
@@ -75,11 +76,18 @@ export default {
     },
     methods: {
         getChampionImgUrl(code) {
-            return 'url(' + require('../assets/images/cards/cropped/' + code + "-cropped.png") + ")"
+            // const champImageBaseUrl = 'https://raw.githubusercontent.com/painttist/lor-champ-icons/master/images/cards/cropped/';
+            const champImageBaseUrl = 'https://painttist.github.io/lor-champ-icons/images/cards/cropped/';
+            return "url(" + champImageBaseUrl + code + "-cropped.png)"
         },
         getRegionImgUrl(regionID) {
             // return 'url(' + require('../assets/images/factions/' + regionID + ".png") + ")"
-            return 'url(' + require('../assets/images/regions/' + regionID + ".svg") + ")"
+            const regionImageBaseUrl = 'https://painttist.github.io/lor-champ-icons/images/regions/';
+            return "url(" + regionImageBaseUrl + regionID + ".svg)";
+            
+            // return 'url(' + require('../assets/images/regions/' + regionID + ".svg") + ")"
+
+            
         },
     }
 }
