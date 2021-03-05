@@ -82,7 +82,7 @@ export default {
         display: flex;
         width: 100%;
         flex-direction: column;
-        background: linear-gradient(60deg, var(--col-grey), var(--col-light-grey));
+        background: linear-gradient(60deg, var(--col-grey), var(--col-lighter-grey));
         padding: 5px;
         border-radius: 6px;
         margin-top: 10px;
