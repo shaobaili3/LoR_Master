@@ -3,11 +3,20 @@ import json
 from .utils import read_json_file
 data_dir = Path(__file__).parent.parent.parent / "Resource"
 print('data_dir: ', data_dir)
+from .utils import get_card_set_online, write_json_file
 
 #these are made for debugging, so commented them out. They were annoying whenever I imported this.
 #print(data_dir.exists())
 #print(Path(".").absolute())
 #print(Path("./data/data/set1-en_us.json").exists())
+
+MAX_SET_NUM = 4
+
+for num in range(MAX_SET_NUM):
+    if len(list(data_dir.glob(f"set{num + 1}*.json"))) == 0:
+        write_json_file(get_card_set_online(num + 1, region="en_us"), Path(__file__).parent.parent.parent / f"Resource/set{num+1}-en_us.json")
+
+
 
 try:
     cards_files = data_dir.glob("set*.json")
@@ -16,7 +25,7 @@ try:
         f_json = read_json_file(f)
         cards += f_json
 except Exception as e:
-    print("Could not load card data")
+    print("Could not load card data:", e)
 
 
 class Card:
@@ -27,10 +36,11 @@ class Card:
         self.count = int(kwargs.get("count", 1))
         self._card_data = self.card_info()
 
-        self.image_path = f"/img/cards/{self.cardCode}.png"
-        self.image_path_full = f"./static/img/cards/{self.cardCode}-full.png"
+        # self.image_path = f"/img/cards/{self.cardCode}.png"
+        # self.image_path_full = f"./static/img/cards/{self.cardCode}-full.png"
 
-        self.image_online = f"https://raw.githubusercontent.com/pedrofracassi/lor-bundles/master/set{self.card_set}/en_us/img/cards/{self.cardCode}.png"
+        self.image_online = f"https://dd.b.pvp.net/latest/set{self.card_set}/en_us/img/cards/{self.cardCode}.png"
+
         self.image_online_full = self.image_online.replace(".png", "-full.png")
 
     def card_info(self):

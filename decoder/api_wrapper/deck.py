@@ -1,18 +1,20 @@
 from pathlib import Path
-import os
 import json
 from .card import Card
 from ..deck_coder.deckCoder import DeckCode
-from .utils import read_json_file, get_lor_globals
+from .utils import read_json_file, get_lor_globals, write_json_file
 from collections import Counter
 
 try:
     # globals_file = Path("./Resource/globals-en_us.json")
-    globals_file = Path(__file__).parent.parent.parent / "Resource/globals-en_us.json"
+    globals_file = Path(
+        __file__).parent.parent.parent / "Resource/globals-en_us.json"
     print('globals_file:', globals_file)
     data_globals = read_json_file(globals_file)
-except:
+except Exception as e:
+    print('Start running data_globals:', e)
     data_globals = get_lor_globals()
+    write_json_file(data_globals, globals_file)
 
 
 class Deck:
