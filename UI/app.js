@@ -32,7 +32,7 @@ const createWindow = () => {
   mainWindow = new BrowserWindow({ 
     width: windowWidth, 
     height: windowHeight, 
-    x: width,
+    x: width - windowWidth,
     y: height - windowHeight,
     frame: false,
     webPreferences: {
@@ -48,7 +48,7 @@ const createWindow = () => {
     slashes: true
   }))
   // console.log("Is development?", process.env.NODE_ENV === 'development')
-  // mainWindow.webContents.openDevTools()
+  mainWindow.webContents.openDevTools()
   mainWindow.removeMenu()
   mainWindow.on('closed', () => {
     mainWindow = null

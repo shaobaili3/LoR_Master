@@ -98,6 +98,7 @@ export default {
         /* border: 1px var(--col-gold)enrod solid; */
         color: var(--col-gold);
         /* background-color:white; */
+        -webkit-app-region: no-drag;
 
         width: 40px;
         height: 60px;
