@@ -8,11 +8,11 @@
             <!-- <slot></slot> -->
             {{playerRankString}}
         </div>
-        <div class="menu-item">
-            <span><i class="fa fa-minus" @click="hideApp()"></i></span>
+        <div class="menu-item" @click="hideApp()">
+            <span><i class="fa fa-minus"></i></span>
         </div>
-        <div class="menu-item">
-            <span><i class="fa fa-times" @click="closeApp()"></i></span>
+        <div class="menu-item" @click="closeApp()">
+            <span><i class="fa fa-times"></i></span>
         </div>
         
         <!-- <router-link to="/" class="menu-item"> -->

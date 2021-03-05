@@ -48,7 +48,7 @@ const createWindow = () => {
     slashes: true
   }))
   // console.log("Is development?", process.env.NODE_ENV === 'development')
-  mainWindow.webContents.openDevTools()
+  // mainWindow.webContents.openDevTools()
   mainWindow.removeMenu()
   mainWindow.on('closed', () => {
     mainWindow = null
