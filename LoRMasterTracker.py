@@ -1,3 +1,4 @@
+from Threads.translateThread import TranslateThread
 from PyQt5 import QtCore
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
@@ -13,6 +14,7 @@ from player import Player
 from inspectorWidget import InspectorWidget
 from Threads.serverThread import ServerThread
 from Threads.trackThread import TrackThread
+from Threads.translateThread import TranslateThread
 from leaderboard import getRankStr
 import deck
 
@@ -29,30 +31,40 @@ class Window(QMainWindow):
         self.player = player
         self.serverWork = ServerThread()
         self.trackWork = TrackThread()
+        self.translateWork = TranslateThread()
         self.trackWork.local = local
         self.trackWork.player = player
         self.trackWork.showStatusTrigger.connect(self.showStatus)
 
-        self.enableTrackCheckBox = QCheckBox("auto open decks")
-        self.enableTrackCheckBox.setChecked(
-            player.riot.network.setting.autoOpenDeck)
-        self.enableTrackCheckBox.stateChanged.connect(
-            self.changeEnableTrackCheckBox)
+        # self.enableTrackCheckBox = QCheckBox("auto open decks")
+        # self.enableTrackCheckBox.setChecked(
+        #     player.riot.network.setting.autoOpenDeck)
+        # self.enableTrackCheckBox.stateChanged.connect(
+        #     self.changeEnableTrackCheckBox)
 
-        #self.autoBrowserCheckBox = QCheckBox("Auto open opponent Decks")
-        #self.autoBrowserCheckBox.setChecked(True)
-
-        self.statusBar().addPermanentWidget(self.enableTrackCheckBox)
-        #self.statusBar().addPermanentWidget(self.autoBrowserCheckBox)
+        #self.statusBar().addPermanentWidget(self.enableTrackCheckBox)
         self.statusBar().addPermanentWidget(self.progressBar)
 
-    def changeEnableTrackCheckBox(self, state):
-        if state == Qt.Checked:
-            self.player.riot.network.setting.autoOpenDeck = True
-            self.player.riot.network.setting.saveAutoOpenDeck()
+        self.translatePushButton = QPushButton("启用营地汉化")
+        self.translatePushButton.setDefault(True)
+        self.translatePushButton.clicked.connect(self.translatePushButtonClicked)
+        self.statusBar().addPermanentWidget(self.translatePushButton)
+
+    def translatePushButtonClicked(self, state):
+        if self.translateWork.isRunning():
+            self.translateWork.terminate()
+            self.translatePushButton.setText('启用营地汉化')
         else:
-            self.player.riot.network.setting.autoOpenDeck = False
-            self.player.riot.network.setting.saveAutoOpenDeck()
+            self.translateWork.start()
+            self.translatePushButton.setText('关闭营地汉化')
+
+    # def changeEnableTrackCheckBox(self, state):
+    #     if state == Qt.Checked:
+    #         self.player.riot.network.setting.autoOpenDeck = True
+    #         self.player.riot.network.setting.saveAutoOpenDeck()
+    #     else:
+    #         self.player.riot.network.setting.autoOpenDeck = False
+    #         self.player.riot.network.setting.saveAutoOpenDeck()
 
     def showStatus(self, text):
         self.statusBar().showMessage(text)
@@ -72,8 +84,9 @@ class Inspector(InspectorWidget):
         super().inspectPushButtonClicked()
         if self.inspectWork.isRunning():
             self.inspectWork.terminate()
-            self.showFinish('', self.inspectWork.playerName +
-                            ' inspection has been terminated')
+            self.showFinish(
+                '', self.inspectWork.playerName +
+                ' inspection has been terminated')
             return
 
         print('inspectPushButtonClicked called')
@@ -134,7 +147,10 @@ class Inspector(InspectorWidget):
         if '#' in text:
             id = text.split('#')[0]
             tag = text.split('#')[1].split('[')[0]
-            return self.textBrowser.append("<a href=\"https://lor.runeterra.ar/Matches/" + settingTracker.riotServer.capitalize() + "/" + id + "/" + tag + "\" style=\"color:" + 'OrangeRed' + "\">" + text + "</a>")
+            return self.textBrowser.append(
+                "<a href=\"https://lor.runeterra.ar/Matches/" +
+                settingTracker.riotServer.capitalize() + "/" + id + "/" + tag +
+                "\" style=\"color:" + 'OrangeRed' + "\">" + text + "</a>")
         self.textBrowser.append(self.getHtml(text, 'OrangeRed'))
 
     def showDecks(self, deckdict, num):
@@ -182,8 +198,6 @@ os.environ["QT_AUTO_SCREEN_SCALE_FACTOR"] = "1"
 app.setApplicationName(cs.DISPLAY_TITLE)
 app.setWindowIcon(QIcon('Resource/logo.jpg'))
 app.setStyle('Fusion')
-
-
 
 window = Window(localTracker, playerTracker)
 inspectorWidget = Inspector(window, settingInspect, networkInspect,

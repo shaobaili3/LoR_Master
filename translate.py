@@ -88,6 +88,3 @@ def detect():
             #break
 
         #time.sleep(0.5)
-
-
-detect()
