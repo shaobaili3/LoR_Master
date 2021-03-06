@@ -128,21 +128,33 @@ class Inspector(InspectorWidget):
         htmlDeckCode = self.getDeckCodeHtml(deckCode)
         self.textBrowser.append(htmlOutcome + ' ' + htmlTimeAgo +
                                 htmlFactions + htmlHeros + ' ' + htmlDeckCode)
+        gui.history.append([timeAgo, outcome, factions, deck.getChampion(deckCode), deckCode])
 
     def showSummary(self, deckdict):
         activeWindow()
         app.alert(self)
-
         return super().showSummary(deckdict)
 
     def showMessage(self, text):
         if '#' in text:
             id = text.split('#')[0]
             tag = text.split('#')[1].split('[')[0]
+            gui.reset()
+            gui.opponentName = id + '#' + tag
             return self.textBrowser.append("<a href=\"https://lor.runeterra.ar/Matches/" + settingTracker.riotServer.capitalize() + "/" + id + "/" + tag + "\" style=\"color:" + 'OrangeRed' + "\">" + text + "</a>")
         self.textBrowser.append(self.getHtml(text, 'OrangeRed'))
 
     def showDecks(self, deckdict, num):
+        print(deckdict)
+        print(type(deckdict))
+        gui.summary = deckdict
+        #print(deckdict)
+        gui.isInMatch = True
+        # print(gui.history)
+        # print(gui.opponentName)
+        # print("asf", gui.matchSummary())
+        # print(gui.summary)
+        print(gui.matchStatus())
         if num == 0:
             self.textBrowser.append(
                 self.getHtml('No recent rank records:', 'OrangeRed'))
@@ -200,7 +212,7 @@ window.serverWork.setting = settingTracker
 window.serverWork.start()
 window.trackWork.start()
 
-window.uiWork.ui = GUI()
+window.uiWork.ui = gui
 window.uiWork.start()
 
 window.trackWork.showDecksTrigger.connect(inspectorWidget.showDecks)
