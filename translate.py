@@ -1,7 +1,6 @@
 import winreg
 import hashlib
 import shutil
-import time
 
 lorBinPath = ''
 lorChineseBinPath = 'Resource/LocalizedText_en_us.bin'
@@ -82,14 +81,6 @@ def detect():
     print(lorBinPath)
     shutil.copy(lorChineseBinPath, lorBinPath)
     while True:
-        #print('@@@@',lorBinPath, lorChineseBinPath, '@@@@')
         if hash(lorBinPath) != hash(
                 lorChineseBinPath):  #一旦检查到游戏的汉化文件和我们替换的汉化文件不相等（因为被游戏客户端修正了）
-            #os.remove(directory_han_file)   #就移除掉被系统替换的汉化文件
             shutil.copy(lorChineseBinPath, lorBinPath)  #再次替换汉化文件到游戏的存放汉化文件的目录
-            #break
-
-        #time.sleep(0.5)
-
-
-detect()
