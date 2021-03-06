@@ -16,6 +16,9 @@ from Threads.trackThread import TrackThread
 from leaderboard import getRankStr
 import deck
 
+from GUI.uiThread import UIThread
+from GUI.ui import GUI
+
 
 class Window(QMainWindow):
     def __init__(self, local, player):
@@ -29,6 +32,8 @@ class Window(QMainWindow):
         self.player = player
         self.serverWork = ServerThread()
         self.trackWork = TrackThread()
+        self.uiWork = UIThread()
+        
         self.trackWork.local = local
         self.trackWork.player = player
         self.trackWork.showStatusTrigger.connect(self.showStatus)
@@ -164,6 +169,7 @@ def activeWindow():
     window.activateWindow()
     # window.raise_()
 
+gui = GUI()
 
 settingTracker = Setting()
 networkTracker = Network(settingTracker)
@@ -193,6 +199,9 @@ window.show()
 window.serverWork.setting = settingTracker
 window.serverWork.start()
 window.trackWork.start()
+
+window.uiWork.ui = GUI()
+window.uiWork.start()
 
 window.trackWork.showDecksTrigger.connect(inspectorWidget.showDecks)
 window.trackWork.showMatchsTrigger.connect(inspectorWidget.showMatchs)
