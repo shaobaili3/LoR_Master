@@ -68,6 +68,8 @@ export default {
     },
     methods: {
         getMatchInfo() {
+
+            // console.log("Get Match Info")
             // Version with Name and Opponent Deck
             // const APILink = "https://run.mocky.io/v3/ed5ffaec-c040-4a62-839c-e52966cae1d6"
             
@@ -185,6 +187,10 @@ export default {
         flex-direction: column;
         align-items: center;
         width: 300px;
+    }
+
+    #content {
+        margin-top: 40px;
     }
 
     .footer {

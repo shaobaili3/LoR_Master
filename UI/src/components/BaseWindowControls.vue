@@ -63,19 +63,21 @@ export default {
 
         display: flex;
 
-        /* position: fixed;  */
+        position: fixed; 
         top: 0px;
         left: 0px;
 
         /* flex-direction: column; */
-        align-items: center;
+        align-items: baseline;
         justify-content: flex-end;
 
         height: 20px;
-        padding: 10px 0px;
+        padding: 10px 0px 15px 0px;
         width: 100%;
 
         margin-left: 0px;
+        background-color: var(--col-background);
+        z-index: 2;
     }
 
     .menu-title {
@@ -101,7 +103,7 @@ export default {
         -webkit-app-region: no-drag;
 
         width: 40px;
-        height: 60px;
+        /* height: 60px; */
         align-items: center;
         justify-content: center;
 
