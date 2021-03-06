@@ -1,11 +1,10 @@
 class GUI:
     def __init__(self):
         self.isInMatch = False
-        self.opponentName = '123'
+        self.opponentName = 'initial'
         self.summary = {}
-        self.history = ['adf','adfasdf']
+        self.history = []
         self.testString = 1
-        #self.a = '666'
 
     def opponent(self):
         return self.opponentName
@@ -29,6 +28,3 @@ class GUI:
     def test(self):
         self.testString += 1
         return self.testString
-
-# a = GUI()
-# print(a.a)

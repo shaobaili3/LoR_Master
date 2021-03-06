@@ -145,15 +145,8 @@ class Inspector(InspectorWidget):
         self.textBrowser.append(self.getHtml(text, 'OrangeRed'))
 
     def showDecks(self, deckdict, num):
-        print(deckdict)
-        print(type(deckdict))
         gui.summary = deckdict
-        #print(deckdict)
         gui.isInMatch = True
-        # print(gui.history)
-        # print(gui.opponentName)
-        # print("asf", gui.matchSummary())
-        # print(gui.summary)
         print(gui.matchStatus())
         if num == 0:
             self.textBrowser.append(
@@ -163,7 +156,6 @@ class Inspector(InspectorWidget):
         app.alert(self)
         self.textBrowser.append(self.getHtml('Deck List:', 'OrangeRed'))
         for deckCode, usedTime in deckdict.items():
-            #print(deckCode, usedTime)
             self.textBrowser.append(
                 self.getHtml(
                     self.getHtml(
