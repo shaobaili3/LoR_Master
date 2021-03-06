@@ -1,6 +1,12 @@
 <template>
     <base-window-controls :playerName="playerName" :playerRank="playerRank"></base-window-controls>
+    
     <div id="content">
+
+        <div class="loading" :class="{invisible: playerName == null ? false : true}">
+            Loading..
+        </div> 
+        <!-- <button @click="requestData">Test Request</button> -->
 
         <!-- <div id="history-stats"> -->
             <!-- <div>10-game win rate: 90%</div> -->
@@ -49,7 +55,9 @@ import BaseWindowControls from '../components/BaseWindowControls.vue'
 export default {
     mounted() {
         // console.log(JSON.stringify(this.matchInfos))
-        this.getMatchInfo()
+        // this.getMatchInfo()
+        this.getSubData()
+        this.requestData()
         // console.log("Test")
     },
     data() {
@@ -68,6 +76,12 @@ export default {
     },
     methods: {
         getMatchInfo() {
+
+            // for await (const [topic, msg] of window.sock) {
+            //     console.log("received a message related to:", topic.toString(), "containing message:", msg.toString())
+            //     // window.testData = msg.toString()
+            //     // console.log(mainWindow)
+            // }
 
             // console.log("Get Match Info")
             // Version with Name and Opponent Deck
@@ -104,71 +118,49 @@ export default {
                 } else 
                 { console.log('error', e) }
             })
+        },
+        async getSubData() {
+            if (window.sock)
+            for await (const [topic, msg] of window.sock) {
+                // console.log("Received Sub:", topic.toString(), " message:", msg.toString())
+                // this.playerName = msg.toString()
+                // window.testData = msg.toString()
+                // console.log(mainWindow)
+                this.processRawData(msg)
+            }
+        },
+        async requestData() {
+            
+            await window.request.send("0")
+            console.log("Requested data")
+            const [result] = await window.request.receive()
+            // this.playerName = result.toString()
+            this.processRawData(result)
+            
+        },
+        processRawData(raw) {
+            var data = JSON.parse(raw.toString())
+            console.log("Processing Received Data:", data)
+
+            this.matchInfos = data.matches;
+            this.playerName = data.name;
+            this.playerRank = data.rank;
         }
     }
 
 }
 
-// Retrieve remote BrowserWindow
-// const {BrowserWindow} = require('electron').remote
-
-// function init() {
-//     // Minimize task
-//     document.getElementById("min-btn").addEventListener("click", (e) => {
-//         var window = BrowserWindow.getFocusedWindow();
-//         window.minimize();
-//     });
-
-//     // Maximize window
-//     document.getElementById("max-btn").addEventListener("click", (e) => {
-//         var window = BrowserWindow.getFocusedWindow();
-//         if(window.isMaximized()){
-//             window.unmaximize();
-//         }else{
-//             window.maximize();
-//         }
-//     });
-
-//     // Close app
-//     document.getElementById("close-btn").addEventListener("click", (e) => {
-//         var window = BrowserWindow.getFocusedWindow();
-//         window.close();
-//     });
-// };
-
-// document.onreadystatechange =  () => {
-//     if (document.readyState == "complete") {
-//         init();
-//     }
-// };
-
-// const match1Info = {
-//     opponentName: "Bike",
-//     round: 25,
-//     deck: "CICACAQAAEBACAA2FUBQGAAFBIFQGAYJENKVMAQBAEAASBIDBEBCMSC4MQAQCAIACU", 
-//     oppdeck: "CIBQEAIABENAEAYAAUFASAYJBERTSVCVKZLWAZAAAEAQCAAH",
-//     won: true
-// }
-
-// const match2Info = {
-//     opponentName: "Ace",
-//     round: 25,
-//     deck: "CICACAQAAEBACAA2FUBQGAAFBIFQGAYJENKVMAQBAEAASBIDBEBCMSC4MQAQCAIACU", 
-//     oppdeck: "CIBQEAIABENAEAYAAUFASAYJBERTSVCVKZLWAZAAAEAQCAAH",
-//     won: false
-// }
-
-// const match3Info = {
-//     opponentName: "Cat",
-//     round: 15,
-//     deck: "CICACAQAAEBACAA2FUBQGAAFBIFQGAYJENKVMAQBAEAASBIDBEBCMSC4MQAQCAIACU", 
-//     oppdeck: "CIBQEAIABENAEAYAAUFASAYJBERTSVCVKZLWAZAAAEAQCAAH",
-//     won: false
-// }
-
 </script>
 
 <style scoped>
+
+    .invisible {
+        display: none;
+    }
+    
+    .loading {
+        font-size: 1.2em;
+    }
 
     #title {
         margin-top: 0px;
@@ -196,11 +188,5 @@ export default {
     .footer {
         height: 50px;
     }
-
-    /* @media only screen and (max-width: 768px) {
-        #history {
-            width: 400px;
-        }
-    } */
 
 </style>

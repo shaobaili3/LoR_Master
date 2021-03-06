@@ -1,7 +1,7 @@
 <template>
     <!-- <p><span>{{cost}}--</span><slot></slot><span>--{{count}}</span></p> -->
     <div class="cardContainer"
-        :style=" {background: getCardPreviewBackgroundStyle(champ)}">
+        :style=" {background: getCardPreviewBackgroundStyle()}">
         <div class="cardContent cardCost">{{cost}}</div>
         <div class="cardContent cardName">{{name}}</div>
         <div class="cardContent cardCount">x{{count}}</div>
@@ -30,7 +30,7 @@ export default {
         
     },
     methods: {
-        getCardPreviewBackgroundStyle(code) {
+        getCardPreviewBackgroundStyle() {
             // const champImageBaseUrl = 'https://raw.githubusercontent.com/painttist/lor-champ-icons/master/images/cards/cropped/';
             const cardPreviewUrlBase = 'https://cdn-lor.mobalytics.gg/production/images/cards-preview/';
             

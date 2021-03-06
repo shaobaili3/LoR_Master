@@ -20,25 +20,58 @@ const app = electron.app
 const BrowserWindow = electron.BrowserWindow
 const path = require('path')
 
+const server = require('./appsrc/server.js')
+server.run
+
+// const client = require('./appsrc/client.js')
+
+const zmq = require("zeromq")
+
+// async function runClient() {
+//     const sock = new zmq.Subscriber
+  
+//     sock.connect("tcp://127.0.0.1:3000")
+//     sock.subscribe("kitty cats")
+//     console.log("Subscriber connected to port 3000")
+  
+//     for await (const [topic, msg] of sock) {
+//       console.log("received a message related to:", topic.toString(), "containing message:", msg.toString())
+//       mainWindow.clientData = "CATAT"
+//       // console.log(mainWindow)
+//     }
+// }
+
 let mainWindow = null
 const createWindow = () => {
+
+
   let {width, height} = electron.screen.getPrimaryDisplay().workAreaSize;
   let factor = electron.screen.getPrimaryDisplay().scaleFactor
   // console.log(width)
   let windowWidth = 360
+  // let window.windowWidth = windowWidth
   let windowHeight = Math.floor(windowWidth*1.666)
 
+  let developmentMode = false
 
-  mainWindow = new BrowserWindow({ 
+  if (developmentMode) {
+    windowWidth = 360 + 400
+  }
+
+
+  mainWindow = new BrowserWindow({
+    maxWidth: windowWidth,
+    minWidth: windowWidth,
     width: windowWidth, 
     height: windowHeight, 
     x: width - windowWidth,
     y: height - windowHeight,
     frame: false,
     webPreferences: {
-      preload: __dirname + '/preload.js',
+      preload: __dirname + '/appsrc/preload.js',
       enableRemoteModule: true,
       // nodeIntegration: true,
+      nodeIntegrationInWorker: true,
     }
     // titleBarStyle: 'hiddenInset'
   })
@@ -48,11 +81,15 @@ const createWindow = () => {
     slashes: true
   }))
   // console.log("Is development?", process.env.NODE_ENV === 'development')
-  // mainWindow.webContents.openDevTools()
+  
   mainWindow.removeMenu()
+  mainWindow.setAlwaysOnTop(true)
   mainWindow.on('closed', () => {
     mainWindow = null
   })
+
+  if (developmentMode) mainWindow.webContents.openDevTools()
+  
   mainWindow.webContents.on('new-window', function (evt, url, frameName, disposition, options, additionalFeatures) {
     if(options.width == 800 && options.height == 600){ //default size is 800x600
         
@@ -65,8 +102,13 @@ const createWindow = () => {
         // options.titleBarStyle = 'hidden'
         options.frame = true;
     }
-});
+  });
+
+  // const worker = new Worker(__dirname + '/electron/server.js')
+  // server.run
+  // runClient()
 }
+
 app.on('ready', createWindow)
 app.on('window-all-closed', () => {
   // if (process.platform !== 'darwin') {

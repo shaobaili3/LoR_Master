@@ -17,7 +17,8 @@
 
 <script>
 
-const { DeckEncoder } = require('runeterra')
+// const { DeckEncoder } = require('runeterra')
+import DeckEncoder from '../modules/runeterra/DeckEncoder'
 import championCards from '../assets/data/champion.js'
 //https://painttist.github.io/lor-champ-icons/data/champion.js
 

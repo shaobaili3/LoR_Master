@@ -26,10 +26,18 @@
 </template>
 
 <script>
+
 import DeckDetail from '../components/MatchInfoDeckDetail.vue'
 import DeckPreview from '../components/MatchInfoDeckPreview.vue'
 
 export default {
+    components: {
+        DeckDetail,
+        DeckPreview,
+    },
+    mounted() {
+        this.subscribeData();
+    },
     data() {
         return {
             visibleDeck: 0
@@ -56,6 +64,8 @@ export default {
     methods: {
         showDeck() {
             // console.log("Show Deck")
+            // console.log(window)
+            // console.log(window.testData)
             if (this.visibleDeck == 1)
                 this.visibleDeck = 0
             else
@@ -67,11 +77,10 @@ export default {
                 this.visibleDeck = 0
             else
                 this.visibleDeck = 2
+        },
+        subscribeData() {
+            // console.log(window)
         }
-    },
-    components: {
-        DeckDetail,
-        DeckPreview,
     }
 }
 </script>

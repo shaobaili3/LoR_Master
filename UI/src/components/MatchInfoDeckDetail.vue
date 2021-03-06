@@ -14,7 +14,8 @@
 
 <script>
 
-const { DeckEncoder } = require('runeterra')
+// const { DeckEncoder } = require('runeterra')
+import DeckEncoder from '../modules/runeterra/DeckEncoder'
 import sets from  '../assets/data/allsets-en_us.json'
 import CardsPreview from './CardsPreview.vue'
 // import set1 from '../assets/data/set1-en_us.json'

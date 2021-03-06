@@ -30,27 +30,29 @@
 <script>
 
 export default {
-  props: {
-      playerName: String,
-      playerRank: Number,
-  },
-  computed: {
-      playerRankString() {
-          return 'Rank ' + this.playerRank
-      }
-  },
+    props: {
+        playerName: String,
+        playerRank: Number,
+    },
+    computed: {
+        playerRankString() {
+            if (this.playerRank)
+                return 'Rank ' + this.playerRank
+            return ''
+        }
+    },
   // components: {
   //   MainLayout
   // }
-  methods: {
-      hideApp() {
-        window.minWindow()
-      },
-      closeApp() {
-        window.closeWindow()
-        //   console.log("Closing App")
-      }
-  }
+    methods: {
+        hideApp() {
+            window.minWindow()
+        },
+        closeApp() {
+            window.closeWindow()
+            //   console.log("Closing App")
+        }
+    }
 }
 </script>
 
