@@ -147,7 +147,9 @@ class Inspector(InspectorWidget):
         if '#' in text:
             id = text.split('#')[0]
             tag = text.split('#')[1].split('[')[0]
-            gui = Opponent(id + '#' + tag, 0, [])
+            gui.name = id + '#' + tag
+            # print('!!!!name: ', gui.name)
+
             return self.textBrowser.append(
                 "<a href=\"https://lor.runeterra.ar/Matches/" +
                 settingTracker.riotServer.capitalize() + "/" + id + "/" + tag +
