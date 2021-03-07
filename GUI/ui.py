@@ -1,30 +1,30 @@
-class GUI:
-    def __init__(self):
-        self.isInMatch = False
-        self.opponentName = 'initial'
-        self.summary = {}
-        self.history = []
-        self.testString = 1
+from typing import List
+import json
 
-    def opponent(self):
-        return self.opponentName
+# class Match:
+#     def __init__(self, outcome: str, time: str, regions: str, champions: str,
+#                  deckCode: str):
+#         self.outcome = outcome
+#         self.time = time
+#         self.regions = regions
+#         self.champions = champions
+#         self.deckCode = deckCode
 
-    def matchStatus(self):
-        return self.isInMatch
 
-    def matchSummary(self):
-        self.isInMatch = False
-        return self.summary
+class Opponent:
+    def __init__(self, name: str, rank: int, matches):
+        self.name = name
+        self.rank = rank
+        self.matches = matches
 
-    def matchHistory(self):
-        return self.history
 
-    def reset(self):
-        self.isInMatch = False
-        self.opponentName = ''
-        self.summary = {}
-        self.history = []
 
-    def test(self):
-        self.testString += 1
-        return self.testString
+# match = Match('a', 'a', 'a', 'a', 'a')
+# jsonStr = json.dumps(match.__dict__)
+# # print(jsonStr)
+
+# op = Opponent('a', 1, [match] * 3)
+
+
+# jsonStr2 = json.dumps(op.__dict__)
+

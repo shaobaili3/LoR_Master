@@ -1,14 +1,34 @@
-import zerorpc
+import zmq
+import sys
 
-c = zerorpc.Client()
-c.connect("tcp://127.0.0.1:6393")
+from zmq.sugar.frame import Message
 
-print(c.test())
+port = "9621"
+if len(sys.argv) > 1:
+    port = sys.argv[1]
+    int(port)
 
-print(c.opponent())
+if len(sys.argv) > 2:
+    port1 = sys.argv[2]
+    int(port1)
 
-print(c.matchStatus())
+context = zmq.Context()
+print("Connecting to server...")
+socket = context.socket(zmq.REQ)
+socket.connect("tcp://localhost:%s" % port)
+if len(sys.argv) > 2:
+    socket.connect("tcp://localhost:%s" % port1)
 
-print(c.matchHistory())
+# #  Do 10 requests, waiting each time for a response
+# for request in range(1, 10):
+#     print("Sending request ", request, "...")
+#     socket.send(b"Hello")
+#     #  Get the reply.
+#     message = socket.recv()
+#     print("Received reply ", request, "[", message, "]")
 
-print(c.matchSummary())
+
+while True:
+    socket.send(b"Hello")
+    message = socket.recv()
+    print('message: ', message)

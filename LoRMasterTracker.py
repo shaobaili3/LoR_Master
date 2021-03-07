@@ -17,7 +17,7 @@ from leaderboard import getRankStr
 import deck
 
 from GUI.uiThread import UIThread
-from GUI.ui import GUI
+from GUI.ui import Opponent
 
 
 class Window(QMainWindow):
@@ -33,7 +33,7 @@ class Window(QMainWindow):
         self.serverWork = ServerThread()
         self.trackWork = TrackThread()
         self.uiWork = UIThread()
-        
+
         self.trackWork.local = local
         self.trackWork.player = player
         self.trackWork.showStatusTrigger.connect(self.showStatus)
@@ -77,8 +77,9 @@ class Inspector(InspectorWidget):
         super().inspectPushButtonClicked()
         if self.inspectWork.isRunning():
             self.inspectWork.terminate()
-            self.showFinish('', self.inspectWork.playerName +
-                            ' inspection has been terminated')
+            self.showFinish(
+                '', self.inspectWork.playerName +
+                ' inspection has been terminated')
             return
 
         print('inspectPushButtonClicked called')
@@ -128,7 +129,14 @@ class Inspector(InspectorWidget):
         htmlDeckCode = self.getDeckCodeHtml(deckCode)
         self.textBrowser.append(htmlOutcome + ' ' + htmlTimeAgo +
                                 htmlFactions + htmlHeros + ' ' + htmlDeckCode)
-        gui.history.append([timeAgo, outcome, factions, deck.getChampion(deckCode), deckCode])
+
+        match = {}
+        match['outcome'] = outcome
+        match['time'] = timeAgo
+        match['factions'] = factions
+        match['deckCode'] = deckCode
+
+        gui.matches.append(match)
 
     def showSummary(self, deckdict):
         activeWindow()
@@ -139,15 +147,17 @@ class Inspector(InspectorWidget):
         if '#' in text:
             id = text.split('#')[0]
             tag = text.split('#')[1].split('[')[0]
-            gui.reset()
-            gui.opponentName = id + '#' + tag
-            return self.textBrowser.append("<a href=\"https://lor.runeterra.ar/Matches/" + settingTracker.riotServer.capitalize() + "/" + id + "/" + tag + "\" style=\"color:" + 'OrangeRed' + "\">" + text + "</a>")
+            gui = Opponent(id + '#' + tag, 0, [])
+            return self.textBrowser.append(
+                "<a href=\"https://lor.runeterra.ar/Matches/" +
+                settingTracker.riotServer.capitalize() + "/" + id + "/" + tag +
+                "\" style=\"color:" + 'OrangeRed' + "\">" + text + "</a>")
         self.textBrowser.append(self.getHtml(text, 'OrangeRed'))
 
     def showDecks(self, deckdict, num):
-        gui.summary = deckdict
-        gui.isInMatch = True
-        print(gui.matchStatus())
+        #gui.summary = deckdict
+        #gui.isInMatch = True
+        #print(gui.matchStatus())
         if num == 0:
             self.textBrowser.append(
                 self.getHtml('No recent rank records:', 'OrangeRed'))
@@ -173,7 +183,8 @@ def activeWindow():
     window.activateWindow()
     # window.raise_()
 
-gui = GUI()
+
+gui = Opponent('', 0, [])
 
 settingTracker = Setting()
 networkTracker = Network(settingTracker)
@@ -192,8 +203,6 @@ os.environ["QT_AUTO_SCREEN_SCALE_FACTOR"] = "1"
 app.setApplicationName(cs.DISPLAY_TITLE)
 app.setWindowIcon(QIcon('Resource/logo.jpg'))
 app.setStyle('Fusion')
-
-
 
 window = Window(localTracker, playerTracker)
 inspectorWidget = Inspector(window, settingInspect, networkInspect,
