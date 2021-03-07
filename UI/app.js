@@ -83,7 +83,7 @@ const createWindow = () => {
   // console.log("Is development?", process.env.NODE_ENV === 'development')
   
   mainWindow.removeMenu()
-  mainWindow.setAlwaysOnTop(true)
+  mainWindow.setAlwaysOnTop(true, level = "pop-up-menu")
   mainWindow.on('closed', () => {
     mainWindow = null
   })
