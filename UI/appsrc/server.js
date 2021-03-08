@@ -7,8 +7,8 @@ async function runPub() {
   console.log(zmq)
   const sock = new zmq.Publisher
 
-  await sock.bind("tcp://127.0.0.1:9621 ")
-  console.log("Publisher bound to port 9621")
+  await sock.bind("tcp://127.0.0.1:9622")
+  console.log("Publisher bound to port 9622")
 
   while (true) {
     console.log("Publishing new deck information")
@@ -20,7 +20,10 @@ async function runPub() {
 async function runReply() {
   const sock = new zmq.Reply
 
-  await sock.bind("tcp://127.0.0.1:9622")
+  // Simulate a late connection from server
+  // await new Promise(resolve => setTimeout(resolve, 5000))
+  await sock.bind("tcp://127.0.0.1:9621")
+  console.log("Reply bound to port 9621")
 
   for await (const [msg] of sock) {
     console.log("Replying deck info")
@@ -28,7 +31,7 @@ async function runReply() {
   }
 }
 
-function runAll() {
+async function runAll() {
   runPub()
   runReply()
 }

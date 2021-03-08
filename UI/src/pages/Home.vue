@@ -56,7 +56,8 @@ export default {
     mounted() {
         // console.log(JSON.stringify(this.matchInfos))
         // this.getMatchInfo()
-        this.getSubData()
+        // this.getSubData()
+        console.log("Mounted")
         this.requestData()
         // console.log("Test")
     },
@@ -135,6 +136,10 @@ export default {
             console.log("Requested data")
             const [result] = await window.request.receive()
             // this.playerName = result.toString()
+            
+            console.log("Received data")
+            console.log(result.toString())
+            
             this.processRawData(result)
             
         },

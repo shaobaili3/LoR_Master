@@ -28,8 +28,10 @@ export default {
         }
     }, 
     mounted() {
+        console.log("MatchInfo Deck Preview Mounted");
+        console.log(this.deck)
         var deck = DeckEncoder.decode(this.deck);
-        // console.log(deck)
+        console.log(deck)
         
         // console.log("DeckEncoder: ", DeckEncoder.decode(this.deck))
     },

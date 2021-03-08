@@ -4,16 +4,17 @@ const zmq = require("zeromq");
 // Sub
 const sock = new zmq.Subscriber
   
-sock.connect("tcp://127.0.0.1:9621")
+sock.connect("tcp://127.0.0.1:9622")
 sock.subscribe("LoR")
-// console.log("Subscriber connected to port 3000")
+console.log("Subscriber connected to port 9622")
 
 window.sock = sock;
 
 // Request
 const request = new zmq.Request
 
-request.connect("tcp://127.0.0.1:9622")
+request.connect("tcp://127.0.0.1:9621")
+console.log("Request connected to port 9621")
 window.request = request;
 
 // async function runClient() {
