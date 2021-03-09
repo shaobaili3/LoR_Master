@@ -1,6 +1,7 @@
 import psutil
 from setting import Setting, Server
 import time
+import constants as c 
 
 
 def getLoRLogFile():
@@ -37,6 +38,10 @@ def getPort(setting):
                     if 'Server opened successfully at port: ' in line:
                         # print('port:', line.split()[-1])
                         setting.port = str(line).split().pop()
+
+                    if 'Using user-preferred language CultureInfo of ' in line:
+                        c.DefaultLanguage = str(line).split().pop()
+                        print('Language:  ', c.DefaultLanguage)
         except IOError:
             print('log file not accessible: ', path)
         except BaseException as error:

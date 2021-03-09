@@ -1,6 +1,8 @@
+from collections import defaultdict
 import winreg
 import hashlib
 import shutil
+import constants as c
 
 lorBinPath = ''
 lorChineseBinPath = 'Resource/LocalizedText_en_us.bin'
@@ -73,14 +75,16 @@ def detect():
             #print(software['InstallLocation'])
             lorBinPath = software['InstallLocation'].replace(
                 '/Game', ''
-            ) + '/PatcherData/PatchableFiles/GamePlayData/LocalizedText_en_us.bin'
+            ) + '/PatcherData/PatchableFiles/GamePlayData/LocalizedText_'
 
     if lorBinPath is None:
         print('LoR.exe is not found')
         return
     print(lorBinPath)
-    shutil.copy(lorChineseBinPath, lorBinPath)
+    #shutil.copy(lorChineseBinPath, lorBinPath)
     while True:
-        if hash(lorBinPath) != hash(
-                lorChineseBinPath):  #一旦检查到游戏的汉化文件和我们替换的汉化文件不相等（因为被游戏客户端修正了）
-            shutil.copy(lorChineseBinPath, lorBinPath)  #再次替换汉化文件到游戏的存放汉化文件的目录
+        finalPath = lorBinPath + c.DefaultLanguage.lower().replace('-', '_') + '.bin'
+        if hash(finalPath) != hash(
+                lorChineseBinPath):  #一旦检查到游戏的汉化文件和我们替换的汉化文件不相等（因为被游戏客户端修正了）            
+            print(finalPath)
+            shutil.copy(lorChineseBinPath, finalPath)  #再次替换汉化文件到游戏的存放汉化文件的目录
