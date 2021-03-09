@@ -9,6 +9,12 @@ class Player:
         self.sortedDecksCode = []
         self.riot = riot
 
+        self.summary = {}
+
+    def addMatchToSummary():
+        pass
+
+
     def checkOpponent(self, name, tag, showMessage, showMatchs, showDecks):
         puuid = self.riot.getPlayerPUUID(name, tag)
         if puuid is None:
@@ -48,6 +54,8 @@ class Player:
                                utility.getFactionString(myDetails["factions"]),
                                myDetails['deck_code'], outcome)
         print(self.getNoDuplicate(deckCodes))
+     
+     
         showDecks(self.getNoDuplicate(deckCodes), len(deckCodes))
         self.showOpponentAgain()
 

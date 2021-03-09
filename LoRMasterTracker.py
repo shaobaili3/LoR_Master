@@ -157,9 +157,6 @@ class Inspector(InspectorWidget):
         self.textBrowser.append(self.getHtml(text, 'OrangeRed'))
 
     def showDecks(self, deckdict, num):
-        #gui.summary = deckdict
-        #gui.isInMatch = True
-        #print(gui.matchStatus())
         if num == 0:
             self.textBrowser.append(
                 self.getHtml('No recent rank records:', 'OrangeRed'))
