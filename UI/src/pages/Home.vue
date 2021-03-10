@@ -131,16 +131,20 @@ export default {
             }
         },
         async requestData() {
-            
-            await window.request.send("0")
-            console.log("Requested data")
-            const [result] = await window.request.receive()
-            // this.playerName = result.toString()
-            
-            console.log("Received data")
-            console.log(result.toString())
-            
-            this.processRawData(result)
+
+            if (window.request) {
+                await window.request.send("0")
+                console.log("Requested data")
+                const [result] = await window.request.receive()
+                // this.playerName = result.toString()
+                
+                console.log("Received data")
+                console.log(result.toString())
+                
+                this.processRawData(result)
+            } else {
+                this.getMatchInfo()
+            }
             
         },
         processRawData(raw) {

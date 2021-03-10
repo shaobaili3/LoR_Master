@@ -31,7 +31,7 @@ async function runReply() {
   }
 }
 
-async function runAll() {
+function runAll() {
   runPub()
   runReply()
 }

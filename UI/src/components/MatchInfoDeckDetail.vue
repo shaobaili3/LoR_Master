@@ -6,8 +6,9 @@
         :count="card.count"
         :code="card.code"
         >{{card.name}}</cards-preview>
-        <div class="deck-code">
-            <a :href="deckDetailLink" target="_blank"><span class="link-icon fa fa-external-link-alt"></span>Detail</a>
+        <div class="actions">
+            <a class="actions-btn" :href="deckDetailLink" target="_blank"><span class="actions-icon fa fa-external-link-alt"></span>Detail</a>
+            <div class="actions-btn" @click="copyDeckcode"><span class="actions-icon far fa-copy"></span>{{copyText}}</div>
         </div>
     </div>
 </template>
@@ -31,7 +32,9 @@ export default {
         // this.getCardsInfo()
     },
     data() {
-        return {}
+        return {
+            copied: false,
+        }
     }, 
     props: {
         deck: String,
@@ -52,12 +55,36 @@ export default {
 
             }
             return cards.sort((a, b) => a.cost > b.cost ? 1 : -1)
+        },
+        copyText() {
+            return this.copied ? 'Copied!' : 'Copy'
         }
     },
     methods: {
-        getCardsInfo() {
-            // console.log(sets[0])
-            
+        copyDeckcode() {
+            const copyToClipboard = str => {
+              const el = document.createElement('textarea');
+              el.value = str;
+              el.setAttribute('readonly', '');
+              el.style.position = 'absolute';
+              el.style.left = '-9999px';
+              document.body.appendChild(el);
+              const selected =
+                document.getSelection().rangeCount > 0
+                  ? document.getSelection().getRangeAt(0)
+                  : false;
+              el.select();
+              document.execCommand('copy');
+              document.body.removeChild(el);
+              if (selected) {
+                document.getSelection().removeAllRanges();
+                document.getSelection().addRange(selected);
+              }
+            };
+
+            copyToClipboard(this.deck)
+            this.copied = true
+            setTimeout(() => {this.copied = false}, 1250)
         }
     },
     
@@ -74,7 +101,7 @@ export default {
         font-size: 0.9em;
     }
 
-    .deck-code {
+    .actions {
         margin-top: 10px;
         display: flex;
         justify-content: flex-end;
@@ -82,7 +109,16 @@ export default {
         /* gap: 5px; */
     }
 
-    .link-icon {
+    .actions-btn {
+        margin-left: 10px;
+        cursor: pointer;
+    }
+
+    .actions-btn:hover {
+        text-decoration: none;
+    }
+
+    .actions-icon {
         padding-right: 5px;
     }
 
