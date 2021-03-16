@@ -40,7 +40,11 @@ class Local:
                 self.isClientRuning = False
                 self.reset()
             return
-        details = localRequest.json()
+        try:
+            details = localRequest.json()
+        except ValueError:
+            print('Decoding local port json failed')
+            return
         gameState = details['GameState']
         vsPlayerStr = ''
         if gameState == 'InProgress':
