@@ -139,8 +139,6 @@ class Inspector(InspectorWidget):
         gui.matches.append(match)
 
     def showSummary(self, deckdict):
-        activeWindow()
-        app.alert(self)
         return super().showSummary(deckdict)
 
     def showMessage(self, text):
@@ -161,8 +159,6 @@ class Inspector(InspectorWidget):
             self.textBrowser.append(
                 self.getHtml('No recent rank records:', 'OrangeRed'))
             return
-        activeWindow()
-        app.alert(self)
         self.textBrowser.append(self.getHtml('Deck List:', 'OrangeRed'))
         for deckCode, usedTime in deckdict.items():
             self.textBrowser.append(
@@ -172,16 +168,6 @@ class Inspector(InspectorWidget):
                     deck.getChampion(deckCode), 'DarkRed') + ' ' +
                 self.getDeckCodeHtml(deckCode))
         self.textBrowser.append('')
-
-
-def activeWindow():
-    # if not window.isActiveWindow():
-    if not window.isActiveWindow():
-        window.showMinimized()
-    window.showNormal()
-    window.activateWindow()
-    # window.raise_()
-
 
 gui = Opponent('', 0, [])
 
