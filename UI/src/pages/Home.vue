@@ -3,7 +3,7 @@
     
     <div id="content">
 
-        <div class="loading" :class="{invisible: playerName == null ? false : true}">
+        <div class="loading" :class="{invisible: !isLoading}">
             Loading..
         </div> 
         <!-- <button @click="requestData">Test Request</button> -->
@@ -72,6 +72,10 @@ export default {
         }
     },
     computed: {
+        isLoading() {
+            return (this.playerName == null || this.playerName == "")
+            // return true
+        }
     },
     components: { 
         BaseWindowControls,

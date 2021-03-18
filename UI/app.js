@@ -20,8 +20,11 @@ const app = electron.app
 const BrowserWindow = electron.BrowserWindow
 const path = require('path')
 
-const server = require('./appsrc/server.js')
-server.run
+// const server = require('./appsrc/server.js')
+// server.run
+
+const developmentMode = false
+const snapAssist = false
 
 // const client = require('./appsrc/client.js')
 
@@ -52,7 +55,7 @@ const createWindow = () => {
   // let window.windowWidth = windowWidth
   let windowHeight = Math.floor(windowWidth*1.666)
 
-  let developmentMode = false
+  
 
   if (developmentMode) {
     windowWidth = windowWidth + 400
@@ -66,6 +69,7 @@ const createWindow = () => {
     x: width - windowWidth,
     y: height - windowHeight,
     frame: false,
+    resizable: snapAssist,
     webPreferences: {
       preload: __dirname + '/appsrc/preload.js',
       enableRemoteModule: true,
@@ -81,6 +85,7 @@ const createWindow = () => {
   }))
   // console.log("Is development?", process.env.NODE_ENV === 'development')
   
+  if (!snapAssist) mainWindow.setResizable(true)
   mainWindow.removeMenu()
   mainWindow.setAlwaysOnTop(true, level = "pop-up-menu")
   mainWindow.on('closed', () => {
