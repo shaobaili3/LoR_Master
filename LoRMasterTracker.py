@@ -81,7 +81,6 @@ class Inspector(InspectorWidget):
                 '', self.inspectWork.playerName +
                 ' inspection has been terminated')
             return
-
         print('inspectPushButtonClicked called')
         self.parentWindow.progressBar.setValue(1)
 
@@ -91,8 +90,12 @@ class Inspector(InspectorWidget):
         if '#' in fullName:
             # 检查名字是否过短
             if len(fullName) >= 5:
+
                 self.inspectWork.start()
                 rank = getRankStr(
+                    fullName.split('#')[0], self.setting.getServer())
+                gui.name = fullName
+                gui.rank = getRankInt(
                     fullName.split('#')[0], self.setting.getServer())
                 self.textBrowser.append(
                     self.getHtml(fullName, 'OrangeRed') + ' ' + rank + ' (' +
@@ -130,15 +133,8 @@ class Inspector(InspectorWidget):
         self.textBrowser.append(htmlOutcome + ' ' + htmlTimeAgo +
                                 htmlFactions + htmlHeros + ' ' + htmlDeckCode)
 
-        # match = {}
-        # match['outcome'] = outcome
-        # match['time'] = timeAgo
-        # match['factions'] = factions
-        # match['deckCode'] = deckCode
-
-        # gui.matches.append(match)
-
     def showSummary(self, deckdict):
+        self.loadMatchsToSocket(playerInspect)
         return super().showSummary(deckdict)
 
     def showMessage(self, text):
@@ -146,13 +142,7 @@ class Inspector(InspectorWidget):
             id = text.split('#')[0]
             tag = text.split('#')[1].split('[')[0]
             gui.name = id + '#' + tag
-
-
-            #print('@@@@@@@@@@@@!!!!: ', getRankStr(id, settingTracker.getServer().lower()), settingTracker.getServer(), id)
-            gui.rank = getRankInt(id, settingTracker.getServer().lower())
-
-            # print('!!!!name: ', gui.name)
-
+            gui.rank = getRankInt(id, settingTracker.getServer())
             return self.textBrowser.append(
                 "<a href=\"https://lor.runeterra.ar/Matches/" +
                 settingTracker.riotServer.capitalize() + "/" + id + "/" + tag +
@@ -164,14 +154,7 @@ class Inspector(InspectorWidget):
             self.textBrowser.append(
                 self.getHtml('No recent rank records:', 'OrangeRed'))
             return
-        for a in playerTracker.summary:
-            match = {}
-            match['time'] = playerTracker.summary[a].time
-            match['deckCode'] = a
-            match['matches'] = playerTracker.summary[a].matches
-            match['winrate'] = playerTracker.summary[a].winNum / playerTracker.summary[a].matches
-            gui.matches.append(match)
-
+        self.loadMatchsToSocket(playerTracker)
         self.textBrowser.append(self.getHtml('Deck List:', 'OrangeRed'))
         for deckCode, usedTime in deckdict.items():
             self.textBrowser.append(
@@ -181,6 +164,18 @@ class Inspector(InspectorWidget):
                     deck.getChampion(deckCode), 'DarkRed') + ' ' +
                 self.getDeckCodeHtml(deckCode))
         self.textBrowser.append('')
+
+    def loadMatchsToSocket(self, player):
+        gui.matches = []
+        for deckCode in player.summary:
+            match = {}
+            match['time'] = player.summary[deckCode].time
+            match['deckCode'] = deckCode
+            match['matches'] = player.summary[deckCode].matches
+            match['winrate'] = player.summary[
+                deckCode].winNum / player.summary[deckCode].matches
+            gui.matches.append(match)
+
 
 gui = Opponent('', 0, [])
 
