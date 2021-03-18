@@ -48,16 +48,15 @@ const createWindow = () => {
   let {width, height} = electron.screen.getPrimaryDisplay().workAreaSize;
   let factor = electron.screen.getPrimaryDisplay().scaleFactor
   // console.log(width)
-  let windowWidth = 360
+  let windowWidth = 335
   // let window.windowWidth = windowWidth
   let windowHeight = Math.floor(windowWidth*1.666)
 
   let developmentMode = false
 
   if (developmentMode) {
-    windowWidth = 360 + 400
+    windowWidth = windowWidth + 400
   }
-
 
   mainWindow = new BrowserWindow({
     maxWidth: windowWidth,

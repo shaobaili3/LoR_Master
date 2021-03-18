@@ -32,8 +32,8 @@ async function runReply() {
 }
 
 function runAll() {
-  runPub()
-  runReply()
+  // runPub()
+  // runReply()
 }
 
 module.exports = {

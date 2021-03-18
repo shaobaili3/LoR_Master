@@ -1,6 +1,8 @@
 const remote = require("electron").remote;
 const zmq = require("zeromq");
 
+const shell = require('electron').shell;
+
 // Sub
 const sock = new zmq.Subscriber
   
@@ -37,10 +39,18 @@ window.request = request;
 window.closeWindow = function() {
     // console.log('Closing');
     var win = remote.getCurrentWindow();
-    win.close();
+    
+    // Close Logic
+    // win.close();
+
+    // Minimize to Tray
+    win.minimize();
+
 	// remote.app.relaunch()
 	// remote.app.exit(0);
 };
+
+var clientHeight = 0;
 
 window.minWindow = function() {
     var win = remote.getCurrentWindow();
@@ -51,13 +61,17 @@ window.minWindow = function() {
     let h = win.getSize()[1]
 
     if (h > 45) {
+        clientHeight = h
         h = 45
     } else {
-        h = Math.floor(w*1.666)
+        // h = Math.floor(w*1.666)
+        h = clientHeight
     }
 
     win.setSize(w, h, false);
     // console.log(win.getSize());
 }
 
-// window.
+window.openExternal = function(url) {
+    shell.openExternal(url);
+}

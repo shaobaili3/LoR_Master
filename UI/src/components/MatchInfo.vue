@@ -5,7 +5,8 @@
                 {{opponentName}}
             </router-link> -->
             <p class="match-info-title">
-                {{winrate}}
+                <!-- {{matches}} / {{total}} -->
+                {{useRate}}% Usage
             </p>
             <div class="match-info-badge" v-for="(badge, index) in badges" :key="index">
                 <span class="match-info-badge-icon fa" :class="{'fa-clock': badge=='recent', 'fa-angle-double-up': badge=='frequent'}"></span>
@@ -52,13 +53,18 @@ export default {
         time: String,
         matches: Number,
         badges: Array,
+        total: Number
     },
     computed: {
         opponentLink() {
             return "/profile/" + this.opponentName
         },
         won() {
-            return parseFloat(this.winrate) > 50;
+            // return parseFloat(this.winrate) > 0.5;
+            return true
+        },
+        useRate() {
+            return Math.floor(this.matches / this.total * 100);
         }
     }, 
     methods: {

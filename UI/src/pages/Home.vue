@@ -34,7 +34,8 @@
                 :winrate="match.winrate"
                 :badges="match.badge"
                 :opponentDeck="match.opponentDeck" 
-                :deck="match.deck"
+                :deck="match.deckCode"
+                :total="matchTotalNum"
             ></match-info>
 
         </div>
@@ -67,6 +68,7 @@ export default {
             request: null,
             playerName: null,
             playerRank: null,
+            matchTotalNum: 0
         }
     },
     computed: {
@@ -130,6 +132,13 @@ export default {
                 this.processRawData(msg)
             }
         },
+        requestDataAgain() {
+            return new Promise(resolve => {
+                setTimeout(() => {
+                    resolve('Requesting new Data')
+                }, 3000);
+            })
+        },
         async requestData() {
 
             if (window.request) {
@@ -139,21 +148,35 @@ export default {
                 // this.playerName = result.toString()
                 
                 console.log("Received data")
-                console.log(result.toString())
+                // console.log(result.toString())
                 
                 this.processRawData(result)
+                await this.requestDataAgain()
+                this.requestData()
+
             } else {
                 this.getMatchInfo()
             }
             
         },
         processRawData(raw) {
-            var data = JSON.parse(raw.toString())
+            var data = JSON.parse(raw.toString('utf8'))
             console.log("Processing Received Data:", data)
 
+            this.matchTotalNum = 0;
+
             this.matchInfos = data.matches;
+
+            // console.log("Match Information")
+            for (const i in data.matches) {
+                // this.matchTotalNum += match.matches
+                this.matchTotalNum += data.matches[i].matches
+            }
+            // console.log(this.matchTotalNum)
+
             this.playerName = data.name;
             this.playerRank = data.rank;
+
         }
     }
 
