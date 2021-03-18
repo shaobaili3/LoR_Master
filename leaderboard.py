@@ -64,6 +64,15 @@ def checkRank(name, server):
     return rank, lp
 
 
+def getRankInt(name, server):
+    rank, lp = checkRank(name, server)
+    if rank != '':
+        return int(rank)
+    else:
+        return 0
+
+
+
 def getRankStr(name, server):
     rank, lp = checkRank(name, server)
     if rank != '':

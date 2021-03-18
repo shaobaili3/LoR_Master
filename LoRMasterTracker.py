@@ -13,7 +13,7 @@ from player import Player
 from inspectorWidget import InspectorWidget
 from Threads.serverThread import ServerThread
 from Threads.trackThread import TrackThread
-from leaderboard import getRankStr
+from leaderboard import getRankStr, getRankInt
 import deck
 
 from GUI.uiThread import UIThread
@@ -146,6 +146,11 @@ class Inspector(InspectorWidget):
             id = text.split('#')[0]
             tag = text.split('#')[1].split('[')[0]
             gui.name = id + '#' + tag
+
+
+            #print('@@@@@@@@@@@@!!!!: ', getRankStr(id, settingTracker.getServer().lower()), settingTracker.getServer(), id)
+            gui.rank = getRankInt(id, settingTracker.getServer().lower())
+
             # print('!!!!name: ', gui.name)
 
             return self.textBrowser.append(
@@ -159,12 +164,8 @@ class Inspector(InspectorWidget):
             self.textBrowser.append(
                 self.getHtml('No recent rank records:', 'OrangeRed'))
             return
-
-        print('!!!!!!!!!!!!!!!!!!', playerTracker.summary)
         for a in playerTracker.summary:
-            #print('@@@@@@@@@@: ', )
             match = {}
-            # match['outcome'] = outcome
             match['time'] = playerTracker.summary[a].time
             match['deckCode'] = a
             match['matches'] = playerTracker.summary[a].matches
