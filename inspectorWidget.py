@@ -73,18 +73,7 @@ class InspectorWidget(QWidget):
         self.textBrowser.clear()
 
     def inspectPushButtonClicked(self):
-        pass
-        # print('start button pushed')
-        # fullName = self.idLineEdit.text().strip()
-        # self.work.plaerName = fullName
-
-        # if '#' in fullName:
-        #     if len(fullName) >= 5:
-        #         self.work.start()
-        #         self.textEdit.appendHtml(self.getHtml(fullName, 'OrangeRed'))
-        #         return
-
-        # self.textEdit.appendHtml(self.getHtml(fullName + ' is invalid, please input name and tag seperated by # eg: storm#5961', 'OrangeRed'))
+        return
 
     def showFinish(self, name, text):
         self.inspectPushButton.setText('Inspect')

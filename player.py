@@ -13,14 +13,17 @@ class Player:
         self.summary = {}
 
     def addMatchToSummary(self, code, outcome, time):
-        if code in self.summary.keys:
+        print('outcome: ', outcome)
+        if code in self.summary:
             self.summary[code].matches += 1
+            if outcome == 'win':
+                self.summary[code].winNum += 1
         else:
             winNum = 0
             if outcome == 'win':
                 winNum = 1
 
-            self.summary[code] =  DeckDetail(1, winNum , time)                                  
+            self.summary[code] = DeckDetail(1, winNum , time)                                  
         
 
 
@@ -61,7 +64,7 @@ class Player:
                     deckCodes.append(myDetails['deck_code'])
                     startTime = detail['info']['game_start_time_utc']
                     outcome = myDetails["game_outcome"]
-                    self.addMatchToSummary(myDetails['deck_code'], myDetails["game_outcome"],utility.toLocalTimeString(startTime, True))
+                    self.addMatchToSummary(myDetails['deck_code'], outcome,utility.toLocalTimeString(startTime, True))
                     showMatchs(utility.toLocalTimeString(startTime, True),
                                utility.getFactionString(myDetails["factions"]),
                                myDetails['deck_code'], outcome)

@@ -160,8 +160,16 @@ class Inspector(InspectorWidget):
                 self.getHtml('No recent rank records:', 'OrangeRed'))
             return
 
-        for a in self.player.summary:
-            print('@@@@@@@@@@: ', self.player.summary[a].time)
+        print('!!!!!!!!!!!!!!!!!!', playerTracker.summary)
+        for a in playerTracker.summary:
+            #print('@@@@@@@@@@: ', )
+            match = {}
+            # match['outcome'] = outcome
+            match['time'] = playerTracker.summary[a].time
+            match['deckCode'] = a
+            match['matches'] = playerTracker.summary[a].matches
+            match['winrate'] = playerTracker.summary[a].winNum / playerTracker.summary[a].matches
+            gui.matches.append(match)
 
         self.textBrowser.append(self.getHtml('Deck List:', 'OrangeRed'))
         for deckCode, usedTime in deckdict.items():
