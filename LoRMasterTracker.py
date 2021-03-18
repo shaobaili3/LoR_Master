@@ -130,13 +130,13 @@ class Inspector(InspectorWidget):
         self.textBrowser.append(htmlOutcome + ' ' + htmlTimeAgo +
                                 htmlFactions + htmlHeros + ' ' + htmlDeckCode)
 
-        match = {}
-        match['outcome'] = outcome
-        match['time'] = timeAgo
-        match['factions'] = factions
-        match['deckCode'] = deckCode
+        # match = {}
+        # match['outcome'] = outcome
+        # match['time'] = timeAgo
+        # match['factions'] = factions
+        # match['deckCode'] = deckCode
 
-        gui.matches.append(match)
+        # gui.matches.append(match)
 
     def showSummary(self, deckdict):
         return super().showSummary(deckdict)
@@ -159,6 +159,10 @@ class Inspector(InspectorWidget):
             self.textBrowser.append(
                 self.getHtml('No recent rank records:', 'OrangeRed'))
             return
+
+        for a in self.player.summary:
+            print('@@@@@@@@@@: ', self.player.summary[a].time)
+
         self.textBrowser.append(self.getHtml('Deck List:', 'OrangeRed'))
         for deckCode, usedTime in deckdict.items():
             self.textBrowser.append(

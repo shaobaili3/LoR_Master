@@ -2,6 +2,7 @@ import webbrowser
 import utility
 import constants as cs
 from leaderboard import getRankStr
+from GUI.ui import DeckDetail
 
 
 class Player:
@@ -11,8 +12,16 @@ class Player:
 
         self.summary = {}
 
-    def addMatchToSummary():
-        pass
+    def addMatchToSummary(self, code, outcome, time):
+        if code in self.summary.keys:
+            self.summary[code].matches += 1
+        else:
+            winNum = 0
+            if outcome == 'win':
+                winNum = 1
+
+            self.summary[code] =  DeckDetail(1, winNum , time)                                  
+        
 
 
     def checkOpponent(self, name, tag, showMessage, showMatchs, showDecks):
@@ -32,6 +41,8 @@ class Player:
         self.riot.asyncio.set_event_loop(loop)
         tasks = [self.riot.aioMatchDetail(id) for id in matchIds]
         details = loop.run_until_complete(self.riot.asyncio.gather(*tasks))
+
+        self.summary = {}
         for detail in details:
             if str(detail).isdigit():
                 print('Retry after ' + str(detail) + ', Riot server is busy.')
@@ -50,6 +61,7 @@ class Player:
                     deckCodes.append(myDetails['deck_code'])
                     startTime = detail['info']['game_start_time_utc']
                     outcome = myDetails["game_outcome"]
+                    self.addMatchToSummary(myDetails['deck_code'], myDetails["game_outcome"],utility.toLocalTimeString(startTime, True))
                     showMatchs(utility.toLocalTimeString(startTime, True),
                                utility.getFactionString(myDetails["factions"]),
                                myDetails['deck_code'], outcome)

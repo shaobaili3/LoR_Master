@@ -17,6 +17,11 @@ class Opponent:
         self.rank = rank
         self.matches = matches
 
+class DeckDetail:
+    def __init__(self, matches: int , winNum: int, time: str):
+        self.matches = matches
+        self.winNum = winNum
+        self.time = time
 
 
 # match = Match('a', 'a', 'a', 'a', 'a')
