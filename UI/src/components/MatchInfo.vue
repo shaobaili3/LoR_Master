@@ -15,7 +15,7 @@
             <div class="history-info">{{matches}} Games</div>
         </div>
         <div class="row match-history-dots">
-            <div class="match-history-summary">3 W - 1 L </div>
+            <div class="match-history-summary">{{wonNum}} W - {{lostNum}} L </div>
             <div class="dot" :class="{'won' : isWonGame(index), 'played' : isPlayedGame(index)}" v-for="index in total" :key="index"></div>
             
         </div>
@@ -71,6 +71,12 @@ export default {
         },
         useRate() {
             return Math.floor(this.matches / this.total * 100);
+        },
+        wonNum() {
+            return (this.history.match(/W/g)||[]).length
+        },
+        lostNum() {
+            return (this.history.match(/L/g)||[]).length
         }
     }, 
     methods: {
@@ -206,7 +212,7 @@ export default {
     }
 
     .row.match-history-dots .dot.played {
-        opacity: 0.2;
+        opacity: 0.3;
         background: rgb(255,255,255);
     }
 
@@ -225,7 +231,7 @@ export default {
 
     .row.match-history-dots:hover .dot.played {
         /* display: initial; */
-        opacity: 0.3;
+        opacity: 0.5;
         /* background-color: var(--col-background); */
     }
 

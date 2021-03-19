@@ -36,7 +36,7 @@
                 :opponentDeck="match.opponentDeck" 
                 :deck="match.deckCode"
                 :total="matchTotalNum"
-                :history="'EEEWWWLL'"
+                :history="'EEEEWWLLL'"
             ></match-info>
 
         </div>
