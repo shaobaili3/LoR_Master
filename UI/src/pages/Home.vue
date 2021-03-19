@@ -4,7 +4,7 @@
     <div id="content">
 
         <div class="loading" :class="{invisible: !isLoading}">
-            Loading..
+            {{loadingText}}
         </div> 
         <!-- <button @click="requestData">Test Request</button> -->
 
@@ -53,6 +53,8 @@ import MatchInfo from '../components/MatchInfo.vue'
 import axios from 'axios'
 import BaseWindowControls from '../components/BaseWindowControls.vue'
 
+const requestDataWaitTime = 1000 // ms
+
 export default {
     mounted() {
         // console.log(JSON.stringify(this.matchInfos))
@@ -75,6 +77,9 @@ export default {
         isLoading() {
             return (this.playerName == null || this.playerName == "" || this.matchInfos.length == 0)
             // return true
+        },
+        loadingText() {
+            return 'Loading..'
         }
     },
     components: { 
@@ -84,30 +89,13 @@ export default {
     methods: {
         getMatchInfo() {
 
-            // for await (const [topic, msg] of window.sock) {
-            //     console.log("received a message related to:", topic.toString(), "containing message:", msg.toString())
-            //     // window.testData = msg.toString()
-            //     // console.log(mainWindow)
-            // }
-
-            // console.log("Get Match Info")
-            // Version with Name and Opponent Deck
-            // const APILink = "https://run.mocky.io/v3/ed5ffaec-c040-4a62-839c-e52966cae1d6"
-            
-            // winrate
-            // const APILink = "https://run.mocky.io/v3/febc2c8b-4437-4dea-92f0-8c3384a8adf5"
-            
-            // Name, winrate, extra player and match infos
             const APILink = "https://run.mocky.io/v3/1b944261-e5c2-4071-bf22-a8c5e509edeb"
             
-            
             if (this.request) this.cancelLeaderboard()
-
             const axiosSource = axios.CancelToken.source()
             this.request = { cancel: axiosSource.cancel, msg: "Loading..." };
 
             // var APILink = test_api_links[regionID]
-
             this.isLoading = true;
 
             axios.get(APILink, {cancelToken: axiosSource.token} )
@@ -140,7 +128,7 @@ export default {
             return new Promise(resolve => {
                 setTimeout(() => {
                     resolve('Requesting new Data')
-                }, 3000);
+                }, requestDataWaitTime);
             })
         },
         async requestData() {
