@@ -23,7 +23,7 @@ const path = require('path')
 // const server = require('./appsrc/server.js')
 // server.run
 
-const developmentMode = false
+const developmentMode = true
 const snapAssist = false
 
 // const client = require('./appsrc/client.js')
@@ -85,7 +85,15 @@ const createWindow = () => {
   }))
   // console.log("Is development?", process.env.NODE_ENV === 'development')
   
-  if (!snapAssist) mainWindow.setResizable(true)
+  if (!snapAssist) { 
+    var minSize = mainWindow.getMinimumSize()
+    var maxSize = mainWindow.getMaximumSize()
+    
+    mainWindow.setResizable(true)
+    mainWindow.setMinimumSize(minSize[0], minSize[1])
+    mainWindow.setMaximumSize(maxSize[0], maxSize[1])
+    // mainWindow.setMinimumSize
+  }
   mainWindow.removeMenu()
   mainWindow.setAlwaysOnTop(true, level = "pop-up-menu")
   mainWindow.on('closed', () => {

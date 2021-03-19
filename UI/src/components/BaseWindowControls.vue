@@ -73,11 +73,12 @@ export default {
         align-items: baseline;
         justify-content: flex-end;
 
-        height: 20px;
+        height: 19px;
         padding: 10px 0px 15px 0px;
         width: 100%;
 
         margin-left: 0px;
+        margin-top: 1px;
         background-color: var(--col-background);
         z-index: 2;
     }
