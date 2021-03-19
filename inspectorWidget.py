@@ -109,15 +109,8 @@ class InspectorWidget(QWidget):
         self.textBrowser.append(' ')
 
     def showSummary(self, deckdict):
-        self.textBrowser.append(self.getHtml('Summary:', 'OrangeRed'))
-        for deckCode, usedTime in deckdict.items():
-            #print(deckCode, usedTime)
-            self.textBrowser.append(
-                self.getHtml(deck.getChampion(deckCode), 'DarkRed') + ' ' +
-                self.getDeckCodeHtml(deckCode) + ' ' + str(usedTime) +
-                ' times')
-        #self.textBrowser.append('')
-
+        return
+        
     def getVivoHtml(self, name, color):
         #https://lor.runeterra.ar/Matches/Americas/HiddenValley/2860
         id = name.split('#')[0]

@@ -136,6 +136,14 @@ class Inspector(InspectorWidget):
 
     def showSummary(self, deckdict):
         self.loadMatchsToSocket(playerInspect)
+
+        self.textBrowser.append(self.getHtml('Summary:', 'OrangeRed'))
+        for deckCode, usedTime in deckdict.items():
+            #print(deckCode, usedTime)
+            self.textBrowser.append(
+                self.getHtml(deck.getChampion(deckCode), 'DarkRed') + ' ' +
+                self.getDeckCodeHtml(deckCode) + ' ' + str(usedTime) +
+                ' Games '+ self.showWinLoss(deckCode, playerInspect)) 
         return super().showSummary(deckdict)
 
     def showMessage(self, text):
@@ -178,9 +186,12 @@ class Inspector(InspectorWidget):
                 deckCode].winNum / player.summary[deckCode].matches
             gui.matches.append(match)
 
+    def showWinLoss(self, deckCode, player):
+        winNum = player.summary[deckCode].winNum
+        lossNum =  player.summary[deckCode].matches - player.summary[deckCode].winNum
+        return '[' + str(winNum) + 'W' + ' ' + str(lossNum) + 'L' + ']'
 
 gui = Opponent('', 0, [])
-
 settingTracker = Setting()
 networkTracker = Network(settingTracker)
 riotTracker = Riot(networkTracker)
