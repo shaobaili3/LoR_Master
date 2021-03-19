@@ -53,9 +53,8 @@ const createWindow = () => {
   // console.log(width)
   let windowWidth = 335
   // let window.windowWidth = windowWidth
-  let windowHeight = Math.floor(windowWidth*1.666)
-
-  
+  let windowHeight = Math.floor(windowWidth*2.3)
+  let windowPadding = 20
 
   if (developmentMode) {
     windowWidth = windowWidth + 400
@@ -66,8 +65,8 @@ const createWindow = () => {
     minWidth: windowWidth,
     width: windowWidth, 
     height: windowHeight, 
-    x: width - windowWidth,
-    y: height - windowHeight,
+    x: width - windowWidth - windowPadding,
+    y: height - windowHeight - windowPadding,
     frame: false,
     resizable: snapAssist,
     webPreferences: {

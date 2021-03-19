@@ -1,4 +1,5 @@
 <template>
+    <div id="menu-bg"></div>
     <div id="menu" class="">
         <div class="menu-title">
             <!-- <slot></slot> -->
@@ -73,12 +74,29 @@ export default {
         align-items: baseline;
         justify-content: flex-end;
 
-        height: 19px;
+        height: 18px;
         padding: 10px 0px 15px 0px;
         width: 100%;
 
         margin-left: 0px;
-        margin-top: 1px;
+        margin-top: 2px;
+        background-color: var(--col-background);
+        z-index: 3;
+    }
+
+    #menu-bg {
+
+        cursor: default;
+        position: fixed; 
+        top: 0px;
+        left: 0px;
+
+        height: 20px;
+        padding: 10px 0px 15px 0px;
+        width: 100%;
+
+        margin-left: 0px;
+        margin-top: 0px;
         background-color: var(--col-background);
         z-index: 2;
     }
