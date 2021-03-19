@@ -73,7 +73,7 @@ export default {
     },
     computed: {
         isLoading() {
-            return (this.playerName == null || this.playerName == "")
+            return (this.playerName == null || this.playerName == "" || this.matchInfos.length == 0)
             // return true
         }
     },
