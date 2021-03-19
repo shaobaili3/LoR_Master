@@ -94,6 +94,7 @@ class Inspector(InspectorWidget):
                 self.inspectWork.start()
                 rank = getRankStr(
                     fullName.split('#')[0], self.setting.getServer())
+                gui.matches = []
                 gui.name = fullName
                 gui.rank = getRankInt(
                     fullName.split('#')[0], self.setting.getServer())
@@ -141,6 +142,7 @@ class Inspector(InspectorWidget):
         if '#' in text:
             id = text.split('#')[0]
             tag = text.split('#')[1].split('[')[0]
+            gui.matches = []
             gui.name = id + '#' + tag
             gui.rank = getRankInt(id, settingTracker.getServer())
             return self.textBrowser.append(
