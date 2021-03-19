@@ -14,6 +14,11 @@
             <div class="history-info">{{time}}</div>
             <div class="history-info">{{matches}} Games</div>
         </div>
+        <div class="row match-history-dots">
+            <div class="match-history-summary">3 W - 1 L </div>
+            <div class="dot" :class="{'won' : isWonGame(index), 'played' : isPlayedGame(index)}" v-for="index in total" :key="index"></div>
+            
+        </div>
         <div class="row decklist">
             <deck-preview @click="showDeck" :deck="deck" :won="won"></deck-preview>
             <!-- <div class="text-vs">VS</div> -->
@@ -53,7 +58,8 @@ export default {
         time: String,
         matches: Number,
         badges: Array,
-        total: Number
+        total: Number,
+        history: String,
     },
     computed: {
         opponentLink() {
@@ -86,6 +92,18 @@ export default {
         },
         subscribeData() {
             // console.log(window)
+        },
+        isWonGame(index) {
+            var i = index - 1
+            // console.log(this.history)
+            if (i >= this.history.length) return false
+            return (this.history[i] == 'W')
+        },
+        isPlayedGame(index) {
+            var i = index - 1
+            // console.log(this.history)
+            if (i >= this.history.length) return false
+            return (this.history[i] == 'W' || this.history[i] == 'L')
         }
     }
 }
@@ -163,6 +181,79 @@ export default {
         justify-content: center;
         align-items: center;
     }
+
+    .match-history-dots {
+        display: flex;
+        gap: 10px;
+        /* height: 20px; */
+
+        justify-content: flex-start;
+        align-items: center;
+
+        padding: 2px 5px 5px 5px;
+        margin: 0;
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+
+    .row.match-history-dots .dot {
+        height: 10px;
+        width: 10px;
+        border-radius: 10px;
+
+        background-color: var(--col-background);
+        opacity: 0.1;
+    }
+
+    .row.match-history-dots .dot.played {
+        opacity: 0.2;
+        background: rgb(255,255,255);
+    }
+
+    .row.match-history-dots .dot.played.won {
+        opacity: 0.7;
+        background: rgb(255,255,255);
+    }
+
+    /* .row.match-history-dots:hover .dot {
+        display: none;
+    } */
+
+    .row.match-history-dots:hover .dot {
+        opacity: 0.05;
+    }
+
+    .row.match-history-dots:hover .dot.played {
+        /* display: initial; */
+        opacity: 0.3;
+        /* background-color: var(--col-background); */
+    }
+
+    .match-history-dots:hover .dot.played.won {
+        opacity: 1;
+        background: rgb(255,255,255);
+        box-shadow: 1px 2px 5px -2px #000000;
+    }
+
+    .match-history-summary {
+        /* display: block; */
+        /* display: flex; */
+        /* align-items: center; */
+        line-height: 10px;
+        height: 10px;
+        text-align: center;
+        /* height: 20px; */
+        /* line-height: 20px; */
+        font-size: 0.8em;
+        /* display: none; */
+        opacity: 0.7;
+    }
+
+    .match-history-dots:hover .match-history-summary {
+        opacity: 1;
+    }
+
+    
 
     .match-info-title {
         /* display: block; */

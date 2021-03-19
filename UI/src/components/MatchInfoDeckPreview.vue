@@ -148,9 +148,8 @@ export default {
     }
 
     .icon.faction {
-
-        filter: brightness(0) invert(1) opacity(0.8);
-
+        opacity: 0.8;
+        filter: brightness(0) invert(1) drop-shadow(0.5px 1px 0.5px rgba(0, 0, 0, 0.1));
         /* box-shadow: 2px 2px 3px -2px black; */
         /* filter: drop-shadow(-2px 2px 1px rgba(43, 38, 27, 0.6)); */
         /* filter: drop-shadow(-0.5px 1px 0.5px white); */
@@ -169,11 +168,13 @@ export default {
     }
 
     .btn:hover .icon.faction {
-        filter: brightness(0) invert(1) opacity(1);
+        opacity: 1;
+        filter: brightness(0) invert(1) drop-shadow(1px 2px 1px rgba(0, 0, 0, 0.6));
     }
 
     .btn:hover .icon.champ {
         border: 2px solid rgba(255, 255, 255, 1);
+        box-shadow: 1px 2px 5px -2px #000000;
     }
 
     .btn.won:hover {

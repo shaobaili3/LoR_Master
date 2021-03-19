@@ -36,6 +36,7 @@
                 :opponentDeck="match.opponentDeck" 
                 :deck="match.deckCode"
                 :total="matchTotalNum"
+                :history="'EEEWWWLL'"
             ></match-info>
 
         </div>
@@ -89,7 +90,8 @@ export default {
     methods: {
         getMatchInfo() {
 
-            const APILink = "https://run.mocky.io/v3/1b944261-e5c2-4071-bf22-a8c5e509edeb"
+            // const APILink = "https://run.mocky.io/v3/1b944261-e5c2-4071-bf22-a8c5e509edeb"
+            const APILink = "https://run.mocky.io/v3/32d5b3e2-fd92-49a4-90eb-13a2b027d8e3"
             
             if (this.request) this.cancelLeaderboard()
             const axiosSource = axios.CancelToken.source()
@@ -100,12 +102,7 @@ export default {
 
             axios.get(APILink, {cancelToken: axiosSource.token} )
             .then((data) => {
-                // Testing Shurima expansion
-                // data.data.matches[0].deck = "CECQMBAHAMNBYJRTLUAQCAAWAEBQADQBAQAAGAICAAEQGAQCAABAQAQBAAETGAIEA44QA";
-                this.matchInfos = data.data.matches;
-                this.playerName = data.data.name;
-                this.playerRank = data.data.rank;
-                // console.log(this.matchInfos);
+                this.processJsonData(data.data)
             })
             .catch((e) => {
                 if (axios.isCancel(e)) {
@@ -148,15 +145,15 @@ export default {
 
             } else {
                 this.getMatchInfo()
-            }
-            
+            }            
         },
         processRawData(raw) {
             var data = JSON.parse(raw.toString('utf8'))
-            console.log("Processing Received Data:", data)
-
+            console.log("Processing Received Data:", raw.toString('utf8'))
+            this.processJsonData(data)
+        },
+        processJsonData(data) {
             this.matchTotalNum = 0;
-
             this.matchInfos = data.matches;
 
             // console.log("Match Information")
@@ -168,7 +165,6 @@ export default {
 
             this.playerName = data.name;
             this.playerRank = data.rank;
-
         }
     }
 

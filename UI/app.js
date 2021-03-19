@@ -23,7 +23,7 @@ const path = require('path')
 // const server = require('./appsrc/server.js')
 // server.run
 
-const developmentMode = false
+const developmentMode = true
 const snapAssist = false
 
 // const client = require('./appsrc/client.js')
