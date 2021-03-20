@@ -12,5 +12,6 @@ class DeckDetail:
         self.matches = matches
         self.winNum = winNum
         self.time = time
+        self.history = ''
 
 

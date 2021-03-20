@@ -184,6 +184,7 @@ class Inspector(InspectorWidget):
             match['matches'] = player.summary[deckCode].matches
             match['winrate'] = player.summary[
                 deckCode].winNum / player.summary[deckCode].matches
+            match['history'] = player.summary[deckCode].history
             gui.matches.append(match)
 
     def showWinLoss(self, deckCode, player):

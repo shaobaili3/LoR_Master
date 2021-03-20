@@ -12,7 +12,6 @@ class Player:
         self.summary = {}
 
     def addMatchToSummary(self, code, outcome, time):
-        print('outcome: ', outcome)
         if code in self.summary:
             self.summary[code].matches += 1
             if outcome == 'win':
@@ -22,6 +21,22 @@ class Player:
             if outcome == 'win':
                 winNum = 1
             self.summary[code] = DeckDetail(1, winNum, time)
+
+        for key in self.summary:
+            if key != code:
+                self.summary[key].history += 'E'
+            else:
+                if outcome == 'win':
+                    self.summary[key].history += 'W'
+                else:
+                    self.summary[key].history += 'L'
+        
+        matchNum = len(self.summary[list(self.summary.keys())[0]].history)
+
+        for key in self.summary:
+            fill = 'E' * (matchNum - len(self.summary[key].history)) 
+            self.summary[key].history = fill + self.summary[key].history
+
 
     def checkOpponent(self, name, tag, showMessage, showMatchs, showDecks):
         puuid = self.riot.getPlayerPUUID(name, tag)
