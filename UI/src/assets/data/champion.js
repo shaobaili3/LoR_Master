@@ -47,6 +47,7 @@ export default { champions: [
   "03NX007",
   "03PZ003",
   "03SI005", // End of Set 3
+  "03MT217", // Aphelios
   "04DE008",
   "04FR005",
   "04NX004",

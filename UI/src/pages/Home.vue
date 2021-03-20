@@ -104,7 +104,11 @@ export default {
             .then((data) => {
                 var d = data.data
                 // Testing 6 Champs
-                d.matches[0].deckCode = "CMBQCAQAAMAQIAAHBAAQAAIGBEFRIGRCE4BACAIAEQAQIAAJAMAQEAAGAEBQACYEAEAAYFRKFU"
+                // d.matches[0].deckCode = "CMBQCAQAAMAQIAAHBAAQAAIGBEFRIGRCE4BACAIAEQAQIAAJAMAQEAAGAEBQACYEAEAAYFRKFU"
+                
+                // Testing singleton
+                d.matches[0].deckCode = "CMAAABQBAMDA6AQEAQFA4BADAQCAYEQZBEAQIAIIBIKBWHBEFY3QYAQGBEFA2EQUFAWC4LZQHI6AYAYJBEIR2JZKGA4ESVSY2YA5SAI"
+                d.matches[1].deckCode = "CMBACAQAAMEACAABAYEQWFA2EITQEAIBAASAEBAAA4EQIAIBAEPACAQAAYAQGAALAQAQADAWFIWQ"
                 this.processJsonData(data.data)
             })
             .catch((e) => {
