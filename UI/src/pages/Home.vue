@@ -91,7 +91,7 @@ export default {
         getMatchInfo() {
 
             // const APILink = "https://run.mocky.io/v3/1b944261-e5c2-4071-bf22-a8c5e509edeb"
-            const APILink = "https://run.mocky.io/v3/32d5b3e2-fd92-49a4-90eb-13a2b027d8e3"
+            const APILink = "https://run.mocky.io/v3/ed898fe9-570b-476b-824d-a8fd93c4d331"            
             
             if (this.request) this.cancelLeaderboard()
             const axiosSource = axios.CancelToken.source()
@@ -102,6 +102,9 @@ export default {
 
             axios.get(APILink, {cancelToken: axiosSource.token} )
             .then((data) => {
+                var d = data.data
+                // Testing 6 Champs
+                d.matches[0].deckCode = "CMBQCAQAAMAQIAAHBAAQAAIGBEFRIGRCE4BACAIAEQAQIAAJAMAQEAAGAEBQACYEAEAAYFRKFU"
                 this.processJsonData(data.data)
             })
             .catch((e) => {

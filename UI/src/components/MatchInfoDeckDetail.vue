@@ -18,12 +18,16 @@
 
 // const { DeckEncoder } = require('runeterra')
 import DeckEncoder from '../modules/runeterra/DeckEncoder'
-import sets from  '../assets/data/allsets-en_us.json'
+// import sets from  '../assets/data/allsets-en_us.json'
 import CardsPreview from './CardsPreview.vue'
-// import set1 from '../assets/data/set1-en_us.json'
-// import set2 from '../assets/data/set2-en_us.json'
-// import set3 from '../assets/data/set3-en_us.json'
-// import set4 from '../assets/data/set4-en_us.json'
+import set1 from '../assets/data/set1-en_us.json'
+import set2 from '../assets/data/set2-en_us.json'
+import set3 from '../assets/data/set3-en_us.json'
+import set4 from '../assets/data/set4-en_us.json'
+
+
+const sets = set1.concat(set2, set3, set4)
+// console.log(sets)
 
 export default {
     components: {
@@ -50,9 +54,10 @@ export default {
             for (var j in deck) {
                 var cardCode = deck[j].code
                 var card = sets.find(card => card.cardCode == cardCode)
-
-                // console.log(cardName, deck[j].count)
-                cards.push({code: deck[j].code, name: card.name, count: deck[j].count, cost: card.cost})
+                if (card) {
+                    // console.log(cardName, deck[j].count)
+                    cards.push({code: deck[j].code, name: card.name, count: deck[j].count, cost: card.cost})
+                }
 
             }
             return cards.sort((a, b) => a.cost > b.cost ? 1 : -1)
