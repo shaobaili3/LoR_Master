@@ -1,6 +1,6 @@
-API_KEY1 = '?api_key=' + 'RGAPI-693e34b0-9890-4591-a22d-36df07ccde53'  #ios product
+API_KEY = '?api_key=' + 'RGAPI-693e34b0-9890-4591-a22d-36df07ccde53'  #ios product
 API_KEY1 = '?api_key=' + 'RGAPI-3dd1641a-6d80-458d-9fb5-357253d7674b'  #product
-API_KEY = '?api_key=' + 'RGAPI-3b5bde16-66b4-4943-b8fa-241d27b29344'  #personal
+API_KEY2 = '?api_key=' + 'RGAPI-3b5bde16-66b4-4943-b8fa-241d27b29344'  #personal
 MATCH_KEY = '.api.riotgames.com/lor/match/v1/matches/by-puuid/'
 DETAILS_KEY = '.api.riotgames.com/lor/match/v1/matches/'
 NAME_KEY = '.api.riotgames.com/riot/account/v1/accounts/by-puuid/'
