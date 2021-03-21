@@ -25,6 +25,8 @@ const path = require('path')
 
 const developmentMode = false
 const snapAssist = false
+const headerHeight = 45 // Repeated in preload.js
+const defaultRatio = 2.3 // Repeated in preload.js
 
 // const client = require('./appsrc/client.js')
 
@@ -53,7 +55,7 @@ const createWindow = () => {
   // console.log(width)
   let windowWidth = 335
   // let window.windowWidth = windowWidth
-  let windowHeight = Math.floor(windowWidth*2.3)
+  let windowHeight = Math.floor(windowWidth*defaultRatio)
   let windowPadding = 20
 
   if (developmentMode) {
@@ -63,6 +65,7 @@ const createWindow = () => {
   mainWindow = new BrowserWindow({
     maxWidth: windowWidth,
     minWidth: windowWidth,
+    minHeight: headerHeight,
     width: windowWidth, 
     height: windowHeight, 
     x: width - windowWidth - windowPadding,
