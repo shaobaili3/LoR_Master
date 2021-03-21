@@ -51,6 +51,8 @@ window.closeWindow = function() {
 };
 
 var clientHeight = 0;
+const headerHeight = 45; // Repeated in app.js
+const defaultRatio = 2.3; // Repeated in app.js
 
 window.minWindow = function() {
     var win = remote.getCurrentWindow();
@@ -60,11 +62,14 @@ window.minWindow = function() {
     let w = win.getSize()[0]
     let h = win.getSize()[1]
 
-    if (h > 45) {
+    if (h > headerHeight) {
         clientHeight = h
-        h = 45
+        h = headerHeight
     } else {
         // h = Math.floor(w*1.666)
+        if (clientHeight <= headerHeight) {
+            clientHeight = Math.floor(w*defaultRatio)
+        }
         h = clientHeight
     }
 
