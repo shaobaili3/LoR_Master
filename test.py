@@ -10,7 +10,7 @@ def runElectron():
         isRuning = False
         for proc in psutil.process_iter():
             try:
-                if proc.name() == u"LoRMasterTracker.exe":
+                if proc.name() == u"LoRMasterTrackerUI.exe":
                     isRuning = True
             except psutil.AccessDenied:
                 print("Permission error or access denied on process")
@@ -23,6 +23,3 @@ def runElectron():
             subprocess.Popen('UI/app/LoRMasterTrackerUI-win32-x64/LoRMasterTrackerUI.exe', shell=False)
     except Exception as e:
         print('runElectron error:', e)
-
-
-runElectron()
