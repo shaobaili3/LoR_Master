@@ -8,8 +8,6 @@ setting = Setting()
 setting.setServer(Server.NA)
 network = Network(setting)
 riot = Riot(network)
-player = Player(riot)
-
 # J01#EU1
 # asia europe americas
 

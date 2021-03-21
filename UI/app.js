@@ -20,27 +20,158 @@ const app = electron.app
 const BrowserWindow = electron.BrowserWindow
 const path = require('path')
 
+// const server = require('./appsrc/server.js')
+// server.run
+
+const developmentMode = false
+const snapAssist = false
+const closeWithoutTracker = true
+const headerHeight = 45 // Repeated in preload.js
+const defaultRatio = 2.3 // Repeated in preload.js
+
+// const client = require('./appsrc/client.js')
+
+const zmq = require("zeromq")
+
+// async function runClient() {
+//     const sock = new zmq.Subscriber
+  
+//     sock.connect("tcp://127.0.0.1:3000")
+//     sock.subscribe("kitty cats")
+//     console.log("Subscriber connected to port 3000")
+  
+//     for await (const [topic, msg] of sock) {
+//       console.log("received a message related to:", topic.toString(), "containing message:", msg.toString())
+//       mainWindow.clientData = "CATAT"
+//       // console.log(mainWindow)
+//     }
+// }
+
 let mainWindow = null
 const createWindow = () => {
-  mainWindow = new BrowserWindow({width: 800, height: 600})
+
+  if (closeWithoutTracker) checkTracker()
+
+  let {width, height} = electron.screen.getPrimaryDisplay().workAreaSize;
+  let factor = electron.screen.getPrimaryDisplay().scaleFactor
+  // console.log(width)
+  let windowWidth = 335
+  // let window.windowWidth = windowWidth
+  let windowHeight = Math.floor(windowWidth*defaultRatio)
+  let windowPadding = 20
+
+  if (developmentMode) {
+    windowWidth = windowWidth + 400
+  }
+
+  mainWindow = new BrowserWindow({
+    maxWidth: windowWidth,
+    minWidth: windowWidth,
+    minHeight: headerHeight,
+    width: windowWidth, 
+    height: windowHeight, 
+    x: width - windowWidth - windowPadding,
+    y: height - windowHeight - windowPadding,
+    frame: false,
+    resizable: snapAssist,
+    webPreferences: {
+      preload: __dirname + '/appsrc/preload.js',
+      enableRemoteModule: true,
+      // nodeIntegration: true,
+      nodeIntegrationInWorker: true,
+    }
+    // titleBarStyle: 'hiddenInset'
+  })
   mainWindow.loadURL(require('url').format({
     pathname: path.join(__dirname, 'dist/index.html'),
     protocol: 'file:',
     slashes: true
   }))
-  mainWindow.webContents.openDevTools()
+  // console.log("Is development?", process.env.NODE_ENV === 'development')
+  
+  if (!snapAssist) { 
+    var minSize = mainWindow.getMinimumSize()
+    var maxSize = mainWindow.getMaximumSize()
+    
+    mainWindow.setResizable(true)
+    mainWindow.setMinimumSize(minSize[0], minSize[1])
+    mainWindow.setMaximumSize(maxSize[0], maxSize[1])
+    // mainWindow.setMinimumSize
+  }
+  mainWindow.removeMenu()
+  mainWindow.setAlwaysOnTop(true, level = "pop-up-menu")
   mainWindow.on('closed', () => {
     mainWindow = null
   })
+
+  if (developmentMode) mainWindow.webContents.openDevTools()
+  
+  mainWindow.webContents.on('new-window', function (evt, url, frameName, disposition, options, additionalFeatures) {
+    if(options.width == 800 && options.height == 600){ //default size is 800x600
+        
+        options.width = windowWidth | 0;
+        options.height = windowHeight | 0;
+        
+        options.x = 1440 - windowWidth * 2;
+        // console.log(width);
+        options.y = height - windowHeight;
+        // options.titleBarStyle = 'hidden'
+        options.frame = true;
+    }
+  });
+
+  // const worker = new Worker(__dirname + '/electron/server.js')
+  // server.run
+  // runClient()
 }
+
+
 app.on('ready', createWindow)
 app.on('window-all-closed', () => {
-  if (process.platform !== 'darwin') {
+  // if (process.platform !== 'darwin') {
     app.quit()
-  }
+  // }
 })
 app.on('activate', () => {
   if (mainWindow === null) {
     createWindow()
   }
 })
+
+const tasklist = require('tasklist');
+/*
+	[
+		{
+			imageName: 'taskhostex.exe',
+			pid: 1820,
+			sessionName: 'Console',
+			sessionNumber: 1,
+			memUsage: 4415488
+		},
+		…
+	]
+	*/
+
+async function checkTracker() {
+  
+  // Check Python Process with window name containing LoR Master Tracker
+  var pythonList = await tasklist({filter: ["IMAGENAME eq python.exe"], verbose: true});
+  pythonList = pythonList.filter(ps => ps.windowTitle.indexOf("LoR Master Tracker") != -1);
+
+  // Check LoRMasterTracker.exe process
+  var trackerList = await tasklist({filter: ["IMAGENAME eq LoRMasterTracker.exe"], verbose: false});
+  
+  // console.log(list.filter(ps => ps.imageName.indexOf('python') != -1));
+  // console.log("\n pythonList", pythonList.length);
+  // console.log("trackerList", trackerList.length);
+
+  if (pythonList.length + trackerList.length <= 0) {
+    // There is no tracker running
+    console.log("No tracker running")
+    app.quit()
+  }
+
+  setTimeout(checkTracker, 1000);
+}
+
+// checkTracker()

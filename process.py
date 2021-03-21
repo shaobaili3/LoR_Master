@@ -1,4 +1,5 @@
 import psutil
+import subprocess
 from setting import Setting, Server
 import time
 import constants as c 
@@ -47,11 +48,28 @@ def getPort(setting):
         except BaseException as error:
             print('An exception occurred: {}'.format(error))
 
+def runElectron():
+    try:
+        isRuning = False
+        for proc in psutil.process_iter():
+            try:
+                if proc.name() == u"LoRMasterTracker.exe":
+                    isRuning = True
+            except psutil.AccessDenied:
+                print("Permission error or access denied on process")
+                return None
+            except IndexError:
+                print('Index error')
+                return None
+
+        if isRuning is False:
+            subprocess.Popen('UI/app/LoRMasterTrackerUI-win32-x64/LoRMasterTrackerUI.exe', shell=False)
+    except Exception as e:
+        print('runElectron error:', e)
+
 
 def updateTrackServer(setting):
     while (True):
         time.sleep(2)
         getPort(setting)
-
-
-#updateTrackServer(1)
+        

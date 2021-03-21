@@ -16,7 +16,12 @@ from Threads.serverThread import ServerThread
 from Threads.trackThread import TrackThread
 from Threads.translateThread import TranslateThread
 from leaderboard import getRankStr
+from leaderboard import getRankInt
+from process import runElectron
 import deck
+
+from GUI.uiThread import UIThread
+from GUI.ui import Opponent
 
 
 class Window(QMainWindow):
@@ -32,6 +37,7 @@ class Window(QMainWindow):
         self.serverWork = ServerThread()
         self.trackWork = TrackThread()
         self.translateWork = TranslateThread()
+        self.uiWork = UIThread()
         self.trackWork.local = local
         self.trackWork.player = player
         self.trackWork.showStatusTrigger.connect(self.showStatus)
@@ -88,7 +94,6 @@ class Inspector(InspectorWidget):
                 '', self.inspectWork.playerName +
                 ' inspection has been terminated')
             return
-
         print('inspectPushButtonClicked called')
         self.parentWindow.progressBar.setValue(1)
 
@@ -98,8 +103,13 @@ class Inspector(InspectorWidget):
         if '#' in fullName:
             # 检查名字是否过短
             if len(fullName) >= 5:
+
                 self.inspectWork.start()
                 rank = getRankStr(
+                    fullName.split('#')[0], self.setting.getServer())
+                gui.matches = []
+                gui.name = fullName
+                gui.rank = getRankInt(
                     fullName.split('#')[0], self.setting.getServer())
                 self.textBrowser.append(
                     self.getHtml(fullName, 'OrangeRed') + ' ' + rank + ' (' +
@@ -138,15 +148,24 @@ class Inspector(InspectorWidget):
                                 htmlFactions + htmlHeros + ' ' + htmlDeckCode)
 
     def showSummary(self, deckdict):
-        activeWindow()
-        app.alert(self)
+        self.loadMatchsToSocket(playerInspect)
 
+        self.textBrowser.append(self.getHtml('Summary:', 'OrangeRed'))
+        for deckCode, usedTime in deckdict.items():
+            #print(deckCode, usedTime)
+            self.textBrowser.append(
+                self.getHtml(deck.getChampion(deckCode), 'DarkRed') + ' ' +
+                self.getDeckCodeHtml(deckCode) + ' ' + str(usedTime) +
+                ' Games '+ self.showWinLoss(deckCode, playerInspect)) 
         return super().showSummary(deckdict)
 
     def showMessage(self, text):
         if '#' in text:
             id = text.split('#')[0]
             tag = text.split('#')[1].split('[')[0]
+            gui.matches = []
+            gui.name = id + '#' + tag
+            gui.rank = getRankInt(id, settingTracker.getServer())
             return self.textBrowser.append(
                 "<a href=\"https://lor.runeterra.ar/Matches/" +
                 settingTracker.riotServer.capitalize() + "/" + id + "/" + tag +
@@ -158,11 +177,9 @@ class Inspector(InspectorWidget):
             self.textBrowser.append(
                 self.getHtml('No recent rank records:', 'OrangeRed'))
             return
-        activeWindow()
-        app.alert(self)
+        self.loadMatchsToSocket(playerTracker)
         self.textBrowser.append(self.getHtml('Deck List:', 'OrangeRed'))
         for deckCode, usedTime in deckdict.items():
-            #print(deckCode, usedTime)
             self.textBrowser.append(
                 self.getHtml(
                     self.getHtml(
@@ -171,16 +188,25 @@ class Inspector(InspectorWidget):
                 self.getDeckCodeHtml(deckCode))
         self.textBrowser.append('')
 
+    def loadMatchsToSocket(self, player):
+        gui.matches = []
+        for deckCode in player.summary:
+            match = {}
+            match['time'] = player.summary[deckCode].time
+            match['deckCode'] = deckCode
+            match['matches'] = player.summary[deckCode].matches
+            match['winrate'] = player.summary[
+                deckCode].winNum / player.summary[deckCode].matches
+            match['history'] = player.summary[deckCode].history
+            gui.matches.append(match)
+        runElectron()
 
-def activeWindow():
-    # if not window.isActiveWindow():
-    if not window.isActiveWindow():
-        window.showMinimized()
-    window.showNormal()
-    window.activateWindow()
-    # window.raise_()
+    def showWinLoss(self, deckCode, player):
+        winNum = player.summary[deckCode].winNum
+        lossNum =  player.summary[deckCode].matches - player.summary[deckCode].winNum
+        return '[' + str(winNum) + 'W' + ' ' + str(lossNum) + 'L' + ']'
 
-
+gui = Opponent('', 0, [])
 settingTracker = Setting()
 networkTracker = Network(settingTracker)
 riotTracker = Riot(networkTracker)
@@ -207,6 +233,9 @@ window.show()
 window.serverWork.setting = settingTracker
 window.serverWork.start()
 window.trackWork.start()
+
+window.uiWork.ui = gui
+window.uiWork.start()
 
 window.trackWork.showDecksTrigger.connect(inspectorWidget.showDecks)
 window.trackWork.showMatchsTrigger.connect(inspectorWidget.showMatchs)

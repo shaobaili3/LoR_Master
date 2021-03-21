@@ -2,12 +2,41 @@ import webbrowser
 import utility
 import constants as cs
 from leaderboard import getRankStr
+from GUI.ui import DeckDetail
 
 
 class Player:
     def __init__(self, riot):
         self.sortedDecksCode = []
         self.riot = riot
+        self.summary = {}
+
+    def addMatchToSummary(self, code, outcome, time):
+        if code in self.summary:
+            self.summary[code].matches += 1
+            if outcome == 'win':
+                self.summary[code].winNum += 1
+        else:
+            winNum = 0
+            if outcome == 'win':
+                winNum = 1
+            self.summary[code] = DeckDetail(1, winNum, time)
+
+        for key in self.summary:
+            if key != code:
+                self.summary[key].history += 'E'
+            else:
+                if outcome == 'win':
+                    self.summary[key].history += 'W'
+                else:
+                    self.summary[key].history += 'L'
+        
+        matchNum = len(self.summary[list(self.summary.keys())[0]].history)
+
+        for key in self.summary:
+            fill = 'E' * (matchNum - len(self.summary[key].history)) 
+            self.summary[key].history = fill + self.summary[key].history
+
 
     def checkOpponent(self, name, tag, showMessage, showMatchs, showDecks):
         puuid = self.riot.getPlayerPUUID(name, tag)
@@ -26,10 +55,13 @@ class Player:
         self.riot.asyncio.set_event_loop(loop)
         tasks = [self.riot.aioMatchDetail(id) for id in matchIds]
         details = loop.run_until_complete(self.riot.asyncio.gather(*tasks))
+
+        self.summary = {}
         for detail in details:
             if str(detail).isdigit():
                 print('Retry after ' + str(detail) + ', Riot server is busy.')
-                showMessage('Riot server is busy, will restore in ' + str(detail) + ' seconds.')
+                showMessage('Riot server is busy, will restore in ' +
+                            str(detail) + ' seconds.')
                 return
             if detail is None:
                 continue
@@ -44,12 +76,13 @@ class Player:
                     deckCodes.append(myDetails['deck_code'])
                     startTime = detail['info']['game_start_time_utc']
                     outcome = myDetails["game_outcome"]
+                    self.addMatchToSummary(
+                        myDetails['deck_code'], outcome,
+                        utility.toLocalTimeString(startTime, True))
                     showMatchs(utility.toLocalTimeString(startTime, True),
                                utility.getFactionString(myDetails["factions"]),
                                myDetails['deck_code'], outcome)
-        print(self.getNoDuplicate(deckCodes))
         showDecks(self.getNoDuplicate(deckCodes), len(deckCodes))
-        self.showOpponentAgain()
 
     def getNoDuplicate(self, deckCodes):
         deckslist = dict(
@@ -63,29 +96,12 @@ class Player:
                                       reverse=True)
         return deckslist
 
-    def showOpponentAgain(self):
-        if not self.riot.network.setting.autoOpenDeck:
-            return
-        if not self.sortedDecksCode:
-            print("对手最近没有Rank记录")
-            return
-        print("已找到卡组:")
-        for index, code in enumerate(self.sortedDecksCode):
-            print('卡组', index + 1, '代码:', code)
-        print("正在启动浏览器...(如果等待过长，请手动重启默认浏览器后，点击重新显示套牌按钮)")
-        for index, code in enumerate(self.sortedDecksCode):
-            webbrowser.open('https://lor.mobalytics.gg/decks/code/' + code)
-            if index == 0:
-                pass
-            if index == 2:
-                break
-        print("卡组已在默认浏览器中显示, 请在浏览器中查看")
-
     def inspectPlayer(self, name, tag, showlog, showSummary, finishTrigger):
         puuid = self.riot.getPlayerPUUID(name, tag)
         if puuid is None:
             print('查询失败, puuid为空')
-            return finishTrigger('', name + '#' + tag + ' is not exist or changed name')
+            return finishTrigger(
+                '', name + '#' + tag + ' is not exist or changed name')
         matchIds = self.riot.getMatchs(puuid)
         winNum = 0
         matchNum = 0
@@ -94,6 +110,7 @@ class Player:
             return finishTrigger(name + '#' + tag,
                                  ' has no recent match records')
         deckCodes = []
+        self.summary = {}
         for matchId in matchIds:
             if matchNum == cs.MAX_NUM_DETAILS:
                 break
@@ -101,7 +118,9 @@ class Player:
             # print('type:', str(type(detail)))
             if str(detail).isdigit():
                 print('Retry after ', str(detail), ', Riot server is busy.')
-                finishTrigger(name + '#' + tag, 'Riot server is busy, will restore in ' + str(detail) + ' seconds.')
+                finishTrigger(
+                    name + '#' + tag, 'Riot server is busy, will restore in ' +
+                    str(detail) + ' seconds.')
                 return
             if detail is None:
                 continue
@@ -118,8 +137,6 @@ class Player:
             opponentDetail = None
             myDetails = None
             totalTurn = detail['info']['total_turn_count']
-            opName = ['', '']
-            fullName = ''
             myIndex = 1
             opponentIndex = 0
             if riotId[0] == puuid:
@@ -135,12 +152,11 @@ class Player:
             outcome = myDetails["game_outcome"]
             if outcome == 'win':
                 winNum += 1
-            # opName = self.riot.getPlayerName(opponentDetail['puuid'])[0]
-            rank = ''
-            print('@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@')
             print(detail)
+            self.addMatchToSummary(myDetails['deck_code'], outcome, utility.toLocalTimeString(startTime, True))
             print(str(outcome), str(myDetails["factions"]),
-                  str(myDetails['deck_code']), str(opponentDetail["factions"]), str(opponentDetail['deck_code']))
+                  str(myDetails['deck_code']), str(opponentDetail["factions"]),
+                  str(opponentDetail['deck_code']))
             deckCodes.append(myDetails['deck_code'])
             settingServer = self.riot.network.setting.getServer()
             rank = getRankStr(opName[0], settingServer)
@@ -157,10 +173,10 @@ class Player:
                 ' rank matchs')
             print("Win rate:", str(int(winNum / matchNum * 100)) + "%")
             showSummary(self.getNoDuplicate(deckCodes))
-            return finishTrigger(name + '#' + tag, ' win rate: ' +
-                                 str(int(winNum / matchNum * 100)) + "%  " +
-                                 str(winNum) + ' wins' + ' out of ' +
-                                 str(matchNum) + ' rank matchs')
+            return finishTrigger(
+                name + '#' + tag, ' win rate: ' +
+                str(int(winNum / matchNum * 100)) + "%  " + str(winNum) +
+                ' wins' + ' out of ' + str(matchNum) + ' rank matchs')
         else:
             print('无法获取对战历史数据')
             return finishTrigger(name + '#' + tag,

@@ -2,6 +2,14 @@ p {
     color: white;
 }
 
+div {
+    user-select: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
 /* @import url('https://fonts.googleapis.com/css2?family=Kelly+Slab&display=swap'); */
 /* @import url('https://fonts.googleapis.com/css2?family=Squada+One&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap');
@@ -23,6 +31,7 @@ p {
 
     --col-grey: rgb(78, 78, 78);
     --col-light-grey: rgb(94, 94, 94);
+    --col-lighter-grey: rgb(124, 124, 124);
     --col-dark-grey: rgb(65, 65, 65);
 }
 
