@@ -49,6 +49,7 @@ const zmq = require("zeromq")
 let mainWindow = null
 const createWindow = () => {
 
+  checkTracker()
 
   let {width, height} = electron.screen.getPrimaryDisplay().workAreaSize;
   let factor = electron.screen.getPrimaryDisplay().scaleFactor
@@ -123,6 +124,7 @@ const createWindow = () => {
   // runClient()
 }
 
+
 app.on('ready', createWindow)
 app.on('window-all-closed', () => {
   // if (process.platform !== 'darwin') {
@@ -135,4 +137,40 @@ app.on('activate', () => {
   }
 })
 
-// console.log("Activated Electron");
+const tasklist = require('tasklist');
+/*
+	[
+		{
+			imageName: 'taskhostex.exe',
+			pid: 1820,
+			sessionName: 'Console',
+			sessionNumber: 1,
+			memUsage: 4415488
+		},
+		…
+	]
+	*/
+
+async function checkTracker() {
+  
+  // Check Python Process with window name containing LoR Master Tracker
+  var pythonList = await tasklist({filter: ["IMAGENAME eq python.exe"], verbose: true});
+  pythonList = pythonList.filter(ps => ps.windowTitle.indexOf("LoR Master Tracker") != -1);
+
+  // Check LoRMasterTracker.exe process
+  var trackerList = await tasklist({filter: ["IMAGENAME eq LoRMasterTracker.exe"], verbose: false});
+  
+  // console.log(list.filter(ps => ps.imageName.indexOf('python') != -1));
+  // console.log("\n pythonList", pythonList.length);
+  // console.log("trackerList", trackerList.length);
+
+  if (pythonList.length + trackerList.length <= 0) {
+    // There is no tracker running
+    console.log("No tracker running")
+    app.quit()
+  }
+
+  setTimeout(checkTracker, 1000);
+}
+
+// checkTracker()
