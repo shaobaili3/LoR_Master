@@ -25,6 +25,7 @@ const path = require('path')
 
 const developmentMode = false
 const snapAssist = false
+const closeWithoutTracker = true
 const headerHeight = 45 // Repeated in preload.js
 const defaultRatio = 2.3 // Repeated in preload.js
 
@@ -49,7 +50,7 @@ const zmq = require("zeromq")
 let mainWindow = null
 const createWindow = () => {
 
-  checkTracker()
+  if (closeWithoutTracker) checkTracker()
 
   let {width, height} = electron.screen.getPrimaryDisplay().workAreaSize;
   let factor = electron.screen.getPrimaryDisplay().scaleFactor
