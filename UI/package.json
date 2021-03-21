@@ -2,6 +2,7 @@
   "name": "lor-master-leaderboard",
   "version": "0.1.0",
   "private": true,
+  "main": "app.js",
   "scripts": {
     "dev": "vue-cli-service build && electron app.js",
     "serve": "vue-cli-service serve",
