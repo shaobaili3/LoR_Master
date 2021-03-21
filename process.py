@@ -58,7 +58,7 @@ def runElectron():
                 return None
 
         if isRuning is False:
-            subprocess.run('UI/app/LoRMasterTrackerUI-win32-x64/LoRMasterTrackerUI.exe', shell=False)
+            subprocess.Popen('UI/app/LoRMasterTrackerUI-win32-x64/LoRMasterTrackerUI.exe', shell=False)
     except Exception as e:
         print('runElectron error:', e)
 
