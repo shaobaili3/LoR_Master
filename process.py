@@ -67,4 +67,4 @@ def updateTrackServer(setting):
     while (True):
         time.sleep(2)
         getPort(setting)
-        runElectron()
+        

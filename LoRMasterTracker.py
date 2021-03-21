@@ -16,6 +16,7 @@ from Threads.serverThread import ServerThread
 from Threads.trackThread import TrackThread
 from leaderboard import getRankStr
 from leaderboard import getRankInt
+from process import runElectron
 import deck
 
 from GUI.uiThread import UIThread
@@ -188,6 +189,7 @@ class Inspector(InspectorWidget):
                 deckCode].winNum / player.summary[deckCode].matches
             match['history'] = player.summary[deckCode].history
             gui.matches.append(match)
+        runElectron()
 
     def showWinLoss(self, deckCode, player):
         winNum = player.summary[deckCode].winNum
