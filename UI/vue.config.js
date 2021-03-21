@@ -6,7 +6,7 @@ module.exports = {
     config
         .plugin('html')
         .tap(args => {
-            args[0].title = "LoR Master Leaderboard";
+            args[0].title = "LoR Master Tracker UI";
             return args;
         })
   }
