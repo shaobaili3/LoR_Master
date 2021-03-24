@@ -18,7 +18,7 @@ from leaderboard import getRankInt
 from process import runElectron
 import deck
 import webbrowser
-from GUI.uiThread import UIThread
+from Threads.uiThread import UIThread
 from GUI.ui import Opponent
 
 
@@ -49,7 +49,7 @@ class Window(QMainWindow):
         #self.statusBar().addPermanentWidget(self.enableTrackCheckBox)
         self.statusBar().addPermanentWidget(self.progressBar)
 
-        self.translatePushButton = QPushButton("启用营地简中[繁体中文]")
+        self.translatePushButton = QPushButton("启用营地简中[不支持繁体]")
         self.translatePushButton.setDefault(True)
         self.translatePushButton.clicked.connect(self.translatePushButtonClicked)
         self.statusBar().addPermanentWidget(self.translatePushButton)
@@ -65,7 +65,7 @@ class Window(QMainWindow):
     def translatePushButtonClicked(self, state):
         if self.translateWork.isRunning():
             self.translateWork.terminate()
-            self.translatePushButton.setText('启用营地简中')
+            self.translatePushButton.setText('启用营地简中[不支持繁体]')
         else:
             self.translateWork.start()
             self.translatePushButton.setText('关闭营地简中')
