@@ -26,7 +26,8 @@ class Window(QMainWindow):
     def __init__(self, local, player):
         super().__init__()
         self.resize(1024, 768)
-        self.setWindowTitle(cs.DISPLAY_TITLE + " v" + cs.VERSION_NUM_INSPECTOR)
+        self.setWindowTitle(cs.DISPLAY_TITLE)
+        # Built with ❤ by Storm/FlyingFish
         self.statusBar().showMessage('[Disconnected] Launch LoR to start enemy tracker')
         self.progressBar = QProgressBar()
         self.progressBar.setRange(0, cs.MAX_NUM_DETAILS + 1)
@@ -54,7 +55,7 @@ class Window(QMainWindow):
         self.translatePushButton.clicked.connect(self.translatePushButtonClicked)
         self.statusBar().addPermanentWidget(self.translatePushButton)
 
-        self.updatePushButton = QPushButton("About")
+        self.updatePushButton = QPushButton("v" + cs.VERSION_NUM_INSPECTOR)
         self.updatePushButton.setDefault(True)
         self.updatePushButton.clicked.connect(self.updatePushButtonClicked)
         self.statusBar().addPermanentWidget(self.updatePushButton)
