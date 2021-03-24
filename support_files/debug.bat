@@ -1,2 +1,2 @@
-LoRmaster.exe
+LoRmasterTracker.exe
 pause

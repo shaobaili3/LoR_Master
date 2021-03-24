@@ -1,7 +1,7 @@
-from setting import Server
+from Models.setting import Server
 import aiohttp
 import asyncio
-from network import API_KEY
+from Models.network import API_KEY
 
 leaderboards = [None, None, None, None]
 LEADERBOARD_KEY = '.api.riotgames.com/lor/ranked/v1/leaderboards/'

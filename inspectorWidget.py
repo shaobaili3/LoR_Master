@@ -1,12 +1,12 @@
 import constants as cs
 import os
-from setting import Setting, Server
+from Models.setting import Setting, Server
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5 import *
 from Threads.inspectThread import InspectThread
-import deck
+import Models.deck as deck
 
 
 class InspectorWidget(QWidget):

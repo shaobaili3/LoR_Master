@@ -1,24 +1,27 @@
 from Threads.translateThread import TranslateThread
+from Threads.serverThread import ServerThread
+from Threads.trackThread import TrackThread
+from Threads.uiThread import UIThread
+
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
-import constants as cs
+
 import os
 import sys
-from setting import Setting
-from local import Local
-from riot import Riot
-from network import Network
-from player import Player
-from inspectorWidget import InspectorWidget
-from Threads.serverThread import ServerThread
-from Threads.trackThread import TrackThread
-from leaderboard import getRankStr
-from leaderboard import getRankInt
-from process import runElectron
-import deck
 import webbrowser
-from Threads.uiThread import UIThread
+
+from Models.setting import Setting
+from Models.local import Local
+from Models.riot import Riot
+from Models.network import Network
+from Models.player import Player
+from inspectorWidget import InspectorWidget
+from Models.leaderboard import getRankStr
+from Models.leaderboard import getRankInt
+from Models.process import runElectron
+import Models.deck as deck
+import constants as cs
 from GUI.ui import Opponent
 
 

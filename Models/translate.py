@@ -1,4 +1,3 @@
-from collections import defaultdict
 import winreg
 import hashlib
 import shutil

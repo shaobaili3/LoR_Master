@@ -1,6 +1,6 @@
 import psutil
 import subprocess
-from setting import Setting, Server
+from Models.setting import Setting, Server
 import time
 import constants as c 
 

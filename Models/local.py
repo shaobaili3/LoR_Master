@@ -1,8 +1,8 @@
 import requests
-from setting import Server
+from Models.setting import Server
 import constants as cs
-import utility
-from leaderboard import getRankStr, updateLeaderboard
+import Models.utility as utility
+from Models.leaderboard import getRankStr, updateLeaderboard
 
 
 class Local:

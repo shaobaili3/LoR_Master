@@ -1,5 +1,5 @@
 from PyQt5.QtCore import QThread
-from process import updateTrackServer
+from Models.process import updateTrackServer
 
 
 class ServerThread(QThread):

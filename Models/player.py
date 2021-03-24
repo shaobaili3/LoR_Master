@@ -1,6 +1,6 @@
-import utility
+import Models.utility as utility
 import constants as cs
-from leaderboard import getRankStr
+from Models.leaderboard import getRankStr
 from GUI.ui import DeckDetail
 
 
