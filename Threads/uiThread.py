@@ -1,7 +1,5 @@
-from PyQt5.QtCore import QThread, pyqtSignal
+from PyQt5.QtCore import QThread
 import zmq
-import time
-import sys
 import json
 
 class UIThread(QThread):

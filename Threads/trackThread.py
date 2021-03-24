@@ -1,5 +1,4 @@
 from PyQt5.QtCore import QThread, pyqtSignal
-from local import Local
 from leaderboard import updateLeaderboard
 import time
 
