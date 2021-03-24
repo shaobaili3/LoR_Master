@@ -1,12 +1,11 @@
 from Threads.translateThread import TranslateThread
-from PyQt5 import QtCore
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 import constants as cs
 import os
 import sys
-from setting import Setting, Server
+from setting import Setting
 from local import Local
 from riot import Riot
 from network import Network
@@ -14,12 +13,11 @@ from player import Player
 from inspectorWidget import InspectorWidget
 from Threads.serverThread import ServerThread
 from Threads.trackThread import TrackThread
-from Threads.translateThread import TranslateThread
 from leaderboard import getRankStr
 from leaderboard import getRankInt
 from process import runElectron
 import deck
-
+import webbrowser
 from GUI.uiThread import UIThread
 from GUI.ui import Opponent
 
@@ -29,7 +27,7 @@ class Window(QMainWindow):
         super().__init__()
         self.resize(1024, 768)
         self.setWindowTitle(cs.DISPLAY_TITLE + " v" + cs.VERSION_NUM_INSPECTOR)
-        self.statusBar().showMessage('LoR Disconnected')
+        self.statusBar().showMessage('[Disconnected] Launch LoR to start enemy tracker')
         self.progressBar = QProgressBar()
         self.progressBar.setRange(0, cs.MAX_NUM_DETAILS + 1)
         self.progressBar.setHidden(True)
@@ -51,18 +49,26 @@ class Window(QMainWindow):
         #self.statusBar().addPermanentWidget(self.enableTrackCheckBox)
         self.statusBar().addPermanentWidget(self.progressBar)
 
-        self.translatePushButton = QPushButton("启用营地汉化")
+        self.translatePushButton = QPushButton("启用营地简中[繁体中文]")
         self.translatePushButton.setDefault(True)
         self.translatePushButton.clicked.connect(self.translatePushButtonClicked)
         self.statusBar().addPermanentWidget(self.translatePushButton)
 
+        self.updatePushButton = QPushButton("About")
+        self.updatePushButton.setDefault(True)
+        self.updatePushButton.clicked.connect(self.updatePushButtonClicked)
+        self.statusBar().addPermanentWidget(self.updatePushButton)
+
+    def updatePushButtonClicked(self, state):
+        webbrowser.open('https://github.com/shaobaili3/LoR_Master')
+
     def translatePushButtonClicked(self, state):
         if self.translateWork.isRunning():
             self.translateWork.terminate()
-            self.translatePushButton.setText('启用营地汉化')
+            self.translatePushButton.setText('启用营地简中')
         else:
             self.translateWork.start()
-            self.translatePushButton.setText('关闭营地汉化')
+            self.translatePushButton.setText('关闭营地简中')
 
     # def changeEnableTrackCheckBox(self, state):
     #     if state == Qt.Checked:

@@ -31,12 +31,12 @@ class Local:
             if not self.isClientRuning:
                 # LoR client launched
                 print('LoR客户端已启动', '当前服务器:', self.setting.getServer())
-                showStatus('LoR Connected: ' + self.setting.getServer())
+                showStatus('[Connected: ' + self.setting.getServer() + '] Enemy tracker enabled')
                 self.isClientRuning = True
         except requests.exceptions.RequestException:
             if self.isClientRuning:
                 print('LoR客户端已关闭')  # LoR client exited
-                showStatus('LoR Disconnected')
+                showStatus('[Disconnected] Launch LoR to start enemy tracker')
                 self.isClientRuning = False
                 self.reset()
             return

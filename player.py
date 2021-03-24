@@ -1,4 +1,3 @@
-import webbrowser
 import utility
 import constants as cs
 from leaderboard import getRankStr
