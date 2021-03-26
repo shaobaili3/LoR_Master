@@ -82,13 +82,14 @@ def isSimulation():
                     isPython = True
             except psutil.AccessDenied:
                 print("Permission error or access denied on process")
-                isPython
+                return isPython
             except IndexError as e:
                 print('runElectron IndexError: ', e)
-                isPython
+                return isPython
     except Exception as e:
         print('runElectron error:', e)
         return isPython
+    print('isSimulation: ', isPython)
     return isPython
 
 

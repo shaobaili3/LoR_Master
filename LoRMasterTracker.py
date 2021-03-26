@@ -54,7 +54,7 @@ class Window(QMainWindow):
         #self.statusBar().addPermanentWidget(self.enableTrackCheckBox)
         self.statusBar().addPermanentWidget(self.progressBar)
 
-        if locale.getdefaultlocale()[0] == 'zh_CN':
+        if 'zh' in locale.getdefaultlocale()[0]:
             self.translatePushButton = QPushButton("启用营地简中[不支持繁体]")
             self.translatePushButton.setDefault(True)
             self.translatePushButton.clicked.connect(self.translatePushButtonClicked)

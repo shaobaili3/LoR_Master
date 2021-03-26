@@ -13,17 +13,17 @@ PUUID_KEY = '.api.riotgames.com/riot/account/v1/accounts/by-riot-id/'
 sysLanguage = locale.getdefaultlocale()[0]
 print('System Language: ', sysLanguage)
 
-if sysLanguage == 'en_GB':
+if 'en' in sysLanguage:
     API_KEY = API_KEY0
-elif sysLanguage == 'zh_CN':
+elif 'zh' in sysLanguage:
     API_KEY = API_KEY3
 else:
     API_KEY = API_KEY2
 
-if isSimulation:
+if isSimulation():
     API_KEY = API_KEY1
 
-print('API_KEY Used: ', API_KEY)
+print('API_KEY Used: ', API_KEY, isSimulation())
 
 
 class Network():
