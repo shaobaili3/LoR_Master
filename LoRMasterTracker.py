@@ -10,6 +10,7 @@ from PyQt5.QtWidgets import *
 import os
 import sys
 import webbrowser
+import locale
 
 from Models.setting import Setting
 from Models.local import Local
@@ -53,10 +54,11 @@ class Window(QMainWindow):
         #self.statusBar().addPermanentWidget(self.enableTrackCheckBox)
         self.statusBar().addPermanentWidget(self.progressBar)
 
-        self.translatePushButton = QPushButton("启用营地简中[不支持繁体]")
-        self.translatePushButton.setDefault(True)
-        self.translatePushButton.clicked.connect(self.translatePushButtonClicked)
-        self.statusBar().addPermanentWidget(self.translatePushButton)
+        if locale.getdefaultlocale()[0] == 'zh_CN':
+            self.translatePushButton = QPushButton("启用营地简中[不支持繁体]")
+            self.translatePushButton.setDefault(True)
+            self.translatePushButton.clicked.connect(self.translatePushButtonClicked)
+            self.statusBar().addPermanentWidget(self.translatePushButton)
 
         self.updatePushButton = QPushButton("v" + cs.VERSION_NUM_INSPECTOR)
         self.updatePushButton.setDefault(True)

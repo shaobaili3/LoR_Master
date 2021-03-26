@@ -2,7 +2,7 @@ import psutil
 import subprocess
 from Models.setting import Setting, Server
 import time
-import constants as c 
+import constants as c
 
 
 def getLoRLogFile():
@@ -48,6 +48,7 @@ def getPort(setting):
         except BaseException as error:
             print('An exception occurred: {}'.format(error))
 
+
 def runElectron():
     try:
         isRuning = False
@@ -58,18 +59,40 @@ def runElectron():
             except psutil.AccessDenied:
                 print("Permission error or access denied on process")
                 return None
-            except IndexError:
-                print('Index error')
+            except IndexError as e:
+                print('runElectron: ', e)
                 return None
 
         if isRuning is False:
-            subprocess.Popen('UI/app/LoRMasterTrackerUI-win32-x64/LoRMasterTrackerUI.exe', shell=False)
+            subprocess.Popen(
+                'UI/app/LoRMasterTrackerUI-win32-x64/LoRMasterTrackerUI.exe',
+                shell=False)
     except Exception as e:
         print('runElectron error:', e)
+
+
+def isSimulation():
+    isPython = True
+    try:
+        for proc in psutil.process_iter():
+            try:
+                if proc.name() == u"LoRMasterTracker.exe":
+                    isPython = False
+                if proc.name() == u"python.exe":
+                    isPython = True
+            except psutil.AccessDenied:
+                print("Permission error or access denied on process")
+                isPython
+            except IndexError as e:
+                print('runElectron IndexError: ', e)
+                isPython
+    except Exception as e:
+        print('runElectron error:', e)
+        return isPython
+    return isPython
 
 
 def updateTrackServer(setting):
     while (True):
         time.sleep(2)
         getPort(setting)
-        
