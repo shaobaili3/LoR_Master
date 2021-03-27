@@ -23,22 +23,19 @@ class InspectorWidget(QWidget):
         outerLayout = QVBoxLayout()
         topLayout = QHBoxLayout()
         styleComboBox = QComboBox()
-        allServers = [Server.NA.value, Server.EU.value, Server.ASIA.value]
+        allServers = [Server.NA.value.capitalize(), Server.EU.value.capitalize(), Server.ASIA.value.capitalize()]
         styleComboBox.addItems(allServers)
+        
         for index, oneServer in enumerate(allServers):
-            if oneServer == self.setting.getServer():
+            if oneServer.lower() == self.setting.getServer():
                 styleComboBox.setCurrentIndex(index)
-            self.local.updatePlayernames()
+        
         styleComboBox.activated[str].connect(self.changeServer)
         styleLabel = QLabel("Server:")
         styleLabel.setBuddy(styleComboBox)
         idLabel = QLabel("Riot ID:")
         self.idLineEdit = QLineEdit(self)
-        # self.idLineEdit.textChanged.connect(self.idLineEditChanged)
-        completer = QCompleter(self.local.playernames)
-        completer.setCaseSensitivity(QtCore.Qt.CaseInsensitive)
-        self.idLineEdit.setCompleter(completer)
-        
+        self.changeServer(self.setting.getServer())
         self.inspectPushButton = QPushButton("Inspect")
         self.inspectPushButton.setDefault(True)
         self.inspectPushButton.clicked.connect(self.inspectPushButtonClicked)
@@ -124,6 +121,7 @@ class InspectorWidget(QWidget):
         return ' <font color = \"' + color + '\">' + text + '</font>'
 
     def changeServer(self, serverName):
+        serverName = serverName.lower()
         print('changeSever call')
         #completer = QCompleter(local.playernames)
         self.setting.setServer(Server._value2member_map_[serverName])
