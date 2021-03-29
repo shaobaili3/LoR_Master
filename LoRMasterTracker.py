@@ -3,9 +3,9 @@ from Threads.serverThread import ServerThread
 from Threads.trackThread import TrackThread
 from Threads.uiThread import UIThread
 
-from PyQt5.QtCore import *
-from PyQt5.QtGui import *
-from PyQt5.QtWidgets import *
+from PyQt6.QtCore import *
+from PyQt6.QtGui import *
+from PyQt6.QtWidgets import *
 
 import os
 import sys
@@ -237,14 +237,14 @@ app.setApplicationName(cs.DISPLAY_TITLE)
 app.setWindowIcon(QIcon('Resource/logo.jpg'))
 app.setStyle('Fusion')
 
-font_db = QFontDatabase()
-CURRENT_DIRECTORY = os.path.dirname(os.path.realpath(__file__))
-font_path = os.path.join(CURRENT_DIRECTORY, "Resource", "NotoSans-Regular.ttf")
-font_id = font_db.addApplicationFont(font_path)  # relative path is unacceptable
-if font_id == -1:
-    print("problem loading font")
-print(font_id, font_db.applicationFontFamilies(font_id))
-app.setFont(QFont(font_db.applicationFontFamilies(font_id)[0]))
+# font_db = QFontDatabase()
+# CURRENT_DIRECTORY = os.path.dirname(os.path.realpath(__file__))
+# font_path = os.path.join(CURRENT_DIRECTORY, "Resource", "NotoSans-Regular.ttf")
+# font_id = font_db.addApplicationFont(font_path)  # relative path is unacceptable
+# if font_id == -1:
+#     print("problem loading font")
+# print(font_id, font_db.applicationFontFamilies(font_id))
+# app.setFont(QFont(font_db.applicationFontFamilies(font_id)[0]))
 
 window = Window(localTracker, playerTracker)
 inspectorWidget = Inspector(window, settingInspect, networkInspect,

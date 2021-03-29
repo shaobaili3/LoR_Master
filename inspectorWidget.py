@@ -1,10 +1,10 @@
 import constants as cs
 import os
 from Models.setting import Setting, Server
-from PyQt5.QtGui import *
-from PyQt5.QtWidgets import *
-from PyQt5.QtCore import *
-from PyQt5 import *
+from PyQt6.QtGui import *
+from PyQt6.QtWidgets import *
+from PyQt6.QtCore import *
+from PyQt6 import *
 from Threads.inspectThread import InspectThread
 import Models.deck as deck
 
@@ -22,20 +22,20 @@ class InspectorWidget(QWidget):
         # self.resize(900, 512)
         outerLayout = QVBoxLayout()
         topLayout = QHBoxLayout()
-        styleComboBox = QComboBox()
+        self.serverComboBox = QComboBox()
         allServers = [Server.NA.value.capitalize(), Server.EU.value.capitalize(), Server.ASIA.value.capitalize()]
-        styleComboBox.addItems(allServers)
+        self.serverComboBox.addItems(allServers)
         
         for index, oneServer in enumerate(allServers):
             if oneServer.lower() == self.setting.getServer():
-                styleComboBox.setCurrentIndex(index)
+                self.serverComboBox.setCurrentIndex(index)
         
-        styleComboBox.activated[str].connect(self.changeServer)
+        self.serverComboBox.activated.connect(self.changeServer)
         styleLabel = QLabel("Server:")
-        styleLabel.setBuddy(styleComboBox)
+        styleLabel.setBuddy(self.serverComboBox)
         idLabel = QLabel("Riot ID:")
         self.idLineEdit = QLineEdit(self)
-        self.changeServer(self.setting.getServer())
+        self.changeServer()
         self.inspectPushButton = QPushButton("Inspect")
         self.inspectPushButton.setDefault(True)
         self.inspectPushButton.clicked.connect(self.inspectPushButtonClicked)
@@ -46,7 +46,7 @@ class InspectorWidget(QWidget):
         self.clearButton.setIcon(QIcon('Resource/button.png'))
 
         topLayout.addWidget(styleLabel)
-        topLayout.addWidget(styleComboBox)
+        topLayout.addWidget(self.serverComboBox)
         topLayout.addWidget(idLabel)
         topLayout.addWidget(self.idLineEdit)
         topLayout.addWidget(self.inspectPushButton)
@@ -79,7 +79,7 @@ class InspectorWidget(QWidget):
         else:
             self.textBrowser.append(self.getVivoHtml(name, 'OrangeRed') + self.getHtml(text, 'OrangeRed'))
         self.textBrowser.append('')
-        self.textBrowser.moveCursor(QTextCursor.End)
+        self.textBrowser.moveCursor(QTextCursor.MoveOperation.End)
 
     def showlog(self, opponentName, timeStr, outcome, deckCode, factions,
                 opDeckCode, opFactions, totalTurn, num):
@@ -120,15 +120,15 @@ class InspectorWidget(QWidget):
     def getHtml(self, text, color):
         return ' <font color = \"' + color + '\">' + text + '</font>'
 
-    def changeServer(self, serverName):
-        serverName = serverName.lower()
+    def changeServer(self):
+        serverName = self.serverComboBox.currentText().lower()
         print('changeSever call')
         #completer = QCompleter(local.playernames)
         self.setting.setServer(Server._value2member_map_[serverName])
         self.setting.saveServer()
         self.local.updatePlayernames()
         completer = QCompleter(self.local.playernames)
-        completer.setCaseSensitivity(QtCore.Qt.CaseInsensitive)
+        completer.setCaseSensitivity(Qt.CaseSensitivity.CaseInsensitive)
         self.idLineEdit.setCompleter(completer)
         self.idLineEdit.setText('')
 
