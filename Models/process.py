@@ -18,6 +18,8 @@ def getLoRLogFile():
         except IndexError:
             print('Index error')
             return None
+        except Exception as e:
+            print('error getLoRLogFile: ', e)
     if logFilePath is not None:
         return logFilePath
     else:
