@@ -37,10 +37,10 @@ class Window(QMainWindow):
         self.progressBar.setRange(0, cs.MAX_NUM_DETAILS + 1)
         self.progressBar.setHidden(True)
         self.player = player
-        self.serverWork = ServerThread()
-        self.trackWork = TrackThread()
-        self.translateWork = TranslateThread()
-        self.uiWork = UIThread()
+        self.serverWork = ServerThread(parent=self)
+        self.trackWork = TrackThread(parent=self)
+        self.translateWork = TranslateThread(parent=self)
+        self.uiWork = UIThread(parent=self)
         self.trackWork.local = local
         self.trackWork.player = player
         self.trackWork.showStatusTrigger.connect(self.showStatus)
@@ -101,7 +101,7 @@ class Inspector(InspectorWidget):
     def inspectPushButtonClicked(self):
         super().inspectPushButtonClicked()
         if self.inspectWork.isRunning():
-            self.inspectWork.terminate()
+            self.inspectWork.quit()
             self.showFinish(
                 '', self.inspectWork.playerName +
                 ' inspection has been terminated')
@@ -236,6 +236,7 @@ os.environ["QT_AUTO_SCREEN_SCALE_FACTOR"] = "1"
 app.setApplicationName(cs.DISPLAY_TITLE)
 app.setWindowIcon(QIcon('Resource/logo.jpg'))
 app.setStyle('Fusion')
+app.setAttribute(Qt.AA_UseHighDpiPixmaps)
 
 #font_db = QFontDatabase()
 CURRENT_DIRECTORY = os.path.dirname(os.path.realpath(__file__))
@@ -261,4 +262,4 @@ window.uiWork.start()
 window.trackWork.showDecksTrigger.connect(inspectorWidget.showDecks)
 window.trackWork.showMatchsTrigger.connect(inspectorWidget.showMatchs)
 window.trackWork.showMessageTrigger.connect(inspectorWidget.showMessage)
-sys.exit(app.exec())
+app.exec_()
