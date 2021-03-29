@@ -1,10 +1,10 @@
-from PyQt6.QtCore import QThread, pyqtSignal
+from PySide6.QtCore import QThread, Signal
 
 
 class InspectThread(QThread):
-    showLogtrigger = pyqtSignal(str, str, str, str, str, str, str, int, int)
-    finishTrigger = pyqtSignal(str, str)
-    summaryTigger = pyqtSignal(dict)
+    showLogtrigger = Signal(str, str, str, str, str, str, str, int, int)
+    finishTrigger = Signal(str, str)
+    summaryTigger = Signal(dict)
 
     def __int__(self):
         super().__init__()

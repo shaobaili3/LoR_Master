@@ -1,13 +1,13 @@
-from PyQt6.QtCore import QThread, pyqtSignal
+from PySide6.QtCore import QThread, Signal
 from Models.leaderboard import updateLeaderboard
 import time
 
 
 class TrackThread(QThread):
-    showDecksTrigger = pyqtSignal(dict, int)
-    showStatusTrigger = pyqtSignal(str)
-    showMatchsTrigger = pyqtSignal(str, str, str, str)
-    showMessageTrigger = pyqtSignal(str)
+    showDecksTrigger = Signal(dict, int)
+    showStatusTrigger = Signal(str)
+    showMatchsTrigger = Signal(str, str, str, str)
+    showMessageTrigger = Signal(str)
 
     def __int__(self):
         super().__init__()

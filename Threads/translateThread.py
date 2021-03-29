@@ -1,6 +1,6 @@
 import os
 import time
-from PyQt6.QtCore import QThread
+from PySide6.QtCore import QThread
 if os.name == 'nt':
     from Models.translate import detect
 else:
