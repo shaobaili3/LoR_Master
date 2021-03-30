@@ -232,19 +232,19 @@ playerInspect = Player(riotInspect)
 localInspect = Local(settingInspect)
 
 app = QApplication(sys.argv)
-os.environ["QT_AUTO_SCREEN_SCALE_FACTOR"] = "1"
+# os.environ["QT_AUTO_SCREEN_SCALE_FACTOR"] = "2"
 app.setApplicationName(cs.DISPLAY_TITLE)
 app.setWindowIcon(QIcon('Resource/logo.jpg'))
 app.setStyle('Fusion')
 
 #font_db = QFontDatabase()
 CURRENT_DIRECTORY = os.path.dirname(os.path.realpath(__file__))
-font_path = os.path.join(CURRENT_DIRECTORY, "Resource", "NotoSans-Medium.ttf")
+font_path = os.path.join(CURRENT_DIRECTORY, "Resource", "HelveticaNeue.ttc")
 font_id = QFontDatabase.addApplicationFont(font_path)  # relative path is unacceptable
 if font_id == -1:
     print("problem loading font")
 print(font_id, QFontDatabase.applicationFontFamilies(font_id))
-app.setFont(QFont(QFontDatabase.applicationFontFamilies(font_id)[0]))
+app.setFont(QFont(QFontDatabase.applicationFontFamilies(font_id)[5]))
 
 window = Window(localTracker, playerTracker)
 inspectorWidget = Inspector(window, settingInspect, networkInspect,

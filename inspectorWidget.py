@@ -133,7 +133,7 @@ class InspectorWidget(QWidget):
         self.idLineEdit.setText('')
 
 
-os.environ["QT_AUTO_SCREEN_SCALE_FACTOR"] = "1"
+#os.environ["QT_AUTO_SCREEN_SCALE_FACTOR"] = "2"
 #os.environ["QT_AUTO_SCREEN_SCALE_FACTOR"] = "1"
 # app = QApplication(sys.argv)
 # app.setApplicationName(cs.DISPLAY_TITLE + '#')
