@@ -239,12 +239,12 @@ app.setStyle('Fusion')
 
 #font_db = QFontDatabase()
 CURRENT_DIRECTORY = os.path.dirname(os.path.realpath(__file__))
-font_path = os.path.join(CURRENT_DIRECTORY, "Resource", "HelveticaNeue.ttc")
+font_path = os.path.join(CURRENT_DIRECTORY, "Resource", "NotoSans-Medium.ttf")
 font_id = QFontDatabase.addApplicationFont(font_path)  # relative path is unacceptable
 if font_id == -1:
     print("problem loading font")
 print(font_id, QFontDatabase.applicationFontFamilies(font_id))
-app.setFont(QFont(QFontDatabase.applicationFontFamilies(font_id)[5]))
+app.setFont(QFont(QFontDatabase.applicationFontFamilies(font_id)[0]))
 
 window = Window(localTracker, playerTracker)
 inspectorWidget = Inspector(window, settingInspect, networkInspect,
