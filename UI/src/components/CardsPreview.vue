@@ -5,6 +5,8 @@
         <div class="cardContent cardCost">{{cost}}</div>
         <div class="cardContent cardName">{{name}}</div>
         <div class="cardContent cardCount">x{{count}}</div>
+        <!-- <div class="cardDisplay" :style="{background: getCardDisplay()}"></div> -->
+        <img class="cardDisplay" :src = "getCardDisplayUrl()" alt="">
     </div>
 </template>
 
@@ -27,6 +29,7 @@ export default {
         cost: Number,
         type: String,
         supertype: String,
+        set: String,
     },
     computed: {
         
@@ -46,6 +49,15 @@ export default {
             
             return gradient + "url(" + cardPreviewUrlBase + this.code + ".webp) right top no-repeat"
         },
+        getCardDisplay() {
+            return "url(" + this.getCardDisplayUrl() + ")"
+        },
+        getCardDisplayUrl() {
+            const cardDisplayUrlBase = 'https://dd.b.pvp.net/latest/'
+            const locale = 'en_us'
+            // const locale = 'zh_tw'
+            return cardDisplayUrlBase + this.set.toLowerCase()  + '/' + locale + '/img/cards/' + this.code + '.png' 
+        }
     }
 }
 </script>
@@ -59,9 +71,37 @@ export default {
     align-items: center;
     margin-top: 4px;
     cursor: default;
+
+    position: relative;
     /* border-radius: 4px; */
 }
 
+.cardContainer:hover .cardDisplay {
+    /* display: block; */
+    visibility: initial;
+    /* position: relative; */
+}
+
+.cardDisplay {
+    /* content: ""; */
+    /* display: none; */
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    pointer-events: none;
+
+    width: 270px;
+    height: auto;
+    /* width: auto; */
+    /* height: 100px; */
+    /* background: white; */
+
+    z-index: 10;
+
+    /* background-size: contain; */
+}
 
 .cardContent {
     flex: 1 0;

@@ -7,6 +7,7 @@
         :code="card.code"
         :type="card.type"
         :supertype="card.supertype"
+        :set="card.set"
         >{{card.name}}</cards-preview>
         <div class="actions">
             <!-- <a class="actions-btn" :href="deckDetailLink" target="_blank"><span class="actions-icon fa fa-external-link-alt"></span>Detail</a> -->
@@ -58,7 +59,15 @@ export default {
                 var card = sets.find(card => card.cardCode == cardCode)
                 if (card) {
                     // console.log(cardName, deck[j].count)
-                    cards.push({code: deck[j].code, name: card.name, count: deck[j].count, cost: card.cost, type: card.type, supertype: card.supertype})
+                    cards.push({
+                        code: deck[j].code, 
+                        name: card.name, 
+                        count: deck[j].count, 
+                        cost: card.cost, 
+                        type: card.type, 
+                        supertype: card.supertype,
+                        set: card.set
+                    })
                 }
 
             }
