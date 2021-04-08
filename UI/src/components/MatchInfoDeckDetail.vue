@@ -5,6 +5,8 @@
         :cost="card.cost"
         :count="card.count"
         :code="card.code"
+        :type="card.type"
+        :supertype="card.supertype"
         >{{card.name}}</cards-preview>
         <div class="actions">
             <!-- <a class="actions-btn" :href="deckDetailLink" target="_blank"><span class="actions-icon fa fa-external-link-alt"></span>Detail</a> -->
@@ -56,11 +58,30 @@ export default {
                 var card = sets.find(card => card.cardCode == cardCode)
                 if (card) {
                     // console.log(cardName, deck[j].count)
-                    cards.push({code: deck[j].code, name: card.name, count: deck[j].count, cost: card.cost})
+                    cards.push({code: deck[j].code, name: card.name, count: deck[j].count, cost: card.cost, type: card.type, supertype: card.supertype})
                 }
 
             }
-            return cards.sort((a, b) => a.cost > b.cost ? 1 : -1)
+            console.log(cards)
+            return cards.sort(function (a, b) { 
+                // if (a.type > b.type) {
+                //     return 1; 
+                // } if (a.supertype > b.supertype) {
+                //     return 1;
+                // }  else {
+                //     return a.cost > b.cost ? 1 : -1
+                // }
+                // if (a.type == "Unit" && b.type == "Spell") {
+                //     return 1
+                // }
+                if (a.supertype == b.supertype) {
+                    if (a.type == b.type) {
+                        return a.cost > b.cost ? 1 : -1
+                    }
+                    return a.type > b.type ? 1 : -1
+                }
+                return a.supertype < b.supertype ? 1 : -1
+            })
         },
         copyText() {
             return this.copied ? 'Copied!' : 'Copy'
@@ -69,23 +90,23 @@ export default {
     methods: {
         copyDeckcode() {
             const copyToClipboard = str => {
-              const el = document.createElement('textarea');
-              el.value = str;
-              el.setAttribute('readonly', '');
-              el.style.position = 'absolute';
-              el.style.left = '-9999px';
-              document.body.appendChild(el);
-              const selected =
+                const el = document.createElement('textarea');
+                el.value = str;
+                el.setAttribute('readonly', '');
+                el.style.position = 'absolute';
+                el.style.left = '-9999px';
+                document.body.appendChild(el);
+                const selected =
                 document.getSelection().rangeCount > 0
-                  ? document.getSelection().getRangeAt(0)
-                  : false;
-              el.select();
-              document.execCommand('copy');
-              document.body.removeChild(el);
-              if (selected) {
+                    ? document.getSelection().getRangeAt(0)
+                    : false;
+                el.select();
+                document.execCommand('copy');
+                document.body.removeChild(el);
+                if (selected) {
                 document.getSelection().removeAllRanges();
                 document.getSelection().addRange(selected);
-              }
+                }
             };
 
             copyToClipboard(this.deck)
@@ -105,13 +126,15 @@ export default {
         width: 270px;
         /* height: 100px; */
         word-wrap: break-word;
-        padding: 10px;
+        padding: 0px 4px 8px 4px;
         background-color: var(--col-dark-grey);
         font-size: 0.9em;
+        border-radius: 5px;
     }
 
     .actions {
-        margin-top: 10px;
+        margin-top: 8px;
+        margin-right: 8px;
         display: flex;
         justify-content: flex-end;
         align-items: center;

@@ -124,7 +124,7 @@ export default {
         background: linear-gradient(60deg, var(--col-grey), var(--col-lighter-grey));
         padding: 5px;
         border-radius: 6px;
-        margin-top: 10px;
+        margin-top: 5px;
     }
 
     .match.won {
@@ -190,13 +190,13 @@ export default {
 
     .match-history-dots {
         display: flex;
-        gap: 10px;
+        gap: 8px;
         /* height: 20px; */
 
         justify-content: flex-start;
         align-items: center;
 
-        padding: 2px 5px 5px 5px;
+        padding: 2px 2px 5px 2px;
         margin: 0;
         margin-left: 8px;
         margin-right: 8px;

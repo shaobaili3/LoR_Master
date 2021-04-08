@@ -47,10 +47,10 @@ export default {
   // }
     methods: {
         hideApp() {
-            window.minWindow()
+            window.minWindow() // Defined in appsrc > preload.js
         },
         closeApp() {
-            window.closeWindow()
+            window.closeWindow() // Defined in appsrc > preload.js
             //   console.log("Closing App")
         }
     }
@@ -106,7 +106,7 @@ export default {
         margin-left: 16px;
         /* margin-right: auto; */
         color: white;
-        font-size: 1.2em;
+        font-size: 1.0em;
     }
 
     .menu-sub-title {
@@ -114,6 +114,7 @@ export default {
         margin-left: 10px;
         margin-right: auto;
         color: rgba(255, 255, 255, 0.5);
+        font-size: 0.9em;
     }
 
     .menu-item {

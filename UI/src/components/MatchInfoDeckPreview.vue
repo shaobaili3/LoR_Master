@@ -76,9 +76,9 @@ export default {
         },
         extraChampString() {
             // console.log("Champ length:", this.champs.length)
-            console.log(this.champs)
+            // console.log(this.champs)
             var extra = (this.champs.length - (maxSlot - Math.min(this.factions.length, maxFactions)))
-            console.log(extra)
+            // console.log(extra)
             if (extra > 0)
                 return "+" + extra
             return ""
@@ -142,7 +142,7 @@ export default {
     .row.deck {
         /* width: 40%; */
         width: 100%;
-        padding: 7px 8px;
+        padding: 7px 5px;
         justify-content: flex-start;
         border-radius: 6px;
         align-items: center;
@@ -160,12 +160,12 @@ export default {
         margin-right: 0;
         margin-left: 0;
 
-        padding: 10px;
+        padding: 9px;
         text-align: center;
         /* line-height: 30px; */
         /* vertical-align: middle; */
-        width: 20px;
-        height: 20px;
+        width: 18px;
+        height: 18px;
         color: white;
 
         /* background-color: white; */

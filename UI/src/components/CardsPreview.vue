@@ -1,7 +1,7 @@
 <template>
-    <!-- <p><span>{{cost}}--</span><slot></slot><span>--{{count}}</span></p> -->
     <div class="cardContainer"
-        :style=" {background: getCardPreviewBackgroundStyle()}">
+        :class="{spell: type == 'Spell', unit: type == 'Unit', champ: supertype == 'Champion', landmark: type == 'Landmark'}"
+        :style="{background: getCardPreviewBackgroundStyle()}">
         <div class="cardContent cardCost">{{cost}}</div>
         <div class="cardContent cardName">{{name}}</div>
         <div class="cardContent cardCount">x{{count}}</div>
@@ -25,6 +25,8 @@ export default {
         name: String,
         count: Number,
         cost: Number,
+        type: String,
+        supertype: String,
     },
     computed: {
         
@@ -35,7 +37,12 @@ export default {
             const cardPreviewUrlBase = 'https://cdn-lor.mobalytics.gg/production/images/cards-preview/';
             
             // const gradient = "linear-gradient(90deg, rgb(191, 176, 131) 30%, rgba(191, 176, 131, 0) 70%),"
-            const gradient = "linear-gradient(90deg, rgb(65, 65, 65) 30%, rgba(65, 65, 65, 0) 70%),"
+            var gradient
+            if (this.supertype == "Champion") {
+                gradient = "linear-gradient(90deg, var(--col-darker-gold) 30%, rgba(158, 114, 18, 0) 70%),"
+            } else {
+                gradient = "linear-gradient(90deg, rgb(65, 65, 65) 30%, rgba(65, 65, 65, 0) 70%),"
+            }
             
             return gradient + "url(" + cardPreviewUrlBase + this.code + ".webp) right top no-repeat"
         },
@@ -52,9 +59,9 @@ export default {
     align-items: center;
     margin-top: 4px;
     cursor: default;
-    
     /* border-radius: 4px; */
 }
+
 
 .cardContent {
     flex: 1 0;
@@ -70,9 +77,10 @@ export default {
     /* color: var(--col-dark-grey); */
     /* width: 50%; */
     /* height: 70%; */
-    padding: 7px 2px;
+    /* padding: 5px; */
     /* border-radius: 50px 0px 0px 50px; */
     border-radius: 0px 8px 8px 0px;
+    /* border-radius: 20px; */
 }
 
 .cardName {
@@ -87,5 +95,43 @@ export default {
     /* padding: 0px; */
     background: var(--col-light-grey);
 }
+
+.champ .cardCost {
+    /* color: black; */
+    background: var(--col-mid-gold);
+}
+
+.champ .cardCount {
+    /* padding: 0px; */
+    background: var(--col-mid-gold);
+}
+
+:not(.spell) + .spell, 
+:not(.unit) + .unit, 
+:not(.landmark) + .landmark{
+    position: relative;
+    margin-top: 12px;
+}
+
+:not(.spell) + .spell::before, 
+:not(.unit) + .unit::before, 
+:not(.landmark) + .landmark::before{
+    content: "";
+    /* display: block; */
+    position: absolute;
+    top: -6px;
+    height: 1px;
+    width: 250px;
+    padding: 0px 10px;
+    background: var(--col-lighter-grey);
+    background-clip: content-box;
+    /* margin-top: 4px; */
+    /* padding-top: 10px; */
+    /* border-top: 1px solid white; */
+    /* background-origin: content-box; */
+}
+
+
+
 
 </style>

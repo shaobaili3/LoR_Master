@@ -55,7 +55,7 @@ const createWindow = () => {
   let {width, height} = electron.screen.getPrimaryDisplay().workAreaSize;
   let factor = electron.screen.getPrimaryDisplay().scaleFactor
   // console.log(width)
-  let windowWidth = 335
+  let windowWidth = 295 // (335)
   // let window.windowWidth = windowWidth
   let windowHeight = Math.floor(windowWidth*defaultRatio)
   let windowPadding = 20

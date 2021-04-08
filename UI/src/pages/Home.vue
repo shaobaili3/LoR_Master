@@ -139,11 +139,11 @@ export default {
 
             if (window.request) {
                 await window.request.send("0")
-                console.log("Requested data")
+                // console.log("Requested data")
                 const [result] = await window.request.receive()
                 // this.playerName = result.toString()
                 
-                console.log("Received data")
+                // console.log("Received data")
                 // console.log(result.toString())
                 
                 this.processRawData(result)
@@ -156,7 +156,7 @@ export default {
         },
         processRawData(raw) {
             var data = JSON.parse(raw.toString('utf8'))
-            console.log("Processing Received Data:", raw.toString('utf8'))
+            // console.log("Processing Received Data:", raw.toString('utf8'))
             this.processJsonData(data)
         },
         processJsonData(data) {
@@ -205,7 +205,7 @@ export default {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 300px;
+        width: 270px;
     }
 
     #content {
