@@ -2,6 +2,7 @@ from Threads.translateThread import TranslateThread
 from Threads.serverThread import ServerThread
 from Threads.trackThread import TrackThread
 from Threads.uiThread import UIThread
+from Models.leaderboard import updateLeaderboard
 
 from PyQt6.QtCore import *
 from PyQt6.QtGui import *
@@ -218,6 +219,8 @@ class Inspector(InspectorWidget):
         lossNum =  player.summary[deckCode].matches - player.summary[deckCode].winNum
         return '[' + str(winNum) + 'W' + ' ' + str(lossNum) + 'L' + ']'
 
+
+updateLeaderboard()
 gui = Opponent('', 0, [])
 settingTracker = Setting()
 networkTracker = Network(settingTracker)

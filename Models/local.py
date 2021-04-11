@@ -12,7 +12,7 @@ class Local:
         self.isClientRuning = False
         self.isInProgress = False
         self.setting = setting
-        self.playernames = []
+        self.playernames = set()
         self.playername = None
         #self.updatePlayernames()
 
@@ -103,13 +103,13 @@ class Local:
         self.opponentTag = None
 
     def updatePlayernames(self):
-        self.playernames = []
+        self.playernames = set()
         #with open(utility.resource_path('Resource/' + self.setting.getServer() + '.dat'), encoding="utf8") as search:
         with open(('Resource/' + self.setting.getServer() + '.dat'),
                   encoding="utf8") as search:
             for line in search:
                 fullName = line.strip()
-                self.playernames.append(fullName)
+                self.playernames.add(fullName)
 
     def getLocalLink(self):
         return cs.IP_KEY + self.setting.getPort() + cs.LOCAL_KEY

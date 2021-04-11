@@ -28,15 +28,7 @@ def updateAll():
             leaderboards[index] = board
 
 
-def checkRank(name, server):
-    rank = ''
-    lp = ''
-
-    print('rank search:', name, server)
-
-    if None in leaderboards:
-        updateAll()
-
+def getboard(server):
     board = None
     if server == Server.NA.value:
         ab = leaderboards[0]
@@ -54,11 +46,24 @@ def checkRank(name, server):
         ab = leaderboards[3]
         if ab:
             board = ab.get('players')
+    return board
+
+
+def checkRank(name, server):
+    rank = ''
+    lp = ''
+
+    print('rank search:', name, server)
+
+    if None in leaderboards:
+        updateAll()
+
+    board = getboard(server)
     if not board:
         return rank, lp
 
     for playerRank in board:
-        if playerRank['name'] == name:
+        if playerRank['name'].lower() == name.lower():
             rank = str(playerRank['rank'] + 1)
             lp = str(int(playerRank['lp']))
     return rank, lp
@@ -72,13 +77,30 @@ def getRankInt(name, server):
         return 0
 
 
-
 def getRankStr(name, server):
     rank, lp = checkRank(name, server)
     if rank != '':
         return '[Rank: ' + rank + ' lp: ' + lp + ']'
     else:
         return ''
+
+
+def filterMasterPlayer(names, server):
+    board = getboard(server)
+    if not board:
+        return names
+
+    masterNames = set()
+    masterFullNames = set()
+
+    for playerRank in board:
+        masterNames.add(playerRank['name'])
+
+    for name in names:
+        if name.split('#')[0] in masterNames:
+            masterFullNames.add(name)
+
+    return masterFullNames
 
 
 async def aioLeaderboard(server):

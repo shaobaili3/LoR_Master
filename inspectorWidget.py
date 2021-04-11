@@ -7,6 +7,7 @@ from PyQt6.QtCore import *
 from PyQt6 import *
 from Threads.inspectThread import InspectThread
 import Models.deck as deck
+from Models.leaderboard import filterMasterPlayer
 
 
 class InspectorWidget(QWidget):
@@ -127,7 +128,7 @@ class InspectorWidget(QWidget):
         self.setting.setServer(Server._value2member_map_[serverName])
         self.setting.saveServer()
         self.local.updatePlayernames()
-        completer = QCompleter(self.local.playernames)
+        completer = QCompleter(filterMasterPlayer(self.local.playernames, serverName))
         completer.setCaseSensitivity(Qt.CaseSensitivity.CaseInsensitive)
         self.idLineEdit.setCompleter(completer)
         self.idLineEdit.setText('')

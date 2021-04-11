@@ -1,5 +1,5 @@
 from PyQt6.QtCore import QThread, pyqtSignal
-from Models.leaderboard import updateLeaderboard
+
 import time
 
 
@@ -16,7 +16,6 @@ class TrackThread(QThread):
 
     def run(self):
         print('tracker running')
-        updateLeaderboard()
         while (True):
             time.sleep(1)
             # print('tracking detecting')
