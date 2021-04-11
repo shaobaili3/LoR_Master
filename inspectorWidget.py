@@ -88,7 +88,7 @@ class InspectorWidget(QWidget):
         print('call showlog')
         htmlOpponentName = self.getVivoHtml(opponentName, 'MidnightBlue')
         htmlFactions = self.getHtml(factions, 'OrangeRed')
-        htmlTotalturn = self.getHtml('Turn: ' + str(totalTurn), 'DarkGray')
+        htmlTotalturn = self.getHtml('Turn: ' + totalTurn, 'DarkGray')
         htmlOpFactions = self.getHtml(opFactions, 'Black')
         htmlOutcome = self.getHtml(outcome.capitalize(), 'IndianRed')
         if outcome == 'win':

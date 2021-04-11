@@ -100,7 +100,7 @@ class Player:
         if puuid is None:
             print('查询失败, puuid为空')
             return finishTrigger(
-                '', name + '#' + tag + ' is not exist or changed name')
+                '', name + '#' + tag + ' does not exist. Please check player name#tag and use correct format. eg.Storm#5961')
         matchIds = self.riot.getMatchs(puuid)
         winNum = 0
         matchNum = 0
@@ -125,8 +125,8 @@ class Player:
                 continue
             print('detail', detail)
             startTime = detail['info']['game_start_time_utc']
-            if detail['info']['game_type'] != 'Ranked':
-                print(detail['info']['game_type'], detail['info']['game_mode'],
+            if detail['info']['game_mode'] != 'Constructed' or detail['info']['game_type'] == 'AI':
+                print('game_type:', detail['info']['game_type'], 'game_mode:', detail['info']['game_mode'],
                       utility.toLocalTimeString(startTime))
                 continue
             else:
@@ -160,12 +160,12 @@ class Player:
             settingServer = self.riot.network.setting.getServer()
             rank = getRankStr(opName[0], settingServer)
             showlog(fullName + ' ' + rank,
-                    utility.toLocalTimeString(startTime), outcome,
+                    '[' + detail['info']['game_type'] + '] ' + utility.toLocalTimeString(startTime), outcome,
                     myDetails['deck_code'],
                     utility.getFactionString(myDetails["factions"]),
                     opponentDetail['deck_code'],
                     utility.getFactionString(opponentDetail["factions"]),
-                    totalTurn, matchNum)
+                    str(totalTurn) + ' Order of play: ' + str(myDetails['order_of_play']), matchNum)
         if matchNum != 0:
             print(
                 str(winNum) + ' wins' + ' out of ' + str(matchNum) +
@@ -175,7 +175,7 @@ class Player:
             return finishTrigger(
                 name + '#' + tag, ' win rate: ' +
                 str(int(winNum / matchNum * 100)) + "%  " + str(winNum) +
-                ' wins' + ' out of ' + str(matchNum) + ' rank matchs')
+                ' wins' + ' out of ' + str(matchNum) + ' matchs')
         else:
             print('无法获取对战历史数据')
             return finishTrigger(name + '#' + tag,

@@ -2,7 +2,7 @@ from PyQt6.QtCore import QThread, pyqtSignal
 
 
 class InspectThread(QThread):
-    showLogtrigger = pyqtSignal(str, str, str, str, str, str, str, int, int)
+    showLogtrigger = pyqtSignal(str, str, str, str, str, str, str, str, int)
     finishTrigger = pyqtSignal(str, str)
     summaryTigger = pyqtSignal(dict)
 
