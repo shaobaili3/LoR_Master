@@ -55,7 +55,9 @@ class InspectorWidget(QWidget):
         textLayout = QHBoxLayout()
         self.textBrowser = QTextBrowser()
         self.textBrowser.setAcceptRichText(True)
-        self.textBrowser.setOpenExternalLinks(True)
+        self.textBrowser.setOpenExternalLinks(False)
+        self.textBrowser.anchorClicked.connect(self.on_anchor_clicked)
+        self.textBrowser.setOpenLinks(False)
         textLayout.addWidget(self.textBrowser)
         outerLayout.addLayout(topLayout)
         outerLayout.addLayout(textLayout)
@@ -66,6 +68,9 @@ class InspectorWidget(QWidget):
         self.inspectWork.finishTrigger.connect(self.showFinish)
         self.inspectWork.summaryTigger.connect(self.showSummary)
         #self.textBrowser.setHtml("""My image :<br /><img src="test.ico"/  height=10 width=20>""")
+    
+    def on_anchor_clicked(self, url):
+        print(url)
 
     def clearButtonCliked(self):
         self.textBrowser.clear()
@@ -88,7 +93,7 @@ class InspectorWidget(QWidget):
         print('call showlog')
         htmlOpponentName = self.getVivoHtml(opponentName, 'MidnightBlue')
         htmlFactions = self.getHtml(factions, 'OrangeRed')
-        htmlTotalturn = self.getHtml('Turn: ' + totalTurn, 'DarkGray')
+        htmlTotalturn = self.getHtml(' Turn: ' + totalTurn, 'DarkGray')
         htmlOpFactions = self.getHtml(opFactions, 'Black')
         htmlOutcome = self.getHtml(outcome.capitalize(), 'IndianRed')
         if outcome == 'win':

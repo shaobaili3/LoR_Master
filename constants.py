@@ -8,7 +8,7 @@ VERSION_NUM = '0.9.0 beta'
 VERSION_NUM_INSPECTOR = '0.9.0 beta'
 DISPLAY_TITLE = 'LoR Master Tracker'
 #DISPLAY_TITLE = 'LoR大师'
-MAX_NUM_DETAILS = 10
-MAX_NUM_TRACK = 10
+MAX_NUM_DETAILS = 20
+MAX_NUM_TRACK = 20
 
 DefaultLanguage = 'en-US'

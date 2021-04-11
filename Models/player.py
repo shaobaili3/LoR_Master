@@ -100,7 +100,7 @@ class Player:
         if puuid is None:
             print('查询失败, puuid为空')
             return finishTrigger(
-                '', name + '#' + tag + ' does not exist. Please check player name#tag and use correct format. eg.Storm#5961')
+                '', name + '#' + tag + ' does not exist. Please check player name and tag and use correct format. eg.Storm#5961')
         matchIds = self.riot.getMatchs(puuid)
         winNum = 0
         matchNum = 0
@@ -165,7 +165,7 @@ class Player:
                     utility.getFactionString(myDetails["factions"]),
                     opponentDetail['deck_code'],
                     utility.getFactionString(opponentDetail["factions"]),
-                    str(totalTurn) + ' Order of play: ' + str(myDetails['order_of_play']), matchNum)
+                    str(totalTurn) + ' Order of Play: ' + str(myDetails['order_of_play']), matchNum)
         if matchNum != 0:
             print(
                 str(winNum) + ' wins' + ' out of ' + str(matchNum) +
