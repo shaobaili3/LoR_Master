@@ -130,8 +130,7 @@ class Player:
                       utility.toLocalTimeString(startTime))
                 if detail['info']['game_type'] != 'StandardGauntlet':
                     continue
-                else:
-                    matchNum += 1
+            matchNum += 1
             riotId = detail['metadata']['participants']
             outcome = None
             opponentDetail = None
@@ -176,7 +175,7 @@ class Player:
             return finishTrigger(
                 name + '#' + tag, ' win rate: ' +
                 str(int(winNum / matchNum * 100)) + "%  " + str(winNum) +
-                ' wins' + ' out of ' + str(matchNum) + ' matchs')
+                ' wins' + ' out of ' + str(matchNum) + ' matches')
         else:
             print('无法获取对战历史数据')
             return finishTrigger(name + '#' + tag,
