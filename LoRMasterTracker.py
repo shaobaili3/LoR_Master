@@ -87,6 +87,8 @@ class Inspector(InspectorWidget):
         print(text)
         if 'deckCode' in text:
             print('open deck', text)
+            gui.type = 'deckCode'            
+            gui.deckCode = text.split('#')[1]
         elif 'playername' in text:
             self.inspectPlayer('#'.join(text.split('#')[2:4]))
 
@@ -110,6 +112,7 @@ class Inspector(InspectorWidget):
                 gui.name = fullName.split('#')[0]
                 gui.rank = getRankInt(
                     fullName.split('#')[0], self.setting.getServer())
+                gui.type = 'match'
                 self.textBrowser.append(
                     self.getHtml(fullName, 'OrangeRed') + ' ' + rank + ' (' +
                     self.setting.getServer().capitalize() + ')')
@@ -136,13 +139,6 @@ class Inspector(InspectorWidget):
     def showFinish(self, name, text):
         self.parentWindow.progressBar.setHidden(True)
         return super().showFinish(name, text)
-
-    # def showDetailMatch(self, opponentName, timeStr, outcome, deckCode, factions,
-    #             opDeckCode, opFactions, totalTurn, num):
-    #     self.parentWindow.progressBar.setValue(num + 1)
-    #     return super().showDetailMatch(opponentName, timeStr, outcome, deckCode,
-    #                            factions, opDeckCode, opFactions, totalTurn,
-    #                            num)
 
     def showMatchs(self, timeAgo, factions, deckCode, outcome):
         htmlFactions = self.getHtml(factions, 'OrangeRed')
@@ -181,6 +177,7 @@ class Inspector(InspectorWidget):
             gui.matches = []
             gui.name = id + '#' + tag
             gui.rank = getRankInt(id, settingTracker.getServer())
+            gui.type = 'match'
             return self.textBrowser.append(
                 "<a href=\"https://lor.runeterra.ar/Matches/" +
                 settingTracker.riotServer.capitalize() + "/" + id + "/" + tag +
@@ -224,7 +221,7 @@ class Inspector(InspectorWidget):
 
 
 updateLeaderboard()
-gui = Opponent('', 0, [])
+
 settingTracker = Setting()
 networkTracker = Network(settingTracker)
 riotTracker = Riot(networkTracker)
@@ -261,7 +258,7 @@ window.show()
 window.serverWork.setting = settingTracker
 window.serverWork.start()
 window.trackWork.start()
-
+gui = Opponent('', 0, [])
 window.uiWork.ui = gui
 window.uiWork.start()
 

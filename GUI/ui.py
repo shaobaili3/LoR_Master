@@ -6,6 +6,8 @@ class Opponent:
         self.name = name
         self.rank = rank
         self.matches = matches
+        self.type = 'match'
+        self.deckCode = ''
 
 class DeckDetail:
     def __init__(self, matches: int , winNum: int, time: str):
@@ -15,3 +17,7 @@ class DeckDetail:
         self.history = ''
 
 
+class DeckCode:
+    def __init__(self, deckCode: str):
+        self.type = ''
+        self.deckCode = deckCode
