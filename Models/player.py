@@ -128,9 +128,10 @@ class Player:
             if detail['info']['game_mode'] != 'Constructed' or detail['info']['game_type'] == 'AI':
                 print('game_type:', detail['info']['game_type'], 'game_mode:', detail['info']['game_mode'],
                       utility.toLocalTimeString(startTime))
-                continue
-            else:
-                matchNum += 1
+                if detail['info']['game_type'] != 'StandardGauntlet':
+                    continue
+                else:
+                    matchNum += 1
             riotId = detail['metadata']['participants']
             outcome = None
             opponentDetail = None

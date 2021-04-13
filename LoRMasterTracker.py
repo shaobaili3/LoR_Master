@@ -33,7 +33,8 @@ class Window(QMainWindow):
         self.resize(1024, 768)
         self.setWindowTitle(cs.DISPLAY_TITLE)
         # Built with ❤ by Storm/FlyingFish
-        self.statusBar().showMessage('[Disconnected] Launch LoR to start enemy tracker')
+        self.statusBar().showMessage(
+            '[Disconnected] Launch LoR to start enemy tracker')
         self.progressBar = QProgressBar()
         self.progressBar.setRange(0, cs.MAX_NUM_DETAILS + 1)
         self.progressBar.setHidden(True)
@@ -45,20 +46,13 @@ class Window(QMainWindow):
         self.trackWork.local = local
         self.trackWork.player = player
         self.trackWork.showStatusTrigger.connect(self.showStatus)
-
-        # self.enableTrackCheckBox = QCheckBox("auto open decks")
-        # self.enableTrackCheckBox.setChecked(
-        #     player.riot.network.setting.autoOpenDeck)
-        # self.enableTrackCheckBox.stateChanged.connect(
-        #     self.changeEnableTrackCheckBox)
-
-        #self.statusBar().addPermanentWidget(self.enableTrackCheckBox)
         self.statusBar().addPermanentWidget(self.progressBar)
 
         if 'zh' in locale.getdefaultlocale()[0]:
             self.translatePushButton = QPushButton("启用营地简中[不支持繁体]")
             self.translatePushButton.setDefault(True)
-            self.translatePushButton.clicked.connect(self.translatePushButtonClicked)
+            self.translatePushButton.clicked.connect(
+                self.translatePushButtonClicked)
             self.statusBar().addPermanentWidget(self.translatePushButton)
 
         self.updatePushButton = QPushButton("v" + cs.VERSION_NUM_INSPECTOR)
@@ -77,14 +71,6 @@ class Window(QMainWindow):
             self.translateWork.start()
             self.translatePushButton.setText('关闭营地简中')
 
-    # def changeEnableTrackCheckBox(self, state):
-    #     if state == Qt.Checked:
-    #         self.player.riot.network.setting.autoOpenDeck = True
-    #         self.player.riot.network.setting.saveAutoOpenDeck()
-    #     else:
-    #         self.player.riot.network.setting.autoOpenDeck = False
-    #         self.player.riot.network.setting.saveAutoOpenDeck()
-
     def showStatus(self, text):
         self.statusBar().showMessage(text)
 
@@ -94,13 +80,17 @@ class Inspector(InspectorWidget):
         super().__init__(setting, network, riot, player, local)
         self.parentWindow = window
         self.idLineEdit.returnPressed.connect(self.enterIdLineEdit)
+        self.textBrowser.anchorClicked.connect(self.on_anchor_clicked)
 
-    def enterIdLineEdit(self):
-        if not self.inspectWork.isRunning():
-            self.inspectPushButtonClicked()
+    def on_anchor_clicked(self, url):
+        text = url.toString()
+        print(text)
+        if 'deckCode' in text:
+            print('open deck', text)
+        elif 'playername' in text:
+            self.inspectPlayer('#'.join(text.split('#')[2:4]))
 
-    def inspectPushButtonClicked(self):
-        super().inspectPushButtonClicked()
+    def inspectPlayer(self, fullName):
         if self.inspectWork.isRunning():
             self.inspectWork.terminate()
             self.showFinish(
@@ -109,19 +99,15 @@ class Inspector(InspectorWidget):
             return
         print('inspectPushButtonClicked called')
         self.parentWindow.progressBar.setValue(1)
-
-        fullName = self.idLineEdit.text().strip()
-        self.inspectWork.playerName = fullName
-
         if '#' in fullName:
             # 检查名字是否过短
             if len(fullName) >= 5:
-
+                self.inspectWork.playerName = fullName
                 self.inspectWork.start()
                 rank = getRankStr(
                     fullName.split('#')[0], self.setting.getServer())
                 gui.matches = []
-                gui.name = fullName
+                gui.name = fullName.split('#')[0]
                 gui.rank = getRankInt(
                     fullName.split('#')[0], self.setting.getServer())
                 self.textBrowser.append(
@@ -138,16 +124,25 @@ class Inspector(InspectorWidget):
                 'OrangeRed'))
         return
 
+    def enterIdLineEdit(self):
+        if not self.inspectWork.isRunning():
+            self.inspectPushButtonClicked()
+
+    def inspectPushButtonClicked(self):
+        super().inspectPushButtonClicked()
+        self.inspectPlayer(self.idLineEdit.text().strip())
+        return
+
     def showFinish(self, name, text):
         self.parentWindow.progressBar.setHidden(True)
         return super().showFinish(name, text)
 
-    def showlog(self, opponentName, timeStr, outcome, deckCode, factions,
-                opDeckCode, opFactions, totalTurn, num):
-        self.parentWindow.progressBar.setValue(num + 1)
-        return super().showlog(opponentName, timeStr, outcome, deckCode,
-                               factions, opDeckCode, opFactions, totalTurn,
-                               num)
+    # def showDetailMatch(self, opponentName, timeStr, outcome, deckCode, factions,
+    #             opDeckCode, opFactions, totalTurn, num):
+    #     self.parentWindow.progressBar.setValue(num + 1)
+    #     return super().showDetailMatch(opponentName, timeStr, outcome, deckCode,
+    #                            factions, opDeckCode, opFactions, totalTurn,
+    #                            num)
 
     def showMatchs(self, timeAgo, factions, deckCode, outcome):
         htmlFactions = self.getHtml(factions, 'OrangeRed')
@@ -160,6 +155,13 @@ class Inspector(InspectorWidget):
         self.textBrowser.append(htmlOutcome + ' ' + htmlTimeAgo +
                                 htmlFactions + htmlHeros + ' ' + htmlDeckCode)
 
+    def showDetailMatch(self, opponentName, timeStr, outcome, deckCode,
+                        factions, opDeckCode, opFactions, totalTurn, num):
+        self.parentWindow.progressBar.setValue(num + 1)
+        return super().showDetailMatch(opponentName, timeStr, outcome,
+                                       deckCode, factions, opDeckCode,
+                                       opFactions, totalTurn, num)
+
     def showSummary(self, deckdict):
         self.loadMatchsToSocket(playerInspect)
 
@@ -169,7 +171,7 @@ class Inspector(InspectorWidget):
             self.textBrowser.append(
                 self.getHtml(deck.getChampion(deckCode), 'DarkRed') + ' ' +
                 self.getDeckCodeHtml(deckCode) + ' ' + str(usedTime) +
-                ' Games '+ self.showWinLoss(deckCode, playerInspect)) 
+                ' Games ' + self.showWinLoss(deckCode, playerInspect))
         return super().showSummary(deckdict)
 
     def showMessage(self, text):
@@ -216,7 +218,8 @@ class Inspector(InspectorWidget):
 
     def showWinLoss(self, deckCode, player):
         winNum = player.summary[deckCode].winNum
-        lossNum =  player.summary[deckCode].matches - player.summary[deckCode].winNum
+        lossNum = player.summary[deckCode].matches - player.summary[
+            deckCode].winNum
         return '[' + str(winNum) + 'W' + ' ' + str(lossNum) + 'L' + ']'
 
 
@@ -243,7 +246,8 @@ app.setStyle('Fusion')
 #font_db = QFontDatabase()
 CURRENT_DIRECTORY = os.path.dirname(os.path.realpath(__file__))
 font_path = os.path.join(CURRENT_DIRECTORY, "Resource", "NotoSans-Medium.ttf")
-font_id = QFontDatabase.addApplicationFont(font_path)  # relative path is unacceptable
+font_id = QFontDatabase.addApplicationFont(
+    font_path)  # relative path is unacceptable
 if font_id == -1:
     print("problem loading font")
 print(font_id, QFontDatabase.applicationFontFamilies(font_id))

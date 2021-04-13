@@ -24,13 +24,17 @@ class InspectorWidget(QWidget):
         outerLayout = QVBoxLayout()
         topLayout = QHBoxLayout()
         self.serverComboBox = QComboBox()
-        allServers = [Server.NA.value.capitalize(), Server.EU.value.capitalize(), Server.ASIA.value.capitalize()]
+        allServers = [
+            Server.NA.value.capitalize(),
+            Server.EU.value.capitalize(),
+            Server.ASIA.value.capitalize()
+        ]
         self.serverComboBox.addItems(allServers)
-        
+
         for index, oneServer in enumerate(allServers):
             if oneServer.lower() == self.setting.getServer():
                 self.serverComboBox.setCurrentIndex(index)
-        
+
         self.serverComboBox.activated.connect(self.changeServer)
         styleLabel = QLabel("Server:")
         styleLabel.setBuddy(self.serverComboBox)
@@ -56,7 +60,7 @@ class InspectorWidget(QWidget):
         self.textBrowser = QTextBrowser()
         self.textBrowser.setAcceptRichText(True)
         self.textBrowser.setOpenExternalLinks(False)
-        self.textBrowser.anchorClicked.connect(self.on_anchor_clicked)
+
         self.textBrowser.setOpenLinks(False)
         textLayout.addWidget(self.textBrowser)
         outerLayout.addLayout(topLayout)
@@ -64,13 +68,10 @@ class InspectorWidget(QWidget):
         self.setLayout(outerLayout)
         self.inspectWork = InspectThread()
         self.inspectWork.player = self.player
-        self.inspectWork.showLogtrigger.connect(self.showlog)
+        self.inspectWork.showLogtrigger.connect(self.showDetailMatch)
         self.inspectWork.finishTrigger.connect(self.showFinish)
         self.inspectWork.summaryTigger.connect(self.showSummary)
         #self.textBrowser.setHtml("""My image :<br /><img src="test.ico"/  height=10 width=20>""")
-    
-    def on_anchor_clicked(self, url):
-        print(url)
 
     def clearButtonCliked(self):
         self.textBrowser.clear()
@@ -83,12 +84,14 @@ class InspectorWidget(QWidget):
         if name is None or name == "":
             self.textBrowser.append(self.getHtml(text, 'OrangeRed'))
         else:
-            self.textBrowser.append(self.getVivoHtml(name, 'OrangeRed') + self.getHtml(text, 'OrangeRed'))
+            self.textBrowser.append(
+                self.getVivoHtml(name, 'OrangeRed') +
+                self.getHtml(text, 'OrangeRed'))
         self.textBrowser.append('')
         self.textBrowser.moveCursor(QTextCursor.MoveOperation.End)
 
-    def showlog(self, opponentName, timeStr, outcome, deckCode, factions,
-                opDeckCode, opFactions, totalTurn, num):
+    def showDetailMatch(self, opponentName, timeStr, outcome, deckCode,
+                        factions, opDeckCode, opFactions, totalTurn, num):
 
         print('call showlog')
         htmlOpponentName = self.getVivoHtml(opponentName, 'MidnightBlue')
@@ -103,25 +106,28 @@ class InspectorWidget(QWidget):
 
         self.textBrowser.append(htmlOutcome + ' ' + htmlOpponentName)
         self.textBrowser.append(
-            self.getHtml(timeStr, 'DarkOrange') + ' ' + htmlTotalturn)
-        self.textBrowser.append(htmlFactions + htmlHeros)
-        self.textBrowser.append(self.getDeckCodeHtml(deckCode))
+            self.getHtml(timeStr, 'DarkOrange'))
+        self.textBrowser.append(htmlFactions + htmlHeros +
+                                self.getDeckCodeHtml(deckCode))
 
-        self.textBrowser.append(htmlOpFactions + htmlOpHeros)
-        self.textBrowser.append(self.getDeckCodeHtml(opDeckCode))
+        self.textBrowser.append(htmlOpFactions + htmlOpHeros +
+                                self.getDeckCodeHtml(opDeckCode))
+
+        self.textBrowser.append(htmlTotalturn)
         self.textBrowser.append(' ')
 
     def showSummary(self, deckdict):
         return
-        
+
     def getVivoHtml(self, name, color):
         #https://lor.runeterra.ar/Matches/Americas/HiddenValley/2860
         id = name.split('#')[0]
         tag = name.split('#')[1].split('[')[0]
-        return "<a href=\"https://lor.runeterra.ar/Matches/" + self.setting.riotServer.capitalize() + "/" + id + "/" + tag + "\" style=\"color:" + color + "\">" + name + "</a>" 
+        return "<a href=\"playername#" + self.setting.riotServer.capitalize(
+        ) + "#" + id + "#" + tag + "\" style=\"color:" + color + "\">" + name + "</a>"
 
     def getDeckCodeHtml(self, text):
-        return "<a href=\"https://lor.mobalytics.gg/decks/code/" + text + "\" style=\"color:DodgerBlue\">" + text + "</a>"
+        return "<a href=\"deckCode#" + text + "\" style=\"color:DodgerBlue\">" + 'Deck Code' + "</a>"
 
     def getHtml(self, text, color):
         return ' <font color = \"' + color + '\">' + text + '</font>'
@@ -133,19 +139,8 @@ class InspectorWidget(QWidget):
         self.setting.setServer(Server._value2member_map_[serverName])
         self.setting.saveServer()
         self.local.updatePlayernames()
-        completer = QCompleter(filterMasterPlayer(self.local.playernames, serverName))
+        completer = QCompleter(
+            filterMasterPlayer(self.local.playernames, serverName))
         completer.setCaseSensitivity(Qt.CaseSensitivity.CaseInsensitive)
         self.idLineEdit.setCompleter(completer)
         self.idLineEdit.setText('')
-
-
-#os.environ["QT_AUTO_SCREEN_SCALE_FACTOR"] = "2"
-#os.environ["QT_AUTO_SCREEN_SCALE_FACTOR"] = "1"
-# app = QApplication(sys.argv)
-# app.setApplicationName(cs.DISPLAY_TITLE + '#')
-# app.setWindowIcon(QIcon('test.jpg'))
-# app.setStyle('Fusion')
-# window = InspectorWidget()
-# window.show()
-# print(QStyleFactory.keys())
-#sys.exit(app.exec_())
