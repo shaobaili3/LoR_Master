@@ -61,7 +61,7 @@ class Player:
                 print('Retry after ' + str(detail) + ', Riot server is busy.')
                 showMessage('Riot server is busy, will restore in ' +
                             str(detail) + ' seconds.')
-                return
+                continue
             if detail is None:
                 continue
             else:
@@ -120,7 +120,7 @@ class Player:
                 finishTrigger(
                     name + '#' + tag, 'Riot server is busy, will restore in ' +
                     str(detail) + ' seconds.')
-                return
+                continue
             if detail is None:
                 continue
             print('detail', detail)

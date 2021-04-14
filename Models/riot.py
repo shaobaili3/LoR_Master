@@ -40,13 +40,11 @@ class Riot:
             json.dump(self.playerNames, fp)
 
     def getPlayerPUUID(self, name, tag):
-
-        masterId = self.network.setting.riotServer + name + tag + Models.network.API_KEY
+        puuidLink = self.network.getPUUID(name, tag)
+        masterId = self.network.setting.riotServer + name + tag + puuidLink
 
         if masterId in self.riotIds:
             return self.riotIds[masterId]
-
-        puuidLink = self.network.getPUUID(name, tag)
         # print(puuidLink)
         try:
             puuidRequest = self.session.get(puuidLink)
@@ -64,11 +62,12 @@ class Riot:
             print(idDetails)
             return None
         else:
-            if idDetails.get('puuid') is not None:
-                self.riotIds[masterId] = idDetails.get('puuid')
-                self.playerNames[idDetails.get('puuid')] = name, tag
+            puuid = idDetails.get('puuid') 
+            if puuid is not None:
+                self.riotIds[masterId] = puuid
+                self.playerNames[puuid] = name, tag
                 self.save()
-            return idDetails.get('puuid')
+            return puuid
 
     def getMatchs(self, ppid):
         matchLink = self.network.getMatchsLink(ppid)
@@ -145,6 +144,7 @@ class Riot:
             print('比赛内容服务器错误')
             if 'Retry-After' in header:
                 print('服务器正忙,请等待', header['Retry-After'], '秒')
+                Models.network.switchAPI()
                 return header['Retry-After']
             return None
         else:
@@ -167,6 +167,7 @@ class Riot:
             print('无法连接puuid->userId服务器')
             return '名字Unknow', 'unknow'
         name = nameRequest.json()
+        header = nameRequest.headers
         #headers = nameRequest.headers
         #print(headers)
         if not nameRequest.ok:
@@ -174,7 +175,10 @@ class Riot:
             print(nameRequest.headers)
             print(nameRequest.status_code)
             print(name)
-            print('puuid->userid服务器错误:')
+            print('puuid->userid服务器错误:')            
+            if 'Retry-After' in header:
+                print('服务器正忙,请等待', header['Retry-After'], '秒')
+                Models.network.switchAPI()
             return 'Unknow', puuid
         else:
             self.playerNames[puuid] = name['gameName'], name['tagLine']
