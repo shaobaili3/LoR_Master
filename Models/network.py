@@ -46,9 +46,3 @@ class Network():
 
     def getPUUID(self, name, tag):
         return self.getHeadLink() + PUUID_KEY + name + '/' + tag + self.key
-
-    def switchAPIKey(self):
-        if self.key == API_KEY:
-            self.key = API_KEY2
-        else:
-            self.key = API_KEY

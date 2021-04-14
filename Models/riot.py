@@ -1,3 +1,5 @@
+from Models.network import Network
+import Models.network
 import requests
 import aiohttp
 import asyncio
@@ -39,7 +41,7 @@ class Riot:
 
     def getPlayerPUUID(self, name, tag):
 
-        masterId = self.network.setting.riotServer + name + tag
+        masterId = self.network.setting.riotServer + name + tag + Models.network.API_KEY
 
         if masterId in self.riotIds:
             return self.riotIds[masterId]
@@ -64,6 +66,7 @@ class Riot:
         else:
             if idDetails.get('puuid') is not None:
                 self.riotIds[masterId] = idDetails.get('puuid')
+                self.playerNames[idDetails.get('puuid')] = name, tag
                 self.save()
             return idDetails.get('puuid')
 
@@ -172,8 +175,8 @@ class Riot:
             print(nameRequest.status_code)
             print(name)
             print('puuid->userid服务器错误:')
-            return '名字Unknow', 'unknow'
+            return 'Unknow', puuid
         else:
             self.playerNames[puuid] = name['gameName'], name['tagLine']
             self.save()
-        return name['gameName'], name['tagLine']
+        return name['gameName'], (name['tagLine'])
