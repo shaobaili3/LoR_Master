@@ -141,6 +141,12 @@ class Player:
             if riotId[0] == puuid:
                 myIndex = 0
                 opponentIndex = 1
+            else:
+                indexName = self.riot.getPlayerName(riotId[0])
+                if indexName[0] == name and indexName[1] == tag:
+                    myIndex = 0
+                    opponentIndex = 1
+            
             opName = self.riot.getPlayerName(riotId[opponentIndex])
             fullName = opName[0] + '#' + opName[1]
             print(
