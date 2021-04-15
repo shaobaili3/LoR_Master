@@ -51,15 +51,19 @@ class Riot:
         except requests.exceptions.RequestException as e:
             print(puuidLink)
             print(e)
-            print('无法连接PUUID服务器')
+            print('无法连接getPlayerPUUID服务器')
             return None
         idDetails = puuidRequest.json()
+        header = puuidRequest.headers
         if not puuidRequest.ok:
             print(puuidLink)
             print(puuidRequest.headers)
             print(puuidRequest.status_code)
             print('userId -> PUUID服务器错误')
             print(idDetails)
+            if 'Retry-After' in header:
+                print('getPlayerPUUID服务器正忙', header['Retry-After'], '秒')
+                Models.network.switchAPI()
             return None
         else:
             puuid = idDetails.get('puuid') 
@@ -79,12 +83,16 @@ class Riot:
             print('无法连接比赛ID服务器')
             return None
         matchIds = matchRequest.json()
+        header = matchRequest.headers
         if not matchRequest.ok:
             print(matchLink)
             print(matchRequest.headers)
             print(matchRequest.status_code)
-            print('比赛ID服务器错误')
+            print('getmatchs服务器错误')
             print(matchIds)
+            if 'Retry-After' in header:
+                print('getmatchs服务器正忙', header['Retry-After'], '秒')
+                Models.network.switchAPI()
             return None
         return matchIds
 

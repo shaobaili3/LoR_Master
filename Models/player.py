@@ -2,6 +2,7 @@ import Models.utility as utility
 import constants as cs
 from Models.leaderboard import getRankStr
 from GUI.ui import DeckDetail
+import Models.network
 
 
 class Player:
@@ -59,8 +60,8 @@ class Player:
         for detail in details:
             if str(detail).isdigit():
                 print('Retry after ' + str(detail) + ', Riot server is busy.')
-                showMessage('Riot server is busy, will restore in ' +
-                            str(detail) + ' seconds.')
+                showMessage('Riot server [' + Models.network.API_KEY[-4:] + '] busy ' +
+                            str(detail))
                 continue
             if detail is None:
                 continue
@@ -116,10 +117,9 @@ class Player:
             detail = self.riot.getDetail(matchId)
             # print('type:', str(type(detail)))
             if str(detail).isdigit():
-                print('Retry after ', str(detail), ', Riot server is busy.')
                 finishTrigger(
-                    name + '#' + tag, 'Riot server is busy, will restore in ' +
-                    str(detail) + ' seconds.')
+                    name + '#' + tag, 'Riot server [' + Models.network.API_KEY[-4:] + '] busy ' +
+                    str(detail))
                 continue
             if detail is None:
                 continue
