@@ -64,13 +64,15 @@ window.minWindow = function() {
     let h = win.getSize()[1]
 
     if (h > minHeight) {
+        // record height and minimize
         clientHeight = h
         h = headerHeight
     } else {
         if (h > headerHeight) {
+            // shrink to min when too small
             h = headerHeight
         } else {
-        // h = Math.floor(w*1.666)
+            // expand to recorded height
             if (clientHeight <= headerHeight) {
                 clientHeight = Math.floor(w*defaultRatio)
                 }
@@ -84,4 +86,20 @@ window.minWindow = function() {
 
 window.openExternal = function(url) {
     shell.openExternal(url);
+}
+
+window.isMin = function() {
+    var win = remote.getCurrentWindow();
+    // window.minimize();
+
+    // window.setSize(window.getSize[0], 45, true);
+    // let w = win.getSize()[0]
+    let h = win.getSize()[1]
+
+    if (h > headerHeight) {
+        // shrink to min when too small
+        return false
+    } else {
+        return true
+    }
 }

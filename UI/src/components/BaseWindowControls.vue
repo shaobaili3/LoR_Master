@@ -10,10 +10,12 @@
             {{playerRankString}}
         </div>
         <div class="menu-item" @click="hideApp()">
-            <span><i class="fa fa-minus"></i></span>
+            <span v-if="!isWindowMin"><i class="fas fa-compress-alt"></i></span>
+            <span v-if="isWindowMin"><i class="fas fa-expand-alt"></i></span>
+            
         </div>
         <div class="menu-item" @click="closeApp()">
-            <span><i class="fa fa-times"></i></span>
+            <span><i class="fas fa-minus"></i></span>
         </div>
         
         <!-- <router-link to="/" class="menu-item"> -->
@@ -35,6 +37,12 @@ export default {
         playerName: String,
         playerRank: Number,
     },
+    mounted() {
+        window.addEventListener("resize", this.checkIsMin);
+    },
+    unmounted() {
+        window.removeEventListener("resize", this.checkIsMin);
+    },
     computed: {
         playerRankString() {
             if (this.playerRank)
@@ -52,6 +60,14 @@ export default {
         closeApp() {
             window.closeWindow() // Defined in appsrc > preload.js
             //   console.log("Closing App")
+        },
+        checkIsMin() {
+            this.isWindowMin = window.isMin()
+        }
+    },
+    data() {
+        return {
+            isWindowMin: false
         }
     }
 }
