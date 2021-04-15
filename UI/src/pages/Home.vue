@@ -22,7 +22,7 @@
             {{playerName}}
         </div> -->
 
-        <div id="history">
+        <div id="history" v-if="showMatch">
             
             <match-info 
                 v-for="(match, index) in matchInfos" 
@@ -41,6 +41,8 @@
 
         </div>
 
+        <match-info-deck-detail v-if="!showMatch" :deck="deckCode"></match-info-deck-detail>
+
         <div class="footer"></div>
 
     </div>
@@ -53,6 +55,7 @@
 import MatchInfo from '../components/MatchInfo.vue'
 import axios from 'axios'
 import BaseWindowControls from '../components/BaseWindowControls.vue'
+import MatchInfoDeckDetail from '../components/MatchInfoDeckDetail.vue'
 
 const requestDataWaitTime = 1000 // ms
 
@@ -71,7 +74,9 @@ export default {
             request: null,
             playerName: null,
             playerRank: null,
-            matchTotalNum: 0
+            matchTotalNum: 0,
+            infoType: null,
+            deckCode: null
         }
     },
     computed: {
@@ -81,11 +86,18 @@ export default {
         },
         loadingText() {
             return 'Loading..'
+        },
+        showMatch() {
+            if (this.infoType == "deckCode") {
+                return false
+            }
+            return true
         }
     },
     components: { 
         BaseWindowControls,
         MatchInfo,
+        MatchInfoDeckDetail,
     },
     methods: {
         getMatchInfo() {
@@ -160,6 +172,11 @@ export default {
             this.processJsonData(data)
         },
         processJsonData(data) {
+            this.infoType = data.type
+            this.deckCode = data.deckCode
+            // console.log(this.deckCode)
+
+            // if ()
             this.matchTotalNum = 0;
             this.matchInfos = data.matches;
 
