@@ -1,11 +1,12 @@
 <template>
     <div id="menu-bg"></div>
     <div id="menu" class="">
-        <div class="menu-title">
+        <div class="menu-title" v-if="titleType=='match'">
             <!-- <slot></slot> -->
             {{playerName}}
         </div>
-        <div class="menu-sub-title">
+        <div class="menu-title-deck" v-if="titleType=='deckCode'">Deck Info</div>
+        <div class="menu-sub-title" v-if="titleType=='match'">
             <!-- <slot></slot> -->
             {{playerRankString}}
         </div>
@@ -36,6 +37,7 @@ export default {
     props: {
         playerName: String,
         playerRank: Number,
+        titleType: String
     },
     mounted() {
         window.addEventListener("resize", this.checkIsMin);
@@ -131,6 +133,14 @@ export default {
         margin-right: auto;
         color: rgba(255, 255, 255, 0.5);
         font-size: 0.9em;
+    }
+
+    .menu-title-deck {
+        left: 0;
+        margin-left: 16px;
+        margin-right: auto;
+        color: white;
+        font-size: 1.0em;
     }
 
     .menu-item {

@@ -1,5 +1,5 @@
 <template>
-    <base-window-controls :playerName="playerName" :playerRank="playerRank"></base-window-controls>
+    <base-window-controls :playerName="playerName" :playerRank="playerRank" :titleType="infoType" :deck="deckCode"></base-window-controls>
     
     <div id="content">
 
@@ -41,6 +41,8 @@
 
         </div>
 
+        <deck-regions v-if="!showMatch" :deck="deckCode"></deck-regions>
+        <!-- <match-info-deck-preview v-if="!showMatch" :deck="deckCode" :won="true"></match-info-deck-preview> -->
         <match-info-deck-detail v-if="!showMatch" :deck="deckCode"></match-info-deck-detail>
 
         <div class="footer"></div>
@@ -56,6 +58,8 @@ import MatchInfo from '../components/MatchInfo.vue'
 import axios from 'axios'
 import BaseWindowControls from '../components/BaseWindowControls.vue'
 import MatchInfoDeckDetail from '../components/MatchInfoDeckDetail.vue'
+import DeckRegions from '../components/DeckRegions.vue'
+// import MatchInfoDeckPreview from '../components/MatchInfoDeckPreview.vue'
 
 const requestDataWaitTime = 1000 // ms
 
@@ -76,7 +80,8 @@ export default {
             playerRank: null,
             matchTotalNum: 0,
             infoType: null,
-            deckCode: null
+            deckCode: null,
+            titleType: null
         }
     },
     computed: {
@@ -98,6 +103,8 @@ export default {
         BaseWindowControls,
         MatchInfo,
         MatchInfoDeckDetail,
+        DeckRegions,
+        // MatchInfoDeckPreview,
     },
     methods: {
         getMatchInfo() {
@@ -172,7 +179,7 @@ export default {
             this.processJsonData(data)
         },
         processJsonData(data) {
-            this.infoType = data.type
+            this.infoType = data.type // match or deckCode
             this.deckCode = data.deckCode
             // console.log(this.deckCode)
 
