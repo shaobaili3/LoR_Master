@@ -86,7 +86,8 @@ class Inspector(InspectorWidget):
     def deckCodeLineTextChanged(self):
         print('deckcode line text: ', self.deckCodeLineEdit.text())
         gui.type = 'deckCode' 
-        gui.deckCode = self.deckCodeLineEdit.text()      
+        gui.deckCode = self.deckCodeLineEdit.text()
+        runElectron()      
 
     def on_anchor_clicked(self, url):
         text = url.toString()
