@@ -1,5 +1,4 @@
 import constants as cs
-import os
 from Models.setting import Setting, Server
 from PyQt6.QtGui import *
 from PyQt6.QtWidgets import *
@@ -23,6 +22,7 @@ class InspectorWidget(QWidget):
         # self.resize(900, 512)
         outerLayout = QVBoxLayout()
         topLayout = QHBoxLayout()
+        buttomLayout = QHBoxLayout()
         self.serverComboBox = QComboBox()
         allServers = [
             Server.NA.value.capitalize(),
@@ -40,6 +40,7 @@ class InspectorWidget(QWidget):
         styleLabel.setBuddy(self.serverComboBox)
         idLabel = QLabel("Riot ID:")
         self.idLineEdit = QLineEdit(self)
+        self.idLineEdit.setPlaceholderText('Enter name#tag here...   eg.Storm#5961')
         self.changeServer()
         self.inspectPushButton = QPushButton("Inspect")
         self.inspectPushButton.setDefault(True)
@@ -61,10 +62,19 @@ class InspectorWidget(QWidget):
         self.textBrowser.setAcceptRichText(True)
         self.textBrowser.setOpenExternalLinks(False)
 
+
+        deckCodeLabel = QLabel("Deck Code: ")
+        self.deckCodeLineEdit = QLineEdit(self)
+        self.deckCodeLineEdit.setPlaceholderText('Enter deck code here...')
+        buttomLayout.addWidget(deckCodeLabel)
+        buttomLayout.addWidget(self.deckCodeLineEdit)
+        
+
         self.textBrowser.setOpenLinks(False)
         textLayout.addWidget(self.textBrowser)
         outerLayout.addLayout(topLayout)
         outerLayout.addLayout(textLayout)
+        outerLayout.addLayout(buttomLayout)
         self.setLayout(outerLayout)
         self.inspectWork = InspectThread()
         self.inspectWork.player = self.player
@@ -72,6 +82,9 @@ class InspectorWidget(QWidget):
         self.inspectWork.finishTrigger.connect(self.showFinish)
         self.inspectWork.summaryTigger.connect(self.showSummary)
         #self.textBrowser.setHtml("""My image :<br /><img src="test.ico"/  height=10 width=20>""")
+
+    
+        
 
     def clearButtonCliked(self):
         self.textBrowser.clear()

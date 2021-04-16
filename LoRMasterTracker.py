@@ -81,6 +81,12 @@ class Inspector(InspectorWidget):
         self.parentWindow = window
         self.idLineEdit.returnPressed.connect(self.enterIdLineEdit)
         self.textBrowser.anchorClicked.connect(self.on_anchor_clicked)
+        self.deckCodeLineEdit.textChanged.connect(self.deckCodeLineTextChanged)
+
+    def deckCodeLineTextChanged(self):
+        print('deckcode line text: ', self.deckCodeLineEdit.text())
+        gui.type = 'deckCode' 
+        gui.deckCode = self.deckCodeLineEdit.text()      
 
     def on_anchor_clicked(self, url):
         text = url.toString()
@@ -123,7 +129,7 @@ class Inspector(InspectorWidget):
         self.textBrowser.append(
             self.getHtml(
                 fullName +
-                ' is invalid, please input name and tag seperated by # eg: storm#5961',
+                ' is invalid, please input name and tag seperated by #  eg: storm#5961',
                 'OrangeRed'))
         return
 
