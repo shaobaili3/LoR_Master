@@ -61,7 +61,7 @@ import MatchInfoDeckDetail from '../components/MatchInfoDeckDetail.vue'
 import DeckRegions from '../components/DeckRegions.vue'
 // import MatchInfoDeckPreview from '../components/MatchInfoDeckPreview.vue'
 
-const requestDataWaitTime = 1000 // ms
+const requestDataWaitTime = 200 // ms
 
 export default {
     mounted() {
@@ -86,6 +86,7 @@ export default {
     },
     computed: {
         isLoading() {
+            if (this.infoType == "deckCode" && this.deckCode != "") return false
             return (this.playerName == null || this.playerName == "" || this.matchInfos.length == 0)
             // return true
         },

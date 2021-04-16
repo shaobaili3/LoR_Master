@@ -1,6 +1,6 @@
 <template>
     <div class="row deck btn">
-        <div class="region-icon icon faction" v-for="(faction, index) in getFactions" :key="index"
+        <div class="region-icon icon faction" v-for="(faction, index) in getFactionsComplex" :key="index"
         :style=" {backgroundImage: getRegionImgUrl(faction)}"></div>
         <!-- <div class="region-icon icon faction" :style=" {backgroundImage: getRegionImgUrl(0)}"></div> -->
         <!-- <div class="region-icon icon"></div> -->
@@ -18,7 +18,7 @@ import championCards from '../assets/data/champion.js'
 
 const maxChamp = 2;
 const maxSlot = 5;
-const maxFactions = 3;
+const maxFactions = 5;
 
 export default {
     components: {
@@ -74,6 +74,36 @@ export default {
             if (extra > 0)
                 return "+" + extra
             return ""
+        },
+        getFactionsComplex() {
+            var deck = DeckEncoder.decode(this.deck);
+            
+            // console.log(factionIDs)
+            // return factionIDs
+
+            // var deck = DeckEncoder.decode(this.deck);
+            var champs = []
+            var factionIDs = []
+            // console.log(championCards.champions)
+            
+            for (var j in deck) {
+                if (factionIDs.indexOf(deck[j].faction.id) == -1) {
+                    factionIDs.push(deck[j].faction.id)
+                }
+                for (var i in championCards.champions) {
+                var champCode = championCards.champions[i]
+                    var cardCode = deck[j].code
+                    if (cardCode == champCode) {
+                        champs.push(champCode)
+                        // if (champs.length >= maxChamp) {
+                        //     return champs;
+                        // }
+                    }
+                }
+            }
+            // this.champs = champs
+            // this.factions = factionIDs
+            return factionIDs.slice(0, maxFactions)
         }
     },
     methods: {
