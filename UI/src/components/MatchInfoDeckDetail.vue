@@ -1,5 +1,5 @@
 <template>
-    <div class="deck-detail">
+    <div class="deck-detail" v-if="cards.length > 0">
         <cards-preview v-for="(card, index) in cards" :key="index"
         :name="card.name"
         :cost="card.cost"
@@ -53,7 +53,11 @@ export default {
         },
         cards() {
             var cards = []
-            var deck = DeckEncoder.decode(this.deck)
+            var deck = null
+            try { deck = DeckEncoder.decode(this.deck) } catch(err) {
+                return cards
+            }
+            
             for (var j in deck) {
                 var cardCode = deck[j].code
                 var card = sets.find(card => card.cardCode == cardCode)
@@ -71,7 +75,7 @@ export default {
                 }
 
             }
-            console.log(cards)
+            // console.log(cards)
             return cards.sort(function (a, b) { 
                 // if (a.type > b.type) {
                 //     return 1; 

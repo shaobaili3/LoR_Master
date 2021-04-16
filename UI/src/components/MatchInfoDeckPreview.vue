@@ -86,7 +86,11 @@ export default {
     },
     methods: {
         getChampsFactions() {
-            var deck = DeckEncoder.decode(this.deck);
+            
+            var deck = null
+            try { deck = DeckEncoder.decode(this.deck)} catch(err) {
+                return
+            }
             
             // console.log(factionIDs)
             // return factionIDs

@@ -76,30 +76,36 @@ export default {
             return ""
         },
         getFactionsComplex() {
-            var deck = DeckEncoder.decode(this.deck);
+
+            var factionIDs = []
+
+            var deck = null
+            try { deck = DeckEncoder.decode(this.deck)} catch(err) {
+                return factionIDs
+            }
             
             // console.log(factionIDs)
             // return factionIDs
 
             // var deck = DeckEncoder.decode(this.deck);
-            var champs = []
-            var factionIDs = []
+            // var champs = []
+            
             // console.log(championCards.champions)
             
             for (var j in deck) {
                 if (factionIDs.indexOf(deck[j].faction.id) == -1) {
                     factionIDs.push(deck[j].faction.id)
                 }
-                for (var i in championCards.champions) {
-                var champCode = championCards.champions[i]
-                    var cardCode = deck[j].code
-                    if (cardCode == champCode) {
-                        champs.push(champCode)
-                        // if (champs.length >= maxChamp) {
-                        //     return champs;
-                        // }
-                    }
-                }
+                // for (var i in championCards.champions) {
+                // var champCode = championCards.champions[i]
+                //     var cardCode = deck[j].code
+                //     if (cardCode == champCode) {
+                //         champs.push(champCode)
+                //         // if (champs.length >= maxChamp) {
+                //         //     return champs;
+                //         // }
+                //     }
+                // }
             }
             // this.champs = champs
             // this.factions = factionIDs
@@ -108,7 +114,10 @@ export default {
     },
     methods: {
         getChampsFactions() {
-            var deck = DeckEncoder.decode(this.deck);
+            var deck = null
+            try { deck = DeckEncoder.decode(this.deck)} catch(err) {
+                return
+            }
             
             // console.log(factionIDs)
             // return factionIDs

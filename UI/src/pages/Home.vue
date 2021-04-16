@@ -6,6 +6,8 @@
         <div class="loading" :class="{invisible: !isLoading}">
             {{loadingText}}
         </div> 
+
+        <div class="errorText" v-if="isInvalidDeckCode">Invalid Deck Code</div>
         <!-- <button @click="requestData">Test Request</button> -->
 
         <!-- <div id="history-stats"> -->
@@ -60,6 +62,7 @@ import BaseWindowControls from '../components/BaseWindowControls.vue'
 import MatchInfoDeckDetail from '../components/MatchInfoDeckDetail.vue'
 import DeckRegions from '../components/DeckRegions.vue'
 // import MatchInfoDeckPreview from '../components/MatchInfoDeckPreview.vue'
+import DeckEncoder from '../modules/runeterra/DeckEncoder'
 
 const requestDataWaitTime = 200 // ms
 
@@ -98,6 +101,15 @@ export default {
                 return false
             }
             return true
+        },
+        isInvalidDeckCode() {
+            try {
+                var deck = DeckEncoder.decode(this.deckCode)
+            } catch (err) {
+                console.log(err.message)
+                return true
+            }
+            return false
         }
     },
     components: { 
@@ -211,6 +223,12 @@ export default {
     }
     
     .loading {
+        margin-top: 20px;
+        font-size: 1.2em;
+    }
+
+    .errorText {
+        margin-top: 20px;
         font-size: 1.2em;
     }
 
