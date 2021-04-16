@@ -124,7 +124,7 @@ class InspectorWidget(QWidget):
         id = name.split('#')[0]
         tag = name.split('#')[1].split('[')[0]
         return "<a href=\"playername#" + self.setting.riotServer.capitalize(
-        ) + "#" + id + "#" + tag + "\" style=\"color:" + color + "\">" + name + "</a>"
+        ) + "#" + id + "#" + tag + "\" style=\"color:" + color + "\">" + name.replace('#' + tag, '') + "</a>"
 
     def getDeckCodeHtml(self, text):
         return "<a href=\"deckCode#" + text + "\" style=\"color:DodgerBlue\">" + 'Deck Code' + "</a>"
