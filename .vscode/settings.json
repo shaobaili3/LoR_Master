@@ -1,6 +1,3 @@
 {
-    "python.linting.flake8Enabled": true,
-    "python.formatting.provider": "yapf",
-    "python.linting.flake8Args": ["--max-line-length=248"], # 设置单行最长字符限制
-    "python.linting.pylintEnabled": false # 关闭pylint工具 
+    "python.pythonPath": "C:\\Python39\\python.exe"
 }
