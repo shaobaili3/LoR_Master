@@ -7,7 +7,7 @@
             {{loadingText}}
         </div> 
 
-        <div class="errorText" v-if="isInvalidDeckCode">Invalid Deck Code</div>
+        <div class="errorText" v-if="isInvalidDeckCode && !showMatch">Invalid Deck Code</div>
         <!-- <button @click="requestData">Test Request</button> -->
 
         <!-- <div id="history-stats"> -->
