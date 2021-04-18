@@ -3,6 +3,7 @@ from Threads.serverThread import ServerThread
 from Threads.trackThread import TrackThread
 from Threads.uiThread import UIThread
 from Models.leaderboard import updateLeaderboard
+from Threads.electronThread import ElectronThread
 
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
@@ -21,7 +22,6 @@ from Models.player import Player
 from inspectorWidget import InspectorWidget
 from Models.leaderboard import getRankStr
 from Models.leaderboard import getRankInt
-from Models.process import runElectron
 import Models.deck as deck
 import constants as cs
 from GUI.ui import Opponent
@@ -39,6 +39,7 @@ class Window(QMainWindow):
         self.progressBar.setRange(0, cs.MAX_NUM_DETAILS + 1)
         self.progressBar.setHidden(True)
         self.player = player
+        self.electronWork = ElectronThread()
         self.serverWork = ServerThread()
         self.trackWork = TrackThread()
         self.translateWork = TranslateThread()
@@ -87,7 +88,7 @@ class Inspector(InspectorWidget):
         print('deckcode line text: ', self.deckCodeLineEdit.text())
         gui.type = 'deckCode' 
         gui.deckCode = self.deckCodeLineEdit.text()
-        runElectron()      
+        self.parentWindow.electronWork.start()   
 
     def on_anchor_clicked(self, url):
         text = url.toString()
@@ -218,7 +219,7 @@ class Inspector(InspectorWidget):
                 deckCode].winNum / player.summary[deckCode].matches
             match['history'] = player.summary[deckCode].history
             gui.matches.append(match)
-        runElectron()
+        self.parentWindow.electronWork.start()
 
     def showWinLoss(self, deckCode, player):
         winNum = player.summary[deckCode].winNum

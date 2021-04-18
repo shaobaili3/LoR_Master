@@ -54,21 +54,23 @@ def getPort(setting):
 def runElectron():
     try:
         isRuning = False
+        allProcess = set()
         for proc in psutil.process_iter():
-            try:
-                if proc.name() == u"LoRMasterTrackerUI.exe":
-                    isRuning = True
-            except psutil.AccessDenied:
-                print("Permission error or access denied on process")
-                return None
-            except IndexError as e:
-                print('runElectron: ', e)
-                return None
+            allProcess.add(proc.name())
+            
+        if u"LoRMasterTrackerUI.exe" in allProcess:
+            isRuning = True
 
         if isRuning is False:
             subprocess.Popen(
                 'UI/app/LoRMasterTrackerUI-win32-x64/LoRMasterTrackerUI.exe',
                 shell=False)
+    except psutil.AccessDenied:
+        print("Permission error or access denied on process")
+        return None
+    except IndexError as e:
+        print('runElectron IndexError: ', e)
+        return None
     except Exception as e:
         print('runElectron error:', e)
 
