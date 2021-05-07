@@ -98,7 +98,7 @@ class InspectorWidget(QWidget):
             self.textBrowser.append(self.getHtml(text, 'OrangeRed'))
         else:
             self.textBrowser.append(
-                self.getVivoHtml(name, 'OrangeRed') +
+                self.getPlayernameHtml(name, 'OrangeRed') +
                 self.getHtml(text, 'OrangeRed'))
         self.textBrowser.append('')
         self.textBrowser.moveCursor(QTextCursor.MoveOperation.End)
@@ -107,7 +107,7 @@ class InspectorWidget(QWidget):
                         factions, opDeckCode, opFactions, totalTurn, num):
 
         print('call showlog')
-        htmlOpponentName = self.getVivoHtml(opponentName, 'MidnightBlue')
+        htmlOpponentName = self.getPlayernameHtml(opponentName, 'MidnightBlue')
         htmlFactions = self.getHtml(factions, 'OrangeRed')
         htmlTotalturn = self.getHtml(' Turn: ' + totalTurn, 'DarkGray')
         htmlOpFactions = self.getHtml(opFactions, 'Black')
@@ -132,15 +132,14 @@ class InspectorWidget(QWidget):
     def showSummary(self, deckdict):
         return
 
-    def getVivoHtml(self, name, color):
-        #https://lor.runeterra.ar/Matches/Americas/HiddenValley/2860
+    def getPlayernameHtml(self, name, color):
         id = name.split('#')[0]
         tag = name.split('#')[1].split('[')[0]
         return "<a href=\"playername#" + self.setting.riotServer.capitalize(
         ) + "#" + id + "#" + tag + "\" style=\"color:" + color + "\">" + name.replace('#' + tag, '') + "</a>"
 
     def getDeckCodeHtml(self, text):
-        return "<a href=\"deckCode#" + text + "\" style=\"color:DodgerBlue\">" + 'Deck Code' + "</a>"
+        return "<a href=\"deckCode#" + text + "\" style=\"color:DodgerBlue\">" + 'View Deck' + "</a>"
 
     def getHtml(self, text, color):
         return ' <font color = \"' + color + '\">' + text + '</font>'

@@ -88,7 +88,13 @@ class Inspector(InspectorWidget):
         print('deckcode line text: ', self.deckCodeLineEdit.text())
         gui.type = 'deckCode' 
         gui.deckCode = self.deckCodeLineEdit.text()
-        self.parentWindow.electronWork.start()   
+        
+        if deck.validDeckCode(gui.deckCode):
+            self.textBrowser.append(self.getHtml(deck.getChampion(gui.deckCode), 'ForestGreen') + self.getDeckCodeHtml(gui.deckCode) + self.getHtml(gui.deckCode, 'Black'))
+        
+
+
+        self.parentWindow.electronWork.start()
 
     def on_anchor_clicked(self, url):
         text = url.toString()
@@ -142,6 +148,10 @@ class Inspector(InspectorWidget):
     def inspectPushButtonClicked(self):
         super().inspectPushButtonClicked()
         self.inspectPlayer(self.idLineEdit.text().strip())
+        return
+
+    def showDeckCode(self, deckCode):
+        self.textBrowser.append(self.getHtml(deckCode, 'OrangeRed'))
         return
 
     def showFinish(self, name, text):
