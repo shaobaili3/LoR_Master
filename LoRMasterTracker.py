@@ -237,6 +237,7 @@ class Inspector(InspectorWidget):
             deckCode].winNum
         return '[' + str(winNum) + 'W' + ' ' + str(lossNum) + 'L' + ']'
 
+os.environ["QT_AUTO_SCREEN_SCALE_FACTOR"] = "1"
 
 updateLeaderboard()
 
@@ -253,7 +254,8 @@ playerInspect = Player(riotInspect)
 localInspect = Local(settingInspect)
 
 app = QApplication(sys.argv)
-# os.environ["QT_AUTO_SCREEN_SCALE_FACTOR"] = "2"
+
+app.setAttribute(Qt.AA_UseHighDpiPixmaps)
 app.setApplicationName(cs.DISPLAY_TITLE)
 app.setWindowIcon(QIcon('Resource/logo.jpg'))
 app.setStyle('Fusion')
