@@ -1,7 +1,7 @@
 
 # LoR Master Tracker-beta
 
-We are open source now!
+## We are open source now!
 
 <p align="center">
 <img src="Preview/logo.jpg"width="300" height="300"/>
@@ -10,7 +10,7 @@ We are open source now!
 <p align="center">
     <a href="https://github.com/shaobaili3/lor_master/releases"><img src="https://img.shields.io/github/v/release/shaobaili3/lor_master?include_prereleases"/></a>
     <a href="https://www.python.org/downloads/"><img src="https://img.shields.io/badge/language-Python-<COLOR>.svg"/></a>
-    <a href="https://github.com/shaobaili3/LoR-Master-Tracker/blob/main/LICENSE"><img src="https://img.shields.io/github/license/mashape/apistatus.svg"/></a>
+    <a href="https://github.com/shaobaili3/LoR_Master/blob/master/LICENSE"><img src="https://img.shields.io/github/license/mashape/apistatus.svg"/></a>
 
 </p>
 
