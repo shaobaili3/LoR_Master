@@ -48,6 +48,40 @@ LoR Master Tracker is a history tracker and deck inspector for League of Runeter
 
 LoR Master Tracker backend is written by pure [Python3](https://www.python.org/downloads/) for cross-platform and local port retrieval. The main Interface is built by [PyQt6](https://riverbankcomputing.com/software/pyqt/download), the In-game UI is built by [Electron](https://www.electronjs.org/) and [Vuejs](https://github.com/vuejs/vue)
 
+## Build Instructions
+
+Pre-requisites:
+
+* To run command line tools, you'll need to configure Python3
+* npm
+
+1. Clone or Download the repository:
+
+  ```shell
+  git clone https://github.com/shaobaili3/LoR_Master
+  ```
+
+2. Run Python backend + main UI
+
+  ```shell
+  pip install -r requirements.txt
+  python LoRMasterTracker.py
+  ```
+
+  If this errors out, make sure that you have an `Python3` environment
+  variable pointing to the right path.
+
+3. Run Electron in-game UI
+
+  ```shell
+  cd UI
+  npm install
+  npm run dev
+  npm run package
+  ```
+
+  Make sure you are in `UI` directory.
+
 ## FAQ
 
 **Q.** Is using LoR Master Tracker considered cheating?  
