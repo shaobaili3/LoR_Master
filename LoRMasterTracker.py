@@ -92,11 +92,10 @@ class Inspector(InspectorWidget):
         if deck.validDeckCode(gui.deckCode):
             self.textBrowser.append(self.getHtml(deck.getChampion(gui.deckCode), 'ForestGreen') + self.getDeckCodeHtml(gui.deckCode) + self.getHtml(gui.deckCode, 'Black'))
         
-
-
         self.parentWindow.electronWork.start()
 
     def on_anchor_clicked(self, url):
+        self.parentWindow.electronWork.start()
         text = url.toString()
         print(text)
         if 'deckCode' in text:
