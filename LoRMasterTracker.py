@@ -1,3 +1,4 @@
+from Models import leaderboard
 from Threads.translateThread import TranslateThread
 from Threads.serverThread import ServerThread
 from Threads.trackThread import TrackThread
@@ -20,6 +21,7 @@ from Models.riot import Riot
 from Models.network import Network
 from Models.player import Player
 from inspectorWidget import InspectorWidget
+from leaderboardWidget import Table
 from Models.leaderboard import getRankStr
 from Models.leaderboard import getRankInt
 import Models.deck as deck
@@ -49,6 +51,12 @@ class Window(QMainWindow):
         self.trackWork.showStatusTrigger.connect(self.showStatus)
         self.statusBar().addPermanentWidget(self.progressBar)
 
+        self.leaderboardPushButton = QPushButton("Leaderboard")
+        self.leaderboardPushButton.setDefault(True)
+        self.leaderboardPushButton.clicked.connect(
+            self.leaderboardPushButtonClicked)
+        self.statusBar().addPermanentWidget(self.leaderboardPushButton)
+
         if 'zh' in locale.getdefaultlocale()[0]:
             self.translatePushButton = QPushButton("启用营地简中[不支持繁体]")
             self.translatePushButton.setDefault(True)
@@ -56,10 +64,16 @@ class Window(QMainWindow):
                 self.translatePushButtonClicked)
             self.statusBar().addPermanentWidget(self.translatePushButton)
 
+
         self.updatePushButton = QPushButton("v" + cs.VERSION_NUM_INSPECTOR)
         self.updatePushButton.setDefault(True)
         self.updatePushButton.clicked.connect(self.updatePushButtonClicked)
         self.statusBar().addPermanentWidget(self.updatePushButton)
+
+    def leaderboardPushButtonClicked(self, state):
+        leaderboard.updateAll()
+        table.close()
+        table.show()
 
     def updatePushButtonClicked(self, state):
         webbrowser.open('https://github.com/shaobaili3/LoR_Master')
@@ -284,4 +298,8 @@ window.uiWork.start()
 window.trackWork.showDecksTrigger.connect(inspectorWidget.showDecks)
 window.trackWork.showMatchsTrigger.connect(inspectorWidget.showMatchs)
 window.trackWork.showMessageTrigger.connect(inspectorWidget.showMessage)
+
+table = Table()
+
+
 sys.exit(app.exec())
