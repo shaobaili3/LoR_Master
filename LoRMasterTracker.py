@@ -70,6 +70,11 @@ class Window(QMainWindow):
         self.updatePushButton.clicked.connect(self.updatePushButtonClicked)
         self.statusBar().addPermanentWidget(self.updatePushButton)
 
+    def closeEvent(self, event):
+        print("User has clicked the red x on the main window")
+        event.accept()
+        app.quit()
+
     def leaderboardPushButtonClicked(self, state):
         leaderboard.updateAll()
         table.close()
@@ -298,7 +303,7 @@ window.uiWork.start()
 window.trackWork.showDecksTrigger.connect(inspectorWidget.showDecks)
 window.trackWork.showMatchsTrigger.connect(inspectorWidget.showMatchs)
 window.trackWork.showMessageTrigger.connect(inspectorWidget.showMessage)
-
+app.setQuitOnLastWindowClosed(True)
 table = Table()
 
 
