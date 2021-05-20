@@ -63,18 +63,22 @@ def hash(file_path, Bytes=1024):
 
 
 def detect():
-    software_list = regEdit(
-        winreg.HKEY_LOCAL_MACHINE, winreg.KEY_WOW64_32KEY) + regEdit(
-            winreg.HKEY_LOCAL_MACHINE, winreg.KEY_WOW64_64KEY) + regEdit(
-                winreg.HKEY_CURRENT_USER, 0)
+    # To-do: handle unknow error, add GUI for error message
+    try:
+        software_list = regEdit(
+            winreg.HKEY_LOCAL_MACHINE, winreg.KEY_WOW64_32KEY) + regEdit(
+                winreg.HKEY_LOCAL_MACHINE, winreg.KEY_WOW64_64KEY) + regEdit(
+                    winreg.HKEY_CURRENT_USER, 0)
 
-    for software in software_list:
-        #print('Name=%s, Version=%s, Publisher=%s' % (software['name'], software['InstallLocation'], software['publisher']))
-        if software['name'] == 'Legends of Runeterra':
-            #print(software['InstallLocation'])
-            lorBinPath = software['InstallLocation'].replace(
-                '/Game', ''
-            ) + '/PatcherData/PatchableFiles/GamePlayData/LocalizedText_'
+        for software in software_list:
+            #print('Name=%s, Version=%s, Publisher=%s' % (software['name'], software['InstallLocation'], software['publisher']))
+            if software['name'] == 'Legends of Runeterra':
+                #print(software['InstallLocation'])
+                lorBinPath = software['InstallLocation'].replace(
+                    '/Game', ''
+                ) + '/PatcherData/PatchableFiles/GamePlayData/LocalizedText_'
+    except Exception as e:
+        print('translate detect error:', e)
 
     if lorBinPath is None:
         print('LoR.exe is not found')
