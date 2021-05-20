@@ -21,11 +21,6 @@
             "nameRef": "SunDiscRestore"
         },
         {
-            "description": "Pick a card from among 3 in your deck. Shuffle the deck and put that card on top.",
-            "name": "Predict",
-            "nameRef": "Forecast"
-        },
-        {
             "description": "Attacking with a support unit will buff the unit to its right.",
             "name": "Support",
             "nameRef": "Support"
@@ -61,11 +56,6 @@
             "nameRef": "Attack"
         },
         {
-            "description": "Activates if allies have struck for 5+ damage at least 4 times this game.",
-            "name": "Reputation",
-            "nameRef": "Aftermath"
-        },
-        {
             "description": "A unit is buffed when its Power or Health is increased or it gains a new keyword.",
             "name": "Buffed",
             "nameRef": "Buffed"
@@ -79,6 +69,11 @@
             "description": "Effect when unit Strikes the enemy Nexus.",
             "name": "Nexus Strike",
             "nameRef": "NexusStrike"
+        },
+        {
+            "description": "Activates if allies have struck for 5+ damage at least 4 times this game.",
+            "name": "Reputation",
+            "nameRef": "Reputation"
         },
         {
             "description": "Get this effect when the round starts.",
@@ -124,6 +119,11 @@
             "description": "A card triggers its plunder ability when played if you damaged the enemy Nexus this round.",
             "name": "Plunder",
             "nameRef": "Plunder"
+        },
+        {
+            "description": "Pick a card from among 3 in your deck. Shuffle the deck and put that card on top.",
+            "name": "Predict",
+            "nameRef": "Predict"
         }
     ],
     "keywords": [
@@ -431,55 +431,55 @@
     "regions": [
         {
             "abbreviation": "MT",
-            "iconAbsolutePath": "http://dd.b.pvp.net/2_7_0/core/en_us/img/regions/icon-targon.png",
+            "iconAbsolutePath": "http://dd.b.pvp.net/2_8_0/core/en_us/img/regions/icon-targon.png",
             "name": "Targon",
             "nameRef": "Targon"
         },
         {
             "abbreviation": "NX",
-            "iconAbsolutePath": "http://dd.b.pvp.net/2_7_0/core/en_us/img/regions/icon-noxus.png",
+            "iconAbsolutePath": "http://dd.b.pvp.net/2_8_0/core/en_us/img/regions/icon-noxus.png",
             "name": "Noxus",
             "nameRef": "Noxus"
         },
         {
             "abbreviation": "DE",
-            "iconAbsolutePath": "http://dd.b.pvp.net/2_7_0/core/en_us/img/regions/icon-demacia.png",
+            "iconAbsolutePath": "http://dd.b.pvp.net/2_8_0/core/en_us/img/regions/icon-demacia.png",
             "name": "Demacia",
             "nameRef": "Demacia"
         },
         {
             "abbreviation": "FR",
-            "iconAbsolutePath": "http://dd.b.pvp.net/2_7_0/core/en_us/img/regions/icon-freljord.png",
+            "iconAbsolutePath": "http://dd.b.pvp.net/2_8_0/core/en_us/img/regions/icon-freljord.png",
             "name": "Freljord",
             "nameRef": "Freljord"
         },
         {
             "abbreviation": "SI",
-            "iconAbsolutePath": "http://dd.b.pvp.net/2_7_0/core/en_us/img/regions/icon-shadowisles.png",
+            "iconAbsolutePath": "http://dd.b.pvp.net/2_8_0/core/en_us/img/regions/icon-shadowisles.png",
             "name": "Shadow Isles",
             "nameRef": "ShadowIsles"
         },
         {
             "abbreviation": "IO",
-            "iconAbsolutePath": "http://dd.b.pvp.net/2_7_0/core/en_us/img/regions/icon-ionia.png",
+            "iconAbsolutePath": "http://dd.b.pvp.net/2_8_0/core/en_us/img/regions/icon-ionia.png",
             "name": "Ionia",
             "nameRef": "Ionia"
         },
         {
             "abbreviation": "SH",
-            "iconAbsolutePath": "http://dd.b.pvp.net/2_7_0/core/en_us/img/regions/icon-shurima.png",
+            "iconAbsolutePath": "http://dd.b.pvp.net/2_8_0/core/en_us/img/regions/icon-shurima.png",
             "name": "Shurima",
             "nameRef": "Shurima"
         },
         {
             "abbreviation": "BW",
-            "iconAbsolutePath": "http://dd.b.pvp.net/2_7_0/core/en_us/img/regions/icon-bilgewater.png",
+            "iconAbsolutePath": "http://dd.b.pvp.net/2_8_0/core/en_us/img/regions/icon-bilgewater.png",
             "name": "Bilgewater",
             "nameRef": "Bilgewater"
         },
         {
             "abbreviation": "PZ",
-            "iconAbsolutePath": "http://dd.b.pvp.net/2_7_0/core/en_us/img/regions/icon-piltoverzaun.png",
+            "iconAbsolutePath": "http://dd.b.pvp.net/2_8_0/core/en_us/img/regions/icon-piltoverzaun.png",
             "name": "Piltover & Zaun",
             "nameRef": "PiltoverZaun"
         }
@@ -522,22 +522,22 @@
     ],
     "sets": [
         {
-            "iconAbsolutePath": "http://dd.b.pvp.net/2_7_0/core/en_us/img/sets/set3.png",
+            "iconAbsolutePath": "http://dd.b.pvp.net/2_8_0/core/en_us/img/sets/set3.png",
             "name": "Call of the Mountain",
             "nameRef": "Set3"
         },
         {
-            "iconAbsolutePath": "http://dd.b.pvp.net/2_7_0/core/en_us/img/sets/set1.png",
+            "iconAbsolutePath": "http://dd.b.pvp.net/2_8_0/core/en_us/img/sets/set1.png",
             "name": "Foundations",
             "nameRef": "Set1"
         },
         {
-            "iconAbsolutePath": "http://dd.b.pvp.net/2_7_0/core/en_us/img/sets/set2.png",
+            "iconAbsolutePath": "http://dd.b.pvp.net/2_8_0/core/en_us/img/sets/set2.png",
             "name": "Rising Tides",
             "nameRef": "Set2"
         },
         {
-            "iconAbsolutePath": "http://dd.b.pvp.net/2_7_0/core/en_us/img/sets/set4.png",
+            "iconAbsolutePath": "http://dd.b.pvp.net/2_8_0/core/en_us/img/sets/set4.png",
             "name": "Empires of the Ascended",
             "nameRef": "Set4"
         }
