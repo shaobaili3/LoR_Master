@@ -15,6 +15,8 @@ def updateLeaderboard():
 
 
 def updateAll():
+    global leaderboards
+    print('UpdateAll running')
     # loop = self.asyncio.get_event_loop()
     loop = asyncio.new_event_loop()
     asyncio.set_event_loop(loop)
