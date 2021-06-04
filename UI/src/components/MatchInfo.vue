@@ -12,7 +12,7 @@
                 <span class="match-info-badge-icon fa" :class="{'fa-clock': badge=='recent', 'fa-angle-double-up': badge=='frequent'}"></span>
                 {{badge}}</div>
             <div class="history-info">{{time}}</div>
-            <div class="history-info">{{matches}} Games</div>
+            <div class="history-info">{{gamesString}}</div>
         </div>
         <div class="row match-history-dots">
             <div class="match-history-summary">{{wonNum}} W - {{lostNum}} L </div>
@@ -77,6 +77,9 @@ export default {
         },
         lostNum() {
             return (this.history.match(/L/g)||[]).length
+        },
+        gamesString() {
+            return this.matches > 1 ? this.matches + " games" : this.matches + " game"
         }
     }, 
     methods: {
@@ -179,6 +182,7 @@ export default {
         color: rgba(255, 255, 255, 0.7);
         padding: 8px 5px;
         cursor: default;
+        white-space: nowrap;
     }
 
     .history-info:hover {
@@ -262,6 +266,7 @@ export default {
         font-size: 0.8em;
         /* display: none; */
         opacity: 0.7;
+        white-space: nowrap;
     }
 
     .match-history-dots:hover .match-history-summary {
@@ -280,6 +285,7 @@ export default {
         /* padding-bottom: 5px; */
         /* border-radius: 6px; */
         text-decoration: none;
+        white-space: nowrap;
 
         /* border-bottom: 2px solid transparent; */
         border-radius: 0px;
@@ -307,6 +313,10 @@ export default {
         .match-history-dots {
             gap: 5px;
             margin-left: 5px;
+        }
+
+        .history-info {
+            padding-right: 2px;
         }
 
     }
