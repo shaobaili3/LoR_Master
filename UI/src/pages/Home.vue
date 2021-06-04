@@ -201,10 +201,11 @@ export default {
         },
         processJsonData(data) {
 
+            if ((data.type == "deckCode" && data.deckCode != "") || 
+            !(data.name == null || data.name == "" || data.matches.length == 0)) {
+                window.showWindow()
+                }
             
-
-            window.showWindow()
-            this.data = data
             this.infoType = data.type // match or deckCode
             this.deckCode = data.deckCode
             // console.log(this.deckCode)
