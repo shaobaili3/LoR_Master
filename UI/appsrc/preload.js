@@ -19,6 +19,8 @@ request.connect("tcp://127.0.0.1:9621")
 console.log("Request connected to port 9621")
 window.request = request
 
+var win = remote.getCurrentWindow()
+
 // async function runClient() {
 //     const sock = new zmq.Subscriber
 //     // const window = remote.getCurrentWindow()
@@ -37,13 +39,35 @@ window.request = request
 // runClient()
 
 window.closeWindow = function() {
-    var win = remote.getCurrentWindow()
+    
     win.close()
+}
+
+window.toggleWindow = function() {
+    
+    if (win.isMinimized()) {
+        window.showWindow()
+    } else {
+        window.toggleShrinkWindow()
+    }
+}
+
+window.showWindow = function() {
+    
+    // if (!win.isVisible()) {
+    //     win.restore()
+    //     win.show()
+    // }
+    if (win.isMinimized()) {
+        win.restore()
+    }
+    window.expandWindow()
+        // win.show()
 }
 
 window.minWindow = function() {
     // console.log('Closing')
-    var win = remote.getCurrentWindow()
+    
     
     // Close Logic
     // win.close()
@@ -60,11 +84,22 @@ const headerHeight = 45 // Repeated in app.js
 const defaultRatio = 2.3 // Repeated in app.js
 const minHeight = 170 
 
-window.shrinkWindow = function() {
-    var win = remote.getCurrentWindow()
-    // window.minimize()
+window.expandWindow = function() {
 
-    // window.setSize(window.getSize[0], 45, true)
+    let w = win.getSize()[0]
+    let h = win.getSize()[1]
+
+    if (clientHeight <= headerHeight) {
+        // in case recorded height is too small, reset it to default
+        clientHeight = Math.floor(w*defaultRatio)
+    }   
+    h = clientHeight
+
+    win.setSize(w, h, false)
+}
+
+window.shrinkWindow = function() {
+
     let w = win.getSize()[0]
     let h = win.getSize()[1]
 
@@ -74,7 +109,26 @@ window.shrinkWindow = function() {
         h = headerHeight
     } else {
         if (h > headerHeight) {
-            // shrink to min when too small
+            // shrink to min when too small but no record
+            h = headerHeight
+        }
+    }
+}
+
+window.toggleShrinkWindow = function() {
+    
+    let w = win.getSize()[0]
+    let h = win.getSize()[1]
+    // window.minimize()
+    // window.setSize(window.getSize[0], 45, true)
+
+    if (h > minHeight) {
+        // record height and minimize
+        clientHeight = h
+        h = headerHeight
+    } else {
+        if (h > headerHeight) {
+            // shrink to min when too small but no record
             h = headerHeight
         } else {
             // expand to recorded height
@@ -94,7 +148,7 @@ window.openExternal = function(url) {
 }
 
 window.isMin = function() {
-    var win = remote.getCurrentWindow()
+    
     // window.minimize()
 
     // window.setSize(window.getSize[0], 45, true)

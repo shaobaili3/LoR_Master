@@ -1,22 +1,6 @@
-// const electron = require('electron')
-// const app = electron.app
-// const BrowserWindow = electron.BrowserWindow
-
-// let url
-// if (!process.env.NODE_ENV === 'production') {
-//   url = 'http://localhost:8080/'
-// } else {
-//   url = `file://${process.cwd()}/dist/index.html`
-// }
-
-// app.on('ready', () => {
-//   let window = new BrowserWindow({width: 800, height: 600})
-//   window.loadURL(url)
-// })
-
 
 const electron = require('electron')
-const { Menu, MenuItem, protocol } = require('electron')
+const { Menu, MenuItem, protocol, globalShortcut } = require('electron')
 const app = electron.app
 const BrowserWindow = electron.BrowserWindow
 const path = require('path')
@@ -200,8 +184,43 @@ const appReady = () => {
   // runClient()
 }
 
+function showDeckWindow() {
+  try {
+    deckWindow.webContents.executeJavaScript('window.showWindow()');  
+  } catch (e) {
+    console.log(e)
+  }
+}
 
-app.on('ready', appReady)
+function toggleMinDeckWindow() {
+  if (deckWindow.isMinimized()) {
+    deckWindow.restore()
+  } else {
+    deckWindow.minimize()
+  }
+}
+
+function toggleDeckWindow() {
+  try {
+    deckWindow.webContents.executeJavaScript('window.toggleWindow()');  
+  } catch (e) {
+    console.log(e)
+  }
+}
+
+app.on('ready', () => {
+  // --- registers global shortcuts ---
+  globalShortcut.register('Alt+CommandOrControl+E', () => {
+    // console.log('Electron loves global shortcuts!')
+    toggleDeckWindow()
+  })
+
+  globalShortcut.register('Alt+CommandOrControl+W', () => {
+    toggleMinDeckWindow()
+  })
+
+  appReady()
+})
 app.on('window-all-closed', () => {
   // if (process.platform !== 'darwin') {
     app.quit()
