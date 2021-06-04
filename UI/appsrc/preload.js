@@ -37,6 +37,11 @@ window.request = request
 // runClient()
 
 window.closeWindow = function() {
+    var win = remote.getCurrentWindow()
+    win.close()
+}
+
+window.minWindow = function() {
     // console.log('Closing')
     var win = remote.getCurrentWindow()
     
@@ -55,7 +60,7 @@ const headerHeight = 45 // Repeated in app.js
 const defaultRatio = 2.3 // Repeated in app.js
 const minHeight = 170 
 
-window.minWindow = function() {
+window.shrinkWindow = function() {
     var win = remote.getCurrentWindow()
     // window.minimize()
 

@@ -29,7 +29,10 @@ menu.append(new MenuItem({
   submenu: [{
     role: 'help',
     accelerator: process.platform === 'darwin' ? 'Alt+Cmd+I' : 'Alt+Shift+I',
-    click: () => { console.log('Electron rocks!') }
+    click: () => { 
+      console.log('New Info Window') 
+      newInfoWindow()
+  }
   }]
 }))
 
@@ -64,9 +67,9 @@ let deckWindow = null
 let infoWindow = null
 
 
-const appReady = () => {
+function newDeckWindow() {
 
-  if (closeWithoutTracker && !isCheckingTracker) checkTracker()
+  if (deckWindow) return
 
   let {width, height} = electron.screen.getPrimaryDisplay().workAreaSize
   // let factor = electron.screen.getPrimaryDisplay().scaleFactor
@@ -109,7 +112,7 @@ const appReady = () => {
   // }))
   deckWindow.loadURL(`file://${__dirname}/dist/index.html`)
   // console.log("Is development?", process.env.NODE_ENV === 'development')
-  
+
   // Attempted to use a bug? to turn off snapAssist on Windows
   // if (!snapAssist) { 
   //   var minSize = deckWindow.getMinimumSize()
@@ -128,6 +131,55 @@ const appReady = () => {
   })
 
   if (developmentMode) deckWindow.webContents.openDevTools()
+}
+
+function newInfoWindow() {
+
+  if (infoWindow) return
+
+  let {width, height} = electron.screen.getPrimaryDisplay().workAreaSize
+  // let factor = electron.screen.getPrimaryDisplay().scaleFactor
+
+  // --- infoWindow ---
+  let windowWidth = 270 
+  let windowHeight = 270
+
+  if (developmentMode) {
+    windowWidth = windowWidth + 400
+  }
+
+  infoWindow = new BrowserWindow({
+    width: windowWidth, 
+    height: windowHeight, 
+    x: width / 2 - windowWidth / 2,
+    y: height / 2 - windowHeight / 2,
+    frame: false,
+    resizable: false,
+    webPreferences: {
+      preload: __dirname + '/appsrc/preload.js',
+      enableRemoteModule: true,
+      //nodeIntegration: true,
+      nodeIntegrationInWorker: true,
+    }
+    // titleBarStyle: 'hiddenInset'
+  })
+  infoWindow.loadURL(`file://${__dirname}/dist/info.html`)
+  // console.log("Is development?", process.env.NODE_ENV === 'development')
+
+  infoWindow.setAlwaysOnTop(true, level = "pop-up-menu")
+  infoWindow.on('closed', () => {
+    infoWindow = null
+  })
+
+  if (developmentMode) infoWindow.webContents.openDevTools()
+}
+
+const appReady = () => {
+
+  if (closeWithoutTracker && !isCheckingTracker) checkTracker()
+
+  // --- deckWindow ---
+  newDeckWindow()
   
   // deckWindow.webContents.on('new-window', function (evt, url, frameName, disposition, options, additionalFeatures) {
   //   if(options.width == 800 && options.height == 600){ //default size is 800x600
@@ -156,9 +208,7 @@ app.on('window-all-closed', () => {
   // }
 })
 app.on('activate', () => {
-  if (deckWindow === null) {
-    appReady()
-  }
+  newDeckWindow()
 })
 
 const tasklist = require('tasklist')

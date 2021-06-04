@@ -1,5 +1,5 @@
 <template>
-    <base-window-controls :playerName="playerName" :playerRank="playerRank" :titleType="infoType" :deck="deckCode"></base-window-controls>
+    <base-window-controls :canClose="false" :canShrink="true" :playerName="playerName" :playerRank="playerRank" :titleType="infoType" :deck="deckCode"></base-window-controls>
     
     <div id="content">
 

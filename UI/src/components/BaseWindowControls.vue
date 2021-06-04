@@ -1,22 +1,27 @@
 <template>
     <div id="menu-bg"></div>
     <div id="menu" class="">
+        <div class="window-title" v-if="titleType=='window'">
+            {{title}}
+        </div>
         <div class="menu-title" v-if="titleType=='match'">
-            <!-- <slot></slot> -->
             {{playerName}}
         </div>
         <div class="menu-title-deck" v-if="titleType=='deckCode'">Deck Info</div>
         <div class="menu-sub-title" v-if="titleType=='match'">
-            <!-- <slot></slot> -->
             {{playerRankString}}
         </div>
-        <div class="menu-item" @click="hideApp()">
+        
+        <div v-if="canShrink" class="menu-item" @click="shrinkApp()">
             <span v-if="!isWindowMin"><i class="fas fa-compress-alt"></i></span>
             <span v-if="isWindowMin"><i class="fas fa-expand-alt"></i></span>
             
         </div>
-        <div class="menu-item" @click="closeApp()">
+        <div v-if="canMin" class="menu-item" @click="minApp()">
             <span><i class="fas fa-minus"></i></span>
+        </div>
+        <div v-if="canClose" class="menu-item" @click="closeApp()">
+            <span><i class="fas fa-times"></i></span>
         </div>
         
         <!-- <router-link to="/" class="menu-item"> -->
@@ -35,9 +40,22 @@
 
 export default {
     props: {
+        title: String,
         playerName: String,
         playerRank: Number,
-        titleType: String
+        titleType: String,
+        canShrink: {
+            type: Boolean,
+            default: false,
+        },
+        canMin: {
+            type: Boolean,
+            default: true,
+        },
+        canClose: {
+            type: Boolean,
+            default: true,
+        }
     },
     mounted() {
         window.addEventListener("resize", this.checkIsMin);
@@ -57,11 +75,14 @@ export default {
   // }
     methods: {
         hideApp() {
+            window.shrinkWindow() // Defined in appsrc > preload.js
+        },
+        minApp() {
             window.minWindow() // Defined in appsrc > preload.js
+            //   console.log("Closing App")
         },
         closeApp() {
-            window.closeWindow() // Defined in appsrc > preload.js
-            //   console.log("Closing App")
+            window.closeWindow()
         },
         checkIsMin() {
             this.isWindowMin = window.isMin()
@@ -117,6 +138,12 @@ export default {
         margin-top: 0px;
         background-color: var(--col-background);
         z-index: 2;
+    }
+
+    .window-title {
+        color: white;
+        position: absolute;
+        left: 12px;
     }
 
     .menu-title {
