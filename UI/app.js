@@ -69,6 +69,7 @@ function newDeckWindow() {
 
   if (developmentMode) {
     windowWidth = windowWidth + 400
+    windowMaxWidth = windowWidth + 400
   }
 
   deckWindow = new BrowserWindow({

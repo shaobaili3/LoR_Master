@@ -77,6 +77,7 @@ export default {
     },
     data() {
         return {
+            rawDataString: null,
             matchInfos: [],
             request: null,
             playerName: null,
@@ -187,11 +188,23 @@ export default {
             }            
         },
         processRawData(raw) {
-            var data = JSON.parse(raw.toString('utf8'))
+            var rawString = raw.toString('utf8')
+            if (this.rawDataString == rawString) return
+
+            console.log("Old:", this.rawDataString)
+            console.log("New:", rawString)
+            
+            this.rawDataString = rawString
+            var data = JSON.parse(rawString)
             // console.log("Processing Received Data:", raw.toString('utf8'))
             this.processJsonData(data)
         },
         processJsonData(data) {
+
+            
+
+            window.showWindow()
+            this.data = data
             this.infoType = data.type // match or deckCode
             this.deckCode = data.deckCode
             // console.log(this.deckCode)
