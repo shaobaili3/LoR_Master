@@ -3,9 +3,9 @@
     <div id="content">
         <p>Brought to you by</p>
         <p>
-            <span class="text-link" @click="openURL('https://twitter.com/FlyingFishLoR')">
-                FlyingFish</span> & 
             <span class="text-link" @click="openURL('https://twitter.com/storm_lor')">Storm</span>
+            & <span class="text-link" @click="openURL('https://twitter.com/FlyingFishLoR')">FlyingFish</span>
+            
         </p>
     </div>
 </template>

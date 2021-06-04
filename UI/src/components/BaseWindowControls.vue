@@ -74,7 +74,7 @@ export default {
   //   MainLayout
   // }
     methods: {
-        hideApp() {
+        shrinkApp() {
             window.shrinkWindow() // Defined in appsrc > preload.js
         },
         minApp() {
