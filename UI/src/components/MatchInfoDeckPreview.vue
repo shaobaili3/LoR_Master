@@ -146,7 +146,7 @@ export default {
     .row.deck {
         /* width: 40%; */
         width: 100%;
-        padding: 7px 5px;
+        padding: 5px 5px 3px 5px;
         justify-content: flex-start;
         border-radius: 6px;
         align-items: center;
@@ -236,6 +236,13 @@ export default {
         transform: translate(2px, -2px); */
         cursor: pointer;
         /* border: 2px solid white; */
+    }
+
+    @media screen and (max-width: 275px) {
+        .icon {
+            width: 15px;
+            height: 15px;
+        }
     }
 
 </style>

@@ -52,10 +52,12 @@ const createWindow = () => {
 
   if (closeWithoutTracker) checkTracker()
 
-  let {width, height} = electron.screen.getPrimaryDisplay().workAreaSize;
+  let {width, height} = electron.screen.getPrimaryDisplay().workAreaSize
   let factor = electron.screen.getPrimaryDisplay().scaleFactor
   // console.log(width)
-  let windowWidth = 295 // (335)
+  let windowWidth = 280 // (335)
+  let windowMaxWidth = 290
+  let windowMinWidth = 240
   // let window.windowWidth = windowWidth
   let windowHeight = Math.floor(windowWidth*defaultRatio)
   let windowPadding = 20
@@ -65,8 +67,8 @@ const createWindow = () => {
   }
 
   mainWindow = new BrowserWindow({
-    maxWidth: windowWidth,
-    minWidth: windowWidth,
+    maxWidth: windowMaxWidth,
+    minWidth: windowMinWidth,
     minHeight: headerHeight,
     width: windowWidth, 
     height: windowHeight, 
@@ -77,7 +79,7 @@ const createWindow = () => {
     webPreferences: {
       preload: __dirname + '/appsrc/preload.js',
       enableRemoteModule: true,
-      // nodeIntegration: true,
+      //nodeIntegration: true,
       nodeIntegrationInWorker: true,
     }
     // titleBarStyle: 'hiddenInset'
@@ -109,16 +111,16 @@ const createWindow = () => {
   mainWindow.webContents.on('new-window', function (evt, url, frameName, disposition, options, additionalFeatures) {
     if(options.width == 800 && options.height == 600){ //default size is 800x600
         
-        options.width = windowWidth | 0;
-        options.height = windowHeight | 0;
+        options.width = windowWidth | 0
+        options.height = windowHeight | 0
         
-        options.x = 1440 - windowWidth * 2;
-        // console.log(width);
-        options.y = height - windowHeight;
+        options.x = 1440 - windowWidth * 2
+        // console.log(width)
+        options.y = height - windowHeight
         // options.titleBarStyle = 'hidden'
-        options.frame = true;
+        options.frame = true
     }
-  });
+  })
 
   // const worker = new Worker(__dirname + '/electron/server.js')
   // server.run
@@ -138,7 +140,7 @@ app.on('activate', () => {
   }
 })
 
-const tasklist = require('tasklist');
+const tasklist = require('tasklist')
 /*
 	[
 		{
@@ -155,15 +157,15 @@ const tasklist = require('tasklist');
 async function checkTracker() {
   
   // Check Python Process with window name containing LoR Master Tracker
-  var pythonList = await tasklist({filter: ["IMAGENAME eq python.exe"], verbose: true});
-  pythonList = pythonList.filter(ps => ps.windowTitle.indexOf("LoR Master Tracker") != -1);
+  var pythonList = await tasklist({filter: ["IMAGENAME eq python.exe"], verbose: true})
+  pythonList = pythonList.filter(ps => ps.windowTitle.indexOf("LoR Master Tracker") != -1)
 
   // Check LoRMasterTracker.exe process
-  var trackerList = await tasklist({filter: ["IMAGENAME eq LoRMasterTracker.exe"], verbose: false});
+  var trackerList = await tasklist({filter: ["IMAGENAME eq LoRMasterTracker.exe"], verbose: false})
   
-  // console.log(list.filter(ps => ps.imageName.indexOf('python') != -1));
-  // console.log("\n pythonList", pythonList.length);
-  // console.log("trackerList", trackerList.length);
+  // console.log(list.filter(ps => ps.imageName.indexOf('python') != -1))
+  // console.log("\n pythonList", pythonList.length)
+  // console.log("trackerList", trackerList.length)
 
   if (pythonList.length + trackerList.length <= 0) {
     // There is no tracker running
@@ -171,7 +173,7 @@ async function checkTracker() {
     app.quit()
   }
 
-  setTimeout(checkTracker, 1000);
+  setTimeout(checkTracker, 1000)
 }
 
 // checkTracker()

@@ -248,7 +248,13 @@ export default {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 270px;
+        max-width: 280px;
+        /* min-width: 270px; */
+        width: 100%;
+
+        /* margin: 3px 3px 3px 3px; */
+
+        /* font-size: 0.9em; */
     }
 
     #content {

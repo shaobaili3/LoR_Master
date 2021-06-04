@@ -117,14 +117,23 @@ export default {
 
 <style scoped>
 
+    
+
     .match {
         display: flex;
         width: 100%;
         flex-direction: column;
         background: linear-gradient(60deg, var(--col-grey), var(--col-lighter-grey));
+        box-sizing: border-box;
         padding: 5px;
         border-radius: 6px;
-        margin-top: 5px;
+        
+
+        border-left: 3px solid var(--col-background);
+        border-right: 3px solid var(--col-background);
+        margin-top: 4px;
+
+        font-size: 1em;
     }
 
     .match.won {
@@ -283,6 +292,23 @@ export default {
         /* text-decoration: underline; */
         /* border-bottom: 1px solid white; */
         cursor: pointer;
+    }
+
+    @media screen and (max-width: 275px) {
+        .match {
+            font-size: 0.85em;
+        }
+
+        .match-info-title {
+            padding: 3px;
+            margin-left: 5px;
+        }
+
+        .match-history-dots {
+            gap: 5px;
+            margin-left: 5px;
+        }
+
     }
 
 </style>

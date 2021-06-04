@@ -136,11 +136,12 @@ export default {
 
 <style>
     .deck-detail {
-        width: 270px;
+        width: 100%;
+        box-sizing: border-box;
         /* height: 100px; */
         word-wrap: break-word;
         padding: 0px 4px 8px 4px;
-        background-color: var(--col-dark-grey);
+        background-color: var(--col-background);
         font-size: 0.9em;
         border-radius: 5px;
     }
