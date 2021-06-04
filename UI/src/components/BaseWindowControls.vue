@@ -11,14 +11,13 @@
         <div class="menu-sub-title" v-if="titleType=='match'">
             {{playerRankString}}
         </div>
-        
+        <div v-if="canMin" class="menu-item" @click="minApp()">
+            <span><i class="fas fa-minus"></i></span>
+        </div>
         <div v-if="canShrink" class="menu-item" @click="shrinkApp()">
             <span v-if="!isWindowMin"><i class="fas fa-compress-alt"></i></span>
             <span v-if="isWindowMin"><i class="fas fa-expand-alt"></i></span>
             
-        </div>
-        <div v-if="canMin" class="menu-item" @click="minApp()">
-            <span><i class="fas fa-minus"></i></span>
         </div>
         <div v-if="canClose" class="menu-item" @click="closeApp()">
             <span><i class="fas fa-times"></i></span>
