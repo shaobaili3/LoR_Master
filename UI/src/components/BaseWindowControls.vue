@@ -48,7 +48,7 @@ export default {
     computed: {
         playerRankString() {
             if (this.playerRank)
-                return 'Rank ' + this.playerRank
+                return '#' + this.playerRank
             return ''
         }
     },
@@ -125,6 +125,10 @@ export default {
         /* margin-right: auto; */
         color: white;
         font-size: 1.0em;
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     .menu-sub-title {
@@ -133,6 +137,12 @@ export default {
         margin-right: auto;
         color: rgba(255, 255, 255, 0.5);
         font-size: 0.9em;
+
+        direction: rtl;
+
+        white-space: nowrap;
+        /* overflow: scroll; */
+        /* text-overflow: hidden; */
     }
 
     .menu-title-deck {
