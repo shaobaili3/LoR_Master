@@ -14,7 +14,7 @@
         <div v-if="canMin" class="menu-item" @click="minApp()">
             <span><i class="fas fa-minus"></i></span>
         </div>
-        <div v-if="canShrink" class="menu-item" @click="shrinkApp()">
+        <div v-if="canShrink" class="menu-item" @click="shrinkToggle()">
             <span v-if="!isWindowMin"><i class="fas fa-compress-alt"></i></span>
             <span v-if="isWindowMin"><i class="fas fa-expand-alt"></i></span>
             
@@ -73,8 +73,8 @@ export default {
   //   MainLayout
   // }
     methods: {
-        shrinkApp() {
-            window.shrinkWindow() // Defined in appsrc > preload.js
+        shrinkToggle() {
+            window.toggleShrinkWindow() // Defined in appsrc > preload.js
         },
         minApp() {
             window.minWindow() // Defined in appsrc > preload.js

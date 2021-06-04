@@ -113,6 +113,8 @@ window.shrinkWindow = function() {
             h = headerHeight
         }
     }
+
+    win.setSize(w, h, false)
 }
 
 window.toggleShrinkWindow = function() {
