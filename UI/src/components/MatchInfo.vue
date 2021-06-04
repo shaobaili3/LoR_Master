@@ -277,7 +277,7 @@ export default {
 
     .match-info-title {
         /* display: block; */
-        padding: 5px 5px 5px 5px;
+        padding: 5px 5px 5px 1px;
         margin: 0;
         margin-left: 8px;
         margin-right: 5px;
@@ -306,7 +306,7 @@ export default {
         }
 
         .match-info-title {
-            padding: 3px;
+            padding: 3px 3px 3px 1px;
             margin-left: 5px;
         }
 
