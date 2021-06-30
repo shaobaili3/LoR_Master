@@ -60,5 +60,7 @@ export default { champions: [
   "04IO005", // Set 4 Second expansion
   "04MT008",
   "04SH039", 
-            
+  "04PZ001", // Set 4 Third expansion
+  "04BW005",
+  "04SH019", 
 ]}
