@@ -45,9 +45,9 @@ class Riot:
         puuidLink = self.network.getPUUID(name, tag)
         masterId = self.network.setting.riotServer + name + tag + puuidLink
 
-        # if masterId in self.riotIds:
-        #     return self.riotIds[masterId]
-        # print(puuidLink)
+        if masterId in self.riotIds:
+            return self.riotIds[masterId]
+        print(puuidLink)
         try:
             puuidRequest = self.session.get(puuidLink)
         except requests.exceptions.RequestException as e:
@@ -69,10 +69,10 @@ class Riot:
             return None
         else:
             puuid = idDetails.get('puuid') 
-            # if puuid is not None:
-            #     self.riotIds[masterId] = puuid
-            #     self.playerNames[puuid] = name, tag
-            #     self.save()
+            if puuid is not None:
+                self.riotIds[masterId] = puuid
+                self.playerNames[puuid] = name, tag
+                self.save()
             return puuid
 
     def getMatchs(self, puuid):
