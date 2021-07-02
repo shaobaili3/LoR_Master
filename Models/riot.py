@@ -27,7 +27,8 @@ class Riot:
                 self.riotIds = json.load(fp)
             with open('data/playerNames.json', 'r') as fp:
                 self.playerNames = json.load(fp)
-        except IOError:
+        except IOError as e:
+            print('No cache found', e)
             return
 
     def save(self):

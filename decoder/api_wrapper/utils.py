@@ -1,5 +1,6 @@
 import json
 import requests
+import os
 
 
 def read_json_file(json_file):
@@ -21,5 +22,6 @@ def get_lor_globals(region="en_us"):
     return r.json()
 
 def write_json_file(json_data,json_path):
+    os.makedirs(os.path.dirname(json_path), exist_ok=True)
     with open(json_path, 'w', encoding='utf-8') as f:
         json.dump(json_data, f, ensure_ascii=False, indent=4)
