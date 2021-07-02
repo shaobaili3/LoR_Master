@@ -36,7 +36,7 @@ class Window(QMainWindow):
         self.setWindowTitle(cs.DISPLAY_TITLE)
         # Built with ❤ by Storm/FlyingFish
         self.statusBar().showMessage(
-            '[Disconnected] Launch LoR to start enemy tracker')
+            '[LoR Disconnected]')
         self.progressBar = QProgressBar()
         self.progressBar.setRange(0, cs.MAX_NUM_DETAILS + 1)
         self.progressBar.setHidden(True)
@@ -51,7 +51,7 @@ class Window(QMainWindow):
         self.trackWork.showStatusTrigger.connect(self.showStatus)
         self.statusBar().addPermanentWidget(self.progressBar)
 
-        self.leaderboardPushButton = QPushButton("Leaderboard")
+        self.leaderboardPushButton = QPushButton("Refresh Leaderboard")
         self.leaderboardPushButton.setDefault(True)
         self.leaderboardPushButton.clicked.connect(
             self.leaderboardPushButtonClicked)
@@ -78,6 +78,7 @@ class Window(QMainWindow):
     def leaderboardPushButtonClicked(self, state):
         leaderboard.updateAll()
         table.close()
+        table.refresh()
         table.show()
 
     def updatePushButtonClicked(self, state):
