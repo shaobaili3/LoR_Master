@@ -23,10 +23,10 @@
 import DeckEncoder from '../modules/runeterra/DeckEncoder'
 // import sets from  '../assets/data/allsets-en_us.json'
 import CardsPreview from './CardsPreview.vue'
-import set1 from '../../../Resource/set1-en_us.json'
-import set2 from '../../../Resource/set2-en_us.json'
-import set3 from '../../../Resource/set3-en_us.json'
-import set4 from '../../../Resource/set4-en_us.json'
+import set1 from '../../../data/set1-en_us.json'
+import set2 from '../../../data/set2-en_us.json'
+import set3 from '../../../data/set3-en_us.json'
+import set4 from '../../../data/set4-en_us.json'
 
 
 const sets = set1.concat(set2, set3, set4)
@@ -136,11 +136,12 @@ export default {
 
 <style>
     .deck-detail {
-        width: 270px;
+        width: 100%;
+        box-sizing: border-box;
         /* height: 100px; */
         word-wrap: break-word;
         padding: 0px 4px 8px 4px;
-        background-color: var(--col-dark-grey);
+        background-color: var(--col-background);
         font-size: 0.9em;
         border-radius: 5px;
     }

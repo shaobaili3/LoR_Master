@@ -39,12 +39,13 @@ class Riot:
         with open('data/playerNames.json', 'w+') as fp:
             json.dump(self.playerNames, fp)
 
+    # Should not use cache, because you cannot identify capital letters of playernames
     def getPlayerPUUID(self, name, tag):
         puuidLink = self.network.getPUUID(name, tag)
         masterId = self.network.setting.riotServer + name + tag + puuidLink
 
-        if masterId in self.riotIds:
-            return self.riotIds[masterId]
+        # if masterId in self.riotIds:
+        #     return self.riotIds[masterId]
         # print(puuidLink)
         try:
             puuidRequest = self.session.get(puuidLink)
@@ -67,14 +68,14 @@ class Riot:
             return None
         else:
             puuid = idDetails.get('puuid') 
-            if puuid is not None:
-                self.riotIds[masterId] = puuid
-                self.playerNames[puuid] = name, tag
-                self.save()
+            # if puuid is not None:
+            #     self.riotIds[masterId] = puuid
+            #     self.playerNames[puuid] = name, tag
+            #     self.save()
             return puuid
 
-    def getMatchs(self, ppid):
-        matchLink = self.network.getMatchsLink(ppid)
+    def getMatchs(self, puuid):
+        matchLink = self.network.getMatchsLink(puuid)
         try:
             matchRequest = self.session.get(matchLink)
         except requests.exceptions.RequestException as e:

@@ -144,8 +144,9 @@ class Player:
                 myIndex = 0
                 opponentIndex = 1
             else:
+                # differnet APIs has df puuid, has to double check if equal playernames when may using caching data
                 indexName = self.riot.getPlayerName(riotId[0])
-                if indexName[0] == name and indexName[1] == tag:
+                if indexName[0].lower() == name.lower() and indexName[1].lower() == tag.lower():
                     myIndex = 0
                     opponentIndex = 1
             

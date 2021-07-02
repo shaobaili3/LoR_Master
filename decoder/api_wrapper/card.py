@@ -1,7 +1,7 @@
 from pathlib import Path
 import json
 from .utils import read_json_file
-data_dir = Path(__file__).parent.parent.parent / "Resource"
+data_dir = Path(__file__).parent.parent.parent / "data"
 print('data_dir: ', data_dir)
 from .utils import get_card_set_online, write_json_file
 
@@ -14,7 +14,7 @@ MAX_SET_NUM = 4
 
 for num in range(MAX_SET_NUM):
     if len(list(data_dir.glob(f"set{num + 1}*.json"))) == 0:
-        write_json_file(get_card_set_online(num + 1, region="en_us"), Path(__file__).parent.parent.parent / f"Resource/set{num+1}-en_us.json")
+        write_json_file(get_card_set_online(num + 1, region="en_us"), Path(__file__).parent.parent.parent / f"data/set{num+1}-en_us.json")
 
 
 

@@ -78,34 +78,42 @@ export default {
 
 .cardContainer:hover .cardDisplay {
     /* display: block; */
-    visibility: initial;
+    /* visibility: initial; */
     /* position: relative; */
+    opacity: 1;
+
+    transition: opacity 0.15s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .cardDisplay {
     /* content: ""; */
     /* display: none; */
-    visibility: hidden;
+    /* visibility: hidden; */
+    opacity: 0;
     position: absolute;
     top: 0;
     left: 0;
 
     pointer-events: none;
 
-    width: 270px;
+    width: 100%;
     height: auto;
     /* width: auto; */
     /* height: 100px; */
     /* background: white; */
+    
+    filter: drop-shadow(3px 3px 2px rgba(43, 38, 27, 0.6));
 
     z-index: 10;
+
+    transition: opacity 0.15s cubic-bezier(0.075, 0.82, 0.165, 1);
 
     /* background-size: contain; */
 }
 
 .cardContent {
     flex: 1 0;
-    padding: 9px 4px;
+    padding: 8px 3px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -129,6 +137,10 @@ export default {
     /* padding: 9px 2px 9px 6px; */
     padding-left: 6px;
     text-shadow: rgb(0 0 0) 0px 1px 3px;
+    box-sizing: border-box;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .cardCount {

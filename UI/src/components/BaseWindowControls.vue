@@ -1,22 +1,26 @@
 <template>
     <div id="menu-bg"></div>
     <div id="menu" class="">
+        <div class="window-title" v-if="titleType=='window'">
+            {{title}}
+        </div>
         <div class="menu-title" v-if="titleType=='match'">
-            <!-- <slot></slot> -->
             {{playerName}}
         </div>
         <div class="menu-title-deck" v-if="titleType=='deckCode'">Deck Info</div>
         <div class="menu-sub-title" v-if="titleType=='match'">
-            <!-- <slot></slot> -->
             {{playerRankString}}
         </div>
-        <div class="menu-item" @click="hideApp()">
+        <div v-if="canMin" class="menu-item" @click="minApp()">
+            <span><i class="fas fa-minus"></i></span>
+        </div>
+        <div v-if="canShrink" class="menu-item" @click="shrinkToggle()">
             <span v-if="!isWindowMin"><i class="fas fa-compress-alt"></i></span>
             <span v-if="isWindowMin"><i class="fas fa-expand-alt"></i></span>
             
         </div>
-        <div class="menu-item" @click="closeApp()">
-            <span><i class="fas fa-minus"></i></span>
+        <div v-if="canClose" class="menu-item" @click="closeApp()">
+            <span><i class="fas fa-times"></i></span>
         </div>
         
         <!-- <router-link to="/" class="menu-item"> -->
@@ -35,9 +39,22 @@
 
 export default {
     props: {
+        title: String,
         playerName: String,
         playerRank: Number,
-        titleType: String
+        titleType: String,
+        canShrink: {
+            type: Boolean,
+            default: false,
+        },
+        canMin: {
+            type: Boolean,
+            default: true,
+        },
+        canClose: {
+            type: Boolean,
+            default: true,
+        }
     },
     mounted() {
         window.addEventListener("resize", this.checkIsMin);
@@ -48,7 +65,7 @@ export default {
     computed: {
         playerRankString() {
             if (this.playerRank)
-                return 'Rank ' + this.playerRank
+                return '#' + this.playerRank
             return ''
         }
     },
@@ -56,12 +73,15 @@ export default {
   //   MainLayout
   // }
     methods: {
-        hideApp() {
+        shrinkToggle() {
+            window.toggleShrinkWindow() // Defined in appsrc > preload.js
+        },
+        minApp() {
             window.minWindow() // Defined in appsrc > preload.js
+            //   console.log("Closing App")
         },
         closeApp() {
-            window.closeWindow() // Defined in appsrc > preload.js
-            //   console.log("Closing App")
+            window.closeWindow()
         },
         checkIsMin() {
             this.isWindowMin = window.isMin()
@@ -119,12 +139,22 @@ export default {
         z-index: 2;
     }
 
+    .window-title {
+        color: white;
+        position: absolute;
+        left: 12px;
+    }
+
     .menu-title {
         left: 0;
         margin-left: 16px;
         /* margin-right: auto; */
         color: white;
         font-size: 1.0em;
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     .menu-sub-title {
@@ -133,6 +163,12 @@ export default {
         margin-right: auto;
         color: rgba(255, 255, 255, 0.5);
         font-size: 0.9em;
+
+        direction: rtl;
+
+        white-space: nowrap;
+        /* overflow: scroll; */
+        /* text-overflow: hidden; */
     }
 
     .menu-title-deck {

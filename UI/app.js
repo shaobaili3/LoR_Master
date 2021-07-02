@@ -1,37 +1,37 @@
-// const electron = require('electron')
-// const app = electron.app
-// const BrowserWindow = electron.BrowserWindow
-
-// let url
-// if (!process.env.NODE_ENV === 'production') {
-//   url = 'http://localhost:8080/'
-// } else {
-//   url = `file://${process.cwd()}/dist/index.html`
-// }
-
-// app.on('ready', () => {
-//   let window = new BrowserWindow({width: 800, height: 600})
-//   window.loadURL(url)
-// })
-
 
 const electron = require('electron')
+const { Menu, MenuItem, protocol, globalShortcut } = require('electron')
 const app = electron.app
 const BrowserWindow = electron.BrowserWindow
 const path = require('path')
+
+// --- Menu and short cuts ---
+
+const menu = new Menu()
+menu.append(new MenuItem({
+  label: 'Electron',
+  submenu: [{
+    role: 'help',
+    accelerator: process.platform === 'darwin' ? 'Alt+Cmd+I' : 'Alt+Shift+I',
+    click: () => { 
+      console.log('New Info Window') 
+      newInfoWindow()
+  }
+  }]
+}))
+
+Menu.setApplicationMenu(menu)
 
 // const server = require('./appsrc/server.js')
 // server.run
 
 const developmentMode = false
-const snapAssist = false
+// const snapAssist = true
 const closeWithoutTracker = true
 const headerHeight = 45 // Repeated in preload.js
 const defaultRatio = 2.3 // Repeated in preload.js
 
 // const client = require('./appsrc/client.js')
-
-const zmq = require("zeromq")
 
 // async function runClient() {
 //     const sock = new zmq.Subscriber
@@ -42,103 +42,196 @@ const zmq = require("zeromq")
   
 //     for await (const [topic, msg] of sock) {
 //       console.log("received a message related to:", topic.toString(), "containing message:", msg.toString())
-//       mainWindow.clientData = "CATAT"
-//       // console.log(mainWindow)
+//       deckWindow.clientData = "CATAT"
+//       // console.log(deckWindow)
 //     }
 // }
 
-let mainWindow = null
-const createWindow = () => {
+let deckWindow = null
+let infoWindow = null
 
-  if (closeWithoutTracker) checkTracker()
 
-  let {width, height} = electron.screen.getPrimaryDisplay().workAreaSize;
-  let factor = electron.screen.getPrimaryDisplay().scaleFactor
-  // console.log(width)
-  let windowWidth = 295 // (335)
+function newDeckWindow() {
+
+  if (deckWindow) return
+
+  let {width, height} = electron.screen.getPrimaryDisplay().workAreaSize
+  // let factor = electron.screen.getPrimaryDisplay().scaleFactor
+  // console.log("Scale Factor:", factor)
+
+  // --- deckWindow ---
+  let windowWidth = 270 // (335)
+  let windowMaxWidth = 290
+  let windowMinWidth = 240
   // let window.windowWidth = windowWidth
   let windowHeight = Math.floor(windowWidth*defaultRatio)
   let windowPadding = 20
 
   if (developmentMode) {
     windowWidth = windowWidth + 400
+    windowMaxWidth = windowWidth + 400
   }
 
-  mainWindow = new BrowserWindow({
-    maxWidth: windowWidth,
-    minWidth: windowWidth,
+  deckWindow = new BrowserWindow({
+    maxWidth: windowMaxWidth,
+    minWidth: windowMinWidth,
     minHeight: headerHeight,
     width: windowWidth, 
     height: windowHeight, 
     x: width - windowWidth - windowPadding,
     y: height - windowHeight - windowPadding,
     frame: false,
-    resizable: snapAssist,
+    resizable: true,
     webPreferences: {
       preload: __dirname + '/appsrc/preload.js',
       enableRemoteModule: true,
-      // nodeIntegration: true,
+      //nodeIntegration: true,
       nodeIntegrationInWorker: true,
     }
     // titleBarStyle: 'hiddenInset'
   })
-  mainWindow.loadURL(require('url').format({
-    pathname: path.join(__dirname, 'dist/index.html'),
-    protocol: 'file:',
-    slashes: true
-  }))
+  // deckWindow.loadURL(require('url').format({
+  //   pathname: path.join(__dirname, 'dist/index.html'),
+  //   protocol: 'file:',
+  //   slashes: true
+  // }))
+  deckWindow.loadURL(`file://${__dirname}/dist/index.html`)
   // console.log("Is development?", process.env.NODE_ENV === 'development')
-  
-  if (!snapAssist) { 
-    var minSize = mainWindow.getMinimumSize()
-    var maxSize = mainWindow.getMaximumSize()
+
+  // Attempted to use a bug? to turn off snapAssist on Windows
+  // if (!snapAssist) { 
+  //   var minSize = deckWindow.getMinimumSize()
+  //   var maxSize = deckWindow.getMaximumSize()
     
-    mainWindow.setResizable(true)
-    mainWindow.setMinimumSize(minSize[0], minSize[1])
-    mainWindow.setMaximumSize(maxSize[0], maxSize[1])
-    // mainWindow.setMinimumSize
-  }
-  mainWindow.removeMenu()
-  mainWindow.setAlwaysOnTop(true, level = "pop-up-menu")
-  mainWindow.on('closed', () => {
-    mainWindow = null
+  //   deckWindow.setResizable(true)
+  //   deckWindow.setMinimumSize(minSize[0], minSize[1])
+  //   deckWindow.setMaximumSize(maxSize[0], maxSize[1])
+  //   // deckWindow.setMinimumSize
+  // }
+
+  // deckWindow.removeMenu()
+  deckWindow.setAlwaysOnTop(true, level = "pop-up-menu")
+  deckWindow.on('closed', () => {
+    deckWindow = null
   })
 
-  if (developmentMode) mainWindow.webContents.openDevTools()
-  
-  mainWindow.webContents.on('new-window', function (evt, url, frameName, disposition, options, additionalFeatures) {
-    if(options.width == 800 && options.height == 600){ //default size is 800x600
-        
-        options.width = windowWidth | 0;
-        options.height = windowHeight | 0;
-        
-        options.x = 1440 - windowWidth * 2;
-        // console.log(width);
-        options.y = height - windowHeight;
-        // options.titleBarStyle = 'hidden'
-        options.frame = true;
+  if (developmentMode) deckWindow.webContents.openDevTools()
+}
+
+function newInfoWindow() {
+
+  if (infoWindow) return
+
+  let {width, height} = electron.screen.getPrimaryDisplay().workAreaSize
+  // let factor = electron.screen.getPrimaryDisplay().scaleFactor
+
+  // --- infoWindow ---
+  let windowWidth = 270 
+  let windowHeight = 270
+
+  if (developmentMode) {
+    windowWidth = windowWidth + 400
+  }
+
+  infoWindow = new BrowserWindow({
+    width: windowWidth, 
+    height: windowHeight, 
+    x: width / 2 - windowWidth / 2,
+    y: height / 2 - windowHeight / 2,
+    frame: false,
+    resizable: false,
+    webPreferences: {
+      preload: __dirname + '/appsrc/preload.js',
+      enableRemoteModule: true,
+      //nodeIntegration: true,
+      nodeIntegrationInWorker: true,
     }
-  });
+    // titleBarStyle: 'hiddenInset'
+  })
+  infoWindow.loadURL(`file://${__dirname}/dist/info.html`)
+  // console.log("Is development?", process.env.NODE_ENV === 'development')
+
+  infoWindow.setAlwaysOnTop(true, level = "pop-up-menu")
+  infoWindow.on('closed', () => {
+    infoWindow = null
+  })
+
+  if (developmentMode) infoWindow.webContents.openDevTools()
+}
+
+const appReady = () => {
+
+  if (closeWithoutTracker && !isCheckingTracker) checkTracker()
+
+  // --- deckWindow ---
+  newDeckWindow()
+  
+  // deckWindow.webContents.on('new-window', function (evt, url, frameName, disposition, options, additionalFeatures) {
+  //   if(options.width == 800 && options.height == 600){ //default size is 800x600
+        
+  //       options.width = windowWidth | 0
+  //       options.height = windowHeight | 0
+        
+  //       options.x = 1440 - windowWidth * 2
+  //       // console.log(width)
+  //       options.y = height - windowHeight
+  //       // options.titleBarStyle = 'hidden'
+  //       options.frame = true
+  //   }
+  // })
 
   // const worker = new Worker(__dirname + '/electron/server.js')
   // server.run
   // runClient()
 }
 
+function showDeckWindow() {
+  try {
+    deckWindow.webContents.executeJavaScript('window.showWindow()');  
+  } catch (e) {
+    console.log(e)
+  }
+}
 
-app.on('ready', createWindow)
+function toggleMinDeckWindow() {
+  if (deckWindow.isMinimized()) {
+    deckWindow.restore()
+  } else {
+    deckWindow.minimize()
+  }
+}
+
+function toggleDeckWindow() {
+  try {
+    deckWindow.webContents.executeJavaScript('window.toggleWindow()');  
+  } catch (e) {
+    console.log(e)
+  }
+}
+
+app.on('ready', () => {
+  // --- registers global shortcuts ---
+  globalShortcut.register('Alt+CommandOrControl+E', () => {
+    // console.log('Electron loves global shortcuts!')
+    toggleDeckWindow()
+  })
+
+  globalShortcut.register('Alt+CommandOrControl+W', () => {
+    toggleMinDeckWindow()
+  })
+
+  appReady()
+})
 app.on('window-all-closed', () => {
   // if (process.platform !== 'darwin') {
     app.quit()
   // }
 })
 app.on('activate', () => {
-  if (mainWindow === null) {
-    createWindow()
-  }
+  newDeckWindow()
 })
 
-const tasklist = require('tasklist');
+const tasklist = require('tasklist')
 /*
 	[
 		{
@@ -152,26 +245,33 @@ const tasklist = require('tasklist');
 	]
 	*/
 
+var isCheckingTracker = false;
 async function checkTracker() {
+
+  isCheckingTracker = true
   
   // Check Python Process with window name containing LoR Master Tracker
-  var pythonList = await tasklist({filter: ["IMAGENAME eq python.exe"], verbose: true});
-  pythonList = pythonList.filter(ps => ps.windowTitle.indexOf("LoR Master Tracker") != -1);
+  var pythonList = await tasklist({filter: ["IMAGENAME eq python.exe"], verbose: true})
+  pythonList = pythonList.filter(ps => ps.windowTitle.indexOf("LoR Master Tracker") != -1)
 
   // Check LoRMasterTracker.exe process
-  var trackerList = await tasklist({filter: ["IMAGENAME eq LoRMasterTracker.exe"], verbose: false});
+  var trackerList = await tasklist({filter: ["IMAGENAME eq LoRMasterTracker.exe"], verbose: false})
   
-  // console.log(list.filter(ps => ps.imageName.indexOf('python') != -1));
-  // console.log("\n pythonList", pythonList.length);
-  // console.log("trackerList", trackerList.length);
+  // console.log(list.filter(ps => ps.imageName.indexOf('python') != -1))
+  // console.log("\n pythonList", pythonList.length)
+  // console.log("trackerList", trackerList.length)
 
   if (pythonList.length + trackerList.length <= 0) {
     // There is no tracker running
     console.log("No tracker running")
-    app.quit()
+    // app.quit()
+    if (deckWindow) deckWindow.close()
+    // app.exit()
+  } else {
+    // if (!deckWindow) appReady()
   }
 
-  setTimeout(checkTracker, 1000);
+  setTimeout(checkTracker, 1000)
 }
 
 // checkTracker()

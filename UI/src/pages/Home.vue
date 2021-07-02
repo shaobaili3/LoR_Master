@@ -1,5 +1,5 @@
 <template>
-    <base-window-controls :playerName="playerName" :playerRank="playerRank" :titleType="infoType" :deck="deckCode"></base-window-controls>
+    <base-window-controls :canClose="false" :canShrink="true" :playerName="playerName" :playerRank="playerRank" :titleType="infoType" :deck="deckCode"></base-window-controls>
     
     <div id="content">
 
@@ -77,6 +77,7 @@ export default {
     },
     data() {
         return {
+            rawDataString: null,
             matchInfos: [],
             request: null,
             playerName: null,
@@ -187,11 +188,24 @@ export default {
             }            
         },
         processRawData(raw) {
-            var data = JSON.parse(raw.toString('utf8'))
+            var rawString = raw.toString('utf8')
+            if (this.rawDataString == rawString) return
+
+            console.log("Old:", this.rawDataString)
+            console.log("New:", rawString)
+            
+            this.rawDataString = rawString
+            var data = JSON.parse(rawString)
             // console.log("Processing Received Data:", raw.toString('utf8'))
             this.processJsonData(data)
         },
         processJsonData(data) {
+
+            if ((data.type == "deckCode" && data.deckCode != "") || 
+            !(data.name == null || data.name == "" || data.matches.length == 0)) {
+                window.showWindow()
+                }
+            
             this.infoType = data.type // match or deckCode
             this.deckCode = data.deckCode
             // console.log(this.deckCode)
@@ -248,7 +262,13 @@ export default {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 270px;
+        max-width: 280px;
+        /* min-width: 270px; */
+        width: 100%;
+
+        /* margin: 3px 3px 3px 3px; */
+
+        /* font-size: 0.9em; */
     }
 
     #content {

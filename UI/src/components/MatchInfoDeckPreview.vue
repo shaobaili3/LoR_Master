@@ -28,6 +28,15 @@ const maxChamp = 2;
 const maxSlot = 5;
 const maxFactions = 3;
 
+// function importAll(r) {
+//     let images = {};
+//     r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
+//     return images;
+// }
+
+// const cardImages = importAll(require.context('../assets/images/cards/cropped/', false, /\.(png|jpe?g|svg)$/));
+// const regionImages = importAll(require.context('../assets/images/regions/', false, /\.(png|jpe?g|svg)$/));
+
 export default {
     components: {
 
@@ -39,6 +48,8 @@ export default {
         }
     }, 
     mounted() {
+
+        // console.log(images)
         // console.log("MatchInfo Deck Preview Mounted");
         // console.log(this.deck)
         // var deck = DeckEncoder.decode(this.deck);
@@ -120,16 +131,29 @@ export default {
         },
         getChampionImgUrl(code) {
             // const champImageBaseUrl = 'https://raw.githubusercontent.com/painttist/lor-champ-icons/master/images/cards/cropped/';
-            const champImageBaseUrl = 'https://painttist.github.io/lor-champ-icons/images/cards/cropped/';
-            return "url(" + champImageBaseUrl + code + "-cropped.png)"
+            // const champImageBaseUrl = 'https://painttist.github.io/lor-champ-icons/images/cards/cropped/';
+            // return "url('" + champImageBaseUrl + code + "-cropped.png')"
+
+            // -- Local
+            // - v1
+            var fileName = code + "-cropped.png"
+            // return "url('" + cardImages[fileName] + "')"
+
+            // - v2
+            return "url(" + require('../assets/images/cards/cropped/' + fileName) + ")"
         },
         getRegionImgUrl(regionID) {
-            // return 'url(' + require('../assets/images/factions/' + regionID + ".png") + ")"
-            const regionImageBaseUrl = 'https://painttist.github.io/lor-champ-icons/images/regions/';
-            return "url(" + regionImageBaseUrl + regionID + ".svg)";
             
-            // return 'url(' + require('../assets/images/regions/' + regionID + ".svg") + ")"
+            // Remote
 
+            // const regionImageBaseUrl = 'https://painttist.github.io/lor-champ-icons/images/regions/';
+            // return "url(" + regionImageBaseUrl + regionID + ".svg)";
+            
+            // Local
+
+            return "url(" + require('../assets/images/regions/' + regionID + ".svg") + ")"
+
+            
             
         },
     }
@@ -146,7 +170,7 @@ export default {
     .row.deck {
         /* width: 40%; */
         width: 100%;
-        padding: 7px 5px;
+        padding: 5px 5px 3px 5px;
         justify-content: flex-start;
         border-radius: 6px;
         align-items: center;
@@ -236,6 +260,13 @@ export default {
         transform: translate(2px, -2px); */
         cursor: pointer;
         /* border: 2px solid white; */
+    }
+
+    @media screen and (max-width: 275px) {
+        .icon {
+            width: 15px;
+            height: 15px;
+        }
     }
 
 </style>
