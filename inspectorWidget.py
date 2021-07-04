@@ -66,9 +66,12 @@ class InspectorWidget(QWidget):
         deckCodeLabel = QLabel("Deck Code: ")
         self.deckCodeLineEdit = QLineEdit(self)
         self.deckCodeLineEdit.setPlaceholderText('Enter deck code here...')
+        self.importButton = QPushButton("Import Deck")
+        self.importButton.clicked.connect(self.importPushButtonClicked)
+        self.importButton.setDefault(True)
         buttomLayout.addWidget(deckCodeLabel)
         buttomLayout.addWidget(self.deckCodeLineEdit)
-        
+        buttomLayout.addWidget(self.importButton)
 
         self.textBrowser.setOpenLinks(False)
         textLayout.addWidget(self.textBrowser)
@@ -83,8 +86,9 @@ class InspectorWidget(QWidget):
         self.inspectWork.summaryTigger.connect(self.showSummary)
         #self.textBrowser.setHtml("""My image :<br /><img src="test.ico"/  height=10 width=20>""")
 
-    
-        
+    def importPushButtonClicked(self):
+        textClipboard = QApplication.clipboard().text()
+        self.deckCodeLineEdit.setText(textClipboard)
 
     def clearButtonCliked(self):
         self.textBrowser.clear()
