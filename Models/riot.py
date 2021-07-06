@@ -154,8 +154,9 @@ class Riot:
             print('比赛内容服务器错误')
             if 'Retry-After' in header:
                 print('服务器正忙,请等待', header['Retry-After'], '秒')
-                Models.network.switchAPI()
-                return header['Retry-After']
+                second = header['Retry-After']
+                Models.network.switchAPI(second)
+                return second
             return None
         else:
             self.matchDetails[matchId] = detail

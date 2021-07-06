@@ -15,11 +15,11 @@ NAME_KEY = '.api.riotgames.com/riot/account/v1/accounts/by-puuid/'
 PUUID_KEY = '.api.riotgames.com/riot/account/v1/accounts/by-riot-id/'
 
 API_KEY = '?api_key=' + key.APIKEY
-
+#API_KEY = API_KEY1
 aviliableKeys = []
 
 def switchAPI(second = 1):
-    time.sleep(second)
+    time.sleep(int(second))
     print('API exceed limit:', second)
 
 
