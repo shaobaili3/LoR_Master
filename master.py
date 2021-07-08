@@ -38,9 +38,28 @@ loadJson()
 for name in masterNames:
     if name in dict:
         print(name, dict[name])
-        all.append(name + '#' + dict[name])
+        all.append([name, dict[name]])
     else:
         noName.append(name)
 print(len(dict))
 print(len(all))
 print(noName)
+
+
+from Models import riot
+from Models import network
+from Models import setting
+from Models.setting import Server
+from Models import player
+from Models import utility
+from Models import local
+from Models import leaderboard
+import json
+setting = setting.Setting()
+setting.setServer(Server.NA)
+network = network.Network(setting)
+riot = riot.Riot(network)
+
+for index, name in enumerate(all):
+    puuid = riot.getPuuidWithoutCache(name[0], name[1])
+    print(index, ':', name, puuid)

@@ -97,6 +97,8 @@ def getFull():
     for name in masterNames:
         print(name, '@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@')
         tag = getTagByName(name)
+        if tag is None:
+            continue
         getParticipantsPuuids(name, tag)
         print(masterFullName)
         save()

@@ -75,6 +75,32 @@ class Riot:
                 self.save()
             return puuid
 
+    def getPuuidWithoutCache(self, name, tag):
+        puuidLink = self.network.getPUUID(name, tag)
+        masterId = self.network.setting.riotServer + name + tag + puuidLink
+        try:
+            puuidRequest = self.session.get(puuidLink)
+        except requests.exceptions.RequestException as e:
+            print(puuidLink)
+            print(e)
+            print('无法连接getPlayerPUUID服务器')
+            return None
+        idDetails = puuidRequest.json()
+        header = puuidRequest.headers
+        if not puuidRequest.ok:
+            print(puuidLink)
+            print(puuidRequest.headers)
+            print(puuidRequest.status_code)
+            print('userId -> PUUID Error')
+            print(idDetails)
+            if 'Retry-After' in header:
+                print('puuid busy', header['Retry-After'], '秒')
+                Models.network.switchAPI()
+            return None
+        else:
+            puuid = idDetails.get('puuid') 
+            return puuid
+
     def getMatchs(self, puuid):
         matchLink = self.network.getMatchsLink(puuid)
         try:
