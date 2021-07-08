@@ -88,6 +88,11 @@ class InspectorWidget(QWidget):
 
     def importPushButtonClicked(self):
         textClipboard = QApplication.clipboard().text()
+        # check if user does not change deck code in the textclipboard.
+        if self.deckCodeLineEdit.text().lower() == textClipboard.lower():
+            print('Deck code already exist')
+            self.deckCodeLineEdit.setText('')
+
         self.deckCodeLineEdit.setText(textClipboard)
 
     def clearButtonCliked(self):
