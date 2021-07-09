@@ -68,10 +68,12 @@ class Riot:
                 Models.network.switchAPI()
             return None
         else:
-            puuid = idDetails.get('puuid') 
+            puuid = idDetails.get('puuid')
+            gameName = idDetails.get('gameName')
+            tagLine = idDetails.get('tagLine')
             if puuid is not None:
                 self.riotIds[masterId] = puuid
-                self.playerNames[puuid] = name, tag
+                self.playerNames[puuid] = gameName, tagLine
                 self.save()
             return puuid
 
