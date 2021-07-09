@@ -42,8 +42,11 @@ class Riot:
 
     # Should not use cache, because you cannot identify capital letters of playernames
     def getPlayerPUUID(self, name, tag):
-        puuidLink = self.network.getPUUID(name, tag)
-        masterId = self.network.setting.riotServer + name + tag + puuidLink
+
+        # Developer keys expose in cache. 'lower()' make sure link will not change by case sensitivity.
+        puuidLink = self.network.getPUUID(name.lower(), tag.lower())
+
+        masterId = puuidLink
 
         if masterId in self.riotIds:
             return self.riotIds[masterId]
@@ -181,13 +184,13 @@ class Riot:
         name = nameRequest.json()
         header = nameRequest.headers
         #headers = nameRequest.headers
-        #print(headers)
+        # print(headers)
         if not nameRequest.ok:
             print(nameLink)
             print(nameRequest.headers)
             print(nameRequest.status_code)
             print(name)
-            print('puuid->userid服务器错误:')            
+            print('puuid->userid服务器错误:')
             if 'Retry-After' in header:
                 print('服务器正忙,请等待', header['Retry-After'], '秒')
                 Models.network.switchAPI()
