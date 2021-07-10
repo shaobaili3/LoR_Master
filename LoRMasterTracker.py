@@ -64,7 +64,6 @@ class Window(QMainWindow):
                 self.translatePushButtonClicked)
             self.statusBar().addPermanentWidget(self.translatePushButton)
 
-
         self.updatePushButton = QPushButton("v" + cs.VERSION_NUM_INSPECTOR)
         self.updatePushButton.setDefault(True)
         self.updatePushButton.clicked.connect(self.updatePushButtonClicked)
@@ -106,12 +105,13 @@ class Inspector(InspectorWidget):
 
     def deckCodeLineTextChanged(self):
         print('deckcode line text: ', self.deckCodeLineEdit.text())
-        gui.type = 'deckCode' 
+        gui.type = 'deckCode'
         gui.deckCode = self.deckCodeLineEdit.text()
-        
+
         if deck.validDeckCode(gui.deckCode):
-            self.textBrowser.append(self.getHtml(deck.getChampion(gui.deckCode), 'ForestGreen') + self.getDeckCodeHtml(gui.deckCode) + self.getHtml(gui.deckCode, 'Black'))
-        
+            self.textBrowser.append(self.getHtml(deck.getChampion(
+                gui.deckCode), 'ForestGreen') + self.getDeckCodeHtml(gui.deckCode) + self.getHtml(gui.deckCode, 'Black'))
+
         self.parentWindow.electronWork.start()
 
     def on_anchor_clicked(self, url):
@@ -120,7 +120,7 @@ class Inspector(InspectorWidget):
         print(text)
         if 'deckCode' in text:
             print('open deck', text)
-            gui.type = 'deckCode'            
+            gui.type = 'deckCode'
             gui.deckCode = text.split('#')[1]
         elif 'playername' in text:
             self.inspectPlayer('#'.join(text.split('#')[2:4]))
@@ -256,6 +256,7 @@ class Inspector(InspectorWidget):
             deckCode].winNum
         return '[' + str(winNum) + 'W' + ' ' + str(lossNum) + 'L' + ']'
 
+
 os.environ["QT_AUTO_SCREEN_SCALE_FACTOR"] = "1"
 
 updateLeaderboard()
@@ -279,7 +280,6 @@ app.setApplicationName(cs.DISPLAY_TITLE)
 app.setWindowIcon(QIcon('Resource/logo.jpg'))
 app.setStyle('Fusion')
 
-#font_db = QFontDatabase()
 CURRENT_DIRECTORY = os.path.dirname(os.path.realpath(__file__))
 font_path = os.path.join(CURRENT_DIRECTORY, "Resource", "NotoSans-Medium.ttf")
 font_id = QFontDatabase.addApplicationFont(
@@ -300,12 +300,10 @@ window.trackWork.start()
 gui = Opponent('', 0, [])
 window.uiWork.ui = gui
 window.uiWork.start()
-
 window.trackWork.showDecksTrigger.connect(inspectorWidget.showDecks)
 window.trackWork.showMatchsTrigger.connect(inspectorWidget.showMatchs)
 window.trackWork.showMessageTrigger.connect(inspectorWidget.showMessage)
 app.setQuitOnLastWindowClosed(True)
 table = Table()
-
 
 sys.exit(app.exec())

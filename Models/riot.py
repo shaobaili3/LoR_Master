@@ -6,7 +6,6 @@ import asyncio
 import json
 import os
 
-
 class Riot:
     def __init__(self, network):
         self.network = network
@@ -16,6 +15,7 @@ class Riot:
         self.riotIds = {}
         self.playerNames = {}
         self.loadJson()
+        self.matches = {}
         self.session = requests.Session()
         return
 
@@ -27,6 +27,8 @@ class Riot:
                 self.riotIds = json.load(fp)
             with open('data/playerNames.json', 'r') as fp:
                 self.playerNames = json.load(fp)
+            with open('data/matches.json', 'r') as fp:
+                self.matches = json.load(fp)
         except IOError as e:
             print('No cache found', e)
             return
@@ -80,8 +82,23 @@ class Riot:
                 self.save()
             return puuid
 
-    def getMatchs(self, puuid):
-        matchLink = self.network.getMatchsLink(puuid)
+
+    def saveMatchesInCache(self, puuid, matchIds):
+        playName = self.getPlayerName(puuid)
+        server = self.network.setting.riotServer
+        uniqueName = playName[0] + playName[1] + server
+        matchIdsCache = self.matches.get(uniqueName)
+        if matchIdsCache is not None:
+            new = matchIds + list(set(matchIdsCache) - set(matchIds))
+            self.matches[uniqueName] = new
+        else:
+            self.matches[uniqueName] = matchIds
+        os.makedirs('data', exist_ok=True)
+        with open('data/matches.json', 'w+') as fp:
+            json.dump(self.matches, fp)
+
+    def getMatches(self, puuid):
+        matchLink = self.network.getMatchesLink(puuid)
         try:
             matchRequest = self.session.get(matchLink)
         except requests.exceptions.RequestException as e:
@@ -95,12 +112,13 @@ class Riot:
             print(matchLink)
             print(matchRequest.headers)
             print(matchRequest.status_code)
-            print('getmatchs服务器错误')
+            print('getmatches server error')
             print(matchIds)
             if 'Retry-After' in header:
-                print('getmatchs服务器正忙', header['Retry-After'], '秒')
+                print('getmatches server busy', header['Retry-After'], '秒')
                 Models.network.switchAPI()
             return None
+        self.saveMatchesInCache(puuid, matchIds)
         return matchIds
 
     async def aioMatchDetail(self, matchId):
