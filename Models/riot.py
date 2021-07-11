@@ -5,6 +5,7 @@ import aiohttp
 import asyncio
 import json
 import os
+import constants
 
 class Riot:
     def __init__(self, network):
@@ -160,7 +161,11 @@ class Riot:
             print(detail)
             return None
 
-    def getDetail(self, matchId):
+    def getDetail(self, matchId, matchIndex):
+        # If matchIndex bigger than MAX, only pull data from cache
+        if matchIndex > constants.MAX_NUM_DETAILS - 1:
+            return self.matchDetails.get(matchId)
+
         if matchId in self.matchDetails:
             return self.matchDetails[matchId]
         detailsLink = self.network.getDetailsLink(matchId)
