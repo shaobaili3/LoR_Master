@@ -14,8 +14,8 @@ class Riot:
         self.matchDetails = {}
         self.riotIds = {}
         self.playerNames = {}
-        self.loadJson()
         self.matches = {}
+        self.loadJson()
         self.session = requests.Session()
         return
 
@@ -97,6 +97,13 @@ class Riot:
         with open('data/matches.json', 'w+') as fp:
             json.dump(self.matches, fp)
 
+    def getMatchesInCache(self, puuid):
+        playName = self.getPlayerName(puuid)
+        server = self.network.setting.riotServer
+        uniqueName = playName[0] + playName[1] + server
+        return self.matches[uniqueName]
+
+
     def getMatches(self, puuid):
         matchLink = self.network.getMatchesLink(puuid)
         try:
@@ -119,7 +126,8 @@ class Riot:
                 Models.network.switchAPI()
             return None
         self.saveMatchesInCache(puuid, matchIds)
-        return matchIds
+        return self.getMatchesInCache(puuid)
+        #   return matchIds
 
     async def aioMatchDetail(self, matchId):
         if matchId in self.matchDetails:

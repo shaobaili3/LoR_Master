@@ -113,8 +113,8 @@ class Player:
         deckCodes = []
         self.summary = {}
         for matchId in matchIds:
-            if matchNum == cs.MAX_NUM_DETAILS:
-                break
+            # if matchNum == cs.MAX_NUM_DETAILS:
+            #     break
             detail = self.riot.getDetail(matchId)
             if str(detail).isdigit():
                 finishTrigger(
