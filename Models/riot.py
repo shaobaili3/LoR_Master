@@ -149,6 +149,7 @@ class Riot:
 
         if 'Retry-After' in header:
             print('aio服务器正忙,请等待', header['Retry-After'], '秒')
+            Models.network.switchAPI()
             return header['Retry-After']
 
         if resp.ok:
