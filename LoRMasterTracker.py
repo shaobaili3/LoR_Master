@@ -29,6 +29,8 @@ import constants as cs
 from GUI.ui import Opponent
 
 
+from Models import master
+
 class Window(QMainWindow):
     def __init__(self, local, player):
         super().__init__()
