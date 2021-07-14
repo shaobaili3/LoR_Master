@@ -36,12 +36,12 @@ class Riot:
 
     def save(self):
         os.makedirs('data', exist_ok=True)
-        with open('data/matchDetails.json', 'w+') as fp:
-            json.dump(self.matchDetails, fp)
-        with open('data/riotIds.json', 'w+') as fp:
-            json.dump(self.riotIds, fp)
-        with open('data/playerNames.json', 'w+') as fp:
-            json.dump(self.playerNames, fp)
+        with open('data/matchDetails.json', 'w+', encoding='utf-8') as fp:
+            json.dump(self.matchDetails, fp, ensure_ascii=False, indent= 2)
+        with open('data/riotIds.json', 'w+', encoding='utf-8') as fp:
+            json.dump(self.riotIds, fp, ensure_ascii=False, indent= 2)
+        with open('data/playerNames.json', 'w+', encoding='utf-8') as fp:
+            json.dump(self.playerNames, fp, ensure_ascii=False, indent= 2)
 
     # Should not use cache, because you cannot identify capital letters of playernames
     def getPlayerPUUID(self, name, tag):

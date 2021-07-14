@@ -16,7 +16,7 @@ def get_playernames(server):
     r = session.get(url)
     os.makedirs('data', exist_ok=True)
     with open('data/' + server +'.json', 'w+', encoding='utf-8') as fp:
-        json.dump(r.json(), fp, indent= 2)
+        json.dump(r.json(), fp, ensure_ascii=False, indent= 2)
 
 
 get_playernames(Server.NA)
