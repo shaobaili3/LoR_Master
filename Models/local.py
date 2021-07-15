@@ -3,7 +3,7 @@ from Models.setting import Server
 import constants as cs
 import Models.utility as utility
 from Models.leaderboard import getRankStr, updateLeaderboard
-
+import json
 
 class Local:
     def __init__(self, setting):
@@ -92,6 +92,11 @@ class Local:
                 updateLeaderboard()
 
     def updateTagByName(self, name):
+        with open('data/' + self.setting.getServer() + '.json', 'r') as fp:
+            names = json.load(fp)
+            if name in names:
+                self.opponentTag = names[name]
+                return
         with open(('Resource/' + self.setting.getServer() + '.dat'),
                   encoding="utf8") as search:
             for line in search:
@@ -104,12 +109,17 @@ class Local:
 
     def updatePlayernames(self):
         self.playernames = set()
-        #with open(utility.resource_path('Resource/' + self.setting.getServer() + '.dat'), encoding="utf8") as search:
-        with open(('Resource/' + self.setting.getServer() + '.dat'),
-                  encoding="utf8") as search:
-            for line in search:
-                fullName = line.strip()
-                self.playernames.add(fullName)
+        with open('data/' + self.setting.getServer() + '.json', 'r') as fp:
+            names = json.load(fp)
+            for name in names.items():
+                self.playernames.add(name[0] + '#' + name[1])
+
+            
+        # with open(('Resource/' + self.setting.getServer() + '.dat'),
+        #           encoding="utf8") as search:
+        #     for line in search:
+        #         fullName = line.strip()
+        #         self.playernames.add(fullName)
 
     def getLocalLink(self):
         return cs.IP_KEY + self.setting.getPort() + cs.LOCAL_KEY

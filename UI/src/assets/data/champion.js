@@ -62,5 +62,7 @@ export default { champions: [
   "04SH039", 
   "04PZ001", // Set 4 Third expansion
   "04BW005",
-  "04SH019", 
+  "04SH019",
+  "04SI055", // Viego
+  "04SH130", // Akshan
 ]}

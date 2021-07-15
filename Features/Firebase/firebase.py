@@ -19,7 +19,7 @@ def initialFirebase():
 
 def writeMatchs(name, tag):
     puuid = getPlayerPUUID(name, tag)
-    matchIds = match.getMatchs(puuid)
+    matchIds = match.getMatches(puuid)
     print(matchIds)
     for matchId in matchIds:
         print('*')

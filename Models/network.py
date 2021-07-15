@@ -55,7 +55,7 @@ class Network():
     def getHeadLink(self):
         return 'https://' + self.setting.getServer()
 
-    def getMatchsLink(self, ppid):
+    def getMatchesLink(self, ppid):
         return self.getHeadLink() + MATCH_KEY + ppid + '/ids' + API_KEY
 
     def getDetailsLink(self, matchId):

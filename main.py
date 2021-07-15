@@ -15,7 +15,7 @@ riot = Riot(network)
 def checkPlayerDetails():
 
     puuid = riot.getPlayerPUUID('storm', '5961')
-    matchIds = riot.getMatchs(puuid)
+    matchIds = riot.getMatches(puuid)
     print(matchIds)
 
     winNum = 0
@@ -64,7 +64,7 @@ def checkPlayerDetails():
 
 def checkPlayerDetails2(name, tag):
     puuid = riot.getPlayerPUUID(name, tag)
-    matchIds = riot.getMatchs(puuid)
+    matchIds = riot.getMatches(puuid)
     winNum = 0
     matchNum = 0
     if matchIds is None:

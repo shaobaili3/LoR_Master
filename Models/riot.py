@@ -5,7 +5,7 @@ import aiohttp
 import asyncio
 import json
 import os
-
+import constants
 
 class Riot:
     def __init__(self, network):
@@ -15,6 +15,7 @@ class Riot:
         self.matchDetails = {}
         self.riotIds = {}
         self.playerNames = {}
+        self.matches = {}
         self.loadJson()
         self.session = requests.Session()
         return
@@ -27,23 +28,28 @@ class Riot:
                 self.riotIds = json.load(fp)
             with open('data/playerNames.json', 'r') as fp:
                 self.playerNames = json.load(fp)
+            with open('data/matches.json', 'r') as fp:
+                self.matches = json.load(fp)
         except IOError as e:
             print('No cache found', e)
             return
 
     def save(self):
         os.makedirs('data', exist_ok=True)
-        with open('data/matchDetails.json', 'w+') as fp:
-            json.dump(self.matchDetails, fp)
-        with open('data/riotIds.json', 'w+') as fp:
-            json.dump(self.riotIds, fp)
-        with open('data/playerNames.json', 'w+') as fp:
-            json.dump(self.playerNames, fp)
+        with open('data/matchDetails.json', 'w+', encoding='utf-8') as fp:
+            json.dump(self.matchDetails, fp, ensure_ascii=False, indent= 2)
+        with open('data/riotIds.json', 'w+', encoding='utf-8') as fp:
+            json.dump(self.riotIds, fp, ensure_ascii=False, indent= 2)
+        with open('data/playerNames.json', 'w+', encoding='utf-8') as fp:
+            json.dump(self.playerNames, fp, ensure_ascii=False, indent= 2)
 
     # Should not use cache, because you cannot identify capital letters of playernames
     def getPlayerPUUID(self, name, tag):
-        puuidLink = self.network.getPUUID(name, tag)
-        masterId = self.network.setting.riotServer + name + tag + puuidLink
+
+        # Developer keys expose in cache. 'lower()' make sure link will not change by case sensitivity.
+        puuidLink = self.network.getPUUID(name.lower(), tag.lower())
+
+        masterId = puuidLink
 
         if masterId in self.riotIds:
             return self.riotIds[masterId]
@@ -68,15 +74,39 @@ class Riot:
                 Models.network.switchAPI()
             return None
         else:
-            puuid = idDetails.get('puuid') 
+            puuid = idDetails.get('puuid')
+            gameName = idDetails.get('gameName')
+            tagLine = idDetails.get('tagLine')
             if puuid is not None:
                 self.riotIds[masterId] = puuid
-                self.playerNames[puuid] = name, tag
+                self.playerNames[puuid] = gameName, tagLine
                 self.save()
             return puuid
 
-    def getMatchs(self, puuid):
-        matchLink = self.network.getMatchsLink(puuid)
+
+    def saveMatchesInCache(self, puuid, matchIds):
+        playName = self.getPlayerName(puuid)
+        server = self.network.setting.riotServer
+        uniqueName = playName[0] + playName[1] + server
+        matchIdsCache = self.matches.get(uniqueName)
+        if matchIdsCache is not None:
+            new = matchIds + list(set(matchIdsCache) - set(matchIds))
+            self.matches[uniqueName] = new
+        else:
+            self.matches[uniqueName] = matchIds
+        os.makedirs('data', exist_ok=True)
+        with open('data/matches.json', 'w+') as fp:
+            json.dump(self.matches, fp)
+
+    def getMatchesInCache(self, puuid):
+        playName = self.getPlayerName(puuid)
+        server = self.network.setting.riotServer
+        uniqueName = playName[0] + playName[1] + server
+        return self.matches[uniqueName]
+
+
+    def getMatches(self, puuid):
+        matchLink = self.network.getMatchesLink(puuid)
         try:
             matchRequest = self.session.get(matchLink)
         except requests.exceptions.RequestException as e:
@@ -90,13 +120,15 @@ class Riot:
             print(matchLink)
             print(matchRequest.headers)
             print(matchRequest.status_code)
-            print('getmatchs服务器错误')
+            print('getmatches server error')
             print(matchIds)
             if 'Retry-After' in header:
-                print('getmatchs服务器正忙', header['Retry-After'], '秒')
+                print('getmatches server busy', header['Retry-After'], '秒')
                 Models.network.switchAPI()
             return None
-        return matchIds
+        self.saveMatchesInCache(puuid, matchIds)
+        return self.getMatchesInCache(puuid)
+        #   return matchIds
 
     async def aioMatchDetail(self, matchId):
         if matchId in self.matchDetails:
@@ -117,6 +149,7 @@ class Riot:
 
         if 'Retry-After' in header:
             print('aio服务器正忙,请等待', header['Retry-After'], '秒')
+            Models.network.switchAPI()
             return header['Retry-After']
 
         if resp.ok:
@@ -129,7 +162,11 @@ class Riot:
             print(detail)
             return None
 
-    def getDetail(self, matchId):
+    def getDetail(self, matchId, matchIndex):
+        # If matchIndex bigger than MAX, only pull data from cache
+        if matchIndex > constants.MAX_NUM_DETAILS - 1:
+            return self.matchDetails.get(matchId)
+
         if matchId in self.matchDetails:
             return self.matchDetails[matchId]
         detailsLink = self.network.getDetailsLink(matchId)
@@ -179,13 +216,13 @@ class Riot:
         name = nameRequest.json()
         header = nameRequest.headers
         #headers = nameRequest.headers
-        #print(headers)
+        # print(headers)
         if not nameRequest.ok:
             print(nameLink)
             print(nameRequest.headers)
             print(nameRequest.status_code)
             print(name)
-            print('puuid->userid服务器错误:')            
+            print('puuid->userid服务器错误:')
             if 'Retry-After' in header:
                 print('服务器正忙,请等待', header['Retry-After'], '秒')
                 Models.network.switchAPI()
