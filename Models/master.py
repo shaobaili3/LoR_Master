@@ -1,6 +1,8 @@
 import json
 import requests
 import os
+import threading
+import time
 from Models.setting import Server
 
 
@@ -18,7 +20,19 @@ def get_playernames(server):
     with open('data/' + server +'.json', 'w+', encoding='utf-8') as fp:
         json.dump(r.json(), fp, ensure_ascii=False, indent= 2)
 
+def f(s):
+    while True:
+        try:
+            get_playernames(s)
+        except Exception as e:
+            print('Model.master error: ', e)
+        time.sleep(3600)
 
-get_playernames(Server.NA)
-get_playernames(Server.EU)
-get_playernames(Server.ASIA)
+n = threading.Thread(target=f, args = (Server.NA,))
+n.start()
+
+e = threading.Thread(target=f, args = (Server.EU,))
+e.start()
+
+a = threading.Thread(target=f, args = (Server.ASIA,))
+a.start()
