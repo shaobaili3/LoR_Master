@@ -22,13 +22,13 @@ class Riot:
 
     def loadJson(self):
         try:
-            with open('data/matchDetails.json', 'r') as fp:
+            with open('data/matchDetails.json', encoding='utf-8') as fp:
                 self.matchDetails = json.load(fp)
-            with open('data/riotIds.json', 'r') as fp:
+            with open('data/riotIds.json', encoding='utf-8') as fp:
                 self.riotIds = json.load(fp)
-            with open('data/playerNames.json', 'r') as fp:
+            with open('data/playerNames.json', encoding='utf-8') as fp:
                 self.playerNames = json.load(fp)
-            with open('data/matches.json', 'r') as fp:
+            with open('data/matches.json', encoding='utf-8') as fp:
                 self.matches = json.load(fp)
         except IOError as e:
             print('No cache found', e)
@@ -95,7 +95,7 @@ class Riot:
         else:
             self.matches[uniqueName] = matchIds
         os.makedirs('data', exist_ok=True)
-        with open('data/matches.json', 'w+') as fp:
+        with open('data/matches.json', 'w+', encoding='utf-8') as fp:
             json.dump(self.matches, fp)
 
     def getMatchesInCache(self, puuid):

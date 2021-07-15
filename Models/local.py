@@ -92,13 +92,12 @@ class Local:
                 updateLeaderboard()
 
     def updateTagByName(self, name):
-        with open('data/' + self.setting.getServer() + '.json', 'r') as fp:
+        with open('data/' + self.setting.getServer() + '.json', encoding='utf-8') as fp:
             names = json.load(fp)
             if name in names:
                 self.opponentTag = names[name]
                 return
-        with open(('Resource/' + self.setting.getServer() + '.dat'),
-                  encoding="utf8") as search:
+        with open(('Resource/' + self.setting.getServer() + '.dat'), encoding="utf8") as search:
             for line in search:
                 fullName = line.rstrip().split('#')
                 if name == fullName[0]:
@@ -109,7 +108,7 @@ class Local:
 
     def updatePlayernames(self):
         self.playernames = set()
-        with open('data/' + self.setting.getServer() + '.json', 'r') as fp:
+        with open('data/' + self.setting.getServer() + '.json', encoding='utf-8') as fp:
             names = json.load(fp)
             for name in names.items():
                 self.playernames.add(name[0] + '#' + name[1])

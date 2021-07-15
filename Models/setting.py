@@ -46,7 +46,7 @@ class Setting():
 
     def writeConfig(self):
         self.check()
-        with open('config.ini', 'w') as configfile:
+        with open('config.ini', 'w', encoding='utf-8') as configfile:
             self.config.write(configfile)
             configfile.close()
 
