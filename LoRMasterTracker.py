@@ -27,8 +27,6 @@ from Models.leaderboard import getRankInt
 import Models.deck as deck
 import constants as cs
 from GUI.ui import Opponent
-
-
 from Models import master
 
 class Window(QMainWindow):
