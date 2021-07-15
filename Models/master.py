@@ -5,12 +5,7 @@ import threading
 import time
 from Models.setting import Server
 
-
 session = requests.Session()
-
-def read_json_file(json_file):
-    with open(json_file, encoding='utf8') as f:
-        return json.load(f)
 
 def get_playernames(server):
     url = f"https://raw.githubusercontent.com/LoR-Master-Tracker/LoR-Player-Crawler/master/{server}.json"

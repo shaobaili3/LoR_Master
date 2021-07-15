@@ -1,7 +1,14 @@
 import json
 import requests
 import os
+
+
 session = requests.Session()
+
+def read_json_file(json_file):
+    with open(json_file, encoding='utf8') as f:
+        return json.load(f)
+
 
 def get_card_set_online(set_num: int, region="en_us"):
     url = f'http://dd.b.pvp.net/latest/set{set_num}/{region}/data/set{set_num}-{region}.json'
