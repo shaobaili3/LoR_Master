@@ -218,6 +218,11 @@ export default {
             for (const i in data.matches) {
                 // this.matchTotalNum += match.matches
                 this.matchTotalNum += data.matches[i].matches
+
+                // when total matchNum bigger than 10, set it to 10 for better display.
+                if (this.matchTotalNum > 10) {
+                    this.matchTotalNum = 10
+                }
             }
             // console.log(this.matchTotalNum)
 

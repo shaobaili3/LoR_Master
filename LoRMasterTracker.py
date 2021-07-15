@@ -247,12 +247,7 @@ class Inspector(InspectorWidget):
             match['winrate'] = player.summary[
                 deckCode].winNum / player.summary[deckCode].matches
             match['history'] = player.summary[deckCode].history
-            
-            #To-do: show more than 10 matches
-            if player.summary[deckCode].matches > 10:
-                match['matches'] = 10
-
-            gui.matches.append(match)
+            gui.matches.append(match))
         self.parentWindow.electronWork.start()
 
     def showWinLoss(self, deckCode, player):

@@ -17,7 +17,7 @@ class UIThread(QThread):
         while True:
             #  Wait for next request from client
             message = socket.recv()
-            print("Received request: ", message)
+            #print("Received request: ", message)
             # time.sleep(3) #  Immediately send the data to avoid receive message stuck
             jsonStr = json.dumps(self.ui.__dict__)
             socket.send(str(jsonStr).encode('ascii'))
