@@ -29,10 +29,13 @@ def f(s):
         time.sleep(3600)
 
 n = threading.Thread(target=f, args = (Server.NA,))
+n.daemon = True 
 n.start()
 
 e = threading.Thread(target=f, args = (Server.EU,))
+e.daemon = True 
 e.start()
 
 a = threading.Thread(target=f, args = (Server.ASIA,))
+a.daemon = True 
 a.start()
