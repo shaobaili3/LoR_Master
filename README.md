@@ -1,10 +1,8 @@
 
 # LoR Master Tracker-beta
 
-## We are open source now!
-
 <p align="center">
-<img src="Preview/logo.jpg"width="300" height="300"/>
+<img src="Preview/logo2.jpg"width="430" height="270"/>
 </p>
 
 <p align="center">
@@ -14,7 +12,7 @@
 
 </p>
 
-LoR Master Tracker is a history tracker and deck inspector for League of Runeterra.
+LoR Master Tracker is a open source match tracker and player inspector for League of Runeterra.
 
 ## Installation
 
@@ -39,10 +37,14 @@ LoR Master Tracker is a history tracker and deck inspector for League of Runeter
     At the game beginning, the opponent decks, rank and lp automatically revealed by real-time enemy tracker.
     
     > ### ⚠️ Disclaimer:
-    > Opponent decks are pulled from recent 10 matches by Riot API. Even if there is no third-parties data requests, this function may still create an unfair advantage for players, which may violate [POLICIES](https://developer.riotgames.com/policies/general). We are still working on the adjustment for this function. We may remove it in the next version. We are looking forward to getting feedback from the community and Riot and actively upgrade LMT.
+    > Opponent decks are pulled from recent 10 matches by [Riot API](https://developer.riotgames.com/apis) via our development Riot API keys. We are looking forward to getting feedback from the community and Riot and actively upgrade LMT.
 
 ![c](Preview/3.png)
-![d](Preview/4.png)
+
+* **Real time Master Leaderboard**
+
+    LMT real time update leaderboard and Master player list via open source [LMT Crawler](https://github.com/LoR-Master-Tracker/LoR-Player-Crawler)
+![b](Preview/6.png)
 
 ## Development
 
