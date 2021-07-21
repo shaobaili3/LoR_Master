@@ -176,7 +176,7 @@ class Player:
             print("Win rate:", str(int(winNum / matchNum * 100)) + "%")
             showSummary(self.getNoDuplicate(deckCodes))
             return finishTrigger(
-                name + '#' + tag, ' win rate: ' +
+                name + '#' + tag, ' Win rate: ' +
                 str(int(winNum / matchNum * 100)) + "%  " + str(winNum) +
                 ' wins' + ' out of ' + str(matchNum) + ' matches')
         else:

@@ -254,7 +254,7 @@ class Inspector(InspectorWidget):
         winNum = player.summary[deckCode].winNum
         lossNum = player.summary[deckCode].matches - player.summary[
             deckCode].winNum
-        return '[' + str(winNum) + 'W' + ' ' + str(lossNum) + 'L' + ']'
+        return '[' + str(winNum) + 'W' + ' ' + str(lossNum) + 'L' + '] Win rate: ' + str(int(winNum/(lossNum + winNum)*100)) + '%'
 
 
 os.environ["QT_AUTO_SCREEN_SCALE_FACTOR"] = "1"
