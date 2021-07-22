@@ -1,7 +1,9 @@
 import requests
+from requests import models
 from Models.setting import Server
 import constants as cs
 import Models.utility as utility
+import Models.process
 from Models.leaderboard import getRankStr, updateLeaderboard
 import json
 
@@ -26,6 +28,7 @@ class Local:
 
     def updateStatus(self, checkOpponent, showMessage, showStatus, showMatchs,
                      showDecks):
+        Models.process.getPort(self.setting)
         try:
             localRequest = requests.get(self.getLocalLink())
             if not self.isClientRuning:

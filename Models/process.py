@@ -44,7 +44,7 @@ def getPort(setting):
 
                     if 'Using user-preferred language CultureInfo of ' in line:
                         c.DefaultLanguage = str(line).split().pop()
-                        print('Language:  ', c.DefaultLanguage)
+                        # print('Language:  ', c.DefaultLanguage)
         except IOError:
             print('log file not accessible: ', path)
         except BaseException as error:
@@ -98,6 +98,4 @@ def isSimulation():
 
 
 def updateTrackServer(setting):
-    while (True):
-        time.sleep(2)
         getPort(setting)
