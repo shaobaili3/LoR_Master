@@ -30,6 +30,7 @@ class Table(QWidget):
 
         self.tableView.horizontalHeader().setStretchLastSection(True)
         self.tableView.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
+        self.tableView.setSelectionMode(QAbstractItemView.SelectionMode.SingleSelection)
         layout=QVBoxLayout()
         layout.addWidget(self.tableView)
         self.setLayout(layout)

@@ -1,4 +1,5 @@
 from Models import leaderboard
+from Models import local
 from Threads.translateThread import TranslateThread
 from Threads.serverThread import ServerThread
 from Threads.trackThread import TrackThread
@@ -257,6 +258,18 @@ class Inspector(InspectorWidget):
         return '[' + str(winNum) + 'W' + ' ' + str(lossNum) + 'L' + '] Win rate: ' + str(int(winNum/(lossNum + winNum)*100)) + '%'
 
 
+class LeaderboardUI(Table):
+    def __init__(self):
+        super().__init__()
+        self.tableView.clicked.connect(self.clickName)
+    
+    def clickName(self):
+        index=(self.tableView.selectionModel().currentIndex())
+        value=index.sibling(index.row(),index.column()).data()
+        print(value)
+        name = value.split(' [')[0]
+        print(name)
+
 os.environ["QT_AUTO_SCREEN_SCALE_FACTOR"] = "1"
 
 updateLeaderboard()
@@ -304,6 +317,6 @@ window.trackWork.showDecksTrigger.connect(inspectorWidget.showDecks)
 window.trackWork.showMatchsTrigger.connect(inspectorWidget.showMatchs)
 window.trackWork.showMessageTrigger.connect(inspectorWidget.showMessage)
 app.setQuitOnLastWindowClosed(True)
-table = Table()
+table = LeaderboardUI()
 
 sys.exit(app.exec())
