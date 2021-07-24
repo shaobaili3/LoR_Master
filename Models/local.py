@@ -95,26 +95,32 @@ class Local:
                 updateLeaderboard()
 
     def updateTagByName(self, name):
-        with open('data/' + self.setting.getServer() + '.json', encoding='utf-8') as fp:
-            names = json.load(fp)
-            if name in names:
-                self.opponentTag = names[name]
-                return
-        with open(('Resource/' + self.setting.getServer() + '.dat'), encoding="utf8") as search:
-            for line in search:
-                fullName = line.rstrip().split('#')
-                if name == fullName[0]:
-                    # print(fullName)
-                    self.opponentTag = fullName[1]
+        try:        
+            with open('data/' + self.setting.getServer() + '.json', encoding='utf-8') as fp:
+                names = json.load(fp)
+                if name in names:
+                    self.opponentTag = names[name]
                     return
+            with open(('Resource/' + self.setting.getServer() + '.dat'), encoding="utf8") as search:
+                for line in search:
+                    fullName = line.rstrip().split('#')
+                    if name == fullName[0]:
+                        # print(fullName)
+                        self.opponentTag = fullName[1]
+                        return
+        except IOError as e:
+            print('updateTagByName', e)
         self.opponentTag = None
 
     def updatePlayernames(self):
-        self.playernames = set()
-        with open('data/' + self.setting.getServer() + '.json', encoding='utf-8') as fp:
-            names = json.load(fp)
-            for name in names.items():
-                self.playernames.add(name[0] + '#' + name[1])
+        try: 
+            self.playernames = set()
+            with open('data/' + self.setting.getServer() + '.json', encoding='utf-8') as fp:
+                names = json.load(fp)
+                for name in names.items():
+                    self.playernames.add(name[0] + '#' + name[1])
+        except IOError as e:
+            print('updatePlayernames', e)
 
             
         # with open(('Resource/' + self.setting.getServer() + '.dat'),
