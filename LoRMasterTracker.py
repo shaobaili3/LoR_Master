@@ -25,6 +25,7 @@ from inspectorWidget import InspectorWidget
 from leaderboardWidget import Table
 from Models.leaderboard import getRankStr
 from Models.leaderboard import getRankInt
+from Models.leaderboard import getRankQuickStr
 import Models.deck as deck
 import constants as cs
 from GUI.ui import Opponent
@@ -144,8 +145,7 @@ class Inspector(InspectorWidget):
                     fullName.split('#')[0], self.setting.getServer())
                 gui.matches = []
                 gui.name = fullName.split('#')[0]
-                gui.rank = getRankInt(
-                    fullName.split('#')[0], self.setting.getServer())
+                gui.rank = rank
                 gui.type = 'match'
                 self.textBrowser.append(
                     self.getHtml(fullName, 'OrangeRed') + ' ' + rank + ' (' +
@@ -214,7 +214,8 @@ class Inspector(InspectorWidget):
             tag = text.split('#')[1].split('[')[0]
             gui.matches = []
             gui.name = id + '#' + tag
-            gui.rank = getRankInt(id, settingTracker.getServer())
+            gui.rank = getRankQuickStr(
+                    id, self.setting.getServer())
             gui.type = 'match'
             return self.textBrowser.append(
                 "<a href=\"https://lor.runeterra.ar/Matches/" +

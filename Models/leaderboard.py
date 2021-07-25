@@ -86,6 +86,12 @@ def getRankStr(name, server):
     else:
         return ''
 
+def getRankQuickStr(name, server):
+    rank, lp = checkRank(name, server)
+    if rank != '':
+        return rank + 'L' + lp
+    else:
+        return ''
 
 def filterMasterPlayer(names, server):
     board = getboard(server)
