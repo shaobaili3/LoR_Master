@@ -145,7 +145,8 @@ class Inspector(InspectorWidget):
                     fullName.split('#')[0], self.setting.getServer())
                 gui.matches = []
                 gui.name = fullName.split('#')[0]
-                gui.rank = rank
+                gui.rank = getRankInt(
+                    fullName.split('#')[0], self.setting.getServer())
                 gui.type = 'match'
                 self.textBrowser.append(
                     self.getHtml(fullName, 'OrangeRed') + ' ' + rank + ' (' +
