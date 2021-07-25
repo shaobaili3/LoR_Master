@@ -218,10 +218,7 @@ class Inspector(InspectorWidget):
             gui.rank = getRankQuickStr(
                     id, self.setting.getServer())
             gui.type = 'match'
-            return self.textBrowser.append(
-                "<a href=\"https://lor.runeterra.ar/Matches/" +
-                settingTracker.riotServer.capitalize() + "/" + id + "/" + tag +
-                "\" style=\"color:" + 'OrangeRed' + "\">" + text + "</a>")
+            return self.textBrowser.append(self.getPlayernameHtml(id, tag))
         self.textBrowser.append(self.getHtml(text, 'OrangeRed'))
 
     def showDecks(self, deckdict, num):

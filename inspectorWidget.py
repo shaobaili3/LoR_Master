@@ -1,3 +1,4 @@
+from os import name
 import constants as cs
 from Models.setting import Setting, Server
 from PyQt5.QtGui import *
@@ -18,7 +19,7 @@ class InspectorWidget(QWidget):
         self.player = player
         self.local = local
         self.setWindowTitle(cs.DISPLAY_TITLE + ' v' + cs.VERSION_NUM)
-        #self.setWindowIcon(QIcon('test.jpg'))
+        # self.setWindowIcon(QIcon('test.jpg'))
         # self.resize(900, 512)
         outerLayout = QVBoxLayout()
         topLayout = QHBoxLayout()
@@ -40,7 +41,8 @@ class InspectorWidget(QWidget):
         styleLabel.setBuddy(self.serverComboBox)
         idLabel = QLabel("Riot ID:")
         self.idLineEdit = QLineEdit(self)
-        self.idLineEdit.setPlaceholderText('Enter name#tag here...   eg.Storm#5961')
+        self.idLineEdit.setPlaceholderText(
+            'Enter name#tag here...   eg.Storm#5961')
         self.changeServer()
         self.inspectPushButton = QPushButton("Inspect")
         self.inspectPushButton.setDefault(True)
@@ -61,7 +63,6 @@ class InspectorWidget(QWidget):
         self.textBrowser = QTextBrowser()
         self.textBrowser.setAcceptRichText(True)
         self.textBrowser.setOpenExternalLinks(False)
-
 
         deckCodeLabel = QLabel("Deck Code: ")
         self.deckCodeLineEdit = QLineEdit(self)
@@ -107,7 +108,7 @@ class InspectorWidget(QWidget):
             self.textBrowser.append(self.getHtml(text, 'OrangeRed'))
         else:
             self.textBrowser.append(
-                self.getPlayernameHtml(name, 'OrangeRed') +
+                self.getHashPlayernameHtml(name, 'OrangeRed') +
                 self.getHtml(text, 'OrangeRed'))
         self.textBrowser.append('')
         self.textBrowser.moveCursor(QTextCursor.MoveOperation.End)
@@ -116,7 +117,8 @@ class InspectorWidget(QWidget):
                         factions, opDeckCode, opFactions, totalTurn, num):
 
         print('call showlog')
-        htmlOpponentName = self.getPlayernameHtml(opponentName, 'MidnightBlue')
+        htmlOpponentName = self.getHashPlayernameHtml(
+            opponentName, 'MidnightBlue')
         htmlFactions = self.getHtml(factions, 'OrangeRed')
         htmlTotalturn = self.getHtml(' Turn: ' + totalTurn, 'DarkGray')
         htmlOpFactions = self.getHtml(opFactions, 'Black')
@@ -141,11 +143,16 @@ class InspectorWidget(QWidget):
     def showSummary(self, deckdict):
         return
 
-    def getPlayernameHtml(self, name, color):
+    def getHashPlayernameHtml(self, name, color):
         id = name.split('#')[0]
         tag = name.split('#')[1].split('[')[0]
         return "<a href=\"playername#" + self.setting.riotServer.capitalize(
         ) + "#" + id + "#" + tag + "\" style=\"color:" + color + "\">" + name + "</a>"
+
+    def getPlayernameHtml(self, id, tag, color='OrangeRed'):
+        return "<a href=\"playername#" + self.setting.riotServer.capitalize(
+        ) + "#" + id + "#" + tag + "\" style=\"color:" + color + "\">" + id + '#' + tag + "</a>"
+
     def getDeckCodeHtml(self, text):
         return "<a href=\"deckCode#" + text + "\" style=\"color:DodgerBlue\">" + 'View Deck' + "</a>"
 
