@@ -129,6 +129,8 @@ class Player:
                       utility.toLocalTimeString(startTime))
                 if detail['info']['game_mode'] == 'SeasonalTournamentLobby':
                     pass
+                if detail['info']['game_mode'] == 'LastCallQualifierGauntletLobby':
+                    pass
                 elif detail['info']['game_type'] != 'StandardGauntlet':
                     continue
             matchNum += 1
@@ -162,7 +164,7 @@ class Player:
             settingServer = self.riot.network.setting.getServer()
             rank = getRankStr(opName[0], settingServer)
             showlog(fullName + ' ' + rank,
-                    '[' + detail['info']['game_type'] + '] ' +
+                    '[' + detail['info']['game_type'] + ' ' + detail['info']['game_mode'] + ']' +
                     utility.toLocalTimeString(startTime), outcome,
                     myDetails['deck_code'],
                     utility.getFactionString(myDetails["factions"]),
