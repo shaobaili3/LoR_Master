@@ -123,15 +123,17 @@ class Player:
             if detail is None:
                 continue
             print('detail', detail)
+            gameMode = detail['info']['game_mode']
+            gameType = detail['info']['game_type']
             startTime = detail['info']['game_start_time_utc']
-            if detail['info']['game_mode'] != 'Constructed' or detail['info']['game_type'] == 'AI':
-                print('game_type:', detail['info']['game_type'], 'game_mode:', detail['info']['game_mode'],
+            if gameMode != 'Constructed' or gameType == 'AI':
+                print('game_type:', gameType, 'game_mode:', gameMode,
                       utility.toLocalTimeString(startTime))
-                if detail['info']['game_mode'] == 'SeasonalTournamentLobby':
+                if gameMode == 'SeasonalTournamentLobby':
                     pass
-                if detail['info']['game_mode'] == 'LastCallQualifierGauntletLobby':
+                if gameMode == 'LastCallQualifierGauntletLobby':
                     pass
-                elif detail['info']['game_type'] != 'StandardGauntlet':
+                elif gameType != 'StandardGauntlet':
                     continue
             matchNum += 1
             riotId = detail['metadata']['participants']
@@ -163,8 +165,12 @@ class Player:
             deckCodes.append(myDetails['deck_code'])
             settingServer = self.riot.network.setting.getServer()
             rank = getRankStr(opName[0], settingServer)
+            gameTypeString = '[' + gameType + ']'
+            if gameType is '':
+                gameTypeString = ''
+                
             showlog(fullName + ' ' + rank,
-                    '[' + detail['info']['game_type'] + ' ' + detail['info']['game_mode'] + ']' +
+                    gameTypeString + ' [' + gameMode + '] ' +
                     utility.toLocalTimeString(startTime), outcome,
                     myDetails['deck_code'],
                     utility.getFactionString(myDetails["factions"]),
