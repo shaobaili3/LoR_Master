@@ -99,9 +99,9 @@ class Player:
         puuid = self.riot.getPlayerPUUID(name, tag)
         if puuid is None:
             print(
-                '', name + '#' + tag + ' does not exist. Please check player name and tag and use correct format. eg.Storm#5961')
+                '', name + '#' + tag + ' does not exist. Please check player name and player tag')
             return finishTrigger(
-                '', name + '#' + tag + ' does not exist. Please check player name and tag and use correct format. eg.Storm#5961')
+                '', name + '#' + tag + ' does not exist. Please check player name and player tag')
         matchIds = self.riot.getMatches(puuid)
         winNum = 0
         matchNum = 0
