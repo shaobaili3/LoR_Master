@@ -45,6 +45,12 @@ def getPort(setting):
                     if 'Using user-preferred language CultureInfo of ' in line:
                         c.DefaultLanguage = str(line).split().pop()
                         # print('Language:  ', c.DefaultLanguage)
+
+                    if '[CheckingForUpdates] StartCheckingForUpdates for user ' in line:
+                        userId = str(line).split().pop()
+                        setting.playerId = str(line).split().pop()
+                        print(setting.playerId)
+
         except IOError:
             print('log file not accessible: ', path)
         except BaseException as error:
