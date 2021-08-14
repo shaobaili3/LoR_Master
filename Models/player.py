@@ -126,17 +126,11 @@ class Player:
             gameMode = detail['info']['game_mode']
             gameType = detail['info']['game_type']
             startTime = detail['info']['game_start_time_utc']
-            if gameMode != 'Constructed' or gameType == 'AI':
-                print('game_type:', gameType, 'game_mode:', gameMode,
-                      utility.toLocalTimeString(startTime))
-                if gameMode == 'SeasonalTournamentLobby':
-                    pass
-                if gameMode == 'LastCallQualifierGauntletLobby':
-                    pass
-                if gameMode == 'Bo3ChallengeLobby':
-                    pass
-                elif gameType != 'StandardGauntlet':
-                    continue
+            
+            # To-do comment this will stack the inspection, it cannot inspect AI matches.
+            if gameType == 'AI':
+                continue
+
             matchNum += 1
             riotId = detail['metadata']['participants']
             outcome = None
@@ -179,6 +173,7 @@ class Player:
                     opponentDetail['deck_code'],
                     utility.getFactionString(opponentDetail["factions"]),
                     str(totalTurn) + ' Order of Play: ' + str(myDetails['order_of_play']), matchNum)
+        
         if matchNum != 0:
             print(
                 str(winNum) + ' wins' + ' out of ' + str(matchNum) +
