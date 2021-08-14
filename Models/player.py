@@ -133,6 +133,8 @@ class Player:
                     pass
                 if gameMode == 'LastCallQualifierGauntletLobby':
                     pass
+                if gameMode == 'Bo3ChallengeLobby':
+                    pass
                 elif gameType != 'StandardGauntlet':
                     continue
             matchNum += 1
