@@ -22,6 +22,12 @@ module.exports = {
       template: 'public/index.html',
       filename: 'info.html',
       title: 'LoR Master Tracker Info',
+    },
+    deck: {
+      entry: 'src/pages/deck/main.js',
+      template: 'public/index.html',
+      filename: 'deck.html',
+      title: 'LoR Master Tracker Deck',
     }
   }
   // chainWebpack: config => {

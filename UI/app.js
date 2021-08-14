@@ -49,7 +49,53 @@ const defaultRatio = 2.3 // Repeated in preload.js
 
 let deckWindow = null
 let infoWindow = null
+let mainWindow = null
 
+function newMainWindow() {
+
+  if (mainWindow) return
+
+  let {width, height} = electron.screen.getPrimaryDisplay().workAreaSize
+
+  // --- mainWindow ---
+  let windowWidth = 800 // (335)
+  let windowMaxWidth = 1200
+  let windowMinWidth = 600
+  let windowHeight = Math.floor(windowWidth*0.8)
+  // let windowXPadding = 200
+  // let windowYPadding = 20
+
+  if (developmentMode) {
+    windowWidth = windowWidth + 400
+    windowMaxWidth = windowWidth + 400
+  }
+
+  mainWindow = new BrowserWindow({
+    maxWidth: windowMaxWidth,
+    minWidth: windowMinWidth,
+    minHeight: headerHeight,
+    width: windowWidth, 
+    height: windowHeight, 
+    x: (width - windowWidth) / 2,
+    y: (height - windowHeight) / 2,
+    frame: false,
+    resizable: true,
+    webPreferences: {
+      preload: __dirname + '/appsrc/preload.js',
+      enableRemoteModule: true,
+      nodeIntegrationInWorker: true,
+    }
+  })
+  mainWindow.loadURL(`file://${__dirname}/dist/index.html`)
+  
+  // mainWindow.setAlwaysOnTop(true, level = "pop-up-menu")
+  mainWindow.on('closed', () => {
+    mainWindow = null
+    app.quit()
+  })
+
+  if (developmentMode) mainWindow.webContents.openDevTools()
+}
 
 function newDeckWindow() {
 
@@ -95,7 +141,7 @@ function newDeckWindow() {
   //   protocol: 'file:',
   //   slashes: true
   // }))
-  deckWindow.loadURL(`file://${__dirname}/dist/index.html`)
+  deckWindow.loadURL(`file://${__dirname}/dist/deck.html`)
   // console.log("Is development?", process.env.NODE_ENV === 'development')
 
   // Attempted to use a bug? to turn off snapAssist on Windows
@@ -165,6 +211,9 @@ const appReady = () => {
 
   // --- deckWindow ---
   newDeckWindow()
+
+  // --- mainWindow ---
+  newMainWindow()
   
   // deckWindow.webContents.on('new-window', function (evt, url, frameName, disposition, options, additionalFeatures) {
   //   if(options.width == 800 && options.height == 600){ //default size is 800x600
