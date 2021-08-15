@@ -68,12 +68,12 @@ class Window(QMainWindow):
             self.leaderboardPushButtonClicked)
         self.statusBar().addPermanentWidget(self.leaderboardPushButton)
 
-        if 'zh' in locale.getdefaultlocale()[0]:
-            self.translatePushButton = QPushButton("启用营地简中[不支持繁体]")
-            self.translatePushButton.setDefault(True)
-            self.translatePushButton.clicked.connect(
-                self.translatePushButtonClicked)
-            self.statusBar().addPermanentWidget(self.translatePushButton)
+        # if 'zh' in locale.getdefaultlocale()[0]:
+        #     self.translatePushButton = QPushButton("启用营地简中[不支持繁体]")
+        #     self.translatePushButton.setDefault(True)
+        #     self.translatePushButton.clicked.connect(
+        #         self.translatePushButtonClicked)
+        #     self.statusBar().addPermanentWidget(self.translatePushButton)
 
         self.updatePushButton = QPushButton("v" + cs.VERSION_NUM_INSPECTOR)
         self.updatePushButton.setDefault(True)
