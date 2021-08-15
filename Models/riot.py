@@ -105,7 +105,7 @@ class Riot:
         return self.matches[uniqueName]
 
 
-    def getMatches(self, puuid):
+    def getMatches(self, puuid, saveCache = True):
         matchLink = self.network.getMatchesLink(puuid)
         try:
             matchRequest = self.session.get(matchLink)
@@ -126,8 +126,10 @@ class Riot:
                 print('getmatches server busy', header['Retry-After'], '秒')
                 Models.network.switchAPI()
             return None
-        self.saveMatchesInCache(puuid, matchIds)
-        return self.getMatchesInCache(puuid)
+        if saveCache:
+            self.saveMatchesInCache(puuid, matchIds)
+            return self.getMatchesInCache(puuid)
+        return matchIds
         #   return matchIds
 
     async def aioMatchDetail(self, matchId):

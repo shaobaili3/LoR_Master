@@ -42,7 +42,7 @@ class Player:
         if puuid is None:
             print("无法获取对手puuid")
             return
-        matchIds = self.riot.getMatches(puuid)
+        matchIds = self.riot.getMatches(puuid, False)
         if matchIds is None:
             print("无法获取对手最近对战记录")
             return
