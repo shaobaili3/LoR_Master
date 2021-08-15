@@ -226,7 +226,7 @@ class Riot:
             if 'Retry-After' in header:
                 print('服务器正忙,请等待', header['Retry-After'], '秒')
                 Models.network.switchAPI()
-            return 'Unknow', puuid[0:5]
+            return 'Unknow', str(puuid)[0:5]
         else:
             self.playerNames[puuid] = name['gameName'], name['tagLine']
             self.save()
