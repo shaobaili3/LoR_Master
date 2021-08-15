@@ -42,7 +42,7 @@ class Player:
         if puuid is None:
             print("无法获取对手puuid")
             return
-        matchIds = self.riot.getMatches(puuid)
+        matchIds = self.riot.getMatches(puuid, False)
         if matchIds is None:
             print("无法获取对手最近对战记录")
             return
@@ -99,84 +99,22 @@ class Player:
         puuid = self.riot.getPlayerPUUID(name, tag)
         if puuid is None:
             print(
-                '', name + '#' + tag + ' does not exist. Please check player name and tag and use correct format. eg.Storm#5961')
+                '', name + '#' + tag + ' does not exist. Please check player name and player tag')
             return finishTrigger(
-                '', name + '#' + tag + ' does not exist. Please check player name and tag and use correct format. eg.Storm#5961')
+                '', name + '#' + tag + ' does not exist. Please check player name and player tag')
         matchIds = self.riot.getMatches(puuid)
         winNum = 0
         matchNum = 0
         if matchIds is None:
             print(name + '#' + tag,
-                                 ' has no recent match records')
+                  ' has no recent match records')
             return finishTrigger(name + '#' + tag,
                                  ' has no recent match records')
         deckCodes = []
         self.summary = {}
-        for matchId in matchIds:
-            # If match number bigger than MAX, getDetail will only ruturn data from cache 
-            detail = self.riot.getDetail(matchId, matchNum)
-            if str(detail).isdigit():
-                finishTrigger(
-                    name + '#' + tag, 'Riot server [' + Models.network.API_KEY[-4:] + '] busy ' +
-                    str(detail))
-                continue
-            if detail is None:
-                continue
-            print('detail', detail)
-            gameMode = detail['info']['game_mode']
-            gameType = detail['info']['game_type']
-            startTime = detail['info']['game_start_time_utc']
-            if gameMode != 'Constructed' or gameType == 'AI':
-                print('game_type:', gameType, 'game_mode:', gameMode,
-                      utility.toLocalTimeString(startTime))
-                if gameMode == 'SeasonalTournamentLobby':
-                    pass
-                if gameMode == 'LastCallQualifierGauntletLobby':
-                    pass
-                elif gameType != 'StandardGauntlet':
-                    continue
-            matchNum += 1
-            riotId = detail['metadata']['participants']
-            outcome = None
-            opponentDetail = None
-            myDetails = None
-            totalTurn = detail['info']['total_turn_count']
-            myIndex = 1
-            opponentIndex = 0
-            if riotId[0] == puuid:
-                myIndex = 0
-                opponentIndex = 1
-            else:
-                # differnet APIs has df puuid, has to double check if equal playernames when may using caching data
-                indexName = self.riot.getPlayerName(riotId[0])
-                if indexName[0].lower() == name.lower() and indexName[1].lower() == tag.lower():
-                    myIndex = 0
-                    opponentIndex = 1
-            opName = self.riot.getPlayerName(riotId[opponentIndex])
-            fullName = opName[0] + '#' + opName[1]
-            opponentDetail = detail['info']['players'][opponentIndex]
-            myDetails = detail['info']['players'][myIndex]
-            outcome = myDetails["game_outcome"]
-            if outcome == 'win':
-                winNum += 1
-            print(detail)
-            self.addMatchToSummary(
-                myDetails['deck_code'], outcome, utility.toLocalTimeString(startTime, True))
-            deckCodes.append(myDetails['deck_code'])
-            settingServer = self.riot.network.setting.getServer()
-            rank = getRankStr(opName[0], settingServer)
-            gameTypeString = '[' + gameType + ']'
-            if gameType is '':
-                gameTypeString = ''
-                
-            showlog(fullName + ' ' + rank,
-                    gameTypeString + ' [' + gameMode + '] ' +
-                    utility.toLocalTimeString(startTime), outcome,
-                    myDetails['deck_code'],
-                    utility.getFactionString(myDetails["factions"]),
-                    opponentDetail['deck_code'],
-                    utility.getFactionString(opponentDetail["factions"]),
-                    str(totalTurn) + ' Order of Play: ' + str(myDetails['order_of_play']), matchNum)
+        matchNum, winNum = self.readMatchIds(
+            matchIds, matchNum, finishTrigger, name, tag, puuid, deckCodes, showlog, winNum)
+
         if matchNum != 0:
             print(
                 str(winNum) + ' wins' + ' out of ' + str(matchNum) +
@@ -189,6 +127,73 @@ class Player:
                 ' wins' + ' out of ' + str(matchNum) + ' matches')
         else:
             print(name + '#' + tag,
-                                 ' has no recent rank match records')
+                  ' has no recent rank match records')
             return finishTrigger(name + '#' + tag,
                                  ' has no recent rank match records')
+
+    def readMatchIds(self, matchIds, matchNum, finishTrigger, name, tag, puuid, deckCodes, showlog, winNum):
+        for matchId in matchIds:
+            try:
+                # If match number bigger than MAX, getDetail will only ruturn data from cache
+                detail = self.riot.getDetail(matchId, matchNum)
+                if str(detail).isdigit():
+                    finishTrigger(
+                        name + '#' + tag, 'Riot server [' + Models.network.API_KEY[-4:] + '] busy ' +
+                        str(detail))
+                    continue
+                if detail is None:
+                    continue
+                print('detail', detail)
+                gameMode = detail['info']['game_mode']
+                gameType = detail['info']['game_type']
+                startTime = detail['info']['game_start_time_utc']
+
+                # To-do comment this will stack the inspection, it cannot inspect AI matches.
+                if gameType == 'AI':
+                    continue
+
+                matchNum += 1
+                riotId = detail['metadata']['participants']
+                outcome = None
+                opponentDetail = None
+                myDetails = None
+                totalTurn = detail['info']['total_turn_count']
+                myIndex = 1
+                opponentIndex = 0
+                if riotId[0] == puuid:
+                    myIndex = 0
+                    opponentIndex = 1
+                else:
+                    # differnet APIs has df puuid, has to double check if equal playernames when may using caching data
+                    indexName = self.riot.getPlayerName(riotId[0])
+                    if indexName[0].lower() == name.lower() and indexName[1].lower() == tag.lower():
+                        myIndex = 0
+                        opponentIndex = 1
+                opName = self.riot.getPlayerName(riotId[opponentIndex])
+                fullName = opName[0] + '#' + opName[1]
+                opponentDetail = detail['info']['players'][opponentIndex]
+                myDetails = detail['info']['players'][myIndex]
+                outcome = myDetails["game_outcome"]
+                if outcome == 'win':
+                    winNum += 1
+                print(detail)
+                self.addMatchToSummary(
+                    myDetails['deck_code'], outcome, utility.toLocalTimeString(startTime, True))
+                deckCodes.append(myDetails['deck_code'])
+                settingServer = self.riot.network.setting.getServer()
+                rank = getRankStr(opName[0], settingServer)
+                gameTypeString = '[' + gameType + ']'
+                if gameType is '':
+                    gameTypeString = ''
+                showlog(fullName + ' ' + rank,
+                        gameTypeString + ' [' + gameMode + '] ' +
+                        utility.toLocalTimeString(startTime), outcome,
+                        myDetails['deck_code'],
+                        utility.getFactionString(myDetails["factions"]),
+                        opponentDetail['deck_code'],
+                        utility.getFactionString(opponentDetail["factions"]),
+                        str(totalTurn) + ' Order of Play: ' + str(myDetails['order_of_play']), matchNum)
+            except Exception as e:
+                print('Read MatchId Error match id: ', matchId , e)
+                continue
+        return matchNum, winNum

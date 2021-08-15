@@ -1,3 +1,12 @@
+import sentry_sdk
+sentry_sdk.init(
+    "https://1138a186a6384b00a20a6196273c3009@o958702.ingest.sentry.io/5907306",
+    # Set traces_sample_rate to 1.0 to capture 100%
+    # of transactions for performance monitoring.
+    # We recommend adjusting this value in production.
+    traces_sample_rate=1.0
+)
+
 from Models import leaderboard
 from Models import local
 from Threads.translateThread import TranslateThread
@@ -59,12 +68,12 @@ class Window(QMainWindow):
             self.leaderboardPushButtonClicked)
         self.statusBar().addPermanentWidget(self.leaderboardPushButton)
 
-        if 'zh' in locale.getdefaultlocale()[0]:
-            self.translatePushButton = QPushButton("启用营地简中[不支持繁体]")
-            self.translatePushButton.setDefault(True)
-            self.translatePushButton.clicked.connect(
-                self.translatePushButtonClicked)
-            self.statusBar().addPermanentWidget(self.translatePushButton)
+        # if 'zh' in locale.getdefaultlocale()[0]:
+        #     self.translatePushButton = QPushButton("启用营地简中[不支持繁体]")
+        #     self.translatePushButton.setDefault(True)
+        #     self.translatePushButton.clicked.connect(
+        #         self.translatePushButtonClicked)
+        #     self.statusBar().addPermanentWidget(self.translatePushButton)
 
         self.updatePushButton = QPushButton("v" + cs.VERSION_NUM_INSPECTOR)
         self.updatePushButton.setDefault(True)

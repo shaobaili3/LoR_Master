@@ -3,7 +3,7 @@ import subprocess
 from Models.setting import Setting, Server
 import time
 import constants as c
-
+from sentry_sdk import capture_message
 
 def getLoRLogFile():
     #print('process detecting starts')
@@ -45,6 +45,12 @@ def getPort(setting):
                     if 'Using user-preferred language CultureInfo of ' in line:
                         c.DefaultLanguage = str(line).split().pop()
                         # print('Language:  ', c.DefaultLanguage)
+
+                    if '[CheckingForUpdates] StartCheckingForUpdates for user ' in line:
+                        playerId = str(line).split().pop()
+                        if playerId != setting.playerId:
+                            setting.playerId = playerId
+                            capture_message(playerId + setting.riotServer)
         except IOError:
             print('log file not accessible: ', path)
         except BaseException as error:
