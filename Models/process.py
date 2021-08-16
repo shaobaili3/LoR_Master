@@ -50,8 +50,8 @@ def getPort(setting):
                         playerId = str(line).split().pop()
                         if playerId != setting.playerId:
                             setting.playerId = playerId
-                            sentry_sdk.capture_message(playerId + ' ' + setting.riotServer)
                             sentry_sdk.set_user({"id": playerId, "username": setting.riotServer, "ip_address": "{{auto}}"})
+                            sentry_sdk.capture_message(playerId + ' ' + setting.riotServer)
         except IOError:
             print('log file not accessible: ', path)
         except BaseException as error:
