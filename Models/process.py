@@ -3,7 +3,7 @@ import subprocess
 from Models.setting import Setting, Server
 import time
 import constants as c
-from sentry_sdk import capture_message
+import sentry_sdk
 
 def getLoRLogFile():
     #print('process detecting starts')
@@ -50,7 +50,8 @@ def getPort(setting):
                         playerId = str(line).split().pop()
                         if playerId != setting.playerId:
                             setting.playerId = playerId
-                            capture_message(playerId + setting.riotServer)
+                            sentry_sdk.capture_message(playerId + ' ' + setting.riotServer)
+                            sentry_sdk.set_user({"id": playerId, "username": setting.riotServer, "ip_address": "{{auto}}"})
         except IOError:
             print('log file not accessible: ', path)
         except BaseException as error:

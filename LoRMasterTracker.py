@@ -1,44 +1,43 @@
+from Models import master
+from GUI.ui import Opponent
+import constants as cs
+import Models.deck as deck
+from Models.leaderboard import getRankQuickStr
+from Models.leaderboard import getRankInt
+from Models.leaderboard import getRankStr
+from leaderboardWidget import Table
+from inspectorWidget import InspectorWidget
+from Models.player import Player
+from Models.network import Network
+from Models.riot import Riot
+from Models.local import Local
+from Models.setting import Setting
+import locale
+import webbrowser
+import sys
+import os
+from PyQt5.QtWidgets import *
+from PyQt5.QtGui import *
+from PyQt5.QtCore import *
+from Threads.electronThread import ElectronThread
+from Models.leaderboard import updateLeaderboard
+from Threads.uiThread import UIThread
+from Threads.trackThread import TrackThread
+from Threads.serverThread import ServerThread
+from Threads.translateThread import TranslateThread
+from Models import local
+from Models import leaderboard
 import sentry_sdk
+
 sentry_sdk.init(
     "https://1138a186a6384b00a20a6196273c3009@o958702.ingest.sentry.io/5907306",
     # Set traces_sample_rate to 1.0 to capture 100%
     # of transactions for performance monitoring.
     # We recommend adjusting this value in production.
-    traces_sample_rate=1.0
+    traces_sample_rate=1.0,
+    send_default_pii=True
 )
 
-from Models import leaderboard
-from Models import local
-from Threads.translateThread import TranslateThread
-from Threads.serverThread import ServerThread
-from Threads.trackThread import TrackThread
-from Threads.uiThread import UIThread
-from Models.leaderboard import updateLeaderboard
-from Threads.electronThread import ElectronThread
-
-from PyQt5.QtCore import *
-from PyQt5.QtGui import *
-from PyQt5.QtWidgets import *
-
-import os
-import sys
-import webbrowser
-import locale
-
-from Models.setting import Setting
-from Models.local import Local
-from Models.riot import Riot
-from Models.network import Network
-from Models.player import Player
-from inspectorWidget import InspectorWidget
-from leaderboardWidget import Table
-from Models.leaderboard import getRankStr
-from Models.leaderboard import getRankInt
-from Models.leaderboard import getRankQuickStr
-import Models.deck as deck
-import constants as cs
-from GUI.ui import Opponent
-from Models import master
 
 class Window(QMainWindow):
     def __init__(self, local, player):
@@ -225,7 +224,7 @@ class Inspector(InspectorWidget):
             gui.matches = []
             gui.name = id + '#' + tag
             gui.rank = getRankQuickStr(
-                    id, self.setting.getServer())
+                id, self.setting.getServer())
             gui.type = 'match'
             return self.textBrowser.append(self.getPlayernameHtml(id, tag))
         self.textBrowser.append(self.getHtml(text, 'OrangeRed'))
@@ -270,13 +269,14 @@ class LeaderboardUI(Table):
     def __init__(self):
         super().__init__()
         self.tableView.clicked.connect(self.clickName)
-    
+
     def clickName(self):
-        index=(self.tableView.selectionModel().currentIndex())
-        value=index.sibling(index.row(),index.column()).data()
+        index = (self.tableView.selectionModel().currentIndex())
+        value = index.sibling(index.row(), index.column()).data()
         print(value)
         name = value.split(' [')[0]
         print(name)
+
 
 os.environ["QT_AUTO_SCREEN_SCALE_FACTOR"] = "1"
 
