@@ -29,16 +29,6 @@ from Models import local
 from Models import leaderboard
 import sentry_sdk
 
-sentry_sdk.init(
-    "https://1138a186a6384b00a20a6196273c3009@o958702.ingest.sentry.io/5907306",
-    # Set traces_sample_rate to 1.0 to capture 100%
-    # of transactions for performance monitoring.
-    # We recommend adjusting this value in production.
-    traces_sample_rate=1.0,
-    send_default_pii=True
-)
-
-
 class Window(QMainWindow):
     def __init__(self, local, player):
         super().__init__()
@@ -277,9 +267,15 @@ class LeaderboardUI(Table):
         name = value.split(' [')[0]
         print(name)
 
+sentry_sdk.init(
+    "https://1138a186a6384b00a20a6196273c3009@o958702.ingest.sentry.io/5907306",
+    traces_sample_rate=1.0,
+    send_default_pii=True
+)
+
+sentry_sdk.set_user({"ip_address": "{{auto}}"})
 
 os.environ["QT_AUTO_SCREEN_SCALE_FACTOR"] = "1"
-
 updateLeaderboard()
 
 settingTracker = Setting()
@@ -295,7 +291,6 @@ playerInspect = Player(riotInspect)
 localInspect = Local(settingInspect)
 
 app = QApplication(sys.argv)
-
 app.setAttribute(Qt.AA_UseHighDpiPixmaps)
 app.setApplicationName(cs.DISPLAY_TITLE)
 app.setWindowIcon(QIcon('Resource/logo.jpg'))
