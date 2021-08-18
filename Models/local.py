@@ -118,7 +118,10 @@ class Local:
             with open('data/' + self.setting.getServer() + '.json', encoding='utf-8') as fp:
                 names = json.load(fp)
                 for name in names.items():
-                    self.playernames.add(name[0] + '#' + name[1])
+                    try:
+                        self.playernames.add(name[0] + '#' + name[1])
+                    except Exception as e:
+                        print('updatePlayernames for loop playname:', name , e)
         except Exception as e:
             print('updatePlayernames', e)
 
