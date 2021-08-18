@@ -108,7 +108,7 @@ class Local:
                         # print(fullName)
                         self.opponentTag = fullName[1]
                         return
-        except IOError as e:
+        except Exception as e:
             print('updateTagByName', e)
         self.opponentTag = None
 
@@ -119,7 +119,7 @@ class Local:
                 names = json.load(fp)
                 for name in names.items():
                     self.playernames.add(name[0] + '#' + name[1])
-        except IOError as e:
+        except Exception as e:
             print('updatePlayernames', e)
 
             
