@@ -13,5 +13,6 @@ MAX_NUM_TRACK = 10
 
 DefaultLanguage = 'en-US'
 
-UNSUPPORTED_MODE = ['Mods_URF', 'AI']
+UNSUPPORTED_MODE = ['Expeditions', 'Mods_URF', 'Power2', 'Mods_Power_1']
+UNSUPPORTED_TYPE = ['AI']
 SUPPORTED_MODE = ['SeasonalTournamentLobby', 'LastCallQualifierGauntletLobby', 'Bo3ChallengeLobby', 'StandardGauntlet']

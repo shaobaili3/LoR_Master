@@ -148,7 +148,10 @@ class Player:
                 gameType = detail['info']['game_type']
                 startTime = detail['info']['game_start_time_utc']
 
-                if gameType in cs.UNSUPPORTED_MODE:
+                if gameMode in cs.UNSUPPORTED_MODE:
+                    continue
+                
+                if gameType in cs.UNSUPPORTED_TYPE:
                     continue
 
                 matchNum += 1
@@ -182,7 +185,7 @@ class Player:
                 settingServer = self.riot.network.setting.getServer()
                 rank = getRankStr(opName[0], settingServer)
                 gameTypeString = '[' + gameType + ']'
-                if gameType is '':
+                if gameType == '':
                     gameTypeString = ''
                 showlog(fullName + ' ' + rank,
                         gameTypeString + ' [' + gameMode + '] ' +
