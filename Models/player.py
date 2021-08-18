@@ -148,8 +148,7 @@ class Player:
                 gameType = detail['info']['game_type']
                 startTime = detail['info']['game_start_time_utc']
 
-                # To-do comment this will stack the inspection, it cannot inspect AI matches.
-                if gameType == 'AI':
+                if gameType in cs.UNSUPPORTED_MODE:
                     continue
 
                 matchNum += 1

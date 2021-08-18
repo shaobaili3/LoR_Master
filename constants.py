@@ -12,3 +12,5 @@ MAX_NUM_DETAILS = 20
 MAX_NUM_TRACK = 10
 
 DefaultLanguage = 'en-US'
+
+UNSUPPORTED_MODE = ['Mods_URF', 'AI']
