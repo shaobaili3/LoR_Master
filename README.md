@@ -17,7 +17,7 @@ LoR Master Tracker is a open source match tracker and player inspector for Leagu
 ## Installation
 
 * Requirements: Windows 7 or higher
-* [Click here to download](https://github.com/shaobaili3/LoR_Master/releases/download/v0.9.5.2-beta/LoRMasterTracker-v0.9.5.3-beta.exe)
+* [Click here to download](https://github.com/shaobaili3/LoR_Master/releases/download/v0.9.5.3-beta/LoRMasterTracker-v0.9.5.3-beta.exe)
 * [Changelogs](https://github.com/shaobaili3/lor_master/releases)
 
 ## Features
