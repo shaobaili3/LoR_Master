@@ -1,0 +1,13 @@
+from flask import Flask
+
+app = Flask(__name__)
+
+json = {"DeckCode": "CIBQCAICBQBQEAQDAUDAKAYJBENSGM6XAEBACAQCBEBQGCJIFFKQIAICAIEACAYCCQAQGCITAIAQEARR", "CardsInDeck": {"01IO012": 3, "02IO003": 3, "02IO005": 3, "02IO006": 3, "03MT009": 3, "03MT027": 3, "03MT035": 3, "03MT051": 3, "03MT215": 3, "02IO009": 2, "03MT040": 2, "03MT041": 2, "03MT085": 2, "02IO008": 1, "03IO020": 
+1, "03MT019": 1, "01IO002": 1, "01IO049": 1}, "CurrentDeckCode": "CEBQCAICBQBQEAQDAUDAKAYJBENSGM6XAEBACAQCBEBQGCJIFFKQIAICAIEACAYCCQAQGCITAIAQEARR"}
+
+@app.route("/code", methods = ['get'])
+def hello_world():
+    return json
+
+
+app.run(host='0.0.0.0', port=6123)
