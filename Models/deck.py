@@ -1,4 +1,6 @@
 #To-do cannot run here
+from requests.models import codes
+from GUI.ui import DeckCode
 from decoder import Deck
 
 def getChampion(deckCode):
@@ -16,6 +18,14 @@ def getChampion(deckCode):
         return 'None champion'
     print(heros)
     return heros
+
+def getDeckCode(cardsInDeck):
+    try:
+        deckCode = Deck(cards = cardsInDeck).encode().deck_code
+    except Exception as e:
+        print('invalid cards error:', e)
+        return None
+    return deckCode
 
 def validDeckCode(deckCode):
     try:

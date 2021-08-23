@@ -5,6 +5,7 @@ import constants as cs
 import Models.utility as utility
 import Models.process
 from Models.leaderboard import getRankStr, updateLeaderboard
+from Models.deck import getDeckCode
 import json
 
 class Local:
@@ -41,7 +42,11 @@ class Local:
         except Exception as e:
             print('updateMyDeck Error: ', e)
             return
+        currentCards = details['CardsInDeck']
+        currentDeckCode = getDeckCode(currentCards)
+        details['CurrentDeckCode'] = currentDeckCode
         self.myDeck = details
+        
         #print(details)
 
     def updateStatus(self, checkOpponent, showMessage, showStatus, showMatchs,
