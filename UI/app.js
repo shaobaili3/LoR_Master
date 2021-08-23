@@ -25,7 +25,7 @@ Menu.setApplicationMenu(menu)
 // const server = require('./appsrc/server.js')
 // server.run
 
-const developmentMode = false
+const developmentMode = true
 // const snapAssist = true
 const closeWithoutTracker = true
 const headerHeight = 45 // Repeated in preload.js
@@ -110,7 +110,7 @@ function newDeckWindow() {
   let windowMaxWidth = 290
   let windowMinWidth = 240
   // let window.windowWidth = windowWidth
-  let windowHeight = Math.floor(windowWidth*defaultRatio)
+  let windowHeight = 620
   let windowPadding = 20
 
   if (developmentMode) {

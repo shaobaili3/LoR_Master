@@ -46,6 +46,7 @@ export default {
     }, 
     props: {
         deck: String,
+        baseDeck: String,
     },
     computed: {
         deckDetailLink() {
@@ -59,15 +60,33 @@ export default {
                 return cards
             }
             
-            for (var j in deck) {
-                var cardCode = deck[j].code
+            var baseDeck = null
+            try { baseDeck = DeckEncoder.decode(this.baseDeck) } catch(err) {
+                console.log(err)
+                // return cards
+            }
+            
+            for (var j in baseDeck) {
+                // Loop through base deck
+                var cardCode = baseDeck[j].code
+                // Get full information from the sets collection
                 var card = sets.find(card => card.cardCode == cardCode)
+
+                // Finding the same card in current deck
+                var currentCard = deck.find(card => card.code == cardCode)
+                
+                // Get the current card copy count
+                var cardCount = 0
+                if (currentCard) {
+                    cardCount = currentCard.count
+                }
+                
                 if (card) {
                     // console.log(cardName, deck[j].count)
                     cards.push({
-                        code: deck[j].code, 
-                        name: card.name, 
-                        count: deck[j].count, 
+                        code: baseDeck[j].code, 
+                        name: card.name,
+                        count: cardCount, 
                         cost: card.cost, 
                         type: card.type, 
                         supertype: card.supertype,

@@ -83,6 +83,7 @@ var clientHeight = 0
 const headerHeight = 45 // Repeated in app.js
 const defaultRatio = 2.3 // Repeated in app.js
 const minHeight = 170 
+const defaultHeight = 620
 
 window.expandWindow = function() {
 
@@ -91,7 +92,7 @@ window.expandWindow = function() {
 
     if (clientHeight <= headerHeight) {
         // in case recorded height is too small, reset it to default
-        clientHeight = Math.floor(w*defaultRatio)
+        clientHeight = defaultHeight
     }   
     h = clientHeight
 
@@ -135,7 +136,7 @@ window.toggleShrinkWindow = function() {
         } else {
             // expand to recorded height
             if (clientHeight <= headerHeight) {
-                clientHeight = Math.floor(w*defaultRatio)
+                clientHeight = defaultHeight
                 }
             h = clientHeight
         }

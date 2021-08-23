@@ -7,7 +7,7 @@
             {{loadingText}}
         </div> 
 
-        <div class="errorText" v-if="isInvalidDeckCode && !showMatch">Invalid Deck Code</div>
+        <div class="errorText" v-if="isInvalidDeckCode && isShowCode">Invalid Deck Code</div>
         <!-- <button @click="requestData">Test Request</button> -->
 
         <!-- <div id="history-stats"> -->
@@ -51,7 +51,8 @@
 
         <div class="tab-content" v-if="isShowMy">
             <deck-regions :deck="myDeck.CurrentDeckCode"></deck-regions>
-            <match-info-deck-detail :deck="myDeck.CurrentDeckCode"></match-info-deck-detail>
+            <!-- <match-info-deck-detail :deck="myDeck.CurrentDeckCode"></match-info-deck-detail> -->
+            <deck-detail-base :deck="myDeck.CurrentDeckCode" :baseDeck="myDeck.DeckCode"></deck-detail-base>
         </div>
 
         <div class="tab-content" v-if="isShowCode">
@@ -73,6 +74,7 @@ import BaseWindowControls from '../../components/BaseWindowControls.vue'
 import MatchInfoDeckDetail from '../../components/MatchInfoDeckDetail.vue'
 import DeckRegions from '../../components/DeckRegions.vue'
 import DeckEncoder from '../../modules/runeterra/DeckEncoder'
+import DeckDetailBase from '../../components/DeckDetailBase.vue'
 
 const requestDataWaitTime = 200; // ms
 
@@ -109,7 +111,7 @@ export default {
     computed: {
         isLoading() {
             if (this.infoType == "deckCode" && this.deckCode != "") return false
-            return (this.playerName == null || this.playerName == "" || this.matchInfos.length == 0)
+            return (this.playerName == null || this.playerName == "" || (this.matchInfos.length == 0 && !this.myDeck))
             // return true
         },
         loadingText() {
@@ -145,6 +147,7 @@ export default {
         MatchInfo,
         MatchInfoDeckDetail,
         DeckRegions,
+        DeckDetailBase,
         // MatchInfoDeckPreview,
     },
     methods: {
