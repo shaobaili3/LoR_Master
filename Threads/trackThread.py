@@ -13,6 +13,7 @@ class TrackThread(QThread):
         super().__init__()
         self.local = None
         self.player = None
+        self.gui = None
 
     def run(self):
         print('tracker running')
@@ -24,5 +25,6 @@ class TrackThread(QThread):
                                     self.showStatusTrigger.emit,
                                     self.showMatchsTrigger.emit,
                                     self.showDecksTrigger.emit)
+            self.gui.myDeck = self.local.myDeck
             if not self.isRunning():
                 return

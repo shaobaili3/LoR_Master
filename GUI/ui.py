@@ -8,6 +8,7 @@ class Opponent:
         self.matches = matches
         self.type = 'match'
         self.deckCode = ''
+        self.myDeck = None
 
 class DeckDetail:
     def __init__(self, matches: int , winNum: int, time: str):

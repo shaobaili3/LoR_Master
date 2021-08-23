@@ -42,7 +42,7 @@ class Local:
             print('updateMyDeck Error: ', e)
             return
         self.myDeck = details
-        print(details)
+        #print(details)
 
     def updateStatus(self, checkOpponent, showMessage, showStatus, showMatchs,
                      showDecks):

@@ -48,6 +48,7 @@ class Window(QMainWindow):
         self.uiWork = UIThread()
         self.trackWork.local = local
         self.trackWork.player = player
+        self.trackWork.gui = gui
         self.trackWork.showStatusTrigger.connect(self.showStatus)
         self.statusBar().addPermanentWidget(self.progressBar)
 
@@ -305,6 +306,7 @@ if font_id == -1:
 print(font_id, QFontDatabase.applicationFontFamilies(font_id))
 app.setFont(QFont(QFontDatabase.applicationFontFamilies(font_id)[0]))
 
+gui = Opponent('', 0, [])
 window = Window(localTracker, playerTracker)
 inspectorWidget = Inspector(window, settingInspect, networkInspect,
                             riotInspect, playerInspect, localInspect)
@@ -313,7 +315,7 @@ window.show()
 window.serverWork.setting = settingTracker
 window.serverWork.start()
 window.trackWork.start()
-gui = Opponent('', 0, [])
+
 window.uiWork.ui = gui
 window.uiWork.start()
 window.trackWork.showDecksTrigger.connect(inspectorWidget.showDecks)
