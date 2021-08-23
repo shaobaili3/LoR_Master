@@ -16,6 +16,7 @@ class Local:
         self.setting = setting
         self.playernames = set()
         self.playername = None
+        self.myDeck = None
         #self.updatePlayernames()
 
     # call this function after changes server in the tracker
@@ -26,9 +27,27 @@ class Local:
         self.isClientRuning = False
         self.isInProgress = False
 
+    def updateMyDeck(self):
+        try:
+            localDeckRequest = requests.get(self.getLocalDeckLink())
+            if not self.isClientRuning:
+                return
+        except requests.exceptions.RequestException:
+            if self.isClientRuning:
+                print('LoR is closed')
+            return
+        try:
+            details = localDeckRequest.json()
+        except Exception as e:
+            print('updateMyDeck Error: ', e)
+            return
+        self.myDeck = details
+        print(details)
+
     def updateStatus(self, checkOpponent, showMessage, showStatus, showMatchs,
                      showDecks):
         Models.process.getPort(self.setting)
+        self.updateMyDeck()
         try:
             localRequest = requests.get(self.getLocalLink())
             if not self.isClientRuning:
@@ -133,4 +152,7 @@ class Local:
         #         self.playernames.add(fullName)
 
     def getLocalLink(self):
-        return cs.IP_KEY + self.setting.getPort() + cs.LOCAL_KEY
+        return cs.IP_KEY + self.setting.getPort() + cs.LOCAL_MATCH
+
+    def getLocalDeckLink(self):
+        return cs.IP_KEY + self.setting.getPort() + cs.LOCAL_DECK

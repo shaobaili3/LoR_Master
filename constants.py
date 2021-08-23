@@ -1,5 +1,7 @@
 PORT_IP = '21337'
-LOCAL_KEY = '/positional-rectangles'
+LOCAL_MATCH = '/positional-rectangles'
+LOCAL_DECK = '/static-decklist'
+
 IP_KEY = 'http://127.0.0.1:'
 # PLAYERS_NA_PATH = 'Resource/NA.dat'
 # PLAYERS_EU_PATH = 'Resource/EU.dat'
