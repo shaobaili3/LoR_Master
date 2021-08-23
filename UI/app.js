@@ -213,7 +213,7 @@ const appReady = () => {
   newDeckWindow()
 
   // --- mainWindow ---
-  newMainWindow()
+  // newMainWindow()
   
   // deckWindow.webContents.on('new-window', function (evt, url, frameName, disposition, options, additionalFeatures) {
   //   if(options.width == 800 && options.height == 600){ //default size is 800x600

@@ -24,7 +24,13 @@
             {{playerName}}
         </div> -->
 
-        <div id="history" v-if="showMatch">
+        <div class="tabs" v-if="!isLoading">
+            <div class="tab-title" @click="showOppo" :class="{active: isShowOppo}">Opp.</div>
+            <div class="tab-title" @click="showMy" :class="{active: isShowMy}">My</div>
+            <div class="tab-title" @click="showCode" :class="{active: isShowCode}">Code</div>
+        </div>
+
+        <div id="history" class="tab-content" v-if="isShowOppo">
             
             <match-info 
                 v-for="(match, index) in matchInfos" 
@@ -43,9 +49,15 @@
 
         </div>
 
-        <deck-regions v-if="!showMatch" :deck="deckCode"></deck-regions>
-        <!-- <match-info-deck-preview v-if="!showMatch" :deck="deckCode" :won="true"></match-info-deck-preview> -->
-        <match-info-deck-detail v-if="!showMatch" :deck="deckCode"></match-info-deck-detail>
+        <div class="tab-content" v-if="isShowMy">
+            <deck-regions :deck="myDeck.CurrentDeckCode"></deck-regions>
+            <match-info-deck-detail :deck="myDeck.CurrentDeckCode"></match-info-deck-detail>
+        </div>
+
+        <div class="tab-content" v-if="isShowCode">
+            <deck-regions :deck="deckCode"></deck-regions>
+            <match-info-deck-detail :deck="deckCode"></match-info-deck-detail>
+        </div>
 
         <div class="footer"></div>
 
@@ -62,7 +74,13 @@ import MatchInfoDeckDetail from '../../components/MatchInfoDeckDetail.vue'
 import DeckRegions from '../../components/DeckRegions.vue'
 import DeckEncoder from '../../modules/runeterra/DeckEncoder'
 
-const requestDataWaitTime = 200 // ms
+const requestDataWaitTime = 200; // ms
+
+const TABS = {
+    oppo: 0,
+    my: 1,
+    code: 2
+}
 
 export default {
     mounted() {
@@ -83,7 +101,9 @@ export default {
             matchTotalNum: 0,
             infoType: null,
             deckCode: null,
-            titleType: null
+            titleType: null,
+            currentTab: TABS.oppo,
+            myDeck: null,
         }
     },
     computed: {
@@ -95,12 +115,21 @@ export default {
         loadingText() {
             return 'Loading..'
         },
-        showMatch() {
-            if (this.infoType == "deckCode") {
-                return false
-            }
-            return true
+        isShowOppo() {
+            return this.currentTab == TABS.oppo
         },
+        isShowMy() {
+            return this.currentTab == TABS.my
+        },
+        isShowCode() {
+            return this.currentTab == TABS.code
+        },
+        // showMatch() {
+        //     if (this.infoType == "deckCode") {
+        //         return false
+        //     }
+        //     return true
+        // },
         isInvalidDeckCode() {
             try {
                 var deck = DeckEncoder.decode(this.deckCode)
@@ -119,6 +148,15 @@ export default {
         // MatchInfoDeckPreview,
     },
     methods: {
+        showOppo() {
+            this.currentTab = TABS.oppo
+        },
+        showMy() {
+            this.currentTab = TABS.my
+        },
+        showCode() {
+            this.currentTab = TABS.code
+        },
         getMatchInfo() {
 
             // const APILink = "https://run.mocky.io/v3/1b944261-e5c2-4071-bf22-a8c5e509edeb"
@@ -189,8 +227,8 @@ export default {
             var rawString = raw.toString('utf8')
             if (this.rawDataString == rawString) return
 
-            console.log("Old:", this.rawDataString)
-            console.log("New:", rawString)
+            // console.log("Old:", this.rawDataString)
+            // console.log("New:", rawString)
             
             this.rawDataString = rawString
             var data = JSON.parse(rawString)
@@ -199,14 +237,26 @@ export default {
         },
         processJsonData(data) {
 
+            // console.log("Process New Data")
+
             if ((data.type == "deckCode" && data.deckCode != "") || 
             !(data.name == null || data.name == "" || data.matches.length == 0)) {
                 window.showWindow()
+                if (data.myDeck) {
+                    this.showMy()
+                } else if ((data.type == "deckCode" && data.deckCode != "")) {
+                    this.showCode()
+                } else if (data.type == "match") {
+                    // this.showOppo()
                 }
+            } // Make window appear to display deck code
             
             this.infoType = data.type // match or deckCode
             this.deckCode = data.deckCode
             // console.log(this.deckCode)
+
+            this.myDeck = data.myDeck
+            // console.log(this.myDeck.CurrentDeckCode)
 
             // if ()
             this.matchTotalNum = 0;
@@ -280,6 +330,40 @@ export default {
 
     .footer {
         height: 50px;
+    }
+
+    .tabs {
+        width: calc(100% - 20px);
+        max-width: 280px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 5px;
+        /* padding: 0px; */
+        margin: 10px 0px;
+    }
+
+    .tab-title {
+        flex: 1 1 0;
+        color: var(--col-lighter-grey);
+        cursor: pointer;
+        text-align: center;
+        background: var(--col-dark-grey);
+        padding: 5px 0px;
+        border-radius: 20px;
+    }
+
+    .tab-title:hover {
+        color: white
+    }
+
+    .tab-title.active {
+        color: white;
+    }
+
+    .tab-content {
+        max-width: 280px;
+        width: 100%;
     }
 
 </style>

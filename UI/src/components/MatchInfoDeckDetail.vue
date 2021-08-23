@@ -55,6 +55,7 @@ export default {
             var cards = []
             var deck = null
             try { deck = DeckEncoder.decode(this.deck) } catch(err) {
+                console.log(cards)
                 return cards
             }
             
