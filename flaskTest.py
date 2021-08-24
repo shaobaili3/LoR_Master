@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, jsonify
 import json
 from Models.player import Player
 from Models.network import Network
@@ -21,6 +21,19 @@ localInspect.updatePlayernames()
 
 print(localInspect.playernames)
 
+def processMatchDetail(detail):
+    try:
+        playerPuuids = detail['metadata']['participants']
+    except Exception as e:
+        print('processMatchDetail error:', e)
+        return detail
+    playernames = []
+    for puuid in playerPuuids:
+        name, tag = riotInspect.getPlayerName(puuid)
+        playernames.append(name + '#' + tag)
+    detail['playernames'] = playernames
+    return detail
+
 @app.route("/code", methods = ['get'])
 def get_code():
     return jsonText
@@ -33,22 +46,24 @@ def get_names(playername):
         if name[0:len(playername)].lower() == playername.lower():
             playerList.add(name)
 
-    returnList = json.dumps(list(playerList))
+    returnList = jsonify(list(playerList))
     print(returnList)
     return returnList
 
 @app.route("/search/<string:name>/<string:tag>", methods = ['get'])
 def search(name, tag):
-    allMatches = {}
+    allMatches = []
     try:
         puuid = riotInspect.getPlayerPUUID(name, tag)
         matchIds = riotInspect.getMatches(puuid)
+        print(matchIds)
         for matchId in matchIds:
-            allMatches[matchId] = riotInspect.getDetail(matchId, 5)
+            allMatches.append(processMatchDetail(riotInspect.getDetail(matchId, 5)))
     except Exception as e:
         print(e)
         return 'Error'
-    return allMatches
+    return jsonify(allMatches)
 
-
+    
 app.run(host='0.0.0.0', port=6123)
+
