@@ -106,7 +106,7 @@ function newDeckWindow() {
   // console.log("Scale Factor:", factor)
 
   // --- deckWindow ---
-  let windowWidth = 270 // (335)
+  let windowWidth = 240 // (335)
   let windowMaxWidth = 290
   let windowMinWidth = 240
   // let window.windowWidth = windowWidth
@@ -213,7 +213,7 @@ const appReady = () => {
   newDeckWindow()
 
   // --- mainWindow ---
-  // newMainWindow()
+  newMainWindow()
   
   // deckWindow.webContents.on('new-window', function (evt, url, frameName, disposition, options, additionalFeatures) {
   //   if(options.width == 800 && options.height == 600){ //default size is 800x600

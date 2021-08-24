@@ -39,7 +39,7 @@ var win = remote.getCurrentWindow()
 // runClient()
 
 window.closeWindow = function() {
-    
+    // console.log("Close window")
     win.close()
 }
 
