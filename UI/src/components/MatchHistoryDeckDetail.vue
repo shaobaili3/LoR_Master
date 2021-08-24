@@ -27,9 +27,10 @@ import set1 from '../../../data/set1-en_us.json'
 import set2 from '../../../data/set2-en_us.json'
 import set3 from '../../../data/set3-en_us.json'
 import set4 from '../../../data/set4-en_us.json'
+import set5 from '../../../data/set5-en_us.json'
 
 
-const sets = set1.concat(set2, set3, set4)
+const sets = set1.concat(set2, set3, set4, set5)
 // console.log(sets)
 
 export default {

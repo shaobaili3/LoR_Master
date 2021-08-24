@@ -26,4 +26,8 @@ module.exports = class Card {
   get id () {
     return parseInt(this.code.substring(4, 7))
   }
+
+  get version () {
+    return Faction.getVersion(this.code.substring(2, 4))
+  }
 }
