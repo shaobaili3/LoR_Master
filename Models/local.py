@@ -20,7 +20,9 @@ class Local:
         self.myDeck = None
         #self.updatePlayernames()
         self.session = requests.Session()
-
+        self.playedCards = {}
+        self.graveyard = {}
+        self.opGraveyard = {}
 
     # call this function after changes server in the tracker
     def reset(self):
@@ -29,12 +31,51 @@ class Local:
         self.opponentTag = None
         self.isClientRuning = False
         self.isInProgress = False
+        self.playedCards = {}
+        self.graveyard = {}
+        self.opGraveyard = {}
+
+    def updateTracker(self, rectangles):
+        if rectangles is None:
+            return
+        for card in rectangles:
+            if card['LocalPlayer'] is True:
+                self.playedCards[card['CardID']] = card['CardCode']
+            else:
+                self.graveyard[card['CardID']] = card['CardCode']
+        # have to know if player have changed cards
+        if len(self.playedCards) == 5 and len(self.graveyard) == 1:
+            self.playedCards = {}
+            self.graveyard = {}
+
+    def updateLeftCards(self, currentCards):
+        if currentCards is None:
+            return
+        for key in self.playedCards:
+            cardCode = self.playedCards[key]
+            if cardCode in currentCards:
+                num = currentCards[cardCode]
+                if num > 0:
+                    num -= 1
+                currentCards[cardCode] = num
+        return {x:y for x,y in currentCards.items() if y!=0}
+
+    def updateOpGraveyard(self):
+        self.opGraveyard = {}
+        for key in self.graveyard:
+            cardCode = self.graveyard[key]
+            if cardCode in self.opGraveyard:
+                self.opGraveyard[cardCode] += 1
+            else:
+                self.opGraveyard[cardCode] = 1
+        if 'face' in self.opGraveyard:
+            del self.opGraveyard['face']
 
     def updateMyDeck(self):
         try:
             localDeckRequest = self.session.get(self.getLocalDeckLink())
             if not self.isClientRuning:
-                return
+                return 
         except requests.exceptions.RequestException:
             if self.isClientRuning:
                 print('LoR is closed')
@@ -45,8 +86,11 @@ class Local:
             print('updateMyDeck Error: ', e)
             return
         currentCards = details['CardsInDeck']
+        currentCards = self.updateLeftCards(currentCards)
         currentDeckCode = getDeckCode(currentCards)
         details['CurrentDeckCode'] = currentDeckCode
+        self.updateOpGraveyard()
+        details['opGraveyard'] = self.opGraveyard
         self.myDeck = details
         
         print(details)
@@ -74,6 +118,7 @@ class Local:
         except ValueError:
             print('Decoding local port json failed')
             return
+        self.updateTracker(details['Rectangles'])
         gameState = details['GameState']
         vsPlayerStr = ''
         if gameState == 'InProgress':
