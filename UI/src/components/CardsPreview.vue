@@ -1,6 +1,6 @@
 <template>
     <div class="cardContainer"
-        :class="{spell: type == 'Spell', unit: type == 'Unit', champ: supertype == 'Champion', landmark: type == 'Landmark'}"
+        :class="{empty: count == 0, spell: type == 'Spell', unit: type == 'Unit', champ: supertype == 'Champion', landmark: type == 'Landmark'}"
         :style="{background: getCardPreviewBackgroundStyle()}">
         <div class="cardContent cardCost">{{cost}}</div>
         <div class="cardContent cardName">{{name}}</div>
@@ -83,6 +83,10 @@ export default {
     opacity: 1;
 
     transition: opacity 0.15s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.cardContainer.empty .cardCount{
+    opacity: 0.5;
 }
 
 .cardDisplay {
