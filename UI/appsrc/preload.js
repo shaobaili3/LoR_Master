@@ -61,8 +61,11 @@ window.showWindow = function() {
     if (win.isMinimized()) {
         win.restore()
     }
-    window.expandWindow()
+    if (window.isMin()) {
+        window.expandWindow()
+    }
         // win.show()
+    // console.log("Show Window")
 }
 
 window.minWindow = function() {
@@ -159,7 +162,6 @@ window.isMin = function() {
     let h = win.getSize()[1]
 
     if (h > headerHeight) {
-        // shrink to min when too small
         return false
     } else {
         return true

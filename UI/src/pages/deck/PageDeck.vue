@@ -50,9 +50,9 @@
         </div>
 
         <div class="tab-content" v-if="isShowMy">
-            <deck-regions :deck="myDeck.CurrentDeckCode"></deck-regions>
-            <!-- <match-info-deck-detail :deck="myDeck.CurrentDeckCode"></match-info-deck-detail> -->
-            <deck-detail-base :deck="myDeck.CurrentDeckCode" :baseDeck="myDeck.DeckCode"></deck-detail-base>
+            <deck-regions :deck="myDeck.currentDeckCode"></deck-regions>
+            <!-- <match-info-deck-detail :deck="myDeck.currentDeckCode"></match-info-deck-detail> -->
+            <deck-detail-base :deck="myDeck.currentDeckCode" :baseDeck="myDeck.deckCode"></deck-detail-base>
         </div>
 
         <div class="tab-content" v-if="isShowCode">
@@ -110,8 +110,10 @@ export default {
     },
     computed: {
         isLoading() {
+            // console.log(this.myDeck)
             if (this.infoType == "deckCode" && this.deckCode != "") return false
-            return (this.playerName == null || this.playerName == "" || (this.matchInfos.length == 0 && !this.myDeck))
+            if (this.myDeck && this.myDeck.deckCode) return false
+            return (this.playerName == null || this.playerName == "" || this.matchInfos.length == 0)
             // return true
         },
         loadingText() {
@@ -240,26 +242,26 @@ export default {
         },
         processJsonData(data) {
 
-            // console.log("Process New Data")
+            // Process New Data
 
-            if ((data.type == "deckCode" && data.deckCode != "") || 
-            !(data.name == null || data.name == "" || data.matches.length == 0)) {
+            if ((data.type == "deckCode" && data.deckCode != "" && data.deckCode != this.deckCode)) {
+                // Changes Deck Code
+                // Make window appear to display deck code
                 window.showWindow()
-                if (data.myDeck) {
-                    this.showMy()
-                } else if ((data.type == "deckCode" && data.deckCode != "")) {
-                    this.showCode()
-                } else if (data.type == "match") {
-                    // this.showOppo()
-                }
-            } // Make window appear to display deck code
+                // Switches to code tab
+                this.showCode()
+            } else if (JSON.stringify(this.matchInfos) != JSON.stringify(data.matches)) {
+                // Changes Match Info
+                window.showWindow()
+                this.showOppo()
+            }
             
             this.infoType = data.type // match or deckCode
             this.deckCode = data.deckCode
             // console.log(this.deckCode)
 
             this.myDeck = data.myDeck
-            // console.log(this.myDeck.CurrentDeckCode)
+            // console.log(this.myDeck.currentDeckCode)
 
             // if ()
             this.matchTotalNum = 0;
