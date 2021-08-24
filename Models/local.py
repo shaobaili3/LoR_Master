@@ -19,6 +19,8 @@ class Local:
         self.playername = None
         self.myDeck = None
         #self.updatePlayernames()
+        self.session = requests.Session()
+
 
     # call this function after changes server in the tracker
     def reset(self):
@@ -30,7 +32,7 @@ class Local:
 
     def updateMyDeck(self):
         try:
-            localDeckRequest = requests.get(self.getLocalDeckLink())
+            localDeckRequest = self.session.get(self.getLocalDeckLink())
             if not self.isClientRuning:
                 return
         except requests.exceptions.RequestException:
@@ -47,14 +49,14 @@ class Local:
         details['CurrentDeckCode'] = currentDeckCode
         self.myDeck = details
         
-        #print(details)
+        print(details)
 
     def updateStatus(self, checkOpponent, showMessage, showStatus, showMatchs,
                      showDecks):
         Models.process.getPort(self.setting)
         self.updateMyDeck()
         try:
-            localRequest = requests.get(self.getLocalLink())
+            localRequest = self.session.get(self.getLocalLink())
             if not self.isClientRuning:
                 # LoR client launched
                 print('LoR客户端已启动', '当前服务器:', self.setting.getServer())
