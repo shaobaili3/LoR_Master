@@ -17,7 +17,7 @@ class Local:
         self.setting = setting
         self.playernames = set()
         self.playername = None
-        self.myDeck = None
+        self.trackerDict = {}
         #self.updatePlayernames()
         self.session = requests.Session()
         self.playedCards = {}
@@ -88,11 +88,13 @@ class Local:
         currentCards = details['CardsInDeck']
         currentCards = self.updateLeftCards(currentCards)
         currentDeckCode = getDeckCode(currentCards)
-        details['CurrentDeckCode'] = currentDeckCode
+        self.trackerDict['deckCode'] = details['DeckCode']
+        self.trackerDict['cardsInDeck'] = details['CardsInDeck']
+        self.trackerDict['currentDeckCode'] = currentDeckCode
         self.updateOpGraveyard()
-        details['opGraveyard'] = self.opGraveyard
-        self.myDeck = details
+        self.trackerDict['opGraveyard'] = self.opGraveyard
         
+        self.trackerDict['opGraveyardCode'] = getDeckCode(self.opGraveyard)
         print(details)
 
     def updateStatus(self, checkOpponent, showMessage, showStatus, showMatchs,
