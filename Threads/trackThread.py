@@ -25,6 +25,6 @@ class TrackThread(QThread):
                                     self.showStatusTrigger.emit,
                                     self.showMatchsTrigger.emit,
                                     self.showDecksTrigger.emit)
-            self.gui.myDeck = self.local.myDeck
+            self.gui.myDeck = self.local.trackerDict
             if not self.isRunning():
                 return

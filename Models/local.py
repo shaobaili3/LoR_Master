@@ -95,7 +95,7 @@ class Local:
         self.trackerDict['opGraveyard'] = self.opGraveyard
         
         self.trackerDict['opGraveyardCode'] = getDeckCode(self.opGraveyard)
-        print(details)
+        # print(self.trackerDict)
 
     def updateStatus(self, checkOpponent, showMessage, showStatus, showMatchs,
                      showDecks):
