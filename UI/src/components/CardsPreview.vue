@@ -177,8 +177,9 @@ export default {
     position: absolute;
     top: -6px;
     height: 1px;
-    width: 250px;
-    padding: 0px 10px;
+    width: 100%;
+    padding: 0px 5px;
+    box-sizing: border-box;
     background: var(--col-lighter-grey);
     background-clip: content-box;
     /* margin-top: 4px; */
