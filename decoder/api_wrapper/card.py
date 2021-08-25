@@ -10,7 +10,7 @@ from .utils import get_card_set_online, write_json_file
 #print(Path(".").absolute())
 #print(Path("./data/data/set1-en_us.json").exists())
 
-MAX_SET_NUM = 4
+MAX_SET_NUM = 5
 
 for num in range(MAX_SET_NUM):
     if len(list(data_dir.glob(f"set{num + 1}*.json"))) == 0:
