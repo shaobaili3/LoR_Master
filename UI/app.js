@@ -25,13 +25,13 @@ Menu.setApplicationMenu(menu)
 // const server = require('./appsrc/server.js')
 // server.run
 
-const developmentMode = false
+const developmentMode = true
 // const snapAssist = true
-const closeWithoutTracker = true
+const closeWithoutTracker = false
 const headerHeight = 45 // Repeated in preload.js
 const defaultRatio = 2.3 // Repeated in preload.js
 
-const spawnFlaskTest = true
+const spawnFlaskTest = false
 var python
 
 if (spawnFlaskTest) {

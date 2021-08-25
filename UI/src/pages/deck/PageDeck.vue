@@ -1,5 +1,5 @@
 <template>
-    <base-window-controls :canClose="false" :canShrink="true" :playerName="playerName" :playerRank="playerRank" :titleType="infoType" :deck="deckCode"></base-window-controls>
+    <base-window-controls :canClose="false" :canShrink="true" :playerName="oppoName" :playerRank="oppoRank" :titleType="infoType" :deck="deckCode"></base-window-controls>
     
     <div id="content">
 
@@ -12,7 +12,7 @@
 
         <!-- <div id="history-stats"> -->
             <!-- <div>10-game win rate: 90%</div> -->
-            <!-- {{playerName}} -->
+            <!-- {{oppoName}} -->
         <!-- </div> -->
 
         <!-- <div id="search-container">
@@ -21,13 +21,13 @@
         </div> -->
 
         <!-- <div id="opponent">
-            {{playerName}}
+            {{oppoName}}
         </div> -->
 
         <div class="tabs" v-if="!isLoading">
             <div class="tab-title" @click="showOppo" :class="{active: isShowOppo}">Opp.</div>
             <div class="tab-title" @click="showMy" :class="{active: isShowMy}">My</div>
-            <div class="tab-title" @click="showCode" :class="{active: isShowCode}">Code</div>
+            <!-- <div class="tab-title" @click="showCode" :class="{active: isShowCode}">Code</div> -->
         </div>
 
         <div id="history" class="tab-content" v-if="isShowOppo">
@@ -50,9 +50,9 @@
         </div>
 
         <div class="tab-content" v-if="isShowMy">
-            <deck-regions :deck="myDeck.currentDeckCode"></deck-regions>
+            <deck-regions :deck="currentDeckCode"></deck-regions>
             <!-- <match-info-deck-detail :deck="myDeck.currentDeckCode"></match-info-deck-detail> -->
-            <deck-detail-base :deck="myDeck.currentDeckCode" :baseDeck="myDeck.deckCode"></deck-detail-base>
+            <deck-detail-base :deck="currentDeckCode" :baseDeck="startingDeckCode"></deck-detail-base>
         </div>
 
         <div class="tab-content" v-if="isShowCode">
@@ -76,7 +76,7 @@ import DeckRegions from '../../components/DeckRegions.vue'
 import DeckEncoder from '../../modules/runeterra/DeckEncoder'
 import DeckDetailBase from '../../components/DeckDetailBase.vue'
 
-const requestDataWaitTime = 200; // ms
+const requestDataWaitTime = 500; // ms
 
 const TABS = {
     oppo: 0,
@@ -91,6 +91,8 @@ export default {
         // this.getSubData()
         console.log("Mounted")
         this.requestData()
+        this.requestTrackInfo()
+        // this.requestOpponentHistory()
         // console.log("Test")
     },
     data() {
@@ -98,14 +100,19 @@ export default {
             rawDataString: null,
             matchInfos: [],
             request: null,
-            playerName: null,
-            playerRank: null,
+            
             matchTotalNum: 0,
             infoType: null,
             deckCode: null,
             titleType: null,
             currentTab: TABS.oppo,
             myDeck: null,
+            currentDeckCode: null,
+            startingDeckCode: null,
+            oppoName: null,
+            oppoRank: null,
+            
+            oppoTag: null,
         }
     },
     computed: {
@@ -113,7 +120,8 @@ export default {
             // console.log(this.myDeck)
             if (this.infoType == "deckCode" && this.deckCode != "") return false
             if (this.myDeck && this.myDeck.deckCode) return false
-            return (this.playerName == null || this.playerName == "" || this.matchInfos.length == 0)
+            if (this.matchInfos.length > 0) return false
+            return (this.oppoName == null || this.oppoName == "" || this.matchInfos.length == 0)
             // return true
         },
         loadingText() {
@@ -159,9 +167,9 @@ export default {
         showMy() {
             this.currentTab = TABS.my
         },
-        showCode() {
-            this.currentTab = TABS.code
-        },
+        // showCode() {
+        //     this.currentTab = TABS.code
+        // },
         getMatchInfo() {
 
             // const APILink = "https://run.mocky.io/v3/1b944261-e5c2-4071-bf22-a8c5e509edeb"
@@ -196,7 +204,7 @@ export default {
             if (window.sock)
             for await (const [topic, msg] of window.sock) {
                 // console.log("Received Sub:", topic.toString(), " message:", msg.toString())
-                // this.playerName = msg.toString()
+                // this.oppoName = msg.toString()
                 // window.testData = msg.toString()
                 // console.log(mainWindow)
                 this.processRawData(msg)
@@ -209,13 +217,86 @@ export default {
                 }, requestDataWaitTime);
             })
         },
+        async requestOpponentHistory() {
+            // http://192.168.20.4:6123/history/asia/J01/J01
+
+            console.log("Request Opponent History for " + this.oppoName + "#" + this.oppoTag)
+            
+            axios.get(`http://127.0.0.1:6123/history/${this.server}/${this.oppoName}/${this.oppoTag}`)
+                .then((response) => {
+                    console.log(response.data)
+                    this.processJsonData(response.data)
+                })
+                .catch((e) => {
+                    if (axios.isCancel(e)) {
+                        console.log("Request cancelled");
+                    } else 
+                    { console.log('error', e) }
+                })
+
+        },
+        async requestTrackInfo() {
+            // http://192.168.20.4:6123/track
+
+            console.log("Request Track Info")
+
+            axios.get(`http://127.0.0.1:6123/track`)
+                .then((response) => {
+                    console.log(response.data)
+                    
+                    this.processTrackInfo(response.data)
+                    this.requestTrackInfo()
+                })
+                .catch((e) => {
+                    if (axios.isCancel(e)) {
+                        console.log("Request cancelled");
+                    } else 
+                    { console.log('error', e) }
+                })
+
+            
+        },
+        processTrackInfo(data) {
+            if (data.opponent_info) {
+                var oppoInfo = data.opponent_info;
+                if ((oppoInfo.name) && (oppoInfo.tag)) {
+
+                    console.log("Reading Opponent Info")
+
+                    if ((!this.oppoName) || (this.oppoName.toLowerCase() != oppoInfo.name.toLowerCase()))
+                    this.oppoName = oppoInfo.name
+                    this.oppoTag = oppoInfo.tag
+                    this.server = oppoInfo.server
+
+                    this.requestOpponentHistory()
+                } else {
+
+                    console.log("Test Opponent Info")
+
+                    if (!this.oppoName || this.oppoName.toLowerCase() != "storm") {
+                        console.log(this.oppoName)
+                        this.oppoName = "Storm"
+                        this.oppoTag = "5961"
+                        this.server = "americas"
+
+                        this.requestOpponentHistory()
+                    }
+                    
+                }
+            }
+
+            if (data.deck_tracker) {
+                this.startingDeckCode = data.deck_tracker.deckCode
+                this.currentDeckCode = data.deck_tracker.currentDeckCode
+            }
+        },
         async requestData() {
 
             if (window.request) {
                 await window.request.send("0")
-                // console.log("Requested data")
+                console.log("Requested data")
                 const [result] = await window.request.receive()
-                // this.playerName = result.toString()
+                // this.oppoName = result.toString()
                 
                 // console.log("Received data")
                 // console.log(result.toString())
@@ -244,23 +325,25 @@ export default {
 
             // Process New Data
 
-            if ((data.type == "deckCode" && data.deckCode != "" && data.deckCode != this.deckCode)) {
+            // if ((data.type == "deckCode" && data.deckCode != "" && data.deckCode != this.deckCode)) {
                 // Changes Deck Code
                 // Make window appear to display deck code
-                window.showWindow()
+                // window.showWindow()
                 // Switches to code tab
-                this.showCode()
-            } else if (JSON.stringify(this.matchInfos) != JSON.stringify(data.matches)) {
+                // this.showCode()
+            // } else 
+            if (JSON.stringify(this.matchInfos) != JSON.stringify(data.matches)) {
                 // Changes Match Info
                 window.showWindow()
                 this.showOppo()
             }
             
-            this.infoType = data.type // match or deckCode
-            this.deckCode = data.deckCode
+            // this.infoType = data.type // match or deckCode
+            this.infoType = "match"
+            // this.deckCode = data.deckCode
             // console.log(this.deckCode)
 
-            this.myDeck = data.myDeck
+            // this.myDeck = data.myDeck
             // console.log(this.myDeck.currentDeckCode)
 
             // if ()
@@ -279,8 +362,8 @@ export default {
             }
             // console.log(this.matchTotalNum)
 
-            this.playerName = data.name;
-            this.playerRank = data.rank;
+            // this.oppoName = data.name;
+            // this.oppoRank = data.rank;
         }
     }
 
