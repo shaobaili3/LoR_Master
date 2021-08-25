@@ -17,9 +17,6 @@ networkInspect = Network(settingInspect)
 riotInspect = Riot(networkInspect)
 playerInspect = Player(riotInspect)
 localInspect = Local(settingInspect)
-#localInspect.updatePlayernames()
-
-print(localInspect.playernames)
 
 def processMatchDetail(detail):
     try:

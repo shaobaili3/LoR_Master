@@ -31,7 +31,7 @@ def getPort(setting):
     path = getLoRLogFile()
     if path is not None:
         try:
-            with open(path, 'rb', encoding='utf-8') as lorLog:
+            with open(path, 'r', encoding='utf-8') as lorLog:
                 for line in lorLog.readlines():
                     line = line.strip()
                     if '[TrySetShardDnsLive] setting dns data by affinity' in line:
