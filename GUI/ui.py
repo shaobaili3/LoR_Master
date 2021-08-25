@@ -10,6 +10,10 @@ class Opponent:
         self.deckCode = ''
         self.myDeck = None
 
+class OpponentFlask:
+    def __init__(self):
+        self.matches = []
+
 class DeckDetail:
     def __init__(self, matches: int , winNum: int, time: str):
         self.matches = matches

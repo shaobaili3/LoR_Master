@@ -1,5 +1,9 @@
+from os import name
 from flask import Flask, jsonify
 import json
+
+from flask.json import tag
+from Models import player
 from Models.setting import Server
 from Models.player import Player
 from Models.network import Network
@@ -7,7 +11,6 @@ from Models.riot import Riot
 from Models.local import Local
 from Models.setting import Setting
 from Models.leaderboard import checkRank
-
 
 app = Flask(__name__)
 
@@ -44,6 +47,12 @@ def processMatchDetail(detail):
 def track():
     return localInspect.updateStatusFlask()
 
+@app.route("/history/<string:server>/<string:name>/<string:tag>", methods = ['get'])
+def history(server, name, tag):
+    settingInspect.setServer(Server._value2member_map_[server])
+    playerInspect.inspectFlask(name, tag)
+    playerInspect.loadMatchsToFlask()
+    return jsonify(playerInspect.historyFlask.__dict__)
 
 @app.route("/name/<string:server>/<string:playername>", methods = ['get'])
 def get_names(server, playername):
