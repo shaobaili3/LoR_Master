@@ -90,7 +90,7 @@ export default {
         // this.getMatchInfo()
         // this.getSubData()
         console.log("Mounted")
-        this.requestData()
+        // this.requestData()
         this.requestTrackInfo()
         // this.requestOpponentHistory()
         // console.log("Test")
@@ -170,36 +170,6 @@ export default {
         // showCode() {
         //     this.currentTab = TABS.code
         // },
-        getMatchInfo() {
-
-            // const APILink = "https://run.mocky.io/v3/1b944261-e5c2-4071-bf22-a8c5e509edeb"
-            const APILink = "https://run.mocky.io/v3/ed898fe9-570b-476b-824d-a8fd93c4d331"            
-            
-            if (this.request) this.cancelLeaderboard()
-            const axiosSource = axios.CancelToken.source()
-            this.request = { cancel: axiosSource.cancel, msg: "Loading..." };
-
-            // var APILink = test_api_links[regionID]
-            this.isLoading = true;
-
-            axios.get(APILink, {cancelToken: axiosSource.token} )
-            .then((data) => {
-                var d = data.data
-                // Testing 6 Champs
-                // d.matches[0].deckCode = "CMBQCAQAAMAQIAAHBAAQAAIGBEFRIGRCE4BACAIAEQAQIAAJAMAQEAAGAEBQACYEAEAAYFRKFU"
-                
-                // Testing singleton
-                d.matches[0].deckCode = "CMAAABQBAMDA6AQEAQFA4BADAQCAYEQZBEAQIAIIBIKBWHBEFY3QYAQGBEFA2EQUFAWC4LZQHI6AYAYJBEIR2JZKGA4ESVSY2YA5SAI"
-                d.matches[1].deckCode = "CMBACAQAAMEACAABAYEQWFA2EITQEAIBAASAEBAAA4EQIAIBAEPACAQAAYAQGAALAQAQADAWFIWQ"
-                this.processJsonData(data.data)
-            })
-            .catch((e) => {
-                if (axios.isCancel(e)) {
-                    console.log("Request cancelled");
-                } else 
-                { console.log('error', e) }
-            })
-        },
         async getSubData() {
             if (window.sock)
             for await (const [topic, msg] of window.sock) {
@@ -259,67 +229,40 @@ export default {
         processTrackInfo(data) {
             if (data.opponent_info) {
                 var oppoInfo = data.opponent_info;
-                if ((oppoInfo.name) && (oppoInfo.tag)) {
+                if ((oppoInfo.name) && (oppoInfo.tag) && (oppoInfo.server)) {
 
                     console.log("Reading Opponent Info")
 
-                    if ((!this.oppoName) || (this.oppoName.toLowerCase() != oppoInfo.name.toLowerCase()))
-                    this.oppoName = oppoInfo.name
-                    this.oppoTag = oppoInfo.tag
-                    this.server = oppoInfo.server
-
-                    this.requestOpponentHistory()
-                } else {
-
-                    console.log("Test Opponent Info")
-
-                    if (!this.oppoName || this.oppoName.toLowerCase() != "storm") {
-                        console.log(this.oppoName)
-                        this.oppoName = "Storm"
-                        this.oppoTag = "5961"
-                        this.server = "americas"
+                    if ((!this.oppoName) || (this.oppoName.toLowerCase() != oppoInfo.name.toLowerCase())) {
+                        // If there is no oppoName set or there is a change in the name
+                        this.oppoName = oppoInfo.name
+                        this.oppoTag = oppoInfo.tag
+                        this.oppoRank = oppoInfo.rank
+                        this.server = oppoInfo.server
 
                         this.requestOpponentHistory()
                     }
-                    
                 }
+                // else {
+
+                //     console.log("Test Opponent Info")
+
+                //     if (!this.oppoName || this.oppoName.toLowerCase() != "storm") {
+                //         console.log(this.oppoName)
+                //         this.oppoName = "Storm"
+                //         this.oppoTag = "5961"
+                //         this.server = "americas"
+
+                //         this.requestOpponentHistory()
+                //     }
+                    
+                // }
             }
 
             if (data.deck_tracker) {
                 this.startingDeckCode = data.deck_tracker.deckCode
                 this.currentDeckCode = data.deck_tracker.currentDeckCode
             }
-        },
-        async requestData() {
-
-            if (window.request) {
-                await window.request.send("0")
-                console.log("Requested data")
-                const [result] = await window.request.receive()
-                // this.oppoName = result.toString()
-                
-                // console.log("Received data")
-                // console.log(result.toString())
-                
-                this.processRawData(result)
-                await this.requestDataAgain()
-                this.requestData()
-
-            } else {
-                this.getMatchInfo()
-            }            
-        },
-        processRawData(raw) {
-            var rawString = raw.toString('utf8')
-            if (this.rawDataString == rawString) return
-
-            // console.log("Old:", this.rawDataString)
-            // console.log("New:", rawString)
-            
-            this.rawDataString = rawString
-            var data = JSON.parse(rawString)
-            // console.log("Processing Received Data:", raw.toString('utf8'))
-            this.processJsonData(data)
         },
         processJsonData(data) {
 
