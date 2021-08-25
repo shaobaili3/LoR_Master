@@ -5,14 +5,6 @@ const app = electron.app
 const BrowserWindow = electron.BrowserWindow
 const path = require('path')
 
-var python = require('child_process').spawn('py', ['../flaskTest.py']);
-  python.stdout.on('data', function (data) {
-    console.log("data: ", data.toString('utf8'));
-  });
-  python.stderr.on('data', (data) => {
-    console.log(`stderr: ${data}`); // when error
-  });
-
 // --- Menu and short cuts ---
 
 const menu = new Menu()
@@ -38,6 +30,20 @@ const developmentMode = true
 const closeWithoutTracker = true
 const headerHeight = 45 // Repeated in preload.js
 const defaultRatio = 2.3 // Repeated in preload.js
+
+const spawnFlaskTest = true
+var python
+
+if (spawnFlaskTest) {
+  python = require('child_process').spawn('py', ['./flaskTest.py'], {cwd: '../'});
+  python.stdout.on('data', function (data) {
+    console.log("data: ", data.toString('utf8'));
+  });
+  python.stderr.on('data', (data) => {
+    console.log(`stderr: ${data}`); // when error
+  });
+}
+
 
 // const client = require('./appsrc/client.js')
 

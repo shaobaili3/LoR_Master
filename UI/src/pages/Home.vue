@@ -164,6 +164,7 @@ export default {
     methods: {
         selectRegion(region) {
             this.selectedRegion = region
+            this.searchName()
         },
         searchName() {
             // console.log("searchName")
@@ -220,6 +221,11 @@ export default {
             this.winrate = ""
             this.playerName = ""
             this.playerTag = ""
+            this.matches = []
+        },
+        errorHistory() {
+            this.clearInfo()
+            this.playerName = "No history found"
         },
         processHistoryData(data) {
             this.matches = []
@@ -230,6 +236,9 @@ export default {
             console.log(data)
             for (var key in data) {
                 // console.log(data[key])
+
+                if (!data[key]) continue // Skip if null history
+
                 var isFirstPlayer = data[key].playernames[0].toLowerCase() == (this.playerName + "#" + this.playerTag).toLowerCase()
                 
                 var player, opponent;
@@ -349,7 +358,8 @@ export default {
                     this.isLoading = false;
 
                     if (response.data == "Error") {
-                        this.clearInfo()
+                        console.log("History Search Error")
+                        this.errorHistory()
                     } else {
                         this.processHistoryData(response.data)
                     }
