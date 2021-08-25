@@ -103,6 +103,12 @@ const inputNameListLength = 10;
 
 let cancelToken
 
+const regionNames = {
+    'NA': 'americas',
+    'EU': 'europe',
+    'AS': 'asia',
+}
+
 export default {
     mounted() {
         console.log("Mounted")
@@ -303,7 +309,7 @@ export default {
         },
         async requestNameData() {
             
-            axios.get(`http://127.0.0.1:6123/name/${this.searchText}`)
+            axios.get(`http://127.0.0.1:6123/name/${regionNames[this.selectedRegion]}/${this.searchText}`)
                 .then((response) => {
                     if (response.data == "Error") {
                         // Error
@@ -337,7 +343,7 @@ export default {
             //Save the cancel token for the current request
             cancelToken = axios.CancelToken.source()
 
-            axios.get(`http://127.0.0.1:6123/search/${this.playerName}/${this.playerTag}`,
+            axios.get(`http://127.0.0.1:6123/search/${regionNames[this.selectedRegion]}/${this.playerName}/${this.playerTag}`,
                     { cancelToken: cancelToken.token }) // Pass the cancel token
                 .then((response) => {
                     this.isLoading = false;
