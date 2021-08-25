@@ -209,7 +209,7 @@ class Local:
                 if name in names:
                     self.opponentTag = names[name]
                     return
-            with open(('Resource/' + self.setting.getServer() + '.dat'), encoding="utf8") as search:
+            with open(('Resource/' + self.setting.getServer() + '.dat'), encoding="utf-8") as search:
                 for line in search:
                     fullName = line.rstrip().split('#')
                     if name == fullName[0]:
