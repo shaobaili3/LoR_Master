@@ -100,7 +100,7 @@ class Local:
         # print(self.trackerDict)
 
     def updateStatusFlask(self):
-        Models.process.getPort(self.setting)
+        #Models.process.getPort(self.setting)
         try:
             localRequest = self.session.get(self.getLocalLink())
             self.positional_rectangles = localRequest.json()
@@ -119,7 +119,7 @@ class Local:
         self.trackJson['deck_tracker'] = self.trackerDict
         
         opInfo = {}
-        updateTrackServer(self.setting)
+        #updateTrackServer(self.setting)
         self.updateTagByName(self.positional_rectangles['OpponentName'])
         opInfo['server'] = self.setting.riotServer
         opInfo['name'] = self.positional_rectangles['OpponentName']
