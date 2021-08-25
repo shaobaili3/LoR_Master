@@ -40,9 +40,9 @@ def processMatchDetail(detail):
     detail['player_info'] = player_info
     return detail
 
-@app.route("/code", methods = ['get'])
-def get_code():
-    return jsonText
+@app.route("/track", methods = ['get'])
+def track():
+    return localInspect.updateStatusFlask()
 
 
 @app.route("/name/<string:server>/<string:playername>", methods = ['get'])

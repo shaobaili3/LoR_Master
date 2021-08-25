@@ -10,6 +10,7 @@ import json
 
 class Local:
     def __init__(self, setting):
+        
         self.opponentName = None
         self.opponentTag = None
         self.isClientRuning = False
@@ -18,12 +19,14 @@ class Local:
         self.playernames = set()
         self.playername = None
         self.trackerDict = {}
-        #self.updatePlayernames()
         self.session = requests.Session()
         self.playedCards = {}
         self.graveyard = {}
         self.opGraveyard = {}
-
+        self.positional_rectangles = None
+        self.static_decklist = None
+        self.trackJson = {}
+        self.updatePlayernames()
     # call this function after changes server in the tracker
     def reset(self):
         self.opponentName = None
@@ -34,6 +37,7 @@ class Local:
         self.playedCards = {}
         self.graveyard = {}
         self.opGraveyard = {}
+        self.trackJson = {}
 
     def updateTracker(self, rectangles):
         if rectangles is None:
@@ -74,16 +78,12 @@ class Local:
     def updateMyDeck(self):
         try:
             localDeckRequest = self.session.get(self.getLocalDeckLink())
-            if not self.isClientRuning:
-                return 
-        except requests.exceptions.RequestException:
-            if self.isClientRuning:
-                print('LoR is closed')
-            return
-        try:
             details = localDeckRequest.json()
         except Exception as e:
             print('updateMyDeck Error: ', e)
+            return
+        if details['DeckCode'] is None:
+            print('updateMyDeck Match is not start')
             return
         currentCards = details['CardsInDeck']
         currentCards = self.updateLeftCards(currentCards)
@@ -96,6 +96,29 @@ class Local:
         
         self.trackerDict['opGraveyardCode'] = getDeckCode(self.opGraveyard)
         # print(self.trackerDict)
+
+    def updateStatusFlask(self):
+        Models.process.getPort(self.setting)
+        try:
+            localRequest = self.session.get(self.getLocalLink())
+            self.positional_rectangles = localRequest.json()
+        except Exception as e:
+            print('client is not running: ', e)
+            self.reset()
+            return None
+        if self.positional_rectangles['GameState'] == 'InProgress':
+            self.updateTracker(self.positional_rectangles['Rectangles'])
+            self.updateMyDeck()
+            print(self.trackerDict)
+        else:
+            self.reset()
+
+        self.trackJson['positional_rectangles'] = self.positional_rectangles
+        self.trackJson['deck_tracker'] = self.trackerDict
+        
+
+        return self.trackJson
+
 
     def updateStatus(self, checkOpponent, showMessage, showStatus, showMatchs,
                      showDecks):
@@ -117,9 +140,10 @@ class Local:
             return
         try:
             details = localRequest.json()
-        except ValueError:
-            print('Decoding local port json failed')
+        except Exception as e:
+            print('Decoding local port json failed: ', e)
             return
+        self.positional_rectangles = details
         self.updateTracker(details['Rectangles'])
         gameState = details['GameState']
         vsPlayerStr = ''
@@ -142,7 +166,7 @@ class Local:
                     self.opponentName = opName
                     self.updateTagByName(self.opponentName)
                     showMessage(
-                        opName + ' ' + vsPlayerStr + ' ' +
+                        opName + ' ' + vsPlayerSstr + ' ' +
                         getRankStr(playerName, self.setting.getServer()))
                     if self.opponentTag is None:
                         # Play Tag does not exist
