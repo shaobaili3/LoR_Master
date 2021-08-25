@@ -1,11 +1,13 @@
 import requests
 from requests import models
+from Models import setting
 from Models.setting import Server
 import constants as cs
 import Models.utility as utility
 import Models.process
 from Models.leaderboard import getRankStr, updateLeaderboard
 from Models.deck import getDeckCode
+from Models.process import updateTrackServer
 import json
 
 class Local:
@@ -116,6 +118,15 @@ class Local:
         self.trackJson['positional_rectangles'] = self.positional_rectangles
         self.trackJson['deck_tracker'] = self.trackerDict
         
+        opInfo = {}
+        updateTrackServer(self.setting)
+        self.updateTagByName(self.positional_rectangles['OpponentName'])
+        opInfo['server'] = self.setting.riotServer
+        opInfo['name'] = self.positional_rectangles['OpponentName']
+        opInfo['tag'] = self.opponentTag
+        opInfo['rank'] = None
+        opInfo['lp'] = None
+        self.trackJson['opponent_info'] = opInfo
 
         return self.trackJson
 
