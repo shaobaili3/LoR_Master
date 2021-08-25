@@ -22,13 +22,13 @@ class Riot:
 
     def loadJson(self):
         try:
-            with open('data/matchDetails.json', encoding='utf-8') as fp:
+            with open('data/matchDetails.json', 'rb', encoding='utf-8') as fp:
                 self.matchDetails = json.load(fp)
-            with open('data/riotIds.json', encoding='utf-8') as fp:
+            with open('data/riotIds.json', 'rb', encoding='utf-8') as fp:
                 self.riotIds = json.load(fp)
-            with open('data/playerNames.json', encoding='utf-8') as fp:
+            with open('data/playerNames.json', 'rb', encoding='utf-8') as fp:
                 self.playerNames = json.load(fp)
-            with open('data/matches.json', encoding='utf-8') as fp:
+            with open('data/matches.json', 'rb', encoding='utf-8') as fp:
                 self.matches = json.load(fp)
         except IOError as e:
             print('No cache found', e)

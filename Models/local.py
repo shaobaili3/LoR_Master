@@ -204,12 +204,12 @@ class Local:
 
     def updateTagByName(self, name):
         try:        
-            with open('data/' + self.setting.getServer() + '.json', encoding='utf-8') as fp:
+            with open('data/' + self.setting.getServer() + '.json', 'rb', encoding='utf-8') as fp:
                 names = json.load(fp)
                 if name in names:
                     self.opponentTag = names[name]
                     return
-            with open(('Resource/' + self.setting.getServer() + '.dat'), encoding="utf-8") as search:
+            with open(('Resource/' + self.setting.getServer() + '.dat'), 'rb', encoding="utf-8") as search:
                 for line in search:
                     fullName = line.rstrip().split('#')
                     if name == fullName[0]:
@@ -223,7 +223,7 @@ class Local:
     def updatePlayernames(self):
         try: 
             self.playernames = set()
-            with open('data/' + self.setting.getServer() + '.json', encoding='utf-8') as fp:
+            with open('data/' + self.setting.getServer() + '.json', 'rb', encoding='utf-8') as fp:
                 names = json.load(fp)
                 for name in names.items():
                     try:
