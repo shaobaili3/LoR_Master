@@ -38,8 +38,8 @@
                 <div class="player-summary">
                     <div class="name">{{playerName}}</div>
                     <!-- <div class="detail server">Server: SEA</div> -->
-                    <!-- <div class="detail rank">Rank: 1</div> -->
-                    <!-- <div class="detail lp">LP: 1000</div> -->
+                    <div class="detail rank" v-if="playerRank">Rank: {{playerRank}}</div>
+                    <div class="detail lp" v-if="playerLP">LP: {{playerLP}}</div>
                 </div>
                 <div class="history-summary">
                     <div class="win-loss">{{winloss}}</div>
@@ -62,6 +62,7 @@
                     :rounds="match.rounds"
                     :win="match.win"
                     :time="match.time"
+                    :badges="match.badges"
                 ></match-history>
                 
             </div>
@@ -82,7 +83,7 @@
 
     <div class="bottom-bar">
         <div class="left">
-            <div class="version">Status: Fine</div>
+            <div class="status">Status: Fine</div>
         </div>
         <div class="right">
             <div class="version">v0.9.3 Beta</div>
@@ -107,6 +108,39 @@ const regionNames = {
     'NA': 'americas',
     'EU': 'europe',
     'AS': 'asia',
+}
+
+function processDate(dateString) {
+    var time
+    var date = new Date(dateString)
+
+    var milliElapsed = Date.now() - date
+    var secondsElapsed = milliElapsed / 1000
+    var minElapse = secondsElapsed / 60
+    var hoursElapse = minElapse / 60
+    var daysElapsed = hoursElapse / 24
+
+    if (secondsElapsed < 60) {
+        time = Math.floor(secondsElapsed) + " sec. agp"
+    } else if (minElapse < 60) {
+        time = Math.floor(minElapse) + " min. agp"
+    } else if (hoursElapse < 24) {
+        if (Math.floor(hoursElapse) == 1) {
+            time = Math.floor(hoursElapse) + " hour agp"
+        } else {
+            time = Math.floor(hoursElapse) + " hours agp"
+        }
+    } else if (daysElapsed < 7) {
+        if ( Math.floor(daysElapsed) == 1) {
+            time = Math.floor(daysElapsed) + " day agp"
+        } else {
+            time = Math.floor(daysElapsed) + " days agp"
+        }
+    } else {
+        time = date.toLocaleDateString()
+    }
+
+    return time
 }
 
 export default {
@@ -145,6 +179,8 @@ export default {
             winrate: "",
             playerName: "",
             playerTag: "",
+            playerRank: null,
+            playerLP: null,
             searchText: "",
             isLoading: false,
             inputNameList: [],
@@ -221,6 +257,8 @@ export default {
             this.winrate = ""
             this.playerName = ""
             this.playerTag = ""
+            this.playerRank = null
+            this.playerLP = null
             this.matches = []
         },
         errorHistory() {
@@ -229,6 +267,8 @@ export default {
         },
         processHistoryData(data) {
             this.matches = []
+            this.playerRank = null
+            this.playerLP = null
             var totalWins = 0
             var totalLoss = 0
             // var totalMatches = data.length
@@ -239,68 +279,50 @@ export default {
 
                 if (!data[key]) continue // Skip if null history
 
-                var isFirstPlayer = data[key].playernames[0].toLowerCase() == (this.playerName + "#" + this.playerTag).toLowerCase()
+                var isFirstPlayer = data[key].player_info[0].name.toLowerCase() == this.playerName.toLowerCase()
                 
-                var player, opponent;
+                var player, playerGame, opponent, opponentGame;
                 var info = data[key].info
                 
                 var opponentName, deck, opponentDeck, rounds, win, time, order;
                 
                 if (isFirstPlayer) {
-                    player = info.players[0]
-                    opponent = info.players[1]
+                    playerGame = info.players[0]
+                    opponentGame = info.players[1]
 
-                    this.playerName = data[key].playernames[0].split("#")[0]
-                    opponentName = data[key].playernames[1].split("#")[0]
+                    player = data[key].player_info[0]
+                    opponent = data[key].player_info[1]
                 } else {
-                    player = info.players[1]
-                    opponent = info.players[0]
+                    playerGame = info.players[1]
+                    opponentGame = info.players[0]
 
-                    this.playerName = data[key].playernames[1].split("#")[0]
-                    opponentName = data[key].playernames[0].split("#")[0]
+                    player = data[key].player_info[1]
+                    opponent = data[key].player_info[0]
                 }
 
-                if (!player || !opponent) continue;
+                if (!playerGame || !opponentGame || !player || !opponent) continue;
 
+                this.playerName = player.name
+                opponentName = opponent.name
+
+                if (!this.playerRank) this.playerRank = player.rank
+                if (!this.playerLP) this.playerLP = player.lp
                 
-                deck = player.deck_code
-                opponentDeck = opponent.deck_code
-                order = player.order_of_play
-                win = player.game_outcome == "win"
+                deck = playerGame.deck_code
+                opponentDeck = opponentGame.deck_code
+                order = playerGame.order_of_play
+                win = playerGame.game_outcome == "win"
                 if (win) {
                     totalWins += 1
                 } else {
                     totalLoss += 1
                 }
                 rounds = info.total_turn_count
+                var badges = []
+                if (info.game_mode) badges.push(info.game_mode.replace(/([A-Z])/g, ' $1').trim().replace("Lobby", ""))
+                if (info.game_type) badges.push(info.game_type.replace(/([A-Z])/g, ' $1').trim().replace("Lobby", ""))
 
-                var date = new Date(info.game_start_time_utc)
-
-                var milliElapsed = Date.now() - date
-                var secondsElapsed = milliElapsed / 1000
-                var minElapse = secondsElapsed / 60
-                var hoursElapse = minElapse / 60
-                var daysElapsed = hoursElapse / 24
-
-                if (secondsElapsed < 60) {
-                    time = Math.floor(secondsElapsed) + " sec. agp"
-                } else if (minElapse < 60) {
-                    time = Math.floor(minElapse) + " min. agp"
-                } else if (hoursElapse < 24) {
-                    if (Math.floor(hoursElapse) == 1) {
-                        time = Math.floor(hoursElapse) + " hour agp"
-                    } else {
-                        time = Math.floor(hoursElapse) + " hours agp"
-                    }
-                } else if (daysElapsed < 7) {
-                    if ( Math.floor(daysElapsed) == 1) {
-                        time = Math.floor(daysElapsed) + " day agp"
-                    } else {
-                        time = Math.floor(daysElapsed) + " days agp"
-                    }
-                } else {
-                    time = date.toLocaleDateString()
-                }
+                time = processDate(info.game_start_time_utc)
 
                 this.matches.push({
                     opponentName: opponentName,
@@ -309,6 +331,7 @@ export default {
                     rounds: rounds,
                     win: win,
                     time: time,
+                    badges: badges,
                 })
             }
             // var totalLoss = totalMatches - totalWins;
@@ -638,6 +661,10 @@ export default {
         background: none;
         border: 0px;
         cursor: pointer;
+    }
+
+    .left-nav-btn:focus {
+        outline: 0px;
     }
 
     .left-nav-btn.selected {

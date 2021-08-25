@@ -6,6 +6,9 @@
             </p>
             <div class="history-info">{{time}}</div>
             <div class="history-info">{{rounds}} rounds</div>
+            <div class="match-info-badge" v-for="(badge, index) in badges" :key="index" >
+                <span v-if="badge=='recent' || badge=='frequent'" class="match-info-badge-icon fa" :class="{'fa-clock': badge=='recent', 'fa-angle-double-up': badge=='frequent'}"></span>
+                {{badge}}</div>
         </div>
         <div class="row decklist">
             <deck-preview @click="showDeck(deck)" :deck="deck" :won="won"></deck-preview>
@@ -47,6 +50,7 @@ export default {
         opponentDeck: String,
         win: Boolean,
         time: String,
+        badges: Array,
     },
     computed: {
         opponentLink() {
@@ -135,10 +139,10 @@ export default {
     }
 
     .match-info-badge {
-        font-size: 0.8em;
+        font-size: 0.7em;
         color: rgba(255, 255, 255, 0.8);
         background: rgba(255, 255, 255, 0.2);
-        padding: 5px 10px;
+        padding: 3px 8px;
         margin-right: 5px;
         border-radius: 50px;
         cursor: default;
@@ -164,7 +168,7 @@ export default {
     
     .row {
         display: flex;
-        align-items: baseline;
+        align-items: center;
     }
 
 

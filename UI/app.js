@@ -25,7 +25,7 @@ Menu.setApplicationMenu(menu)
 // const server = require('./appsrc/server.js')
 // server.run
 
-const developmentMode = true
+const developmentMode = false
 // const snapAssist = true
 const closeWithoutTracker = true
 const headerHeight = 45 // Repeated in preload.js
@@ -35,7 +35,7 @@ const spawnFlaskTest = true
 var python
 
 if (spawnFlaskTest) {
-  python = require('child_process').spawn('py', ['./flaskTest.py'], {cwd: '../'});
+  python = require('child_process').spawn('python', ['./flaskTest.py'], {cwd: '../'});
   python.stdout.on('data', function (data) {
     console.log("data: ", data.toString('utf8'));
   });
