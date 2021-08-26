@@ -77,7 +77,7 @@ import DeckRegions from '../../components/DeckRegions.vue'
 import DeckEncoder from '../../modules/runeterra/DeckEncoder'
 import DeckDetailBase from '../../components/DeckDetailBase.vue'
 
-const requestDataWaitTime = 300; // ms
+const requestDataWaitTime = 100; // ms
 const requestServerWaitTime = 3000; //ms
 const portNum = "63312"
 
