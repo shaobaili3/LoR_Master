@@ -5,7 +5,7 @@ block_cipher = None
 
 
 a = Analysis(['LoRMasterTracker.py'],
-             pathex=['C:\\Users\\Storm\\Desktop\\LoR_Master'],
+             pathex=['C:\\Users\\Storm\\Desktop\\LoR_Master\\UI'],
              binaries=[],
              datas=[],
              hiddenimports=[],

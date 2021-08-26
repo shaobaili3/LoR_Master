@@ -126,6 +126,7 @@ class Local:
         if gameState == 'InProgress':
             if not self.isInProgress:
                 print('新对局开始')  # New Match Found
+                Models.process.runElectron()
                 self.isInProgress = True
             opName = details['OpponentName']
             playerName = details['PlayerName']
