@@ -287,7 +287,7 @@ export default {
             
             if (data.opponent_info) {
                 var oppoInfo = data.opponent_info;
-                if ((oppoInfo.name) && (oppoInfo.tag) && (oppoInfo.server)) {
+                if ((oppoInfo.name) && (oppoInfo.tag)) {
 
                     // console.log("Reading Opponent Info")
 
