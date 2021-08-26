@@ -12,7 +12,7 @@ class Opponent:
 
 class OpponentFlask:
     def __init__(self):
-        self.matches = []
+        self.history = []
 
 class DeckDetail:
     def __init__(self, matches: int , winNum: int, time: str):

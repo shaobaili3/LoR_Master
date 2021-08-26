@@ -13,6 +13,7 @@ class Player:
         self.riot = riot
         self.summary = {}
         self.historyFlask = OpponentFlask()
+        self.matchesJson = []
 
     def addMatchToSummary(self, code, outcome, time):
         if code in self.summary:
@@ -204,7 +205,7 @@ class Player:
         return matchNum, winNum
 
     def loadMatchsToFlask(self):
-        self.historyFlask.matches = []
+        self.historyFlask.history = []
         for deckCode in self.summary:
             match = {}
             match['time'] = self.summary[deckCode].time
@@ -213,7 +214,7 @@ class Player:
             match['winrate'] = self.summary[
                 deckCode].winNum / self.summary[deckCode].matches
             match['history'] = self.summary[deckCode].history
-            self.historyFlask.matches.append(match)
+            self.historyFlask.history.append(match)
 
 
     def inspectFlask(self, name, tag):
@@ -267,7 +268,8 @@ class Player:
                 
                 if gameType in cs.UNSUPPORTED_TYPE:
                     continue
-
+                
+                self.matchesJson.append(detail)
                 matchNum += 1
                 riotId = detail['metadata']['participants']
                 outcome = None

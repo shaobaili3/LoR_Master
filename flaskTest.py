@@ -44,7 +44,7 @@ def history(server, name, tag):
     settingInspect.setServer(Server._value2member_map_[server])
     playerInspect.inspectFlask(name, tag)
     playerInspect.loadMatchsToFlask()
-    return jsonify(playerInspect.historyFlask.__dict__)
+    return jsonify(playerInspect.historyFlask.__dict__['history'])
 
 @app.route("/name/<string:server>/<string:playername>", methods = ['get'])
 def get_names(server, playername):
@@ -74,6 +74,15 @@ def search(name, tag, server):
         return 'Error'
     return jsonify(allMatches)
 
-    
+@app.route("/inspect/<string:server>/<string:name>/<string:tag>", methods = ['get'])
+def inspect(name, tag, server):
+    settingInspect.setServer(Server._value2member_map_[server])
+    playerInspect.inspectFlask(name, tag)
+    inspection = {} 
+    inspection['history'] = playerInspect.historyFlask.__dict__['history']
+    inspection['matches'] = playerInspect.matchesJson
+    return jsonify(inspection)
+
+
 app.run(host='0.0.0.0', port=6123)
 
