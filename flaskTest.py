@@ -11,6 +11,24 @@ from Models.riot import Riot
 from Models.local import Local
 from Models.setting import Setting
 from Models.leaderboard import checkRank
+import time
+import threading
+from Models.process import updateTrackServer
+
+
+class FlaskApp(Flask):
+    def __init__(self, *args, **kwargs):
+        super(FlaskApp, self).__init__(*args, **kwargs)
+        self.processWork()
+
+    def processWork(self):
+        def run_job():
+            while True:
+                updateTrackServer(settingInspect)
+                time.sleep(2)
+        t1 = threading.Thread(target=run_job)
+        t1.start()
+
 app = Flask(__name__)
 settingInspect = Setting()
 networkInspect = Network(settingInspect)
@@ -34,6 +52,13 @@ def processMatchDetail(detail):
     detail['playernames'] = playernames
     detail['player_info'] = player_info
     return detail
+
+@app.route("/process", methods = ['get'])
+def process():
+    process_info = {}
+    process_info['server'] = settingInspect.riotServer
+    process_info['port'] = settingInspect.port
+    return jsonify(process_info)
 
 @app.route("/track", methods = ['get'])
 def track():
@@ -84,5 +109,5 @@ def inspect(name, tag, server):
     return jsonify(inspection)
 
 
-app.run(host='0.0.0.0', port=6123)
+app.run(port=6123)
 
