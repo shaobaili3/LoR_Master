@@ -40,6 +40,8 @@ class Local:
         self.graveyard = {}
         self.opGraveyard = {}
         self.trackJson = {}
+        #self.positional_rectangles = None
+        self.trackerDict = {}
 
     def updateTracker(self, rectangles):
         if rectangles is None:
@@ -107,13 +109,16 @@ class Local:
         except Exception as e:
             print('client is not running: ', e)
             self.reset()
-            return None
+            return {}
         if self.positional_rectangles['GameState'] == 'InProgress':
             self.updateTracker(self.positional_rectangles['Rectangles'])
             self.updateMyDeck()
             print(self.trackerDict)
         else:
             self.reset()
+            self.trackJson
+            self.trackJson['positional_rectangles'] = self.positional_rectangles
+            return self.trackJson
 
         self.trackJson['positional_rectangles'] = self.positional_rectangles
         self.trackJson['deck_tracker'] = self.trackerDict

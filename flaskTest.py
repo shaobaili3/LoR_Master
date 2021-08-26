@@ -37,7 +37,7 @@ def processMatchDetail(detail):
 
 @app.route("/track", methods = ['get'])
 def track():
-    return localInspect.updateStatusFlask()
+    return jsonify(localInspect.updateStatusFlask())
 
 @app.route("/history/<string:server>/<string:name>/<string:tag>", methods = ['get'])
 def history(server, name, tag):
