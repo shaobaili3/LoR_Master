@@ -126,7 +126,6 @@ class Local:
         opInfo = {}
         #updateTrackServer(self.setting)
         self.updateTagByName(self.positional_rectangles['OpponentName'])
-        opInfo['server'] = self.setting.riotServer
         opInfo['name'] = self.positional_rectangles['OpponentName']
         opInfo['tag'] = self.opponentTag
         opInfo['rank'] = None
