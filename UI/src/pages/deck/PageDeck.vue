@@ -30,7 +30,7 @@
             <!-- <div class="tab-title" @click="showCode" :class="{active: isShowCode}">Code</div> -->
         </div>
 
-        <div id="history" class="tab-content" v-if="isShowOppo">
+        <div id="history" class="tab-content" v-if="isShowOppo && !isLoading">
 
             <div class="loading" v-if="matchInfos.length <= 0">{{loadingOppoText}}</div>
             
@@ -78,6 +78,7 @@ import DeckEncoder from '../../modules/runeterra/DeckEncoder'
 import DeckDetailBase from '../../components/DeckDetailBase.vue'
 
 const requestDataWaitTime = 300; // ms
+const requestServerWaitTime = 3000; //ms
 const portNum = "6123"
 
 const TABS = {
@@ -86,18 +87,19 @@ const TABS = {
     code: 2
 }
 
-var lastTrackTime;
+var lastTrackTime, lastServerRequestTime;
 
 export default {
     mounted() {
         // console.log(JSON.stringify(this.matchInfos))
         // this.getMatchInfo()
         // this.getSubData()
-        console.log("Mounted")
+        // console.log("Mounted")
         // this.requestData()
         this.infoType = "match"
 
         this.requestTrackInfo()
+        this.requestServerInfo()
         // this.requestOpponentHistory()
         // console.log("Test")
     },
@@ -154,7 +156,7 @@ export default {
             try {
                 var deck = DeckEncoder.decode(this.deckCode)
             } catch (err) {
-                console.log(err.message)
+                // console.log(err.message)
                 return true
             }
             return false
@@ -203,11 +205,11 @@ export default {
         async requestOpponentHistory() {
             // http://192.168.20.4:${portNum}/history/asia/J01/J01
 
-            console.log("Request Opponent History for " + this.oppoName + "#" + this.oppoTag)
+            // console.log("Request Opponent History for " + this.oppoName + "#" + this.oppoTag)
             
             axios.get(`http://127.0.0.1:${portNum}/history/${this.server}/${this.oppoName}/${this.oppoTag}`)
                 .then((response) => {
-                    console.log(response.data)
+                    // console.log(response.data)
                     this.processJsonData(response.data)
                 })
                 .catch((e) => {
@@ -218,16 +220,46 @@ export default {
                 })
 
         },
+        async requestServerInfo() {
+            lastServerRequestTime = Date.now()
+            
+            axios.get(`http://127.0.0.1:${portNum}/process`)
+                .then((response) => {
+                    // console.log(response.data)
+
+                    var elapsedTime = Date.now() - lastServerRequestTime // milli
+                    // console.log("Elapsed ", elapsedTime)
+                    
+                    this.server = response.data.server
+
+                    // console.log("Server", this.server)
+
+                    if (requestServerWaitTime > elapsedTime) {
+                        setTimeout(this.requestServerInfo, requestServerWaitTime - elapsedTime); 
+                    } else {
+                        this.requestServerInfo()
+                    }
+                    
+                })
+                .catch((e) => {
+                    if (axios.isCancel(e)) {
+                        console.log("Request cancelled");
+                    } else 
+                    { console.log('error', e) }
+                    this.requestServerInfo()
+                })
+            
+        },
         async requestTrackInfo() {
             // http://192.168.20.4:${portNum}/track
 
-            console.log("Request Track Info")
+            // console.log("Request Track Info")
 
             lastTrackTime = Date.now()
 
             axios.get(`http://127.0.0.1:${portNum}/track`)
                 .then((response) => {
-                    console.log(response.data)
+                    // console.log(response.data)
 
                     var elapsedTime = Date.now() - lastTrackTime // milli
                     // console.log("Elapsed ", elapsedTime)
@@ -241,7 +273,7 @@ export default {
                 })
                 .catch((e) => {
                     if (axios.isCancel(e)) {
-                        console.log("Request cancelled");
+                        // console.log("Request cancelled");
                     } else 
                     { console.log('error', e) }
                     this.requestTrackInfo()
@@ -264,10 +296,13 @@ export default {
                         this.oppoName = oppoInfo.name
                         this.oppoTag = oppoInfo.tag
                         this.oppoRank = oppoInfo.rank
-                        this.server = oppoInfo.server
 
                         this.requestOpponentHistory()
                     }
+                } else {
+                    this.oppoName = null
+                    this.oppoTag = null
+                    this.oppoRank = null
                 }
 
                 // if (oppoInfo.name) {
@@ -284,6 +319,9 @@ export default {
                 // if (data.deck_tracker.deckCode) {
                 //     this.makeWindowVisible()
                 // }
+            } else {
+                this.startingDeckCode = null
+                this.currentDeckCode = null
             }
         },
         processJsonData(data) {

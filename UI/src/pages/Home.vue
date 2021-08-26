@@ -254,7 +254,7 @@ export default {
             var totalLoss = 0
             // var totalMatches = data.length
 
-            console.log(data)
+            // console.log(data)
             for (var key in data) {
                 // console.log(data[key])
 
