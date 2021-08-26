@@ -15,6 +15,13 @@ import time
 import threading
 from Models.process import updateTrackServer
 
+settingInspect = Setting()
+networkInspect = Network(settingInspect)
+riotInspect = Riot(networkInspect)
+playerInspect = Player(riotInspect)
+localInspect = Local(settingInspect)
+
+settingOnly = Setting()
 
 class FlaskApp(Flask):
     def __init__(self, *args, **kwargs):
@@ -24,17 +31,15 @@ class FlaskApp(Flask):
     def processWork(self):
         def run_job():
             while True:
-                updateTrackServer(settingInspect)
+                updateTrackServer(settingOnly)
+                # port equal to real setting for all other restful api, server can be changed during inspection so no need to set
+                settingInspect.port = settingOnly.port
                 time.sleep(2)
         t1 = threading.Thread(target=run_job)
         t1.start()
 
-app = Flask(__name__)
-settingInspect = Setting()
-networkInspect = Network(settingInspect)
-riotInspect = Riot(networkInspect)
-playerInspect = Player(riotInspect)
-localInspect = Local(settingInspect)
+app = FlaskApp(__name__)
+
 
 def processMatchDetail(detail):
     try:
@@ -56,8 +61,8 @@ def processMatchDetail(detail):
 @app.route("/process", methods = ['get'])
 def process():
     process_info = {}
-    process_info['server'] = settingInspect.riotServer
-    process_info['port'] = settingInspect.port
+    process_info['server'] = settingOnly.riotServer
+    process_info['port'] = settingOnly.port
     return jsonify(process_info)
 
 @app.route("/track", methods = ['get'])
