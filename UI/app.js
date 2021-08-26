@@ -44,13 +44,13 @@ if (spawnFlaskTest) {
   // });
 
   let backend;
-  backend = path.join(process.cwd(), '/backend/LMTService.exe')
+  backend = path.join(process.cwd(), '/backend/LMTService/LMTService.exe')
   var execfile = require('child_process').execFile;
   execfile(
     backend,
     {
       windowsHide: true,
-      cwd: path.join(process.cwd(), '/backend/')
+      cwd: path.join(process.cwd(), '/backend/LMTService/')
     },
     (err, stdout, stderr) => {
       if (err) {
