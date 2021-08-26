@@ -16,7 +16,7 @@ menu.append(new MenuItem({
     click: () => { 
       console.log('New Info Window') 
       newInfoWindow()
-  }
+    }
   }]
 }))
 
@@ -44,13 +44,13 @@ if (spawnFlaskTest) {
   // });
 
   let backend;
-  backend = path.join(process.cwd(), '/backend/flaskTest/flaskTest.exe')
+  backend = path.join(process.cwd(), '/backend/LMTService.exe')
   var execfile = require('child_process').execFile;
   execfile(
     backend,
     {
       windowsHide: true,
-      cwd: path.join(process.cwd(), '/backend/flaskTest/')
+      cwd: path.join(process.cwd(), '/backend/')
     },
     (err, stdout, stderr) => {
       if (err) {

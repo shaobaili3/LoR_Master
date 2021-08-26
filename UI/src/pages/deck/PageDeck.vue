@@ -79,7 +79,7 @@ import DeckDetailBase from '../../components/DeckDetailBase.vue'
 
 const requestDataWaitTime = 300; // ms
 const requestServerWaitTime = 3000; //ms
-const portNum = "6123"
+const portNum = "63312"
 
 const TABS = {
     oppo: 0,

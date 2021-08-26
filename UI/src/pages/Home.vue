@@ -102,7 +102,7 @@ import MatchHistoryDeckDetail from '../components/MatchHistoryDeckDetail.vue'
 const requestDataWaitTime = 200 //ms
 const inputNameListLength = 10;
 
-const portNum = "6123"
+const portNum = "63312"
 
 let cancelToken
 
