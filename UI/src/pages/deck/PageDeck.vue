@@ -31,6 +31,8 @@
         </div>
 
         <div id="history" class="tab-content" v-if="isShowOppo">
+
+            <div class="loading" v-if="matchInfos.length <= 0">{{loadingOppoText}}</div>
             
             <match-info 
                 v-for="(match, index) in matchInfos" 
@@ -50,8 +52,7 @@
         </div>
 
         <div class="tab-content" v-if="isShowMy">
-            <deck-regions :deck="currentDeckCode"></deck-regions>
-            <!-- <match-info-deck-detail :deck="myDeck.currentDeckCode"></match-info-deck-detail> -->
+            <deck-regions :deck="startingDeckCode"></deck-regions>
             <deck-detail-base :deck="currentDeckCode" :baseDeck="startingDeckCode"></deck-detail-base>
         </div>
 
@@ -76,13 +77,16 @@ import DeckRegions from '../../components/DeckRegions.vue'
 import DeckEncoder from '../../modules/runeterra/DeckEncoder'
 import DeckDetailBase from '../../components/DeckDetailBase.vue'
 
-const requestDataWaitTime = 500; // ms
+const requestDataWaitTime = 300; // ms
+const portNum = "6123"
 
 const TABS = {
     oppo: 0,
     my: 1,
     code: 2
 }
+
+var lastTrackTime;
 
 export default {
     mounted() {
@@ -91,6 +95,8 @@ export default {
         // this.getSubData()
         console.log("Mounted")
         // this.requestData()
+        this.infoType = "match"
+
         this.requestTrackInfo()
         // this.requestOpponentHistory()
         // console.log("Test")
@@ -105,27 +111,29 @@ export default {
             infoType: null,
             deckCode: null,
             titleType: null,
-            currentTab: TABS.oppo,
-            myDeck: null,
+            currentTab: TABS.my,
+
             currentDeckCode: null,
             startingDeckCode: null,
             oppoName: null,
             oppoRank: null,
-            
             oppoTag: null,
         }
     },
     computed: {
         isLoading() {
-            // console.log(this.myDeck)
             if (this.infoType == "deckCode" && this.deckCode != "") return false
-            if (this.myDeck && this.myDeck.deckCode) return false
+            if (this.currentDeckCode || this.startingDeckCode) return false
             if (this.matchInfos.length > 0) return false
             return (this.oppoName == null || this.oppoName == "" || this.matchInfos.length == 0)
             // return true
         },
         loadingText() {
-            return 'Loading..'
+            return 'Ready to rock 🤘'
+        },
+        loadingOppoText() {
+            if (this.oppoName && this.oppoTag) return "Loading History..."
+            return "History unavailable"
         },
         isShowOppo() {
             return this.currentTab == TABS.oppo
@@ -161,6 +169,11 @@ export default {
         // MatchInfoDeckPreview,
     },
     methods: {
+        makeWindowVisible() {
+            if (window.makeVisible) {
+                window.makeVisible()
+            }
+        },
         showOppo() {
             this.currentTab = TABS.oppo
         },
@@ -188,11 +201,11 @@ export default {
             })
         },
         async requestOpponentHistory() {
-            // http://192.168.20.4:6123/history/asia/J01/J01
+            // http://192.168.20.4:${portNum}/history/asia/J01/J01
 
             console.log("Request Opponent History for " + this.oppoName + "#" + this.oppoTag)
             
-            axios.get(`http://127.0.0.1:6123/history/${this.server}/${this.oppoName}/${this.oppoTag}`)
+            axios.get(`http://127.0.0.1:${portNum}/history/${this.server}/${this.oppoName}/${this.oppoTag}`)
                 .then((response) => {
                     console.log(response.data)
                     this.processJsonData(response.data)
@@ -206,32 +219,45 @@ export default {
 
         },
         async requestTrackInfo() {
-            // http://192.168.20.4:6123/track
+            // http://192.168.20.4:${portNum}/track
 
             console.log("Request Track Info")
 
-            axios.get(`http://127.0.0.1:6123/track`)
+            lastTrackTime = Date.now()
+
+            axios.get(`http://127.0.0.1:${portNum}/track`)
                 .then((response) => {
                     console.log(response.data)
+
+                    var elapsedTime = Date.now() - lastTrackTime // milli
+                    // console.log("Elapsed ", elapsedTime)
                     
                     this.processTrackInfo(response.data)
-                    this.requestTrackInfo()
+                    if (requestDataWaitTime > elapsedTime) {
+                        setTimeout(this.requestTrackInfo, requestDataWaitTime - elapsedTime); 
+                    } else {
+                        this.requestTrackInfo()
+                    }
                 })
                 .catch((e) => {
                     if (axios.isCancel(e)) {
                         console.log("Request cancelled");
                     } else 
                     { console.log('error', e) }
+                    this.requestTrackInfo()
                 })
 
             
         },
         processTrackInfo(data) {
+
+            // console.log("Processing Tracker Info")
+            
             if (data.opponent_info) {
                 var oppoInfo = data.opponent_info;
                 if ((oppoInfo.name) && (oppoInfo.tag) && (oppoInfo.server)) {
 
-                    console.log("Reading Opponent Info")
+                    // console.log("Reading Opponent Info")
 
                     if ((!this.oppoName) || (this.oppoName.toLowerCase() != oppoInfo.name.toLowerCase())) {
                         // If there is no oppoName set or there is a change in the name
@@ -243,25 +269,21 @@ export default {
                         this.requestOpponentHistory()
                     }
                 }
-                // else {
 
-                //     console.log("Test Opponent Info")
-
-                //     if (!this.oppoName || this.oppoName.toLowerCase() != "storm") {
-                //         console.log(this.oppoName)
-                //         this.oppoName = "Storm"
-                //         this.oppoTag = "5961"
-                //         this.server = "americas"
-
-                //         this.requestOpponentHistory()
-                //     }
-                    
+                // if (oppoInfo.name) {
+                    // this.oppoName = oppoInfo.name
+                    // console.log(this.oppoName)
+                    // this.makeWindowVisible()
                 // }
             }
 
             if (data.deck_tracker) {
                 this.startingDeckCode = data.deck_tracker.deckCode
                 this.currentDeckCode = data.deck_tracker.currentDeckCode
+
+                // if (data.deck_tracker.deckCode) {
+                //     this.makeWindowVisible()
+                // }
             }
         },
         processJsonData(data) {
@@ -275,28 +297,25 @@ export default {
                 // Switches to code tab
                 // this.showCode()
             // } else 
-            if (JSON.stringify(this.matchInfos) != JSON.stringify(data.matches)) {
+            if (JSON.stringify(this.matchInfos) != JSON.stringify(data)) {
                 // Changes Match Info
                 window.showWindow()
                 this.showOppo()
             }
             
             // this.infoType = data.type // match or deckCode
-            this.infoType = "match"
             // this.deckCode = data.deckCode
             // console.log(this.deckCode)
 
-            // this.myDeck = data.myDeck
-            // console.log(this.myDeck.currentDeckCode)
 
             // if ()
             this.matchTotalNum = 0;
-            this.matchInfos = data.matches;
+            this.matchInfos = data;
 
             // console.log("Match Information")
-            for (const i in data.matches) {
+            for (const i in data) {
                 // this.matchTotalNum += match.matches
-                this.matchTotalNum += data.matches[i].matches
+                this.matchTotalNum += data[i].matches
 
                 // when total matchNum bigger than 10, set it to 10 for better display.
                 if (this.matchTotalNum > 10) {
@@ -305,8 +324,6 @@ export default {
             }
             // console.log(this.matchTotalNum)
 
-            // this.oppoName = data.name;
-            // this.oppoRank = data.rank;
         }
     }
 

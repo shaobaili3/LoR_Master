@@ -102,6 +102,8 @@ import MatchHistoryDeckDetail from '../components/MatchHistoryDeckDetail.vue'
 const requestDataWaitTime = 200 //ms
 const inputNameListLength = 10;
 
+const portNum = "6123"
+
 let cancelToken
 
 const regionNames = {
@@ -147,27 +149,6 @@ export default {
     mounted() {
         console.log("Mounted")
         var test = 'Hello'
-        // this.makeGetRequest()
-        // this.requestHistoryData()
-
-        // this.matches = [
-        //     {
-        //         opponentName: "Storm",
-        //         deck: "CEBQCAYCBIBACAQIBQBQCAYUFIWAKAICAMEQCBADBIBACAQQHEBQCAYLFY3QIAQCAUEASCQA",
-        //         opponentDeck: "CICACAIEGQAQGBAFAECAIEAEAMEQSVTA3EAQGAICAQAQEAYJKROAGAIEEYTS2AYBAECBWAQDAQGREBADBERUSS2V",
-        //         rounds: 12,
-        //         win: true,
-        //         time: "20 mins ago",
-        //     },
-        //     {
-        //         opponentName: "Bob",
-        //         deck: "CMCACAYEBUBAEBADBICAIBYBBUTVGBQEAQAQEBAFA4GAAAIBAQDU6",
-        //         opponentDeck: "CECACAIFFAAQIAIOAMBQCAQGCYCQCAIDBQKCCJYBAEAQKKYCAEAQCKQHAECQCDYTDEOSENQ",
-        //         rounds: 12,
-        //         win: true,
-        //         time: "20 mins ago",
-        //     }
-        // ]
     },
     data() {
         return {
@@ -341,7 +322,7 @@ export default {
         },
         async requestNameData() {
             
-            axios.get(`http://127.0.0.1:6123/name/${regionNames[this.selectedRegion]}/${this.searchText}`)
+            axios.get(`http://127.0.0.1:${portNum}/name/${regionNames[this.selectedRegion]}/${this.searchText}`)
                 .then((response) => {
                     if (response.data == "Error") {
                         // Error
@@ -375,7 +356,7 @@ export default {
             //Save the cancel token for the current request
             cancelToken = axios.CancelToken.source()
 
-            axios.get(`http://127.0.0.1:6123/search/${regionNames[this.selectedRegion]}/${this.playerName}/${this.playerTag}`,
+            axios.get(`http://127.0.0.1:${portNum}/search/${regionNames[this.selectedRegion]}/${this.playerName}/${this.playerTag}`,
                     { cancelToken: cancelToken.token }) // Pass the cancel token
                 .then((response) => {
                     this.isLoading = false;
@@ -411,24 +392,6 @@ export default {
         hideDeck() {
             this.isShowDeck = false
         },
-        async makePostRequest(test) {
-            axios.post('http://127.0.0.1:6123/code', test)
-            .then(function (response) {
-                console.log("It says: ", response.data);
-            })
-            .catch(function (error) {
-                console.log(error);
-            });
-        },
-        async makeGetRequest() {
-            axios.get('http://127.0.0.1:6123/code')
-                .then(function (response) {
-                    console.log("It says: ", response.data);
-                })
-                .catch(function (error) {
-                    console.log(error);
-                });
-        }
     },
 
 }

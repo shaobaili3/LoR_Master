@@ -54,10 +54,6 @@ window.toggleWindow = function() {
 
 window.showWindow = function() {
     
-    // if (!win.isVisible()) {
-    //     win.restore()
-    //     win.show()
-    // }
     if (win.isMinimized()) {
         win.restore()
     }
@@ -66,6 +62,12 @@ window.showWindow = function() {
     }
         // win.show()
     // console.log("Show Window")
+}
+
+window.makeVisible = function() {
+    if (!win.isVisible()) {
+        win.show()
+    }
 }
 
 window.minWindow = function() {

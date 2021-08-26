@@ -35,13 +35,35 @@ const spawnFlaskTest = true
 var python
 
 if (spawnFlaskTest) {
-  python = require('child_process').spawn('python', ['./flaskTest.py'], {cwd: '../'});
-  python.stdout.on('data', function (data) {
-    console.log("data: ", data.toString('utf8'));
-  });
-  python.stderr.on('data', (data) => {
-    console.log(`stderr: ${data}`); // when error
-  });
+  // python = require('child_process').spawn('python', ['./flaskTest.py'], {cwd: '../'});
+  // python.stdout.on('data', function (data) {
+  //   console.log("data: ", data.toString('utf8'));
+  // });
+  // python.stderr.on('data', (data) => {
+  //   console.log(`stderr: ${data}`); // when error
+  // });
+
+  let backend;
+  backend = path.join(process.cwd(), '/backend/flaskTest/flaskTest.exe')
+  var execfile = require('child_process').execFile;
+  execfile(
+    backend,
+    {
+      windowsHide: true,
+      cwd: path.join(process.cwd(), '/backend/flaskTest/')
+    },
+    (err, stdout, stderr) => {
+      if (err) {
+      console.log(err);
+      }
+      if (stdout) {
+      console.log(stdout);
+      }
+      if (stderr) {
+      console.log(stderr);
+      }
+    }
+  )
 }
 
 
@@ -138,8 +160,10 @@ function newDeckWindow() {
     minHeight: headerHeight,
     width: windowWidth, 
     height: windowHeight, 
-    x: width - windowWidth - windowPadding,
-    y: height - windowHeight - windowPadding,
+    // x: width - windowWidth - windowPadding,
+    // y: height - windowHeight - windowPadding,
+    x: windowPadding,
+    y: height / 2 - windowHeight / 2,
     frame: false,
     resizable: true,
     webPreferences: {
@@ -147,7 +171,8 @@ function newDeckWindow() {
       enableRemoteModule: true,
       //nodeIntegration: true,
       nodeIntegrationInWorker: true,
-    }
+    },
+    // show: false
     // titleBarStyle: 'hiddenInset'
   })
   // deckWindow.loadURL(require('url').format({
