@@ -29,23 +29,23 @@ class FlaskApp(Flask):
         self.processWork()
 
     def processWork(self):
-        def run_job():
+        def run_work():
             while True:
                 updateTrackServer(settingOnly)
                 # port equal to real setting for all other restful api, server can be changed during inspection so no need to set
                 settingInspect.port = settingOnly.port
                 time.sleep(2)
-        t1 = threading.Thread(target=run_job)
-        t1.start()
+        work = threading.Thread(target=run_work)
+        work.start()
 
 app = FlaskApp(__name__)
-
 
 def processMatchDetail(detail):
     try:
         playerPuuids = detail['metadata']['participants']
     except Exception as e:
         print('processMatchDetail error:', e)
+        print(detail)
         return detail
     playernames = []
     player_info = []
@@ -97,8 +97,8 @@ def search(name, tag, server):
         puuid = riotInspect.getPlayerPUUID(name, tag)
         matchIds = riotInspect.getMatches(puuid)
         print(matchIds)
-        for matchId in matchIds:
-            allMatches.append(processMatchDetail(riotInspect.getDetail(matchId, 5)))
+        for index, matchId in enumerate(matchIds):
+            allMatches.append(processMatchDetail(riotInspect.getDetail(matchId, index + 1)))
     except Exception as e:
         print(e)
         return 'Error'
@@ -113,6 +113,5 @@ def inspect(name, tag, server):
     inspection['matches'] = playerInspect.matchesJson
     return jsonify(inspection)
 
-
-app.run(port=6123)
+app.run(port=63312)
 
