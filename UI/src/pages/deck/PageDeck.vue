@@ -298,6 +298,14 @@ export default {
                         this.requestOpponentHistory()
                     }
                 }
+                else {
+                    this.oppoName = null
+                    this.oppoTag = null
+                    this.oppoRank = null
+                    this.matchTotalNum = 0
+                    this.matchInfos = []
+                }
+
                 // if (oppoInfo.name) {
                     // this.oppoName = oppoInfo.name
                     // console.log(this.oppoName)
