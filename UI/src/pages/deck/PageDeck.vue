@@ -205,11 +205,11 @@ export default {
         async requestOpponentHistory() {
             // http://192.168.20.4:${portNum}/history/asia/J01/J01
 
-            // console.log("Request Opponent History for " + this.oppoName + "#" + this.oppoTag)
+            console.log("Request Opponent History for " + this.oppoName + "#" + this.oppoTag)
             
             axios.get(`http://127.0.0.1:${portNum}/history/${this.server}/${this.oppoName}/${this.oppoTag}`)
                 .then((response) => {
-                    // console.log(response.data)
+                    console.log("Opponent Data", response.data)
                     this.processJsonData(response.data)
                 })
                 .catch((e) => {
@@ -327,6 +327,7 @@ export default {
         processJsonData(data) {
 
             // Process New Data
+            console.log("Process Json Data")
 
             // if ((data.type == "deckCode" && data.deckCode != "" && data.deckCode != this.deckCode)) {
                 // Changes Deck Code
@@ -337,20 +338,18 @@ export default {
             // } else 
             if (JSON.stringify(this.matchInfos) != JSON.stringify(data)) {
                 // Changes Match Info
+                console.log("New Match Info")
+
                 window.showWindow()
                 this.showOppo()
             }
             
-            // this.infoType = data.type // match or deckCode
-            // this.deckCode = data.deckCode
-            // console.log(this.deckCode)
-
-
-            // if ()
             this.matchTotalNum = 0;
             this.matchInfos = data;
 
-            // console.log("Match Information")
+            console.log("Match Info Updated: ")
+            console.log(this.matchInfos)
+
             for (const i in data) {
                 // this.matchTotalNum += match.matches
                 this.matchTotalNum += data[i].matches

@@ -67,11 +67,11 @@ export default {
                 // return cards
             }
 
-            console.log(baseDeck)
-            console.log(deck)
+            // console.log(baseDeck)
+            // console.log(deck)
 
             if (baseDeck) {
-                console.log("Base Deck fine")
+                // console.log("Base Deck fine")
                 // make sure cards not in current Deck are shown
                 for (var j in baseDeck) {
                     // Loop through base deck
@@ -81,7 +81,7 @@ export default {
                     var cardCount = baseDeck[j].count
                     
                     if (deck) {
-                        console.log("Current Deck fine")
+                        // console.log("Current Deck fine")
                         // make sure currentDeck exist
                         
                         // Finding the same card in current deck
