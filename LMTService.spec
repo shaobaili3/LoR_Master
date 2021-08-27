@@ -5,7 +5,7 @@ block_cipher = None
 
 
 a = Analysis(['LMTService.py'],
-             pathex=['C:\\Users\\Storm\\Desktop\\LoR_Master'],
+             pathex=['F:\\Projects\\Code\\2021 01 15 LoR Master Leaderboard\\LO'],
              binaries=[],
              datas=[],
              hiddenimports=[],

@@ -25,7 +25,7 @@ Menu.setApplicationMenu(menu)
 // const server = require('./appsrc/server.js')
 // server.run
 
-const developmentMode = false
+const developmentMode = true
 // const snapAssist = true
 const closeWithoutTracker = false
 const headerHeight = 45 // Repeated in preload.js
@@ -49,18 +49,19 @@ if (spawnFlaskTest) {
   execfile(
     backend,
     {
-      windowsHide: true,
+      windowsHide: false,
+      // shell: true,
       cwd: path.join(process.cwd(), '/backend/LMTService/')
     },
     (err, stdout, stderr) => {
       if (err) {
-      console.log(err);
+        console.log(err);
       }
       if (stdout) {
-      console.log(stdout);
+        console.log(stdout);
       }
       if (stderr) {
-      console.log(stderr);
+        console.log(stderr);
       }
     }
   )

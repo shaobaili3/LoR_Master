@@ -375,9 +375,6 @@ export default {
                     { console.log('error', e) }
                 })
 
-            // await this.requestDataAgain()
-            // this.requestData()
-
         },
         showDeck(deck) {
             // console.log("Main Show Deck", deck)
