@@ -49,6 +49,7 @@ if (spawnFlaskTest) {
   execfile(
     backend,
     {
+      encoding: 'utf8',
       windowsHide: false,
       // shell: true,
       cwd: path.join(process.cwd(), '/backend/LMTService/')
