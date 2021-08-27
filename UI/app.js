@@ -31,17 +31,12 @@ const closeWithoutTracker = false
 const headerHeight = 45 // Repeated in preload.js
 const defaultRatio = 2.3 // Repeated in preload.js
 
-const spawnFlaskTest = true
+const spawnService = true
+const spawnPython = true
 var python
 
-if (spawnFlaskTest) {
-  // python = require('child_process').spawn('python', ['./flaskTest.py'], {cwd: '../'});
-  // python.stdout.on('data', function (data) {
-  //   console.log("data: ", data.toString('utf8'));
-  // });
-  // python.stderr.on('data', (data) => {
-  //   console.log(`stderr: ${data}`); // when error
-  // });
+if (spawnService) {
+  
 
   startLMTService()
 }
@@ -50,10 +45,16 @@ function startLMTService() {
 
   // ---- New ver. ----
 
-  var backend
-  backend = path.join(process.cwd(), '/backend/LMTService/LMTService.exe')
+  var proc
 
-  var proc = require('child_process').spawn(backend, {cwd: '../'});
+  if (spawnPython) {
+    proc = require('child_process').spawn('python', ['./LMTService.py'], {cwd: '../'});
+  } else {
+    var backend
+    backend = path.join(process.cwd(), '/backend/LMTService/LMTService.exe')
+    proc = require('child_process').spawn(backend, {cwd: '../'});
+  }
+  
   proc.stdout.on('data', function (data) {
     console.log("data: ", data.toString('utf8'));
   });
