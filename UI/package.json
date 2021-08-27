@@ -10,7 +10,7 @@
     "lint": "vue-cli-service lint",
     "deploy": "deploy.sh",
     "start": "electron app.js",
-    "package": "electron-packager ./ LoRMasterTrackerUI --out ./app --app-version 1.0.0 --overwrite --icon=image.ico"
+    "package": "electron-packager ./ LoRMasterTracker --out ./app --app-version 0.9.7 --overwrite --icon=image.ico"
   },
   "dependencies": {
     "axios": "^0.21.1",
