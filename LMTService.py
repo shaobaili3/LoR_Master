@@ -25,13 +25,11 @@ sentry_sdk.init(
     send_default_pii=True
 )
 
-
 settingInspect = Setting()
 networkInspect = Network(settingInspect)
 riotInspect = Riot(networkInspect)
 playerInspect = Player(riotInspect)
 localInspect = Local(settingInspect)
-
 settingOnly = Setting()
 
 class FlaskApp(Flask):
@@ -55,8 +53,8 @@ def processMatchDetail(detail):
     try:
         playerPuuids = detail['metadata']['participants']
     except Exception as e:
-        print('processMatchDetail error:', e)
-        print(detail)
+        #print('processMatchDetail error:', e)
+        print('processMatchDetail error')
         return detail
     playernames = []
     player_info = []
@@ -97,7 +95,6 @@ def get_names(server, playername):
             playerList.add(name)
 
     returnList = jsonify(list(playerList))
-    print(returnList)
     return returnList
 
 @app.route("/search/<string:server>/<string:name>/<string:tag>", methods = ['get'])
@@ -107,13 +104,11 @@ def search(name, tag, server):
     try:
         puuid = riotInspect.getPlayerPUUID(name, tag)
         matchIds = riotInspect.getMatches(puuid)
-        print(matchIds)
         for index, matchId in enumerate(matchIds):
             allMatches.append(processMatchDetail(riotInspect.getDetail(matchId, index + 1)))
     except Exception as e:
-        print(e)
         errorJson = {}
-        errorJson['error'] = e
+        errorJson['error'] = str(e)
         return jsonify(errorJson)
     return jsonify(allMatches)
 
