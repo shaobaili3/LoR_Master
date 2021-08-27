@@ -1,19 +1,3 @@
-from os import error, name
-from flask import Flask, jsonify
-import json
-
-from flask.json import tag
-from Models import player
-from Models.setting import Server
-from Models.player import Player
-from Models.network import Network
-from Models.riot import Riot
-from Models.local import Local
-from Models.setting import Setting
-from Models.leaderboard import checkRank
-import time
-import threading
-from Models.process import updateTrackServer
 import sentry_sdk
 from sentry_sdk.integrations.flask import FlaskIntegration
 
@@ -26,6 +10,23 @@ sentry_sdk.init(
     traces_sample_rate=1.0,
     send_default_pii=True
 )
+
+from os import error, name
+from flask import Flask, jsonify
+import json
+from Models import master
+from flask.json import tag
+from Models import player
+from Models.setting import Server
+from Models.player import Player
+from Models.network import Network
+from Models.riot import Riot
+from Models.local import Local
+from Models.setting import Setting
+from Models.leaderboard import checkRank
+import time
+import threading
+from Models.process import updateTrackServer
 
 settingInspect = Setting()
 networkInspect = Network(settingInspect)
