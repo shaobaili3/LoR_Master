@@ -83,10 +83,10 @@
 
     <div class="bottom-bar">
         <div class="left">
-            <div class="status">Status: Fine</div>
+            <!-- <div class="status">Status: Fine</div> -->
         </div>
         <div class="right">
-            <div class="version">v0.9.3 Beta</div>
+            <div class="version">v0.9.7 Beta</div>
         </div>
     </div>
 </template>
