@@ -15,8 +15,12 @@ class DeckEncoder {
     }
 
     const firstByte = bytes.shift()
+    const format = firstByte >> 4
     const version = firstByte & 0xF
 
+    if (format !== DeckEncoder.FORMAT) {
+      throw new TypeError('The provided code does not match the required format.')
+    }
     if (version > DeckEncoder.MAX_KNOWN_VERSION) {
       throw new TypeError('The provided code requires a higher version of this library; please update.')
     }
@@ -68,7 +72,7 @@ class DeckEncoder {
     const nOfs = cards.filter(c => c.count > 3)
 
     return Base32.encode([
-      0x11,
+      DeckEncoder.FORMAT << 4 | cards.reduce((p, c) => Math.max(p, c.version), 0) & 0xF,
       ...this.encodeGroup(grouped3),
       ...this.encodeGroup(grouped2),
       ...this.encodeGroup(grouped1),
@@ -138,6 +142,8 @@ class DeckEncoder {
   }
 }
 
-DeckEncoder.MAX_KNOWN_VERSION = 3
+DeckEncoder.MAX_KNOWN_VERSION = 4
+DeckEncoder.FORMAT = 1
+DeckEncoder.INITIAL_VERSION = 1
 
 module.exports = DeckEncoder

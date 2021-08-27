@@ -29,16 +29,6 @@ from Models import local
 from Models import leaderboard
 import sentry_sdk
 
-sentry_sdk.init(
-    "https://1138a186a6384b00a20a6196273c3009@o958702.ingest.sentry.io/5907306",
-    # Set traces_sample_rate to 1.0 to capture 100%
-    # of transactions for performance monitoring.
-    # We recommend adjusting this value in production.
-    traces_sample_rate=1.0,
-    send_default_pii=True
-)
-
-
 class Window(QMainWindow):
     def __init__(self, local, player):
         super().__init__()
@@ -58,6 +48,7 @@ class Window(QMainWindow):
         self.uiWork = UIThread()
         self.trackWork.local = local
         self.trackWork.player = player
+        self.trackWork.gui = gui
         self.trackWork.showStatusTrigger.connect(self.showStatus)
         self.statusBar().addPermanentWidget(self.progressBar)
 
@@ -277,9 +268,15 @@ class LeaderboardUI(Table):
         name = value.split(' [')[0]
         print(name)
 
+sentry_sdk.init(
+    "https://1138a186a6384b00a20a6196273c3009@o958702.ingest.sentry.io/5907306",
+    traces_sample_rate=1.0,
+    send_default_pii=True
+)
+
+sentry_sdk.set_user({"ip_address": "{{auto}}"})
 
 os.environ["QT_AUTO_SCREEN_SCALE_FACTOR"] = "1"
-
 updateLeaderboard()
 
 settingTracker = Setting()
@@ -295,7 +292,6 @@ playerInspect = Player(riotInspect)
 localInspect = Local(settingInspect)
 
 app = QApplication(sys.argv)
-
 app.setAttribute(Qt.AA_UseHighDpiPixmaps)
 app.setApplicationName(cs.DISPLAY_TITLE)
 app.setWindowIcon(QIcon('Resource/logo.jpg'))
@@ -310,6 +306,7 @@ if font_id == -1:
 print(font_id, QFontDatabase.applicationFontFamilies(font_id))
 app.setFont(QFont(QFontDatabase.applicationFontFamilies(font_id)[0]))
 
+gui = Opponent('', 0, [])
 window = Window(localTracker, playerTracker)
 inspectorWidget = Inspector(window, settingInspect, networkInspect,
                             riotInspect, playerInspect, localInspect)
@@ -318,7 +315,7 @@ window.show()
 window.serverWork.setting = settingTracker
 window.serverWork.start()
 window.trackWork.start()
-gui = Opponent('', 0, [])
+
 window.uiWork.ui = gui
 window.uiWork.start()
 window.trackWork.showDecksTrigger.connect(inspectorWidget.showDecks)

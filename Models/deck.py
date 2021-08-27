@@ -1,17 +1,31 @@
 #To-do cannot run here
+from requests.models import codes
+from GUI.ui import DeckCode
 from decoder import Deck
 
 def getChampion(deckCode):
-    cards = Deck.decode(deckCode).cards
-    heros = ''
-    for card in cards:
-        if card.isChampion:
-            heros += card.name + ' '
-            heros += '(' + str(card.count) + ') '     
-    if heros == '':
-        heros = 'No champion '
+    try:
+        cards = Deck.decode(deckCode).cards
+        heros = ''
+        for card in cards:
+            if card.isChampion:
+                heros += card.name + ' '
+                heros += '(' + str(card.count) + ') '     
+        if heros == '':
+            heros = 'No champion '
+    except Exception as e:
+        print('valid hero from code:', e)
+        return 'None champion'
     print(heros)
     return heros
+
+def getDeckCode(cardsInDeck):
+    try:
+        deckCode = Deck(cards = cardsInDeck).encode().deck_code
+    except Exception as e:
+        print('invalid cards error:', e)
+        return None
+    return deckCode
 
 def validDeckCode(deckCode):
     try:

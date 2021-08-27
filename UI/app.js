@@ -16,7 +16,7 @@ menu.append(new MenuItem({
     click: () => { 
       console.log('New Info Window') 
       newInfoWindow()
-  }
+    }
   }]
 }))
 
@@ -27,9 +27,85 @@ Menu.setApplicationMenu(menu)
 
 const developmentMode = false
 // const snapAssist = true
-const closeWithoutTracker = true
+const closeWithoutTracker = false
 const headerHeight = 45 // Repeated in preload.js
 const defaultRatio = 2.3 // Repeated in preload.js
+
+const spawnService = true
+const spawnPython = false
+var python
+
+if (spawnService) {
+  
+
+  startLMTService()
+}
+
+function startLMTService() {
+
+  // ---- New ver. ----
+
+  var proc
+
+  if (spawnPython) {
+    proc = require('child_process').spawn('python', ['./LMTService.py'], {cwd: '../'});
+  } else {
+    var backend
+    backend = path.join(process.cwd(), '/backend/LMTService/LMTService.exe')
+    proc = require('child_process').spawn(backend, {cwd: '../'});
+  }
+  
+  proc.stdout.on('data', function (data) {
+    console.log("data: ", data.toString('utf8'));
+  });
+  proc.stderr.on('data', (data) => {
+    console.log(`stderr: ${data}`); // when error
+  });
+
+  proc.on('close', (code) => {
+    console.log(`child process close all stdio with code ${code}`);
+    startLMTService()
+  });
+  proc.on('exit', (code) => {
+    console.log(`child process exited with code ${code}`);
+  });
+
+  // ---- Old ver. ----
+
+  // let backend;
+  // backend = path.join(process.cwd(), '/backend/LMTService/LMTService.exe')
+  // var execfile = require('child_process').execFile;
+
+  // var proc = execfile(
+  //   backend,
+  //   {
+  //     encoding: 'utf8',
+  //     windowsHide: false,
+  //     // shell: true,
+  //     cwd: path.join(process.cwd(), '/backend/LMTService/')
+  //   },
+  //   (err, stdout, stderr) => {
+  //     if (err) {
+  //       console.log(err);
+  //     }
+  //     if (stdout) {
+  //       console.log(stdout);
+  //     }
+  //     if (stderr) {
+  //       console.log(stderr);
+  //     }
+  //   }
+  // )
+
+  // proc.on('close', (code) => {
+  //   console.log(`child process close all stdio with code ${code}`);
+  //   startLMTService()
+  // });
+  
+  // proc.on('exit', (code) => {
+  //   console.log(`child process exited with code ${code}`);
+  // });
+}
 
 // const client = require('./appsrc/client.js')
 
@@ -106,11 +182,11 @@ function newDeckWindow() {
   // console.log("Scale Factor:", factor)
 
   // --- deckWindow ---
-  let windowWidth = 270 // (335)
+  let windowWidth = 240 // (335)
   let windowMaxWidth = 290
   let windowMinWidth = 240
   // let window.windowWidth = windowWidth
-  let windowHeight = Math.floor(windowWidth*defaultRatio)
+  let windowHeight = 620
   let windowPadding = 20
 
   if (developmentMode) {
@@ -124,8 +200,10 @@ function newDeckWindow() {
     minHeight: headerHeight,
     width: windowWidth, 
     height: windowHeight, 
-    x: width - windowWidth - windowPadding,
-    y: height - windowHeight - windowPadding,
+    // x: width - windowWidth - windowPadding,
+    // y: height - windowHeight - windowPadding,
+    x: windowPadding,
+    y: height / 2 - windowHeight / 2,
     frame: false,
     resizable: true,
     webPreferences: {
@@ -133,7 +211,8 @@ function newDeckWindow() {
       enableRemoteModule: true,
       //nodeIntegration: true,
       nodeIntegrationInWorker: true,
-    }
+    },
+    // show: false
     // titleBarStyle: 'hiddenInset'
   })
   // deckWindow.loadURL(require('url').format({

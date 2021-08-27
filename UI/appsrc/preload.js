@@ -39,7 +39,7 @@ var win = remote.getCurrentWindow()
 // runClient()
 
 window.closeWindow = function() {
-    
+    // console.log("Close window")
     win.close()
 }
 
@@ -54,15 +54,20 @@ window.toggleWindow = function() {
 
 window.showWindow = function() {
     
-    // if (!win.isVisible()) {
-    //     win.restore()
-    //     win.show()
-    // }
     if (win.isMinimized()) {
         win.restore()
     }
-    window.expandWindow()
+    if (window.isMin()) {
+        window.expandWindow()
+    }
         // win.show()
+    // console.log("Show Window")
+}
+
+window.makeVisible = function() {
+    if (!win.isVisible()) {
+        win.show()
+    }
 }
 
 window.minWindow = function() {
@@ -83,6 +88,7 @@ var clientHeight = 0
 const headerHeight = 45 // Repeated in app.js
 const defaultRatio = 2.3 // Repeated in app.js
 const minHeight = 170 
+const defaultHeight = 620
 
 window.expandWindow = function() {
 
@@ -91,7 +97,7 @@ window.expandWindow = function() {
 
     if (clientHeight <= headerHeight) {
         // in case recorded height is too small, reset it to default
-        clientHeight = Math.floor(w*defaultRatio)
+        clientHeight = defaultHeight
     }   
     h = clientHeight
 
@@ -135,7 +141,7 @@ window.toggleShrinkWindow = function() {
         } else {
             // expand to recorded height
             if (clientHeight <= headerHeight) {
-                clientHeight = Math.floor(w*defaultRatio)
+                clientHeight = defaultHeight
                 }
             h = clientHeight
         }
@@ -158,7 +164,6 @@ window.isMin = function() {
     let h = win.getSize()[1]
 
     if (h > headerHeight) {
-        // shrink to min when too small
         return false
     } else {
         return true

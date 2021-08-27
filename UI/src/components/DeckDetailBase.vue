@@ -47,48 +47,71 @@ export default {
     }, 
     props: {
         deck: String,
+        baseDeck: String,
     },
     computed: {
         deckDetailLink() {
-            return "https://lor.mobalytics.gg/decks/code/" + this.deck
+            return "https://lor.mobalytics.gg/decks/code/" + this.baseDeck
         },
         cards() {
             var cards = []
             var deck = null
-            try { deck = DeckEncoder.decode(this.deck) } catch(err) {
-                // console.log(cards)
-                return cards
+            if (this.deck) try { deck = DeckEncoder.decode(this.deck) } catch(err) {
+                console.log(err)
+                // return cards
             }
             
-            for (var j in deck) {
-                var cardCode = deck[j].code
-                var card = sets.find(card => card.cardCode == cardCode)
-                if (card) {
-                    // console.log(cardName, deck[j].count)
-                    cards.push({
-                        code: deck[j].code, 
-                        name: card.name, 
-                        count: deck[j].count, 
-                        cost: card.cost, 
-                        type: card.type, 
-                        supertype: card.supertype,
-                        set: card.set
-                    })
-                }
-
+            var baseDeck = null
+            if (this.baseDeck) try { baseDeck = DeckEncoder.decode(this.baseDeck) } catch(err) {
+                console.log(err)
+                // return cards
             }
-            // console.log(cards)
-            return cards.sort(function (a, b) { 
-                // if (a.type > b.type) {
-                //     return 1; 
-                // } if (a.supertype > b.supertype) {
-                //     return 1;
-                // }  else {
-                //     return a.cost > b.cost ? 1 : -1
-                // }
-                // if (a.type == "Unit" && b.type == "Spell") {
-                //     return 1
-                // }
+
+            // console.log(baseDeck)
+            // console.log(deck)
+
+            if (baseDeck) {
+                // console.log("Base Deck fine")
+                // make sure cards not in current Deck are shown
+                for (var j in baseDeck) {
+                    // Loop through base deck
+                    var cardCode = baseDeck[j].code
+                    // Get full information from the sets collection
+                    var card = sets.find(card => card.cardCode == cardCode)
+                    var cardCount = baseDeck[j].count
+                    
+                    if (deck) {
+                        // console.log("Current Deck fine")
+                        // make sure currentDeck exist
+                        
+                        // Finding the same card in current deck
+                        var currentCard = deck.find(card => card.code == cardCode)
+                    
+                        // Get the current card copy count
+                        if (currentCard) {
+                            cardCount = currentCard.count
+                        } else {
+                            cardCount = 0
+                        }
+                    }
+
+                    if (card) {
+                        // console.log(cardName, deck[j].count)
+                        cards.push({
+                            code: cardCode, 
+                            name: card.name,
+                            count: cardCount, 
+                            cost: card.cost, 
+                            type: card.type, 
+                            supertype: card.supertype,
+                            set: card.set
+                        })
+                    }
+
+                }
+            }
+
+            return cards.sort(function (a, b) {
                 if (a.supertype == b.supertype) {
                     if (a.type == b.type) {
                         return a.cost > b.cost ? 1 : -1
@@ -124,7 +147,7 @@ export default {
                 }
             };
 
-            copyToClipboard(this.deck)
+            copyToClipboard(this.baseDeck)
             this.copied = true
             setTimeout(() => {this.copied = false}, 1250)
         },

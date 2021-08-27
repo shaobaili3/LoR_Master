@@ -84,7 +84,8 @@ export default {
             window.closeWindow()
         },
         checkIsMin() {
-            this.isWindowMin = window.isMin()
+            if (window.isMin)
+                this.isWindowMin = window.isMin()
         }
     },
     data() {

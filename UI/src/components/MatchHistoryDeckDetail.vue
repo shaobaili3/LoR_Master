@@ -9,11 +9,11 @@
         :supertype="card.supertype"
         :set="card.set"
         >{{card.name}}</cards-preview>
-        <div class="actions">
-            <!-- <a class="actions-btn" :href="deckDetailLink" target="_blank"><span class="actions-icon fa fa-external-link-alt"></span>Detail</a> -->
-            <div class="actions-btn" @click="openURL(deckDetailLink)"><span class="actions-icon fa fa-external-link-alt"></span>Detail</div>
-            <div class="actions-btn" @click="copyDeckcode"><span class="actions-icon far fa-copy"></span>{{copyText}}</div>
-        </div>
+    </div>
+    <div class="actions">
+        <!-- <a class="actions-btn" :href="deckDetailLink" target="_blank"><span class="actions-icon fa fa-external-link-alt"></span>Detail</a> -->
+        <!-- <div class="actions-btn" @click="openURL(deckDetailLink)"><span class="actions-icon fa fa-external-link-alt"></span>Detail</div> -->
+        <div class="actions-btn" @click="copyDeckcode"><span class="actions-icon far fa-copy"></span>{{copyText}}</div>
     </div>
 </template>
 
@@ -146,14 +146,29 @@ export default {
         background-color: var(--col-background);
         font-size: 0.9em;
         border-radius: 5px;
+        color: white;
+
+        height: 100%;
+        overflow: scroll;
     }
 
     .actions {
-        margin-top: 8px;
-        margin-right: 8px;
+        
+        width: 100%;
+
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        padding: 8px;
+
+        box-sizing: border-box;
+
         display: flex;
         justify-content: flex-end;
         align-items: center;
+        background: var(--col-background);
+
+        color: white;
         /* gap: 5px; */
     }
 

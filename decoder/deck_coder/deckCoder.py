@@ -38,6 +38,7 @@ faction_code_to_id = {
     "SI": 5,
     "BW": 6,
     "SH": 7,
+    "BC": 10,
     "MT": 9
 }
 id_to_faction_code = {
@@ -49,6 +50,7 @@ id_to_faction_code = {
     5: "SI",
     6: "BW",
     7: "SH",
+    10: "BC",
     9: "MT"
 }
 

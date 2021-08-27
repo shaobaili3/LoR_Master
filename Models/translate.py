@@ -51,7 +51,7 @@ def regEdit(hive, flag):
 def hash(file_path, Bytes=1024):
     #print(file_path)
     md5_1 = hashlib.md5()  #创建一个md5算法对象
-    with open(file_path, 'rb', encoding='utf-8') as f:  #打开一个文件，必须是'rb'模式打开
+    with open(file_path, 'r', encoding='utf-8') as f:  #打开一个文件，必须是'rb'模式打开
         while 1:
             data = f.read(Bytes)  #由于是一个文件，每次只读取固定字节
             if data:  #当读取内容不为空时对读取内容进行update

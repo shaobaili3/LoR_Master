@@ -31,7 +31,7 @@ def getPort(setting):
     path = getLoRLogFile()
     if path is not None:
         try:
-            with open(path, 'rt', encoding='utf-8') as lorLog:
+            with open(path, 'r', encoding='utf-8') as lorLog:
                 for line in lorLog.readlines():
                     line = line.strip()
                     if '[TrySetShardDnsLive] setting dns data by affinity' in line:
@@ -50,8 +50,8 @@ def getPort(setting):
                         playerId = str(line).split().pop()
                         if playerId != setting.playerId:
                             setting.playerId = playerId
-                            sentry_sdk.capture_message(playerId + ' ' + setting.riotServer)
                             sentry_sdk.set_user({"id": playerId, "username": setting.riotServer, "ip_address": "{{auto}}"})
+                            sentry_sdk.capture_message(playerId + ' ' + setting.riotServer)
         except IOError:
             print('log file not accessible: ', path)
         except BaseException as error:

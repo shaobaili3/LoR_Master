@@ -65,4 +65,15 @@ export default { champions: [
   "04SH019",
   "04SI055", // Viego
   "04SH130", // Akshan
+
+  "05BC041", // Start of Set 5
+  "05BC093",
+  "05BC133",
+  "05BC163",
+  "05BW005",
+  "05NX001",
+  "05PZ006",
+  "05SH014",
+  "05SI009", // End of Set 5 First expansion
+  
 ]}
