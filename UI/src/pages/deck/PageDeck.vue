@@ -107,9 +107,9 @@ export default {
         return {
             rawDataString: null,
             matchInfos: [],
+            matchTotalNum: 0,
             request: null,
             
-            matchTotalNum: 0,
             infoType: null,
             deckCode: null,
             titleType: null,
@@ -284,38 +284,36 @@ export default {
         processTrackInfo(data) {
 
             // console.log("Processing Tracker Info")
+            // console.log(data)
             
             if (data.opponent_info) {
                 var oppoInfo = data.opponent_info;
                 if ((oppoInfo.name) && (oppoInfo.tag)) {
-
                     // console.log("Reading Opponent Info")
-
                     if ((!this.oppoName) || (this.oppoName.toLowerCase() != oppoInfo.name.toLowerCase())) {
                         // If there is no oppoName set or there is a change in the name
                         this.oppoName = oppoInfo.name
                         this.oppoTag = oppoInfo.tag
                         this.oppoRank = oppoInfo.rank
-
                         this.requestOpponentHistory()
                     }
-                } else {
-                    this.oppoName = null
-                    this.oppoTag = null
-                    this.oppoRank = null
                 }
-
                 // if (oppoInfo.name) {
                     // this.oppoName = oppoInfo.name
                     // console.log(this.oppoName)
                     // this.makeWindowVisible()
                 // }
+            } else {
+                this.oppoName = null
+                this.oppoTag = null
+                this.oppoRank = null
+                this.matchTotalNum = 0
+                this.matchInfos = []
             }
 
             if (data.deck_tracker) {
                 this.startingDeckCode = data.deck_tracker.deckCode
                 this.currentDeckCode = data.deck_tracker.currentDeckCode
-
                 // if (data.deck_tracker.deckCode) {
                 //     this.makeWindowVisible()
                 // }
