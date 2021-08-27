@@ -23,7 +23,7 @@ from Models.network import Network
 from Models.riot import Riot
 from Models.local import Local
 from Models.setting import Setting
-from Models.leaderboard import checkRank
+from Models.leaderboard import checkRank, updateLeaderboard
 import time
 import threading
 from Models.process import updateTrackServer
@@ -39,6 +39,7 @@ class FlaskApp(Flask):
     def __init__(self, *args, **kwargs):
         super(FlaskApp, self).__init__(*args, **kwargs)
         self.processWork()
+        self.leaderboardsWork()
 
     def processWork(self):
         def run_work():
@@ -47,6 +48,14 @@ class FlaskApp(Flask):
                 # port equal to real setting for all other restful api, server can be changed during inspection so no need to set
                 settingInspect.port = settingOnly.port
                 time.sleep(2)
+        work = threading.Thread(target=run_work)
+        work.start()
+
+    def leaderboardsWork(self):
+        def run_work():
+            while True:
+                updateLeaderboard()
+                time.sleep(600)
         work = threading.Thread(target=run_work)
         work.start()
 

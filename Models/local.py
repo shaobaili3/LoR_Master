@@ -8,6 +8,7 @@ import Models.process
 from Models.leaderboard import getRankStr, updateLeaderboard
 from Models.deck import getDeckCode
 from Models.process import updateTrackServer
+from Models.leaderboard import checkRank
 import json
 
 class Local:
@@ -130,8 +131,7 @@ class Local:
         self.updateTagByName(self.positional_rectangles['OpponentName'])
         opInfo['name'] = self.positional_rectangles['OpponentName']
         opInfo['tag'] = self.opponentTag
-        opInfo['rank'] = None
-        opInfo['lp'] = None
+        opInfo['rank'], opInfo['lp'] = checkRank(self.positional_rectangles['OpponentName'], self.setting.riotServer)
         self.trackJson['opponent_info'] = opInfo
 
         return self.trackJson
