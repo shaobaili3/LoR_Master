@@ -14,6 +14,17 @@ from Models.leaderboard import checkRank
 import time
 import threading
 from Models.process import updateTrackServer
+import sentry_sdk
+
+sentry_sdk.init(
+    "https://1138a186a6384b00a20a6196273c3009@o958702.ingest.sentry.io/5907306",
+    # Set traces_sample_rate to 1.0 to capture 100%
+    # of transactions for performance monitoring.
+    # We recommend adjusting this value in production.
+    traces_sample_rate=1.0,
+    send_default_pii=True
+)
+
 
 settingInspect = Setting()
 networkInspect = Network(settingInspect)
