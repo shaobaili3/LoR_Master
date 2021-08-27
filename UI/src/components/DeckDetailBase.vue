@@ -51,7 +51,7 @@ export default {
     },
     computed: {
         deckDetailLink() {
-            return "https://lor.mobalytics.gg/decks/code/" + this.deck
+            return "https://lor.mobalytics.gg/decks/code/" + this.baseDeck
         },
         cards() {
             var cards = []
@@ -147,7 +147,7 @@ export default {
                 }
             };
 
-            copyToClipboard(this.deck)
+            copyToClipboard(this.baseDeck)
             this.copied = true
             setTimeout(() => {this.copied = false}, 1250)
         },
