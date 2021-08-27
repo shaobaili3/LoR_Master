@@ -1,4 +1,4 @@
-from os import name
+from os import error, name
 from flask import Flask, jsonify
 import json
 
@@ -112,7 +112,9 @@ def search(name, tag, server):
             allMatches.append(processMatchDetail(riotInspect.getDetail(matchId, index + 1)))
     except Exception as e:
         print(e)
-        return 'Error'
+        errorJson = {}
+        errorJson['error'] = e
+        return jsonify(errorJson)
     return jsonify(allMatches)
 
 @app.route("/inspect/<string:server>/<string:name>/<string:tag>", methods = ['get'])
