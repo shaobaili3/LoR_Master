@@ -43,31 +43,68 @@ if (spawnFlaskTest) {
   //   console.log(`stderr: ${data}`); // when error
   // });
 
-  let backend;
-  backend = path.join(process.cwd(), '/backend/LMTService/LMTService.exe')
-  var execfile = require('child_process').execFile;
-  execfile(
-    backend,
-    {
-      encoding: 'utf8',
-      windowsHide: false,
-      // shell: true,
-      cwd: path.join(process.cwd(), '/backend/LMTService/')
-    },
-    (err, stdout, stderr) => {
-      if (err) {
-        console.log(err);
-      }
-      if (stdout) {
-        console.log(stdout);
-      }
-      if (stderr) {
-        console.log(stderr);
-      }
-    }
-  )
+  startLMTService()
 }
 
+function startLMTService() {
+
+  // ---- New ver. ----
+
+  var backend
+  backend = path.join(process.cwd(), '/backend/LMTService/LMTService.exe')
+
+  var proc = require('child_process').spawn(backend, {cwd: '../'});
+  proc.stdout.on('data', function (data) {
+    console.log("data: ", data.toString('utf8'));
+  });
+  proc.stderr.on('data', (data) => {
+    console.log(`stderr: ${data}`); // when error
+  });
+
+  proc.on('close', (code) => {
+    console.log(`child process close all stdio with code ${code}`);
+    // startLMTService()
+  });
+  proc.on('exit', (code) => {
+    console.log(`child process exited with code ${code}`);
+  });
+
+  // ---- Old ver. ----
+
+  // let backend;
+  // backend = path.join(process.cwd(), '/backend/LMTService/LMTService.exe')
+  // var execfile = require('child_process').execFile;
+
+  // var proc = execfile(
+  //   backend,
+  //   {
+  //     encoding: 'utf8',
+  //     windowsHide: false,
+  //     // shell: true,
+  //     cwd: path.join(process.cwd(), '/backend/LMTService/')
+  //   },
+  //   (err, stdout, stderr) => {
+  //     if (err) {
+  //       console.log(err);
+  //     }
+  //     if (stdout) {
+  //       console.log(stdout);
+  //     }
+  //     if (stderr) {
+  //       console.log(stderr);
+  //     }
+  //   }
+  // )
+
+  // proc.on('close', (code) => {
+  //   console.log(`child process close all stdio with code ${code}`);
+  //   startLMTService()
+  // });
+  
+  // proc.on('exit', (code) => {
+  //   console.log(`child process exited with code ${code}`);
+  // });
+}
 
 // const client = require('./appsrc/client.js')
 
