@@ -30,18 +30,22 @@ class Riot:
                 self.playerNames = json.load(fp)
             with open('data/matches.json', 'r', encoding='utf-8') as fp:
                 self.matches = json.load(fp)
-        except IOError as e:
-            print('No cache found', e)
+        except Exception as e:
+            print('loadJson error', e)
             return
 
     def save(self):
-        os.makedirs('data', exist_ok=True)
-        with open('data/matchDetails.json', 'w+', encoding='utf-8') as fp:
-            json.dump(self.matchDetails, fp, ensure_ascii=False, indent= 2)
-        with open('data/riotIds.json', 'w+', encoding='utf-8') as fp:
-            json.dump(self.riotIds, fp, ensure_ascii=False, indent= 2)
-        with open('data/playerNames.json', 'w+', encoding='utf-8') as fp:
-            json.dump(self.playerNames, fp, ensure_ascii=False, indent= 2)
+        try:
+            os.makedirs('data', exist_ok=True)
+            with open('data/matchDetails.json', 'w+', encoding='utf-8') as fp:
+                json.dump(self.matchDetails, fp, ensure_ascii=False, indent= 2)
+            with open('data/riotIds.json', 'w+', encoding='utf-8') as fp:
+                json.dump(self.riotIds, fp, ensure_ascii=False, indent= 2)
+            with open('data/playerNames.json', 'w+', encoding='utf-8') as fp:
+                json.dump(self.playerNames, fp, ensure_ascii=False, indent= 2)
+        except Exception as e:
+            print('save cache error: ', e)
+            return
 
     # Should not use cache, because you cannot identify capital letters of playernames
     def getPlayerPUUID(self, name, tag):

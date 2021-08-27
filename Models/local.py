@@ -181,7 +181,7 @@ class Local:
                     self.opponentName = opName
                     self.updateTagByName(self.opponentName)
                     showMessage(
-                        opName + ' ' + vsPlayerSstr + ' ' +
+                        opName + ' ' + vsPlayerStr + ' ' +
                         getRankStr(playerName, self.setting.getServer()))
                     if self.opponentTag is None:
                         # Play Tag does not exist
