@@ -1,7 +1,8 @@
+from Models import riot
 from asyncio.windows_events import SelectorEventLoop
 import Models.utility as utility
 import constants as cs
-from Models.leaderboard import getRankStr
+from Models.leaderboard import getRankStr, checkRank
 from GUI.ui import DeckDetail
 import Models.network
 from GUI.ui import OpponentFlask
@@ -218,6 +219,7 @@ class Player:
 
 
     def inspectFlask(self, name, tag):
+        self.matchesJson = []
         puuid = self.riot.getPlayerPUUID(name, tag)
         if puuid is None:
             print(
@@ -269,7 +271,9 @@ class Player:
                 if gameType in cs.UNSUPPORTED_TYPE:
                     continue
                 
-                self.matchesJson.append(detail)
+                
+
+                self.matchesJson.append(self.processMatchDetail(detail))
                 matchNum += 1
                 riotId = detail['metadata']['participants']
                 outcome = None
@@ -315,3 +319,22 @@ class Player:
                 print('Read MatchId Error match id: ', matchId , e)
                 continue
         return matchNum, winNum
+
+
+    def processMatchDetail(self, detail):
+        try:
+            playerPuuids = detail['metadata']['participants']
+        except Exception as e:
+            #print('processMatchDetail error:', e)
+            print('processMatchDetail error')
+            return detail
+        playernames = []
+        player_info = []
+        for puuid in playerPuuids:
+            name, tag = self.riot.getPlayerName(puuid)
+            rank, lp = checkRank(name, self.riot.network.setting.getServer())
+            playernames.append(name + '#' + tag)
+            player_info.append({'name':name, 'tag':tag, 'rank':rank, 'lp':lp})
+        detail['playernames'] = playernames
+        detail['player_info'] = player_info
+        return detail

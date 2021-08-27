@@ -49,24 +49,6 @@ class FlaskApp(Flask):
 
 app = FlaskApp(__name__)
 
-def processMatchDetail(detail):
-    try:
-        playerPuuids = detail['metadata']['participants']
-    except Exception as e:
-        #print('processMatchDetail error:', e)
-        print('processMatchDetail error')
-        return detail
-    playernames = []
-    player_info = []
-    for puuid in playerPuuids:
-        name, tag = riotInspect.getPlayerName(puuid)
-        rank, lp = checkRank(name, Server.NA.value)
-        playernames.append(name + '#' + tag)
-        player_info.append({'name':name, 'tag':tag, 'rank':rank, 'lp':lp})
-    detail['playernames'] = playernames
-    detail['player_info'] = player_info
-    return detail
-
 @app.route("/process", methods = ['get'])
 def process():
     process_info = {}
