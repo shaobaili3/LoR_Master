@@ -97,20 +97,20 @@ def get_names(server, playername):
     returnList = jsonify(list(playerList))
     return returnList
 
-@app.route("/search/<string:server>/<string:name>/<string:tag>", methods = ['get'])
-def search(name, tag, server):
-    settingInspect.setServer(Server._value2member_map_[server])
-    allMatches = []
-    try:
-        puuid = riotInspect.getPlayerPUUID(name, tag)
-        matchIds = riotInspect.getMatches(puuid)
-        for index, matchId in enumerate(matchIds):
-            allMatches.append(processMatchDetail(riotInspect.getDetail(matchId, index + 1)))
-    except Exception as e:
-        errorJson = {}
-        errorJson['error'] = str(e)
-        return jsonify(errorJson)
-    return jsonify(allMatches)
+# @app.route("/search/<string:server>/<string:name>/<string:tag>", methods = ['get'])
+# def search(name, tag, server):
+#     settingInspect.setServer(Server._value2member_map_[server])
+#     allMatches = []
+#     try:
+#         puuid = riotInspect.getPlayerPUUID(name, tag)
+#         matchIds = riotInspect.getMatches(puuid)
+#         for index, matchId in enumerate(matchIds):
+#             allMatches.append(processMatchDetail(riotInspect.getDetail(matchId, index + 1)))
+#     except Exception as e:
+#         errorJson = {}
+#         errorJson['error'] = str(e)
+#         return jsonify(errorJson)
+#     return jsonify(allMatches)
 
 @app.route("/inspect/<string:server>/<string:name>/<string:tag>", methods = ['get'])
 def inspect(name, tag, server):
@@ -120,6 +120,16 @@ def inspect(name, tag, server):
     inspection['history'] = playerInspect.historyFlask.__dict__['history']
     inspection['matches'] = playerInspect.matchesJson
     return jsonify(inspection)
+
+
+@app.route("/search/<string:server>/<string:name>/<string:tag>", methods = ['get'])
+def search(name, tag, server):
+    settingInspect.setServer(Server._value2member_map_[server])
+    playerInspect.inspectFlask(name, tag)
+    inspection = {} 
+    inspection['history'] = playerInspect.historyFlask.__dict__['history']
+    inspection['matches'] = playerInspect.matchesJson
+    return jsonify(playerInspect.matchesJson)
 
 app.run(port=63312)
 
