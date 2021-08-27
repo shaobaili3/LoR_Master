@@ -140,7 +140,6 @@ class Local:
     def updateStatus(self, checkOpponent, showMessage, showStatus, showMatchs,
                      showDecks):
         Models.process.getPort(self.setting)
-        self.updateMyDeck()
         try:
             localRequest = self.session.get(self.getLocalLink())
             if not self.isClientRuning:
