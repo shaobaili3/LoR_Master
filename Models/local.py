@@ -66,9 +66,9 @@ class Local:
                 num = currentCards[cardCode]
                 if num > 0:
                     num -= 1
+                currentCards[cardCode] = num
                 if num == 0:
                     del currentCards[cardCode]
-                currentCards[cardCode] = num
         return {x:y for x,y in currentCards.items() if y!=0}
 
     def updateOpGraveyard(self):
