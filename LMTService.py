@@ -1,3 +1,4 @@
+print('卡尼能布恩', '째남모')
 import sentry_sdk
 from sentry_sdk.integrations.flask import FlaskIntegration
 
