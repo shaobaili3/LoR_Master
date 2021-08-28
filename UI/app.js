@@ -52,7 +52,7 @@ function startLMTService() {
   } else {
     var backend
     backend = path.join(process.cwd(), '/backend/LMTService/LMTService.exe')
-    proc = require('child_process').spawn(backend, {cwd: '../'});
+    proc = require('child_process').spawn(backend, {cwd: './backend/LMTService/'});
   }
   
   proc.stdout.on('data', function (data) {
