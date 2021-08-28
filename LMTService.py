@@ -75,6 +75,7 @@ def process():
 
 @app.route("/track", methods = ['get'])
 def track():
+    settingInspect.setServer(Server._value2member_map_[settingOnly.riotServer])
     return jsonify(localInspect.updateStatusFlask())
 
 @app.route("/history/<string:server>/<string:name>/<string:tag>", methods = ['get'])
