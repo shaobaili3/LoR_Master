@@ -1,4 +1,8 @@
-print('卡尼能布恩', '째남모')
+import io
+import sys
+import urllib.request
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf16')
+print('utf16 string test: ', '卡尼能布恩', '째남모')
 import sentry_sdk
 from sentry_sdk.integrations.flask import FlaskIntegration
 
