@@ -249,6 +249,7 @@ class Player:
             return
 
     def processMatchIds(self, matchIds, matchNum, name, tag, puuid, deckCodes, winNum):
+        matchNum = 0
         for matchId in matchIds:
             try:
                 # If match number bigger than MAX, getDetail will only ruturn data from cache
