@@ -80,6 +80,9 @@ def track():
 
 @app.route("/history/<string:server>/<string:name>/<string:tag>", methods = ['get'])
 def history(server, name, tag):
+    if server == 'sea':
+        print('history: Riot API not suppport SEA')
+        return jsonify([])
     settingInspect.setServer(Server._value2member_map_[server])
     playerInspect.inspectFlask(name, tag)
     playerInspect.loadMatchsToFlask()

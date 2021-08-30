@@ -86,7 +86,7 @@
             <!-- <div class="status">Status: Fine</div> -->
         </div>
         <div class="right">
-            <div class="version">v0.9.7 Beta</div>
+            <div class="version">v0.9.7.2 Beta</div>
         </div>
     </div>
 </template>
