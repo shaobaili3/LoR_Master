@@ -25,30 +25,29 @@ LoR Master Tracker is a open source match tracker and player inspector for Leagu
 * **Player Inspector**
 
     By simply providing the player name, LMT can inspect recent matches. Multiple Language player names are supported.
-![n](Preview/inspector.png)
+![n](Preview/inspect.png)
 
-* **In-game Deck Code Viewer**
+* **In-game Deck Tracker**
 
-    LMT can view the deck by entering the deck code. The viewer can be displayed in-game.
-![b](Preview/viewer.png)
-
-* **In-game Enemy Deck Tracker**
-
-    At the game beginning, the opponent decks, rank and lp automatically revealed by real-time enemy tracker.
-    
-    > ### ⚠️ Disclaimer:
+    At the game beginning, the opponent history, rank and lp automatically revealed by real-time enemy tracker.
+![c](Preview/tracker.png)  
+    > ### Disclaimer:
     > Opponent decks are pulled from recent 10 matches by [Riot API](https://developer.riotgames.com/apis) via our development Riot API keys. We are looking forward to getting feedback from the community and Riot and actively upgrade LMT.
 
-![c](Preview/3.png)
 
-* **Real time Master Leaderboard**
+* **In-game Deck Code Viewer(Coming soon)**
+
+    LMT can view the deck by entering the deck code. The viewer can be displayed in-game.
+
+
+* **Real time Master Leaderboard(Coming soon)**
 
     LMT real time update leaderboard and Master player list via open source [LMT Crawler](https://github.com/LoR-Master-Tracker/LoR-Player-Crawler)
-![b](Preview/6.png)
+
 
 ## Development
 
-LoR Master Tracker backend is written by pure [Python3](https://www.python.org/downloads/) for cross-platform and local port retrieval. The main Interface is built by [PyQt6](https://riverbankcomputing.com/software/pyqt/download), the In-game UI is built by [Electron](https://www.electronjs.org/) and [Vuejs](https://github.com/vuejs/vue)
+LoR Master Tracker backend is written by pure [Python3](https://www.python.org/downloads/) for cross-platform and local port retrieval.the In-game UI is built by [Electron](https://www.electronjs.org/) and [Vuejs](https://github.com/vuejs/vue)
 
 ## Build Instructions
 

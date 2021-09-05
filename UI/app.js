@@ -32,7 +32,7 @@ const headerHeight = 45 // Repeated in preload.js
 const defaultRatio = 2.3 // Repeated in preload.js
 
 const spawnService = true
-const spawnPython = false
+const spawnPython = true
 var python
 
 if (spawnService) {
