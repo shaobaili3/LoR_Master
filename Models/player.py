@@ -1,5 +1,4 @@
 from Models import riot
-from asyncio.windows_events import SelectorEventLoop
 import Models.utility as utility
 import constants as cs
 from Models.leaderboard import getRankStr, checkRank
