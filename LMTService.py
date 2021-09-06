@@ -31,6 +31,7 @@ from Models.riot import Riot
 from Models.local import Local
 from Models.setting import Setting
 from Models.leaderboard import checkRank, updateLeaderboard
+import Models.leaderboard
 import time
 import threading
 from Models.process import updateTrackServer
@@ -118,7 +119,6 @@ def inspect(name, tag, server):
 
 @app.route("/search/<string:server>/<string:name>/<string:tag>", methods = ['get'])
 def search(name, tag, server):
-    print('search#######################server: ', server)
     settingInspect.setServer(Server._value2member_map_[server])
     playerInspect.inspectFlask(name, tag)
     inspection = {} 
@@ -126,5 +126,10 @@ def search(name, tag, server):
     inspection['matches'] = playerInspect.matchesJson
     return jsonify(playerInspect.matchesJson)
 
+
+@app.route("/leaderboard/<string:server>", methods = ['get'])
+def leaderboard(server):
+    return jsonify(Models.leaderboard.getboard(server))
+    
 app.run(port=63312)
 
