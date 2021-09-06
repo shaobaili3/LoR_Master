@@ -1,7 +1,9 @@
+#!/usr/local/bin/python
+# -*- coding: utf-8 -*-
 import io
 import sys
 import urllib.request
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf8')
+# sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf8')
 print('utf8 string test: ', '卡尼能布恩', '째남모')
 import sentry_sdk
 from sentry_sdk.integrations.flask import FlaskIntegration
@@ -38,7 +40,13 @@ networkInspect = Network(settingInspect)
 riotInspect = Riot(networkInspect)
 playerInspect = Player(riotInspect)
 localInspect = Local(settingInspect)
-settingOnly = Setting()
+
+settingTrack = Setting()
+networkTrack = Network(settingTrack)
+riotTrack = Riot(networkTrack)
+playerTrack = Player(riotTrack)
+localTrack= Local(settingTrack)
+
 
 class FlaskApp(Flask):
     def __init__(self, *args, **kwargs):
@@ -49,9 +57,7 @@ class FlaskApp(Flask):
     def processWork(self):
         def run_work():
             while True:
-                updateTrackServer(settingOnly)
-                # port equal to real setting for all other restful api, server can be changed during inspection so no need to set
-                settingInspect.port = settingOnly.port
+                updateTrackServer(settingTrack)
                 time.sleep(2)
         work = threading.Thread(target=run_work)
         work.start()
@@ -69,13 +75,13 @@ app = FlaskApp(__name__)
 @app.route("/process", methods = ['get'])
 def process():
     process_info = {}
-    process_info['server'] = settingOnly.riotServer
-    process_info['port'] = settingOnly.port
+    process_info['server'] = settingTrack.riotServer
+    process_info['port'] = settingTrack.port
     return jsonify(process_info)
 
 @app.route("/track", methods = ['get'])
 def track():
-    settingInspect.setServer(Server._value2member_map_[settingOnly.riotServer])
+    settingTrack.setServer(Server._value2member_map_[settingTrack.riotServer])
     return jsonify(localInspect.updateStatusFlask())
 
 @app.route("/history/<string:server>/<string:name>/<string:tag>", methods = ['get'])
@@ -100,21 +106,6 @@ def get_names(server, playername):
     returnList = jsonify(list(playerList))
     return returnList
 
-# @app.route("/search/<string:server>/<string:name>/<string:tag>", methods = ['get'])
-# def search(name, tag, server):
-#     settingInspect.setServer(Server._value2member_map_[server])
-#     allMatches = []
-#     try:
-#         puuid = riotInspect.getPlayerPUUID(name, tag)
-#         matchIds = riotInspect.getMatches(puuid)
-#         for index, matchId in enumerate(matchIds):
-#             allMatches.append(processMatchDetail(riotInspect.getDetail(matchId, index + 1)))
-#     except Exception as e:
-#         errorJson = {}
-#         errorJson['error'] = str(e)
-#         return jsonify(errorJson)
-#     return jsonify(allMatches)
-
 @app.route("/inspect/<string:server>/<string:name>/<string:tag>", methods = ['get'])
 def inspect(name, tag, server):
     settingInspect.setServer(Server._value2member_map_[server])
@@ -127,6 +118,7 @@ def inspect(name, tag, server):
 
 @app.route("/search/<string:server>/<string:name>/<string:tag>", methods = ['get'])
 def search(name, tag, server):
+    print('search#######################server: ', server)
     settingInspect.setServer(Server._value2member_map_[server])
     playerInspect.inspectFlask(name, tag)
     inspection = {} 
