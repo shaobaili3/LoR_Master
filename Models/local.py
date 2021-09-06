@@ -250,3 +250,13 @@ class Local:
 
     def getLocalDeckLink(self):
         return cs.IP_KEY + self.setting.getPort() + cs.LOCAL_DECK
+
+    def getPlayerTag(self, name, serverName):
+        try:        
+            with open('data/' + serverName + '.json', 'r', encoding='utf-8') as fp:
+                names = json.load(fp)
+                if name in names:
+                    return names[name]
+        except Exception as e:
+            print('updateTagByName', e)
+        return ''    

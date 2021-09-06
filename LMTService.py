@@ -129,7 +129,13 @@ def search(name, tag, server):
 
 @app.route("/leaderboard/<string:server>", methods = ['get'])
 def leaderboard(server):
-    return jsonify(Models.leaderboard.getboard(server))
+    #to-do move functions to leaderboard model
+    board = Models.leaderboard.getboard(server)
+    boardWithTag = []
+    for player in board:
+        player['tag'] = localInspect.getPlayerTag(player['name'], server)
+        boardWithTag.append(player)
+    return jsonify(boardWithTag)
     
 app.run(port=63312)
 
