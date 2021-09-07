@@ -3,7 +3,7 @@
 import io
 import sys
 import urllib.request
-# sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf8')
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf8')
 print('utf8 string test: ', '卡尼能布恩', '째남모')
 import sentry_sdk
 from sentry_sdk.integrations.flask import FlaskIntegration
