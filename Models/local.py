@@ -26,6 +26,7 @@ class Local:
         self.playedCards = {}
         self.graveyard = {}
         self.opGraveyard = {}
+        self.myGraveyard = {}
         self.positional_rectangles = None
         self.static_decklist = None
         self.trackJson = {}
@@ -82,6 +83,26 @@ class Local:
         if 'face' in self.opGraveyard:
             del self.opGraveyard['face']
 
+    def updateMyGraveyard(self):
+        rectangles = self.positional_rectangles['Rectangles']
+        if rectangles is None:
+            return
+        self.myGraveyard = {}
+        myGraveyardWithId = self.playedCards.copy()
+        if self.playedCards == {}:
+            return
+        for card in rectangles:
+            if card['LocalPlayer'] is True:
+                del myGraveyardWithId[card['CardID']]
+        for key in myGraveyardWithId:
+            cardCode = myGraveyardWithId[key]
+            if cardCode in self.myGraveyard:
+                self.myGraveyard[cardCode] += 1
+            else:
+                self.myGraveyard[cardCode] = 1
+        if 'face' in self.myGraveyard:
+            del self.myGraveyard['face']
+
     def updateMyDeck(self):
         try:
             localDeckRequest = self.session.get(self.getLocalDeckLink())
@@ -100,8 +121,10 @@ class Local:
         self.trackerDict['currentDeckCode'] = currentDeckCode
         self.updateOpGraveyard()
         self.trackerDict['opGraveyard'] = self.opGraveyard
-        
         self.trackerDict['opGraveyardCode'] = getDeckCode(self.opGraveyard)
+        self.updateMyGraveyard()
+        self.trackerDict['myGraveyard'] = self.myGraveyard
+        self.trackerDict['myGraveyardCode'] = getDeckCode(self.myGraveyard)
         # print(self.trackerDict)
 
     def updateStatusFlask(self):
