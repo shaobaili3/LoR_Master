@@ -40,3 +40,22 @@ def validDeckCode(deckCode):
 # getChampion('CICACAIFGAAQIBZPAIBAKBAGAICAKAYFAMBAIBINCABQIBYJFV4QIAIFBMUSWMIDAEAQKGIBAMCQIAQEA5GGC')
 # getChampion('CICACBAFAMBAEBIEAYBAIBYCKIBQCBJLGAYQIAIBAUPACAYFBAAQIBZPAMCAKAIFCABQCBAHMEAQIBICAIAQKAJA')
 # getChampion('CIAAABQBAMBQ2AQDAYDAQBQBAQEBWJZLGQ3AMAQDAEBQIBIHBAGAEBQEAUEA2FQ4EATCQLJ2HQGQCAYCAQEQYDYUEMSSMKBOGM3Q')
+# deckList =  {
+#             "01PZ039": 1,
+#             "04SH014": 1,
+#             "04SH028": 3,
+#             "04SH039": 1,
+#             "04SH059": 1,
+#             "04SH070": 1,
+#             "04SH076": 2,
+#             "04SH079": 1,
+#             "04SH081": 1,
+#             "04SH089": 1,
+#             "04SH110": 1,
+#             "04SH130": 2,
+#             "04SH130T1": 1,
+#             "04SH130T11": 2,
+#             "04SH130T12": 1,
+#         }
+
+# print(deck.getDeckCode(deckList))
