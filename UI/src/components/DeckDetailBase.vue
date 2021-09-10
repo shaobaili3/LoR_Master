@@ -9,7 +9,7 @@
         :supertype="card.supertype"
         :set="card.set"
         >{{card.name}}</cards-preview>
-        <div class="actions">
+        <div class="actions" v-if="showCopy">
             <!-- <a class="actions-btn" :href="deckDetailLink" target="_blank"><span class="actions-icon fa fa-external-link-alt"></span>Detail</a> -->
             <div class="actions-btn" @click="openURL(deckDetailLink)"><span class="actions-icon fa fa-external-link-alt"></span>Detail</div>
             <div class="actions-btn" @click="copyDeckcode"><span class="actions-icon far fa-copy"></span>{{copyText}}</div>
@@ -48,6 +48,10 @@ export default {
     props: {
         deck: String,
         baseDeck: String,
+        showCopy: {
+            type: Boolean,
+            default: true,
+        },
     },
     computed: {
         deckDetailLink() {

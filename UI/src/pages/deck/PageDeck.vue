@@ -25,8 +25,22 @@
         </div> -->
 
         <div class="tabs" v-if="!isLoading">
-            <div class="tab-title" @click="showOppo" :class="{active: isShowOppo}">Opp.</div>
-            <div class="tab-title" @click="showMy" :class="{active: isShowMy}">My</div>
+            <div class="tab-title-group">
+                <div class="tab-title" @click="showOppo" :class="{active: isShowOppo}">
+                    <i class="fas fa-swords"></i>
+                </div>
+                <div class="tab-title" @click="showOppoGrave" :class="{active: isShowOppoGrave}">
+                    <i class="fas fa-tombstone-alt"></i>
+                </div>
+            </div>
+            <div class="tab-title-group">
+                <div class="tab-title" @click="showMy" :class="{active: isShowMy}">
+                    <i class="fas fa-user-cowboy"></i>
+                </div>
+                <div class="tab-title" @click="showMyGrave" :class="{active: isShowMyGrave}">
+                    <i class="fas fa-tombstone-alt"></i>                
+                </div>
+            </div>
             <!-- <div class="tab-title" @click="showCode" :class="{active: isShowCode}">Code</div> -->
         </div>
 
@@ -51,10 +65,22 @@
 
         </div>
 
-        <div class="tab-content" v-if="isShowMy">
+        <div class="tab-content" v-if="isShowMy && !isLoading">
             <deck-regions :deck="startingDeckCode"></deck-regions>
             <deck-detail-base :deck="currentDeckCode" :baseDeck="startingDeckCode"></deck-detail-base>
         </div>
+
+        <div class="tab-content" v-if="isShowOppoGrave && !isLoading">
+            <div class="tab-text">Opponent Graveyard</div>
+            <deck-detail-base :deck="oppoGraveCode" :baseDeck="oppoGraveCode" :showCopy="false"></deck-detail-base>
+        </div>
+
+        <div class="tab-content" v-if="isShowMyGrave && !isLoading">
+            <div class="tab-text">My Graveyard</div>
+            <deck-detail-base :deck="myGraveCode" :baseDeck="myGraveCode" :showCopy="false"></deck-detail-base>
+        </div>
+
+        
 
         <div class="tab-content" v-if="isShowCode">
             <deck-regions :deck="deckCode"></deck-regions>
@@ -84,7 +110,9 @@ const portNum = "63312"
 const TABS = {
     oppo: 0,
     my: 1,
-    code: 2
+    code: 2,
+    oppog: 3,
+    myg: 4,
 }
 
 var lastTrackTime, lastServerRequestTime;
@@ -117,6 +145,8 @@ export default {
 
             currentDeckCode: null,
             startingDeckCode: null,
+            oppoGraveCode: null,
+            myGraveCode: null,
             oppoName: null,
             oppoRank: null,
             oppoTag: null,
@@ -145,6 +175,12 @@ export default {
         },
         isShowCode() {
             return this.currentTab == TABS.code
+        },
+        isShowOppoGrave(){
+            return this.currentTab == TABS.oppog
+        },
+        isShowMyGrave() {
+            return this.currentTab == TABS.myg
         },
         // showMatch() {
         //     if (this.infoType == "deckCode") {
@@ -181,6 +217,12 @@ export default {
         },
         showMy() {
             this.currentTab = TABS.my
+        },
+        showOppoGrave() {
+            this.currentTab = TABS.oppog
+        },
+        showMyGrave() {
+            this.currentTab = TABS.myg
         },
         // showCode() {
         //     this.currentTab = TABS.code
@@ -322,12 +364,16 @@ export default {
             if (data.deck_tracker) {
                 this.startingDeckCode = data.deck_tracker.deckCode
                 this.currentDeckCode = data.deck_tracker.currentDeckCode
+                this.oppoGraveCode = data.deck_tracker.opGraveyardCode
+                this.myGraveCode = data.deck_tracker.myGraveyardCode
                 // if (data.deck_tracker.deckCode) {
                 //     this.makeWindowVisible()
                 // }
             } else {
                 this.startingDeckCode = null
                 this.currentDeckCode = null
+                this.myGraveCode = null
+                this.oppoGraveCode = null
             }
         },
         processJsonData(data) {
@@ -429,9 +475,17 @@ export default {
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-        gap: 5px;
+        gap: 10px;
         /* padding: 0px; */
         margin: 10px 0px;
+    }
+
+    .tab-title-group {
+        flex: 1 1 0;
+        display: flex;
+        background: var(--col-dark-grey);
+        padding: 5px 0px;
+        border-radius: 20px;
     }
 
     .tab-title {
@@ -440,12 +494,13 @@ export default {
         cursor: pointer;
         text-align: center;
         background: var(--col-dark-grey);
-        padding: 5px 0px;
+        padding: 0px 0px;
         border-radius: 20px;
     }
 
     .tab-title:hover {
-        color: white
+        color: white;
+        /* background: var(--col-grey); */
     }
 
     .tab-title.active {
@@ -455,6 +510,13 @@ export default {
     .tab-content {
         max-width: 280px;
         width: 100%;
+        text-align: center;
     }
+
+    .tab-text {
+        padding: 0px 0px 2px 0px;
+    }
+
+
 
 </style>
