@@ -65,7 +65,7 @@ class Window(QMainWindow):
         #         self.translatePushButtonClicked)
         #     self.statusBar().addPermanentWidget(self.translatePushButton)
 
-        self.updatePushButton = QPushButton("v" + cs.VERSION_NUM_INSPECTOR)
+        self.updatePushButton = QPushButton(cs.VERSION_NUM)
         self.updatePushButton.setDefault(True)
         self.updatePushButton.clicked.connect(self.updatePushButtonClicked)
         self.statusBar().addPermanentWidget(self.updatePushButton)

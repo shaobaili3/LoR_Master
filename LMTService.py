@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 import io
 import sys
+import constants
 import urllib.request
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf8')
 print('utf8 string test: ', '卡尼能布恩', '째남모')
@@ -137,5 +138,15 @@ def leaderboard(server):
         boardWithTag.append(player)
     return jsonify(boardWithTag)
     
+@app.route("/version", methods = ['get'])
+def version():
+    import requests
+    response = requests.get("https://api.github.com/repos/shaobaili3/LoR_Master/releases/latest")
+    print(response.json())
+    version = {}
+    version['version'] = constants.VERSION_NUM
+    version['github'] = response.json()
+    return jsonify(version)
+
 app.run(port=63312)
 
