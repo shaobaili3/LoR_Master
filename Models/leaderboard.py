@@ -54,8 +54,9 @@ def getboard(server):
 def checkRank(name, server):
     rank = ''
     lp = ''
-
-    print('rank search:', name, server)
+    if name is None:
+        print('checkRank: empty name')
+        return rank, lp
 
     if None in leaderboards:
         updateAll()

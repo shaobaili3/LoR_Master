@@ -64,7 +64,8 @@ class DeckCode:
         cards_2 = []
         cards_1 = []
         cards_other = []
-
+        #remove non-collectable and created deck code 
+        deck = DeckCode.remove_invalid_cards(deck)
         if not DeckCode.is_valid_card_codes_and_count(deck):
             raise Exception("Deck contains invalid card codes")
         else:
@@ -159,6 +160,42 @@ class DeckCode:
                 return False
 
         return True
+
+    @staticmethod
+    def remove_invalid_cards(deck):
+        # When you remove continue, it will not print error messages
+        newDeck = deck.copy()
+        for card, count in deck.items():
+            code = card
+            if len(code) != 7:
+                print(f"remove_invalid_cards deck code length is {len(code)}")
+                del newDeck[card]
+                continue
+
+            # check set code is numeric
+            for char in code[:2]:
+                if not char.isdigit():
+                    print(f"remove_invalid_cards code is not digit: {char}")
+                    del newDeck[card]
+                    continue
+
+            faction = faction_code_to_id.get(code[2:4], -1)
+            if faction < 0:
+                print(f"remove_invalid_cards faction code not in faction code list: {code[2:4]}")
+                del newDeck[card]
+                continue
+
+            for char in code[4:]:
+                if not char.isdigit():
+                    print(f"remove_invalid_cards card number contains non digit: {char}")
+                    del newDeck[card]
+                    continue
+
+            if count < 1:
+                print("remove_invalid_cards less than one card: {count}")
+                del newDeck[card]
+                continue
+        return newDeck
 
     @staticmethod
     def decode_deck(string):

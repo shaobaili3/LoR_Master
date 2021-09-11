@@ -2,7 +2,7 @@
 # LoR Master Tracker-beta
 
 <p align="center">
-<img src="Preview/logo2.jpg"width="430" height="270"/>
+<img src="Preview/logo2.jpg"width="480" height="270"/>
 </p>
 
 <p align="center">
@@ -47,7 +47,7 @@ LoR Master Tracker is a open source match tracker and player inspector for Leagu
 
 ## Development
 
-LoR Master Tracker backend is written by pure [Python3](https://www.python.org/downloads/) for cross-platform and local port retrieval.the In-game UI is built by [Electron](https://www.electronjs.org/) and [Vuejs](https://github.com/vuejs/vue)
+LoR Master Tracker backend service is written by [Python3](https://www.python.org).the user interface is built by [Electron](https://www.electronjs.org/) and [Vuejs](https://github.com/vuejs/vue)
 
 ## Build Instructions
 

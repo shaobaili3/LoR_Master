@@ -86,7 +86,7 @@
             <!-- <div class="status">Status: Fine</div> -->
         </div>
         <div class="right">
-            <div class="version">v0.9.7 Beta</div>
+            <div class="version">v0.9.7.2 Beta</div>
         </div>
     </div>
 </template>
@@ -123,20 +123,20 @@ function processDate(dateString) {
     var daysElapsed = hoursElapse / 24
 
     if (secondsElapsed < 60) {
-        time = Math.floor(secondsElapsed) + " sec. agp"
+        time = Math.floor(secondsElapsed) + " sec. ago"
     } else if (minElapse < 60) {
-        time = Math.floor(minElapse) + " min. agp"
+        time = Math.floor(minElapse) + " min. ago"
     } else if (hoursElapse < 24) {
         if (Math.floor(hoursElapse) == 1) {
-            time = Math.floor(hoursElapse) + " hour agp"
+            time = Math.floor(hoursElapse) + " hour ago"
         } else {
-            time = Math.floor(hoursElapse) + " hours agp"
+            time = Math.floor(hoursElapse) + " hours ago"
         }
     } else if (daysElapsed < 7) {
         if ( Math.floor(daysElapsed) == 1) {
-            time = Math.floor(daysElapsed) + " day agp"
+            time = Math.floor(daysElapsed) + " day ago"
         } else {
-            time = Math.floor(daysElapsed) + " days agp"
+            time = Math.floor(daysElapsed) + " days ago"
         }
     } else {
         time = date.toLocaleDateString()

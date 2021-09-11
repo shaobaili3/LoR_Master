@@ -1,5 +1,4 @@
 from Models import riot
-from asyncio.windows_events import SelectorEventLoop
 import Models.utility as utility
 import constants as cs
 from Models.leaderboard import getRankStr, checkRank
@@ -249,6 +248,7 @@ class Player:
             return
 
     def processMatchIds(self, matchIds, matchNum, name, tag, puuid, deckCodes, winNum):
+        matchNum = 0
         for matchId in matchIds:
             try:
                 # If match number bigger than MAX, getDetail will only ruturn data from cache

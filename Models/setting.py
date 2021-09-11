@@ -7,6 +7,7 @@ class Server(str, Enum):
     NA = 'americas'
     EU = 'europe'
     ASIA = 'asia'
+    SEA = 'sea'
 
 
 class Setting():

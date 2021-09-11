@@ -52,7 +52,7 @@ function startLMTService() {
   } else {
     var backend
     backend = path.join(process.cwd(), '/backend/LMTService/LMTService.exe')
-    proc = require('child_process').spawn(backend, {cwd: '../'});
+    proc = require('child_process').spawn(backend, {cwd: './backend/LMTService/'});
   }
   
   proc.stdout.on('data', function (data) {
@@ -137,7 +137,7 @@ function newMainWindow() {
   let windowWidth = 800 // (335)
   let windowMaxWidth = 1200
   let windowMinWidth = 600
-  let windowHeight = Math.floor(windowWidth*0.8)
+  let windowHeight = height * 0.7
   // let windowXPadding = 200
   // let windowYPadding = 20
 
@@ -186,7 +186,7 @@ function newDeckWindow() {
   let windowMaxWidth = 290
   let windowMinWidth = 240
   // let window.windowWidth = windowWidth
-  let windowHeight = 620
+  let windowHeight = height * 0.7
   let windowPadding = 20
 
   if (developmentMode) {
