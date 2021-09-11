@@ -365,7 +365,7 @@ export default {
                 this.startingDeckCode = data.deck_tracker.deckCode
                 this.currentDeckCode = data.deck_tracker.currentDeckCode
                 this.oppoGraveCode = data.deck_tracker.opGraveyardCode
-                this.myGraveCode = data.deck_tracker.myGraveyardCode
+                this.myGraveCode = data.deck_tracker.myPlayedCardsCode
                 // if (data.deck_tracker.deckCode) {
                 //     this.makeWindowVisible()
                 // }

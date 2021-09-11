@@ -103,6 +103,17 @@ class Local:
         if 'face' in self.myGraveyard:
             del self.myGraveyard['face']
 
+    def playedCardsToDeck(self):
+        myPlayedCards = {}
+        for key, cardCode in self.playedCards.items():
+            if cardCode in myPlayedCards:
+                myPlayedCards[key] += 1
+            else:
+                myPlayedCards[key] = 1
+        if 'face' in myPlayedCards:
+            del myPlayedCards['face']
+        return myPlayedCards
+
     def updateMyDeck(self):
         try:
             localDeckRequest = self.session.get(self.getLocalDeckLink())
@@ -125,6 +136,8 @@ class Local:
         self.updateMyGraveyard()
         self.trackerDict['myGraveyard'] = self.myGraveyard
         self.trackerDict['myGraveyardCode'] = getDeckCode(self.myGraveyard)
+        self.trackerDict['myPlayedCards'] = self.playedCardsToDeck()
+        self.trackerDict['myPlayedCardsCode'] = getDeckCode(self.trackerDict['myPlayedCards'])
         # print(self.trackerDict)
 
     def updateStatusFlask(self):
