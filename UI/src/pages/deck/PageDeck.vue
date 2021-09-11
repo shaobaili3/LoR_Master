@@ -87,7 +87,9 @@
             <match-info-deck-detail :deck="deckCode"></match-info-deck-detail>
         </div>
 
-        <div class="footer"></div>
+        <div class="footer" v-if="!isLoading">
+            <div class="footer-text">Cards in hand: {{cardsInHandNum}}</div>
+        </div>
 
     </div>
 </template>
@@ -143,10 +145,13 @@ export default {
             titleType: null,
             currentTab: TABS.my,
 
+            cardsInHandNum: null,
+
             currentDeckCode: null,
             startingDeckCode: null,
             oppoGraveCode: null,
             myGraveCode: null,
+
             oppoName: null,
             oppoRank: null,
             oppoTag: null,
@@ -366,6 +371,7 @@ export default {
                 this.currentDeckCode = data.deck_tracker.currentDeckCode
                 this.oppoGraveCode = data.deck_tracker.opGraveyardCode
                 this.myGraveCode = data.deck_tracker.myPlayedCardsCode
+                this.cardsInHandNum = data.deck_tracker.cardsInHandNum
                 // if (data.deck_tracker.deckCode) {
                 //     this.makeWindowVisible()
                 // }
@@ -374,6 +380,7 @@ export default {
                 this.currentDeckCode = null
                 this.myGraveCode = null
                 this.oppoGraveCode = null
+                this.cardsInHandNum = null
             }
         },
         processJsonData(data) {
@@ -466,7 +473,16 @@ export default {
     }
 
     .footer {
-        height: 50px;
+        display: flex;
+        height: 30px;
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
+        text-align: center;
+        align-content: center;
+        justify-content: center;
+        padding: 10px;
+        background: var(--col-background);
     }
 
     .tabs {
