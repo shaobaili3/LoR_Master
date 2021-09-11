@@ -86,7 +86,16 @@
             <!-- <div class="status">Status: Fine</div> -->
         </div>
         <div class="right">
-            <div class="version">v0.9.7.2 Beta</div>
+            <div class="version download tooltip" v-if="!isUpdatedVersion" @click="openURL(downloadUrl)">
+                <span class="tooltiptext">
+                    <i class="fas fa-arrow-to-bottom"></i> {{remoteVersion}}
+                </span>
+                <i class="fas fa-exclamation-triangle"></i> {{version}}</div>
+            <div class="version tooltip" v-if="isUpdatedVersion">
+                <span class="tooltiptext">
+                    <i class="fas fa-check"></i> Updated
+                </span>
+                {{version}}</div>
         </div>
     </div>
 </template>
@@ -148,7 +157,8 @@ function processDate(dateString) {
 export default {
     mounted() {
         console.log("Mounted")
-        var test = 'Hello'
+        // var test = 'Hello'
+        this.requestVersionData()
     },
     data() {
         return {
@@ -168,9 +178,16 @@ export default {
             autoCompleteIndex: -1,
             regions: ["NA", "EU", "AS"],
             selectedRegion: "NA",
+
+            version: "",
+            remoteVersion: "",
+            downloadUrl: null,
         }
     },
     computed: {
+        isUpdatedVersion() {
+            return this.version == this.remoteVersion
+        }
     },
     components: { 
         BaseWindowControls,
@@ -319,6 +336,24 @@ export default {
             var totalMatches = totalLoss + totalWins;
             this.winloss = `${totalWins}W ${totalLoss}L`
             this.winrate = Math.floor(totalWins/totalMatches*100) + "% winrate"
+        },
+        openURL(url) {
+            window.openExternal(url);
+        },
+        requestVersionData() {
+            axios.get(`http://127.0.0.1:${portNum}/version`)
+                .then((response) => {
+                    var data = response.data
+                    this.version = data.version
+                    this.remoteVersion = data.remoteVersion
+                    this.downloadUrl = data.downloadUrl
+                })
+                .catch((e) => {
+                    if (axios.isCancel(e)) {
+                        // Console log is cancel
+                    } else 
+                    { console.log('error', e) }
+                })
         },
         async requestNameData() {
             
@@ -657,6 +692,43 @@ export default {
 
     .bottom-bar .left, .bottom-bar .right {
         padding: 20px;
+    }
+
+    .version.download {
+        cursor: pointer;
+    }
+
+    .tooltip {
+        position: relative;
+    }
+
+    .tooltip .tooltiptext {
+        visibility: hidden;
+        display: block;
+        /* width: 120px; */
+        white-space: nowrap;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 8px 10px;
+
+        box-sizing: border-box;
+
+        /* Position the tooltip */
+        position: absolute;
+        z-index: 1;
+        bottom: 120%;
+        left: 50%;
+        transform:translateX(-50%);
+        
+        
+        /* left: 50%; */
+        /* margin-left: -50%; */
+    }
+
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
     }
 
 </style>
