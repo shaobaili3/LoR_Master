@@ -105,7 +105,7 @@ class Local:
 
     def playedCardsToDeck(self):
         myPlayedCards = {}
-        for key, cardCode in self.playedCards.items():
+        for cardCode, key in self.playedCards.items():
             if cardCode in myPlayedCards:
                 myPlayedCards[key] += 1
             else:
