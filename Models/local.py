@@ -27,6 +27,7 @@ class Local:
         self.graveyard = {}
         self.opGraveyard = {}
         self.myGraveyard = {}
+        self.cardsInHandNum = 0
         self.positional_rectangles = None
         self.static_decklist = None
         self.trackJson = {}
@@ -48,9 +49,15 @@ class Local:
     def updateTracker(self, rectangles):
         if rectangles is None:
             return
+        faceHeight = 0
+        self.cardsInHandNum = 0
         for card in rectangles:
+            if card['CardCode'] == 'face':
+                faceHeight = card['Height']
             if card['LocalPlayer'] is True:
-                self.playedCards[card['CardID']] = card['CardCode']
+                if card['TopLeftY'] < faceHeight:
+                    self.cardsInHandNum += 1
+                    self.playedCards[card['CardID']] = card['CardCode']
             else:
                 self.graveyard[card['CardID']] = card['CardCode']
         # have to know if player have changed cards
@@ -133,11 +140,12 @@ class Local:
         self.updateOpGraveyard()
         self.trackerDict['opGraveyard'] = self.opGraveyard
         self.trackerDict['opGraveyardCode'] = getDeckCode(self.opGraveyard)
-        self.updateMyGraveyard()
+        # self.updateMyGraveyard()
         self.trackerDict['myGraveyard'] = self.myGraveyard
         self.trackerDict['myGraveyardCode'] = getDeckCode(self.myGraveyard)
         self.trackerDict['myPlayedCards'] = self.playedCardsToDeck()
         self.trackerDict['myPlayedCardsCode'] = getDeckCode(self.trackerDict['myPlayedCards'])
+        self.trackerDict['cardsInHandNum'] = self.cardsInHandNum
         # print(self.trackerDict)
 
     def updateStatusFlask(self):
