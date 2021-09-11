@@ -88,7 +88,7 @@ var clientHeight = 0
 const headerHeight = 45 // Repeated in app.js
 const defaultRatio = 2.3 // Repeated in app.js
 const minHeight = 170 
-const defaultHeight = 620
+const defaultHeight = screen.height * 0.6
 
 window.expandWindow = function() {
 
