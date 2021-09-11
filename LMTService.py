@@ -141,11 +141,17 @@ def leaderboard(server):
 @app.route("/version", methods = ['get'])
 def version():
     import requests
-    response = requests.get("https://api.github.com/repos/shaobaili3/LoR_Master/releases/latest")
-    print(response.json())
+    try:
+        response = requests.get("https://api.github.com/repos/shaobaili3/LoR_Master/releases/latest")
+        githubJson = response.json()
+    except Exception as e:
+        return jsonify({})
+
     version = {}
     version['version'] = constants.VERSION_NUM
-    version['github'] = response.json()
+    version['remoteVersion'] = githubJson['tag_name']
+    version['downloadUrl'] = githubJson['assets'][0]['browser_download_url']
+    version['github'] = githubJson
     return jsonify(version)
 
 app.run(port=63312)
