@@ -17,12 +17,15 @@
                 @click="selectRegion(region)">{{region}}</div>
             </div>
             <div class="search-bar-container">
-                <input class="search-bar" 
-                    @keyup="searchName" 
-                    @keyup.enter="searchHistory"
-                    @keyup.up="autoCompleteIndexMinus"
-                    @keyup.down="autoCompleteIndexPlus"
-                    v-model="searchText"/>
+                <div class="search-bar-input-container">
+                    <input class="search-bar" 
+                        @keyup="searchName" 
+                        @keyup.enter="searchHistory"
+                        @keyup.up="autoCompleteIndexMinus"
+                        @keyup.down="autoCompleteIndexPlus"
+                        v-model="searchText"/>
+                    <button class="search-btn inside" @click="clearSearch" v-if="searchText!=''"><span><i class="fas fa-times"></i></span></button>
+                </div>
                 <div class="search-bar-auto-complete">
                     <div class="auto-complete-item" 
                         v-for="(name, index) in inputNameList" :key="index" 
@@ -32,6 +35,7 @@
                         {{name}}
                     </div>
                 </div>
+                
                 <button class="search-btn" @click="searchHistory"><span><i class="fas fa-search"></i></span></button>
             </div>
             <div class="summary-container" v-if="!isLoading">
@@ -199,6 +203,10 @@ export default {
         selectRegion(region) {
             this.selectedRegion = region
             this.searchName()
+        },
+        clearSearch() {
+            this.searchText = ''
+            document.querySelector(".search-bar").focus()
         },
         searchName() {
             // console.log("searchName")
@@ -476,6 +484,11 @@ export default {
         position: relative;
     }
 
+    .search-bar-input-container {
+        width: 100%;
+        position: relative;
+    }
+
     .search-bar {
         width: 100%;
         height: 36px;
@@ -523,6 +536,13 @@ export default {
         cursor: pointer;
         width: 6%;
         text-align: right;
+    }
+
+    .search-btn.inside {
+        position: absolute;
+        right: 10px;
+        width: 36px;
+        height: 36px;
     }
 
     .summary-container {
