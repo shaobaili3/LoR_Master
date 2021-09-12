@@ -1,7 +1,7 @@
 <template>
     <div id="content">
 
-        <h1 id="title">LoR Master Leaderboard</h1>
+        <!-- <h1 id="title">LoR Master Leaderboard</h1> -->
 
         <div id="btn-group-regions" class="flex">
             <button id="btn-na" class="btn" :class="{active: activeRegion == 0}" @click="switchRegion(regions.NA)">NA</button>

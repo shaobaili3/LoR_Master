@@ -53,6 +53,7 @@
                     <!-- <div class="detail server">Server: SEA</div> -->
                     <div class="detail rank" v-if="playerRank">Rank: {{playerRank}}</div>
                     <div class="detail lp" v-if="playerLP">LP: {{playerLP}}</div>
+                    <div class="detail lp" v-if="playerRegion">Region: {{playerRegion}}</div>
                 </div>
                 <div class="history-summary">
                     <div class="win-loss">{{winloss}}</div>
@@ -83,7 +84,7 @@
             <div class="loading-text" v-if="isLoading">
                 <i class="fas fa-circle-notch fa-spin"></i> 
                 Loading...
-                </div>
+            </div>
         </div>
 
         <div class="main-content-container leaderboard" v-if="currentPage == PAGES.leaderboard">
@@ -103,7 +104,7 @@
 
     <div class="bottom-bar">
         <div class="left">
-            <!-- <div class="status">Status: Fine</div> -->
+            <div class="status">LoR Master Tracker</div>
         </div>
         <div class="right">
             <div class="version download tooltip" v-if="!isUpdatedVersion" @click="openURL(downloadUrl)">
@@ -198,6 +199,7 @@ export default {
             playerTag: "",
             playerRank: null,
             playerLP: null,
+            playerRegion: null,
             searchText: "",
             isLoading: false,
             inputNameList: [],
@@ -309,6 +311,7 @@ export default {
             this.playerTag = ""
             this.playerRank = null
             this.playerLP = null
+            this.playerRegion = null
             this.matches = []
         },
         errorHistory() {
@@ -442,7 +445,8 @@ export default {
             
             //Save the cancel token for the current request
             cancelToken = axios.CancelToken.source()
-
+            
+            this.playerRegion = regionNames[this.selectedRegion]
             axios.get(`http://127.0.0.1:${portNum}/search/${regionNames[this.selectedRegion]}/${this.playerName}/${this.playerTag}`,
                     { cancelToken: cancelToken.token }) // Pass the cancel token
                 .then((response) => {

@@ -265,7 +265,6 @@ export default {
                     } else 
                     { console.log('error', e) }
                 })
-
         },
         async requestServerInfo() {
             lastServerRequestTime = Date.now()
