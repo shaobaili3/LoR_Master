@@ -14,7 +14,7 @@
 
 LoR Master Tracker is a open source match tracker and player inspector for League of Runeterra.
 
-## Installation
+## [Download](https://github.com/shaobaili3/LoR_Master/releases/download/v0.9.7.2-beta/LoRMasterTracker-v0.9.7.2-beta.exe)
 
 * Requirements: Windows 7 or higher
 * [Click here to download](https://github.com/shaobaili3/LoR_Master/releases/download/v0.9.7.2-beta/LoRMasterTracker-v0.9.7.2-beta.exe)
