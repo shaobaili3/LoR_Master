@@ -2,13 +2,22 @@
 
     <div class="left-nav">
         <button class="left-nav-btn disabled"><span><i class="fas fa-user-circle"></i></span></button>
-        <button class="left-nav-btn selected"><span><i class="fas fa-search"></i></span></button>
+        <button class="left-nav-btn" 
+            :class="{selected: currentPage == PAGES.search}" 
+            @click="setCurrentPage(PAGES.search)">
+            <span><i class="fas fa-search"></i></span>
+        </button>
+        <button class="left-nav-btn" 
+            :class="{selected: currentPage == PAGES.leaderboard}" 
+            @click="setCurrentPage(PAGES.leaderboard)">
+            <span><i class="fas fa-trophy"></i></span>
+        </button>
     </div>
     
     <base-window-controls :title="''" :titleType="'window'"></base-window-controls>
     
     <div class="content">
-        <div class="history-content-container">
+        <div class="main-content-container" v-if="currentPage == PAGES.search">
             <div class="region-tabs">
                 <div class="region-option" 
                 v-for="(region, index) in regions"
@@ -73,6 +82,10 @@
 
             <div class="loading-text" v-if="isLoading">Loading...</div>
         </div>
+
+        <div class="main-content-container leaderboard" v-if="currentPage == PAGES.leaderboard">
+            <leaderboard @search="searchPlayer($event)"></leaderboard>
+        </div>
     </div>
 
     <div class="deck-content-container" :class="{hidden: !isShowDeck}">
@@ -111,6 +124,7 @@ import axios from 'axios'
 import MatchHistory from '../components/MatchHistory.vue'
 import DeckRegions from '../components/DeckRegions.vue'
 import MatchHistoryDeckDetail from '../components/MatchHistoryDeckDetail.vue'
+import Leaderboard from '../components/Leaderboard.vue'
 
 const requestDataWaitTime = 200 //ms
 const inputNameListLength = 10;
@@ -123,6 +137,11 @@ const regionNames = {
     'NA': 'americas',
     'EU': 'europe',
     'AS': 'asia',
+}
+
+const PAGES = {
+    search: 0,
+    leaderboard: 1
 }
 
 function processDate(dateString) {
@@ -186,6 +205,10 @@ export default {
             version: "",
             remoteVersion: "",
             downloadUrl: null,
+
+            currentPage: PAGES.search,
+
+            PAGES: PAGES
         }
     },
     computed: {
@@ -198,11 +221,29 @@ export default {
         MatchHistory,
         DeckRegions,
         MatchHistoryDeckDetail,
+        Leaderboard,
     },
     methods: {
+
+        // Page Switch
+        setCurrentPage(page) {
+            this.currentPage = page
+        },
         selectRegion(region) {
             this.selectedRegion = region
             this.searchName()
+        },
+        searchPlayer(data) {
+            
+            if (this.regions.includes(data.region)) {
+                // SEA will not be included
+                this.setCurrentPage(PAGES.search)
+                this.searchText = `${data.name}#${data.tag}`
+                this.selectRegion(data.region)
+                this.searchHistory()
+            }
+
+            // console.log(data)
         },
         clearSearch() {
             this.searchText = ''
@@ -645,9 +686,14 @@ export default {
         height: calc(100vh - 138px);
     }
 
-    .history-content-container {
+    .main-content-container {
         margin: auto;
         max-width: 550px;
+    }
+
+    .main-content-container.leaderboard {
+        height: calc(100vh - 88px);
+        overflow: scroll;
     }
 
     .left-nav {

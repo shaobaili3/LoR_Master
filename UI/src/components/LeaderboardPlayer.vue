@@ -1,14 +1,9 @@
 <template>
-    <router-link :to="'/profile/'+name">
-    
-    <!-- <a href="profile.html?name=Ace"> -->
-        <div class="info flex" :class="{champion: isChampion}">
-            <div class="info-rank">{{rank}}</div>
-            <div class="info-name">{{name}}</div>
-            <div class="info-lp">{{lp}}</div>
-        </div>
-    <!-- </a> -->
-    </router-link>
+    <div class="info flex" :class="{champion: isChampion}">
+        <div class="info-rank">{{rank}}</div>
+        <div class="info-name">{{name}}</div>
+        <div class="info-lp">{{lp}}</div>
+    </div>
 </template>
 
 <script>
@@ -38,6 +33,8 @@ export default {
         align-items: center;
         justify-content: space-around;
         border-radius: 5px;
+
+        cursor: pointer;
     }
 
     .info:hover {
