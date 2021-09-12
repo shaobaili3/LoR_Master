@@ -84,7 +84,7 @@ def process():
 @app.route("/track", methods = ['get'])
 def track():
     settingTrack.setServer(Server._value2member_map_[settingTrack.riotServer])
-    return jsonify(localInspect.updateStatusFlask())
+    return jsonify(localTrack.updateStatusFlask())
 
 @app.route("/history/<string:server>/<string:name>/<string:tag>", methods = ['get'])
 def history(server, name, tag):
@@ -153,6 +153,15 @@ def version():
     version['downloadUrl'] = githubJson['assets'][0]['browser_download_url']
     version['github'] = githubJson
     return jsonify(version)
+
+@app.route("/opInfor", methods = ['get'])
+def opInfor():
+    opInfo = {}
+    localTrack.updateTagByName(localTrack.positional_rectangles['OpponentName'])
+    opInfo['name'] = localTrack.positional_rectangles['OpponentName']
+    opInfo['tag'] = localTrack.opponentTag
+    opInfo['rank'], opInfo['lp'] = checkRank(name, settingTrack.riotServer)
+    return jsonify(opInfo)
 
 app.run(port=63312)
 
