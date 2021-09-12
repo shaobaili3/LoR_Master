@@ -80,7 +80,10 @@
                 
             </div>
 
-            <div class="loading-text" v-if="isLoading">Loading...</div>
+            <div class="loading-text" v-if="isLoading">
+                <i class="fas fa-circle-notch fa-spin"></i> 
+                Loading...
+                </div>
         </div>
 
         <div class="main-content-container leaderboard" v-if="currentPage == PAGES.leaderboard">
