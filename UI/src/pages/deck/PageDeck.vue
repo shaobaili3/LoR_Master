@@ -107,7 +107,9 @@ import DeckDetailBase from '../../components/DeckDetailBase.vue'
 
 const requestDataWaitTime = 100; // ms
 const requestServerWaitTime = 3000; //ms
+
 const portNum = "63312"
+const API_BASE = `http://127.0.0.1:${portNum}`
 
 const TABS = {
     oppo: 0,
@@ -254,7 +256,7 @@ export default {
 
             console.log("Request Opponent History for " + this.oppoName + "#" + this.oppoTag)
             
-            axios.get(`http://127.0.0.1:${portNum}/history/${this.server}/${this.oppoName}/${this.oppoTag}`)
+            axios.get(`${API_BASE}/history/${this.server}/${this.oppoName}/${this.oppoTag}`)
                 .then((response) => {
                     console.log("Opponent Data", response.data)
                     this.processJsonData(response.data)
@@ -269,7 +271,7 @@ export default {
         async requestServerInfo() {
             lastServerRequestTime = Date.now()
             
-            axios.get(`http://127.0.0.1:${portNum}/process`)
+            axios.get(`${API_BASE}/process`)
                 .then((response) => {
                     // console.log(response.data)
 
@@ -303,7 +305,7 @@ export default {
 
             lastTrackTime = Date.now()
 
-            axios.get(`http://127.0.0.1:${portNum}/track`)
+            axios.get(`${API_BASE}/track`)
                 .then((response) => {
                     // console.log(response.data)
 

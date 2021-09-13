@@ -134,6 +134,7 @@ const requestDataWaitTime = 200 //ms
 const inputNameListLength = 10;
 
 const portNum = "63312"
+const API_BASE = `http://127.0.0.1:${portNum}`
 
 let cancelToken
 
@@ -396,7 +397,7 @@ export default {
             window.openExternal(url);
         },
         requestVersionData() {
-            axios.get(`http://127.0.0.1:${portNum}/version`)
+            axios.get(`${API_BASE}/version`)
                 .then((response) => {
                     var data = response.data
                     this.version = data.version
@@ -412,7 +413,7 @@ export default {
         },
         async requestNameData() {
             
-            axios.get(`http://127.0.0.1:${portNum}/name/${regionNames[this.selectedRegion]}/${this.searchText}`)
+            axios.get(`${API_BASE}/name/${regionNames[this.selectedRegion]}/${this.searchText}`)
                 .then((response) => {
                     if (response.data == "Error") {
                         // Error
@@ -447,7 +448,7 @@ export default {
             cancelToken = axios.CancelToken.source()
             
             this.playerRegion = regionNames[this.selectedRegion]
-            axios.get(`http://127.0.0.1:${portNum}/search/${regionNames[this.selectedRegion]}/${this.playerName}/${this.playerTag}`,
+            axios.get(`${API_BASE}/search/${regionNames[this.selectedRegion]}/${this.playerName}/${this.playerTag}`,
                     { cancelToken: cancelToken.token }) // Pass the cancel token
                 .then((response) => {
                     this.isLoading = false;
