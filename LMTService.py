@@ -130,11 +130,20 @@ def search(name, tag, server):
 
 @app.route("/leaderboard/<string:server>", methods = ['get'])
 def leaderboard(server):
-    #to-do move functions to leaderboard model
+    # refactor to leaderboard model
     board = Models.leaderboard.getboard(server)
     boardWithTag = []
+    playlistDict = {}
+    try:        
+        with open('data/' + server + '.json', 'r', encoding='utf-8') as fp:
+            playlistDict = json.load(fp)
+    except Exception as e:
+        print('Restful: unable to load player list')
     for player in board:
-        player['tag'] = localInspect.getPlayerTag(player['name'], server)
+        if player['name'] in playlistDict:
+            player['tag'] = playlistDict[player['name']]
+        else:
+            player['tag'] = ''
         boardWithTag.append(player)
     return jsonify(boardWithTag)
     
