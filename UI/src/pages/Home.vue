@@ -32,7 +32,9 @@
                         @keyup.enter="searchHistory"
                         @keyup.up="autoCompleteIndexMinus"
                         @keyup.down="autoCompleteIndexPlus"
-                        v-model="searchText"/>
+                        v-model="searchText"
+                        placeholder="eg.Storm#5961"
+                        />
                     <button class="search-btn inside" @click="clearSearch" v-if="searchText!=''"><span><i class="fas fa-times"></i></span></button>
                 </div>
                 <div class="search-bar-auto-complete">
@@ -249,8 +251,7 @@ export default {
                 this.setCurrentPage(PAGES.search)
                 this.selectRegion(data.region)
                 this.searchText = data.name
-                // document.querySelector(".search-bar").blur()
-                this.resetInputNameList()
+                this.resetInputFocus()
 
                 // this.searchHistory()
                 this.playerName = data.name
@@ -276,6 +277,11 @@ export default {
             // console.log("resetList")
             this.inputNameList = []
             this.autoCompleteIndex = -1
+        },
+        resetInputFocus() {
+            var searchBar = document.querySelector(".search-bar")
+            if (searchBar) searchBar.blur()
+            this.resetInputNameList()
         },
         autoCompleteIndexPlus() {
             this.autoCompleteIndex += 1
@@ -303,8 +309,7 @@ export default {
                 this.playerTag = splited[1]
 
                 this.searchText = this.playerName
-                document.querySelector(".search-bar").blur()
-                this.resetInputNameList()
+                this.resetInputFocus()
 
                 // Perform the actual search
                 this.requestHistoryData()
@@ -319,6 +324,13 @@ export default {
 
                     // Perform the actual search
                     this.requestHistoryData()
+                    this.resetInputFocus()
+                } else {
+                    if (splited.length == 1 && splited[0] == this.playerName && this.playerTag) {
+                        // When trying to search the same people, do a refresh
+                        this.requestHistoryData()
+                        this.resetInputFocus()
+                    }
                 }
             }
             
