@@ -24,30 +24,33 @@ LoR Master Tracker is a open source match tracker and player inspector for Leagu
 
 * **Player Inspector**
 
-    By simply providing the player name, LMT can inspect recent matches. Multiple Language player names are supported.
+    By simply providing the player name, LMT can inspect match history. Multiple Language player names are supported.
 ![n](Preview/inspect.png)
 
 * **In-game Deck Tracker**
 
-    At the game beginning, the opponent history, rank and lp automatically revealed by real-time enemy tracker.
-![c](Preview/tracker.png)  
+    At the game beginning, players' decks, opponent history, rank and both graveyards automatically revealed by real-time deck tracker.
+![c](Preview/tracker2.png)
+![c](Preview/tracker.png)   
     > ### Disclaimer:
-    > Opponent decks are pulled from recent 10 matches by [Riot API](https://developer.riotgames.com/apis) via our development Riot API keys. We are looking forward to getting feedback from the community and Riot and actively upgrade LMT.
+    > Opponent history are pulled from recent 10 matches by [Riot API](https://developer.riotgames.com/apis). We are looking forward to getting feedback from the community and Riot.
 
+* **Real time Master Leaderboard**
+
+    LMT real-time master leaderboard is powered by open-source [LMT Crawler](https://github.com/LoR-Master-Tracker/LoR-Player-Crawler). You can inspect master players via clicking player names.
+![c](Preview/leaderboard.png)
 
 * **In-game Deck Code Viewer(Coming soon)**
 
     LMT can view the deck by entering the deck code. The viewer can be displayed in-game.
 
 
-* **Real time Master Leaderboard(Coming soon)**
 
-    LMT real time update leaderboard and Master player list via open source [LMT Crawler](https://github.com/LoR-Master-Tracker/LoR-Player-Crawler)
 
 
 ## Development
 
-LoR Master Tracker backend service is written by [Python3](https://www.python.org).the user interface is built by [Electron](https://www.electronjs.org/) and [Vuejs](https://github.com/vuejs/vue)
+LoR Master Tracker backend service is written by [Python3](https://www.python.org). The user interface is built by [Electron](https://www.electronjs.org/) and [Vuejs](https://github.com/vuejs/vue)
 
 ## Build Instructions
 
