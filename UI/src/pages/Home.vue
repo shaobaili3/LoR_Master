@@ -47,7 +47,10 @@
                     </div>
                 </div>
                 
-                <button class="search-btn" @click="searchHistory"><span><i class="fas fa-search"></i></span></button>
+                <button class="search-btn" @click="searchHistory">
+                    <span v-if="!isSamePlayer"><i class="fas fa-search"></i></span>
+                    <span v-if="isSamePlayer"><i class="fas fa-redo-alt"></i></span>
+                </button>
             </div>
             <div class="summary-container" v-if="!isLoading">
                 <div class="player-summary">
@@ -225,6 +228,9 @@ export default {
         },
         filteredInputNameList() {
             return this.inputNameList.map(i => i.split('#')[0]);
+        },
+        isSamePlayer() {
+            return ((this.searchText == this.playerName) && (this.playerTag))
         }
     },
     components: { 
