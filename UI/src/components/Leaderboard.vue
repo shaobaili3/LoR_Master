@@ -182,7 +182,7 @@ export default {
 
     #search-container {
         position: relative;
-        margin-top: 20px;
+        margin-top: 15px;
         width: 420px;
         height: 50px;
     
@@ -190,19 +190,22 @@ export default {
 
     #search-input {
         color: white;
-        border-radius: 40px;
+        
+        font-size: 16px;
+
         width: 100%;
         height: 100%;
+        
         border: none;
-        background-color: rgba(255, 255, 255, 0.062);
+        background-color: var(--col-darker-grey);
         padding: 20px 20px 20px 50px;
-
+        border-radius: 40px;
         box-sizing: border-box;
     }
 
     #search-input:focus {
         outline: none;
-        background-color: rgba(255, 255, 255, 0.2);
+        background-color: var(--col-dark-grey);
         /* box-shadow: 0px 0px 10px 2px var(--col-gold); */
     }
 
@@ -252,6 +255,8 @@ export default {
         width: 100px;
         height: 40px;
 
+        font-size: 16px;
+
         cursor: pointer;
 
         border: 0px;
@@ -275,7 +280,7 @@ export default {
     /* Ladder  */
     #ladder {
         
-        margin-top: 25px;
+        margin-top: 20px;
         margin-bottom: 25px;
         /* color: white; */
         display: flex;

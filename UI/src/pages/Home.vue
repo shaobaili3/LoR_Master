@@ -535,38 +535,47 @@ export default {
 
     .region-tabs {
         display: flex;
-
-        gap: 5px;
+        /* gap: 5px; */
+        padding-left: 15px;
     }
 
     .region-option {
         
-        color: #ABABAB;
+        /* color: #ABABAB; */
         cursor: pointer;
 
-        width: 56px;
+        width: 60px;
         height: 30px;
 
         line-height: 30px;
 
-        border: 1px solid #ABABAB;
-        border-radius: 4px 4px 0px 0px;
+        /* border: 1px solid #ABABAB; */
+        /* border-radius: 4px 4px 0px 0px; */
 
         align-items: center;
         text-align: center;
         vertical-align: middle;
+
+        font-size: 16px;
+        color: var(--col-gold);
+        border: 0px;
+        border-bottom: 2px transparent solid;
+        
     }
 
     .region-option:hover {
-        color: white;
+        /* color: white; */
+        border-bottom: 2px var(--col-gold) solid;
     }
 
     .region-option.selected {
         cursor: default;
-        color: var(--col-background);
+        /* color: var(--col-background);
         background:white;
         border: 1px solid white;
-        border-radius: 4px 4px 0px 0px;
+        border-radius: 4px 4px 0px 0px; */
+        color: white;
+        border-bottom: 2px var(--col-gold) solid;
     }
 
     .search-bar-container {
@@ -575,6 +584,7 @@ export default {
         flex-wrap: nowrap;
 
         position: relative;
+        margin-top: 15px;
     }
 
     .search-bar-input-container {
@@ -584,16 +594,21 @@ export default {
 
     .search-bar {
         width: 100%;
-        height: 36px;
+        height: 50px;
 
         color: white;
-        font-size: 20px;
+        font-size: 16px;
 
-        border: 1px solid #FFFFFF;
+        /* border: 1px solid #FFFFFF;
         box-sizing: border-box;
         border-radius: 0px 4px 4px 4px;
+        background: var(--col-background); */
 
-        background: var(--col-background);
+        border: none;
+        background-color: var(--col-darker-grey);
+        padding: 0px 20px 0px 20px;
+        border-radius: 40px;
+        box-sizing: border-box;
     }
 
     .search-bar:focus {
@@ -603,17 +618,20 @@ export default {
 
     .search-bar-auto-complete {
         position: absolute;
-        top: 36px;
-        left: 0;
+        top: 50px;
+        left: 10px;
         text-align: left;
         background: var(--col-background);
-        padding: 5px 0px 0px 0px;
+        /* padding: 5px 0px 0px 0px; */
+        
+        border-radius: 8px;
+        overflow: hidden;
 
         z-index: 2;
     }
 
     .auto-complete-item {
-        padding: 5px 15px 5px 5px;
+        padding: 6px 15px 8px 9px;
         cursor: pointer;
     }
 
@@ -635,7 +653,7 @@ export default {
         position: absolute;
         right: 10px;
         width: 36px;
-        height: 36px;
+        height: 50px;
     }
 
     .summary-container {

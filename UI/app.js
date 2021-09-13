@@ -25,7 +25,7 @@ Menu.setApplicationMenu(menu)
 // const server = require('./appsrc/server.js')
 // server.run
 
-const developmentMode = false
+const developmentMode = true
 // const snapAssist = true
 const closeWithoutTracker = false
 const headerHeight = 45 // Repeated in preload.js
@@ -140,10 +140,12 @@ function newMainWindow() {
   let windowHeight = height * 0.7
   // let windowXPadding = 200
   // let windowYPadding = 20
+  let xOffSet = 0
 
   if (developmentMode) {
     windowWidth = windowWidth + 400
     windowMaxWidth = windowWidth + 400
+    xOffSet = 350
   }
 
   mainWindow = new BrowserWindow({
@@ -152,7 +154,7 @@ function newMainWindow() {
     minHeight: headerHeight,
     width: windowWidth, 
     height: windowHeight, 
-    x: (width - windowWidth) / 2,
+    x: (width - windowWidth) / 2 + xOffSet,
     y: (height - windowHeight) / 2,
     frame: false,
     resizable: true,
