@@ -37,7 +37,7 @@
                 </div>
                 <div class="search-bar-auto-complete">
                     <div class="auto-complete-item" 
-                        v-for="(name, index) in inputNameList" :key="index" 
+                        v-for="(name, index) in filteredInputNameList" :key="index" 
                         :class="{selected: autoCompleteIndex == index}"
                         @click="searchHistoryAutoComplete(index)"
                     >
@@ -220,6 +220,9 @@ export default {
     computed: {
         isUpdatedVersion() {
             return this.version == this.remoteVersion
+        },
+        filteredInputNameList() {
+            return this.inputNameList.map(i => i.split('#')[0]);
         }
     },
     components: { 
@@ -244,9 +247,15 @@ export default {
             if (this.regions.includes(data.region)) {
                 // SEA will not be included
                 this.setCurrentPage(PAGES.search)
-                this.searchText = `${data.name}#${data.tag}`
                 this.selectRegion(data.region)
-                this.searchHistory()
+                this.searchText = data.name
+                // document.querySelector(".search-bar").blur()
+                this.resetInputNameList()
+
+                // this.searchHistory()
+                this.playerName = data.name
+                this.playerTag = data.tag
+                this.requestHistoryData()
             }
 
             // console.log(data)
@@ -285,18 +294,34 @@ export default {
             this.searchHistory()
         },
         searchHistory() {
+            var splited
             if (this.inputNameList.length > 0 && this.inputNameList[this.autoCompleteIndex]) {
-                this.searchText = this.inputNameList[this.autoCompleteIndex]
-                document.querySelector(".search-bar").blur()
-                this.resetInputNameList()
-            }
-            var splited = this.searchText.split("#")
-            if (splited.length == 2 && splited[0].length > 0 && splited[1].length > 0) {
+                // Use auto complete to fill the search
+                // Sets player info for search
+                splited = this.inputNameList[this.autoCompleteIndex].split("#")
                 this.playerName = splited[0]
                 this.playerTag = splited[1]
-                // console.log("Searching ", this.playerName, "#", this.playerTag)
+
+                this.searchText = this.playerName
+                document.querySelector(".search-bar").blur()
+                this.resetInputNameList()
+
+                // Perform the actual search
                 this.requestHistoryData()
+            } else {
+                // Use user input
+                splited = this.searchText.split("#")
+                if (splited.length == 2 && splited[0].length > 0 && splited[1].length > 0) {
+                    // Check if format is correct
+                    // Sets player info for search
+                    this.playerName = splited[0]
+                    this.playerTag = splited[1]
+
+                    // Perform the actual search
+                    this.requestHistoryData()
+                }
             }
+            
         },
         // requestDataAgain() {
         //     return new Promise(resolve => {
@@ -420,6 +445,7 @@ export default {
                     } else {
                         // console.log(response.data)
                         if (document.querySelector(".search-bar") == document.activeElement) {
+                            // If the search bar is still in focus
                             this.inputNameList = response.data.slice(0, inputNameListLength);
                         } else {
                             this.resetInputNameList()
