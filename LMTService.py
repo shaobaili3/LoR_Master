@@ -163,8 +163,8 @@ def version():
     version['github'] = githubJson
     return jsonify(version)
 
-@app.route("/opInfor", methods = ['get'])
-def opInfor():
+@app.route("/opInfo", methods = ['get'])
+def opInfo():
     opInfo = {}
     localTrack.updateTagByName(localTrack.positional_rectangles['OpponentName'])
     opInfo['name'] = localTrack.positional_rectangles['OpponentName']
