@@ -132,8 +132,6 @@ export default {
 
         this.requestTrackInfo()
         this.requestServerInfo()
-        // this.requestOpponentHistory()
-        // console.log("Test")
     },
     data() {
         return {
@@ -157,6 +155,7 @@ export default {
             oppoName: null,
             oppoRank: null,
             oppoTag: null,
+            oppoLp: null,
         }
     },
     computed: {
@@ -298,19 +297,34 @@ export default {
                 })
             
         },
-        async requestTrackInfo() {
-            // http://192.168.20.4:${portNum}/track
+        async requestOppoInfo() {
+            // Getting opponent rank, lp and tag
+            // Once per opponent change
 
-            // console.log("Request Track Info")
+            axios.get(`${API_BASE}/opInfo`)
+                .then((response) => {
+                    var op = response.data
+                    this.oppoRank = op.rank
+                    this.oppoTag = op.tag
+                    this.oppoName = op.name
+                    this.oppoLp = op.lp
+
+                    this.requestOpponentHistory()
+                })
+                .catch((e) => {
+                    if (axios.isCancel(e)) {
+                        // console.log("Request cancelled");
+                    } else 
+                    { console.log('error', e) }
+                })
+        },
+        async requestTrackInfo() {
 
             lastTrackTime = Date.now()
-
             axios.get(`${API_BASE}/track`)
                 .then((response) => {
-                    // console.log(response.data)
 
                     var elapsedTime = Date.now() - lastTrackTime // milli
-                    // console.log("Elapsed ", elapsedTime)
                     
                     this.processTrackInfo(response.data)
                     if (requestDataWaitTime > elapsedTime) {
@@ -323,49 +337,40 @@ export default {
                     if (axios.isCancel(e)) {
                         // console.log("Request cancelled");
                     } else 
-                    { console.log('error', e) }
-                    this.requestTrackInfo()
+                    { 
+                        console.log('error', e) 
+                        this.requestTrackInfo()
+                    }
                 })
 
             
         },
         processTrackInfo(data) {
 
-            // console.log("Processing Tracker Info")
-            // console.log(data)
-            
-            if (data.opponent_info) {
-                var oppoInfo = data.opponent_info;
-                if ((oppoInfo.name) && (oppoInfo.tag)) {
-                    // console.log("Reading Opponent Info")
-                    if ((!this.oppoName) || (this.oppoName.toLowerCase() != oppoInfo.name.toLowerCase())) {
-                        // If there is no oppoName set or there is a change in the name
-                        this.oppoName = oppoInfo.name
-                        this.oppoTag = oppoInfo.tag
-                        this.oppoRank = oppoInfo.rank
-                        this.requestOpponentHistory()
-                    }
+            if (data.positional_rectangles && data.positional_rectangles.OpponentName) {
+                // Check if there is opponent
+                
+                var oppoName = data.positional_rectangles.OpponentName
+                
+                if ((!this.oppoName) || (this.oppoName.toLowerCase() != oppoName.toLowerCase())) {
+                    // If there is no oppoName set or there is a change in the name
+                    this.oppoName = oppoName
+                    this.requestOppoInfo()
                 }
-                else {
-                    this.oppoName = null
-                    this.oppoTag = null
-                    this.oppoRank = null
-                    this.matchTotalNum = 0
-                    this.matchInfos = []
-                }
-
-                // if (oppoInfo.name) {
-                    // this.oppoName = oppoInfo.name
-                    // console.log(this.oppoName)
-                    // this.makeWindowVisible()
-                // }
+                
             } else {
+                // Clear Info about opponent and matches if there is no opponent
+
                 this.oppoName = null
                 this.oppoTag = null
                 this.oppoRank = null
+                this.oppoLp = null
                 this.matchTotalNum = 0
                 this.matchInfos = []
             }
+            
+                
+
 
             if (data.deck_tracker) {
                 this.startingDeckCode = data.deck_tracker.deckCode
