@@ -169,7 +169,7 @@ def opInfo():
     localTrack.updateTagByName(localTrack.positional_rectangles['OpponentName'])
     opInfo['name'] = localTrack.positional_rectangles['OpponentName']
     opInfo['tag'] = localTrack.opponentTag
-    opInfo['rank'], opInfo['lp'] = checkRank(name, settingTrack.riotServer)
+    opInfo['rank'], opInfo['lp'] = checkRank(opInfo['name'], settingTrack.riotServer)
     return jsonify(opInfo)
 
 app.run(port=63312)
