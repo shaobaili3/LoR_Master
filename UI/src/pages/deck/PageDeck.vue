@@ -88,7 +88,7 @@
         </div>
 
         <div class="footer" v-if="!isLoading">
-            <div class="footer-text">Cards in hand: {{cardsInHandNum}}</div>
+            <div class="footer-text">Cards in Hand: {{cardsInHandNum}}</div>
         </div>
 
     </div>
