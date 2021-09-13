@@ -84,7 +84,7 @@ def process():
 @app.route("/track", methods = ['get'])
 def track():
     settingTrack.setServer(Server._value2member_map_[settingTrack.riotServer])
-    return jsonify(localInspect.updateStatusFlask())
+    return jsonify(localTrack.updateStatusFlask())
 
 @app.route("/history/<string:server>/<string:name>/<string:tag>", methods = ['get'])
 def history(server, name, tag):
@@ -130,11 +130,20 @@ def search(name, tag, server):
 
 @app.route("/leaderboard/<string:server>", methods = ['get'])
 def leaderboard(server):
-    #to-do move functions to leaderboard model
+    # refactor to leaderboard model
     board = Models.leaderboard.getboard(server)
     boardWithTag = []
+    playlistDict = {}
+    try:        
+        with open('data/' + server + '.json', 'r', encoding='utf-8') as fp:
+            playlistDict = json.load(fp)
+    except Exception as e:
+        print('Restful: unable to load player list')
     for player in board:
-        player['tag'] = localInspect.getPlayerTag(player['name'], server)
+        if player['name'] in playlistDict:
+            player['tag'] = playlistDict[player['name']]
+        else:
+            player['tag'] = ''
         boardWithTag.append(player)
     return jsonify(boardWithTag)
     
@@ -153,6 +162,15 @@ def version():
     version['downloadUrl'] = githubJson['assets'][0]['browser_download_url']
     version['github'] = githubJson
     return jsonify(version)
+
+@app.route("/opInfo", methods = ['get'])
+def opInfo():
+    opInfo = {}
+    localTrack.updateTagByName(localTrack.positional_rectangles['OpponentName'])
+    opInfo['name'] = localTrack.positional_rectangles['OpponentName']
+    opInfo['tag'] = localTrack.opponentTag
+    opInfo['rank'], opInfo['lp'] = checkRank(opInfo['name'], settingTrack.riotServer)
+    return jsonify(opInfo)
 
 app.run(port=63312)
 

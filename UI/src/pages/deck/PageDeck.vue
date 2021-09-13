@@ -87,7 +87,9 @@
             <match-info-deck-detail :deck="deckCode"></match-info-deck-detail>
         </div>
 
-        <div class="footer"></div>
+        <div class="footer" v-if="!isLoading">
+            <div class="footer-text">Cards in Hand: {{cardsInHandNum}}</div>
+        </div>
 
     </div>
 </template>
@@ -105,7 +107,9 @@ import DeckDetailBase from '../../components/DeckDetailBase.vue'
 
 const requestDataWaitTime = 100; // ms
 const requestServerWaitTime = 3000; //ms
+
 const portNum = "63312"
+const API_BASE = `http://127.0.0.1:${portNum}`
 
 const TABS = {
     oppo: 0,
@@ -128,8 +132,6 @@ export default {
 
         this.requestTrackInfo()
         this.requestServerInfo()
-        // this.requestOpponentHistory()
-        // console.log("Test")
     },
     data() {
         return {
@@ -143,13 +145,17 @@ export default {
             titleType: null,
             currentTab: TABS.my,
 
+            cardsInHandNum: null,
+
             currentDeckCode: null,
             startingDeckCode: null,
             oppoGraveCode: null,
             myGraveCode: null,
+
             oppoName: null,
             oppoRank: null,
             oppoTag: null,
+            oppoLp: null,
         }
     },
     computed: {
@@ -249,7 +255,7 @@ export default {
 
             console.log("Request Opponent History for " + this.oppoName + "#" + this.oppoTag)
             
-            axios.get(`http://127.0.0.1:${portNum}/history/${this.server}/${this.oppoName}/${this.oppoTag}`)
+            axios.get(`${API_BASE}/history/${this.server}/${this.oppoName}/${this.oppoTag}`)
                 .then((response) => {
                     console.log("Opponent Data", response.data)
                     this.processJsonData(response.data)
@@ -260,12 +266,11 @@ export default {
                     } else 
                     { console.log('error', e) }
                 })
-
         },
         async requestServerInfo() {
             lastServerRequestTime = Date.now()
             
-            axios.get(`http://127.0.0.1:${portNum}/process`)
+            axios.get(`${API_BASE}/process`)
                 .then((response) => {
                     // console.log(response.data)
 
@@ -292,19 +297,34 @@ export default {
                 })
             
         },
-        async requestTrackInfo() {
-            // http://192.168.20.4:${portNum}/track
+        async requestOppoInfo() {
+            // Getting opponent rank, lp and tag
+            // Once per opponent change
 
-            // console.log("Request Track Info")
+            axios.get(`${API_BASE}/opInfo`)
+                .then((response) => {
+                    var op = response.data
+                    this.oppoRank = op.rank
+                    this.oppoTag = op.tag
+                    this.oppoName = op.name
+                    this.oppoLp = op.lp
+
+                    this.requestOpponentHistory()
+                })
+                .catch((e) => {
+                    if (axios.isCancel(e)) {
+                        // console.log("Request cancelled");
+                    } else 
+                    { console.log('error', e) }
+                })
+        },
+        async requestTrackInfo() {
 
             lastTrackTime = Date.now()
-
-            axios.get(`http://127.0.0.1:${portNum}/track`)
+            axios.get(`${API_BASE}/track`)
                 .then((response) => {
-                    // console.log(response.data)
 
                     var elapsedTime = Date.now() - lastTrackTime // milli
-                    // console.log("Elapsed ", elapsedTime)
                     
                     this.processTrackInfo(response.data)
                     if (requestDataWaitTime > elapsedTime) {
@@ -317,55 +337,47 @@ export default {
                     if (axios.isCancel(e)) {
                         // console.log("Request cancelled");
                     } else 
-                    { console.log('error', e) }
-                    this.requestTrackInfo()
+                    { 
+                        console.log('error', e) 
+                        this.requestTrackInfo()
+                    }
                 })
 
             
         },
         processTrackInfo(data) {
 
-            // console.log("Processing Tracker Info")
-            // console.log(data)
-            
-            if (data.opponent_info) {
-                var oppoInfo = data.opponent_info;
-                if ((oppoInfo.name) && (oppoInfo.tag)) {
-                    // console.log("Reading Opponent Info")
-                    if ((!this.oppoName) || (this.oppoName.toLowerCase() != oppoInfo.name.toLowerCase())) {
-                        // If there is no oppoName set or there is a change in the name
-                        this.oppoName = oppoInfo.name
-                        this.oppoTag = oppoInfo.tag
-                        this.oppoRank = oppoInfo.rank
-                        this.requestOpponentHistory()
-                    }
+            if (data.positional_rectangles && data.positional_rectangles.OpponentName) {
+                // Check if there is opponent
+                
+                var oppoName = data.positional_rectangles.OpponentName
+                
+                if ((!this.oppoName) || (this.oppoName.toLowerCase() != oppoName.toLowerCase())) {
+                    // If there is no oppoName set or there is a change in the name
+                    this.oppoName = oppoName
+                    this.requestOppoInfo()
                 }
-                else {
-                    this.oppoName = null
-                    this.oppoTag = null
-                    this.oppoRank = null
-                    this.matchTotalNum = 0
-                    this.matchInfos = []
-                }
-
-                // if (oppoInfo.name) {
-                    // this.oppoName = oppoInfo.name
-                    // console.log(this.oppoName)
-                    // this.makeWindowVisible()
-                // }
+                
             } else {
+                // Clear Info about opponent and matches if there is no opponent
+
                 this.oppoName = null
                 this.oppoTag = null
                 this.oppoRank = null
+                this.oppoLp = null
                 this.matchTotalNum = 0
                 this.matchInfos = []
             }
+            
+                
+
 
             if (data.deck_tracker) {
                 this.startingDeckCode = data.deck_tracker.deckCode
                 this.currentDeckCode = data.deck_tracker.currentDeckCode
                 this.oppoGraveCode = data.deck_tracker.opGraveyardCode
                 this.myGraveCode = data.deck_tracker.myPlayedCardsCode
+                this.cardsInHandNum = data.deck_tracker.cardsInHandNum
                 // if (data.deck_tracker.deckCode) {
                 //     this.makeWindowVisible()
                 // }
@@ -374,6 +386,7 @@ export default {
                 this.currentDeckCode = null
                 this.myGraveCode = null
                 this.oppoGraveCode = null
+                this.cardsInHandNum = null
             }
         },
         processJsonData(data) {
@@ -466,7 +479,16 @@ export default {
     }
 
     .footer {
-        height: 50px;
+        display: flex;
+        height: 30px;
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
+        text-align: center;
+        align-content: center;
+        justify-content: center;
+        padding: 10px;
+        background: var(--col-background);
     }
 
     .tabs {

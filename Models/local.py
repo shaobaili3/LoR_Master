@@ -31,6 +31,7 @@ class Local:
         self.static_decklist = None
         self.trackJson = {}
         self.updatePlayernames()
+        self.handsInHand = {}
     # call this function after changes server in the tracker
     def reset(self):
         self.opponentName = None
@@ -40,21 +41,27 @@ class Local:
         self.isInProgress = False
         self.playedCards = {}
         self.graveyard = {}
-        self.opGraveyard = {}
+        self.opGraveyard = {}   
         self.trackJson = {}
         #self.positional_rectangles = None
         self.trackerDict = {}
 
-    def updateTracker(self, rectangles):
+    def updateTracker(self):
+        rectangles =  self.positional_rectangles['Rectangles']
         if rectangles is None:
             return
+        screenHeight = self.positional_rectangles['Screen']['ScreenHeight']
+        self.cardsInHand = {}
         for card in rectangles:
             if card['LocalPlayer'] is True:
-                self.playedCards[card['CardID']] = card['CardCode']
+                if card['Height'] > screenHeight / 5.2 and card['TopLeftY'] < screenHeight / 2:
+                    self.cardsInHand[card['CardID']] = card['CardCode']
+                    self.playedCards[card['CardID']] = card['CardCode']
             else:
                 self.graveyard[card['CardID']] = card['CardCode']
+
         # have to know if player have changed cards
-        if len(self.playedCards) == 5 and len(self.graveyard) == 1:
+        if len(self.playedCards) == 0 and len(self.graveyard) == 1:
             self.playedCards = {}
             self.graveyard = {}
 
@@ -83,6 +90,7 @@ class Local:
         if 'face' in self.opGraveyard:
             del self.opGraveyard['face']
 
+    # get drew cards but not in hand and board.
     def updateMyGraveyard(self):
         rectangles = self.positional_rectangles['Rectangles']
         if rectangles is None:
@@ -93,7 +101,8 @@ class Local:
             return
         for card in rectangles:
             if card['LocalPlayer'] is True:
-                del myGraveyardWithId[card['CardID']]
+                if card['CardID'] in myGraveyardWithId:
+                    del myGraveyardWithId[card['CardID']]
         for key in myGraveyardWithId:
             cardCode = myGraveyardWithId[key]
             if cardCode in self.myGraveyard:
@@ -105,11 +114,16 @@ class Local:
 
     def playedCardsToDeck(self):
         myPlayedCards = {}
-        for cardCode, key in self.playedCards.items():
+
+        # Remove cards in hand
+        playedCardWithoutHand = dict(self.playedCards.items() - self.cardsInHand.items())
+        
+        for cardId, cardCode in playedCardWithoutHand.items():
             if cardCode in myPlayedCards:
-                myPlayedCards[key] += 1
+                myPlayedCards[cardCode] += 1
             else:
-                myPlayedCards[key] = 1
+                myPlayedCards[cardCode] = 1
+
         if 'face' in myPlayedCards:
             del myPlayedCards['face']
         return myPlayedCards
@@ -133,11 +147,12 @@ class Local:
         self.updateOpGraveyard()
         self.trackerDict['opGraveyard'] = self.opGraveyard
         self.trackerDict['opGraveyardCode'] = getDeckCode(self.opGraveyard)
-        self.updateMyGraveyard()
+        # self.updateMyGraveyard()
         self.trackerDict['myGraveyard'] = self.myGraveyard
         self.trackerDict['myGraveyardCode'] = getDeckCode(self.myGraveyard)
         self.trackerDict['myPlayedCards'] = self.playedCardsToDeck()
         self.trackerDict['myPlayedCardsCode'] = getDeckCode(self.trackerDict['myPlayedCards'])
+        self.trackerDict['cardsInHandNum'] = len(self.cardsInHand)
         # print(self.trackerDict)
 
     def updateStatusFlask(self):
@@ -150,7 +165,7 @@ class Local:
             self.reset()
             return {}
         if self.positional_rectangles['GameState'] == 'InProgress':
-            self.updateTracker(self.positional_rectangles['Rectangles'])
+            self.updateTracker()
             self.updateMyDeck()
             print(self.trackerDict)
         else:
@@ -163,11 +178,11 @@ class Local:
         self.trackJson['deck_tracker'] = self.trackerDict
         
         opInfo = {}
-        #updateTrackServer(self.setting)
-        self.updateTagByName(self.positional_rectangles['OpponentName'])
-        opInfo['name'] = self.positional_rectangles['OpponentName']
-        opInfo['tag'] = self.opponentTag
-        opInfo['rank'], opInfo['lp'] = checkRank(self.positional_rectangles['OpponentName'], self.setting.riotServer)
+        updateTrackServer(self.setting)
+        # self.updateTagByName(self.positional_rectangles['OpponentName'])
+        # opInfo['name'] = self.positional_rectangles['OpponentName']
+        # opInfo['tag'] = self.opponentTag
+        # opInfo['rank'], opInfo['lp'] = checkRank(self.positional_rectangles['OpponentName'], self.setting.riotServer)
         self.trackJson['opponent_info'] = opInfo
 
         return self.trackJson

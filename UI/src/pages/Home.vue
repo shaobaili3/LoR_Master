@@ -2,13 +2,22 @@
 
     <div class="left-nav">
         <button class="left-nav-btn disabled"><span><i class="fas fa-user-circle"></i></span></button>
-        <button class="left-nav-btn selected"><span><i class="fas fa-search"></i></span></button>
+        <button class="left-nav-btn" 
+            :class="{selected: currentPage == PAGES.search}" 
+            @click="setCurrentPage(PAGES.search)">
+            <span><i class="fas fa-search"></i></span>
+        </button>
+        <button class="left-nav-btn" 
+            :class="{selected: currentPage == PAGES.leaderboard}" 
+            @click="setCurrentPage(PAGES.leaderboard)">
+            <span><i class="fas fa-trophy"></i></span>
+        </button>
     </div>
     
     <base-window-controls :title="''" :titleType="'window'"></base-window-controls>
     
     <div class="content">
-        <div class="history-content-container">
+        <div class="main-content-container" v-if="currentPage == PAGES.search">
             <div class="region-tabs">
                 <div class="region-option" 
                 v-for="(region, index) in regions"
@@ -17,22 +26,31 @@
                 @click="selectRegion(region)">{{region}}</div>
             </div>
             <div class="search-bar-container">
-                <input class="search-bar" 
-                    @keyup="searchName" 
-                    @keyup.enter="searchHistory"
-                    @keyup.up="autoCompleteIndexMinus"
-                    @keyup.down="autoCompleteIndexPlus"
-                    v-model="searchText"/>
+                <div class="search-bar-input-container">
+                    <input class="search-bar" 
+                        @keyup="searchName" 
+                        @keyup.enter="searchHistory"
+                        @keyup.up="autoCompleteIndexMinus"
+                        @keyup.down="autoCompleteIndexPlus"
+                        v-model="searchText"
+                        placeholder="eg.Storm#5961"
+                        />
+                    <button class="search-btn inside" @click="clearSearch" v-if="searchText!=''"><span><i class="fas fa-times"></i></span></button>
+                </div>
                 <div class="search-bar-auto-complete">
                     <div class="auto-complete-item" 
-                        v-for="(name, index) in inputNameList" :key="index" 
+                        v-for="(name, index) in filteredInputNameList" :key="index" 
                         :class="{selected: autoCompleteIndex == index}"
                         @click="searchHistoryAutoComplete(index)"
                     >
                         {{name}}
                     </div>
                 </div>
-                <button class="search-btn" @click="searchHistory"><span><i class="fas fa-search"></i></span></button>
+                
+                <button class="search-btn" @click="searchHistory">
+                    <span v-if="!isSamePlayer"><i class="fas fa-search"></i></span>
+                    <span v-if="isSamePlayer"><i class="fas fa-redo-alt"></i></span>
+                </button>
             </div>
             <div class="summary-container" v-if="!isLoading">
                 <div class="player-summary">
@@ -40,6 +58,7 @@
                     <!-- <div class="detail server">Server: SEA</div> -->
                     <div class="detail rank" v-if="playerRank">Rank: {{playerRank}}</div>
                     <div class="detail lp" v-if="playerLP">LP: {{playerLP}}</div>
+                    <div class="detail lp" v-if="playerRegion">Region: {{playerRegion}}</div>
                 </div>
                 <div class="history-summary">
                     <div class="win-loss">{{winloss}}</div>
@@ -67,7 +86,14 @@
                 
             </div>
 
-            <div class="loading-text" v-if="isLoading">Loading...</div>
+            <div class="loading-text" v-if="isLoading">
+                <i class="fas fa-circle-notch fa-spin"></i> 
+                Loading...
+            </div>
+        </div>
+
+        <div class="main-content-container leaderboard" v-if="currentPage == PAGES.leaderboard">
+            <leaderboard @search="searchPlayer($event)"></leaderboard>
         </div>
     </div>
 
@@ -83,10 +109,19 @@
 
     <div class="bottom-bar">
         <div class="left">
-            <!-- <div class="status">Status: Fine</div> -->
+            <div class="status">LoR Master Tracker</div>
         </div>
         <div class="right">
-            <div class="version">v0.9.7.2 Beta</div>
+            <div class="version download tooltip" v-if="!isUpdatedVersion" @click="openURL(downloadUrl)">
+                <span class="tooltiptext">
+                    <i class="fas fa-arrow-to-bottom"></i> {{remoteVersion}}
+                </span>
+                <i class="fas fa-exclamation-triangle"></i> {{version}}</div>
+            <div class="version tooltip" v-if="isUpdatedVersion">
+                <span class="tooltiptext">
+                    <i class="fas fa-check"></i> Updated
+                </span>
+                {{version}}</div>
         </div>
     </div>
 </template>
@@ -98,11 +133,13 @@ import axios from 'axios'
 import MatchHistory from '../components/MatchHistory.vue'
 import DeckRegions from '../components/DeckRegions.vue'
 import MatchHistoryDeckDetail from '../components/MatchHistoryDeckDetail.vue'
+import Leaderboard from '../components/Leaderboard.vue'
 
 const requestDataWaitTime = 200 //ms
 const inputNameListLength = 10;
 
 const portNum = "63312"
+const API_BASE = `http://127.0.0.1:${portNum}`
 
 let cancelToken
 
@@ -110,6 +147,11 @@ const regionNames = {
     'NA': 'americas',
     'EU': 'europe',
     'AS': 'asia',
+}
+
+const PAGES = {
+    search: 0,
+    leaderboard: 1
 }
 
 function processDate(dateString) {
@@ -148,7 +190,8 @@ function processDate(dateString) {
 export default {
     mounted() {
         console.log("Mounted")
-        var test = 'Hello'
+        // var test = 'Hello'
+        this.requestVersionData()
     },
     data() {
         return {
@@ -162,26 +205,71 @@ export default {
             playerTag: "",
             playerRank: null,
             playerLP: null,
+            playerRegion: null,
             searchText: "",
             isLoading: false,
             inputNameList: [],
             autoCompleteIndex: -1,
             regions: ["NA", "EU", "AS"],
             selectedRegion: "NA",
+
+            version: "",
+            remoteVersion: "",
+            downloadUrl: null,
+
+            currentPage: PAGES.search,
+
+            PAGES: PAGES
         }
     },
     computed: {
+        isUpdatedVersion() {
+            return this.version == this.remoteVersion
+        },
+        filteredInputNameList() {
+            return this.inputNameList.map(i => i.split('#')[0]);
+        },
+        isSamePlayer() {
+            return ((this.searchText == this.playerName) && (this.playerTag))
+        }
     },
     components: { 
         BaseWindowControls,
         MatchHistory,
         DeckRegions,
         MatchHistoryDeckDetail,
+        Leaderboard,
     },
     methods: {
+
+        // Page Switch
+        setCurrentPage(page) {
+            this.currentPage = page
+        },
         selectRegion(region) {
             this.selectedRegion = region
             this.searchName()
+        },
+        searchPlayer(data) {
+            
+            if (this.regions.includes(data.region)) {
+                // SEA will not be included
+                this.setCurrentPage(PAGES.search)
+                this.selectRegion(data.region)
+                this.searchText = data.name
+                this.resetInputFocus()
+
+                // this.searchHistory()
+                this.playerName = data.name
+                this.playerTag = data.tag
+                this.requestHistoryData()
+            }
+
+            // console.log(data)
+        },
+        clearSearch() {
+            this.searchText = ''
+            document.querySelector(".search-bar").focus()
         },
         searchName() {
             // console.log("searchName")
@@ -195,6 +283,11 @@ export default {
             // console.log("resetList")
             this.inputNameList = []
             this.autoCompleteIndex = -1
+        },
+        resetInputFocus() {
+            var searchBar = document.querySelector(".search-bar")
+            if (searchBar) searchBar.blur()
+            this.resetInputNameList()
         },
         autoCompleteIndexPlus() {
             this.autoCompleteIndex += 1
@@ -213,18 +306,40 @@ export default {
             this.searchHistory()
         },
         searchHistory() {
+            var splited
             if (this.inputNameList.length > 0 && this.inputNameList[this.autoCompleteIndex]) {
-                this.searchText = this.inputNameList[this.autoCompleteIndex]
-                document.querySelector(".search-bar").blur()
-                this.resetInputNameList()
-            }
-            var splited = this.searchText.split("#")
-            if (splited.length == 2 && splited[0].length > 0 && splited[1].length > 0) {
+                // Use auto complete to fill the search
+                // Sets player info for search
+                splited = this.inputNameList[this.autoCompleteIndex].split("#")
                 this.playerName = splited[0]
                 this.playerTag = splited[1]
-                // console.log("Searching ", this.playerName, "#", this.playerTag)
+
+                this.searchText = this.playerName
+                this.resetInputFocus()
+
+                // Perform the actual search
                 this.requestHistoryData()
+            } else {
+                // Use user input
+                splited = this.searchText.split("#")
+                if (splited.length == 2 && splited[0].length > 0 && splited[1].length > 0) {
+                    // Check if format is correct
+                    // Sets player info for search
+                    this.playerName = splited[0]
+                    this.playerTag = splited[1]
+
+                    // Perform the actual search
+                    this.requestHistoryData()
+                    this.resetInputFocus()
+                } else {
+                    if (splited.length == 1 && splited[0] == this.playerName && this.playerTag) {
+                        // When trying to search the same people, do a refresh
+                        this.requestHistoryData()
+                        this.resetInputFocus()
+                    }
+                }
             }
+            
         },
         // requestDataAgain() {
         //     return new Promise(resolve => {
@@ -240,6 +355,7 @@ export default {
             this.playerTag = ""
             this.playerRank = null
             this.playerLP = null
+            this.playerRegion = null
             this.matches = []
         },
         errorHistory() {
@@ -320,15 +436,34 @@ export default {
             this.winloss = `${totalWins}W ${totalLoss}L`
             this.winrate = Math.floor(totalWins/totalMatches*100) + "% winrate"
         },
+        openURL(url) {
+            window.openExternal(url);
+        },
+        requestVersionData() {
+            axios.get(`${API_BASE}/version`)
+                .then((response) => {
+                    var data = response.data
+                    this.version = data.version
+                    this.remoteVersion = data.remoteVersion
+                    this.downloadUrl = data.downloadUrl
+                })
+                .catch((e) => {
+                    if (axios.isCancel(e)) {
+                        // Console log is cancel
+                    } else 
+                    { console.log('error', e) }
+                })
+        },
         async requestNameData() {
             
-            axios.get(`http://127.0.0.1:${portNum}/name/${regionNames[this.selectedRegion]}/${this.searchText}`)
+            axios.get(`${API_BASE}/name/${regionNames[this.selectedRegion]}/${this.searchText}`)
                 .then((response) => {
                     if (response.data == "Error") {
                         // Error
                     } else {
                         // console.log(response.data)
                         if (document.querySelector(".search-bar") == document.activeElement) {
+                            // If the search bar is still in focus
                             this.inputNameList = response.data.slice(0, inputNameListLength);
                         } else {
                             this.resetInputNameList()
@@ -355,8 +490,9 @@ export default {
             
             //Save the cancel token for the current request
             cancelToken = axios.CancelToken.source()
-
-            axios.get(`http://127.0.0.1:${portNum}/search/${regionNames[this.selectedRegion]}/${this.playerName}/${this.playerTag}`,
+            
+            this.playerRegion = regionNames[this.selectedRegion]
+            axios.get(`${API_BASE}/search/${regionNames[this.selectedRegion]}/${this.playerName}/${this.playerTag}`,
                     { cancelToken: cancelToken.token }) // Pass the cancel token
                 .then((response) => {
                     this.isLoading = false;
@@ -441,6 +577,11 @@ export default {
         position: relative;
     }
 
+    .search-bar-input-container {
+        width: 100%;
+        position: relative;
+    }
+
     .search-bar {
         width: 100%;
         height: 36px;
@@ -488,6 +629,13 @@ export default {
         cursor: pointer;
         width: 6%;
         text-align: right;
+    }
+
+    .search-btn.inside {
+        position: absolute;
+        right: 10px;
+        width: 36px;
+        height: 36px;
     }
 
     .summary-container {
@@ -590,9 +738,14 @@ export default {
         height: calc(100vh - 138px);
     }
 
-    .history-content-container {
+    .main-content-container {
         margin: auto;
         max-width: 550px;
+    }
+
+    .main-content-container.leaderboard {
+        height: calc(100vh - 88px);
+        overflow: scroll;
     }
 
     .left-nav {
@@ -657,6 +810,43 @@ export default {
 
     .bottom-bar .left, .bottom-bar .right {
         padding: 20px;
+    }
+
+    .version.download {
+        cursor: pointer;
+    }
+
+    .tooltip {
+        position: relative;
+    }
+
+    .tooltip .tooltiptext {
+        visibility: hidden;
+        display: block;
+        /* width: 120px; */
+        white-space: nowrap;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 8px 10px;
+
+        box-sizing: border-box;
+
+        /* Position the tooltip */
+        position: absolute;
+        z-index: 1;
+        bottom: 120%;
+        left: 50%;
+        transform:translateX(-50%);
+        
+        
+        /* left: 50%; */
+        /* margin-left: -50%; */
+    }
+
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
     }
 
 </style>

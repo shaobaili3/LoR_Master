@@ -12,42 +12,45 @@
 
 </p>
 
-LoR Master Tracker is a open source match tracker and player inspector for League of Runeterra.
+LoR Master Tracker is a open source deck tracker and history inspector for League of Runeterra.
 
-## [Download](https://github.com/shaobaili3/LoR_Master/releases/download/v0.9.7.2-beta/LoRMasterTracker-v0.9.7.2-beta.exe)
+## [Download](https://github.com/shaobaili3/LoR_Master/releases/download/v0.9.8-beta/LoRMasterTracker-v0.9.8-beta.exe)
 
 * Requirements: Windows 7 or higher
-* [Click here to download](https://github.com/shaobaili3/LoR_Master/releases/download/v0.9.7.2-beta/LoRMasterTracker-v0.9.7.2-beta.exe)
+* [Click here to download](https://github.com/shaobaili3/LoR_Master/releases/download/v0.9.8-beta/LoRMasterTracker-v0.9.8-beta.exe)
 * [Changelogs](https://github.com/shaobaili3/lor_master/releases)
 
 ## Features
 
 * **Player Inspector**
 
-    By simply providing the player name, LMT can inspect recent matches. Multiple Language player names are supported.
+    By simply providing the player name, Player Inspector shows match history and statistics. Multiple Language player names are supported.
 ![n](Preview/inspect.png)
 
-* **In-game Deck Tracker**
+* **Deck Tracker**
 
-    At the game beginning, the opponent history, rank and lp automatically revealed by real-time enemy tracker.
-![c](Preview/tracker.png)  
+    At the game beginning, players' decks, opponent history, rank, both graveyards and cards in hand number automatically revealed by real-time deck tracker.
+![c](Preview/tracker2.png)
+![c](Preview/tracker.png)   
     > ### Disclaimer:
-    > Opponent decks are pulled from recent 10 matches by [Riot API](https://developer.riotgames.com/apis) via our development Riot API keys. We are looking forward to getting feedback from the community and Riot and actively upgrade LMT.
+    > Opponent history are pulled from recent 10 matches by [Riot API](https://developer.riotgames.com/apis). We are looking forward to getting feedback from the community and Riot.
 
+* **Real-time Master Leaderboard**
+
+    Real-time Master Leaderboard is powered by open-source [LMT Crawler](https://github.com/LoR-Master-Tracker/LoR-Player-Crawler). You can inspect master players via clicking player names.
+![c](Preview/leaderboard.png)
 
 * **In-game Deck Code Viewer(Coming soon)**
 
-    LMT can view the deck by entering the deck code. The viewer can be displayed in-game.
+    View decks by entering the deck code. The viewer can be displayed in-game.
 
 
-* **Real time Master Leaderboard(Coming soon)**
 
-    LMT real time update leaderboard and Master player list via open source [LMT Crawler](https://github.com/LoR-Master-Tracker/LoR-Player-Crawler)
 
 
 ## Development
 
-LoR Master Tracker backend service is written by [Python3](https://www.python.org).the user interface is built by [Electron](https://www.electronjs.org/) and [Vuejs](https://github.com/vuejs/vue)
+LoR Master Tracker backend service is written by [Python3](https://www.python.org). The user interface is built by [Electron](https://www.electronjs.org/) and [Vuejs](https://github.com/vuejs/vue)
 
 ## Build Instructions
 
@@ -86,6 +89,6 @@ Pre-requisites:
 ## FAQ
 
 **Q.** Is using LoR Master Tracker considered cheating?  
-**A.** This project is registered in the [Riot Development Portal](https://developer.riotgames.com/) and the API key is proved by [Riot](https://www.riotgames.com/en). All data source is from [Riot API](https://developer.riotgames.com/apis) and [LoR Data Dragon](https://developer.riotgames.com/docs/lor). There is zero third-party data source and no third-party API.
+**A.** This project is registered in the [Riot Development Portal](https://developer.riotgames.com/) and API keys are authorized by [Riot](https://www.riotgames.com/en). All data source is from [Riot API](https://developer.riotgames.com/apis) and [LoR Data Dragon](https://developer.riotgames.com/docs/lor). There is no third-party data source or API. There is also no local or remote database, all cached data saves locally in the LMT root folder.
 
 ### Built with ❤ by Storm & FlyingFish
