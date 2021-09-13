@@ -41,29 +41,26 @@ class Local:
         self.isInProgress = False
         self.playedCards = {}
         self.graveyard = {}
-        self.opGraveyard = {}
+        self.opGraveyard = {}   
         self.trackJson = {}
         #self.positional_rectangles = None
         self.trackerDict = {}
 
-    def updateTracker(self, rectangles):
+    def updateTracker(self):
+        rectangles =  self.positional_rectangles['Rectangles']
         if rectangles is None:
             return
-        faceHeight = 0
+        screenHeight = self.positional_rectangles['Screen']['ScreenHeight']
         self.cardsInHand = {}
         for card in rectangles:
-            if card['CardCode'] == 'face':
-                faceHeight = card['Height']
             if card['LocalPlayer'] is True:
-                if card['TopLeftY'] < faceHeight:
+                if card['Height'] > screenHeight / 5.2 and card['TopLeftY'] < screenHeight / 2:
                     self.cardsInHand[card['CardID']] = card['CardCode']
                     self.playedCards[card['CardID']] = card['CardCode']
             else:
                 self.graveyard[card['CardID']] = card['CardCode']
-        # have to know if player have changed cards
 
-        print('self.playedCards: ', self.playedCards)
-        print('self.graveyard', self.graveyard)
+        # have to know if player have changed cards
         if len(self.playedCards) == 0 and len(self.graveyard) == 1:
             self.playedCards = {}
             self.graveyard = {}
@@ -168,7 +165,7 @@ class Local:
             self.reset()
             return {}
         if self.positional_rectangles['GameState'] == 'InProgress':
-            self.updateTracker(self.positional_rectangles['Rectangles'])
+            self.updateTracker()
             self.updateMyDeck()
             print(self.trackerDict)
         else:
