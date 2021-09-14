@@ -33,19 +33,16 @@ LoR Master Tracker is a open source deck tracker and history inspector for Leagu
 ![c](Preview/tracker2.png)
 ![c](Preview/tracker.png)   
     > ### Disclaimer:
-    > Opponent history are pulled from recent 10 matches by [Riot API](https://developer.riotgames.com/apis). We are looking forward to getting feedback from the community and Riot.
+    > Opponent history are pulled from recent 10 matches by [Riot API](https://developer.riotgames.com/apis). Riot suggested website [DAK.GG](https://dak.gg/lor) provides the same functionality. We are looking forward to getting feedback from the community and Riot.
 
-* **Real-time Master Leaderboard**
+* **Master Leaderboard**
 
-    Real-time Master Leaderboard is powered by open-source [LMT Crawler](https://github.com/LoR-Master-Tracker/LoR-Player-Crawler). You can inspect master players via clicking player names.
+    Real-time multi-region Master Leaderboard is powered by open-source [LMT Crawler](https://github.com/LoR-Master-Tracker/LoR-Player-Crawler). You can inspect master players via clicking player names.
 ![c](Preview/leaderboard.png)
 
-* **In-game Deck Code Viewer(Coming soon)**
+* **Deck Code Viewer(Coming soon)**
 
-    View decks by entering the deck code. The viewer can be displayed in-game.
-
-
-
+    The deck viewer can be displayed in-game and outside the game via entering the deck codes.
 
 
 ## Development
@@ -65,23 +62,22 @@ Pre-requisites:
   git clone https://github.com/shaobaili3/LoR_Master
   ```
 
-2. Run Python backend + main UI
+2. Run Python Service
 
   ```shell
   pip install -r requirements.txt
-  python LoRMasterTracker.py
+  python LMTService.py
   ```
 
   If this errors out, make sure that you have an `Python3` environment
   variable pointing to the right path.
 
-3. Run Electron in-game UI
+3. Run Electron User Interface
 
   ```shell
   cd UI
   npm install
   npm run dev
-  npm run package
   ```
 
   Make sure you are in `UI` directory.

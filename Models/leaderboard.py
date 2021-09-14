@@ -3,6 +3,7 @@ import aiohttp
 import asyncio
 from Models.network import API_KEY
 
+#to-do change this to a dict
 leaderboards = [None, None, None, None]
 LEADERBOARD_KEY = '.api.riotgames.com/lor/ranked/v1/leaderboards/'
 

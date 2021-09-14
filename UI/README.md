@@ -1,11 +1,20 @@
-# lor-master-leaderboard
+# LoR-Master-UI
 
 ## Project setup
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+```
+npm run dev
+```
+
+```
+npm run package
+```
+
+
+<!-- ### Compiles and hot-reloads for development
 ```
 npm run serve
 ```
@@ -21,4 +30,4 @@ npm run lint
 ```
 
 ### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+See [Configuration Reference](https://cli.vuejs.org/config/). -->
