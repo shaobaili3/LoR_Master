@@ -92,7 +92,7 @@ def history(server, name, tag):
         print('history: Riot API not suppport SEA')
         return jsonify([])
     settingInspect.setServer(Server._value2member_map_[server])
-    playerInspect.inspectFlask(name, tag)
+    playerInspect.inspectFlask(name, tag, 10)
     playerInspect.loadMatchsToFlask()
     return jsonify(playerInspect.historyFlask.__dict__['history'])
 
@@ -107,16 +107,6 @@ def get_names(server, playername):
 
     returnList = jsonify(list(playerList))
     return returnList
-
-@app.route("/inspect/<string:server>/<string:name>/<string:tag>", methods = ['get'])
-def inspect(name, tag, server):
-    settingInspect.setServer(Server._value2member_map_[server])
-    playerInspect.inspectFlask(name, tag)
-    inspection = {} 
-    inspection['history'] = playerInspect.historyFlask.__dict__['history']
-    inspection['matches'] = playerInspect.matchesJson
-    return jsonify(inspection)
-
 
 @app.route("/search/<string:server>/<string:name>/<string:tag>", methods = ['get'])
 def search(name, tag, server):
@@ -172,5 +162,5 @@ def opInfo():
     opInfo['rank'], opInfo['lp'] = checkRank(opInfo['name'], settingTrack.riotServer)
     return jsonify(opInfo)
 
-app.run(port=63312)
+app.run(port=63312, debug= True)
 

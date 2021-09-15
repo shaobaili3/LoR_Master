@@ -168,9 +168,9 @@ class Riot:
             print(detail)
             return None
             
-    def getDetail(self, matchId, matchIndex = 1):
+    def getDetail(self, matchId, matchIndex = 1, max_num = constants.MAX_NUM_DETAILS):
         # If matchIndex bigger than MAX, only pull data from cache
-        if matchIndex > constants.MAX_NUM_DETAILS - 1:
+        if matchIndex > max_num - 1:
             return self.matchDetails.get(matchId)
 
         if matchId in self.matchDetails:

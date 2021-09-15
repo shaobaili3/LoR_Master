@@ -51,8 +51,8 @@ class Player:
             print("无法获取对手最近对战记录")
             return
         else:
-            if len(matchIds) > cs.MAX_NUM_TRACK:
-                matchIds = matchIds[0:cs.MAX_NUM_TRACK]
+            if len(matchIds) > cs.MAX_NUM_DETAILS:
+                matchIds = matchIds[0:cs.MAX_NUM_DETAILS]
         deckCodes = []
         loop = self.riot.asyncio.new_event_loop()
         self.riot.asyncio.set_event_loop(loop)
@@ -154,7 +154,7 @@ class Player:
 
                 if gameMode in cs.UNSUPPORTED_MODE:
                     continue
-                
+
                 if gameType in cs.UNSUPPORTED_TYPE:
                     continue
 
@@ -200,7 +200,7 @@ class Player:
                         utility.getFactionString(opponentDetail["factions"]),
                         str(totalTurn) + ' Order of Play: ' + str(myDetails['order_of_play']), matchNum)
             except Exception as e:
-                print('Read MatchId Error match id: ', matchId , e)
+                print('Read MatchId Error match id: ', matchId, e)
                 continue
         return matchNum, winNum
 
@@ -216,8 +216,7 @@ class Player:
             match['history'] = self.summary[deckCode].history
             self.historyFlask.history.append(match)
 
-
-    def inspectFlask(self, name, tag):
+    def inspectFlask(self, name, tag, maxNum = cs.MAX_NUM_DETAILS):
         self.matchesJson = []
         puuid = self.riot.getPlayerPUUID(name, tag)
         if puuid is None:
@@ -225,16 +224,11 @@ class Player:
                 '', name + '#' + tag + ' does not exist. Please check player name and player tag')
             return
         matchIds = self.riot.getMatches(puuid)
-        winNum = 0
-        matchNum = 0
         if matchIds is None:
             print(name + '#' + tag,
                   ' has no recent match records')
             return
-        deckCodes = []
-        self.summary = {}
-        matchNum, winNum = self.processMatchIds(
-            matchIds, matchNum, name, tag, puuid, deckCodes, winNum)
+        matchNum, winNum = self.processMatchIds(matchIds, puuid, name, tag, maxNum)
 
         if matchNum != 0:
             print(
@@ -247,16 +241,17 @@ class Player:
                   ' has no recent rank match records')
             return
 
-    def processMatchIds(self, matchIds, matchNum, name, tag, puuid, deckCodes, winNum):
+    def processMatchIds(self, matchIds, puuid, name, tag, maxNum):
+        self.summary = {}
+        deckCodes = []
+        winNum = 0
         matchNum = 0
         for matchId in matchIds:
             try:
                 # If match number bigger than MAX, getDetail will only ruturn data from cache
-                detail = self.riot.getDetail(matchId, matchNum)
+                detail = self.riot.getDetail(matchId, matchNum, maxNum)
                 if str(detail).isdigit():
-                    print(
-                        name + '#' + tag, 'Riot server [' + Models.network.API_KEY[-4:] + '] busy ' +
-                        str(detail))
+                    print('Riot server [' + Models.network.API_KEY[-4:] + '] busy ' + str(detail))
                     continue
                 if detail is None:
                     continue
@@ -267,13 +262,11 @@ class Player:
 
                 if gameMode in cs.UNSUPPORTED_MODE:
                     continue
-                
+
                 if gameType in cs.UNSUPPORTED_TYPE:
                     continue
-                
-                
 
-                self.matchesJson.append(self.processMatchDetail(detail))
+                self.matchesJson.append(self.addPlayerInfoToMatchDetail(detail))
                 matchNum += 1
                 riotId = detail['metadata']['participants']
                 outcome = None
@@ -298,7 +291,6 @@ class Player:
                 outcome = myDetails["game_outcome"]
                 if outcome == 'win':
                     winNum += 1
-                print(detail)
                 self.addMatchToSummary(
                     myDetails['deck_code'], outcome, utility.toLocalTimeString(startTime, True))
                 deckCodes.append(myDetails['deck_code'])
@@ -308,25 +300,23 @@ class Player:
                 if gameType == '':
                     gameTypeString = ''
                 print(fullName + ' ' + rank,
-                        gameTypeString + ' [' + gameMode + '] ' +
-                        utility.toLocalTimeString(startTime), outcome,
-                        myDetails['deck_code'],
-                        utility.getFactionString(myDetails["factions"]),
-                        opponentDetail['deck_code'],
-                        utility.getFactionString(opponentDetail["factions"]),
-                        str(totalTurn) + ' Order of Play: ' + str(myDetails['order_of_play']), matchNum)
+                      gameTypeString + ' [' + gameMode + '] ' +
+                      utility.toLocalTimeString(startTime), outcome,
+                      myDetails['deck_code'],
+                      utility.getFactionString(myDetails["factions"]),
+                      opponentDetail['deck_code'],
+                      utility.getFactionString(opponentDetail["factions"]),
+                      str(totalTurn) + ' Order of Play: ' + str(myDetails['order_of_play']), matchNum)
             except Exception as e:
-                print('Read MatchId Error match id: ', matchId , e)
+                print('Read MatchId Error match id: ', matchId, e)
                 continue
         return matchNum, winNum
 
-
-    def processMatchDetail(self, detail):
+    def addPlayerInfoToMatchDetail(self, detail):
         try:
             playerPuuids = detail['metadata']['participants']
         except Exception as e:
-            #print('processMatchDetail error:', e)
-            print('processMatchDetail error')
+            print('processMatchDetail error', e)
             return detail
         playernames = []
         player_info = []
@@ -334,7 +324,8 @@ class Player:
             name, tag = self.riot.getPlayerName(puuid)
             rank, lp = checkRank(name, self.riot.network.setting.getServer())
             playernames.append(name + '#' + tag)
-            player_info.append({'name':name, 'tag':tag, 'rank':rank, 'lp':lp})
+            player_info.append(
+                {'name': name, 'tag': tag, 'rank': rank, 'lp': lp})
         detail['playernames'] = playernames
         detail['player_info'] = player_info
         return detail
