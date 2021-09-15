@@ -32,6 +32,8 @@ def updateAll():
 
 
 def getboard(server):
+    if None in leaderboards:
+        updateAll()
     board = None
     if server == Server.NA.value:
         ab = leaderboards[0]
@@ -58,10 +60,6 @@ def checkRank(name, server):
     if name is None:
         print('checkRank: empty name')
         return rank, lp
-
-    if None in leaderboards:
-        updateAll()
-
     board = getboard(server)
     if not board:
         return rank, lp
