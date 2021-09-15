@@ -35,7 +35,6 @@ export default {
         DeckPreview,
     },
     mounted() {
-        this.subscribeData();
     },
     data() {
         return {
@@ -75,21 +74,6 @@ export default {
             else
                 this.visibleDeck = 2
         },
-        subscribeData() {
-            // console.log(window)
-        },
-        isWonGame(index) {
-            var i = index - 1
-            // console.log(this.history)
-            if (i >= this.history.length) return false
-            return (this.history[i] == 'W')
-        },
-        isPlayedGame(index) {
-            var i = index - 1
-            // console.log(this.history)
-            if (i >= this.history.length) return false
-            return (this.history[i] == 'W' || this.history[i] == 'L')
-        }
     }
 }
 </script>

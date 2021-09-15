@@ -60,6 +60,13 @@
                     <div class="detail lp" v-if="playerLP">LP: {{playerLP}}</div>
                     <div class="detail lp" v-if="playerRegion">Region: {{playerRegion}}</div>
                 </div>
+                <div class="decks-summary" @wheel.prevent="horizontalScroll">
+                    <deck-champs class="champion-icons" 
+                    v-for="(deck, index) in uniqueDeckCodes" :key="index"
+                    :class="{active: filterDeckCode == deck}"
+                    :deck="deck"
+                    @click="setFilterDeckCode(deck)"></deck-champs>
+                </div>
                 <div class="history-summary">
                     <div class="win-loss">{{winloss}}</div>
                     <div class="winrate">{{winrate}}</div>
@@ -74,7 +81,7 @@
 
             <div class="match-history-container" v-if="!isLoading">
                 <match-history 
-                    @show-deck="showDeck" v-for="(match, index) in matches" :key="index"
+                    @show-deck="showDeck" v-for="(match, index) in filteredMatches" :key="index"
                     :opponentName="match.opponentName" 
                     :deck="match.deck"
                     :opponentDeck="match.opponentDeck"
@@ -134,6 +141,7 @@ import MatchHistory from '../components/MatchHistory.vue'
 import DeckRegions from '../components/DeckRegions.vue'
 import MatchHistoryDeckDetail from '../components/MatchHistoryDeckDetail.vue'
 import Leaderboard from '../components/Leaderboard.vue'
+import DeckChamps from '../components/DeckChamps.vue'
 
 const requestDataWaitTime = 200 //ms
 const inputNameListLength = 10;
@@ -187,11 +195,43 @@ function processDate(dateString) {
     return time
 }
 
+// Some helper math functions
+function FLip(x) {
+    return 1 - x
+}
+function Square(x) {
+    return x * x
+}
+function EaseOut(x) {
+    return FLip(Square(FLip(x)))
+}
+function Clamp(x, min, max) {
+    return Math.min(Math.max(x, min), max);
+}
+
+function filterUnique(value, index, self) {
+    return self.indexOf(value) === index;
+}
+
+const frequencies = arr =>
+    arr.reduce((a, v) => {
+        a[v] = a[v] ? a[v] + 1 : 1;
+        return a;
+    }, {});
+
 export default {
     mounted() {
         console.log("Mounted")
         // var test = 'Hello'
         this.requestVersionData()
+    },
+    components: { 
+        BaseWindowControls,
+        MatchHistory,
+        DeckRegions,
+        MatchHistoryDeckDetail,
+        Leaderboard,
+        DeckChamps
     },
     data() {
         return {
@@ -219,7 +259,9 @@ export default {
 
             currentPage: PAGES.search,
 
-            PAGES: PAGES
+            PAGES: PAGES,
+
+            filterDeckCode: null,
         }
     },
     computed: {
@@ -231,17 +273,71 @@ export default {
         },
         isSamePlayer() {
             return ((this.searchText == this.playerName) && (this.playerTag))
-        }
-    },
-    components: { 
-        BaseWindowControls,
-        MatchHistory,
-        DeckRegions,
-        MatchHistoryDeckDetail,
-        Leaderboard,
+        },
+        uniqueDeckCodes() {
+            if (!this.matches) return null
+            console.log(frequencies(this.matches.map(x => x.deck)))
+            return this.matches.map(x => x.deck).filter(filterUnique)
+        },
+        filteredMatches() {
+            if (!this.filterDeckCode) return this.matches
+            return this.matches.filter(x => x.deck == this.filterDeckCode)
+        },
     },
     methods: {
+        // Support Functions
+        animateScroll(el, distance, duration) {
+            var scrollAmount = 0;
+            // Duration in seconds
+            // var step = distance / duration / fps;
+            // var interval = 1000 / fps;
 
+            var start, prePos;
+
+            function step(timestamp) {
+                if (start === undefined) {
+                    start = timestamp;
+                    prePos = 0;
+                }
+                const elapsed = timestamp - start;
+                var newPos = distance * EaseOut(Clamp(elapsed / duration, 0, 1))
+                
+                el.scrollLeft += newPos - prePos;
+                prePos = newPos;
+
+                if (elapsed < duration) { // Stop the animation after 2 seconds
+                    window.requestAnimationFrame(step);
+                }
+            }
+
+            window.requestAnimationFrame(step);
+
+            // var slideTimer = setInterval(
+                
+            // function(){
+            //     el.scrollLeft += step;
+            //     scrollAmount += step;
+            //     if(Math.abs(scrollAmount) >= Math.abs(distance)){
+            //         window.clearInterval(slideTimer);
+            //     }
+            // }, interval);
+        },
+        horizontalScroll(event) {
+            var el = event.currentTarget
+
+            if (event.deltaY > 0) {
+                // el.scrollLeft += 100;
+                this.animateScroll(el, 100, 300);
+            } else {
+                // el.scrollLeft -= 100;
+                this.animateScroll(el, -100, 300);
+            }
+
+            // console.log("deltaY:", event.deltaY)
+            // console.log("wheelDelta:", event.wheelDelta)
+
+            // console.log("scrollLeft:", el.scrollLeft)
+        },
         // Page Switch
         setCurrentPage(page) {
             this.currentPage = page
@@ -267,6 +363,18 @@ export default {
 
             // console.log(data)
         },
+
+        // Filter related
+        setFilterDeckCode(code) {
+            if (this.filterDeckCode == code) {
+                // If trying to set the same, clear the filter
+                this.filterDeckCode = null
+            } else {
+                this.filterDeckCode = code
+            }
+        },
+
+        // Search bar
         clearSearch() {
             this.searchText = ''
             document.querySelector(".search-bar").focus()
@@ -356,6 +464,7 @@ export default {
             this.playerRank = null
             this.playerLP = null
             this.playerRegion = null
+            this.filterDeckCode = null
             this.matches = []
         },
         errorHistory() {
@@ -366,6 +475,7 @@ export default {
             this.matches = []
             this.playerRank = null
             this.playerLP = null
+            this.filterDeckCode = null
             var totalWins = 0
             var totalLoss = 0
             // var totalMatches = data.length
@@ -657,7 +767,7 @@ export default {
     }
 
     .summary-container {
-        margin: 20px 0px;
+        margin: 15px 0px;
         display: flex;
         gap: 10px;
         justify-content: space-between;
@@ -665,7 +775,7 @@ export default {
     }
 
     .match-history-container {
-        height: calc(100vh - 306px);
+        height: calc(100vh - 320px);
         overflow: scroll;
     }
 
@@ -686,6 +796,20 @@ export default {
     .player-summary .detail {
         font-size: 12px;
         color: var(--col-lighter-grey);
+    }
+
+    .decks-summary {
+        display: block;
+        overflow-x: scroll;
+        white-space: nowrap;
+        width: 50%;
+        text-align: left;
+    }
+
+    .decks-summary .champion-icons {
+        display: inline-flex;
+        margin: 0px 2px;
+        cursor: pointer;
     }
 
     .history-summary {

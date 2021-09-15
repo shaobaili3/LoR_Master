@@ -57,7 +57,7 @@ export default {
         
         // console.log("DeckEncoder: ", DeckEncoder.decode(this.deck))
 
-        this.getChampsFactions()
+        // this.getChampsFactions()
     },
     props: {
         deck: String,
@@ -80,23 +80,24 @@ export default {
         //     return factionIDs
         // },
         getChamps() {
-            return this.champs.slice(0, maxSlot - Math.min(this.factions.length, maxFactions))
+            var champs = this.getChampsFactions.champs
+            var factions = this.getChampsFactions.factions
+            return champs.slice(0, maxSlot - Math.min(factions.length, maxFactions))
         },
         getFactions() {
-            return this.factions.slice(0, maxFactions)
+            var factions = this.getChampsFactions.factions
+            return factions.slice(0, maxFactions)
         },
         extraChampString() {
-            // console.log("Champ length:", this.champs.length)
-            // console.log(this.champs)
-            var extra = (this.champs.length - (maxSlot - Math.min(this.factions.length, maxFactions)))
+            var champs = this.getChampsFactions.champs
+            var factions = this.getChampsFactions.factions
+            var extra = (champs.length - (maxSlot - Math.min(factions.length, maxFactions)))
             // console.log(extra)
             if (extra > 0)
                 return "+" + extra
             return ""
-        }
-    },
-    methods: {
-        
+        },
+
         getChampsFactions() {
             
             var deck = null
@@ -127,9 +128,16 @@ export default {
                     }
                 }
             }
-            this.champs = champs
-            this.factions = factionIDs
+            
+            return {
+                champs: champs, 
+                factions: factionIDs
+            }
         },
+    },
+    methods: {
+        
+        
         getChampionImgUrl(code) {
             // const champImageBaseUrl = 'https://raw.githubusercontent.com/painttist/lor-champ-icons/master/images/cards/cropped/';
             // const champImageBaseUrl = 'https://painttist.github.io/lor-champ-icons/images/cards/cropped/';
@@ -153,9 +161,6 @@ export default {
             // Local
 
             return "url(" + require('../assets/images/regions/' + regionID + ".svg") + ")"
-
-            
-            
         },
     }
 }
