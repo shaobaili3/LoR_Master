@@ -187,7 +187,7 @@ class Player:
                     myDetails['deck_code'], outcome, utility.toLocalTimeString(startTime, True))
                 deckCodes.append(myDetails['deck_code'])
                 settingServer = self.riot.network.setting.getServer()
-                rank = getRankStr(opName[0], settingServer)
+                rank = 0
                 gameTypeString = '[' + gameType + ']'
                 if gameType == '':
                     gameTypeString = ''
@@ -295,7 +295,7 @@ class Player:
                     myDetails['deck_code'], outcome, utility.toLocalTimeString(startTime, True))
                 deckCodes.append(myDetails['deck_code'])
                 settingServer = self.riot.network.setting.getServer()
-                rank = getRankStr(opName[0], settingServer)
+                rank = 0
                 gameTypeString = '[' + gameType + ']'
                 if gameType == '':
                     gameTypeString = ''

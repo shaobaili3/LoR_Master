@@ -62,6 +62,7 @@ class FlaskApp(Flask):
                 updateTrackServer(settingTrack)
                 time.sleep(2)
         work = threading.Thread(target=run_work)
+        work.daemon = True
         work.start()
 
     def leaderboardsWork(self):
@@ -180,4 +181,4 @@ def opInfo():
     return jsonify(opInfo)
 
 
-app.run(port=63312, debug=True)
+app.run(port=63312, debug=True, use_reloader=False)
