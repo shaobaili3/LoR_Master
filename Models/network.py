@@ -1,5 +1,4 @@
 from Models.process import isSimulation
-# import locale
 import random
 
 API_KEY1 = '?api_key=' + 'RGAPI-693e34b0-9890-4591-a22d-36df07ccde53'  #ios product development
