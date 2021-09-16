@@ -70,6 +70,7 @@ class FlaskApp(Flask):
                 leaderboardModel.updateAll()
                 time.sleep(600)
         work = threading.Thread(target=run_work)
+        work.daemon = True
         work.start()
 
 
