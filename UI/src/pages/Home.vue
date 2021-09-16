@@ -71,7 +71,7 @@
                     v-for="(deck, index) in uniqueDeckCodes" :key="index"
                     :class="{active: filterDeckCode == deck}"
                     @click="setFilterDeckCode(deck)">
-                        <deck-champs :deck="deck"></deck-champs>
+                        <deck-champs :deck="deck" :showRegion="true"></deck-champs>
                     </div>
                 </div>
                 <div class="history-summary">
@@ -839,6 +839,7 @@ export default {
 
     .player-summary {
         text-align: left;
+        width: 20%;
     }
 
     .player-summary .name {
@@ -890,6 +891,7 @@ export default {
         font-size: 24px;
         /* margin-left: 20px; */
         text-align: right;
+        width: 20%;
     }
 
     .history-summary .winrate {

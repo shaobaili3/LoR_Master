@@ -2,6 +2,7 @@
     <div class="icon-container">
         <champ-icon v-for="(champ, index) in getChamps" :key="index" :code="champ"></champ-icon>
         <div class="extra-champ" v-if="extraChampString">{{extraChampString}}</div>
+        <deck-regions v-if="getChamps.length <= 0 && showRegion" :deck="deck"></deck-regions>
     </div>
 </template>
 
@@ -10,16 +11,13 @@
 import DeckEncoder from '../modules/runeterra/DeckEncoder'
 import championCards from '../assets/data/champion.js'
 import ChampIcon from './image/ChampIcon.vue'
+import DeckRegions from './DeckRegions.vue'
 
 // const maxChamp = 2;
 
 export default {
-    components: { ChampIcon },
+    components: { ChampIcon, DeckRegions },
     data() {
-        return {
-            champs : [],
-            factions : [],
-        }
     }, 
     mounted() {
     },
@@ -32,6 +30,10 @@ export default {
             type: Number,
             default: 2
         },
+        showRegion: {
+            type: Boolean,
+            default: false
+        }
     },
     computed: {
         getChamps() {
