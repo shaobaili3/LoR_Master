@@ -152,17 +152,18 @@ def get_leaderboard(server):
 
 
 @app.route("/version", methods=['get'])
-def version():
+def get_version():
     import requests
+    version = {}
+    version['version'] = constants.VERSION_NUM
+    version['remoteVersion'] = constants.VERSION_NUM
     try:
         response = requests.get(
             "https://api.github.com/repos/shaobaili3/LoR_Master/releases/latest")
         githubJson = response.json()
     except Exception as e:
-        return jsonify({})
-
-    version = {}
-    version['version'] = constants.VERSION_NUM
+        print('get_version() error', e)
+        return jsonify(version)
     version['remoteVersion'] = githubJson['tag_name']
     version['downloadUrl'] = githubJson['assets'][0]['browser_download_url']
     version['github'] = githubJson
