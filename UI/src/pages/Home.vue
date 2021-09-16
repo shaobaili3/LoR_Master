@@ -64,7 +64,7 @@
                         {{playerLP}}</div>
                     <div class="detail region" v-if="playerRegion">
                         <span class="pre-info"><i class="fas" :class="'fa-globe-'+playerRegion"></i></span>
-                        {{playerRegion}}</div>
+                        {{playerRegionFC}}</div>
                 </div>
                 <div class="decks-summary" @wheel.prevent="horizontalScroll">
                     <div class="champion-icons btn" 
@@ -177,6 +177,10 @@ const regionShort = {
 const PAGES = {
     search: 0,
     leaderboard: 1
+}
+
+function firstCap(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
 function processDate(dateString) {
@@ -298,6 +302,9 @@ export default {
             if (!this.matches) return null
             if (!this.filterDeckCode) return this.matches.filter(n => n) // filters out null decks
             return this.matches.filter(x => x.deck == this.filterDeckCode) // filters according to deck code
+        },
+        playerRegionFC() {
+            return firstCap(this.playerRegion)
         },
         totalWins() {
             if (!this.filteredMatches) return null
@@ -905,7 +912,7 @@ export default {
         text-align: center;
         display: block;
         width: calc(100% - 80px);
-        min-width: 500px;
+        min-width: 550px;
         margin-left: 80px;
         margin-top: 43px;
         padding: 10px 40px;

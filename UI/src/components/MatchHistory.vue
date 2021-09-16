@@ -7,7 +7,7 @@
             <div class="opponent-info" v-if="opponentRank"><i class="fas fa-trophy"></i> {{opponentRank}}</div>
             <div class="history-info">{{time}}</div>
             <div class="history-info">{{rounds}} rounds</div>
-            <div class="match-info-badge" v-for="(badge, index) in badges" :key="index" >
+            <div class="match-info-badge" v-for="(badge, index) in filteredBadges" :key="index" >
                 <span v-if="badge=='recent' || badge=='frequent'" class="match-info-badge-icon fa" :class="{'fa-clock': badge=='recent', 'fa-angle-double-up': badge=='frequent'}"></span>
                 {{badge}}</div>
         </div>
@@ -62,6 +62,10 @@ export default {
             // return parseFloat(this.winrate) > 0.5;
             return this.win
         },
+        filteredBadges() {
+            if (!this.badges) return null
+            return this.badges.filter(badge => !badge.includes("Constructed"))
+        }
     },
     methods: {
         showDeck(deck) {
@@ -98,6 +102,7 @@ export default {
         padding: 5px;
         border-radius: 6px;
         
+        overflow: hidden;
 
         border-left: 3px solid var(--col-background);
         border-right: 3px solid var(--col-background);
