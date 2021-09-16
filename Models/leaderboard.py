@@ -1,11 +1,11 @@
 from Models.setting import Server
 import aiohttp
 import asyncio
+import constants
 from Models.network import API_KEY
 
-#to-do change this to a dict
+# to-do change this to a dict
 leaderboards = [None, None, None, None]
-LEADERBOARD_KEY = '.api.riotgames.com/lor/ranked/v1/leaderboards/'
 
 
 def updateLeaderboard():
@@ -18,7 +18,6 @@ def updateLeaderboard():
 def updateAll():
     global leaderboards
     print('UpdateAll running')
-    # loop = self.asyncio.get_event_loop()
     loop = asyncio.new_event_loop()
     asyncio.set_event_loop(loop)
     tasks = [
@@ -86,12 +85,14 @@ def getRankStr(name, server):
     else:
         return ''
 
+
 def getRankQuickStr(name, server):
     rank, lp = checkRank(name, server)
     if rank != '':
         return rank + 'L' + lp
     else:
         return ''
+
 
 def filterMasterPlayer(names, server):
     board = getboard(server)
@@ -112,7 +113,7 @@ def filterMasterPlayer(names, server):
 
 
 async def aioLeaderboard(server):
-    async with aiohttp.ClientSession() as session:
+    async with aiohttp.ClientSession(trust_env=True) as session:
         link = getLeaderboard(server)
         try:
             async with session.get(link) as resp:
@@ -132,4 +133,4 @@ async def aioLeaderboard(server):
 
 
 def getLeaderboard(server):
-    return 'https://' + server + LEADERBOARD_KEY + API_KEY
+    return 'https://' + server + constants.LEADERBOARD_KEY + API_KEY
