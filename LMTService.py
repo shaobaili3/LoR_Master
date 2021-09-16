@@ -35,26 +35,26 @@ sentry_sdk.init(
     send_default_pii=True
 )
 
-leaderboard = Leaderboard()
+leaderboardModel = Leaderboard()
 
 settingInspect = Setting()
 networkInspect = Network(settingInspect)
 riotInspect = Riot(networkInspect)
-playerInspect = Player(riotInspect)
+playerInspect = Player(riotInspect, leaderboardModel)
 localInspect = Local(settingInspect)
 
 settingTrack = Setting()
 networkTrack = Network(settingTrack)
 riotTrack = Riot(networkTrack)
-playerTrack = Player(riotTrack)
+playerTrack = Player(riotTrack, leaderboardModel)
 localTrack = Local(settingTrack)
 
 
 class FlaskApp(Flask):
     def __init__(self, *args, **kwargs):
         super(FlaskApp, self).__init__(*args, **kwargs)
-        # self.processWork()
-        # self.leaderboardsWork()
+        self.processWork()
+        self.leaderboardsWork()
 
     def processWork(self):
         def run_work():
@@ -67,7 +67,7 @@ class FlaskApp(Flask):
     def leaderboardsWork(self):
         def run_work():
             while True:
-                leaderboard.update
+                leaderboardModel.updateAll()
                 time.sleep(600)
         work = threading.Thread(target=run_work)
         work.start()
@@ -125,9 +125,9 @@ def search(name, tag, server):
 
 
 @app.route("/leaderboard/<string:server>", methods=['get'])
-def leaderboard(server):
+def get_leaderboard(server):
     # refactor to leaderboard model
-    board = leaderboard.getLeaderboard(server)
+    board = leaderboardModel.getLeaderboard(server)
 
     boardWithTag = []
     playlistDict = {}
@@ -174,7 +174,7 @@ def opInfo():
         localTrack.positional_rectangles['OpponentName'])
     opInfo['name'] = localTrack.positional_rectangles['OpponentName']
     opInfo['tag'] = localTrack.opponentTag
-    opInfo['rank'], opInfo['lp'] = checkRank(
+    opInfo['rank'], opInfo['lp'] = leaderboardModel.checkRank(
         opInfo['name'], settingTrack.riotServer)
     return jsonify(opInfo)
 

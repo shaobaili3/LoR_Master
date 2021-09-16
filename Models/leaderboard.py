@@ -4,7 +4,7 @@ import requests
 from Models.network import API_KEY
 
 class Leaderboard():
-    def __init__(self) -> None:
+    def __init__(self):
         self.leaderboards = {}
         self.session = requests.Session()
         self.updateAll()
@@ -28,7 +28,8 @@ class Leaderboard():
             if 'Retry-After' in headers:
                 print('server is busy', headers['Retry-After'], 'seconds')
             return
-        self.leaderboards[server] = leaderboard
+        if leaderboard is not None:
+            self.leaderboards[server] = leaderboard
 
     def getLeaderboard(self, server):
         if self.leaderboards[server] is None:
@@ -42,7 +43,7 @@ class Leaderboard():
             print('checkRank: empty name')
             return rank, lp
         board = self.getLeaderboard(server)
-        if not board:
+        if board is None:
             return rank, lp
 
         for playerRank in board:

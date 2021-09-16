@@ -7,12 +7,13 @@ from GUI.ui import OpponentFlask
 
 
 class Player:
-    def __init__(self, riot):
+    def __init__(self, riot, leaderboard):
         self.sortedDecksCode = []
         self.riot = riot
         self.summary = {}
         self.historyFlask = OpponentFlask()
         self.matchesJson = []
+        self.leaderboard = leaderboard
 
     def addMatchToSummary(self, code, outcome, time):
         if code in self.summary:
@@ -321,7 +322,7 @@ class Player:
         player_info = []
         for puuid in playerPuuids:
             name, tag = self.riot.getPlayerName(puuid)
-            rank, lp = checkRank(name, self.riot.network.setting.getServer())
+            rank, lp = self.leaderboard.checkRank(name, self.riot.network.setting.getServer())
             playernames.append(name + '#' + tag)
             player_info.append(
                 {'name': name, 'tag': tag, 'rank': rank, 'lp': lp})
