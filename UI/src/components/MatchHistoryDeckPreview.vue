@@ -1,14 +1,10 @@
 <template>
     <div class="row deck btn" :class="{won: won, loss: !won}">
-        <div class="region-icon icon faction" v-for="(faction, index) in getFactions" :key="index"
-        :style=" {backgroundImage: getRegionImgUrl(faction)}"></div>
-        <!-- <div class="region-icon icon faction" :style=" {backgroundImage: getRegionImgUrl(0)}"></div> -->
-        <!-- <div class="region-icon icon"></div> -->
-        <!-- <div class="region-icon icon">DE</div> -->
-        <div class="champion-icon icon champ" v-for="(champ, index) in getChamps" :key="index"
+        <region-icon v-for="(faction, index) in getFactions" :key="index" :faction="faction"></region-icon>
+        <champ-icon v-for="(champ, index) in getChamps" :key="index" :code="champ"></champ-icon>
+        <!-- <div class="champion-icon icon champ" v-for="(champ, index) in getChamps" :key="index"
             :style=" {backgroundImage: getChampionImgUrl(champ)}">
-            <!-- <img :src="getChampionImgUrl(champ)" alt=""> -->
-        </div>
+        </div> -->
         <div class="extra-champ">{{extraChampString}}</div>
         <!-- <div class="champion-icon icon">TF</div> -->
         <!-- <div class="fa fa-ellipsis-h"></div> -->
@@ -21,6 +17,8 @@
 // const { DeckEncoder } = require('runeterra')
 import DeckEncoder from '../modules/runeterra/DeckEncoder'
 import championCards from '../assets/data/champion.js'
+import RegionIcon from './image/RegionIcon.vue';
+import ChampIcon from './image/ChampIcon.vue';
 //https://painttist.github.io/lor-champ-icons/data/champion.js
 
 
@@ -39,7 +37,8 @@ const maxFactions = 3;
 
 export default {
     components: {
-
+        RegionIcon,
+        ChampIcon,
     },
     data() {
         return {
@@ -108,6 +107,8 @@ export default {
             // console.log(factionIDs)
             // return factionIDs
 
+            console.log(deck)
+
             // var deck = DeckEncoder.decode(this.deck);
             var champs = []
             var factionIDs = []
@@ -136,7 +137,6 @@ export default {
         },
     },
     methods: {
-        
         
         getChampionImgUrl(code) {
             // const champImageBaseUrl = 'https://raw.githubusercontent.com/painttist/lor-champ-icons/master/images/cards/cropped/';
@@ -230,7 +230,6 @@ export default {
 
     .icon.champ {
         border-radius: 30px;
-
         border: 2px solid rgba(220, 220, 220, 1);
         /* box-shadow: -2px 2px 2px 0px rgba(43, 38, 27, 0.6) inset; */
     }

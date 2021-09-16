@@ -1,18 +1,14 @@
 <template>
     <div class="row deck btn">
-        <div class="region-icon icon faction" v-for="(faction, index) in getFactionsComplex" :key="index"
-        :style=" {backgroundImage: getRegionImgUrl(faction)}"></div>
-        <!-- <div class="region-icon icon faction" :style=" {backgroundImage: getRegionImgUrl(0)}"></div> -->
-        <!-- <div class="region-icon icon"></div> -->
-        <!-- <div class="region-icon icon">DE</div> -->
+        <region-icon class="region-icon" v-for="(faction, index) in getFactionsComplex" :key="index" :faction="faction"></region-icon>
     </div>
 </template>
 
 <script>
 
-// const { DeckEncoder } = require('runeterra')
 import DeckEncoder from '../modules/runeterra/DeckEncoder'
 import championCards from '../assets/data/champion.js'
+import RegionIcon from './image/RegionIcon.vue';
 //https://painttist.github.io/lor-champ-icons/data/champion.js
 
 
@@ -22,6 +18,7 @@ const maxFactions = 5;
 
 export default {
     components: {
+        RegionIcon
 
     },
     data() {
