@@ -127,7 +127,7 @@ def search(name, tag, server):
 @app.route("/leaderboard/<string:server>", methods=['get'])
 def leaderboard(server):
     # refactor to leaderboard model
-    board = Leaderboard.getLeaderboard(server)
+    board = leaderboard.getLeaderboard(server)
 
     boardWithTag = []
     playlistDict = {}
