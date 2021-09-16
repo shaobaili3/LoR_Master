@@ -61,11 +61,12 @@
                     <div class="detail lp" v-if="playerRegion">Region: {{playerRegion}}</div>
                 </div>
                 <div class="decks-summary" @wheel.prevent="horizontalScroll">
-                    <deck-champs class="champion-icons" 
+                    <div class="champion-icons btn" 
                     v-for="(deck, index) in uniqueDeckCodes" :key="index"
                     :class="{active: filterDeckCode == deck}"
-                    :deck="deck"
-                    @click="setFilterDeckCode(deck)"></deck-champs>
+                    @click="setFilterDeckCode(deck)">
+                        <deck-champs :deck="deck"></deck-champs>
+                    </div>
                 </div>
                 <div class="history-summary">
                     <div class="win-loss">{{winloss}}</div>
@@ -139,9 +140,9 @@ import BaseWindowControls from '../components/BaseWindowControls.vue'
 import axios from 'axios'
 import MatchHistory from '../components/MatchHistory.vue'
 import DeckRegions from '../components/DeckRegions.vue'
+import DeckChamps from '../components/DeckChamps.vue'
 import MatchHistoryDeckDetail from '../components/MatchHistoryDeckDetail.vue'
 import Leaderboard from '../components/Leaderboard.vue'
-import DeckChamps from '../components/DeckChamps.vue'
 
 const requestDataWaitTime = 400 //ms
 const inputNameListLength = 10;
@@ -811,8 +812,18 @@ export default {
 
     .decks-summary .champion-icons {
         display: inline-flex;
+        padding: 5px;
+        border-radius: 50px;
         margin: 0px 2px;
         cursor: pointer;
+    }
+
+    .decks-summary .champion-icons:hover {
+        background: var(--col-dark-grey);
+    }
+
+    .decks-summary .champion-icons.active {
+        background: var(--col-light-grey);
     }
 
     .history-summary {

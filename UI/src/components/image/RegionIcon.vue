@@ -68,4 +68,16 @@ export default {
         /* filter: drop-shadow(-0.5px 1px 0.5px white); */
     }
 
+    /* .icon.faction:hover {
+        opacity: 1;
+        filter: brightness(0) invert(1) drop-shadow(1px 2px 1px rgba(0, 0, 0, 0.6));
+    } */
+
+    @media screen and (max-width: 275px) {
+        .icon {
+            width: 15px;
+            height: 15px;
+        }
+    }
+
 </style>

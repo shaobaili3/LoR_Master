@@ -68,4 +68,16 @@ export default {
         /* box-shadow: -2px 2px 2px 0px rgba(43, 38, 27, 0.6) inset; */
     }
 
+    /* .icon.champ:hover {
+        border: 2px solid rgba(255, 255, 255, 1);
+        box-shadow: 1px 2px 5px -2px #000000;
+    } */
+
+    @media screen and (max-width: 275px) {
+        .icon {
+            width: 15px;
+            height: 15px;
+        }
+    }
+
 </style>
