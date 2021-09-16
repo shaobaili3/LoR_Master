@@ -15,7 +15,7 @@ class Leaderboard():
 
     def updateLeaderboard(self, server):
         if server not in self.leaderboards:
-            self.leaderboards[server] = []
+            self.leaderboards[server] = None
         try:
             leaderboardRequest = self.session.get(self.getLeaderboardLink(server))
         except requests.exceptions.RequestException as e:

@@ -98,7 +98,7 @@ def history(server, name, tag):
         print('history: Riot API not suppport SEA')
         return jsonify([])
     settingInspect.setServer(Server._value2member_map_[server])
-    playerInspect.inspectFlask(name, tag, 10)
+    playerInspect.inspectFlask(name, tag, 20)
     playerInspect.loadMatchsToFlask()
     return jsonify(playerInspect.historyFlask.__dict__['history'])
 
