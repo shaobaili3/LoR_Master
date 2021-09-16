@@ -5,10 +5,9 @@ from Models.setting import Server
 import constants as cs
 import Models.utility as utility
 import Models.process
-from Models.leaderboard import getRankStr, updateLeaderboard
+# from Models.leaderboard import getRankStr, updateLeaderboard
 from Models.deck import getDeckCode
 from Models.process import updateTrackServer
-from Models.leaderboard import checkRank
 import json
 
 class Local:

@@ -1,7 +1,6 @@
 from Models import riot
 import Models.utility as utility
 import constants as cs
-from Models.leaderboard import getRankStr, checkRank
 from GUI.ui import DeckDetail
 import Models.network
 from GUI.ui import OpponentFlask

@@ -3,8 +3,7 @@
 from Models.process import updateTrackServer
 import threading
 import time
-import Models.leaderboard
-from Models.leaderboard import checkRank, updateLeaderboard
+from Models.leaderboard import Leaderboard
 from Models.setting import Setting
 from Models.local import Local
 from Models.riot import Riot
@@ -36,6 +35,8 @@ sentry_sdk.init(
     send_default_pii=True
 )
 
+leaderboard = Leaderboard()
+
 settingInspect = Setting()
 networkInspect = Network(settingInspect)
 riotInspect = Riot(networkInspect)
@@ -53,7 +54,7 @@ class FlaskApp(Flask):
     def __init__(self, *args, **kwargs):
         super(FlaskApp, self).__init__(*args, **kwargs)
         # self.processWork()
-        self.leaderboardsWork()
+        # self.leaderboardsWork()
 
     def processWork(self):
         def run_work():
@@ -66,7 +67,7 @@ class FlaskApp(Flask):
     def leaderboardsWork(self):
         def run_work():
             while True:
-                updateLeaderboard()
+                leaderboard.update
                 time.sleep(600)
         work = threading.Thread(target=run_work)
         work.start()
@@ -126,7 +127,7 @@ def search(name, tag, server):
 @app.route("/leaderboard/<string:server>", methods=['get'])
 def leaderboard(server):
     # refactor to leaderboard model
-    board = Models.leaderboard.getboard(server)
+    board = Leaderboard.getLeaderboard(server)
 
     boardWithTag = []
     playlistDict = {}
