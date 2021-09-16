@@ -871,9 +871,11 @@ export default {
 
     }
 
-    /* .deck-content-top-bar {
+    .deck-content-top-bar {
+        height: 50px;
         display: flex;
-    } */
+        justify-content: center;
+    }
 
     .collapse-btn {
         display: block;
@@ -888,6 +890,7 @@ export default {
         color: white;
 
         cursor: pointer;
+        left: 0px;
     }
 
     .deck-content-detail {
