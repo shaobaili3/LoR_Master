@@ -1,9 +1,10 @@
 <template>
     <div class="match" :class="{won: won, loss: !won}">
         <div class="row opponent">
-            <p class="match-info-title">
-                vs {{opponentName}}
+            <p @click="search" class="match-info-title">
+                vs <span class="name">{{opponentName}}</span>
             </p>
+            <div class="opponent-info" v-if="opponentRank"><i class="fas fa-trophy"></i> {{opponentRank}}</div>
             <div class="history-info">{{time}}</div>
             <div class="history-info">{{rounds}} rounds</div>
             <div class="match-info-badge" v-for="(badge, index) in badges" :key="index" >
@@ -41,9 +42,11 @@ export default {
             visibleDeck: 0
         }
     },
-    emits: ['showDeck'],
+    emits: ['showDeck', 'search'],
     props: {
         opponentName: String,
+        opponentRank: String,
+        opponentLp: String,
         rounds: Number,
         deck: String,
         opponentDeck: String,
@@ -66,6 +69,10 @@ export default {
             this.$emit('showDeck', deck)
             // console.log(window)
             // console.log(window.testData)
+        },
+        search() {
+            // console.log("Match History Search")
+            this.$emit('search')
         },
         showOpponentDeck() {
             // console.log("Show Oppo Deck")
@@ -147,7 +154,14 @@ export default {
 
     .history-info:hover {
         color: rgba(255, 255, 255, 1);
-        
+    }
+
+    .opponent-info {
+        font-size: 0.8em;
+        color: rgba(255, 255, 255, 1);
+        padding: 8px 6px 8px 0px;
+        cursor: default;
+        white-space: nowrap;
     }
     
     .row {
@@ -255,7 +269,11 @@ export default {
         /* border-bottom: 2px solid transparent; */
         border-radius: 0px;
 
-        cursor: default;
+        cursor: pointer;
+    }
+
+    .match-info-title:hover .name {
+        text-decoration: underline;
     }
 
     .btn:hover {

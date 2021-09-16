@@ -52,13 +52,19 @@
                     <span v-if="isSamePlayer"><i class="fas fa-redo-alt"></i></span>
                 </button>
             </div>
+            <div class="player-name" v-if="!isLoading">{{playerName}}</div>
             <div class="summary-container" v-if="!isLoading">
                 <div class="player-summary">
-                    <div class="name">{{playerName}}</div>
                     <!-- <div class="detail server">Server: SEA</div> -->
-                    <div class="detail rank" v-if="playerRank">Rank: {{playerRank}}</div>
-                    <div class="detail lp" v-if="playerLP">LP: {{playerLP}}</div>
-                    <div class="detail lp" v-if="playerRegion">Region: {{playerRegion}}</div>
+                    <div class="detail rank" v-if="playerRank">
+                        <span class="pre-info"><i class="fas fa-trophy"></i></span> 
+                        {{playerRank}}</div>
+                    <div class="detail lp" v-if="playerLP">
+                        <span class="pre-info"><i class="iconfy">LP</i></span>
+                        {{playerLP}}</div>
+                    <div class="detail region" v-if="playerRegion">
+                        <span class="pre-info"><i class="fas" :class="'fa-globe-'+playerRegion"></i></span>
+                        {{playerRegion}}</div>
                 </div>
                 <div class="decks-summary" @wheel.prevent="horizontalScroll">
                     <div class="champion-icons btn" 
@@ -69,8 +75,8 @@
                     </div>
                 </div>
                 <div class="history-summary">
-                    <div class="win-loss">{{winloss}}</div>
-                    <div class="winrate">{{winrate}}</div>
+                    <div class="winrate" v-if="winrate">{{winrate}} <span class="subtext">WIN</span></div>
+                    <div class="winloss" v-if="winloss">{{winloss}}</div>
                 </div>
                 <!-- <div class="history-chart">
                     <div class="decks-filter">
@@ -82,8 +88,12 @@
 
             <div class="match-history-container" v-if="!isLoading">
                 <match-history 
-                    @show-deck="showDeck" v-for="(match, index) in filteredMatches" :key="index"
+                    @show-deck="showDeck"
+                    @search="searchPlayer({region: match.region, name: match.opponentName, tag: match.opponentTag})"
+                    v-for="(match, index) in filteredMatches" :key="index"
                     :opponentName="match.opponentName" 
+                    :opponentRank="match.opponentRank"
+                    :opponentLp="match.opponentLp"
                     :deck="match.deck"
                     :opponentDeck="match.opponentDeck"
                     :rounds="match.rounds"
@@ -156,6 +166,12 @@ const regionNames = {
     'NA': 'americas',
     'EU': 'europe',
     'AS': 'asia',
+}
+
+const regionShort = {
+    'americas': 'NA',
+    'europe' : 'EU',
+    'asia' : 'AS',
 }
 
 const PAGES = {
@@ -240,8 +256,6 @@ export default {
             deckCode: null,
             isShowDeck: false,
             matches: null,
-            winloss: "",
-            winrate: "",
             playerName: "",
             playerTag: "",
             playerRank: null,
@@ -277,12 +291,29 @@ export default {
         },
         uniqueDeckCodes() {
             if (!this.matches) return null
-            console.log(frequencies(this.matches.map(x => x.deck)))
+            // console.log(frequencies(this.matches.map(x => x.deck)))
             return this.matches.map(x => x.deck).filter(filterUnique)
         },
         filteredMatches() {
-            if (!this.filterDeckCode) return this.matches
-            return this.matches.filter(x => x.deck == this.filterDeckCode)
+            if (!this.matches) return null
+            if (!this.filterDeckCode) return this.matches.filter(n => n) // filters out null decks
+            return this.matches.filter(x => x.deck == this.filterDeckCode) // filters according to deck code
+        },
+        totalWins() {
+            if (!this.filteredMatches) return null
+            return this.filteredMatches.reduce((total, match) => match.win ? total+1 : total, 0) // adds up all the wins
+        },
+        totalMatches(){
+            return this.filteredMatches.length
+        },
+        winloss() {
+            if (!this.filteredMatches) return null
+            var loss = this.totalMatches - this.totalWins
+            return `${this.totalWins}W ${loss}L`
+        },
+        winrate() {
+            if (!this.filteredMatches) return null
+            return Math.floor(this.totalWins/this.totalMatches*100) + "%"
         },
     },
     methods: {
@@ -348,6 +379,8 @@ export default {
             this.searchName()
         },
         searchPlayer(data) {
+
+            // console.log("Search Player", data)
             
             if (this.regions.includes(data.region)) {
                 // SEA will not be included
@@ -458,8 +491,6 @@ export default {
         //     })
         // },
         clearInfo() {
-            this.winloss = ""
-            this.winrate = ""
             this.playerName = ""
             this.playerTag = ""
             this.playerRank = null
@@ -477,8 +508,8 @@ export default {
             this.playerRank = null
             this.playerLP = null
             this.filterDeckCode = null
-            var totalWins = 0
-            var totalLoss = 0
+            // var totalWins = 0
+            // var totalLoss = 0
             // var totalMatches = data.length
 
             // console.log(data)
@@ -492,7 +523,8 @@ export default {
                 var player, playerGame, opponent, opponentGame;
                 var info = data[key].info
                 
-                var opponentName, deck, opponentDeck, rounds, win, time, order;
+                var opponentName, opponentRank, opponentLp, opponentTag, opponentDeck, 
+                    deck, rounds, win, time, order;
                 
                 if (isFirstPlayer) {
                     playerGame = info.players[0]
@@ -512,6 +544,10 @@ export default {
 
                 this.playerName = player.name
                 opponentName = opponent.name
+                
+                opponentRank = opponent.rank
+                opponentLp = opponent.lp
+                opponentTag = opponent.tag
 
                 if (!this.playerRank) this.playerRank = player.rank
                 if (!this.playerLP) this.playerLP = player.lp
@@ -520,11 +556,11 @@ export default {
                 opponentDeck = opponentGame.deck_code
                 order = playerGame.order_of_play
                 win = playerGame.game_outcome == "win"
-                if (win) {
-                    totalWins += 1
-                } else {
-                    totalLoss += 1
-                }
+                // if (win) {
+                //     totalWins += 1
+                // } else {
+                //     totalLoss += 1
+                // }
                 rounds = info.total_turn_count
                 var badges = []
                 if (info.game_mode) badges.push(info.game_mode.replace(/([A-Z])/g, ' $1').trim().replace("Lobby", ""))
@@ -535,17 +571,17 @@ export default {
                 this.matches.push({
                     opponentName: opponentName,
                     deck: deck,
+                    region: regionShort[this.playerRegion],
                     opponentDeck: opponentDeck,
+                    opponentRank: opponentRank,
+                    opponentLp: opponentLp,
+                    opponentTag: opponentTag,
                     rounds: rounds,
                     win: win,
                     time: time,
                     badges: badges,
                 })
             }
-            // var totalLoss = totalMatches - totalWins;
-            var totalMatches = totalLoss + totalWins;
-            this.winloss = `${totalWins}W ${totalLoss}L`
-            this.winrate = Math.floor(totalWins/totalMatches*100) + "% winrate"
         },
         openURL(url) {
             window.openExternal(url);
@@ -770,8 +806,14 @@ export default {
         height: 50px;
     }
 
+    .player-name {
+        font-size: 24px;
+        margin-top: 15px;
+        text-align: left;
+    }
+
     .summary-container {
-        margin: 15px 0px;
+        margin: 5px 0px 15px 0px;
         display: flex;
         gap: 10px;
         justify-content: space-between;
@@ -800,6 +842,17 @@ export default {
     .player-summary .detail {
         font-size: 12px;
         color: var(--col-lighter-grey);
+    }
+
+    .player-summary .detail .pre-info {
+        display: inline-block;
+        width: 20px;
+        border-right: 1px solid var(--col-lighter-grey);
+    }
+
+    .iconfy {
+        font-size: 0.9em;
+        font-weight: 900;
     }
 
     .decks-summary {
@@ -833,6 +886,17 @@ export default {
     }
 
     .history-summary .winrate {
+        font-size: 24px;
+        color: white;
+        /* color: var(--col-lighter-grey); */
+    }
+
+    .history-summary .winrate .subtext {
+        font-size: 0.75em;
+        color: white;
+    }
+
+    .history-summary .winloss {
         font-size: 18px;
         color: var(--col-lighter-grey);
     }
