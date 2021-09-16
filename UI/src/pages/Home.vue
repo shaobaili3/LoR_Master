@@ -143,7 +143,7 @@ import MatchHistoryDeckDetail from '../components/MatchHistoryDeckDetail.vue'
 import Leaderboard from '../components/Leaderboard.vue'
 import DeckChamps from '../components/DeckChamps.vue'
 
-const requestDataWaitTime = 200 //ms
+const requestDataWaitTime = 400 //ms
 const inputNameListLength = 10;
 
 const portNum = "63312"
@@ -560,8 +560,11 @@ export default {
                 .catch((e) => {
                     if (axios.isCancel(e)) {
                         // Console log is cancel
-                    } else 
-                    { console.log('error', e) }
+                    } else { 
+                        console.log('error', e) 
+                        
+                        setTimeout(this.requestVersionData, requestDataWaitTime);
+                    }
                 })
         },
         async requestNameData() {
