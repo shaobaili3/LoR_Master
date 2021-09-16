@@ -27,16 +27,9 @@ class Setting():
         if 'network' not in section:
             self.config.add_section('network')
             self.config['network']['server'] = Server.NA.value
-        if 'track' not in section:
-            self.config.add_section('track')
-            self.config['track']['isAutoOpenDeck'] = 'false'
-
-    def saveAutoOpenDeck(self):
-        if self.autoOpenDeck:
-            self.config['track']['isAutoOpenDeck'] = 'true'
-        else:
-            self.config['track']['isAutoOpenDeck'] = 'false'
-        self.writeConfig()
+        # if 'track' not in section:
+        #     self.config.add_section('track')
+        #     self.config['track']['isAutoOpenDeck'] = 'false'
 
     def setServer(self, server):
         self.riotServer = server.value
@@ -53,8 +46,6 @@ class Setting():
             configfile.close()
 
     def getServer(self):
-        #return self.config['network']['server']
-        #return self.config.get('network', 'server')
         return self.riotServer
 
     def getPort(self):

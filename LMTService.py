@@ -105,13 +105,18 @@ def history(server, name, tag):
 
 @app.route("/name/<string:server>/<string:playername>", methods=['get'])
 def get_names(server, playername):
-    settingInspect.setServer(Server._value2member_map_[server])
-    localInspect.updatePlayernames()
+    playernames = set()
+    try:         
+        with open('data/' + server.lower() + '.json', 'r', encoding='utf-8') as fp:
+            names = json.load(fp)
+            for name in names.items():
+                playernames.add(name[0] + '#' + name[1])
+    except Exception as e:
+        print('updatePlayernames', e)
     playerList = set()
-    for name in localInspect.playernames:
+    for name in playernames:
         if name[0:len(playername)].lower() == playername.lower():
             playerList.add(name)
-
     returnList = jsonify(list(playerList))
     return returnList
 

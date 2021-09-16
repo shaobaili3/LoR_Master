@@ -9,6 +9,7 @@ from Models.deck import getDeckCode
 from Models.process import updateTrackServer
 import json
 
+
 class Local:
     def __init__(self, setting):
         self.opponentName = None
@@ -16,7 +17,6 @@ class Local:
         self.isClientRuning = False
         self.isInProgress = False
         self.setting = setting
-        self.playernames = set()
         self.playername = None
         self.trackerDict = {}
         self.session = requests.Session()
@@ -27,9 +27,8 @@ class Local:
         self.positional_rectangles = None
         self.static_decklist = None
         self.trackJson = {}
-        self.updatePlayernames()
         self.handsInHand = {}
-        
+
     # call this function after changes server in the tracker
     def reset(self):
         self.opponentName = None
@@ -39,12 +38,12 @@ class Local:
         self.isInProgress = False
         self.playedCards = {}
         self.graveyard = {}
-        self.opGraveyard = {}   
+        self.opGraveyard = {}
         self.trackJson = {}
         self.trackerDict = {}
 
     def updateTracker(self):
-        rectangles =  self.positional_rectangles['Rectangles']
+        rectangles = self.positional_rectangles['Rectangles']
         if rectangles is None:
             return
         screenHeight = self.positional_rectangles['Screen']['ScreenHeight']
@@ -73,7 +72,7 @@ class Local:
                 currentCards[cardCode] = num
                 if num == 0:
                     del currentCards[cardCode]
-        return {x:y for x,y in currentCards.items() if y!=0}
+        return {x: y for x, y in currentCards.items() if y != 0}
 
     def updateOpGraveyard(self):
         self.opGraveyard = {}
@@ -111,7 +110,8 @@ class Local:
     def playedCardsToDeck(self):
         myPlayedCards = {}
         # Remove cards in hand
-        playedCardWithoutHand = dict(self.playedCards.items() - self.cardsInHand.items())
+        playedCardWithoutHand = dict(
+            self.playedCards.items() - self.cardsInHand.items())
         for cardId, cardCode in playedCardWithoutHand.items():
             if cardCode in myPlayedCards:
                 myPlayedCards[cardCode] += 1
@@ -143,11 +143,11 @@ class Local:
         self.trackerDict['myGraveyard'] = self.myGraveyard
         self.trackerDict['myGraveyardCode'] = getDeckCode(self.myGraveyard)
         self.trackerDict['myPlayedCards'] = self.playedCardsToDeck()
-        self.trackerDict['myPlayedCardsCode'] = getDeckCode(self.trackerDict['myPlayedCards'])
+        self.trackerDict['myPlayedCardsCode'] = getDeckCode(
+            self.trackerDict['myPlayedCards'])
         self.trackerDict['cardsInHandNum'] = len(self.cardsInHand)
 
     def updateStatusFlask(self):
-        #Models.process.getPort(self.setting)
         try:
             localRequest = self.session.get(self.getLocalLink())
             self.positional_rectangles = localRequest.json()
@@ -167,7 +167,7 @@ class Local:
 
         self.trackJson['positional_rectangles'] = self.positional_rectangles
         self.trackJson['deck_tracker'] = self.trackerDict
-        
+
         opInfo = {}
         updateTrackServer(self.setting)
         self.trackJson['opponent_info'] = opInfo
@@ -175,7 +175,7 @@ class Local:
         return self.trackJson
 
     def updateTagByName(self, name):
-        try:        
+        try:
             with open('data/' + self.setting.getServer() + '.json', 'r', encoding='utf-8') as fp:
                 names = json.load(fp)
                 if name in names:
@@ -192,31 +192,8 @@ class Local:
             print('updateTagByName', e)
         self.opponentTag = None
 
-    def updatePlayernames(self):
-        try: 
-            self.playernames = set()
-            with open('data/' + self.setting.getServer() + '.json', 'r', encoding='utf-8') as fp:
-                names = json.load(fp)
-                for name in names.items():
-                    try:
-                        self.playernames.add(name[0] + '#' + name[1])
-                    except Exception as e:
-                        print('updatePlayernames for loop playname:', name , e)
-        except Exception as e:
-            print('updatePlayernames', e)
-
     def getLocalLink(self):
         return cs.IP_KEY + self.setting.getPort() + cs.LOCAL_MATCH
 
     def getLocalDeckLink(self):
         return cs.IP_KEY + self.setting.getPort() + cs.LOCAL_DECK
-
-    def getPlayerTag(self, name, serverName):
-        try:        
-            with open('data/' + serverName + '.json', 'r', encoding='utf-8') as fp:
-                names = json.load(fp)
-                if name in names:
-                    return names[name]
-        except Exception as e:
-            print('updateTagByName', e)
-        return ''    
