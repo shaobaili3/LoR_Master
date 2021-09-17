@@ -18,7 +18,6 @@ class Setting():
         self.check()
         self.writeConfig()
         self.riotServer = self.config['network']['server']
-        self.autoOpenDeck = self.config['track'].getboolean('isAutoOpenDeck')
         self.playerId = 'UNKNOW'
         return
 
