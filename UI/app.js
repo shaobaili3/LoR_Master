@@ -1,9 +1,115 @@
 
 const electron = require('electron')
-const { Menu, MenuItem, protocol, globalShortcut } = require('electron')
-const app = electron.app
+const { app, Tray, Menu, MenuItem, protocol, globalShortcut } = require('electron')
+// const app = electron.app
 const BrowserWindow = electron.BrowserWindow
 const path = require('path')
+
+const developmentMode = false
+// const snapAssist = true
+const closeWithoutTracker = false
+const headerHeight = 45 // Repeated in preload.js
+const defaultRatio = 2.3 // Repeated in preload.js
+
+const spawnService = true
+const spawnPython = true
+
+// --- app entry points ---
+
+app.on('ready', () => {
+  // --- registers global shortcuts ---
+  globalShortcut.register('Alt+CommandOrControl+E', () => {
+    // console.log('Electron loves global shortcuts!')
+    toggleDeckWindow()
+  })
+
+  globalShortcut.register('Alt+CommandOrControl+W', () => {
+    toggleMinDeckWindow()
+  })
+
+  appReady()
+})
+
+app.on('window-all-closed', () => {
+  // if (process.platform !== 'darwin') {
+  // app.quit()
+  // }
+})
+
+app.on('activate', () => {
+  newDeckWindow()
+})
+
+const appReady = () => {
+
+  if (closeWithoutTracker && !isCheckingTracker) checkTracker()
+
+  // --- deckWindow ---
+  newDeckWindow()
+
+  // --- mainWindow ---
+  newMainWindow()
+
+  // --- tray ---
+  initTray()
+  
+  // deckWindow.webContents.on('new-window', function (evt, url, frameName, disposition, options, additionalFeatures) {
+  //   if(options.width == 800 && options.height == 600){ //default size is 800x600
+        
+  //       options.width = windowWidth | 0
+  //       options.height = windowHeight | 0
+        
+  //       options.x = 1440 - windowWidth * 2
+  //       // console.log(width)
+  //       options.y = height - windowHeight
+  //       // options.titleBarStyle = 'hidden'
+  //       options.frame = true
+  //   }
+  // })
+
+  // const worker = new Worker(__dirname + '/electron/server.js')
+  // server.run
+  // runClient()
+}
+
+// --- Tray ---
+let tray = null
+function initTray() {
+  tray = new Tray('./src/assets/logo.png')
+  const contextMenu = Menu.buildFromTemplate([
+    // { label: 'Item1', type: 'radio' },
+    // { label: 'Item2', type: 'radio' },
+    // { label: 'Item3', type: 'radio', checked: true },
+    // { label: 'Item4', type: 'radio' },
+    { 
+      label: 'Open',
+      click: () => {
+        newMainWindow();
+        newDeckWindow();
+      }
+    },
+    {
+      label: 'About',
+      click: () => { newInfoWindow() }
+    },
+    { type: 'separator' },
+    {
+      label: 'Quit',
+      click: () => { app.quit() }
+    }
+  ])
+  tray.setToolTip('This is my application.')
+  tray.on('click', ()=>{
+      // tray.popUpContextMenu();
+      // console.log("Tray Clicked")
+      newMainWindow();
+      newDeckWindow();
+  })
+  
+  tray.setContextMenu(contextMenu)
+
+  console.log("Tray Created")
+}
 
 // --- Menu and short cuts ---
 
@@ -25,19 +131,7 @@ Menu.setApplicationMenu(menu)
 // const server = require('./appsrc/server.js')
 // server.run
 
-const developmentMode = false
-// const snapAssist = true
-const closeWithoutTracker = false
-const headerHeight = 45 // Repeated in preload.js
-const defaultRatio = 2.3 // Repeated in preload.js
-
-const spawnService = true
-const spawnPython = true
-var python
-
 if (spawnService) {
-  
-
   startLMTService()
 }
 
@@ -169,7 +263,7 @@ function newMainWindow() {
   // mainWindow.setAlwaysOnTop(true, level = "pop-up-menu")
   mainWindow.on('closed', () => {
     mainWindow = null
-    app.quit()
+    // app.quit()
   })
 
   if (developmentMode) mainWindow.webContents.openDevTools()
@@ -286,35 +380,6 @@ function newInfoWindow() {
   if (developmentMode) infoWindow.webContents.openDevTools()
 }
 
-const appReady = () => {
-
-  if (closeWithoutTracker && !isCheckingTracker) checkTracker()
-
-  // --- deckWindow ---
-  newDeckWindow()
-
-  // --- mainWindow ---
-  newMainWindow()
-  
-  // deckWindow.webContents.on('new-window', function (evt, url, frameName, disposition, options, additionalFeatures) {
-  //   if(options.width == 800 && options.height == 600){ //default size is 800x600
-        
-  //       options.width = windowWidth | 0
-  //       options.height = windowHeight | 0
-        
-  //       options.x = 1440 - windowWidth * 2
-  //       // console.log(width)
-  //       options.y = height - windowHeight
-  //       // options.titleBarStyle = 'hidden'
-  //       options.frame = true
-  //   }
-  // })
-
-  // const worker = new Worker(__dirname + '/electron/server.js')
-  // server.run
-  // runClient()
-}
-
 function showDeckWindow() {
   try {
     deckWindow.webContents.executeJavaScript('window.showWindow()');  
@@ -339,27 +404,8 @@ function toggleDeckWindow() {
   }
 }
 
-app.on('ready', () => {
-  // --- registers global shortcuts ---
-  globalShortcut.register('Alt+CommandOrControl+E', () => {
-    // console.log('Electron loves global shortcuts!')
-    toggleDeckWindow()
-  })
 
-  globalShortcut.register('Alt+CommandOrControl+W', () => {
-    toggleMinDeckWindow()
-  })
-
-  appReady()
-})
-app.on('window-all-closed', () => {
-  // if (process.platform !== 'darwin') {
-    app.quit()
-  // }
-})
-app.on('activate', () => {
-  newDeckWindow()
-})
+// --- Use these to check for old running python app ---
 
 const tasklist = require('tasklist')
 /*
