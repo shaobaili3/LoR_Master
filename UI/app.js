@@ -16,6 +16,21 @@ const spawnPython = true
 
 // --- app entry points ---
 
+const gotTheLock = app.requestSingleInstanceLock()
+
+if (!gotTheLock) {
+  console.log("Another Instance is alreaedy running")
+  app.quit()
+} else {
+  app.on('second-instance', (event, commandLine, workingDirectory) => {
+    // Someone tried to run a second instance, we should focus our window.
+    if (mainWindow) {
+      if (mainWindow.isMinimized()) mainWindow.restore()
+      mainWindow.focus()
+    }
+  })
+}
+
 app.on('ready', () => {
   // --- registers global shortcuts ---
   globalShortcut.register('Alt+CommandOrControl+E', () => {
@@ -43,6 +58,10 @@ app.on('activate', () => {
 const appReady = () => {
 
   if (closeWithoutTracker && !isCheckingTracker) checkTracker()
+
+  if (spawnService) {
+    startLMTService()
+  }
 
   // --- deckWindow ---
   newDeckWindow()
@@ -130,10 +149,6 @@ Menu.setApplicationMenu(menu)
 
 // const server = require('./appsrc/server.js')
 // server.run
-
-if (spawnService) {
-  startLMTService()
-}
 
 function startLMTService() {
 
