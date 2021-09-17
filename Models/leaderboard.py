@@ -1,3 +1,4 @@
+from os import name
 from Models.setting import Server
 import constants
 import requests
@@ -6,12 +7,13 @@ from Models.network import API_KEY
 class Leaderboard():
     def __init__(self):
         self.leaderboards = {}
+        self.leaderboardDicts = {}
         self.session = requests.Session()
         self.updateAll()
 
     def updateAll(self):
         for server in list(Server):
-            self.updateLeaderboard(server)
+            self.updateLeaderboard(server.value)
 
     def updateLeaderboard(self, server):
         if server not in self.leaderboards:
@@ -30,6 +32,7 @@ class Leaderboard():
             return
         if leaderboard is not None:
             self.leaderboards[server] = leaderboard
+            self.leaderboardDicts[server] = {board['name'].lower():{'rank':board['rank'], 'lp':board['lp']} for board in leaderboard}
 
     def getLeaderboard(self, server):
         if self.leaderboards[server] is None:
@@ -45,19 +48,11 @@ class Leaderboard():
         board = self.getLeaderboard(server)
         if board is None:
             return rank, lp
-
-        for playerRank in board:
-            if playerRank['name'].lower() == name.lower():
-                rank = str(playerRank['rank'] + 1)
-                lp = str(int(playerRank['lp']))
-        return rank, lp
-
-    def getRankInt(self, name, server):
-        rank, lp = self.checkRank(self, name, server)
-        if rank != '':
-            return int(rank)
-        else:
-            return 0
-
+        info = self.leaderboardDicts[server][name.lower()]
+        # for playerRank in board:
+        #     if playerRank['name'].lower() == name.lower():
+        #         rank = str(playerRank['rank'] + 1)
+        #         lp = str(int(playerRank['lp']))
+        return info['rank'], info['lp']
     def getLeaderboardLink(self, server):
         return 'https://' + server + constants.LEADERBOARD_KEY + API_KEY

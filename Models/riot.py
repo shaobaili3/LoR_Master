@@ -88,7 +88,7 @@ class Riot:
             return puuid
 
 
-    def saveMatchesInCache(self, puuid, matchIds):
+    def saveMatchIdsInCache(self, puuid, matchIds):
         playName = self.getPlayerName(puuid)
         server = self.network.setting.riotServer
         uniqueName = playName[0] + playName[1] + server
@@ -131,7 +131,7 @@ class Riot:
                 Models.network.switchAPI()
             return None
         if saveCache:
-            self.saveMatchesInCache(puuid, matchIds)
+            self.saveMatchIdsInCache(puuid, matchIds)
             return self.getMatchesInCache(puuid)
         return matchIds
         #   return matchIds
@@ -170,11 +170,8 @@ class Riot:
             
     def getDetail(self, matchId, matchIndex = 1, max_num = constants.MAX_NUM_DETAILS):
         # If matchIndex bigger than MAX, only pull data from cache
-        if matchIndex > max_num - 1:
+        if matchId in self.matchDetails or matchIndex > max_num - 1:
             return self.matchDetails.get(matchId)
-
-        if matchId in self.matchDetails:
-            return self.matchDetails[matchId]
         detailsLink = self.network.getDetailsLink(matchId)
         try:
             detailsRequest = self.session.get(detailsLink)
