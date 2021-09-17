@@ -223,7 +223,10 @@ let mainWindow = null
 
 function newMainWindow() {
 
-  if (mainWindow) return
+  if (mainWindow) {
+    mainWindow.show()
+    return
+  }
 
   let {width, height} = electron.screen.getPrimaryDisplay().workAreaSize
 
@@ -271,7 +274,10 @@ function newMainWindow() {
 
 function newDeckWindow() {
 
-  if (deckWindow) return
+  if (deckWindow) {
+    deckWindow.show()
+    return
+  }
 
   let {width, height} = electron.screen.getPrimaryDisplay().workAreaSize
   // let factor = electron.screen.getPrimaryDisplay().scaleFactor
@@ -341,7 +347,10 @@ function newDeckWindow() {
 
 function newInfoWindow() {
 
-  if (infoWindow) return
+  if (infoWindow) {
+    infoWindow.show()
+    return
+  }
 
   let {width, height} = electron.screen.getPrimaryDisplay().workAreaSize
   // let factor = electron.screen.getPrimaryDisplay().scaleFactor
