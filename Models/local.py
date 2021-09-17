@@ -3,8 +3,6 @@ from requests import models
 from Models import setting
 from Models.setting import Server
 import constants as cs
-import Models.utility as utility
-import Models.process
 from Models.deck import getDeckCode
 from Models.process import updateTrackServer
 import json
@@ -169,6 +167,7 @@ class Local:
         self.trackJson['deck_tracker'] = self.trackerDict
 
         opInfo = {}
+        # To-do remove
         updateTrackServer(self.setting)
         self.trackJson['opponent_info'] = opInfo
 

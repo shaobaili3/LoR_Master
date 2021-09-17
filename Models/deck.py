@@ -1,5 +1,3 @@
-#To-do cannot run here
-from requests.models import codes
 from decoder import Deck
 
 def getChampion(deckCode):

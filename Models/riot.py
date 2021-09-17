@@ -1,7 +1,6 @@
 from Models.network import Network
 import Models.network
 import requests
-import asyncio
 import json
 import os
 import constants

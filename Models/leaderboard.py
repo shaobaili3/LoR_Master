@@ -1,4 +1,3 @@
-from os import name
 from Models.setting import Server
 import constants
 import requests

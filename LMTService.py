@@ -39,6 +39,7 @@ sentry_sdk.set_context("Version", {
 })
 
 
+master.startMasterWorker()
 leaderboardModel = Leaderboard()
 
 settingInspect = Setting()
