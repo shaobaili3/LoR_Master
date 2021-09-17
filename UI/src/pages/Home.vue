@@ -805,19 +805,17 @@ export default {
     }
 
     .search-btn {
-        color: white;
+        color: var(--col-dark-white);
         background: none;
         outline: 0px;
         border: 0px;
         cursor: pointer;
         width: 6%;
         text-align: right;
-
-        opacity: .7;
     }
 
     .search-btn.active {
-        opacity: 1;
+        color: white;
     }
 
     .search-btn.inside {
@@ -883,7 +881,7 @@ export default {
     }
 
     .player-summary:hover .detail {
-        color: rgba(255,255,255,0.6);
+        color: var(--col-dark-white);
     }
 
     .player-summary:hover .detail.rank {
@@ -942,6 +940,10 @@ export default {
     .history-summary .winloss {
         font-size: 18px;
         color: var(--col-lighter-grey);
+    }
+
+    .history-summary:hover .winloss {
+        color: var(--col-dark-white);
     }
 
     .content {

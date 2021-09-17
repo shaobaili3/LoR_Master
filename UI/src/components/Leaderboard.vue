@@ -230,7 +230,7 @@ export default {
         vertical-align: middle;
 
         left: 10px;
-        opacity: .7;
+        color: var(--col-dark-white);
     }
 
 
