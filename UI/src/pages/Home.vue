@@ -70,10 +70,10 @@
                 </div>
                 <div class="decks-summary" @wheel.prevent="horizontalScroll">
                     <div class="champion-icons btn" 
-                    v-for="(deck, index) in uniqueDeckCodes" :key="index"
-                    :class="{active: filterDeckCode == deck}"
-                    @click="setFilterDeckCode(deck)">
-                        <deck-champs :deck="deck" :showRegion="true"></deck-champs>
+                    v-for="(obj, index) in uniqueDeckCodes" :key="index"
+                    :class="{active: filterDeckCode == obj.deck}"
+                    @click="setFilterDeckCode(obj.deck)">
+                        <deck-champs :deck="obj.deck" :showRegion="true"></deck-champs>
                     </div>
                 </div>
                 <div class="history-summary">
@@ -298,7 +298,20 @@ export default {
         uniqueDeckCodes() {
             if (!this.matches) return null
             // console.log(frequencies(this.matches.map(x => x.deck)))
-            return this.matches.map(x => x.deck).filter(filterUnique)
+            var decks = this.matches.map(x => x.deck)
+            var decks_freq = decks.reduce((a, v) => {
+                a[v] = a[v] ? a[v] + 1 : 1;
+                return a;
+            }, {})
+            var decks_freq_array = []
+            Object.keys(decks_freq).map(function(key, index) {
+                decks_freq_array[index] = {deck: key, num: decks_freq[key]}
+            });
+
+            decks_freq_array.sort((a, b) => b.num - a.num)
+            // Large num in front
+
+            return decks_freq_array
         },
         filteredMatches() {
             if (!this.matches) return null
