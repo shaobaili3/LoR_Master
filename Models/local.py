@@ -167,8 +167,6 @@ class Local:
         self.trackJson['deck_tracker'] = self.trackerDict
 
         opInfo = {}
-        # To-do remove
-        updateTrackServer(self.setting)
         self.trackJson['opponent_info'] = opInfo
 
         return self.trackJson
