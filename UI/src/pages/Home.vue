@@ -52,8 +52,8 @@
                     <span v-if="isSameSearch"><i class="fas fa-redo-alt"></i></span>
                 </button>
             </div>
-            <div class="player-name" v-if="!isLoading">{{playerName}}</div>
-            <div class="summary-container" v-if="!isLoading">
+            <div class="player-name" v-if="!isLoading && playerName">{{playerName}}</div>
+            <div class="summary-container" v-if="!isLoading && playerName">
                 <div class="player-summary">
                     <!-- <div class="detail server">Server: SEA</div> -->
                     <div class="detail rank" v-if="playerRank">
@@ -832,8 +832,8 @@ export default {
     }
 
     .match-history-container {
-        height: calc(100vh - 320px);
-        overflow: scroll;
+        height: calc(100vh - 325px);
+        overflow-y: scroll;
     }
 
     .loading-text {
@@ -881,6 +881,8 @@ export default {
         white-space: nowrap;
         width: 55%;
         text-align: left;
+
+        padding-bottom: 5px;
     }
 
     .decks-summary .champion-icons {
@@ -988,8 +990,9 @@ export default {
     }
 
     .main-content-container.leaderboard {
-        height: calc(100vh - 88px);
-        overflow: scroll;
+        height: calc(100vh - 98px); 
+        /* -43 -10 -45 */
+        overflow-y: scroll;
     }
 
     .left-nav {
