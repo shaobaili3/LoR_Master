@@ -8,7 +8,6 @@ import constants
 class Riot:
     def __init__(self, network):
         self.network = network
-        self.asyncio = asyncio
         self.loop = None
         self.matchDetails = {}
         self.riotIds = {}
