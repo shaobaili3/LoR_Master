@@ -65,7 +65,7 @@ class FlaskApp(Flask):
         def run_work():
             while True:
                 updateTrackServer(settingTrack)
-                time.sleep(2)
+                time.sleep(3)
         work = threading.Thread(target=run_work)
         work.daemon = True
         work.start()
@@ -93,7 +93,6 @@ def process():
 
 @app.route("/track", methods=['get'])
 def track():
-    settingTrack.setServer(Server._value2member_map_[settingTrack.riotServer])
     return jsonify(localTrack.updateStatusFlask())
 
 
@@ -102,7 +101,7 @@ def history(server, name, tag):
     if server == 'sea':
         print('history: Riot API not suppport SEA')
         return jsonify([])
-    settingInspect.setServer(Server._value2member_map_[server])
+    settingInspect.riotServer = Server._value2member_map_[server]
     playerInspect.inspectFlask(name, tag, 20)
     playerInspect.loadMatchsToFlask()
     return jsonify(playerInspect.historyFlask.__dict__['history'])
@@ -111,7 +110,7 @@ def history(server, name, tag):
 @app.route("/name/<string:server>/<string:playername>", methods=['get'])
 def get_names(server, playername):
     playernames = set()
-    try:         
+    try:
         with open('data/' + server.lower() + '.json', 'r', encoding='utf-8') as fp:
             names = json.load(fp)
             for name in names.items():
@@ -128,7 +127,7 @@ def get_names(server, playername):
 
 @app.route("/search/<string:server>/<string:name>/<string:tag>", methods=['get'])
 def search(name, tag, server):
-    settingInspect.setServer(Server._value2member_map_[server])
+    settingInspect.riotServer = Server._value2member_map_[server]
     playerInspect.inspectFlask(name, tag)
     inspection = {}
     inspection['history'] = playerInspect.historyFlask.__dict__['history']
@@ -190,6 +189,17 @@ def opInfo():
     opInfo['rank'], opInfo['lp'] = leaderboardModel.checkRank(
         opInfo['name'], settingTrack.riotServer)
     return jsonify(opInfo)
+
+
+@app.route("/status", methods=['get'])
+def get_status():
+    status = {}
+    status['playerId'] = settingTrack.playerId
+    status['port'] = settingTrack.port
+    status['server'] = settingTrack.riotServer
+    status['language'] = settingTrack.language
+    status['lorRunning'] = settingTrack.isLorRunning
+    return jsonify(status)
 
 
 app.run(port=63312, debug=True, use_reloader=False)

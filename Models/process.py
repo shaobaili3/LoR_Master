@@ -28,6 +28,7 @@ def getLogPath():
 def readLog(setting):
     path = getLogPath()
     if path is not None:
+        setting.isLorRunning = True
         try:
             with open(path, 'r', encoding='utf-8') as lorLog:
                 for line in lorLog.readlines():
@@ -38,7 +39,7 @@ def readLog(setting):
                         setting.port = str(line).split().pop()
 
                     if 'Using user-preferred language CultureInfo of ' in line:
-                        c.DefaultLanguage = str(line).split().pop()
+                        setting.language = str(line).split().pop()
 
                     if '[CheckingForUpdates] StartCheckingForUpdates for user ' in line:
                         playerId = str(line).split().pop()
@@ -50,6 +51,8 @@ def readLog(setting):
             print('log file not accessible: ', path)
         except BaseException as error:
             print('An exception occurred: {}'.format(error))
+    else:
+        setting.isLorRunning = False
 
 def isSimulation():
     isPython = True

@@ -173,12 +173,12 @@ class Local:
 
     def updateTagByName(self, name):
         try:
-            with open('data/' + self.setting.getServer() + '.json', 'r', encoding='utf-8') as fp:
+            with open('data/' + self.setting.riotServer + '.json', 'r', encoding='utf-8') as fp:
                 names = json.load(fp)
                 if name in names:
                     self.opponentTag = names[name]
                     return
-            with open(('Resource/' + self.setting.getServer() + '.dat'), 'r', encoding="utf-8") as search:
+            with open(('Resource/' + self.setting.riotServer + '.dat'), 'r', encoding="utf-8") as search:
                 for line in search:
                     fullName = line.rstrip().split('#')
                     if name == fullName[0]:
@@ -190,7 +190,7 @@ class Local:
         self.opponentTag = None
 
     def getLocalLink(self):
-        return cs.IP_KEY + self.setting.getPort() + cs.LOCAL_MATCH
+        return cs.IP_KEY + self.setting.port + cs.LOCAL_MATCH
 
     def getLocalDeckLink(self):
-        return cs.IP_KEY + self.setting.getPort() + cs.LOCAL_DECK
+        return cs.IP_KEY + self.setting.port + cs.LOCAL_DECK

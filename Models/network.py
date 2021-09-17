@@ -52,7 +52,7 @@ class Network():
         return
 
     def getHeadLink(self):
-        return 'https://' + self.setting.getServer()
+        return 'https://' + self.setting.riotServer
 
     def getMatchesLink(self, ppid):
         return self.getHeadLink() + MATCH_KEY + ppid + '/ids' + API_KEY

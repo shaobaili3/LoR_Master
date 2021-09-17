@@ -134,7 +134,7 @@ class Player:
                 self.addMatchToSummary(
                     myDetails['deck_code'], outcome, utility.toLocalTimeString(startTime, True))
                 deckCodes.append(myDetails['deck_code'])
-                settingServer = self.riot.network.setting.getServer()
+                settingServer = self.riot.network.setting.riotServer
                 rank = 0
                 gameTypeString = '[' + gameType + ']'
                 if gameType == '':
@@ -163,7 +163,7 @@ class Player:
         for puuid in playerPuuids:
             name, tag = self.riot.getPlayerName(puuid)
             rank, lp = self.leaderboard.checkRank(
-                name, self.riot.network.setting.getServer())
+                name, self.riot.network.setting.riotServer)
             playernames.append(name + '#' + tag)
             player_info.append(
                 {'name': name, 'tag': tag, 'rank': rank, 'lp': lp})
