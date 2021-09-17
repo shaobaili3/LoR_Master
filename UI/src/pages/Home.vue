@@ -895,7 +895,7 @@ export default {
 
     .decks-summary {
         display: block;
-        overflow-x: scroll;
+        overflow-x: auto;
         white-space: nowrap;
         width: 55%;
         text-align: left;
