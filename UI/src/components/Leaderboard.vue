@@ -1,28 +1,34 @@
 <template>
-    <div id="content">
+    <!-- <div id="content"> -->
 
         <!-- <h1 id="title">LoR Master Leaderboard</h1> -->
 
-        <div id="btn-group-regions" class="flex">
-            <button id="btn-na" class="btn" :class="{active: activeRegion == 0}" @click="switchRegion(regions.NA)">NA</button>
-            <button id="btn-eu" class="btn" :class="{active: activeRegion == 1}"  @click="switchRegion(regions.EU,)">EU</button>
-            <button id="btn-as" class="btn" :class="{active: activeRegion == 2}" @click="switchRegion(regions.AS)">AS</button>
-            <button id="btn-sea" class="btn" :class="{active: activeRegion == 3}" @click="switchRegion(regions.SEA)">SEA</button>
-        </div>
+        <div class="sticky-top">
 
-        <div id="search-container">
-            <div class="search-icon" v-if="!isLoading"><i class="fa fa-search"></i></div>
-            <div class="search-icon loading" v-if="isLoading"><i class="fa fa-circle-notch fa-spin"></i></div>
-            <input v-model="searchText"
-                id="search-input" type="text" :placeholder="isLoading ? 'Loading...' : searchPlaceHolder " :disabled="isLoading">
-        </div>
+            <div id="btn-group-regions" class="flex">
+                <button id="btn-na" class="btn" :class="{active: activeRegion == 0}" @click="switchRegion(regions.NA)">NA</button>
+                <button id="btn-eu" class="btn" :class="{active: activeRegion == 1}"  @click="switchRegion(regions.EU,)">EU</button>
+                <button id="btn-as" class="btn" :class="{active: activeRegion == 2}" @click="switchRegion(regions.AS)">AS</button>
+                <button id="btn-sea" class="btn" :class="{active: activeRegion == 3}" @click="switchRegion(regions.SEA)">SEA</button>
+            </div>
 
-        <div id="ladder">
+            <div id="search-container">
+                <div class="search-icon" v-if="!isLoading"><i class="fa fa-search"></i></div>
+                <div class="search-icon loading" v-if="isLoading"><i class="fa fa-circle-notch fa-spin"></i></div>
+                <input v-model="searchText"
+                    id="search-input" type="text" :placeholder="isLoading ? 'Loading...' : searchPlaceHolder " :disabled="isLoading">
+            </div>
+
             <div class="flex info-help">
                 <div class="info-rank">Rank</div>
                 <div class="info-name">Name</div>
                 <div class="info-lp">Points</div>
             </div>
+
+        </div>
+
+        <div id="ladder">
+            
             <leaderboard-player v-for="(player, index) in filteredPlayers" 
                 @click="searchPlayer(player)"  
                 :key="index" 
@@ -32,7 +38,7 @@
             </leaderboard-player>
         </div>
 
-    </div>
+    <!-- </div> -->
 </template>
 
 <script>
@@ -157,7 +163,7 @@ export default {
         width: 100%;
         height: 30px;
         padding: 5px 0px;
-        margin: 0px 0px;
+        margin: 20px 0px 0px 0px;
         align-items: center;
         justify-content: space-around;
         border-radius: 5px;
@@ -179,11 +185,18 @@ export default {
     }
 
     /* Search */
+    
+    .sticky-top {
+        position: sticky;
+        top: 0;
+        background: var(--col-background);
+        padding-bottom: 5px;
+    }
 
     #search-container {
         position: relative;
         margin-top: 15px;
-        width: 420px;
+        /* width: 420px; */
         height: 50px;
     
     }
@@ -211,9 +224,13 @@ export default {
 
     .search-icon {
         position: absolute;
-        top: 14px;
-        left: 20px;
-        opacity: 0.7;
+        width: 36px;
+        height: 50px;
+        line-height: 50px;
+        vertical-align: middle;
+
+        left: 10px;
+        opacity: .7;
     }
 
 
@@ -251,9 +268,8 @@ export default {
         background-color: transparent;
         color: var(--col-gold);
 
-        padding: 10px;
-        width: 100px;
-        height: 40px;
+        width: 60px;
+        height: 32px;
 
         font-size: 16px;
 
@@ -278,24 +294,22 @@ export default {
 
 
     /* Ladder  */
-    #ladder {
+    #ladder {        
         
-        margin-top: 20px;
         margin-bottom: 25px;
         /* color: white; */
         display: flex;
         flex-direction: column;
-        width: 520px;
+        /* width: 520px; */
         gap: 5px;
 
         
     }
 
-    @media only screen and (max-width: 768px) {
+    /* @media only screen and (max-width: 768px) {
         #ladder {
-            /* display: flex; */
             width: 400px;
         }
-    }
+    } */
 
 </style>

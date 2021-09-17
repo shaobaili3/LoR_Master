@@ -27,6 +27,13 @@
             </div>
             <div class="search-bar-container">
                 <div class="search-bar-input-container">
+                    <button class="search-btn inside left" 
+                        :class="{active: searchText!=''}"
+                        @click="searchHistory">
+                        <span v-if="!isSameSearch"><i class="fas fa-search"></i></span>
+                        <span v-if="isSameSearch"><i class="fas fa-redo-alt"></i></span>
+                    </button>
+                    
                     <input class="search-bar" 
                         @keyup="searchName" 
                         @keyup.enter="searchHistory"
@@ -35,7 +42,7 @@
                         v-model="searchText"
                         placeholder="eg.Storm#5961"
                         />
-                    <button class="search-btn inside" @click="clearSearch" v-if="searchText!=''"><span><i class="fas fa-times"></i></span></button>
+                    <button class="search-btn inside right" @click="clearSearch" v-if="searchText!=''"><span><i class="fas fa-times"></i></span></button>
                 </div>
                 <div class="search-bar-auto-complete">
                     <div class="auto-complete-item" 
@@ -46,11 +53,6 @@
                         {{name}}
                     </div>
                 </div>
-                
-                <button class="search-btn" @click="searchHistory">
-                    <span v-if="!isSameSearch"><i class="fas fa-search"></i></span>
-                    <span v-if="isSameSearch"><i class="fas fa-redo-alt"></i></span>
-                </button>
             </div>
             <div class="player-name" v-if="!isLoading && playerName">{{playerName}}</div>
             <div class="summary-container" v-if="!isLoading && playerName">
@@ -484,12 +486,12 @@ export default {
                     // Perform the actual search
                     this.requestHistoryData()
                     this.resetInputFocus()
+                } else if (splited.length == 1 && splited[0] == this.playerName && this.playerTag) {
+                    // When trying to search the same people, do a refresh
+                    this.requestHistoryData()
+                    this.resetInputFocus()
                 } else {
-                    if (splited.length == 1 && splited[0] == this.playerName && this.playerTag) {
-                        // When trying to search the same people, do a refresh
-                        this.requestHistoryData()
-                        this.resetInputFocus()
-                    }
+                    // Alert the player needed info
                 }
             }
             
@@ -556,11 +558,11 @@ export default {
                 this.playerName = player.name
                 opponentName = opponent.name
                 
-                opponentRank = opponent.rank
+                opponentRank = opponent.rank + 1 // rank starts from 0
                 opponentLp = opponent.lp
                 opponentTag = opponent.tag
 
-                if (!this.playerRank) this.playerRank = player.rank
+                if (!this.playerRank) this.playerRank = player.rank + 1 // player.rank starts from 0
                 if (!this.playerLP) this.playerLP = player.lp
                 
                 deck = playerGame.deck_code
@@ -697,7 +699,7 @@ export default {
     .region-tabs {
         display: flex;
         /* gap: 5px; */
-        padding-left: 15px;
+        /* padding-left: 15px; */
     }
 
     .region-option {
@@ -706,7 +708,7 @@ export default {
         cursor: pointer;
 
         width: 60px;
-        height: 30px;
+        height: 32px;
 
         line-height: 30px;
 
@@ -721,6 +723,8 @@ export default {
         color: var(--col-gold);
         border: 0px;
         border-bottom: 2px transparent solid;
+
+        box-sizing: border-box;
         
     }
 
@@ -767,7 +771,7 @@ export default {
 
         border: none;
         background-color: var(--col-darker-grey);
-        padding: 0px 20px 0px 20px;
+        padding: 0px 20px 0px 50px;
         border-radius: 40px;
         box-sizing: border-box;
     }
@@ -808,13 +812,29 @@ export default {
         cursor: pointer;
         width: 6%;
         text-align: right;
+
+        opacity: .7;
+    }
+
+    .search-btn.active {
+        opacity: 1;
     }
 
     .search-btn.inside {
         position: absolute;
-        right: 10px;
         width: 36px;
         height: 50px;
+        padding: 0px;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .search-btn.right {
+        right: 10px;
+    }
+
+    .search-btn.left {
+        left: 10px;
     }
 
     .player-name {
