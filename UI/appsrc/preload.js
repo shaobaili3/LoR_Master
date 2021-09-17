@@ -40,7 +40,8 @@ var win = remote.getCurrentWindow()
 
 window.closeWindow = function() {
     // console.log("Close window")
-    win.close()
+    win.hide()
+    // win.close()
 }
 
 window.toggleWindow = function() {
