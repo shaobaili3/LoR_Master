@@ -117,7 +117,7 @@ function initTray() {
       click: () => { app.quit() }
     }
   ])
-  tray.setToolTip('This is my application.')
+  tray.setToolTip('LoR Master Tracker')
   tray.on('click', ()=>{
       // tray.popUpContextMenu();
       // console.log("Tray Clicked")
