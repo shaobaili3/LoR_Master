@@ -48,8 +48,8 @@
                 </div>
                 
                 <button class="search-btn" @click="searchHistory">
-                    <span v-if="!isSamePlayer"><i class="fas fa-search"></i></span>
-                    <span v-if="isSamePlayer"><i class="fas fa-redo-alt"></i></span>
+                    <span v-if="!isSameSearch"><i class="fas fa-search"></i></span>
+                    <span v-if="isSameSearch"><i class="fas fa-redo-alt"></i></span>
                 </button>
             </div>
             <div class="player-name" v-if="!isLoading">{{playerName}}</div>
@@ -290,8 +290,8 @@ export default {
         filteredInputNameList() {
             return this.inputNameList.map(i => i.split('#')[0]);
         },
-        isSamePlayer() {
-            return ((this.searchText == this.playerName) && (this.playerTag))
+        isSameSearch() {
+            return ((this.searchText == this.playerName) && (this.playerTag) && (this.selectedRegion == regionShort[this.playerRegion]))
         },
         uniqueDeckCodes() {
             if (!this.matches) return null
@@ -383,6 +383,9 @@ export default {
         },
         selectRegion(region) {
             this.selectedRegion = region
+            var searchBar = document.querySelector(".search-bar")
+            if (searchBar) searchBar.focus()
+            
             this.searchName()
         },
         searchPlayer(data) {
@@ -418,6 +421,7 @@ export default {
         // Search bar
         clearSearch() {
             this.searchText = ''
+            this.searchName()
             document.querySelector(".search-bar").focus()
         },
         searchName() {
@@ -858,6 +862,14 @@ export default {
         border-right: 1px solid var(--col-lighter-grey);
     }
 
+    .player-summary:hover .detail {
+        color: rgba(255,255,255,0.6);
+    }
+
+    .player-summary:hover .detail.rank {
+        color: white;
+    }
+
     .iconfy {
         font-size: 0.9em;
         font-weight: 900;
@@ -867,7 +879,7 @@ export default {
         display: block;
         overflow-x: scroll;
         white-space: nowrap;
-        width: 50%;
+        width: 55%;
         text-align: left;
     }
 
@@ -891,7 +903,7 @@ export default {
         font-size: 24px;
         /* margin-left: 20px; */
         text-align: right;
-        width: 20%;
+        width: 22%;
     }
 
     .history-summary .winrate {

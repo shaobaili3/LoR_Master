@@ -168,6 +168,10 @@ export default {
         cursor: default;
         white-space: nowrap;
     }
+
+    .opponent-info i {
+        font-size: 0.85em;
+    }
     
     .row {
         display: flex;
