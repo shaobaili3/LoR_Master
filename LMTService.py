@@ -10,18 +10,15 @@ from Models.riot import Riot
 from Models.network import Network
 from Models.player import Player
 from Models.setting import Server
-from Models import player
-from flask.json import tag
 from Models import master
 import json
 from flask import Flask, jsonify
-from os import error, name
 from sentry_sdk.integrations.flask import FlaskIntegration
 import sentry_sdk
 import io
 import sys
 import constants
-import urllib.request
+
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf8')
 print('utf8 string test: ', '卡尼能布恩', '째남모')
 
@@ -32,8 +29,15 @@ sentry_sdk.init(
     # We recommend adjusting this value in production.
     integrations=[FlaskIntegration()],
     traces_sample_rate=1.0,
-    send_default_pii=True
+    send_default_pii=True,
+    debug=True,
+    release=constants.VERSION_NUM
 )
+
+sentry_sdk.set_context("Version", {
+    "num": constants.VERSION_NUM
+})
+
 
 leaderboardModel = Leaderboard()
 

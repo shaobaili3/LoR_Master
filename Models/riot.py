@@ -1,7 +1,6 @@
 from Models.network import Network
 import Models.network
 import requests
-import aiohttp
 import asyncio
 import json
 import os
@@ -135,38 +134,6 @@ class Riot:
             return self.getMatchesInCache(puuid)
         return matchIds
         #   return matchIds
-
-    async def aioMatchDetail(self, matchId):
-        if matchId in self.matchDetails:
-            return self.matchDetails[matchId]
-        async with aiohttp.ClientSession() as session:
-            try:
-                detailsLink = self.network.getDetailsLink(matchId)
-                async with session.get(detailsLink) as resp:
-                    detail = await resp.json()
-            except aiohttp.ClientConnectionError as e:
-                print('aioMatchDetail Error: ', e)
-                return None
-        header = resp.headers
-        if 'X-Method-Rate-Limit-Count' in header:
-            print('X-Method-Rate-Limit-Count: ',
-                  header['X-Method-Rate-Limit-Count'])
-            print('X-App-Rate-Limit', header['X-App-Rate-Limit'])
-
-        if 'Retry-After' in header:
-            print('aio服务器正忙,请等待', header['Retry-After'], '秒')
-            Models.network.switchAPI()
-            return header['Retry-After']
-
-        if resp.ok:
-            self.matchDetails[matchId] = detail
-            self.save()
-            return detail
-        else:
-            print('AIO比赛内容服务器错误: ', resp.status)
-            print(detailsLink)
-            print(detail)
-            return None
             
     def getDetail(self, matchId, matchIndex = 1, max_num = constants.MAX_NUM_DETAILS):
         # If matchIndex bigger than MAX, only pull data from cache
