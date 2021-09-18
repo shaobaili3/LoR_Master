@@ -262,7 +262,7 @@ export default {
             axios.get(`${API_BASE}/history/${this.server}/${this.oppoName}/${this.oppoTag}`)
                 .then((response) => {
                     console.log("Opponent Data", response.data)
-                    this.processJsonData(response.data)
+                    this.processOpponentHistory(response.data)
                 })
                 .catch((e) => {
                     if (axios.isCancel(e)) {
@@ -413,7 +413,7 @@ export default {
                 this.hideWindow()
             }
         },
-        processJsonData(data) {
+        processOpponentHistory(data) {
 
             // Process New Data
             console.log("Process Json Data")

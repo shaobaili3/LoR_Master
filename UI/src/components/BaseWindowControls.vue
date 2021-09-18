@@ -8,8 +8,8 @@
             {{playerName}}
         </div>
         <div class="menu-title-deck" v-if="titleType=='deckCode'">Deck Info</div>
-        <div class="menu-sub-title" v-if="titleType=='match'">
-            {{playerRankString}}
+        <div class="menu-sub-title" v-if="titleType=='match' && playerRank">
+            <i class="fas fa-trophy"></i> {{playerRank}}
         </div>
         <div v-if="canMin" class="menu-item" @click="minApp()">
             <span><i class="fas fa-minus"></i></span>
@@ -63,11 +63,6 @@ export default {
         window.removeEventListener("resize", this.checkIsMin);
     },
     computed: {
-        playerRankString() {
-            if (this.playerRank)
-                return '#' + this.playerRank
-            return ''
-        }
     },
   // components: {
   //   MainLayout
@@ -165,7 +160,7 @@ export default {
         color: rgba(255, 255, 255, 0.5);
         font-size: 0.9em;
 
-        direction: rtl;
+        /* direction: rtl; */
 
         white-space: nowrap;
         /* overflow: scroll; */

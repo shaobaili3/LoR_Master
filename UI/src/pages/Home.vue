@@ -1,13 +1,15 @@
 <template>
 
     <div class="left-nav">
-        <button class="left-nav-btn"
+        <button class="left-nav-btn tooltip"
             :class="{
                 selected: currentPage == PAGES.my,
                 disabled: !hasLocalInfo
             }" 
             @click="hasLocalInfo && setCurrentPage(PAGES.my)">
-            <span><i class="fas fa-user-circle"></i></span></button>
+            <span><i class="fas fa-user-circle"></i></span>
+            <div class="tooltiptext right" v-if="!hasLocalInfo">Please log in LoR</div>
+        </button>
         <button class="left-nav-btn" 
             :class="{selected: currentPage == PAGES.search}" 
             @click="setCurrentPage(PAGES.search)">
@@ -998,6 +1000,8 @@ export default {
         visibility: hidden;
         display: block;
         /* width: 120px; */
+        font-size: 16px;
+
         white-space: nowrap;
         background-color: black;
         color: #fff;
@@ -1007,16 +1011,31 @@ export default {
 
         box-sizing: border-box;
 
-        /* Position the tooltip */
         position: absolute;
         z-index: 10;
+
+        /* Position the tooltip */
         bottom: 120%;
         left: 50%;
         transform:translateX(-50%);
         
-        
         /* left: 50%; */
         /* margin-left: -50%; */
+    }
+
+    .tooltip .tooltiptext.top {
+        /* Position the tooltip */
+        bottom: 120%;
+        left: 50%;
+        transform:translateX(-50%);
+    }
+
+    .tooltip .tooltiptext.right {
+        /* Position the tooltip */
+        top: 50%;
+        bottom: auto;
+        left: 105%;
+        transform: translateY(-50%);
     }
 
     .tooltip:hover .tooltiptext {
