@@ -1,6 +1,6 @@
 #!/usr/local/bin/python
 # -*- coding: utf-8 -*-
-from Models.process import updateTrackServer
+from Models.process import updateStatus
 import threading
 import time
 from Models.leaderboard import Leaderboard
@@ -64,7 +64,7 @@ class FlaskApp(Flask):
     def processWork(self):
         def run_work():
             while True:
-                updateTrackServer(settingTrack)
+                updateStatus(settingTrack)
                 time.sleep(3)
         work = threading.Thread(target=run_work)
         work.daemon = True

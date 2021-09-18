@@ -1,4 +1,3 @@
-from Models import riot
 import Models.utility as utility
 import constants as cs
 from uiModels import DeckDetail

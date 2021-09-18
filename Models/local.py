@@ -1,10 +1,6 @@
 import requests
-from requests import models
-from Models import setting
-from Models.setting import Server
 import constants as cs
 from Models.deck import getDeckCode
-from Models.process import updateTrackServer
 import json
 
 
