@@ -44,6 +44,10 @@ window.closeWindow = function() {
     // win.close()
 }
 
+window.setSkipTaskbar = function(bool) {
+    win.setSkipTaskbar(bool)
+}
+
 window.toggleWindow = function() {
     
     if (win.isMinimized()) {
@@ -78,7 +82,7 @@ window.minWindow = function() {
     // Close Logic
     // win.close()
 
-    // Minimize to Tray
+    // Minimize to Taskbar
     win.minimize()
 
 	// remote.app.relaunch()
