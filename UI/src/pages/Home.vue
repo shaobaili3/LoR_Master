@@ -4,9 +4,9 @@
         <button class="left-nav-btn"
             :class="{
                 selected: currentPage == PAGES.my,
-                disabled: false
+                disabled: !hasLocalInfo
             }" 
-            @click="setCurrentPage(PAGES.my)">
+            @click="hasLocalInfo && setCurrentPage(PAGES.my)">
             <span><i class="fas fa-user-circle"></i></span></button>
         <button class="left-nav-btn" 
             :class="{selected: currentPage == PAGES.search}" 
@@ -24,43 +24,55 @@
     
     <div class="content">
         <div class="main-content-container" v-if="currentPage == PAGES.my">
-            
+            <player-matches v-if="hasLocalInfo" 
+                @search="searchPlayer($event)"
+                @show-deck="showDeck"
+                :playerName="localPlayerInfo.name"
+                :playerRegion="localPlayerInfo.server"
+                :playerRank="localPlayerInfo.rank"
+                :playerLP="localPlayerInfo.lp"
+                :matches="localMatches"
+            >
+            </player-matches>
+
         </div>
 
-        <div class="main-content-container" v-if="currentPage == PAGES.search">
-            <div class="region-tabs">
-                <div class="region-option" 
-                v-for="(region, index) in regions"
-                :class="{selected: selectedRegion == region}" 
-                :key="index"
-                @click="selectRegion(region)">{{region}}</div>
-            </div>
-            <div class="search-bar-container">
-                <div class="search-bar-input-container">
-                    <button class="search-btn inside left" 
-                        :class="{active: searchText!=''}"
-                        @click="searchHistory">
-                        <span v-if="!isSameSearch"><i class="fas fa-search"></i></span>
-                        <span v-if="isSameSearch"><i class="fas fa-redo-alt"></i></span>
-                    </button>
-                    
-                    <input class="search-bar" 
-                        @keyup="searchName" 
-                        @keyup.enter="searchHistory"
-                        @keyup.up="autoCompleteIndexMinus"
-                        @keyup.down="autoCompleteIndexPlus"
-                        v-model="searchText"
-                        placeholder="eg.Storm#5961"
-                        />
-                    <button class="search-btn inside right" @click="clearSearch" v-if="searchText!=''"><span><i class="fas fa-times"></i></span></button>
+        <div class="main-content-container search" v-if="currentPage == PAGES.search">
+            <div class="sticky-top">
+                <div class="region-tabs">
+                    <div class="region-option" 
+                    v-for="(region, index) in regions"
+                    :class="{selected: selectedRegion == region}" 
+                    :key="index"
+                    @click="selectRegion(region)">{{region}}</div>
                 </div>
-                <div class="search-bar-auto-complete">
-                    <div class="auto-complete-item" 
-                        v-for="(name, index) in filteredInputNameList" :key="index" 
-                        :class="{selected: autoCompleteIndex == index}"
-                        @click="searchHistoryAutoComplete(index)"
-                    >
-                        {{name}}
+                <div class="search-bar-container">
+                    <div class="search-bar-input-container">
+                        <button class="search-btn inside left" 
+                            :class="{active: searchText!=''}"
+                            @click="searchHistory">
+                            <span v-if="!isSameSearch"><i class="fas fa-search"></i></span>
+                            <span v-if="isSameSearch"><i class="fas fa-redo-alt"></i></span>
+                        </button>
+                        
+                        <input class="search-bar" 
+                            @keyup="searchName" 
+                            @keyup.enter="searchHistory"
+                            @keyup.up="autoCompleteIndexMinus"
+                            @keyup.down="autoCompleteIndexPlus"
+                            v-model="searchText"
+                            placeholder="eg.Storm#5961"
+                            />
+                        <button class="search-btn inside right" @click="clearSearch" v-if="searchText!=''"><span><i class="fas fa-times"></i></span></button>
+                    </div>
+                    <div class="search-bar-auto-complete">
+                        <div class="auto-complete-item" 
+                            v-for="(name, index) in filteredInputNameList" :key="index" 
+                            :class="{selected: autoCompleteIndex == index}"
+                            @click="searchHistoryAutoComplete(index)"
+                        >
+                            {{name}}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -132,7 +144,7 @@ const inputNameListLength = 10;
 const portNum = "63312"
 const API_BASE = `http://127.0.0.1:${portNum}`
 
-let cancelToken
+let cancelToken, localCancleToken
 var lastStatusRequestTime
 
 const regionNames = {
@@ -241,6 +253,9 @@ export default {
         isSameSearch() {
             return ((this.searchText == this.playerName) && (this.playerTag) && (this.selectedRegion == regionShort[this.playerRegion]))
         },
+        hasLocalInfo() {
+            return this.localMatches.length > 0
+        }
     },
     methods: {
         // Page Switch
@@ -256,6 +271,8 @@ export default {
         },
         searchPlayer(data) {
 
+            console.log("Search Player", data)
+
             if (this.regions.includes(data.region)) {
                 // SEA will not be included
                 this.setCurrentPage(PAGES.search)
@@ -268,7 +285,6 @@ export default {
                 this.requestHistoryData()
             }
         },
-
 
         // Search bar
         clearSearch() {
@@ -392,13 +408,14 @@ export default {
 
                 if (!playerGame || !opponentGame || !player || !opponent) continue;
 
-                this.playerName = player.name
+                this.playerName = player.name // Sync name so all caps are correct
                 opponentName = opponent.name
                 
                 opponentRank = opponent.rank + 1 // rank starts from 0
                 opponentLp = opponent.lp
                 opponentTag = opponent.tag
 
+                
                 if (!this.playerRank) this.playerRank = player.rank + 1 // player.rank starts from 0
                 if (!this.playerLP) this.playerLP = player.lp
                 
@@ -406,11 +423,6 @@ export default {
                 opponentDeck = opponentGame.deck_code
                 order = playerGame.order_of_play
                 win = playerGame.game_outcome == "win"
-                // if (win) {
-                //     totalWins += 1
-                // } else {
-                //     totalLoss += 1
-                // }
                 rounds = info.total_turn_count
                 var badges = []
                 if (info.game_mode) badges.push(info.game_mode.replace(/([A-Z])/g, ' $1').trim().replace("Lobby", ""))
@@ -462,9 +474,33 @@ export default {
                     var data = response.data
                     var elapsedTime = Date.now() - lastStatusRequestTime // ms
 
-                    this.localPlayerInfo.playerId = data.playerId
+                    var updateLocalPlayer = false
+                    if (this.localPlayerInfo.playerId != data.playerId) {
+                        // there is a change in player ID
+                        updateLocalPlayer = true
+                    }
+
+                    if (data.playerId != "") {
+
+                        this.localPlayerInfo.playerId = data.playerId
+
+                        var nameid = data.playerId.split('#')
+                        this.localPlayerInfo.name = nameid[0]
+                        this.localPlayerInfo.tag = nameid[1]
+                    } else {
+                        this.localPlayerInfo.playerId = null
+                        this.localPlayerInfo.name = null
+                        this.localPlayerInfo.tag = null
+
+                        this.localMatches = []
+                    }
+
                     this.localPlayerInfo.server = data.server
                     this.localPlayerInfo.language = data.language
+
+                    if (updateLocalPlayer) {
+                        this.requestLocalHistory()
+                    }
 
                     this.lorRunning = data.lorRunning
 
@@ -553,6 +589,110 @@ export default {
         },
         hideDeck() {
             this.isShowDeck = false
+        },
+
+        requestLocalHistory() {
+
+            //Check if there are any previous pending requests
+            if (typeof localCancleToken != typeof undefined) {
+                localCancleToken.cancel("Operation canceled due to new request.")
+            }
+            
+            //Save the cancel token for the current request
+            localCancleToken = axios.CancelToken.source()
+            
+            var server = this.localPlayerInfo.server
+            var name = this.localPlayerInfo.name
+            var tag = this.localPlayerInfo.tag
+
+            if (!(server && name && tag)) return
+
+            axios.get(`${API_BASE}/search/${server}/${name}/${tag}`,
+                    { cancelToken: localCancleToken.token }) // Pass the cancel token
+                .then((response) => {
+                    if (response.data == "Error") {
+                        console.log("Local History Search Error")
+                    } else {
+                        this.processLocalHistory(response.data)
+                    }
+                })
+                .catch((e) => {
+                    if (axios.isCancel(e)) {
+                        console.log("Request cancelled");
+                    } else 
+                    { console.log('error', e) }
+                })
+        },
+        processLocalHistory(data) {
+
+            console.log("Process Local History!")
+
+            this.localMatches = []
+            this.localPlayerInfo.rank = null
+            this.localPlayerInfo.lp = null
+
+            for (var key in data) {
+
+                if (!data[key]) continue // Skip if null history
+
+                var isFirstPlayer = data[key].player_info[0].name.toLowerCase() == this.playerName.toLowerCase()
+                
+                var player, playerGame, opponent, opponentGame;
+                var info = data[key].info
+                
+                var opponentName, opponentRank, opponentLp, opponentTag, opponentDeck, 
+                    deck, rounds, win, time, order;
+                
+                if (isFirstPlayer) {
+                    playerGame = info.players[0]
+                    opponentGame = info.players[1]
+
+                    player = data[key].player_info[0]
+                    opponent = data[key].player_info[1]
+                } else {
+                    playerGame = info.players[1]
+                    opponentGame = info.players[0]
+
+                    player = data[key].player_info[1]
+                    opponent = data[key].player_info[0]
+                }
+
+                if (!playerGame || !opponentGame || !player || !opponent) continue;
+
+                opponentName = opponent.name
+                
+                opponentRank = opponent.rank + 1 // rank starts from 0
+                opponentLp = opponent.lp
+                opponentTag = opponent.tag
+
+                if (!this.localPlayerInfo.rank) this.localPlayerInfo.rank = player.rank + 1 // player.rank starts from 0
+                if (!this.localPlayerInfo.lp) this.localPlayerInfo.lp = player.lp
+                
+                deck = playerGame.deck_code
+                opponentDeck = opponentGame.deck_code
+                order = playerGame.order_of_play
+                win = playerGame.game_outcome == "win"
+                rounds = info.total_turn_count
+                var badges = []
+                if (info.game_mode) badges.push(info.game_mode.replace(/([A-Z])/g, ' $1').trim().replace("Lobby", ""))
+                if (info.game_type) badges.push(info.game_type.replace(/([A-Z])/g, ' $1').trim().replace("Lobby", ""))
+
+                time = processDate(info.game_start_time_utc)
+
+                this.localMatches.push({
+                    opponentName: opponentName,
+                    deck: deck,
+                    region: regionShort[this.localPlayerInfo.server],
+                    opponentDeck: opponentDeck,
+                    opponentRank: opponentRank,
+                    opponentLp: opponentLp,
+                    opponentTag: opponentTag,
+                    rounds: rounds,
+                    win: win,
+                    time: time,
+                    badges: badges,
+                })
+            }
         },
     },
 
@@ -715,7 +855,7 @@ export default {
         min-width: 550px;
         margin-left: 80px;
         margin-top: 43px;
-        padding: 10px 40px;
+        /* padding: 10px 40px; */
         box-sizing: border-box;
         white-space: normal;
         color: white;
@@ -771,12 +911,15 @@ export default {
     .main-content-container {
         margin: auto;
         max-width: 550px;
+        height: calc(100vh - 88px); 
+        /* top bar: -43 | bottom bar: -45 */
+        overflow-y: scroll;
     }
 
     .main-content-container.leaderboard {
-        height: calc(100vh - 98px); 
+        /* height: calc(100vh - 98px);  */
         /* -43 -10 -45 */
-        overflow-y: scroll;
+        /* overflow-y: scroll; */
     }
 
     .left-nav {
@@ -866,7 +1009,7 @@ export default {
 
         /* Position the tooltip */
         position: absolute;
-        z-index: 1;
+        z-index: 10;
         bottom: 120%;
         left: 50%;
         transform:translateX(-50%);
@@ -878,6 +1021,13 @@ export default {
 
     .tooltip:hover .tooltiptext {
         visibility: visible;
+    }
+
+    .sticky-top {
+        position: sticky;
+        top: 0;
+        background: var(--col-background);
+        z-index: 1;
     }
 
 </style>

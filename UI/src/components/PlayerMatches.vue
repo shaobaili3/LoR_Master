@@ -1,28 +1,30 @@
 <template>
-    <div class="player-name">{{playerName}}</div>
-    <div class="summary-container">
-        <div class="player-summary">
-            <div class="detail rank" v-if="playerRank">
-                <span class="pre-info"><i class="fas fa-trophy"></i></span> 
-                {{playerRank}}</div>
-            <div class="detail lp" v-if="playerLP">
-                <span class="pre-info"><i class="iconfy">LP</i></span>
-                {{playerLP}}</div>
-            <div class="detail region" v-if="playerRegion">
-                <span class="pre-info"><i class="fas" :class="'fa-globe-'+playerRegion"></i></span>
-                {{playerRegionFC}}</div>
-        </div>
-        <div class="decks-summary" @wheel.prevent="horizontalScroll">
-            <div class="champion-icons btn" 
-            v-for="(obj, index) in uniqueDeckCodes" :key="index"
-            :class="{active: filterDeckCode == obj.deck}"
-            @click="setFilterDeckCode(obj.deck)">
-                <deck-champs :deck="obj.deck" :showRegion="true"></deck-champs>
+    <div class="sticky-top">
+        <div class="player-name">{{playerName}}</div>
+        <div class="summary-container">
+            <div class="player-summary">
+                <div class="detail rank" v-if="playerRank">
+                    <span class="pre-info"><i class="fas fa-trophy"></i></span> 
+                    {{playerRank}}</div>
+                <div class="detail lp" v-if="playerLP">
+                    <span class="pre-info"><i class="iconfy">LP</i></span>
+                    {{playerLP}}</div>
+                <div class="detail region" v-if="playerRegion">
+                    <span class="pre-info"><i class="fas" :class="'fa-globe-'+playerRegion"></i></span>
+                    {{playerRegionFC}}</div>
             </div>
-        </div>
-        <div class="history-summary">
-            <div class="winrate" v-if="winrate">{{winrate}} <span class="subtext">WIN</span></div>
-            <div class="winloss" v-if="winloss">{{winloss}}</div>
+            <div class="decks-summary" @wheel.prevent="horizontalScroll">
+                <div class="champion-icons btn" 
+                v-for="(obj, index) in uniqueDeckCodes" :key="index"
+                :class="{active: filterDeckCode == obj.deck}"
+                @click="setFilterDeckCode(obj.deck)">
+                    <deck-champs :deck="obj.deck" :showRegion="true"></deck-champs>
+                </div>
+            </div>
+            <div class="history-summary">
+                <div class="winrate" v-if="winrate">{{winrate}} <span class="subtext">WIN</span></div>
+                <div class="winloss" v-if="winloss">{{winloss}}</div>
+            </div>
         </div>
     </div>
 
@@ -224,12 +226,12 @@ export default {
 
     .player-name {
         font-size: 24px;
-        margin-top: 15px;
+        padding-top: 15px;
         text-align: left;
     }
 
     .summary-container {
-        margin: 5px 0px 15px 0px;
+        padding: 5px 0px 15px 0px;
         display: flex;
         gap: 10px;
         justify-content: space-between;
@@ -237,8 +239,9 @@ export default {
     }
 
     .match-history-container {
-        height: calc(100vh - 325px);
-        overflow-y: scroll;
+        /* height: calc(100vh - 325px); */
+        /* overflow-y: scroll; */
+        margin-bottom: 25px;
     }
 
     
@@ -329,5 +332,17 @@ export default {
         color: var(--col-dark-white);
     }
 
+    .sticky-top {
+        position: sticky;
+        top: 0;
+        background: var(--col-background);
+        z-index: 1;
+    }
+
+    .main-content-container.search .sticky-top{
+        position: sticky;
+        top: 97px;
+        background: var(--col-background);
+    }
 
 </style>
