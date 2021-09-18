@@ -18,6 +18,7 @@ const spawnPython = true
 
 const gotTheLock = app.requestSingleInstanceLock()
 
+// Set up single instance
 if (!gotTheLock) {
   console.log("Another Instance is alreaedy running")
   app.quit()
@@ -52,7 +53,7 @@ app.on('window-all-closed', () => {
 })
 
 app.on('activate', () => {
-  newDeckWindow()
+  newMainWindow()
 })
 
 const appReady = () => {
@@ -71,24 +72,13 @@ const appReady = () => {
 
   // --- tray ---
   initTray()
-  
-  // deckWindow.webContents.on('new-window', function (evt, url, frameName, disposition, options, additionalFeatures) {
-  //   if(options.width == 800 && options.height == 600){ //default size is 800x600
-        
-  //       options.width = windowWidth | 0
-  //       options.height = windowHeight | 0
-        
-  //       options.x = 1440 - windowWidth * 2
-  //       // console.log(width)
-  //       options.y = height - windowHeight
-  //       // options.titleBarStyle = 'hidden'
-  //       options.frame = true
-  //   }
-  // })
 
   // const worker = new Worker(__dirname + '/electron/server.js')
   // server.run
   // runClient()
+
+  console.log("Is Packaged?", app.isPackaged)
+  console.log("Version: ", app.getVersion())
 }
 
 // --- Tray ---
@@ -104,7 +94,7 @@ function initTray() {
       label: 'Open',
       click: () => {
         newMainWindow();
-        newDeckWindow();
+        // newDeckWindow();
       }
     },
     {
@@ -122,7 +112,7 @@ function initTray() {
       // tray.popUpContextMenu();
       // console.log("Tray Clicked")
       newMainWindow();
-      newDeckWindow();
+      // newDeckWindow();
   })
   
   tray.setContextMenu(contextMenu)
@@ -337,7 +327,11 @@ function newDeckWindow() {
   //   protocol: 'file:',
   //   slashes: true
   // }))
+  deckWindow.setSkipTaskbar(true)
+  deckWindow.hide()
+  
   deckWindow.loadURL(`file://${__dirname}/dist/deck.html`)
+  
   // console.log("Is development?", process.env.NODE_ENV === 'development')
 
   // Attempted to use a bug? to turn off snapAssist on Windows
@@ -357,7 +351,17 @@ function newDeckWindow() {
     deckWindow = null
   })
 
+  deckWindow.on('restore', () => {
+    deckWindow.setSkipTaskbar(true)
+  })
+
+  deckWindow.on('minimize', () => {
+    deckWindow.setSkipTaskbar(false)
+  })
+
   if (developmentMode) deckWindow.webContents.openDevTools()
+
+  
 }
 
 function newInfoWindow() {
