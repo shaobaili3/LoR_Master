@@ -107,6 +107,7 @@ import DeckDetailBase from '../../components/DeckDetailBase.vue'
 
 const requestDataWaitTime = 100; // ms
 const requestServerWaitTime = 3000; //ms
+const requestStatusWaitTime = 1000; //ms
 
 const portNum = "63312"
 const API_BASE = `http://127.0.0.1:${portNum}`
@@ -119,9 +120,17 @@ const TABS = {
     myg: 4,
 }
 
-var lastTrackTime, lastServerRequestTime;
+var lastTrackTime, lastServerRequestTime, lastStatusRequestTime;
 
 export default {
+    components: { 
+        BaseWindowControls,
+        MatchInfo,
+        MatchInfoDeckDetail,
+        DeckRegions,
+        DeckDetailBase,
+        // MatchInfoDeckPreview,
+    },
     mounted() {
         // console.log(JSON.stringify(this.matchInfos))
         // this.getMatchInfo()
@@ -130,8 +139,9 @@ export default {
         // this.requestData()
         this.infoType = "match"
 
-        this.requestTrackInfo()
-        this.requestServerInfo()
+        // this.requestTrackInfo()
+        // this.requestServerInfo()
+        this.requestStatusInfo()
     },
     data() {
         return {
@@ -156,11 +166,13 @@ export default {
             oppoRank: null,
             oppoTag: null,
             oppoLp: null,
+
+            lorRunning: false,
         }
     },
     computed: {
         isLoading() {
-            if (this.infoType == "deckCode" && this.deckCode != "") return false
+            // if (this.infoType == "deckCode" && this.deckCode != "") return false
             if (this.currentDeckCode || this.startingDeckCode) return false
             if (this.matchInfos.length > 0) return false
             return (this.oppoName == null || this.oppoName == "" || this.matchInfos.length == 0)
@@ -204,14 +216,6 @@ export default {
             return false
         }
     },
-    components: { 
-        BaseWindowControls,
-        MatchInfo,
-        MatchInfoDeckDetail,
-        DeckRegions,
-        DeckDetailBase,
-        // MatchInfoDeckPreview,
-    },
     methods: {
         makeWindowVisible() {
             if (window.makeVisible) {
@@ -243,14 +247,7 @@ export default {
                 this.processRawData(msg)
             }
         },
-        requestDataAgain() {
-            return new Promise(resolve => {
-                setTimeout(() => {
-                    resolve('Requesting new Data')
-                }, requestDataWaitTime);
-            })
-        },
-        async requestOpponentHistory() {
+        requestOpponentHistory() {
             // http://192.168.20.4:${portNum}/history/asia/J01/J01
 
             console.log("Request Opponent History for " + this.oppoName + "#" + this.oppoTag)
@@ -267,37 +264,59 @@ export default {
                     { console.log('error', e) }
                 })
         },
-        async requestServerInfo() {
-            lastServerRequestTime = Date.now()
-            
-            axios.get(`${API_BASE}/process`)
-                .then((response) => {
-                    // console.log(response.data)
+        // requestServerInfo() {
+        //     lastServerRequestTime = Date.now()
+        //     axios.get(`${API_BASE}/process`)
+        //         .then((response) => {
+        //             // console.log(response.data)
 
-                    var elapsedTime = Date.now() - lastServerRequestTime // milli
-                    // console.log("Elapsed ", elapsedTime)
+        //             var elapsedTime = Date.now() - lastServerRequestTime // ms
+        //             // console.log("Elapsed ", elapsedTime)
                     
+        //             this.server = response.data.server
+
+        //             // console.log("Server", this.server)
+
+        //             if (requestServerWaitTime > elapsedTime) {
+        //                 setTimeout(this.requestServerInfo, requestServerWaitTime - elapsedTime); 
+        //             } else {
+        //                 this.requestServerInfo()
+        //             }
+                    
+        //         })
+        //         .catch((e) => {
+        //             if (axios.isCancel(e)) {
+        //                 console.log("Request cancelled");
+        //             } else 
+        //             { console.log('error', e) }
+        //             this.requestServerInfo()
+        //         })
+        // },
+        requestStatusInfo() {
+            // Keeps requesting status
+            lastStatusRequestTime = Date.now()
+            axios.get(`${API_BASE}/status`)
+                .then((response) => {
+                    var elapsedTime = Date.now() - lastStatusRequestTime // ms
                     this.server = response.data.server
 
                     // console.log("Server", this.server)
 
-                    if (requestServerWaitTime > elapsedTime) {
-                        setTimeout(this.requestServerInfo, requestServerWaitTime - elapsedTime); 
+                    if (requestStatusWaitTime > elapsedTime) {
+                        setTimeout(this.requestStatusInfo, requestStatusWaitTime - elapsedTime); 
                     } else {
-                        this.requestServerInfo()
+                        this.requestStatusInfo()
                     }
-                    
                 })
                 .catch((e) => {
                     if (axios.isCancel(e)) {
                         console.log("Request cancelled");
                     } else 
                     { console.log('error', e) }
-                    this.requestServerInfo()
+                    this.requestStatusInfo()
                 })
-            
         },
-        async requestOppoInfo() {
+        requestOppoInfo() {
             // Getting opponent rank, lp and tag
             // Once per opponent change
 
@@ -318,7 +337,7 @@ export default {
                     { console.log('error', e) }
                 })
         },
-        async requestTrackInfo() {
+        requestTrackInfo() {
 
             lastTrackTime = Date.now()
             axios.get(`${API_BASE}/track`)
@@ -342,7 +361,6 @@ export default {
                         this.requestTrackInfo()
                     }
                 })
-
             
         },
         processTrackInfo(data) {
