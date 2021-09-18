@@ -34,8 +34,8 @@ sentry_sdk.init(
     release=constants.VERSION_NUM
 )
 
-sentry_sdk.set_context("Version", {
-    "num": constants.VERSION_NUM
+sentry_sdk.set_context("info", {
+    "version": constants.VERSION_NUM
 })
 
 
