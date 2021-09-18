@@ -106,3 +106,12 @@ body {
     align-items: center;
     color: white;
 }
+
+.fa-spin-fast {
+    -webkit-animation: fa-spin 0.5s infinite linear;
+    animation: fa-spin 0.5s infinite linear;
+}
+
+.fa-spin-fast.pause {
+    animation-play-state: paused;
+}

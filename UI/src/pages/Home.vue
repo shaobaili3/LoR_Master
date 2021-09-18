@@ -6,8 +6,11 @@
                 selected: currentPage == PAGES.my,
                 disabled: !hasLocalInfo
             }" 
-            @click="(hasLocalInfo && setCurrentPage(PAGES.my)) + requestLocalHistory()">
-            <span><i class="fas fa-user-circle"></i></span>
+            @click="(hasLocalInfo && setCurrentPage(PAGES.my)) + requestLocalHistory()"
+            :disabled="!hasLocalInfo"
+        >
+            <span class="icon-default"><i class="fas fa-user-circle"></i></span>
+            <span class="icon-hover"><i class="fas fa-redo-alt fa-spin-fast" :class="{'pause': !localHistoryLoading}"></i></span>
             <div class="tooltiptext right" v-if="!hasLocalInfo">Please log in LoR</div>
         </button>
         <button class="left-nav-btn" 
@@ -599,6 +602,8 @@ export default {
 
         requestLocalHistory() {
 
+            if (this.localHistoryLoading) return
+
             console.log("Request Local History")
             this.localHistoryLoading = true
 
@@ -976,6 +981,19 @@ export default {
         cursor: default;
     }
 
+    .left-nav-btn.selected:not(:disabled):hover .icon-default,
+    .left-nav-btn .icon-hover{
+        display: none;
+    }
+
+    .left-nav-btn .icon-default {
+        display: inline;
+    }
+
+    .left-nav-btn.selected:not(:disabled):hover .icon-hover{
+        display: inline;
+        cursor: pointer;
+    }
 
 
     .bottom-bar {
