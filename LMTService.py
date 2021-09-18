@@ -128,7 +128,10 @@ def get_names(server, playername):
 @app.route("/search/<string:server>/<string:name>/<string:tag>", methods=['get'])
 def search(name, tag, server):
     settingInspect.riotServer = Server._value2member_map_[server]
-    playerInspect.inspectFlask(name, tag)
+    maxNum = 10
+    if (name + '#' + tag).lower() == settingTrack.playerId.lower():
+        maxNum = 20
+    playerInspect.inspectFlask(name, tag, maxNum)
     inspection = {}
     inspection['history'] = playerInspect.historyFlask.__dict__['history']
     inspection['matches'] = playerInspect.matchesJson
