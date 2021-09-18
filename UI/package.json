@@ -1,6 +1,7 @@
 {
   "name": "lor-master-tracker-ui",
-  "version": "0.1.0",
+  "productName": "LoR Master Tracker",
+  "version": "0.9.8",
   "private": true,
   "main": "app.js",
   "scripts": {
@@ -10,7 +11,7 @@
     "lint": "vue-cli-service lint",
     "deploy": "deploy.sh",
     "start": "electron app.js",
-    "package": "electron-packager ./ LoRMasterTracker --out ./app --app-version 0.9.7 --overwrite --icon=image.ico"
+    "package": "electron-packager ./ LoRMasterTracker --out ./app --app-version ${npm_package_version} --overwrite --icon=image.ico"
   },
   "dependencies": {
     "axios": "^0.21.1",
