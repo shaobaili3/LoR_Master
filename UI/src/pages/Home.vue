@@ -1027,7 +1027,7 @@ export default {
         position: sticky;
         top: 0;
         background: var(--col-background);
-        z-index: 1;
+        z-index: 2;
     }
 
 </style>

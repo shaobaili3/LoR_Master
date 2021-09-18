@@ -139,7 +139,9 @@ export default {
         // this.requestData()
         this.infoType = "match"
 
-        // this.requestTrackInfo()
+        // this.hideWindow()
+
+        this.requestTrackInfo()
         // this.requestServerInfo()
         this.requestStatusInfo()
     },
@@ -217,6 +219,11 @@ export default {
         }
     },
     methods: {
+        hideWindow() {
+            if (window.closeWindow) {
+                window.closeWindow()
+            }
+        },
         makeWindowVisible() {
             if (window.makeVisible) {
                 window.makeVisible()
@@ -367,13 +374,13 @@ export default {
 
             if (data.positional_rectangles && data.positional_rectangles.OpponentName) {
                 // Check if there is opponent
-                
                 var oppoName = data.positional_rectangles.OpponentName
                 
                 if ((!this.oppoName) || (this.oppoName.toLowerCase() != oppoName.toLowerCase())) {
                     // If there is no oppoName set or there is a change in the name
                     this.oppoName = oppoName
                     this.requestOppoInfo()
+                    this.makeWindowVisible()
                 }
                 
             } else {
@@ -387,24 +394,23 @@ export default {
                 this.matchInfos = []
             }
             
-                
-
-
             if (data.deck_tracker) {
                 this.startingDeckCode = data.deck_tracker.deckCode
                 this.currentDeckCode = data.deck_tracker.currentDeckCode
                 this.oppoGraveCode = data.deck_tracker.opGraveyardCode
                 this.myGraveCode = data.deck_tracker.myPlayedCardsCode
                 this.cardsInHandNum = data.deck_tracker.cardsInHandNum
-                // if (data.deck_tracker.deckCode) {
-                //     this.makeWindowVisible()
-                // }
+                if (data.deck_tracker.deckCode) {
+                    this.makeWindowVisible()
+                }
             } else {
                 this.startingDeckCode = null
                 this.currentDeckCode = null
                 this.myGraveCode = null
                 this.oppoGraveCode = null
                 this.cardsInHandNum = null
+
+                this.hideWindow()
             }
         },
         processJsonData(data) {
