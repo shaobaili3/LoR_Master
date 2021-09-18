@@ -70,7 +70,14 @@ export default {
         }
     },
     emits: {
-        search: null,
+        search: ({ region, name, tag }) => {
+            if (region && name && tag) {
+                return true
+            } else {
+                console.warn('Invalid submit event payload!')
+                return false
+            }
+        },
     },
     computed: {
         filteredPlayers() {
