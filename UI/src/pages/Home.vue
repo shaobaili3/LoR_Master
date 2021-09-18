@@ -34,7 +34,6 @@
                 :matches="localMatches"
             >
             </player-matches>
-
         </div>
 
         <div class="main-content-container search" v-if="currentPage == PAGES.search">
@@ -875,6 +874,7 @@ export default {
         /* overflow: scroll; */
 
         transition: right 0.2s ease;
+        z-index: 6;
     }
 
     .deck-content-container.hidden {
