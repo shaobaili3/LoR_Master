@@ -42,6 +42,8 @@ class Player:
 
     def loadMatchsToFlask(self):
         self.historyFlask.history = []
+        if self.summary == {}:
+            return
         for deckCode in self.summary:
             match = {}
             match['time'] = self.summary[deckCode].time
@@ -54,6 +56,7 @@ class Player:
 
     def inspectFlask(self, name, tag, maxNum=cs.MAX_NUM_DETAILS):
         self.matchesJson = []
+        self.summary = {}
         puuid = self.riot.getPlayerPUUID(name, tag)
         if puuid is None:
             print(
