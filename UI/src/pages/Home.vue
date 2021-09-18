@@ -6,7 +6,7 @@
                 selected: currentPage == PAGES.my,
                 disabled: !hasLocalInfo
             }" 
-            @click="hasLocalInfo && setCurrentPage(PAGES.my)">
+            @click="(hasLocalInfo && setCurrentPage(PAGES.my)) + requestLocalHistory()">
             <span><i class="fas fa-user-circle"></i></span>
             <div class="tooltiptext right" v-if="!hasLocalInfo">Please log in LoR</div>
         </button>
@@ -61,6 +61,10 @@
                             @keyup.enter="searchHistory"
                             @keyup.up="autoCompleteIndexMinus"
                             @keyup.down="autoCompleteIndexPlus"
+
+                            @blur="resetInputNameList"
+                            @focus="searchName"
+
                             v-model="searchText"
                             placeholder="eg.Storm#5961"
                             />
@@ -242,6 +246,7 @@ export default {
             lorRunning: null,
             localMatches: [],
             localPlayerInfo: {}, // playerId, server, language, rank, lp
+            localHistoryLoading: false,
         }
     },
     computed: {
@@ -594,6 +599,9 @@ export default {
 
         requestLocalHistory() {
 
+            console.log("Request Local History")
+            this.localHistoryLoading = true
+
             //Check if there are any previous pending requests
             if (typeof localCancleToken != typeof undefined) {
                 localCancleToken.cancel("Operation canceled due to new request.")
@@ -628,6 +636,8 @@ export default {
 
             console.log("Process Local History!")
 
+            this.localHistoryLoading = false
+
             this.localMatches = []
             this.localPlayerInfo.rank = null
             this.localPlayerInfo.lp = null
@@ -636,7 +646,7 @@ export default {
 
                 if (!data[key]) continue // Skip if null history
 
-                var isFirstPlayer = data[key].player_info[0].name.toLowerCase() == this.playerName.toLowerCase()
+                var isFirstPlayer = data[key].player_info[0].name.toLowerCase() == this.localPlayerInfo.name.toLowerCase()
                 
                 var player, playerGame, opponent, opponentGame;
                 var info = data[key].info
