@@ -611,7 +611,6 @@ export default {
         },
 
         requestLocalHistory() {
-
             
             this.localHistoryLoading = true
 
@@ -627,9 +626,9 @@ export default {
             var name = this.localPlayerInfo.name
             var tag = this.localPlayerInfo.tag
 
-            console.log("Request Local History", `${API_BASE}/search/${server}/${name}/${tag}`)
+            if (!(server && name && tag)) this.requestLocalHistory()
 
-            if (!(server && name && tag)) return
+            console.log("Request Local History", `${API_BASE}/search/${server}/${name}/${tag}`)
 
             axios.get(`${API_BASE}/search/${server}/${name}/${tag}`,
                     { cancelToken: localCancleToken.token }) // Pass the cancel token
@@ -646,7 +645,6 @@ export default {
                     } else 
                     {
                         console.log('error', e)
-                        this.requestLocalHistory()
                     }
                     
                 })
