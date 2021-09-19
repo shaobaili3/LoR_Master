@@ -1,7 +1,9 @@
 import psutil
 import constants as c
 import sentry_sdk
+import locale
 
+sysLanguage = locale.getdefaultlocale().get(0)
 
 def getLogPath():
     logFilePath = None
@@ -40,7 +42,7 @@ def readLog(setting):
                             setting.playerId = playerId
                             sentry_sdk.set_user(
                                 {"id": playerId, "username": playerId  + ' ' + setting.riotServer, "ip_address": "{{auto}}"})
-                            sentry_sdk.set_context("info", {"version": c.VERSION_NUM, "language": setting.language})
+                            sentry_sdk.set_context("info", {"version": c.VERSION_NUM, "riotLanguage": setting.language, "sysLanguage": sysLanguage})
                             sentry_sdk.capture_message(
                                 playerId + ' ' + setting.riotServer)
         except IOError:
