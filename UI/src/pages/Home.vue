@@ -334,6 +334,7 @@ export default {
             }
         },
         searchHistoryAutoComplete(index) {
+            // console.log("searchHistoryAutoComplete")
             this.autoCompleteIndex = index
             this.searchHistory()
         },
@@ -833,8 +834,6 @@ export default {
         position: relative;
     }
 
-    
-
     .search-bar {
         width: 100%;
         height: 50px;
@@ -860,7 +859,8 @@ export default {
     }
 
     .search-bar-auto-complete {
-        display: none;
+        opacity: 0;
+        visibility: hidden;
 
         position: absolute;
         top: 50px;
@@ -873,10 +873,15 @@ export default {
         overflow: hidden;
 
         z-index: 2;
+
+        transition: visibility 0s linear 300ms, opacity 300ms;
     }
 
     .search-bar-input-container:focus-within + .search-bar-auto-complete {
-        display: block;
+        opacity: 1;
+        visibility: visible;
+
+        transition: visibility 0s linear 0s, opacity 300ms;
     }
 
     .auto-complete-item {
