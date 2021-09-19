@@ -1,9 +1,9 @@
-from Models.network import Network
 import Models.network
 import requests
 import json
 import os
 import constants
+
 
 class Riot:
     def __init__(self, network):
@@ -35,23 +35,19 @@ class Riot:
         try:
             os.makedirs('data', exist_ok=True)
             with open('data/matchDetails.json', 'w+', encoding='utf-8') as fp:
-                json.dump(self.matchDetails, fp, ensure_ascii=False, indent= 2)
+                json.dump(self.matchDetails, fp, ensure_ascii=False, indent=2)
             with open('data/riotIds.json', 'w+', encoding='utf-8') as fp:
-                json.dump(self.riotIds, fp, ensure_ascii=False, indent= 2)
+                json.dump(self.riotIds, fp, ensure_ascii=False, indent=2)
             with open('data/playerNames.json', 'w+', encoding='utf-8') as fp:
-                json.dump(self.playerNames, fp, ensure_ascii=False, indent= 2)
+                json.dump(self.playerNames, fp, ensure_ascii=False, indent=2)
         except Exception as e:
             print('save cache error: ', e)
             return
 
-    # Should not use cache, because you cannot identify capital letters of playernames
     def getPlayerPUUID(self, name, tag):
-
         # Developer keys expose in cache. 'lower()' make sure link will not change by case sensitivity.
         puuidLink = self.network.getPUUID(name.lower(), tag.lower())
-
         masterId = puuidLink
-
         if masterId in self.riotIds:
             return self.riotIds[masterId]
         print(puuidLink)
@@ -59,19 +55,18 @@ class Riot:
             puuidRequest = self.session.get(puuidLink)
         except requests.exceptions.RequestException as e:
             print(puuidLink)
-            print(e)
-            print('无法连接getPlayerPUUID服务器')
+            print('getPlayerPUUID error": ', e)
             return None
         idDetails = puuidRequest.json()
         header = puuidRequest.headers
         if not puuidRequest.ok:
-            print(puuidLink)
+            print('getPlayerPUUID server error:', puuidLink)
             print(puuidRequest.headers)
             print(puuidRequest.status_code)
-            print('userId -> PUUID服务器错误')
             print(idDetails)
             if 'Retry-After' in header:
-                print('getPlayerPUUID服务器正忙', header['Retry-After'], '秒')
+                print('getPlayerPUUID server busy',
+                      header['Retry-After'], 'seconds')
                 Models.network.switchAPI()
             return None
         else:
@@ -83,7 +78,6 @@ class Riot:
                 self.playerNames[puuid] = gameName, tagLine
                 self.save()
             return puuid
-
 
     def saveMatchIdsInCache(self, puuid, matchIds):
         playName = self.getPlayerName(puuid)
@@ -105,35 +99,33 @@ class Riot:
         uniqueName = playName[0] + playName[1] + server
         return self.matches[uniqueName]
 
-
-    def getMatches(self, puuid, saveCache = True):
+    def getMatches(self, puuid, saveCache=True):
         matchLink = self.network.getMatchesLink(puuid)
         try:
             matchRequest = self.session.get(matchLink)
         except requests.exceptions.RequestException as e:
             print(matchLink)
-            print(e)
-            print('无法连接比赛ID服务器')
+            print('getMatches error: ', e)
             return None
         matchIds = matchRequest.json()
         header = matchRequest.headers
         if not matchRequest.ok:
+            print('getmatches server error:', matchLink)
             print(matchLink)
             print(matchRequest.headers)
             print(matchRequest.status_code)
-            print('getmatches server error')
             print(matchIds)
             if 'Retry-After' in header:
-                print('getmatches server busy', header['Retry-After'], '秒')
+                print('getmatches server busy',
+                      header['Retry-After'], 'seconds')
                 Models.network.switchAPI()
             return None
         if saveCache:
             self.saveMatchIdsInCache(puuid, matchIds)
             return self.getMatchesInCache(puuid)
         return matchIds
-        #   return matchIds
-            
-    def getDetail(self, matchId, matchIndex = 1, max_num = constants.MAX_NUM_DETAILS):
+
+    def getDetail(self, matchId, matchIndex=1, max_num=constants.MAX_NUM_DETAILS):
         # If matchIndex bigger than MAX, only pull data from cache
         if matchId in self.matchDetails or matchIndex > max_num - 1:
             return self.matchDetails.get(matchId)
@@ -143,7 +135,7 @@ class Riot:
         except requests.exceptions.RequestException as e:
             print(detailsLink)
             print(e)
-            print('无法连接比赛内容服务器')
+            print('getDetail error', e)
             return None
         detail = detailsRequest.json()
         header = detailsRequest.headers
@@ -152,13 +144,12 @@ class Riot:
                   header['X-Method-Rate-Limit-Count'])
             print('X-App-Rate-Limit', header['X-App-Rate-Limit'])
         if not detailsRequest.ok:
-            print(detailsLink)
+            print('getDetail server error:', detailsLink)
             print(header)
             print(detailsRequest.status_code)
             print(detail)
-            print('比赛内容服务器错误')
             if 'Retry-After' in header:
-                print('服务器正忙,请等待', header['Retry-After'], '秒')
+                print('getDetail sever busy', header['Retry-After'], 'seconds')
                 Models.network.switchAPI()
                 return header['Retry-After']
             return None
@@ -166,10 +157,9 @@ class Riot:
             self.matchDetails[matchId] = detail
             self.save()
         if detail is None:
-            print('比赛内容服务返回空')
+            print('match details empty')
         return detail
 
-    # 在main中使用和inspector中使用
     def getPlayerName(self, puuid):
         if puuid in self.playerNames:
             return self.playerNames[puuid]
@@ -179,20 +169,17 @@ class Riot:
         except requests.exceptions.RequestException as e:
             print(nameLink)
             print(e)
-            print('无法连接puuid->userId服务器')
-            return '名字Unknow', 'unknow'
+            print('getPlayerName error')
+            return 'Error', 'Unknow'
         name = nameRequest.json()
         header = nameRequest.headers
-        #headers = nameRequest.headers
-        # print(headers)
         if not nameRequest.ok:
-            print(nameLink)
-            print(nameRequest.headers)
+            print('getPlayerName server error:', nameLink)
+            print(header)
             print(nameRequest.status_code)
             print(name)
-            print('puuid->userid服务器错误:')
             if 'Retry-After' in header:
-                print('服务器正忙,请等待', header['Retry-After'], '秒')
+                print('Riot server is busy', header['Retry-After'], 'second')
                 Models.network.switchAPI()
             return 'Unknow', str(puuid)[0:5]
         else:
