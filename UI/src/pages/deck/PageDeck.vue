@@ -330,7 +330,9 @@ export default {
             axios.get(`${API_BASE}/opInfo`)
                 .then((response) => {
                     var op = response.data
-                    this.oppoRank = op.rank + 1 // rank starts at 0
+                    if (op.rank !== "") {
+                        this.oppoRank = op.rank + 1
+                    }
                     this.oppoTag = op.tag
                     this.oppoName = op.name
                     this.oppoLp = op.lp
