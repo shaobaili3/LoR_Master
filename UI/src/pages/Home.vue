@@ -145,6 +145,7 @@ import Leaderboard from '../components/Leaderboard.vue'
 import PlayerMatches from '../components/PlayerMatches.vue'
 
 const requestDataWaitTime = 400 //ms
+const requestHistoryWaitTime = 100 //ms
 const requestStatusWaitTime = 1000 //ms
 const inputNameListLength = 10;
 
@@ -153,6 +154,7 @@ const API_BASE = `http://127.0.0.1:${portNum}`
 
 let cancelToken, localCancleToken
 var lastStatusRequestTime
+var requestLocalHistoryTimeout
 
 const regionNames = {
     'NA': 'americas',
@@ -418,7 +420,7 @@ export default {
                 this.playerName = player.name // Sync name so all caps are correct
                 opponentName = opponent.name
                 
-                if (opponentRank !== "") {
+                if (opponent.rank !== "") {
                     opponentRank = opponent.rank + 1 // rank starts from 0
                 } else {
                     opponentRank = "" // ranks can be empty
@@ -426,7 +428,6 @@ export default {
 
                 opponentLp = opponent.lp
                 opponentTag = opponent.tag
-
 
                 if (this.playerRank == null && player.rank !== "") { 
                     this.playerRank = player.rank + 1 // player.rank starts from 0
@@ -565,7 +566,15 @@ export default {
         requestHistoryData() {
 
             this.isLoading = true;
-            this.inputNameList = [];
+
+            console.log("Enters Request History Data")
+
+            if (this.localHistoryLoading) {
+                setTimeout(this.requestHistoryData, requestHistoryWaitTime);
+                return
+            }
+
+            console.log("Actually start request", `${API_BASE}/search/${regionNames[this.selectedRegion]}/${this.playerName}/${this.playerTag}`)
 
             //Check if there are any previous pending requests
             if (typeof cancelToken != typeof undefined) {
@@ -613,6 +622,12 @@ export default {
         requestLocalHistory() {
             
             this.localHistoryLoading = true
+
+            if (this.isLoading) {
+                if (requestLocalHistoryTimeout) clearTimeout(requestLocalHistoryTimeout)
+                requestLocalHistoryTimeout = setTimeout(this.requestLocalHistory, requestHistoryWaitTime);
+                return
+            }
 
             //Check if there are any previous pending requests
             if (typeof localCancleToken != typeof undefined) {
@@ -689,7 +704,7 @@ export default {
 
                 opponentName = opponent.name
                 
-                if (opponentRank !== "") {
+                if (opponent.rank !== "") {
                     opponentRank = opponent.rank + 1 // rank starts from 0
                 } else {
                     opponentRank = "" // ranks can be empty
