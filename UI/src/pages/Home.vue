@@ -420,12 +420,17 @@ export default {
                 this.playerName = player.name // Sync name so all caps are correct
                 opponentName = opponent.name
                 
-                opponentRank = opponent.rank + 1 // rank starts from 0
+                if (opponentRank != "") {
+                    opponentRank = opponent.rank + 1 // rank starts from 0
+                } else {
+                    opponentRank = "" // ranks can be empty
+                }
+
                 opponentLp = opponent.lp
                 opponentTag = opponent.tag
 
                 
-                if (!this.playerRank) this.playerRank = player.rank + 1 // player.rank starts from 0
+                if (!this.playerRank && player.rank != "") this.playerRank = player.rank + 1 // player.rank starts from 0
                 if (!this.playerLP) this.playerLP = player.lp
                 
                 deck = playerGame.deck_code
@@ -492,10 +497,15 @@ export default {
                     if (data.playerId != "") {
 
                         this.localPlayerInfo.playerId = data.playerId
-
                         var nameid = data.playerId.split('#')
                         this.localPlayerInfo.name = nameid[0]
                         this.localPlayerInfo.tag = nameid[1]
+
+                        if (this.localMatches.length <= 0) {
+                            // if the matches are still empty
+                            // updateLocalPlayer = true
+                        }
+
                     } else {
                         this.localPlayerInfo.playerId = null
                         this.localPlayerInfo.name = null
@@ -602,9 +612,7 @@ export default {
 
         requestLocalHistory() {
 
-            if (this.localHistoryLoading) return
-
-            console.log("Request Local History")
+            
             this.localHistoryLoading = true
 
             //Check if there are any previous pending requests
@@ -618,6 +626,8 @@ export default {
             var server = this.localPlayerInfo.server
             var name = this.localPlayerInfo.name
             var tag = this.localPlayerInfo.tag
+
+            console.log("Request Local History", `${API_BASE}/search/${server}/${name}/${tag}`)
 
             if (!(server && name && tag)) return
 
@@ -634,7 +644,11 @@ export default {
                     if (axios.isCancel(e)) {
                         console.log("Request cancelled");
                     } else 
-                    { console.log('error', e) }
+                    {
+                        console.log('error', e)
+                        this.requestLocalHistory()
+                    }
+                    
                 })
         },
         processLocalHistory(data) {
@@ -677,11 +691,19 @@ export default {
 
                 opponentName = opponent.name
                 
-                opponentRank = opponent.rank + 1 // rank starts from 0
+                if (opponentRank != "") {
+                    opponentRank = opponent.rank + 1 // rank starts from 0
+                } else {
+                    opponentRank = "" // ranks can be empty
+                }
+                
                 opponentLp = opponent.lp
                 opponentTag = opponent.tag
 
-                if (!this.localPlayerInfo.rank) this.localPlayerInfo.rank = player.rank + 1 // player.rank starts from 0
+                if (!this.localPlayerInfo.rank && player.rank != "") {
+                    this.localPlayerInfo.rank = player.rank + 1 // player.rank starts from 0
+                }
+                
                 if (!this.localPlayerInfo.lp) this.localPlayerInfo.lp = player.lp
                 
                 deck = playerGame.deck_code
