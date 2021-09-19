@@ -105,7 +105,7 @@ def history(server, name, tag):
         print('history: Riot API not suppport SEA')
         return jsonify([])
     settingInspect.riotServer = Server._value2member_map_[server]
-    playerInspect.inspectFlask(name, tag, 20)
+    playerInspect.inspectFlask(name, tag, 10)
     playerInspect.loadMatchsToFlask()
     return jsonify(playerInspect.historyFlask.__dict__['history'])
 
@@ -132,7 +132,7 @@ def get_names(server, playername):
 def search(name, tag, server):
     settingModel = Setting()
     settingModel.riotServer = Server._value2member_map_[server]
-    maxNum = 10
+    maxNum = constants.MAX_NUM_INSPECT
     if (name + '#' + tag).lower() == settingTrack.playerId.lower():
         maxNum = 20
     riotModel = Riot(Network(settingModel), cacheModel)

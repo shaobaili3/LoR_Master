@@ -84,7 +84,7 @@ const appReady = () => {
 // --- Tray ---
 let tray = null
 function initTray() {
-  tray = new Tray('./src/assets/logo.png')
+  tray = new Tray('./image.ico')
   const contextMenu = Menu.buildFromTemplate([
     // { label: 'Item1', type: 'radio' },
     // { label: 'Item2', type: 'radio' },

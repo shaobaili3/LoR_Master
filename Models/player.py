@@ -54,7 +54,7 @@ class Player:
             match['history'] = self.summary[deckCode].history
             self.historyFlask.history.append(match)
 
-    def inspectFlask(self, name, tag, maxNum=cs.MAX_NUM_DETAILS):
+    def inspectFlask(self, name, tag, maxNum=cs.MAX_NUM_ALL):
         self.matchesJson = []
         self.summary = {}
         puuid = self.riot.getPlayerPUUID(name, tag)

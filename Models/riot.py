@@ -94,7 +94,7 @@ class Riot:
             return self.getMatchesInCache(puuid)
         return matchIds
 
-    def getDetail(self, matchId, matchIndex=1, max_num=constants.MAX_NUM_DETAILS):
+    def getDetail(self, matchId, matchIndex=1, max_num=constants.MAX_NUM_ALL):
         # If matchIndex bigger than MAX, only pull data from cache
         if matchId in self.cache.matchDetails or matchIndex > max_num - 1:
             return self.cache.matchDetails.get(matchId)
