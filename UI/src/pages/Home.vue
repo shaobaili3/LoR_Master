@@ -10,7 +10,10 @@
             :disabled="!hasLocalInfo"
         >
             <span class="icon-default"><i class="fas fa-user-circle"></i></span>
-            <span class="icon-hover"><i class="fas fa-redo-alt fa-spin-fast" :class="{'pause': !localHistoryLoading}"></i></span>
+            <span class="icon-hover"><i class="fas fa-redo-alt fa-spin-fast"
+                v-if="localHistoryLoading || isLoading"></i></span>
+            <span class="icon-hover"><i class="fas fa-check" 
+                v-if="!localHistoryLoading && !isLoading"></i></span>
             <div class="tooltiptext right" v-if="!hasLocalInfo">Please log in LoR</div>
         </button>
         <button class="left-nav-btn" 
@@ -154,7 +157,7 @@ const API_BASE = `http://127.0.0.1:${portNum}`
 
 let cancelToken, localCancleToken
 var lastStatusRequestTime
-var requestLocalHistoryTimeout
+var requestLocalHistoryTimeout, requestHistoryTimeout, prevHistoryRequest
 
 const regionNames = {
     'NA': 'americas',
@@ -565,16 +568,20 @@ export default {
         },
         requestHistoryData() {
 
-            this.isLoading = true;
-
             console.log("Enters Request History Data")
 
             if (this.localHistoryLoading) {
-                setTimeout(this.requestHistoryData, requestHistoryWaitTime);
+                // Before start, wait until old local search resolves
+                if (requestHistoryTimeout) clearTimeout(requestHistoryTimeout)
+                requestHistoryTimeout = setTimeout(this.requestHistoryData, requestHistoryWaitTime);
                 return
             }
 
-            console.log("Actually start request", `${API_BASE}/search/${regionNames[this.selectedRegion]}/${this.playerName}/${this.playerTag}`)
+            var newRequest = `${API_BASE}/search/${regionNames[this.selectedRegion]}/${this.playerName}/${this.playerTag}`
+            if (prevHistoryRequest == newRequest && this.isLoading) {
+                // Don't refresh if the request is the same and ongoing
+                return
+            }
 
             //Check if there are any previous pending requests
             if (typeof cancelToken != typeof undefined) {
@@ -583,9 +590,13 @@ export default {
             
             //Save the cancel token for the current request
             cancelToken = axios.CancelToken.source()
-            
+
+            this.isLoading = true;
             this.playerRegion = regionNames[this.selectedRegion]
-            axios.get(`${API_BASE}/search/${regionNames[this.selectedRegion]}/${this.playerName}/${this.playerTag}`,
+
+            prevHistoryRequest = newRequest
+
+            axios.get( newRequest ,
                     { cancelToken: cancelToken.token }) // Pass the cancel token
                 .then((response) => {
                     this.isLoading = false;
@@ -600,8 +611,10 @@ export default {
                 .catch((e) => {
                     if (axios.isCancel(e)) {
                         console.log("Request cancelled");
-                    } else 
-                    { console.log('error', e) }
+                    } else { 
+                        console.log('error', e) 
+                        this.isLoading = false
+                    }
                 })
 
         },
@@ -620,12 +633,16 @@ export default {
         },
 
         requestLocalHistory() {
-            
-            this.localHistoryLoading = true
 
             if (this.isLoading) {
+                // Before starting everything check to see if there is already a search request
                 if (requestLocalHistoryTimeout) clearTimeout(requestLocalHistoryTimeout)
                 requestLocalHistoryTimeout = setTimeout(this.requestLocalHistory, requestHistoryWaitTime);
+                return
+            }
+            
+            if (this.localHistoryLoading) {
+                // Don't do anything if there is already a local search request
                 return
             }
 
@@ -644,10 +661,13 @@ export default {
             if (!(server && name && tag)) this.requestLocalHistory()
 
             console.log("Request Local History", `${API_BASE}/search/${server}/${name}/${tag}`)
+            this.localHistoryLoading = true
 
             axios.get(`${API_BASE}/search/${server}/${name}/${tag}`,
                     { cancelToken: localCancleToken.token }) // Pass the cancel token
                 .then((response) => {
+                    this.localHistoryLoading = false
+
                     if (response.data == "Error") {
                         console.log("Local History Search Error")
                     } else {
@@ -657,9 +677,9 @@ export default {
                 .catch((e) => {
                     if (axios.isCancel(e)) {
                         console.log("Request cancelled");
-                    } else 
-                    {
+                    } else {
                         console.log('error', e)
+                        this.localHistoryLoading = false
                     }
                     
                 })
@@ -667,8 +687,6 @@ export default {
         processLocalHistory(data) {
 
             console.log("Process Local History!")
-
-            this.localHistoryLoading = false
 
             this.localMatches = []
             this.localPlayerInfo.rank = null
