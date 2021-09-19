@@ -6,50 +6,19 @@ import constants
 
 
 class Riot:
-    def __init__(self, network):
+    def __init__(self, network, cache):
         self.network = network
-        self.loop = None
-        self.matchDetails = {}
-        self.riotIds = {}
-        self.playerNames = {}
-        self.matches = {}
-        self.loadJson()
+        self.cache = cache
+        self.cache.loadJson()
         self.session = requests.Session()
         return
-
-    def loadJson(self):
-        try:
-            with open('data/matchDetails.json', 'r', encoding='utf-8') as fp:
-                self.matchDetails = json.load(fp)
-            with open('data/riotIds.json', 'r', encoding='utf-8') as fp:
-                self.riotIds = json.load(fp)
-            with open('data/playerNames.json', 'r', encoding='utf-8') as fp:
-                self.playerNames = json.load(fp)
-            with open('data/matches.json', 'r', encoding='utf-8') as fp:
-                self.matches = json.load(fp)
-        except Exception as e:
-            print('loadJson error', e)
-            return
-
-    def save(self):
-        try:
-            os.makedirs('data', exist_ok=True)
-            with open('data/matchDetails.json', 'w+', encoding='utf-8') as fp:
-                json.dump(self.matchDetails, fp, ensure_ascii=False, indent=2)
-            with open('data/riotIds.json', 'w+', encoding='utf-8') as fp:
-                json.dump(self.riotIds, fp, ensure_ascii=False, indent=2)
-            with open('data/playerNames.json', 'w+', encoding='utf-8') as fp:
-                json.dump(self.playerNames, fp, ensure_ascii=False, indent=2)
-        except Exception as e:
-            print('save cache error: ', e)
-            return
 
     def getPlayerPUUID(self, name, tag):
         # Developer keys expose in cache. 'lower()' make sure link will not change by case sensitivity.
         puuidLink = self.network.getPUUID(name.lower(), tag.lower())
         masterId = puuidLink
-        if masterId in self.riotIds:
-            return self.riotIds[masterId]
+        if masterId in self.cache.riotIds:
+            return self.cache.riotIds[masterId]
         print(puuidLink)
         try:
             puuidRequest = self.session.get(puuidLink)
@@ -74,30 +43,30 @@ class Riot:
             gameName = idDetails.get('gameName')
             tagLine = idDetails.get('tagLine')
             if puuid is not None:
-                self.riotIds[masterId] = puuid
-                self.playerNames[puuid] = gameName, tagLine
-                self.save()
+                self.cache.riotIds[masterId] = puuid
+                self.cache.playerNames[puuid] = gameName, tagLine
+                self.cache.save()
             return puuid
 
     def saveMatchIdsInCache(self, puuid, matchIds):
         playName = self.getPlayerName(puuid)
         server = self.network.setting.riotServer
         uniqueName = playName[0] + playName[1] + server
-        matchIdsCache = self.matches.get(uniqueName)
+        matchIdsCache = self.cache.matches.get(uniqueName)
         if matchIdsCache is not None:
             new = matchIds + list(set(matchIdsCache) - set(matchIds))
-            self.matches[uniqueName] = new
+            self.cache.matches[uniqueName] = new
         else:
-            self.matches[uniqueName] = matchIds
+            self.cache.matches[uniqueName] = matchIds
         os.makedirs('data', exist_ok=True)
         with open('data/matches.json', 'w+', encoding='utf-8') as fp:
-            json.dump(self.matches, fp)
+            json.dump(self.cache.matches, fp)
 
     def getMatchesInCache(self, puuid):
         playName = self.getPlayerName(puuid)
         server = self.network.setting.riotServer
         uniqueName = playName[0] + playName[1] + server
-        return self.matches[uniqueName]
+        return self.cache.matches[uniqueName]
 
     def getMatches(self, puuid, saveCache=True):
         matchLink = self.network.getMatchesLink(puuid)
@@ -127,8 +96,8 @@ class Riot:
 
     def getDetail(self, matchId, matchIndex=1, max_num=constants.MAX_NUM_DETAILS):
         # If matchIndex bigger than MAX, only pull data from cache
-        if matchId in self.matchDetails or matchIndex > max_num - 1:
-            return self.matchDetails.get(matchId)
+        if matchId in self.cache.matchDetails or matchIndex > max_num - 1:
+            return self.cache.matchDetails.get(matchId)
         detailsLink = self.network.getDetailsLink(matchId)
         try:
             detailsRequest = self.session.get(detailsLink)
@@ -154,15 +123,15 @@ class Riot:
                 return header['Retry-After']
             return None
         else:
-            self.matchDetails[matchId] = detail
-            self.save()
+            self.cache.matchDetails[matchId] = detail
+            self.cache.save()
         if detail is None:
             print('match details empty')
         return detail
 
     def getPlayerName(self, puuid):
-        if puuid in self.playerNames:
-            return self.playerNames[puuid]
+        if puuid in self.cache.playerNames:
+            return self.cache.playerNames[puuid]
         nameLink = self.network.getNameLink(puuid)
         try:
             nameRequest = self.session.get(nameLink)
@@ -183,6 +152,6 @@ class Riot:
                 Models.network.switchAPI()
             return 'Unknow', str(puuid)[0:5]
         else:
-            self.playerNames[puuid] = name['gameName'], name['tagLine']
-            self.save()
+            self.cache.playerNames[puuid] = name['gameName'], name['tagLine']
+            self.cache.save()
         return name['gameName'], (name['tagLine'])

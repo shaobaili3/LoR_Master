@@ -1,5 +1,6 @@
 #!/usr/local/bin/python
 # -*- coding: utf-8 -*-
+import Models
 from Models.process import updateStatus
 import threading
 import time
@@ -10,6 +11,7 @@ from Models.riot import Riot
 from Models.network import Network
 from Models.player import Player
 from Models.setting import Server
+from Models.cache import Cache
 from Models import master
 import json
 from flask import Flask, jsonify
@@ -41,16 +43,17 @@ sentry_sdk.set_context("info", {
 
 master.startMasterWorker()
 leaderboardModel = Leaderboard()
+cacheModel = Cache()
 
 settingInspect = Setting()
 networkInspect = Network(settingInspect)
-riotInspect = Riot(networkInspect)
+riotInspect = Riot(networkInspect, cacheModel)
 playerInspect = Player(riotInspect, leaderboardModel)
 localInspect = Local(settingInspect)
 
 settingTrack = Setting()
 networkTrack = Network(settingTrack)
-riotTrack = Riot(networkTrack)
+riotTrack = Riot(networkInspect, cacheModel)
 playerTrack = Player(riotTrack, leaderboardModel)
 localTrack = Local(settingTrack)
 
@@ -127,15 +130,18 @@ def get_names(server, playername):
 
 @app.route("/search/<string:server>/<string:name>/<string:tag>", methods=['get'])
 def search(name, tag, server):
-    settingInspect.riotServer = Server._value2member_map_[server]
+    settingModel = Setting()
+    settingModel.riotServer = Server._value2member_map_[server]
     maxNum = 10
     if (name + '#' + tag).lower() == settingTrack.playerId.lower():
         maxNum = 20
-    playerInspect.inspectFlask(name, tag, maxNum)
+    riotModel = Riot(Network(settingModel), cacheModel)
+    playerModel = Player(riotModel, leaderboardModel)
+    playerModel.inspectFlask(name, tag, maxNum)
     inspection = {}
-    inspection['history'] = playerInspect.historyFlask.__dict__['history']
-    inspection['matches'] = playerInspect.matchesJson
-    return jsonify(playerInspect.matchesJson)
+    inspection['history'] = playerModel.historyFlask.__dict__['history']
+    inspection['matches'] = playerModel.matchesJson
+    return jsonify(playerModel.matchesJson)
 
 
 @app.route("/leaderboard/<string:server>", methods=['get'])
