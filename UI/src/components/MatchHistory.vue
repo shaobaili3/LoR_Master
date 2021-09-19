@@ -64,7 +64,10 @@ export default {
         },
         filteredBadges() {
             if (!this.badges) return null
-            return this.badges.filter(badge => !badge.includes("Constructed"))
+            return this.badges.filter((badge, pos, self) => {
+                // remove "Constructed" and duplicates
+                return !badge.includes("Constructed") && self.indexOf(badge) == pos
+                })
         }
     },
     methods: {

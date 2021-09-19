@@ -347,10 +347,10 @@ export default {
                 this.playerTag = splited[1]
 
                 this.searchText = this.playerName
-                this.resetInputFocus()
-
+                
                 // Perform the actual search
                 this.requestHistoryData()
+                this.resetInputFocus()
             } else {
                 // Use user input
                 splited = this.searchText.split("#")
@@ -833,6 +833,8 @@ export default {
         position: relative;
     }
 
+    
+
     .search-bar {
         width: 100%;
         height: 50px;
@@ -858,6 +860,8 @@ export default {
     }
 
     .search-bar-auto-complete {
+        display: none;
+
         position: absolute;
         top: 50px;
         left: 10px;
@@ -869,6 +873,10 @@ export default {
         overflow: hidden;
 
         z-index: 2;
+    }
+
+    .search-bar-input-container:focus-within + .search-bar-auto-complete {
+        display: block;
     }
 
     .auto-complete-item {
