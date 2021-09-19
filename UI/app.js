@@ -266,7 +266,17 @@ function newMainWindow() {
       nodeIntegrationInWorker: true,
     }
   })
-  mainWindow.loadURL(`file://${__dirname}/dist/index.html`)
+
+  const mainWindowUrl = require('url').format({
+    protocol: 'file',
+    slashes: true,
+    pathname: require('path').join(__dirname, 'dist', 'index.html')
+  })
+
+  console.log(mainWindowUrl)
+
+  // mainWindow.loadURL(`file://${__dirname}/dist/index.html`)
+  mainWindow.loadURL(mainWindowUrl)
   
   // mainWindow.setAlwaysOnTop(true, level = "pop-up-menu")
   mainWindow.on('closed', () => {

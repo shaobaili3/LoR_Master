@@ -1,5 +1,5 @@
 {
-  "name": "lor-master-tracker-ui",
+  "name": "lor-master-tracker",
   "productName": "LoR Master Tracker",
   "version": "0.9.8",
   "private": true,
@@ -11,7 +11,28 @@
     "lint": "vue-cli-service lint",
     "deploy": "deploy.sh",
     "start": "electron app.js",
-    "package": "electron-packager ./ LoRMasterTracker --out ./app --app-version ${npm_package_version} --overwrite --icon=image.ico"
+    "package": "electron-packager ./ LoRMasterTracker --out ./app --app-version %npm_package_version% --overwrite --icon=image.ico",
+    "build-installer": "electron-builder"
+  },
+  "build": {
+    "appId": "%npm_package_name%",
+    "directories": {
+      "output": "build"
+    },
+    "files": ["**/*", "dist/*"],
+    "win": {
+      "target": ["nsis"],
+      "icon": "image.ico"
+    },
+    "nsis": {
+      "installerIcon": "image.ico",
+      "uninstallerIcon": "image.ico",
+      "uninstallDisplayName": "%npm_package_productName%",
+      "license": "LICENSE",
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true
+    }
   },
   "dependencies": {
     "axios": "^0.21.1",
@@ -20,8 +41,7 @@
     "tasklist": "^4.0.1",
     "vue": "^3.0.0",
     "vue-router": "^4.0.3",
-    "vuex": "^4.0.0-rc.2",
-    "zeromq": "^6.0.0-beta.6"
+    "vuex": "^4.0.0-rc.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
@@ -32,7 +52,8 @@
     "electron": "^11.2.3",
     "electron-packager": "^15.2.0",
     "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^7.0.0-0"
+    "eslint-plugin-vue": "^7.0.0-0",
+    "electron-builder": "^22.11.7"
   },
   "eslintConfig": {
     "root": true,
