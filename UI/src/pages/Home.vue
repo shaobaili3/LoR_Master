@@ -539,8 +539,17 @@ export default {
                     if (axios.isCancel(e)) {
                         console.log("Request cancelled");
                     } else 
-                    { console.log('error', e) }
-                    this.requestStatusInfo()
+                    { 
+                        console.log('error', e)
+                        var elapsedTime = Date.now() - lastStatusRequestTime // ms
+                        if (requestStatusWaitTime > elapsedTime) {
+                            setTimeout(this.requestStatusInfo, requestStatusWaitTime - elapsedTime); 
+                        } else {
+                            this.requestStatusInfo()
+                        }
+                    }
+
+                    
                 })
         },
         requestNameData() {
