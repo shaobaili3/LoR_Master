@@ -65,7 +65,6 @@
                             @keyup.up="autoCompleteIndexMinus"
                             @keyup.down="autoCompleteIndexPlus"
 
-                            @blur="resetInputNameList"
                             @focus="searchName"
 
                             v-model="searchText"
@@ -385,9 +384,8 @@ export default {
             this.matches = []
             this.playerRank = null
             this.playerLP = null
-            // var totalWins = 0
-            // var totalLoss = 0
-            // var totalMatches = data.length
+
+            console.log("processHistoryData", data)
 
             for (var key in data) {
 
@@ -420,7 +418,7 @@ export default {
                 this.playerName = player.name // Sync name so all caps are correct
                 opponentName = opponent.name
                 
-                if (opponentRank != "") {
+                if (opponentRank !== "") {
                     opponentRank = opponent.rank + 1 // rank starts from 0
                 } else {
                     opponentRank = "" // ranks can be empty
@@ -429,8 +427,10 @@ export default {
                 opponentLp = opponent.lp
                 opponentTag = opponent.tag
 
-                
-                if (!this.playerRank && player.rank != "") this.playerRank = player.rank + 1 // player.rank starts from 0
+
+                if (this.playerRank == null && player.rank !== "") { 
+                    this.playerRank = player.rank + 1 // player.rank starts from 0
+                }
                 if (!this.playerLP) this.playerLP = player.lp
                 
                 deck = playerGame.deck_code
@@ -689,7 +689,7 @@ export default {
 
                 opponentName = opponent.name
                 
-                if (opponentRank != "") {
+                if (opponentRank !== "") {
                     opponentRank = opponent.rank + 1 // rank starts from 0
                 } else {
                     opponentRank = "" // ranks can be empty
@@ -698,7 +698,7 @@ export default {
                 opponentLp = opponent.lp
                 opponentTag = opponent.tag
 
-                if (!this.localPlayerInfo.rank && player.rank != "") {
+                if (!this.localPlayerInfo.rank && player.rank !== "") {
                     this.localPlayerInfo.rank = player.rank + 1 // player.rank starts from 0
                 }
                 
