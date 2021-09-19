@@ -1,5 +1,3 @@
-from Models.process import isSimulation
-# import locale
 import random
 
 API_KEY1 = '?api_key=' + 'RGAPI-693e34b0-9890-4591-a22d-36df07ccde53'  #ios product development
@@ -15,20 +13,6 @@ DETAILS_KEY = '.api.riotgames.com/lor/match/v1/matches/'
 NAME_KEY = '.api.riotgames.com/riot/account/v1/accounts/by-puuid/'
 PUUID_KEY = '.api.riotgames.com/riot/account/v1/accounts/by-riot-id/'
 
-# sysLanguage = locale.getdefaultlocale()[0]
-# print('System Language: ', sysLanguage)
-
-# if 'en' in sysLanguage:
-#     API_KEY = API_KEY0
-# elif 'zh' in sysLanguage:
-#     API_KEY = API_KEY3
-# else:
-#     API_KEY = API_KEY2
-
-# if isSimulation():
-#     API_KEY = API_KEY1
-
-#allKeys = {API_KEY1, API_KEY2, API_KEY3, API_KEY4, API_KEY5}
 allKeys = [API_KEY1, API_KEY2, API_KEY3, API_KEY4, API_KEY5]
 random.shuffle(allKeys)
 API_KEY = allKeys[0]
@@ -53,7 +37,7 @@ class Network():
         return
 
     def getHeadLink(self):
-        return 'https://' + self.setting.getServer()
+        return 'https://' + self.setting.riotServer
 
     def getMatchesLink(self, ppid):
         return self.getHeadLink() + MATCH_KEY + ppid + '/ids' + API_KEY

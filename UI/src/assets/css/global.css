@@ -1,4 +1,4 @@
-@import "all.css";
+@import "./fontawesome/all.min.css";
 
 * {
     margin: 0px;
@@ -12,8 +12,41 @@ div {
     user-select: none;
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
     display: none;
+} */
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar:vertical {
+    display: none;
+}
+
+::-webkit-scrollbar-corner, ::-webkit-resizer {
+    display: none;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: rgba(255,255,255, 0.1);
+}
+
+/* ::-webkit-scrollbar-track-piece:start {
+    background: white;
+} */
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgba(255,255,255, 0.2);
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255,255,255, 0.4);
+}
+::-webkit-scrollbar-thumb:active {
+    background: rgba(255,255,255, 0.9);
 }
 
 /* @import url('https://fonts.googleapis.com/css2?family=Kelly+Slab&display=swap'); */
@@ -42,6 +75,8 @@ div {
     --col-lighter-grey: rgb(124, 124, 124);
     --col-dark-grey: rgb(65, 65, 65);
     --col-darker-grey: rgb(42, 42, 45);
+
+    --col-dark-white: #acacac;
 }
 
 body {
@@ -70,4 +105,13 @@ body {
 
     align-items: center;
     color: white;
+}
+
+.fa-spin-fast {
+    -webkit-animation: fa-spin 0.5s infinite linear;
+    animation: fa-spin 0.5s infinite linear;
+}
+
+.fa-spin-fast.pause {
+    animation-play-state: paused;
 }

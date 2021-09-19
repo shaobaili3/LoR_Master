@@ -14,48 +14,31 @@ class Setting():
     def __init__(self):
         self.config = configparser.ConfigParser()
         self.port = c.PORT_IP
-        self.config.read('config.ini')
-        self.check()
-        self.writeConfig()
-        self.riotServer = self.config['network']['server']
-        self.autoOpenDeck = self.config['track'].getboolean('isAutoOpenDeck')
-        self.playerId = 'UNKNOW'
+        # self.config.read('config.ini')
+        # self.check()
+        # self.writeConfig()
+        self.riotServer = 'americas'
+        self.playerId = ''
+        self.language = c.DefaultLanguage
+        self.isLorRunning = False
         return
 
-    def check(self):
-        section = self.config.sections()
-        if 'network' not in section:
-            self.config.add_section('network')
-            self.config['network']['server'] = Server.NA.value
-        if 'track' not in section:
-            self.config.add_section('track')
-            self.config['track']['isAutoOpenDeck'] = 'false'
+    # def check(self):
+    #     section = self.config.sections()
+    #     if 'network' not in section:
+    #         self.config.add_section('network')
+    #         self.config['network']['server'] = Server.NA.value
 
-    def saveAutoOpenDeck(self):
-        if self.autoOpenDeck:
-            self.config['track']['isAutoOpenDeck'] = 'true'
-        else:
-            self.config['track']['isAutoOpenDeck'] = 'false'
-        self.writeConfig()
+    # def setServer(self, server):
+    #     self.riotServer = server.value
 
-    def setServer(self, server):
-        self.riotServer = server.value
+    # def saveServer(self):
+    #     self.config['network']['server'] = self.riotServer
+    #     self.check()
+    #     self.writeConfig()
 
-    def saveServer(self):
-        self.config['network']['server'] = self.riotServer
-        self.check()
-        self.writeConfig()
-
-    def writeConfig(self):
-        self.check()
-        with open('config.ini', 'w', encoding='utf-8') as configfile:
-            self.config.write(configfile)
-            configfile.close()
-
-    def getServer(self):
-        #return self.config['network']['server']
-        #return self.config.get('network', 'server')
-        return self.riotServer
-
-    def getPort(self):
-        return self.port
+    # def writeConfig(self):
+    #     self.check()
+    #     with open('config.ini', 'w', encoding='utf-8') as configfile:
+    #         self.config.write(configfile)
+    #         configfile.close()

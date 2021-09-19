@@ -14,13 +14,18 @@
 
 LoR Master Tracker is a open source deck tracker and history inspector for League of Runeterra.
 
-## [Download](https://github.com/shaobaili3/LoR_Master/releases/download/v0.9.8.1-beta/LoRMasterTracker-v0.9.8.1-beta.exe)
+## [Download](https://github.com/shaobaili3/LoR_Master/releases/download/v0.9.9-beta/LoRMasterTracker-v0.9.9-beta.exe)
 
 * Requirements: Windows 7 or higher
-* [Click here to download](https://github.com/shaobaili3/LoR_Master/releases/download/v0.9.8.1-beta/LoRMasterTracker-v0.9.8.1-beta.exe)
+* [Click here to download](https://github.com/shaobaili3/LoR_Master/releases/download/v0.9.9-beta/LoRMasterTracker-v0.9.9-beta.exe)
 * [Changelogs](https://github.com/shaobaili3/lor_master/releases)
 
 ## Features
+
+* **Player Profile**
+
+    Player Profile displays all your match history with analytical data.
+![n](Preview/profile.png)
 
 * **Player Inspector**
 
@@ -37,7 +42,7 @@ LoR Master Tracker is a open source deck tracker and history inspector for Leagu
 
 * **Master Leaderboard**
 
-    Real-time multi-region Master Leaderboard is powered by open-source [LMT Crawler](https://github.com/LoR-Master-Tracker/LoR-Player-Crawler). You can inspect master players via clicking player names.
+    Master Leaderboard is powered by open-source [LMT Crawler](https://github.com/LoR-Master-Tracker/LoR-Player-Crawler). You can inspect master players via clicking player names.
 ![c](Preview/leaderboard.png)
 
 * **Deck Code Viewer(Coming soon)**

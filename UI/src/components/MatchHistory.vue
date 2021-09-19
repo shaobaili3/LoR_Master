@@ -1,12 +1,13 @@
 <template>
     <div class="match" :class="{won: won, loss: !won}">
         <div class="row opponent">
-            <p class="match-info-title">
-                vs {{opponentName}}
+            <p @click="search" class="match-info-title">
+                vs <span class="name">{{opponentName}}</span>
             </p>
+            <div class="opponent-info" v-if="opponentRank"><i class="fas fa-trophy"></i> {{opponentRank}}</div>
             <div class="history-info">{{time}}</div>
             <div class="history-info">{{rounds}} rounds</div>
-            <div class="match-info-badge" v-for="(badge, index) in badges" :key="index" >
+            <div class="match-info-badge" v-for="(badge, index) in filteredBadges" :key="index" >
                 <span v-if="badge=='recent' || badge=='frequent'" class="match-info-badge-icon fa" :class="{'fa-clock': badge=='recent', 'fa-angle-double-up': badge=='frequent'}"></span>
                 {{badge}}</div>
         </div>
@@ -35,16 +36,17 @@ export default {
         DeckPreview,
     },
     mounted() {
-        this.subscribeData();
     },
     data() {
         return {
             visibleDeck: 0
         }
     },
-    emits: ['showDeck'],
+    emits: ['showDeck', 'search'],
     props: {
         opponentName: String,
+        opponentRank: String,
+        opponentLp: String,
         rounds: Number,
         deck: String,
         opponentDeck: String,
@@ -60,6 +62,14 @@ export default {
             // return parseFloat(this.winrate) > 0.5;
             return this.win
         },
+        filteredBadges() {
+            if (!this.badges) return null
+            var filtered = this.badges.map(b => b.trim()).filter((badge, pos, self) => {
+                // remove "Constructed" and duplicates
+                return !badge.includes("Constructed") && self.indexOf(badge) == pos
+                })
+            return filtered
+        }
     },
     methods: {
         showDeck(deck) {
@@ -68,6 +78,10 @@ export default {
             // console.log(window)
             // console.log(window.testData)
         },
+        search() {
+            // console.log("Match History Search")
+            this.$emit('search')
+        },
         showOpponentDeck() {
             // console.log("Show Oppo Deck")
             if (this.visibleDeck == 2)
@@ -75,21 +89,6 @@ export default {
             else
                 this.visibleDeck = 2
         },
-        subscribeData() {
-            // console.log(window)
-        },
-        isWonGame(index) {
-            var i = index - 1
-            // console.log(this.history)
-            if (i >= this.history.length) return false
-            return (this.history[i] == 'W')
-        },
-        isPlayedGame(index) {
-            var i = index - 1
-            // console.log(this.history)
-            if (i >= this.history.length) return false
-            return (this.history[i] == 'W' || this.history[i] == 'L')
-        }
     }
 }
 </script>
@@ -107,6 +106,7 @@ export default {
         padding: 5px;
         border-radius: 6px;
         
+        overflow: hidden;
 
         border-left: 3px solid var(--col-background);
         border-right: 3px solid var(--col-background);
@@ -163,7 +163,18 @@ export default {
 
     .history-info:hover {
         color: rgba(255, 255, 255, 1);
-        
+    }
+
+    .opponent-info {
+        font-size: 0.8em;
+        color: rgba(255, 255, 255, 1);
+        padding: 8px 6px 8px 0px;
+        cursor: default;
+        white-space: nowrap;
+    }
+
+    .opponent-info i {
+        font-size: 0.85em;
     }
     
     .row {
@@ -271,7 +282,11 @@ export default {
         /* border-bottom: 2px solid transparent; */
         border-radius: 0px;
 
-        cursor: default;
+        cursor: pointer;
+    }
+
+    .match-info-title:hover .name {
+        text-decoration: underline;
     }
 
     .btn:hover {

@@ -1,25 +1,25 @@
 const remote = require("electron").remote
-const zmq = require("zeromq")
+// const zmq = require("zeromq")
 
 const shell = require('electron').shell
 
-// Sub
-const sock = new zmq.Subscriber
+// // Sub
+// const sock = new zmq.Subscriber
 
-sock.connect("tcp://127.0.0.1:9622")
-sock.subscribe("LoR")
-console.log("Subscriber connected to port 9622")
+// sock.connect("tcp://127.0.0.1:9622")
+// sock.subscribe("LoR")
+// console.log("Subscriber connected to port 9622")
 
-window.sock = sock
+// window.sock = sock
 
-// Request
-const request = new zmq.Request
+// // Request
+// const request = new zmq.Request
 
-request.connect("tcp://127.0.0.1:9621")
-console.log("Request connected to port 9621")
-window.request = request
+// request.connect("tcp://127.0.0.1:9621")
+// console.log("Request connected to port 9621")
+// window.request = request
 
-var win = remote.getCurrentWindow()
+
 
 // async function runClient() {
 //     const sock = new zmq.Subscriber
@@ -38,9 +38,16 @@ var win = remote.getCurrentWindow()
 
 // runClient()
 
+var win = remote.getCurrentWindow()
+
 window.closeWindow = function() {
     // console.log("Close window")
-    win.close()
+    win.hide()
+    // win.close()
+}
+
+window.setSkipTaskbar = function(bool) {
+    win.setSkipTaskbar(bool)
 }
 
 window.toggleWindow = function() {
@@ -77,7 +84,7 @@ window.minWindow = function() {
     // Close Logic
     // win.close()
 
-    // Minimize to Tray
+    // Minimize to Taskbar
     win.minimize()
 
 	// remote.app.relaunch()

@@ -1,137 +1,60 @@
 from Models.setting import Server
-import aiohttp
-import asyncio
+import constants
+import requests
 from Models.network import API_KEY
 
-#to-do change this to a dict
-leaderboards = [None, None, None, None]
-LEADERBOARD_KEY = '.api.riotgames.com/lor/ranked/v1/leaderboards/'
 
+class Leaderboard():
+    def __init__(self):
+        self.leaderboards = {}
+        self.leaderboardDicts = {}
+        self.session = requests.Session()
+        self.updateAll()
 
-def updateLeaderboard():
-    if None in leaderboards:
-        updateAll()
-    if None in leaderboards:
-        updateAll()
+    def updateAll(self):
+        for server in list(Server):
+            self.updateLeaderboard(server.value)
 
-
-def updateAll():
-    global leaderboards
-    print('UpdateAll running')
-    # loop = self.asyncio.get_event_loop()
-    loop = asyncio.new_event_loop()
-    asyncio.set_event_loop(loop)
-    tasks = [
-        aioLeaderboard(server) for server in
-        [Server.NA.value, Server.EU.value, Server.ASIA.value, 'sea']
-    ]
-    boards = loop.run_until_complete(asyncio.gather(*tasks))
-    for index, board in enumerate(boards):
-        if board is not None:
-            leaderboards[index] = board
-
-
-def getboard(server):
-    board = None
-    if server == Server.NA.value:
-        ab = leaderboards[0]
-        if ab:
-            board = ab.get('players')
-    if server == Server.EU.value:
-        ab = leaderboards[1]
-        if ab:
-            board = ab.get('players')
-    elif server == Server.ASIA.value:
-        ab = leaderboards[2]
-        if ab:
-            board = ab.get('players')
-    elif server == 'sea':
-        ab = leaderboards[3]
-        if ab:
-            board = ab.get('players')
-    return board
-
-
-def checkRank(name, server):
-    rank = ''
-    lp = ''
-    if name is None:
-        print('checkRank: empty name')
-        return rank, lp
-
-    if None in leaderboards:
-        updateAll()
-
-    board = getboard(server)
-    if not board:
-        return rank, lp
-
-    for playerRank in board:
-        if playerRank['name'].lower() == name.lower():
-            rank = str(playerRank['rank'] + 1)
-            lp = str(int(playerRank['lp']))
-    return rank, lp
-
-
-def getRankInt(name, server):
-    rank, lp = checkRank(name, server)
-    if rank != '':
-        return int(rank)
-    else:
-        return 0
-
-
-def getRankStr(name, server):
-    rank, lp = checkRank(name, server)
-    if rank != '':
-        return '[Rank: ' + rank + ' lp: ' + lp + ']'
-    else:
-        return ''
-
-def getRankQuickStr(name, server):
-    rank, lp = checkRank(name, server)
-    if rank != '':
-        return rank + 'L' + lp
-    else:
-        return ''
-
-def filterMasterPlayer(names, server):
-    board = getboard(server)
-    if not board:
-        return names
-
-    masterNames = set()
-    masterFullNames = set()
-
-    for playerRank in board:
-        masterNames.add(playerRank['name'])
-
-    for name in names:
-        if name.split('#')[0] in masterNames:
-            masterFullNames.add(name)
-
-    return masterFullNames
-
-
-async def aioLeaderboard(server):
-    async with aiohttp.ClientSession() as session:
-        link = getLeaderboard(server)
+    def updateLeaderboard(self, server):
+        if server not in self.leaderboards:
+            self.leaderboards[server] = None
         try:
-            async with session.get(link) as resp:
-                # print(resp.status)
-                detail = await resp.json()
-        except aiohttp.ClientConnectionError as e:
-            print('aioLeaderboard Error: ', str(e))
-            return None
+            leaderboardRequest = self.session.get(
+                self.getLeaderboardLink(server))
+        except requests.exceptions.RequestException as e:
+            print('getPlayerName error: ', e)
+            return
+        leaderboard = leaderboardRequest.json().get('players')
+        headers = leaderboardRequest.headers
+        if not leaderboardRequest.ok:
+            print('getPlayerName error with status',
+                  leaderboardRequest.headers)
+            if 'Retry-After' in headers:
+                print('server is busy', headers['Retry-After'], 'seconds')
+            return
+        if leaderboard is not None:
+            self.leaderboards[server] = leaderboard
+            self.leaderboardDicts[server] = {board['name'].lower(
+            ): {'rank': board['rank'], 'lp': board['lp']} for board in leaderboard}
 
-    print('status:', resp.status)
-    if resp.ok:
-        return detail
-    else:
-        print('排行榜服务器错误: ', server, resp.status)
-        print(detail)
-        return None
+    def getLeaderboard(self, server):
+        if self.leaderboards[server] is None:
+            self.updateLeaderboard(server)
+        return self.leaderboards[server]
 
+    def checkRank(self, name, server):
+        rank = ''
+        lp = ''
+        if name is None:
+            print('checkRank: empty name')
+            return rank, lp
+        board = self.getLeaderboard(server)
+        if board is None:
+            return rank, lp
+        if name.lower() in self.leaderboardDicts.get(server):
+            info = self.leaderboardDicts[server][name.lower()]
+            return info['rank'], info['lp']
+        return rank, lp
 
-def getLeaderboard(server):
-    return 'https://' + server + LEADERBOARD_KEY + API_KEY
+    def getLeaderboardLink(self, server):
+        return 'https://' + server + constants.LEADERBOARD_KEY + API_KEY

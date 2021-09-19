@@ -1,13 +1,28 @@
 #!/usr/local/bin/python
 # -*- coding: utf-8 -*-
+import Models
+from Models.process import updateStatus
+import threading
+import time
+from Models.leaderboard import Leaderboard
+from Models.setting import Setting
+from Models.local import Local
+from Models.riot import Riot
+from Models.network import Network
+from Models.player import Player
+from Models.setting import Server
+from Models.cache import Cache
+from Models import master
+import json
+from flask import Flask, jsonify
+from sentry_sdk.integrations.flask import FlaskIntegration
+import sentry_sdk
 import io
 import sys
 import constants
-import urllib.request
+
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf8')
 print('utf8 string test: ', '卡尼能布恩', '째남모')
-import sentry_sdk
-from sentry_sdk.integrations.flask import FlaskIntegration
 
 sentry_sdk.init(
     "https://1138a186a6384b00a20a6196273c3009@o958702.ingest.sentry.io/5907306",
@@ -16,38 +31,31 @@ sentry_sdk.init(
     # We recommend adjusting this value in production.
     integrations=[FlaskIntegration()],
     traces_sample_rate=1.0,
-    send_default_pii=True
+    send_default_pii=True,
+    debug=True,
+    release=constants.VERSION_NUM
 )
 
-from os import error, name
-from flask import Flask, jsonify
-import json
-from Models import master
-from flask.json import tag
-from Models import player
-from Models.setting import Server
-from Models.player import Player
-from Models.network import Network
-from Models.riot import Riot
-from Models.local import Local
-from Models.setting import Setting
-from Models.leaderboard import checkRank, updateLeaderboard
-import Models.leaderboard
-import time
-import threading
-from Models.process import updateTrackServer
+sentry_sdk.set_context("info", {
+    "version": constants.VERSION_NUM
+})
+
+
+master.startMasterWorker()
+leaderboardModel = Leaderboard()
+cacheModel = Cache()
 
 settingInspect = Setting()
 networkInspect = Network(settingInspect)
-riotInspect = Riot(networkInspect)
-playerInspect = Player(riotInspect)
+riotInspect = Riot(networkInspect, cacheModel)
+playerInspect = Player(riotInspect, leaderboardModel)
 localInspect = Local(settingInspect)
 
 settingTrack = Setting()
 networkTrack = Network(settingTrack)
-riotTrack = Riot(networkTrack)
-playerTrack = Player(riotTrack)
-localTrack= Local(settingTrack)
+riotTrack = Riot(networkInspect, cacheModel)
+playerTrack = Player(riotTrack, leaderboardModel)
+localTrack = Local(settingTrack)
 
 
 class FlaskApp(Flask):
@@ -59,82 +67,95 @@ class FlaskApp(Flask):
     def processWork(self):
         def run_work():
             while True:
-                updateTrackServer(settingTrack)
-                time.sleep(2)
+                updateStatus(settingTrack)
+                time.sleep(3)
         work = threading.Thread(target=run_work)
+        work.daemon = True
         work.start()
 
     def leaderboardsWork(self):
         def run_work():
             while True:
-                updateLeaderboard()
+                leaderboardModel.updateAll()
                 time.sleep(600)
         work = threading.Thread(target=run_work)
+        work.daemon = True
         work.start()
+
 
 app = FlaskApp(__name__)
 
-@app.route("/process", methods = ['get'])
+
+@app.route("/process", methods=['get'])
 def process():
     process_info = {}
     process_info['server'] = settingTrack.riotServer
     process_info['port'] = settingTrack.port
     return jsonify(process_info)
 
-@app.route("/track", methods = ['get'])
+
+@app.route("/track", methods=['get'])
 def track():
-    settingTrack.setServer(Server._value2member_map_[settingTrack.riotServer])
     return jsonify(localTrack.updateStatusFlask())
 
-@app.route("/history/<string:server>/<string:name>/<string:tag>", methods = ['get'])
+
+@app.route("/history/<string:server>/<string:name>/<string:tag>", methods=['get'])
 def history(server, name, tag):
     if server == 'sea':
         print('history: Riot API not suppport SEA')
         return jsonify([])
-    settingInspect.setServer(Server._value2member_map_[server])
-    playerInspect.inspectFlask(name, tag)
+    settingInspect.riotServer = Server._value2member_map_[server]
+    playerInspect.inspectFlask(name, tag, 10)
     playerInspect.loadMatchsToFlask()
     return jsonify(playerInspect.historyFlask.__dict__['history'])
 
-@app.route("/name/<string:server>/<string:playername>", methods = ['get'])
+
+@app.route("/name/<string:server>/<string:playername>", methods=['get'])
 def get_names(server, playername):
-    settingInspect.setServer(Server._value2member_map_[server])
-    localInspect.updatePlayernames()
+    playernames = set()
+    try:
+        with open('data/' + server.lower() + '.json', 'r', encoding='utf-8') as fp:
+            names = json.load(fp)
+            for name in names.items():
+                playernames.add(name[0] + '#' + name[1])
+    except Exception as e:
+        print('updatePlayernames', e)
     playerList = set()
-    for name in localInspect.playernames:
+    for name in playernames:
         if name[0:len(playername)].lower() == playername.lower():
             playerList.add(name)
-
     returnList = jsonify(list(playerList))
     return returnList
 
-@app.route("/inspect/<string:server>/<string:name>/<string:tag>", methods = ['get'])
-def inspect(name, tag, server):
-    settingInspect.setServer(Server._value2member_map_[server])
-    playerInspect.inspectFlask(name, tag)
-    inspection = {} 
-    inspection['history'] = playerInspect.historyFlask.__dict__['history']
-    inspection['matches'] = playerInspect.matchesJson
-    return jsonify(inspection)
 
-
-@app.route("/search/<string:server>/<string:name>/<string:tag>", methods = ['get'])
+@app.route("/search/<string:server>/<string:name>/<string:tag>", methods=['get'])
 def search(name, tag, server):
-    settingInspect.setServer(Server._value2member_map_[server])
-    playerInspect.inspectFlask(name, tag)
-    inspection = {} 
-    inspection['history'] = playerInspect.historyFlask.__dict__['history']
-    inspection['matches'] = playerInspect.matchesJson
-    return jsonify(playerInspect.matchesJson)
+    settingModel = Setting()
+    settingModel.riotServer = Server._value2member_map_[server]
+    maxNum = constants.MAX_NUM_INSPECT
+    if (name + '#' + tag).lower() == settingTrack.playerId.lower():
+        maxNum = 20
+    riotModel = Riot(Network(settingModel), cacheModel)
+    playerModel = Player(riotModel, leaderboardModel)
+    playerModel.inspectFlask(name, tag, maxNum)
+    inspection = {}
+    inspection['history'] = playerModel.historyFlask.__dict__['history']
+    inspection['matches'] = playerModel.matchesJson
+    return jsonify(playerModel.matchesJson)
 
 
-@app.route("/leaderboard/<string:server>", methods = ['get'])
-def leaderboard(server):
+@app.route("/leaderboard/<string:server>", methods=['get'])
+def get_leaderboard(server):
     # refactor to leaderboard model
-    board = Models.leaderboard.getboard(server)
+    board = leaderboardModel.getLeaderboard(server)
+
     boardWithTag = []
     playlistDict = {}
-    try:        
+
+    if board is None:
+        return jsonify(boardWithTag)
+
+    try:
         with open('data/' + server + '.json', 'r', encoding='utf-8') as fp:
             playlistDict = json.load(fp)
     except Exception as e:
@@ -146,31 +167,48 @@ def leaderboard(server):
             player['tag'] = ''
         boardWithTag.append(player)
     return jsonify(boardWithTag)
-    
-@app.route("/version", methods = ['get'])
-def version():
-    import requests
-    try:
-        response = requests.get("https://api.github.com/repos/shaobaili3/LoR_Master/releases/latest")
-        githubJson = response.json()
-    except Exception as e:
-        return jsonify({})
 
+
+@app.route("/version", methods=['get'])
+def get_version():
+    import requests
     version = {}
     version['version'] = constants.VERSION_NUM
+    version['remoteVersion'] = constants.VERSION_NUM
+    try:
+        response = requests.get(
+            "https://api.github.com/repos/shaobaili3/LoR_Master/releases/latest")
+        githubJson = response.json()
+    except Exception as e:
+        print('get_version() error', e)
+        return jsonify(version)
     version['remoteVersion'] = githubJson['tag_name']
     version['downloadUrl'] = githubJson['assets'][0]['browser_download_url']
     version['github'] = githubJson
     return jsonify(version)
 
-@app.route("/opInfo", methods = ['get'])
+
+@app.route("/opInfo", methods=['get'])
 def opInfo():
     opInfo = {}
-    localTrack.updateTagByName(localTrack.positional_rectangles['OpponentName'])
+    localTrack.updateTagByName(
+        localTrack.positional_rectangles['OpponentName'])
     opInfo['name'] = localTrack.positional_rectangles['OpponentName']
     opInfo['tag'] = localTrack.opponentTag
-    opInfo['rank'], opInfo['lp'] = checkRank(opInfo['name'], settingTrack.riotServer)
+    opInfo['rank'], opInfo['lp'] = leaderboardModel.checkRank(
+        opInfo['name'], settingTrack.riotServer)
     return jsonify(opInfo)
 
-app.run(port=63312)
 
+@app.route("/status", methods=['get'])
+def get_status():
+    status = {}
+    status['playerId'] = settingTrack.playerId
+    status['port'] = settingTrack.port
+    status['server'] = settingTrack.riotServer
+    status['language'] = settingTrack.language
+    status['lorRunning'] = settingTrack.isLorRunning
+    return jsonify(status)
+
+
+app.run(port=63312, debug=True, use_reloader=False)

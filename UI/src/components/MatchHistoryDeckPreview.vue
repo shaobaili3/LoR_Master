@@ -1,18 +1,7 @@
 <template>
     <div class="row deck btn" :class="{won: won, loss: !won}">
-        <div class="region-icon icon faction" v-for="(faction, index) in getFactions" :key="index"
-        :style=" {backgroundImage: getRegionImgUrl(faction)}"></div>
-        <!-- <div class="region-icon icon faction" :style=" {backgroundImage: getRegionImgUrl(0)}"></div> -->
-        <!-- <div class="region-icon icon"></div> -->
-        <!-- <div class="region-icon icon">DE</div> -->
-        <div class="champion-icon icon champ" v-for="(champ, index) in getChamps" :key="index"
-            :style=" {backgroundImage: getChampionImgUrl(champ)}">
-            <!-- <img :src="getChampionImgUrl(champ)" alt=""> -->
-        </div>
-        <div class="extra-champ">{{extraChampString}}</div>
-        <!-- <div class="champion-icon icon">TF</div> -->
-        <!-- <div class="fa fa-ellipsis-h"></div> -->
-        <!-- <div class="icon cheveron fa fa-chevron-down"></div> -->
+        <deck-regions :deck="deck"></deck-regions>
+        <deck-champs :deck="deck"></deck-champs>
     </div>
 </template>
 
@@ -21,6 +10,8 @@
 // const { DeckEncoder } = require('runeterra')
 import DeckEncoder from '../modules/runeterra/DeckEncoder'
 import championCards from '../assets/data/champion.js'
+import DeckRegions from './DeckRegions.vue';
+import DeckChamps from './DeckChamps.vue';
 //https://painttist.github.io/lor-champ-icons/data/champion.js
 
 
@@ -39,7 +30,8 @@ const maxFactions = 3;
 
 export default {
     components: {
-
+        DeckRegions,
+        DeckChamps,
     },
     data() {
         return {
@@ -49,54 +41,31 @@ export default {
     }, 
     mounted() {
 
-        // console.log(images)
-        // console.log("MatchInfo Deck Preview Mounted");
-        // console.log(this.deck)
-        // var deck = DeckEncoder.decode(this.deck);
-        // console.log(deck)
-        
-        // console.log("DeckEncoder: ", DeckEncoder.decode(this.deck))
-
-        this.getChampsFactions()
     },
     props: {
         deck: String,
         won: Boolean,
     },
     computed: {
-        // factions() {
-        //     var deck = DeckEncoder.decode(this.deck);
-        //     var factionIDs = []
-        //     for (var i in deck) {
-        //         if (factionIDs.indexOf(deck[i].faction.id) == -1) {
-        //             factionIDs.push(deck[i].faction.id)
-        //             if (factionIDs.length >= maxFactionIDs) {
-        //                 return factionIDs;
-        //             }
-        //         }
-        //         // console.log(deck[i].faction.id)
-        //     }
-        //     // console.log(factionIDs)
-        //     return factionIDs
-        // },
         getChamps() {
-            return this.champs.slice(0, maxSlot - Math.min(this.factions.length, maxFactions))
+            var champs = this.getChampsFactions.champs
+            var factions = this.getChampsFactions.factions
+            return champs.slice(0, maxSlot - Math.min(factions.length, maxFactions))
         },
         getFactions() {
-            return this.factions.slice(0, maxFactions)
+            var factions = this.getChampsFactions.factions
+            return factions.slice(0, maxFactions)
         },
         extraChampString() {
-            // console.log("Champ length:", this.champs.length)
-            // console.log(this.champs)
-            var extra = (this.champs.length - (maxSlot - Math.min(this.factions.length, maxFactions)))
+            var champs = this.getChampsFactions.champs
+            var factions = this.getChampsFactions.factions
+            var extra = (champs.length - (maxSlot - Math.min(factions.length, maxFactions)))
             // console.log(extra)
             if (extra > 0)
                 return "+" + extra
             return ""
-        }
-    },
-    methods: {
-        
+        },
+
         getChampsFactions() {
             
             var deck = null
@@ -106,6 +75,8 @@ export default {
             
             // console.log(factionIDs)
             // return factionIDs
+
+            // console.log(deck)
 
             // var deck = DeckEncoder.decode(this.deck);
             var champs = []
@@ -127,9 +98,15 @@ export default {
                     }
                 }
             }
-            this.champs = champs
-            this.factions = factionIDs
+            
+            return {
+                champs: champs, 
+                factions: factionIDs
+            }
         },
+    },
+    methods: {
+        
         getChampionImgUrl(code) {
             // const champImageBaseUrl = 'https://raw.githubusercontent.com/painttist/lor-champ-icons/master/images/cards/cropped/';
             // const champImageBaseUrl = 'https://painttist.github.io/lor-champ-icons/images/cards/cropped/';
@@ -153,9 +130,6 @@ export default {
             // Local
 
             return "url(" + require('../assets/images/regions/' + regionID + ".svg") + ")"
-
-            
-            
         },
     }
 }
@@ -225,7 +199,6 @@ export default {
 
     .icon.champ {
         border-radius: 30px;
-
         border: 2px solid rgba(220, 220, 220, 1);
         /* box-shadow: -2px 2px 2px 0px rgba(43, 38, 27, 0.6) inset; */
     }
@@ -233,16 +206,6 @@ export default {
     .btn {
         /* box-shadow: 2px 2px 2px 0px rgba(43, 38, 27, 0.8); */
         /* border: 2px solid transparent; */
-    }
-
-    .btn:hover .icon.faction {
-        opacity: 1;
-        filter: brightness(0) invert(1) drop-shadow(1px 2px 1px rgba(0, 0, 0, 0.6));
-    }
-
-    .btn:hover .icon.champ {
-        border: 2px solid rgba(255, 255, 255, 1);
-        box-shadow: 1px 2px 5px -2px #000000;
     }
 
     .btn.won:hover {

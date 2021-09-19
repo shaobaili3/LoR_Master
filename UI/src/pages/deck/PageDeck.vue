@@ -107,6 +107,7 @@ import DeckDetailBase from '../../components/DeckDetailBase.vue'
 
 const requestDataWaitTime = 100; // ms
 const requestServerWaitTime = 3000; //ms
+const requestStatusWaitTime = 1000; //ms
 
 const portNum = "63312"
 const API_BASE = `http://127.0.0.1:${portNum}`
@@ -119,9 +120,17 @@ const TABS = {
     myg: 4,
 }
 
-var lastTrackTime, lastServerRequestTime;
+var lastTrackTime, lastServerRequestTime, lastStatusRequestTime;
 
 export default {
+    components: { 
+        BaseWindowControls,
+        MatchInfo,
+        MatchInfoDeckDetail,
+        DeckRegions,
+        DeckDetailBase,
+        // MatchInfoDeckPreview,
+    },
     mounted() {
         // console.log(JSON.stringify(this.matchInfos))
         // this.getMatchInfo()
@@ -130,8 +139,11 @@ export default {
         // this.requestData()
         this.infoType = "match"
 
+        // this.hideWindow()
+
         this.requestTrackInfo()
-        this.requestServerInfo()
+        // this.requestServerInfo()
+        this.requestStatusInfo()
     },
     data() {
         return {
@@ -156,11 +168,13 @@ export default {
             oppoRank: null,
             oppoTag: null,
             oppoLp: null,
+
+            lorRunning: false,
         }
     },
     computed: {
         isLoading() {
-            if (this.infoType == "deckCode" && this.deckCode != "") return false
+            // if (this.infoType == "deckCode" && this.deckCode != "") return false
             if (this.currentDeckCode || this.startingDeckCode) return false
             if (this.matchInfos.length > 0) return false
             return (this.oppoName == null || this.oppoName == "" || this.matchInfos.length == 0)
@@ -204,15 +218,12 @@ export default {
             return false
         }
     },
-    components: { 
-        BaseWindowControls,
-        MatchInfo,
-        MatchInfoDeckDetail,
-        DeckRegions,
-        DeckDetailBase,
-        // MatchInfoDeckPreview,
-    },
     methods: {
+        hideWindow() {
+            if (window.closeWindow) {
+                window.closeWindow()
+            }
+        },
         makeWindowVisible() {
             if (window.makeVisible) {
                 window.makeVisible()
@@ -243,14 +254,7 @@ export default {
                 this.processRawData(msg)
             }
         },
-        requestDataAgain() {
-            return new Promise(resolve => {
-                setTimeout(() => {
-                    resolve('Requesting new Data')
-                }, requestDataWaitTime);
-            })
-        },
-        async requestOpponentHistory() {
+        requestOpponentHistory() {
             // http://192.168.20.4:${portNum}/history/asia/J01/J01
 
             console.log("Request Opponent History for " + this.oppoName + "#" + this.oppoTag)
@@ -258,7 +262,7 @@ export default {
             axios.get(`${API_BASE}/history/${this.server}/${this.oppoName}/${this.oppoTag}`)
                 .then((response) => {
                     console.log("Opponent Data", response.data)
-                    this.processJsonData(response.data)
+                    this.processOpponentHistory(response.data)
                 })
                 .catch((e) => {
                     if (axios.isCancel(e)) {
@@ -267,44 +271,68 @@ export default {
                     { console.log('error', e) }
                 })
         },
-        async requestServerInfo() {
-            lastServerRequestTime = Date.now()
-            
-            axios.get(`${API_BASE}/process`)
-                .then((response) => {
-                    // console.log(response.data)
+        // requestServerInfo() {
+        //     lastServerRequestTime = Date.now()
+        //     axios.get(`${API_BASE}/process`)
+        //         .then((response) => {
+        //             // console.log(response.data)
 
-                    var elapsedTime = Date.now() - lastServerRequestTime // milli
-                    // console.log("Elapsed ", elapsedTime)
+        //             var elapsedTime = Date.now() - lastServerRequestTime // ms
+        //             // console.log("Elapsed ", elapsedTime)
                     
+        //             this.server = response.data.server
+
+        //             // console.log("Server", this.server)
+
+        //             if (requestServerWaitTime > elapsedTime) {
+        //                 setTimeout(this.requestServerInfo, requestServerWaitTime - elapsedTime); 
+        //             } else {
+        //                 this.requestServerInfo()
+        //             }
+                    
+        //         })
+        //         .catch((e) => {
+        //             if (axios.isCancel(e)) {
+        //                 console.log("Request cancelled");
+        //             } else 
+        //             { console.log('error', e) }
+        //             this.requestServerInfo()
+        //         })
+        // },
+        requestStatusInfo() {
+            // Keeps requesting status
+            lastStatusRequestTime = Date.now()
+            axios.get(`${API_BASE}/status`)
+                .then((response) => {
+                    var elapsedTime = Date.now() - lastStatusRequestTime // ms
                     this.server = response.data.server
 
                     // console.log("Server", this.server)
 
-                    if (requestServerWaitTime > elapsedTime) {
-                        setTimeout(this.requestServerInfo, requestServerWaitTime - elapsedTime); 
+                    if (requestStatusWaitTime > elapsedTime) {
+                        setTimeout(this.requestStatusInfo, requestStatusWaitTime - elapsedTime); 
                     } else {
-                        this.requestServerInfo()
+                        this.requestStatusInfo()
                     }
-                    
                 })
                 .catch((e) => {
                     if (axios.isCancel(e)) {
                         console.log("Request cancelled");
                     } else 
                     { console.log('error', e) }
-                    this.requestServerInfo()
+                    this.requestStatusInfo()
                 })
-            
         },
-        async requestOppoInfo() {
+        requestOppoInfo() {
             // Getting opponent rank, lp and tag
             // Once per opponent change
 
             axios.get(`${API_BASE}/opInfo`)
                 .then((response) => {
                     var op = response.data
-                    this.oppoRank = op.rank
+                    if (op.rank !== "") {
+                        this.oppoRank = op.rank + 1
+                    }
                     this.oppoTag = op.tag
                     this.oppoName = op.name
                     this.oppoLp = op.lp
@@ -318,7 +346,7 @@ export default {
                     { console.log('error', e) }
                 })
         },
-        async requestTrackInfo() {
+        requestTrackInfo() {
 
             lastTrackTime = Date.now()
             axios.get(`${API_BASE}/track`)
@@ -342,20 +370,19 @@ export default {
                         this.requestTrackInfo()
                     }
                 })
-
             
         },
         processTrackInfo(data) {
 
             if (data.positional_rectangles && data.positional_rectangles.OpponentName) {
                 // Check if there is opponent
-                
                 var oppoName = data.positional_rectangles.OpponentName
                 
                 if ((!this.oppoName) || (this.oppoName.toLowerCase() != oppoName.toLowerCase())) {
                     // If there is no oppoName set or there is a change in the name
                     this.oppoName = oppoName
                     this.requestOppoInfo()
+                    this.makeWindowVisible()
                 }
                 
             } else {
@@ -369,27 +396,26 @@ export default {
                 this.matchInfos = []
             }
             
-                
-
-
             if (data.deck_tracker) {
                 this.startingDeckCode = data.deck_tracker.deckCode
                 this.currentDeckCode = data.deck_tracker.currentDeckCode
                 this.oppoGraveCode = data.deck_tracker.opGraveyardCode
                 this.myGraveCode = data.deck_tracker.myPlayedCardsCode
                 this.cardsInHandNum = data.deck_tracker.cardsInHandNum
-                // if (data.deck_tracker.deckCode) {
-                //     this.makeWindowVisible()
-                // }
+                if (data.deck_tracker.deckCode) {
+                    this.makeWindowVisible()
+                }
             } else {
                 this.startingDeckCode = null
                 this.currentDeckCode = null
                 this.myGraveCode = null
                 this.oppoGraveCode = null
                 this.cardsInHandNum = null
+
+                this.hideWindow()
             }
         },
-        processJsonData(data) {
+        processOpponentHistory(data) {
 
             // Process New Data
             console.log("Process Json Data")
