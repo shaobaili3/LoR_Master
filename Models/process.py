@@ -3,7 +3,7 @@ import constants as c
 import sentry_sdk
 import locale
 
-sysLanguage = locale.getdefaultlocale().get(0)
+sysLanguage = locale.getdefaultlocale()[0]
 
 def getLogPath():
     logFilePath = None
