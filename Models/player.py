@@ -90,16 +90,13 @@ class Player:
             try:
                 # If match number bigger than MAX, getDetail will only ruturn data from cache
                 detail = self.riot.getDetail(matchId, matchNum, maxNum)
-                if str(detail).isdigit():
-                    print(
-                        'Riot server [' + Models.network.API_KEY[-4:] + '] busy ' + str(detail))
-                    continue
                 if detail is None:
                     continue
-                print('detail', detail)
                 gameMode = detail['info']['game_mode']
                 gameType = detail['info']['game_type']
                 startTime = detail['info']['game_start_time_utc']
+
+                print(matchId, gameMode, gameType)
 
                 if gameMode in cs.UNSUPPORTED_MODE:
                     continue
@@ -136,19 +133,15 @@ class Player:
                 self.addMatchToSummary(
                     myDetails['deck_code'], outcome, utility.toLocalTimeString(startTime, True))
                 deckCodes.append(myDetails['deck_code'])
-                settingServer = self.riot.network.setting.riotServer
                 rank = 0
-                gameTypeString = '[' + gameType + ']'
-                if gameType == '':
-                    gameTypeString = ''
-                print(fullName + ' ' + rank,
-                      gameTypeString + ' [' + gameMode + '] ' +
+                print(fullName, rank,
+                      gameType, gameMode,
                       utility.toLocalTimeString(startTime), outcome,
                       myDetails['deck_code'],
                       utility.getFactionString(myDetails["factions"]),
                       opponentDetail['deck_code'],
                       utility.getFactionString(opponentDetail["factions"]),
-                      str(totalTurn) + ' Order of Play: ' + str(myDetails['order_of_play']), matchNum)
+                      str(totalTurn) , ' Order of Play: ' , str(myDetails['order_of_play']), matchNum)
             except Exception as e:
                 print('Read MatchId Error match id: ', matchId, e)
                 continue

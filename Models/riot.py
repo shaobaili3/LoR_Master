@@ -16,9 +16,8 @@ class Riot:
     def getPlayerPUUID(self, name, tag):
         # Developer keys expose in cache. 'lower()' make sure link will not change by case sensitivity.
         puuidLink = self.network.getPUUID(name.lower(), tag.lower())
-        masterId = puuidLink
-        if masterId in self.cache.riotIds:
-            return self.cache.riotIds[masterId]
+        if puuidLink in self.cache.riotIds:
+            return self.cache.riotIds[puuidLink]
         print(puuidLink)
         try:
             puuidRequest = self.session.get(puuidLink)
@@ -39,11 +38,18 @@ class Riot:
                 Models.network.switchAPI()
             return None
         else:
+            # For some special account, playerId->puuid only return puuid without name and tag
             puuid = idDetails.get('puuid')
             gameName = idDetails.get('gameName')
             tagLine = idDetails.get('tagLine')
+            if gameName is None or tagLine is None:
+                gameName = name
+                tagLine = tag
+                # give up saving cache for this special case
+                print(gameName, '#' , tagLine, ': only return puuid without name and tag!!!!!!!!!!!!!!!!!!!!!!!!!!!')
+                return puuid
             if puuid is not None:
-                self.cache.riotIds[masterId] = puuid
+                self.cache.riotIds[puuidLink] = puuid
                 self.cache.playerNames[puuid] = gameName, tagLine
                 self.cache.save()
             return puuid
@@ -118,15 +124,15 @@ class Riot:
             print(detailsRequest.status_code)
             print(detail)
             if 'Retry-After' in header:
-                print('getDetail sever busy', header['Retry-After'], 'seconds')
+                print('getDetail server busy APIKEY: ', Models.network.API_KEY, header['Retry-After'], 'seconds')
                 Models.network.switchAPI()
-                return header['Retry-After']
+                return None
             return None
         else:
             self.cache.matchDetails[matchId] = detail
             self.cache.save()
         if detail is None:
-            print('match details empty')
+            print('match id:', matchId , 'details empty')
         return detail
 
     def getPlayerName(self, puuid):
