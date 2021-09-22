@@ -1,7 +1,7 @@
 {
   "name": "lor-master-tracker",
   "productName": "LoR Master Tracker",
-  "version": "0.9.8",
+  "version": "0.9.9",
   "private": true,
   "main": "app.js",
   "scripts": {
@@ -12,7 +12,8 @@
     "deploy": "deploy.sh",
     "start": "electron app.js",
     "package": "electron-packager ./ LoRMasterTracker --out ./app --app-version %npm_package_version% --overwrite --icon=image.ico",
-    "build-installer": "electron-builder"
+    "build-installer": "electron-builder",
+    "build-pack": "electron-builder --dir"
   },
   "build": {
     "appId": "%npm_package_name%",
@@ -20,6 +21,15 @@
       "output": "build"
     },
     "files": ["**/*", "dist/*"],
+    "extraFiles": [
+      {
+        "from": "./backend/",
+        "to": "backend/",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ],
     "win": {
       "target": ["nsis"],
       "icon": "image.ico"

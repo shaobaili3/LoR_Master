@@ -11,8 +11,8 @@ const closeWithoutTracker = false
 const headerHeight = 45 // Repeated in preload.js
 const defaultRatio = 2.3 // Repeated in preload.js
 
-const spawnService = false
-const spawnPython = true
+const spawnService = true
+const spawnPython = false
 
 // --- app entry points ---
 
