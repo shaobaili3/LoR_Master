@@ -1,6 +1,7 @@
 
 const electron = require('electron')
-const { app, Tray, Menu, MenuItem, protocol, globalShortcut } = require('electron')
+const { app, Tray, Menu, MenuItem, protocol, globalShortcut, dialog } = require('electron')
+const { autoUpdater } = require('electron-updater')
 // const app = electron.app
 const BrowserWindow = electron.BrowserWindow
 const path = require('path')
@@ -43,6 +44,10 @@ app.on('ready', () => {
     toggleMinDeckWindow()
   })
 
+  if (app.isPackaged) {
+    autoUpdater.checkForUpdatesAndNotify();
+  }
+
   appReady()
 })
 
@@ -79,7 +84,83 @@ const appReady = () => {
 
   console.log("Is Packaged?", app.isPackaged)
   console.log("Version: ", app.getVersion())
+  
+  
 }
+
+// --- Auto Updater --- 
+
+autoUpdater.logger = require('electron-log');
+autoUpdater.logger.transports.file.level = 'info';
+
+autoUpdater.on('checking-for-update', () => {
+  console.log("Checking for Update...")
+})
+
+autoUpdater.on('update-available', (info) => {
+  console.log("Update available")
+  console.log("Version", info.version)
+  console.log("Release Data", info.releaseDate)
+})
+
+autoUpdater.on('update-not-available', () => {
+  console.log('Update not available')
+})
+
+autoUpdater.on('download-progress', (progress) => {
+  console.log(`Progress ${Math.floor(progress.percent)}`)
+})
+
+autoUpdater.on('update-downloaded', (info) => {
+  console.log("Update downloaded")
+  autoUpdater.quitAndInstall(true)
+})
+
+autoUpdater.on('error', (err) => {
+  console.log(err)
+})
+
+// Old version
+// const autoUpdateServer = 'https://lo-r-master-tracker-deploy.vercel.app'
+// const auoUpdateUrl = `${autoUpdateServer}/update/${process.platform}/${app.getVersion()}`
+const checkUpdateInterval = 5000
+
+function checkForUpdate() {
+  console.log("Check for update")
+  autoUpdater.checkForUpdates()
+}
+
+function setUpAutoUpdate() {
+
+
+
+  // autoUpdater.setFeedURL({ url: auoUpdateUrl })
+
+  // autoUpdater.on('update-downloaded', (event, releaseNotes, releaseName) => {
+  //   const dialogOpts = {
+  //     type: 'info',
+  //     buttons: ['Restart', 'Later'],
+  //     title: 'Application Update',
+  //     message: process.platform === 'win32' ? releaseNotes : releaseName,
+  //     detail: 'A new version has been downloaded. Restart the application to apply the updates.'
+  //   }
+
+  //   dialog.showMessageBox(dialogOpts).then((returnValue) => {
+  //     if (returnValue.response === 0) autoUpdater.quitAndInstall()
+  //   })
+  // })
+  // autoUpdater.on('error', message => {
+  //   console.error('There was a problem updating the application')
+  //   console.error(message)
+  // })
+
+  // setInterval(checkForUpdate, checkUpdateInterval)
+
+  // checkForUpdate()
+
+}
+
+
 
 // --- Tray ---
 let tray = null

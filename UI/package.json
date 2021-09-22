@@ -1,11 +1,16 @@
 {
   "name": "lor-master-tracker",
   "productName": "LoR Master Tracker",
-  "version": "0.9.9",
+  "version": "0.9.11",
   "private": true,
   "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shaobaili3/LoR_Master"
+  },
+
   "scripts": {
-    "dev": "vue-cli-service build && electron app.js",
+    "dev": "vue-cli-service build && electron --inspect=5858 app.js",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
@@ -13,14 +18,18 @@
     "start": "electron app.js",
     "package": "electron-packager ./ LoRMasterTracker --out ./app --app-version %npm_package_version% --overwrite --icon=image.ico",
     "build-installer": "electron-builder",
-    "build-pack": "electron-builder --dir"
+    "build-pack": "electron-builder --dir",
+    "build-pub": "electron-builder -p always"
   },
   "build": {
-    "appId": "%npm_package_name%",
+    "appId": "%npm_package_name%np",
     "directories": {
       "output": "build"
     },
-    "files": ["**/*", "dist/*"],
+    "files": [
+      "**/*",
+      "dist/*"
+    ],
     "extraFiles": [
       {
         "from": "./backend/",
@@ -31,8 +40,15 @@
       }
     ],
     "win": {
-      "target": ["nsis"],
-      "icon": "image.ico"
+      "target": [
+        "nsis"
+      ],
+      "icon": "image.ico",
+      "publish": [{
+        "provider": "github",
+        "owner": "shaobaili3",
+        "repo": "LoR_Master"
+      }]
     },
     "nsis": {
       "installerIcon": "image.ico",
@@ -47,6 +63,8 @@
   "dependencies": {
     "axios": "^0.21.1",
     "core-js": "^3.6.5",
+    "electron-log": "^4.4.1",
+    "electron-updater": "^4.3.9",
     "runeterra": "^2.0.0",
     "tasklist": "^4.0.1",
     "vue": "^3.0.0",
