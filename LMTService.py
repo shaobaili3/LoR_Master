@@ -182,8 +182,8 @@ def get_version():
     except Exception as e:
         print('get_version() error', e)
         return jsonify(version)
-    version['remoteVersion'] = githubJson['tag_name']
-    version['downloadUrl'] = githubJson['assets'][0]['browser_download_url']
+    version['remoteVersion'] = githubJson.get('tag_name')
+    version['downloadUrl'] = githubJson.get('assets')[0].get('browser_download_url')
     version['github'] = githubJson
     return jsonify(version)
 
