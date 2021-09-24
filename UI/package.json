@@ -22,7 +22,8 @@
     "build-pub": "electron-builder -p always"
   },
   "build": {
-    "appId": "%npm_package_name%np",
+    "appId": "com.lor-master-tracker.tracker",
+    "productName": "LorMasterTracker",
     "directories": {
       "output": "build"
     },
@@ -57,7 +58,8 @@
       "license": "LICENSE",
       "oneClick": false,
       "perMachine": false,
-      "allowToChangeInstallationDirectory": true
+      "allowToChangeInstallationDirectory": true,
+      "shortcutName": "%npm_package_productName%"
     }
   },
   "dependencies": {
