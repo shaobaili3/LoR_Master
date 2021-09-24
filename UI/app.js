@@ -1,6 +1,6 @@
 
 const electron = require('electron')
-const { app, Tray, Menu, MenuItem, protocol, globalShortcut, dialog } = require('electron')
+const { app, Tray, Menu, MenuItem, protocol, globalShortcut, dialog , ipcMain} = require('electron')
 const { autoUpdater } = require('electron-updater')
 // const app = electron.app
 const BrowserWindow = electron.BrowserWindow
@@ -14,6 +14,8 @@ const defaultRatio = 2.3 // Repeated in preload.js
 
 const spawnService = true
 const spawnPython = false
+
+let currentVersion = "";
 
 // --- app entry points ---
 
@@ -45,7 +47,13 @@ app.on('ready', () => {
   })
 
   if (app.isPackaged) {
-    autoUpdater.checkForUpdatesAndNotify();
+    currentVersion = app.getVersion()
+    // autoUpdater.checkForUpdates();
+  } else {
+    currentVersion = require('./package.json').version;
+    autoUpdater.autoDownload = false;
+    autoUpdater.currentVersion = require('./package.json').version;
+    // autoUpdater.checkForUpdates();
   }
 
   appReady()
@@ -83,7 +91,7 @@ const appReady = () => {
   // runClient()
 
   console.log("Is Packaged?", app.isPackaged)
-  console.log("Version: ", app.getVersion())
+  console.log("Version: ", currentVersion)
   
   
 }
@@ -95,30 +103,46 @@ autoUpdater.logger.transports.file.level = 'info';
 
 autoUpdater.on('checking-for-update', () => {
   console.log("Checking for Update...")
+  if (mainWindow) mainWindow.webContents.send('checking-for-update')
 })
 
 autoUpdater.on('update-available', (info) => {
   console.log("Update available")
   console.log("Version", info.version)
   console.log("Release Data", info.releaseDate)
+  if (mainWindow) mainWindow.webContents.send('update-available', info)
 })
 
 autoUpdater.on('update-not-available', () => {
   console.log('Update not available')
+  if (mainWindow) mainWindow.webContents.send('update-not-available')
 })
 
 autoUpdater.on('download-progress', (progress) => {
   console.log(`Progress ${Math.floor(progress.percent)}`)
+  if (mainWindow) mainWindow.webContents.send('download-process', progress)
 })
 
 autoUpdater.on('update-downloaded', (info) => {
   console.log("Update downloaded")
-  autoUpdater.quitAndInstall(true)
+  // autoUpdater.quitAndInstall(true)
+  if (mainWindow) mainWindow.webContents.send('update-downloaded', info)
 })
 
 autoUpdater.on('error', (err) => {
   console.log(err)
 })
+
+ipcMain.on('check-update', (event) => {
+  autoUpdater.checkForUpdates()
+})
+
+ipcMain.on('install-update', (event) => {
+  autoUpdater.quitAndInstall(true, true)
+})
+
+
+
 
 // Old version
 // const autoUpdateServer = 'https://lo-r-master-tracker-deploy.vercel.app'
@@ -363,6 +387,10 @@ function newMainWindow() {
   mainWindow.on('closed', () => {
     mainWindow = null
     // app.quit()
+  })
+
+  mainWindow.once('ready-to-show', () => {
+    mainWindow.webContents.send('app-version', currentVersion)
   })
 
   if (developmentMode) mainWindow.webContents.openDevTools()

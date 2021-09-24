@@ -124,16 +124,20 @@
             <div class="status">LoR Master Tracker</div>
         </div>
         <div class="right">
-            <div class="version download tooltip" v-if="!isUpdatedVersion" @click="openURL(downloadUrl)">
+            <!-- <div class="version download tooltip" v-if="!isUpdatedVersion" @click="openURL(downloadUrl)">
                 <span class="tooltiptext">
                     <i class="fas fa-arrow-to-bottom"></i> {{remoteVersion}}
                 </span>
-                <i class="fas fa-exclamation-triangle"></i> {{version}}</div>
-            <div class="version tooltip" v-if="isUpdatedVersion">
-                <span class="tooltiptext">
-                    <i class="fas fa-check"></i> Updated
+                <i class="fas fa-exclamation-triangle"></i> {{version}}</div> -->
+            <div class="version tooltip"
+            :class="{download: updateDownloaded}"
+            @click="installDownloadedUpdate()"
+            >
+                <span class="tooltiptext top-bottom-right">
+                    <span v-if="isUpdatedVersion"><i class="fas fa-check"></i> </span>{{versionTooltip}}
                 </span>
-                {{version}}</div>
+                <i class="fas" :class="{'fa-redo-alt': updateDownloaded}"></i>
+                {{versionText}}</div>
         </div>
     </div>
 </template>
@@ -216,6 +220,8 @@ export default {
         // var test = 'Hello'
         this.requestVersionData()
         this.requestStatusInfo()
+
+        // console.log(window.ipcRenderer)
     },
     components: { 
         BaseWindowControls,
@@ -245,6 +251,8 @@ export default {
             version: "",
             remoteVersion: "",
             downloadUrl: null,
+            updateProcess: 0,
+            updateDownloaded: false,
 
             currentPage: PAGES.search,
 
@@ -268,6 +276,24 @@ export default {
         },
         hasLocalInfo() {
             return this.localMatches.length > 0
+        },
+        versionText(){
+            if (this.updateDownloaded) {
+                return "Restart"
+            }
+            return this.version
+        },
+        versionTooltip() {
+            if (this.isUpdatedVersion) { 
+                return "Updated"
+            } else if (this.updateDownloaded) {
+                return "Update on next start" 
+            } else if (this.updateProcess > 0) {
+                return `Downloading... ${this.updateProcess}%`
+            } else if (this.remoteVersion) {
+                return `Latest: ${this.remoteVersion}`
+            }
+            return  "Loading..."
         }
     },
     methods: {
@@ -467,23 +493,83 @@ export default {
         openURL(url) {
             window.openExternal(url);
         },
+        installDownloadedUpdate() {
+            if (this.updateDownloaded) {
+                console.log("Trigger Intall Update")
+                window.ipcRenderer.send("install-update")
+            } else {
+                console.log("Download not finished")
+            }
+        },
         requestVersionData() {
-            axios.get(`${API_BASE}/version`)
-                .then((response) => {
-                    var data = response.data
-                    this.version = data.version
-                    this.remoteVersion = data.remoteVersion
-                    this.downloadUrl = data.downloadUrl
-                })
-                .catch((e) => {
-                    if (axios.isCancel(e)) {
-                        // Console log is cancel
-                    } else { 
-                        console.log('error', e) 
+
+            console.log("Request Version Data")
+            window.ipcRenderer.on('app-version', (event, arg) => {
+                console.log("Current Version is:", arg)
+                // window.appVersion = arg
+                this.version = arg
+            })
+
+            window.ipcRenderer.on('checking-for-update', (event) => {
+                console.log("Checking For Update")
+                this.updateDownloaded = false // Reset Update downloaded
+            })
+
+            window.ipcRenderer.on('update-available', (event, info) => {
+                // console.log(info)
+                // window.appVersionLatest = info.version
+                
+                console.log("Latest Version is:", info.version)
+                this.remoteVersion = info.version
+            })
+
+            window.ipcRenderer.on('update-not-available', (event, arg) => {
+                console.log("Version is Latest")
+                this.remoteVersion = this.version
+            })
+
+            window.ipcRenderer.on('download-process', (event, arg) => {
+                console.log(arg)
+                if (Math.floor(arg.percent) < 100)
+                    this.updateProcess = Math.floor(arg.percent)
+            })
+
+            window.ipcRenderer.on('update-downloaded', (event, arg) => {
+                console.log(arg)
+                console.log("Update Downloaded!")
+                this.updateDownloaded = true
+            })
+
+            window.ipcRenderer.send("check-update")
+            
+
+            // --- Version 2 ---
+            // console.log(window)
+            // console.log(window.appVersion)
+
+            // if (window && window.appVersion) {
+            //     this.version = window.appVersion
+            //     console.log("Got Version Data:", window.appVersion)
+            // } else {
+            //     setTimeout(this.requestVersionData, requestDataWaitTime);
+            // }
+            
+            // axios.get(`${API_BASE}/version`)
+            //     .then((response) => {
+            //         var data = response.data
+            //         this.version = data.version
+            //         this.remoteVersion = data.remoteVersion
+            //         this.downloadUrl = data.downloadUrl
+            //     })
+            //     .catch((e) => {
+            //         if (axios.isCancel(e)) {
+            //             // Console log is cancel
+            //         } else { 
+            //             console.log('error', e) 
                         
-                        setTimeout(this.requestVersionData, requestDataWaitTime);
-                    }
-                })
+            //             setTimeout(this.requestVersionData, requestDataWaitTime);
+            //         }
+            //     })
         },
         requestStatusInfo() {
             // Keeps requesting status
@@ -1139,6 +1225,15 @@ export default {
         bottom: auto;
         left: 105%;
         transform: translateY(-50%);
+    }
+
+    .tooltip .tooltiptext.top-bottom-right {
+        /* Position the tooltip */
+        bottom: 100%;
+        right: -10px;
+        left: auto;
+        transform: none;
+        margin-bottom: 20px;
     }
 
     .tooltip:hover .tooltiptext {
