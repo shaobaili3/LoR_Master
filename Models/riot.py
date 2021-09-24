@@ -64,9 +64,7 @@ class Riot:
             self.cache.matches[uniqueName] = new
         else:
             self.cache.matches[uniqueName] = matchIds
-        os.makedirs('data', exist_ok=True)
-        with open('data/matches.json', 'w+', encoding='utf-8') as fp:
-            json.dump(self.cache.matches, fp)
+        self.cache.save()
 
     def getMatchesInCache(self, puuid):
         playName = self.getPlayerName(puuid)
