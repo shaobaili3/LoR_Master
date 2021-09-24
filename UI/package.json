@@ -57,7 +57,8 @@
       "uninstallerIcon": "uninstall.ico",
       "license": "LICENSE",
       "oneClick": false,
-      "perMachine": true,
+      "allowElevation": false,
+      "perMachine": false,
       "allowToChangeInstallationDirectory": true,
       "shortcutName": "LoR Master Tracker",
       "deleteAppDataOnUninstall": "true"
