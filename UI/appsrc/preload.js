@@ -6,8 +6,11 @@ var win = remote.getCurrentWindow()
 
 window.closeWindow = function() {
     // console.log("Close window")
+    win.close()
+}
+
+window.hideWindow = function() {
     win.hide()
-    // win.close()
 }
 
 window.setSkipTaskbar = function(bool) {

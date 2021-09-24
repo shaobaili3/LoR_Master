@@ -76,7 +76,7 @@ export default {
             //   console.log("Closing App")
         },
         closeApp() {
-            window.closeWindow()
+            window.hideWindow()
         },
         checkIsMin() {
             if (window.isMin)

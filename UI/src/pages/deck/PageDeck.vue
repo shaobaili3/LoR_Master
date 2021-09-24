@@ -220,8 +220,8 @@ export default {
     },
     methods: {
         hideWindow() {
-            if (window.closeWindow) {
-                window.closeWindow()
+            if (window.hideWindow) {
+                window.hideWindow()
             }
         },
         makeWindowVisible() {
