@@ -46,7 +46,7 @@
 import axios from 'axios'
 import LeaderboardPlayer from '../components/LeaderboardPlayer.vue'
 
-const portNum = "63312"
+const portNum = "26531"
 const REGION_ID = {
     NA: 0, EU: 1, AS: 2, SEA: 3
 }

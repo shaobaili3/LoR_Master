@@ -134,7 +134,7 @@
             @click="installDownloadedUpdate()"
             >
                 <span class="tooltiptext top-bottom-right">
-                    <span v-if="isUpdatedVersion"><i class="fas fa-check"></i> </span>{{versionTooltip}}
+                    <span v-if="isUpdatedVersion"><i class="fas fa-check"></i></span>{{versionTooltip}}
                 </span>
                 <i class="fas" :class="{'fa-redo-alt': updateDownloaded}"></i>
                 {{versionText}}</div>
@@ -156,7 +156,7 @@ const requestHistoryWaitTime = 100 //ms
 const requestStatusWaitTime = 1000 //ms
 const inputNameListLength = 10;
 
-const portNum = "63312"
+const portNum = "26531"
 const API_BASE = `http://127.0.0.1:${portNum}`
 
 let cancelToken, localCancleToken
@@ -1210,6 +1210,10 @@ export default {
         
         /* left: 50%; */
         /* margin-left: -50%; */
+    }
+
+    .tooltip .tooltiptext .fas {
+        margin-right: 5px;
     }
 
     .tooltip .tooltiptext.top {

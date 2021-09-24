@@ -109,7 +109,7 @@ const requestDataWaitTime = 100; // ms
 const requestServerWaitTime = 3000; //ms
 const requestStatusWaitTime = 1000; //ms
 
-const portNum = "63312"
+const portNum = "26531"
 const API_BASE = `http://127.0.0.1:${portNum}`
 
 const TABS = {
