@@ -54,12 +54,12 @@
     "nsis": {
       "installerIcon": "image.ico",
       "uninstallerIcon": "image.ico",
-      "uninstallDisplayName": "%npm_package_productName%",
+      "uninstallDisplayName": "LoR Master Tracker",
       "license": "LICENSE",
       "oneClick": false,
       "perMachine": false,
       "allowToChangeInstallationDirectory": true,
-      "shortcutName": "%npm_package_productName%"
+      "shortcutName": "LoR Master Tracker"
     }
   },
   "dependencies": {
