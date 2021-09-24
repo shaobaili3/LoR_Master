@@ -8,7 +8,6 @@
     "type": "git",
     "url": "https://github.com/shaobaili3/LoR_Master"
   },
-
   "scripts": {
     "dev": "vue-cli-service build && electron --inspect=5858 app.js",
     "serve": "vue-cli-service serve",
@@ -45,11 +44,13 @@
         "nsis"
       ],
       "icon": "image.ico",
-      "publish": [{
-        "provider": "github",
-        "owner": "shaobaili3",
-        "repo": "LoR_Master"
-      }]
+      "publish": [
+        {
+          "provider": "github",
+          "owner": "shaobaili3",
+          "repo": "LoR_Master"
+        }
+      ]
     },
     "nsis": {
       "installerIcon": "image.ico",
@@ -80,10 +81,10 @@
     "@vue/compiler-sfc": "^3.0.0",
     "babel-eslint": "^10.1.0",
     "electron": "^11.2.3",
+    "electron-builder": "^22.11.7",
     "electron-packager": "^15.2.0",
     "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^7.0.0-0",
-    "electron-builder": "^22.11.7"
+    "eslint-plugin-vue": "^7.0.0-0"
   },
   "eslintConfig": {
     "root": true,
