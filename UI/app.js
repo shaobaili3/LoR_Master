@@ -6,18 +6,20 @@ const { autoUpdater } = require('electron-updater')
 const BrowserWindow = electron.BrowserWindow
 const path = require('path')
 
-const developmentMode = false
+const developmentMode = true
 // const snapAssist = true
 const closeWithoutTracker = false
 const headerHeight = 45 // Repeated in preload.js
 const defaultRatio = 2.3 // Repeated in preload.js
 
-const spawnService = true
+const spawnService = false
 const spawnPython = false
 
 let currentVersion = "";
 
+// -----------------------------------------------
 // --- app entry points ---
+// -----------------------------------------------
 
 const gotTheLock = app.requestSingleInstanceLock()
 
@@ -60,10 +62,15 @@ app.on('ready', () => {
 })
 
 app.on('window-all-closed', () => {
+  // console.log("All Window Closed")
   // if (process.platform !== 'darwin') {
   // app.quit()
   // }
 })
+
+// app.on("browser-window-blur", (event, window) => {
+//   console.log("Window Blur", window)
+// })
 
 app.on('activate', () => {
   newMainWindow()
@@ -96,7 +103,9 @@ const appReady = () => {
   
 }
 
+// -----------------------------------------------
 // --- Auto Updater --- 
+// -----------------------------------------------
 
 autoUpdater.logger = require('electron-log');
 autoUpdater.logger.transports.file.level = 'info';
@@ -141,52 +150,14 @@ ipcMain.on('install-update', (event) => {
   autoUpdater.quitAndInstall(true, true)
 })
 
+setInterval(() => {
+  autoUpdater.checkForUpdates();
+}, 1000 * 60 * 15);
 
-
-
-// Old version
-// const autoUpdateServer = 'https://lo-r-master-tracker-deploy.vercel.app'
-// const auoUpdateUrl = `${autoUpdateServer}/update/${process.platform}/${app.getVersion()}`
-const checkUpdateInterval = 5000
-
-function checkForUpdate() {
-  console.log("Check for update")
-  autoUpdater.checkForUpdates()
-}
-
-function setUpAutoUpdate() {
-
-
-
-  // autoUpdater.setFeedURL({ url: auoUpdateUrl })
-
-  // autoUpdater.on('update-downloaded', (event, releaseNotes, releaseName) => {
-  //   const dialogOpts = {
-  //     type: 'info',
-  //     buttons: ['Restart', 'Later'],
-  //     title: 'Application Update',
-  //     message: process.platform === 'win32' ? releaseNotes : releaseName,
-  //     detail: 'A new version has been downloaded. Restart the application to apply the updates.'
-  //   }
-
-  //   dialog.showMessageBox(dialogOpts).then((returnValue) => {
-  //     if (returnValue.response === 0) autoUpdater.quitAndInstall()
-  //   })
-  // })
-  // autoUpdater.on('error', message => {
-  //   console.error('There was a problem updating the application')
-  //   console.error(message)
-  // })
-
-  // setInterval(checkForUpdate, checkUpdateInterval)
-
-  // checkForUpdate()
-
-}
-
-
-
+// -----------------------------------------------
 // --- Tray ---
+// -----------------------------------------------
+
 let tray = null
 function initTray() {
   tray = new Tray(__dirname + '/image.ico')
@@ -225,7 +196,9 @@ function initTray() {
   console.log("Tray Created")
 }
 
+// -----------------------------------------------
 // --- Menu and short cuts ---
+// -----------------------------------------------
 
 const menu = new Menu()
 menu.append(new MenuItem({
@@ -242,12 +215,11 @@ menu.append(new MenuItem({
 
 Menu.setApplicationMenu(menu)
 
-// const server = require('./appsrc/server.js')
-// server.run
+// -----------------------------------------------
+// --- Backend Service ---
+// -----------------------------------------------
 
 function startLMTService() {
-
-  // ---- New ver. ----
 
   var proc
 
@@ -274,58 +246,11 @@ function startLMTService() {
     console.log(`child process exited with code ${code}`);
   });
 
-  // ---- Old ver. ----
-
-  // let backend;
-  // backend = path.join(process.cwd(), '/backend/LMTService/LMTService.exe')
-  // var execfile = require('child_process').execFile;
-
-  // var proc = execfile(
-  //   backend,
-  //   {
-  //     encoding: 'utf8',
-  //     windowsHide: false,
-  //     // shell: true,
-  //     cwd: path.join(process.cwd(), '/backend/LMTService/')
-  //   },
-  //   (err, stdout, stderr) => {
-  //     if (err) {
-  //       console.log(err);
-  //     }
-  //     if (stdout) {
-  //       console.log(stdout);
-  //     }
-  //     if (stderr) {
-  //       console.log(stderr);
-  //     }
-  //   }
-  // )
-
-  // proc.on('close', (code) => {
-  //   console.log(`child process close all stdio with code ${code}`);
-  //   startLMTService()
-  // });
-  
-  // proc.on('exit', (code) => {
-  //   console.log(`child process exited with code ${code}`);
-  // });
 }
 
-// const client = require('./appsrc/client.js')
-
-// async function runClient() {
-//     const sock = new zmq.Subscriber
-  
-//     sock.connect("tcp://127.0.0.1:3000")
-//     sock.subscribe("kitty cats")
-//     console.log("Subscriber connected to port 3000")
-  
-//     for await (const [topic, msg] of sock) {
-//       console.log("received a message related to:", topic.toString(), "containing message:", msg.toString())
-//       deckWindow.clientData = "CATAT"
-//       // console.log(deckWindow)
-//     }
-// }
+// -----------------------------------------------
+// --- BrowserWindows ---
+// -----------------------------------------------
 
 let deckWindow = null
 let infoWindow = null
@@ -387,6 +312,14 @@ function newMainWindow() {
   mainWindow.on('closed', () => {
     mainWindow = null
     // app.quit()
+  })
+
+  mainWindow.on('hide', () => {
+    console.log("Hiding Main Window")
+    // tray.displayBalloon({
+    //   title: "LoR Master Tracker Hidden",
+    //   content: "click icon to show"
+    // })
   })
 
   mainWindow.once('ready-to-show', () => {
@@ -550,7 +483,6 @@ function toggleDeckWindow() {
     console.log(e)
   }
 }
-
 
 // --- Use these to check for old running python app ---
 
