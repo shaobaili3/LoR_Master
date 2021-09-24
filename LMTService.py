@@ -211,4 +211,4 @@ def get_status():
     return jsonify(status)
 
 
-app.run(port=63312, debug=True, use_reloader=False)
+app.run(port=26531, debug=True, use_reloader=False)

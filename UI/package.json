@@ -1,7 +1,7 @@
 {
   "name": "lor-master-tracker",
   "productName": "LoR Master Tracker",
-  "version": "0.9.10",
+  "version": "0.9.11",
   "private": true,
   "main": "app.js",
   "repository": {
@@ -54,13 +54,13 @@
     },
     "nsis": {
       "installerIcon": "image.ico",
-      "uninstallerIcon": "image.ico",
-      "uninstallDisplayName": "LoR Master Tracker",
+      "uninstallerIcon": "uninstall.ico",
       "license": "LICENSE",
       "oneClick": false,
-      "perMachine": false,
+      "perMachine": true,
       "allowToChangeInstallationDirectory": true,
-      "shortcutName": "LoR Master Tracker"
+      "shortcutName": "LoR Master Tracker",
+      "deleteAppDataOnUninstall": "true"
     }
   },
   "dependencies": {
