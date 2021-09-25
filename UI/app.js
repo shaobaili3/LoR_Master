@@ -6,7 +6,7 @@ const { autoUpdater } = require('electron-updater')
 const BrowserWindow = electron.BrowserWindow
 const path = require('path')
 
-const developmentMode = false
+const developmentMode = true
 // const snapAssist = true
 const closeWithoutTracker = false
 const headerHeight = 45 // Repeated in preload.js
@@ -77,6 +77,14 @@ app.on('activate', () => {
   newMainWindow()
 })
 
+function showAlert(title, message) {
+  const { dialog } = require('electron')
+  dialog.showMessageBox({
+    title: title,
+    message: message
+  })
+}
+
 const appReady = () => {
 
   if (closeWithoutTracker && !isCheckingTracker) checkTracker()
@@ -84,6 +92,9 @@ const appReady = () => {
   if (spawnService) {
     startLMTService()
   }
+
+  console.log("Process Args:")
+  console.log(process.argv)
 
   // --- deckWindow ---
   newDeckWindow()
@@ -232,14 +243,22 @@ Menu.setApplicationMenu(menu)
 
 function startLMTService() {
 
+  const { spawn } = require('child_process')
+
   var proc
 
   if (spawnPython) {
-    proc = require('child_process').spawn('python', ['./LMTService.py'], {cwd: '../'});
+    proc = spawn('python', ['./LMTService.py'], {cwd: '../'});
   } else {
     var backend
-    backend = path.join(process.cwd(), '/backend/LMTService/LMTService.exe')
-    proc = require('child_process').spawn(backend, {cwd: './backend/LMTService/'});
+    if (app.isPackaged) {
+      var execPath = path.dirname(app.getPath('exe'))
+      backend = path.join(execPath, 'backend', 'LMTService', 'LMTService.exe')
+      proc = spawn(backend, {cwd: path.join(execPath, 'backend', 'LMTService')});
+    } else {
+      backend = path.join(__dirname, 'backend', 'LMTService', 'LMTService.exe')
+      proc = spawn(backend, {cwd: path.join(__dirname, 'backend', 'LMTService')});
+    }
   }
   
   proc.stdout.on('data', function (data) {
@@ -314,7 +333,9 @@ function newMainWindow() {
     pathname: require('path').join(__dirname, 'dist', 'index.html')
   })
 
-  console.log(mainWindowUrl)
+  // console.log(mainWindowUrl)
+
+  
 
   // mainWindow.loadURL(`file://${__dirname}/dist/index.html`)
   mainWindow.loadURL(mainWindowUrl)
@@ -335,6 +356,7 @@ function newMainWindow() {
 
   mainWindow.once('ready-to-show', () => {
     mainWindow.webContents.send('app-version', currentVersion)
+    mainWindow.webContents.send('debug-info-display', process.argv)
   })
 
   if (developmentMode) mainWindow.webContents.openDevTools()
@@ -376,6 +398,8 @@ function newDeckWindow() {
     y: height / 2 - windowHeight / 2,
     frame: false,
     resizable: true,
+    skipTaskbar: true,
+    show: false,
     webPreferences: {
       preload: __dirname + '/appsrc/preload.js',
       enableRemoteModule: true,
@@ -390,8 +414,7 @@ function newDeckWindow() {
   //   protocol: 'file:',
   //   slashes: true
   // }))
-  deckWindow.setSkipTaskbar(true)
-  deckWindow.hide()
+  // deckWindow.hide()
   
   deckWindow.loadURL(`file://${__dirname}/dist/deck.html`)
   

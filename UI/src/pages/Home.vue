@@ -125,6 +125,10 @@
                     <button class="settings-btn" v-if="!autoLaunch" @click="setAutoLaunch(true)">Enable</button>
                 </div>
             </div>
+
+            <div class="debug-info">
+                {{debugInfos}}
+            </div>
         </div>
     </div>
 
@@ -286,6 +290,7 @@ export default {
 
             // Options
             autoLaunch: null,
+            debugInfos: "",
         }
     },
     computed: {
@@ -326,6 +331,11 @@ export default {
         initLocalSettings() {
             window.ipcRenderer.on('check-auto-launch-return', (event, isEnabled) => {
                 this.autoLaunch = isEnabled
+            })
+
+            window.ipcRenderer.on('debug-info-display', (event, info) => {
+                console.log(info)
+                this.debugInfos = info
             })
 
             this.checkAutoLaunch()
@@ -664,25 +674,22 @@ export default {
                     if (requestStatusWaitTime > elapsedTime) {
                         setTimeout(this.requestStatusInfo, requestStatusWaitTime - elapsedTime); 
                     } else {
-                        this.requestStatusInfo()
+                        setTimeout(this.requestStatusInfo, 100);
                     }
                     
                 })
                 .catch((e) => {
                     if (axios.isCancel(e)) {
                         console.log("Request cancelled");
-                    } else 
-                    { 
+                    } else { 
                         console.log('error', e)
                         var elapsedTime = Date.now() - lastStatusRequestTime // ms
-                        if (requestStatusWaitTime > elapsedTime) {
-                            setTimeout(this.requestStatusInfo, requestStatusWaitTime - elapsedTime); 
+                        if (elapsedTime > requestStatusWaitTime) {
+                            setTimeout(this.requestStatusInfo, 100);
                         } else {
-                            this.requestStatusInfo()
+                            setTimeout(this.requestStatusInfo, requestStatusWaitTime - elapsedTime);
                         }
                     }
-
-                    
                 })
         },
         requestNameData() {
@@ -801,7 +808,12 @@ export default {
             var name = this.localPlayerInfo.name
             var tag = this.localPlayerInfo.tag
 
-            if (!(server && name && tag)) this.requestLocalHistory()
+            if (!(server && name && tag)) {
+                setTimeout(() => {
+                    this.requestLocalHistory()
+                }, 100);
+                return
+            }
 
             console.log("Request Local History", `${API_BASE}/search/${server}/${name}/${tag}`)
             this.localHistoryLoading = true
@@ -1319,6 +1331,13 @@ export default {
         padding: 10px 15px;
         outline: none;
         cursor: pointer;
+    }
+
+    .settings .debug-info {
+        margin-top: 50px;
+        background: var(--col-dark-grey);
+        padding: 20px;
+        overflow: scroll;
     }
 
 </style>
