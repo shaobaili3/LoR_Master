@@ -6,13 +6,13 @@ const { autoUpdater } = require('electron-updater')
 const BrowserWindow = electron.BrowserWindow
 const path = require('path')
 
-const developmentMode = true
+const developmentMode = false
 // const snapAssist = true
 const closeWithoutTracker = false
 const headerHeight = 45 // Repeated in preload.js
 const defaultRatio = 2.3 // Repeated in preload.js
 
-const spawnService = false
+const spawnService = true
 const spawnPython = false
 
 let currentVersion = "";
@@ -519,19 +519,16 @@ function newAlert() {
 // --- Auto Launch ---
 // -----------------------------------------------
 
-var isAutoLaunch = null
-
-// var quitOnClose = false;
+var AutoLaunch = require('auto-launch');
+var autoLauncher = new AutoLaunch({
+    name: 'LoR Master Tracker',
+    isHidden: true
+});
 
 function checkAutoLaunch() {
-  var AutoLaunch = require('auto-launch');
-  var autoLauncher = new AutoLaunch({
-      name: 'LoR Master Tracker',
-  });
 
   autoLauncher.isEnabled().then(
     function(isEnabled) {
-      isAutoLaunch = isEnabled
       console.log("Auto Launch Enabled: ", isEnabled)
       sendAutoLaunchToMain(isEnabled)
     }
@@ -557,25 +554,18 @@ ipcMain.on('set-auto-launch', (event, enable) => {
   checkAutoLaunch()
 })
 
+
+// var quitOnClose = false;
+
 // ipcMain.on('set-quit-on-close', (event, enable) => {
   
 // })
 
 function enableAutoLaunch() {
-  var AutoLaunch = require('auto-launch');
-  var autoLauncher = new AutoLaunch({
-      name: 'LoR Master Tracker',
-  });
-
   autoLauncher.enable();
 }
 
 function disableAutoLaunch() {
-  var AutoLaunch = require('auto-launch');
-  var autoLauncher = new AutoLaunch({
-      name: 'LoR Master Tracker',
-  });
-
   autoLauncher.disable();
 }
 
