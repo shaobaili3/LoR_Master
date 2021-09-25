@@ -30,7 +30,7 @@
             @click="setCurrentPage(PAGES.leaderboard)">
             <span><i class="fas fa-trophy"></i></span>
         </button>
-        <button class="left-nav-btn" 
+        <button class="left-nav-btn nav-bottom" 
             :class="{selected: currentPage == PAGES.settings}" 
             @click="setCurrentPage(PAGES.settings)">
             <span><i class="fas fa-cog"></i></span>
@@ -118,6 +118,7 @@
         </div>
 
         <div class="main-content-container settings" v-if="currentPage == PAGES.settings">
+            <div class="title">Settings</div>
             <div class="settings-list">
                 <div class="settings-list-item">
                     <div class="settings-title">Auto launch on startup: {{autoLaunch ? "Enabled" : "Disabled"}}</div>
@@ -1201,6 +1202,16 @@ export default {
         cursor: default;
     }
 
+    .left-nav-btn.nav-bottom {
+        margin-top: auto;
+        margin-bottom: calc(45px + 10px);
+        color: var(--col-lighter-grey);
+    }
+
+    .left-nav-btn.nav-bottom.selected {
+        color: white;
+    }
+
     .left-nav-btn.selected:not(:disabled):hover .icon-default,
     .left-nav-btn .icon-hover{
         display: none;
@@ -1311,6 +1322,13 @@ export default {
     }
 
     /* Settings Page */
+
+    .settings .title {
+        font-size: 32px;
+        text-align: left;
+        padding: 10px 0px;
+    }
+
     .settings-list-item {
         display: flex;
         font-size: 18px;
@@ -1331,6 +1349,7 @@ export default {
         padding: 10px 15px;
         outline: none;
         cursor: pointer;
+        border-radius: 100px;
     }
 
     .settings .debug-info {
