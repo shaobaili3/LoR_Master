@@ -126,9 +126,9 @@
                 </div>
             </div>
 
-            <div class="debug-info">
+            <!-- <div class="debug-info">
                 {{debugInfos}}
-            </div>
+            </div> -->
         </div>
     </div>
 

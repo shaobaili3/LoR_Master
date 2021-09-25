@@ -6,7 +6,7 @@ const { autoUpdater } = require('electron-updater')
 const BrowserWindow = electron.BrowserWindow
 const path = require('path')
 
-const developmentMode = true
+const developmentMode = false
 // const snapAssist = true
 const closeWithoutTracker = false
 const headerHeight = 45 // Repeated in preload.js
@@ -16,6 +16,7 @@ const spawnService = true
 const spawnPython = false
 
 let currentVersion = "";
+var startHidden = false;
 
 // -----------------------------------------------
 // --- app entry points ---
@@ -95,6 +96,8 @@ const appReady = () => {
 
   console.log("Process Args:")
   console.log(process.argv)
+
+  startHidden = process.argv.includes('--hidden')
 
   // --- deckWindow ---
   newDeckWindow()
@@ -320,6 +323,7 @@ function newMainWindow() {
     y: (height - windowHeight) / 2,
     frame: false,
     resizable: true,
+    show: !startHidden,
     webPreferences: {
       preload: __dirname + '/appsrc/preload.js',
       enableRemoteModule: true,
