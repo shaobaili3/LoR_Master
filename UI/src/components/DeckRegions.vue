@@ -50,7 +50,11 @@ export default {
         },
         maxFactions: {
             type: Number,
-            default: 3
+            default: 2
+        },
+        fixedWidth: {
+            type: Boolean,
+            default: true
         }
     },
     computed: {
@@ -81,6 +85,14 @@ export default {
                 }
             }
 
+            if (this.fixedWidth) {
+                // Add filler champ icons
+                var fillerIcons = this.maxFactions - factionIDs.length
+                for (let i = 0; i < fillerIcons; i++) {
+                    factionIDs.unshift(-1)
+                }
+            }
+            
             return factionIDs
         }
     },

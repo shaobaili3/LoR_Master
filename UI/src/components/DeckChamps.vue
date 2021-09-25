@@ -1,8 +1,8 @@
 <template>
     <div class="icon-container">
         <champ-icon v-for="(champ, index) in getChamps" :key="index" :code="champ"></champ-icon>
-        <div class="extra-champ" v-if="extraChampString">{{extraChampString}}</div>
-        <deck-regions v-if="getChamps.length <= 0 && showRegion" :deck="deck"></deck-regions>
+        <div class="extra-champ" :class="{'fixed-width': fixedWidth }" v-if="extraChampString">{{extraChampString}}</div>
+        <deck-regions v-if="getChamps.length <= 0 && showRegion" :deck="deck" :fixedWidth="fixedWidth"></deck-regions>
     </div>
 </template>
 
@@ -33,6 +33,10 @@ export default {
         showRegion: {
             type: Boolean,
             default: false
+        },
+        fixedWidth: {
+            type: Boolean,
+            default: true
         }
     },
     computed: {
@@ -60,6 +64,13 @@ export default {
                     }
                 }
             }
+            // Add filler champ icons
+            if (this.fixedWidth) {
+                var fillerIcons = this.maxChamp - champs.length
+                for (let i = 0; i < fillerIcons; i++) {
+                    champs.push("")
+                }
+            }
             return champs
         },
     },
@@ -75,6 +86,7 @@ export default {
         gap: 2px;
         /* padding: 4px; */
         align-items: center;
+        position: relative;
 
         /* border-radius: 50px; */
     }
@@ -83,6 +95,17 @@ export default {
     .btn.active .icon-container .icon.champ {
         border: 2px solid rgba(255, 255, 255, 1);
         box-shadow: 1px 2px 5px -2px #000000;
+    }
+
+    .icon {
+        border: 2px solid transparent;
+    }
+
+    .extra-champ.fixed-width {
+        position: absolute;
+        top: 0;
+        right: -20px;
+        transform: translate(0, 50%);
     }
 
     /*     

@@ -1,5 +1,5 @@
 <template>
-    <div class="icon faction" :style=" {backgroundImage: getRegionImgUrl}"></div>
+    <div class="icon" :class="{'faction': faction != -1}" :style=" {backgroundImage: getRegionImgUrl}"></div>
 </template>
 
 <script>
@@ -19,6 +19,9 @@ export default {
     },
     computed: {
         getRegionImgUrl() {
+            if (this.faction == -1) {
+                return "none"
+            }
             // Remote
             // const regionImageBaseUrl = 'https://painttist.github.io/lor-champ-icons/images/regions/';
             // return "url(" + regionImageBaseUrl + regionID + ".svg)";

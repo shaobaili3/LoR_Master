@@ -136,7 +136,7 @@
     <div class="deck-content-container" :class="{hidden: !isShowDeck}">
         <div class="deck-content-top-bar">
             <button class="collapse-btn" @click="hideDeck"><span><i class="fas fa-chevron-right"></i></span></button>
-            <deck-regions :deck="deckCode"></deck-regions>
+            <deck-regions :deck="deckCode" :fixedWidth="false"></deck-regions>
         </div>
         <div class="deck-content-detail">
             <match-history-deck-detail :deck="deckCode"></match-history-deck-detail>

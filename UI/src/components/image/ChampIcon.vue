@@ -1,5 +1,5 @@
 <template>
-    <div class="icon champ" :style=" {backgroundImage: getChampionImgUrl}"></div>
+    <div class="icon" :class="{champ: code != ''}" :style=" {backgroundImage: getChampionImgUrl}"></div>
 </template>
 
 <script>
@@ -19,6 +19,9 @@ export default {
     },
     computed: {
         getChampionImgUrl() {
+            if (this.code == "") {
+                return "none"
+            }
             // const champImageBaseUrl = 'https://raw.githubusercontent.com/painttist/lor-champ-icons/master/images/cards/cropped/';
             // const champImageBaseUrl = 'https://painttist.github.io/lor-champ-icons/images/cards/cropped/';
             // return "url('" + champImageBaseUrl + code + "-cropped.png')"

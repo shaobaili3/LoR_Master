@@ -18,7 +18,7 @@
                 v-for="(obj, index) in uniqueDeckCodes" :key="index"
                 :class="{active: filterDeckCode == obj.deck}"
                 @click="setFilterDeckCode(obj.deck)">
-                    <deck-champs :deck="obj.deck" :showRegion="true"></deck-champs>
+                    <deck-champs :deck="obj.deck" :showRegion="true" :fixedWidth="false"></deck-champs>
                 </div>
             </div>
             <div class="history-summary">
