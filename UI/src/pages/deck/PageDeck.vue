@@ -8,21 +8,6 @@
         </div> 
 
         <div class="errorText" v-if="isInvalidDeckCode && isShowCode">Invalid Deck Code</div>
-        <!-- <button @click="requestData">Test Request</button> -->
-
-        <!-- <div id="history-stats"> -->
-            <!-- <div>10-game win rate: 90%</div> -->
-            <!-- {{oppoName}} -->
-        <!-- </div> -->
-
-        <!-- <div id="search-container">
-            <div id="search-icon"><i class="fa fa-search"></i></div>
-            <input id="search-input" type="text" placeholder="Search...">
-        </div> -->
-
-        <!-- <div id="opponent">
-            {{oppoName}}
-        </div> -->
 
         <div class="tabs" v-if="!isLoading">
             <div class="tab-title-group">
@@ -41,7 +26,6 @@
                     <i class="fas fa-tombstone-alt"></i>                
                 </div>
             </div>
-            <!-- <div class="tab-title" @click="showCode" :class="{active: isShowCode}">Code</div> -->
         </div>
 
         <div id="history" class="tab-content" v-if="isShowOppo && !isLoading">
@@ -518,14 +502,19 @@ export default {
     }
 
     .tabs {
+        display: flex;
+        position: sticky;
+        top: 40px;
         width: calc(100% - 20px);
         max-width: 280px;
-        display: flex;
+        
         justify-content: space-evenly;
         align-items: center;
         gap: 10px;
-        /* padding: 0px; */
-        margin: 10px 0px;
+        padding: 10px 10px;
+        
+        z-index: 2;
+        background: var(--col-background);
     }
 
     .tab-title-group {
@@ -559,6 +548,15 @@ export default {
         max-width: 280px;
         width: 100%;
         text-align: center;
+    }
+
+    /* Styling Deck Content */
+    .tab-content .icon-content {
+        /* position: sticky;
+        z-index: 2;
+        top: 90px;
+        background: var(--col-background); */
+        padding: 0px 0px 5px 0px;
     }
 
     .tab-text {

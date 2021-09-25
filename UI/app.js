@@ -1,6 +1,6 @@
 
 const electron = require('electron')
-const { app, Tray, Menu, MenuItem, protocol, globalShortcut, dialog , ipcMain} = require('electron')
+const { app, Tray, Menu, MenuItem, protocol, globalShortcut , ipcMain} = require('electron')
 const { autoUpdater } = require('electron-updater')
 // const app = electron.app
 const BrowserWindow = electron.BrowserWindow
@@ -101,6 +101,7 @@ const appReady = () => {
   console.log("Is Packaged?", app.isPackaged)
   console.log("Version: ", currentVersion)
   
+  newAlert()
   
 }
 
@@ -484,6 +485,27 @@ function toggleDeckWindow() {
     console.log(e)
   }
 }
+
+
+// -----------------------------------------------
+// --- Alerts ---
+// -----------------------------------------------
+
+function newAlert() {
+
+
+}
+
+// ipcMain.on('custom-alert', (event, args) => {
+//   console.log("Alert", args)
+//   // autoUpdater.quitAndInstall(true, true)
+// })
+
+// setInterval(() => {
+//   newAlert("LoR Master Tracker Hidden", "Click on icon to show, Right click for more");
+// }, 1000 * 5);
+
+
 
 // --- Use these to check for old running python app ---
 

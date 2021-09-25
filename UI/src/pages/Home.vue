@@ -62,7 +62,7 @@
                             <span v-if="isSameSearch"><i class="fas fa-redo-alt"></i></span>
                         </button>
                         
-                        <input class="search-bar" 
+                        <input autocomplete='off' class="search-bar" 
                             @keyup="searchName" 
                             @keyup.enter="searchHistory"
                             @keyup.up="autoCompleteIndexMinus"

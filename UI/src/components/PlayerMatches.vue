@@ -6,7 +6,7 @@
                 <div class="detail rank" v-if="playerRank">
                     <span class="pre-info"><i class="fas fa-trophy"></i></span> 
                     {{playerRank}}</div>
-                <div class="detail lp" v-if="playerLP">
+                <div class="detail lp" v-if="playerLP || playerLP === 0">
                     <span class="pre-info"><i class="iconfy">LP</i></span>
                     {{playerLP}}</div>
                 <div class="detail region" v-if="playerRegion">

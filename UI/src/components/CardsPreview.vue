@@ -124,7 +124,7 @@ export default {
 }
 
 .cardCost {
-    background: var(--col-light-grey);
+    background: var(--col-blue-light-grey);
     /* background: var(--col-dark-gold); */
     /* color: var(--col-dark-grey); */
     /* width: 50%; */

@@ -11,6 +11,7 @@
         <div class="menu-sub-title" v-if="titleType=='match' && playerRank">
             <i class="fas fa-trophy"></i> {{playerRank}}
         </div>
+        <div class="menu-fill"></div>
         <div v-if="canMin" class="menu-item" @click="minApp()">
             <span><i class="fas fa-minus"></i></span>
         </div>
@@ -156,7 +157,7 @@ export default {
     .menu-sub-title {
         left: 0;
         margin-left: 10px;
-        margin-right: auto;
+        /* margin-right: auto; */
         color: rgba(255, 255, 255, 0.5);
         font-size: 0.9em;
 
@@ -165,6 +166,13 @@ export default {
         white-space: nowrap;
         /* overflow: scroll; */
         /* text-overflow: hidden; */
+    }
+
+    .menu-fill {
+        width: 0px;
+        left: 0;
+        margin-left: 0px;
+        margin-right: auto;
     }
 
     .menu-title-deck {
