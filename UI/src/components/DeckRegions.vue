@@ -10,6 +10,27 @@ import RegionIcon from './image/RegionIcon.vue'
 import DeckEncoder from '../modules/runeterra/DeckEncoder'
 //https://painttist.github.io/lor-champ-icons/data/champion.js
 
+import set1 from '../../../data/set1-en_us.json'
+import set2 from '../../../data/set2-en_us.json'
+import set3 from '../../../data/set3-en_us.json'
+import set4 from '../../../data/set4-en_us.json'
+import set5 from '../../../data/set5-en_us.json'
+
+const sets = set1.concat(set2, set3, set4, set5)
+
+const regionRefID = {
+    "Demacia": 0,
+    "Freljord": 1,
+    "Ionia": 2,
+    "Noxus": 3,
+    "PiltoverZaun": 4,
+    "ShadowIsles": 5,
+    "Bilgewater": 6,
+    "Shurima": 7,
+    "Targon": 9,
+    "BandleCity": 10
+}
+
 export default {
     components: {
         RegionIcon
@@ -39,16 +60,27 @@ export default {
         getFactionsComplex() {
             var factionIDs = []
 
-            var deck = null
-            try { deck = DeckEncoder.decode(this.deck)} catch(err) {
+            var cards = null
+            try { cards = DeckEncoder.decode(this.deck)} catch(err) {
                 return factionIDs
             }
             
-            for (var j in deck) {
-                if (factionIDs.indexOf(deck[j].faction.id) == -1) {
-                    factionIDs.push(deck[j].faction.id)
+            for (var j in cards) {
+                
+                var cardCode = cards[j].code
+                var card = sets.find(card => card.cardCode == cardCode)
+                if (card) {
+                    if (card.regions && card.regions.length == 1) {
+                        // Only considers mono region cards
+                        var regionID = regionRefID[card.regionRefs[0]]
+
+                        if (factionIDs.indexOf(regionID) == -1) {
+                            factionIDs.push(regionID)
+                        }
+                    }
                 }
             }
+
             return factionIDs
         }
     },

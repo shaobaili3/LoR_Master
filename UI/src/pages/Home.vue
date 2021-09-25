@@ -30,6 +30,11 @@
             @click="setCurrentPage(PAGES.leaderboard)">
             <span><i class="fas fa-trophy"></i></span>
         </button>
+        <button class="left-nav-btn" 
+            :class="{selected: currentPage == PAGES.settings}" 
+            @click="setCurrentPage(PAGES.settings)">
+            <span><i class="fas fa-cog"></i></span>
+        </button>
     </div>
     
     <base-window-controls :title="''" :titleType="'window'"></base-window-controls>
@@ -111,6 +116,16 @@
         <div class="main-content-container leaderboard" v-if="currentPage == PAGES.leaderboard">
             <leaderboard @search="searchPlayer($event)"></leaderboard>
         </div>
+
+        <div class="main-content-container settings" v-if="currentPage == PAGES.settings">
+            <div class="settings-list">
+                <div class="settings-list-item">
+                    <div class="settings-title">Auto launch on startup: {{autoLaunch ? "Enabled" : "Disabled"}}</div>
+                    <button class="settings-btn" v-if="autoLaunch" @click="setAutoLaunch(false)">Disable</button>
+                    <button class="settings-btn" v-if="!autoLaunch" @click="setAutoLaunch(true)">Enable</button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="deck-content-container" :class="{hidden: !isShowDeck}">
@@ -182,7 +197,8 @@ const regionShort = {
 const PAGES = {
     my: 0,
     search: 1,
-    leaderboard: 2
+    leaderboard: 2,
+    settings: 3,
 }
 
 function processDate(dateString) {
@@ -225,6 +241,8 @@ export default {
         this.requestVersionData()
         this.requestStatusInfo()
         this.handleGameEnd()
+
+        this.initLocalSettings()
     },
     components: { 
         BaseWindowControls,
@@ -265,6 +283,9 @@ export default {
             localMatches: [],
             localPlayerInfo: {}, // playerId, server, language, rank, lp
             localHistoryLoading: false,
+
+            // Options
+            autoLaunch: null,
         }
     },
     computed: {
@@ -300,6 +321,23 @@ export default {
         }
     },
     methods: {
+
+        // Local Settings
+        initLocalSettings() {
+            window.ipcRenderer.on('check-auto-launch-return', (event, isEnabled) => {
+                this.autoLaunch = isEnabled
+            })
+
+            this.checkAutoLaunch()
+        },
+
+        checkAutoLaunch() {
+            window.ipcRenderer.send("check-auto-launch")
+        },
+        setAutoLaunch(enable) {
+            window.ipcRenderer.send('set-auto-launch', enable)
+        },
+
         // Page Switch
         setCurrentPage(page) {
             this.currentPage = page
@@ -1258,6 +1296,29 @@ export default {
         top: 0;
         background: var(--col-background);
         z-index: 2;
+    }
+
+    /* Settings Page */
+    .settings-list-item {
+        display: flex;
+        font-size: 18px;
+        align-items: center;
+    }
+
+    .settings-list-item .settings-title {
+        display: inline-block;
+    }
+
+    .settings-list-item .settings-btn {
+        display: inline-block;
+        margin-left: auto;
+        border: 0px;
+        background: var(--col-dark-grey);
+        color: white;
+        font-size: 1em;
+        padding: 10px 15px;
+        outline: none;
+        cursor: pointer;
     }
 
 </style>

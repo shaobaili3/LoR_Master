@@ -101,8 +101,12 @@ const appReady = () => {
   console.log("Is Packaged?", app.isPackaged)
   console.log("Version: ", currentVersion)
   
-  newAlert()
-  
+  // newAlert()
+
+  // if (app.isPackaged) {
+    // Init Auto Launch on startup only on packaged app
+    // enableAutoLaunch()
+  // }
 }
 
 // -----------------------------------------------
@@ -511,10 +515,77 @@ function newAlert() {
 // }, 1000 * 5);
 
 
+// -----------------------------------------------
+// --- Auto Launch ---
+// -----------------------------------------------
+
+var isAutoLaunch = null
+
+// var quitOnClose = false;
+
+function checkAutoLaunch() {
+  var AutoLaunch = require('auto-launch');
+  var autoLauncher = new AutoLaunch({
+      name: 'LoR Master Tracker',
+  });
+
+  autoLauncher.isEnabled().then(
+    function(isEnabled) {
+      isAutoLaunch = isEnabled
+      console.log("Auto Launch Enabled: ", isEnabled)
+      sendAutoLaunchToMain(isEnabled)
+    }
+  ).catch(function(err){
+      console.log(err)
+  });
+}
+
+function sendAutoLaunchToMain(isEnabled) {
+  if (mainWindow) (mainWindow.webContents.send('check-auto-launch-return', isEnabled))
+}
+
+ipcMain.on('check-auto-launch', (event, args) => {
+  checkAutoLaunch()
+})
+
+ipcMain.on('set-auto-launch', (event, enable) => {
+  if (enable) {
+    enableAutoLaunch()
+  } else {
+    disableAutoLaunch()
+  }
+  checkAutoLaunch()
+})
+
+// ipcMain.on('set-quit-on-close', (event, enable) => {
+  
+// })
+
+function enableAutoLaunch() {
+  var AutoLaunch = require('auto-launch');
+  var autoLauncher = new AutoLaunch({
+      name: 'LoR Master Tracker',
+  });
+
+  autoLauncher.enable();
+}
+
+function disableAutoLaunch() {
+  var AutoLaunch = require('auto-launch');
+  var autoLauncher = new AutoLaunch({
+      name: 'LoR Master Tracker',
+  });
+
+  autoLauncher.disable();
+}
+
+
+
 
 // --- Use these to check for old running python app ---
 
 const tasklist = require('tasklist')
+const { cp } = require('fs')
 /*
 	[
 		{
