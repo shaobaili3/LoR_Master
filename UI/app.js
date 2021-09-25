@@ -152,6 +152,11 @@ ipcMain.on('install-update', (event) => {
   autoUpdater.quitAndInstall(true, true)
 })
 
+ipcMain.on('game-end-trigger', () => {
+  console.log("Handling Game End")
+  if (mainWindow) mainWindow.webContents.send('game-end-handle')
+})
+
 setInterval(() => {
   autoUpdater.checkForUpdates();
 }, 1000 * 60 * 15);

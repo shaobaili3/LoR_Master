@@ -9,11 +9,15 @@
             @click="(hasLocalInfo && setCurrentPage(PAGES.my)) + requestLocalHistory()"
             :disabled="!hasLocalInfo"
         >
-            <span class="icon-default"><i class="fas fa-user-circle"></i></span>
-            <span class="icon-hover"><i class="fas fa-redo-alt fa-spin-fast"
-                v-if="localHistoryLoading || isLoading"></i></span>
-            <span class="icon-hover"><i class="fas fa-check" 
-                v-if="!localHistoryLoading && !isLoading"></i></span>
+            <span class="icon-default"
+                v-if="!localHistoryLoading && !isLoading"
+            ><i class="fas fa-user-circle"></i></span>
+            <span class="icon-default icon-hover"
+                v-if="localHistoryLoading || isLoading"
+            ><i class="fas fa-redo-alt fa-spin-fast"></i></span>
+            <span class="icon-hover"
+                v-if="!localHistoryLoading && !isLoading"
+            ><i class="fas fa-check"></i></span>
             <div class="tooltiptext right" v-if="!hasLocalInfo">Please log in LoR</div>
         </button>
         <button class="left-nav-btn" 
@@ -220,8 +224,7 @@ export default {
         // var test = 'Hello'
         this.requestVersionData()
         this.requestStatusInfo()
-
-        // console.log(window.ipcRenderer)
+        this.handleGameEnd()
     },
     components: { 
         BaseWindowControls,
@@ -500,6 +503,12 @@ export default {
             } else {
                 console.log("Download not finished")
             }
+        },
+        handleGameEnd() {
+            window.ipcRenderer.on('game-end-handle', (event) => {
+                console.log("Game Ended: Requesting local history")
+                this.requestLocalHistory()
+            })
         },
         requestVersionData() {
 

@@ -390,6 +390,10 @@ export default {
                     this.makeWindowVisible()
                 }
             } else {
+                if (this.startingDeckCode != null) {
+                    // switching from game end
+                    this.handleGameEnd()
+                }
                 this.startingDeckCode = null
                 this.currentDeckCode = null
                 this.myGraveCode = null
@@ -436,6 +440,9 @@ export default {
             }
             // console.log(this.matchTotalNum)
 
+        },
+        handleGameEnd() {
+            window.ipcRenderer.send("game-end-trigger")
         }
     }
 
