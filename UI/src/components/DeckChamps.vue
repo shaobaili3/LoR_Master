@@ -64,8 +64,8 @@ export default {
                     }
                 }
             }
-            // Add filler champ icons (only when there is a champion)
-            if (this.fixedWidth && champs.length > 0) {
+            // Add filler champ icons
+            if (this.fixedWidth) {
                 var fillerIcons = this.maxChamp - champs.length
                 for (let i = 0; i < fillerIcons; i++) {
                     champs.push("")
