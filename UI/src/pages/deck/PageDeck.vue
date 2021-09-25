@@ -113,7 +113,6 @@ export default {
         MatchInfoDeckDetail,
         DeckRegions,
         DeckDetailBase,
-        // MatchInfoDeckPreview,
     },
     mounted() {
         // console.log(JSON.stringify(this.matchInfos))

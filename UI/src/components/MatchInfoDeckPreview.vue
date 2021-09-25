@@ -8,21 +8,11 @@
 
 <script>
 
-// const { DeckEncoder } = require('runeterra')
 import DeckEncoder from '../modules/runeterra/DeckEncoder'
 import championCards from '../assets/data/champion.js'
 import DeckChamps from './DeckChamps.vue';
 import DeckRegions from './DeckRegions.vue';
 //https://painttist.github.io/lor-champ-icons/data/champion.js
-
-// function importAll(r) {
-//     let images = {};
-//     r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
-//     return images;
-// }
-
-// const cardImages = importAll(require.context('../assets/images/cards/cropped/', false, /\.(png|jpe?g|svg)$/));
-// const regionImages = importAll(require.context('../assets/images/regions/', false, /\.(png|jpe?g|svg)$/));
 
 export default {
     components: {
@@ -68,21 +58,13 @@ export default {
     }
 
     .btn.won:hover {
-        /* mix-blend-mode: normal; */
         background-color: var(--col-gold);
-        /* box-shadow: -1px 1px 2px 0px rgba(43, 38, 27, 0.7), 1px -1px 2px 0px rgba(255, 255, 255, 0.3);
-        transform: translate(2px, -2px); */
         cursor: pointer;
-        /* border: 2px solid white; */
     }
 
     .btn.loss:hover {
-        /* mix-blend-mode: normal; */
         background-color: var(--col-lighter-grey);
-        /* box-shadow: -1px 1px 2px 0px rgba(43, 38, 27, 0.7), 1px -1px 2px 0px rgba(255, 255, 255, 0.3);
-        transform: translate(2px, -2px); */
         cursor: pointer;
-        /* border: 2px solid white; */
     }
 
     @media screen and (max-width: 275px) {

@@ -1,7 +1,8 @@
 <template>
-    <div class="row deck btn" :class="{won: won, loss: !won}">
+    <div class="row deck btn" :class="{won: won, loss: !won, cheveron: cheveron}">
         <deck-regions :deck="deck"></deck-regions>
         <deck-champs :deck="deck"></deck-champs>
+        <div v-if="cheveron" class="icon cheveron fa fa-chevron-down"></div>
     </div>
 </template>
 
@@ -25,6 +26,10 @@ export default {
     props: {
         deck: String,
         won: Boolean,
+        cheveron: {
+            type: Boolean,
+            default: false,
+        },
     },
     computed: {
     },
@@ -48,6 +53,16 @@ export default {
         border-radius: 6px;
         align-items: center;
         gap: 5px;
+    }
+
+    .row.deck.cheveron {
+        justify-content: flex-start;
+    }
+
+    .icon.cheveron {
+        width: 10px;
+        padding: 5px;
+        margin-left: auto;
     }
 
     .btn.won:hover {

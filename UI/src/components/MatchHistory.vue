@@ -27,12 +27,10 @@
 
 <script>
 
-// import DeckDetail from '../components/MatchInfoDeckDetail.vue'
-import DeckPreview from '../components/MatchHistoryDeckPreview.vue'
+import DeckPreview from '../components/DeckPreview.vue'
 
 export default {
     components: {
-        // DeckDetail,
         DeckPreview,
     },
     mounted() {
