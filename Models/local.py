@@ -2,6 +2,8 @@ import requests
 import constants as cs
 from Models.deck import getDeckCode
 import json
+import os
+import constants
 
 
 class Local:
@@ -168,8 +170,11 @@ class Local:
         return self.trackJson
 
     def updateTagByName(self, name):
+        nameListPath = constants.getCacheFilePath(self.setting.riotServe.lower() +'.json')
+        if not os.path.isfile(nameListPath):
+            nameListPath = 'data/' + self.setting.riotServe.lower() + '.json'
         try:
-            with open('data/' + self.setting.riotServer + '.json', 'r', encoding='utf-8') as fp:
+            with open(nameListPath, 'r', encoding='utf-8') as fp:
                 names = json.load(fp)
                 if name in names:
                     self.opponentTag = names[name]

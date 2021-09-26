@@ -19,6 +19,7 @@ from sentry_sdk.integrations.flask import FlaskIntegration
 import sentry_sdk
 import io
 import sys
+import os
 import constants
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf8')
@@ -112,9 +113,13 @@ def history(server, name, tag):
 
 @app.route("/name/<string:server>/<string:playername>", methods=['get'])
 def get_names(server, playername):
+    # to-do move functions to master model
     playernames = set()
+    nameListPath = constants.getCacheFilePath(server.lower() +'.json')
+    if not os.path.isfile(nameListPath):
+        nameListPath = 'data/' + server.lower() + '.json'
     try:
-        with open('data/' + server.lower() + '.json', 'r', encoding='utf-8') as fp:
+        with open(nameListPath, 'r', encoding='utf-8') as fp:
             names = json.load(fp)
             for name in names.items():
                 playernames.add(name[0] + '#' + name[1])
@@ -154,9 +159,11 @@ def get_leaderboard(server):
 
     if board is None:
         return jsonify(boardWithTag)
-
+    nameListPath = constants.getCacheFilePath(server.lower() +'.json')
+    if not os.path.isfile(nameListPath):
+        nameListPath = 'data/' + server.lower() + '.json'
     try:
-        with open('data/' + server + '.json', 'r', encoding='utf-8') as fp:
+        with open(nameListPath, 'r', encoding='utf-8') as fp:
             playlistDict = json.load(fp)
     except Exception as e:
         print('Restful: unable to load player list')
