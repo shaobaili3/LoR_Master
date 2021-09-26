@@ -4,7 +4,6 @@ import json
 import os
 import constants
 
-
 class Riot:
     def __init__(self, network, cache):
         self.network = network
@@ -20,7 +19,7 @@ class Riot:
             return self.cache.riotIds[puuidLink]
         print(puuidLink)
         try:
-            puuidRequest = self.session.get(puuidLink)
+            puuidRequest = self.session.get(puuidLink, proxies= Models.network.getProxy())
         except requests.exceptions.RequestException as e:
             print(puuidLink)
             print('getPlayerPUUID error": ', e)
@@ -75,7 +74,7 @@ class Riot:
     def getMatches(self, puuid, saveCache=True):
         matchLink = self.network.getMatchesLink(puuid)
         try:
-            matchRequest = self.session.get(matchLink)
+            matchRequest = self.session.get(matchLink, proxies = Models.network.getProxy())
         except requests.exceptions.RequestException as e:
             print(matchLink)
             print('getMatches error: ', e)
@@ -104,7 +103,7 @@ class Riot:
             return self.cache.matchDetails.get(matchId)
         detailsLink = self.network.getDetailsLink(matchId)
         try:
-            detailsRequest = self.session.get(detailsLink)
+            detailsRequest = self.session.get(detailsLink, proxies = Models.network.getProxy())
         except requests.exceptions.RequestException as e:
             print(detailsLink)
             print(e)
@@ -138,7 +137,7 @@ class Riot:
             return self.cache.playerNames[puuid]
         nameLink = self.network.getNameLink(puuid)
         try:
-            nameRequest = self.session.get(nameLink)
+            nameRequest = self.session.get(nameLink, proxies = Models.network.getProxy())
         except requests.exceptions.RequestException as e:
             print(nameLink)
             print(e)

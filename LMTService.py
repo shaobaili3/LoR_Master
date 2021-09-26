@@ -168,26 +168,6 @@ def get_leaderboard(server):
         boardWithTag.append(player)
     return jsonify(boardWithTag)
 
-
-@app.route("/version", methods=['get'])
-def get_version():
-    import requests
-    version = {}
-    version['version'] = constants.VERSION_NUM
-    version['remoteVersion'] = constants.VERSION_NUM
-    try:
-        response = requests.get(
-            "https://api.github.com/repos/shaobaili3/LoR_Master/releases/latest")
-        githubJson = response.json()
-    except Exception as e:
-        print('get_version() error', e)
-        return jsonify(version)
-    version['remoteVersion'] = githubJson.get('tag_name')
-    version['downloadUrl'] = githubJson.get('assets')[0].get('browser_download_url')
-    version['github'] = githubJson
-    return jsonify(version)
-
-
 @app.route("/opInfo", methods=['get'])
 def opInfo():
     opInfo = {}
