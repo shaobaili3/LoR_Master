@@ -9,7 +9,7 @@
     "url": "https://github.com/shaobaili3/LoR_Master"
   },
   "scripts": {
-    "dev": "vue-cli-service build && electron --inspect=5858 app.js",
+    "dev": "vue-cli-service build && electron app.js",
     "dev-hidden": "vue-cli-service build && electron app.js --hidden",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",

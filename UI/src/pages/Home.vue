@@ -10,13 +10,13 @@
             :disabled="!hasLocalInfo"
         >
             <span class="icon-default"
-                v-if="!localHistoryLoading && !isLoading"
+                v-if="!localHistoryLoading"
             ><i class="fas fa-user-circle"></i></span>
             <span class="icon-default icon-hover"
-                v-if="localHistoryLoading || isLoading"
+                v-if="localHistoryLoading"
             ><i class="fas fa-redo-alt fa-spin-fast"></i></span>
             <span class="icon-hover"
-                v-if="!localHistoryLoading && !isLoading"
+                v-if="!localHistoryLoading"
             ><i class="fas fa-check"></i></span>
             <div class="tooltiptext right" v-if="!hasLocalInfo">Please log in LoR</div>
         </button>
@@ -288,6 +288,7 @@ export default {
             localMatches: [],
             localPlayerInfo: {}, // playerId, server, language, rank, lp
             localHistoryLoading: false,
+            localHistoryWaiting: false,
 
             // Options
             autoLaunch: null,
@@ -647,6 +648,9 @@ export default {
 
                         this.localPlayerInfo.playerId = data.playerId
                         var nameid = data.playerId.split('#')
+                        var oldName = this.localPlayerInfo.name
+                        var oldTag = this.localPlayerInfo.tag
+                        
                         this.localPlayerInfo.name = nameid[0]
                         this.localPlayerInfo.tag = nameid[1]
 
@@ -785,17 +789,23 @@ export default {
 
         requestLocalHistory() {
 
-            if (this.isLoading) {
-                // Before starting everything check to see if there is already a search request
-                if (requestLocalHistoryTimeout) clearTimeout(requestLocalHistoryTimeout)
-                requestLocalHistoryTimeout = setTimeout(this.requestLocalHistory, requestHistoryWaitTime);
-                return
-            }
+            // if (this.isLoading) {
+            //     // Before starting everything check to see if there is already a search request
+            //     if (requestLocalHistoryTimeout) clearTimeout(requestLocalHistoryTimeout)
+            //     requestLocalHistoryTimeout = setTimeout(this.requestLocalHistory, requestHistoryWaitTime);
+            //     this.localHistoryWaiting = true
+            //     return
+            // }
+
+            // Not waiting for other search requests
+            // this.localHistoryWaiting = false
             
             if (this.localHistoryLoading) {
                 // Don't do anything if there is already a local search request
                 return
             }
+
+            // Now ready for a new request
 
             //Check if there are any previous pending requests
             if (typeof localCancleToken != typeof undefined) {
@@ -810,9 +820,8 @@ export default {
             var tag = this.localPlayerInfo.tag
 
             if (!(server && name && tag)) {
-                setTimeout(() => {
-                    this.requestLocalHistory()
-                }, 100);
+                // Checks to see if there is all the information
+                // Don't do anything if not enough data
                 return
             }
 
