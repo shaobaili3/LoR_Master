@@ -8,7 +8,7 @@ from collections import Counter
 try:
     # globals_file = Path("./data/globals-en_us.json")
     globals_file = Path(
-        __file__).parent.parent.parent / "data/globals-en_us.json"
+        __file__).parent.parent.parent / "Resource/globals-en_us.json"
     print('globals_file:', globals_file)
     data_globals = read_json_file(globals_file)
 except Exception as e:

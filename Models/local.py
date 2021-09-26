@@ -172,7 +172,7 @@ class Local:
     def updateTagByName(self, name):
         nameListPath = constants.getCacheFilePath(self.setting.riotServe.lower() +'.json')
         if not os.path.isfile(nameListPath):
-            nameListPath = 'data/' + self.setting.riotServe.lower() + '.json'
+            nameListPath = 'Resource/' + self.setting.riotServe.lower() + '.json'
         try:
             with open(nameListPath, 'r', encoding='utf-8') as fp:
                 names = json.load(fp)

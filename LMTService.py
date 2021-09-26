@@ -117,7 +117,7 @@ def get_names(server, playername):
     playernames = set()
     nameListPath = constants.getCacheFilePath(server.lower() +'.json')
     if not os.path.isfile(nameListPath):
-        nameListPath = 'data/' + server.lower() + '.json'
+        nameListPath = 'Resource/' + server.lower() + '.json'
     try:
         with open(nameListPath, 'r', encoding='utf-8') as fp:
             names = json.load(fp)
@@ -161,7 +161,7 @@ def get_leaderboard(server):
         return jsonify(boardWithTag)
     nameListPath = constants.getCacheFilePath(server.lower() +'.json')
     if not os.path.isfile(nameListPath):
-        nameListPath = 'data/' + server.lower() + '.json'
+        nameListPath = 'Resource/' + server.lower() + '.json'
     try:
         with open(nameListPath, 'r', encoding='utf-8') as fp:
             playlistDict = json.load(fp)

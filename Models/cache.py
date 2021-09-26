@@ -26,7 +26,6 @@ class Cache():
 
     def save(self):
         try:
-            os.makedirs('data', exist_ok=True)
             with open(constants.getCacheFilePath('matchDetails.json'), 'w+', encoding='utf-8') as fp:
                 json.dump(self.matchDetails, fp, ensure_ascii=False, indent=2)
             with open(constants.getCacheFilePath('riotIds.json'), 'w+', encoding='utf-8') as fp:
