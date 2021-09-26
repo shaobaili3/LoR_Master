@@ -31,7 +31,9 @@ class Cache():
             with open(constants.getCacheFilePath('riotIds.json'), 'w+', encoding='utf-8') as fp:
                 json.dump(self.riotIds, fp, ensure_ascii=False, indent=2)
             with open(constants.getCacheFilePath('playerNames.json'), 'w+', encoding='utf-8') as fp:
-                json.dump(constants.getCacheFilePath('matches.json'), fp, ensure_ascii=False, indent=2)
+                json.dump(self.playerNames, fp, ensure_ascii=False, indent=2)
+            with open(constants.getCacheFilePath('matches.json'), 'w+', encoding='utf-8') as fp:
+                json.dump(self.matches, fp, ensure_ascii=False, indent=2)
         except Exception as e:
             print('save cache error: ', e)
             return

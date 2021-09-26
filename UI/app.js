@@ -12,7 +12,7 @@ const closeWithoutTracker = false
 const headerHeight = 45 // Repeated in preload.js
 const defaultRatio = 2.3 // Repeated in preload.js
 
-const spawnService = true
+const spawnService = false
 const spawnPython = false
 
 let currentVersion = "";
