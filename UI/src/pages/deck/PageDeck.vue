@@ -51,17 +51,17 @@
 
         <div class="tab-content" v-if="isShowMy && !isLoading">
             <deck-regions :deck="startingDeckCode"></deck-regions>
-            <deck-detail-base :deck="currentDeckCode" :baseDeck="startingDeckCode"></deck-detail-base>
+            <deck-detail :deck="currentDeckCode" :baseDeck="startingDeckCode"></deck-detail>
         </div>
 
         <div class="tab-content" v-if="isShowOppoGrave && !isLoading">
             <div class="tab-text">Opponent Graveyard</div>
-            <deck-detail-base :deck="oppoGraveCode" :baseDeck="oppoGraveCode" :showCopy="false"></deck-detail-base>
+            <deck-detail :deck="oppoGraveCode" :baseDeck="oppoGraveCode" :showCopy="false"></deck-detail>
         </div>
 
         <div class="tab-content" v-if="isShowMyGrave && !isLoading">
             <div class="tab-text">My Graveyard</div>
-            <deck-detail-base :deck="myGraveCode" :baseDeck="myGraveCode" :showCopy="false"></deck-detail-base>
+            <deck-detail :deck="myGraveCode" :baseDeck="myGraveCode" :showCopy="false"></deck-detail>
         </div>
 
         
@@ -87,7 +87,7 @@ import BaseWindowControls from '../../components/BaseWindowControls.vue'
 import MatchInfoDeckDetail from '../../components/MatchInfoDeckDetail.vue'
 import DeckRegions from '../../components/DeckRegions.vue'
 import DeckEncoder from '../../modules/runeterra/DeckEncoder'
-import DeckDetailBase from '../../components/DeckDetailBase.vue'
+import DeckDetail from '../../components/DeckDetail.vue'
 
 const requestDataWaitTime = 100; // ms
 const requestServerWaitTime = 3000; //ms
@@ -112,7 +112,7 @@ export default {
         MatchInfo,
         MatchInfoDeckDetail,
         DeckRegions,
-        DeckDetailBase,
+        DeckDetail,
     },
     mounted() {
         // console.log(JSON.stringify(this.matchInfos))
