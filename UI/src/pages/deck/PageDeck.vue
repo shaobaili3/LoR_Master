@@ -68,7 +68,7 @@
 
         <div class="tab-content" v-if="isShowCode">
             <deck-regions :deck="deckCode"></deck-regions>
-            <match-info-deck-detail :deck="deckCode"></match-info-deck-detail>
+            <deck-detail :baseDeck="deckCode"></deck-detail>
         </div>
 
         <div class="footer" v-if="!isLoading">
@@ -84,10 +84,9 @@
 import MatchInfo from '../../components/MatchInfo.vue'
 import axios from 'axios'
 import BaseWindowControls from '../../components/BaseWindowControls.vue'
-import MatchInfoDeckDetail from '../../components/MatchInfoDeckDetail.vue'
+import DeckDetail from '../../components/DeckDetail.vue'
 import DeckRegions from '../../components/DeckRegions.vue'
 import DeckEncoder from '../../modules/runeterra/DeckEncoder'
-import DeckDetail from '../../components/DeckDetail.vue'
 
 const requestDataWaitTime = 100; // ms
 const requestServerWaitTime = 3000; //ms
@@ -110,9 +109,8 @@ export default {
     components: { 
         BaseWindowControls,
         MatchInfo,
-        MatchInfoDeckDetail,
-        DeckRegions,
         DeckDetail,
+        DeckRegions,
     },
     mounted() {
         // console.log(JSON.stringify(this.matchInfos))

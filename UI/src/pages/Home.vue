@@ -139,7 +139,7 @@
             <deck-regions :deck="deckCode" :fixedWidth="false"></deck-regions>
         </div>
         <div class="deck-content-detail">
-            <match-history-deck-detail :deck="deckCode"></match-history-deck-detail>
+            <deck-detail :baseDeck="deckCode" :fixedHeight="true"></deck-detail>
         </div>
     </div>
 
@@ -171,9 +171,9 @@
 import BaseWindowControls from '../components/BaseWindowControls.vue'
 import axios from 'axios'
 import DeckRegions from '../components/DeckRegions.vue'
-import MatchHistoryDeckDetail from '../components/MatchHistoryDeckDetail.vue'
 import Leaderboard from '../components/Leaderboard.vue'
 import PlayerMatches from '../components/PlayerMatches.vue'
+import DeckDetail from '../components/DeckDetail.vue'
 
 const requestDataWaitTime = 400 //ms
 const requestHistoryWaitTime = 100 //ms
@@ -252,9 +252,9 @@ export default {
     components: { 
         BaseWindowControls,
         DeckRegions,
-        MatchHistoryDeckDetail,
         Leaderboard,
-        PlayerMatches
+        PlayerMatches,
+        DeckDetail
     },
     data() {
         return {
@@ -1316,7 +1316,7 @@ export default {
         right: -10px;
         left: auto;
         transform: none;
-        margin-bottom: 20px;
+        margin-bottom: 22px;
     }
 
     .tooltip:hover .tooltiptext {
