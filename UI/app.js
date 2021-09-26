@@ -323,7 +323,8 @@ function newMainWindow() {
     y: (height - windowHeight) / 2,
     frame: false,
     resizable: true,
-    show: !startHidden,
+    show: false,
+    backgroundColor: '#1c1c1f',
     webPreferences: {
       preload: __dirname + '/appsrc/preload.js',
       enableRemoteModule: true,
@@ -338,9 +339,6 @@ function newMainWindow() {
   })
 
   // console.log(mainWindowUrl)
-
-  
-
   // mainWindow.loadURL(`file://${__dirname}/dist/index.html`)
   mainWindow.loadURL(mainWindowUrl)
   
@@ -351,14 +349,12 @@ function newMainWindow() {
   })
 
   mainWindow.on('hide', () => {
-    console.log("Hiding Main Window")
-    // tray.displayBalloon({
-    //   title: "LoR Master Tracker Hidden",
-    //   content: "click icon to show"
-    // })
   })
 
   mainWindow.once('ready-to-show', () => {
+    
+    if (!startHidden) mainWindow.show()
+
     mainWindow.webContents.send('app-version', currentVersion)
     mainWindow.webContents.send('debug-info-display', process.argv)
   })
