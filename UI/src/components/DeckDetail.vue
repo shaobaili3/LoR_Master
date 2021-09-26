@@ -1,5 +1,7 @@
 <template>
-    <div class="deck-detail" v-if="cards.length > 0">
+    <div class="deck-detail" 
+    :class="{'fixed-height': fixedHeight}"
+    v-if="cards.length > 0">
         <cards-preview v-for="(card, index) in cards" :key="index"
         :name="card.name"
         :cost="card.cost"
@@ -9,11 +11,13 @@
         :supertype="card.supertype"
         :set="card.set"
         >{{card.name}}</cards-preview>
-        <div class="actions" v-if="showCopy">
-            <!-- <a class="actions-btn" :href="deckDetailLink" target="_blank"><span class="actions-icon fa fa-external-link-alt"></span>Detail</a> -->
-            <div class="actions-btn" @click="openURL(deckDetailLink)"><span class="actions-icon fa fa-external-link-alt"></span>Detail</div>
-            <div class="actions-btn" @click="copyDeckcode"><span class="actions-icon far fa-copy"></span>{{copyText}}</div>
-        </div>
+    </div>
+    <div class="actions" 
+    :class="{'fixed-height': fixedHeight}"
+    v-if="showCopy">
+        <!-- <a class="actions-btn" :href="deckDetailLink" target="_blank"><span class="actions-icon fa fa-external-link-alt"></span>Detail</a> -->
+        <div class="actions-btn" v-if="showURL" @click="openURL(deckDetailLink)"><span class="actions-icon fa fa-external-link-alt"></span>Detail</div>
+        <div class="actions-btn" @click="copyDeckcode"><span class="actions-icon far fa-copy"></span>{{copyText}}</div>
     </div>
 </template>
 
@@ -52,6 +56,14 @@ export default {
             type: Boolean,
             default: true,
         },
+        showURL: {
+            type: Boolean,
+            default: false,
+        },
+        fixedHeight: {
+            type: Boolean,
+            default: false,
+        },
     },
     computed: {
         deckDetailLink() {
@@ -71,11 +83,7 @@ export default {
                 // return cards
             }
 
-            // console.log(baseDeck)
-            // console.log(deck)
-
             if (baseDeck) {
-                // console.log("Base Deck fine")
                 // make sure cards not in current Deck are shown
                 for (var j in baseDeck) {
                     // Loop through base deck
@@ -85,7 +93,6 @@ export default {
                     var cardCount = baseDeck[j].count
                     
                     if (deck) {
-                        // console.log("Current Deck fine")
                         // make sure currentDeck exist
                         
                         // Finding the same card in current deck
@@ -100,7 +107,6 @@ export default {
                     }
 
                     if (card) {
-                        // console.log(cardName, deck[j].count)
                         cards.push({
                             code: cardCode, 
                             name: card.name,
@@ -173,15 +179,32 @@ export default {
         background-color: var(--col-background);
         font-size: 0.9em;
         border-radius: 5px;
+        color: white;
     }
 
-    .actions {
-        margin-top: 8px;
-        margin-right: 8px;
+    .deck-detail.fixed-height {
+        height: 100%;
+        overflow: scroll;
+    }
+
+    .actions {    
+        width: 100%;
+        padding: 8px;
+
+        box-sizing: border-box;
+
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        /* gap: 5px; */
+        background: var(--col-background);
+
+        color: white;
+    }
+
+    .actions.fixed-height {
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
     }
 
     .actions-btn {
