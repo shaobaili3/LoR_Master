@@ -20,21 +20,20 @@
             
         </div>
         <div class="row decklist">
-            <deck-preview @click="showDeck" :deck="deck" :won="won"></deck-preview>
+            <deck-preview @click="showDeck" :deck="deck" :won="won" :cheveron="true"></deck-preview>
             <!-- <div class="text-vs">VS</div> -->
             <!-- <deck-preview @click="showDeck" :deck="deck"></deck-preview> -->
         </div>
     </div>
 
-    <deck-detail v-if="visibleDeck == 1" :deck="deck"></deck-detail>
-    <!-- <deck-detail v-if="visibleDeck == 2" :deck="opponentDeck"></deck-detail> -->
+    <deck-detail v-if="visibleDeck == 1" :baseDeck="deck"></deck-detail>
 
 </template>
 
 <script>
 
-import DeckDetail from '../components/MatchInfoDeckDetail.vue'
-import DeckPreview from '../components/MatchInfoDeckPreview.vue'
+import DeckDetail from '../components/DeckDetail.vue'
+import DeckPreview from '../components/DeckPreview.vue'
 
 export default {
     components: {

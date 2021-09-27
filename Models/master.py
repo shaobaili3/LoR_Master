@@ -1,6 +1,6 @@
 import json
 import requests
-import os
+import constants
 import threading
 import time
 from Models.setting import Server
@@ -8,7 +8,7 @@ from Models.setting import Server
 session = requests.Session()
 
 def get_playernames(server):
-    url = f"https://raw.githubusercontent.com/LoR-Master-Tracker/LoR-Player-Crawler/master/{server}.json"
+    url = f"https://raw.githubusercontent.com/LoR-Master-Tracker/LoR-Player-Crawler/master/save/{server}.json"
     print('Loading: ', url)
     r = session.get(url)
 
@@ -18,8 +18,7 @@ def get_playernames(server):
     except Exception as e:
         print('Json valid issue: ', e)
         return
-    os.makedirs('data', exist_ok=True)
-    with open('data/' + server +'.json', 'w+', encoding='utf-8') as fp:
+    with open(constants.getCacheFilePath(server.lower() +'.json'), 'w', encoding='utf-8') as fp:
         json.dump(jsonObject, fp, ensure_ascii=False, indent= 2)
 
 def f(s):

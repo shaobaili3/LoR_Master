@@ -1,42 +1,74 @@
 {
   "name": "lor-master-tracker",
   "productName": "LoR Master Tracker",
-  "version": "0.9.8",
+  "version": "0.9.12",
   "private": true,
   "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shaobaili3/LoR_Master"
+  },
   "scripts": {
     "dev": "vue-cli-service build && electron app.js",
+    "dev-hidden": "vue-cli-service build && electron app.js --hidden",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "deploy": "deploy.sh",
     "start": "electron app.js",
     "package": "electron-packager ./ LoRMasterTracker --out ./app --app-version %npm_package_version% --overwrite --icon=image.ico",
-    "build-installer": "electron-builder"
+    "build-installer": "electron-builder",
+    "build-pack": "electron-builder --dir",
+    "build-pub": "electron-builder -p always"
   },
   "build": {
-    "appId": "%npm_package_name%",
+    "appId": "com.lor-master-tracker.tracker",
+    "productName": "LoRMasterTracker",
     "directories": {
       "output": "build"
     },
-    "files": ["**/*", "dist/*"],
+    "files": [
+      "**/*",
+      "dist/*"
+    ],
+    "extraFiles": [
+      {
+        "from": "./backend/",
+        "to": "backend/",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ],
     "win": {
-      "target": ["nsis"],
-      "icon": "image.ico"
+      "target": [
+        "nsis"
+      ],
+      "icon": "image.ico",
+      "publish": [
+        {
+          "provider": "github",
+          "owner": "shaobaili3",
+          "repo": "LoR_Master"
+        }
+      ]
     },
     "nsis": {
       "installerIcon": "image.ico",
-      "uninstallerIcon": "image.ico",
-      "uninstallDisplayName": "%npm_package_productName%",
+      "uninstallerIcon": "uninstall.ico",
       "license": "LICENSE",
       "oneClick": false,
-      "perMachine": false,
-      "allowToChangeInstallationDirectory": true
+      "allowToChangeInstallationDirectory": true,
+      "shortcutName": "LoR Master Tracker",
+      "deleteAppDataOnUninstall": "true"
     }
   },
   "dependencies": {
+    "auto-launch": "^5.0.5",
     "axios": "^0.21.1",
     "core-js": "^3.6.5",
+    "electron-log": "^4.4.1",
+    "electron-updater": "^4.3.9",
     "runeterra": "^2.0.0",
     "tasklist": "^4.0.1",
     "vue": "^3.0.0",
@@ -50,10 +82,10 @@
     "@vue/compiler-sfc": "^3.0.0",
     "babel-eslint": "^10.1.0",
     "electron": "^11.2.3",
+    "electron-builder": "^22.11.7",
     "electron-packager": "^15.2.0",
     "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^7.0.0-0",
-    "electron-builder": "^22.11.7"
+    "eslint-plugin-vue": "^7.0.0-0"
   },
   "eslintConfig": {
     "root": true,

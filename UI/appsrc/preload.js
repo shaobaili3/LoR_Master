@@ -1,49 +1,16 @@
 const remote = require("electron").remote
-// const zmq = require("zeromq")
 
 const shell = require('electron').shell
-
-// // Sub
-// const sock = new zmq.Subscriber
-
-// sock.connect("tcp://127.0.0.1:9622")
-// sock.subscribe("LoR")
-// console.log("Subscriber connected to port 9622")
-
-// window.sock = sock
-
-// // Request
-// const request = new zmq.Request
-
-// request.connect("tcp://127.0.0.1:9621")
-// console.log("Request connected to port 9621")
-// window.request = request
-
-
-
-// async function runClient() {
-//     const sock = new zmq.Subscriber
-//     // const window = remote.getCurrentWindow()
-
-//     sock.connect("tcp://127.0.0.1:3000")
-//     sock.subscribe("kitty cats")
-//     console.log("Subscriber connected to port 3000")
-
-//     for await (const [topic, msg] of sock) {
-//       console.log("received a message related to:", topic.toString(), "containing message:", msg.toString())
-//       window.testData = msg.toString()
-//       // console.log(mainWindow)
-//     }
-// }
-
-// runClient()
 
 var win = remote.getCurrentWindow()
 
 window.closeWindow = function() {
     // console.log("Close window")
+    win.close()
+}
+
+window.hideWindow = function() {
     win.hide()
-    // win.close()
 }
 
 window.setSkipTaskbar = function(bool) {
@@ -176,3 +143,50 @@ window.isMin = function() {
         return true
     }
 }
+
+
+// --- Auto Update Logics ---
+
+const { ipcRenderer } = require('electron')
+
+// window.appVersion = null
+// window.appVersionLatest = null
+
+window.ipcRenderer = ipcRenderer
+
+// ipcRenderer.on('app-version', (event, arg) => {
+//     console.log(arg)
+//     window.appVersion = arg
+// })
+
+// ipcRenderer.on('update-available', (event, info) => {
+//     // console.log(info)
+//     window.appVersionLatest = info.version
+//     console.log("Latest Version is:", info.version)
+// })
+
+// ipcRenderer.on('update-not-available', (event, arg) => {
+//     console.log(arg)
+//     window.appVersionLatest = window.appVersion
+// })
+
+// ipcRenderer.on('download-process', (event, arg) => {
+//     console.log(arg)
+// })
+
+// ipcRenderer.on('update-downloaded', (event, arg) => {
+//     console.log(arg)
+// })
+
+// window.getAppVersion = function() {
+//     ipcRenderer.send('get-app-version', 'ping')
+// }
+
+// ipcRenderer.on('get-app-version-reply', (event, arg) => {
+//     console.log(arg)
+// })
+
+
+// ipcRenderer.send('asynchronous-message', 'ping')
+
+// alert("Preload JS")

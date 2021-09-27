@@ -1,4 +1,5 @@
 import random
+import urllib.request
 
 API_KEY1 = '?api_key=' + 'RGAPI-693e34b0-9890-4591-a22d-36df07ccde53'  #ios product development
 API_KEY2 = '?api_key=' + 'RGAPI-5cfa0b1c-8d06-4d65-b9f7-3738e745fc7b'  #ios new github release
@@ -29,6 +30,8 @@ def switchAPI():
     API_KEY = aviliableKeys.pop()
     print('API CHANGED!!!!!!!!!!!!!!!!!!!!!!!!!!!!!', API_KEY)
 
+def getProxy():
+    return urllib.request.getproxies()
 
 class Network():
     def __init__(self, setting) -> None:

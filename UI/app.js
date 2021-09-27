@@ -1,20 +1,25 @@
 
 const electron = require('electron')
-const { app, Tray, Menu, MenuItem, protocol, globalShortcut } = require('electron')
+const { app, Tray, Menu, MenuItem, protocol, globalShortcut , ipcMain} = require('electron')
+const { autoUpdater } = require('electron-updater')
 // const app = electron.app
 const BrowserWindow = electron.BrowserWindow
 const path = require('path')
 
 const developmentMode = false
-// const snapAssist = true
 const closeWithoutTracker = false
 const headerHeight = 45 // Repeated in preload.js
 const defaultRatio = 2.3 // Repeated in preload.js
 
 const spawnService = false
-const spawnPython = true
+const spawnPython = false
 
+let currentVersion = "";
+var startHidden = false;
+
+// -----------------------------------------------
 // --- app entry points ---
+// -----------------------------------------------
 
 const gotTheLock = app.requestSingleInstanceLock()
 
@@ -27,6 +32,7 @@ if (!gotTheLock) {
     // Someone tried to run a second instance, we should focus our window.
     if (mainWindow) {
       if (mainWindow.isMinimized()) mainWindow.restore()
+      if (!mainWindow.isVisible()) mainWindow.show()
       mainWindow.focus()
     }
   })
@@ -43,26 +49,54 @@ app.on('ready', () => {
     toggleMinDeckWindow()
   })
 
+  if (app.isPackaged) {
+    currentVersion = app.getVersion()
+    // autoUpdater.checkForUpdates();
+  } else {
+    currentVersion = require('./package.json').version;
+    autoUpdater.autoDownload = false;
+    autoUpdater.currentVersion = require('./package.json').version;
+    // autoUpdater.checkForUpdates();
+  }
+
   appReady()
 })
 
 app.on('window-all-closed', () => {
+  // console.log("All Window Closed")
   // if (process.platform !== 'darwin') {
   // app.quit()
   // }
 })
 
+// app.on("browser-window-blur", (event, window) => {
+//   console.log("Window Blur", window)
+// })
+
 app.on('activate', () => {
   newMainWindow()
 })
+
+function showAlert(title, message) {
+  const { dialog } = require('electron')
+  dialog.showMessageBox({
+    title: title,
+    message: message
+  })
+}
 
 const appReady = () => {
 
   if (closeWithoutTracker && !isCheckingTracker) checkTracker()
 
-  if (spawnService) {
+  if (app.isPackaged || spawnService) {
     startLMTService()
   }
+
+  console.log("Process Args:")
+  console.log(process.argv)
+
+  startHidden = process.argv.includes('--hidden')
 
   // --- deckWindow ---
   newDeckWindow()
@@ -78,10 +112,76 @@ const appReady = () => {
   // runClient()
 
   console.log("Is Packaged?", app.isPackaged)
-  console.log("Version: ", app.getVersion())
+  console.log("Version: ", currentVersion)
+  
+  // newAlert()
+
+  // if (app.isPackaged) {
+    // Init Auto Launch on startup only on packaged app
+    // enableAutoLaunch()
+  // }
 }
 
+// -----------------------------------------------
+// --- Auto Updater --- 
+// -----------------------------------------------
+
+autoUpdater.logger = require('electron-log');
+autoUpdater.logger.transports.file.level = 'info';
+
+autoUpdater.on('checking-for-update', () => {
+  console.log("Checking for Update...")
+  if (mainWindow) mainWindow.webContents.send('checking-for-update')
+})
+
+autoUpdater.on('update-available', (info) => {
+  console.log("Update available")
+  console.log("Version", info.version)
+  console.log("Release Data", info.releaseDate)
+  if (mainWindow) mainWindow.webContents.send('update-available', info)
+})
+
+autoUpdater.on('update-not-available', () => {
+  console.log('Update not available')
+  if (mainWindow) mainWindow.webContents.send('update-not-available')
+})
+
+autoUpdater.on('download-progress', (progress) => {
+  console.log(`Progress ${Math.floor(progress.percent)}`)
+  if (mainWindow) mainWindow.webContents.send('download-process', progress)
+})
+
+autoUpdater.on('update-downloaded', (info) => {
+  console.log("Update downloaded")
+  // autoUpdater.quitAndInstall(true)
+  if (mainWindow) mainWindow.webContents.send('update-downloaded', info)
+})
+
+autoUpdater.on('error', (err) => {
+  console.log(err)
+})
+
+ipcMain.on('check-update', (event) => {
+  autoUpdater.checkForUpdates()
+})
+
+ipcMain.on('install-update', (event) => {
+  autoUpdater.quitAndInstall(true, true)
+})
+
+ipcMain.on('game-end-trigger', () => {
+  console.log("Handling Game End")
+  if (mainWindow) mainWindow.webContents.send('game-end-handle')
+})
+
+setInterval(() => {
+  autoUpdater.checkForUpdates();
+}, 1000 * 60 * 15);
+
+// -----------------------------------------------
 // --- Tray ---
+// -----------------------------------------------
+
 let tray = null
 function initTray() {
   tray = new Tray(__dirname + '/image.ico')
@@ -120,7 +220,9 @@ function initTray() {
   console.log("Tray Created")
 }
 
+// -----------------------------------------------
 // --- Menu and short cuts ---
+// -----------------------------------------------
 
 const menu = new Menu()
 menu.append(new MenuItem({
@@ -137,21 +239,28 @@ menu.append(new MenuItem({
 
 Menu.setApplicationMenu(menu)
 
-// const server = require('./appsrc/server.js')
-// server.run
+// -----------------------------------------------
+// --- Backend Service ---
+// -----------------------------------------------
 
 function startLMTService() {
 
-  // ---- New ver. ----
+  const { spawn } = require('child_process')
 
   var proc
 
-  if (spawnPython) {
-    proc = require('child_process').spawn('python', ['./LMTService.py'], {cwd: '../'});
+  if (spawnPython && !app.isPackaged) {
+    proc = spawn('python', ['./LMTService.py'], {cwd: '../'});
   } else {
     var backend
-    backend = path.join(process.cwd(), '/backend/LMTService/LMTService.exe')
-    proc = require('child_process').spawn(backend, {cwd: './backend/LMTService/'});
+    if (app.isPackaged) {
+      var execPath = path.dirname(app.getPath('exe'))
+      backend = path.join(execPath, 'backend', 'LMTService', 'LMTService.exe')
+      proc = spawn(backend, {cwd: path.join(execPath, 'backend', 'LMTService')});
+    } else {
+      backend = path.join(__dirname, 'backend', 'LMTService', 'LMTService.exe')
+      proc = spawn(backend, {cwd: path.join(__dirname, 'backend', 'LMTService')});
+    }
   }
   
   proc.stdout.on('data', function (data) {
@@ -169,58 +278,11 @@ function startLMTService() {
     console.log(`child process exited with code ${code}`);
   });
 
-  // ---- Old ver. ----
-
-  // let backend;
-  // backend = path.join(process.cwd(), '/backend/LMTService/LMTService.exe')
-  // var execfile = require('child_process').execFile;
-
-  // var proc = execfile(
-  //   backend,
-  //   {
-  //     encoding: 'utf8',
-  //     windowsHide: false,
-  //     // shell: true,
-  //     cwd: path.join(process.cwd(), '/backend/LMTService/')
-  //   },
-  //   (err, stdout, stderr) => {
-  //     if (err) {
-  //       console.log(err);
-  //     }
-  //     if (stdout) {
-  //       console.log(stdout);
-  //     }
-  //     if (stderr) {
-  //       console.log(stderr);
-  //     }
-  //   }
-  // )
-
-  // proc.on('close', (code) => {
-  //   console.log(`child process close all stdio with code ${code}`);
-  //   startLMTService()
-  // });
-  
-  // proc.on('exit', (code) => {
-  //   console.log(`child process exited with code ${code}`);
-  // });
 }
 
-// const client = require('./appsrc/client.js')
-
-// async function runClient() {
-//     const sock = new zmq.Subscriber
-  
-//     sock.connect("tcp://127.0.0.1:3000")
-//     sock.subscribe("kitty cats")
-//     console.log("Subscriber connected to port 3000")
-  
-//     for await (const [topic, msg] of sock) {
-//       console.log("received a message related to:", topic.toString(), "containing message:", msg.toString())
-//       deckWindow.clientData = "CATAT"
-//       // console.log(deckWindow)
-//     }
-// }
+// -----------------------------------------------
+// --- BrowserWindows ---
+// -----------------------------------------------
 
 let deckWindow = null
 let infoWindow = null
@@ -238,7 +300,7 @@ function newMainWindow() {
   // --- mainWindow ---
   let windowWidth = 800 // (335)
   let windowMaxWidth = 1200
-  let windowMinWidth = 600
+  let windowMinWidth = 700
   let windowHeight = height * 0.7
   // let windowXPadding = 200
   // let windowYPadding = 20
@@ -260,6 +322,8 @@ function newMainWindow() {
     y: (height - windowHeight) / 2,
     frame: false,
     resizable: true,
+    show: false,
+    backgroundColor: '#1c1c1f',
     webPreferences: {
       preload: __dirname + '/appsrc/preload.js',
       enableRemoteModule: true,
@@ -273,8 +337,7 @@ function newMainWindow() {
     pathname: require('path').join(__dirname, 'dist', 'index.html')
   })
 
-  console.log(mainWindowUrl)
-
+  // console.log(mainWindowUrl)
   // mainWindow.loadURL(`file://${__dirname}/dist/index.html`)
   mainWindow.loadURL(mainWindowUrl)
   
@@ -282,6 +345,17 @@ function newMainWindow() {
   mainWindow.on('closed', () => {
     mainWindow = null
     // app.quit()
+  })
+
+  mainWindow.on('hide', () => {
+  })
+
+  mainWindow.once('ready-to-show', () => {
+    
+    if (!startHidden) mainWindow.show()
+
+    mainWindow.webContents.send('app-version', currentVersion)
+    mainWindow.webContents.send('debug-info-display', process.argv)
   })
 
   if (developmentMode) mainWindow.webContents.openDevTools()
@@ -323,6 +397,8 @@ function newDeckWindow() {
     y: height / 2 - windowHeight / 2,
     frame: false,
     resizable: true,
+    skipTaskbar: true,
+    show: false,
     webPreferences: {
       preload: __dirname + '/appsrc/preload.js',
       enableRemoteModule: true,
@@ -337,8 +413,7 @@ function newDeckWindow() {
   //   protocol: 'file:',
   //   slashes: true
   // }))
-  deckWindow.setSkipTaskbar(true)
-  deckWindow.hide()
+  // deckWindow.hide()
   
   deckWindow.loadURL(`file://${__dirname}/dist/deck.html`)
   
@@ -443,9 +518,86 @@ function toggleDeckWindow() {
 }
 
 
+// -----------------------------------------------
+// --- Alerts ---
+// -----------------------------------------------
+
+function newAlert() {
+
+
+}
+
+// ipcMain.on('custom-alert', (event, args) => {
+//   console.log("Alert", args)
+//   // autoUpdater.quitAndInstall(true, true)
+// })
+
+// setInterval(() => {
+//   newAlert("LoR Master Tracker Hidden", "Click on icon to show, Right click for more");
+// }, 1000 * 5);
+
+
+// -----------------------------------------------
+// --- Auto Launch ---
+// -----------------------------------------------
+
+var AutoLaunch = require('auto-launch');
+var autoLauncher = new AutoLaunch({
+    name: 'LoR Master Tracker',
+    isHidden: true
+});
+
+function checkAutoLaunch() {
+
+  autoLauncher.isEnabled().then(
+    function(isEnabled) {
+      console.log("Auto Launch Enabled: ", isEnabled)
+      sendAutoLaunchToMain(isEnabled)
+    }
+  ).catch(function(err){
+      console.log(err)
+  });
+}
+
+function sendAutoLaunchToMain(isEnabled) {
+  if (mainWindow) (mainWindow.webContents.send('check-auto-launch-return', isEnabled))
+}
+
+ipcMain.on('check-auto-launch', (event, args) => {
+  checkAutoLaunch()
+})
+
+ipcMain.on('set-auto-launch', (event, enable) => {
+  if (enable) {
+    enableAutoLaunch()
+  } else {
+    disableAutoLaunch()
+  }
+  checkAutoLaunch()
+})
+
+
+// var quitOnClose = false;
+
+// ipcMain.on('set-quit-on-close', (event, enable) => {
+  
+// })
+
+function enableAutoLaunch() {
+  autoLauncher.enable();
+}
+
+function disableAutoLaunch() {
+  autoLauncher.disable();
+}
+
+
+
+
 // --- Use these to check for old running python app ---
 
 const tasklist = require('tasklist')
+const { cp } = require('fs')
 /*
 	[
 		{

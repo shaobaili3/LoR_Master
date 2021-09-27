@@ -15,13 +15,23 @@
 // Image from mobalytics | 220x40
 // https://cdn-lor.mobalytics.gg/production/images/cards-preview/01DE029.webp
 
+import axios from 'axios'
+
+const portNum = "26531"
+const API_BASE = `http://127.0.0.1:${portNum}`
+
+const requestStatusWaitTime = 1000 //ms
+var lastStatusRequestTime
+
 export default {
-    // mounted() {
-    //     this.getCardsInfo()
-    // },
-    // data() {
-    //     return {}
-    // }, 
+    mounted() {
+        this.requestStatusInfo()
+    },
+    data() {
+        return {
+            locale: 'en_us',
+        }
+    }, 
     props: {
         code: String,
         name: String,
@@ -54,10 +64,40 @@ export default {
         },
         getCardDisplayUrl() {
             const cardDisplayUrlBase = 'https://dd.b.pvp.net/latest/'
-            const locale = 'en_us'
             // const locale = 'zh_tw'
-            return cardDisplayUrlBase + this.set.toLowerCase()  + '/' + locale + '/img/cards/' + this.code + '.png' 
-        }
+            return cardDisplayUrlBase + this.set.toLowerCase()  + '/' + this.locale + '/img/cards/' + this.code + '.png' 
+        },
+        requestStatusInfo() {
+            // Keeps requesting status
+            lastStatusRequestTime = Date.now()
+            axios.get(`${API_BASE}/status`)
+                .then((response) => {
+                    var data = response.data
+                    var elapsedTime = Date.now() - lastStatusRequestTime // ms
+
+                    if (data.language) this.locale = data.language.replace('-', '_').toLowerCase()
+
+                    if (requestStatusWaitTime > elapsedTime) {
+                        setTimeout(this.requestStatusInfo, requestStatusWaitTime - elapsedTime); 
+                    } else {
+                        setTimeout(this.requestStatusInfo, 100);
+                    }
+                    
+                })
+                .catch((e) => {
+                    if (axios.isCancel(e)) {
+                        console.log("Request cancelled");
+                    } else { 
+                        console.log('error', e)
+                        var elapsedTime = Date.now() - lastStatusRequestTime // ms
+                        if (elapsedTime > requestStatusWaitTime) {
+                            setTimeout(this.requestStatusInfo, 100);
+                        } else {
+                            setTimeout(this.requestStatusInfo, requestStatusWaitTime - elapsedTime);
+                        }
+                    }
+                })
+        },
     }
 }
 </script>
@@ -124,7 +164,7 @@ export default {
 }
 
 .cardCost {
-    background: var(--col-light-grey);
+    background: var(--col-blue-light-grey);
     /* background: var(--col-dark-gold); */
     /* color: var(--col-dark-grey); */
     /* width: 50%; */

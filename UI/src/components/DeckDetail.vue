@@ -1,5 +1,7 @@
 <template>
-    <div class="deck-detail" v-if="cards.length > 0">
+    <div class="deck-detail" 
+    :class="{'fixed-height': fixedHeight}"
+    v-if="cards.length > 0">
         <cards-preview v-for="(card, index) in cards" :key="index"
         :name="card.name"
         :cost="card.cost"
@@ -9,11 +11,13 @@
         :supertype="card.supertype"
         :set="card.set"
         >{{card.name}}</cards-preview>
-        <div class="actions">
-            <!-- <a class="actions-btn" :href="deckDetailLink" target="_blank"><span class="actions-icon fa fa-external-link-alt"></span>Detail</a> -->
-            <div class="actions-btn" @click="openURL(deckDetailLink)"><span class="actions-icon fa fa-external-link-alt"></span>Detail</div>
-            <div class="actions-btn" @click="copyDeckcode"><span class="actions-icon far fa-copy"></span>{{copyText}}</div>
-        </div>
+    </div>
+    <div class="actions" 
+    :class="{'fixed-height': fixedHeight}"
+    v-if="showCopy">
+        <!-- <a class="actions-btn" :href="deckDetailLink" target="_blank"><span class="actions-icon fa fa-external-link-alt"></span>Detail</a> -->
+        <div class="actions-btn" v-if="showURL" @click="openURL(deckDetailLink)"><span class="actions-icon fa fa-external-link-alt"></span>Detail</div>
+        <div class="actions-btn" @click="copyDeckcode"><span class="actions-icon far fa-copy"></span>{{copyText}}</div>
     </div>
 </template>
 
@@ -47,48 +51,77 @@ export default {
     }, 
     props: {
         deck: String,
+        baseDeck: String,
+        showCopy: {
+            type: Boolean,
+            default: true,
+        },
+        showURL: {
+            type: Boolean,
+            default: false,
+        },
+        fixedHeight: {
+            type: Boolean,
+            default: false,
+        },
     },
     computed: {
         deckDetailLink() {
-            return "https://lor.mobalytics.gg/decks/code/" + this.deck
+            return "https://lor.mobalytics.gg/decks/code/" + this.baseDeck
         },
         cards() {
             var cards = []
             var deck = null
-            try { deck = DeckEncoder.decode(this.deck) } catch(err) {
-                // console.log(cards)
-                return cards
+            if (this.deck) try { deck = DeckEncoder.decode(this.deck) } catch(err) {
+                console.log(err)
+                // return cards
             }
             
-            for (var j in deck) {
-                var cardCode = deck[j].code
-                var card = sets.find(card => card.cardCode == cardCode)
-                if (card) {
-                    // console.log(cardName, deck[j].count)
-                    cards.push({
-                        code: deck[j].code, 
-                        name: card.name, 
-                        count: deck[j].count, 
-                        cost: card.cost, 
-                        type: card.type, 
-                        supertype: card.supertype,
-                        set: card.set
-                    })
-                }
-
+            var baseDeck = null
+            if (this.baseDeck) try { baseDeck = DeckEncoder.decode(this.baseDeck) } catch(err) {
+                console.log(err)
+                // return cards
             }
-            // console.log(cards)
-            return cards.sort(function (a, b) { 
-                // if (a.type > b.type) {
-                //     return 1; 
-                // } if (a.supertype > b.supertype) {
-                //     return 1;
-                // }  else {
-                //     return a.cost > b.cost ? 1 : -1
-                // }
-                // if (a.type == "Unit" && b.type == "Spell") {
-                //     return 1
-                // }
+
+            if (baseDeck) {
+                // make sure cards not in current Deck are shown
+                for (var j in baseDeck) {
+                    // Loop through base deck
+                    var cardCode = baseDeck[j].code
+                    // Get full information from the sets collection
+                    var card = sets.find(card => card.cardCode == cardCode)
+                    var cardCount = baseDeck[j].count
+                    
+                    if (deck) {
+                        // make sure currentDeck exist
+                        
+                        // Finding the same card in current deck
+                        var currentCard = deck.find(card => card.code == cardCode)
+                    
+                        // Get the current card copy count
+                        if (currentCard) {
+                            cardCount = currentCard.count
+                        } else {
+                            cardCount = 0
+                        }
+                    }
+
+                    if (card) {
+                        cards.push({
+                            code: cardCode, 
+                            name: card.name,
+                            count: cardCount, 
+                            cost: card.cost, 
+                            type: card.type, 
+                            supertype: card.supertype,
+                            set: card.set
+                        })
+                    }
+
+                }
+            }
+
+            return cards.sort(function (a, b) {
                 if (a.supertype == b.supertype) {
                     if (a.type == b.type) {
                         return a.cost > b.cost ? 1 : -1
@@ -124,7 +157,7 @@ export default {
                 }
             };
 
-            copyToClipboard(this.deck)
+            copyToClipboard(this.baseDeck)
             this.copied = true
             setTimeout(() => {this.copied = false}, 1250)
         },
@@ -146,15 +179,32 @@ export default {
         background-color: var(--col-background);
         font-size: 0.9em;
         border-radius: 5px;
+        color: white;
     }
 
-    .actions {
-        margin-top: 8px;
-        margin-right: 8px;
+    .deck-detail.fixed-height {
+        height: 100%;
+        overflow: scroll;
+    }
+
+    .actions {    
+        width: 100%;
+        padding: 8px;
+
+        box-sizing: border-box;
+
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        /* gap: 5px; */
+        background: var(--col-background);
+
+        color: white;
+    }
+
+    .actions.fixed-height {
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
     }
 
     .actions-btn {

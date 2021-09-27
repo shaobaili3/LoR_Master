@@ -8,21 +8,6 @@
         </div> 
 
         <div class="errorText" v-if="isInvalidDeckCode && isShowCode">Invalid Deck Code</div>
-        <!-- <button @click="requestData">Test Request</button> -->
-
-        <!-- <div id="history-stats"> -->
-            <!-- <div>10-game win rate: 90%</div> -->
-            <!-- {{oppoName}} -->
-        <!-- </div> -->
-
-        <!-- <div id="search-container">
-            <div id="search-icon"><i class="fa fa-search"></i></div>
-            <input id="search-input" type="text" placeholder="Search...">
-        </div> -->
-
-        <!-- <div id="opponent">
-            {{oppoName}}
-        </div> -->
 
         <div class="tabs" v-if="!isLoading">
             <div class="tab-title-group">
@@ -41,7 +26,6 @@
                     <i class="fas fa-tombstone-alt"></i>                
                 </div>
             </div>
-            <!-- <div class="tab-title" @click="showCode" :class="{active: isShowCode}">Code</div> -->
         </div>
 
         <div id="history" class="tab-content" v-if="isShowOppo && !isLoading">
@@ -67,24 +51,24 @@
 
         <div class="tab-content" v-if="isShowMy && !isLoading">
             <deck-regions :deck="startingDeckCode"></deck-regions>
-            <deck-detail-base :deck="currentDeckCode" :baseDeck="startingDeckCode"></deck-detail-base>
+            <deck-detail :deck="currentDeckCode" :baseDeck="startingDeckCode"></deck-detail>
         </div>
 
         <div class="tab-content" v-if="isShowOppoGrave && !isLoading">
             <div class="tab-text">Opponent Graveyard</div>
-            <deck-detail-base :deck="oppoGraveCode" :baseDeck="oppoGraveCode" :showCopy="false"></deck-detail-base>
+            <deck-detail :deck="oppoGraveCode" :baseDeck="oppoGraveCode" :showCopy="false"></deck-detail>
         </div>
 
         <div class="tab-content" v-if="isShowMyGrave && !isLoading">
             <div class="tab-text">My Graveyard</div>
-            <deck-detail-base :deck="myGraveCode" :baseDeck="myGraveCode" :showCopy="false"></deck-detail-base>
+            <deck-detail :deck="myGraveCode" :baseDeck="myGraveCode" :showCopy="false"></deck-detail>
         </div>
 
         
 
         <div class="tab-content" v-if="isShowCode">
             <deck-regions :deck="deckCode"></deck-regions>
-            <match-info-deck-detail :deck="deckCode"></match-info-deck-detail>
+            <deck-detail :baseDeck="deckCode"></deck-detail>
         </div>
 
         <div class="footer" v-if="!isLoading">
@@ -100,16 +84,15 @@
 import MatchInfo from '../../components/MatchInfo.vue'
 import axios from 'axios'
 import BaseWindowControls from '../../components/BaseWindowControls.vue'
-import MatchInfoDeckDetail from '../../components/MatchInfoDeckDetail.vue'
+import DeckDetail from '../../components/DeckDetail.vue'
 import DeckRegions from '../../components/DeckRegions.vue'
 import DeckEncoder from '../../modules/runeterra/DeckEncoder'
-import DeckDetailBase from '../../components/DeckDetailBase.vue'
 
 const requestDataWaitTime = 100; // ms
 const requestServerWaitTime = 3000; //ms
 const requestStatusWaitTime = 1000; //ms
 
-const portNum = "63312"
+const portNum = "26531"
 const API_BASE = `http://127.0.0.1:${portNum}`
 
 const TABS = {
@@ -126,10 +109,8 @@ export default {
     components: { 
         BaseWindowControls,
         MatchInfo,
-        MatchInfoDeckDetail,
+        DeckDetail,
         DeckRegions,
-        DeckDetailBase,
-        // MatchInfoDeckPreview,
     },
     mounted() {
         // console.log(JSON.stringify(this.matchInfos))
@@ -220,8 +201,8 @@ export default {
     },
     methods: {
         hideWindow() {
-            if (window.closeWindow) {
-                window.closeWindow()
+            if (window.hideWindow) {
+                window.hideWindow()
             }
         },
         makeWindowVisible() {
@@ -406,6 +387,10 @@ export default {
                     this.makeWindowVisible()
                 }
             } else {
+                if (this.startingDeckCode != null) {
+                    // switching from game end
+                    this.handleGameEnd()
+                }
                 this.startingDeckCode = null
                 this.currentDeckCode = null
                 this.myGraveCode = null
@@ -452,6 +437,9 @@ export default {
             }
             // console.log(this.matchTotalNum)
 
+        },
+        handleGameEnd() {
+            window.ipcRenderer.send("game-end-trigger")
         }
     }
 
@@ -518,14 +506,19 @@ export default {
     }
 
     .tabs {
+        display: flex;
+        position: sticky;
+        top: 40px;
         width: calc(100% - 20px);
         max-width: 280px;
-        display: flex;
+        
         justify-content: space-evenly;
         align-items: center;
         gap: 10px;
-        /* padding: 0px; */
-        margin: 10px 0px;
+        padding: 10px 10px;
+        
+        z-index: 2;
+        background: var(--col-background);
     }
 
     .tab-title-group {
@@ -559,6 +552,15 @@ export default {
         max-width: 280px;
         width: 100%;
         text-align: center;
+    }
+
+    /* Styling Deck Content */
+    .tab-content .icon-content {
+        /* position: sticky;
+        z-index: 2;
+        top: 90px;
+        background: var(--col-background); */
+        padding: 0px 0px 5px 0px;
     }
 
     .tab-text {

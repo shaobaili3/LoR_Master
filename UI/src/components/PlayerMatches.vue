@@ -6,7 +6,7 @@
                 <div class="detail rank" v-if="playerRank">
                     <span class="pre-info"><i class="fas fa-trophy"></i></span> 
                     {{playerRank}}</div>
-                <div class="detail lp" v-if="playerLP">
+                <div class="detail lp" v-if="playerLP || playerLP === 0">
                     <span class="pre-info"><i class="iconfy">LP</i></span>
                     {{playerLP}}</div>
                 <div class="detail region" v-if="playerRegion">
@@ -18,7 +18,7 @@
                 v-for="(obj, index) in uniqueDeckCodes" :key="index"
                 :class="{active: filterDeckCode == obj.deck}"
                 @click="setFilterDeckCode(obj.deck)">
-                    <deck-champs :deck="obj.deck" :showRegion="true"></deck-champs>
+                    <deck-champs :deck="obj.deck" :showRegion="true" :fixedWidth="false"></deck-champs>
                 </div>
             </div>
             <div class="history-summary">

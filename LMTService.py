@@ -19,7 +19,11 @@ from sentry_sdk.integrations.flask import FlaskIntegration
 import sentry_sdk
 import io
 import sys
+import os
 import constants
+
+
+isDebug = True
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf8')
 print('utf8 string test: ', '卡尼能布恩', '째남모')
@@ -32,7 +36,7 @@ sentry_sdk.init(
     integrations=[FlaskIntegration()],
     traces_sample_rate=1.0,
     send_default_pii=True,
-    debug=True,
+    debug=isDebug,
     release=constants.VERSION_NUM
 )
 
@@ -112,9 +116,13 @@ def history(server, name, tag):
 
 @app.route("/name/<string:server>/<string:playername>", methods=['get'])
 def get_names(server, playername):
+    # to-do move functions to master model
     playernames = set()
+    nameListPath = constants.getCacheFilePath(server.lower() +'.json')
+    if not os.path.isfile(nameListPath):
+        nameListPath = 'Resource/' + server.lower() + '.json'
     try:
-        with open('data/' + server.lower() + '.json', 'r', encoding='utf-8') as fp:
+        with open(nameListPath, 'r', encoding='utf-8') as fp:
             names = json.load(fp)
             for name in names.items():
                 playernames.add(name[0] + '#' + name[1])
@@ -154,9 +162,11 @@ def get_leaderboard(server):
 
     if board is None:
         return jsonify(boardWithTag)
-
+    nameListPath = constants.getCacheFilePath(server.lower() +'.json')
+    if not os.path.isfile(nameListPath):
+        nameListPath = 'Resource/' + server.lower() + '.json'
     try:
-        with open('data/' + server + '.json', 'r', encoding='utf-8') as fp:
+        with open(nameListPath, 'r', encoding='utf-8') as fp:
             playlistDict = json.load(fp)
     except Exception as e:
         print('Restful: unable to load player list')
@@ -167,26 +177,6 @@ def get_leaderboard(server):
             player['tag'] = ''
         boardWithTag.append(player)
     return jsonify(boardWithTag)
-
-
-@app.route("/version", methods=['get'])
-def get_version():
-    import requests
-    version = {}
-    version['version'] = constants.VERSION_NUM
-    version['remoteVersion'] = constants.VERSION_NUM
-    try:
-        response = requests.get(
-            "https://api.github.com/repos/shaobaili3/LoR_Master/releases/latest")
-        githubJson = response.json()
-    except Exception as e:
-        print('get_version() error', e)
-        return jsonify(version)
-    version['remoteVersion'] = githubJson['tag_name']
-    version['downloadUrl'] = githubJson['assets'][0]['browser_download_url']
-    version['github'] = githubJson
-    return jsonify(version)
-
 
 @app.route("/opInfo", methods=['get'])
 def opInfo():
@@ -211,4 +201,4 @@ def get_status():
     return jsonify(status)
 
 
-app.run(port=63312, debug=True, use_reloader=False)
+app.run(port=26531, debug=isDebug, use_reloader=False)

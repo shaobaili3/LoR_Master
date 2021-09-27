@@ -9,11 +9,15 @@
             @click="(hasLocalInfo && setCurrentPage(PAGES.my)) + requestLocalHistory()"
             :disabled="!hasLocalInfo"
         >
-            <span class="icon-default"><i class="fas fa-user-circle"></i></span>
-            <span class="icon-hover"><i class="fas fa-redo-alt fa-spin-fast"
-                v-if="localHistoryLoading || isLoading"></i></span>
-            <span class="icon-hover"><i class="fas fa-check" 
-                v-if="!localHistoryLoading && !isLoading"></i></span>
+            <span class="icon-default"
+                v-if="!localHistoryLoading"
+            ><i class="fas fa-user-circle"></i></span>
+            <span class="icon-default icon-hover"
+                v-if="localHistoryLoading"
+            ><i class="fas fa-redo-alt fa-spin-fast"></i></span>
+            <span class="icon-hover"
+                v-if="!localHistoryLoading"
+            ><i class="fas fa-check"></i></span>
             <div class="tooltiptext right" v-if="!hasLocalInfo">Please log in LoR</div>
         </button>
         <button class="left-nav-btn" 
@@ -25,6 +29,11 @@
             :class="{selected: currentPage == PAGES.leaderboard}" 
             @click="setCurrentPage(PAGES.leaderboard)">
             <span><i class="fas fa-trophy"></i></span>
+        </button>
+        <button class="left-nav-btn nav-bottom" 
+            :class="{selected: currentPage == PAGES.settings}" 
+            @click="setCurrentPage(PAGES.settings)">
+            <span><i class="fas fa-cog"></i></span>
         </button>
     </div>
     
@@ -62,7 +71,7 @@
                             <span v-if="isSameSearch"><i class="fas fa-redo-alt"></i></span>
                         </button>
                         
-                        <input class="search-bar" 
+                        <input autocomplete='off' class="search-bar" 
                             @keyup="searchName" 
                             @keyup.enter="searchHistory"
                             @keyup.up="autoCompleteIndexMinus"
@@ -107,15 +116,30 @@
         <div class="main-content-container leaderboard" v-if="currentPage == PAGES.leaderboard">
             <leaderboard @search="searchPlayer($event)"></leaderboard>
         </div>
+
+        <div class="main-content-container settings" v-if="currentPage == PAGES.settings">
+            <div class="title">Settings</div>
+            <div class="settings-list">
+                <div class="settings-list-item">
+                    <div class="settings-title">Auto launch on startup: {{autoLaunch ? "Enabled" : "Disabled"}}</div>
+                    <button class="settings-btn" v-if="autoLaunch" @click="setAutoLaunch(false)">Disable</button>
+                    <button class="settings-btn" v-if="!autoLaunch" @click="setAutoLaunch(true)">Enable</button>
+                </div>
+            </div>
+
+            <!-- <div class="debug-info">
+                {{debugInfos}}
+            </div> -->
+        </div>
     </div>
 
     <div class="deck-content-container" :class="{hidden: !isShowDeck}">
         <div class="deck-content-top-bar">
             <button class="collapse-btn" @click="hideDeck"><span><i class="fas fa-chevron-right"></i></span></button>
-            <deck-regions :deck="deckCode"></deck-regions>
+            <deck-regions :deck="deckCode" :fixedWidth="false"></deck-regions>
         </div>
         <div class="deck-content-detail">
-            <match-history-deck-detail :deck="deckCode"></match-history-deck-detail>
+            <deck-detail :baseDeck="deckCode" :fixedHeight="true"></deck-detail>
         </div>
     </div>
 
@@ -124,16 +148,20 @@
             <div class="status">LoR Master Tracker</div>
         </div>
         <div class="right">
-            <div class="version download tooltip" v-if="!isUpdatedVersion" @click="openURL(downloadUrl)">
+            <!-- <div class="version download tooltip" v-if="!isUpdatedVersion" @click="openURL(downloadUrl)">
                 <span class="tooltiptext">
                     <i class="fas fa-arrow-to-bottom"></i> {{remoteVersion}}
                 </span>
-                <i class="fas fa-exclamation-triangle"></i> {{version}}</div>
-            <div class="version tooltip" v-if="isUpdatedVersion">
-                <span class="tooltiptext">
-                    <i class="fas fa-check"></i> Updated
+                <i class="fas fa-exclamation-triangle"></i> {{version}}</div> -->
+            <div class="version tooltip"
+            :class="{download: updateDownloaded}"
+            @click="installDownloadedUpdate()"
+            >
+                <span class="tooltiptext top-bottom-right">
+                    <span v-if="isUpdatedVersion"><i class="fas fa-check"></i></span>{{versionTooltip}}
                 </span>
-                {{version}}</div>
+                <i class="fas" :class="{'fa-redo-alt': updateDownloaded}"></i>
+                {{versionText}}</div>
         </div>
     </div>
 </template>
@@ -143,16 +171,16 @@
 import BaseWindowControls from '../components/BaseWindowControls.vue'
 import axios from 'axios'
 import DeckRegions from '../components/DeckRegions.vue'
-import MatchHistoryDeckDetail from '../components/MatchHistoryDeckDetail.vue'
 import Leaderboard from '../components/Leaderboard.vue'
 import PlayerMatches from '../components/PlayerMatches.vue'
+import DeckDetail from '../components/DeckDetail.vue'
 
 const requestDataWaitTime = 400 //ms
 const requestHistoryWaitTime = 100 //ms
 const requestStatusWaitTime = 1000 //ms
 const inputNameListLength = 10;
 
-const portNum = "63312"
+const portNum = "26531"
 const API_BASE = `http://127.0.0.1:${portNum}`
 
 let cancelToken, localCancleToken
@@ -174,7 +202,8 @@ const regionShort = {
 const PAGES = {
     my: 0,
     search: 1,
-    leaderboard: 2
+    leaderboard: 2,
+    settings: 3,
 }
 
 function processDate(dateString) {
@@ -216,13 +245,16 @@ export default {
         // var test = 'Hello'
         this.requestVersionData()
         this.requestStatusInfo()
+        this.handleGameEnd()
+
+        this.initLocalSettings()
     },
     components: { 
         BaseWindowControls,
         DeckRegions,
-        MatchHistoryDeckDetail,
         Leaderboard,
-        PlayerMatches
+        PlayerMatches,
+        DeckDetail
     },
     data() {
         return {
@@ -245,6 +277,8 @@ export default {
             version: "",
             remoteVersion: "",
             downloadUrl: null,
+            updateProcess: 0,
+            updateDownloaded: false,
 
             currentPage: PAGES.search,
 
@@ -254,6 +288,11 @@ export default {
             localMatches: [],
             localPlayerInfo: {}, // playerId, server, language, rank, lp
             localHistoryLoading: false,
+            localHistoryWaiting: false,
+
+            // Options
+            autoLaunch: null,
+            debugInfos: "",
         }
     },
     computed: {
@@ -268,9 +307,49 @@ export default {
         },
         hasLocalInfo() {
             return this.localMatches.length > 0
+        },
+        versionText(){
+            if (this.updateDownloaded) {
+                return "Restart"
+            }
+            return this.version
+        },
+        versionTooltip() {
+            if (this.isUpdatedVersion) { 
+                return "Updated"
+            } else if (this.updateDownloaded) {
+                return "Update on next start" 
+            } else if (this.updateProcess > 0) {
+                return `Downloading... ${this.updateProcess}%`
+            } else if (this.remoteVersion) {
+                return `Latest: ${this.remoteVersion}`
+            }
+            return  "Loading..."
         }
     },
     methods: {
+
+        // Local Settings
+        initLocalSettings() {
+            window.ipcRenderer.on('check-auto-launch-return', (event, isEnabled) => {
+                this.autoLaunch = isEnabled
+            })
+
+            window.ipcRenderer.on('debug-info-display', (event, info) => {
+                console.log(info)
+                this.debugInfos = info
+            })
+
+            this.checkAutoLaunch()
+        },
+
+        checkAutoLaunch() {
+            window.ipcRenderer.send("check-auto-launch")
+        },
+        setAutoLaunch(enable) {
+            window.ipcRenderer.send('set-auto-launch', enable)
+        },
+
         // Page Switch
         setCurrentPage(page) {
             this.currentPage = page
@@ -467,23 +546,89 @@ export default {
         openURL(url) {
             window.openExternal(url);
         },
+        installDownloadedUpdate() {
+            if (this.updateDownloaded) {
+                console.log("Trigger Intall Update")
+                window.ipcRenderer.send("install-update")
+            } else {
+                console.log("Download not finished")
+            }
+        },
+        handleGameEnd() {
+            window.ipcRenderer.on('game-end-handle', (event) => {
+                console.log("Game Ended: Requesting local history")
+                this.requestLocalHistory()
+            })
+        },
         requestVersionData() {
-            axios.get(`${API_BASE}/version`)
-                .then((response) => {
-                    var data = response.data
-                    this.version = data.version
-                    this.remoteVersion = data.remoteVersion
-                    this.downloadUrl = data.downloadUrl
-                })
-                .catch((e) => {
-                    if (axios.isCancel(e)) {
-                        // Console log is cancel
-                    } else { 
-                        console.log('error', e) 
+
+            console.log("Request Version Data")
+            window.ipcRenderer.on('app-version', (event, arg) => {
+                console.log("Current Version is:", arg)
+                // window.appVersion = arg
+                this.version = arg
+            })
+
+            window.ipcRenderer.on('checking-for-update', (event) => {
+                console.log("Checking For Update")
+                this.updateDownloaded = false // Reset Update downloaded
+            })
+
+            window.ipcRenderer.on('update-available', (event, info) => {
+                // console.log(info)
+                // window.appVersionLatest = info.version
+                
+                console.log("Latest Version is:", info.version)
+                this.remoteVersion = info.version
+            })
+
+            window.ipcRenderer.on('update-not-available', (event, arg) => {
+                console.log("Version is Latest")
+                this.remoteVersion = this.version
+            })
+
+            window.ipcRenderer.on('download-process', (event, arg) => {
+                console.log(arg)
+                if (Math.floor(arg.percent) < 100)
+                    this.updateProcess = Math.floor(arg.percent)
+            })
+
+            window.ipcRenderer.on('update-downloaded', (event, arg) => {
+                console.log(arg)
+                console.log("Update Downloaded!")
+                this.updateDownloaded = true
+            })
+
+            window.ipcRenderer.send("check-update")
+            
+
+            // --- Version 2 ---
+            // console.log(window)
+            // console.log(window.appVersion)
+
+            // if (window && window.appVersion) {
+            //     this.version = window.appVersion
+            //     console.log("Got Version Data:", window.appVersion)
+            // } else {
+            //     setTimeout(this.requestVersionData, requestDataWaitTime);
+            // }
+            
+            // axios.get(`${API_BASE}/version`)
+            //     .then((response) => {
+            //         var data = response.data
+            //         this.version = data.version
+            //         this.remoteVersion = data.remoteVersion
+            //         this.downloadUrl = data.downloadUrl
+            //     })
+            //     .catch((e) => {
+            //         if (axios.isCancel(e)) {
+            //             // Console log is cancel
+            //         } else { 
+            //             console.log('error', e) 
                         
-                        setTimeout(this.requestVersionData, requestDataWaitTime);
-                    }
-                })
+            //             setTimeout(this.requestVersionData, requestDataWaitTime);
+            //         }
+            //     })
         },
         requestStatusInfo() {
             // Keeps requesting status
@@ -503,6 +648,9 @@ export default {
 
                         this.localPlayerInfo.playerId = data.playerId
                         var nameid = data.playerId.split('#')
+                        var oldName = this.localPlayerInfo.name
+                        var oldTag = this.localPlayerInfo.tag
+                        
                         this.localPlayerInfo.name = nameid[0]
                         this.localPlayerInfo.tag = nameid[1]
 
@@ -531,25 +679,22 @@ export default {
                     if (requestStatusWaitTime > elapsedTime) {
                         setTimeout(this.requestStatusInfo, requestStatusWaitTime - elapsedTime); 
                     } else {
-                        this.requestStatusInfo()
+                        setTimeout(this.requestStatusInfo, 100);
                     }
                     
                 })
                 .catch((e) => {
                     if (axios.isCancel(e)) {
                         console.log("Request cancelled");
-                    } else 
-                    { 
+                    } else { 
                         console.log('error', e)
                         var elapsedTime = Date.now() - lastStatusRequestTime // ms
-                        if (requestStatusWaitTime > elapsedTime) {
-                            setTimeout(this.requestStatusInfo, requestStatusWaitTime - elapsedTime); 
+                        if (elapsedTime > requestStatusWaitTime) {
+                            setTimeout(this.requestStatusInfo, 100);
                         } else {
-                            this.requestStatusInfo()
+                            setTimeout(this.requestStatusInfo, requestStatusWaitTime - elapsedTime);
                         }
                     }
-
-                    
                 })
         },
         requestNameData() {
@@ -644,17 +789,23 @@ export default {
 
         requestLocalHistory() {
 
-            if (this.isLoading) {
-                // Before starting everything check to see if there is already a search request
-                if (requestLocalHistoryTimeout) clearTimeout(requestLocalHistoryTimeout)
-                requestLocalHistoryTimeout = setTimeout(this.requestLocalHistory, requestHistoryWaitTime);
-                return
-            }
+            // if (this.isLoading) {
+            //     // Before starting everything check to see if there is already a search request
+            //     if (requestLocalHistoryTimeout) clearTimeout(requestLocalHistoryTimeout)
+            //     requestLocalHistoryTimeout = setTimeout(this.requestLocalHistory, requestHistoryWaitTime);
+            //     this.localHistoryWaiting = true
+            //     return
+            // }
+
+            // Not waiting for other search requests
+            // this.localHistoryWaiting = false
             
             if (this.localHistoryLoading) {
                 // Don't do anything if there is already a local search request
                 return
             }
+
+            // Now ready for a new request
 
             //Check if there are any previous pending requests
             if (typeof localCancleToken != typeof undefined) {
@@ -668,7 +819,11 @@ export default {
             var name = this.localPlayerInfo.name
             var tag = this.localPlayerInfo.tag
 
-            if (!(server && name && tag)) this.requestLocalHistory()
+            if (!(server && name && tag)) {
+                // Checks to see if there is all the information
+                // Don't do anything if not enough data
+                return
+            }
 
             console.log("Request Local History", `${API_BASE}/search/${server}/${name}/${tag}`)
             this.localHistoryLoading = true
@@ -1056,6 +1211,16 @@ export default {
         cursor: default;
     }
 
+    .left-nav-btn.nav-bottom {
+        margin-top: auto;
+        margin-bottom: calc(45px + 10px);
+        color: var(--col-lighter-grey);
+    }
+
+    .left-nav-btn.nav-bottom.selected {
+        color: white;
+    }
+
     .left-nav-btn.selected:not(:disabled):hover .icon-default,
     .left-nav-btn .icon-hover{
         display: none;
@@ -1126,6 +1291,10 @@ export default {
         /* margin-left: -50%; */
     }
 
+    .tooltip .tooltiptext .fas {
+        margin-right: 5px;
+    }
+
     .tooltip .tooltiptext.top {
         /* Position the tooltip */
         bottom: 120%;
@@ -1141,6 +1310,15 @@ export default {
         transform: translateY(-50%);
     }
 
+    .tooltip .tooltiptext.top-bottom-right {
+        /* Position the tooltip */
+        bottom: 100%;
+        right: -10px;
+        left: auto;
+        transform: none;
+        margin-bottom: 22px;
+    }
+
     .tooltip:hover .tooltiptext {
         visibility: visible;
     }
@@ -1150,6 +1328,44 @@ export default {
         top: 0;
         background: var(--col-background);
         z-index: 2;
+    }
+
+    /* Settings Page */
+
+    .settings .title {
+        font-size: 32px;
+        text-align: left;
+        padding: 10px 0px;
+    }
+
+    .settings-list-item {
+        display: flex;
+        font-size: 18px;
+        align-items: center;
+    }
+
+    .settings-list-item .settings-title {
+        display: inline-block;
+    }
+
+    .settings-list-item .settings-btn {
+        display: inline-block;
+        margin-left: auto;
+        border: 0px;
+        background: var(--col-dark-grey);
+        color: white;
+        font-size: 1em;
+        padding: 10px 15px;
+        outline: none;
+        cursor: pointer;
+        border-radius: 100px;
+    }
+
+    .settings .debug-info {
+        margin-top: 50px;
+        background: var(--col-dark-grey);
+        padding: 20px;
+        overflow: scroll;
     }
 
 </style>
