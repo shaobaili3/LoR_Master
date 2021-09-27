@@ -22,6 +22,9 @@ import sys
 import os
 import constants
 
+
+isDebug = False
+
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf8')
 print('utf8 string test: ', '卡尼能布恩', '째남모')
 
@@ -33,7 +36,7 @@ sentry_sdk.init(
     integrations=[FlaskIntegration()],
     traces_sample_rate=1.0,
     send_default_pii=True,
-    debug=True,
+    debug=isDebug,
     release=constants.VERSION_NUM
 )
 
@@ -198,4 +201,4 @@ def get_status():
     return jsonify(status)
 
 
-app.run(port=26531, debug=True, use_reloader=False)
+app.run(port=26531, debug=isDebug, use_reloader=False)
