@@ -299,8 +299,8 @@ function newMainWindow() {
   let {width, height} = electron.screen.getPrimaryDisplay().workAreaSize
 
   // --- mainWindow ---
-  let windowWidth = 800 // (335)
-  let windowMaxWidth = 1200
+  let windowWidth = 1200 // (335)
+  let windowMaxWidth = 1920
   let windowMinWidth = 600
   let windowHeight = height * 0.7
   // let windowXPadding = 200
