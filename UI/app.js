@@ -7,6 +7,7 @@ const BrowserWindow = electron.BrowserWindow
 const path = require('path')
 
 const developmentMode = false
+// const snapAssist = true
 const closeWithoutTracker = false
 const headerHeight = 45 // Repeated in preload.js
 const defaultRatio = 2.3 // Repeated in preload.js
@@ -89,7 +90,7 @@ const appReady = () => {
 
   if (closeWithoutTracker && !isCheckingTracker) checkTracker()
 
-  if (app.isPackaged || spawnService) {
+  if (spawnService) {
     startLMTService()
   }
 
@@ -249,7 +250,7 @@ function startLMTService() {
 
   var proc
 
-  if (spawnPython && !app.isPackaged) {
+  if (spawnPython) {
     proc = spawn('python', ['./LMTService.py'], {cwd: '../'});
   } else {
     var backend
