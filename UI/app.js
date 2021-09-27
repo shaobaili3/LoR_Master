@@ -301,8 +301,8 @@ function newMainWindow() {
   // --- mainWindow ---
   let windowWidth = 1200 // (335)
   let windowMaxWidth = 1920
-  let windowMinWidth = 800
-  let windowHeight = 800
+  let windowMinWidth = 600
+  let windowHeight = height * 0.7
   // let windowXPadding = 200
   // let windowYPadding = 20
   let xOffSet = 0
