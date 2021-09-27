@@ -23,7 +23,7 @@ import os
 import constants
 
 
-isDebug = False
+isDebug = True
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf8')
 print('utf8 string test: ', '卡尼能布恩', '째남모')
