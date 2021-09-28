@@ -18,7 +18,7 @@
             <span class="icon-hover"
                 v-if="!localHistoryLoading"
             ><i class="fas fa-check"></i></span>
-            <div class="tooltiptext right" v-if="!hasLocalInfo">Please log in LoR</div>
+            <div class="tooltiptext right" v-if="!hasLocalInfo">{{$t('tooltips.lorlogin')}}</div>
         </button>
         <button class="left-nav-btn" 
             :class="{selected: currentPage == PAGES.search}" 
@@ -80,7 +80,7 @@
                             @focus="searchName"
 
                             v-model="searchText"
-                            placeholder="eg.Storm#5961"
+                            :placeholder="$t('search.player.placeholder')"
                             />
                         <button class="search-btn inside right" @click="clearSearch" v-if="searchText!=''"><span><i class="fas fa-times"></i></span></button>
                     </div>
@@ -109,7 +109,7 @@
 
             <div class="loading-text" v-if="isLoading">
                 <i class="fas fa-circle-notch fa-spin"></i> 
-                Loading...
+                {{$t('str.loading')}}
             </div>
         </div>
 
@@ -118,12 +118,15 @@
         </div>
 
         <div class="main-content-container settings" v-if="currentPage == PAGES.settings">
-            <div class="title">Settings</div>
+            <div class="title">{{$t('str.settings')}}</div>
             <div class="settings-list">
                 <div class="settings-list-item">
-                    <div class="settings-title">Auto launch on startup: {{autoLaunch ? "Enabled" : "Disabled"}}</div>
-                    <button class="settings-btn" v-if="autoLaunch" @click="setAutoLaunch(false)">Disable</button>
-                    <button class="settings-btn" v-if="!autoLaunch" @click="setAutoLaunch(true)">Enable</button>
+                    <div class="settings-title">{{ $t('settings.options.autoLaunch') }} {{autoLaunch ? $t('settings.enabled') : $t('settings.disabled')}}</div>
+                    <button class="settings-btn" v-if="autoLaunch" @click="setAutoLaunch(false)">{{ $t('settings.disable') }}</button>
+                    <button class="settings-btn" v-if="!autoLaunch" @click="setAutoLaunch(true)">{{ $t('settings.enable') }}</button>
+                </div>
+                <div class="settings-list-item">
+                    <locale-changer></locale-changer>
                 </div>
             </div>
 
@@ -145,7 +148,7 @@
 
     <div class="bottom-bar">
         <div class="left">
-            <div class="status">LoR Master Tracker</div>
+            <div class="app-name">{{ $t("appName") }}</div>
         </div>
         <div class="right">
             <!-- <div class="version download tooltip" v-if="!isUpdatedVersion" @click="openURL(downloadUrl)">
@@ -174,6 +177,7 @@ import DeckRegions from '../components/DeckRegions.vue'
 import Leaderboard from '../components/Leaderboard.vue'
 import PlayerMatches from '../components/PlayerMatches.vue'
 import DeckDetail from '../components/DeckDetail.vue'
+import LocaleChanger from '../components/LocaleChanger.vue'
 
 const requestDataWaitTime = 400 //ms
 const requestHistoryWaitTime = 100 //ms
@@ -254,7 +258,8 @@ export default {
         DeckRegions,
         Leaderboard,
         PlayerMatches,
-        DeckDetail
+        DeckDetail,
+        LocaleChanger
     },
     data() {
         return {
@@ -1339,6 +1344,7 @@ export default {
     }
 
     .settings-list-item {
+        margin-bottom: 10px;
         display: flex;
         font-size: 18px;
         align-items: center;
@@ -1354,8 +1360,8 @@ export default {
         border: 0px;
         background: var(--col-dark-grey);
         color: white;
-        font-size: 1em;
-        padding: 10px 15px;
+        font-size: 0.9em;
+        padding: 8px 15px;
         outline: none;
         cursor: pointer;
         border-radius: 100px;

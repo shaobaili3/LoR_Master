@@ -16,13 +16,13 @@
                 <div class="search-icon" v-if="!isLoading"><i class="fa fa-search"></i></div>
                 <div class="search-icon loading" v-if="isLoading"><i class="fa fa-circle-notch fa-spin"></i></div>
                 <input autocomplete='off' v-model="searchText"
-                    id="search-input" type="text" :placeholder="isLoading ? 'Loading...' : searchPlaceHolder " :disabled="isLoading">
+                    id="search-input" type="text" :placeholder="isLoading ? $t('str.loading') : searchPlaceHolder " :disabled="isLoading">
             </div>
 
             <div class="flex info-help">
-                <div class="info-rank">Rank</div>
-                <div class="info-name">Name</div>
-                <div class="info-lp">Points</div>
+                <div class="info-rank">{{$t('leaderboard.rank')}}</div>
+                <div class="info-name">{{$t('leaderboard.name')}}</div>
+                <div class="info-lp">{{$t('leaderboard.points')}}</div>
             </div>
 
         </div>
