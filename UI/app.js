@@ -17,6 +17,8 @@ const spawnPython = false
 let currentVersion = "";
 var startHidden = false;
 
+var isWin = process.platform === "win32";
+
 // -----------------------------------------------
 // --- app entry points ---
 // -----------------------------------------------
@@ -51,12 +53,10 @@ app.on('ready', () => {
 
   if (app.isPackaged) {
     currentVersion = app.getVersion()
-    // autoUpdater.checkForUpdates();
   } else {
     currentVersion = require('./package.json').version;
     autoUpdater.autoDownload = false;
     autoUpdater.currentVersion = require('./package.json').version;
-    // autoUpdater.checkForUpdates();
   }
 
   appReady()
@@ -162,7 +162,7 @@ autoUpdater.on('error', (err) => {
 })
 
 ipcMain.on('check-update', (event) => {
-  autoUpdater.checkForUpdates()
+  checkForUpdates()
 })
 
 ipcMain.on('install-update', (event) => {
@@ -175,8 +175,12 @@ ipcMain.on('game-end-trigger', () => {
 })
 
 setInterval(() => {
-  autoUpdater.checkForUpdates();
+  checkForUpdates()
 }, 1000 * 60 * 15);
+
+function checkForUpdates() {
+  if (isWin) autoUpdater.checkForUpdates();
+}
 
 // -----------------------------------------------
 // --- Tray ---
