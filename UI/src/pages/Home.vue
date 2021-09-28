@@ -329,7 +329,7 @@ export default {
             } else if (this.remoteVersion) {
                 return `Latest: ${this.remoteVersion}`
             }
-            return  "Loading..."
+            return this.$t('str.loading') 
         }
     },
     methods: {

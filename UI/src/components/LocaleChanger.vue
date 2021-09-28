@@ -23,7 +23,7 @@
         outline: none;
         background: var(--col-dark-grey);
         color: white;
-        padding: 8px 20px 8px 15px;
+        padding: 8px 15px;
         border-radius: 40px;
         border: 0px;
         appearance: none;
