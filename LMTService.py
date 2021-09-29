@@ -23,7 +23,7 @@ import constants
 import argparse
 
 argParser = argparse.ArgumentParser()
-argParser.add_argument('-port', action='store', type=int, default=26531)
+argParser.add_argument('--port', action='store', type=int, default=26531)
 args = argParser.parse_args()
 print('args: ', args)
 
