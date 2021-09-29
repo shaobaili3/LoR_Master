@@ -10,6 +10,7 @@
         :type="card.type"
         :supertype="card.supertype"
         :set="card.set"
+        :locale="locale"
         >{{card.name}}</cards-preview>
     </div>
     <div class="actions" 
@@ -64,6 +65,10 @@ export default {
             type: Boolean,
             default: false,
         },
+        locale: {
+            type: String,
+            default: 'en_us'
+        }
     },
     computed: {
         deckDetailLink() {

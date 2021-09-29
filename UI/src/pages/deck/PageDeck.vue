@@ -45,30 +45,31 @@
                 :deck="match.deckCode"
                 :total="matchTotalNum"
                 :history="match.history"
+                :locale="locale"
             ></match-info>
 
         </div>
 
         <div class="tab-content" v-if="isShowMy && !isLoading">
             <deck-regions :deck="startingDeckCode"></deck-regions>
-            <deck-detail :deck="currentDeckCode" :baseDeck="startingDeckCode"></deck-detail>
+            <deck-detail :locale="locale" :deck="currentDeckCode" :baseDeck="startingDeckCode"></deck-detail>
         </div>
 
         <div class="tab-content" v-if="isShowOppoGrave && !isLoading">
             <div class="tab-text">Opponent Graveyard</div>
-            <deck-detail :deck="oppoGraveCode" :baseDeck="oppoGraveCode" :showCopy="false"></deck-detail>
+            <deck-detail :locale="locale" :deck="oppoGraveCode" :baseDeck="oppoGraveCode" :showCopy="false"></deck-detail>
         </div>
 
         <div class="tab-content" v-if="isShowMyGrave && !isLoading">
             <div class="tab-text">My Graveyard</div>
-            <deck-detail :deck="myGraveCode" :baseDeck="myGraveCode" :showCopy="false"></deck-detail>
+            <deck-detail :locale="locale" :deck="myGraveCode" :baseDeck="myGraveCode" :showCopy="false"></deck-detail>
         </div>
 
         
 
         <div class="tab-content" v-if="isShowCode">
             <deck-regions :deck="deckCode"></deck-regions>
-            <deck-detail :baseDeck="deckCode"></deck-detail>
+            <deck-detail :locale="locale" :baseDeck="deckCode"></deck-detail>
         </div>
 
         <div class="footer" v-if="!isLoading">
@@ -151,6 +152,7 @@ export default {
             oppoLp: null,
 
             lorRunning: false,
+            locale: 'en_us',
         }
     },
     computed: {
@@ -285,8 +287,10 @@ export default {
             lastStatusRequestTime = Date.now()
             axios.get(`${API_BASE}/status`)
                 .then((response) => {
+                    var data = response.data
                     var elapsedTime = Date.now() - lastStatusRequestTime // ms
-                    this.server = response.data.server
+                    this.server = data.server
+                    if (data.language) this.locale = data.language.replace('-', '_').toLowerCase()
 
                     // console.log("Server", this.server)
 

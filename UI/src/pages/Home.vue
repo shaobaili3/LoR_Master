@@ -142,7 +142,7 @@
             <deck-regions :deck="deckCode" :fixedWidth="false"></deck-regions>
         </div>
         <div class="deck-content-detail">
-            <deck-detail :baseDeck="deckCode" :fixedHeight="true"></deck-detail>
+            <deck-detail :locale="locale" :baseDeck="deckCode" :fixedHeight="true"></deck-detail>
         </div>
     </div>
 
@@ -298,6 +298,7 @@ export default {
             // Options
             autoLaunch: null,
             debugInfos: "",
+            locale: 'en_us',
         }
     },
     computed: {
@@ -678,6 +679,8 @@ export default {
                     if (updateLocalPlayer) {
                         this.requestLocalHistory()
                     }
+
+                    if (data.language) this.locale = data.language.replace('-', '_').toLowerCase()
 
                     this.lorRunning = data.lorRunning
 
