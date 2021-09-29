@@ -62,17 +62,17 @@ export default {
     }
 
     .info-rank {
-        width: 50px;
+        width: 9.6%;
         text-align: center;
     }
 
     .info-name {
-        width: 280px;
+        width: 53.8%;
         text-align: left;
     }
 
     .info-lp {
-        width: 50px;
+        width: 9.6%;
         text-align: center;
     }
 
