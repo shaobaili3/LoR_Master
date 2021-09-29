@@ -645,7 +645,6 @@ export default {
             axios.get(`${API_BASE}/status`)
                 .then((response) => {
                     var data = response.data
-                    var elapsedTime = Date.now() - lastStatusRequestTime // ms
 
                     var updateLocalPlayer = false
                     if (this.localPlayerInfo.playerId != data.playerId) {
@@ -687,6 +686,7 @@ export default {
 
                     this.lorRunning = data.lorRunning
 
+                    var elapsedTime = Date.now() - lastStatusRequestTime // ms
                     if (requestStatusWaitTime > elapsedTime) {
                         setTimeout(this.requestStatusInfo, requestStatusWaitTime - elapsedTime); 
                     } else {

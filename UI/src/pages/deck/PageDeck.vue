@@ -337,13 +337,13 @@ export default {
             axios.get(`${API_BASE}/track`)
                 .then((response) => {
 
-                    var elapsedTime = Date.now() - lastTrackTime // milli
-                    
                     this.processTrackInfo(response.data)
+                    
+                    var elapsedTime = Date.now() - lastTrackTime // ms
                     if (requestDataWaitTime > elapsedTime) {
                         setTimeout(this.requestTrackInfo, requestDataWaitTime - elapsedTime); 
                     } else {
-                        this.requestTrackInfo()
+                        setTimeout(this.requestTrackInfo, 100);
                     }
                 })
                 .catch((e) => {
@@ -352,7 +352,13 @@ export default {
                     } else 
                     { 
                         console.log('error', e) 
-                        this.requestTrackInfo()
+                        
+                        var elapsedTime = Date.now() - lastTrackTime // ms
+                        if (requestDataWaitTime > elapsedTime) {
+                            setTimeout(this.requestTrackInfo, requestDataWaitTime - elapsedTime); 
+                        } else {
+                            setTimeout(this.requestTrackInfo, 100);
+                        }
                     }
                 })
             

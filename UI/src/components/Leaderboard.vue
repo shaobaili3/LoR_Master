@@ -52,6 +52,9 @@ const REGION_ID = {
 const REGION_SHORTS = ['NA', 'EU', 'AS', 'SEA']
 const REGION_NAMES = ["americas", "europe", "asia", "sea"]
 
+const requestLeaderboardWaitTime = 1000 //ms
+var lastLeaderboardRequestTime
+
 export default {
     mounted() {
         this.getLeaderboard(this.activeRegion)
@@ -115,6 +118,8 @@ export default {
     methods: {
         getLeaderboard(regionID) {
 
+            lastLeaderboardRequestTime = Date.now()
+
             this.isLoading = true
 
             var region = REGION_NAMES[regionID]
@@ -136,7 +141,14 @@ export default {
                 } else 
                 { 
                     console.log('error', e) 
-                    this.getLeaderboard(regionID)
+
+                    var elapsedTime = Date.now() - lastLeaderboardRequestTime // ms
+                    if (elapsedTime > requestLeaderboardWaitTime) {
+                        setTimeout(() => {this.getLeaderboard(regionID)}, 100);
+                    } else {
+                        setTimeout(() => {this.getLeaderboard(regionID)}, requestLeaderboardWaitTime - elapsedTime);
+                    }
+                    
                 }
             })
         },
