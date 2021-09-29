@@ -89,7 +89,7 @@ const appReady = () => {
 
   if (closeWithoutTracker && !isCheckingTracker) checkTracker()
 
-  if ((app.isPackaged || spawnService) && isWin) {
+  if (app.isPackaged || spawnService) {
     startLMTService()
   }
 
