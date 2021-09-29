@@ -18,7 +18,7 @@
             <span class="icon-hover"
                 v-if="!localHistoryLoading"
             ><i class="fas fa-check"></i></span>
-            <div class="tooltiptext right" v-if="!hasLocalInfo">Please log in LoR</div>
+            <div class="tooltiptext right" v-if="!hasLocalInfo">{{$t('tooltips.lorlogin')}}</div>
         </button>
         <button class="left-nav-btn" 
             :class="{selected: currentPage == PAGES.search}" 
@@ -80,7 +80,7 @@
                             @focus="searchName"
 
                             v-model="searchText"
-                            placeholder="eg.Storm#5961"
+                            :placeholder="$t('search.player.placeholder')"
                             />
                         <button class="search-btn inside right" @click="clearSearch" v-if="searchText!=''"><span><i class="fas fa-times"></i></span></button>
                     </div>
@@ -109,21 +109,24 @@
 
             <div class="loading-text" v-if="isLoading">
                 <i class="fas fa-circle-notch fa-spin"></i> 
-                Loading...
+                {{$t('str.loading')}}
             </div>
         </div>
 
         <div class="main-content-container leaderboard" v-if="currentPage == PAGES.leaderboard">
-            <leaderboard @search="searchPlayer($event)"></leaderboard>
+            <leaderboard :apiBase="apiBase" @search="searchPlayer($event)"></leaderboard>
         </div>
 
         <div class="main-content-container settings" v-if="currentPage == PAGES.settings">
-            <div class="title">Settings</div>
+            <div class="title">{{$t('str.settings')}}</div>
             <div class="settings-list">
                 <div class="settings-list-item">
-                    <div class="settings-title">Auto launch on startup: {{autoLaunch ? "Enabled" : "Disabled"}}</div>
-                    <button class="settings-btn" v-if="autoLaunch" @click="setAutoLaunch(false)">Disable</button>
-                    <button class="settings-btn" v-if="!autoLaunch" @click="setAutoLaunch(true)">Enable</button>
+                    <div class="settings-title">{{ $t('settings.options.autoLaunch') }} {{autoLaunch ? $t('settings.enabled') : $t('settings.disabled')}}</div>
+                    <button class="settings-btn" v-if="autoLaunch" @click="setAutoLaunch(false)">{{ $t('settings.disable') }}</button>
+                    <button class="settings-btn" v-if="!autoLaunch" @click="setAutoLaunch(true)">{{ $t('settings.enable') }}</button>
+                </div>
+                <div class="settings-list-item">
+                    <locale-changer></locale-changer>
                 </div>
             </div>
 
@@ -139,13 +142,13 @@
             <deck-regions :deck="deckCode" :fixedWidth="false"></deck-regions>
         </div>
         <div class="deck-content-detail">
-            <deck-detail :baseDeck="deckCode" :fixedHeight="true"></deck-detail>
+            <deck-detail :locale="locale" :baseDeck="deckCode" :fixedHeight="true"></deck-detail>
         </div>
     </div>
 
     <div class="bottom-bar">
         <div class="left">
-            <div class="status">LoR Master Tracker</div>
+            <div class="app-name">{{ $t("appName") }}</div>
         </div>
         <div class="right">
             <!-- <div class="version download tooltip" v-if="!isUpdatedVersion" @click="openURL(downloadUrl)">
@@ -174,14 +177,15 @@ import DeckRegions from '../components/DeckRegions.vue'
 import Leaderboard from '../components/Leaderboard.vue'
 import PlayerMatches from '../components/PlayerMatches.vue'
 import DeckDetail from '../components/DeckDetail.vue'
+import LocaleChanger from '../components/LocaleChanger.vue'
 
 const requestDataWaitTime = 400 //ms
 const requestHistoryWaitTime = 100 //ms
 const requestStatusWaitTime = 1000 //ms
 const inputNameListLength = 10;
 
-const portNum = "26531"
-const API_BASE = `http://127.0.0.1:${portNum}`
+// const portNum = "26531"
+// const API_BASE = `http://127.0.0.1:${portNum}`
 
 let cancelToken, localCancleToken
 var lastStatusRequestTime
@@ -254,7 +258,8 @@ export default {
         DeckRegions,
         Leaderboard,
         PlayerMatches,
-        DeckDetail
+        DeckDetail,
+        LocaleChanger
     },
     data() {
         return {
@@ -293,6 +298,9 @@ export default {
             // Options
             autoLaunch: null,
             debugInfos: "",
+            locale: 'en_us',
+
+            portNum: '26531',
         }
     },
     computed: {
@@ -324,7 +332,10 @@ export default {
             } else if (this.remoteVersion) {
                 return `Latest: ${this.remoteVersion}`
             }
-            return  "Loading..."
+            return this.$t('str.loading') 
+        },
+        apiBase() {
+            return `http://127.0.0.1:${this.portNum}`
         }
     },
     methods: {
@@ -339,6 +350,13 @@ export default {
                 console.log(info)
                 this.debugInfos = info
             })
+
+            window.ipcRenderer.on('return-port', (event, port) => {
+                console.log("New Port:", port)
+                this.portNum = port
+            })
+
+            window.ipcRenderer.send("get-port")
 
             this.checkAutoLaunch()
         },
@@ -613,7 +631,7 @@ export default {
             //     setTimeout(this.requestVersionData, requestDataWaitTime);
             // }
             
-            // axios.get(`${API_BASE}/version`)
+            // axios.get(`${this.apiBase}/version`)
             //     .then((response) => {
             //         var data = response.data
             //         this.version = data.version
@@ -633,10 +651,9 @@ export default {
         requestStatusInfo() {
             // Keeps requesting status
             lastStatusRequestTime = Date.now()
-            axios.get(`${API_BASE}/status`)
+            axios.get(`${this.apiBase}/status`)
                 .then((response) => {
                     var data = response.data
-                    var elapsedTime = Date.now() - lastStatusRequestTime // ms
 
                     var updateLocalPlayer = false
                     if (this.localPlayerInfo.playerId != data.playerId) {
@@ -674,8 +691,11 @@ export default {
                         this.requestLocalHistory()
                     }
 
+                    if (data.language) this.locale = data.language.replace('-', '_').toLowerCase()
+
                     this.lorRunning = data.lorRunning
 
+                    var elapsedTime = Date.now() - lastStatusRequestTime // ms
                     if (requestStatusWaitTime > elapsedTime) {
                         setTimeout(this.requestStatusInfo, requestStatusWaitTime - elapsedTime); 
                     } else {
@@ -699,7 +719,7 @@ export default {
         },
         requestNameData() {
             
-            axios.get(`${API_BASE}/name/${regionNames[this.selectedRegion]}/${this.searchText}`)
+            axios.get(`${this.apiBase}/name/${regionNames[this.selectedRegion]}/${this.searchText}`)
                 .then((response) => {
                     if (response.data == "Error") {
                         // Error
@@ -732,7 +752,7 @@ export default {
                 return
             }
 
-            var newRequest = `${API_BASE}/search/${regionNames[this.selectedRegion]}/${this.playerName}/${this.playerTag}`
+            var newRequest = `${this.apiBase}/search/${regionNames[this.selectedRegion]}/${this.playerName}/${this.playerTag}`
             if (prevHistoryRequest == newRequest && this.isLoading) {
                 // Don't refresh if the request is the same and ongoing
                 return
@@ -825,10 +845,10 @@ export default {
                 return
             }
 
-            console.log("Request Local History", `${API_BASE}/search/${server}/${name}/${tag}`)
+            console.log("Request Local History", `${this.apiBase}/search/${server}/${name}/${tag}`)
             this.localHistoryLoading = true
 
-            axios.get(`${API_BASE}/search/${server}/${name}/${tag}`,
+            axios.get(`${this.apiBase}/search/${server}/${name}/${tag}`,
                     { cancelToken: localCancleToken.token }) // Pass the cancel token
                 .then((response) => {
                     this.localHistoryLoading = false
@@ -1163,12 +1183,6 @@ export default {
         overflow-y: scroll;
     }
 
-    .main-content-container.leaderboard {
-        /* height: calc(100vh - 98px);  */
-        /* -43 -10 -45 */
-        /* overflow-y: scroll; */
-    }
-
     .left-nav {
         position: absolute;
         top: 0;
@@ -1339,6 +1353,7 @@ export default {
     }
 
     .settings-list-item {
+        margin-bottom: 10px;
         display: flex;
         font-size: 18px;
         align-items: center;
@@ -1354,8 +1369,8 @@ export default {
         border: 0px;
         background: var(--col-dark-grey);
         color: white;
-        font-size: 1em;
-        padding: 10px 15px;
+        font-size: 0.9em;
+        padding: 8px 15px;
         outline: none;
         cursor: pointer;
         border-radius: 100px;

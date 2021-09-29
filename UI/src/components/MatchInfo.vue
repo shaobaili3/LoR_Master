@@ -26,7 +26,7 @@
         </div>
     </div>
 
-    <deck-detail v-if="visibleDeck == 1" :baseDeck="deck"></deck-detail>
+    <deck-detail :locale="locale" v-if="visibleDeck == 1" :baseDeck="deck"></deck-detail>
 
 </template>
 
@@ -59,6 +59,10 @@ export default {
         badges: Array,
         total: Number,
         history: String,
+        locale: {
+            type: String,
+            default: 'en_us',
+        }
     },
     computed: {
         opponentLink() {

@@ -10,6 +10,7 @@
         :type="card.type"
         :supertype="card.supertype"
         :set="card.set"
+        :locale="locale"
         >{{card.name}}</cards-preview>
     </div>
     <div class="actions" 
@@ -27,11 +28,11 @@
 import DeckEncoder from '../modules/runeterra/DeckEncoder'
 // import sets from  '../assets/data/allsets-en_us.json'
 import CardsPreview from './CardsPreview.vue'
-import set1 from '../../../data/set1-en_us.json'
-import set2 from '../../../data/set2-en_us.json'
-import set3 from '../../../data/set3-en_us.json'
-import set4 from '../../../data/set4-en_us.json'
-import set5 from '../../../data/set5-en_us.json'
+import set1 from '../../../Resource/set1-en_us.json'
+import set2 from '../../../Resource/set2-en_us.json'
+import set3 from '../../../Resource/set3-en_us.json'
+import set4 from '../../../Resource/set4-en_us.json'
+import set5 from '../../../Resource/set5-en_us.json'
 
 
 const sets = set1.concat(set2, set3, set4, set5)
@@ -64,6 +65,10 @@ export default {
             type: Boolean,
             default: false,
         },
+        locale: {
+            type: String,
+            default: 'en_us'
+        }
     },
     computed: {
         deckDetailLink() {

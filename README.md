@@ -12,11 +12,11 @@
 
 </p>
 
-LoR Master Tracker is a open source deck tracker and history inspector for League of Runeterra.
+LoR Master Tracker is a open source deck tracker for League of Runeterra.
 
 ## [Download](https://github.com/shaobaili3/LoR_Master/releases/download/v0.9.12/LoRMasterTracker-Setup-0.9.12.exe)
 
-* Requirements: Windows 7 or higher
+* Requirements: Windows 10 64bit
 * [Click here to download](https://github.com/shaobaili3/LoR_Master/releases/download/v0.9.12/LoRMasterTracker-Setup-0.9.12.exe)
 * [Changelogs](https://github.com/shaobaili3/lor_master/releases)
 
@@ -90,6 +90,6 @@ Pre-requisites:
 ## FAQ
 
 **Q.** Is using LoR Master Tracker considered cheating?  
-**A.** This project is registered in the [Riot Development Portal](https://developer.riotgames.com/) and API keys are authorized by [Riot](https://www.riotgames.com/en). All data source is from [Riot API](https://developer.riotgames.com/apis) and [LoR Data Dragon](https://developer.riotgames.com/docs/lor). There is no third-party data source or API. There is also no local or remote database, all cached data saves locally in the LMT root folder.
+**A.** This project is registered in the [Riot Development Portal](https://developer.riotgames.com/) and API keys are authorized by [Riot](https://www.riotgames.com/en). All data source is from [Riot API](https://developer.riotgames.com/apis) and [LoR Data Dragon](https://developer.riotgames.com/docs/lor). There is no third-party data source, API, and no local or remote database. all requests sent via our Riot API keys, all data cached locally.
 
 ### Built with ❤ by Storm & FlyingFish

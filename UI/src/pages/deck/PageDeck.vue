@@ -45,30 +45,31 @@
                 :deck="match.deckCode"
                 :total="matchTotalNum"
                 :history="match.history"
+                :locale="locale"
             ></match-info>
 
         </div>
 
         <div class="tab-content" v-if="isShowMy && !isLoading">
             <deck-regions :deck="startingDeckCode"></deck-regions>
-            <deck-detail :deck="currentDeckCode" :baseDeck="startingDeckCode"></deck-detail>
+            <deck-detail :locale="locale" :deck="currentDeckCode" :baseDeck="startingDeckCode"></deck-detail>
         </div>
 
         <div class="tab-content" v-if="isShowOppoGrave && !isLoading">
             <div class="tab-text">Opponent Graveyard</div>
-            <deck-detail :deck="oppoGraveCode" :baseDeck="oppoGraveCode" :showCopy="false"></deck-detail>
+            <deck-detail :locale="locale" :deck="oppoGraveCode" :baseDeck="oppoGraveCode" :showCopy="false"></deck-detail>
         </div>
 
         <div class="tab-content" v-if="isShowMyGrave && !isLoading">
             <div class="tab-text">My Graveyard</div>
-            <deck-detail :deck="myGraveCode" :baseDeck="myGraveCode" :showCopy="false"></deck-detail>
+            <deck-detail :locale="locale" :deck="myGraveCode" :baseDeck="myGraveCode" :showCopy="false"></deck-detail>
         </div>
 
         
 
         <div class="tab-content" v-if="isShowCode">
             <deck-regions :deck="deckCode"></deck-regions>
-            <deck-detail :baseDeck="deckCode"></deck-detail>
+            <deck-detail :locale="locale" :baseDeck="deckCode"></deck-detail>
         </div>
 
         <div class="footer" v-if="!isLoading">
@@ -92,8 +93,8 @@ const requestDataWaitTime = 100; // ms
 const requestServerWaitTime = 3000; //ms
 const requestStatusWaitTime = 1000; //ms
 
-const portNum = "26531"
-const API_BASE = `http://127.0.0.1:${portNum}`
+// const portNum = "26531"
+// const API_BASE = `http://127.0.0.1:${portNum}`
 
 const TABS = {
     oppo: 0,
@@ -118,9 +119,17 @@ export default {
         // this.getSubData()
         // console.log("Mounted")
         // this.requestData()
+        console.log("Page Deck Mounted")
+
         this.infoType = "match"
 
         // this.hideWindow()
+        window.ipcRenderer.on('return-port', (event, port) => {
+            console.log("New Port:", port)
+            this.portNum = port
+        })
+
+        window.ipcRenderer.send("get-port")
 
         this.requestTrackInfo()
         // this.requestServerInfo()
@@ -151,6 +160,9 @@ export default {
             oppoLp: null,
 
             lorRunning: false,
+            locale: 'en_us',
+
+            portNum: '26531'
         }
     },
     computed: {
@@ -197,7 +209,10 @@ export default {
                 return true
             }
             return false
-        }
+        },
+        apiBase() {
+            return `http://127.0.0.1:${this.portNum}`
+        },
     },
     methods: {
         hideWindow() {
@@ -240,7 +255,7 @@ export default {
 
             console.log("Request Opponent History for " + this.oppoName + "#" + this.oppoTag)
             
-            axios.get(`${API_BASE}/history/${this.server}/${this.oppoName}/${this.oppoTag}`)
+            axios.get(`${this.apiBase}/history/${this.server}/${this.oppoName}/${this.oppoTag}`)
                 .then((response) => {
                     console.log("Opponent Data", response.data)
                     this.processOpponentHistory(response.data)
@@ -254,7 +269,7 @@ export default {
         },
         // requestServerInfo() {
         //     lastServerRequestTime = Date.now()
-        //     axios.get(`${API_BASE}/process`)
+        //     axios.get(`${this.apiBase}/process`)
         //         .then((response) => {
         //             // console.log(response.data)
 
@@ -283,32 +298,35 @@ export default {
         requestStatusInfo() {
             // Keeps requesting status
             lastStatusRequestTime = Date.now()
-            axios.get(`${API_BASE}/status`)
+            axios.get(`${this.apiBase}/status`)
                 .then((response) => {
+                    var data = response.data
                     var elapsedTime = Date.now() - lastStatusRequestTime // ms
-                    this.server = response.data.server
+                    this.server = data.server
+                    if (data.language) this.locale = data.language.replace('-', '_').toLowerCase()
 
                     // console.log("Server", this.server)
 
                     if (requestStatusWaitTime > elapsedTime) {
                         setTimeout(this.requestStatusInfo, requestStatusWaitTime - elapsedTime); 
                     } else {
-                        this.requestStatusInfo()
+                        setTimeout(this.requestStatusInfo, 100)
                     }
                 })
                 .catch((e) => {
                     if (axios.isCancel(e)) {
                         console.log("Request cancelled");
-                    } else 
-                    { console.log('error', e) }
-                    this.requestStatusInfo()
+                    } else { 
+                        console.log('error', e) 
+                        setTimeout(this.requestStatusInfo, 100)
+                    }
                 })
         },
         requestOppoInfo() {
             // Getting opponent rank, lp and tag
             // Once per opponent change
 
-            axios.get(`${API_BASE}/opInfo`)
+            axios.get(`${this.apiBase}/opInfo`)
                 .then((response) => {
                     var op = response.data
                     if (op.rank !== "") {
@@ -330,16 +348,16 @@ export default {
         requestTrackInfo() {
 
             lastTrackTime = Date.now()
-            axios.get(`${API_BASE}/track`)
+            axios.get(`${this.apiBase}/track`)
                 .then((response) => {
 
-                    var elapsedTime = Date.now() - lastTrackTime // milli
-                    
                     this.processTrackInfo(response.data)
+                    
+                    var elapsedTime = Date.now() - lastTrackTime // ms
                     if (requestDataWaitTime > elapsedTime) {
                         setTimeout(this.requestTrackInfo, requestDataWaitTime - elapsedTime); 
                     } else {
-                        this.requestTrackInfo()
+                        setTimeout(this.requestTrackInfo, 100);
                     }
                 })
                 .catch((e) => {
@@ -348,7 +366,13 @@ export default {
                     } else 
                     { 
                         console.log('error', e) 
-                        this.requestTrackInfo()
+
+                        var elapsedTime = Date.now() - lastTrackTime // ms
+                        if (requestDataWaitTime > elapsedTime) {
+                            setTimeout(this.requestTrackInfo, requestDataWaitTime - elapsedTime); 
+                        } else {
+                            setTimeout(this.requestTrackInfo, 100);
+                        }
                     }
                 })
             

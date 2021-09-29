@@ -28,6 +28,15 @@ except Exception as e:
     print("Could not load card data:", e)
 
 
+def downloadAllSet():
+    setData = []
+    regions = ['zh_tw', 'ko_kr', 'ja_jp', 'es_es', 'pt_br', 'ru_ru', 'th_th']
+    for region in regions:
+        for num in range(MAX_SET_NUM):
+            setData.append(get_card_set_online(num + 1, region=region))
+        write_json_file(setData, Path(__file__).parent.parent.parent / 'Resource'/ (region + '.json'))
+
+
 class Card:
     def __init__(self, card=None, **kwargs):
         self.id = kwargs.get("CardID", None)

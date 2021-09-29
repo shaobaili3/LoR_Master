@@ -16,13 +16,13 @@
                 <div class="search-icon" v-if="!isLoading"><i class="fa fa-search"></i></div>
                 <div class="search-icon loading" v-if="isLoading"><i class="fa fa-circle-notch fa-spin"></i></div>
                 <input autocomplete='off' v-model="searchText"
-                    id="search-input" type="text" :placeholder="isLoading ? 'Loading...' : searchPlaceHolder " :disabled="isLoading">
+                    id="search-input" type="text" :placeholder="isLoading ? $t('str.loading') : searchPlaceHolder " :disabled="isLoading">
             </div>
 
             <div class="flex info-help">
-                <div class="info-rank">Rank</div>
-                <div class="info-name">Name</div>
-                <div class="info-lp">Points</div>
+                <div class="info-rank">{{$t('leaderboard.rank')}}</div>
+                <div class="info-name">{{$t('leaderboard.name')}}</div>
+                <div class="info-lp">{{$t('leaderboard.points')}}</div>
             </div>
 
         </div>
@@ -46,12 +46,14 @@
 import axios from 'axios'
 import LeaderboardPlayer from '../components/LeaderboardPlayer.vue'
 
-const portNum = "26531"
 const REGION_ID = {
     NA: 0, EU: 1, AS: 2, SEA: 3
 }
 const REGION_SHORTS = ['NA', 'EU', 'AS', 'SEA']
 const REGION_NAMES = ["americas", "europe", "asia", "sea"]
+
+const requestLeaderboardWaitTime = 1000 //ms
+var lastLeaderboardRequestTime
 
 export default {
     mounted() {
@@ -67,6 +69,12 @@ export default {
             searchText: "",
             signedIn: false,
             dataStartTime: 0,
+        }
+    },
+    props: {
+        apiBase: {
+            type: String,
+            required: true
         }
     },
     emits: {
@@ -104,11 +112,13 @@ export default {
             } else {
                 return "Search"
             }
-        },
+        }
     },
     components: { LeaderboardPlayer },
     methods: {
         getLeaderboard(regionID) {
+
+            lastLeaderboardRequestTime = Date.now()
 
             this.isLoading = true
 
@@ -118,7 +128,7 @@ export default {
             const axiosSource = axios.CancelToken.source()
             this.request = { cancel: axiosSource.cancel, msg: "Loading..." }
 
-            var api_link = `http://127.0.0.1:${portNum}/leaderboard/${region}`
+            var api_link = `${this.apiBase}/leaderboard/${region}`
 
             axios.get(api_link, {cancelToken: axiosSource.token} )
             .then((res) => {
@@ -131,7 +141,14 @@ export default {
                 } else 
                 { 
                     console.log('error', e) 
-                    this.getLeaderboard(regionID)
+
+                    var elapsedTime = Date.now() - lastLeaderboardRequestTime // ms
+                    if (elapsedTime > requestLeaderboardWaitTime) {
+                        setTimeout(() => {this.getLeaderboard(regionID)}, 100);
+                    } else {
+                        setTimeout(() => {this.getLeaderboard(regionID)}, requestLeaderboardWaitTime - elapsedTime);
+                    }
+                    
                 }
             })
         },
