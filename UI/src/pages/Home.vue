@@ -300,7 +300,7 @@ export default {
             debugInfos: "",
             locale: 'en_us',
 
-            portNum: '123456',
+            portNum: '26531',
         }
     },
     computed: {

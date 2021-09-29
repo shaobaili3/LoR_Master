@@ -13,7 +13,7 @@ const defaultRatio = 2.3 // Repeated in preload.js
 
 const defaultPort = '26531'
 
-const spawnService = false
+const spawnService = true
 const spawnPython = false
 
 let currentVersion = ""

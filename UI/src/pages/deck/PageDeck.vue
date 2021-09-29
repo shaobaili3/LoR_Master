@@ -162,7 +162,7 @@ export default {
             lorRunning: false,
             locale: 'en_us',
 
-            portNum: '123456'
+            portNum: '26531'
         }
     },
     computed: {
@@ -310,15 +310,16 @@ export default {
                     if (requestStatusWaitTime > elapsedTime) {
                         setTimeout(this.requestStatusInfo, requestStatusWaitTime - elapsedTime); 
                     } else {
-                        this.requestStatusInfo()
+                        setTimeout(this.requestStatusInfo, 100)
                     }
                 })
                 .catch((e) => {
                     if (axios.isCancel(e)) {
                         console.log("Request cancelled");
-                    } else 
-                    { console.log('error', e) }
-                    this.requestStatusInfo()
+                    } else { 
+                        console.log('error', e) 
+                        setTimeout(this.requestStatusInfo, 100)
+                    }
                 })
         },
         requestOppoInfo() {
