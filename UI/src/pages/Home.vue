@@ -114,7 +114,7 @@
         </div>
 
         <div class="main-content-container leaderboard" v-if="currentPage == PAGES.leaderboard">
-            <leaderboard :apiBase="API_BASE" @search="searchPlayer($event)"></leaderboard>
+            <leaderboard :apiBase="apiBase" @search="searchPlayer($event)"></leaderboard>
         </div>
 
         <div class="main-content-container settings" v-if="currentPage == PAGES.settings">
@@ -331,6 +331,9 @@ export default {
                 return `Latest: ${this.remoteVersion}`
             }
             return this.$t('str.loading') 
+        },
+        apiBase() {
+            return API_BASE
         }
     },
     methods: {
