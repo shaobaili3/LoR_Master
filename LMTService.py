@@ -1,6 +1,5 @@
 #!/usr/local/bin/python
 # -*- coding: utf-8 -*-
-import Models
 from Models.process import updateStatus
 import threading
 import time
@@ -21,6 +20,12 @@ import io
 import sys
 import os
 import constants
+import argparse
+
+argParser = argparse.ArgumentParser()
+argParser.add_argument('--port', action='store', type=int, default=26531)
+args = argParser.parse_args()
+print('args: ', args)
 
 
 isDebug = True
@@ -48,6 +53,8 @@ sentry_sdk.set_context("info", {
 master.startMasterWorker()
 leaderboardModel = Leaderboard()
 cacheModel = Cache()
+
+  
 
 settingInspect = Setting()
 networkInspect = Network(settingInspect)
@@ -201,4 +208,4 @@ def get_status():
     return jsonify(status)
 
 
-app.run(port=26531, debug=isDebug, use_reloader=False)
+app.run(port=args.port, debug=isDebug, use_reloader=False)
