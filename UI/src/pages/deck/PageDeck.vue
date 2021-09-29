@@ -93,8 +93,8 @@ const requestDataWaitTime = 100; // ms
 const requestServerWaitTime = 3000; //ms
 const requestStatusWaitTime = 1000; //ms
 
-const portNum = "26531"
-const API_BASE = `http://127.0.0.1:${portNum}`
+// const portNum = "26531"
+// const API_BASE = `http://127.0.0.1:${portNum}`
 
 const TABS = {
     oppo: 0,
@@ -122,6 +122,12 @@ export default {
         this.infoType = "match"
 
         // this.hideWindow()
+        window.ipcRenderer.on('return-port', (event, port) => {
+            console.log("New Port:", port)
+            this.portNum = port
+        })
+
+        window.ipcRenderer.send("get-port")
 
         this.requestTrackInfo()
         // this.requestServerInfo()
@@ -153,6 +159,8 @@ export default {
 
             lorRunning: false,
             locale: 'en_us',
+
+            portNum: '123456'
         }
     },
     computed: {
@@ -199,7 +207,10 @@ export default {
                 return true
             }
             return false
-        }
+        },
+        apiBase() {
+            return `http://127.0.0.1:${this.portNum}`
+        },
     },
     methods: {
         hideWindow() {
@@ -242,7 +253,7 @@ export default {
 
             console.log("Request Opponent History for " + this.oppoName + "#" + this.oppoTag)
             
-            axios.get(`${API_BASE}/history/${this.server}/${this.oppoName}/${this.oppoTag}`)
+            axios.get(`${this.apiBase}/history/${this.server}/${this.oppoName}/${this.oppoTag}`)
                 .then((response) => {
                     console.log("Opponent Data", response.data)
                     this.processOpponentHistory(response.data)
@@ -256,7 +267,7 @@ export default {
         },
         // requestServerInfo() {
         //     lastServerRequestTime = Date.now()
-        //     axios.get(`${API_BASE}/process`)
+        //     axios.get(`${this.apiBase}/process`)
         //         .then((response) => {
         //             // console.log(response.data)
 
@@ -285,7 +296,7 @@ export default {
         requestStatusInfo() {
             // Keeps requesting status
             lastStatusRequestTime = Date.now()
-            axios.get(`${API_BASE}/status`)
+            axios.get(`${this.apiBase}/status`)
                 .then((response) => {
                     var data = response.data
                     var elapsedTime = Date.now() - lastStatusRequestTime // ms
@@ -312,7 +323,7 @@ export default {
             // Getting opponent rank, lp and tag
             // Once per opponent change
 
-            axios.get(`${API_BASE}/opInfo`)
+            axios.get(`${this.apiBase}/opInfo`)
                 .then((response) => {
                     var op = response.data
                     if (op.rank !== "") {
@@ -334,7 +345,7 @@ export default {
         requestTrackInfo() {
 
             lastTrackTime = Date.now()
-            axios.get(`${API_BASE}/track`)
+            axios.get(`${this.apiBase}/track`)
                 .then((response) => {
 
                     this.processTrackInfo(response.data)
@@ -352,7 +363,7 @@ export default {
                     } else 
                     { 
                         console.log('error', e) 
-                        
+
                         var elapsedTime = Date.now() - lastTrackTime // ms
                         if (requestDataWaitTime > elapsedTime) {
                             setTimeout(this.requestTrackInfo, requestDataWaitTime - elapsedTime); 

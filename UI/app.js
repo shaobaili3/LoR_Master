@@ -11,6 +11,8 @@ const closeWithoutTracker = false
 const headerHeight = 45 // Repeated in preload.js
 const defaultRatio = 2.3 // Repeated in preload.js
 
+const defaultPort = '26531'
+
 const spawnService = false
 const spawnPython = false
 
@@ -18,6 +20,7 @@ let currentVersion = "";
 var startHidden = false;
 
 var isWin = process.platform === "win32";
+var port = defaultPort
 
 // -----------------------------------------------
 // --- app entry points ---
@@ -87,11 +90,30 @@ function showAlert(title, message) {
 
 const appReady = () => {
 
-  if (closeWithoutTracker && !isCheckingTracker) checkTracker()
+  const detect = require('detect-port');
+  detect(port, (err, _port) => {
+    if (err) {
+      console.log(err);
+      return
+    }
+  
+    if (port == _port) {
+      console.log(`port: ${port} was not occupied`);
+    } else {
+      console.log(`port: ${port} was occupied, try port: ${_port}`);
+    }
 
-  if (app.isPackaged || spawnService) {
-    startLMTService()
-  }
+    port = _port
+
+    if (mainWindow) mainWindow.webContents.send('return-port', port)
+    if (deckWindow) deckWindow.webContents.send('return-port', port)
+
+    if (app.isPackaged || spawnService) {
+      startLMTService(port)
+    }
+  });
+
+  if (closeWithoutTracker && !isCheckingTracker) checkTracker()
 
   console.log("Process Args:")
   console.log(process.argv)
@@ -174,6 +196,13 @@ ipcMain.on('game-end-trigger', () => {
   if (mainWindow) mainWindow.webContents.send('game-end-handle')
 })
 
+ipcMain.on('get-port', (event, args) => {
+
+  event.sender.send('return-port', port)
+  // if (mainWindow) mainWindow.webContents.send('return-port', port)
+  // if (deckWindow) deckWindow.webContents.send('return-port', port)
+})
+
 setInterval(() => {
   checkForUpdates()
 }, 1000 * 60 * 15);
@@ -247,7 +276,9 @@ Menu.setApplicationMenu(menu)
 // --- Backend Service ---
 // -----------------------------------------------
 
-function startLMTService() {
+function startLMTService(port) {
+
+  console.log("Starting LMT Service")
 
   const { spawn } = require('child_process')
 
@@ -260,10 +291,11 @@ function startLMTService() {
     if (app.isPackaged) {
       var execPath = path.dirname(app.getPath('exe'))
       backend = path.join(execPath, 'backend', 'LMTService', 'LMTService.exe')
-      proc = spawn(backend, {cwd: path.join(execPath, 'backend', 'LMTService')});
+      proc = spawn(backend, [`--port=${port}`], {cwd: path.join(execPath, 'backend', 'LMTService')});
+      
     } else {
       backend = path.join(__dirname, 'backend', 'LMTService', 'LMTService.exe')
-      proc = spawn(backend, {cwd: path.join(__dirname, 'backend', 'LMTService')});
+      proc = spawn(backend, [`--port=${port}`], {cwd: path.join(__dirname, 'backend', 'LMTService')});
     }
   }
   
