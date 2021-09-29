@@ -123,7 +123,7 @@ export default {
             const axiosSource = axios.CancelToken.source()
             this.request = { cancel: axiosSource.cancel, msg: "Loading..." }
 
-            var api_link = `${apiBase}/leaderboard/${region}`
+            var api_link = `${this.apiBase}/leaderboard/${region}`
 
             axios.get(api_link, {cancelToken: axiosSource.token} )
             .then((res) => {
