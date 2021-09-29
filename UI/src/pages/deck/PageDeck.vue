@@ -119,6 +119,8 @@ export default {
         // this.getSubData()
         // console.log("Mounted")
         // this.requestData()
+        console.log("Page Deck Mounted")
+
         this.infoType = "match"
 
         // this.hideWindow()
