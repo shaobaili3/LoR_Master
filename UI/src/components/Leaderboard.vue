@@ -46,7 +46,6 @@
 import axios from 'axios'
 import LeaderboardPlayer from '../components/LeaderboardPlayer.vue'
 
-const portNum = "26531"
 const REGION_ID = {
     NA: 0, EU: 1, AS: 2, SEA: 3
 }
@@ -67,6 +66,12 @@ export default {
             searchText: "",
             signedIn: false,
             dataStartTime: 0,
+        }
+    },
+    props: {
+        apiBase: {
+            type: String,
+            required: true
         }
     },
     emits: {
@@ -104,7 +109,7 @@ export default {
             } else {
                 return "Search"
             }
-        },
+        }
     },
     components: { LeaderboardPlayer },
     methods: {
@@ -118,7 +123,7 @@ export default {
             const axiosSource = axios.CancelToken.source()
             this.request = { cancel: axiosSource.cancel, msg: "Loading..." }
 
-            var api_link = `http://127.0.0.1:${portNum}/leaderboard/${region}`
+            var api_link = `${apiBase}/leaderboard/${region}`
 
             axios.get(api_link, {cancelToken: axiosSource.token} )
             .then((res) => {

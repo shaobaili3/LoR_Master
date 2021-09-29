@@ -114,7 +114,7 @@
         </div>
 
         <div class="main-content-container leaderboard" v-if="currentPage == PAGES.leaderboard">
-            <leaderboard @search="searchPlayer($event)"></leaderboard>
+            <leaderboard :apiBase="API_BASE" @search="searchPlayer($event)"></leaderboard>
         </div>
 
         <div class="main-content-container settings" v-if="currentPage == PAGES.settings">
