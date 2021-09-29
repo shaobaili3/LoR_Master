@@ -22,7 +22,6 @@ var lastStatusRequestTime
 
 export default {
     mounted() {
-        this.requestStatusInfo()
     },
     data() {
     }, 
