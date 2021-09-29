@@ -26,4 +26,4 @@ def get_lor_globals(region="en_us"):
 def write_json_file(json_data,json_path):
     os.makedirs(os.path.dirname(json_path), exist_ok=True)
     with open(json_path, 'w', encoding='utf-8') as f:
-        json.dump(json_data, f, ensure_ascii=False, indent=4)
+        json.dump(json_data, f, indent=2)
