@@ -1,10 +1,23 @@
 module.exports = {
   English: {
-    appName: "LoR Master Tracker",
+    appName: 'LoR Master Tracker',
     str: {
       settings: 'Settings',
       loading: 'Loading...',
       languages: 'Languages',
+      invalidDeck: 'Invalid Deck Code',
+    },
+    loading: {
+      readyToRock: 'Ready to rock 🤘',
+      history: 'Loading History...',
+      nohistory: 'History unavailable',
+    },
+    tracker: {
+      tabs: {
+        oppoPlayed: 'Opponent Played',
+        myPlayed: 'My Played',
+      },
+      cardsInHand: 'Cards in Hand: {num}'
     },
     leaderboard: {
       rank: 'Rank',
@@ -13,15 +26,15 @@ module.exports = {
     },
     search: {
       player: {
-        placeholder: "eg.Storm#5961"
+        placeholder: 'eg.Storm#5961'
       }
     },
     tooltips: {
-      lorlogin: "Please log in LoR"
+      lorlogin: 'Please log in LoR'
     },
     settings: {
       options: {
-        autoLaunch: "Auto launch on startup:"
+        autoLaunch: 'Auto launch on startup:'
       },
       enabled: 'Enabled',
       enable: 'Enable',
@@ -30,11 +43,24 @@ module.exports = {
     }
   },
   繁體中文: {
-    appName: "LoR 魔盒",
+    appName: 'LoR 魔盒',
     str: {
       settings: '設置',
       loading: '加載中...',
       languages: '語言',
+      invalidDeck: '牌組代碼錯誤',
+    },
+    loading: {
+      readyToRock: '準備就緒 🤘',
+      history: '努力加載歷史中...',
+      nohistory: '沒有找到歷史數據',
+    },
+    tracker: {
+      tabs: {
+        oppoPlayed: '對手已打出',
+        myPlayed: '我方已打出',
+      },
+      cardsInHand: '手牌數: {num}'
     },
     leaderboard: {
       rank: '排名',
@@ -43,15 +69,15 @@ module.exports = {
     },
     search: {
       player: {
-        placeholder: "例：Storm#5961"
+        placeholder: '例：Storm#5961'
       }
     },
     tooltips: {
-      lorlogin: "請登陸 LoR"
+      lorlogin: '請登陸 LoR'
     },
     settings: {
       options: {
-        autoLaunch: "開機自動啟動:"
+        autoLaunch: '開機自動啟動:'
       },
       enabled: '開啟',
       enable: '開啟',

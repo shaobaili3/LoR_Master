@@ -299,12 +299,12 @@ function startLMTService(port) {
     }
   }
   
-  proc.stdout.on('data', function (data) {
-    console.log("data: ", data.toString('utf8'))
-  })
-  proc.stderr.on('data', (data) => {
-    console.log(`stderr: ${data}`) // when error
-  })
+  // proc.stdout.on('data', function (data) {
+  //   console.log("data: ", data.toString('utf8'))
+  // })
+  // proc.stderr.on('data', (data) => {
+  //   console.log(`stderr: ${data}`) // when error
+  // })
 
   proc.on('close', (code) => {
     console.log(`child process close all stdio with code ${code}`)
@@ -323,6 +323,8 @@ function startLMTService(port) {
 let deckWindow = null
 let infoWindow = null
 let mainWindow = null
+
+let allWindows = []
 
 function newMainWindow() {
 
@@ -395,6 +397,8 @@ function newMainWindow() {
   })
 
   if (developmentMode) mainWindow.webContents.openDevTools()
+
+  allWindows.push(mainWindow)
 }
 
 function newDeckWindow() {
@@ -482,7 +486,7 @@ function newDeckWindow() {
 
   if (developmentMode) deckWindow.webContents.openDevTools()
 
-  
+  allWindows.push(deckWindow)
 }
 
 function newInfoWindow() {
@@ -527,6 +531,8 @@ function newInfoWindow() {
   })
 
   if (developmentMode) infoWindow.webContents.openDevTools()
+
+  allWindows.push(infoWindow)
 }
 
 function showDeckWindow() {
@@ -627,6 +633,20 @@ function disableAutoLaunch() {
   autoLauncher.disable()
 }
 
+
+// -----------------------------------------------
+// --- Locale ---
+// -----------------------------------------------
+
+ipcMain.on('changed-locale', (event, newLocale) => {
+  console.log("Changing Locale to", newLocale, ", from", event.sender.id)
+  allWindows.forEach(bw => {
+    if (bw && bw.webContents.id != event.sender.id) {
+      console.log("-- sending to", bw.id)
+      bw.webContents.send('to-change-locale', newLocale)
+    }
+  });
+})
 
 
 

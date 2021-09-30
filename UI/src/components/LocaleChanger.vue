@@ -19,6 +19,9 @@ export default {
   methods: {
     changeLocale(newLocale) {
       this.$i18n.locale = newLocale
+      if (window.ipcRenderer) {
+        window.ipcRenderer.send('changed-locale', newLocale)
+      }
     }
   }
 }

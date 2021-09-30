@@ -252,6 +252,8 @@ export default {
         this.handleGameEnd()
 
         this.initLocalSettings()
+
+        this.initChangeLocale()
     },
     components: { 
         BaseWindowControls,
@@ -339,6 +341,14 @@ export default {
         }
     },
     methods: {
+
+        // Change Locale
+        initChangeLocale() {
+            window.ipcRenderer.on('to-change-locale', (event, newLocale) => {
+                this.$i18n.locale = newLocale
+                console.log("Changing locale to", newLocale)
+            })
+        },
 
         // Local Settings
         initLocalSettings() {

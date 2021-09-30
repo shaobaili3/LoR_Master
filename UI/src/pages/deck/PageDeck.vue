@@ -7,7 +7,7 @@
             {{loadingText}}
         </div> 
 
-        <div class="errorText" v-if="isInvalidDeckCode && isShowCode">Invalid Deck Code</div>
+        <div class="errorText" v-if="isInvalidDeckCode && isShowCode">{{$t('invalidDeck')}}</div>
 
         <div class="tabs" v-if="!isLoading">
             <div class="tab-title-group">
@@ -56,12 +56,12 @@
         </div>
 
         <div class="tab-content" v-if="isShowOppoGrave && !isLoading">
-            <div class="tab-text">Opponent Graveyard</div>
+            <div class="tab-text">{{$t('tracker.tabs.oppoPlayed')}}</div>
             <deck-detail :locale="locale" :deck="oppoGraveCode" :baseDeck="oppoGraveCode" :showCopy="false"></deck-detail>
         </div>
 
         <div class="tab-content" v-if="isShowMyGrave && !isLoading">
-            <div class="tab-text">My Graveyard</div>
+            <div class="tab-text">{{$t('tracker.tabs.myPlayed')}}</div>
             <deck-detail :locale="locale" :deck="myGraveCode" :baseDeck="myGraveCode" :showCopy="false"></deck-detail>
         </div>
 
@@ -73,7 +73,7 @@
         </div>
 
         <div class="footer" v-if="!isLoading">
-            <div class="footer-text">Cards in Hand: {{cardsInHandNum}}</div>
+            <div class="footer-text">{{$t('tracker.cardsInHand', {num: cardsInHandNum})}}</div>
         </div>
 
     </div>
@@ -134,6 +134,8 @@ export default {
         this.requestTrackInfo()
         // this.requestServerInfo()
         this.requestStatusInfo()
+        
+        this.initChangeLocale()
     },
     data() {
         return {
@@ -174,11 +176,11 @@ export default {
             // return true
         },
         loadingText() {
-            return 'Ready to rock 🤘'
+            return this.$t('loading.readyToRock')
         },
         loadingOppoText() {
-            if (this.oppoName && this.oppoTag) return "Loading History..."
-            return "History unavailable"
+            if (this.oppoName && this.oppoTag) return this.$t('loading.history')
+            return this.$t('loading.nohistory') 
         },
         isShowOppo() {
             return this.currentTab == TABS.oppo
@@ -215,6 +217,14 @@ export default {
         },
     },
     methods: {
+        // Change Locale
+        initChangeLocale() {
+            window.ipcRenderer.on('to-change-locale', (event, newLocale) => {
+                this.$i18n.locale = newLocale
+                console.log("Changing locale to", newLocale)
+            })
+        },
+
         hideWindow() {
             if (window.hideWindow) {
                 window.hideWindow()

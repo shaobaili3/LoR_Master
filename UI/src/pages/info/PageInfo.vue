@@ -14,10 +14,21 @@
 import BaseWindowControls from '../../components/BaseWindowControls.vue';
 export default {
     components: { BaseWindowControls },
+    mounted() {
+        this.initChangeLocale()
+    },
     methods: {
+        // Change Locale
+        initChangeLocale() {
+            window.ipcRenderer.on('to-change-locale', (event, newLocale) => {
+                this.$i18n.locale = newLocale
+                console.log("Changing locale to", newLocale)
+            })
+        },
         openURL(url) {
             window.openExternal(url);
-        }
+        },
+        
     }
 }
 </script>
