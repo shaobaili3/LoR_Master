@@ -690,8 +690,15 @@ export default {
                     if (updateLocalPlayer) {
                         this.requestLocalHistory()
                     }
-
-                    if (data.language) this.locale = data.language.replace('-', '_').toLowerCase()
+                    
+                    if (data.language) {
+                        var newLocale = data.language.replace('-', '_').toLowerCase()
+                        if (this.locale != newLocale) {
+                            console.log("Switch Locale", this.locale, newLocale)
+                        }
+                        this.locale = newLocale
+                    }
+                    // console.log(this.locale)
 
                     this.lorRunning = data.lorRunning
 
