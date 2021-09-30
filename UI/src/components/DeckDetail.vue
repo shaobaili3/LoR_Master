@@ -165,7 +165,7 @@ export default {
             })
         },
         copyText() {
-            return this.copied ? 'Copied!' : 'Copy'
+            return this.copied ? this.$t('str.copied') : this.$t('str.copy')
         }
     },
     methods: {

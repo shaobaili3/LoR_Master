@@ -210,39 +210,6 @@ const PAGES = {
     settings: 3,
 }
 
-function processDate(dateString) {
-    var time
-    var date = new Date(dateString)
-
-    var milliElapsed = Date.now() - date
-    var secondsElapsed = milliElapsed / 1000
-    var minElapse = secondsElapsed / 60
-    var hoursElapse = minElapse / 60
-    var daysElapsed = hoursElapse / 24
-
-    if (secondsElapsed < 60) {
-        time = Math.floor(secondsElapsed) + " sec. ago"
-    } else if (minElapse < 60) {
-        time = Math.floor(minElapse) + " min. ago"
-    } else if (hoursElapse < 24) {
-        if (Math.floor(hoursElapse) == 1) {
-            time = Math.floor(hoursElapse) + " hour ago"
-        } else {
-            time = Math.floor(hoursElapse) + " hours ago"
-        }
-    } else if (daysElapsed < 7) {
-        if ( Math.floor(daysElapsed) == 1) {
-            time = Math.floor(daysElapsed) + " day ago"
-        } else {
-            time = Math.floor(daysElapsed) + " days ago"
-        }
-    } else {
-        time = date.toLocaleDateString()
-    }
-
-    return time
-}
-
 export default {
     mounted() {
         console.log("Mounted")
@@ -554,7 +521,7 @@ export default {
                 if (info.game_mode) badges.push(info.game_mode.replace(/([A-Z])/g, ' $1').trim().replace("Lobby", ""))
                 if (info.game_type) badges.push(info.game_type.replace(/([A-Z])/g, ' $1').trim().replace("Lobby", ""))
 
-                time = processDate(info.game_start_time_utc)
+                time = info.game_start_time_utc
 
                 this.matches.push({
                     opponentName: opponentName,
@@ -948,7 +915,7 @@ export default {
                 if (info.game_mode) badges.push(info.game_mode.replace(/([A-Z])/g, ' $1').trim().replace("Lobby", ""))
                 if (info.game_type) badges.push(info.game_type.replace(/([A-Z])/g, ' $1').trim().replace("Lobby", ""))
 
-                time = processDate(info.game_start_time_utc)
+                time = info.game_start_time_utc
 
                 this.localMatches.push({
                     opponentName: opponentName,

@@ -108,9 +108,9 @@ export default {
         },
         searchPlaceHolder() {
             if (this.rawPlayers) {
-                return "Search "+ this.rawPlayers.length +" players"
+                return this.$t('search.leaderboard.numPlayer', {num: this.rawPlayers.length})
             } else {
-                return "Search"
+                return this.$t('search.leaderboard.base')
             }
         }
     },

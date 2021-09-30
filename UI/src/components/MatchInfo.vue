@@ -6,7 +6,7 @@
             </router-link> -->
             <p class="match-info-title">
                 <!-- {{matches}} / {{total}} -->
-                {{useRate}}% Usage
+                {{$t('matches.usage', {num: useRate})}}
             </p>
             <div class="match-info-badge" v-for="(badge, index) in badges" :key="index">
                 <span class="match-info-badge-icon fa" :class="{'fa-clock': badge=='recent', 'fa-angle-double-up': badge=='frequent'}"></span>
@@ -82,7 +82,9 @@ export default {
             return (this.history.match(/L/g)||[]).length
         },
         gamesString() {
-            return this.matches > 1 ? this.matches + " games" : this.matches + " game"
+            return this.matches > 1 ? 
+                this.$t('matches.games', {num: this.matches}) :
+                this.$t('matches.game', {num: this.matches})
         }
     }, 
     methods: {
