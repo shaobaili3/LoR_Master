@@ -9,7 +9,6 @@ class Leaderboard():
         self.leaderboards = {}
         self.leaderboardDicts = {}
         self.session = requests.Session()
-        self.updateAll()
 
     def updateAll(self):
         for server in list(Server):

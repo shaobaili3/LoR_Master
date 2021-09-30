@@ -9,6 +9,7 @@ class Cache():
         self.riotIds = {}
         self.playerNames = {}
         self.matches = {}
+        self.loadJson()
 
     def loadJson(self):
         try:

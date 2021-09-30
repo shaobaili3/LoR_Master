@@ -1,6 +1,5 @@
 #!/usr/local/bin/python
 # -*- coding: utf-8 -*-
-from Models.process import updateStatus
 import threading
 import time
 from Models.leaderboard import Leaderboard
@@ -12,6 +11,7 @@ from Models.player import Player
 from Models.setting import Server
 from Models.cache import Cache
 from Models import master
+from Models.process import readLog
 import json
 from flask import Flask, jsonify
 from sentry_sdk.integrations.flask import FlaskIntegration
@@ -22,6 +22,8 @@ import os
 import constants
 import argparse
 
+isDebug = False
+
 # Update Riot set json files
 # from decoder.api_wrapper import card
 # card.downloadAllSet()
@@ -31,17 +33,11 @@ argParser.add_argument('--port', action='store', type=int, default=26531)
 args = argParser.parse_args()
 print('args: ', args)
 
-
-isDebug = True
-
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf8')
 print('utf8 string test: ', '卡尼能布恩', '째남모')
 
 sentry_sdk.init(
     "https://1138a186a6384b00a20a6196273c3009@o958702.ingest.sentry.io/5907306",
-    # Set traces_sample_rate to 1.0 to capture 100%
-    # of transactions for performance monitoring.
-    # We recommend adjusting this value in production.
     integrations=[FlaskIntegration()],
     traces_sample_rate=1.0,
     send_default_pii=True,
@@ -53,23 +49,11 @@ sentry_sdk.set_context("info", {
     "version": constants.VERSION_NUM
 })
 
-
 master.startMasterWorker()
 leaderboardModel = Leaderboard()
 cacheModel = Cache()
 
-  
-
-settingInspect = Setting()
-networkInspect = Network(settingInspect)
-riotInspect = Riot(networkInspect, cacheModel)
-playerInspect = Player(riotInspect, leaderboardModel)
-localInspect = Local(settingInspect)
-
 settingTrack = Setting()
-networkTrack = Network(settingTrack)
-riotTrack = Riot(networkInspect, cacheModel)
-playerTrack = Player(riotTrack, leaderboardModel)
 localTrack = Local(settingTrack)
 
 
@@ -82,7 +66,7 @@ class FlaskApp(Flask):
     def processWork(self):
         def run_work():
             while True:
-                updateStatus(settingTrack)
+                readLog(settingTrack)
                 time.sleep(3)
         work = threading.Thread(target=run_work)
         work.daemon = True
@@ -97,9 +81,7 @@ class FlaskApp(Flask):
         work.daemon = True
         work.start()
 
-
 app = FlaskApp(__name__)
-
 
 @app.route("/process", methods=['get'])
 def process():
@@ -119,7 +101,11 @@ def history(server, name, tag):
     if server == 'sea':
         print('history: Riot API not suppport SEA')
         return jsonify([])
+    settingInspect = Setting()
     settingInspect.riotServer = Server._value2member_map_[server]
+    networkInspect = Network(settingInspect)
+    riotInspect = Riot(networkInspect, cacheModel)
+    playerInspect = Player(riotInspect, leaderboardModel)
     playerInspect.inspectFlask(name, tag, 10)
     playerInspect.loadMatchsToFlask()
     return jsonify(playerInspect.historyFlask.__dict__['history'])
@@ -129,7 +115,7 @@ def history(server, name, tag):
 def get_names(server, playername):
     # to-do move functions to master model
     playernames = set()
-    nameListPath = constants.getCacheFilePath(server.lower() +'.json')
+    nameListPath = constants.getCacheFilePath(server.lower() + '.json')
     if not os.path.isfile(nameListPath):
         nameListPath = 'Resource/' + server.lower() + '.json'
     try:
@@ -173,7 +159,7 @@ def get_leaderboard(server):
 
     if board is None:
         return jsonify(boardWithTag)
-    nameListPath = constants.getCacheFilePath(server.lower() +'.json')
+    nameListPath = constants.getCacheFilePath(server.lower() + '.json')
     if not os.path.isfile(nameListPath):
         nameListPath = 'Resource/' + server.lower() + '.json'
     try:
@@ -188,6 +174,7 @@ def get_leaderboard(server):
             player['tag'] = ''
         boardWithTag.append(player)
     return jsonify(boardWithTag)
+
 
 @app.route("/opInfo", methods=['get'])
 def opInfo():

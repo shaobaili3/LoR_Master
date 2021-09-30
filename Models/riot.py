@@ -8,7 +8,6 @@ class Riot:
     def __init__(self, network, cache):
         self.network = network
         self.cache = cache
-        self.cache.loadJson()
         self.session = requests.Session()
         return
 

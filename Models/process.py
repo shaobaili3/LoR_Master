@@ -71,7 +71,3 @@ def isSimulation():
         return isPython
     print('isSimulation: ', isPython)
     return isPython
-
-
-def updateStatus(setting):
-    readLog(setting)
