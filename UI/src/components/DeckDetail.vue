@@ -28,14 +28,20 @@
 import DeckEncoder from '../modules/runeterra/DeckEncoder'
 // import sets from  '../assets/data/allsets-en_us.json'
 import CardsPreview from './CardsPreview.vue'
-import set1 from '../../../Resource/set1-en_us.json'
-import set2 from '../../../Resource/set2-en_us.json'
-import set3 from '../../../Resource/set3-en_us.json'
-import set4 from '../../../Resource/set4-en_us.json'
-import set5 from '../../../Resource/set5-en_us.json'
+// import set1 from '../../../Resource/set1-en_us.json'
+// import set2 from '../../../Resource/set2-en_us.json'
+// import set3 from '../../../Resource/set3-en_us.json'
+// import set4 from '../../../Resource/set4-en_us.json'
+// import set5 from '../../../Resource/set5-en_us.json'
 
-
-const sets = set1.concat(set2, set3, set4, set5)
+const en_us = () => import('../../../Resource/en_us.json')
+const zh_tw = () => import('../../../Resource/zh_tw.json')
+const pt_br = () => import('../../../Resource/pt_br.json')
+const ja_jp = () => import('../../../Resource/ja_jp.json')
+const ru_ru = () => import('../../../Resource/ru_ru.json')
+const es_es = () => import('../../../Resource/es_es.json')
+const th_th = () => import('../../../Resource/th_th.json')
+const ko_kr = () => import('../../../Resource/ko_kr.json')
 // console.log(sets)
 
 export default {
@@ -48,6 +54,7 @@ export default {
     data() {
         return {
             copied: false,
+            sets: en_us,
         }
     }, 
     props: {
@@ -68,6 +75,36 @@ export default {
         locale: {
             type: String,
             default: 'en_us'
+        }
+    },
+    watch: {
+        async locale(newLoacle, oldLocale) {
+            console.log("Computing Sets", newLoacle)
+            switch (newLoacle) {
+                case 'en_us':
+                    this.sets = [].concat(...(await en_us()).default)
+                    break
+                case 'zh_tw':
+                    console.log("Returning ZH_TW")
+                    this.sets = [].concat(...(await zh_tw()).default)
+                    break
+                // case 'pt_br':
+                //     return pt_br()
+                // case 'ja_jp':
+                //     return ja_jp()
+                // case 'ko_kr':
+                //     return ko_kr()
+                // case 'th_th':
+                //     return th_th()
+                // case 'ru_ru':
+                //     return ru_ru()
+                // case 'es_es':
+                //     return es_es()
+                default:
+                    console.log("Returning Default")
+                    console.log(this.locale == 'zh_tw')
+                    this.sets = en_us
+            }
         }
     },
     computed: {
@@ -94,7 +131,8 @@ export default {
                     // Loop through base deck
                     var cardCode = baseDeck[j].code
                     // Get full information from the sets collection
-                    var card = sets.find(card => card.cardCode == cardCode)
+                    console.log(this.sets)
+                    var card = this.sets.find(card => card.cardCode == cardCode)
                     var cardCount = baseDeck[j].count
                     
                     if (deck) {
