@@ -30,7 +30,7 @@ except Exception as e:
 
 def downloadAllSet():
     setData = []
-    regions = ['en_us', 'zh_tw', 'ko_kr', 'ja_jp', 'es_es', 'pt_br', 'ru_ru', 'th_th']
+    regions = ['de_de', 'en_us', 'es_es', 'es_mx', 'fr_fr', 'it_it', 'ja_jp', 'ko_kr', 'pl_pl', 'pt_br', 'th_th', 'tr_tr', 'ru_ru', 'zh_tw']
     for region in regions:
         for num in range(MAX_SET_NUM):
             setData.append(get_card_set_online(num + 1, region=region))
