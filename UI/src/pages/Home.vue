@@ -1356,7 +1356,7 @@ export default {
     .settings .title {
         font-size: 32px;
         text-align: left;
-        padding: 10px 0px;
+        padding: 10px 0px 20px 0px;
     }
 
     .settings-list-item {

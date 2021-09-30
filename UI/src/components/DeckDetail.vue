@@ -35,15 +35,13 @@ import CardsPreview from './CardsPreview.vue'
 // import set4 from '../../../Resource/set4-en_us.json'
 // import set5 from '../../../Resource/set5-en_us.json'
 
-const en_us = () => import('../../../Resource/en_us.json')
-const zh_tw = () => import('../../../Resource/zh_tw.json')
-const pt_br = () => import('../../../Resource/pt_br.json')
-const ja_jp = () => import('../../../Resource/ja_jp.json')
-const ru_ru = () => import('../../../Resource/ru_ru.json')
-const es_es = () => import('../../../Resource/es_es.json')
-const th_th = () => import('../../../Resource/th_th.json')
-const ko_kr = () => import('../../../Resource/ko_kr.json')
-// console.log(sets)
+const locales = ['de_de', 'en_us', 'es_es', 'es_mx', 'fr_fr', 'it_it', 'ja_jp', 'ko_kr', 'pl_pl', 'pt_br', 'th_th', 'tr_tr', 'ru_ru', 'zh_tw']
+
+locales.forEach(lo => {
+    window[lo] = () => import('../../../Resource/'+lo+'.json')
+});
+
+// const en_us = () => import('../../../Resource/en_us.json')
 
 export default {
     components: {
@@ -174,27 +172,12 @@ export default {
         async loadSetsJson(locale) {
             console.log("Computing Sets", locale)
             var loadModule
-            switch (locale) {
-                case 'en_us':
-                    loadModule = await en_us()
-                    break
-                case 'zh_tw':
-                    loadModule = await zh_tw()
-                    break
-                // case 'pt_br':
-                //     return pt_br()
-                // case 'ja_jp':
-                //     return ja_jp()
-                // case 'ko_kr':
-                //     return ko_kr()
-                // case 'th_th':
-                //     return th_th()
-                // case 'ru_ru':
-                //     return ru_ru()
-                // case 'es_es':
-                //     return es_es()
-                default:
-                    loadModule = await en_us()
+
+            if (!locales.includes(locale)) {
+                console.log("Invalid locale, default to en_us")
+                loadModule = await window['en_us']()
+            } else {
+                loadModule = await window[locale]()
             }
 
             this.sets = [].concat(...loadModule.default)
