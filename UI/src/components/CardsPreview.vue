@@ -127,6 +127,8 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 34px;
+    box-sizing: border-box;
 }
 
 .cardCost {

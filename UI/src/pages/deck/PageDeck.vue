@@ -303,7 +303,14 @@ export default {
                     var data = response.data
                     var elapsedTime = Date.now() - lastStatusRequestTime // ms
                     this.server = data.server
-                    if (data.language) this.locale = data.language.replace('-', '_').toLowerCase()
+                    
+                    if (data.language) {
+                        var newLocale = data.language.replace('-', '_').toLowerCase()
+                        if (this.locale != newLocale) {
+                            console.log("Switch Locale", this.locale, newLocale)
+                        }
+                        this.locale = newLocale
+                    }
 
                     // console.log("Server", this.server)
 

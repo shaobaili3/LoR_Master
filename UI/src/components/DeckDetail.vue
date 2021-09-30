@@ -50,11 +50,12 @@ export default {
     },
     mounted() {
         // this.getCardsInfo()
+        if ( this.sets == null ) this.loadSetsJson( this.locale )
     },
     data() {
         return {
             copied: false,
-            sets: en_us,
+            sets: null,
         }
     }, 
     props: {
@@ -78,33 +79,8 @@ export default {
         }
     },
     watch: {
-        async locale(newLoacle, oldLocale) {
-            console.log("Computing Sets", newLoacle)
-            switch (newLoacle) {
-                case 'en_us':
-                    this.sets = [].concat(...(await en_us()).default)
-                    break
-                case 'zh_tw':
-                    console.log("Returning ZH_TW")
-                    this.sets = [].concat(...(await zh_tw()).default)
-                    break
-                // case 'pt_br':
-                //     return pt_br()
-                // case 'ja_jp':
-                //     return ja_jp()
-                // case 'ko_kr':
-                //     return ko_kr()
-                // case 'th_th':
-                //     return th_th()
-                // case 'ru_ru':
-                //     return ru_ru()
-                // case 'es_es':
-                //     return es_es()
-                default:
-                    console.log("Returning Default")
-                    console.log(this.locale == 'zh_tw')
-                    this.sets = en_us
-            }
+        locale(newLoacle, oldLocale) {
+            this.loadSetsJson(newLoacle)
         }
     },
     computed: {
@@ -113,6 +89,9 @@ export default {
         },
         cards() {
             var cards = []
+
+            if( this.sets == null ) return cards
+            
             var deck = null
             if (this.deck) try { deck = DeckEncoder.decode(this.deck) } catch(err) {
                 console.log(err)
@@ -131,7 +110,6 @@ export default {
                     // Loop through base deck
                     var cardCode = baseDeck[j].code
                     // Get full information from the sets collection
-                    console.log(this.sets)
                     var card = this.sets.find(card => card.cardCode == cardCode)
                     var cardCount = baseDeck[j].count
                     
@@ -179,6 +157,34 @@ export default {
         }
     },
     methods: {
+        async loadSetsJson(locale) {
+            console.log("Computing Sets", locale)
+            switch (locale) {
+                case 'en_us':
+                    this.sets = [].concat(...(await en_us()).default)
+                    break
+                case 'zh_tw':
+                    console.log("Returning ZH_TW")
+                    this.sets = [].concat(...(await zh_tw()).default)
+                    break
+                // case 'pt_br':
+                //     return pt_br()
+                // case 'ja_jp':
+                //     return ja_jp()
+                // case 'ko_kr':
+                //     return ko_kr()
+                // case 'th_th':
+                //     return th_th()
+                // case 'ru_ru':
+                //     return ru_ru()
+                // case 'es_es':
+                //     return es_es()
+                default:
+                    console.log("Returning Default")
+                    console.log(this.locale == 'zh_tw')
+                    this.sets = en_us
+            }
+        },
         copyDeckcode() {
             const copyToClipboard = str => {
                 const el = document.createElement('textarea');
