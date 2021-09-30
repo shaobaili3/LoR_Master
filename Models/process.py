@@ -37,7 +37,7 @@ def readLog(setting):
                     if 'Using user-preferred language CultureInfo of ' in line:
                         setting.language = str(line).split().pop()
                     if '[CheckingForUpdates] StartCheckingForUpdates for user ' in line:
-                        playerId = str(line).split().pop()
+                        playerId = str(line).split("[CheckingForUpdates] StartCheckingForUpdates for user ", 1)[1]
                         if playerId != setting.playerId:
                             setting.playerId = playerId
                             sentry_sdk.set_user(

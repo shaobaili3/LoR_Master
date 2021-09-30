@@ -1,13 +1,15 @@
-from riot import Riot
-from network import Network
-from setting import Setting, Server
-from player import Player
-import utility
+from Models.leaderboard import Leaderboard
+from Models.setting import Setting
+from Models.local import Local
+from Models.riot import Riot
+from Models.network import Network
+from Models.player import Player
+from Models.setting import Server
+from Models.cache import Cache
 
 setting = Setting()
-setting.setServer(Server.NA)
 network = Network(setting)
-riot = Riot(network)
+riot = Riot(network, Cache())
 # J01#EU1
 # asia europe americas
 
