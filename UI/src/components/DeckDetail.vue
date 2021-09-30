@@ -10,6 +10,7 @@
         :type="card.type"
         :supertype="card.supertype"
         :set="card.set"
+        :typeRef="card.typeRef"
         :locale="locale"
         >{{card.name}}</cards-preview>
     </div>
@@ -128,12 +129,25 @@ export default {
                     }
 
                     if (card) {
+
+                        var typeRef = ""
+                        if (card.supertype != "") {
+                            typeRef = "Champion"
+                        } else if (card.spellSpeedRef != "") {
+                            typeRef = "Spell"
+                        } else if (card.keywordRefs && card.keywordRefs.includes("LandmarkVisualOnly")) {
+                            typeRef = "Landmark"
+                        } else {
+                            typeRef = "Unit"
+                        }
+
                         cards.push({
                             code: cardCode, 
                             name: card.name,
                             count: cardCount, 
                             cost: card.cost, 
-                            type: card.type, 
+                            type: card.type,
+                            typeRef: typeRef,
                             supertype: card.supertype,
                             set: card.set
                         })
@@ -159,13 +173,13 @@ export default {
     methods: {
         async loadSetsJson(locale) {
             console.log("Computing Sets", locale)
+            var loadModule
             switch (locale) {
                 case 'en_us':
-                    this.sets = [].concat(...(await en_us()).default)
+                    loadModule = await en_us()
                     break
                 case 'zh_tw':
-                    console.log("Returning ZH_TW")
-                    this.sets = [].concat(...(await zh_tw()).default)
+                    loadModule = await zh_tw()
                     break
                 // case 'pt_br':
                 //     return pt_br()
@@ -180,10 +194,11 @@ export default {
                 // case 'es_es':
                 //     return es_es()
                 default:
-                    console.log("Returning Default")
-                    console.log(this.locale == 'zh_tw')
-                    this.sets = en_us
+                    loadModule = await en_us()
             }
+
+            this.sets = [].concat(...loadModule.default)
+            console.log(this.sets)
         },
         copyDeckcode() {
             const copyToClipboard = str => {
