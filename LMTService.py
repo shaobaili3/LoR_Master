@@ -24,9 +24,7 @@ import argparse
 
 isDebug = False
 
-# Update Riot set json files
-# from decoder.api_wrapper import card
-# card.downloadAllSet()
+
 
 argParser = argparse.ArgumentParser()
 argParser.add_argument('--port', action='store', type=int, default=26531)
