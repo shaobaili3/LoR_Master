@@ -113,30 +113,6 @@ export default {
         DeckDetail,
         DeckRegions,
     },
-    mounted() {
-        // console.log(JSON.stringify(this.matchInfos))
-        // this.getMatchInfo()
-        // this.getSubData()
-        // console.log("Mounted")
-        // this.requestData()
-        console.log("Page Deck Mounted")
-
-        this.infoType = "match"
-
-        // this.hideWindow()
-        window.ipcRenderer.on('return-port', (event, port) => {
-            console.log("New Port:", port)
-            this.portNum = port
-        })
-
-        window.ipcRenderer.send("get-port")
-
-        this.requestTrackInfo()
-        // this.requestServerInfo()
-        this.requestStatusInfo()
-        
-        this.initChangeLocale()
-    },
     data() {
         return {
             rawDataString: null,
@@ -216,9 +192,52 @@ export default {
             return `http://127.0.0.1:${this.portNum}`
         },
     },
+    mounted() {
+        // console.log(JSON.stringify(this.matchInfos))
+        // this.getMatchInfo()
+        // this.getSubData()
+        // console.log("Mounted")
+        // this.requestData()
+        console.log("Page Deck Mounted")
+
+        this.infoType = "match"
+
+        // this.hideWindow()
+        window.ipcRenderer.on('return-port', (event, port) => {
+            console.log("New Port:", port)
+            this.portNum = port
+        })
+
+        window.ipcRenderer.send("get-port")
+
+        this.requestTrackInfo()
+        // this.requestServerInfo()
+        this.requestStatusInfo()
+        
+        this.initStore()
+        this.initChangeLocale()
+    },
     methods: {
+        initStore() {
+            window.ipcRenderer.send('request-store', 'ui-locale')
+
+            window.ipcRenderer.on('reply-store', (event, key, val) => {
+                console.log("Got store", key, val)
+
+                if (key == 'ui-locale' && val) {
+                    this.$i18n.locale = val
+                    console.log("Change locale to", val)
+                }
+            })
+        },
         // Change Locale
         initChangeLocale() {
+
+            const Store = require('electron-store')
+            const store = new Store()
+
+            this.$i18n.locale = store.get('ui-locale')
+
             window.ipcRenderer.on('to-change-locale', (event, newLocale) => {
                 this.$i18n.locale = newLocale
                 console.log("Changing locale to", newLocale)

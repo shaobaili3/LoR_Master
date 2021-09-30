@@ -211,17 +211,6 @@ const PAGES = {
 }
 
 export default {
-    mounted() {
-        console.log("Mounted")
-        // var test = 'Hello'
-        this.requestVersionData()
-        this.requestStatusInfo()
-        this.handleGameEnd()
-
-        this.initLocalSettings()
-
-        this.initChangeLocale()
-    },
     components: { 
         BaseWindowControls,
         DeckRegions,
@@ -307,10 +296,37 @@ export default {
             return `http://127.0.0.1:${this.portNum}`
         }
     },
+    mounted() {
+        console.log("Mounted")
+        // var test = 'Hello'
+        this.requestVersionData()
+        this.requestStatusInfo()
+        this.handleGameEnd()
+
+        this.initLocalSettings()
+
+        this.initStore()
+        this.initChangeLocale()
+        
+    },
     methods: {
+
+        initStore() {
+            window.ipcRenderer.send('request-store', 'ui-locale')
+
+            window.ipcRenderer.on('reply-store', (event, key, val) => {
+                console.log("Got store", key, val)
+
+                if (key == 'ui-locale' && val) {
+                    this.$i18n.locale = val
+                    console.log("Change locale to", val)
+                }
+            })
+        },
 
         // Change Locale
         initChangeLocale() {
+
             window.ipcRenderer.on('to-change-locale', (event, newLocale) => {
                 this.$i18n.locale = newLocale
                 console.log("Changing locale to", newLocale)

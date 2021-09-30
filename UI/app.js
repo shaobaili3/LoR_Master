@@ -635,11 +635,30 @@ function disableAutoLaunch() {
 
 
 // -----------------------------------------------
+// --- Store ---
+// -----------------------------------------------
+
+const Store = require('electron-store');
+const store = new Store();
+
+console.log("Storing data at", app.getPath('userData'))
+
+ipcMain.on('request-store', (event, key) => {
+  event.sender.send('reply-store', key, store.get(key));
+});
+
+ipcMain.on('save-store', (event, key, val) => {
+  store.set(key, val)
+});
+
+// -----------------------------------------------
 // --- Locale ---
 // -----------------------------------------------
 
 ipcMain.on('changed-locale', (event, newLocale) => {
   console.log("Changing Locale to", newLocale, ", from", event.sender.id)
+  store.set('ui-locale', newLocale)
+
   allWindows.forEach(bw => {
     if (bw && bw.webContents.id != event.sender.id) {
       console.log("-- sending to", bw.id)
@@ -647,8 +666,6 @@ ipcMain.on('changed-locale', (event, newLocale) => {
     }
   });
 })
-
-
 
 // --- Use these to check for old running python app ---
 
