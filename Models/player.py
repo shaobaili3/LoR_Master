@@ -35,7 +35,7 @@ class Player:
             winNum = 0
             if outcome == 'win':
                 winNum = 1
-            self.summaries[code] = DeckSummary(1, winNum, time, startTime)
+            self.summaries[code] = DeckSummary(1, winNum, time, startTime, code)
 
         for key in self.summaries:
             if key != code:
