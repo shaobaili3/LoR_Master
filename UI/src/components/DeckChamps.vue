@@ -52,7 +52,9 @@ export default {
         getChampsFromDeck() {
             var deck = null
             try { deck = DeckEncoder.decode(this.deck)} catch(err) {
-                return
+                console.log(err)
+                console.log(this.deck)
+                return []
             }
             var champs = []
             for (var j in deck) {

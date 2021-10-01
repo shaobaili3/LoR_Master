@@ -44,8 +44,8 @@
                 :badges="match.badge"
                 :opponentDeck="match.opponentDeck" 
                 :deck="match.deckCode"
-                :totaol="matchTotalNum"
-                :histry="match.history"
+                :total="matchTotalNum"
+                :history="match.history"
                 :locale="locale"
             ></match-info>
 
