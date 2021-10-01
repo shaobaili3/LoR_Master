@@ -103,12 +103,14 @@ const appReady = () => {
       console.log(`port: ${port} was occupied, try port: ${_port}`)
     }
 
-    port = _port
-
-    if (mainWindow) mainWindow.webContents.send('return-port', port)
-    if (deckWindow) deckWindow.webContents.send('return-port', port)
-
     if (app.isPackaged || spawnService) {
+
+      // Only if spawning service will the port be changed
+      port = _port
+
+      if (mainWindow) mainWindow.webContents.send('return-port', port)
+      if (deckWindow) deckWindow.webContents.send('return-port', port)
+
       startLMTService(port)
     }
   })
