@@ -38,13 +38,14 @@
                 :opponentName="match.opponentName" 
                 :rounds="match.rounds" 
                 :time="match.time"
+                :startTime="match.startTime"
                 :matches="match.matches"
                 :winrate="match.winrate"
                 :badges="match.badge"
                 :opponentDeck="match.opponentDeck" 
                 :deck="match.deckCode"
-                :total="matchTotalNum"
-                :history="match.history"
+                :totaol="matchTotalNum"
+                :histry="match.history"
                 :locale="locale"
             ></match-info>
 
