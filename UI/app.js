@@ -645,6 +645,37 @@ const store = new Store();
 
 console.log("Storing data at", app.getPath('userData'))
 
+if (store.get('ui-locale') == null) {
+  // First time language setting
+  var systemLang = getEnvLocale()
+  console.log("No Language Set | System Locale", systemLang)
+
+  var newLocale = ""
+
+  if (systemLang.includes('zh_CN')) {
+    // 简体中文
+    newLocale = '简体中文'
+  } else if (systemLang.includes('zh')) {
+    // 繁体中文
+    newLocale = '繁體中文'
+  }
+
+  if (newLocale != "") {
+    store.set('ui-locale', newLocale)
+
+    allWindows.forEach(bw => {
+      if (bw && bw.webContents.id != event.sender.id) {
+        console.log("-- sending to", bw.id)
+        bw.webContents.send('to-change-locale', newLocale)
+      }
+    });
+  }
+  
+
+} else {
+  console.log('Language set to', store.get('ui-locale'), " | System Locale", getEnvLocale())
+}
+
 ipcMain.on('request-store', (event, key) => {
   event.sender.send('reply-store', key, store.get(key));
 });
@@ -668,6 +699,12 @@ ipcMain.on('changed-locale', (event, newLocale) => {
     }
   });
 })
+
+function getEnvLocale(env) {
+  env = env || process.env;
+
+  return env.LC_ALL || env.LC_MESSAGES || env.LANG || env.LANGUAGE;
+}
 
 // --- Use these to check for old running python app ---
 
