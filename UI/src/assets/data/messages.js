@@ -174,5 +174,93 @@ module.exports = {
       disabled: '關閉',
       disable: '關閉'
     }
+  },
+  简体中文: {
+    appName: 'LoR Master Tracker 魔盒',
+    str: {
+      settings: '设置',
+      loading: '加载中...',
+      languages: '语言',
+      invalidDeck: '牌组代码错误',
+      copy: '复制',
+      copied: '复制成功！',
+      rounds: '回合',
+      regions: {
+        americas: '美洲',
+        europe: '欧洲',
+        asia: '亚洲',
+        sea: '东南亚',
+      },
+      times: {
+        sec: '{t} 秒前',
+        min: '{t} 分钟前',
+        hour: '{t} 小时前',
+        hours: '{t} 小时前',
+        day: '{t} 天前',
+        days: '{t} 天前',
+      },
+    },
+    loading: {
+      readyToRock: '准备就绪 🤘',
+      history: '努力加载历史中...',
+      nohistory: '没有找到历史数据',
+    },
+    tracker: {
+      tabs: {
+        oppoPlayed: '对手已打出',
+        myPlayed: '我方已打出',
+      },
+      cardsInHand: '手牌数: {num}'
+    },
+    leaderboard: {
+      rank: '排名',
+      name: '玩家',
+      points: '分数',
+    },
+    matches: {
+      usage: '{num}% 使用率',
+      game: '{num} 场',
+      games: '{num} 场',
+      badges: {
+        Ranked: '排位',
+        Bo3Challenge: '三局两胜',
+        StandardGauntlet: '武斗场',
+      }
+    },
+    dash: {
+      winRate: '胜率',
+      winloss: '{win}胜 {loss}负',
+    },
+    search: {
+      leaderboard: {
+        base: '搜索',
+        numPlayer: '搜索 {num} 名玩家'
+      },
+      player: {
+        placeholder: '例：Storm#5961'
+      }
+    },
+    tooltips: {
+      lorlogin: '请登陆 LoR'
+    },
+    contact: {
+      messageBox: {
+        placeholder: '来一条建议？',
+        messageSent: '已发送',
+        confirm: '确定？',
+        send: '发送',
+      },
+      contactUs: '联系我们',
+      broughtWithLove: '为你倾❤️打造:'
+    },
+    settings: {
+      options: {
+        autoLaunch: '开机自动启动:'
+      },
+      enabled: '开启',
+      enable: '开启',
+      disabled: '关闭',
+      disable: '关闭'
+    }
   }
 }
