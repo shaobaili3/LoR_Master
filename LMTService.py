@@ -144,7 +144,7 @@ def search(name, tag, server):
     if playerModel.error is None:
         return jsonify(playerModel.matchesJson)
     else:
-        return jsonify(playerModel.error)
+        return jsonify(playerModel.error), playerModel.error['status']['code']
 
 
 @app.route("/leaderboard/<string:server>", methods=['get'])
