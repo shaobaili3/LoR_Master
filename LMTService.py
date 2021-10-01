@@ -22,7 +22,7 @@ import os
 import constants
 import argparse
 
-isDebug = False
+isDebug = True
 
 
 
@@ -105,8 +105,7 @@ def history(server, name, tag):
     riotInspect = Riot(networkInspect, cacheModel)
     playerInspect = Player(riotInspect, leaderboardModel)
     playerInspect.inspectFlask(name, tag, 10)
-    playerInspect.loadMatchsToFlask()
-    return jsonify(playerInspect.historyFlask.__dict__['history'])
+    return jsonify([summary.__dict__ for summary in playerInspect.summaries.values()])
 
 
 @app.route("/name/<string:server>/<string:playername>", methods=['get'])
@@ -142,7 +141,6 @@ def search(name, tag, server):
     playerModel = Player(riotModel, leaderboardModel)
     playerModel.inspectFlask(name, tag, maxNum)
     inspection = {}
-    inspection['history'] = playerModel.historyFlask.__dict__['history']
     inspection['matches'] = playerModel.matchesJson
     return jsonify(playerModel.matchesJson)
 

@@ -1,62 +1,44 @@
 import Models.utility as utility
 import constants as cs
-from uiModels import DeckDetail
-import Models.network
-from uiModels import OpponentFlask
-
+from uiModels import DeckSummary
 
 class Player:
     def __init__(self, riot, leaderboard):
         self.sortedDecksCode = []
         self.riot = riot
-        self.summary = {}
-        self.historyFlask = OpponentFlask()
+        self.summaries = {}
         self.matchesJson = []
         self.leaderboard = leaderboard
 
-    def addMatchToSummary(self, code, outcome, time):
-        if code in self.summary:
-            self.summary[code].matches += 1
+    def addMatchToSummary(self, code, outcome, time, startTime):
+        if code in self.summaries:
+            self.summaries[code].matches += 1
             if outcome == 'win':
-                self.summary[code].winNum += 1
+                self.summaries[code].winNum += 1
         else:
             winNum = 0
             if outcome == 'win':
                 winNum = 1
-            self.summary[code] = DeckDetail(1, winNum, time)
+            self.summaries[code] = DeckSummary(1, winNum, time, startTime)
 
-        for key in self.summary:
+        for key in self.summaries:
             if key != code:
-                self.summary[key].history += 'E'
+                self.summaries[key].history += 'E'
             else:
                 if outcome == 'win':
-                    self.summary[key].history += 'W'
+                    self.summaries[key].history += 'W'
                 else:
-                    self.summary[key].history += 'L'
+                    self.summaries[key].history += 'L'
 
-        matchNum = len(self.summary[list(self.summary.keys())[0]].history)
+        matchNum = len(self.summaries[list(self.summaries.keys())[0]].history)
 
-        for key in self.summary:
-            fill = 'E' * (matchNum - len(self.summary[key].history))
-            self.summary[key].history = fill + self.summary[key].history
-
-    def loadMatchsToFlask(self):
-        self.historyFlask.history = []
-        if self.summary == {}:
-            return
-        for deckCode in self.summary:
-            match = {}
-            match['time'] = self.summary[deckCode].time
-            match['deckCode'] = deckCode
-            match['matches'] = self.summary[deckCode].matches
-            match['winrate'] = self.summary[
-                deckCode].winNum / self.summary[deckCode].matches
-            match['history'] = self.summary[deckCode].history
-            self.historyFlask.history.append(match)
+        for key in self.summaries:
+            fill = 'E' * (matchNum - len(self.summaries[key].history))
+            self.summaries[key].history = fill + self.summaries[key].history
 
     def inspectFlask(self, name, tag, maxNum=cs.MAX_NUM_ALL):
         self.matchesJson = []
-        self.summary = {}
+        self.summaries = {}
         puuid = self.riot.getPlayerPUUID(name, tag)
         if puuid is None:
             print(
@@ -82,7 +64,6 @@ class Player:
             return
 
     def processMatchIds(self, matchIds, puuid, name, tag, maxNum):
-        self.summary = {}
         deckCodes = []
         winNum = 0
         matchNum = 0
@@ -109,39 +90,22 @@ class Player:
                 matchNum += 1
                 riotId = detail['metadata']['participants']
                 outcome = None
-                opponentDetail = None
                 myDetails = None
-                totalTurn = detail['info']['total_turn_count']
                 myIndex = 1
-                opponentIndex = 0
                 if riotId[0] == puuid:
                     myIndex = 0
-                    opponentIndex = 1
                 else:
                     # differnet APIs has df puuid, has to double check if equal playernames when may using caching data
                     indexName = self.riot.getPlayerName(riotId[0])
                     if indexName[0].lower() == name.lower() and indexName[1].lower() == tag.lower():
                         myIndex = 0
-                        opponentIndex = 1
-                opName = self.riot.getPlayerName(riotId[opponentIndex])
-                fullName = opName[0] + '#' + opName[1]
-                opponentDetail = detail['info']['players'][opponentIndex]
                 myDetails = detail['info']['players'][myIndex]
                 outcome = myDetails["game_outcome"]
                 if outcome == 'win':
                     winNum += 1
                 self.addMatchToSummary(
-                    myDetails['deck_code'], outcome, utility.toLocalTimeString(startTime, True))
+                    myDetails['deck_code'], outcome, utility.toLocalTimeString(startTime, True), startTime)
                 deckCodes.append(myDetails['deck_code'])
-                rank = 0
-                print(fullName, rank,
-                      gameType, gameMode,
-                      utility.toLocalTimeString(startTime), outcome,
-                      myDetails['deck_code'],
-                      utility.getFactionString(myDetails["factions"]),
-                      opponentDetail['deck_code'],
-                      utility.getFactionString(opponentDetail["factions"]),
-                      str(totalTurn) , ' Order of Play: ' , str(myDetails['order_of_play']), matchNum)
             except Exception as e:
                 print('Read MatchId Error match id: ', matchId, e)
                 continue
