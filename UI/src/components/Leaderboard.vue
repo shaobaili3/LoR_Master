@@ -15,7 +15,7 @@
             <div id="search-container">
                 <div class="search-icon" v-if="!isLoading"><i class="fa fa-search"></i></div>
                 <div class="search-icon loading" v-if="isLoading"><i class="fa fa-circle-notch fa-spin"></i></div>
-                <input autocomplete='off' v-model="searchText"
+                <input spellcheck="false" autocomplete='off' v-model="searchText"
                     id="search-input" type="text" :placeholder="isLoading ? $t('str.loading') : searchPlaceHolder " :disabled="isLoading">
             </div>
 

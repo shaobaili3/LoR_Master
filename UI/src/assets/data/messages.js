@@ -67,6 +67,16 @@ module.exports = {
     tooltips: {
       lorlogin: 'Please log in LoR'
     },
+    contact: {
+      messageBox: {
+        placeholder: 'Any suggestions?',
+        messageSent: 'Message Sent',
+        confirm: 'Confirm?',
+        send: 'Send',
+      },
+      contactUs: 'Contact Us',
+      broughtWithLove: 'Brought to you with ❤️ by'
+    },
     settings: {
       options: {
         autoLaunch: 'Auto launch on startup:'
@@ -78,7 +88,7 @@ module.exports = {
     }
   },
   繁體中文: {
-    appName: 'LoR 魔盒',
+    appName: 'LoR Master Tracker 魔盒',
     str: {
       settings: '設置',
       loading: '加載中...',
@@ -144,6 +154,16 @@ module.exports = {
     },
     tooltips: {
       lorlogin: '請登陸 LoR'
+    },
+    contact: {
+      messageBox: {
+        placeholder: '來一條建議？',
+        messageSent: '已發送',
+        confirm: '確定？',
+        send: '發送',
+      },
+      contactUs: '聯繫我們',
+      broughtWithLove: '為你傾❤️打造:'
     },
     settings: {
       options: {

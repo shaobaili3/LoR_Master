@@ -31,6 +31,11 @@
             <span><i class="fas fa-trophy"></i></span>
         </button>
         <button class="left-nav-btn nav-bottom" 
+            :class="{selected: currentPage == PAGES.contact}" 
+            @click="setCurrentPage(PAGES.contact)">
+            <span><i class="fas fa-comment-alt-smile"></i></span>
+        </button>
+        <button class="left-nav-btn nav-bottom" 
             :class="{selected: currentPage == PAGES.settings}" 
             @click="setCurrentPage(PAGES.settings)">
             <span><i class="fas fa-cog"></i></span>
@@ -71,7 +76,7 @@
                             <span v-if="isSameSearch"><i class="fas fa-redo-alt"></i></span>
                         </button>
                         
-                        <input autocomplete='off' class="search-bar" 
+                        <input spellcheck="false" autocomplete='off' class="search-bar" 
                             @keyup="searchName" 
                             @keyup.enter="searchHistory"
                             @keyup.up="autoCompleteIndexMinus"
@@ -115,6 +120,10 @@
 
         <div class="main-content-container leaderboard" v-if="currentPage == PAGES.leaderboard">
             <leaderboard :apiBase="apiBase" @search="searchPlayer($event)"></leaderboard>
+        </div>
+
+        <div class="main-content-container contact" v-if="currentPage == PAGES.contact">
+            <contact-info :locale="locale"></contact-info>
         </div>
 
         <div class="main-content-container settings" v-if="currentPage == PAGES.settings">
@@ -178,6 +187,7 @@ import Leaderboard from '../components/Leaderboard.vue'
 import PlayerMatches from '../components/PlayerMatches.vue'
 import DeckDetail from '../components/DeckDetail.vue'
 import LocaleChanger from '../components/LocaleChanger.vue'
+import ContactInfo from '../components/ContactInfo.vue'
 
 const requestDataWaitTime = 400 //ms
 const requestHistoryWaitTime = 100 //ms
@@ -207,7 +217,9 @@ const PAGES = {
     my: 0,
     search: 1,
     leaderboard: 2,
-    settings: 3,
+    
+    contact: 9,
+    settings: 10,
 }
 
 export default {
@@ -217,7 +229,8 @@ export default {
         Leaderboard,
         PlayerMatches,
         DeckDetail,
-        LocaleChanger
+        LocaleChanger,
+        ContactInfo,
     },
     data() {
         return {
@@ -1226,9 +1239,16 @@ export default {
     }
 
     .left-nav-btn.nav-bottom {
-        margin-top: auto;
-        margin-bottom: calc(45px + 10px);
         color: var(--col-lighter-grey);
+        margin-top: auto;
+    }
+
+    .left-nav-btn.nav-bottom ~ .left-nav-btn.nav-bottom {
+        margin-top: 0px;
+    }
+
+    .left-nav-btn.nav-bottom:last-child {
+        margin-bottom: calc(45px + 10px);
     }
 
     .left-nav-btn.nav-bottom.selected {
