@@ -101,7 +101,7 @@
                 </div>
             </div>
             <!-- Player Info -->
-            <player-matches v-if="!isLoading && playerName" 
+            <player-matches v-if="!isLoading && playerName && matches.length > 0" 
                 @search="searchPlayer($event)"
                 @show-deck="showDeck"
                 :playerName="playerName"
@@ -112,9 +112,18 @@
             >
             </player-matches>
 
-            <div class="loading-text" v-if="isLoading">
-                <i class="fas fa-circle-notch fa-spin"></i> 
-                {{$t('str.loading')}}
+            <div class="status-text">
+                <span v-if="!isLoading && !isError && matches.length <= 0">
+                    {{$t('search.prompt')}}
+                </span>
+                <span v-if="isLoading">
+                    <i class="fas fa-circle-notch fa-spin"></i> 
+                    {{$t('str.loading')}}
+                </span>
+                <span v-if="isError">
+                    <!-- <i class="fas fa-circle-notch fa-spin"></i> -->
+                    {{errorText}}
+                </span>
             </div>
         </div>
 
@@ -245,6 +254,10 @@ export default {
             playerRegion: null,
             searchText: "",
             isLoading: false,
+            isError: false,
+
+            errorType: "",
+            
             inputNameList: [],
             autoCompleteIndex: -1,
             regions: ["NA", "EU", "AS"],
@@ -275,6 +288,18 @@ export default {
         }
     },
     computed: {
+        errorText() {
+            
+            var error = this.errorType
+            console.log("Processing error text from type", error)
+            if (error == 0) {
+                return this.$t('str.error.playerNotFound')
+            } else if (error == 1 || error == 2) {
+                return this.$t('str.error.playerNoHistory')
+            } else {
+                return this.$t('str.error.unkown')
+            }
+        },
         isUpdatedVersion() {
             return this.version == this.remoteVersion
         },
@@ -485,9 +510,12 @@ export default {
             this.playerRegion = null
             this.matches = []
         },
-        errorHistory() {
+        errorHistory(error) {
             this.clearInfo()
-            this.playerName = "No history found"
+            this.isError = true
+            this.errorType = error
+            // this.playerName = "No history found"
+
         },
         processHistoryData(data) {
             this.matches = []
@@ -723,7 +751,7 @@ export default {
                         console.log('error', e)
                         var elapsedTime = Date.now() - lastStatusRequestTime // ms
                         if (elapsedTime > requestStatusWaitTime) {
-                            setTimeout(this.requestStatusInfo, 100);
+                            setTimeout(this.requestStatusInfo, 100)
                         } else {
                             setTimeout(this.requestStatusInfo, requestStatusWaitTime - elapsedTime);
                         }
@@ -780,6 +808,7 @@ export default {
             cancelToken = axios.CancelToken.source()
 
             this.isLoading = true;
+            this.isError = false;
             this.playerRegion = regionNames[this.selectedRegion]
 
             prevHistoryRequest = newRequest
@@ -789,18 +818,22 @@ export default {
                 .then((response) => {
                     this.isLoading = false;
 
-                    if (response.data == "Error") {
-                        console.log("History Search Error")
-                        this.errorHistory()
-                    } else {
+                    if (response.status === 200 && !response.data.status) {
                         this.processHistoryData(response.data)
+                    } else {
+                        console.log("History Search Error with code", response.status)
+                        this.errorHistory(0)
                     }
                 })
                 .catch((e) => {
                     if (axios.isCancel(e)) {
-                        console.log("Request cancelled");
-                    } else { 
-                        console.log('error', e) 
+                        console.log("Request cancelled")
+                    } else {
+                        console.log('error', e)
+                        if (e.response) {
+                            var data = e.response.data
+                            this.errorHistory(data.status.error)
+                        }
                         this.isLoading = false
                     }
                 })
@@ -1121,7 +1154,7 @@ export default {
         left: 10px;
     }
 
-    .loading-text {
+    .status-text {
         font-size: 24px;
         margin: 20px 0px;
     }

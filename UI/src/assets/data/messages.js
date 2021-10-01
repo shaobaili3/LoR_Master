@@ -4,11 +4,16 @@ module.exports = {
     str: {
       settings: 'Settings',
       loading: 'Loading...',
-      languages: 'Languages',
+      languages: 'Main UI Languages',
       invalidDeck: 'Invalid Deck Code',
       copy: 'Copy',
       copied: 'Copied!',
       rounds: 'Rounds',
+      error: {
+        unkown: 'Something went wrong',
+        playerNotFound: 'Player not found',
+        playerNoHistory: 'No valid history found'
+      },
       regions: {
         americas: 'Americas',
         europe: 'Europe',
@@ -62,7 +67,8 @@ module.exports = {
       },
       player: {
         placeholder: 'eg.Storm#5961'
-      }
+      },
+      prompt: '⬆ Enter name and tag to search',
     },
     tooltips: {
       lorlogin: 'Please log in LoR'
@@ -92,11 +98,16 @@ module.exports = {
     str: {
       settings: '設置',
       loading: '加載中...',
-      languages: '語言',
+      languages: '主界面語言',
       invalidDeck: '牌組代碼錯誤',
       copy: '複製',
       copied: '複製成功！',
       rounds: '回合',
+      error: {
+        unkown: '哪裡出了一些問題',
+        playerNotFound: '未找到玩家',
+        playerNoHistory: '未找到歷史記錄'
+      },
       regions: {
         americas: '美洲',
         europe: '歐洲',
@@ -150,7 +161,8 @@ module.exports = {
       },
       player: {
         placeholder: '例：Storm#5961'
-      }
+      },
+      prompt: '⬆ 請輸入名字與後綴',
     },
     tooltips: {
       lorlogin: '請登陸 LoR'
@@ -180,11 +192,16 @@ module.exports = {
     str: {
       settings: '设置',
       loading: '加载中...',
-      languages: '语言',
+      languages: '主界面语言',
       invalidDeck: '牌组代码错误',
       copy: '复制',
       copied: '复制成功！',
       rounds: '回合',
+      error: {
+        unkown: '哪里出了一些问题',
+        playerNotFound: '未找到玩家',
+        playerNoHistory: '未找到历史记录'
+      },
       regions: {
         americas: '美洲',
         europe: '欧洲',
@@ -238,7 +255,8 @@ module.exports = {
       },
       player: {
         placeholder: '例：Storm#5961'
-      }
+      },
+      prompt: '⬆ 请输入名字与后缀',
     },
     tooltips: {
       lorlogin: '请登陆 LoR'
