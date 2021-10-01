@@ -123,7 +123,7 @@
         </div>
 
         <div class="main-content-container contact" v-if="currentPage == PAGES.contact">
-            <contact-info :locale="locale"></contact-info>
+            <contact-info :locale="locale" :apiBase="apiBase"></contact-info>
         </div>
 
         <div class="main-content-container settings" v-if="currentPage == PAGES.settings">

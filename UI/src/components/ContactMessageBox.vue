@@ -18,6 +18,8 @@
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
     components: {
 
@@ -32,6 +34,10 @@ export default {
         locale: {
             type: String,
             default: 'en_us'
+        },
+        apiBase: {
+            type: String,
+            required: true
         }
     },
     mounted() {
@@ -44,7 +50,24 @@ export default {
         },
         sendMessage() {
             if (this.doubleCheck) {
-                console.log("Message is", this.message)
+                // console.log("Message is", this.message)
+                // axios.post(`${this.apiBase}/report`, {
+                //     firstName: 'Fred',
+                //     lastName: 'Flintstone'
+                // })
+                // .then(function (response) {
+                // console.log(response);
+                // })
+                // .catch(function (error) {
+                // console.log(error);
+                // });
+
+                var reportUrl = `${this.apiBase}/report/${encodeURIComponent(this.message)}`
+                console.log('Sending url', reportUrl)
+                axios.get(reportUrl).then((response) => {
+                    console.log("Send Report Success")
+                }).catch(err => {console.log(err)})
+
                 this.handleMessageSent()
             } else if (this.message != "") {
                 this.doubleCheck = true

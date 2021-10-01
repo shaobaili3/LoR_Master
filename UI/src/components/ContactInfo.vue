@@ -16,7 +16,7 @@
                 FlyingFish</span>
             </p>
         </div>
-        <contact-message-box></contact-message-box>
+        <contact-message-box :locale="locale" :apiBase="apiBase"></contact-message-box>
         
     </div>
 </template>
@@ -35,6 +35,10 @@ export default {
         locale: {
             type: String,
             default: 'en_us'
+        },
+        apiBase: {
+            type: String,
+            required: true
         }
     },
     mounted() {
