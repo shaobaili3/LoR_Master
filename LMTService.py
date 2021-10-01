@@ -17,6 +17,7 @@ from flask import Flask, jsonify
 from sentry_sdk.integrations.flask import FlaskIntegration
 import sentry_sdk
 import io
+
 import sys
 import os
 import constants
@@ -193,6 +194,12 @@ def get_status():
     status['language'] = settingTrack.language
     status['lorRunning'] = settingTrack.isLorRunning
     return jsonify(status)
+
+
+@app.route("/report/<string:message>", methods=['get'])
+def report(message):
+    sentry_sdk.capture_message(message)
+    return jsonify('OK')
 
 
 app.run(port=args.port, debug=isDebug, use_reloader=False)
