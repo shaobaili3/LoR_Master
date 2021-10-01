@@ -141,9 +141,10 @@ def search(name, tag, server):
     riotModel = Riot(Network(settingModel), cacheModel)
     playerModel = Player(riotModel, leaderboardModel)
     playerModel.inspectFlask(name, tag, maxNum)
-    inspection = {}
-    inspection['matches'] = playerModel.matchesJson
-    return jsonify(playerModel.matchesJson)
+    if playerModel.error is None:
+        return jsonify(playerModel.matchesJson)
+    else:
+        return jsonify(playerModel.error)
 
 
 @app.route("/leaderboard/<string:server>", methods=['get'])

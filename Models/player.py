@@ -10,6 +10,21 @@ class Player:
         self.summaries = {}
         self.matchesJson = []
         self.leaderboard = leaderboard
+        self.error = {
+            "status": {
+                "message": "error",
+                "error": 0,
+                "code": 404
+            }
+        }
+
+    def setError(self, message, error, code=404):
+        self.error = {}
+        self.error['status'] = {}
+        self.error['status']['message'] = message
+        self.error['status']['error'] = error
+        self.error['status']['code'] = code
+        print('error', self.error)
 
     def addMatchToSummary(self, code, outcome, time, startTime):
         if code in self.summaries:
@@ -38,35 +53,32 @@ class Player:
             self.summaries[key].history = fill + self.summaries[key].history
 
     def inspectFlask(self, name, tag, maxNum=cs.MAX_NUM_ALL):
+        self.error = None
         self.matchesJson = []
         self.summaries = {}
         puuid = self.riot.getPlayerPUUID(name, tag)
         if puuid is None:
-            print(
-                '', name + '#' + tag + ' does not exist. Please check player name and player tag')
+            errorMessage = str(
+                '' + name + '#' + tag + ' does not exist. Please check player name and player tag')
+            self.setError(errorMessage, 0)
             return
         matchIds = self.riot.getMatches(puuid)
         if matchIds is None:
-            print(name + '#' + tag,
-                  ' has no recent match records')
+            errorMessage = str(name + '#' + tag +
+                               ' has no recent match records')
+            self.setError(errorMessage, 1)
             return
-        matchNum, winNum = self.processMatchIds(
+        matchNum = self.processMatchIds(
             matchIds, puuid, name, tag, maxNum)
 
-        if matchNum != 0:
-            print(
-                str(winNum) + ' wins' + ' out of ' + str(matchNum) +
-                ' rank matchs')
-            print("Win rate:", str(int(winNum / matchNum * 100)) + "%")
-            return
-        else:
-            print(name + '#' + tag,
-                  ' has no recent rank match records')
+        if matchNum == 0:
+            errorMessage = str(name + '#' + tag +
+                               ' has no recent rank match records')
+            self.setError(errorMessage, 2)
             return
 
     def processMatchIds(self, matchIds, puuid, name, tag, maxNum):
         deckCodes = []
-        winNum = 0
         matchNum = 0
         for matchId in matchIds:
             try:
@@ -102,15 +114,13 @@ class Player:
                         myIndex = 0
                 myDetails = detail['info']['players'][myIndex]
                 outcome = myDetails["game_outcome"]
-                if outcome == 'win':
-                    winNum += 1
                 self.addMatchToSummary(
                     myDetails['deck_code'], outcome, utility.toLocalTimeString(startTime, True), startTime)
                 deckCodes.append(myDetails['deck_code'])
             except Exception as e:
                 print('Read MatchId Error match id: ', matchId, e)
                 continue
-        return matchNum, winNum
+        return matchNum
 
     def addPlayerInfoToMatchDetail(self, detail):
         try:
