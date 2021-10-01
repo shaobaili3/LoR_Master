@@ -24,8 +24,6 @@ import argparse
 
 isDebug = True
 
-
-
 argParser = argparse.ArgumentParser()
 argParser.add_argument('--port', action='store', type=int, default=26531)
 args = argParser.parse_args()
@@ -79,7 +77,9 @@ class FlaskApp(Flask):
         work.daemon = True
         work.start()
 
+
 app = FlaskApp(__name__)
+
 
 @app.route("/process", methods=['get'])
 def process():

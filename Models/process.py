@@ -40,8 +40,7 @@ def readLog(setting):
                         playerId = str(line).split("[CheckingForUpdates] StartCheckingForUpdates for user ", 1)[1]
                         if playerId != setting.playerId:
                             setting.playerId = playerId
-                            sentry_sdk.set_user(
-                                {"id": playerId, "username": playerId  + ' ' + setting.riotServer, "ip_address": "{{auto}}"})
+                            sentry_sdk.set_user({"id": playerId, "username": playerId + ' ' + setting.riotServer, "ip_address": "{{auto}}"})
                             sentry_sdk.set_context("info", {"version": c.VERSION_NUM, "riotLanguage": setting.language, "sysLanguage": sysLanguage})
                             sentry_sdk.capture_message(
                                 playerId + ' ' + setting.riotServer)

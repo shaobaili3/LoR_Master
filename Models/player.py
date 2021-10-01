@@ -2,6 +2,7 @@ import Models.utility as utility
 import constants as cs
 from uiModels import DeckSummary
 
+
 class Player:
     def __init__(self, riot, leaderboard):
         self.sortedDecksCode = []

@@ -21,6 +21,7 @@ SUPPORTED_MODE = ['SeasonalTournamentLobby',
 
 appDir = user_data_dir('LMT', DISPLAY_TITLE)
 
+
 def getCacheFilePath(fileName, subDir='backend'):
     filePath = Path(appDir, subDir, fileName)
     os.makedirs(os.path.dirname(filePath), exist_ok=True)

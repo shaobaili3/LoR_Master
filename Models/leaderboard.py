@@ -4,6 +4,7 @@ import requests
 from Models.network import API_KEY
 import Models.network
 
+
 class Leaderboard():
     def __init__(self):
         self.leaderboards = {}
@@ -19,7 +20,7 @@ class Leaderboard():
             self.leaderboards[server] = None
         try:
             leaderboardRequest = self.session.get(
-                self.getLeaderboardLink(server), proxies = Models.network.getProxy())
+                self.getLeaderboardLink(server), proxies=Models.network.getProxy())
         except requests.exceptions.RequestException as e:
             print('getPlayerName error: ', e)
             return
