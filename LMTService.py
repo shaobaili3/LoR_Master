@@ -162,7 +162,7 @@ def get_leaderboard(server):
         with open(nameListPath, 'r', encoding='utf-8') as fp:
             playlistDict = json.load(fp)
     except Exception as e:
-        print('Restful: unable to load player list')
+        print('Restful: unable to load player list', e)
     for player in board:
         if player['name'] in playlistDict:
             player['tag'] = playlistDict[player['name']]
