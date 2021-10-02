@@ -95,9 +95,9 @@ def process():
 
 @app.route("/track", methods=['get'])
 def track():
-    print('track')
+    print('track', flush=True)
     a = jsonify(localTrack.updateStatusFlask())
-    print('track done')
+    print('track done', flush=True)
     return a
 
 
@@ -144,7 +144,7 @@ def get_names(server, playername):
 
 @app.route("/search/<string:server>/<string:name>/<string:tag>", methods=['get'])
 def search(name, tag, server):
-    print('search')
+    print('search', flush=True)
     settingModel = Setting()
     settingModel.riotServer = Server._value2member_map_[server]
     maxNum = constants.MAX_NUM_INSPECT
@@ -153,7 +153,7 @@ def search(name, tag, server):
     riotModel = Riot(Network(settingModel), cacheModel)
     playerModel = Player(riotModel, leaderboardModel)
     playerModel.inspectFlask(name, tag, maxNum)
-    print('search done')
+    print('search done', flush=True)
     if playerModel.error is None:
         return jsonify(playerModel.matchesJson)
     else:
