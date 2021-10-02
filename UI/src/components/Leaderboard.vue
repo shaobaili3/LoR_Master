@@ -118,6 +118,7 @@ export default {
     methods: {
         getLeaderboard(regionID) {
 
+            console.log("Requesting Leaderboard")
             lastLeaderboardRequestTime = Date.now()
 
             this.isLoading = true
@@ -132,15 +133,16 @@ export default {
 
             axios.get(api_link, {cancelToken: axiosSource.token} )
             .then((res) => {
+                console.log("Got Leaderboard")
                 this.rawPlayers = res.data
                 this.isLoading = false
             })
             .catch((e) => {
                 if (axios.isCancel(e)) {
-                    console.log("Request cancelled")
+                    console.log("Request Leaderboard Cancelled")
                 } else 
                 { 
-                    console.log('error', e) 
+                    console.log('Request Leaderboard Error', e) 
 
                     var elapsedTime = Date.now() - lastLeaderboardRequestTime // ms
                     if (elapsedTime > requestLeaderboardWaitTime) {

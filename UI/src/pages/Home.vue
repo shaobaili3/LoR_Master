@@ -210,6 +210,8 @@ let cancelToken, localCancleToken
 var lastStatusRequestTime
 var requestLocalHistoryTimeout, requestHistoryTimeout, prevHistoryRequest
 
+var requestStatusCount = 0
+
 const regionNames = {
     'NA': 'americas',
     'EU': 'europe',
@@ -684,9 +686,13 @@ export default {
         },
         requestStatusInfo() {
             // Keeps requesting status
+            requestStatusCount += 1
+            console.log("Request Status", requestStatusCount)
+
             lastStatusRequestTime = Date.now()
             axios.get(`${this.apiBase}/status`)
                 .then((response) => {
+                    console.log("Got Status")
                     var data = response.data
 
                     var updateLocalPlayer = false
@@ -746,9 +752,9 @@ export default {
                 })
                 .catch((e) => {
                     if (axios.isCancel(e)) {
-                        console.log("Request cancelled");
+                        console.log("Request Status Cancelled");
                     } else { 
-                        console.log('error', e)
+                        console.log('Request Status Error', e)
                         var elapsedTime = Date.now() - lastStatusRequestTime // ms
                         if (elapsedTime > requestStatusWaitTime) {
                             setTimeout(this.requestStatusInfo, 100)
