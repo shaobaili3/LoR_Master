@@ -280,7 +280,9 @@ Menu.setApplicationMenu(menu)
 
 function startLMTService(port) {
 
-  console.log("Starting LMT Service")
+  console.log("--------------------")
+  console.log("Starting LMT Service", "Port equals to: ", port)
+  console.log("--------------------")
 
   const { spawn } = require('child_process')
 
@@ -309,11 +311,11 @@ function startLMTService(port) {
   // })
 
   proc.on('close', (code) => {
-    console.log(`child process close all stdio with code ${code}`)
+    console.log(`Child process close all stdio with code ${code}`)
     startLMTService(port)
   })
   proc.on('exit', (code) => {
-    console.log(`child process exited with code ${code}`)
+    console.log(`Child process exited with code ${code}`)
   })
 
 }
