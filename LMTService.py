@@ -1,5 +1,6 @@
 #!/usr/local/bin/python
 # -*- coding: utf-8 -*-
+from waitress import serve
 import threading
 import time
 from Models.leaderboard import Leaderboard
@@ -61,6 +62,9 @@ settingTrack = Setting()
 localTrack = Local(settingTrack)
 
 
+index = 0
+
+
 class FlaskApp(Flask):
     def __init__(self, *args, **kwargs):
         super(FlaskApp, self).__init__(*args, **kwargs)
@@ -102,9 +106,11 @@ def process():
 
 @app.route("/track", methods=['get'])
 def track():
-    print('track', flush=True)
+    global index
+    index += 1
+    print('track' + index, flush=True)
     a = jsonify(localTrack.updateStatusFlask())
-    print('track done', flush=True)
+    print('track done' + index, flush=True)
     return a
 
 
@@ -250,4 +256,6 @@ def log_request(response):
     return response
 
 
-app.run(port=args.port, debug=isDebug, use_reloader=False, threaded=True)
+#app.run(port=args.port, debug=isDebug, use_reloader=False, threaded=True)
+
+serve(app, host='127.0.0.1', port=args.port, threads=10)
