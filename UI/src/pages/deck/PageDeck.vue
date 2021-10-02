@@ -90,7 +90,7 @@ import DeckDetail from '../../components/DeckDetail.vue'
 import DeckRegions from '../../components/DeckRegions.vue'
 import DeckEncoder from '../../modules/runeterra/DeckEncoder'
 
-const requestDataWaitTime = 100; // ms
+const requestTrackWaitTime = 500; // ms
 const requestServerWaitTime = 3000; //ms
 const requestStatusWaitTime = 1000; //ms
 
@@ -404,8 +404,8 @@ export default {
                     this.processTrackInfo(response.data)
                     
                     var elapsedTime = Date.now() - lastTrackTime // ms
-                    if (requestDataWaitTime > elapsedTime) {
-                        setTimeout(this.requestTrackInfo, requestDataWaitTime - elapsedTime); 
+                    if (requestTrackWaitTime > elapsedTime) {
+                        setTimeout(this.requestTrackInfo, requestTrackWaitTime - elapsedTime); 
                     } else {
                         setTimeout(this.requestTrackInfo, 100);
                     }
@@ -418,8 +418,8 @@ export default {
                         console.log('Requesting Track Error', e) 
 
                         var elapsedTime = Date.now() - lastTrackTime // ms
-                        if (requestDataWaitTime > elapsedTime) {
-                            setTimeout(this.requestTrackInfo, requestDataWaitTime - elapsedTime); 
+                        if (requestTrackWaitTime > elapsedTime) {
+                            setTimeout(this.requestTrackInfo, requestTrackWaitTime - elapsedTime); 
                         } else {
                             setTimeout(this.requestTrackInfo, 100);
                         }
