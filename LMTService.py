@@ -84,19 +84,26 @@ app = FlaskApp(__name__)
 
 @app.route("/process", methods=['get'])
 def process():
+    print('process')
     process_info = {}
     process_info['server'] = settingTrack.riotServer
     process_info['port'] = settingTrack.port
-    return jsonify(process_info)
+    a = jsonify(process_info)
+    print('process done')
+    return a
 
 
 @app.route("/track", methods=['get'])
 def track():
-    return jsonify(localTrack.updateStatusFlask())
+    print('track')
+    a = jsonify(localTrack.updateStatusFlask())
+    print('track done')
+    return a
 
 
 @app.route("/history/<string:server>/<string:name>/<string:tag>", methods=['get'])
 def history(server, name, tag):
+    print('history')
     if server == 'sea':
         print('history: Riot API not suppport SEA')
         return jsonify([])
@@ -106,11 +113,14 @@ def history(server, name, tag):
     riotInspect = Riot(networkInspect, cacheModel)
     playerInspect = Player(riotInspect, leaderboardModel)
     playerInspect.inspectFlask(name, tag, 10)
-    return jsonify([summary.__dict__ for summary in playerInspect.summaries.values()])
+    a = jsonify([summary.__dict__ for summary in playerInspect.summaries.values()])
+    print('history done')
+    return a
 
 
 @app.route("/name/<string:server>/<string:playername>", methods=['get'])
 def get_names(server, playername):
+    print('get_names')
     # to-do move functions to master model
     playernames = set()
     nameListPath = constants.getCacheFilePath(server.lower() + '.json')
@@ -128,11 +138,13 @@ def get_names(server, playername):
         if name[0:len(playername)].lower() == playername.lower():
             playerList.add(name)
     returnList = jsonify(list(playerList))
+    print('get_names done')
     return returnList
 
 
 @app.route("/search/<string:server>/<string:name>/<string:tag>", methods=['get'])
 def search(name, tag, server):
+    print('search')
     settingModel = Setting()
     settingModel.riotServer = Server._value2member_map_[server]
     maxNum = constants.MAX_NUM_INSPECT
@@ -141,6 +153,7 @@ def search(name, tag, server):
     riotModel = Riot(Network(settingModel), cacheModel)
     playerModel = Player(riotModel, leaderboardModel)
     playerModel.inspectFlask(name, tag, maxNum)
+    print('search done')
     if playerModel.error is None:
         return jsonify(playerModel.matchesJson)
     else:
@@ -149,6 +162,7 @@ def search(name, tag, server):
 
 @app.route("/leaderboard/<string:server>", methods=['get'])
 def get_leaderboard(server):
+    print('get_leaderboard')
     # refactor to leaderboard model
     board = leaderboardModel.getLeaderboard(server)
 
@@ -171,29 +185,36 @@ def get_leaderboard(server):
         else:
             player['tag'] = ''
         boardWithTag.append(player)
+    print('get_leaderboard done')
     return jsonify(boardWithTag)
 
 
 @app.route("/opInfo", methods=['get'])
 def opInfo():
+    print('opInfo')
     opInfo = {}
+    if localTrack.positional_rectangles.get('OpponentName') is None:
+        return jsonify('game not start')
     localTrack.updateTagByName(
         localTrack.positional_rectangles['OpponentName'])
     opInfo['name'] = localTrack.positional_rectangles['OpponentName']
     opInfo['tag'] = localTrack.opponentTag
     opInfo['rank'], opInfo['lp'] = leaderboardModel.checkRank(
         opInfo['name'], settingTrack.riotServer)
+    print('opInfo done')
     return jsonify(opInfo)
 
 
 @app.route("/status", methods=['get'])
 def get_status():
+    print('get_status')
     status = {}
     status['playerId'] = settingTrack.playerId
     status['port'] = settingTrack.port
     status['server'] = settingTrack.riotServer
     status['language'] = settingTrack.language
     status['lorRunning'] = settingTrack.isLorRunning
+    print('get_status done')
     return jsonify(status)
 
 
@@ -203,4 +224,4 @@ def report(message):
     return jsonify('OK')
 
 
-app.run(port=args.port, debug=isDebug, use_reloader=False)
+app.run(port=args.port, debug=isDebug, use_reloader=False, threaded=True)
