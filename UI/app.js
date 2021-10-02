@@ -301,9 +301,9 @@ function startLMTService(port) {
     }
   }
   
-  // proc.stdout.on('data', function (data) {
-  //   console.log("data: ", data.toString('utf8'))
-  // })
+  proc.stdout.on('data', function (data) {
+    console.log("data: ", data.toString('utf8'))
+  })
   // proc.stderr.on('data', (data) => {
   //   console.log(`stderr: ${data}`) // when error
   // })
