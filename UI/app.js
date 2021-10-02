@@ -14,7 +14,7 @@ const defaultRatio = 2.3 // Repeated in preload.js
 const defaultPort = '26531'
 
 const spawnService = true
-const spawnPython = false
+const spawnPython = true
 
 let currentVersion = ""
 var startHidden = false
@@ -306,9 +306,9 @@ function startLMTService(port) {
   proc.stdout.on('data', function (data) {
     console.log("data: ", data.toString('utf8'))
   })
-  // proc.stderr.on('data', (data) => {
-  //   console.log(`stderr: ${data}`) // when error
-  // })
+  proc.stderr.on('data', (data) => {
+    // console.log(`stderr: ${data}`) // when error
+  })
 
   proc.on('close', (code) => {
     console.log(`Child process close all stdio with code ${code}`)
