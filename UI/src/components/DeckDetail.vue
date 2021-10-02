@@ -181,7 +181,7 @@ export default {
             }
 
             this.sets = [].concat(...loadModule.default)
-            console.log(this.sets)
+            // console.log(this.sets)
         },
         copyDeckcode() {
             const copyToClipboard = str => {

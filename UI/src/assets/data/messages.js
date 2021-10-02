@@ -54,6 +54,7 @@ module.exports = {
         Ranked: 'Ranked',
         Bo3Challenge: 'Bo3 Challenge',
         StandardGauntlet: 'Gauntlet',
+        Normal: 'Normal'
       }
     },
     dash: {
@@ -148,6 +149,7 @@ module.exports = {
         Ranked: '排位',
         Bo3Challenge: '三局兩勝',
         StandardGauntlet: '武鬥場',
+        Normal: '普通'
       }
     },
     dash: {
@@ -242,6 +244,7 @@ module.exports = {
         Ranked: '排位',
         Bo3Challenge: '三局两胜',
         StandardGauntlet: '武斗场',
+        Normal: '普通'
       }
     },
     dash: {
