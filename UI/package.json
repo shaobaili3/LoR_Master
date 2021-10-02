@@ -60,7 +60,9 @@
       "oneClick": false,
       "allowToChangeInstallationDirectory": true,
       "shortcutName": "LoR Master Tracker",
-      "deleteAppDataOnUninstall": "true"
+      "deleteAppDataOnUninstall": "true",
+      "allowElevation": "false",
+      "perMachine": "false"
     }
   },
   "dependencies": {
