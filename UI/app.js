@@ -5,8 +5,14 @@ const { autoUpdater } = require('electron-updater')
 // const app = electron.app
 const BrowserWindow = electron.BrowserWindow
 const path = require('path')
+const remote = require('@electron/remote/main')
+remote.initialize()
 
-const developmentMode = true
+const development = true
+const forceDevelopment = false
+
+const developmentMode = (development && !app.isPackaged) || forceDevelopment
+
 const closeWithoutTracker = false
 const headerHeight = 45 // Repeated in preload.js
 const defaultRatio = 2.3 // Repeated in preload.js
@@ -367,11 +373,14 @@ function newMainWindow() {
     show: false,
     backgroundColor: '#1c1c1f',
     webPreferences: {
+      // nodeIntegration: true,
+      // enableRemoteModule: true,
+      contextIsolation: false,
       preload: __dirname + '/appsrc/preload.js',
-      enableRemoteModule: true,
-      nodeIntegrationInWorker: true,
     }
   })
+
+  remote.enable(mainWindow.webContents)
 
   const mainWindowUrl = require('url').format({
     protocol: 'file',
@@ -444,14 +453,16 @@ function newDeckWindow() {
     skipTaskbar: true,
     show: false,
     webPreferences: {
+      // nodeIntegration: true,
+      // enableRemoteModule: true,
+      contextIsolation: false,
       preload: __dirname + '/appsrc/preload.js',
-      enableRemoteModule: true,
-      //nodeIntegration: true,
-      nodeIntegrationInWorker: true,
     },
     // show: false
     // titleBarStyle: 'hiddenInset'
   })
+
+  remote.enable(deckWindow.webContents)
   // deckWindow.loadURL(require('url').format({
   //   pathname: path.join(__dirname, 'dist/index.html'),
   //   protocol: 'file:',
@@ -519,13 +530,16 @@ function newInfoWindow() {
     frame: false,
     resizable: false,
     webPreferences: {
+      // nodeIntegration: true,
+      // enableRemoteModule: true,
+      contextIsolation: false,
       preload: __dirname + '/appsrc/preload.js',
-      enableRemoteModule: true,
-      //nodeIntegration: true,
-      nodeIntegrationInWorker: true,
     }
     // titleBarStyle: 'hiddenInset'
   })
+
+  remote.enable(infoWindow.webContents)
+
   infoWindow.loadURL(`file://${__dirname}/dist/info.html`)
   // console.log("Is development?", process.env.NODE_ENV === 'development')
 
@@ -667,11 +681,9 @@ if (store.get('ui-locale') == null) {
   if (newLocale != "") {
     store.set('ui-locale', newLocale)
 
-    allWindows.forEach(bw => {
-      if (bw && bw.webContents.id != event.sender.id) {
+    BrowserWindow.getAllWindows().forEach(bw => {
         console.log("-- sending to", bw.id)
-        bw.webContents.send('to-change-locale', newLocale)
-      }
+        bw.webContents.send('to-change-locale', newLocale) 
     });
   }
   
@@ -696,10 +708,12 @@ ipcMain.on('changed-locale', (event, newLocale) => {
   console.log("Changing Locale to", newLocale, ", from", event.sender.id)
   store.set('ui-locale', newLocale)
 
-  allWindows.forEach(bw => {
+  BrowserWindow.getAllWindows().forEach(bw => {
     if (bw && bw.webContents.id != event.sender.id) {
-      console.log("-- sending to", bw.id)
+      console.log("-- sending to", bw.webContents.id)
       bw.webContents.send('to-change-locale', newLocale)
+    } else {
+      console.log("-- not sending to", bw.webContents.id)
     }
   });
 })
