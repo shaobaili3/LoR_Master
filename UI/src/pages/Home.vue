@@ -200,7 +200,7 @@ import ContactInfo from '../components/ContactInfo.vue'
 
 const requestDataWaitTime = 400 //ms
 const requestHistoryWaitTime = 100 //ms
-const requestStatusWaitTime = 1000 //ms
+const requestStatusWaitTime = 5000 //ms
 const inputNameListLength = 10;
 
 // const portNum = "26531"
