@@ -654,7 +654,9 @@ if (store.get('ui-locale') == null) {
 
   var newLocale = ""
 
-  if (systemLang.includes('zh_CN')) {
+  if (!systemLang) {
+    newLocale = 'English'
+  } else if (systemLang.includes('zh_CN')) {
     // 简体中文
     newLocale = '简体中文'
   } else if (systemLang.includes('zh')) {
