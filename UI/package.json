@@ -45,27 +45,20 @@
         "nsis"
       ],
       "icon": "image.ico",
-      "publish": [
-        {
-          "provider": "github",
-          "owner": "shaobaili3",
-          "repo": "LoR_Master"
-        }
-      ]
+      "requestedExecutionLevel": "asInvoker"
     },
     "nsis": {
       "installerIcon": "image.ico",
       "uninstallerIcon": "uninstall.ico",
       "license": "LICENSE",
       "oneClick": false,
+      "perMachine": true,
       "allowToChangeInstallationDirectory": true,
-      "shortcutName": "LoR Master Tracker",
-      "deleteAppDataOnUninstall": "true",
-      "allowElevation": "false",
-      "perMachine": "false"
+      "shortcutName": "LoR Master Tracker"
     }
   },
   "dependencies": {
+    "@electron/remote": "^2.0.1",
     "auto-launch": "^5.0.5",
     "axios": "^0.21.1",
     "core-js": "^3.6.5",
@@ -86,7 +79,7 @@
     "@vue/cli-service": "~4.5.0",
     "@vue/compiler-sfc": "^3.0.0",
     "babel-eslint": "^10.1.0",
-    "electron": "^11.2.3",
+    "electron": "^15.1.0",
     "electron-builder": "^22.11.7",
     "electron-packager": "^15.2.0",
     "eslint": "^6.7.2",

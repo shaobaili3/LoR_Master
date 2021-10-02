@@ -200,6 +200,7 @@ export default {
         // console.log("Mounted")
         // this.requestData()
         console.log("Page Deck Mounted")
+        console.log("Webcontents ID", window.getID())
 
         this.infoType = "match"
 
@@ -234,10 +235,7 @@ export default {
         // Change Locale
         initChangeLocale() {
 
-            const Store = require('electron-store')
-            const store = new Store()
-
-            this.$i18n.locale = store.get('ui-locale')
+            console.log("Initing Change Locale | current locale", this.$i18n.locale)
 
             window.ipcRenderer.on('to-change-locale', (event, newLocale) => {
                 this.$i18n.locale = newLocale

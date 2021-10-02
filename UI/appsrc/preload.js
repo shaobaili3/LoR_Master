@@ -1,4 +1,9 @@
-const remote = require("electron").remote
+const remote = require('@electron/remote')
+
+const {
+    contextBridge,
+    ipcRenderer
+} = require("electron");
 
 const shell = require('electron').shell
 
@@ -42,6 +47,10 @@ window.makeVisible = function() {
     if (!win.isVisible()) {
         win.show()
     }
+}
+
+window.getID = function(){
+    return win.webContents.id
 }
 
 window.minWindow = function() {
@@ -146,8 +155,6 @@ window.isMin = function() {
 
 
 // --- Auto Update Logics ---
-
-const { ipcRenderer } = require('electron')
 
 // window.appVersion = null
 // window.appVersionLatest = null
