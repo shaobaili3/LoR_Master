@@ -301,7 +301,7 @@ function startLMTService(port) {
     } else {
       backend = path.join(__dirname, 'backend', 'LMTService', 'LMTService.exe')
       // proc = spawn(backend, [`--port=${port}`], {cwd: path.join(__dirname, 'backend', 'LMTService')})
-      proc = spawn(backend, {cwd: path.join(execPath, 'backend', 'LMTService')})
+      proc = spawn(backend, {cwd: path.join(__dirname, 'backend', 'LMTService')})
     }
   }
   
