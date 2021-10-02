@@ -90,9 +90,9 @@ import DeckDetail from '../../components/DeckDetail.vue'
 import DeckRegions from '../../components/DeckRegions.vue'
 import DeckEncoder from '../../modules/runeterra/DeckEncoder'
 
-const requestTrackWaitTime = 500; // ms
+const requestTrackWaitTime = 5000; // ms
 const requestServerWaitTime = 3000; //ms
-const requestStatusWaitTime = 1000; //ms
+const requestStatusWaitTime = 5000; //ms
 
 var requestStatusCount = 0, requestTrackCount = 0;
 
