@@ -154,7 +154,6 @@ class Local:
         if self.positional_rectangles['GameState'] == 'InProgress':
             self.updateTracker()
             self.updateMyDeck()
-            print(self.trackerDict)
         else:
             self.reset()
             self.trackJson

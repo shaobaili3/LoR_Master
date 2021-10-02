@@ -17,13 +17,20 @@ from flask import Flask, jsonify
 from sentry_sdk.integrations.flask import FlaskIntegration
 import sentry_sdk
 import io
+from flask import g, request, Flask
 
 import sys
 import os
 import constants
 import argparse
-
+import logging
 isDebug = True
+
+logging.basicConfig(
+    format='%(asctime)-15s %(levelname)-8s %(name)-1s: %(message)s',
+    level=logging.DEBUG)
+logging.getLogger("requests").setLevel(logging.WARNING)
+logging.getLogger("urllib3").setLevel(logging.WARNING)
 
 argParser = argparse.ArgumentParser()
 argParser.add_argument('--port', action='store', type=int, default=26531)
@@ -113,7 +120,8 @@ def history(server, name, tag):
     riotInspect = Riot(networkInspect, cacheModel)
     playerInspect = Player(riotInspect, leaderboardModel)
     playerInspect.inspectFlask(name, tag, 10)
-    a = jsonify([summary.__dict__ for summary in playerInspect.summaries.values()])
+    a = jsonify(
+        [summary.__dict__ for summary in playerInspect.summaries.values()])
     print('history done')
     return a
 
@@ -222,6 +230,24 @@ def get_status():
 def report(message):
     sentry_sdk.capture_message(message)
     return jsonify('OK')
+
+
+@app.before_request
+def start_timer():
+    g.start = time.time()
+
+
+@app.after_request
+def log_request(response):
+    now = time.time()
+    duration = round(now - g.start, 2)
+    logging.info(response.get_data())  # not working
+    logging.info("testing")  # also not working
+    logging.info("The following request took ({}) seconds".format(
+        duration))  # not working
+    logging.info("dhefei")  # not working
+    logging.info('Processing default request')  # not working
+    return response
 
 
 app.run(port=args.port, debug=isDebug, use_reloader=False, threaded=True)
