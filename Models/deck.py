@@ -1,5 +1,6 @@
 from decoder import Deck
 
+
 def getChampion(deckCode):
     try:
         cards = Deck.decode(deckCode).cards
@@ -7,7 +8,7 @@ def getChampion(deckCode):
         for card in cards:
             if card.isChampion:
                 heros += card.name + ' '
-                heros += '(' + str(card.count) + ') '     
+                heros += '(' + str(card.count) + ') '
         if heros == '':
             heros = 'No champion '
     except Exception as e:
@@ -16,13 +17,15 @@ def getChampion(deckCode):
     print(heros)
     return heros
 
+
 def getDeckCode(cardsInDeck):
     try:
-        deckCode = Deck(cards = cardsInDeck).encode().deck_code
+        deckCode = Deck(cards=cardsInDeck).encode().deck_code
     except Exception as e:
         print('invalid cards error:', e)
         return None
     return deckCode
+
 
 def validDeckCode(deckCode):
     try:

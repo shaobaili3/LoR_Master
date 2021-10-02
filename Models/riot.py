@@ -4,11 +4,11 @@ import json
 import os
 import constants
 
+
 class Riot:
     def __init__(self, network, cache):
         self.network = network
         self.cache = cache
-        self.cache.loadJson()
         self.session = requests.Session()
         return
 
@@ -19,7 +19,8 @@ class Riot:
             return self.cache.riotIds[puuidLink]
         print(puuidLink)
         try:
-            puuidRequest = self.session.get(puuidLink, proxies= Models.network.getProxy())
+            puuidRequest = self.session.get(
+                puuidLink, proxies=Models.network.getProxy())
         except requests.exceptions.RequestException as e:
             print(puuidLink)
             print('getPlayerPUUID error": ', e)
@@ -45,7 +46,8 @@ class Riot:
                 gameName = name
                 tagLine = tag
                 # give up saving cache for this special case
-                print(gameName, '#' , tagLine, ': only return puuid without name and tag!!!!!!!!!!!!!!!!!!!!!!!!!!!')
+                print(gameName, '#', tagLine,
+                      ': only return puuid without name and tag!!!!!!!!!!!!!!!!!!!!!!!!!!!')
                 return puuid
             if puuid is not None:
                 self.cache.riotIds[puuidLink] = puuid
@@ -74,7 +76,8 @@ class Riot:
     def getMatches(self, puuid, saveCache=True):
         matchLink = self.network.getMatchesLink(puuid)
         try:
-            matchRequest = self.session.get(matchLink, proxies = Models.network.getProxy())
+            matchRequest = self.session.get(
+                matchLink, proxies=Models.network.getProxy())
         except requests.exceptions.RequestException as e:
             print(matchLink)
             print('getMatches error: ', e)
@@ -103,7 +106,8 @@ class Riot:
             return self.cache.matchDetails.get(matchId)
         detailsLink = self.network.getDetailsLink(matchId)
         try:
-            detailsRequest = self.session.get(detailsLink, proxies = Models.network.getProxy())
+            detailsRequest = self.session.get(
+                detailsLink, proxies=Models.network.getProxy())
         except requests.exceptions.RequestException as e:
             print(detailsLink)
             print(e)
@@ -121,7 +125,8 @@ class Riot:
             print(detailsRequest.status_code)
             print(detail)
             if 'Retry-After' in header:
-                print('getDetail server busy APIKEY: ', Models.network.API_KEY, header['Retry-After'], 'seconds')
+                print('getDetail server busy APIKEY: ',
+                      Models.network.API_KEY, header['Retry-After'], 'seconds')
                 Models.network.switchAPI()
                 return None
             return None
@@ -129,7 +134,7 @@ class Riot:
             self.cache.matchDetails[matchId] = detail
             self.cache.save()
         if detail is None:
-            print('match id:', matchId , 'details empty')
+            print('match id:', matchId, 'details empty')
         return detail
 
     def getPlayerName(self, puuid):
@@ -137,7 +142,8 @@ class Riot:
             return self.cache.playerNames[puuid]
         nameLink = self.network.getNameLink(puuid)
         try:
-            nameRequest = self.session.get(nameLink, proxies = Models.network.getProxy())
+            nameRequest = self.session.get(
+                nameLink, proxies=Models.network.getProxy())
         except requests.exceptions.RequestException as e:
             print(nameLink)
             print(e)

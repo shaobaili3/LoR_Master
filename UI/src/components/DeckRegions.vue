@@ -10,13 +10,17 @@ import RegionIcon from './image/RegionIcon.vue'
 import DeckEncoder from '../modules/runeterra/DeckEncoder'
 //https://painttist.github.io/lor-champ-icons/data/champion.js
 
-import set1 from '../../../Resource/set1-en_us.json'
-import set2 from '../../../Resource/set2-en_us.json'
-import set3 from '../../../Resource/set3-en_us.json'
-import set4 from '../../../Resource/set4-en_us.json'
-import set5 from '../../../Resource/set5-en_us.json'
+// import set1 from '../../../Resource/set1-en_us.json'
+// import set2 from '../../../Resource/set2-en_us.json'
+// import set3 from '../../../Resource/set3-en_us.json'
+// import set4 from '../../../Resource/set4-en_us.json'
+// import set5 from '../../../Resource/set5-en_us.json'
 
-const sets = set1.concat(set2, set3, set4, set5)
+import en_us_array from '../../../Resource/en_us.json'
+
+const en_us = [].concat(...en_us_array)
+
+// console.log("EN_US in Deck Regions:", en_us)
 
 const regionRefID = {
     "Demacia": 0,
@@ -72,7 +76,7 @@ export default {
             for (var j in cards) {
                 
                 var cardCode = cards[j].code
-                var card = sets.find(card => card.cardCode == cardCode)
+                var card = en_us.find(card => card.cardCode == cardCode)
                 if (card) {
                     if (card.regions && card.regions.length == 1) {
                         // Only considers mono region cards

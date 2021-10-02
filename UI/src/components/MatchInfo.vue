@@ -6,12 +6,12 @@
             </router-link> -->
             <p class="match-info-title">
                 <!-- {{matches}} / {{total}} -->
-                {{useRate}}% Usage
+                {{$t('matches.usage', {num: useRate})}}
             </p>
             <div class="match-info-badge" v-for="(badge, index) in badges" :key="index">
                 <span class="match-info-badge-icon fa" :class="{'fa-clock': badge=='recent', 'fa-angle-double-up': badge=='frequent'}"></span>
                 {{badge}}</div>
-            <div class="history-info">{{time}}</div>
+            <div class="history-info">{{timeString}}</div>
             <div class="history-info">{{gamesString}}</div>
         </div>
         <div class="row match-history-dots">
@@ -55,6 +55,7 @@ export default {
         opponentDeck: String,
         winrate: String,
         time: String,
+        startTime: String,
         matches: Number,
         badges: Array,
         total: Number,
@@ -65,6 +66,40 @@ export default {
         }
     },
     computed: {
+        timeString() {
+            
+            var date = new Date(this.startTime)
+            var time
+            
+            var milliElapsed = Date.now() - date
+            var secondsElapsed = milliElapsed / 1000
+            var minElapse = secondsElapsed / 60
+            var hoursElapse = minElapse / 60
+            var daysElapsed = hoursElapse / 24
+
+            if (secondsElapsed < 60) {
+                time = this.$t('str.times.sec', {t: Math.floor(secondsElapsed)})
+            } else if (minElapse < 60) {
+                time = this.$t('str.times.min', {t: Math.floor(minElapse)})
+            } else if (hoursElapse < 24) {
+                if (Math.floor(hoursElapse) == 1) {
+                    time = this.$t('str.times.hour', {t: Math.floor(hoursElapse)})
+                } else {
+                    time = this.$t('str.times.hours', {t: Math.floor(hoursElapse)})
+                }
+            } else if (daysElapsed < 7) {
+                if ( Math.floor(daysElapsed) == 1) {
+                    time = this.$t('str.times.day', {t: Math.floor(daysElapsed)})
+                } else {
+                    time = this.$t('str.times.days', {t: Math.floor(daysElapsed)})
+                }
+            } else {
+                time = date.toLocaleDateString()
+            }
+
+            return time
+        },
+
         opponentLink() {
             return "/profile/" + this.opponentName
         },
@@ -82,7 +117,9 @@ export default {
             return (this.history.match(/L/g)||[]).length
         },
         gamesString() {
-            return this.matches > 1 ? this.matches + " games" : this.matches + " game"
+            return this.matches > 1 ? 
+                this.$t('matches.games', {num: this.matches}) :
+                this.$t('matches.game', {num: this.matches})
         }
     }, 
     methods: {

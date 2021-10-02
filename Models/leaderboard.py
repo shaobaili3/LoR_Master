@@ -4,12 +4,12 @@ import requests
 from Models.network import API_KEY
 import Models.network
 
+
 class Leaderboard():
     def __init__(self):
         self.leaderboards = {}
         self.leaderboardDicts = {}
         self.session = requests.Session()
-        self.updateAll()
 
     def updateAll(self):
         for server in list(Server):
@@ -20,7 +20,7 @@ class Leaderboard():
             self.leaderboards[server] = None
         try:
             leaderboardRequest = self.session.get(
-                self.getLeaderboardLink(server), proxies = Models.network.getProxy())
+                self.getLeaderboardLink(server), proxies=Models.network.getProxy())
         except requests.exceptions.RequestException as e:
             print('getPlayerName error: ', e)
             return
@@ -38,7 +38,7 @@ class Leaderboard():
             ): {'rank': board['rank'], 'lp': board['lp']} for board in leaderboard}
 
     def getLeaderboard(self, server):
-        if self.leaderboards[server] is None:
+        if self.leaderboards.get(server) is None:
             self.updateLeaderboard(server)
         return self.leaderboards[server]
 

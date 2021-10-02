@@ -1,4 +1,5 @@
 import json
+from json import encoder
 import requests
 import os
 
@@ -12,8 +13,9 @@ def read_json_file(json_file):
 
 def get_card_set_online(set_num: int, region="en_us"):
     url = f'http://dd.b.pvp.net/latest/set{set_num}/{region}/data/set{set_num}-{region}.json'
-    print('Loading: ', url)
+    print('Loading: ', url) 
     r = session.get(url)
+    r.encoding = 'utf8'
     return r.json()
 
 
@@ -26,4 +28,4 @@ def get_lor_globals(region="en_us"):
 def write_json_file(json_data,json_path):
     os.makedirs(os.path.dirname(json_path), exist_ok=True)
     with open(json_path, 'w', encoding='utf-8') as f:
-        json.dump(json_data, f, ensure_ascii=False, indent=4)
+        json.dump(json_data, f, indent=2, ensure_ascii=False)

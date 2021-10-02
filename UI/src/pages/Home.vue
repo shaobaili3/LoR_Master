@@ -31,6 +31,11 @@
             <span><i class="fas fa-trophy"></i></span>
         </button>
         <button class="left-nav-btn nav-bottom" 
+            :class="{selected: currentPage == PAGES.contact}" 
+            @click="setCurrentPage(PAGES.contact)">
+            <span><i class="fas fa-comment-alt-smile"></i></span>
+        </button>
+        <button class="left-nav-btn nav-bottom" 
             :class="{selected: currentPage == PAGES.settings}" 
             @click="setCurrentPage(PAGES.settings)">
             <span><i class="fas fa-cog"></i></span>
@@ -71,7 +76,7 @@
                             <span v-if="isSameSearch"><i class="fas fa-redo-alt"></i></span>
                         </button>
                         
-                        <input autocomplete='off' class="search-bar" 
+                        <input spellcheck="false" autocomplete='off' class="search-bar" 
                             @keyup="searchName" 
                             @keyup.enter="searchHistory"
                             @keyup.up="autoCompleteIndexMinus"
@@ -96,7 +101,7 @@
                 </div>
             </div>
             <!-- Player Info -->
-            <player-matches v-if="!isLoading && playerName" 
+            <player-matches v-if="!isLoading && playerName && matches.length > 0" 
                 @search="searchPlayer($event)"
                 @show-deck="showDeck"
                 :playerName="playerName"
@@ -107,14 +112,27 @@
             >
             </player-matches>
 
-            <div class="loading-text" v-if="isLoading">
-                <i class="fas fa-circle-notch fa-spin"></i> 
-                {{$t('str.loading')}}
+            <div class="status-text">
+                <span v-if="!isLoading && !isError && matches.length <= 0">
+                    {{$t('search.prompt')}}
+                </span>
+                <span v-if="isLoading">
+                    <i class="fas fa-circle-notch fa-spin"></i> 
+                    {{$t('str.loading')}}
+                </span>
+                <span v-if="isError">
+                    <!-- <i class="fas fa-circle-notch fa-spin"></i> -->
+                    {{errorText}}
+                </span>
             </div>
         </div>
 
         <div class="main-content-container leaderboard" v-if="currentPage == PAGES.leaderboard">
             <leaderboard :apiBase="apiBase" @search="searchPlayer($event)"></leaderboard>
+        </div>
+
+        <div class="main-content-container contact" v-if="currentPage == PAGES.contact">
+            <contact-info :locale="locale" :apiBase="apiBase"></contact-info>
         </div>
 
         <div class="main-content-container settings" v-if="currentPage == PAGES.settings">
@@ -178,6 +196,7 @@ import Leaderboard from '../components/Leaderboard.vue'
 import PlayerMatches from '../components/PlayerMatches.vue'
 import DeckDetail from '../components/DeckDetail.vue'
 import LocaleChanger from '../components/LocaleChanger.vue'
+import ContactInfo from '../components/ContactInfo.vue'
 
 const requestDataWaitTime = 400 //ms
 const requestHistoryWaitTime = 100 //ms
@@ -207,59 +226,20 @@ const PAGES = {
     my: 0,
     search: 1,
     leaderboard: 2,
-    settings: 3,
-}
-
-function processDate(dateString) {
-    var time
-    var date = new Date(dateString)
-
-    var milliElapsed = Date.now() - date
-    var secondsElapsed = milliElapsed / 1000
-    var minElapse = secondsElapsed / 60
-    var hoursElapse = minElapse / 60
-    var daysElapsed = hoursElapse / 24
-
-    if (secondsElapsed < 60) {
-        time = Math.floor(secondsElapsed) + " sec. ago"
-    } else if (minElapse < 60) {
-        time = Math.floor(minElapse) + " min. ago"
-    } else if (hoursElapse < 24) {
-        if (Math.floor(hoursElapse) == 1) {
-            time = Math.floor(hoursElapse) + " hour ago"
-        } else {
-            time = Math.floor(hoursElapse) + " hours ago"
-        }
-    } else if (daysElapsed < 7) {
-        if ( Math.floor(daysElapsed) == 1) {
-            time = Math.floor(daysElapsed) + " day ago"
-        } else {
-            time = Math.floor(daysElapsed) + " days ago"
-        }
-    } else {
-        time = date.toLocaleDateString()
-    }
-
-    return time
+    
+    contact: 9,
+    settings: 10,
 }
 
 export default {
-    mounted() {
-        console.log("Mounted")
-        // var test = 'Hello'
-        this.requestVersionData()
-        this.requestStatusInfo()
-        this.handleGameEnd()
-
-        this.initLocalSettings()
-    },
     components: { 
         BaseWindowControls,
         DeckRegions,
         Leaderboard,
         PlayerMatches,
         DeckDetail,
-        LocaleChanger
+        LocaleChanger,
+        ContactInfo,
     },
     data() {
         return {
@@ -274,6 +254,10 @@ export default {
             playerRegion: null,
             searchText: "",
             isLoading: false,
+            isError: false,
+
+            errorType: "",
+            
             inputNameList: [],
             autoCompleteIndex: -1,
             regions: ["NA", "EU", "AS"],
@@ -304,6 +288,18 @@ export default {
         }
     },
     computed: {
+        errorText() {
+            
+            var error = this.errorType
+            console.log("Processing error text from type", error)
+            if (error == 0) {
+                return this.$t('str.error.playerNotFound')
+            } else if (error == 1 || error == 2) {
+                return this.$t('str.error.playerNoHistory')
+            } else {
+                return this.$t('str.error.unkown')
+            }
+        },
         isUpdatedVersion() {
             return this.version == this.remoteVersion
         },
@@ -338,7 +334,42 @@ export default {
             return `http://127.0.0.1:${this.portNum}`
         }
     },
+    mounted() {
+        console.log("Mounted")
+        // var test = 'Hello'
+        this.requestVersionData()
+        this.requestStatusInfo()
+        this.handleGameEnd()
+
+        this.initLocalSettings()
+
+        this.initStore()
+        this.initChangeLocale()
+        
+    },
     methods: {
+
+        initStore() {
+            window.ipcRenderer.send('request-store', 'ui-locale')
+
+            window.ipcRenderer.on('reply-store', (event, key, val) => {
+                console.log("Got store", key, val)
+
+                if (key == 'ui-locale' && val) {
+                    this.$i18n.locale = val
+                    console.log("Change locale to", val)
+                }
+            })
+        },
+
+        // Change Locale
+        initChangeLocale() {
+
+            window.ipcRenderer.on('to-change-locale', (event, newLocale) => {
+                this.$i18n.locale = newLocale
+                console.log("Changing locale to", newLocale)
+            })
+        },
 
         // Local Settings
         initLocalSettings() {
@@ -479,9 +510,12 @@ export default {
             this.playerRegion = null
             this.matches = []
         },
-        errorHistory() {
+        errorHistory(error) {
             this.clearInfo()
-            this.playerName = "No history found"
+            this.isError = true
+            this.errorType = error
+            // this.playerName = "No history found"
+
         },
         processHistoryData(data) {
             this.matches = []
@@ -544,7 +578,7 @@ export default {
                 if (info.game_mode) badges.push(info.game_mode.replace(/([A-Z])/g, ' $1').trim().replace("Lobby", ""))
                 if (info.game_type) badges.push(info.game_type.replace(/([A-Z])/g, ' $1').trim().replace("Lobby", ""))
 
-                time = processDate(info.game_start_time_utc)
+                time = info.game_start_time_utc
 
                 this.matches.push({
                     opponentName: opponentName,
@@ -690,8 +724,15 @@ export default {
                     if (updateLocalPlayer) {
                         this.requestLocalHistory()
                     }
-
-                    if (data.language) this.locale = data.language.replace('-', '_').toLowerCase()
+                    
+                    if (data.language) {
+                        var newLocale = data.language.replace('-', '_').toLowerCase()
+                        if (this.locale != newLocale) {
+                            console.log("Switch Locale", this.locale, newLocale)
+                        }
+                        this.locale = newLocale
+                    }
+                    // console.log(this.locale)
 
                     this.lorRunning = data.lorRunning
 
@@ -710,7 +751,7 @@ export default {
                         console.log('error', e)
                         var elapsedTime = Date.now() - lastStatusRequestTime // ms
                         if (elapsedTime > requestStatusWaitTime) {
-                            setTimeout(this.requestStatusInfo, 100);
+                            setTimeout(this.requestStatusInfo, 100)
                         } else {
                             setTimeout(this.requestStatusInfo, requestStatusWaitTime - elapsedTime);
                         }
@@ -767,6 +808,7 @@ export default {
             cancelToken = axios.CancelToken.source()
 
             this.isLoading = true;
+            this.isError = false;
             this.playerRegion = regionNames[this.selectedRegion]
 
             prevHistoryRequest = newRequest
@@ -776,18 +818,22 @@ export default {
                 .then((response) => {
                     this.isLoading = false;
 
-                    if (response.data == "Error") {
-                        console.log("History Search Error")
-                        this.errorHistory()
-                    } else {
+                    if (response.status === 200 && !response.data.status) {
                         this.processHistoryData(response.data)
+                    } else {
+                        console.log("History Search Error with code", response.status)
+                        this.errorHistory(0)
                     }
                 })
                 .catch((e) => {
                     if (axios.isCancel(e)) {
-                        console.log("Request cancelled");
-                    } else { 
-                        console.log('error', e) 
+                        console.log("Request cancelled")
+                    } else {
+                        console.log('error', e)
+                        if (e.response) {
+                            var data = e.response.data
+                            this.errorHistory(data.status.error)
+                        }
                         this.isLoading = false
                     }
                 })
@@ -931,7 +977,7 @@ export default {
                 if (info.game_mode) badges.push(info.game_mode.replace(/([A-Z])/g, ' $1').trim().replace("Lobby", ""))
                 if (info.game_type) badges.push(info.game_type.replace(/([A-Z])/g, ' $1').trim().replace("Lobby", ""))
 
-                time = processDate(info.game_start_time_utc)
+                time = info.game_start_time_utc
 
                 this.localMatches.push({
                     opponentName: opponentName,
@@ -1108,7 +1154,7 @@ export default {
         left: 10px;
     }
 
-    .loading-text {
+    .status-text {
         font-size: 24px;
         margin: 20px 0px;
     }
@@ -1226,9 +1272,16 @@ export default {
     }
 
     .left-nav-btn.nav-bottom {
-        margin-top: auto;
-        margin-bottom: calc(45px + 10px);
         color: var(--col-lighter-grey);
+        margin-top: auto;
+    }
+
+    .left-nav-btn.nav-bottom ~ .left-nav-btn.nav-bottom {
+        margin-top: 0px;
+    }
+
+    .left-nav-btn.nav-bottom:last-child {
+        margin-bottom: calc(45px + 10px);
     }
 
     .left-nav-btn.nav-bottom.selected {
@@ -1349,7 +1402,7 @@ export default {
     .settings .title {
         font-size: 32px;
         text-align: left;
-        padding: 10px 0px;
+        padding: 10px 0px 20px 0px;
     }
 
     .settings-list-item {

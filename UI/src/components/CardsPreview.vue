@@ -1,6 +1,6 @@
 <template>
     <div class="cardContainer"
-        :class="{empty: count == 0, spell: type == 'Spell', unit: type == 'Unit', champ: supertype == 'Champion', landmark: type == 'Landmark'}"
+        :class="{empty: count == 0, spell: typeRef == 'Spell', unit: typeRef == 'Unit', champ: typeRef == 'Champion', landmark: typeRef == 'Landmark'}"
         :style="{background: getCardPreviewBackgroundStyle()}">
         <div class="cardContent cardCost">{{cost}}</div>
         <div class="cardContent cardName">{{name}}</div>
@@ -31,8 +31,11 @@ export default {
         count: Number,
         cost: Number,
         type: String,
+        typeRef: String,
+
         supertype: String,
         set: String,
+
         locale: {
             type: String,
             default: 'en_us'
@@ -127,6 +130,8 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 34px;
+    box-sizing: border-box;
 }
 
 .cardCost {

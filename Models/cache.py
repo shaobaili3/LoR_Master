@@ -2,13 +2,15 @@ import json
 import os
 import constants
 
+
 class Cache():
-    
+
     def __init__(self) -> None:
         self.matchDetails = {}
         self.riotIds = {}
         self.playerNames = {}
         self.matches = {}
+        self.loadJson()
 
     def loadJson(self):
         try:
@@ -22,7 +24,6 @@ class Cache():
                 self.matches = json.load(fp)
         except Exception as e:
             print('loadJson error', e)
-            return
 
     def save(self):
         try:
@@ -36,4 +37,3 @@ class Cache():
                 json.dump(self.matches, fp, ensure_ascii=False, indent=2)
         except Exception as e:
             print('save cache error: ', e)
-            return

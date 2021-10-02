@@ -170,7 +170,7 @@ class Local:
         return self.trackJson
 
     def updateTagByName(self, name):
-        nameListPath = constants.getCacheFilePath(self.setting.riotServer.lower() +'.json')
+        nameListPath = constants.getCacheFilePath(self.setting.riotServer.lower() + '.json')
         if not os.path.isfile(nameListPath):
             nameListPath = 'Resource/' + self.setting.riotServer.lower() + '.json'
         try:

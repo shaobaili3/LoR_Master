@@ -5,11 +5,11 @@
                 vs <span class="name">{{opponentName}}</span>
             </p>
             <div class="opponent-info" v-if="opponentRank"><i class="fas fa-trophy"></i> {{opponentRank}}</div>
-            <div class="history-info">{{time}}</div>
-            <div class="history-info">{{rounds}} rounds</div>
+            <div class="history-info">{{timeString}}</div>
+            <div class="history-info">{{rounds}} {{$t('str.rounds')}}</div>
             <div class="match-info-badge" v-for="(badge, index) in filteredBadges" :key="index" >
                 <span v-if="badge=='recent' || badge=='frequent'" class="match-info-badge-icon fa" :class="{'fa-clock': badge=='recent', 'fa-angle-double-up': badge=='frequent'}"></span>
-                {{badge}}</div>
+                {{$t('matches.badges.'+badge.replace(/\s+/g, ''))}}</div>
         </div>
         <div class="row decklist">
             <deck-preview @click="showDeck(deck)" :deck="deck" :won="won"></deck-preview>
@@ -53,6 +53,39 @@ export default {
         badges: Array,
     },
     computed: {
+        timeString() {
+            
+            var date = new Date(this.time)
+            var time
+            
+            var milliElapsed = Date.now() - date
+            var secondsElapsed = milliElapsed / 1000
+            var minElapse = secondsElapsed / 60
+            var hoursElapse = minElapse / 60
+            var daysElapsed = hoursElapse / 24
+
+            if (secondsElapsed < 60) {
+                time = this.$t('str.times.sec', {t: Math.floor(secondsElapsed)})
+            } else if (minElapse < 60) {
+                time = this.$t('str.times.min', {t: Math.floor(minElapse)})
+            } else if (hoursElapse < 24) {
+                if (Math.floor(hoursElapse) == 1) {
+                    time = this.$t('str.times.hour', {t: Math.floor(hoursElapse)})
+                } else {
+                    time = this.$t('str.times.hours', {t: Math.floor(hoursElapse)})
+                }
+            } else if (daysElapsed < 7) {
+                if ( Math.floor(daysElapsed) == 1) {
+                    time = this.$t('str.times.day', {t: Math.floor(daysElapsed)})
+                } else {
+                    time = this.$t('str.times.days', {t: Math.floor(daysElapsed)})
+                }
+            } else {
+                time = date.toLocaleDateString()
+            }
+
+            return time
+        },
         opponentLink() {
             return "/profile/" + this.opponentName
         },

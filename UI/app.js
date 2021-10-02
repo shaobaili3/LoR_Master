@@ -14,7 +14,7 @@ const defaultRatio = 2.3 // Repeated in preload.js
 const defaultPort = '26531'
 
 const spawnService = true
-const spawnPython = false
+const spawnPython = true
 
 let currentVersion = ""
 var startHidden = false
@@ -103,12 +103,14 @@ const appReady = () => {
       console.log(`port: ${port} was occupied, try port: ${_port}`)
     }
 
-    port = _port
-
-    if (mainWindow) mainWindow.webContents.send('return-port', port)
-    if (deckWindow) deckWindow.webContents.send('return-port', port)
-
     if (app.isPackaged || spawnService) {
+
+      // Only if spawning service will the port be changed
+      port = _port
+
+      if (mainWindow) mainWindow.webContents.send('return-port', port)
+      if (deckWindow) deckWindow.webContents.send('return-port', port)
+
       startLMTService(port)
     }
   })
@@ -278,7 +280,9 @@ Menu.setApplicationMenu(menu)
 
 function startLMTService(port) {
 
-  console.log("Starting LMT Service")
+  console.log("--------------------")
+  console.log("Starting LMT Service", "Port equals to: ", port)
+  console.log("--------------------")
 
   const { spawn } = require('child_process')
 
@@ -303,15 +307,15 @@ function startLMTService(port) {
     console.log("data: ", data.toString('utf8'))
   })
   proc.stderr.on('data', (data) => {
-    console.log(`stderr: ${data}`) // when error
+    // console.log(`stderr: ${data}`) // when error
   })
 
   proc.on('close', (code) => {
-    console.log(`child process close all stdio with code ${code}`)
-    startLMTService()
+    console.log(`Child process close all stdio with code ${code}`)
+    startLMTService(port)
   })
   proc.on('exit', (code) => {
-    console.log(`child process exited with code ${code}`)
+    console.log(`Child process exited with code ${code}`)
   })
 
 }
@@ -323,6 +327,8 @@ function startLMTService(port) {
 let deckWindow = null
 let infoWindow = null
 let mainWindow = null
+
+let allWindows = []
 
 function newMainWindow() {
 
@@ -395,6 +401,8 @@ function newMainWindow() {
   })
 
   if (developmentMode) mainWindow.webContents.openDevTools()
+
+  allWindows.push(mainWindow)
 }
 
 function newDeckWindow() {
@@ -482,7 +490,7 @@ function newDeckWindow() {
 
   if (developmentMode) deckWindow.webContents.openDevTools()
 
-  
+  allWindows.push(deckWindow)
 }
 
 function newInfoWindow() {
@@ -527,6 +535,8 @@ function newInfoWindow() {
   })
 
   if (developmentMode) infoWindow.webContents.openDevTools()
+
+  allWindows.push(infoWindow)
 }
 
 function showDeckWindow() {
@@ -628,7 +638,77 @@ function disableAutoLaunch() {
 }
 
 
+// -----------------------------------------------
+// --- Store ---
+// -----------------------------------------------
 
+const Store = require('electron-store');
+const store = new Store();
+
+console.log("Storing data at", app.getPath('userData'))
+
+if (store.get('ui-locale') == null) {
+  // First time language setting
+  var systemLang = getEnvLocale()
+  console.log("No Language Set | System Locale", systemLang)
+
+  var newLocale = ""
+
+  if (!systemLang) {
+    newLocale = 'English'
+  } else if (systemLang.includes('zh_CN')) {
+    // 简体中文
+    newLocale = '简体中文'
+  } else if (systemLang.includes('zh')) {
+    // 繁体中文
+    newLocale = '繁體中文'
+  }
+
+  if (newLocale != "") {
+    store.set('ui-locale', newLocale)
+
+    allWindows.forEach(bw => {
+      if (bw && bw.webContents.id != event.sender.id) {
+        console.log("-- sending to", bw.id)
+        bw.webContents.send('to-change-locale', newLocale)
+      }
+    });
+  }
+  
+
+} else {
+  console.log('Language set to', store.get('ui-locale'), " | System Locale", getEnvLocale())
+}
+
+ipcMain.on('request-store', (event, key) => {
+  event.sender.send('reply-store', key, store.get(key));
+});
+
+ipcMain.on('save-store', (event, key, val) => {
+  store.set(key, val)
+});
+
+// -----------------------------------------------
+// --- Locale ---
+// -----------------------------------------------
+
+ipcMain.on('changed-locale', (event, newLocale) => {
+  console.log("Changing Locale to", newLocale, ", from", event.sender.id)
+  store.set('ui-locale', newLocale)
+
+  allWindows.forEach(bw => {
+    if (bw && bw.webContents.id != event.sender.id) {
+      console.log("-- sending to", bw.id)
+      bw.webContents.send('to-change-locale', newLocale)
+    }
+  });
+})
+
+function getEnvLocale(env) {
+  env = env || process.env;
+
+  return env.LC_ALL || env.LC_MESSAGES || env.LANG || env.LANGUAGE;
+}
 
 // --- Use these to check for old running python app ---
 

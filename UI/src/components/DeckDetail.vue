@@ -10,6 +10,7 @@
         :type="card.type"
         :supertype="card.supertype"
         :set="card.set"
+        :typeRef="card.typeRef"
         :locale="locale"
         >{{card.name}}</cards-preview>
     </div>
@@ -28,15 +29,19 @@
 import DeckEncoder from '../modules/runeterra/DeckEncoder'
 // import sets from  '../assets/data/allsets-en_us.json'
 import CardsPreview from './CardsPreview.vue'
-import set1 from '../../../Resource/set1-en_us.json'
-import set2 from '../../../Resource/set2-en_us.json'
-import set3 from '../../../Resource/set3-en_us.json'
-import set4 from '../../../Resource/set4-en_us.json'
-import set5 from '../../../Resource/set5-en_us.json'
+// import set1 from '../../../Resource/set1-en_us.json'
+// import set2 from '../../../Resource/set2-en_us.json'
+// import set3 from '../../../Resource/set3-en_us.json'
+// import set4 from '../../../Resource/set4-en_us.json'
+// import set5 from '../../../Resource/set5-en_us.json'
 
+const locales = ['de_de', 'en_us', 'es_es', 'es_mx', 'fr_fr', 'it_it', 'ja_jp', 'ko_kr', 'pl_pl', 'pt_br', 'th_th', 'tr_tr', 'ru_ru', 'zh_tw']
 
-const sets = set1.concat(set2, set3, set4, set5)
-// console.log(sets)
+locales.forEach(lo => {
+    window[lo] = () => import('../../../Resource/'+lo+'.json')
+});
+
+// const en_us = () => import('../../../Resource/en_us.json')
 
 export default {
     components: {
@@ -44,10 +49,12 @@ export default {
     },
     mounted() {
         // this.getCardsInfo()
+        if ( this.sets == null ) this.loadSetsJson( this.locale )
     },
     data() {
         return {
             copied: false,
+            sets: null,
         }
     }, 
     props: {
@@ -70,12 +77,20 @@ export default {
             default: 'en_us'
         }
     },
+    watch: {
+        locale(newLoacle, oldLocale) {
+            this.loadSetsJson(newLoacle)
+        }
+    },
     computed: {
         deckDetailLink() {
             return "https://lor.mobalytics.gg/decks/code/" + this.baseDeck
         },
         cards() {
             var cards = []
+
+            if( this.sets == null ) return cards
+            
             var deck = null
             if (this.deck) try { deck = DeckEncoder.decode(this.deck) } catch(err) {
                 console.log(err)
@@ -94,7 +109,7 @@ export default {
                     // Loop through base deck
                     var cardCode = baseDeck[j].code
                     // Get full information from the sets collection
-                    var card = sets.find(card => card.cardCode == cardCode)
+                    var card = this.sets.find(card => card.cardCode == cardCode)
                     var cardCount = baseDeck[j].count
                     
                     if (deck) {
@@ -112,12 +127,25 @@ export default {
                     }
 
                     if (card) {
+
+                        var typeRef = ""
+                        if (card.supertype != "") {
+                            typeRef = "Champion"
+                        } else if (card.spellSpeedRef != "") {
+                            typeRef = "Spell"
+                        } else if (card.keywordRefs && card.keywordRefs.includes("LandmarkVisualOnly")) {
+                            typeRef = "Landmark"
+                        } else {
+                            typeRef = "Unit"
+                        }
+
                         cards.push({
                             code: cardCode, 
                             name: card.name,
                             count: cardCount, 
                             cost: card.cost, 
-                            type: card.type, 
+                            type: card.type,
+                            typeRef: typeRef,
                             supertype: card.supertype,
                             set: card.set
                         })
@@ -137,10 +165,24 @@ export default {
             })
         },
         copyText() {
-            return this.copied ? 'Copied!' : 'Copy'
+            return this.copied ? this.$t('str.copied') : this.$t('str.copy')
         }
     },
     methods: {
+        async loadSetsJson(locale) {
+            console.log("Computing Sets", locale)
+            var loadModule
+
+            if (!locales.includes(locale)) {
+                console.log("Invalid locale, default to en_us")
+                loadModule = await window['en_us']()
+            } else {
+                loadModule = await window[locale]()
+            }
+
+            this.sets = [].concat(...loadModule.default)
+            // console.log(this.sets)
+        },
         copyDeckcode() {
             const copyToClipboard = str => {
                 const el = document.createElement('textarea');

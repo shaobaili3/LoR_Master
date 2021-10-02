@@ -22,7 +22,7 @@
                 </div>
             </div>
             <div class="history-summary">
-                <div class="winrate" v-if="winrate">{{winrate}} <span class="subtext">WIN</span></div>
+                <div class="winrate" v-if="winrate">{{winrate}} <span class="subtext">{{$t('dash.winRate')}}</span></div>
                 <div class="winloss" v-if="winloss">{{winloss}}</div>
             </div>
         </div>
@@ -118,7 +118,7 @@ export default {
     computed: {
         
         playerRegionFC() {
-            return firstCap(this.playerRegion)
+            return this.$t('str.regions.'+this.playerRegion)
         },
         
         uniqueDeckCodes() {
@@ -153,7 +153,7 @@ export default {
         winloss() {
             if (!this.filteredMatches) return null
             var loss = this.totalMatches - this.totalWins
-            return `${this.totalWins}W ${loss}L`
+            return this.$t('dash.winloss', {win: this.totalWins, loss: loss})
         },
         winrate() {
             if (!this.filteredMatches) return null
