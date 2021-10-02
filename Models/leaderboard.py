@@ -38,7 +38,7 @@ class Leaderboard():
             ): {'rank': board['rank'], 'lp': board['lp']} for board in leaderboard}
 
     def getLeaderboard(self, server):
-        if self.leaderboards[server] is None:
+        if self.leaderboards.get(server) is None:
             self.updateLeaderboard(server)
         return self.leaderboards[server]
 
