@@ -289,17 +289,19 @@ function startLMTService(port) {
   var proc
 
   if (spawnPython && !app.isPackaged) {
-    proc = spawn('python', ['./LMTService.py', `--port=${port}`], {cwd: '../'})
+    // proc = spawn('python', ['./LMTService.py', `--port=${port}`], {cwd: '../'})
+    proc = spawn('python', ['./LMTService.py'], {cwd: '../'})
   } else {
     var backend
     if (app.isPackaged) {
       var execPath = path.dirname(app.getPath('exe'))
       backend = path.join(execPath, 'backend', 'LMTService', 'LMTService.exe')
-      proc = spawn(backend, [`--port=${port}`], {cwd: path.join(execPath, 'backend', 'LMTService')})
-      
+      // proc = spawn(backend, [`--port=${port}`], {cwd: path.join(execPath, 'backend', 'LMTService')})
+      proc = spawn(backend, {cwd: path.join(execPath, 'backend', 'LMTService')})
     } else {
       backend = path.join(__dirname, 'backend', 'LMTService', 'LMTService.exe')
-      proc = spawn(backend, [`--port=${port}`], {cwd: path.join(__dirname, 'backend', 'LMTService')})
+      // proc = spawn(backend, [`--port=${port}`], {cwd: path.join(__dirname, 'backend', 'LMTService')})
+      proc = spawn(backend, {cwd: path.join(execPath, 'backend', 'LMTService')})
     }
   }
   
