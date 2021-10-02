@@ -94,6 +94,8 @@ const requestDataWaitTime = 100; // ms
 const requestServerWaitTime = 3000; //ms
 const requestStatusWaitTime = 1000; //ms
 
+var requestStatusCount = 0, requestTrackCount = 0;
+
 // const portNum = "26531"
 // const API_BASE = `http://127.0.0.1:${portNum}`
 
@@ -327,9 +329,15 @@ export default {
         // },
         requestStatusInfo() {
             // Keeps requesting status
+            requestStatusCount += 1;
+            console.log("Requesting Status Info", requestStatusCount)
+
             lastStatusRequestTime = Date.now()
             axios.get(`${this.apiBase}/status`)
                 .then((response) => {
+
+                    console.log("Got Status Info")
+
                     var data = response.data
                     var elapsedTime = Date.now() - lastStatusRequestTime // ms
                     this.server = data.server
@@ -352,9 +360,9 @@ export default {
                 })
                 .catch((e) => {
                     if (axios.isCancel(e)) {
-                        console.log("Request cancelled");
+                        console.log("Status Info Request cancelled");
                     } else { 
-                        console.log('error', e) 
+                        console.log('Status Info Error', e) 
                         setTimeout(this.requestStatusInfo, 100)
                     }
                 })
@@ -384,9 +392,14 @@ export default {
         },
         requestTrackInfo() {
 
+            requestTrackCount += 1;
+            console.log("Requesting Track Info", requestTrackCount)
+
             lastTrackTime = Date.now()
             axios.get(`${this.apiBase}/track`)
                 .then((response) => {
+                    
+                    console.log("Got Track Info")
 
                     this.processTrackInfo(response.data)
                     
@@ -402,7 +415,7 @@ export default {
                         // console.log("Request cancelled");
                     } else 
                     { 
-                        console.log('error', e) 
+                        console.log('Requesting Track Error', e) 
 
                         var elapsedTime = Date.now() - lastTrackTime // ms
                         if (requestDataWaitTime > elapsedTime) {
