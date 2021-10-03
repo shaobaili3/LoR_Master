@@ -8,6 +8,8 @@ const path = require('path')
 const remote = require('@electron/remote/main')
 remote.initialize()
 
+require('dotenv').config();
+
 const developmentMode = true && !(process.env.IS_PUBLISH)
 
 const closeWithoutTracker = false
