@@ -23,7 +23,12 @@ import os
 import constants
 import argparse
 
+
 isDebug = True
+
+if os.getenv('IS_PUBLISH') == 'true':
+    isDebug = False
+
 
 argParser = argparse.ArgumentParser()
 argParser.add_argument('--port', action='store', type=int, default=26531)

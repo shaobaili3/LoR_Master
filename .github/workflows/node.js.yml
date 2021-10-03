@@ -46,11 +46,15 @@ jobs:
       working-directory: ./UI
 
     - run: npm run build --if-present
-      working-directory: ./UI
+      working-directory: ./UI 
     
-    - run: cmd.exe /c makefile.bat
+    - name: "Set up LMTServer"
+      run: cmd.exe /c makefile.bat
+      env:
+        IS_PUBLISH: true
 
     - run: npm run build-pub
       working-directory: ./UI
       env:
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        IS_PUBLISH: true
