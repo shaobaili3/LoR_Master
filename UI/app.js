@@ -59,6 +59,12 @@ app.on('ready', () => {
   globalShortcut.register('Alt+CommandOrControl+W', () => {
     toggleMinDeckWindow()
   })
+  
+  if (developmentMode) {
+    globalShortcut.register('Alt+CommandOrControl+T', () => {
+      requestTestHistory()
+    })
+  }
 
   if (app.isPackaged) {
     currentVersion = app.getVersion()
@@ -152,6 +158,14 @@ const appReady = () => {
   // }
 }
 
+
+function requestTestHistory() {
+  if (deckWindow) {
+    deckWindow.webContents.send('request-test-history')
+  }
+}
+
+
 // -----------------------------------------------
 // --- Auto Updater --- 
 // -----------------------------------------------
@@ -235,7 +249,6 @@ function initTray() {
       label: 'Open',
       click: () => {
         newMainWindow()
-        // newDeckWindow()
       }
     },
     {
@@ -253,7 +266,6 @@ function initTray() {
       // tray.popUpContextMenu()
       // console.log("Tray Clicked")
       newMainWindow()
-      // newDeckWindow()
   })
   
   tray.setContextMenu(contextMenu)
@@ -428,7 +440,7 @@ function newDeckWindow() {
   // --- deckWindow ---
   let windowWidth = 240 // (335)
   let windowMaxWidth = 290
-  let windowMinWidth = 240
+  let windowMinWidth = 180
   // let window.windowWidth = windowWidth
   let windowHeight = height * 0.7
   let windowPadding = 20

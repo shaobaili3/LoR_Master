@@ -75,10 +75,10 @@ export default {
         cursor: pointer;
     }
 
-    @media screen and (max-width: 275px) {
-        .icon {
-            width: 15px;
-            height: 15px;
+    @media screen and (max-width: 190px) {
+        .row.deck {
+            gap: 2px;
+            padding: 4px 2px;
         }
     }
 

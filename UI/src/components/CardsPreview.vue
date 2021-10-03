@@ -131,7 +131,9 @@ export default {
     justify-content: center;
     align-items: center;
     height: 34px;
+    max-height: 15.5vw;
     box-sizing: border-box;
+    font-size: clamp(12px, 8vw, 15px);
 }
 
 .cardCost {

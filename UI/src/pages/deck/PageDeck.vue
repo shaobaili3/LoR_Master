@@ -241,6 +241,10 @@ export default {
                 this.$i18n.locale = newLocale
                 console.log("Changing locale to", newLocale)
             })
+
+            window.ipcRenderer.on('request-test-history', (event) => {
+                this.requestTestOppoHistory()
+            })
         },
 
         hideWindow() {
@@ -282,8 +286,22 @@ export default {
             // http://192.168.20.4:${portNum}/history/asia/J01/J01
 
             console.log("Request Opponent History for " + this.oppoName + "#" + this.oppoTag)
-            
+
             axios.get(`${this.apiBase}/history/${this.server}/${this.oppoName}/${this.oppoTag}`)
+                .then((response) => {
+                    console.log("Opponent Data", response.data)
+                    this.processOpponentHistory(response.data)
+                })
+                .catch((e) => {
+                    if (axios.isCancel(e)) {
+                        console.log("Request cancelled");
+                    } else 
+                    { console.log('error', e) }
+                })
+        },
+        requestTestOppoHistory() {
+            const stormHistoryAPI = `${this.apiBase}/history/americas/storm/5961`
+            axios.get(stormHistoryAPI)
                 .then((response) => {
                     console.log("Opponent Data", response.data)
                     this.processOpponentHistory(response.data)

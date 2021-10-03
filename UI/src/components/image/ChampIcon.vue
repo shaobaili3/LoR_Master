@@ -83,4 +83,11 @@ export default {
         }
     }
 
+    @media screen and (max-width: 190px) {
+        .icon {
+            width: 12px;
+            height: 12px;
+        }
+    }
+
 </style>

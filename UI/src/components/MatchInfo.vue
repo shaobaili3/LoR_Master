@@ -361,4 +361,39 @@ export default {
 
     }
 
+    @media screen and (max-width: 190px) {
+
+        .match {
+            font-size: 0.78em;
+            padding: 5px 6px;
+        }
+
+        .match-info-title {
+            padding:0px 2px 2px 02px;
+            margin-left: 0px;
+        }
+
+        .match-history-dots {
+            gap: 4px;
+            margin-left: 0px;
+            padding-left: 2px;
+        }
+
+        .row.match-history-dots .dot {
+            height: 7px;
+            width: 7px;
+        }
+
+        .history-info {
+            padding-right: 2px;
+            padding-left: 2px;
+            padding-top: 0px;
+            padding-bottom: 2px;
+        }
+
+        .row {
+            align-items: center;
+        }
+    }
+
 </style>

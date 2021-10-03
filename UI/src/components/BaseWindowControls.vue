@@ -191,6 +191,7 @@ export default {
         -webkit-app-region: no-drag;
 
         width: 40px;
+        min-width: 30px;
         /* height: 60px; */
         align-items: center;
         justify-content: center;
