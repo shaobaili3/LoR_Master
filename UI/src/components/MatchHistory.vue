@@ -12,11 +12,11 @@
                 {{$t('matches.badges.'+badge.replace(/\s+/g, ''))}}</div>
         </div>
         <div class="row decklist">
-            <deck-preview @click="showDeck(deck)" :deck="deck" :won="won"></deck-preview>
+            <deck-preview @click="showDeck(deck)" :deck="deck" :won="won" :fixedWidth="true"></deck-preview>
             <!-- <div class="text-vs">VS</div> -->
             <!-- <deck-preview @click="showDeck" :deck="deck"></deck-preview> -->
             <span class="vs-text">VS</span>
-            <deck-preview @click="showDeck(opponentDeck)" :deck="opponentDeck" :won="won"></deck-preview>
+            <deck-preview @click="showDeck(opponentDeck)" :deck="opponentDeck" :won="won" :fixedWidth="true"></deck-preview>
         </div>
     </div>
 
@@ -216,7 +216,7 @@ export default {
 
     .row.decklist {
         /* justify-content: space-between; */
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
     }
 
