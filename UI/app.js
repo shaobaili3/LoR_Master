@@ -8,10 +8,7 @@ const path = require('path')
 const remote = require('@electron/remote/main')
 remote.initialize()
 
-const development = true
-const forceDevelopment = false
-
-const developmentMode = (development && !app.isPackaged) || forceDevelopment
+const developmentMode = true && !(process.env.IS_PUBLISH)
 
 const closeWithoutTracker = false
 const headerHeight = 45 // Repeated in preload.js
@@ -19,8 +16,8 @@ const defaultRatio = 2.3 // Repeated in preload.js
 
 const defaultPort = '26531'
 
-const spawnService = true
-const spawnPython = true
+const spawnService = true || process.env.IS_PUBLISH
+const spawnPython = true && !(process.env.IS_PUBLISH)
 
 let currentVersion = ""
 var startHidden = false
@@ -115,7 +112,7 @@ const appReady = () => {
       console.log(`port: ${port} was occupied, try port: ${_port}`)
     }
 
-    if (app.isPackaged || spawnService) {
+    if (spawnService) {
 
       // Only if spawning service will the port be changed
       port = _port
@@ -306,7 +303,7 @@ function startLMTService(port) {
 
   var proc
 
-  if (spawnPython && !app.isPackaged) {
+  if (spawnPython) {
     proc = spawn('python', ['./LMTService.py', `--port=${port}`], {cwd: '../'})
   } else {
     var backend
