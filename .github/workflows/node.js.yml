@@ -42,7 +42,8 @@ jobs:
       with:
         path: ./UI
         node-version: ${{ matrix.node-version }}
-        cache: 'npm'  
+        cache: 'npm'
+        cache-dependency-path: UI/package.json  
     
     - run: npm ci
       working-directory: ./UI
