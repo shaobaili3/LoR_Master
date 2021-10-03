@@ -571,14 +571,14 @@ export default {
 
     .footer {
         display: flex;
-        height: 30px;
+        /* height: 30px; */
         position: fixed;
         bottom: 0px;
         width: 100%;
         text-align: center;
         align-content: center;
         justify-content: center;
-        padding: 10px;
+        padding: 5px 0 8px 0;;
         background: var(--col-background);
     }
 
