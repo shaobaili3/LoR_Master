@@ -52,3 +52,5 @@ jobs:
 
     - run: npm run build-pub
       working-directory: ./UI
+      env:
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
