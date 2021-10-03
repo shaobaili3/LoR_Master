@@ -14,9 +14,9 @@
 
 LoR Master Tracker is a open source deck tracker for League of Runeterra.
 
-## [Download](https://github.com/shaobaili3/LoR_Master/releases/download/v0.9.13/LoRMasterTracker-Setup-0.9.13.exe)
+## [Download](https://github.com/shaobaili3/LoR_Master/releases/download/untagged-266d361330d2b4ae0f96/LoRMasterTracker-Setup-0.9.14.exe)
 * Requirements: Windows 10 64bit
-* [Click here to download](https://github.com/shaobaili3/LoR_Master/releases/download/v0.9.13/LoRMasterTracker-Setup-0.9.13.exe)
+* [Click here to download](https://github.com/shaobaili3/LoR_Master/releases/download/untagged-266d361330d2b4ae0f96/LoRMasterTracker-Setup-0.9.14.exe)
 * [Changelogs](https://github.com/shaobaili3/lor_master/releases)
 
 ## Features
