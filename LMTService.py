@@ -26,8 +26,8 @@ import argparse
 
 isDebug = True
 
-if os.getenv('IS_PUBLISH') == 'true':
-    isDebug = False
+# if os.getenv('IS_PUBLISH') == 'true':
+#     isDebug = False
 
 
 argParser = argparse.ArgumentParser()
