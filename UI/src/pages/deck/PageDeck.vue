@@ -52,7 +52,7 @@
         </div>
 
         <div class="tab-content" v-if="isShowMy && !isLoading">
-            <deck-regions :deck="startingDeckCode"></deck-regions>
+            <deck-regions :deck="startingDeckCode" :fixedWidth="false"></deck-regions>
             <deck-detail :locale="locale" :deck="currentDeckCode" :baseDeck="startingDeckCode"></deck-detail>
         </div>
 
@@ -69,7 +69,7 @@
         
 
         <div class="tab-content" v-if="isShowCode">
-            <deck-regions :deck="deckCode"></deck-regions>
+            <deck-regions :deck="deckCode" :fixedWidth="false"></deck-regions>
             <deck-detail :locale="locale" :baseDeck="deckCode"></deck-detail>
         </div>
 

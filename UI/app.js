@@ -440,7 +440,7 @@ function newDeckWindow() {
   // --- deckWindow ---
   let windowWidth = 240 // (335)
   let windowMaxWidth = 290
-  let windowMinWidth = 180
+  let windowMinWidth = 170
   // let window.windowWidth = windowWidth
   let windowHeight = height * 0.7
   let windowPadding = 20

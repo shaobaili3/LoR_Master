@@ -1,7 +1,7 @@
 <template>
     <div class="row deck btn" :class="{won: won, loss: !won, cheveron: cheveron}">
-        <deck-regions :deck="deck"></deck-regions>
-        <deck-champs :deck="deck"></deck-champs>
+        <deck-regions :deck="deck" :fixedWidth="false"></deck-regions>
+        <deck-champs :deck="deck" :fixedWidth="!cheveron"></deck-champs>
         <div v-if="cheveron" class="icon cheveron fa fa-chevron-down"></div>
     </div>
 </template>
