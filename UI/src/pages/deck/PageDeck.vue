@@ -52,7 +52,7 @@
         </div>
 
         <div class="tab-content" v-if="isShowMy && !isLoading">
-            <deck-regions :deck="startingDeckCode"></deck-regions>
+            <deck-regions :deck="startingDeckCode" :fixedWidth="false"></deck-regions>
             <deck-detail :locale="locale" :deck="currentDeckCode" :baseDeck="startingDeckCode"></deck-detail>
         </div>
 
@@ -69,7 +69,7 @@
         
 
         <div class="tab-content" v-if="isShowCode">
-            <deck-regions :deck="deckCode"></deck-regions>
+            <deck-regions :deck="deckCode" :fixedWidth="false"></deck-regions>
             <deck-detail :locale="locale" :baseDeck="deckCode"></deck-detail>
         </div>
 
@@ -241,6 +241,10 @@ export default {
                 this.$i18n.locale = newLocale
                 console.log("Changing locale to", newLocale)
             })
+
+            window.ipcRenderer.on('request-test-history', (event) => {
+                this.requestTestOppoHistory()
+            })
         },
 
         hideWindow() {
@@ -282,8 +286,22 @@ export default {
             // http://192.168.20.4:${portNum}/history/asia/J01/J01
 
             console.log("Request Opponent History for " + this.oppoName + "#" + this.oppoTag)
-            
+
             axios.get(`${this.apiBase}/history/${this.server}/${this.oppoName}/${this.oppoTag}`)
+                .then((response) => {
+                    console.log("Opponent Data", response.data)
+                    this.processOpponentHistory(response.data)
+                })
+                .catch((e) => {
+                    if (axios.isCancel(e)) {
+                        console.log("Request cancelled");
+                    } else 
+                    { console.log('error', e) }
+                })
+        },
+        requestTestOppoHistory() {
+            const stormHistoryAPI = `${this.apiBase}/history/americas/storm/5961`
+            axios.get(stormHistoryAPI)
                 .then((response) => {
                     console.log("Opponent Data", response.data)
                     this.processOpponentHistory(response.data)
@@ -553,14 +571,14 @@ export default {
 
     .footer {
         display: flex;
-        height: 30px;
+        /* height: 30px; */
         position: fixed;
         bottom: 0px;
         width: 100%;
         text-align: center;
         align-content: center;
         justify-content: center;
-        padding: 10px;
+        padding: 5px 0 8px 0;;
         background: var(--col-background);
     }
 

@@ -8,10 +8,10 @@ const path = require('path')
 const remote = require('@electron/remote/main')
 remote.initialize()
 
-const development = true
-const forceDevelopment = false
+const isPackaged = app.isPackaged
+const isDev = process.argv.includes('--dev')
 
-const developmentMode = (development && !app.isPackaged) || forceDevelopment
+const developmentMode = true && !(isPackaged) || isDev
 
 const closeWithoutTracker = false
 const headerHeight = 45 // Repeated in preload.js
@@ -19,8 +19,8 @@ const defaultRatio = 2.3 // Repeated in preload.js
 
 const defaultPort = '26531'
 
-const spawnService = true
-const spawnPython = true
+const spawnService = true || isPackaged
+const spawnPython = true && !(isPackaged)
 
 let currentVersion = ""
 var startHidden = false
@@ -49,6 +49,8 @@ if (!gotTheLock) {
   })
 }
 
+detectPortAndStartService()
+
 app.on('ready', () => {
   // --- registers global shortcuts ---
   globalShortcut.register('Alt+CommandOrControl+E', () => {
@@ -59,6 +61,12 @@ app.on('ready', () => {
   globalShortcut.register('Alt+CommandOrControl+W', () => {
     toggleMinDeckWindow()
   })
+  
+  if (developmentMode) {
+    globalShortcut.register('Alt+CommandOrControl+T', () => {
+      requestTestHistory()
+    })
+  }
 
   if (app.isPackaged) {
     currentVersion = app.getVersion()
@@ -95,34 +103,7 @@ function showAlert(title, message) {
 }
 
 const appReady = () => {
-
-  const detect = require('detect-port')
-  detect(port, (err, _port) => {
-    if (err) {
-      console.log(err)
-      return
-    }
   
-    if (port == _port) {
-      console.log(`port: ${port} was not occupied`)
-    } else {
-      console.log(`port: ${port} was occupied, try port: ${_port}`)
-    }
-
-    if (app.isPackaged || spawnService) {
-
-      // Only if spawning service will the port be changed
-      port = _port
-
-      if (mainWindow) mainWindow.webContents.send('return-port', port)
-      if (deckWindow) deckWindow.webContents.send('return-port', port)
-
-      startLMTService(port)
-    }
-  })
-
-  if (closeWithoutTracker && !isCheckingTracker) checkTracker()
-
   console.log("Process Args:")
   console.log(process.argv)
 
@@ -151,6 +132,14 @@ const appReady = () => {
     // enableAutoLaunch()
   // }
 }
+
+
+function requestTestHistory() {
+  if (deckWindow) {
+    deckWindow.webContents.send('request-test-history')
+  }
+}
+
 
 // -----------------------------------------------
 // --- Auto Updater --- 
@@ -235,7 +224,6 @@ function initTray() {
       label: 'Open',
       click: () => {
         newMainWindow()
-        // newDeckWindow()
       }
     },
     {
@@ -253,7 +241,6 @@ function initTray() {
       // tray.popUpContextMenu()
       // console.log("Tray Clicked")
       newMainWindow()
-      // newDeckWindow()
   })
   
   tray.setContextMenu(contextMenu)
@@ -284,6 +271,34 @@ Menu.setApplicationMenu(menu)
 // --- Backend Service ---
 // -----------------------------------------------
 
+function detectPortAndStartService() {
+  
+  const detect = require('detect-port')
+  detect(port, (err, _port) => {
+    if (err) {
+      console.log(err)
+      return
+    }
+  
+    if (port == _port) {
+      console.log(`port: ${port} was not occupied`)
+    } else {
+      console.log(`port: ${port} was occupied, try port: ${_port}`)
+    }
+
+    if (spawnService) {
+
+      // Only if spawning service will the port be changed
+      port = _port
+
+      if (mainWindow) mainWindow.webContents.send('return-port', port)
+      if (deckWindow) deckWindow.webContents.send('return-port', port)
+
+      startLMTService(port)
+    }
+  })
+}
+
 function startLMTService(port) {
 
   console.log("--------------------")
@@ -294,19 +309,21 @@ function startLMTService(port) {
 
   var proc
 
-  if (spawnPython && !app.isPackaged) {
-    proc = spawn('python', ['./LMTService.py', `--port=${port}`], {cwd: '../'})
+  var devarg = developmentMode ? 'dev' : 'prod'
+
+  var args = [`--port=${port}`, `--status=${devarg}`]
+
+  if (spawnPython) {
+    proc = spawn('python', ['./LMTService.py', ...args], {cwd: '../'})
   } else {
-    var backend
+    var backend, execPath
     if (app.isPackaged) {
-      var execPath = path.dirname(app.getPath('exe'))
-      backend = path.join(execPath, 'backend', 'LMTService', 'LMTService.exe')
-      proc = spawn(backend, [`--port=${port}`], {cwd: path.join(execPath, 'backend', 'LMTService')})
-      
+      execPath = path.dirname(app.getPath('exe'))
     } else {
-      backend = path.join(__dirname, 'backend', 'LMTService', 'LMTService.exe')
-      proc = spawn(backend, [`--port=${port}`], {cwd: path.join(__dirname, 'backend', 'LMTService')})
+      execPath = __dirname
     }
+    backend = path.join(execPath, 'backend', 'LMTService', 'LMTService.exe')
+    proc = spawn(backend, args, {cwd: path.join(execPath, 'backend', 'LMTService')})
   }
   
   proc.stdout.on('data', function (data) {
@@ -428,7 +445,7 @@ function newDeckWindow() {
   // --- deckWindow ---
   let windowWidth = 240 // (335)
   let windowMaxWidth = 290
-  let windowMinWidth = 240
+  let windowMinWidth = 170
   // let window.windowWidth = windowWidth
   let windowHeight = height * 0.7
   let windowPadding = 20

@@ -1,8 +1,10 @@
 <template>
     <div class="row deck btn" :class="{won: won, loss: !won, cheveron: cheveron}">
-        <deck-regions :deck="deck"></deck-regions>
-        <deck-champs :deck="deck"></deck-champs>
-        <div v-if="cheveron" class="icon cheveron fa fa-chevron-down"></div>
+        <div class="row" :class="{fixedWidth: fixedWidth}">
+            <deck-regions :deck="deck" :fixedWidth="false"></deck-regions>
+            <deck-champs :deck="deck" :fixedWidth="!cheveron"></deck-champs>
+            <div v-if="cheveron" class="icon cheveron fa fa-chevron-down"></div>
+        </div>
     </div>
 </template>
 
@@ -30,6 +32,10 @@ export default {
             type: Boolean,
             default: false,
         },
+        fixedWidth: { // 180px vs 100%
+            type: Boolean,
+            default: false,
+        }
     },
     computed: {
     },
@@ -55,6 +61,17 @@ export default {
         gap: 5px;
     }
 
+    .row.deck .row {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .row.deck .row.fixedWidth {
+        width: 160px;
+    }
+
     .row.deck.cheveron {
         justify-content: flex-start;
     }
@@ -75,10 +92,10 @@ export default {
         cursor: pointer;
     }
 
-    @media screen and (max-width: 275px) {
-        .icon {
-            width: 15px;
-            height: 15px;
+    @media screen and (max-width: 190px) {
+        .row.deck .row{
+            gap: 2px;
+            /* padding: 4px 2px; */
         }
     }
 

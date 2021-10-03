@@ -17,18 +17,23 @@ from flask import Flask, jsonify
 from sentry_sdk.integrations.flask import FlaskIntegration
 import sentry_sdk
 import io
-
 import sys
 import os
 import constants
 import argparse
 
-isDebug = True
 
 argParser = argparse.ArgumentParser()
 argParser.add_argument('--port', action='store', type=int, default=26531)
+argParser.add_argument('--status', action='store', type=str, default='dev')
 args = argParser.parse_args()
 print('args: ', args)
+
+isDebug = False
+
+if args.status == 'dev':
+    isDebug = True
+
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf8')
 print('utf8 string test: ', '卡尼能布恩', '째남모')
