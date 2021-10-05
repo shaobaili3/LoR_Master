@@ -124,6 +124,12 @@ class Riot:
             print(header)
             print(detailsRequest.status_code)
             print(detail)
+            #  If match is not exist in Riot server, still save cache as None
+            # "message": "Data not found - match file not found",
+            # "status_code": 404
+            if detailsRequest.status_code == 404:
+                self.cache.matchDetails[matchId] = None
+                self.cache.save()
             if 'Retry-After' in header:
                 print('getDetail server busy APIKEY: ',
                       Models.network.API_KEY, header['Retry-After'], 'seconds')

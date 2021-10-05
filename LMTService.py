@@ -1,5 +1,7 @@
 #!/usr/local/bin/python
 # -*- coding: utf-8 -*-
+from sentry_sdk.integrations.flask import FlaskIntegration
+import sentry_sdk
 import threading
 import time
 from Models.leaderboard import Leaderboard
@@ -14,8 +16,6 @@ from Models import master
 from Models.process import readLog
 import json
 from flask import Flask, jsonify
-from sentry_sdk.integrations.flask import FlaskIntegration
-import sentry_sdk
 import io
 import sys
 import os
