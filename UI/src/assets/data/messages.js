@@ -54,7 +54,9 @@ module.exports = {
         Ranked: 'Ranked',
         Bo3Challenge: 'Bo3 Challenge',
         StandardGauntlet: 'Gauntlet',
-        Normal: 'Normal'
+        Normal: 'Normal',
+        LastCallQualifierGauntlet: 'Final Gauntlet',
+        SeasonalTournamentLobby: 'Seasonal'
       }
     },
     dash: {
@@ -149,7 +151,9 @@ module.exports = {
         Ranked: '排位',
         Bo3Challenge: '三局兩勝',
         StandardGauntlet: '武鬥場',
-        Normal: '普通'
+        Normal: '普通',
+        LastCallQualifierGauntlet: '終極武鬥場',
+        SeasonalTournamentLobby: '季賽'
       }
     },
     dash: {
@@ -244,7 +248,9 @@ module.exports = {
         Ranked: '排位',
         Bo3Challenge: '三局两胜',
         StandardGauntlet: '武斗场',
-        Normal: '普通'
+        Normal: '普通',
+        LastCallQualifierGauntlet: '终极武斗场',
+        SeasonalTournamentLobby: '季赛'
       }
     },
     dash: {
