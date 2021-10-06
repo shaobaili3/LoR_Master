@@ -56,7 +56,7 @@ module.exports = {
         StandardGauntlet: 'Gauntlet',
         Normal: 'Normal',
         LastCallQualifierGauntlet: 'Final Gauntlet',
-        SeasonalTournamentLobby: 'Seasonal'
+        SeasonalTournament: 'Seasonal'
       }
     },
     dash: {
@@ -153,7 +153,7 @@ module.exports = {
         StandardGauntlet: '武鬥場',
         Normal: '普通',
         LastCallQualifierGauntlet: '終極武鬥場',
-        SeasonalTournamentLobby: '季賽'
+        SeasonalTournament: '季賽'
       }
     },
     dash: {
@@ -250,7 +250,7 @@ module.exports = {
         StandardGauntlet: '武斗场',
         Normal: '普通',
         LastCallQualifierGauntlet: '终极武斗场',
-        SeasonalTournamentLobby: '季赛'
+        SeasonalTournament: '季赛'
       }
     },
     dash: {
