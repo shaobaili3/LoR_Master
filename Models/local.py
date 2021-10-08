@@ -10,8 +10,6 @@ class Local:
     def __init__(self, setting):
         self.opponentName = None
         self.opponentTag = None
-        self.isClientRuning = False
-        self.isInProgress = False
         self.setting = setting
         self.playername = None
         self.trackerDict = {}
@@ -30,8 +28,6 @@ class Local:
         self.opponentName = None
         self.playername = None
         self.opponentTag = None
-        self.isClientRuning = False
-        self.isInProgress = False
         self.playedCards = {}
         self.graveyard = {}
         self.opGraveyard = {}
@@ -50,8 +46,8 @@ class Local:
                     self.cardsInHand[card['CardID']] = card['CardCode']
                     self.playedCards[card['CardID']] = card['CardCode']
             else:
-                self.graveyard[card['CardID']] = card['CardCode']
-        # have to know if player have changed cards
+                self.graveyard[card['CardID']] = card['CardCode']       
+        # player is replacing cards
         if len(self.playedCards) == 0 and len(self.graveyard) == 1:
             self.playedCards = {}
             self.graveyard = {}
@@ -151,6 +147,7 @@ class Local:
             print('client is not running: ', e)
             self.reset()
             return {}
+        self.opponentName = self.positional_rectangles['OpponentName']
         if self.positional_rectangles['GameState'] == 'InProgress':
             self.updateTracker()
             self.updateMyDeck()
@@ -169,21 +166,23 @@ class Local:
 
         return self.trackJson
 
-    def updateTagByName(self, name):
+    def updateTagByName(self):
+        if self.opponentName is None:
+            print('updateTagByName:', 'game not start')
+            return
         nameListPath = constants.getCacheFilePath(self.setting.riotServer.lower() + '.json')
         if not os.path.isfile(nameListPath):
             nameListPath = 'Resource/' + self.setting.riotServer.lower() + '.json'
         try:
             with open(nameListPath, 'r', encoding='utf-8') as fp:
                 names = json.load(fp)
-                if name in names:
-                    self.opponentTag = names[name]
+                if self.opponentName in names:
+                    self.opponentTag = names[self.opponentName]
                     return
             with open(('Resource/' + self.setting.riotServer + '.dat'), 'r', encoding="utf-8") as search:
                 for line in search:
                     fullName = line.rstrip().split('#')
-                    if name == fullName[0]:
-                        # print(fullName)
+                    if self.opponentName == fullName[0]:
                         self.opponentTag = fullName[1]
                         return
         except Exception as e:

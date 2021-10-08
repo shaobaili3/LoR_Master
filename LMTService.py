@@ -182,12 +182,14 @@ def get_leaderboard(server):
 @app.route("/opInfo", methods=['get'])
 def opInfo():
     opInfo = {}
-    localTrack.updateTagByName(
-        localTrack.positional_rectangles['OpponentName'])
-    opInfo['name'] = localTrack.positional_rectangles['OpponentName']
+    localTrack.updateTagByName()
+    opInfo['name'] = localTrack.opponentName
+    # will break here if opponentName is None
+    if localTrack.opponentName.startswith('deckname_'):
+        opInfo['name'] = 'AI'
     opInfo['tag'] = localTrack.opponentTag
     opInfo['rank'], opInfo['lp'] = leaderboardModel.checkRank(
-        opInfo['name'], settingTrack.riotServer)
+        localTrack.opponentName, settingTrack.riotServer)
     return jsonify(opInfo)
 
 
