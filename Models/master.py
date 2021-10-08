@@ -17,30 +17,22 @@ def get_playernames(server):
     try:
         jsonObject = r.json()
     except Exception as e:
-        print('Json valid issue: ', e)
+        print(url, 'Json valid issue: ', e)
         return
     with open(constants.getCacheFilePath(server.lower() + '.json'), 'w', encoding='utf-8') as fp:
         json.dump(jsonObject, fp, ensure_ascii=False, indent=2)
 
 
-def f(s):
+def getAllList():
     while True:
-        try:
-            get_playernames(s)
-        except Exception as e:
-            print('Model.master error: ', e)
+        for server in list(Server):
+            try:
+                get_playernames(server.value)
+            except Exception as e:
+                print('Model.master error: ', e)
         time.sleep(3600)
 
-
 def startMasterWorker():
-    n = threading.Thread(target=f, args=(Server.NA,))
+    n = threading.Thread(target=getAllList)
     n.daemon = True
     n.start()
-
-    e = threading.Thread(target=f, args=(Server.EU,))
-    e.daemon = True
-    e.start()
-
-    a = threading.Thread(target=f, args=(Server.ASIA,))
-    a.daemon = True
-    a.start()
