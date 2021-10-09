@@ -954,12 +954,20 @@ export default {
 
             for (var key in data) {
 
-                if (!data[key]) continue // Skip if null history
+                var match = data[key]
 
-                var isFirstPlayer = data[key].player_info[0].name.toLowerCase() == this.localPlayerInfo.name.toLowerCase()
+                if (!match) continue // Skip if null history
+
+                var isFirstPlayer = match.player_info[0].name.toLowerCase() == this.localPlayerInfo.name.toLowerCase()
                 
-                var player, playerGame, opponent, opponentGame;
-                var info = data[key].info
+                var player, playerGame, opponent, opponentGame
+                var info = match.info
+
+                var details = match.details
+                if (details) {
+                    // Only add isFirstPlayer if there is details
+                    details.isFirstPlayer = isFirstPlayer
+                }
                 
                 var opponentName, opponentRank, opponentLp, opponentTag, opponentDeck, 
                     deck, rounds, win, time, order;
@@ -968,14 +976,14 @@ export default {
                     playerGame = info.players[0]
                     opponentGame = info.players[1]
 
-                    player = data[key].player_info[0]
-                    opponent = data[key].player_info[1]
+                    player = match.player_info[0]
+                    opponent = match.player_info[1]
                 } else {
                     playerGame = info.players[1]
                     opponentGame = info.players[0]
 
-                    player = data[key].player_info[1]
-                    opponent = data[key].player_info[0]
+                    player = match.player_info[1]
+                    opponent = match.player_info[0]
                 }
 
                 if (!playerGame || !opponentGame || !player || !opponent) continue;
@@ -1020,6 +1028,7 @@ export default {
                     win: win,
                     time: time,
                     badges: badges,
+                    details: details,
                 })
             }
         },
@@ -1028,6 +1037,86 @@ export default {
 }
 
 </script>
+
+<style lang="scss">
+    .tooltip {
+        position: relative;
+
+        .tooltiptext {
+            visibility: hidden;
+            display: block;
+            /* width: 120px; */
+            font-size: 16px;
+
+            white-space: nowrap;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 8px 10px;
+
+            box-sizing: border-box;
+
+            position: absolute;
+            z-index: 10;
+
+            /* Position the tooltip */
+            bottom: 0%;
+            left: 50%;
+            transform:translateX(-50%);
+            
+            /* Position the tooltip */
+            &.top {
+                bottom: 120%;
+                left: 50%;
+                transform:translateX(-50%);
+            }
+
+            &.right {
+                top: 50%;
+                bottom: auto;
+                left: 105%;
+                transform: translateY(-50%);
+            }
+
+            &.left {
+                top: 50%;
+                bottom: auto;
+                right: 105%;
+                left: auto;
+                transform: translateY(-50%);
+            }
+
+            &.top-end {
+                top: auto;
+                bottom: 120%;
+                left: auto;
+                right: 0%;
+                transform:translateX(0%);
+            }
+
+            &.top-bottom-right {
+                bottom: 100%;
+                right: -10px;
+                left: auto;
+                transform: none;
+                margin-bottom: 22px;
+            }
+        
+            /* left: 50%; */
+            /* margin-left: -50%; */
+            .fas {
+                margin-right: 5px;
+            }
+        }
+
+        &:hover {
+            .tooltiptext {
+                visibility: visible;
+            }
+        }
+    }
+</style>
 
 <style scoped>
 
@@ -1356,69 +1445,6 @@ export default {
         cursor: pointer;
     }
 
-    .tooltip {
-        position: relative;
-    }
-
-    .tooltip .tooltiptext {
-        visibility: hidden;
-        display: block;
-        /* width: 120px; */
-        font-size: 16px;
-
-        white-space: nowrap;
-        background-color: black;
-        color: #fff;
-        text-align: center;
-        border-radius: 6px;
-        padding: 8px 10px;
-
-        box-sizing: border-box;
-
-        position: absolute;
-        z-index: 10;
-
-        /* Position the tooltip */
-        bottom: 120%;
-        left: 50%;
-        transform:translateX(-50%);
-        
-        /* left: 50%; */
-        /* margin-left: -50%; */
-    }
-
-    .tooltip .tooltiptext .fas {
-        margin-right: 5px;
-    }
-
-    .tooltip .tooltiptext.top {
-        /* Position the tooltip */
-        bottom: 120%;
-        left: 50%;
-        transform:translateX(-50%);
-    }
-
-    .tooltip .tooltiptext.right {
-        /* Position the tooltip */
-        top: 50%;
-        bottom: auto;
-        left: 105%;
-        transform: translateY(-50%);
-    }
-
-    .tooltip .tooltiptext.top-bottom-right {
-        /* Position the tooltip */
-        bottom: 100%;
-        right: -10px;
-        left: auto;
-        transform: none;
-        margin-bottom: 22px;
-    }
-
-    .tooltip:hover .tooltiptext {
-        visibility: visible;
-    }
-
     .sticky-top {
         position: sticky;
         top: 0;
@@ -1466,3 +1492,4 @@ export default {
     }
 
 </style>
+

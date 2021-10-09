@@ -18,7 +18,7 @@ module.exports = [
           "puuid": "7ZtOwhQHjVf3gdybn3P7NvFnNdw3JfPfAehcIrtsmbVGTYczEz3wjR_chCbf8iGd-JCNOg_klLNvtQ"
         },
         {
-          "deck_code": "CQCQCAQAA4AQGAAOAEBQEAQDAEAASFI5AUCQUKLUU4A26APLAEBACBAAAIBAKCTAN4AQCAIAEU",
+          "deck_code": "CQCQCAQAA4AQGAAOAEBQEAQDAEAASFI5AUCQUKLUU4A26APLAEAQCBAAAIAA",
           "deck_id": "679533be-e337-466f-a09d-6c9a55ac78a7",
           "factions": [
             "faction_BandleCity_Name",
@@ -56,7 +56,23 @@ module.exports = [
     "playernames": [
       "Storm#5961",
       "Sterben Kira#NA1"
-    ]
+    ],
+    "details": {
+      "time_stamps": [
+        {
+          "card_code": "05BW005",
+          "utc_time": "1633673895",
+        },
+        {
+          "card_code": "05BW005",
+          "utc_time": "1633673898",
+        },
+        {
+          "card_code": "05BW005",
+          "utc_time": "1633673906",
+        }
+      ]
+    }
   },
   {
     "info": {

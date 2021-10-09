@@ -1,5 +1,10 @@
 <template>
     <div class="match-history match" :class="{won: won, loss: !won}">
+        <div class="btn-expand-detail" v-if="details" @click="toggleDetail">
+            <i class="fas"
+                :class="{'fa-chevron-down': !showDetail, 'fa-chevron-up': showDetail}"
+            ></i>
+        </div>
         <div class="row opponent">
             <p @click="search" class="match-info-title">
                 vs <span class="name">{{opponentName}}</span>
@@ -18,22 +23,30 @@
             <span class="vs-text">VS</span>
             <deck-preview @click="showDeck(opponentDeck)" :deck="opponentDeck" :won="won" :fixedWidth="true"></deck-preview>
         </div>
+        <match-detail v-if="details && showDetail" 
+            :time="time"
+            :details="details"
+        ></match-detail>
     </div>
 </template>
 
 <script>
 
 import DeckPreview from '../components/DeckPreview.vue'
+import MatchDetail from './MatchDetail.vue'
 
 export default {
     components: {
         DeckPreview,
+        MatchDetail,
     },
     mounted() {
+        // console.log(this.details)
     },
     data() {
         return {
-            visibleDeck: 0
+            visibleDeck: 0,
+            showDetail: false,
         }
     },
     emits: ['showDeck', 'search'],
@@ -47,6 +60,7 @@ export default {
         win: Boolean,
         time: String,
         badges: Array,
+        details: Object,
     },
     computed: {
         timeString() {
@@ -99,6 +113,9 @@ export default {
         }
     },
     methods: {
+        toggleDetail() {
+            this.showDetail = !this.showDetail
+        },
         showDeck(deck) {
             // console.log("Show Deck", deck)
             this.$emit('showDeck', deck)
@@ -122,9 +139,16 @@ export default {
 
 <style scoped>
 
-    
+    .btn-expand-detail {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 0.7em;
+        cursor: pointer;
+    }
 
     .match {
+        position: relative;
         display: flex;
         width: 100%;
         flex-direction: column;

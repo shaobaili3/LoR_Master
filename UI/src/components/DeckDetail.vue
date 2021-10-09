@@ -19,7 +19,11 @@
     v-if="showCopy">
         <!-- <a class="actions-btn" :href="deckDetailLink" target="_blank"><span class="actions-icon fa fa-external-link-alt"></span>Detail</a> -->
         <div class="actions-btn" v-if="showURL" @click="openURL(deckDetailLink)"><span class="actions-icon fa fa-external-link-alt"></span>Detail</div>
-        <div class="actions-btn" @click="copyDeckcode"><span class="actions-icon far fa-copy"></span>{{copyText}}</div>
+        <div class="actions-btn tooltip" @click="copyDeckcode"><span class="actions-icon far fa-copy"
+            :class="{'fa-exclamation-triangle': !isValid}"
+        ></span>{{copyText}}
+            <div class="tooltiptext top-end" v-if="!isValid">{{$t('tooltips.incompleteDeck')}}</div>
+        </div>
     </div>
 </template>
 
@@ -166,6 +170,11 @@ export default {
         },
         copyText() {
             return this.copied ? this.$t('str.copied') : this.$t('str.copy')
+        },
+        isValid() {
+            return this.cards.reduce((prev, card) => {
+                return prev + card.count
+            }, 0) == 40
         }
     },
     methods: {

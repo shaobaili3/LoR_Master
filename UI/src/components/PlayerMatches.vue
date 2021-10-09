@@ -42,6 +42,7 @@
             :win="match.win"
             :time="match.time"
             :badges="match.badges"
+            :details="match.details"
         ></match-history>
     </div>
 </template>

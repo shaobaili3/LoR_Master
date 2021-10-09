@@ -74,7 +74,8 @@ module.exports = {
       prompt: '⬆ Enter name and tag to search',
     },
     tooltips: {
-      lorlogin: 'Please log in LoR'
+      lorlogin: 'Please log in LoR',
+      incompleteDeck: 'Incomplete Deck',
     },
     contact: {
       messageBox: {
