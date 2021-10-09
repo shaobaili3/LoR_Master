@@ -89,7 +89,7 @@ import DeckDetail from '../../components/DeckDetail.vue'
 import DeckRegions from '../../components/DeckRegions.vue'
 import DeckEncoder from '../../modules/runeterra/DeckEncoder'
 
-import { mapMutations } from 'vuex'
+import { mapActions } from 'vuex'
 
 const requestDataWaitTime = 100; // ms
 const requestServerWaitTime = 3000; //ms
@@ -221,7 +221,7 @@ export default {
     },
     methods: {
 
-        ...mapMutations([
+        ...mapActions([
             'changeLocale'
         ]),
 

@@ -198,7 +198,7 @@ import DeckDetail from '@/components/DeckDetail.vue'
 import LocaleChanger from '@/components/LocaleChanger.vue'
 import ContactInfo from '@/components/ContactInfo.vue'
 
-import { mapMutations } from 'vuex'
+import { mapActions } from 'vuex'
 
 const requestDataWaitTime = 400 //ms
 const requestHistoryWaitTime = 100 //ms
@@ -367,7 +367,7 @@ export default {
     },
     methods: {
 
-        ...mapMutations([
+        ...mapActions([
             'changeLocale'
         ]),
 

@@ -38,12 +38,6 @@ import CardPreview from './CardPreview.vue'
 // import set4 from '../../../Resource/set4-en_us.json'
 // import set5 from '../../../Resource/set5-en_us.json'
 
-const locales = ['de_de', 'en_us', 'es_es', 'es_mx', 'fr_fr', 'it_it', 'ja_jp', 'ko_kr', 'pl_pl', 'pt_br', 'th_th', 'tr_tr', 'ru_ru', 'zh_tw']
-
-locales.forEach(lo => {
-    window[lo] = () => import('../../../Resource/'+lo+'.json')
-});
-
 // const en_us = () => import('../../../Resource/en_us.json')
 
 export default {
@@ -51,18 +45,10 @@ export default {
         CardPreview,
     },
     mounted() {
-        // this.getCardsInfo()
-        if ( this.sets == null ) this.loadSetsJson( this.locale )
-        this.$store.watch(() => this.locale, 
-            (newLoacle, oldLocale) => {
-                this.loadSetsJson(newLoacle)
-            }
-        )
     },
     data() {
         return {
             copied: false,
-            sets: null,
         }
     }, 
     props: {
@@ -178,20 +164,6 @@ export default {
         }
     },
     methods: {
-        async loadSetsJson(locale) {
-            console.log("Computing Sets", locale)
-            var loadModule
-
-            if (!locales.includes(locale)) {
-                console.log("Invalid locale, default to en_us")
-                loadModule = await window['en_us']()
-            } else {
-                loadModule = await window[locale]()
-            }
-
-            this.sets = [].concat(...loadModule.default)
-            // console.log(this.sets)
-        },
         copyDeckcode() {
             const copyToClipboard = str => {
                 const el = document.createElement('textarea');
