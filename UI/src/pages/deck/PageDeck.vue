@@ -89,6 +89,8 @@ import DeckDetail from '../../components/DeckDetail.vue'
 import DeckRegions from '../../components/DeckRegions.vue'
 import DeckEncoder from '../../modules/runeterra/DeckEncoder'
 
+import { mapMutations } from 'vuex'
+
 const requestDataWaitTime = 100; // ms
 const requestServerWaitTime = 3000; //ms
 const requestStatusWaitTime = 1000; //ms
@@ -138,7 +140,6 @@ export default {
             oppoLp: null,
 
             lorRunning: false,
-            locale: 'en_us',
 
             portNum: '26531'
         }
@@ -219,6 +220,11 @@ export default {
         this.initChangeLocale()
     },
     methods: {
+
+        ...mapMutations([
+            'changeLocale'
+        ]),
+
         initStore() {
             window.ipcRenderer.send('request-store', 'ui-locale')
 
@@ -354,7 +360,7 @@ export default {
                         if (this.locale != newLocale) {
                             console.log("Switch Locale", this.locale, newLocale)
                         }
-                        this.locale = newLocale
+                        this.changeLocale(newLocale)
                     }
 
                     // console.log("Server", this.server)

@@ -1,12 +1,11 @@
 import { createApp } from 'vue'
-import { createStore } from 'vuex'
 import { createI18n } from 'vue-i18n'
 
 import App from './App.vue'
 import router from './router/'
 import '@/assets/css/global.css'
 
-import { mapState, mapMutations } from 'vuex'
+import { createStore, mapState, mapMutations } from 'vuex'
 
 const store = createStore({
   state () {
@@ -21,7 +20,7 @@ const store = createStore({
   }
 })
 
-const messages = require('./assets/data/messages.js')
+const messages = require('@/assets/data/messages.js')
 
 const i18n = createI18n({
   locale: 'English', // set locale

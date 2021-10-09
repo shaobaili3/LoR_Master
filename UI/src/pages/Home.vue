@@ -160,7 +160,7 @@
             <deck-regions :deck="deckCode" :fixedWidth="false"></deck-regions>
         </div>
         <div class="deck-content-detail">
-            <deck-detail :locale="locale" :baseDeck="deckCode" :fixedHeight="true"></deck-detail>
+            <deck-detail :baseDeck="deckCode" :fixedHeight="true"></deck-detail>
         </div>
     </div>
 
