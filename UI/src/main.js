@@ -6,19 +6,17 @@ import App from './App.vue'
 import router from './router/'
 import '@/assets/css/global.css'
 
+import { mapState, mapMutations } from 'vuex'
+
 const store = createStore({
   state () {
-      return {
-          activeRegion: 0,
-          players: [],
-      }
+    return {
+      locale: 'en_us'
+    }
   },
   mutations: {
-    storePlayers (state, payload) {
-      state.players[payload.id] = payload.obj;
-    },
-    changeRegion (state, newRegion) {
-        state.activeRegion = newRegion
+    changeLocale (state, newLocale) {
+        state.locale = newLocale
     }
   }
 })
@@ -31,4 +29,21 @@ const i18n = createI18n({
   messages,
 })
 
-createApp(App).use(i18n).use(router).use(store).mount('#app')
+const app = createApp(App)
+
+app.use(i18n).use(router).use(store)
+
+app.mixin({
+  computed: {
+    ...mapState([
+      'locale'
+    ])
+  },
+  // methods: {
+  //   ...mapMutations([
+  //     'changeLocale'
+  //   ]),
+  // }
+})
+
+app.mount('#app')

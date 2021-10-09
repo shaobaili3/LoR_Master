@@ -35,11 +35,6 @@ export default {
 
         supertype: String,
         set: String,
-
-        locale: {
-            type: String,
-            default: 'en_us'
-        }
     },
     computed: {
         

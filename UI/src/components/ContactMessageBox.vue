@@ -31,10 +31,6 @@ export default {
         }
     },
     props: {
-        locale: {
-            type: String,
-            default: 'en_us'
-        },
         apiBase: {
             type: String,
             required: true

@@ -2,7 +2,7 @@
     <div class="deck-detail" 
     :class="{'fixed-height': fixedHeight}"
     v-if="cards.length > 0">
-        <cards-preview v-for="(card, index) in cards" :key="index"
+        <card-preview v-for="(card, index) in cards" :key="index"
         :name="card.name"
         :cost="card.cost"
         :count="card.count"
@@ -11,8 +11,7 @@
         :supertype="card.supertype"
         :set="card.set"
         :typeRef="card.typeRef"
-        :locale="locale"
-        >{{card.name}}</cards-preview>
+        >{{card.name}}</card-preview>
     </div>
     <div class="actions" 
     :class="{'fixed-height': fixedHeight}"
@@ -32,7 +31,7 @@
 // const { DeckEncoder } = require('runeterra')
 import DeckEncoder from '../modules/runeterra/DeckEncoder'
 // import sets from  '../assets/data/allsets-en_us.json'
-import CardsPreview from './CardsPreview.vue'
+import CardPreview from './CardPreview.vue'
 // import set1 from '../../../Resource/set1-en_us.json'
 // import set2 from '../../../Resource/set2-en_us.json'
 // import set3 from '../../../Resource/set3-en_us.json'
@@ -49,11 +48,16 @@ locales.forEach(lo => {
 
 export default {
     components: {
-        CardsPreview,
+        CardPreview,
     },
     mounted() {
         // this.getCardsInfo()
         if ( this.sets == null ) this.loadSetsJson( this.locale )
+        this.$store.watch(() => this.locale, 
+            (newLoacle, oldLocale) => {
+                this.loadSetsJson(newLoacle)
+            }
+        )
     },
     data() {
         return {
@@ -76,15 +80,11 @@ export default {
             type: Boolean,
             default: false,
         },
-        locale: {
-            type: String,
-            default: 'en_us'
-        }
     },
     watch: {
-        locale(newLoacle, oldLocale) {
-            this.loadSetsJson(newLoacle)
-        }
+        // locale(newLoacle, oldLocale) {
+        //     this.loadSetsJson(newLoacle)
+        // }
     },
     computed: {
         deckDetailLink() {

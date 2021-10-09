@@ -26,7 +26,7 @@
         </div>
     </div>
 
-    <deck-detail :locale="locale" v-if="visibleDeck == 1" :baseDeck="deck"></deck-detail>
+    <deck-detail v-if="visibleDeck == 1" :baseDeck="deck"></deck-detail>
 
 </template>
 
@@ -41,7 +41,7 @@ export default {
         DeckPreview,
     },
     mounted() {
-        this.subscribeData();
+        this.subscribeData()
     },
     data() {
         return {
@@ -60,10 +60,6 @@ export default {
         badges: Array,
         total: Number,
         history: String,
-        locale: {
-            type: String,
-            default: 'en_us',
-        }
     },
     computed: {
         timeString() {

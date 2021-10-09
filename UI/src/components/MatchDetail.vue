@@ -1,13 +1,19 @@
 <template>
     <div class="match-detail">
-        {{details}}
+        <div class="" v-for="(card, index) in details.time_stamps"
+        :key="index">
+            {{card}}
+            <card-preview></card-preview>
+        </div>
     </div>
 </template>
 
 <script>
+import CardPreview from './CardPreview.vue'
 
 export default {
     components: {
+        CardPreview,
     },
     mounted() {
         // console.log(this.details)

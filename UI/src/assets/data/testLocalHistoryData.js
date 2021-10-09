@@ -64,11 +64,11 @@ module.exports = [
           "utc_time": "1633673895",
         },
         {
-          "card_code": "05BW005",
+          "card_code": "03MT040",
           "utc_time": "1633673898",
         },
         {
-          "card_code": "05BW005",
+          "card_code": "03MT009",
           "utc_time": "1633673906",
         }
       ]

@@ -132,7 +132,7 @@
         </div>
 
         <div class="main-content-container contact" v-if="currentPage == PAGES.contact">
-            <contact-info :locale="locale" :apiBase="apiBase"></contact-info>
+            <contact-info :apiBase="apiBase"></contact-info>
         </div>
 
         <div class="main-content-container settings" v-if="currentPage == PAGES.settings">
@@ -197,6 +197,8 @@ import PlayerMatches from '../components/PlayerMatches.vue'
 import DeckDetail from '../components/DeckDetail.vue'
 import LocaleChanger from '../components/LocaleChanger.vue'
 import ContactInfo from '../components/ContactInfo.vue'
+
+import { mapMutations } from 'vuex'
 
 const requestDataWaitTime = 400 //ms
 const requestHistoryWaitTime = 100 //ms
@@ -332,11 +334,18 @@ export default {
         },
         apiBase() {
             return `http://127.0.0.1:${this.portNum}`
-        }
+        },
     },
     mounted() {
         console.log("Mounted")
         console.log(process.env.NODE_ENV)
+        console.log("$store.state.locale", this.locale)
+        
+        // Testing switching locale
+        // if (process.env.NODE_ENV == "development") {
+        //     this.$store.commit('changeLocale', 'zh_tw')
+        // }
+        
 
         try {
 
@@ -358,6 +367,10 @@ export default {
         
     },
     methods: {
+
+        ...mapMutations([
+            'changeLocale'
+        ]),
 
         initStore() {
             window.ipcRenderer.send('request-store', 'ui-locale')
@@ -620,7 +633,7 @@ export default {
 
             if (process.env.NODE_ENV == "development") {
                 console.log("Request Status Data")
-                const testStatus = '{"language": "en-US","lorRunning": true,"playerId": "Storm#5961","port": "21337","server": "americas"}'
+                const testStatus = '{"language": "zh-TW","lorRunning": true,"playerId": "Storm#5961","port": "21337","server": "americas"}'
                 this.processStatusInfo(JSON.parse(testStatus))
                 return
             } 
@@ -652,7 +665,7 @@ export default {
         },
         processStatusInfo(data) {
 
-            console.log(data)
+            // console.log(data)
 
             var updateLocalPlayer = false
             if (this.localPlayerInfo.playerId != data.playerId) {
@@ -695,7 +708,7 @@ export default {
                 if (this.locale != newLocale) {
                     console.log("Switch Locale", this.locale, newLocale)
                 }
-                this.locale = newLocale
+                this.changeLocale(newLocale)
             }
             // console.log(this.locale)
 
