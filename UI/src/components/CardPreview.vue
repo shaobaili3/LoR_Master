@@ -5,8 +5,7 @@
         <div class="cardContent cardCost">{{cost}}</div>
         <div class="cardContent cardName">{{name}}</div>
         <div class="cardContent cardCount">x{{count}}</div>
-        <!-- <div class="cardDisplay" :style="{background: getCardDisplay()}"></div> -->
-        <img class="cardDisplay" :src = "getCardDisplayUrl()" alt="">
+        <img class="cardDisplay" :src="getCardDisplayUrl" alt="">
     </div>
 </template>
 
@@ -16,7 +15,7 @@
 // https://cdn-lor.mobalytics.gg/production/images/cards-preview/01DE029.webp
 
 import axios from 'axios'
-
+const cardDisplayUrlBase = 'https://dd.b.pvp.net/latest/'
 const requestStatusWaitTime = 1000 //ms
 var lastStatusRequestTime
 
@@ -37,7 +36,9 @@ export default {
         set: String,
     },
     computed: {
-        
+        getCardDisplayUrl() {
+            return cardDisplayUrlBase + this.set.toLowerCase()  + '/' + this.locale + '/img/cards/' + this.code + '.png' 
+        },
     },
     methods: {
         getCardPreviewBackgroundStyle() {
@@ -54,14 +55,7 @@ export default {
             
             return gradient + "url(" + cardPreviewUrlBase + this.code + ".webp) right top no-repeat"
         },
-        getCardDisplay() {
-            return "url(" + this.getCardDisplayUrl() + ")"
-        },
-        getCardDisplayUrl() {
-            const cardDisplayUrlBase = 'https://dd.b.pvp.net/latest/'
-            // const locale = 'zh_tw'
-            return cardDisplayUrlBase + this.set.toLowerCase()  + '/' + this.locale + '/img/cards/' + this.code + '.png' 
-        },
+        
     }
 }
 </script>
