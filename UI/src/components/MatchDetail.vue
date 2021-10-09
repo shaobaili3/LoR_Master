@@ -7,12 +7,12 @@
             <div class="card-icon" v-for="(card, index) in details.time_stamps"
                 :key="index"
                 :class="{'first': card.player}"
-                :style="{'margin-left': 'calc('+timePercents[index]+'% - 10px)'}"
+                :style="{'padding-left': 'calc('+timePercents[index]+'% - 10px)'}"
             >
                 <card-image :code="card.card_code"></card-image>
             </div>
             <div class="card-icon tooltip" 
-            :style="{'margin-left': 'calc('+timePercents[details.time_stamps.length]+'% - 10px)'}">
+            :style="{'padding-left': 'calc('+timePercents[details.time_stamps.length]+'% - 10px)'}">
                 <div class="tooltiptext top-end">Game End</div>
             </div>
         </div>
@@ -99,6 +99,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+@keyframes delay-overflow {
+    from { overflow: hidden; }
+}
+
     .match-detail {
 
         .timeline-container {
@@ -117,13 +122,23 @@ export default {
                 position: relative;
                 width: 10px;
                 height: 20px;
-                background: white;
-                overflow: hidden;
+                // background: white;
+                overflow: visible;
 
-                box-sizing: border-box;
+                // box-sizing: border-box;
                 // border-left: 1px solid black;
 
-                &.first {
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 10px;
+                    height: 100%;
+                    background: white;
+                }
+
+                &.first::after {
                     background: black;
                 }
 
@@ -132,23 +147,27 @@ export default {
 
                     bottom: 100%;
                     left: 100%;
-                    transform: translateX(-50%);
+                    transform: translateX(calc(-50% - 5px)); // because of 10px width of the selector
                     
                     width: 100px;
                     height: auto;
+
+                    visibility: hidden;
                     opacity: 0;
                     filter: drop-shadow(3px 3px 2px rgba(43, 38, 27, 0.6));
                     z-index: 10;
-                    transition: opacity 0.15s cubic-bezier(0.075, 0.82, 0.165, 1);
+                    transition: visibility 0s linear 0.3s, opacity 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 
                     
                 }
 
                 &:hover {
-                    overflow: visible;
+                    // overflow: visible;
+                    
                     .card-image {
+                        visibility: visible;
                         opacity: 1;
-                        
+                        transition:  visibility 0s linear 0s, opacity 0.3s ease;
                     }
                 }
             }

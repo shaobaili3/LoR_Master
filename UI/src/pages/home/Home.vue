@@ -1056,6 +1056,10 @@ export default {
 
         .tooltiptext {
             visibility: hidden;
+            opacity: 0;
+
+            transition: visibility 0s linear 200ms, opacity 200ms ease;
+
             display: block;
             /* width: 120px; */
             font-size: 16px;
@@ -1133,6 +1137,8 @@ export default {
         &:hover {
             .tooltiptext {
                 visibility: visible;
+                opacity: 1;
+                transition: visibility 0s linear 0s, opacity 200ms ease;
             }
         }
     }
