@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
 import { createI18n } from 'vue-i18n'
 
-import App from './PageDeck.vue'
+import App from './Deck.vue'
 import '@/assets/css/global.css'
 
 import { createStore, mapState, mapMutations } from 'vuex'

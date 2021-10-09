@@ -189,14 +189,14 @@
 
 <script>
 
-import BaseWindowControls from '../components/BaseWindowControls.vue'
+import BaseWindowControls from '@/components/BaseWindowControls.vue'
 import axios from 'axios'
-import DeckRegions from '../components/DeckRegions.vue'
-import Leaderboard from '../components/Leaderboard.vue'
-import PlayerMatches from '../components/PlayerMatches.vue'
-import DeckDetail from '../components/DeckDetail.vue'
-import LocaleChanger from '../components/LocaleChanger.vue'
-import ContactInfo from '../components/ContactInfo.vue'
+import DeckRegions from '@/components/DeckRegions.vue'
+import Leaderboard from '@/components/Leaderboard.vue'
+import PlayerMatches from '@/components/PlayerMatches.vue'
+import DeckDetail from '@/components/DeckDetail.vue'
+import LocaleChanger from '@/components/LocaleChanger.vue'
+import ContactInfo from '@/components/ContactInfo.vue'
 
 import { mapMutations } from 'vuex'
 
@@ -890,7 +890,7 @@ export default {
 
             if (process.env.NODE_ENV == "development") {
 
-                const testData = require('../assets/data/testLocalHistoryData')
+                const testData = require('@/assets/data/testLocalHistoryData')
                 // pass
                 this.processLocalHistory(testData)
                 return

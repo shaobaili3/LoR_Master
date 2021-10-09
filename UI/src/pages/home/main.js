@@ -1,8 +1,7 @@
 import { createApp } from 'vue'
 import { createI18n } from 'vue-i18n'
 
-import App from './App.vue'
-import router from './router/'
+import App from './Home.vue'
 import '@/assets/css/global.css'
 
 import { createStore, mapState, mapMutations } from 'vuex'
@@ -30,7 +29,7 @@ const i18n = createI18n({
 
 const app = createApp(App)
 
-app.use(i18n).use(router).use(store)
+app.use(i18n).use(store)
 
 app.mixin({
   computed: {
