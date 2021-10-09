@@ -5,7 +5,7 @@
         <div class="cardContent cardCost">{{cost}}</div>
         <div class="cardContent cardName">{{name}}</div>
         <div class="cardContent cardCount">x{{count}}</div>
-        <img class="cardDisplay" :src="getCardDisplayUrl" alt="">
+        <card-image :code="code" :set="set"></card-image>
     </div>
 </template>
 
@@ -15,14 +15,17 @@
 // https://cdn-lor.mobalytics.gg/production/images/cards-preview/01DE029.webp
 
 import axios from 'axios'
-const cardDisplayUrlBase = 'https://dd.b.pvp.net/latest/'
+import CardImage from './image/CardImage.vue'
+
 const requestStatusWaitTime = 1000 //ms
 var lastStatusRequestTime
 
 export default {
+    components: { CardImage },
     mounted() {
     },
     data() {
+        return {}
     }, 
     props: {
         code: String,
@@ -36,9 +39,6 @@ export default {
         set: String,
     },
     computed: {
-        getCardDisplayUrl() {
-            return cardDisplayUrlBase + this.set.toLowerCase()  + '/' + this.locale + '/img/cards/' + this.code + '.png' 
-        },
     },
     methods: {
         getCardPreviewBackgroundStyle() {

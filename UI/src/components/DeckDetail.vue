@@ -28,17 +28,8 @@
 
 <script>
 
-// const { DeckEncoder } = require('runeterra')
 import DeckEncoder from '../modules/runeterra/DeckEncoder'
-// import sets from  '../assets/data/allsets-en_us.json'
 import CardPreview from './CardPreview.vue'
-// import set1 from '../../../Resource/set1-en_us.json'
-// import set2 from '../../../Resource/set2-en_us.json'
-// import set3 from '../../../Resource/set3-en_us.json'
-// import set4 from '../../../Resource/set4-en_us.json'
-// import set5 from '../../../Resource/set5-en_us.json'
-
-// const en_us = () => import('../../../Resource/en_us.json')
 
 export default {
     components: {
