@@ -22,6 +22,7 @@ export default {
         DeckRegions,
     },
     data() {
+        return {}
     }, 
     mounted() {
     },

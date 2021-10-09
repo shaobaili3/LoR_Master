@@ -336,15 +336,25 @@ export default {
     },
     mounted() {
         console.log("Mounted")
-        // var test = 'Hello'
-        this.requestVersionData()
-        this.requestStatusInfo()
-        this.handleGameEnd()
+        console.log(process.env.NODE_ENV)
 
-        this.initLocalSettings()
+        try {
 
-        this.initStore()
-        this.initChangeLocale()
+            // var test = 'Hello'
+            
+            this.requestStatusInfo()
+            
+            if (!window.ipcRenderer) { return }
+            this.handleGameEnd()
+            this.requestVersionData()
+            this.initLocalSettings()
+            this.initStore()
+            this.initChangeLocale()
+            
+        } catch (error) {
+            console.log(error)
+        }
+        
         
     },
     methods: {
@@ -517,84 +527,7 @@ export default {
             // this.playerName = "No history found"
 
         },
-        processHistoryData(data) {
-            this.matches = []
-            this.playerRank = null
-            this.playerLP = null
-
-            console.log("processHistoryData", data)
-
-            for (var key in data) {
-
-                if (!data[key]) continue // Skip if null history
-
-                var isFirstPlayer = data[key].player_info[0].name.toLowerCase() == this.playerName.toLowerCase()
-                
-                var player, playerGame, opponent, opponentGame;
-                var info = data[key].info
-                
-                var opponentName, opponentRank, opponentLp, opponentTag, opponentDeck, 
-                    deck, rounds, win, time, order;
-                
-                if (isFirstPlayer) {
-                    playerGame = info.players[0]
-                    opponentGame = info.players[1]
-
-                    player = data[key].player_info[0]
-                    opponent = data[key].player_info[1]
-                } else {
-                    playerGame = info.players[1]
-                    opponentGame = info.players[0]
-
-                    player = data[key].player_info[1]
-                    opponent = data[key].player_info[0]
-                }
-
-                if (!playerGame || !opponentGame || !player || !opponent) continue;
-
-                this.playerName = player.name // Sync name so all caps are correct
-                opponentName = opponent.name
-                
-                if (opponent.rank !== "") {
-                    opponentRank = opponent.rank + 1 // rank starts from 0
-                } else {
-                    opponentRank = "" // ranks can be empty
-                }
-
-                opponentLp = opponent.lp
-                opponentTag = opponent.tag
-
-                if (this.playerRank == null && player.rank !== "") { 
-                    this.playerRank = player.rank + 1 // player.rank starts from 0
-                }
-                if (!this.playerLP) this.playerLP = player.lp
-                
-                deck = playerGame.deck_code
-                opponentDeck = opponentGame.deck_code
-                order = playerGame.order_of_play
-                win = playerGame.game_outcome == "win"
-                rounds = info.total_turn_count
-                var badges = []
-                if (info.game_mode) badges.push(info.game_mode.replace(/([A-Z])/g, ' $1').trim().replace("Lobby", ""))
-                if (info.game_type) badges.push(info.game_type.replace(/([A-Z])/g, ' $1').trim().replace("Lobby", ""))
-
-                time = info.game_start_time_utc
-
-                this.matches.push({
-                    opponentName: opponentName,
-                    deck: deck,
-                    region: regionShort[this.playerRegion],
-                    opponentDeck: opponentDeck,
-                    opponentRank: opponentRank,
-                    opponentLp: opponentLp,
-                    opponentTag: opponentTag,
-                    rounds: rounds,
-                    win: win,
-                    time: time,
-                    badges: badges,
-                })
-            }
-        },
+        
         openURL(url) {
             window.openExternal(url);
         },
@@ -684,65 +617,24 @@ export default {
         },
         requestStatusInfo() {
             // Keeps requesting status
+
+            if (process.env.NODE_ENV == "development") {
+                console.log("Request Status Data")
+                const testStatus = '{"language": "en-US","lorRunning": true,"playerId": "Storm#5961","port": "21337","server": "americas"}'
+                this.processStatusInfo(JSON.parse(testStatus))
+                return
+            } 
+
             lastStatusRequestTime = Date.now()
             axios.get(`${this.apiBase}/status`)
                 .then((response) => {
-                    var data = response.data
-
-                    var updateLocalPlayer = false
-                    if (this.localPlayerInfo.playerId != data.playerId) {
-                        // there is a change in player ID
-                        updateLocalPlayer = true
-                    }
-
-                    if (data.playerId != "") {
-
-                        this.localPlayerInfo.playerId = data.playerId
-                        var nameid = data.playerId.split('#')
-                        var oldName = this.localPlayerInfo.name
-                        var oldTag = this.localPlayerInfo.tag
-                        
-                        this.localPlayerInfo.name = nameid[0]
-                        this.localPlayerInfo.tag = nameid[1]
-
-                        if (this.localMatches.length <= 0) {
-                            // if the matches are still empty
-                            // updateLocalPlayer = true
-                        }
-
-                    } else {
-                        this.localPlayerInfo.playerId = null
-                        this.localPlayerInfo.name = null
-                        this.localPlayerInfo.tag = null
-
-                        this.localMatches = []
-                    }
-
-                    this.localPlayerInfo.server = data.server
-                    this.localPlayerInfo.language = data.language
-
-                    if (updateLocalPlayer) {
-                        this.requestLocalHistory()
-                    }
-                    
-                    if (data.language) {
-                        var newLocale = data.language.replace('-', '_').toLowerCase()
-                        if (this.locale != newLocale) {
-                            console.log("Switch Locale", this.locale, newLocale)
-                        }
-                        this.locale = newLocale
-                    }
-                    // console.log(this.locale)
-
-                    this.lorRunning = data.lorRunning
-
+                    this.processStatusInfo(response.data)
                     var elapsedTime = Date.now() - lastStatusRequestTime // ms
                     if (requestStatusWaitTime > elapsedTime) {
                         setTimeout(this.requestStatusInfo, requestStatusWaitTime - elapsedTime); 
                     } else {
                         setTimeout(this.requestStatusInfo, 100);
                     }
-                    
                 })
                 .catch((e) => {
                     if (axios.isCancel(e)) {
@@ -757,6 +649,57 @@ export default {
                         }
                     }
                 })
+        },
+        processStatusInfo(data) {
+
+            console.log(data)
+
+            var updateLocalPlayer = false
+            if (this.localPlayerInfo.playerId != data.playerId) {
+                // there is a change in player ID
+                updateLocalPlayer = true
+            }
+
+            if (data.playerId != "") {
+
+                this.localPlayerInfo.playerId = data.playerId
+                var nameid = data.playerId.split('#')
+                var oldName = this.localPlayerInfo.name
+                var oldTag = this.localPlayerInfo.tag
+                
+                this.localPlayerInfo.name = nameid[0]
+                this.localPlayerInfo.tag = nameid[1]
+
+                if (this.localMatches.length <= 0) {
+                    // if the matches are still empty
+                    // updateLocalPlayer = true
+                }
+
+            } else {
+                this.localPlayerInfo.playerId = null
+                this.localPlayerInfo.name = null
+                this.localPlayerInfo.tag = null
+
+                this.localMatches = []
+            }
+
+            this.localPlayerInfo.server = data.server
+            this.localPlayerInfo.language = data.language
+
+            if (updateLocalPlayer) {
+                this.requestLocalHistory()
+            }
+            
+            if (data.language) {
+                var newLocale = data.language.replace('-', '_').toLowerCase()
+                if (this.locale != newLocale) {
+                    console.log("Switch Locale", this.locale, newLocale)
+                }
+                this.locale = newLocale
+            }
+            // console.log(this.locale)
+
+            this.lorRunning = data.lorRunning
         },
         requestNameData() {
             
@@ -839,6 +782,84 @@ export default {
                 })
 
         },
+        processHistoryData(data) {
+            this.matches = []
+            this.playerRank = null
+            this.playerLP = null
+
+            console.log("processHistoryData", data)
+
+            for (var key in data) {
+
+                if (!data[key]) continue // Skip if null history
+
+                var isFirstPlayer = data[key].player_info[0].name.toLowerCase() == this.playerName.toLowerCase()
+                
+                var player, playerGame, opponent, opponentGame;
+                var info = data[key].info
+                
+                var opponentName, opponentRank, opponentLp, opponentTag, opponentDeck, 
+                    deck, rounds, win, time, order;
+                
+                if (isFirstPlayer) {
+                    playerGame = info.players[0]
+                    opponentGame = info.players[1]
+
+                    player = data[key].player_info[0]
+                    opponent = data[key].player_info[1]
+                } else {
+                    playerGame = info.players[1]
+                    opponentGame = info.players[0]
+
+                    player = data[key].player_info[1]
+                    opponent = data[key].player_info[0]
+                }
+
+                if (!playerGame || !opponentGame || !player || !opponent) continue;
+
+                this.playerName = player.name // Sync name so all caps are correct
+                opponentName = opponent.name
+                
+                if (opponent.rank !== "") {
+                    opponentRank = opponent.rank + 1 // rank starts from 0
+                } else {
+                    opponentRank = "" // ranks can be empty
+                }
+
+                opponentLp = opponent.lp
+                opponentTag = opponent.tag
+
+                if (this.playerRank == null && player.rank !== "") { 
+                    this.playerRank = player.rank + 1 // player.rank starts from 0
+                }
+                if (!this.playerLP) this.playerLP = player.lp
+                
+                deck = playerGame.deck_code
+                opponentDeck = opponentGame.deck_code
+                order = playerGame.order_of_play
+                win = playerGame.game_outcome == "win"
+                rounds = info.total_turn_count
+                var badges = []
+                if (info.game_mode) badges.push(info.game_mode.replace(/([A-Z])/g, ' $1').trim().replace("Lobby", ""))
+                if (info.game_type) badges.push(info.game_type.replace(/([A-Z])/g, ' $1').trim().replace("Lobby", ""))
+
+                time = info.game_start_time_utc
+
+                this.matches.push({
+                    opponentName: opponentName,
+                    deck: deck,
+                    region: regionShort[this.playerRegion],
+                    opponentDeck: opponentDeck,
+                    opponentRank: opponentRank,
+                    opponentLp: opponentLp,
+                    opponentTag: opponentTag,
+                    rounds: rounds,
+                    win: win,
+                    time: time,
+                    badges: badges,
+                })
+            }
+        },
         showDeck(deck) {
             // console.log("Main Show Deck", deck)
             if (this.deckCode == deck && this.isShowDeck == true) {
@@ -854,6 +875,14 @@ export default {
         },
 
         requestLocalHistory() {
+
+            if (process.env.NODE_ENV == "development") {
+
+                const testData = require('../assets/data/testLocalHistoryData')
+                // pass
+                this.processLocalHistory(testData)
+                return
+            }
 
             // if (this.isLoading) {
             //     // Before starting everything check to see if there is already a search request

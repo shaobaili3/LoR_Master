@@ -1,5 +1,5 @@
 <template>
-    <div class="match" :class="{won: won, loss: !won}">
+    <div class="match-history match" :class="{won: won, loss: !won}">
         <div class="row opponent">
             <p @click="search" class="match-info-title">
                 vs <span class="name">{{opponentName}}</span>
@@ -19,10 +19,6 @@
             <deck-preview @click="showDeck(opponentDeck)" :deck="opponentDeck" :won="won" :fixedWidth="true"></deck-preview>
         </div>
     </div>
-
-    <!-- <deck-detail v-if="visibleDeck == 1" :deck="deck"></deck-detail> -->
-    <!-- <deck-detail v-if="visibleDeck == 2" :deck="opponentDeck"></deck-detail> -->
-
 </template>
 
 <script>

@@ -123,6 +123,9 @@ export default {
         },
         getLeaderboard(regionID) {
 
+            // Return if using npm run serve
+            if (process.env.NODE_ENV == "development") { return }
+
             lastLeaderboardRequestTime = Date.now()
 
             this.isLoading = true
@@ -145,7 +148,11 @@ export default {
                     console.log("Request cancelled")
                 } else 
                 { 
-                    console.log('error', e) 
+                    console.log('error', e)
+                    // if (!e.status) {
+                    //     console.log("Network Error")
+                    //     // return
+                    // }
 
                     var elapsedTime = Date.now() - lastLeaderboardRequestTime // ms
                     if (elapsedTime > requestLeaderboardWaitTime) {
