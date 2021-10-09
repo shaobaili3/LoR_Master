@@ -156,8 +156,10 @@ export default {
         box-sizing: border-box;
         padding: 5px;
         border-radius: 6px;
+
+        overflow-x: visible;
         
-        overflow: hidden;
+        /* overflow: hidden; */
 
         border-left: 3px solid var(--col-background);
         border-right: 3px solid var(--col-background);

@@ -62,14 +62,22 @@ module.exports = [
         {
           "card_code": "05BW005",
           "utc_time": "1633673895",
+          "player": 0,
         },
         {
           "card_code": "03MT040",
           "utc_time": "1633673898",
+          "player": 1,
+        },
+        {
+          "card_code": "03MT040",
+          "utc_time": "1633673899",
+          "player": 1,
         },
         {
           "card_code": "03MT009",
           "utc_time": "1633673906",
+          "player": 0,
         }
       ]
     }

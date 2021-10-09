@@ -189,14 +189,14 @@
 
 <script>
 
-import BaseWindowControls from '@/components/BaseWindowControls.vue'
+import BaseWindowControls from '../../components/BaseWindowControls.vue'
 import axios from 'axios'
-import DeckRegions from '@/components/DeckRegions.vue'
-import Leaderboard from '@/components/Leaderboard.vue'
-import PlayerMatches from '@/components/PlayerMatches.vue'
-import DeckDetail from '@/components/DeckDetail.vue'
-import LocaleChanger from '@/components/LocaleChanger.vue'
-import ContactInfo from '@/components/ContactInfo.vue'
+import DeckRegions from '../../components/DeckRegions.vue'
+import Leaderboard from '../../components/Leaderboard.vue'
+import PlayerMatches from '../../components/PlayerMatches.vue'
+import DeckDetail from '../../components/DeckDetail.vue'
+import LocaleChanger from '../../components/LocaleChanger.vue'
+import ContactInfo from '../../components/ContactInfo.vue'
 
 import { mapActions } from 'vuex'
 
@@ -890,7 +890,7 @@ export default {
 
             if (process.env.NODE_ENV == "development") {
 
-                const testData = require('@/assets/data/testLocalHistoryData')
+                const testData = require('../../assets/data/testLocalHistoryData')
                 // pass
                 this.processLocalHistory(testData)
                 return
@@ -1104,6 +1104,14 @@ export default {
                 bottom: 120%;
                 left: auto;
                 right: 0%;
+                transform:translateX(0%);
+            }
+
+            &.top-start {
+                top: auto;
+                bottom: 120%;
+                left: 0%;
+                right: auto;
                 transform:translateX(0%);
             }
 
@@ -1353,10 +1361,12 @@ export default {
 
     .main-content-container {
         margin: auto;
-        max-width: 550px;
+        max-width: 650px;
+        padding: 0px 50px;
         height: calc(100vh - 88px); 
         /* top bar: -43 | bottom bar: -45 */
         overflow-y: scroll;
+        box-sizing: border-box;
     }
 
     .left-nav {
