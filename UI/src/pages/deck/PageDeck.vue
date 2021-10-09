@@ -359,8 +359,8 @@ export default {
                         var newLocale = data.language.replace('-', '_').toLowerCase()
                         if (this.locale != newLocale) {
                             console.log("Switch Locale", this.locale, newLocale)
+                            this.changeLocale(newLocale)
                         }
-                        this.changeLocale(newLocale)
                     }
 
                     // console.log("Server", this.server)
