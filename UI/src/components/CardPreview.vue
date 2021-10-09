@@ -5,7 +5,7 @@
         <div class="cardContent cardCost">{{cost}}</div>
         <div class="cardContent cardName">{{name}}</div>
         <div class="cardContent cardCount">x{{count}}</div>
-        <card-image :code="code" :set="set"></card-image>
+        <card-image class="cardDisplay" :code="code" :set="set"></card-image>
     </div>
 </template>
 
@@ -60,7 +60,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
 .cardContainer {
     max-width: 320px;
