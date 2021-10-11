@@ -23,6 +23,11 @@
             <span class="vs-text">VS</span>
             <deck-preview @click="showDeck(opponentDeck)" :deck="opponentDeck" :won="won" :fixedWidth="true"></deck-preview>
         </div>
+        <match-detail-mulligan v-if="details && showDetail" 
+            :startHand="details.start_hand"
+            :endHand="details.end_hand"
+        ></match-detail-mulligan>
+
         <match-detail-timeline v-if="details && showDetail" 
             :time="time"
             :details="details"
@@ -33,12 +38,14 @@
 <script>
 
 import DeckPreview from '../components/DeckPreview.vue'
+import MatchDetailMulligan from './MatchDetailMulligan.vue'
 import MatchDetailTimeline from './MatchDetailTimeline.vue'
 
 export default {
     components: {
         DeckPreview,
         MatchDetailTimeline,
+        MatchDetailMulligan,
     },
     mounted() {
         // console.log(this.details)

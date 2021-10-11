@@ -4,7 +4,7 @@
             <line @mouseenter="lineHover($event, 0)" x1="0" y1="0" x2="0" y2="20"></line>
             <line @mouseenter="lineHover($event, 1)" x1="20" y1="0" x2="20" y2="20"></line>
         </svg> -->
-        <p class="title-text">Timeline:</p>
+        <!-- <p class="title-text">Timeline</p> -->
         <div class="timeline-container" @wheel.prevent ="handleScroll"
             :class="{'grabbing': grabbing}"
             @scroll="whenScrolled"

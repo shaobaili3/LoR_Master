@@ -58,6 +58,12 @@ module.exports = [
       "Sterben Kira#NA1"
     ],
     "details": {
+      "start_hand": [
+        "05BW005","03MT040","03MT009","03MT091"
+      ],
+      "end_hand": [
+        "05BW005", "03MT009", "02BW024", "02BW045"
+      ],
       "time_stamps": [
         {
           "card_code": "05BW005",
