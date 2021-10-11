@@ -23,22 +23,22 @@
             <span class="vs-text">VS</span>
             <deck-preview @click="showDeck(opponentDeck)" :deck="opponentDeck" :won="won" :fixedWidth="true"></deck-preview>
         </div>
-        <match-detail v-if="details && showDetail" 
+        <match-detail-timeline v-if="details && showDetail" 
             :time="time"
             :details="details"
-        ></match-detail>
+        ></match-detail-timeline>
     </div>
 </template>
 
 <script>
 
 import DeckPreview from '../components/DeckPreview.vue'
-import MatchDetail from './MatchDetail.vue'
+import MatchDetailTimeline from './MatchDetailTimeline.vue'
 
 export default {
     components: {
         DeckPreview,
-        MatchDetail,
+        MatchDetailTimeline,
     },
     mounted() {
         // console.log(this.details)

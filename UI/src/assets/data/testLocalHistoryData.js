@@ -62,22 +62,110 @@ module.exports = [
         {
           "card_code": "05BW005",
           "utc_time": "1633673895",
+          "relative_time": "1",
           "player": 0,
         },
         {
           "card_code": "03MT040",
           "utc_time": "1633673898",
+          "relative_time": "4",
           "player": 1,
         },
         {
           "card_code": "03MT040",
           "utc_time": "1633673899",
+          "relative_time": "12",
           "player": 1,
         },
         {
           "card_code": "03MT009",
           "utc_time": "1633673906",
+          "relative_time": "24",
           "player": 0,
+        },
+        {
+          "card_code": "03MT009",
+          "utc_time": "1633673906",
+          "relative_time": "30",
+          "player": 0,
+        },
+        {
+          "card_code": "03MT009",
+          "utc_time": "1633673906",
+          "relative_time": "31",
+          "player": 0,
+        },
+        {
+          "card_code": "03MT009",
+          "utc_time": "1633673906",
+          "relative_time": "32",
+          "player": 0,
+        },
+        {
+          "card_code": "03MT009",
+          "utc_time": "1633673906",
+          "relative_time": "50",
+          "player": 1,
+        },
+        {
+          "card_code": "03MT009",
+          "utc_time": "1633673906",
+          "relative_time": "60",
+          "player": 0,
+        },
+        {
+          "card_code": "03MT009",
+          "utc_time": "1633673906",
+          "relative_time": "80",
+          "player": 1,
+        },
+        {
+          "card_code": "03MT009",
+          "utc_time": "1633673906",
+          "relative_time": "82",
+          "player": 0,
+        },
+        {
+          "card_code": "03MT009",
+          "utc_time": "1633673906",
+          "relative_time": "85",
+          "player": 1,
+        },
+        {
+          "card_code": "03MT009",
+          "utc_time": "1633673906",
+          "relative_time": "88",
+          "player": 0,
+        },
+        {
+          "card_code": "03MT009",
+          "utc_time": "1633673906",
+          "relative_time": "89",
+          "player": 1,
+        },
+        {
+          "card_code": "03MT009",
+          "utc_time": "1633673906",
+          "relative_time": "90",
+          "player": 0,
+        },
+        {
+          "card_code": "03MT009",
+          "utc_time": "1633673906",
+          "relative_time": "92",
+          "player": 1,
+        },
+        {
+          "card_code": "03MT009",
+          "utc_time": "1633673906",
+          "relative_time": "120",
+          "player": 0,
+        },
+        {
+          "card_code": "03MT009",
+          "utc_time": "1633673906",
+          "relative_time": "150",
+          "player": 1,
         }
       ]
     }

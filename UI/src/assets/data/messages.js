@@ -55,7 +55,7 @@ module.exports = {
         Bo3Challenge: 'Bo3 Challenge',
         StandardGauntlet: 'Gauntlet',
         Normal: 'Normal',
-        LastCallQualifierGauntlet: 'Final Gauntlet',
+        LastCallQualifierGauntlet: 'Last Chance Gauntlet',
         SeasonalTournament: 'Seasonal'
       }
     },
