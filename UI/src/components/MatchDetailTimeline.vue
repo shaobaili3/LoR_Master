@@ -4,19 +4,26 @@
             <line @mouseenter="lineHover($event, 0)" x1="0" y1="0" x2="0" y2="20"></line>
             <line @mouseenter="lineHover($event, 1)" x1="20" y1="0" x2="20" y2="20"></line>
         </svg> -->
+        <p class="title-text">Timeline:</p>
         <div class="timeline-container" @wheel.prevent ="handleScroll"
             :class="{'grabbing': grabbing}"
             @scroll="whenScrolled"
         >
             <div class="timeline-content" :style="{'width': zoom+'%'}">
+                <!-- <div class="gridline" v-for="i in 10"
+                    :key="i"
+                    :style="{'left': i*10+'%'}"
+                    :class="{'thick': i%5==0 }"
+                ></div> -->
                 <div class="card-icon event">
                     <!-- <div class="tooltiptext top-start">Game Start</div> -->
                 </div>
                 <div class="card-icon" v-for="(card, index) in details.time_stamps"
                     :key="index"
-                    :class="{'first': card.player}"
+                    :class="{'first': card.player, 'diamond': index % 7 == 0}"
                     :style="{'padding-left': 'calc('+timePercents[index]+'% - 10px)'}"
                 >
+                    <p class="time-text">{{Math.floor(card.relative_time/60)}}:{{card.relative_time & 60}}</p>
                     <card-image :code="card.card_code" @mousedown.prevent="" :style="{'margin-left': -scrollLeft+'px'}"></card-image>
                 </div>
                 <div class="card-icon event" 
@@ -148,7 +155,7 @@ export default {
             const dy = e.clientY - pos.y;
 
             // Scroll the element
-            this.ele.scrollTop = pos.top - dy;
+            // this.ele.scrollTop = pos.top - dy;
             this.ele.scrollLeft = pos.left - dx;
         },
         mouseUpHandler() {
@@ -180,14 +187,20 @@ export default {
                 // Zoom out
                 this.zoom = this.zoom / zoomSpeed
                 this.ele.scrollLeft = this.ele.scrollLeft / zoomSpeed
-                
+
+                if (this.zoom <= 100) {
+                    this.zoom = 100
+                    this.ele.scrollLeft = 0
+                }
                 
             } else {
                 // Zoom in
                 this.zoom = this.zoom * zoomSpeed
                 this.ele.scrollLeft = this.ele.scrollLeft * zoomSpeed
                 
-                
+                if (this.zoom >= 3000) {
+                    this.zoom = 3000
+                }
             }
         },
     }
@@ -196,32 +209,41 @@ export default {
 
 <style lang="scss" scoped>
 
-svg {
+    svg {
 
-    display: block;
-    height: 40px;
-    width: 100%;
+        display: block;
+        height: 40px;
+        width: 100%;
 
-    line {
-        stroke: red;
-        stroke-width: 1;
-        stroke-linecap: round;
-        // stroke-dasharray
-        transition: stroke 0.5s ease;
+        line {
+            stroke: red;
+            stroke-width: 1;
+            stroke-linecap: round;
+            // stroke-dasharray
+            transition: stroke 0.5s ease;
+        }
+
+        line:hover {
+            stroke: blue;
+        }
     }
 
-    line:hover {
-        stroke: blue;
+    @keyframes delay-overflow {
+        from { overflow: hidden; }
     }
-}
-
-@keyframes delay-overflow {
-    from { overflow: hidden; }
-}
 
     .timeline {
 
+        margin-top: 5px;
+
+        .title-text {
+            text-align: left;
+            font-size: 0.8em;
+        }
+
         .timeline-container {
+
+            // position: relative;
 
             cursor: grab;     
             &.grabbing {
@@ -238,48 +260,120 @@ svg {
             
             // gap: 1px;
 
-            padding-top: 20px;
+            margin-top: 2px;
+
+            // padding-top: 20px;
             padding-left: 10px;
             padding-right: 10px;
-            padding-bottom: 10px;
+            // padding-bottom: 10px;
             box-sizing: border-box;
+
+            // background: var(--col-gold);
+            // background: var(--col-background);
+            background: var(--col-darker-grey);
+
+            border-radius: 4px;
 
             .timeline-content {
                 // width: 100%;
+
+                position: relative;
                 
                 display: flex;
                 justify-content: flex-start;
+
+                .gridline {
+                    position: absolute;
+                    left: 10%;
+                    top: -50%;
+                    width: 1px;
+                    height: 200%;
+                    background-color: white;
+
+                    &.thick {
+                        width: 2px;
+                    }
+                }
 
                 .card-icon {
 
                     position: relative;
                     width: 10px;
                     height: 20px;
+                    padding-top: 22px;
+                    padding-bottom: 12px;
                     // background: white;
                     overflow: visible;
+                    
+                    opacity: 0.5;
 
                     // box-sizing: border-box;
                     // border-left: 1px solid black;
+                &:hover {
+
+                    opacity: 1;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        bottom: -50%;
+                        right: 3px;
+                        width: 4px;
+                        height: 200%;
+                        background: var(--col-dark-gold);
+                    }
+
+                    &.event::before {
+                        display: none;
+                    }
+
+                    .time-text {
+                        opacity: 1;
+                    }
+                    
+                }   
 
                     &::after {
                         content: "";
                         position: absolute;
-                        top: 0;
+                        top: calc(50% - 5px);
                         right: 0;
                         width: 10px;
-                        height: 100%;
-                        background: white;
+                        height: 10px;
+                        background: #fff;
+                        border-radius: 100%;
                         // background-image: url('../assets/images/cardback.png');
                         // background-repeat: no-repeat;
-                        // background-size: auto 100%;
+                        // background-size: auto 100%;   
                     }
 
                     &.first::after {
-                        background: black;
+                        top: calc(50% + 5px);
+                        background: var(--col-gold);
+                    }
+
+                    &.diamond::after {
+                        border-radius: 0px;
+                        transform: rotate(45deg);
                     }
 
                     &.event::after {
-                        background: grey;
+                        // top: 0;
+                        height: 100%;
+                        width: 4px;
+                        background: #160C28;
+                        border-radius: 0px;
+
+                        display: none;
+                    }
+
+                    .time-text {
+                        opacity: 0;
+                        font-size: 0.8em;
+                        position: absolute;
+                        margin-top: -22px;
+                        margin-left: 20px;
+                        z-index: 12; // Above the image which is 10
                     }
 
                     .card-image {
@@ -289,7 +383,7 @@ svg {
                         // left: 0px;
                         // bottom: 100%;
                         // left: 100%;
-                        transform: translateX(calc(-50%)) translateY(-100%); // because of 10px width of the selector
+                        transform: translateX(calc(-50% - 1px)) translateY(calc(-100% - 10px)); // because of 10px width of the selector
                         
                         width: 200px;
                         height: auto;
