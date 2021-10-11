@@ -185,7 +185,7 @@ def opInfo():
     localTrack.updateTagByName()
     opInfo['name'] = localTrack.opponentName
     # will break here if opponentName is None
-    if localTrack.opponentName.startswith('deckname_'):
+    if localTrack.opponentName.startswith('deckname_') or localTrack.opponentName.startswith('decks_'):
         opInfo['name'] = 'AI'
     opInfo['tag'] = localTrack.opponentTag
     opInfo['rank'], opInfo['lp'] = leaderboardModel.checkRank(

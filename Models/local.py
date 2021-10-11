@@ -10,6 +10,7 @@ class Local:
     def __init__(self, setting):
         self.opponentName = None
         self.opponentTag = None
+        self.gameId = None
         self.setting = setting
         self.playername = None
         self.trackerDict = {}
@@ -23,16 +24,35 @@ class Local:
         self.trackJson = {}
         self.handsInHand = {}
 
+        self.openHand = {}
+        self.replacedHnad = {}
+
     # call this function after changes server in the tracker
     def reset(self):
         self.opponentName = None
         self.playername = None
+        self.gameId = None
         self.opponentTag = None
         self.playedCards = {}
         self.graveyard = {}
         self.opGraveyard = {}
         self.trackJson = {}
         self.trackerDict = {}
+
+        self.openHand = {}
+        self.replacedHnad = {}
+
+    # get latest game result and update self.gameId
+    def getResult(self):
+        try:
+            resultRequest = self.session.get(self.getResultLink())
+            resultJson = resultRequest.json()
+            self.gameId = resultJson['GameID'] + 1
+            localPlayerWon = resultJson['LocalPlayerWon']
+        except Exception as e:
+            print('getResult client is not running: ', e)
+            self.gameId = None
+        return localPlayerWon
 
     def updateTracker(self):
         rectangles = self.positional_rectangles['Rectangles']
@@ -46,11 +66,16 @@ class Local:
                     self.cardsInHand[card['CardID']] = card['CardCode']
                     self.playedCards[card['CardID']] = card['CardCode']
             else:
-                self.graveyard[card['CardID']] = card['CardCode']       
-        # player is replacing cards
-        if len(self.playedCards) == 0 and len(self.graveyard) == 1:
-            self.playedCards = {}
+                self.graveyard[card['CardID']] = card['CardCode']
+        # player is replacing cards, lor clean all cards after replacement than arrange cards for both players.
+        if len(self.playedCards) == 0 and len(self.graveyard) == 1 and len(rectangles) == 6:
             self.graveyard = {}
+            # replaceds card will show in the center of screen as same as open cards, so use it to avoid save replaced cards
+            if not self.openHand:
+                self.openHand = rectangles
+        # player has finished replacing
+        if len(self.playedCards) == 4 and len(self.cardsInHand) == 4 and len(self.graveyard) == 1 and len(rectangles) == 6:
+            self.replacedHnad = rectangles
 
     def updateLeftCards(self, currentCards):
         if currentCards is None:
@@ -138,6 +163,8 @@ class Local:
         self.trackerDict['myPlayedCardsCode'] = getDeckCode(
             self.trackerDict['myPlayedCards'])
         self.trackerDict['cardsInHandNum'] = len(self.cardsInHand)
+        self.trackerDict['openHand'] = self.openHand
+        self.trackerDict['replacedHand'] = self.replacedHnad
 
     def updateStatusFlask(self):
         try:
@@ -153,6 +180,7 @@ class Local:
             self.updateMyDeck()
             print(self.trackerDict)
         else:
+            # save game result here
             self.reset()
             self.trackJson
             self.trackJson['positional_rectangles'] = self.positional_rectangles
@@ -161,16 +189,14 @@ class Local:
         self.trackJson['positional_rectangles'] = self.positional_rectangles
         self.trackJson['deck_tracker'] = self.trackerDict
 
-        opInfo = {}
-        self.trackJson['opponent_info'] = opInfo
-
         return self.trackJson
 
     def updateTagByName(self):
         if self.opponentName is None:
             print('updateTagByName:', 'game not start')
             return
-        nameListPath = constants.getCacheFilePath(self.setting.riotServer.lower() + '.json')
+        nameListPath = constants.getCacheFilePath(
+            self.setting.riotServer.lower() + '.json')
         if not os.path.isfile(nameListPath):
             nameListPath = 'Resource/' + self.setting.riotServer.lower() + '.json'
         try:
@@ -194,3 +220,6 @@ class Local:
 
     def getLocalDeckLink(self):
         return cs.IP_KEY + self.setting.port + cs.LOCAL_DECK
+
+    def getResultLink(self):
+        return cs.IP_KEY + self.setting.port + cs.LOCAL_RESULT
