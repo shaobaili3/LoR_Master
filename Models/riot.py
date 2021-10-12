@@ -118,11 +118,9 @@ class Riot:
         if 'X-Method-Rate-Limit-Count' in header:
             print('X-Method-Rate-Limit-Count: ',
                   header['X-Method-Rate-Limit-Count'])
-            print('X-App-Rate-Limit', header['X-App-Rate-Limit'])
+            # print('X-App-Rate-Limit', header['X-App-Rate-Limit'])
         if not detailsRequest.ok:
             print('getDetail server error:', detailsLink)
-            print(header)
-            print(detailsRequest.status_code)
             print(detail)
             #  If match is not exist in Riot server, still save cache as None
             # "message": "Data not found - match file not found",
