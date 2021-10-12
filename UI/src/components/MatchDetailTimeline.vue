@@ -23,7 +23,12 @@
                     :class="{'first': card.player, 'diamond': index % 7 == 0}"
                     :style="{'padding-left': 'calc('+timePercents[index]+'% - 10px)'}"
                 >
-                    <p class="time-text">{{Math.floor(card.relative_time/60)}}:{{card.relative_time & 60}}</p>
+                    <svg viewPort="0 0 10 10">
+                        <!-- <polygon points="0,0 10,0 10,10 0,10"></polygon> -->
+                        <ellipse cx="5" cy="5" rx="4.045" ry="4.045"></ellipse>
+                        <polygon points="5,0 9.755,3.455 7.939,9.045 2.061,9.045 0.245,3.455"></polygon>
+                    </svg>
+                    <p class="time-text">{{Math.floor(card.relative_time/60)}}:{{card.relative_time % 60}}</p>
                     <card-image :code="card.card_code" @mousedown.prevent="" :style="{'margin-left': -scrollLeft+'px'}"></card-image>
                 </div>
                 <div class="card-icon event" 
@@ -209,24 +214,6 @@ export default {
 
 <style lang="scss" scoped>
 
-    svg {
-
-        display: block;
-        height: 40px;
-        width: 100%;
-
-        line {
-            stroke: red;
-            stroke-width: 1;
-            stroke-linecap: round;
-            // stroke-dasharray
-            transition: stroke 0.5s ease;
-        }
-
-        line:hover {
-            stroke: blue;
-        }
-    }
 
     @keyframes delay-overflow {
         from { overflow: hidden; }
@@ -309,52 +296,89 @@ export default {
 
                     // box-sizing: border-box;
                     // border-left: 1px solid black;
-                &:hover {
-
-                    opacity: 1;
-
-                    &::before {
-                        content: "";
-                        position: absolute;
-                        bottom: -50%;
-                        right: 3px;
-                        width: 4px;
-                        height: 200%;
-                        background: var(--col-dark-gold);
-                    }
-
-                    &.event::before {
-                        display: none;
-                    }
-
-                    .time-text {
+                    &:hover {
+                        // Hover
                         opacity: 1;
+
+                        &::before {
+                            // On hover shows the indicator
+                            content: "";
+                            position: absolute;
+                            bottom: -50%;
+                            right: 4px;
+                            width: 2px;
+                            height: 200%;
+                            background: var(--col-dark-gold);
+
+                            // transform: translateX(-50%);
+                        }
+
+                        &.event::before {
+                            display: none;
+                        }
+
+                        .time-text {
+                            opacity: 1;
+                        }
+                        
+                    }
+
+                    svg {
+                        position: absolute;
+                        display: block;
+                        height: 10px;
+                        width: 10px;
+
+                        right: 0px;
+
+                        fill: white;
+
+                        ellipse {
+                            display: initial;
+                        }
+
+                        polygon {
+                            display: none;
+                        }
+                        
+                    }
+
+                    // &::after {
+                    //     content: "";
+                    //     position: absolute;
+                    //     top: calc(50% - 5px);
+                    //     right: 0;
+                    //     width: 10px;
+                    //     height: 10px;
+                    //     // background: #fff;
+                    //     border-radius: 100%;
+                    //     // background-image: url('../assets/images/cardback.png');
+                    //     // background-repeat: no-repeat;
+                    //     // background-size: auto 100%;   
+                    // }
+
+                    &.first {
+
+                        svg {
+                            padding-top: 10px;
+                            fill: var(--col-gold);;
+                        }
+
                     }
                     
-                }   
 
-                    &::after {
-                        content: "";
-                        position: absolute;
-                        top: calc(50% - 5px);
-                        right: 0;
-                        width: 10px;
-                        height: 10px;
-                        background: #fff;
-                        border-radius: 100%;
-                        // background-image: url('../assets/images/cardback.png');
-                        // background-repeat: no-repeat;
-                        // background-size: auto 100%;   
-                    }
+                    &.diamond {
+                        
+                        svg {
+                            ellipse {
+                                display: none;
+                            }
+                            polygon {
+                                display: initial;
+                            }
+                        }
 
-                    &.first::after {
-                        top: calc(50% + 5px);
-                        background: var(--col-gold);
-                    }
-
-                    &.diamond::after {
-                        border-radius: 0px;
-                        transform: rotate(45deg);
+                        
                     }
 
                     &.event::after {
