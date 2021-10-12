@@ -23,10 +23,20 @@
                     :class="{'first': card.player, 'diamond': index % 7 == 0}"
                     :style="{'padding-left': 'calc('+timePercents[index]+'% - 10px)'}"
                 >
-                    <svg viewPort="0 0 10 10">
+                    <svg viewBox="0 0 10 10">
                         <!-- <polygon points="0,0 10,0 10,10 0,10"></polygon> -->
-                        <ellipse cx="5" cy="5" rx="4.045" ry="4.045"></ellipse>
-                        <polygon points="5,0 9.755,3.455 7.939,9.045 2.061,9.045 0.245,3.455"></polygon>
+                        <!-- normal circle -->
+                        <!-- <ellipse cx="5" cy="5" rx="4.045" ry="4.045"></ellipse> -->
+
+                        <ellipse cx="5" cy="5" rx="3.6" ry="3.6"></ellipse>
+
+                        <!-- <polygon points="5,0 9.755,3.455 7.939,9.045 2.061,9.045 0.245,3.455"></polygon> -->
+                        <!-- <polygon points="5,0 10,5 5,10 0,5"></polygon> -->
+                        <!-- <polygon points="5,0 10,8 0,8"></polygon> -->
+                        <!-- <polygon points="5,9 10,1 0,1"></polygon> -->
+                        <!-- 6 sided -->
+                        <!-- <polygon points="5,0 9.33,2.5 9.33,7.5 5,10 0.67,7.5 0.67,2.5"></polygon> -->
+                        <polygon points="10,5 7.5,9.33 2.5,9.33 0,5 2.5,0.67 7.5,0.67"></polygon>
                     </svg>
                     <p class="time-text">{{Math.floor(card.relative_time/60)}}:{{card.relative_time % 60}}</p>
                     <card-image :code="card.card_code" @mousedown.prevent="" :style="{'margin-left': -scrollLeft+'px'}"></card-image>
@@ -294,6 +304,25 @@ export default {
                     
                     opacity: 0.5;
 
+                    &.first {
+                        svg {
+                            padding-top: 10px;
+                            fill: var(--col-gold);;
+                        }
+                    }
+                    
+                    &.diamond {
+                        opacity: 0.6;
+                        svg {
+                            ellipse {
+                                display: none;
+                            }
+                            polygon {
+                                display: initial;
+                            }
+                        }
+                    }
+
                     // box-sizing: border-box;
                     // border-left: 1px solid black;
                     &:hover {
@@ -320,6 +349,13 @@ export default {
                         .time-text {
                             opacity: 1;
                         }
+
+                        svg {
+                            width: 14px;
+                            height: 14px;
+                            margin-right: -2px;
+                            margin-top: -2px;
+                        }
                         
                     }
 
@@ -340,44 +376,6 @@ export default {
                         polygon {
                             display: none;
                         }
-                        
-                    }
-
-                    // &::after {
-                    //     content: "";
-                    //     position: absolute;
-                    //     top: calc(50% - 5px);
-                    //     right: 0;
-                    //     width: 10px;
-                    //     height: 10px;
-                    //     // background: #fff;
-                    //     border-radius: 100%;
-                    //     // background-image: url('../assets/images/cardback.png');
-                    //     // background-repeat: no-repeat;
-                    //     // background-size: auto 100%;   
-                    // }
-
-                    &.first {
-
-                        svg {
-                            padding-top: 10px;
-                            fill: var(--col-gold);;
-                        }
-
-                    }
-                    
-
-                    &.diamond {
-                        
-                        svg {
-                            ellipse {
-                                display: none;
-                            }
-                            polygon {
-                                display: initial;
-                            }
-                        }
-
                         
                     }
 
