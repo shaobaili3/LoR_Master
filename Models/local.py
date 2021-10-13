@@ -6,20 +6,12 @@ import os
 import constants
 from datetime import datetime
 
-
-class Card:
-    def __init__(self, cardId, cardCode, drawTime) -> None:
-        self.cardId = cardId
-        self.cardCode = cardCode
-        self.drawTime = drawTime
-        self.exitTime = None
-
-
 class Local:
-    def __init__(self, setting):
+    def __init__(self, setting, cache):
         self.opponentName = None
         self.opponentTag = None
         self.gameId = None
+        self.startTime = None
         self.setting = setting
         self.playername = None
         self.trackerDict = {}
@@ -38,6 +30,7 @@ class Local:
 
         self.timeline = {}
         self.allCard = {}
+        self.cache = cache
 
     # call this function after changes server in the tracker
     def reset(self):
@@ -77,6 +70,16 @@ class Local:
         except Exception as e:
             print('getResult client is not running: ', e)
             self.gameId = None
+            return
+        self.startTime = str(datetime.utcnow())
+        self.opponentName = 'test'
+        self.cache.localMatches[self.startTime + self.opponentName] = {}
+        self.cache.localMatches[self.startTime + self.opponentName]['track'] = self.trackerDict
+        self.cache.localMatches[self.startTime + self.opponentName]['startTime'] = self.startTime
+        self.cache.localMatches[self.startTime + self.opponentName]['localPlayerWon'] = localPlayerWon
+        self.cache.localMatches[self.startTime + self.opponentName]['opponentName'] = self.opponentName
+        self.cache.localMatches[self.startTime + self.opponentName]['opponentTag'] = self.opponentTag
+        self.cache.saveLocal()
         return localPlayerWon
 
     def updateTracker(self):
@@ -100,6 +103,7 @@ class Local:
         self.updateTimeline()
         # player is replacing cards, lor clean all cards after replacement than arrange cards for both players.
         if len(self.playedCards) == 0 and len(self.opGraveyardWithId) == 1 and len(rectangles) == 6:
+            self.startTime = str(datetime.utcnow())
             self.opGraveyardWithId = {}
             self.timeline = {}
             # replaceds card will show in the center of screen as same as open cards, so use it to avoid save replaced cards
@@ -215,8 +219,9 @@ class Local:
             print(self.trackerDict)
         else:
             # save game result here
+            if len(self.openHand) > 0:
+                self.getResult()
             self.reset()
-            self.trackJson
             self.trackJson['positional_rectangles'] = self.positional_rectangles
             return self.trackJson
 

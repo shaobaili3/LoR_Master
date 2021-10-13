@@ -10,6 +10,7 @@ class Cache():
         self.riotIds = {}
         self.playerNames = {}
         self.matches = {}
+        self.localMatches = {}
         self.loadJson()
 
     def loadJson(self):
@@ -21,6 +22,8 @@ class Cache():
             with open(constants.getCacheFilePath('playerNames.json'), 'r', encoding='utf-8') as fp:
                 self.playerNames = json.load(fp)
             with open(constants.getCacheFilePath('matches.json'), 'r', encoding='utf-8') as fp:
+                self.matches = json.load(fp)
+            with open(constants.getCacheFilePath('localMatches.json'), 'r', encoding='utf-8') as fp:
                 self.matches = json.load(fp)
         except Exception as e:
             print('loadJson error', e)
@@ -35,5 +38,12 @@ class Cache():
                 json.dump(self.playerNames, fp, ensure_ascii=False, indent=2)
             with open(constants.getCacheFilePath('matches.json'), 'w+', encoding='utf-8') as fp:
                 json.dump(self.matches, fp, ensure_ascii=False, indent=2)
+        except Exception as e:
+            print('save cache error: ', e)
+
+    def saveLocal(self):
+        try:
+            with open(constants.getCacheFilePath('localMatches.json'), 'w+', encoding='utf-8') as fp:
+                json.dump(self.localMatches, fp, ensure_ascii=False, indent=2)
         except Exception as e:
             print('save cache error: ', e)

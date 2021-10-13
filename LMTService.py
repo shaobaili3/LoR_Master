@@ -56,7 +56,7 @@ leaderboardModel = Leaderboard()
 cacheModel = Cache()
 
 settingTrack = Setting()
-localTrack = Local(settingTrack)
+localTrack = Local(settingTrack, cacheModel)
 
 
 class FlaskApp(Flask):
@@ -203,6 +203,10 @@ def get_status():
     status['lorRunning'] = settingTrack.isLorRunning
     return jsonify(status)
 
+
+@app.route("/local", methods=['get'])
+def get_local():
+    return jsonify(cacheModel.localMatches)
 
 @app.route("/report/<string:message>", methods=['get'])
 def report(message):
