@@ -206,7 +206,7 @@ def get_status():
 
 @app.route("/local", methods=['get'])
 def get_local():
-    return jsonify(cacheModel.localMatches)
+    return jsonify(list(cacheModel.localMatches.values()))
 
 @app.route("/report/<string:message>", methods=['get'])
 def report(message):

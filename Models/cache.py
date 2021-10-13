@@ -24,7 +24,7 @@ class Cache():
             with open(constants.getCacheFilePath('matches.json'), 'r', encoding='utf-8') as fp:
                 self.matches = json.load(fp)
             with open(constants.getCacheFilePath('localMatches.json'), 'r', encoding='utf-8') as fp:
-                self.matches = json.load(fp)
+                self.localMatches = json.load(fp)
         except Exception as e:
             print('loadJson error', e)
 
