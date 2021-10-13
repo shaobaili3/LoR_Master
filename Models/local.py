@@ -4,6 +4,15 @@ from Models.deck import getDeckCode
 import json
 import os
 import constants
+from datetime import datetime
+
+
+class Card:
+    def __init__(self, cardId, cardCode, drawTime) -> None:
+        self.cardId = cardId
+        self.cardCode = cardCode
+        self.drawTime = drawTime
+        self.exitTime = None
 
 
 class Local:
@@ -16,7 +25,7 @@ class Local:
         self.trackerDict = {}
         self.session = requests.Session()
         self.playedCards = {}
-        self.graveyard = {}
+        self.opGraveyardWithId = {}
         self.opGraveyard = {}
         self.myGraveyard = {}
         self.positional_rectangles = None
@@ -27,6 +36,9 @@ class Local:
         self.openHand = {}
         self.replacedHnad = {}
 
+        self.timeline = {}
+        self.allCard = {}
+
     # call this function after changes server in the tracker
     def reset(self):
         self.opponentName = None
@@ -34,13 +46,26 @@ class Local:
         self.gameId = None
         self.opponentTag = None
         self.playedCards = {}
-        self.graveyard = {}
+        self.opGraveyardWithId = {}
         self.opGraveyard = {}
         self.trackJson = {}
         self.trackerDict = {}
 
         self.openHand = {}
         self.replacedHnad = {}
+
+        self.allCard = {}
+
+    def addCardToTimeline(self, card):
+        if card['CardID'] not in self.timeline:
+            self.timeline[card['CardID']] = card
+            self.timeline[card['CardID']]['drawTime'] = str(datetime.utcnow())
+
+    def updateTimeline(self):
+        for cardId in self.timeline.keys():
+            if cardId not in self.allCard:
+                if self.timeline[cardId].get('exitTime') is None:
+                    self.timeline[cardId]['exitTime'] = str(datetime.utcnow())
 
     # get latest game result and update self.gameId
     def getResult(self):
@@ -60,24 +85,32 @@ class Local:
             return
         screenHeight = self.positional_rectangles['Screen']['ScreenHeight']
         self.cardsInHand = {}
+        self.allCard = {}
         for card in rectangles:
+            self.allCard[card['CardID']] = card['CardCode']
             if card['LocalPlayer'] is True:
+                # only record the cards in hand for localplayer not on board
                 if card['Height'] > screenHeight / 5.2 and card['TopLeftY'] < screenHeight / 2:
                     self.cardsInHand[card['CardID']] = card['CardCode']
                     self.playedCards[card['CardID']] = card['CardCode']
+                    self.addCardToTimeline(card)
             else:
-                self.graveyard[card['CardID']] = card['CardCode']
+                self.opGraveyardWithId[card['CardID']] = card['CardCode']
+                self.addCardToTimeline(card)
+        self.updateTimeline()
         # player is replacing cards, lor clean all cards after replacement than arrange cards for both players.
-        if len(self.playedCards) == 0 and len(self.graveyard) == 1 and len(rectangles) == 6:
-            self.graveyard = {}
+        if len(self.playedCards) == 0 and len(self.opGraveyardWithId) == 1 and len(rectangles) == 6:
+            self.opGraveyardWithId = {}
+            self.timeline = {}
             # replaceds card will show in the center of screen as same as open cards, so use it to avoid save replaced cards
             if not self.openHand:
                 self.openHand = rectangles
         # player has finished replacing
-        if len(self.playedCards) == 4 and len(self.cardsInHand) == 4 and len(self.graveyard) == 1 and len(rectangles) == 6:
+        if len(self.playedCards) == 4 and len(self.cardsInHand) == 4 and len(self.opGraveyardWithId) == 1 and len(rectangles) == 6:
             self.replacedHnad = rectangles
 
     def updateLeftCards(self, currentCards):
+
         if currentCards is None:
             return
         for key in self.playedCards:
@@ -93,8 +126,8 @@ class Local:
 
     def updateOpGraveyard(self):
         self.opGraveyard = {}
-        for key in self.graveyard:
-            cardCode = self.graveyard[key]
+        for key in self.opGraveyardWithId:
+            cardCode = self.opGraveyardWithId[key]
             if cardCode in self.opGraveyard:
                 self.opGraveyard[cardCode] += 1
             else:
@@ -165,6 +198,7 @@ class Local:
         self.trackerDict['cardsInHandNum'] = len(self.cardsInHand)
         self.trackerDict['openHand'] = self.openHand
         self.trackerDict['replacedHand'] = self.replacedHnad
+        self.trackerDict['timeline'] = self.timeline
 
     def updateStatusFlask(self):
         try:
