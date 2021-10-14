@@ -3,6 +3,9 @@ import { createI18n } from 'vue-i18n'
 import '@/assets/css/global.css'
 
 import { createStore, mapState, mapMutations } from 'vuex'
+import sets_en from '../../../Resource/en_us.json'
+
+const sets_en_combined = [].concat(...sets_en)
 
 export default (App) => {
 
@@ -16,7 +19,7 @@ const store = createStore({
     state () {
         return {
             locale: 'en_us',
-            sets: import('../../../Resource/en_us.json')
+            sets: sets_en_combined,
         }
     },
     mutations: {
