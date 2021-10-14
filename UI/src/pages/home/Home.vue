@@ -827,7 +827,7 @@ export default {
                     opponent = data[key].player_info[0]
                 }
 
-                if (!playerGame || !opponentGame || !player || !opponent) continue;
+                if (!playerGame || !player) continue;
 
                 this.playerName = player.name // Sync name so all caps are correct
                 opponentName = opponent.name
@@ -846,8 +846,13 @@ export default {
                 }
                 if (!this.playerLP) this.playerLP = player.lp
                 
+                if (opponentGame) {
+                    opponentDeck = opponentGame.deck_code
+                } else {
+                    opponentDeck = ""
+                }
+
                 deck = playerGame.deck_code
-                opponentDeck = opponentGame.deck_code
                 order = playerGame.order_of_play
                 win = playerGame.game_outcome == "win"
                 rounds = info.total_turn_count

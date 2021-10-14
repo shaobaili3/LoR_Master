@@ -56,7 +56,8 @@ module.exports = {
         StandardGauntlet: 'Gauntlet',
         Normal: 'Normal',
         LastCallQualifierGauntlet: 'Last Chance Gauntlet',
-        SeasonalTournament: 'Seasonal'
+        SeasonalTournament: 'Seasonal',
+        AI: 'AI'
       }
     },
     dash: {
