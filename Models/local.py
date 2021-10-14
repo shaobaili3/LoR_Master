@@ -6,6 +6,7 @@ import os
 import constants
 from datetime import datetime
 
+
 class Local:
     def __init__(self, setting, cache):
         self.opponentName = None
@@ -71,14 +72,16 @@ class Local:
             print('getResult client is not running: ', e)
             self.gameId = None
             return
-        self.startTime = str(datetime.utcnow())
-        self.opponentName = 'test'
-        self.cache.localMatches[self.startTime + self.opponentName] = {}
-        self.cache.localMatches[self.startTime + self.opponentName]['track'] = self.trackerDict
-        self.cache.localMatches[self.startTime + self.opponentName]['startTime'] = self.startTime
-        self.cache.localMatches[self.startTime + self.opponentName]['localPlayerWon'] = localPlayerWon
-        self.cache.localMatches[self.startTime + self.opponentName]['opponentName'] = self.opponentName
-        self.cache.localMatches[self.startTime + self.opponentName]['opponentTag'] = self.opponentTag
+        # self.startTime = str(datetime.utcnow())
+        if self.setting.playerId not in self.cache.localMatches:
+            self.cache.localMatches[self.setting.playerId] = []
+        localMatch = {}
+        localMatch['deck_tracker'] = self.trackerDict
+        localMatch['startTime'] = self.startTime
+        localMatch['localPlayerWon'] = localPlayerWon
+        localMatch['opponentName'] = self.opponentName
+        localMatch['opponentTag'] = self.opponentTag
+        self.cache.localMatches[self.setting.playerId].insert(0, localMatch)
         self.cache.saveLocal()
         return localPlayerWon
 
@@ -202,7 +205,9 @@ class Local:
         self.trackerDict['cardsInHandNum'] = len(self.cardsInHand)
         self.trackerDict['openHand'] = self.openHand
         self.trackerDict['replacedHand'] = self.replacedHnad
-        self.trackerDict['timeline'] = self.timeline
+        self.trackerDict['timeline'] = list(self.timeline.values())
+        self.trackerDict['opponentName'] = self.opponentName
+        self.trackerDict['opponentTag'] = self.opponentTag
 
     def updateStatusFlask(self):
         try:
@@ -212,8 +217,8 @@ class Local:
             print('client is not running: ', e)
             self.reset()
             return {}
-        self.opponentName = self.positional_rectangles['OpponentName']
         if self.positional_rectangles['GameState'] == 'InProgress':
+            self.opponentName = self.positional_rectangles['OpponentName']
             self.updateTracker()
             self.updateMyDeck()
             print(self.trackerDict)
