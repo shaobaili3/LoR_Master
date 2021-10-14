@@ -30,13 +30,29 @@
 
                         <ellipse cx="5" cy="5" rx="3.6" ry="3.6"></ellipse>
 
+                        <!-- pentagon -->
                         <!-- <polygon points="5,0 9.755,3.455 7.939,9.045 2.061,9.045 0.245,3.455"></polygon> -->
-                        <!-- <polygon points="5,0 10,5 5,10 0,5"></polygon> -->
+                        
+                        <!-- diamond -->
+                        <polygon points="5,0 10,5 5,10 0,5"></polygon>
+
+                        <!-- triangle up -->
                         <!-- <polygon points="5,0 10,8 0,8"></polygon> -->
+                        <!-- triangle down -->
                         <!-- <polygon points="5,9 10,1 0,1"></polygon> -->
+                        
+                        <!-- angled triangle -->
+                        <!-- <polygon points="7,0 8.009,8.993 0,6"></polygon> -->
+
+                        <!-- <polygon points="0,0 0,10 10,10 10,0"></polygon> -->
+
                         <!-- 6 sided -->
+                            <!-- upward -->
                         <!-- <polygon points="5,0 9.33,2.5 9.33,7.5 5,10 0.67,7.5 0.67,2.5"></polygon> -->
-                        <polygon points="10,5 7.5,9.33 2.5,9.33 0,5 2.5,0.67 7.5,0.67"></polygon>
+                                <!-- thinner -->
+                        <!-- <polygon points="5,0 8.33,2.5 8.33,7.5 5,10 1.67,7.5 1.67,2.5"></polygon> -->
+                            <!-- side way -->
+                        <!-- <polygon points="10,5 7.5,9.33 2.5,9.33 0,5 2.5,0.67 7.5,0.67"></polygon> -->
                     </svg>
                     <p class="time-text">{{Math.floor(card.relative_time/60)}}:{{card.relative_time % 60}}</p>
                     <card-image :code="card.card_code" @mousedown.prevent="" :style="{'margin-left': -scrollLeft+'px'}"></card-image>
