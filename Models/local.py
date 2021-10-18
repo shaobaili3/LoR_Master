@@ -78,6 +78,7 @@ class Local:
             self.cache.localMatches[self.setting.playerId] = []
         localMatch = {}
         localMatch['startTime'] = self.startTime
+        localMatch['endTime'] = datetime.utcnow().isoformat()
         localMatch['localPlayerWon'] = localPlayerWon
         localMatch['opponentName'] = self.opponentName
         localMatch['opponentTag'] = self.opponentTag
