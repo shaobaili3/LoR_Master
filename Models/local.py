@@ -217,7 +217,9 @@ class Local:
         except Exception as e:
             print('client is not running: ', e)
             self.reset()
+            self.setting.isLocalApiEnable = False
             return {}
+        self.setting.isLocalApiEnable = True
         if self.positional_rectangles['GameState'] == 'InProgress':
             self.opponentName = self.positional_rectangles['OpponentName']
             if self.startTime is None:

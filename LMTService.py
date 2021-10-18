@@ -201,6 +201,8 @@ def get_status():
     status['server'] = settingTrack.riotServer
     status['language'] = settingTrack.language
     status['lorRunning'] = settingTrack.isLorRunning
+    # isLocalApiEnable is updated by track api
+    status['isLocalApiEnable'] = settingTrack.isLocalApiEnable
     return jsonify(status)
 
 
