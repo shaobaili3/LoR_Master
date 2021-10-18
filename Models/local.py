@@ -47,19 +47,20 @@ class Local:
 
         self.openHand = {}
         self.replacedHnad = {}
+        self.startTime = None
 
         self.allCard = {}
 
     def addCardToTimeline(self, card):
         if card['CardID'] not in self.timeline:
             self.timeline[card['CardID']] = card
-            self.timeline[card['CardID']]['drawTime'] = str(datetime.utcnow())
+            self.timeline[card['CardID']]['drawTime'] = datetime.utcnow().isoformat()
 
     def updateTimeline(self):
         for cardId in self.timeline.keys():
             if cardId not in self.allCard:
                 if self.timeline[cardId].get('exitTime') is None:
-                    self.timeline[cardId]['exitTime'] = str(datetime.utcnow())
+                    self.timeline[cardId]['exitTime'] = datetime.utcnow().isoformat()
 
     # get latest game result and update self.gameId
     def getResult(self):
@@ -106,7 +107,7 @@ class Local:
         self.updateTimeline()
         # player is replacing cards, lor clean all cards after replacement than arrange cards for both players.
         if len(self.playedCards) == 0 and len(self.opGraveyardWithId) == 1 and len(rectangles) == 6:
-            self.startTime = str(datetime.utcnow())
+            # self.startTime = datetime.utcnow().isoformat()
             self.opGraveyardWithId = {}
             self.timeline = {}
             # replaceds card will show in the center of screen as same as open cards, so use it to avoid save replaced cards
@@ -219,12 +220,14 @@ class Local:
             return {}
         if self.positional_rectangles['GameState'] == 'InProgress':
             self.opponentName = self.positional_rectangles['OpponentName']
+            if self.startTime is None:
+                self.startTime = datetime.utcnow().isoformat()
             self.updateTracker()
             self.updateMyDeck()
             print(self.trackerDict)
         else:
             # save game result here
-            if len(self.openHand) > 0:
+            if self.startTime is not None:
                 self.getResult()
             self.reset()
             self.trackJson['positional_rectangles'] = self.positional_rectangles
