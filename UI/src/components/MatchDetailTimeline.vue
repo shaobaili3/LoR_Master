@@ -55,7 +55,7 @@
                         <!-- <polygon points="10,5 7.5,9.33 2.5,9.33 0,5 2.5,0.67 7.5,0.67"></polygon> -->
                     </svg>
                     <p class="time-text">
-                        {{ Math.floor((new Date(card.drawTime) - new Date(time)) / 60000) }}:{{ Math.floor((new Date(card.drawTime) - new Date(time)) / 1000 % 60) }}</p>
+                        {{ moment(new Date(card.drawTime) - new Date(time)).format('mm:ss') }}</p>
                     <card-image :code="card.CardCode" @mousedown.prevent="" :style="{'margin-left': -scrollLeft+'px'}"></card-image>
                 </div>
                 <div class="card-icon event" 
@@ -71,6 +71,7 @@
 import CardImage from './image/CardImage.vue'
 // import CardPreview from './CardPreview.vue'
 
+import moment from 'moment'
 
 let pos = { top: 0, left: 0, x: 0, y: 0 };
 
@@ -96,6 +97,7 @@ export default {
             grabbing: false,
             zoom: 100,
             scrollLeft: 0,
+            moment: moment,
         }
     },
     props: {

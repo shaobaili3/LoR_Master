@@ -7,11 +7,13 @@
         </div>
         <div class="row opponent">
             <p @click="search" class="match-info-title">
-                vs <span class="name">{{opponentName}}</span>
+                vs <span class="name"
+                        :class="{'search': region}"
+                    >{{opponentName}}</span>
             </p>
             <div class="opponent-info" v-if="opponentRank"><i class="fas fa-trophy"></i> {{opponentRank}}</div>
             <div class="history-info">{{timeString}}</div>
-            <div class="history-info">{{rounds}} {{$t('str.rounds')}}</div>
+            <div class="history-info" v-if="rounds">{{rounds}} {{$t('str.rounds')}}</div>
             <div class="match-info-badge" v-for="(badge, index) in filteredBadges" :key="index" >
                 <span v-if="badge=='recent' || badge=='frequent'" class="match-info-badge-icon fa" :class="{'fa-clock': badge=='recent', 'fa-angle-double-up': badge=='frequent'}"></span>
                 {{$t('matches.badges.'+badge.replace(/\s+/g, ''))}}</div>
@@ -69,6 +71,7 @@ export default {
         time: String,
         badges: Array,
         details: Object,
+        region: String,
     },
     computed: {
         timeString() {
@@ -353,11 +356,10 @@ export default {
 
         /* border-bottom: 2px solid transparent; */
         border-radius: 0px;
-
-        cursor: pointer;
     }
 
-    .match-info-title:hover .name {
+    .match-info-title:hover .name.search {
+        cursor: pointer;
         text-decoration: underline;
     }
 

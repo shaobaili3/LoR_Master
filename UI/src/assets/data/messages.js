@@ -12,7 +12,7 @@ module.exports = {
       error: {
         unkown: 'Something went wrong',
         playerNotFound: 'Player not found',
-        playerNoHistory: 'No valid history found'
+        playerNoHistory: 'No history found'
       },
       regions: {
         americas: 'Americas',
@@ -75,7 +75,7 @@ module.exports = {
       prompt: '⬆ Enter name and tag to search',
     },
     tooltips: {
-      lorlogin: 'Please log in LoR',
+      lorlogin: 'Please login LoR',
       incompleteDeck: 'Incomplete Deck',
     },
     contact: {
@@ -173,7 +173,7 @@ module.exports = {
       prompt: '⬆ 請輸入名字與後綴',
     },
     tooltips: {
-      lorlogin: '請登陸 LoR'
+      lorlogin: 'LoR 未登錄 / 無記錄'
     },
     contact: {
       messageBox: {
@@ -270,7 +270,7 @@ module.exports = {
       prompt: '⬆ 请输入名字与后缀',
     },
     tooltips: {
-      lorlogin: '请登陆 LoR'
+      lorlogin: 'LoR 未登录'
     },
     contact: {
       messageBox: {

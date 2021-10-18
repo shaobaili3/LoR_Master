@@ -18,7 +18,10 @@
             <span class="icon-hover"
                 v-if="!localHistoryLoading"
             ><i class="fas fa-check"></i></span>
-            <div class="tooltiptext right" v-if="!hasLocalInfo">{{$t('tooltips.lorlogin')}}</div>
+            <div v-if="!lorRunning || !localPlayerInfo.playerId"
+                class="tooltiptext right" >{{$t('tooltips.lorlogin')}}</div>
+            <div v-if="lorRunning && localPlayerInfo.playerId && !hasLocalInfo"
+                class="tooltiptext right" >{{$t('str.error.playerNoHistory')}}</div>
         </button>
         <button class="left-nav-btn" 
             :class="{selected: currentPage == PAGES.search}" 
@@ -632,7 +635,9 @@ export default {
 
             if (process.env.NODE_ENV == "development") {
                 console.log("Request Status Data")
-                const testStatus = '{"language": "zh-TW","lorRunning": true,"playerId": "Storm#5961","port": "21337","server": "americas"}'
+                const testRegion = 'sea'
+                // const testRegion = 'americas'
+                const testStatus = `{"language": "zh-TW","lorRunning": true,"playerId": "Storm#5961","port": "21337","server": "${testRegion}"}`
                 this.processStatusInfo(JSON.parse(testStatus))
                 return
             } 
@@ -664,7 +669,7 @@ export default {
         },
         processStatusInfo(data) {
 
-            // console.log(data)
+            // console.log("Status", data)
 
             var updateLocalPlayer = false
             if (this.localPlayerInfo.playerId != data.playerId) {
