@@ -1,4 +1,3 @@
-import Models.utility as utility
 import constants as cs
 from uiModels import DeckSummary
 
@@ -115,7 +114,7 @@ class Player:
                 myDetails = detail['info']['players'][myIndex]
                 outcome = myDetails["game_outcome"]
                 self.addMatchToSummary(
-                    myDetails['deck_code'], outcome, utility.toLocalTimeString(startTime, True), startTime)
+                    myDetails['deck_code'], outcome, startTime)
                 deckCodes.append(myDetails['deck_code'])
             except Exception as e:
                 print('Read MatchId Error match id: ', matchId, e)
