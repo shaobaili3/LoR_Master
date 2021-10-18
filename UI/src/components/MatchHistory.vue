@@ -25,8 +25,8 @@
         </div>
         <div class="divider" v-if="details && showDetail"></div>
         <match-detail-mulligan v-if="details && showDetail" 
-            :startHand="details.start_hand"
-            :endHand="details.end_hand"
+            :startHand="details.openHand"
+            :endHand="details.replacedHand"
         ></match-detail-mulligan>
 
         <match-detail-timeline v-if="details && showDetail" 

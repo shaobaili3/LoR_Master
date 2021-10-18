@@ -18,7 +18,7 @@ module.exports = {
         americas: 'Americas',
         europe: 'Europe',
         asia: 'Asia',
-        sea: 'South East Asia',
+        sea: 'SEA',
       },
       times: {
         sec: '{t} sec. ago',

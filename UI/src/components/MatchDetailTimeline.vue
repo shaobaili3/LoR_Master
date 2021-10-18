@@ -18,9 +18,9 @@
                 <div class="card-icon event">
                     <!-- <div class="tooltiptext top-start">Game Start</div> -->
                 </div>
-                <div class="card-icon" v-for="(card, index) in details.time_stamps"
+                <div class="card-icon" v-for="(card, index) in details.timeline"
                     :key="index"
-                    :class="{'first': card.player, 'diamond': index % 7 == 0}"
+                    :class="{'first': card.LocalPlayer, 'diamond': index % 7 == 0}"
                     :style="{'padding-left': 'calc('+timePercents[index]+'% - 10px)'}"
                 >
                     <svg viewBox="0 0 10 10">
@@ -54,11 +54,12 @@
                             <!-- side way -->
                         <!-- <polygon points="10,5 7.5,9.33 2.5,9.33 0,5 2.5,0.67 7.5,0.67"></polygon> -->
                     </svg>
-                    <p class="time-text">{{Math.floor(card.relative_time/60)}}:{{card.relative_time % 60}}</p>
-                    <card-image :code="card.card_code" @mousedown.prevent="" :style="{'margin-left': -scrollLeft+'px'}"></card-image>
+                    <p class="time-text">
+                        {{ Math.floor((new Date(card.drawTime) - new Date(time)) / 60000) }}:{{ Math.floor((new Date(card.drawTime) - new Date(time)) / 1000 % 60) }}</p>
+                    <card-image :code="card.CardCode" @mousedown.prevent="" :style="{'margin-left': -scrollLeft+'px'}"></card-image>
                 </div>
                 <div class="card-icon event" 
-                :style="{'padding-left': 'calc('+timePercents[details.time_stamps.length]+'% - 10px)'}">
+                :style="{'padding-left': 'calc('+timePercents[details.timeline.length]+'% - 10px)'}">
                     <!-- <div class="tooltiptext top-end">Game End</div> -->
                 </div>
             </div>
@@ -81,25 +82,11 @@ export default {
         // CardPreview,
     },
     mounted() {
-        // console.log(this.details)
+        console.log(this.details)
         this.ele = document.querySelector('.timeline-container');
         this.ele.addEventListener('mousedown', this.mouseDownHandler);
 
         if (this.details) {
-            // var timeStamps = this.details.time_stamps
-            // var date = new Date(this.time)
-            
-            // console.log(date.getTime() / 1000)
-
-            // timeStamps.forEach(timeStamp => {
-
-            //     var cardCode = timeStamp.card_code
-            //     var cardDate = new Date(timeStamp.utc_time * 1000)
-            //     var secDiff = Math.floor((cardDate - date)/1000)
-
-            //     console.log(secDiff) // Get Difference In Milli Seconds
-                
-            // });
             console.log("Total Match Time", this.matchTime)
         }
     },
@@ -117,34 +104,34 @@ export default {
     },
     computed: {
         matchTime() {
-            var times = this.details.time_stamps
-            var lastTime = times[times.length-1].utc_time
+            var times = this.details.timeline
+            var lastTime = times[times.length-1].drawTime
 
             var date = new Date(this.time)
-            var cardDate = new Date(lastTime * 1000)
+            console.log("Start time", date)
+            var cardDate = new Date(lastTime)
+            console.log("Card time", cardDate)
             
             var secDiff = Math.floor((cardDate - date)/1000)
 
-            return parseInt(times[times.length-1].relative_time) + gameEndAddTime
+            return secDiff + gameEndAddTime
         },
         timePercents() {
             var percents = []
             var matchTime = this.matchTime
-            var times = this.details.time_stamps
+            var times = this.details.timeline
             var date = new Date(this.time)
 
             var remain = 100
             var prevPercent = 0
             
             times.forEach(time => {
-                var cardDate = new Date(time.utc_time * 1000)
+
+                var cardDate = new Date(time.drawTime)
                 
                 var secDiff = Math.floor((cardDate - date)/1000)
-                
-                // console.log(secDiff)
-                var cardTime = parseInt(time.relative_time)
 
-                var percent = cardTime / matchTime * 100 - prevPercent
+                var percent = secDiff / matchTime * 100 - prevPercent
                 prevPercent += percent
                 remain -= percent
                 percents.push(percent)

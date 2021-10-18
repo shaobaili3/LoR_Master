@@ -2,7 +2,7 @@ module.exports = [
   {
     "info": {
       "game_mode": "Constructed",
-      "game_start_time_utc": "2021-10-08T06:18:13.8283800+00:00",
+      "game_start_time_utc": "2021-10-18T06:41:13.144523",
       "game_type": "Ranked",
       "game_version": "live_2_17_8",
       "players": [
@@ -57,123 +57,452 @@ module.exports = [
       "Storm#5961",
       "Sterben Kira#NA1"
     ],
-    "details": {
-      "start_hand": [
-        "05BW005","03MT040","03MT009","03MT091"
-      ],
-      "end_hand": [
-        "05BW005", "03MT009", "02BW024", "02BW045"
-      ],
-      "time_stamps": [
-        {
-          "card_code": "05BW005",
-          "utc_time": "1633673895",
-          "relative_time": "1",
-          "player": 0,
+    "local": {
+      "deck_tracker": {
+        "cardsInDeck": {
+          "01NX002": 2,
+          "01NX012": 2,
+          "01NX040": 2,
+          "02NX003": 2,
+          "02NX004": 1,
+          "05BC007": 2,
+          "05BC041": 2,
+          "05BC049": 3,
+          "05BC073": 2,
+          "05BC096": 2,
+          "05BC116": 3,
+          "05BC163": 3,
+          "05BC166": 1,
+          "05BC175": 2
         },
-        {
-          "card_code": "03MT040",
-          "utc_time": "1633673898",
-          "relative_time": "4",
-          "player": 1,
+        "cardsInHandNum": 4,
+        "currentDeckCode": "CEAQGBIKGF2KGAIDAEBAGAYDAEBQEDBIAUCQUBZJJFQK6AICAEBAGBABAUFKMAI",
+        "deckCode": "CQBQCAQDAMBQCAYCBQUAQBIKA4UTCSLAOSRQDLYBAIAQEAYEAECQVJQBAA",
+        "myGraveyard": {},
+        "myGraveyardCode": "CEAAAAA",
+        "myPlayedCards": {
+          "01NX012": 1,
+          "01NX040": 1,
+          "02NX003": 1,
+          "05BC041": 1,
+          "05BC073": 1,
+          "05BC096": 1,
+          "05BC166": 1,
+          "05BC175": 1
         },
-        {
-          "card_code": "03MT040",
-          "utc_time": "1633673899",
-          "relative_time": "12",
-          "player": 1,
+        "myPlayedCardsCode": "CEAAAAYBAIBQGAQBAMGCQBIFBIUUSYFGAGXQC",
+        "opGraveyard": {
+          "04IO005": 1,
+          "04IO005T5": 1,
+          "04SH003": 1,
+          "04SH003T1": 5,
+          "04SH026": 1,
+          "04SH051": 2,
+          "04SH077": 1,
+          "04SH114": 1
         },
-        {
-          "card_code": "03MT009",
-          "utc_time": "1633673906",
-          "relative_time": "24",
-          "player": 0,
-        },
-        {
-          "card_code": "03MT009",
-          "utc_time": "1633673906",
-          "relative_time": "30",
-          "player": 0,
-        },
-        {
-          "card_code": "03MT009",
-          "utc_time": "1633673906",
-          "relative_time": "31",
-          "player": 0,
-        },
-        {
-          "card_code": "03MT009",
-          "utc_time": "1633673906",
-          "relative_time": "32",
-          "player": 0,
-        },
-        {
-          "card_code": "03MT009",
-          "utc_time": "1633673906",
-          "relative_time": "50",
-          "player": 1,
-        },
-        {
-          "card_code": "03MT009",
-          "utc_time": "1633673906",
-          "relative_time": "60",
-          "player": 0,
-        },
-        {
-          "card_code": "03MT009",
-          "utc_time": "1633673906",
-          "relative_time": "80",
-          "player": 1,
-        },
-        {
-          "card_code": "03MT009",
-          "utc_time": "1633673906",
-          "relative_time": "82",
-          "player": 0,
-        },
-        {
-          "card_code": "03MT009",
-          "utc_time": "1633673906",
-          "relative_time": "85",
-          "player": 1,
-        },
-        {
-          "card_code": "03MT009",
-          "utc_time": "1633673906",
-          "relative_time": "88",
-          "player": 0,
-        },
-        {
-          "card_code": "03MT009",
-          "utc_time": "1633673906",
-          "relative_time": "89",
-          "player": 1,
-        },
-        {
-          "card_code": "03MT009",
-          "utc_time": "1633673906",
-          "relative_time": "90",
-          "player": 0,
-        },
-        {
-          "card_code": "03MT009",
-          "utc_time": "1633673906",
-          "relative_time": "92",
-          "player": 1,
-        },
-        {
-          "card_code": "03MT009",
-          "utc_time": "1633673906",
-          "relative_time": "120",
-          "player": 0,
-        },
-        {
-          "card_code": "03MT009",
-          "utc_time": "1633673906",
-          "relative_time": "150",
-          "player": 1,
-        }
-      ]
+        "opGraveyardCode": "CEAACAIEA4ZQEAIEAICQIBAHAMNE24Q",
+        "openHand": [
+          {
+              "CardCode": "face",
+              "CardID": 206961730,
+              "Height": 117,
+              "LocalPlayer": true,
+              "TopLeftX": 179,
+              "TopLeftY": 481,
+              "Width": 117
+          },
+          {
+              "CardCode": "face",
+              "CardID": 965792895,
+              "Height": 117,
+              "LocalPlayer": false,
+              "TopLeftX": 179,
+              "TopLeftY": 716,
+              "Width": 117
+          },
+          {
+              "CardCode": "01NX040",
+              "CardID": 815665046,
+              "Height": 373,
+              "LocalPlayer": true,
+              "TopLeftX": 407,
+              "TopLeftY": 730,
+              "Width": 252
+          },
+          {
+              "CardCode": "05BC073",
+              "CardID": 565035605,
+              "Height": 373,
+              "LocalPlayer": true,
+              "TopLeftX": 691,
+              "TopLeftY": 730,
+              "Width": 252
+          },
+          {
+              "CardCode": "05BC166",
+              "CardID": 922359664,
+              "Height": 373,
+              "LocalPlayer": true,
+              "TopLeftX": 975,
+              "TopLeftY": 730,
+              "Width": 252
+          },
+          {
+              "CardCode": "05BC041",
+              "CardID": 1285028606,
+              "Height": 373,
+              "LocalPlayer": true,
+              "TopLeftX": 1259,
+              "TopLeftY": 730,
+              "Width": 252
+          }
+        ],
+        "opponentName": "deck_Set4B_SH_I_Azir_Irelia_Tokens_name",
+        "opponentTag": null,
+        "replacedHand": [
+          {
+              "CardCode": "face",
+              "CardID": 206961730,
+              "Height": 117,
+              "LocalPlayer": true,
+              "TopLeftX": 179,
+              "TopLeftY": 481,
+              "Width": 117
+          },
+          {
+              "CardCode": "face",
+              "CardID": 965792895,
+              "Height": 117,
+              "LocalPlayer": false,
+              "TopLeftX": 179,
+              "TopLeftY": 716,
+              "Width": 117
+          },
+          {
+              "CardCode": "01NX040",
+              "CardID": 815665046,
+              "Height": 246,
+              "LocalPlayer": true,
+              "TopLeftX": 619,
+              "TopLeftY": 84,
+              "Width": 176
+          },
+          {
+              "CardCode": "05BC073",
+              "CardID": 565035605,
+              "Height": 247,
+              "LocalPlayer": true,
+              "TopLeftX": 787,
+              "TopLeftY": 86,
+              "Width": 176
+          },
+          {
+              "CardCode": "05BC166",
+              "CardID": 922359664,
+              "Height": 248,
+              "LocalPlayer": true,
+              "TopLeftX": 955,
+              "TopLeftY": 84,
+              "Width": 177
+          },
+          {
+              "CardCode": "05BC041",
+              "CardID": 1285028606,
+              "Height": 249,
+              "LocalPlayer": true,
+              "TopLeftX": 1126,
+              "TopLeftY": 78,
+              "Width": 178
+          }
+        ],
+        "timeline": [
+          {
+              "CardCode": "face",
+              "CardID": 965792895,
+              "Height": 117,
+              "LocalPlayer": false,
+              "TopLeftX": 179,
+              "TopLeftY": 716,
+              "Width": 117,
+              "drawTime": "2021-10-18T06:41:38.480116"
+          },
+          {
+              "CardCode": "01NX040",
+              "CardID": 815665046,
+              "Height": 246,
+              "LocalPlayer": true,
+              "TopLeftX": 619,
+              "TopLeftY": 84,
+              "Width": 176,
+              "drawTime": "2021-10-18T06:41:38.480116",
+              "exitTime": "2021-10-18T06:42:01.486375"
+          },
+          {
+              "CardCode": "05BC073",
+              "CardID": 565035605,
+              "Height": 247,
+              "LocalPlayer": true,
+              "TopLeftX": 787,
+              "TopLeftY": 86,
+              "Width": 176,
+              "drawTime": "2021-10-18T06:41:38.480116",
+              "exitTime": "2021-10-18T06:41:45.350074"
+          },
+          {
+              "CardCode": "05BC166",
+              "CardID": 922359664,
+              "Height": 248,
+              "LocalPlayer": true,
+              "TopLeftX": 955,
+              "TopLeftY": 84,
+              "Width": 177,
+              "drawTime": "2021-10-18T06:41:38.480116",
+              "exitTime": "2021-10-18T06:43:15.637451"
+          },
+          {
+              "CardCode": "05BC041",
+              "CardID": 1285028606,
+              "Height": 249,
+              "LocalPlayer": true,
+              "TopLeftX": 1126,
+              "TopLeftY": 78,
+              "Width": 178,
+              "drawTime": "2021-10-18T06:41:38.480116",
+              "exitTime": "2021-10-18T06:44:16.346273"
+          },
+          {
+              "CardCode": "01NX012",
+              "CardID": 1641508800,
+              "Height": 249,
+              "LocalPlayer": true,
+              "TopLeftX": 1211,
+              "TopLeftY": 72,
+              "Width": 178,
+              "drawTime": "2021-10-18T06:41:42.786016",
+              "exitTime": "2021-10-18T06:42:05.546748"
+          },
+          {
+              "CardCode": "04SH026",
+              "CardID": 1262891432,
+              "Height": 361,
+              "LocalPlayer": false,
+              "TopLeftX": 835,
+              "TopLeftY": 720,
+              "Width": 248,
+              "drawTime": "2021-10-18T06:41:43.088975",
+              "exitTime": "2021-10-18T06:41:43.739003"
+          },
+          {
+              "CardCode": "04SH003T1",
+              "CardID": 1164104565,
+              "Height": 160,
+              "LocalPlayer": false,
+              "TopLeftX": 974,
+              "TopLeftY": 980,
+              "Width": 127,
+              "drawTime": "2021-10-18T06:41:43.962408",
+              "exitTime": "2021-10-18T06:41:54.617609"
+          },
+          {
+              "CardCode": "05BC041",
+              "CardID": 343536095,
+              "Height": 249,
+              "LocalPlayer": true,
+              "TopLeftX": 1211,
+              "TopLeftY": 72,
+              "Width": 178,
+              "drawTime": "2021-10-18T06:41:59.416176"
+          },
+          {
+              "CardCode": "04SH051",
+              "CardID": 706508888,
+              "Height": 361,
+              "LocalPlayer": false,
+              "TopLeftX": 835,
+              "TopLeftY": 720,
+              "Width": 248,
+              "drawTime": "2021-10-18T06:42:03.373637",
+              "exitTime": "2021-10-18T06:42:04.031500"
+          },
+          {
+              "CardCode": "05BC175",
+              "CardID": 1453265669,
+              "Height": 249,
+              "LocalPlayer": true,
+              "TopLeftX": 1126,
+              "TopLeftY": 78,
+              "Width": 178,
+              "drawTime": "2021-10-18T06:42:17.893681",
+              "exitTime": "2021-10-18T06:42:23.602150"
+          },
+          {
+              "CardCode": "04SH003",
+              "CardID": 1154449367,
+              "Height": 361,
+              "LocalPlayer": false,
+              "TopLeftX": 835,
+              "TopLeftY": 720,
+              "Width": 248,
+              "drawTime": "2021-10-18T06:42:18.375267",
+              "exitTime": "2021-10-18T06:42:18.893325"
+          },
+          {
+              "CardCode": "05BC096",
+              "CardID": 1852764108,
+              "Height": 249,
+              "LocalPlayer": true,
+              "TopLeftX": 1126,
+              "TopLeftY": 78,
+              "Width": 178,
+              "drawTime": "2021-10-18T06:42:24.143066",
+              "exitTime": "2021-10-18T06:44:01.946329"
+          },
+          {
+              "CardCode": "04SH003T1",
+              "CardID": 1293522627,
+              "Height": 158,
+              "LocalPlayer": false,
+              "TopLeftX": 832,
+              "TopLeftY": 789,
+              "Width": 274,
+              "drawTime": "2021-10-18T06:42:25.750967",
+              "exitTime": "2021-10-18T06:42:31.106845"
+          },
+          {
+              "CardCode": "04SH003T1",
+              "CardID": 2078836490,
+              "Height": 158,
+              "LocalPlayer": false,
+              "TopLeftX": 1118,
+              "TopLeftY": 790,
+              "Width": 274,
+              "drawTime": "2021-10-18T06:42:26.229688",
+              "exitTime": "2021-10-18T06:42:32.535518"
+          },
+          {
+              "CardCode": "01NX002",
+              "CardID": 751133203,
+              "Height": 249,
+              "LocalPlayer": true,
+              "TopLeftX": 1126,
+              "TopLeftY": 78,
+              "Width": 178,
+              "drawTime": "2021-10-18T06:42:37.688852"
+          },
+          {
+              "CardCode": "04SH114",
+              "CardID": 377878389,
+              "Height": 115,
+              "LocalPlayer": false,
+              "TopLeftX": 902,
+              "TopLeftY": 598,
+              "Width": 115,
+              "drawTime": "2021-10-18T06:42:41.028769",
+              "exitTime": "2021-10-18T06:42:46.585428"
+          },
+          {
+              "CardCode": "04SH003T1",
+              "CardID": 512371773,
+              "Height": 0,
+              "LocalPlayer": false,
+              "TopLeftX": 960,
+              "TopLeftY": 540,
+              "Width": 0,
+              "drawTime": "2021-10-18T06:42:44.016611",
+              "exitTime": "2021-10-18T06:42:44.563029"
+          },
+          {
+              "CardCode": "04SH003T1",
+              "CardID": 229356454,
+              "Height": 0,
+              "LocalPlayer": false,
+              "TopLeftX": 960,
+              "TopLeftY": 540,
+              "Width": 0,
+              "drawTime": "2021-10-18T06:42:44.016611",
+              "exitTime": "2021-10-18T06:42:44.670527"
+          },
+          {
+              "CardCode": "02NX004",
+              "CardID": 776843834,
+              "Height": 249,
+              "LocalPlayer": true,
+              "TopLeftX": 1211,
+              "TopLeftY": 72,
+              "Width": 178,
+              "drawTime": "2021-10-18T06:43:05.308994"
+          },
+          {
+              "CardCode": "04IO005",
+              "CardID": 938561929,
+              "Height": 361,
+              "LocalPlayer": false,
+              "TopLeftX": 835,
+              "TopLeftY": 720,
+              "Width": 248,
+              "drawTime": "2021-10-18T06:43:05.735856",
+              "exitTime": "2021-10-18T06:43:06.257249"
+          },
+          {
+              "CardCode": "04IO005T5",
+              "CardID": 1740080650,
+              "Height": 216,
+              "LocalPlayer": false,
+              "TopLeftX": 693,
+              "TopLeftY": 1248,
+              "Width": 148,
+              "drawTime": "2021-10-18T06:43:07.652966",
+              "exitTime": "2021-10-18T06:43:55.743573"
+          },
+          {
+              "CardCode": "02NX003",
+              "CardID": 202789830,
+              "Height": 249,
+              "LocalPlayer": true,
+              "TopLeftX": 1211,
+              "TopLeftY": 72,
+              "Width": 178,
+              "drawTime": "2021-10-18T06:43:15.637451",
+              "exitTime": "2021-10-18T06:43:22.208983"
+          },
+          {
+              "CardCode": "04SH051",
+              "CardID": 1492745454,
+              "Height": 361,
+              "LocalPlayer": false,
+              "TopLeftX": 835,
+              "TopLeftY": 720,
+              "Width": 248,
+              "drawTime": "2021-10-18T06:43:17.474609"
+          },
+          {
+              "CardCode": "05BC007",
+              "CardID": 2140470418,
+              "Height": 249,
+              "LocalPlayer": true,
+              "TopLeftX": 1211,
+              "TopLeftY": 72,
+              "Width": 178,
+              "drawTime": "2021-10-18T06:43:59.449884"
+          },
+          {
+              "CardCode": "04SH077",
+              "CardID": 986395219,
+              "Height": 361,
+              "LocalPlayer": false,
+              "TopLeftX": 835,
+              "TopLeftY": 720,
+              "Width": 248,
+              "drawTime": "2021-10-18T06:44:04.267154",
+              "exitTime": "2021-10-18T06:44:04.558749"
+          }
+        ]
+      },
+      "localPlayerWon": true,
+      "opponentName": "deck_Set4B_SH_I_Azir_Irelia_Tokens_name",
+      "opponentTag": null,
+      "startTime": "2021-10-18T06:41:13.144523"
     }
   },
   {

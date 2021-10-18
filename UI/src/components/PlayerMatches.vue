@@ -10,7 +10,7 @@
                     <span class="pre-info"><i class="iconfy">LP</i></span>
                     {{playerLP}}</div>
                 <div class="detail region" v-if="playerRegion">
-                    <span class="pre-info"><i class="fas" :class="'fa-globe-'+playerRegion"></i></span>
+                    <span class="pre-info"><i class="fas" :class="'fa-globe-'+ playerRegion === 'sea' ? 'asia' : playerRegion"></i></span>
                     {{playerRegionFC}}</div>
             </div>
             <div class="decks-summary" @wheel.prevent="horizontalScroll">

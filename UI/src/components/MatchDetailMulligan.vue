@@ -3,17 +3,17 @@
         <!-- <p class="title-text">Mulligan</p> -->
         <div class="images-contaienr">
             <div class="card-container" 
-                v-for="(card, index) in startHand"
+                v-for="(card, index) in startHandFiltered"
                 :key="index">
-                <card-image class="img" :code="card"></card-image>
+                <card-image class="img" :code="card.CardCode"></card-image>
             </div>
             <div class="arrow">
                 <i class="fas fa-arrow-right"></i>
             </div>
             <div class="card-container" 
-                v-for="(card, index) in endHand"
+                v-for="(card, index) in endHandFiltered"
                 :key="index">
-                <card-image class="img" :code="card"></card-image>
+                <card-image class="img" :code="card.CardCode"></card-image>
             </div>
         </div>
     </div>
@@ -37,6 +37,16 @@ export default {
         endHand: Array
     },
     computed: {
+        startHandFiltered() {
+            return this.startHand.filter((card) => {
+                return card.CardCode !== 'face' && card.LocalPlayer
+            })
+        },
+        endHandFiltered() {
+            return this.endHand.filter((card) => {
+                return card.CardCode !== 'face' && card.LocalPlayer
+            })
+        }
     },
     methods: {
     }

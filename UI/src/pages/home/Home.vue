@@ -937,10 +937,16 @@ export default {
                 return
             }
 
-            console.log("Request Local History", `${this.apiBase}/search/${server}/${name}/${tag}`)
+            let apiLink;
+
+            if (server === 'sea') {
+                apiLink = `${this.apiBase}/local`
+            }
+
+            console.log("Request Local History", apiLink)
             this.localHistoryLoading = true
 
-            axios.get(`${this.apiBase}/search/${server}/${name}/${tag}`,
+            axios.get(apiLink,
                     { cancelToken: localCancleToken.token }) // Pass the cancel token
                 .then((response) => {
                     this.localHistoryLoading = false
@@ -948,7 +954,13 @@ export default {
                     if (response.data == "Error") {
                         console.log("Local History Search Error")
                     } else {
-                        this.processLocalHistory(response.data)
+                        if (server === 'sea') {
+                            let key = name + '#' + tag
+                            console.log('Current key', key)
+                            this.processLocalHistorySEA(response.data[key])
+                        } else {
+                            this.processLocalHistory(response.data)
+                        }
                     }
                 })
                 .catch((e) => {
@@ -961,9 +973,59 @@ export default {
                     
                 })
         },
+        processLocalHistorySEA(data) {
+            console.log("Process Local SEA History!")
+            console.log(data)
+
+            this.localMatches = []
+
+            for (let match of data) {
+                var opponentName, opponentRank, opponentLp, opponentTag, opponentDeck, 
+                    deck, rounds, win, time, order;
+
+                this.localPlayerInfo.rank = match.playerRank // Currently no value
+                this.localPlayerInfo.lp = match.playerLp // Currently no value
+
+                opponentName = match.opponentName
+                opponentTag = null // Cannot get
+                opponentRank = match.opponentRank // Currently no value
+                opponentLp = match.opponentLp // Currently no value
+                opponentDeck = match.deck_tracker.opGraveyardCode
+                deck = match.deck_tracker.deckCode
+                rounds = null // Cannot get
+                win = match.localPlayerWon
+                time = match.startTime
+                order = null // Cannot get
+
+                var badges = [] // Currently no value
+
+                var details = {
+                    openHand: match.deck_tracker.openHand,
+                    replacedHand: match.deck_tracker.replacedHand,
+                    timeline: match.deck_tracker.timeline
+                }
+                
+                this.localMatches.push({
+                    opponentName: opponentName,
+                    deck: deck,
+                    region: regionShort[this.localPlayerInfo.server],
+                    opponentDeck: opponentDeck,
+                    opponentRank: opponentRank,
+                    opponentLp: opponentLp,
+                    opponentTag: opponentTag,
+                    rounds: rounds,
+                    win: win,
+                    time: time,
+                    badges: badges,
+                    details: details,
+                })
+            }
+        },
         processLocalHistory(data) {
 
             console.log("Process Local History!")
+
+            console.log(data)
 
             this.localMatches = []
             this.localPlayerInfo.rank = null
@@ -980,11 +1042,21 @@ export default {
                 var player, playerGame, opponent, opponentGame
                 var info = match.info
 
-                var details = match.details
-                if (details) {
-                    // Only add isFirstPlayer if there is details
-                    details.isFirstPlayer = isFirstPlayer
+                var details = null
+                
+                if (match.local) {
+                    details = {
+                        openHand: match.local.deck_tracker.openHand,
+                        replacedHand: match.local.deck_tracker.replacedHand,
+                        timeline: match.local.deck_tracker.timeline,
+                    }
                 }
+
+                
+                // if (details) {
+                //     // Only add isFirstPlayer if there is details
+                //     details.isFirstPlayer = isFirstPlayer
+                // }
                 
                 var opponentName, opponentRank, opponentLp, opponentTag, opponentDeck, 
                     deck, rounds, win, time, order;
