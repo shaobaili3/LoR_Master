@@ -1051,7 +1051,7 @@ export default {
 
                 var details = null
                 
-                if (match.local) {
+                if (match.local && match.local.deck_tracker) {
                     details = {
                         openHand: match.local.deck_tracker.openHand,
                         replacedHand: match.local.deck_tracker.replacedHand,
