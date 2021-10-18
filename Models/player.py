@@ -96,9 +96,8 @@ class Player:
 
                 if gameType in cs.UNSUPPORTED_TYPE:
                     continue
-
-                self.matchesJson.append(
-                    self.addPlayerInfoToMatchDetail(detail))
+                self.addPlayerInfo(detail)
+                self.matchesJson.append(detail)
                 matchNum += 1
                 riotId = detail['metadata']['participants']
                 outcome = None
@@ -121,7 +120,7 @@ class Player:
                 continue
         return matchNum
 
-    def addPlayerInfoToMatchDetail(self, detail):
+    def addPlayerInfo(self, detail):
         try:
             playerPuuids = detail['metadata']['participants']
         except Exception as e:
@@ -138,4 +137,3 @@ class Player:
                 {'name': name, 'tag': tag, 'rank': rank, 'lp': lp})
         detail['playernames'] = playernames
         detail['player_info'] = player_info
-        return detail

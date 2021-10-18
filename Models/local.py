@@ -77,11 +77,11 @@ class Local:
         if self.setting.playerId not in self.cache.localMatches:
             self.cache.localMatches[self.setting.playerId] = []
         localMatch = {}
-        localMatch['deck_tracker'] = self.trackerDict
         localMatch['startTime'] = self.startTime
         localMatch['localPlayerWon'] = localPlayerWon
         localMatch['opponentName'] = self.opponentName
         localMatch['opponentTag'] = self.opponentTag
+        localMatch['deck_tracker'] = self.trackerDict
         self.cache.localMatches[self.setting.playerId].insert(0, localMatch)
         self.cache.saveLocal()
         return localPlayerWon
