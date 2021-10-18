@@ -208,7 +208,12 @@ def get_status():
 
 @app.route("/local", methods=['get'])
 def get_local():
+    if settingTrack.playerId in cacheModel.localMatches:
+        for detail in cacheModel.localMatches[settingTrack.playerId]:
+            detail['opponentRank'], detail['opponentLp'] = leaderboardModel.checkRank(
+                detail['opponentName'], settingTrack.riotServer)
     return jsonify(cacheModel.localMatches)
+
 
 @app.route("/report/<string:message>", methods=['get'])
 def report(message):
