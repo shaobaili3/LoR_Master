@@ -82,7 +82,8 @@ class Player:
         for matchId in matchIds:
             try:
                 # If match number bigger than MAX, getDetail will only ruturn data from cache
-                detail = self.riot.getDetail(matchId, matchNum, maxNum)
+                id = name + '#' + tag
+                detail = self.riot.getDetail(matchId, matchNum, maxNum, id)
                 if detail is None:
                     continue
                 gameMode = detail['info']['game_mode']
