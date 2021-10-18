@@ -146,7 +146,7 @@ class Riot:
         if 'local' in detail:
             return
         detail['local'] = {}
-        
+        id = id.lower()
         if id in self.cache.localMatches:
             startTime = detail.get('info').get('game_start_time_utc')
             for localDetail in self.cache.localMatches[id]:

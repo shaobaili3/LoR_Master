@@ -64,6 +64,7 @@ class Local:
 
     # get latest game result and update self.gameId
     def getResult(self):
+        playerId = self.setting.playerId.lower()
         try:
             resultRequest = self.session.get(self.getResultLink())
             resultJson = resultRequest.json()
@@ -74,8 +75,8 @@ class Local:
             self.gameId = None
             return
         # self.startTime = str(datetime.utcnow())
-        if self.setting.playerId not in self.cache.localMatches:
-            self.cache.localMatches[self.setting.playerId] = []
+        if playerId not in self.cache.localMatches:
+            self.cache.localMatches[playerId] = []
         localMatch = {}
         localMatch['startTime'] = self.startTime
         localMatch['endTime'] = datetime.utcnow().isoformat()
@@ -83,7 +84,7 @@ class Local:
         localMatch['opponentName'] = self.opponentName
         localMatch['opponentTag'] = self.opponentTag
         localMatch['deck_tracker'] = self.trackerDict
-        self.cache.localMatches[self.setting.playerId].insert(0, localMatch)
+        self.cache.localMatches[playerId].insert(0, localMatch)
         self.cache.saveLocal()
         return localPlayerWon
 
