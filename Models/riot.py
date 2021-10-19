@@ -153,7 +153,7 @@ class Riot:
                 localTime = localDetail['startTime']
                 df = datetime.datetime.fromisoformat(
                     localTime[0: 19]) - datetime.datetime.fromisoformat(startTime[0: 19])
-                if df.total_seconds() < 10:
+                if abs(df.total_seconds()) < 10:
                     detail['local'] = localDetail
                     return
 
