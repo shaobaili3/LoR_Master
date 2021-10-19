@@ -5,6 +5,7 @@
             <line @mouseenter="lineHover($event, 1)" x1="20" y1="0" x2="20" y2="20"></line>
         </svg> -->
         <!-- <p class="title-text">Timeline</p> -->
+        <card-image class="card-hover" v-if="displayCode" :code="displayCode" :style="{'left': displayLeft+'px', 'top': displayTop+'px'}"></card-image>
         <div class="timeline-container" @wheel.prevent ="handleScroll"
             :class="{'grabbing': grabbing}"
             @scroll="whenScrolled"
@@ -15,13 +16,15 @@
                     :style="{'left': i*10+'%'}"
                     :class="{'thick': i%5==0 }"
                 ></div> -->
-                <div class="card-icon event">
+                <!-- <div class="card-icon event"> -->
                     <!-- <div class="tooltiptext top-start">Game Start</div> -->
-                </div>
-                <div class="card-icon" v-for="(card, index) in details.timeline"
+                <!-- </div> -->
+                <div class="card-icon" v-for="(card, index) in timelineFiltered"
                     :key="index"
                     :class="{'first': card.LocalPlayer, 'diamond': index % 7 == 0}"
                     :style="{'padding-left': 'calc('+timePercents[index]+'% - 10px)'}"
+                    @mouseover="iconHover($event, card.CardCode)"
+                    @mouseleave="iconLeave($event)"
                 >
                     <svg viewBox="0 0 10 10">
                         <!-- <polygon points="0,0 10,0 10,10 0,10"></polygon> -->
@@ -55,13 +58,13 @@
                         <!-- <polygon points="10,5 7.5,9.33 2.5,9.33 0,5 2.5,0.67 7.5,0.67"></polygon> -->
                     </svg>
                     <p class="time-text">
-                        {{ moment(new Date(card.drawTime) - new Date(time)).format('mm:ss') }}</p>
-                    <card-image :code="card.CardCode" @mousedown.prevent="" :style="{'margin-left': -scrollLeft+'px'}"></card-image>
+                        {{ moment(new Date(card.drawTime) - new Date(details.startTime)).format('mm:ss') }}</p>
+                    <!-- <card-image :code="card.CardCode" @mousedown.prevent="" :style="{'margin-left': -scrollLeft+'px'}"></card-image> -->
                 </div>
-                <div class="card-icon event" 
-                :style="{'padding-left': 'calc('+timePercents[details.timeline.length]+'% - 10px)'}">
+                <!-- <div class="card-icon event"  -->
+                <!-- :style="{'padding-left': 'calc('+timePercents[details.timeline.length]+'% - 10px)'}"> -->
                     <!-- <div class="tooltiptext top-end">Game End</div> -->
-                </div>
+                <!-- </div> -->
             </div>
         </div>
     </div>
@@ -87,9 +90,9 @@ export default {
         this.ele = document.querySelector('.timeline-container');
         this.ele.addEventListener('mousedown', this.mouseDownHandler);
 
-        if (this.details) {
-            console.log("Total Match Time", this.matchTime)
-        }
+        // if (this.details) {
+        //     console.log("Total Match Time", this.matchTime)
+        // }
     },
     data() {
         return {
@@ -98,31 +101,39 @@ export default {
             zoom: 100,
             scrollLeft: 0,
             moment: moment,
+
+            displayCode: null,
+            displayLeft: 0,
+            displayTop: 0,
         }
     },
     props: {
-        time: String,
         details: Object,
     },
     computed: {
         matchTime() {
-            var times = this.details.timeline
-            var lastTime = times[times.length-1].drawTime
-
-            var date = new Date(this.time)
-            console.log("Start time", date)
-            var cardDate = new Date(lastTime)
-            console.log("Card time", cardDate)
             
-            var secDiff = Math.floor((cardDate - date)/1000)
+            var startTime = new Date(this.details.startTime)
+            console.log("Start time", startTime)
+            var endTime = new Date(this.details.endTime)
+            console.log("End time", endTime)
+            
+            var secDiff = Math.floor((endTime - startTime)/1000)
+            console.log("Sec diff", secDiff)
+            return secDiff
 
-            return secDiff + gameEndAddTime
+            
+        },
+        timelineFiltered() {
+            return this.details.timeline.filter((card) => {
+                return card.CardCode != "face"
+            })
         },
         timePercents() {
             var percents = []
             var matchTime = this.matchTime
             var times = this.details.timeline
-            var date = new Date(this.time)
+            var date = new Date(this.details.startTime)
 
             var remain = 100
             var prevPercent = 0
@@ -148,7 +159,7 @@ export default {
     methods: {
         whenScrolled(event) {
             this.scrollLeft = event.currentTarget.scrollLeft
-            console.log(this.scrollLeft)
+            // console.log(this.scrollLeft)
         },
         mouseDownHandler(e) {
             // console.log("Mouse Down")
@@ -188,12 +199,27 @@ export default {
             // this.ele.style.cursor = 'grab';
             // this.ele.style.removeProperty('user-select');
         },
-        // lineHover(event, index) {
-        //     var tar = event.target
-        //     var rect = tar.getBoundingClientRect()
-        //     console.log("Line", index, "Hovered at (", event.clientX, ", ",event.clientY, ")", 
-        //     "Elemetn at (", rect.x, ", ", rect.y, ")")
-        // },
+        iconHover(event, code) {
+            var tar = event.currentTarget
+            console.log("Target", tar)
+            var rect = tar.getBoundingClientRect()
+
+            var left = rect.x + rect.width
+            var top = rect.y + rect.height
+
+            console.log("Point Hovered at (", event.clientX, ", ",event.clientY, ")", 
+            "Elemetn at (", left, ", ", top, ")", "Code", code)
+            // console.log("Element Size: ", rect.width, ", ", rect.height)
+            this.displayCode = code
+            this.displayLeft = left
+            this.displayTop = top
+        },
+        iconLeave(event) {
+            console.log("Point Leave")
+            this.displayCode = null
+            this.displayLeft = 0
+            this.displayTop = 0
+        },
         handleScroll(event) {
             var el = event.currentTarget
 
@@ -241,6 +267,19 @@ export default {
         .title-text {
             text-align: left;
             font-size: 0.8em;
+        }
+
+        .card-hover {
+
+            pointer-events: none;
+
+            position: fixed;
+            width: 200px;
+            height: auto;
+
+            transform: translateX(calc(-50% - 5px)) translateY(calc(-100% - 45px));
+
+            z-index: 10;
         }
 
         .timeline-container {

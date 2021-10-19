@@ -25,7 +25,7 @@
             <span class="vs-text">VS</span>
             <deck-preview @click="showDeck(opponentDeck)" :deck="opponentDeck" :won="won" :fixedWidth="true"></deck-preview>
         </div>
-        <div class="divider" v-if="details && showDetail"></div>
+        <div class="divider" v-if="details && showDetail" :class="{'won': won}"></div>
         <match-detail-mulligan v-if="details && showDetail" 
             :startHand="details.openHand"
             :endHand="details.replacedHand"
@@ -148,7 +148,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 
     .divider {
         margin-left: auto;
@@ -156,9 +156,13 @@ export default {
         width: 100%;
         height: 2px;
         /* background-color: var(--col-background); */
-        background-color: var(--col-gold);
+        background-color: var(--col-light-grey);
         margin-top: 8px;
         /* margin-bottom: 5px; */
+
+        &.won {
+            background-color: var(--col-gold);
+        }
     }
 
     .btn-expand-detail {

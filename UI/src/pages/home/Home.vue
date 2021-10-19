@@ -962,7 +962,7 @@ export default {
                         console.log("Local History Search Error")
                     } else {
                         if (server === 'sea') {
-                            let key = name + '#' + tag
+                            let key = (name + '#' + tag).toLowerCase()
                             console.log('Current key', key)
                             this.processLocalHistorySEA(response.data[key])
                         } else {
@@ -1009,7 +1009,9 @@ export default {
                 var details = {
                     openHand: match.deck_tracker.openHand,
                     replacedHand: match.deck_tracker.replacedHand,
-                    timeline: match.deck_tracker.timeline
+                    timeline: match.deck_tracker.timeline,
+                    startTime: match.local.startTime,
+                    endTime: match.local.endTime,
                 }
                 
                 this.localMatches.push({
@@ -1056,7 +1058,11 @@ export default {
                         openHand: match.local.deck_tracker.openHand,
                         replacedHand: match.local.deck_tracker.replacedHand,
                         timeline: match.local.deck_tracker.timeline,
+                        startTime: match.local.startTime,
+                        endTime: match.local.endTime,
                     }
+
+                    // console.log("Timeline", details.timeline)
                 }
 
                 
