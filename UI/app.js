@@ -154,6 +154,8 @@ ipcMain.on('user-init', (event, uid) => {
   console.log("Init User: ", uid)
 
   userSet = true
+
+  // if (!isPackaged || isDev) return
   
   user = ua('UA-209481840-1', uid, {strictCidFormat: false});
   user.set("ds", "app");
@@ -162,13 +164,37 @@ ipcMain.on('user-init', (event, uid) => {
   var eventCategory = "App"
   var eventAction = "Initialize"
   var eventLabel = "ID: " + uid
-  var eventValue = 1
+  var eventValue = null
+
+  recordUserEvent(eventCategory, eventAction, eventLabel, eventValue)
+})
+
+ipcMain.on('user-event', (event, eventInfo) => {
+
+  var eventCategory = eventInfo.category
+  var eventAction = eventInfo.action
+  var eventLabel = eventInfo.label
+  var eventValue = eventInfo.value
+
+  recordUserEvent(eventCategory, eventAction, eventLabel, eventValue)
+})
+
+function recordUserEvent(eventCategory, eventAction, eventLabel, eventValue) {
+  
+  console.log(eventCategory, "|", eventAction, "|", eventLabel, "|", eventValue)
+  // if (!isPackaged || isDev) return
+
+  if (!userSet) {
+    user = ua('UA-209481840-1');
+    user.set("ds", "app");
+
+    userSet = true
+  }
 
   user.event(eventCategory, eventAction, eventLabel, eventValue, function (err) {
     if (err) console.log(err)
   })
-})
-
+}
 
 // -----------------------------------------------
 // --- Auto Updater --- 
@@ -217,8 +243,16 @@ ipcMain.on('install-update', (event) => {
   autoUpdater.quitAndInstall(true, true)
 })
 
+ipcMain.on('game-start-trigger', () => {
+  console.log("Handling Game Start")
+  recordUserEvent("Tracker Event", "Game Start", new Date().toUTCString(), null)
+
+})
+
 ipcMain.on('game-end-trigger', () => {
   console.log("Handling Game End")
+
+  recordUserEvent("Tracker Event", "Game End", new Date().toUTCString(), null)
   if (mainWindow) mainWindow.webContents.send('game-end-handle')
 })
 
