@@ -208,6 +208,8 @@ const requestHistoryWaitTime = 100 //ms
 const requestStatusWaitTime = 1000 //ms
 const inputNameListLength = 10;
 
+// import ua from 'universal-analytics'
+
 // const portNum = "26531"
 // const API_BASE = `http://127.0.0.1:${portNum}`
 
@@ -348,6 +350,7 @@ export default {
         //     this.$store.commit('changeLocale', 'zh_tw')
         // }
         
+        // console.log(this.user)
 
         try {
 
@@ -667,6 +670,24 @@ export default {
                     }
                 })
         },
+        initAnalytics(uid) {
+
+            // console.log("Init Analytics")
+
+            // this.user.set("ds", "app")
+            // this.user.set("uid", uid)
+            // var eventCategory = "Main"
+            // var eventAction = "Init"
+            // var eventLabel = "ID: " + uid
+            // var eventValue = 1
+
+            // this.user.event(eventCategory, eventAction, eventLabel, eventValue, function (err) {
+            //     console.log(err)
+            // })
+
+            window.ipcRenderer.send('user-init', uid)
+
+        },
         processStatusInfo(data) {
 
             // console.log("Status", data)
@@ -675,6 +696,15 @@ export default {
             if (this.localPlayerInfo.playerId != data.playerId) {
                 // there is a change in player ID
                 updateLocalPlayer = true
+
+                if (data.playerId) {
+                    try {
+                        this.initAnalytics(data.playerId)
+                        // window.ipcRenderer.send('user-init', data.playerId)
+                    } catch (error) {
+                        console.log(error)
+                    }
+                }
             }
 
             if (data.playerId != "") {
@@ -1010,8 +1040,8 @@ export default {
                     openHand: match.deck_tracker.openHand,
                     replacedHand: match.deck_tracker.replacedHand,
                     timeline: match.deck_tracker.timeline,
-                    startTime: match.local.startTime,
-                    endTime: match.local.endTime,
+                    startTime: match.startTime,
+                    endTime: match.endTime,
                 }
                 
                 this.localMatches.push({
