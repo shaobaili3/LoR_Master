@@ -1,21 +1,22 @@
+from .utils import get_card_set_online, write_json_file, get_lor_globals
 from pathlib import Path
 import json
 from .utils import read_json_file
 data_dir = Path(__file__).parent.parent.parent / "Resource"
 print('data_dir: ', data_dir)
-from .utils import get_card_set_online, write_json_file
 
-#these are made for debugging, so commented them out. They were annoying whenever I imported this.
-#print(data_dir.exists())
-#print(Path(".").absolute())
-#print(Path("./data/data/set1-en_us.json").exists())
+
+# these are made for debugging, so commented them out. They were annoying whenever I imported this.
+# print(data_dir.exists())
+# print(Path(".").absolute())
+# print(Path("./data/data/set1-en_us.json").exists())
 
 MAX_SET_NUM = 5
 
 for num in range(MAX_SET_NUM):
     if len(list(data_dir.glob(f"set{num + 1}*.json"))) == 0:
-        write_json_file(get_card_set_online(num + 1, region="en_us"), Path(__file__).parent.parent.parent / f"Resource/set{num+1}-en_us.json")
-
+        write_json_file(get_card_set_online(num + 1, region="en_us"),
+                        Path(__file__).parent.parent.parent / f"Resource/set{num+1}-en_us.json")
 
 
 try:
@@ -27,15 +28,26 @@ try:
 except Exception as e:
     print("Could not load card data:", e)
 
-
+# update combined set jsons for UI
 def downloadAllSet():
     setData = []
-    regions = ['de_de', 'en_us', 'es_es', 'es_mx', 'fr_fr', 'it_it', 'ja_jp', 'ko_kr', 'pl_pl', 'pt_br', 'th_th', 'tr_tr', 'ru_ru', 'zh_tw']
+    regions = ['de_de', 'en_us', 'es_es', 'es_mx', 'fr_fr', 'it_it',
+               'ja_jp', 'ko_kr', 'pl_pl', 'pt_br', 'th_th', 'tr_tr', 'ru_ru', 'zh_tw']
     for region in regions:
         for num in range(MAX_SET_NUM):
             setData.append(get_card_set_online(num + 1, region=region))
-        write_json_file(setData, Path(__file__).parent.parent.parent / 'Resource'/ (region + '.json'))
+        write_json_file(setData, Path(
+            __file__).parent.parent.parent / 'Resource' / (region + '.json'))
         setData = []
+
+# update en set and global jsons
+def downloadRawSet():
+    for num in range(MAX_SET_NUM):
+        write_json_file(get_card_set_online(num + 1, region="en_us"),
+                        Path(__file__).parent.parent.parent / f"Resource/set{num+1}-en_us.json")
+    data_globals = get_lor_globals()
+    globals_file = Path(__file__).parent.parent.parent / "Resource/globals-en_us.json"
+    write_json_file(data_globals, globals_file)
 
 
 class Card:
