@@ -22,7 +22,7 @@
                 <div class="card-icon" v-for="(card, index) in timelineFiltered"
                     :key="index"
                     :class="{'first': card.LocalPlayer, 'diamond': index % 7 == 0}"
-                    :style="{'padding-left': 'calc('+timePercents[index]+'% - 10px)'}"
+                    :style="{'left': 'calc('+timePercents[index]+'% - 10px)'}"
                     @mouseover="iconHover($event, card.CardCode)"
                     @mouseleave="iconLeave($event)"
                 >
@@ -58,7 +58,7 @@
                         <!-- <polygon points="10,5 7.5,9.33 2.5,9.33 0,5 2.5,0.67 7.5,0.67"></polygon> -->
                     </svg>
                     <p class="time-text">
-                        {{ moment(new Date(card.drawTime) - new Date(details.startTime)).format('mm:ss') }}</p>
+                        {{ moment(new Date(card.playTime) - new Date(details.startTime)).format('mm:ss') }}</p>
                     <!-- <card-image :code="card.CardCode" @mousedown.prevent="" :style="{'margin-left': -scrollLeft+'px'}"></card-image> -->
                 </div>
                 <!-- <div class="card-icon event"  -->
@@ -79,6 +79,7 @@ import moment from 'moment'
 let pos = { top: 0, left: 0, x: 0, y: 0 };
 
 const gameEndAddTime = 10 // sec
+const minZoom = 98 // percent
 
 export default {
     components: {
@@ -98,7 +99,7 @@ export default {
         return {
             ele: null,
             grabbing: false,
-            zoom: 100,
+            zoom: minZoom,
             scrollLeft: 0,
             moment: moment,
 
@@ -119,7 +120,7 @@ export default {
             console.log("End time", endTime)
             
             var secDiff = Math.floor((endTime - startTime)/1000)
-            console.log("Sec diff", secDiff)
+            console.log("Match Time: ", secDiff)
             return secDiff
 
             
@@ -132,21 +133,19 @@ export default {
         timePercents() {
             var percents = []
             var matchTime = this.matchTime
-            var times = this.details.timeline
+            var times = this.timelineFiltered
+            
             var date = new Date(this.details.startTime)
 
             var remain = 100
-            var prevPercent = 0
             
             times.forEach(time => {
 
-                var cardDate = new Date(time.drawTime)
+                var cardDate = new Date(time.playTime)
                 
                 var secDiff = Math.floor((cardDate - date)/1000)
-
-                var percent = secDiff / matchTime * 100 - prevPercent
-                prevPercent += percent
-                remain -= percent
+                var percent = secDiff / matchTime * 100
+                
                 percents.push(percent)
                 console.log(percent)
             });
@@ -234,8 +233,8 @@ export default {
                 this.zoom = this.zoom / zoomSpeed
                 this.ele.scrollLeft = this.ele.scrollLeft / zoomSpeed
 
-                if (this.zoom <= 100) {
-                    this.zoom = 100
+                if (this.zoom <= minZoom) {
+                    this.zoom = minZoom
                     this.ele.scrollLeft = 0
                 }
                 
@@ -319,6 +318,8 @@ export default {
                 // width: 100%;
 
                 position: relative;
+
+                height: 60px;
                 
                 display: flex;
                 justify-content: flex-start;
@@ -337,8 +338,8 @@ export default {
                 }
 
                 .card-icon {
-
-                    position: relative;
+                    
+                    position: absolute;
                     width: 10px;
                     height: 20px;
                     padding-top: 22px;
@@ -438,7 +439,7 @@ export default {
                         font-size: 0.8em;
                         position: absolute;
                         margin-top: -22px;
-                        margin-left: 20px;
+                        margin-left: 16px;
                         z-index: 12; // Above the image which is 10
                     }
 
