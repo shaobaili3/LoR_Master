@@ -871,7 +871,7 @@ export default {
 
             var eventInfo = {
                 category: "Main Window Requests",
-                action: "Reqeust Search",
+                action: "Request Search",
                 label: "URL: " + newRequest,
                 value: null,
             }
@@ -1096,7 +1096,7 @@ export default {
 
             let eventInfo = {
                 category: "Main Window Requests",
-                action: "Reqeust Local History",
+                action: "Request Local History",
                 label: "URL: " + apiLink,
                 value: null,
             }
