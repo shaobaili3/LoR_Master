@@ -171,6 +171,14 @@ export default {
 
         switchRegion(regionID) {
 
+            var eventInfo = {
+                category: "Main Window Leaderboard",
+                action: "Select Region",
+                label: REGION_NAMES[regionID],
+                value: null,
+            }
+            window.ipcRenderer.send('user-event', eventInfo)
+
             if (this.activeRegion != regionID) {
                 
                 this.getLeaderboard(regionID)

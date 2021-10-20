@@ -126,6 +126,14 @@ export default {
     methods: {
         toggleDetail() {
             this.showDetail = !this.showDetail
+
+            var eventInfo = {
+                category: "Main Window Match",
+                action: this.showDetail ? "Show Detail" : "Hide Detail",
+                label: this.deck,
+                value: null,
+            }
+            window.ipcRenderer.send('user-event', eventInfo)
         },
         showDeck(deck) {
             // console.log("Show Deck", deck)

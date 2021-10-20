@@ -12,7 +12,8 @@ module.exports = {
       error: {
         unkown: 'Something went wrong',
         playerNotFound: 'Player not found',
-        playerNoHistory: 'No history found'
+        playerNoHistory: 'No history found',
+        localApiError: 'Please enable 3rd party API'
       },
       regions: {
         americas: 'Americas',
@@ -111,7 +112,8 @@ module.exports = {
       error: {
         unkown: '哪裡出了一些問題',
         playerNotFound: '未找到玩家',
-        playerNoHistory: '未找到歷史記錄'
+        playerNoHistory: '未找到歷史記錄',
+        localApiError: '請打開第三方端口'
       },
       regions: {
         americas: '美洲',
@@ -208,7 +210,8 @@ module.exports = {
       error: {
         unkown: '哪里出了一些问题',
         playerNotFound: '未找到玩家',
-        playerNoHistory: '未找到历史记录'
+        playerNoHistory: '未找到历史记录',
+        localApiError: '请打开第三方端口'
       },
       regions: {
         americas: '美洲',

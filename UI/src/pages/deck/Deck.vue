@@ -391,6 +391,7 @@ export default {
                         this.oppoRank = op.rank + 1
                     }
                     this.oppoTag = op.tag
+                    console.log("opInfo:", op.name)
                     this.oppoName = op.name
                     this.oppoLp = op.lp
 
@@ -439,11 +440,17 @@ export default {
 
             if (data.positional_rectangles && data.positional_rectangles.OpponentName) {
                 // Check if there is opponent
-                var oppoName = data.positional_rectangles.OpponentName
-                
-                if ((!this.oppoName) || (this.oppoName.toLowerCase() != oppoName.toLowerCase())) {
+                var opName = data.positional_rectangles.OpponentName
+
+                if (opName.includes('_')){
+                    // opponent is AI
+                    this.oppoName = 'AI';
+                    this.makeWindowVisible()
+                    
+                } else if ((!this.oppoName) || (this.oppoName.toLowerCase() != opName.toLowerCase())) {
                     // If there is no oppoName set or there is a change in the name
-                    this.oppoName = oppoName
+                    console.log("Track Info:", opName)
+                    this.oppoName = opName
                     this.requestOppoInfo()
                     this.makeWindowVisible()
                 }
@@ -460,17 +467,22 @@ export default {
             }
             
             if (data.deck_tracker) {
+                if (data.deck_tracker.deckCode) {
+                    this.makeWindowVisible()
+                    if (this.startingDeckCode == null) {
+                        // switching from not having deck code
+                        this.handleGameStart()
+                    }
+                }
                 this.startingDeckCode = data.deck_tracker.deckCode
                 this.currentDeckCode = data.deck_tracker.currentDeckCode
                 this.oppoGraveCode = data.deck_tracker.opGraveyardCode
                 this.myGraveCode = data.deck_tracker.myPlayedCardsCode
                 this.cardsInHandNum = data.deck_tracker.cardsInHandNum
-                if (data.deck_tracker.deckCode) {
-                    this.makeWindowVisible()
-                }
+                
             } else {
                 if (this.startingDeckCode != null) {
-                    // switching from game end
+                    // switching from having deck code
                     this.handleGameEnd()
                 }
                 this.startingDeckCode = null
@@ -522,6 +534,9 @@ export default {
         },
         handleGameEnd() {
             window.ipcRenderer.send("game-end-trigger")
+        },
+        handleGameStart() {
+            window.ipcRenderer.send("game-start-trigger")
         }
     }
 

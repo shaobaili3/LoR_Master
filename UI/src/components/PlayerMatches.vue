@@ -201,12 +201,21 @@ export default {
         
         // Filter related
         setFilterDeckCode(code) {
+            
             if (this.filterDeckCode == code) {
                 // If trying to set the same, clear the filter
                 this.filterDeckCode = null
             } else {
                 this.filterDeckCode = code
             }
+
+            var eventInfo = {
+                category: "Main Window Matches",
+                action: this.filterDeckCode ? "Set Filter Deck Code" : "Remove Filter Deck Code",
+                label: code,
+                value: null,
+            }
+            window.ipcRenderer.send('user-event', eventInfo)
         },
 
         searchPlayer(data) {
