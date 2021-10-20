@@ -154,9 +154,10 @@ ipcMain.on('user-init', (event, uid) => {
   console.log("Init User: ", uid)
 
   userSet = true
-  user = ua('UA-209481840-1');
+  
+  user = ua('UA-209481840-1', uid, {strictCidFormat: false});
   user.set("ds", "app");
-  user.set("uid", uid)
+  user.set("uid", uid);
 
   var eventCategory = "App"
   var eventAction = "Initialize"

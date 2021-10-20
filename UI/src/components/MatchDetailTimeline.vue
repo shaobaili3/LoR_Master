@@ -21,7 +21,7 @@
                 <!-- </div> -->
                 <div class="card-icon" v-for="(card, index) in timelineFiltered"
                     :key="index"
-                    :class="{'first': card.LocalPlayer, 'diamond': index % 7 == 0}"
+                    :class="{'first': card.LocalPlayer}"
                     :style="{'left': 'calc('+timePercents[index]+'% - 10px)'}"
                     @mouseover="iconHover($event, card.CardCode)"
                     @mouseleave="iconLeave($event)"
@@ -87,7 +87,7 @@ export default {
         // CardPreview,
     },
     mounted() {
-        console.log(this.details)
+        // console.log(this.details)
         this.ele = document.querySelector('.timeline-container');
         this.ele.addEventListener('mousedown', this.mouseDownHandler);
 
@@ -147,7 +147,7 @@ export default {
                 var percent = secDiff / matchTime * 100
                 
                 percents.push(percent)
-                console.log(percent)
+                // console.log(percent)
             });
 
             percents.push(remain) // Last one for the last item
@@ -200,21 +200,20 @@ export default {
         },
         iconHover(event, code) {
             var tar = event.currentTarget
-            console.log("Target", tar)
+            // console.log("Target", tar)
             var rect = tar.getBoundingClientRect()
 
             var left = rect.x + rect.width
             var top = rect.y + rect.height
 
-            console.log("Point Hovered at (", event.clientX, ", ",event.clientY, ")", 
-            "Elemetn at (", left, ", ", top, ")", "Code", code)
+            // console.log("Point Hovered at (", event.clientX, ", ",event.clientY, ")", "Elemetn at (", left, ", ", top, ")", "Code", code)
             // console.log("Element Size: ", rect.width, ", ", rect.height)
             this.displayCode = code
             this.displayLeft = left
             this.displayTop = top
         },
         iconLeave(event) {
-            console.log("Point Leave")
+            // console.log("Point Leave")
             this.displayCode = null
             this.displayLeft = 0
             this.displayTop = 0
