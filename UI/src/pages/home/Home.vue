@@ -170,6 +170,7 @@
     <div class="bottom-bar">
         <div class="left">
             <div class="app-name">{{ $t("appName") }}</div>
+            <div v-if="!localApiEnabled" class="api-warning warning"><small><i class="fas fa-exclamation-triangle"></i>{{ $t("str.error.localApiError")}}</small></div>
         </div>
         <div class="right">
             <!-- <div class="version download tooltip" v-if="!isUpdatedVersion" @click="openURL(downloadUrl)">
@@ -281,6 +282,7 @@ export default {
             PAGES: PAGES,
 
             lorRunning: null,
+            localApiEnabled: true,
             localMatches: [],
             localPlayerInfo: {}, // playerId, server, language, rank, lp
             localHistoryLoading: false,
@@ -810,6 +812,7 @@ export default {
             // console.log(this.locale)
 
             this.lorRunning = data.lorRunning
+            this.localApiEnabled = data.isLocalApiEnable
         },
         requestNameData() {
             
@@ -1722,6 +1725,18 @@ export default {
 
     .bottom-bar .left, .bottom-bar .right {
         padding: 20px;
+        display: flex;
+        gap: 10px;
+    }
+
+    .bottom-bar .left div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .warning i {
+        padding-right: 6px;
     }
 
     .version.download {
