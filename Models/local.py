@@ -51,15 +51,17 @@ class Local:
 
         self.allCard = {}
 
-    def addCardToTimeline(self, cards):
-        if cards['CardID'] not in self.timeline:
-            self.timeline[cards['CardID']] = cards
-            self.timeline[cards['CardID']]['showTime'] = datetime.utcnow().isoformat()
-            if cards['CardID']['LocalPlayer']:
-                self.timeline[cards['CardID']]['drawTime'] = datetime.utcnow().isoformat()
+    def addCardToTimeline(self, card):
+        if card['CardID'] not in self.timeline:
+            self.timeline[card['CardID']] = card
+            self.timeline[card['CardID']
+                          ]['showTime'] = datetime.utcnow().isoformat()
+            if card['LocalPlayer']:
+                self.timeline[card['CardID']
+                              ]['drawTime'] = datetime.utcnow().isoformat()
         else:
-            if cards['CardID']['LocalPlayer']:
-                self.timeline[cards['CardID']]['playTime'] = None
+            if card['LocalPlayer']:
+                self.timeline[card['CardID']]['playTime'] = None
 
     def updateTimeline(self):
         for cardId in self.timeline.keys():
@@ -69,11 +71,11 @@ class Local:
                     ).isoformat()
 
         # check if card still in hand for local player for playtime
-        for cardId in self.timeline:
-            if self.timeline[cardId]['playTime'] == None:
+        for cardId in self.timeline.keys():
+            if self.timeline[cardId].get('playTime') is None:
                 if cardId not in self.cardsInHand:
-                    self.timeline[cardId]['playTime'] = datetime.utcnow().isoformat()
-
+                    self.timeline[cardId]['playTime'] = datetime.utcnow(
+                    ).isoformat()
 
     # get latest game result and update self.gameId
     def getResult(self):
