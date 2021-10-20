@@ -104,8 +104,10 @@ function showAlert(title, message) {
 
 const appReady = () => {
   
-  console.log("Process Args:")
-  console.log(process.argv)
+  console.log("--------")
+  console.log("App Ready")
+  console.log("--------")
+  console.log("Process Args:", process.argv)
 
   startHidden = process.argv.includes('--hidden')
 
@@ -139,6 +141,33 @@ function requestTestHistory() {
     deckWindow.webContents.send('request-test-history')
   }
 }
+
+// -----------------------------------------------
+// --- Google Analytics (UA) ---
+// -----------------------------------------------
+
+const ua = require('universal-analytics')
+var user; 
+var userSet = false;
+
+ipcMain.on('user-init', (event, uid) => {
+  console.log("Init User: ", uid)
+
+  userSet = true
+  
+  user = ua('UA-209481840-1', uid, {strictCidFormat: false});
+  user.set("ds", "app");
+  user.set("uid", uid);
+
+  var eventCategory = "App"
+  var eventAction = "Initialize"
+  var eventLabel = "ID: " + uid
+  var eventValue = 1
+
+  user.event(eventCategory, eventAction, eventLabel, eventValue, function (err) {
+    if (err) console.log(err)
+  })
+})
 
 
 // -----------------------------------------------
@@ -740,6 +769,15 @@ function getEnvLocale(env) {
 
   return env.LC_ALL || env.LC_MESSAGES || env.LANG || env.LANGUAGE;
 }
+
+
+
+
+
+
+
+
+
 
 // --- Use these to check for old running python app ---
 

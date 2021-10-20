@@ -1,4 +1,4 @@
-import App from './Deck.vue'
+import App from './Home.vue'
 
 import template from '../template'
 

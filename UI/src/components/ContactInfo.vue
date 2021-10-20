@@ -16,7 +16,7 @@
                 FlyingFish</span>
             </p>
         </div>
-        <contact-message-box :locale="locale" :apiBase="apiBase"></contact-message-box>
+        <contact-message-box :apiBase="apiBase"></contact-message-box>
         
     </div>
 </template>
@@ -32,10 +32,6 @@ export default {
         return {}
     },
     props: {
-        locale: {
-            type: String,
-            default: 'en_us'
-        },
         apiBase: {
             type: String,
             required: true

@@ -1,5 +1,7 @@
 #!/usr/local/bin/python
 # -*- coding: utf-8 -*-
+from sentry_sdk.integrations.flask import FlaskIntegration
+import sentry_sdk
 import threading
 import time
 from Models.leaderboard import Leaderboard
@@ -14,8 +16,6 @@ from Models import master
 from Models.process import readLog
 import json
 from flask import Flask, jsonify
-from sentry_sdk.integrations.flask import FlaskIntegration
-import sentry_sdk
 import io
 import sys
 import os
@@ -56,7 +56,7 @@ leaderboardModel = Leaderboard()
 cacheModel = Cache()
 
 settingTrack = Setting()
-localTrack = Local(settingTrack)
+localTrack = Local(settingTrack, cacheModel)
 
 
 class FlaskApp(Flask):
@@ -182,12 +182,14 @@ def get_leaderboard(server):
 @app.route("/opInfo", methods=['get'])
 def opInfo():
     opInfo = {}
-    localTrack.updateTagByName(
-        localTrack.positional_rectangles['OpponentName'])
-    opInfo['name'] = localTrack.positional_rectangles['OpponentName']
+    localTrack.updateTagByName()
+    opInfo['name'] = localTrack.opponentName
+    # will break here if opponentName is None
+    if localTrack.opponentName.startswith('deckname_') or localTrack.opponentName.startswith('decks_'):
+        opInfo['name'] = 'AI'
     opInfo['tag'] = localTrack.opponentTag
     opInfo['rank'], opInfo['lp'] = leaderboardModel.checkRank(
-        opInfo['name'], settingTrack.riotServer)
+        localTrack.opponentName, settingTrack.riotServer)
     return jsonify(opInfo)
 
 
@@ -199,7 +201,18 @@ def get_status():
     status['server'] = settingTrack.riotServer
     status['language'] = settingTrack.language
     status['lorRunning'] = settingTrack.isLorRunning
+    # isLocalApiEnable is updated by track api
+    status['isLocalApiEnable'] = settingTrack.isLocalApiEnable
     return jsonify(status)
+
+
+@app.route("/local", methods=['get'])
+def get_local():
+    if settingTrack.playerId in cacheModel.localMatches:
+        for detail in cacheModel.localMatches[settingTrack.playerId]:
+            detail['opponentRank'], detail['opponentLp'] = leaderboardModel.checkRank(
+                detail['opponentName'], settingTrack.riotServer)
+    return jsonify(cacheModel.localMatches)
 
 
 @app.route("/report/<string:message>", methods=['get'])

@@ -1,12 +1,19 @@
 <template>
-    <div class="match" :class="{won: won, loss: !won}">
+    <div class="match-history match" :class="{won: won, loss: !won}">
+        <div class="btn-expand-detail" v-if="details" @click="toggleDetail">
+            <i class="fas"
+                :class="{'fa-chevron-down': !showDetail, 'fa-chevron-up': showDetail}"
+            ></i>
+        </div>
         <div class="row opponent">
             <p @click="search" class="match-info-title">
-                vs <span class="name">{{opponentName}}</span>
+                vs <span class="name"
+                        :class="{'search': region}"
+                    >{{opponentName}}</span>
             </p>
             <div class="opponent-info" v-if="opponentRank"><i class="fas fa-trophy"></i> {{opponentRank}}</div>
             <div class="history-info">{{timeString}}</div>
-            <div class="history-info">{{rounds}} {{$t('str.rounds')}}</div>
+            <div class="history-info" v-if="rounds">{{rounds}} {{$t('str.rounds')}}</div>
             <div class="match-info-badge" v-for="(badge, index) in filteredBadges" :key="index" >
                 <span v-if="badge=='recent' || badge=='frequent'" class="match-info-badge-icon fa" :class="{'fa-clock': badge=='recent', 'fa-angle-double-up': badge=='frequent'}"></span>
                 {{$t('matches.badges.'+badge.replace(/\s+/g, ''))}}</div>
@@ -18,26 +25,38 @@
             <span class="vs-text">VS</span>
             <deck-preview @click="showDeck(opponentDeck)" :deck="opponentDeck" :won="won" :fixedWidth="true"></deck-preview>
         </div>
+        <div class="divider" v-if="details && showDetail" :class="{'won': won}"></div>
+        <match-detail-mulligan v-if="details && showDetail" 
+            :startHand="details.openHand"
+            :endHand="details.replacedHand"
+        ></match-detail-mulligan>
+
+        <match-detail-timeline v-if="details && showDetail" 
+            :time="time"
+            :details="details"
+        ></match-detail-timeline>
     </div>
-
-    <!-- <deck-detail v-if="visibleDeck == 1" :deck="deck"></deck-detail> -->
-    <!-- <deck-detail v-if="visibleDeck == 2" :deck="opponentDeck"></deck-detail> -->
-
 </template>
 
 <script>
 
 import DeckPreview from '../components/DeckPreview.vue'
+import MatchDetailMulligan from './MatchDetailMulligan.vue'
+import MatchDetailTimeline from './MatchDetailTimeline.vue'
 
 export default {
     components: {
         DeckPreview,
+        MatchDetailTimeline,
+        MatchDetailMulligan,
     },
     mounted() {
+        // console.log(this.details)
     },
     data() {
         return {
-            visibleDeck: 0
+            visibleDeck: 0,
+            showDetail: false,
         }
     },
     emits: ['showDeck', 'search'],
@@ -51,6 +70,8 @@ export default {
         win: Boolean,
         time: String,
         badges: Array,
+        details: Object,
+        region: String,
     },
     computed: {
         timeString() {
@@ -103,6 +124,9 @@ export default {
         }
     },
     methods: {
+        toggleDetail() {
+            this.showDetail = !this.showDetail
+        },
         showDeck(deck) {
             // console.log("Show Deck", deck)
             this.$emit('showDeck', deck)
@@ -124,11 +148,33 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 
-    
+    .divider {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        height: 2px;
+        /* background-color: var(--col-background); */
+        background-color: var(--col-light-grey);
+        margin-top: 8px;
+        /* margin-bottom: 5px; */
+
+        &.won {
+            background-color: var(--col-gold);
+        }
+    }
+
+    .btn-expand-detail {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 0.7em;
+        cursor: pointer;
+    }
 
     .match {
+        position: relative;
         display: flex;
         width: 100%;
         flex-direction: column;
@@ -136,8 +182,10 @@ export default {
         box-sizing: border-box;
         padding: 5px;
         border-radius: 6px;
+
+        overflow-x: visible;
         
-        overflow: hidden;
+        /* overflow: hidden; */
 
         border-left: 3px solid var(--col-background);
         border-right: 3px solid var(--col-background);
@@ -312,11 +360,10 @@ export default {
 
         /* border-bottom: 2px solid transparent; */
         border-radius: 0px;
-
-        cursor: pointer;
     }
 
-    .match-info-title:hover .name {
+    .match-info-title:hover .name.search {
+        cursor: pointer;
         text-decoration: underline;
     }
 

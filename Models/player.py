@@ -1,4 +1,3 @@
-import Models.utility as utility
 import constants as cs
 from uiModels import DeckSummary
 
@@ -83,7 +82,8 @@ class Player:
         for matchId in matchIds:
             try:
                 # If match number bigger than MAX, getDetail will only ruturn data from cache
-                detail = self.riot.getDetail(matchId, matchNum, maxNum)
+                id = name + '#' + tag
+                detail = self.riot.getDetail(matchId, matchNum, maxNum, id)
                 if detail is None:
                     continue
                 gameMode = detail['info']['game_mode']
@@ -97,9 +97,8 @@ class Player:
 
                 if gameType in cs.UNSUPPORTED_TYPE:
                     continue
-
-                self.matchesJson.append(
-                    self.addPlayerInfoToMatchDetail(detail))
+                self.addPlayerInfo(detail)
+                self.matchesJson.append(detail)
                 matchNum += 1
                 riotId = detail['metadata']['participants']
                 outcome = None
@@ -115,14 +114,14 @@ class Player:
                 myDetails = detail['info']['players'][myIndex]
                 outcome = myDetails["game_outcome"]
                 self.addMatchToSummary(
-                    myDetails['deck_code'], outcome, utility.toLocalTimeString(startTime, True), startTime)
+                    myDetails['deck_code'], outcome, startTime)
                 deckCodes.append(myDetails['deck_code'])
             except Exception as e:
                 print('Read MatchId Error match id: ', matchId, e)
                 continue
         return matchNum
 
-    def addPlayerInfoToMatchDetail(self, detail):
+    def addPlayerInfo(self, detail):
         try:
             playerPuuids = detail['metadata']['participants']
         except Exception as e:
@@ -139,4 +138,3 @@ class Player:
                 {'name': name, 'tag': tag, 'rank': rank, 'lp': lp})
         detail['playernames'] = playernames
         detail['player_info'] = player_info
-        return detail

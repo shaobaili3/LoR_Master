@@ -1,8 +1,7 @@
 import Models.network
 import requests
-import json
-import os
 import constants
+import datetime
 
 
 class Riot:
@@ -47,7 +46,7 @@ class Riot:
                 tagLine = tag
                 # give up saving cache for this special case
                 print(gameName, '#', tagLine,
-                      ': only return puuid without name and tag!!!!!!!!!!!!!!!!!!!!!!!!!!!')
+                      ': only return puuid without name and tag!')
                 return puuid
             if puuid is not None:
                 self.cache.riotIds[puuidLink] = puuid
@@ -100,7 +99,7 @@ class Riot:
             return self.getMatchesInCache(puuid)
         return matchIds
 
-    def getDetail(self, matchId, matchIndex=1, max_num=constants.MAX_NUM_ALL):
+    def getDetail(self, matchId, matchIndex=1, max_num=constants.MAX_NUM_ALL, id=None):
         # If matchIndex bigger than MAX, only pull data from cache
         if matchId in self.cache.matchDetails or matchIndex > max_num - 1:
             return self.cache.matchDetails.get(matchId)
@@ -118,12 +117,16 @@ class Riot:
         if 'X-Method-Rate-Limit-Count' in header:
             print('X-Method-Rate-Limit-Count: ',
                   header['X-Method-Rate-Limit-Count'])
-            print('X-App-Rate-Limit', header['X-App-Rate-Limit'])
+            # print('X-App-Rate-Limit', header['X-App-Rate-Limit'])
         if not detailsRequest.ok:
             print('getDetail server error:', detailsLink)
-            print(header)
-            print(detailsRequest.status_code)
             print(detail)
+            #  If match is not exist in Riot server, still save cache as None
+            # "message": "Data not found - match file not found",
+            # "status_code": 404
+            if detailsRequest.status_code == 404:
+                self.cache.matchDetails[matchId] = None
+                self.cache.save()
             if 'Retry-After' in header:
                 print('getDetail server busy APIKEY: ',
                       Models.network.API_KEY, header['Retry-After'], 'seconds')
@@ -131,11 +134,28 @@ class Riot:
                 return None
             return None
         else:
+            if id is not None:
+                self.addLocalInfo(detail, id)
             self.cache.matchDetails[matchId] = detail
             self.cache.save()
         if detail is None:
             print('match id:', matchId, 'details empty')
         return detail
+
+    def addLocalInfo(self, detail, id):
+        if 'local' in detail:
+            return
+        detail['local'] = {}
+        id = id.lower()
+        if id in self.cache.localMatches:
+            startTime = detail.get('info').get('game_start_time_utc')
+            for localDetail in self.cache.localMatches[id]:
+                localTime = localDetail['startTime']
+                df = datetime.datetime.fromisoformat(
+                    localTime[0: 19]) - datetime.datetime.fromisoformat(startTime[0: 19])
+                if abs(df.total_seconds()) < 10:
+                    detail['local'] = localDetail
+                    return
 
     def getPlayerName(self, puuid):
         if puuid in self.cache.playerNames:

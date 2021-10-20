@@ -46,31 +46,30 @@
                 :deck="match.deckCode"
                 :total="matchTotalNum"
                 :history="match.history"
-                :locale="locale"
             ></match-info>
 
         </div>
 
         <div class="tab-content" v-if="isShowMy && !isLoading">
             <deck-regions :deck="startingDeckCode" :fixedWidth="false"></deck-regions>
-            <deck-detail :locale="locale" :deck="currentDeckCode" :baseDeck="startingDeckCode"></deck-detail>
+            <deck-detail :deck="currentDeckCode" :baseDeck="startingDeckCode"></deck-detail>
         </div>
 
         <div class="tab-content" v-if="isShowOppoGrave && !isLoading">
             <div class="tab-text">{{$t('tracker.tabs.oppoPlayed')}}</div>
-            <deck-detail :locale="locale" :deck="oppoGraveCode" :baseDeck="oppoGraveCode" :showCopy="false"></deck-detail>
+            <deck-detail :deck="oppoGraveCode" :baseDeck="oppoGraveCode" :showCopy="false"></deck-detail>
         </div>
 
         <div class="tab-content" v-if="isShowMyGrave && !isLoading">
             <div class="tab-text">{{$t('tracker.tabs.myPlayed')}}</div>
-            <deck-detail :locale="locale" :deck="myGraveCode" :baseDeck="myGraveCode" :showCopy="false"></deck-detail>
+            <deck-detail :deck="myGraveCode" :baseDeck="myGraveCode" :showCopy="false"></deck-detail>
         </div>
 
         
 
         <div class="tab-content" v-if="isShowCode">
             <deck-regions :deck="deckCode" :fixedWidth="false"></deck-regions>
-            <deck-detail :locale="locale" :baseDeck="deckCode"></deck-detail>
+            <deck-detail :baseDeck="deckCode"></deck-detail>
         </div>
 
         <div class="footer" v-if="!isLoading">
@@ -89,6 +88,8 @@ import BaseWindowControls from '../../components/BaseWindowControls.vue'
 import DeckDetail from '../../components/DeckDetail.vue'
 import DeckRegions from '../../components/DeckRegions.vue'
 import DeckEncoder from '../../modules/runeterra/DeckEncoder'
+
+import { mapActions } from 'vuex'
 
 const requestDataWaitTime = 100; // ms
 const requestServerWaitTime = 3000; //ms
@@ -139,7 +140,6 @@ export default {
             oppoLp: null,
 
             lorRunning: false,
-            locale: 'en_us',
 
             portNum: '26531'
         }
@@ -220,6 +220,11 @@ export default {
         this.initChangeLocale()
     },
     methods: {
+
+        ...mapActions([
+            'changeLocale'
+        ]),
+
         initStore() {
             window.ipcRenderer.send('request-store', 'ui-locale')
 
@@ -354,8 +359,8 @@ export default {
                         var newLocale = data.language.replace('-', '_').toLowerCase()
                         if (this.locale != newLocale) {
                             console.log("Switch Locale", this.locale, newLocale)
+                            this.changeLocale(newLocale)
                         }
-                        this.locale = newLocale
                     }
 
                     // console.log("Server", this.server)

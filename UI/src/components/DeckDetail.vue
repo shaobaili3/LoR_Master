@@ -2,7 +2,7 @@
     <div class="deck-detail" 
     :class="{'fixed-height': fixedHeight}"
     v-if="cards.length > 0">
-        <cards-preview v-for="(card, index) in cards" :key="index"
+        <card-preview v-for="(card, index) in cards" :key="index"
         :name="card.name"
         :cost="card.cost"
         :count="card.count"
@@ -11,50 +11,35 @@
         :supertype="card.supertype"
         :set="card.set"
         :typeRef="card.typeRef"
-        :locale="locale"
-        >{{card.name}}</cards-preview>
+        >{{card.name}}</card-preview>
     </div>
     <div class="actions" 
     :class="{'fixed-height': fixedHeight}"
     v-if="showCopy">
         <!-- <a class="actions-btn" :href="deckDetailLink" target="_blank"><span class="actions-icon fa fa-external-link-alt"></span>Detail</a> -->
         <div class="actions-btn" v-if="showURL" @click="openURL(deckDetailLink)"><span class="actions-icon fa fa-external-link-alt"></span>Detail</div>
-        <div class="actions-btn" @click="copyDeckcode"><span class="actions-icon far fa-copy"></span>{{copyText}}</div>
+        <div class="actions-btn tooltip" @click="copyDeckcode"><span class="actions-icon far fa-copy"
+            :class="{'fa-exclamation-triangle': !isValid}"
+        ></span>{{copyText}}
+            <div class="tooltiptext top-end" v-if="!isValid">{{$t('tooltips.incompleteDeck')}}</div>
+        </div>
     </div>
 </template>
 
 <script>
 
-// const { DeckEncoder } = require('runeterra')
 import DeckEncoder from '../modules/runeterra/DeckEncoder'
-// import sets from  '../assets/data/allsets-en_us.json'
-import CardsPreview from './CardsPreview.vue'
-// import set1 from '../../../Resource/set1-en_us.json'
-// import set2 from '../../../Resource/set2-en_us.json'
-// import set3 from '../../../Resource/set3-en_us.json'
-// import set4 from '../../../Resource/set4-en_us.json'
-// import set5 from '../../../Resource/set5-en_us.json'
-
-const locales = ['de_de', 'en_us', 'es_es', 'es_mx', 'fr_fr', 'it_it', 'ja_jp', 'ko_kr', 'pl_pl', 'pt_br', 'th_th', 'tr_tr', 'ru_ru', 'zh_tw']
-
-locales.forEach(lo => {
-    window[lo] = () => import('../../../Resource/'+lo+'.json')
-});
-
-// const en_us = () => import('../../../Resource/en_us.json')
+import CardPreview from './CardPreview.vue'
 
 export default {
     components: {
-        CardsPreview,
+        CardPreview,
     },
     mounted() {
-        // this.getCardsInfo()
-        if ( this.sets == null ) this.loadSetsJson( this.locale )
     },
     data() {
         return {
             copied: false,
-            sets: null,
         }
     }, 
     props: {
@@ -72,15 +57,11 @@ export default {
             type: Boolean,
             default: false,
         },
-        locale: {
-            type: String,
-            default: 'en_us'
-        }
     },
     watch: {
-        locale(newLoacle, oldLocale) {
-            this.loadSetsJson(newLoacle)
-        }
+        // locale(newLoacle, oldLocale) {
+        //     this.loadSetsJson(newLoacle)
+        // }
     },
     computed: {
         deckDetailLink() {
@@ -166,23 +147,14 @@ export default {
         },
         copyText() {
             return this.copied ? this.$t('str.copied') : this.$t('str.copy')
+        },
+        isValid() {
+            return this.cards.reduce((prev, card) => {
+                return prev + card.count
+            }, 0) == 40
         }
     },
     methods: {
-        async loadSetsJson(locale) {
-            console.log("Computing Sets", locale)
-            var loadModule
-
-            if (!locales.includes(locale)) {
-                console.log("Invalid locale, default to en_us")
-                loadModule = await window['en_us']()
-            } else {
-                loadModule = await window[locale]()
-            }
-
-            this.sets = [].concat(...loadModule.default)
-            // console.log(this.sets)
-        },
         copyDeckcode() {
             const copyToClipboard = str => {
                 const el = document.createElement('textarea');

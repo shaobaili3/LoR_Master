@@ -18,7 +18,10 @@
             <span class="icon-hover"
                 v-if="!localHistoryLoading"
             ><i class="fas fa-check"></i></span>
-            <div class="tooltiptext right" v-if="!hasLocalInfo">{{$t('tooltips.lorlogin')}}</div>
+            <div v-if="!lorRunning || !localPlayerInfo.playerId"
+                class="tooltiptext right" >{{$t('tooltips.lorlogin')}}</div>
+            <div v-if="lorRunning && localPlayerInfo.playerId && !hasLocalInfo"
+                class="tooltiptext right" >{{$t('str.error.playerNoHistory')}}</div>
         </button>
         <button class="left-nav-btn" 
             :class="{selected: currentPage == PAGES.search}" 
@@ -132,7 +135,7 @@
         </div>
 
         <div class="main-content-container contact" v-if="currentPage == PAGES.contact">
-            <contact-info :locale="locale" :apiBase="apiBase"></contact-info>
+            <contact-info :apiBase="apiBase"></contact-info>
         </div>
 
         <div class="main-content-container settings" v-if="currentPage == PAGES.settings">
@@ -160,7 +163,7 @@
             <deck-regions :deck="deckCode" :fixedWidth="false"></deck-regions>
         </div>
         <div class="deck-content-detail">
-            <deck-detail :locale="locale" :baseDeck="deckCode" :fixedHeight="true"></deck-detail>
+            <deck-detail :baseDeck="deckCode" :fixedHeight="true"></deck-detail>
         </div>
     </div>
 
@@ -189,19 +192,23 @@
 
 <script>
 
-import BaseWindowControls from '../components/BaseWindowControls.vue'
+import BaseWindowControls from '../../components/BaseWindowControls.vue'
 import axios from 'axios'
-import DeckRegions from '../components/DeckRegions.vue'
-import Leaderboard from '../components/Leaderboard.vue'
-import PlayerMatches from '../components/PlayerMatches.vue'
-import DeckDetail from '../components/DeckDetail.vue'
-import LocaleChanger from '../components/LocaleChanger.vue'
-import ContactInfo from '../components/ContactInfo.vue'
+import DeckRegions from '../../components/DeckRegions.vue'
+import Leaderboard from '../../components/Leaderboard.vue'
+import PlayerMatches from '../../components/PlayerMatches.vue'
+import DeckDetail from '../../components/DeckDetail.vue'
+import LocaleChanger from '../../components/LocaleChanger.vue'
+import ContactInfo from '../../components/ContactInfo.vue'
+
+import { mapActions } from 'vuex'
 
 const requestDataWaitTime = 400 //ms
 const requestHistoryWaitTime = 100 //ms
 const requestStatusWaitTime = 1000 //ms
 const inputNameListLength = 10;
+
+// import ua from 'universal-analytics'
 
 // const portNum = "26531"
 // const API_BASE = `http://127.0.0.1:${portNum}`
@@ -282,7 +289,6 @@ export default {
             // Options
             autoLaunch: null,
             debugInfos: "",
-            locale: 'en_us',
 
             portNum: '26531',
         }
@@ -332,22 +338,44 @@ export default {
         },
         apiBase() {
             return `http://127.0.0.1:${this.portNum}`
-        }
+        },
     },
     mounted() {
         console.log("Mounted")
-        // var test = 'Hello'
-        this.requestVersionData()
-        this.requestStatusInfo()
-        this.handleGameEnd()
+        console.log(process.env.NODE_ENV)
+        console.log("$store.state.locale", this.locale)
+        
+        // Testing switching locale
+        // if (process.env.NODE_ENV == "development") {
+        //     this.$store.commit('changeLocale', 'zh_tw')
+        // }
+        
+        // console.log(this.user)
 
-        this.initLocalSettings()
+        try {
 
-        this.initStore()
-        this.initChangeLocale()
+            // var test = 'Hello'
+            
+            this.requestStatusInfo()
+            
+            if (!window.ipcRenderer) { return }
+            this.handleGameEnd()
+            this.requestVersionData()
+            this.initLocalSettings()
+            this.initStore()
+            this.initChangeLocale()
+            
+        } catch (error) {
+            console.log(error)
+        }
+        
         
     },
     methods: {
+
+        ...mapActions([
+            'changeLocale'
+        ]),
 
         initStore() {
             window.ipcRenderer.send('request-store', 'ui-locale')
@@ -517,84 +545,7 @@ export default {
             // this.playerName = "No history found"
 
         },
-        processHistoryData(data) {
-            this.matches = []
-            this.playerRank = null
-            this.playerLP = null
-
-            console.log("processHistoryData", data)
-
-            for (var key in data) {
-
-                if (!data[key]) continue // Skip if null history
-
-                var isFirstPlayer = data[key].player_info[0].name.toLowerCase() == this.playerName.toLowerCase()
-                
-                var player, playerGame, opponent, opponentGame;
-                var info = data[key].info
-                
-                var opponentName, opponentRank, opponentLp, opponentTag, opponentDeck, 
-                    deck, rounds, win, time, order;
-                
-                if (isFirstPlayer) {
-                    playerGame = info.players[0]
-                    opponentGame = info.players[1]
-
-                    player = data[key].player_info[0]
-                    opponent = data[key].player_info[1]
-                } else {
-                    playerGame = info.players[1]
-                    opponentGame = info.players[0]
-
-                    player = data[key].player_info[1]
-                    opponent = data[key].player_info[0]
-                }
-
-                if (!playerGame || !opponentGame || !player || !opponent) continue;
-
-                this.playerName = player.name // Sync name so all caps are correct
-                opponentName = opponent.name
-                
-                if (opponent.rank !== "") {
-                    opponentRank = opponent.rank + 1 // rank starts from 0
-                } else {
-                    opponentRank = "" // ranks can be empty
-                }
-
-                opponentLp = opponent.lp
-                opponentTag = opponent.tag
-
-                if (this.playerRank == null && player.rank !== "") { 
-                    this.playerRank = player.rank + 1 // player.rank starts from 0
-                }
-                if (!this.playerLP) this.playerLP = player.lp
-                
-                deck = playerGame.deck_code
-                opponentDeck = opponentGame.deck_code
-                order = playerGame.order_of_play
-                win = playerGame.game_outcome == "win"
-                rounds = info.total_turn_count
-                var badges = []
-                if (info.game_mode) badges.push(info.game_mode.replace(/([A-Z])/g, ' $1').trim().replace("Lobby", ""))
-                if (info.game_type) badges.push(info.game_type.replace(/([A-Z])/g, ' $1').trim().replace("Lobby", ""))
-
-                time = info.game_start_time_utc
-
-                this.matches.push({
-                    opponentName: opponentName,
-                    deck: deck,
-                    region: regionShort[this.playerRegion],
-                    opponentDeck: opponentDeck,
-                    opponentRank: opponentRank,
-                    opponentLp: opponentLp,
-                    opponentTag: opponentTag,
-                    rounds: rounds,
-                    win: win,
-                    time: time,
-                    badges: badges,
-                })
-            }
-        },
+        
         openURL(url) {
             window.openExternal(url);
         },
@@ -684,65 +635,26 @@ export default {
         },
         requestStatusInfo() {
             // Keeps requesting status
+
+            if (process.env.NODE_ENV == "development") {
+                console.log("Request Status Data")
+                const testRegion = 'sea'
+                // const testRegion = 'americas'
+                const testStatus = `{"language": "zh-TW","lorRunning": true,"playerId": "Storm#5961","port": "21337","server": "${testRegion}"}`
+                this.processStatusInfo(JSON.parse(testStatus))
+                return
+            } 
+
             lastStatusRequestTime = Date.now()
             axios.get(`${this.apiBase}/status`)
                 .then((response) => {
-                    var data = response.data
-
-                    var updateLocalPlayer = false
-                    if (this.localPlayerInfo.playerId != data.playerId) {
-                        // there is a change in player ID
-                        updateLocalPlayer = true
-                    }
-
-                    if (data.playerId != "") {
-
-                        this.localPlayerInfo.playerId = data.playerId
-                        var nameid = data.playerId.split('#')
-                        var oldName = this.localPlayerInfo.name
-                        var oldTag = this.localPlayerInfo.tag
-                        
-                        this.localPlayerInfo.name = nameid[0]
-                        this.localPlayerInfo.tag = nameid[1]
-
-                        if (this.localMatches.length <= 0) {
-                            // if the matches are still empty
-                            // updateLocalPlayer = true
-                        }
-
-                    } else {
-                        this.localPlayerInfo.playerId = null
-                        this.localPlayerInfo.name = null
-                        this.localPlayerInfo.tag = null
-
-                        this.localMatches = []
-                    }
-
-                    this.localPlayerInfo.server = data.server
-                    this.localPlayerInfo.language = data.language
-
-                    if (updateLocalPlayer) {
-                        this.requestLocalHistory()
-                    }
-                    
-                    if (data.language) {
-                        var newLocale = data.language.replace('-', '_').toLowerCase()
-                        if (this.locale != newLocale) {
-                            console.log("Switch Locale", this.locale, newLocale)
-                        }
-                        this.locale = newLocale
-                    }
-                    // console.log(this.locale)
-
-                    this.lorRunning = data.lorRunning
-
+                    this.processStatusInfo(response.data)
                     var elapsedTime = Date.now() - lastStatusRequestTime // ms
                     if (requestStatusWaitTime > elapsedTime) {
                         setTimeout(this.requestStatusInfo, requestStatusWaitTime - elapsedTime); 
                     } else {
                         setTimeout(this.requestStatusInfo, 100);
                     }
-                    
                 })
                 .catch((e) => {
                     if (axios.isCancel(e)) {
@@ -757,6 +669,84 @@ export default {
                         }
                     }
                 })
+        },
+        initAnalytics(uid) {
+
+            // console.log("Init Analytics")
+
+            // this.user.set("ds", "app")
+            // this.user.set("uid", uid)
+            // var eventCategory = "Main"
+            // var eventAction = "Init"
+            // var eventLabel = "ID: " + uid
+            // var eventValue = 1
+
+            // this.user.event(eventCategory, eventAction, eventLabel, eventValue, function (err) {
+            //     console.log(err)
+            // })
+
+            window.ipcRenderer.send('user-init', uid)
+
+        },
+        processStatusInfo(data) {
+
+            // console.log("Status", data)
+
+            var updateLocalPlayer = false
+            if (this.localPlayerInfo.playerId != data.playerId) {
+                // there is a change in player ID
+                updateLocalPlayer = true
+
+                if (data.playerId) {
+                    try {
+                        this.initAnalytics(data.playerId)
+                        // window.ipcRenderer.send('user-init', data.playerId)
+                    } catch (error) {
+                        console.log(error)
+                    }
+                }
+            }
+
+            if (data.playerId != "") {
+
+                this.localPlayerInfo.playerId = data.playerId
+                var nameid = data.playerId.split('#')
+                var oldName = this.localPlayerInfo.name
+                var oldTag = this.localPlayerInfo.tag
+                
+                this.localPlayerInfo.name = nameid[0]
+                this.localPlayerInfo.tag = nameid[1]
+
+                if (this.localMatches.length <= 0) {
+                    // if the matches are still empty
+                    // updateLocalPlayer = true
+                }
+
+            } else {
+                this.localPlayerInfo.playerId = null
+                this.localPlayerInfo.name = null
+                this.localPlayerInfo.tag = null
+
+                this.localMatches = []
+            }
+
+            this.localPlayerInfo.server = data.server
+            this.localPlayerInfo.language = data.language
+
+            if (updateLocalPlayer) {
+                this.requestLocalHistory()
+            }
+            
+            if (data.language) {
+                var newLocale = data.language.replace('-', '_').toLowerCase()
+                if (this.locale != newLocale) {
+                    console.log("Switch Locale", this.locale, newLocale)
+                    this.changeLocale(newLocale)
+                }
+            }
+            // console.log(this.locale)
+
+            this.lorRunning = data.lorRunning
         },
         requestNameData() {
             
@@ -839,6 +829,89 @@ export default {
                 })
 
         },
+        processHistoryData(data) {
+            this.matches = []
+            this.playerRank = null
+            this.playerLP = null
+
+            console.log("processHistoryData", data)
+
+            for (var key in data) {
+
+                if (!data[key]) continue // Skip if null history
+
+                var isFirstPlayer = data[key].player_info[0].name.toLowerCase() == this.playerName.toLowerCase()
+                
+                var player, playerGame, opponent, opponentGame;
+                var info = data[key].info
+                
+                var opponentName, opponentRank, opponentLp, opponentTag, opponentDeck, 
+                    deck, rounds, win, time, order;
+                
+                if (isFirstPlayer) {
+                    playerGame = info.players[0]
+                    opponentGame = info.players[1]
+
+                    player = data[key].player_info[0]
+                    opponent = data[key].player_info[1]
+                } else {
+                    playerGame = info.players[1]
+                    opponentGame = info.players[0]
+
+                    player = data[key].player_info[1]
+                    opponent = data[key].player_info[0]
+                }
+
+                if (!playerGame || !player) continue;
+
+                this.playerName = player.name // Sync name so all caps are correct
+                opponentName = opponent.name
+                
+                if (opponent.rank !== "") {
+                    opponentRank = opponent.rank + 1 // rank starts from 0
+                } else {
+                    opponentRank = "" // ranks can be empty
+                }
+
+                opponentLp = opponent.lp
+                opponentTag = opponent.tag
+
+                if (this.playerRank == null && player.rank !== "") { 
+                    this.playerRank = player.rank + 1 // player.rank starts from 0
+                }
+                if (!this.playerLP) this.playerLP = player.lp
+                
+                if (opponentGame) {
+                    opponentDeck = opponentGame.deck_code
+                } else {
+                    opponentDeck = ""
+                }
+
+                deck = playerGame.deck_code
+                order = playerGame.order_of_play
+                win = playerGame.game_outcome == "win"
+                rounds = info.total_turn_count
+                var badges = []
+                if (info.game_mode) badges.push(info.game_mode.replace(/([A-Z])/g, ' $1').trim().replace("Lobby", ""))
+                if (info.game_type) badges.push(info.game_type.replace(/([A-Z])/g, ' $1').trim().replace("Lobby", ""))
+
+                time = info.game_start_time_utc
+
+                this.matches.push({
+                    opponentName: opponentName,
+                    deck: deck,
+                    region: regionShort[this.playerRegion],
+                    opponentDeck: opponentDeck,
+                    opponentRank: opponentRank,
+                    opponentLp: opponentLp,
+                    opponentTag: opponentTag,
+                    rounds: rounds,
+                    win: win,
+                    time: time,
+                    badges: badges,
+                })
+            }
+        },
         showDeck(deck) {
             // console.log("Main Show Deck", deck)
             if (this.deckCode == deck && this.isShowDeck == true) {
@@ -854,6 +927,14 @@ export default {
         },
 
         requestLocalHistory() {
+
+            if (process.env.NODE_ENV == "development") {
+
+                const testData = require('../../assets/data/testLocalHistoryData')
+                // pass
+                this.processLocalHistory(testData)
+                return
+            }
 
             // if (this.isLoading) {
             //     // Before starting everything check to see if there is already a search request
@@ -891,10 +972,18 @@ export default {
                 return
             }
 
-            console.log("Request Local History", `${this.apiBase}/search/${server}/${name}/${tag}`)
+            let apiLink;
+
+            if (server === 'sea') {
+                apiLink = `${this.apiBase}/local`
+            } else {
+                apiLink = `${this.apiBase}/search/${server}/${name}/${tag}`
+            }
+
+            console.log("Request Local History", apiLink)
             this.localHistoryLoading = true
 
-            axios.get(`${this.apiBase}/search/${server}/${name}/${tag}`,
+            axios.get(apiLink,
                     { cancelToken: localCancleToken.token }) // Pass the cancel token
                 .then((response) => {
                     this.localHistoryLoading = false
@@ -902,7 +991,13 @@ export default {
                     if (response.data == "Error") {
                         console.log("Local History Search Error")
                     } else {
-                        this.processLocalHistory(response.data)
+                        if (server === 'sea') {
+                            let key = (name + '#' + tag).toLowerCase()
+                            console.log('Current key', key)
+                            this.processLocalHistorySEA(response.data[key])
+                        } else {
+                            this.processLocalHistory(response.data)
+                        }
                     }
                 })
                 .catch((e) => {
@@ -915,9 +1010,61 @@ export default {
                     
                 })
         },
+        processLocalHistorySEA(data) {
+            console.log("Process Local SEA History!")
+            console.log(data)
+
+            this.localMatches = []
+
+            for (let match of data) {
+                var opponentName, opponentRank, opponentLp, opponentTag, opponentDeck, 
+                    deck, rounds, win, time, order;
+
+                this.localPlayerInfo.rank = match.playerRank // Currently no value
+                this.localPlayerInfo.lp = match.playerLp // Currently no value
+
+                opponentName = match.opponentName
+                opponentTag = null // Cannot get
+                opponentRank = match.opponentRank // Currently no value
+                opponentLp = match.opponentLp // Currently no value
+                opponentDeck = match.deck_tracker.opGraveyardCode
+                deck = match.deck_tracker.deckCode
+                rounds = null // Cannot get
+                win = match.localPlayerWon
+                time = match.startTime
+                order = null // Cannot get
+
+                var badges = [] // Currently no value
+
+                var details = {
+                    openHand: match.deck_tracker.openHand,
+                    replacedHand: match.deck_tracker.replacedHand,
+                    timeline: match.deck_tracker.timeline,
+                    startTime: match.startTime,
+                    endTime: match.endTime,
+                }
+                
+                this.localMatches.push({
+                    opponentName: opponentName,
+                    deck: deck,
+                    region: regionShort[this.localPlayerInfo.server],
+                    opponentDeck: opponentDeck,
+                    opponentRank: opponentRank,
+                    opponentLp: opponentLp,
+                    opponentTag: opponentTag,
+                    rounds: rounds,
+                    win: win,
+                    time: time,
+                    badges: badges,
+                    details: details,
+                })
+            }
+        },
         processLocalHistory(data) {
 
             console.log("Process Local History!")
+
+            console.log(data)
 
             this.localMatches = []
             this.localPlayerInfo.rank = null
@@ -925,12 +1072,34 @@ export default {
 
             for (var key in data) {
 
-                if (!data[key]) continue // Skip if null history
+                var match = data[key]
 
-                var isFirstPlayer = data[key].player_info[0].name.toLowerCase() == this.localPlayerInfo.name.toLowerCase()
+                if (!match) continue // Skip if null history
+
+                var isFirstPlayer = match.player_info[0].name.toLowerCase() == this.localPlayerInfo.name.toLowerCase()
                 
-                var player, playerGame, opponent, opponentGame;
-                var info = data[key].info
+                var player, playerGame, opponent, opponentGame
+                var info = match.info
+
+                var details = null
+                
+                if (match.local && match.local.deck_tracker) {
+                    details = {
+                        openHand: match.local.deck_tracker.openHand,
+                        replacedHand: match.local.deck_tracker.replacedHand,
+                        timeline: match.local.deck_tracker.timeline,
+                        startTime: match.local.startTime,
+                        endTime: match.local.endTime,
+                    }
+
+                    // console.log("Timeline", details.timeline)
+                }
+
+                
+                // if (details) {
+                //     // Only add isFirstPlayer if there is details
+                //     details.isFirstPlayer = isFirstPlayer
+                // }
                 
                 var opponentName, opponentRank, opponentLp, opponentTag, opponentDeck, 
                     deck, rounds, win, time, order;
@@ -939,14 +1108,14 @@ export default {
                     playerGame = info.players[0]
                     opponentGame = info.players[1]
 
-                    player = data[key].player_info[0]
-                    opponent = data[key].player_info[1]
+                    player = match.player_info[0]
+                    opponent = match.player_info[1]
                 } else {
                     playerGame = info.players[1]
                     opponentGame = info.players[0]
 
-                    player = data[key].player_info[1]
-                    opponent = data[key].player_info[0]
+                    player = match.player_info[1]
+                    opponent = match.player_info[0]
                 }
 
                 if (!playerGame || !opponentGame || !player || !opponent) continue;
@@ -991,6 +1160,7 @@ export default {
                     win: win,
                     time: time,
                     badges: badges,
+                    details: details,
                 })
             }
         },
@@ -999,6 +1169,100 @@ export default {
 }
 
 </script>
+
+<style lang="scss">
+    .tooltip {
+        position: relative;
+
+        .tooltiptext {
+            visibility: hidden;
+            opacity: 0;
+
+            transition: visibility 0s linear 200ms, opacity 200ms ease;
+
+            display: block;
+            /* width: 120px; */
+            font-size: 16px;
+
+            white-space: nowrap;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 8px 10px;
+
+            box-sizing: border-box;
+
+            position: absolute;
+            z-index: 10;
+
+            /* Position the tooltip */
+            bottom: 0%;
+            left: 50%;
+            transform:translateX(-50%);
+            
+            /* Position the tooltip */
+            &.top {
+                bottom: 120%;
+                left: 50%;
+                transform:translateX(-50%);
+            }
+
+            &.right {
+                top: 50%;
+                bottom: auto;
+                left: 105%;
+                transform: translateY(-50%);
+            }
+
+            &.left {
+                top: 50%;
+                bottom: auto;
+                right: 105%;
+                left: auto;
+                transform: translateY(-50%);
+            }
+
+            &.top-end {
+                top: auto;
+                bottom: 120%;
+                left: auto;
+                right: 0%;
+                transform:translateX(0%);
+            }
+
+            &.top-start {
+                top: auto;
+                bottom: 120%;
+                left: 0%;
+                right: auto;
+                transform:translateX(0%);
+            }
+
+            &.top-bottom-right {
+                bottom: 100%;
+                right: -10px;
+                left: auto;
+                transform: none;
+                margin-bottom: 22px;
+            }
+        
+            /* left: 50%; */
+            /* margin-left: -50%; */
+            .fas {
+                margin-right: 5px;
+            }
+        }
+
+        &:hover {
+            .tooltiptext {
+                visibility: visible;
+                opacity: 1;
+                transition: visibility 0s linear 0s, opacity 200ms ease;
+            }
+        }
+    }
+</style>
 
 <style scoped>
 
@@ -1223,10 +1487,12 @@ export default {
 
     .main-content-container {
         margin: auto;
-        max-width: 550px;
+        max-width: 650px;
+        padding: 0px 50px;
         height: calc(100vh - 88px); 
         /* top bar: -43 | bottom bar: -45 */
         overflow-y: scroll;
+        box-sizing: border-box;
     }
 
     .left-nav {
@@ -1327,69 +1593,6 @@ export default {
         cursor: pointer;
     }
 
-    .tooltip {
-        position: relative;
-    }
-
-    .tooltip .tooltiptext {
-        visibility: hidden;
-        display: block;
-        /* width: 120px; */
-        font-size: 16px;
-
-        white-space: nowrap;
-        background-color: black;
-        color: #fff;
-        text-align: center;
-        border-radius: 6px;
-        padding: 8px 10px;
-
-        box-sizing: border-box;
-
-        position: absolute;
-        z-index: 10;
-
-        /* Position the tooltip */
-        bottom: 120%;
-        left: 50%;
-        transform:translateX(-50%);
-        
-        /* left: 50%; */
-        /* margin-left: -50%; */
-    }
-
-    .tooltip .tooltiptext .fas {
-        margin-right: 5px;
-    }
-
-    .tooltip .tooltiptext.top {
-        /* Position the tooltip */
-        bottom: 120%;
-        left: 50%;
-        transform:translateX(-50%);
-    }
-
-    .tooltip .tooltiptext.right {
-        /* Position the tooltip */
-        top: 50%;
-        bottom: auto;
-        left: 105%;
-        transform: translateY(-50%);
-    }
-
-    .tooltip .tooltiptext.top-bottom-right {
-        /* Position the tooltip */
-        bottom: 100%;
-        right: -10px;
-        left: auto;
-        transform: none;
-        margin-bottom: 22px;
-    }
-
-    .tooltip:hover .tooltiptext {
-        visibility: visible;
-    }
-
     .sticky-top {
         position: sticky;
         top: 0;
@@ -1437,3 +1640,4 @@ export default {
     }
 
 </style>
+

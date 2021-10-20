@@ -12,13 +12,13 @@ module.exports = {
       error: {
         unkown: 'Something went wrong',
         playerNotFound: 'Player not found',
-        playerNoHistory: 'No valid history found'
+        playerNoHistory: 'No history found'
       },
       regions: {
         americas: 'Americas',
         europe: 'Europe',
         asia: 'Asia',
-        sea: 'South East Asia',
+        sea: 'SEA',
       },
       times: {
         sec: '{t} sec. ago',
@@ -54,7 +54,10 @@ module.exports = {
         Ranked: 'Ranked',
         Bo3Challenge: 'Bo3 Challenge',
         StandardGauntlet: 'Gauntlet',
-        Normal: 'Normal'
+        Normal: 'Normal',
+        LastCallQualifierGauntlet: 'Last Chance Gauntlet',
+        SeasonalTournament: 'Seasonal',
+        AI: 'AI'
       }
     },
     dash: {
@@ -72,7 +75,8 @@ module.exports = {
       prompt: '⬆ Enter name and tag to search',
     },
     tooltips: {
-      lorlogin: 'Please log in LoR'
+      lorlogin: 'Please login LoR',
+      incompleteDeck: 'Incomplete Deck',
     },
     contact: {
       messageBox: {
@@ -149,7 +153,9 @@ module.exports = {
         Ranked: '排位',
         Bo3Challenge: '三局兩勝',
         StandardGauntlet: '武鬥場',
-        Normal: '普通'
+        Normal: '普通',
+        LastCallQualifierGauntlet: '終極武鬥場',
+        SeasonalTournament: '季賽'
       }
     },
     dash: {
@@ -167,7 +173,7 @@ module.exports = {
       prompt: '⬆ 請輸入名字與後綴',
     },
     tooltips: {
-      lorlogin: '請登陸 LoR'
+      lorlogin: 'LoR 未登錄 / 無記錄'
     },
     contact: {
       messageBox: {
@@ -244,7 +250,9 @@ module.exports = {
         Ranked: '排位',
         Bo3Challenge: '三局两胜',
         StandardGauntlet: '武斗场',
-        Normal: '普通'
+        Normal: '普通',
+        LastCallQualifierGauntlet: '终极武斗场',
+        SeasonalTournament: '季赛'
       }
     },
     dash: {
@@ -262,7 +270,7 @@ module.exports = {
       prompt: '⬆ 请输入名字与后缀',
     },
     tooltips: {
-      lorlogin: '请登陆 LoR'
+      lorlogin: 'LoR 未登录'
     },
     contact: {
       messageBox: {

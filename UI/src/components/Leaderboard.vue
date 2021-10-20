@@ -13,10 +13,11 @@
             </div>
 
             <div id="search-container">
-                <div class="search-icon" v-if="!isLoading"><i class="fa fa-search"></i></div>
-                <div class="search-icon loading" v-if="isLoading"><i class="fa fa-circle-notch fa-spin"></i></div>
+                <div class="search-icon left" v-if="!isLoading"><i class="fa fa-search"></i></div>
+                <div class="search-icon left loading" v-if="isLoading"><i class="fa fa-circle-notch fa-spin"></i></div>
                 <input spellcheck="false" autocomplete='off' v-model="searchText"
                     id="search-input" type="text" :placeholder="isLoading ? $t('str.loading') : searchPlaceHolder " :disabled="isLoading">
+                <div class="search-icon right" @click="clearSearch" v-if="searchText!=''"><span><i class="fas fa-times"></i></span></div>
             </div>
 
             <div class="flex info-help">
@@ -116,7 +117,14 @@ export default {
     },
     components: { LeaderboardPlayer },
     methods: {
+        clearSearch() {
+            this.searchText = ""
+            document.querySelector("#search-input").focus()
+        },
         getLeaderboard(regionID) {
+
+            // Return if using npm run serve
+            if (process.env.NODE_ENV == "development") { return }
 
             lastLeaderboardRequestTime = Date.now()
 
@@ -140,7 +148,11 @@ export default {
                     console.log("Request cancelled")
                 } else 
                 { 
-                    console.log('error', e) 
+                    console.log('error', e)
+                    // if (!e.status) {
+                    //     console.log("Network Error")
+                    //     // return
+                    // }
 
                     var elapsedTime = Date.now() - lastLeaderboardRequestTime // ms
                     if (elapsedTime > requestLeaderboardWaitTime) {
@@ -179,7 +191,8 @@ export default {
 }
 </script>
 
-<style scoped>
+
+<style lang="scss" scoped>
 
     .info-help {
         color: white;
@@ -253,8 +266,18 @@ export default {
         line-height: 50px;
         vertical-align: middle;
 
-        left: 10px;
+        top: 0px;
+
         color: var(--col-dark-white);
+
+        &.left {
+            left: 10px;
+        }
+
+        &.right {
+            right: 10px;
+            cursor: pointer;
+        }
     }
 
 

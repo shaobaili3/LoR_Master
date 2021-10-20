@@ -5,8 +5,7 @@
         <div class="cardContent cardCost">{{cost}}</div>
         <div class="cardContent cardName">{{name}}</div>
         <div class="cardContent cardCount">x{{count}}</div>
-        <!-- <div class="cardDisplay" :style="{background: getCardDisplay()}"></div> -->
-        <img class="cardDisplay" :src = "getCardDisplayUrl()" alt="">
+        <card-image class="cardDisplay" :code="code" :set="set"></card-image>
     </div>
 </template>
 
@@ -16,14 +15,17 @@
 // https://cdn-lor.mobalytics.gg/production/images/cards-preview/01DE029.webp
 
 import axios from 'axios'
+import CardImage from './image/CardImage.vue'
 
 const requestStatusWaitTime = 1000 //ms
 var lastStatusRequestTime
 
 export default {
+    components: { CardImage },
     mounted() {
     },
     data() {
+        return {}
     }, 
     props: {
         code: String,
@@ -35,14 +37,8 @@ export default {
 
         supertype: String,
         set: String,
-
-        locale: {
-            type: String,
-            default: 'en_us'
-        }
     },
     computed: {
-        
     },
     methods: {
         getCardPreviewBackgroundStyle() {
@@ -59,19 +55,12 @@ export default {
             
             return gradient + "url(" + cardPreviewUrlBase + this.code + ".webp) right top no-repeat"
         },
-        getCardDisplay() {
-            return "url(" + this.getCardDisplayUrl() + ")"
-        },
-        getCardDisplayUrl() {
-            const cardDisplayUrlBase = 'https://dd.b.pvp.net/latest/'
-            // const locale = 'zh_tw'
-            return cardDisplayUrlBase + this.set.toLowerCase()  + '/' + this.locale + '/img/cards/' + this.code + '.png' 
-        },
+        
     }
 }
 </script>
 
-<style>
+<style scoped>
 
 .cardContainer {
     max-width: 320px;

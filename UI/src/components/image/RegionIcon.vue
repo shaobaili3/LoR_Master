@@ -15,7 +15,7 @@ export default {
     mounted() {
     },
     props: {
-        faction: String,
+        faction: Number,
     },
     computed: {
         getRegionImgUrl() {

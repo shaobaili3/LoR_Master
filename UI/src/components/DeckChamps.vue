@@ -18,6 +18,7 @@ import DeckRegions from './DeckRegions.vue'
 export default {
     components: { ChampIcon, DeckRegions },
     data() {
+        return {}
     }, 
     mounted() {
     },

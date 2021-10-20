@@ -4,20 +4,21 @@ from Models.deck import getDeckCode
 import json
 import os
 import constants
+from datetime import datetime
 
 
 class Local:
-    def __init__(self, setting):
+    def __init__(self, setting, cache):
         self.opponentName = None
         self.opponentTag = None
-        self.isClientRuning = False
-        self.isInProgress = False
+        self.gameId = None
+        self.startTime = None
         self.setting = setting
         self.playername = None
         self.trackerDict = {}
         self.session = requests.Session()
         self.playedCards = {}
-        self.graveyard = {}
+        self.opGraveyardWithId = {}
         self.opGraveyard = {}
         self.myGraveyard = {}
         self.positional_rectangles = None
@@ -25,18 +26,82 @@ class Local:
         self.trackJson = {}
         self.handsInHand = {}
 
+        self.openHand = {}
+        self.replacedHnad = {}
+
+        self.timeline = {}
+        self.allCard = {}
+        self.cache = cache
+
     # call this function after changes server in the tracker
     def reset(self):
         self.opponentName = None
         self.playername = None
+        self.gameId = None
         self.opponentTag = None
-        self.isClientRuning = False
-        self.isInProgress = False
         self.playedCards = {}
-        self.graveyard = {}
+        self.opGraveyardWithId = {}
         self.opGraveyard = {}
         self.trackJson = {}
         self.trackerDict = {}
+
+        self.openHand = {}
+        self.replacedHnad = {}
+        self.startTime = None
+
+        self.allCard = {}
+
+    def addCardToTimeline(self, card):
+        if card['CardID'] not in self.timeline:
+            self.timeline[card['CardID']] = card
+            self.timeline[card['CardID']
+                          ]['showTime'] = datetime.utcnow().isoformat()
+            if card['LocalPlayer']:
+                self.timeline[card['CardID']
+                              ]['drawTime'] = datetime.utcnow().isoformat()
+        else:
+            if card['LocalPlayer']:
+                self.timeline[card['CardID']]['playTime'] = None
+
+    def updateTimeline(self):
+        for cardId in self.timeline.keys():
+            if cardId not in self.allCard:
+                if self.timeline[cardId].get('exitTime') is None:
+                    self.timeline[cardId]['exitTime'] = datetime.utcnow(
+                    ).isoformat()
+
+        # check if card still in hand for local player for playtime
+        for cardId in self.timeline.keys():
+            if self.timeline[cardId].get('playTime') is None:
+                if cardId not in self.cardsInHand:
+                    self.timeline[cardId]['playTime'] = datetime.utcnow(
+                    ).isoformat()
+
+    # get latest game result and update self.gameId
+    def getResult(self):
+        playerId = self.setting.playerId.lower()
+        try:
+            resultRequest = self.session.get(self.getResultLink())
+            resultJson = resultRequest.json()
+            self.gameId = resultJson['GameID'] + 1
+            localPlayerWon = resultJson['LocalPlayerWon']
+        except Exception as e:
+            print('getResult client is not running: ', e)
+            self.gameId = None
+            return
+        # self.startTime = str(datetime.utcnow())
+        if playerId not in self.cache.localMatches:
+            self.cache.localMatches[playerId] = []
+        localMatch = {}
+        localMatch['startTime'] = self.startTime
+        localMatch['endTime'] = datetime.utcnow().isoformat()
+        localMatch['localPlayerWon'] = localPlayerWon
+        localMatch['opponentName'] = self.opponentName
+        localMatch['opponentTag'] = self.opponentTag
+        localMatch['deck_tracker'] = self.trackerDict
+        self.cache.localMatches[playerId].insert(0, localMatch)
+        self.cache.saveLocal()
+        return localPlayerWon
 
     def updateTracker(self):
         rectangles = self.positional_rectangles['Rectangles']
@@ -44,19 +109,33 @@ class Local:
             return
         screenHeight = self.positional_rectangles['Screen']['ScreenHeight']
         self.cardsInHand = {}
+        self.allCard = {}
         for card in rectangles:
+            self.allCard[card['CardID']] = card['CardCode']
             if card['LocalPlayer'] is True:
+                # only record the cards in hand for localplayer not on board
                 if card['Height'] > screenHeight / 5.2 and card['TopLeftY'] < screenHeight / 2:
                     self.cardsInHand[card['CardID']] = card['CardCode']
                     self.playedCards[card['CardID']] = card['CardCode']
+                    self.addCardToTimeline(card)
             else:
-                self.graveyard[card['CardID']] = card['CardCode']
-        # have to know if player have changed cards
-        if len(self.playedCards) == 0 and len(self.graveyard) == 1:
-            self.playedCards = {}
-            self.graveyard = {}
+                self.opGraveyardWithId[card['CardID']] = card['CardCode']
+                self.addCardToTimeline(card)
+        self.updateTimeline()
+        # player is replacing cards, lor clean all cards after replacement than arrange cards for both players.
+        if len(self.playedCards) == 0 and len(self.opGraveyardWithId) == 1 and len(rectangles) == 6:
+            # self.startTime = datetime.utcnow().isoformat()
+            self.opGraveyardWithId = {}
+            self.timeline = {}
+            # replaceds card will show in the center of screen as same as open cards, so use it to avoid save replaced cards
+            if not self.openHand:
+                self.openHand = rectangles
+        # player has finished replacing
+        if len(self.playedCards) == 4 and len(self.cardsInHand) == 4 and len(self.opGraveyardWithId) == 1 and len(rectangles) == 6:
+            self.replacedHnad = rectangles
 
     def updateLeftCards(self, currentCards):
+
         if currentCards is None:
             return
         for key in self.playedCards:
@@ -72,8 +151,8 @@ class Local:
 
     def updateOpGraveyard(self):
         self.opGraveyard = {}
-        for key in self.graveyard:
-            cardCode = self.graveyard[key]
+        for key in self.opGraveyardWithId:
+            cardCode = self.opGraveyardWithId[key]
             if cardCode in self.opGraveyard:
                 self.opGraveyard[cardCode] += 1
             else:
@@ -142,6 +221,11 @@ class Local:
         self.trackerDict['myPlayedCardsCode'] = getDeckCode(
             self.trackerDict['myPlayedCards'])
         self.trackerDict['cardsInHandNum'] = len(self.cardsInHand)
+        self.trackerDict['openHand'] = self.openHand
+        self.trackerDict['replacedHand'] = self.replacedHnad
+        self.trackerDict['timeline'] = list(self.timeline.values())
+        self.trackerDict['opponentName'] = self.opponentName
+        self.trackerDict['opponentTag'] = self.opponentTag
 
     def updateStatusFlask(self):
         try:
@@ -150,40 +234,47 @@ class Local:
         except Exception as e:
             print('client is not running: ', e)
             self.reset()
+            self.setting.isLocalApiEnable = False
             return {}
+        self.setting.isLocalApiEnable = True
         if self.positional_rectangles['GameState'] == 'InProgress':
+            self.opponentName = self.positional_rectangles['OpponentName']
+            if self.startTime is None:
+                self.startTime = datetime.utcnow().isoformat()
             self.updateTracker()
             self.updateMyDeck()
             print(self.trackerDict)
         else:
+            # save game result here
+            if self.startTime is not None:
+                self.getResult()
             self.reset()
-            self.trackJson
             self.trackJson['positional_rectangles'] = self.positional_rectangles
             return self.trackJson
 
         self.trackJson['positional_rectangles'] = self.positional_rectangles
         self.trackJson['deck_tracker'] = self.trackerDict
 
-        opInfo = {}
-        self.trackJson['opponent_info'] = opInfo
-
         return self.trackJson
 
-    def updateTagByName(self, name):
-        nameListPath = constants.getCacheFilePath(self.setting.riotServer.lower() + '.json')
+    def updateTagByName(self):
+        if self.opponentName is None:
+            print('updateTagByName:', 'game not start')
+            return
+        nameListPath = constants.getCacheFilePath(
+            self.setting.riotServer.lower() + '.json')
         if not os.path.isfile(nameListPath):
             nameListPath = 'Resource/' + self.setting.riotServer.lower() + '.json'
         try:
             with open(nameListPath, 'r', encoding='utf-8') as fp:
                 names = json.load(fp)
-                if name in names:
-                    self.opponentTag = names[name]
+                if self.opponentName in names:
+                    self.opponentTag = names[self.opponentName]
                     return
             with open(('Resource/' + self.setting.riotServer + '.dat'), 'r', encoding="utf-8") as search:
                 for line in search:
                     fullName = line.rstrip().split('#')
-                    if name == fullName[0]:
-                        # print(fullName)
+                    if self.opponentName == fullName[0]:
                         self.opponentTag = fullName[1]
                         return
         except Exception as e:
@@ -195,3 +286,6 @@ class Local:
 
     def getLocalDeckLink(self):
         return cs.IP_KEY + self.setting.port + cs.LOCAL_DECK
+
+    def getResultLink(self):
+        return cs.IP_KEY + self.setting.port + cs.LOCAL_RESULT
