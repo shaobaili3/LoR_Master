@@ -221,4 +221,8 @@ def report(message):
     return jsonify('OK')
 
 
+@app.route('/')
+def index():
+    return "<h1>Welcome to LMT server</h1>"
+
 app.run(port=args.port, debug=isDebug, use_reloader=False)
