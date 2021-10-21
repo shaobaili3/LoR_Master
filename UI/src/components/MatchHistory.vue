@@ -133,7 +133,7 @@ export default {
                 label: this.deck,
                 value: null,
             }
-            window.ipcRenderer.send('user-event', eventInfo)
+            this.sendUserEvent(eventInfo)
         },
         showDeck(deck) {
             // console.log("Show Deck", deck)

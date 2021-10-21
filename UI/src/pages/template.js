@@ -72,11 +72,27 @@ app.mixin({
             'sets'
         ])
     },
-    // methods: {
-    //   ...mapMutations([
-    //     'changeLocale'
-    //   ]),
-    // }
+    methods: {
+        // ...mapMutations([
+        //     'changeLocale'
+        // ]),
+        sendUserEvent(eventInfo) {
+            if (window.ipcRenderer) {
+                window.ipcRenderer.send('user-event', eventInfo)
+            }
+        },
+        sendUserEventFormat(eventCategory, eventAction, eventLabel, eventValue) {
+            if (window.ipcRenderer) {
+                window.ipcRenderer.send('user-event', {
+                    category: eventCategory,
+                    action: eventAction,
+                    label: eventLabel,
+                    value: eventValue,
+                })
+            }
+        }
+
+    }
 })
 
 app.mount('#app')

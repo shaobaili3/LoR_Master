@@ -23,7 +23,7 @@
                     :key="index"
                     :class="{'first': card.LocalPlayer}"
                     :style="{'left': 'calc('+timePercents[index]+'% - 10px)'}"
-                    @mouseover="iconHover($event, card.CardCode)"
+                    @mouseenter="iconHover($event, card.CardCode)"
                     @mouseleave="iconLeave($event)"
                 >
                     <svg viewBox="0 0 10 10">
@@ -440,6 +440,7 @@ export default {
                         margin-top: -22px;
                         margin-left: 16px;
                         z-index: 12; // Above the image which is 10
+                        pointer-events: none;
                     }
 
                     .card-image {

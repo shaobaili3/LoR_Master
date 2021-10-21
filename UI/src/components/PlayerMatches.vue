@@ -209,13 +209,12 @@ export default {
                 this.filterDeckCode = code
             }
 
-            var eventInfo = {
+            this.sendUserEvent({
                 category: "Main Window Matches",
                 action: this.filterDeckCode ? "Set Filter Deck Code" : "Remove Filter Deck Code",
                 label: code,
                 value: null,
-            }
-            window.ipcRenderer.send('user-event', eventInfo)
+            })
         },
 
         searchPlayer(data) {
