@@ -81,7 +81,7 @@ import moment from 'moment'
 let pos = { top: 0, left: 0, x: 0, y: 0 };
 
 const gameEndAddTime = 10 // sec
-const minZoom = 98 // percent
+const minZoom = 100 // percent
 
 export default {
     components: {
@@ -90,8 +90,11 @@ export default {
     },
     mounted() {
         // console.log(this.details)
-        this.ele = document.querySelector('.timeline-container');
-        this.ele.addEventListener('mousedown', this.mouseDownHandler);
+        this.ele = document.querySelectorAll('.timeline-container');
+        
+        for (const el of this.ele) {
+            el.addEventListener('mousedown', this.mouseDownHandler);
+        }
 
         // if (this.details) {
         //     console.log("Total Match Time", this.matchTime)
@@ -110,7 +113,10 @@ export default {
                 left: null,
                 top: null,
                 time: null,
-            }
+            },
+
+            mouseMoveListener: null,
+            mouseUpListener: null,
         }
     },
     props: {
@@ -172,33 +178,45 @@ export default {
             // this.ele.style.userSelect = 'none';
             this.grabbing = true
 
+            // console.log("Mouse Down", e.currentTarget)
+
             pos = {
                 // The current scroll
-                left: this.ele.scrollLeft,
-                top: this.ele.scrollTop,
+                left: e.currentTarget.scrollLeft,
+                top: e.currentTarget.scrollTop,
                 // Get the current mouse position
                 x: e.clientX,
                 y: e.clientY,
             };
 
-            document.addEventListener('mousemove', this.mouseMoveHandler);
-            document.addEventListener('mouseup', this.mouseUpHandler);
+            console.log(pos)
+
+            const tar = e.currentTarget
+
+            this.mouseMoveListener = (ev) => { this.mouseMoveHandler(ev, tar) }
+            this.mouseUpListener = (ev) => { this.mouseUpHandler(ev, tar) }
+
+            document.addEventListener('mousemove', this.mouseMoveListener);
+            document.addEventListener('mouseup', this.mouseUpListener);
         },
-        mouseMoveHandler(e) {
+        mouseMoveHandler(e, tar) {
             // How far the mouse has been moved
+
+            // console.log("Mouse Move", e, tar)
             const dx = e.clientX - pos.x;
             const dy = e.clientY - pos.y;
 
             // Scroll the element
             // this.ele.scrollTop = pos.top - dy;
-            this.ele.scrollLeft = pos.left - dx;
+            // console.log(tar.scrollLeft)
+            tar.scrollLeft = pos.left - dx;
         },
         mouseUpHandler() {
             // console.log("Mouse Up")
             this.grabbing = false
 
-            document.removeEventListener('mousemove', this.mouseMoveHandler);
-            document.removeEventListener('mouseup', this.mouseUpHandler);
+            document.removeEventListener('mousemove', this.mouseMoveListener);
+            document.removeEventListener('mouseup', this.mouseUpListener);
 
             // this.ele.style.cursor = 'grab';
             // this.ele.style.removeProperty('user-select');
@@ -225,7 +243,9 @@ export default {
             this.displayInfo = null
         },
         handleScroll(event) {
+            
             var el = event.currentTarget
+            console.log(el)
 
             const zoomSpeed = 1.2
 
