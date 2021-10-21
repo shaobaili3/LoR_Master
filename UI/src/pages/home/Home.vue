@@ -435,24 +435,21 @@ export default {
             var pagekeys = Object.keys(PAGES)
             var label = "From [" + pagekeys[this.currentPage] + "] to [" + pagekeys[page] +"]"
 
-            var eventInfo = {
+            this.sendUserEvent({
                 category: "Main Window",
                 action: "Change Tab",
                 label: label,
                 value: null,
-            }
-
-            window.ipcRenderer.send('user-event', eventInfo)
+            })
             this.currentPage = page
         },
         selectRegion(region) {
-            var eventInfo = {
+            this.sendUserEvent({
                 category: "Main Window Search",
                 action: "Select Region",
                 label: regionNames[region],
                 value: null,
-            }
-            window.ipcRenderer.send('user-event', eventInfo)
+            })
 
             this.selectedRegion = region
             var searchBar = document.querySelector(".search-bar")
@@ -462,13 +459,12 @@ export default {
         },
         searchPlayer(data) {
             
-            let eventInfo = {
+            this.sendUserEvent({
                 category: "Main Window Search",
                 action: "Leaderboard Search",
                 label: data.region + ": " + data.name + "#" + data.tag,
                 value: null,
-            }
-            window.ipcRenderer.send('user-event', eventInfo)
+            })
 
             console.log("Search Player", data)
 
@@ -536,13 +532,12 @@ export default {
 
                 this.searchText = this.playerName
                 
-                let eventInfo = {
+                this.sendUserEvent({
                     category: "Main Window Search",
                     action: "Auto Complete",
                     label: this.playerName + "#" + this.playerTag,
                     value: null,
-                }
-                window.ipcRenderer.send('user-event', eventInfo)
+                })
 
                 // Perform the actual search
                 this.requestHistoryData()
@@ -556,13 +551,12 @@ export default {
                     this.playerName = splited[0]
                     this.playerTag = splited[1]
 
-                    let eventInfo = {
+                    this.sendUserEvent({
                         category: "Main Window Search",
                         action: "User Input [New]",
                         label: `${this.searchText}`,
                         value: null,
-                    }
-                    window.ipcRenderer.send('user-event', eventInfo)
+                    })
 
                     // Perform the actual search
                     this.requestHistoryData()
@@ -572,24 +566,22 @@ export default {
                     this.requestHistoryData()
                     this.resetInputFocus()
 
-                    let eventInfo = {
+                    this.sendUserEvent({
                         category: "Main Window Search",
                         action: "User Input [Refresh]",
                         label: `${this.searchText}`,
                         value: null,
-                    }
-                    window.ipcRenderer.send('user-event', eventInfo)
+                    })
 
                 } else {
                     // Alert the player needed info
 
-                    let eventInfo = {
+                    this.sendUserEvent({
                         category: "Main Window Search",
                         action: "User Input [Error]",
                         label: `${this.searchText}`,
                         value: null,
-                    }
-                    window.ipcRenderer.send('user-event', eventInfo)
+                    })
 
                 }
             }
@@ -749,8 +741,7 @@ export default {
             // this.user.event(eventCategory, eventAction, eventLabel, eventValue, function (err) {
             //     console.log(err)
             // })
-
-            window.ipcRenderer.send('user-init', uid)
+            if (window.ipcRenderer) { window.ipcRenderer.send('user-init', uid) }
 
         },
         processStatusInfo(data) {
@@ -869,13 +860,12 @@ export default {
 
             prevHistoryRequest = newRequest
 
-            var eventInfo = {
+            this.sendUserEvent({
                 category: "Main Window Requests",
                 action: "Request Search",
                 label: "URL: " + newRequest,
                 value: null,
-            }
-            window.ipcRenderer.send('user-event', eventInfo)
+            })
 
             const requestHistoryStartTime = Date.now()
 
@@ -884,13 +874,12 @@ export default {
                 .then((response) => {
                     this.isLoading = false;
 
-                    let eventInfo = {
+                    this.sendUserEvent({
                         category: "Main Window Requests",
                         action: "Got Search Result [Success]",
                         label: "URL: " + newRequest,
                         value: Date.now() - requestHistoryStartTime,
-                    }
-                    window.ipcRenderer.send('user-event', eventInfo)
+                    })
 
                     this.processHistoryData(response.data)
 
@@ -908,13 +897,12 @@ export default {
                         }
                         this.isLoading = false
 
-                        let eventInfo = {
+                        this.sendUserEvent({
                             category: "Main Window Requests",
                             action: "Got Search Result [Fail]",
                             label: "Type: "+ this.errorType +" | URL: " + newRequest,
                             value: Date.now() - requestHistoryStartTime,
-                        }
-                        window.ipcRenderer.send('user-event', eventInfo)
+                        })
 
                         
                     }
@@ -1015,24 +1003,22 @@ export default {
                 this.deckCode = deck
                 this.isShowDeck = true
             }
-            var eventInfo = {
+            this.sendUserEvent({
                 category: "Main Window Deck",
                 action: this.isShowDeck ? "Show Deck" : "Hide Deck",
                 label: deck,
                 value: null,
-            }
-            window.ipcRenderer.send('user-event', eventInfo)
+            })
             
         },
         hideDeck() {
 
-            var eventInfo = {
+            this.sendUserEvent({
                 category: "Main Window Deck",
                 action: "Hide Deck (Collapse Button)",
                 label: null,
                 value: null,
-            }
-            window.ipcRenderer.send('user-event', eventInfo)
+            })
 
             this.isShowDeck = false
         },
@@ -1041,9 +1027,10 @@ export default {
 
             if (process.env.NODE_ENV == "development") {
 
-                const testData = require('../../assets/data/testLocalHistoryData')
+                // const testData = require('../../assets/data/testLocalHistoryData')
+                const testData = require('../../assets/data/testLocalData')
                 // pass
-                this.processLocalHistory(testData)
+                this.processLocalHistorySEA(testData['flyingfish#0000'])
                 return
             }
 
@@ -1094,13 +1081,12 @@ export default {
             console.log("Request Local History", apiLink)
             this.localHistoryLoading = true
 
-            let eventInfo = {
+            this.sendUserEvent({
                 category: "Main Window Requests",
                 action: "Request Local History",
                 label: "URL: " + apiLink,
                 value: null,
-            }
-            window.ipcRenderer.send('user-event', eventInfo)
+            })
 
             const requestLocalHistoryStartTime = Date.now()
 
@@ -1113,13 +1099,12 @@ export default {
                         console.log("Local History Search Error")
                     } else {
 
-                        let eventInfo = {
+                        this.sendUserEvent({
                             category: "Main Window Requests",
                             action: "Got Local History Result [Success]",
                             label: "URL: " + apiLink,
                             value: Date.now() - requestLocalHistoryStartTime,
-                        }
-                        window.ipcRenderer.send('user-event', eventInfo)
+                        })
 
                         if (server === 'sea') {
                             let key = (name + '#' + tag).toLowerCase()
@@ -1137,13 +1122,12 @@ export default {
                         console.log('error', e)
                         this.localHistoryLoading = false
 
-                        let eventInfo = {
+                        this.sendUserEvent({
                             category: "Main Window Requests",
                             action: "Got Local History Result [Fail]",
                             label: "URL: " + apiLink,
                             value: Date.now() - requestLocalHistoryStartTime,
-                        }
-                        window.ipcRenderer.send('user-event', eventInfo)
+                        })
                     }
                     
                 })
