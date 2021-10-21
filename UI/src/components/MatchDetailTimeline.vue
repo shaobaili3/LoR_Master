@@ -5,7 +5,10 @@
             <line @mouseenter="lineHover($event, 1)" x1="20" y1="0" x2="20" y2="20"></line>
         </svg> -->
         <!-- <p class="title-text">Timeline</p> -->
-        <card-image class="card-hover" v-if="displayCode" :code="displayCode" :style="{'left': displayLeft+'px', 'top': displayTop+'px'}"></card-image>
+        <div class="hover-container" v-if="displayInfo" :style="{'left': displayInfo.left+'px', 'top': displayInfo.top+'px'}">
+            <p class="time-text" v-if="displayInfo.time">{{ moment(new Date(displayInfo.time) - new Date(details.startTime)).format('mm:ss') }}</p>
+            <card-image class="card-hover" v-if="displayInfo.code" :code="displayInfo.code"></card-image>
+        </div>
         <div class="timeline-container" @wheel.prevent ="handleScroll"
             :class="{'grabbing': grabbing}"
             @scroll="whenScrolled"
@@ -23,7 +26,7 @@
                     :key="index"
                     :class="{'first': card.LocalPlayer}"
                     :style="{'left': 'calc('+timePercents[index]+'% - 10px)'}"
-                    @mouseenter="iconHover($event, card.CardCode)"
+                    @mouseenter="iconHover($event, card)"
                     @mouseleave="iconLeave($event)"
                 >
                     <svg viewBox="0 0 10 10">
@@ -57,8 +60,7 @@
                             <!-- side way -->
                         <!-- <polygon points="10,5 7.5,9.33 2.5,9.33 0,5 2.5,0.67 7.5,0.67"></polygon> -->
                     </svg>
-                    <p class="time-text">
-                        {{ moment(new Date(card.playTime) - new Date(details.startTime)).format('mm:ss') }}</p>
+                    
                     <!-- <card-image :code="card.CardCode" @mousedown.prevent="" :style="{'margin-left': -scrollLeft+'px'}"></card-image> -->
                 </div>
                 <!-- <div class="card-icon event"  -->
@@ -103,9 +105,12 @@ export default {
             scrollLeft: 0,
             moment: moment,
 
-            displayCode: null,
-            displayLeft: 0,
-            displayTop: 0,
+            displayInfo: {
+                code: null,
+                left: null,
+                top: null,
+                time: null,
+            }
         }
     },
     props: {
@@ -198,7 +203,7 @@ export default {
             // this.ele.style.cursor = 'grab';
             // this.ele.style.removeProperty('user-select');
         },
-        iconHover(event, code) {
+        iconHover(event, card) {
             var tar = event.currentTarget
             // console.log("Target", tar)
             var rect = tar.getBoundingClientRect()
@@ -208,15 +213,16 @@ export default {
 
             // console.log("Point Hovered at (", event.clientX, ", ",event.clientY, ")", "Elemetn at (", left, ", ", top, ")", "Code", code)
             // console.log("Element Size: ", rect.width, ", ", rect.height)
-            this.displayCode = code
-            this.displayLeft = left
-            this.displayTop = top
+            this.displayInfo = {
+                code: card.CardCode,
+                time: card.playTime,
+                left: left,
+                top: top,
+            }
         },
         iconLeave(event) {
             // console.log("Point Leave")
-            this.displayCode = null
-            this.displayLeft = 0
-            this.displayTop = 0
+            this.displayInfo = null
         },
         handleScroll(event) {
             var el = event.currentTarget
@@ -267,17 +273,23 @@ export default {
             font-size: 0.8em;
         }
 
-        .card-hover {
-
+        .hover-container {
             pointer-events: none;
-
             position: fixed;
-            width: 200px;
-            height: auto;
-
-            transform: translateX(calc(-50% - 5px)) translateY(calc(-100% - 45px));
-
             z-index: 10;
+
+            .card-hover{
+                position: absolute;
+                width: 200px;
+                height: auto;
+                transform: translateX(calc(-50% - 5px)) translateY(calc(-100% - 45px));
+            }
+
+            .time-text {
+                position: absolute;
+                font-size: 0.8em;
+                transform: translateX(10px) translateY(calc(-100% - 40px));
+            }
         }
 
         .timeline-container {
@@ -340,9 +352,9 @@ export default {
                     
                     position: absolute;
                     width: 10px;
-                    height: 20px;
-                    padding-top: 22px;
-                    padding-bottom: 12px;
+                    height: 100%;
+                    // padding-top: 22px;
+                    // padding-bottom: 12px;
                     // background: white;
                     overflow: visible;
                     
@@ -371,7 +383,7 @@ export default {
                     // border-left: 1px solid black;
                     &:hover {
                         // Hover
-                        opacity: 1;
+                        opacity: 0.99; // Somehow setting this to 1 changes the order and thus changes the layout ?!
 
                         &::before {
                             // On hover shows the indicator
@@ -390,10 +402,6 @@ export default {
                             display: none;
                         }
 
-                        .time-text {
-                            opacity: 1;
-                        }
-
                         svg {
                             width: 14px;
                             height: 14px;
@@ -408,6 +416,7 @@ export default {
                         display: block;
                         height: 10px;
                         width: 10px;
+                        top: calc(50% - 5px);
 
                         right: 0px;
 
@@ -431,16 +440,6 @@ export default {
                         border-radius: 0px;
 
                         display: none;
-                    }
-
-                    .time-text {
-                        opacity: 0;
-                        font-size: 0.8em;
-                        position: absolute;
-                        margin-top: -22px;
-                        margin-left: 16px;
-                        z-index: 12; // Above the image which is 10
-                        pointer-events: none;
                     }
 
                     .card-image {
