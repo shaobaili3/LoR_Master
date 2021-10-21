@@ -1027,9 +1027,10 @@ export default {
 
             if (process.env.NODE_ENV == "development") {
 
-                const testData = require('../../assets/data/testLocalHistoryData')
+                // const testData = require('../../assets/data/testLocalHistoryData')
+                const testData = require('../../assets/data/testLocalData')
                 // pass
-                this.processLocalHistory(testData)
+                this.processLocalHistorySEA(testData['flyingfish#0000'])
                 return
             }
 
