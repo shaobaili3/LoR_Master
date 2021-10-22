@@ -82,6 +82,7 @@ let pos = { top: 0, left: 0, x: 0, y: 0 };
 
 const gameEndAddTime = 10 // sec
 const minZoom = 100 // percent
+const maxZoom = 3000 // percent
 
 export default {
     components: {
@@ -89,16 +90,11 @@ export default {
         // CardPreview,
     },
     mounted() {
-        // console.log(this.details)
         this.ele = document.querySelectorAll('.timeline-container');
         
         for (const el of this.ele) {
             el.addEventListener('mousedown', this.mouseDownHandler);
         }
-
-        // if (this.details) {
-        //     console.log("Total Match Time", this.matchTime)
-        // }
     },
     data() {
         return {
@@ -158,7 +154,6 @@ export default {
                 var percent = secDiff / matchTime * 100
                 
                 percents.push(percent)
-                // console.log(percent)
             });
 
             percents.push(remain) // Last one for the last item
@@ -169,16 +164,9 @@ export default {
     methods: {
         whenScrolled(event) {
             this.scrollLeft = event.currentTarget.scrollLeft
-            // console.log(this.scrollLeft)
         },
         mouseDownHandler(e) {
-            // console.log("Mouse Down")
-            // Some user friendly
-            // this.ele.style.cursor = 'grabbing';
-            // this.ele.style.userSelect = 'none';
             this.grabbing = true
-
-            // console.log("Mouse Down", e.currentTarget)
 
             pos = {
                 // The current scroll
@@ -188,8 +176,6 @@ export default {
                 x: e.clientX,
                 y: e.clientY,
             };
-
-            console.log(pos)
 
             const tar = e.currentTarget
 
@@ -202,35 +188,26 @@ export default {
         mouseMoveHandler(e, tar) {
             // How far the mouse has been moved
 
-            // console.log("Mouse Move", e, tar)
             const dx = e.clientX - pos.x;
             const dy = e.clientY - pos.y;
 
             // Scroll the element
-            // this.ele.scrollTop = pos.top - dy;
-            // console.log(tar.scrollLeft)
             tar.scrollLeft = pos.left - dx;
         },
         mouseUpHandler() {
-            // console.log("Mouse Up")
+            // HAndle Mouse Up
             this.grabbing = false
 
             document.removeEventListener('mousemove', this.mouseMoveListener);
             document.removeEventListener('mouseup', this.mouseUpListener);
-
-            // this.ele.style.cursor = 'grab';
-            // this.ele.style.removeProperty('user-select');
         },
         iconHover(event, card) {
             var tar = event.currentTarget
-            // console.log("Target", tar)
             var rect = tar.getBoundingClientRect()
 
             var left = rect.x + rect.width
             var top = rect.y + rect.height
 
-            // console.log("Point Hovered at (", event.clientX, ", ",event.clientY, ")", "Elemetn at (", left, ", ", top, ")", "Code", code)
-            // console.log("Element Size: ", rect.width, ", ", rect.height)
             this.displayInfo = {
                 code: card.CardCode,
                 time: card.playTime,
@@ -239,39 +216,53 @@ export default {
             }
         },
         iconLeave(event) {
-            // console.log("Point Leave")
             this.displayInfo = null
         },
         handleScroll(event) {
             
             var el = event.currentTarget
-            console.log(el)
+            
+            let box = el.getBoundingClientRect()
+            var elWidth = box.width
 
             const zoomSpeed = 1.2
 
-            // this.ele.scrollTop
-            // console.log(this.ele.scrollLeft)
-            // console.log(this.ele.scrollWidth)
-
             if (event.deltaY > 0) {
                 // Zoom out
-                this.zoom = this.zoom / zoomSpeed
-                this.ele.scrollLeft = this.ele.scrollLeft / zoomSpeed
-
-                if (this.zoom <= minZoom) {
-                    this.zoom = minZoom
-                    this.ele.scrollLeft = 0
+                let newZoom = this.zoom / zoomSpeed
+                if (newZoom <= minZoom) {
+                    newZoom = minZoom
                 }
+                this.zoom = newZoom
+
+                let offset = event.clientX - box.x
+                let offsetZoomed = offset / zoomSpeed
+                const newScroolLeft = el.scrollLeft / zoomSpeed - (offset - offsetZoomed)
+                
+                this.$nextTick(() => {
+                    el.scrollLeft = newScroolLeft
+                })
+
                 
             } else {
                 // Zoom in
-                this.zoom = this.zoom * zoomSpeed
-                this.ele.scrollLeft = this.ele.scrollLeft * zoomSpeed
-                
-                if (this.zoom >= 3000) {
-                    this.zoom = 3000
+
+                let newZoom = this.zoom * zoomSpeed
+                if (newZoom >= maxZoom) {
+                    newZoom = maxZoom
                 }
+
+                let offset = event.clientX - box.x
+                let offsetZoomed = offset * zoomSpeed
+                const newScroolLeft = el.scrollLeft * zoomSpeed + (offsetZoomed - offset)
+
+                this.zoom = newZoom
+                this.$nextTick(() => {
+                    el.scrollLeft = newScroolLeft
+                })
+                
             }
+
         },
     }
 }
