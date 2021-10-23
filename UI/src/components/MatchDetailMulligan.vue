@@ -4,7 +4,10 @@
         <div class="images-contaienr">
             <div class="card-container" 
                 v-for="(card, index) in startHandFiltered"
-                :key="index">
+                :key="index"
+                >
+                <i v-if="card.kept" class="indicator fas fa-check"></i>
+                <i v-if="!card.kept" class="indicator fas fa-sync-alt"></i>
                 <card-image class="img" :code="card.CardCode"></card-image>
             </div>
             <div class="arrow">
@@ -12,7 +15,10 @@
             </div>
             <div class="card-container" 
                 v-for="(card, index) in endHandFiltered"
+                :class="{'kept': card.kept}"
                 :key="index">
+                <i v-if="card.kept" class="indicator fas fa-check"></i>
+                <i v-if="!card.kept" class="indicator fas fa-plus"></i>
                 <card-image class="img" :code="card.CardCode"></card-image>
             </div>
         </div>
@@ -40,11 +46,17 @@ export default {
         startHandFiltered() {
             return this.startHand.filter((card) => {
                 return card.CardCode !== 'face' && card.LocalPlayer
+            }).map((card) => {
+                card.kept = this.endHand.find((c) => { return c.CardID == card.CardID})
+                return card
             })
         },
         endHandFiltered() {
             return this.endHand.filter((card) => {
                 return card.CardCode !== 'face' && card.LocalPlayer
+            }).map((card) => {
+                card.kept = this.startHand.find((c) => { return c.CardID == card.CardID})
+                return card
             })
         }
     },
@@ -86,18 +98,34 @@ export default {
             width: 11%;
             min-height: 90px;
             
-
-        &:hover {
-            .img {
-                position: absolute;
-                width: 170px;
-                // height: 200px;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                z-index: 14;
+            &:hover {
+                .img {
+                    position: absolute;
+                    width: 170px;
+                    // height: 200px;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    z-index: 14;
+                }
             }
-        }
+
+            .indicator {
+                // background: var(--col-background);
+                // color: var(--col-gold);
+                // padding: 0.5em;
+                // font-size: 0.8em;
+                // border-radius: 50px;
+
+                color: white;
+                opacity: 0.9;
+                text-shadow: 2px 0 5px #000;
+
+                position: absolute;
+                bottom: 0px;
+                right: 0px;
+            }
+            
 
             .img {
                 pointer-events: none;

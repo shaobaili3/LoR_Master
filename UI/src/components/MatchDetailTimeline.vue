@@ -6,6 +6,7 @@
         </svg> -->
         <!-- <p class="title-text">Timeline</p> -->
         <div class="hover-container" v-if="displayInfo" :style="{'left': displayInfo.left+'px', 'top': displayInfo.top+'px'}">
+            <div class="time-indicator" v-if="displayInfo.code" :class="{'first': displayInfo.first}"></div>
             <p class="time-text" v-if="displayInfo.time">{{ moment(new Date(displayInfo.time) - new Date(details.startTime)).format('mm:ss') }}</p>
             <card-image class="card-hover" v-if="displayInfo.code" :code="displayInfo.code"></card-image>
         </div>
@@ -109,6 +110,7 @@ export default {
                 left: null,
                 top: null,
                 time: null,
+                first: null,
             },
 
             mouseMoveListener: null,
@@ -213,6 +215,7 @@ export default {
                 time: card.playTime,
                 left: left,
                 top: top,
+                first: card.LocalPlayer,
             }
         },
         iconLeave(event) {
@@ -289,7 +292,22 @@ export default {
             position: fixed;
             z-index: 10;
 
-            .card-hover{
+            .time-indicator {
+                position: absolute;
+                width: 2px;
+                height: 100px;
+                background: white;
+                top: -100px;
+                left: -6px;
+                opacity: 0.8;
+                // z-index: 5;
+
+                &.first {
+                    background: var(--col-gold);
+                }
+            }
+
+            .card-hover {
                 position: absolute;
                 width: 200px;
                 height: auto;
@@ -392,33 +410,25 @@ export default {
 
                     // box-sizing: border-box;
                     // border-left: 1px solid black;
+
+                    
+
                     &:hover {
                         // Hover
                         opacity: 0.99; // Somehow setting this to 1 changes the order and thus changes the layout ?!
 
-                        &::before {
-                            // On hover shows the indicator
-                            content: "";
-                            position: absolute;
-                            bottom: -50%;
-                            right: 4px;
-                            width: 2px;
-                            height: 200%;
-                            background: var(--col-dark-gold);
 
-                            // transform: translateX(-50%);
-                        }
-
+                        // Something seems wrong with this before indicator? Causes some layout shift
                         &.event::before {
                             display: none;
                         }
 
-                        svg {
-                            width: 14px;
-                            height: 14px;
-                            margin-right: -2px;
-                            margin-top: -2px;
-                        }
+                        // svg {
+                        //     width: 14px;
+                        //     height: 14px;
+                        //     margin-right: -2px;
+                        //     margin-top: -2px;
+                        // }
                         
                     }
 
