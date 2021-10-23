@@ -25,7 +25,7 @@ class Player:
         self.error['status']['code'] = code
         print('error', self.error)
 
-    def addMatchToSummary(self, code, outcome, time, startTime):
+    def addMatchToSummary(self, code, outcome, startTime):
         if code in self.summaries:
             self.summaries[code].matches += 1
             if outcome == 'win':
@@ -34,7 +34,7 @@ class Player:
             winNum = 0
             if outcome == 'win':
                 winNum = 1
-            self.summaries[code] = DeckSummary(1, winNum, time, startTime, code)
+            self.summaries[code] = DeckSummary(1, winNum, startTime, code)
 
         for key in self.summaries:
             if key != code:
