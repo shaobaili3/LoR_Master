@@ -6,74 +6,34 @@ import threading
 import time
 from Models.leaderboard import Leaderboard
 from Models.setting import Setting
-from Models.local import Local
 from Models.riot import Riot
 from Models.network import Network
 from Models.player import Player
 from Models.setting import Server
 from Models.cache import Cache
 from Models import master
-from Models.process import readLog
 import json
 from flask import Flask, jsonify
-import io
-import sys
 import os
 import constants
-import argparse
-from waitress import serve
-
-
-argParser = argparse.ArgumentParser()
-argParser.add_argument('--port', action='store', type=int, default=26531)
-argParser.add_argument('--status', action='store', type=str, default='dev')
-args = argParser.parse_args()
-print('args: ', args)
-
-isDebug = False
-
-if args.status == 'dev':
-    isDebug = True
-
-
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf8')
-print('utf8 string test: ', '卡尼能布恩', '째남모')
 
 sentry_sdk.init(
     "https://1138a186a6384b00a20a6196273c3009@o958702.ingest.sentry.io/5907306",
     integrations=[FlaskIntegration()],
     traces_sample_rate=1.0,
     send_default_pii=True,
-    debug=isDebug,
-    release=constants.VERSION_NUM
+    debug=True,
+    release=constants.SERVER_NUM
 )
-
-sentry_sdk.set_context("info", {
-    "version": constants.VERSION_NUM
-})
 
 master.startMasterWorker()
 leaderboardModel = Leaderboard()
 cacheModel = Cache()
 
-settingTrack = Setting()
-localTrack = Local(settingTrack, cacheModel)
-
-
 class FlaskApp(Flask):
     def __init__(self, *args, **kwargs):
         super(FlaskApp, self).__init__(*args, **kwargs)
-        self.processWork()
         self.leaderboardsWork()
-
-    def processWork(self):
-        def run_work():
-            while True:
-                readLog(settingTrack)
-                time.sleep(3)
-        work = threading.Thread(target=run_work)
-        work.daemon = True
-        work.start()
 
     def leaderboardsWork(self):
         def run_work():
@@ -84,22 +44,7 @@ class FlaskApp(Flask):
         work.daemon = True
         work.start()
 
-
 app = FlaskApp(__name__)
-
-
-@app.route("/process", methods=['get'])
-def process():
-    process_info = {}
-    process_info['server'] = settingTrack.riotServer
-    process_info['port'] = settingTrack.port
-    return jsonify(process_info)
-
-
-@app.route("/track", methods=['get'])
-def track():
-    return jsonify(localTrack.updateStatusFlask())
-
 
 @app.route("/history/<string:server>/<string:name>/<string:tag>", methods=['get'])
 def history(server, name, tag):
@@ -141,9 +86,7 @@ def get_names(server, playername):
 def search(name, tag, server):
     settingModel = Setting()
     settingModel.riotServer = Server._value2member_map_[server]
-    maxNum = constants.MAX_NUM_INSPECT
-    if (name + '#' + tag).lower() == settingTrack.playerId.lower():
-        maxNum = 20
+    maxNum = 20
     riotModel = Riot(Network(settingModel), cacheModel)
     playerModel = Player(riotModel, leaderboardModel)
     playerModel.inspectFlask(name, tag, maxNum)
@@ -157,10 +100,8 @@ def search(name, tag, server):
 def get_leaderboard(server):
     # refactor to leaderboard model
     board = leaderboardModel.getLeaderboard(server)
-
     boardWithTag = []
     playlistDict = {}
-
     if board is None:
         return jsonify(boardWithTag)
     nameListPath = constants.getCacheFilePath(server.lower() + '.json')
@@ -179,49 +120,8 @@ def get_leaderboard(server):
         boardWithTag.append(player)
     return jsonify(boardWithTag)
 
-
-@app.route("/opInfo", methods=['get'])
-def opInfo():
-    opInfo = {}
-    localTrack.updateTagByName()
-    opInfo['name'] = localTrack.opponentName
-    # will break here if opponentName is None
-    if localTrack.opponentName.startswith('deckname_') or localTrack.opponentName.startswith('decks_'):
-        opInfo['name'] = 'AI'
-    opInfo['tag'] = localTrack.opponentTag
-    opInfo['rank'], opInfo['lp'] = leaderboardModel.checkRank(
-        localTrack.opponentName, settingTrack.riotServer)
-    return jsonify(opInfo)
-
-
-@app.route("/status", methods=['get'])
-def get_status():
-    status = {}
-    status['playerId'] = settingTrack.playerId
-    status['port'] = settingTrack.port
-    status['server'] = settingTrack.riotServer
-    status['language'] = settingTrack.language
-    status['lorRunning'] = settingTrack.isLorRunning
-    # isLocalApiEnable is updated by track api
-    status['isLocalApiEnable'] = settingTrack.isLocalApiEnable
-    return jsonify(status)
-
-
-@app.route("/local", methods=['get'])
-def get_local():
-    if settingTrack.playerId in cacheModel.localMatches:
-        for detail in cacheModel.localMatches[settingTrack.playerId]:
-            detail['opponentRank'], detail['opponentLp'] = leaderboardModel.checkRank(
-                detail['opponentName'], settingTrack.riotServer)
-    return jsonify(cacheModel.localMatches)
-
-
-@app.route("/report/<string:message>", methods=['get'])
-def report(message):
-    sentry_sdk.capture_message(message)
-    return jsonify('OK')
-
-if isDebug:
-    app.run(port=args.port, debug=True, use_reloader=False)
-else:
-    serve(app, host='0.0.0.0', port=args.port)
+@app.route("/", methods=['get'])
+def welcome():
+    info = {}
+    info['matchNum'] = len(cacheModel.matchDetails)
+    return jsonify(info)

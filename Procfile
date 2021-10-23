@@ -1,1 +1,1 @@
-web: gunicorn app:LMTService
+web: gunicorn app:app
