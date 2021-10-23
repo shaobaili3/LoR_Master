@@ -6,18 +6,18 @@
                 selected: currentPage == PAGES.my,
                 disabled: !lorRunning
             }" 
-            @click="setCurrentPage(PAGES.my)"
+            @click="handleProfileClick"
             :disabled="!lorRunning"
         >
             <span class="icon-default"
-                v-if="!localHistoryLoading"
-            ><i class="fas fa-user-circle"></i></span>
+                v-if="!localHistoryLoading"><i class="fas fa-user-circle"></i></span>
             <span class="icon-default icon-hover"
-                v-if="localHistoryLoading"
-            ><i class="fas fa-redo-alt fa-spin-fast"></i></span>
+                v-if="localHistoryLoading"><i class="fas fa-redo-alt fa-spin-fast"></i></span>
             <span class="icon-hover"
-                v-if="!localHistoryLoading"
-            ><i class="fas fa-check"></i></span>
+                v-if="lorRunning && !localHistoryLoading && hasLocalInfo"><i class="fas fa-check"></i></span>
+            <span class="icon-hover"
+                v-if="lorRunning && !localHistoryLoading && !hasLocalInfo"><i class="fas fa-redo-alt"></i></span>
+            
             <div v-if="!lorRunning || !localPlayerInfo.playerId"
                 class="tooltiptext right" >{{$t('tooltips.lorlogin')}}</div>
             <div v-if="lorRunning && localPlayerInfo.playerId && !hasLocalInfo"
@@ -318,7 +318,7 @@ export default {
             return ((this.searchText == this.playerName) && (this.playerTag) && (this.selectedRegion == regionShort[this.playerRegion]))
         },
         hasLocalInfo() {
-            return this.localMatches.length > 0
+            return this.localMatches && this.localMatches.length > 0
         },
         versionText(){
             if (this.updateDownloaded) {
@@ -427,6 +427,13 @@ export default {
         },
         setAutoLaunch(enable) {
             window.ipcRenderer.send('set-auto-launch', enable)
+        },
+
+        handleProfileClick() {
+            this.setCurrentPage(PAGES.my)
+            if (!this.hasLocalInfo) {
+                this.requestLocalHistory()
+            }
         },
 
         // Page Switch
@@ -862,6 +869,8 @@ export default {
         },
         requestLocalHistory() {
 
+            console.log("Request Local History")
+
             if (process.env.NODE_ENV == "development") {
 
                 // const testData = require('../../assets/data/testLocalHistoryData')
@@ -874,8 +883,13 @@ export default {
 
                 const testData = require('../../assets/data/testLocalData')
                 // pass
-                this.processLocalHistory(testData['flyingfish#0000'])
-                // this.processLocalHistory([])
+                // this.processLocalHistory(testData['flyingfish#0000'])
+                this.localHistoryLoading = true
+                setTimeout(() => {
+                    this.localHistoryLoading = false
+                    Math.random() > 0.5 ? this.processLocalHistory(testData['flyingfish#0000']) : this.processLocalHistory([])
+                }, 1000)
+                
 
                 return
             }
