@@ -4,10 +4,10 @@
         <button class="left-nav-btn tooltip"
             :class="{
                 selected: currentPage == PAGES.my,
-                disabled: !hasLocalInfo
+                disabled: !lorRunning
             }" 
-            @click="(hasLocalInfo && setCurrentPage(PAGES.my)) + requestLocalHistory()"
-            :disabled="!hasLocalInfo"
+            @click="setCurrentPage(PAGES.my)"
+            :disabled="!lorRunning"
         >
             <span class="icon-default"
                 v-if="!localHistoryLoading"
@@ -49,7 +49,7 @@
     
     <div class="content">
         <div class="main-content-container" v-if="currentPage == PAGES.my">
-            <player-matches v-if="hasLocalInfo" 
+            <player-matches 
                 @search="searchPlayer($event)"
                 @show-deck="showDeck"
                 :playerName="localPlayerInfo.name"
@@ -216,7 +216,7 @@ const inputNameListLength = 10;
 
 let cancelToken, localCancleToken
 var lastStatusRequestTime
-var requestLocalHistoryTimeout, requestHistoryTimeout, prevHistoryRequest
+var requestHistoryTimeout, prevHistoryRequest
 
 const regionNames = {
     'NA': 'americas',
@@ -602,7 +602,6 @@ export default {
             // this.playerName = "No history found"
 
         },
-        
         openURL(url) {
             window.openExternal(url);
         },
@@ -661,34 +660,6 @@ export default {
 
             window.ipcRenderer.send("check-update")
             
-
-            // --- Version 2 ---
-            // console.log(window)
-            // console.log(window.appVersion)
-
-            // if (window && window.appVersion) {
-            //     this.version = window.appVersion
-            //     console.log("Got Version Data:", window.appVersion)
-            // } else {
-            //     setTimeout(this.requestVersionData, requestDataWaitTime);
-            // }
-            
-            // axios.get(`${this.apiBase}/version`)
-            //     .then((response) => {
-            //         var data = response.data
-            //         this.version = data.version
-            //         this.remoteVersion = data.remoteVersion
-            //         this.downloadUrl = data.downloadUrl
-            //     })
-            //     .catch((e) => {
-            //         if (axios.isCancel(e)) {
-            //             // Console log is cancel
-            //         } else { 
-            //             console.log('error', e) 
-                        
-            //             setTimeout(this.requestVersionData, requestDataWaitTime);
-            //         }
-            //     })
         },
         requestStatusInfo() {
             // Keeps requesting status
@@ -697,7 +668,7 @@ export default {
                 console.log("Request Status Data")
                 const testRegion = 'sea'
                 // const testRegion = 'americas'
-                const testStatus = `{"language": "zh-TW","lorRunning": true,"playerId": "Storm#5961","port": "21337","server": "${testRegion}"}`
+                const testStatus = `{"language": "zh-TW","lorRunning": true, "playerId": "FlyingFish#1111","port": "21337","server": "${testRegion}"}`
                 this.processStatusInfo(JSON.parse(testStatus))
                 return
             } 
@@ -728,26 +699,9 @@ export default {
                 })
         },
         initAnalytics(uid) {
-
-            // console.log("Init Analytics")
-
-            // this.user.set("ds", "app")
-            // this.user.set("uid", uid)
-            // var eventCategory = "Main"
-            // var eventAction = "Init"
-            // var eventLabel = "ID: " + uid
-            // var eventValue = 1
-
-            // this.user.event(eventCategory, eventAction, eventLabel, eventValue, function (err) {
-            //     console.log(err)
-            // })
             if (window.ipcRenderer) { window.ipcRenderer.send('user-init', uid) }
-
         },
         processStatusInfo(data) {
-
-            // console.log("Status", data)
-
             var updateLocalPlayer = false
             if (this.localPlayerInfo.playerId != data.playerId) {
                 // there is a change in player ID
@@ -830,9 +784,6 @@ export default {
                 })
         },
         requestHistoryData() {
-
-            console.log("Enters Request History Data")
-
             if (this.localHistoryLoading) {
                 // Before start, wait until old local search resolves
                 if (requestHistoryTimeout) clearTimeout(requestHistoryTimeout)
@@ -881,7 +832,7 @@ export default {
                         value: Date.now() - requestHistoryStartTime,
                     })
 
-                    this.processHistoryData(response.data)
+                    this.processSearchHistory(response.data)
 
                 })
                 .catch((e) => {
@@ -909,149 +860,32 @@ export default {
                 })
 
         },
-        processHistoryData(data) {
-            this.matches = []
-            this.playerRank = null
-            this.playerLP = null
-
-            console.log("processHistoryData", data)
-
-            for (var key in data) {
-
-                if (!data[key]) continue // Skip if null history
-
-                var isFirstPlayer = data[key].player_info[0].name.toLowerCase() == this.playerName.toLowerCase()
-                
-                var player, playerGame, opponent, opponentGame;
-                var info = data[key].info
-                
-                var opponentName, opponentRank, opponentLp, opponentTag, opponentDeck, 
-                    deck, rounds, win, time, order;
-                
-                if (isFirstPlayer) {
-                    playerGame = info.players[0]
-                    opponentGame = info.players[1]
-
-                    player = data[key].player_info[0]
-                    opponent = data[key].player_info[1]
-                } else {
-                    playerGame = info.players[1]
-                    opponentGame = info.players[0]
-
-                    player = data[key].player_info[1]
-                    opponent = data[key].player_info[0]
-                }
-
-                if (!playerGame || !player) continue;
-
-                this.playerName = player.name // Sync name so all caps are correct
-                opponentName = opponent.name
-                
-                if (opponent.rank !== "") {
-                    opponentRank = opponent.rank + 1 // rank starts from 0
-                } else {
-                    opponentRank = "" // ranks can be empty
-                }
-
-                opponentLp = opponent.lp
-                opponentTag = opponent.tag
-
-                if (this.playerRank == null && player.rank !== "") { 
-                    this.playerRank = player.rank + 1 // player.rank starts from 0
-                }
-                if (!this.playerLP) this.playerLP = player.lp
-                
-                if (opponentGame) {
-                    opponentDeck = opponentGame.deck_code
-                } else {
-                    opponentDeck = ""
-                }
-
-                deck = playerGame.deck_code
-                order = playerGame.order_of_play
-                win = playerGame.game_outcome == "win"
-                rounds = info.total_turn_count
-                var badges = []
-                if (info.game_mode) badges.push(info.game_mode.replace(/([A-Z])/g, ' $1').trim().replace("Lobby", ""))
-                if (info.game_type) badges.push(info.game_type.replace(/([A-Z])/g, ' $1').trim().replace("Lobby", ""))
-
-                time = info.game_start_time_utc
-
-                this.matches.push({
-                    opponentName: opponentName,
-                    deck: deck,
-                    region: regionShort[this.playerRegion],
-                    opponentDeck: opponentDeck,
-                    opponentRank: opponentRank,
-                    opponentLp: opponentLp,
-                    opponentTag: opponentTag,
-                    rounds: rounds,
-                    win: win,
-                    time: time,
-                    badges: badges,
-                })
-            }
-        },
-        showDeck(deck) {
-            
-            
-
-            // console.log("Main Show Deck", deck)
-            if (this.deckCode == deck && this.isShowDeck == true) {
-                this.isShowDeck = false
-            } else {
-                this.deckCode = deck
-                this.isShowDeck = true
-            }
-            this.sendUserEvent({
-                category: "Main Window Deck",
-                action: this.isShowDeck ? "Show Deck" : "Hide Deck",
-                label: deck,
-                value: null,
-            })
-            
-        },
-        hideDeck() {
-
-            this.sendUserEvent({
-                category: "Main Window Deck",
-                action: "Hide Deck (Collapse Button)",
-                label: null,
-                value: null,
-            })
-
-            this.isShowDeck = false
-        },
-
         requestLocalHistory() {
 
             if (process.env.NODE_ENV == "development") {
 
                 // const testData = require('../../assets/data/testLocalHistoryData')
+                // this.processLocalHistory(testData)
+                // this.processLocalHistory({})
+
+                // this.playerName = "FlyingFish"
+                // this.playerRegion = "americas"
+                // this.processSearchHistory(testData)
+
                 const testData = require('../../assets/data/testLocalData')
                 // pass
-                this.processLocalHistorySEA(testData['flyingfish#0000'])
+                this.processLocalHistory(testData['flyingfish#0000'])
+                // this.processLocalHistory([])
+
                 return
             }
 
-            // if (this.isLoading) {
-            //     // Before starting everything check to see if there is already a search request
-            //     if (requestLocalHistoryTimeout) clearTimeout(requestLocalHistoryTimeout)
-            //     requestLocalHistoryTimeout = setTimeout(this.requestLocalHistory, requestHistoryWaitTime);
-            //     this.localHistoryWaiting = true
-            //     return
-            // }
-
-            // Not waiting for other search requests
-            // this.localHistoryWaiting = false
-            
             if (this.localHistoryLoading) {
                 // Don't do anything if there is already a local search request
                 return
             }
 
             // Now ready for a new request
-
             //Check if there are any previous pending requests
             if (typeof localCancleToken != typeof undefined) {
                 localCancleToken.cancel("Operation canceled due to new request.")
@@ -1071,7 +905,6 @@ export default {
             }
 
             let apiLink;
-
             if (server === 'sea') {
                 apiLink = `${this.apiBase}/local`
             } else {
@@ -1108,8 +941,8 @@ export default {
 
                         if (server === 'sea') {
                             let key = (name + '#' + tag).toLowerCase()
-                            console.log('Current key', key)
-                            this.processLocalHistorySEA(response.data[key])
+                            // console.log('Current key', key)
+                            this.processLocalHistory(response.data[key])
                         } else {
                             this.processLocalHistory(response.data)
                         }
@@ -1132,159 +965,194 @@ export default {
                     
                 })
         },
-        processLocalHistorySEA(data) {
-            console.log("Process Local SEA History!")
-            console.log(data)
+        showDeck(deck) {
+            
+            
 
-            this.localMatches = []
-
-            for (let match of data) {
-                var opponentName, opponentRank, opponentLp, opponentTag, opponentDeck, 
-                    deck, rounds, win, time, order;
-
-                this.localPlayerInfo.rank = match.playerRank // Currently no value
-                this.localPlayerInfo.lp = match.playerLp // Currently no value
-
-                opponentName = match.opponentName
-                opponentTag = null // Cannot get
-                opponentRank = match.opponentRank // Currently no value
-                opponentLp = match.opponentLp // Currently no value
-                opponentDeck = match.deck_tracker.opGraveyardCode
-                deck = match.deck_tracker.deckCode
-                rounds = null // Cannot get
-                win = match.localPlayerWon
-                time = match.startTime
-                order = null // Cannot get
-
-                var badges = [] // Currently no value
-
-                var details = {
-                    openHand: match.deck_tracker.openHand,
-                    replacedHand: match.deck_tracker.replacedHand,
-                    timeline: match.deck_tracker.timeline,
-                    startTime: match.startTime,
-                    endTime: match.endTime,
-                }
-                
-                this.localMatches.push({
-                    opponentName: opponentName,
-                    deck: deck,
-                    region: regionShort[this.localPlayerInfo.server],
-                    opponentDeck: opponentDeck,
-                    opponentRank: opponentRank,
-                    opponentLp: opponentLp,
-                    opponentTag: opponentTag,
-                    rounds: rounds,
-                    win: win,
-                    time: time,
-                    badges: badges,
-                    details: details,
-                })
+            // console.log("Main Show Deck", deck)
+            if (this.deckCode == deck && this.isShowDeck == true) {
+                this.isShowDeck = false
+            } else {
+                this.deckCode = deck
+                this.isShowDeck = true
             }
+            this.sendUserEvent({
+                category: "Main Window Deck",
+                action: this.isShowDeck ? "Show Deck" : "Hide Deck",
+                label: deck,
+                value: null,
+            })
+            
         },
-        processLocalHistory(data) {
+        hideDeck() {
 
-            console.log("Process Local History!")
+            this.sendUserEvent({
+                category: "Main Window Deck",
+                action: "Hide Deck (Collapse Button)",
+                label: null,
+                value: null,
+            })
 
+            this.isShowDeck = false
+        },
+        processHistory(data, playerName, playerServer) {
+            console.log("Process History!", playerName, playerServer)
             console.log(data)
 
-            this.localMatches = []
-            this.localPlayerInfo.rank = null
-            this.localPlayerInfo.lp = null
+            var matchInfo = {
+                matches: [],
+                rank: null,
+                lp: null
+            }
 
-            for (var key in data) {
+            if (!data) return matchInfo
 
-                var match = data[key]
+            if (playerServer == 'sea') {
+                // sea players only have local data
+                for (let match of data) {
+                    let opponentName, opponentRank, opponentLp, opponentTag, opponentDeck, 
+                        deck, rounds, win, time, order;
 
-                if (!match) continue // Skip if null history
+                    matchInfo.rank = match.playerRank // Currently no value
+                    matchInfo.lp = match.playerLp // Currently no value
 
-                var isFirstPlayer = match.player_info[0].name.toLowerCase() == this.localPlayerInfo.name.toLowerCase()
-                
-                var player, playerGame, opponent, opponentGame
-                var info = match.info
+                    opponentName = match.opponentName
+                    opponentTag = null // Cannot get
+                    opponentRank = match.opponentRank // Currently no value
+                    opponentLp = match.opponentLp // Currently no value
+                    opponentDeck = match.deck_tracker.opGraveyardCode
+                    deck = match.deck_tracker.deckCode
+                    rounds = null // Cannot get
+                    win = match.localPlayerWon
+                    time = match.startTime
+                    order = null // Cannot get
 
-                var details = null
-                
-                if (match.local && match.local.deck_tracker) {
-                    details = {
-                        openHand: match.local.deck_tracker.openHand,
-                        replacedHand: match.local.deck_tracker.replacedHand,
-                        timeline: match.local.deck_tracker.timeline,
-                        startTime: match.local.startTime,
-                        endTime: match.local.endTime,
+                    let badges = [] // Currently no value
+
+                    let details = {
+                        openHand: match.deck_tracker.openHand,
+                        replacedHand: match.deck_tracker.replacedHand,
+                        timeline: match.deck_tracker.timeline,
+                        startTime: match.startTime,
+                        endTime: match.endTime,
+                    }
+                    
+                    matchInfo.matches.push({
+                        opponentName: opponentName,
+                        deck: deck,
+                        region: regionShort[this.localPlayerInfo.server],
+                        opponentDeck: opponentDeck,
+                        opponentRank: opponentRank,
+                        opponentLp: opponentLp,
+                        opponentTag: opponentTag,
+                        rounds: rounds,
+                        win: win,
+                        time: time,
+                        badges: badges,
+                        details: details,
+                    })
+                }
+            } else {
+                // Processing for normal Data
+                for (var key in data) {
+
+                    var match = data[key]
+                    if (!match) continue // Skip if null history
+
+                    var isFirstPlayer = match.player_info[0].name.toLowerCase() == playerName.toLowerCase()
+                    var player, playerGame, opponent, opponentGame
+                    var info = match.info
+                    var details = null
+                    
+                    if (match.local && match.local.deck_tracker) {
+                        details = {
+                            openHand: match.local.deck_tracker.openHand,
+                            replacedHand: match.local.deck_tracker.replacedHand,
+                            timeline: match.local.deck_tracker.timeline,
+                            startTime: match.local.startTime,
+                            endTime: match.local.endTime,
+                        }
                     }
 
-                    // console.log("Timeline", details.timeline)
+                    var opponentName, opponentRank, opponentLp, opponentTag, opponentDeck, 
+                        deck, rounds, win, time, order;
+                    
+                    if (isFirstPlayer) {
+                        playerGame = info.players[0]
+                        opponentGame = info.players[1]
+
+                        player = match.player_info[0]
+                        opponent = match.player_info[1]
+                    } else {
+                        playerGame = info.players[1]
+                        opponentGame = info.players[0]
+
+                        player = match.player_info[1]
+                        opponent = match.player_info[0]
+                    }
+
+                    if (!playerGame || !opponentGame || !player || !opponent) continue;
+
+                    opponentName = opponent.name
+                    
+                    if (opponent.rank !== "") {
+                        opponentRank = opponent.rank + 1 // rank starts from 0
+                    } else {
+                        opponentRank = "" // ranks can be empty
+                    }
+                    
+                    opponentLp = opponent.lp
+                    opponentTag = opponent.tag
+
+                    if (!matchInfo.rank && player.rank !== "") {
+                        matchInfo.rank = player.rank + 1 // player.rank starts from 0
+                    }
+                    
+                    if (!matchInfo.lp) matchInfo.lp = player.lp
+                    
+                    deck = playerGame.deck_code
+                    opponentDeck = opponentGame.deck_code
+                    order = playerGame.order_of_play
+                    win = playerGame.game_outcome == "win"
+                    rounds = info.total_turn_count
+                    var badges = []
+                    if (info.game_mode) badges.push(info.game_mode.replace(/([A-Z])/g, ' $1').trim().replace("Lobby", ""))
+                    if (info.game_type) badges.push(info.game_type.replace(/([A-Z])/g, ' $1').trim().replace("Lobby", ""))
+
+                    time = info.game_start_time_utc
+
+                    matchInfo.matches.push({
+                        opponentName: opponentName,
+                        deck: deck,
+                        region: regionShort[playerServer],
+                        opponentDeck: opponentDeck,
+                        opponentRank: opponentRank,
+                        opponentLp: opponentLp,
+                        opponentTag: opponentTag,
+                        rounds: rounds,
+                        win: win,
+                        time: time,
+                        badges: badges,
+                        details: details,
+                    })
                 }
 
-                
-                // if (details) {
-                //     // Only add isFirstPlayer if there is details
-                //     details.isFirstPlayer = isFirstPlayer
-                // }
-                
-                var opponentName, opponentRank, opponentLp, opponentTag, opponentDeck, 
-                    deck, rounds, win, time, order;
-                
-                if (isFirstPlayer) {
-                    playerGame = info.players[0]
-                    opponentGame = info.players[1]
-
-                    player = match.player_info[0]
-                    opponent = match.player_info[1]
-                } else {
-                    playerGame = info.players[1]
-                    opponentGame = info.players[0]
-
-                    player = match.player_info[1]
-                    opponent = match.player_info[0]
-                }
-
-                if (!playerGame || !opponentGame || !player || !opponent) continue;
-
-                opponentName = opponent.name
-                
-                if (opponent.rank !== "") {
-                    opponentRank = opponent.rank + 1 // rank starts from 0
-                } else {
-                    opponentRank = "" // ranks can be empty
-                }
-                
-                opponentLp = opponent.lp
-                opponentTag = opponent.tag
-
-                if (!this.localPlayerInfo.rank && player.rank !== "") {
-                    this.localPlayerInfo.rank = player.rank + 1 // player.rank starts from 0
-                }
-                
-                if (!this.localPlayerInfo.lp) this.localPlayerInfo.lp = player.lp
-                
-                deck = playerGame.deck_code
-                opponentDeck = opponentGame.deck_code
-                order = playerGame.order_of_play
-                win = playerGame.game_outcome == "win"
-                rounds = info.total_turn_count
-                var badges = []
-                if (info.game_mode) badges.push(info.game_mode.replace(/([A-Z])/g, ' $1').trim().replace("Lobby", ""))
-                if (info.game_type) badges.push(info.game_type.replace(/([A-Z])/g, ' $1').trim().replace("Lobby", ""))
-
-                time = info.game_start_time_utc
-
-                this.localMatches.push({
-                    opponentName: opponentName,
-                    deck: deck,
-                    region: regionShort[this.localPlayerInfo.server],
-                    opponentDeck: opponentDeck,
-                    opponentRank: opponentRank,
-                    opponentLp: opponentLp,
-                    opponentTag: opponentTag,
-                    rounds: rounds,
-                    win: win,
-                    time: time,
-                    badges: badges,
-                    details: details,
-                })
             }
+
+            return matchInfo
+        },
+        processSearchHistory(data) {
+            var Info = this.processHistory(
+                data, this.playerName, this.playerRegion)
+            this.matches = Info.matches
+            this.playerRank = Info.rank
+            this.playerLP = Info.lp
+        },
+        processLocalHistory(data) {
+            var info = this.processHistory(data, this.localPlayerInfo.name, this.localPlayerInfo.server)
+            this.localMatches = info.matches
+            this.localPlayerInfo.rank = info.rank
+            this.localPlayerInfo.lp = info.lp
         },
     },
 

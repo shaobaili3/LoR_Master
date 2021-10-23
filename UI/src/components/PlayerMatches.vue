@@ -28,6 +28,8 @@
         </div>
     </div>
 
+    <div class="no-content" v-if="totalMatches == 0">{{$t('str.error.playerNoHistory')}}</div>
+
     <div class="match-history-container" v-if="!isLoading">
         <match-history 
             @show-deck="showDeck"
@@ -153,12 +155,12 @@ export default {
             return this.filteredMatches.length
         },
         winloss() {
-            if (!this.filteredMatches) return null
+            if (this.totalMatches == 0) return null
             var loss = this.totalMatches - this.totalWins
             return this.$t('dash.winloss', {win: this.totalWins, loss: loss})
         },
         winrate() {
-            if (!this.filteredMatches) return null
+            if (this.totalMatches == 0) return null
             return Math.floor(this.totalWins/this.totalMatches*100) + "%"
         },
         
@@ -238,6 +240,10 @@ export default {
         font-size: 24px;
         padding-top: 15px;
         text-align: left;
+    }
+    
+    .no-content {
+        font-size: 20px;
     }
 
     .summary-container {
