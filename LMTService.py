@@ -14,6 +14,7 @@ from Models.setting import Server
 from Models.cache import Cache
 from Models import master
 from Models.process import readLog
+from Models.heroku import Heroku
 import json
 from flask import Flask, jsonify
 import io
@@ -22,7 +23,7 @@ import os
 import constants
 import argparse
 from waitress import serve
-
+import requests
 
 argParser = argparse.ArgumentParser()
 argParser.add_argument('--port', action='store', type=int, default=26531)
@@ -55,6 +56,7 @@ sentry_sdk.set_context("info", {
 master.startMasterWorker()
 leaderboardModel = Leaderboard()
 cacheModel = Cache()
+herokuModel = Heroku()
 
 settingTrack = Setting()
 localTrack = Local(settingTrack, cacheModel)
@@ -155,29 +157,7 @@ def search(name, tag, server):
 
 @app.route("/leaderboard/<string:server>", methods=['get'])
 def get_leaderboard(server):
-    # refactor to leaderboard model
-    board = leaderboardModel.getLeaderboard(server)
-
-    boardWithTag = []
-    playlistDict = {}
-
-    if board is None:
-        return jsonify(boardWithTag)
-    nameListPath = constants.getCacheFilePath(server.lower() + '.json')
-    if not os.path.isfile(nameListPath):
-        nameListPath = 'Resource/' + server.lower() + '.json'
-    try:
-        with open(nameListPath, 'r', encoding='utf-8') as fp:
-            playlistDict = json.load(fp)
-    except Exception as e:
-        print('Restful: unable to load player list', e)
-    for player in board:
-        if player['name'] in playlistDict:
-            player['tag'] = playlistDict[player['name']]
-        else:
-            player['tag'] = ''
-        boardWithTag.append(player)
-    return jsonify(boardWithTag)
+    return jsonify(herokuModel.getMatches(server))
 
 
 @app.route("/opInfo", methods=['get'])
