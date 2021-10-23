@@ -119,3 +119,9 @@ def get_leaderboard(server):
             player['tag'] = ''
         boardWithTag.append(player)
     return jsonify(boardWithTag)
+
+@app.route("/", methods=['get'])
+def welcome():
+    info = {}
+    info['matchNum'] = len(cacheModel.matchDetails)
+    return jsonify(info)

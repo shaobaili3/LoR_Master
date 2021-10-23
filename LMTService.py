@@ -221,8 +221,7 @@ def report(message):
     sentry_sdk.capture_message(message)
     return jsonify('OK')
 
-
-#app.run(port=args.port, debug=isDebug, use_reloader=False)
-
-
-serve(app, host='0.0.0.0', port=args.port)
+if isDebug:
+    app.run(port=args.port, debug=True, use_reloader=False)
+else:
+    serve(app, host='0.0.0.0', port=args.port)
