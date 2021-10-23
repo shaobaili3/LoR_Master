@@ -20,19 +20,20 @@ import io
 import sys
 import os
 import constants
-# import argparse
+import argparse
+from waitress import serve
 
 
-# argParser = argparse.ArgumentParser()
-# argParser.add_argument('--port', action='store', type=int, default=26531)
-# argParser.add_argument('--status', action='store', type=str, default='dev')
-# args = argParser.parse_args()
-# print('args: ', args)
+argParser = argparse.ArgumentParser()
+argParser.add_argument('--port', action='store', type=int, default=26531)
+argParser.add_argument('--status', action='store', type=str, default='dev')
+args = argParser.parse_args()
+print('args: ', args)
 
 isDebug = False
 
-# if args.status == 'dev':
-#     isDebug = True
+if args.status == 'dev':
+    isDebug = True
 
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf8')
@@ -222,3 +223,6 @@ def report(message):
 
 
 #app.run(port=args.port, debug=isDebug, use_reloader=False)
+
+
+serve(app, host='0.0.0.0', port=args.port)
