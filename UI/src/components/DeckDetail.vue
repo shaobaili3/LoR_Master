@@ -15,7 +15,7 @@
     </div>
     <div class="actions" 
     :class="{'fixed-height': fixedHeight}"
-    v-if="showCopy">
+    v-if="showCopy && this.baseDeck">
         <!-- <a class="actions-btn" :href="deckDetailLink" target="_blank"><span class="actions-icon fa fa-external-link-alt"></span>Detail</a> -->
         <div class="actions-btn" v-if="showURL" @click="openURL(deckDetailLink)"><span class="actions-icon fa fa-external-link-alt"></span>Detail</div>
         <div class="actions-btn tooltip" @click="copyDeckcode"><span class="actions-icon far fa-copy"

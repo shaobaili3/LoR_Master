@@ -295,9 +295,9 @@ export default {
             .time-indicator {
                 position: absolute;
                 width: 2px;
-                height: 100px;
+                height: 60px;
                 background: white;
-                top: -100px;
+                top: -60px;
                 left: -6px;
                 opacity: 0.8;
                 // z-index: 5;
