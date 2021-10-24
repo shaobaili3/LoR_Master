@@ -169,7 +169,7 @@
 
     <div class="bottom-bar">
         <div class="left">
-            <div class="app-name">{{ $t("appName") }}</div>
+            <div class="app-name url" @click="openURL('https://www.lormaster.com')">{{ $t("appName") }}</div>
             <div v-if="!localApiEnabled && lorRunning" class="api-warning warning"><small><i class="fas fa-exclamation-triangle"></i>{{ $t("str.error.localApiError")}}</small></div>
         </div>
         <div class="right">
@@ -1268,7 +1268,7 @@ export default {
     }
 </style>
 
-<style scoped>
+<style lang="scss" scoped>
 
     .region-tabs {
         display: flex;
@@ -1587,6 +1587,11 @@ export default {
         align-items: center;
 
         color: white;
+
+        .url {
+            color: var(--col-gold);
+            cursor: pointer;
+        }
     }
 
     .bottom-bar .left, .bottom-bar .right {
