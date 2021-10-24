@@ -9,46 +9,33 @@ from datetime import datetime
 
 class Local:
     def __init__(self, setting, cache):
-        self.opponentName = None
-        self.opponentTag = None
-        self.gameId = None
-        self.startTime = None
         self.setting = setting
-        self.playername = None
-        self.trackerDict = {}
-        self.session = requests.Session()
-        self.playedCards = {}
-        self.opGraveyardWithId = {}
-        self.opGraveyard = {}
-        self.myGraveyard = {}
-        self.positional_rectangles = None
-        self.static_decklist = None
-        self.trackJson = {}
-        self.handsInHand = {}
-
-        self.openHand = {}
-        self.replacedHnad = {}
-
-        self.timeline = {}
-        self.allCard = {}
         self.cache = cache
+        self.session = requests.Session()
+        
+        self.reset()
+
 
     # call this function after changes server in the tracker
     def reset(self):
         self.opponentName = None
+        self.opponentTag = None
         self.playername = None
         self.gameId = None
-        self.opponentTag = None
+
+        self.positional_rectangles = None
+        self.trackerDict = {}
         self.playedCards = {}
         self.opGraveyardWithId = {}
         self.opGraveyard = {}
+        self.myGraveyard = {}
         self.trackJson = {}
-        self.trackerDict = {}
 
         self.openHand = {}
         self.replacedHnad = {}
         self.startTime = None
 
+        self.timeline = {}
         self.allCard = {}
 
     def addCardToTimeline(self, card):
