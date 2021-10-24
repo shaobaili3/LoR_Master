@@ -14,6 +14,8 @@
             <span class="icon-default icon-hover"
                 v-if="localHistoryLoading"><i class="fas fa-redo-alt fa-spin-fast"></i></span>
             <span class="icon-hover"
+                v-if="lorRunning && !localHistoryLoading && !(!hasLocalInfo || localPlayerInfo.server != 'sea') "><i class="fas fa-check"></i></span>
+            <span class="icon-hover"
                 v-if="lorRunning && !localHistoryLoading && (!hasLocalInfo || localPlayerInfo.server != 'sea')"><i class="fas fa-redo-alt"></i></span>
             
             <div v-if="!lorRunning || !localPlayerInfo.playerId"
@@ -672,7 +674,7 @@ export default {
             // DevStatus
             if (process.env.NODE_ENV == "development") {
                 console.log("Request Status Data")
-                const testRegion = 'americas'
+                const testRegion = 'sea'
                 // const testRegion = 'americas'
                 const testStatus = `{"language": "zh-TW", "lorRunning": true, "playerId": "FlyingFish#1111","port": "21337","server": "${testRegion}"}`
                 this.processStatusInfo(JSON.parse(testStatus))
@@ -873,8 +875,8 @@ export default {
             // DevLocal
             if (process.env.NODE_ENV == "development") {
 
-                const testData = require('../../assets/data/testLocalHistoryData')
-                // const testData = require('../../assets/data/testLocalData')['flyingfish#0000']
+                // const testData = require('../../assets/data/testLocalHistoryData')
+                const testData = require('../../assets/data/testLocalData')['flyingfish#0000']
 
                 // this.playerName = "FlyingFish"
                 // this.playerRegion = "americas"
