@@ -33,14 +33,26 @@
             @click="setCurrentPage(PAGES.leaderboard)">
             <span><i class="fas fa-trophy"></i></span>
         </button>
-        <!-- <div class="left-nav-btn menu no-click">
+        <div class="left-nav-btn menu no-click">
             <span><i class="fas fa-books"></i></span>
             <div class="menu-content right">
                 <div class="card" @click="openURL('https://masteringruneterra.com/')">
-                    <img width="300" height="129" src="https://masteringruneterra.com/wp-content/uploads/2021/09/MasteringRuneterraWebsiteLogo-300x129.webp">
+                    <img src="https://masteringruneterra.com/wp-content/uploads/2021/09/MasteringRuneterraWebsiteLogo-300x129.webp">
                 </div>
+                <div class="card" @click="openURL(`https://playruneterra.com/${locale.replace('_', '-')}/news`)">
+                    <img src="https://images.contentstack.io/v3/assets/blt0eb2a2986b796d29/blt8ba1ec1b0013e362/5ea53af4ae23d30cd1dfb3e4/lor-logo.png">
+                </div>
+                <div class="card square" @click="openURL('https://www.swimstrim.com/')">
+                    <img src="https://www.swimstrim.com/packs/media/images/logo-8b7cd382.png">
+                </div>
+                <div class="card square" @click="openURL('https://runeterra.ar/')">
+                    <img src="https://cdnruneterra.ar/assets/img/logo_ar_black.png">
+                </div>
+                <!-- <div class="card" @click="openURL('https://masteringruneterra.com/')">
+                    <img src="https://picsum.photos/400/210">
+                </div> -->
             </div>
-        </div> -->
+        </div>
         <button class="left-nav-btn nav-bottom" 
             :class="{selected: currentPage == PAGES.contact}" 
             @click="setCurrentPage(PAGES.contact)">
@@ -619,7 +631,11 @@ export default {
 
         },
         openURL(url) {
-            window.openExternal(url);
+            if (window.openExternal) {
+                window.openExternal(url)
+            } else {
+                window.open(url);
+            }
         },
         installDownloadedUpdate() {
             if (this.updateDownloaded) {
@@ -1548,22 +1564,48 @@ export default {
 
         &.menu {
 
-            position: relative;
+            $trans: 200ms ease;
+            $mid-radius: 10px;
 
-            transition: background-color 200ms ease;
+            position: relative;
+            transition: background-color $trans, color $trans;
+
+            &::before {
+                
+                content: "";
+                position: absolute;
+                background-color: var(--col-light-bg);
+                top: 100%;
+                right: 0px;
+                width: 10px;
+                height: 20px;
+                border-top-right-radius: $mid-radius;
+
+                transition: box-shadow $trans;
+
+                pointer-events: none;
+            }
 
             &:hover {
+
+                color: white;
+
+                &::before {
+                    box-shadow: 0 -5px 0 0 var(--col-lighter-bg);
+                }
 
                 background-color: var(--col-lighter-bg);
 
                 .menu-content {
                     visibility: visible;
                     opacity: 1;
-                    transition: visibility 0s linear 0s, opacity 200ms ease;
+                    transition: visibility 0s linear 0s, opacity $trans;
                 }
             }
 
             .menu-content {
+
+                border-radius: 0px $mid-radius $mid-radius $mid-radius;
 
                 background-color: var(--col-lighter-bg);
 
@@ -1578,19 +1620,53 @@ export default {
 
                 visibility: hidden;
                 opacity: 0;
-                transition: visibility 0s linear 200ms, opacity 200ms ease;
+                transition: visibility 0s $trans, opacity $trans;
+
+                width: 250px;
+                max-height: 400px;
+
+                overflow: auto;
+                
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 4px;
+                grid-auto-rows: 110px;
+                place-items: center;
+
+                box-sizing: border-box;
                 
                 .card {
                     padding: 4px;
                     cursor: pointer;
 
                     border: 1px solid var(--col-lighter-bg);
-                    transition: border 200ms ease;
+                    transition: border $trans, background-color $trans;
                     
-                    border-radius: 20px;
+                    border-radius: 6px;
+
+                    width: 100%;
+                    height: 100%;
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    box-sizing: border-box;
+
+                    grid-column: 1 / span 2;
+
+                    &.square {
+                        grid-column: auto / span 1;
+                    }
                     
                     &:hover {
-                        border: 1px solid var(--col-light-grey);
+                        // border: 1px solid var(--col-light-grey);
+                        background-color: var(--col-grey);
+                    }
+
+                    img {
+                        max-width: 100%;
+                        max-height: 100%;
                     }
                 }
             }
