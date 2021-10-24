@@ -14,9 +14,7 @@
             <span class="icon-default icon-hover"
                 v-if="localHistoryLoading"><i class="fas fa-redo-alt fa-spin-fast"></i></span>
             <span class="icon-hover"
-                v-if="lorRunning && !localHistoryLoading && hasLocalInfo"><i class="fas fa-check"></i></span>
-            <span class="icon-hover"
-                v-if="lorRunning && !localHistoryLoading && !hasLocalInfo"><i class="fas fa-redo-alt"></i></span>
+                v-if="lorRunning && !localHistoryLoading && (!hasLocalInfo || localPlayerInfo.server != 'sea')"><i class="fas fa-redo-alt"></i></span>
             
             <div v-if="!lorRunning || !localPlayerInfo.playerId"
                 class="tooltiptext right" >{{$t('tooltips.lorlogin')}}</div>
@@ -430,10 +428,10 @@ export default {
         },
 
         handleProfileClick() {
-            this.setCurrentPage(PAGES.my)
-            if (!this.hasLocalInfo) {
+            if (!this.hasLocalInfo || (this.currentPage == PAGES.my && this.localPlayerInfo.server != 'sea')) {
                 this.requestLocalHistory()
             }
+            this.setCurrentPage(PAGES.my)
         },
 
         // Page Switch
@@ -670,12 +668,13 @@ export default {
         },
         requestStatusInfo() {
             // Keeps requesting status
-
+            
+            // DevStatus
             if (process.env.NODE_ENV == "development") {
                 console.log("Request Status Data")
-                const testRegion = 'sea'
+                const testRegion = 'americas'
                 // const testRegion = 'americas'
-                const testStatus = `{"language": "zh-TW","lorRunning": true, "playerId": "FlyingFish#1111","port": "21337","server": "${testRegion}"}`
+                const testStatus = `{"language": "zh-TW", "lorRunning": true, "playerId": "FlyingFish#1111","port": "21337","server": "${testRegion}"}`
                 this.processStatusInfo(JSON.parse(testStatus))
                 return
             } 
@@ -871,23 +870,22 @@ export default {
 
             console.log("Request Local History")
 
+            // DevLocal
             if (process.env.NODE_ENV == "development") {
 
-                // const testData = require('../../assets/data/testLocalHistoryData')
-                // this.processLocalHistory(testData)
-                // this.processLocalHistory({})
+                const testData = require('../../assets/data/testLocalHistoryData')
+                // const testData = require('../../assets/data/testLocalData')['flyingfish#0000']
 
                 // this.playerName = "FlyingFish"
                 // this.playerRegion = "americas"
                 // this.processSearchHistory(testData)
 
-                const testData = require('../../assets/data/testLocalData')
                 // pass
                 // this.processLocalHistory(testData['flyingfish#0000'])
                 this.localHistoryLoading = true
                 setTimeout(() => {
                     this.localHistoryLoading = false
-                    Math.random() > 0.5 ? this.processLocalHistory(testData['flyingfish#0000']) : this.processLocalHistory([])
+                    Math.random() > 0.5 ? this.processLocalHistory(testData) : this.processLocalHistory([])
                 }, 1000)
                 
 
