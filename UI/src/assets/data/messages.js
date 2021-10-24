@@ -294,5 +294,105 @@ module.exports = {
       disabled: '关闭',
       disable: '关闭'
     }
+  },
+  'Português (Brasil)': {
+    appName: 'LoR Master Tracker',
+    str: {
+      settings: 'Configurações',
+      loading: 'Carregando...',
+      languages: 'Idioma da interface principal',
+      invalidDeck: 'Código de deck inválido',
+      copy: 'Copiar',
+      copied: 'Copiado!',
+      rounds: 'rodadas',
+      error: {
+        unkown: 'Algo deu errado',
+        playerNotFound: 'Jogador não encontrado',
+        playerNoHistory: 'Nenhum histórico encontrado',
+        localApiError: 'Por favor, habilite a opção ferramentas de terceiros no cliente do jogo'
+      },
+      regions: {
+        americas: 'Américas',
+        europe: 'Europa',
+        asia: 'Ásia',
+        sea: 'Sudeste asiático',
+      },
+      times: {
+        sec: '{t} s atrás',
+        min: '{t} min atrás',
+        hour: '{t} hora atrás',
+        hours: '{t} horas atrás',
+        day: '{t} dia atrás',
+        days: '{t} dias atrás',
+      },
+    },
+    loading: {
+      readyToRock: 'Pronto para arrasar 🤘',
+      history: 'Carregando histórico...',
+      nohistory: 'Histórico indisponível',
+    },
+    tracker: {
+      tabs: {
+        oppoPlayed: 'Oponente jogou',
+        myPlayed: 'Eu joguei',
+      },
+      cardsInHand: 'Cartas na mão: {num}'
+    },
+    leaderboard: {
+      rank: 'Posição',
+      name: 'Nome',
+      points: 'Pontos',
+    },
+    matches: {
+      usage: '{num}% de uso',
+      game: '{num} jogo',
+      games: '{num} jogos',
+      badges: {
+        Ranked: 'Ranqueada',
+        Bo3Challenge: 'Confronto melhor de três',
+        StandardGauntlet: 'Contenda',
+        Normal: 'Normal',
+        LastCallQualifierGauntlet: 'Contenda final',
+        SeasonalTournament: 'Torneio sazonal',
+        AI: 'IA'
+      }
+    },
+    dash: {
+      winRate: 'de vitória',
+      winloss: '{win}V {loss}D',
+    },
+    search: {
+      leaderboard: {
+        base: 'Procurar',
+        numPlayer: 'Procure entre {num} jogadores'
+      },
+      player: {
+        placeholder: 'Exemplo: Storm#5961'
+      },
+      prompt: '⬆ Enter name and tag to search',
+    },
+    tooltips: {
+      lorlogin: 'Por favor, faça login no LoR',
+      incompleteDeck: 'Deck incompleto',
+    },
+    contact: {
+      messageBox: {
+        placeholder: 'Sugestões?',
+        messageSent: 'Mensagem enviada',
+        confirm: 'Confirmar?',
+        send: 'Enviar',
+      },
+      contactUs: 'Fale conosco!',
+      broughtWithLove: 'Feito para você com ❤️ por'
+    },
+    settings: {
+      options: {
+        autoLaunch: 'Abrir automaticante ao iniciar o sistema:'
+      },
+      enabled: 'Ativado',
+      enable: 'Ativar',
+      disabled: 'Desativado',
+      disable: 'Desativar'
+    }
   }
 }
