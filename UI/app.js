@@ -163,7 +163,7 @@ ipcMain.on('user-init', (event, uid) => {
 
   var eventCategory = "App"
   var eventAction = "Initialize"
-  var eventLabel = "ID: " + uid
+  var eventLabel = "ID: " + uid + " | Version: " + currentVersion
   var eventValue = null
 
   recordUserEvent(eventCategory, eventAction, eventLabel, eventValue)
