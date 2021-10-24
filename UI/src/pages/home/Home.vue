@@ -33,6 +33,14 @@
             @click="setCurrentPage(PAGES.leaderboard)">
             <span><i class="fas fa-trophy"></i></span>
         </button>
+        <!-- <div class="left-nav-btn menu no-click">
+            <span><i class="fas fa-books"></i></span>
+            <div class="menu-content right">
+                <div class="card" @click="openURL('https://masteringruneterra.com/')">
+                    <img width="300" height="129" src="https://masteringruneterra.com/wp-content/uploads/2021/09/MasteringRuneterraWebsiteLogo-300x129.webp">
+                </div>
+            </div>
+        </div> -->
         <button class="left-nav-btn nav-bottom" 
             :class="{selected: currentPage == PAGES.contact}" 
             @click="setCurrentPage(PAGES.contact)">
@@ -43,6 +51,7 @@
             @click="setCurrentPage(PAGES.settings)">
             <span><i class="fas fa-cog"></i></span>
         </button>
+        
     </div>
     
     <base-window-controls :title="''" :titleType="'window'"></base-window-controls>
@@ -1505,7 +1514,7 @@ export default {
         left: 0;
         width: 80px;
         height: 100vh;
-        background: #282828;
+        background: var(--col-light-bg);
         z-index: 5;
         display: flex;
         flex-direction: column;
@@ -1525,6 +1534,69 @@ export default {
         background: none;
         border: 0px;
         cursor: pointer;
+
+        display: flex;
+        justify-content: center;
+        // vertical-align: middle;
+        // text-align: center;
+        align-items: center;
+
+        &.no-click {
+            cursor: default;
+        }
+
+
+        &.menu {
+
+            position: relative;
+
+            transition: background-color 200ms ease;
+
+            &:hover {
+
+                background-color: var(--col-lighter-bg);
+
+                .menu-content {
+                    visibility: visible;
+                    opacity: 1;
+                    transition: visibility 0s linear 0s, opacity 200ms ease;
+                }
+            }
+
+            .menu-content {
+
+                background-color: var(--col-lighter-bg);
+
+                position: absolute;
+                z-index: 10;
+
+                top: 0px;
+                bottom: auto;
+                left: 100%;
+                // transform: translateY(-50%);
+                padding: 8px;
+
+                visibility: hidden;
+                opacity: 0;
+                transition: visibility 0s linear 200ms, opacity 200ms ease;
+                
+                .card {
+                    padding: 4px;
+                    cursor: pointer;
+
+                    border: 1px solid var(--col-lighter-bg);
+                    transition: border 200ms ease;
+                    
+                    border-radius: 20px;
+                    
+                    &:hover {
+                        border: 1px solid var(--col-light-grey);
+                    }
+                }
+            }
+
+            
+        }
     }
 
     .left-nav-btn:focus {
@@ -1579,7 +1651,7 @@ export default {
         left: 0;
         width: 100vw;
         height: 45px;
-        background: #383838;
+        background: var(--col-lighter-bg);
         z-index: 6;
 
         display: flex;

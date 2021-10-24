@@ -57,7 +57,7 @@ export default {
 
 .custom-select {
 	position: relative;
-	width: 160px;
+	width: 200px;
 	text-align: left;
 	outline: none;
 	height: 36px;
