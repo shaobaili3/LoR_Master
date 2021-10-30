@@ -48,6 +48,7 @@ class FlaskApp(Flask):
         work.start()
 
 app = FlaskApp(__name__)
+CORS(app)
 
 @app.route("/history/<string:server>/<string:name>/<string:tag>", methods=['get'])
 def history(server, name, tag):
