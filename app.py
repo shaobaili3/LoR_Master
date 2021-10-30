@@ -14,6 +14,7 @@ from Models.cache import Cache
 from Models import master
 import json
 from flask import Flask, jsonify
+from flask_cors import CORS
 import os
 import constants
 
