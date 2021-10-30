@@ -18,6 +18,8 @@ from flask_cors import CORS
 import os
 import constants
 
+from random import randrange
+
 sentry_sdk.init(
     "https://1138a186a6384b00a20a6196273c3009@o958702.ingest.sentry.io/5907306",
     integrations=[FlaskIntegration()],
@@ -114,6 +116,7 @@ def get_leaderboard(server):
     except Exception as e:
         print('Restful: unable to load player list', e)
     for player in board:
+        player['rankChange'] = print('+', randrange(10))
         if player['name'] in playlistDict:
             player['tag'] = playlistDict[player['name']]
         else:
