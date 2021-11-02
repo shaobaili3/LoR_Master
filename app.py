@@ -42,7 +42,7 @@ class FlaskApp(Flask):
         def run_work():
             while True:
                 leaderboardModel.updateAll()
-                time.sleep(2000)
+                time.sleep(4000)
         work = threading.Thread(target=run_work)
         work.daemon = True
         work.start()
