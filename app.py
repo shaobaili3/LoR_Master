@@ -117,7 +117,7 @@ def get_leaderboard(server):
     except Exception as e:
         print('Restful: unable to load player list', e)
     for player in board:
-        player['rankChange'] = '+' + str(randrange(10))
+        # player['rankChange'] = '+' + str(randrange(10))
         if player['name'] in playlistDict:
             player['tag'] = playlistDict[player['name']]
         else:

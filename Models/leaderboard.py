@@ -34,6 +34,12 @@ class Leaderboard():
             return
         if leaderboard is not None:
             self.leaderboards[server] = leaderboard
+            if self.leaderboardDicts.get(server) is None:
+                self.leaderboardDicts[server] = {board['name'].lower(): {'rank': board['rank'], 'lp': board['lp']} for board in leaderboard}
+            for one in leaderboard:
+                one['rankChange'] = 0
+                if one['name'].lower() in self.leaderboardDicts[server]:
+                    one['rankChange'] = int(one['rank'] - self.leaderboardDicts[server][one['name'].lower()]['rank'])
             self.leaderboardDicts[server] = {board['name'].lower(
             ): {'rank': board['rank'], 'lp': board['lp']} for board in leaderboard}
 
