@@ -49,6 +49,7 @@ class FlaskApp(Flask):
 
 app = FlaskApp(__name__)
 CORS(app)
+app.config["DEBUG"] = False
 
 @app.route("/history/<string:server>/<string:name>/<string:tag>", methods=['get'])
 def history(server, name, tag):
