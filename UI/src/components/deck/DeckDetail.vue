@@ -203,7 +203,7 @@ export default {
 
     .deck-detail.fixed-height {
         height: 100%;
-        overflow: scroll;
+        overflow-y: scroll;
     }
 
     .actions {    

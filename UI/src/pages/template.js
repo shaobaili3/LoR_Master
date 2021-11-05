@@ -20,7 +20,7 @@ const store = createStore({
         return {
             locale: 'en_us',
             sets: sets_en_combined,
-            IS_ELECTRON: process.env.IS_ELECTRON === "electron"
+            IS_ELECTRON: window.ipcRenderer !== undefined
         }
     },
     mutations: {

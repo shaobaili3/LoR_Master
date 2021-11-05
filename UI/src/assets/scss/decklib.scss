@@ -1,0 +1,121 @@
+.decklib {
+  .title {
+    font-size: 32px;
+    text-align: left;
+    padding: 10px 0px 20px 0px;
+  }
+
+  .btn-container {
+    display: flex;
+
+    align-items: center;
+    justify-content: flex-start;
+
+    padding: 0px 0px 15px 0px;
+
+    position: relative;
+
+    .input-bar-container {
+
+      position: relative;
+      width: 100%;
+      display: flex;
+
+      .icon.inside {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        position: absolute;
+        width: 36px;
+        height: 50px;
+        padding: 0px;
+        font-size: 16px;
+        text-align: center;
+
+        color: var(--col-dark-white);
+        background: none;
+        outline: 0px;
+        border: 0px;
+        width: 6%;
+
+        &.left {
+          left: 10px;
+        }
+      }
+    }
+
+    .error-message {
+      position: absolute;
+      right: 20px;
+    }
+
+    .btn {
+      display: flex;
+      background: var(--col-light-grey);
+      border: 0px;
+      color: var(--col-background);
+      padding: 5px 10px;
+      cursor: pointer;
+
+      border-radius: 5px;
+
+      &:hover {
+        background: var(--col-dark-white);
+      }
+    }
+  }
+
+  .decks-container {
+    display: grid;
+    width: 100%;
+    gap: 15px;
+    grid-template-columns: repeat(2, 1fr);
+
+    .deck-block {
+      padding: 10px;
+      display: flex;
+      flex-wrap: wrap;
+
+      width: auto;
+      background: var(--col-darker-grey);
+      cursor: pointer;
+      border-radius: 10px;
+
+      
+
+      &:hover {
+        background: var(--col-dark-grey);
+        .icon.champ {
+          border: 2px solid rgba(255, 255, 255, 1);
+          box-shadow: 1px 2px 5px -2px #000000;
+        }
+        .icon.faction {
+          opacity: 1;
+          filter: brightness(0) invert(1) drop-shadow(1 px 2 px 1 px rgba(0, 0, 0, 0.6));
+        }
+      }
+
+      .decklib-deck-title {
+        padding: 5px 5px 10px 5px;
+      }
+
+      .btn-delete {
+        padding: 5px 5px 10px 5px;
+        color: var(--col-light-grey);
+
+        &:hover {
+          color: var(--col-dark-white);
+        }
+      }
+
+      .row.deck {
+        width: auto;
+        opacity: 1;
+        &:hover {
+          background: none;
+        }
+      }
+    }
+  }
+}

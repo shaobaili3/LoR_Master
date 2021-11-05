@@ -98,6 +98,10 @@ module.exports = {
       disabled: "Disabled",
       disable: "Disable",
     },
+    decklib: {
+      title: 'Deck Library',
+      placeholder: 'Paste your deck code here'
+    },
   },
   繁體中文: {
     appName: "LoR Master Tracker 魔盒",
@@ -196,6 +200,10 @@ module.exports = {
       disabled: "關閉",
       disable: "關閉",
     },
+    decklib: {
+      title: '牌組庫',
+      placeholder: '黏貼代碼以保存'
+    },
   },
   简体中文: {
     appName: "LoR Master Tracker 魔盒",
@@ -293,6 +301,10 @@ module.exports = {
       enable: "开启",
       disabled: "关闭",
       disable: "关闭",
+    },
+    decklib: {
+      title: '牌组库',
+      placeholder: '黏贴代码以保存'
     },
   },
   "Português (Brasil)": {

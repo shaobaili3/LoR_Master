@@ -163,11 +163,16 @@
   /* overflow: scroll; */
   transition: right 0.2s ease;
   z-index: 6;
+
+  &.hidden {
+    right: -250px;
+  }
+
+  &.fullheight {
+    height: calc(100vh - 43px);
+  }
 }
 
-.deck-content-container.hidden {
-  right: -250px;
-}
 
 .deck-content-top-bar {
   height: 50px;

@@ -10,7 +10,7 @@
     </div>
     <button class="left-nav-btn tooltip"
       :class="{
-        selected: currentPage == PAGES.my,
+        selected: currentPage == PANELS.my,
         disabled: !lorRunning
       }" 
       @click="handleProfileClick"
@@ -32,14 +32,19 @@
         class="tooltiptext right" >{{$t('str.error.playerNoHistory')}}</div>
     </button>
     <button class="left-nav-btn" 
-      :class="{selected: currentPage == PAGES.search}" 
-      @click="setCurrentPage(PAGES.search)">
+      :class="{selected: currentPage == PANELS.search}" 
+      @click="setCurrentPage(PANELS.search)">
       <span><i class="fas fa-search"></i></span>
     </button>
     <button class="left-nav-btn" 
-      :class="{selected: currentPage == PAGES.leaderboard}" 
-      @click="setCurrentPage(PAGES.leaderboard)">
+      :class="{selected: currentPage == PANELS.leaderboard}" 
+      @click="setCurrentPage(PANELS.leaderboard)">
       <span><i class="fas fa-trophy"></i></span>
+    </button>
+    <button class="left-nav-btn" v-if="IS_ELECTRON"
+      :class="{selected: currentPage == PANELS.decklib}" 
+      @click="setCurrentPage(PANELS.decklib)">
+      <span><i class="fas fa-star"></i></span>
     </button>
     <div class="left-nav-btn menu no-click">
       <span><i class="fas fa-books"></i></span>
@@ -62,13 +67,13 @@
       </div>
     </div>
     <button class="left-nav-btn nav-bottom" 
-      :class="{selected: currentPage == PAGES.contact}" 
-      @click="setCurrentPage(PAGES.contact)">
+      :class="{selected: currentPage == PANELS.contact}" 
+      @click="setCurrentPage(PANELS.contact)">
       <span><i class="fas fa-comment-alt-smile"></i></span>
     </button>
     <button class="left-nav-btn nav-bottom" 
-      :class="{selected: currentPage == PAGES.settings}" 
-      @click="setCurrentPage(PAGES.settings)">
+      :class="{selected: currentPage == PANELS.settings}" 
+      @click="setCurrentPage(PANELS.settings)">
       <span><i class="fas fa-cog"></i></span>
     </button>
     
@@ -77,7 +82,7 @@
   <base-window-controls v-if="IS_ELECTRON" :title="''" :titleType="'window'"></base-window-controls>
   
   <div class="content" :class="{fullheight: !IS_ELECTRON}">
-    <div class="main-content-container" v-if="currentPage == PAGES.my">
+    <div class="main-content-container" v-if="currentPage == PANELS.my">
       <player-matches 
         @search="searchPlayer($event)"
         @show-deck="showDeck"
@@ -90,19 +95,23 @@
       </player-matches>
     </div>
 
-    <div class="main-content-container search" v-if="currentPage == PAGES.search">
+    <div class="main-content-container search" v-if="currentPage == PANELS.search">
       <panel-search ref="panelSearch" :apiBase="apiBase" @showDeck="showDeck"></panel-search>
     </div>
 
-    <div class="main-content-container leaderboard" v-if="currentPage == PAGES.leaderboard">
+    <div class="main-content-container leaderboard" v-if="currentPage == PANELS.leaderboard">
       <leaderboard :apiBase="apiBase" @search="searchPlayer($event)"></leaderboard>
     </div>
 
-    <div class="main-content-container contact" v-if="currentPage == PAGES.contact">
+    <div class="main-content-container search" v-if="currentPage == PANELS.decklib">
+      <panel-deck-lib @showDeck="showDeck"></panel-deck-lib>
+    </div>
+
+    <div class="main-content-container contact" v-if="currentPage == PANELS.contact">
       <contact-info :apiBase="apiBase"></contact-info>
     </div>
 
-    <div class="main-content-container settings" v-if="currentPage == PAGES.settings">
+    <div class="main-content-container settings" v-if="currentPage == PANELS.settings">
       <div class="title">{{$t('str.settings')}}</div>
       <div class="settings-list">
         <div class="settings-list-item" v-if="IS_ELECTRON">
@@ -121,7 +130,7 @@
     </div>
   </div>
 
-  <div class="deck-content-container" :class="{hidden: !isShowDeck}">
+  <div class="deck-content-container" :class="{hidden: !isShowDeck, fullheight: !IS_ELECTRON}">
     <div class="deck-content-top-bar">
       <button class="collapse-btn" @click="hideDeck"><span><i class="fas fa-chevron-right"></i></span></button>
       <deck-regions :deck="deckCode" :fixedWidth="false"></deck-regions>
@@ -173,6 +182,7 @@ import ContactInfo from '../../components/base/ContactInfo.vue'
 
 import { mapActions } from 'vuex'
 import PanelSearch from '../../components/panels/PanelSearch.vue'
+import PanelDeckLib from '../../components/panels/PanelDeckLib.vue'
 
 const requestDataWaitTime = 400 //ms
 const requestHistoryWaitTime = 100 //ms
@@ -188,10 +198,6 @@ let cancelToken, localCancleToken
 var lastStatusRequestTime
 var requestHistoryTimeout, prevHistoryRequest
 
-const IS_ELECTRON = window.ipcRenderer !== undefined
-
-console.log("IS ELECTRON:", IS_ELECTRON)
-
 const regionNames = {
   'NA': 'americas',
   'EU': 'europe',
@@ -204,13 +210,14 @@ const regionShort = {
   'asia' : 'AS',
 }
 
-const PAGES = {
+const PANELS = {
   my: 0,
   search: 1,
   leaderboard: 2,
+  decklib: 3,
   
-  contact: 3,
-  settings: 4,
+  contact: 4,
+  settings: 5,
 }
 
 export default {
@@ -223,6 +230,7 @@ export default {
     LocaleChanger,
     ContactInfo,
     PanelSearch,
+    PanelDeckLib,
   },
   data() {
     return {
@@ -231,6 +239,7 @@ export default {
       regions: ["NA", "EU", "AS"],
 
       isShowDeck: false,
+      deckCode: null,
 
       version: "",
       remoteVersion: "",
@@ -238,9 +247,9 @@ export default {
       updateProcess: 0,
       updateDownloaded: false,
 
-      currentPage: PAGES.search,
+      currentPage: PANELS.search,
 
-      PAGES: PAGES,
+      PANELS: PANELS,
 
       lorRunning: null,
       localApiEnabled: true,
@@ -254,8 +263,6 @@ export default {
       debugInfos: "",
 
       portNum: '26531',
-
-      IS_ELECTRON: IS_ELECTRON,
     }
   },
   computed: {
@@ -380,16 +387,16 @@ export default {
     },
 
     handleProfileClick() {
-      if (!this.hasLocalInfo || (this.currentPage == PAGES.my && this.localPlayerInfo.server != 'sea')) {
+      if (!this.hasLocalInfo || (this.currentPage == PANELS.my && this.localPlayerInfo.server != 'sea')) {
         this.requestLocalHistory()
       }
-      this.setCurrentPage(PAGES.my)
+      this.setCurrentPage(PANELS.my)
     },
 
     // Page Switch
     setCurrentPage(page) {
 
-      var pagekeys = Object.keys(PAGES)
+      var pagekeys = Object.keys(PANELS)
       var label = "From [" + pagekeys[this.currentPage] + "] to [" + pagekeys[page] +"]"
 
       this.sendUserEvent({
@@ -413,7 +420,7 @@ export default {
 
       if (this.regions.includes(data.region)) {
         // SEA will not be included
-        this.setCurrentPage(PAGES.search)
+        this.setCurrentPage(PANELS.search)
         this.$nextTick(() => {
           // Wait until the panel search mounts
           console.log(this.$refs)
@@ -704,7 +711,6 @@ export default {
         })
     },
     showDeck(deck) {
-      // console.log("Main Show Deck", deck)
       if (this.deckCode == deck && this.isShowDeck == true) {
         this.isShowDeck = false
       } else {

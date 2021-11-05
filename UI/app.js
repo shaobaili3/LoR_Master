@@ -458,7 +458,7 @@ function newMainWindow() {
       // nodeIntegration: true,
       // enableRemoteModule: true,
       contextIsolation: false,
-      preload: __dirname + '/appsrc/preload.js',
+      preload: __dirname + '/src/preload.js',
     }
   })
 
@@ -538,7 +538,7 @@ function newDeckWindow() {
       // nodeIntegration: true,
       // enableRemoteModule: true,
       contextIsolation: false,
-      preload: __dirname + '/appsrc/preload.js',
+      preload: __dirname + '/src/preload.js',
     },
     // show: false
     // titleBarStyle: 'hiddenInset'
@@ -615,7 +615,7 @@ function newInfoWindow() {
       // nodeIntegration: true,
       // enableRemoteModule: true,
       contextIsolation: false,
-      preload: __dirname + '/appsrc/preload.js',
+      preload: __dirname + '/src/preload.js',
     }
     // titleBarStyle: 'hiddenInset'
   })
