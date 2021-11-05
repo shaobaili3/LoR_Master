@@ -124,7 +124,7 @@ export default {
         getLeaderboard(regionID) {
 
             // Return if using npm run serve
-            if (process.env.NODE_ENV == "development") { return }
+            // if (process.env.NODE_ENV == "development") { return }
 
             lastLeaderboardRequestTime = Date.now()
 
@@ -211,6 +211,8 @@ export default {
         align-items: center;
         justify-content: space-around;
         border-radius: 5px;
+
+        white-space: nowrap;
     }
 
     .info-rank {

@@ -53,14 +53,14 @@ detectPortAndStartService()
 
 app.on('ready', () => {
   // --- registers global shortcuts ---
-  globalShortcut.register('Alt+CommandOrControl+E', () => {
+  // globalShortcut.register('Alt+CommandOrControl+E', () => {
     // console.log('Electron loves global shortcuts!')
-    toggleDeckWindow()
-  })
+    // toggleDeckWindow()
+  // })
 
-  globalShortcut.register('Alt+CommandOrControl+W', () => {
-    toggleMinDeckWindow()
-  })
+  // globalShortcut.register('Alt+CommandOrControl+W', () => {
+    // toggleMinDeckWindow()
+  // })
   
   if (developmentMode) {
     globalShortcut.register('Alt+CommandOrControl+T', () => {

@@ -1,6 +1,6 @@
 <template>
   <div class="locale-changer">
-    <div class="title">
+    <div class="locale-changer-title">
       {{$t('str.languages')}}
     </div>
     <div class="select-container">
