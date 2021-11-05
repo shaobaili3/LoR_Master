@@ -1,7 +1,7 @@
 <template>
 
   <div class="left-nav">
-    <div class="left-nav-btn logo no-click">
+    <div class="left-nav-btn logo no-click" v-if="!IS_ELECTRON">
       <picture>
         <source srcset="@/assets/images/logo/logo.webp" type="image/webp">
         <source srcset="@/assets/images/logo/logo.png" type="image/png">
@@ -188,6 +188,10 @@ let cancelToken, localCancleToken
 var lastStatusRequestTime
 var requestHistoryTimeout, prevHistoryRequest
 
+const IS_ELECTRON = window.ipcRenderer !== undefined
+
+console.log("IS ELECTRON:", IS_ELECTRON)
+
 const regionNames = {
   'NA': 'americas',
   'EU': 'europe',
@@ -248,6 +252,8 @@ export default {
       debugInfos: "",
 
       portNum: '26531',
+
+      IS_ELECTRON: IS_ELECTRON,
     }
   },
   computed: {

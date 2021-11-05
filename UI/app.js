@@ -28,6 +28,8 @@ var startHidden = false
 var isWin = process.platform === "win32"
 var port = defaultPort
 
+process.env.IS_ELECTRON = "electron"
+
 // -----------------------------------------------
 // --- app entry points ---
 // -----------------------------------------------
