@@ -230,6 +230,8 @@ export default {
       
       regions: ["NA", "EU", "AS"],
 
+      isShowDeck: false,
+
       version: "",
       remoteVersion: "",
       downloadUrl: null,
