@@ -99,6 +99,10 @@
 
       .decklib-deck-title {
         padding: 5px 5px 10px 5px;
+        max-width: calc(100% - 40px);
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
       }
 
       .btn-delete {
