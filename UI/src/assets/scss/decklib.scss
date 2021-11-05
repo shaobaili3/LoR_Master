@@ -70,7 +70,8 @@
     display: grid;
     width: 100%;
     gap: 15px;
-    grid-template-columns: repeat(2, 1fr);
+    // grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 
     .deck-block {
       padding: 10px;
@@ -103,6 +104,7 @@
       .btn-delete {
         padding: 5px 5px 10px 5px;
         color: var(--col-light-grey);
+        background: none;
 
         &:hover {
           color: var(--col-dark-white);
@@ -112,8 +114,10 @@
       .row.deck {
         width: auto;
         opacity: 1;
+        background: none;
+
         &:hover {
-          background: none;
+          // background: none;
         }
       }
     }

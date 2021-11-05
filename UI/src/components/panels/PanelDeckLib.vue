@@ -137,6 +137,7 @@ export default {
     },
     handleDelete(id) {
       this.decks.splice(id, 1)
+      this.updateStore()
     }
   }
 }

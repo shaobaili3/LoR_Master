@@ -70,14 +70,14 @@ export default {
   // }
     methods: {
         shrinkToggle() {
-            window.toggleShrinkWindow() // Defined in appsrc > preload.js
+            if (this.IS_ELECTRON) window.toggleShrinkWindow() // Defined in appsrc > preload.js
         },
         minApp() {
-            window.minWindow() // Defined in appsrc > preload.js
+            if (this.IS_ELECTRON) window.minWindow() // Defined in appsrc > preload.js
             //   console.log("Closing App")
         },
         closeApp() {
-            window.hideWindow()
+            if (this.IS_ELECTRON) window.hideWindow()
         },
         checkIsMin() {
             if (window.isMin)

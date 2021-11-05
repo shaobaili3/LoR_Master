@@ -72,8 +72,12 @@
             <deck-detail :baseDeck="deckCode"></deck-detail>
         </div>
 
-        <div class="footer" v-if="!isLoading">
-            <div class="footer-text">{{$t('tracker.cardsInHand', {num: cardsInHandNum})}}</div>
+        <div class="layerpanel" :class="{expanded: currentLayer != LAYERS.base}" v-if="!isLoading">
+            <div v-if="currentLayer == LAYERS.base" class="footer-text">{{$t('tracker.cardsInHand', {num: cardsInHandNum})}}</div>
+            <button v-if="currentLayer == LAYERS.base" @click="onOpenDecklib" class="btn btn-decklib">Open Deck Library</button>
+
+            <tracker-layer v-if="currentLayer == LAYERS.decklib" @back="setLayer(LAYERS.base)"></tracker-layer>
+
         </div>
 
     </div>
@@ -91,6 +95,11 @@ import DeckEncoder from '../../modules/runeterra/DeckEncoder'
 
 import { mapActions } from 'vuex'
 
+import '../../assets/scss/tooltips.scss'
+import '../../assets/scss/deck.scss'
+
+import TrackerLayer from '../../components/tracker/TrackerLayer.vue'
+
 const requestDataWaitTime = 100; // ms
 const requestServerWaitTime = 3000; //ms
 const requestStatusWaitTime = 1000; //ms
@@ -106,6 +115,12 @@ const TABS = {
     myg: 4,
 }
 
+const LAYERS = {
+    base: 0,
+    decklib: 1,
+    deckdetail: 2,
+}
+
 var lastTrackTime, lastServerRequestTime, lastStatusRequestTime;
 
 export default {
@@ -114,6 +129,7 @@ export default {
         MatchInfo,
         DeckDetail,
         DeckRegions,
+        TrackerLayer,
     },
     data() {
         return {
@@ -126,6 +142,8 @@ export default {
             deckCode: null,
             titleType: null,
             currentTab: TABS.my,
+
+            LAYERS: LAYERS,
 
             cardsInHandNum: null,
 
@@ -141,7 +159,9 @@ export default {
 
             lorRunning: false,
 
-            portNum: '26531'
+            portNum: '26531',
+
+            currentLayer: 0,
         }
     },
     computed: {
@@ -200,24 +220,26 @@ export default {
         // console.log("Mounted")
         // this.requestData()
         console.log("Page Deck Mounted")
-        console.log("Webcontents ID", window.getID())
 
         this.infoType = "match"
 
         // this.hideWindow()
-        window.ipcRenderer.on('return-port', (event, port) => {
-            console.log("New Port:", port)
-            this.portNum = port
-        })
+        if (this.IS_ELECTRON) {
+            window.ipcRenderer.on('return-port', (event, port) => {
+                console.log("New Port:", port)
+                this.portNum = port
+            })
 
-        window.ipcRenderer.send("get-port")
+            window.ipcRenderer.send("get-port")
 
+            this.initStore()
+            this.initChangeLocale()
+        }
+        
         this.requestTrackInfo()
         // this.requestServerInfo()
         this.requestStatusInfo()
         
-        this.initStore()
-        this.initChangeLocale()
     },
     methods: {
 
@@ -318,35 +340,13 @@ export default {
                     { console.log('error', e) }
                 })
         },
-        // requestServerInfo() {
-        //     lastServerRequestTime = Date.now()
-        //     axios.get(`${this.apiBase}/process`)
-        //         .then((response) => {
-        //             // console.log(response.data)
-
-        //             var elapsedTime = Date.now() - lastServerRequestTime // ms
-        //             // console.log("Elapsed ", elapsedTime)
-                    
-        //             this.server = response.data.server
-
-        //             // console.log("Server", this.server)
-
-        //             if (requestServerWaitTime > elapsedTime) {
-        //                 setTimeout(this.requestServerInfo, requestServerWaitTime - elapsedTime); 
-        //             } else {
-        //                 this.requestServerInfo()
-        //             }
-                    
-        //         })
-        //         .catch((e) => {
-        //             if (axios.isCancel(e)) {
-        //                 console.log("Request cancelled");
-        //             } else 
-        //             { console.log('error', e) }
-        //             this.requestServerInfo()
-        //         })
-        // },
         requestStatusInfo() {
+            
+            if (!this.IS_ELECTRON) {
+                this.processTrackInfo(require('../../assets/data/testStatus'))
+                return
+            }
+
             // Keeps requesting status
             lastStatusRequestTime = Date.now()
             axios.get(`${this.apiBase}/status`)
@@ -405,6 +405,20 @@ export default {
                 })
         },
         requestTrackInfo() {
+
+            if (!this.IS_ELECTRON) {
+
+                if (!this.startingDeckCode) {
+                    Math.random() > 0.2 ? this.processTrackInfo(require('../../assets/data/testTrack')) : this.processTrackInfo({
+                        positional_rectangles: null
+                    })
+                } else {
+                    this.processTrackInfo(require('../../assets/data/testTrack'))
+                }
+                
+                setTimeout(this.requestTrackInfo, 1000);
+                return
+            }
 
             lastTrackTime = Date.now()
             axios.get(`${this.apiBase}/track`)
@@ -533,232 +547,24 @@ export default {
 
         },
         handleGameEnd() {
-            window.ipcRenderer.send("game-end-trigger")
+            if (this.IS_ELECTRON) {
+                window.ipcRenderer.send("game-end-trigger")
+            }
         },
         handleGameStart() {
-            window.ipcRenderer.send("game-start-trigger")
+            if (this.IS_ELECTRON) {
+                window.ipcRenderer.send("game-start-trigger")
+            }
+        },
+
+        onOpenDecklib() {
+            this.currentLayer = LAYERS.decklib
+        },
+        setLayer(newLayer) {
+            this.currentLayer = newLayer
         }
     }
 
 }
 
 </script>
-
-<style lang="scss">
-    .tooltip {
-        position: relative;
-
-        .tooltiptext {
-            visibility: hidden;
-            opacity: 0;
-
-            transition: visibility 0s linear 200ms, opacity 200ms ease;
-
-            display: block;
-            /* width: 120px; */
-            font-size: 16px;
-
-            white-space: nowrap;
-            background-color: black;
-            color: #fff;
-            text-align: center;
-            border-radius: 6px;
-            padding: 8px 10px;
-
-            box-sizing: border-box;
-
-            position: absolute;
-            z-index: 10;
-
-            /* Position the tooltip */
-            bottom: 0%;
-            left: 50%;
-            transform:translateX(-50%);
-            
-            /* Position the tooltip */
-            &.top {
-                bottom: 120%;
-                left: 50%;
-                transform:translateX(-50%);
-            }
-
-            &.right {
-                top: 50%;
-                bottom: auto;
-                left: 105%;
-                transform: translateY(-50%);
-            }
-
-            &.left {
-                top: 50%;
-                bottom: auto;
-                right: 105%;
-                left: auto;
-                transform: translateY(-50%);
-            }
-
-            &.top-end {
-                top: auto;
-                bottom: 120%;
-                left: auto;
-                right: 0%;
-                transform:translateX(0%);
-            }
-
-            &.top-start {
-                top: auto;
-                bottom: 120%;
-                left: 0%;
-                right: auto;
-                transform:translateX(0%);
-            }
-
-            &.top-bottom-right {
-                bottom: 100%;
-                right: -10px;
-                left: auto;
-                transform: none;
-                margin-bottom: 22px;
-            }
-        
-            /* left: 50%; */
-            /* margin-left: -50%; */
-            .fas {
-                margin-right: 5px;
-            }
-        }
-
-        &:hover {
-            .tooltiptext {
-                visibility: visible;
-                opacity: 1;
-                transition: visibility 0s linear 0s, opacity 200ms ease;
-            }
-        }
-    }
-</style>
-
-
-<style scoped>
-
-    .invisible {
-        display: none;
-    }
-    
-    .loading {
-        margin-top: 20px;
-        font-size: 1.2em;
-    }
-
-    .errorText {
-        margin-top: 20px;
-        font-size: 1.2em;
-    }
-
-    #title {
-        margin-top: 0px;
-        margin-bottom: 40px;
-    
-    }
-
-    #subtitle {
-        margin-top: 80px;
-        margin-bottom: 20px;
-    }
-
-    #history {
-        /* margin-top: 40px; */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        max-width: 280px;
-        /* min-width: 270px; */
-        width: 100%;
-
-        /* margin: 3px 3px 3px 3px; */
-
-        /* font-size: 0.9em; */
-    }
-
-    #content {
-        margin-top: 40px;
-    }
-
-    .footer {
-        display: flex;
-        /* height: 30px; */
-        position: fixed;
-        bottom: 0px;
-        width: 100%;
-        text-align: center;
-        align-content: center;
-        justify-content: center;
-        padding: 5px 0 8px 0;;
-        background: var(--col-background);
-    }
-
-    .tabs {
-        display: flex;
-        position: sticky;
-        top: 40px;
-        width: calc(100% - 20px);
-        max-width: 280px;
-        
-        justify-content: space-evenly;
-        align-items: center;
-        gap: 10px;
-        padding: 10px 10px;
-        
-        z-index: 2;
-        background: var(--col-background);
-    }
-
-    .tab-title-group {
-        flex: 1 1 0;
-        display: flex;
-        background: var(--col-dark-grey);
-        padding: 5px 0px;
-        border-radius: 20px;
-    }
-
-    .tab-title {
-        flex: 1 1 0;
-        color: var(--col-lighter-grey);
-        cursor: pointer;
-        text-align: center;
-        background: var(--col-dark-grey);
-        padding: 0px 0px;
-        border-radius: 20px;
-    }
-
-    .tab-title:hover {
-        color: white;
-        /* background: var(--col-grey); */
-    }
-
-    .tab-title.active {
-        color: white;
-    }
-
-    .tab-content {
-        max-width: 280px;
-        width: 100%;
-        text-align: center;
-    }
-
-    /* Styling Deck Content */
-    .tab-content .icon-content {
-        /* position: sticky;
-        z-index: 2;
-        top: 90px;
-        background: var(--col-background); */
-        padding: 0px 0px 5px 0px;
-    }
-
-    .tab-text {
-        padding: 0px 0px 2px 0px;
-    }
-
-
-
-</style>
