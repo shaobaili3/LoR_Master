@@ -28,7 +28,7 @@
 
 <script>
 
-import DeckEncoder from '../modules/runeterra/DeckEncoder'
+import DeckEncoder from '../../modules/runeterra/DeckEncoder'
 import CardPreview from './CardPreview.vue'
 
 export default {

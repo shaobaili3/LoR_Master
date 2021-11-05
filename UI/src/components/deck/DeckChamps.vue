@@ -8,9 +8,9 @@
 
 <script>
 
-import DeckEncoder from '../modules/runeterra/DeckEncoder'
-import championCards from '../assets/data/champion.js'
-import ChampIcon from './image/ChampIcon.vue'
+import DeckEncoder from '../../modules/runeterra/DeckEncoder'
+import championCards from '../../assets/data/champion.js'
+import ChampIcon from '../image/ChampIcon.vue'
 import DeckRegions from './DeckRegions.vue'
 
 // const maxChamp = 2;

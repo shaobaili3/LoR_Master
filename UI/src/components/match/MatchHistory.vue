@@ -1,70 +1,86 @@
 <template>
-    <div class="match" :class="{won: won, loss: !won}">
-        <div class="row opponent">
-            <!-- <router-link class="opponent-name btn" :to="opponentLink">
-                {{opponentName}}
-            </router-link> -->
-            <p class="match-info-title">
-                <!-- {{matches}} / {{total}} -->
-                {{$t('matches.usage', {num: useRate})}}
-            </p>
-            <div class="match-info-badge" v-for="(badge, index) in badges" :key="index">
-                <span class="match-info-badge-icon fa" :class="{'fa-clock': badge=='recent', 'fa-angle-double-up': badge=='frequent'}"></span>
-                {{badge}}</div>
-            <div class="history-info">{{timeString}}</div>
-            <div class="history-info">{{gamesString}}</div>
+    <div class="match-history match" :class="{won: won, loss: !won}">
+        <div class="btn-expand-detail" v-if="details" @click="toggleDetail">
+            <i class="fas"
+                :class="{'fa-chevron-down': !showDetail, 'fa-chevron-up': showDetail}"
+            ></i>
         </div>
-        <div class="row match-history-dots">
-            <div class="match-history-summary">{{wonNum}} W - {{lostNum}} L </div>
-            <div class="dot" :class="{'won' : isWonGame(index), 'played' : isPlayedGame(index)}" v-for="index in total" :key="index"></div>
-            
+        <div class="row opponent">
+            <p @click="search" class="match-info-title">
+                vs <span class="name"
+                        :class="{'search': region}"
+                    >{{opponentName}}</span>
+            </p>
+            <div class="opponent-info" v-if="opponentRank"><i class="fas fa-trophy"></i> {{opponentRank}}</div>
+            <div class="history-info">{{timeString}}</div>
+            <div class="history-info" v-if="rounds">{{rounds}} {{$t('str.rounds')}}</div>
+            <div class="history-info" v-if="details" >{{ moment(new Date(details.endTime) - new Date(details.startTime)).format('m:ss') }}</div>
+            <div class="match-info-badge" v-for="(badge, index) in filteredBadges" :key="index" >
+                <span v-if="badge=='recent' || badge=='frequent'" class="match-info-badge-icon fa" :class="{'fa-clock': badge=='recent', 'fa-angle-double-up': badge=='frequent'}"></span>
+                {{$t('matches.badges.'+badge.replace(/\s+/g, ''))}}</div>
         </div>
         <div class="row decklist">
-            <deck-preview @click="showDeck" :deck="deck" :won="won" :cheveron="true"></deck-preview>
+            <deck-preview @click="showDeck(deck)" :deck="deck" :won="won" :fixedWidth="true"></deck-preview>
             <!-- <div class="text-vs">VS</div> -->
             <!-- <deck-preview @click="showDeck" :deck="deck"></deck-preview> -->
+            <span class="vs-text">VS</span>
+            <deck-preview @click="showDeck(opponentDeck)" :deck="opponentDeck" :won="won" :fixedWidth="true"></deck-preview>
         </div>
+        <div class="divider" v-if="details && showDetail" :class="{'won': won}"></div>
+        <match-detail-mulligan v-if="details && showDetail" 
+            :startHand="details.openHand"
+            :endHand="details.replacedHand"
+        ></match-detail-mulligan>
+
+        <match-detail-timeline v-if="details && showDetail" 
+            :time="time"
+            :details="details"
+        ></match-detail-timeline>
     </div>
-
-    <deck-detail v-if="visibleDeck == 1" :baseDeck="deck"></deck-detail>
-
 </template>
 
 <script>
 
-import DeckDetail from '../components/DeckDetail.vue'
-import DeckPreview from '../components/DeckPreview.vue'
+import DeckPreview from '../deck/DeckPreview.vue'
+import MatchDetailMulligan from '../match/MatchDetailMulligan.vue'
+import MatchDetailTimeline from '../match/MatchDetailTimeline.vue'
+
+import moment from 'moment'
 
 export default {
     components: {
-        DeckDetail,
         DeckPreview,
+        MatchDetailTimeline,
+        MatchDetailMulligan,
     },
     mounted() {
-        this.subscribeData()
+        // console.log(this.details)
     },
     data() {
         return {
-            visibleDeck: 0
+            visibleDeck: 0,
+            showDetail: false,
+            moment: moment,
         }
     },
+    emits: ['showDeck', 'search'],
     props: {
         opponentName: String,
+        opponentRank: String,
+        opponentLp: String,
         rounds: Number,
         deck: String,
         opponentDeck: String,
-        winrate: String,
+        win: Boolean,
         time: String,
-        startTime: String,
-        matches: Number,
         badges: Array,
-        total: Number,
-        history: String,
+        details: Object,
+        region: String,
     },
     computed: {
         timeString() {
             
-            var date = new Date(this.startTime)
+            var date = new Date(this.time)
             var time
             
             var milliElapsed = Date.now() - date
@@ -95,38 +111,42 @@ export default {
 
             return time
         },
-
         opponentLink() {
             return "/profile/" + this.opponentName
         },
         won() {
             // return parseFloat(this.winrate) > 0.5;
-            return true
+            return this.win
         },
-        useRate() {
-            return Math.floor(this.matches / this.total * 100);
-        },
-        wonNum() {
-            return (this.history.match(/W/g)||[]).length
-        },
-        lostNum() {
-            return (this.history.match(/L/g)||[]).length
-        },
-        gamesString() {
-            return this.matches > 1 ? 
-                this.$t('matches.games', {num: this.matches}) :
-                this.$t('matches.game', {num: this.matches})
+        filteredBadges() {
+            if (!this.badges) return null
+            var filtered = this.badges.map(b => b.trim()).filter((badge, pos, self) => {
+                // remove "Constructed" and duplicates
+                return !badge.includes("Constructed") && self.indexOf(badge) == pos
+                })
+            return filtered
         }
-    }, 
+    },
     methods: {
-        showDeck() {
-            // console.log("Show Deck")
+        toggleDetail() {
+            this.showDetail = !this.showDetail
+
+            this.sendUserEvent({
+                category: "Main Window Match",
+                action: this.showDetail ? "Show Detail" : "Hide Detail",
+                label: this.deck,
+                value: null,
+            })
+        },
+        showDeck(deck) {
+            // console.log("Show Deck", deck)
+            this.$emit('showDeck', deck)
             // console.log(window)
             // console.log(window.testData)
-            if (this.visibleDeck == 1)
-                this.visibleDeck = 0
-            else
-                this.visibleDeck = 1
+        },
+        search() {
+            // console.log("Match History Search")
+            this.$emit('search')
         },
         showOpponentDeck() {
             // console.log("Show Oppo Deck")
@@ -135,30 +155,37 @@ export default {
             else
                 this.visibleDeck = 2
         },
-        subscribeData() {
-            // console.log(window)
-        },
-        isWonGame(index) {
-            var i = index - 1
-            // console.log(this.history)
-            if (i >= this.history.length) return false
-            return (this.history[i] == 'W')
-        },
-        isPlayedGame(index) {
-            var i = index - 1
-            // console.log(this.history)
-            if (i >= this.history.length) return false
-            return (this.history[i] == 'W' || this.history[i] == 'L')
-        }
     }
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 
-    
+    .divider {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        height: 2px;
+        /* background-color: var(--col-background); */
+        background-color: var(--col-light-grey);
+        margin-top: 8px;
+        /* margin-bottom: 5px; */
+
+        &.won {
+            background-color: var(--col-gold);
+        }
+    }
+
+    .btn-expand-detail {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 0.7em;
+        cursor: pointer;
+    }
 
     .match {
+        position: relative;
         display: flex;
         width: 100%;
         flex-direction: column;
@@ -166,7 +193,10 @@ export default {
         box-sizing: border-box;
         padding: 5px;
         border-radius: 6px;
+
+        overflow-x: visible;
         
+        /* overflow: hidden; */
 
         border-left: 3px solid var(--col-background);
         border-right: 3px solid var(--col-background);
@@ -199,10 +229,10 @@ export default {
     }
 
     .match-info-badge {
-        font-size: 0.8em;
+        font-size: 0.7em;
         color: rgba(255, 255, 255, 0.8);
         background: rgba(255, 255, 255, 0.2);
-        padding: 5px 10px;
+        padding: 3px 8px;
         margin-right: 5px;
         border-radius: 50px;
         cursor: default;
@@ -216,25 +246,41 @@ export default {
     .history-info {
         font-size: 0.8em;
         color: rgba(255, 255, 255, 0.7);
-        padding: 8px 5px;
+        padding: 8px 6px;
         cursor: default;
         white-space: nowrap;
     }
 
     .history-info:hover {
         color: rgba(255, 255, 255, 1);
-        
+    }
+
+    .opponent-info {
+        font-size: 0.8em;
+        color: rgba(255, 255, 255, 1);
+        padding: 8px 6px 8px 0px;
+        cursor: default;
+        white-space: nowrap;
+    }
+
+    .opponent-info i {
+        font-size: 0.85em;
     }
     
     .row {
         display: flex;
-        align-items: baseline;
+        align-items: center;
     }
+
 
     .row.decklist {
         /* justify-content: space-between; */
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
+    }
+
+    .vs-text {
+        padding: 0px 10px;
     }
 
     .match-history-dots {
@@ -325,8 +371,11 @@ export default {
 
         /* border-bottom: 2px solid transparent; */
         border-radius: 0px;
+    }
 
-        cursor: default;
+    .match-info-title:hover .name.search {
+        cursor: pointer;
+        text-decoration: underline;
     }
 
     .btn:hover {
@@ -355,41 +404,6 @@ export default {
             padding-right: 2px;
         }
 
-    }
-
-    @media screen and (max-width: 190px) {
-
-        .match {
-            font-size: 0.78em;
-            padding: 5px 6px;
-        }
-
-        .match-info-title {
-            padding:0px 2px 2px 02px;
-            margin-left: 0px;
-        }
-
-        .match-history-dots {
-            gap: 4px;
-            margin-left: 0px;
-            padding-left: 2px;
-        }
-
-        .row.match-history-dots .dot {
-            height: 7px;
-            width: 7px;
-        }
-
-        .history-info {
-            padding-right: 2px;
-            padding-left: 2px;
-            padding-top: 0px;
-            padding-bottom: 2px;
-        }
-
-        .row {
-            align-items: center;
-        }
     }
 
 </style>

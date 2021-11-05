@@ -162,17 +162,17 @@
 import '../../assets/scss/tooltips.scss'
 import '../../assets/scss/home.scss'
 
-import BaseWindowControls from '../../components/BaseWindowControls.vue'
+import BaseWindowControls from '../../components/base/BaseWindowControls.vue'
 import axios from 'axios'
-import DeckRegions from '../../components/DeckRegions.vue'
-import Leaderboard from '../../components/Leaderboard.vue'
-import PlayerMatches from '../../components/PlayerMatches.vue'
-import DeckDetail from '../../components/DeckDetail.vue'
-import LocaleChanger from '../../components/LocaleChanger.vue'
-import ContactInfo from '../../components/ContactInfo.vue'
+import DeckRegions from '../../components/deck/DeckRegions.vue'
+import Leaderboard from '../../components/leaderboard/Leaderboard.vue'
+import PlayerMatches from '../../components/match/PlayerMatches.vue'
+import DeckDetail from '../../components/deck/DeckDetail.vue'
+import LocaleChanger from '../../components/base/LocaleChanger.vue'
+import ContactInfo from '../../components/base/ContactInfo.vue'
 
 import { mapActions } from 'vuex'
-import PanelSearch from '../../components/PanelSearch.vue'
+import PanelSearch from '../../components/panels/PanelSearch.vue'
 
 const requestDataWaitTime = 400 //ms
 const requestHistoryWaitTime = 100 //ms

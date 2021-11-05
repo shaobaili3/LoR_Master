@@ -82,11 +82,11 @@
 
 <script>
 
-import MatchInfo from '../../components/MatchInfo.vue'
+import MatchInfo from '../../components/match/MatchInfo.vue'
 import axios from 'axios'
-import BaseWindowControls from '../../components/BaseWindowControls.vue'
-import DeckDetail from '../../components/DeckDetail.vue'
-import DeckRegions from '../../components/DeckRegions.vue'
+import BaseWindowControls from '../../components/base/BaseWindowControls.vue'
+import DeckDetail from '../../components/deck/DeckDetail.vue'
+import DeckRegions from '../../components/deck/DeckRegions.vue'
 import DeckEncoder from '../../modules/runeterra/DeckEncoder'
 
 import { mapActions } from 'vuex'

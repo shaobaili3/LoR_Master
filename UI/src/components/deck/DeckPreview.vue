@@ -10,8 +10,8 @@
 
 <script>
 
-import DeckEncoder from '../modules/runeterra/DeckEncoder'
-import championCards from '../assets/data/champion.js'
+import DeckEncoder from '../../modules/runeterra/DeckEncoder'
+import championCards from '../../assets/data/champion.js'
 import DeckChamps from './DeckChamps.vue';
 import DeckRegions from './DeckRegions.vue';
 //https://painttist.github.io/lor-champ-icons/data/champion.js

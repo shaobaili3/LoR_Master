@@ -45,7 +45,7 @@
 <script>
 // const axios = require('axios')
 import axios from 'axios'
-import LeaderboardPlayer from '../components/LeaderboardPlayer.vue'
+import LeaderboardPlayer from './LeaderboardPlayer.vue'
 
 const REGION_ID = {
     NA: 0, EU: 1, AS: 2, SEA: 3

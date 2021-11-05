@@ -108,7 +108,7 @@ const regionShort = {
     'asia' : 'AS',
 }
 
-import PlayerMatches from "./PlayerMatches.vue";
+import PlayerMatches from "../match/PlayerMatches.vue";
 import axios from 'axios';
 
 export default {

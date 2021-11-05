@@ -15,7 +15,7 @@
 // https://cdn-lor.mobalytics.gg/production/images/cards-preview/01DE029.webp
 
 import axios from 'axios'
-import CardImage from './image/CardImage.vue'
+import CardImage from '../image/CardImage.vue'
 
 const requestStatusWaitTime = 1000 //ms
 var lastStatusRequestTime

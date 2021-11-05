@@ -51,8 +51,8 @@
 </template>
 
 <script>
-import DeckChamps from './DeckChamps.vue';
-import MatchHistory from './MatchHistory.vue';
+import DeckChamps from '../deck/DeckChamps.vue';
+import MatchHistory from '../match/MatchHistory.vue';
 
 
 // Some helper math functions

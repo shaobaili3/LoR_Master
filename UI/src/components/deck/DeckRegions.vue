@@ -6,8 +6,8 @@
 
 <script>
 
-import RegionIcon from './image/RegionIcon.vue'
-import DeckEncoder from '../modules/runeterra/DeckEncoder'
+import RegionIcon from '../image/RegionIcon.vue'
+import DeckEncoder from '../../modules/runeterra/DeckEncoder'
 //https://painttist.github.io/lor-champ-icons/data/champion.js
 
 // import set1 from '../../../Resource/set1-en_us.json'
@@ -16,7 +16,7 @@ import DeckEncoder from '../modules/runeterra/DeckEncoder'
 // import set4 from '../../../Resource/set4-en_us.json'
 // import set5 from '../../../Resource/set5-en_us.json'
 
-import en_us_array from '../../../Resource/en_us.json'
+import en_us_array from '../../../../Resource/en_us.json'
 
 const en_us = [].concat(...en_us_array)
 
