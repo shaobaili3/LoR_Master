@@ -542,7 +542,7 @@ export default {
     requestStatusInfo() {
       // Keeps requesting status
 
-      if (!IS_ELECTRON) {
+      if (!this.IS_ELECTRON) {
         return
       }
       
