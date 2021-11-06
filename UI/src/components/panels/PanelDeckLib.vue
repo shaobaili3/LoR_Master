@@ -53,8 +53,11 @@ export default {
       decks: [],
       error: "",
       codeText: "",
+      loaded: false,
+      pasteBuffer: null,
     }
   },
+  emits: ['pasted'],
   mounted() {
     this.initStore()
   },
@@ -64,11 +67,16 @@ export default {
         window.ipcRenderer.send('request-store', 'deck-lib')
 
         window.ipcRenderer.on('reply-store', (event, key, val) => {
-          console.log("Got store", key, val)
+          console.log("Got Store:", key)
 
           if (key == 'deck-lib' && val) {
-            console.log("Deck Lib", val)
+            console.log("Load Deck Lib")
             this.decks = JSON.parse(val)
+            this.loaded = true
+            if (this.pasteBuffer) {
+              console.log("Process pasteBuffer")
+              this.processPaste(this.pasteBuffer)
+            }
           }
         })
       } else {
@@ -101,39 +109,42 @@ export default {
         window.ipcRenderer.send('save-store', 'deck-lib', JSON.stringify(this.decks, null, '\t'))
       }
     },
-    onPaste() {
-      
-      setTimeout(() => {
-        let pasteContent = this.codeText
+    onPaste(event) {
+      event.preventDefault();
+      let pasteContent = (event.clipboardData || window.clipboardData).getData('text');
+      this.processPate(pasteContent)
+    },
+    processPaste(deckCode) {
+      console.log("Process Paste")
 
-        try {
-          let deck = DeckEncoder.decode(pasteContent)
-          let champNames = deck.reduce((names, card) => {
-            let info = this.sets.find(info => info.cardCode == card.code)
-            if (info.rarityRef === "Champion") {
-              names.push(info.name)
-            }
-            return names
-          }, [])
+      if (!this.loaded) {
+        console.log("Save Paste")
+        this.pasteBuffer = deckCode
+        return
+      }
 
-          // console.log("Champ names",champNames)
-          this.decks.unshift({
-            title: champNames.join(' '),
-            code: pasteContent,
-          })
-          this.updateStore()
-        } catch (error) {
-          console.log(error)
-          this.error = this.$t('str.invalidDeck')
-          setTimeout(() => {
+      try {
+        let deck = DeckEncoder.decode(deckCode)
+        let champNames = deck.reduce((names, card) => {
+          let info = this.sets.find(info => info.cardCode == card.code)
+          if (info.rarityRef === "Champion") {
+            names.push(info.name)
+          }
+          return names
+        }, [])
+        this.decks.unshift({
+          title: champNames.join(' '),
+          code: deckCode,
+        })
+        this.updateStore()
+        this.$emit('pasted')
+      } catch (error) {
+        console.log(error)
+        this.error = this.$t('str.invalidDeck')
+        setTimeout(() => {
           this.error = ""
         }, 2000)
-        }
-        
-        this.codeText = ""
-        
-      }, 100)
-      
+      }
     },
     handleDelete(id) {
       this.decks.splice(id, 1)

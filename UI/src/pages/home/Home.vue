@@ -105,7 +105,7 @@
     </div>
 
     <div class="main-content-container search" v-if="currentPage == PANELS.decklib">
-      <panel-deck-lib @showDeck="showDeck"></panel-deck-lib>
+      <panel-deck-lib ref="deckLib" @showDeck="showDeck"></panel-deck-lib>
     </div>
 
     <div class="main-content-container contact" v-if="currentPage == PANELS.contact">
@@ -163,6 +163,11 @@
         {{versionText}}</div>
     </div>
   </div>
+
+  <div class="pop-clipboard" v-if="clipboardDeck">
+    <div class="pop-title">{{$t('str.clipboard')}}</div>
+    <deck-preview :deck="clipboardDeck" @click="processPaste"></deck-preview>
+  </div>
 </template>
 
 <script>
@@ -184,6 +189,7 @@ import ContactInfo from '../../components/base/ContactInfo.vue'
 import { mapActions } from 'vuex'
 import PanelSearch from '../../components/panels/PanelSearch.vue'
 import PanelDeckLib from '../../components/panels/PanelDeckLib.vue'
+import DeckPreview from '../../components/deck/DeckPreview.vue'
 
 const requestDataWaitTime = 400 //ms
 const requestHistoryWaitTime = 100 //ms
@@ -232,6 +238,7 @@ export default {
     ContactInfo,
     PanelSearch,
     PanelDeckLib,
+    DeckPreview,
   },
   data() {
     return {
@@ -264,6 +271,9 @@ export default {
       debugInfos: "",
 
       portNum: '26531',
+
+      clipboardDeck: null,
+
     }
   },
   computed: {
@@ -324,6 +334,7 @@ export default {
       this.initLocalSettings()
       this.initStore()
       this.initChangeLocale()
+      this.initDeckPaste()
       
     } catch (error) {
       console.log(error)
@@ -340,12 +351,31 @@ export default {
     initStore() {
       window.ipcRenderer.send('request-store', 'ui-locale')
 
-      window.ipcRenderer.on('reply-store', (event, key, val) => {
-        console.log("Got store", key, val)
-
+      window.ipcRenderer.on('reply-store', (event, key, val) => {        
         if (key == 'ui-locale' && val) {
           this.$i18n.locale = val
           console.log("Change locale to", val)
+        }
+      })
+    },
+
+    initDeckPaste() {
+      window.ipcRenderer.on('handle-clipboard-deck', (event, deckCode) => {
+        console.log("handle-clipboard-deck")
+
+        this.clipboardDeck = deckCode
+      })
+    },
+
+    processPaste() {
+      this.setCurrentPage(PANELS.decklib)
+
+      this.$nextTick(() => {
+        let lib = this.$refs.deckLib
+        if (lib) {
+          console.log("handled-paste")
+          lib.processPaste(this.clipboardDeck)
+          this.clipboardDeck = null
         }
       })
     },

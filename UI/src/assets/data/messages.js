@@ -9,6 +9,7 @@ module.exports = {
       copy: "Copy",
       copied: "Copied!",
       rounds: "Rounds",
+      clipboard: 'Clipboard',
       error: {
         unkown: "Something went wrong",
         playerNotFound: "Player not found",

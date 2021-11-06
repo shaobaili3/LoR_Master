@@ -483,6 +483,11 @@ function newMainWindow() {
   mainWindow.on('hide', () => {
   })
 
+  mainWindow.on('focus', () => {
+    // console.log("Main window Focus")
+    processClipboard()
+  })
+
   mainWindow.once('ready-to-show', () => {
     
     if (!startHidden) mainWindow.show()
@@ -806,7 +811,29 @@ function getEnvLocale(env) {
   return env.LC_ALL || env.LC_MESSAGES || env.LANG || env.LANGUAGE;
 }
 
+// -----------------------------------------------
+// --- Clipboard ---
+// -----------------------------------------------
 
+function processClipboard() {
+  const { clipboard } = require('electron')
+
+  const code = clipboard.readText()
+
+  // Maybe put this into Renderer?
+  const encoder = require('./src/modules/runeterra/DeckEncoder')
+
+  try {
+    let deck = encoder.decode(code)
+    console.log("Clip board has a deck")
+    if (mainWindow) mainWindow.webContents.send('handle-clipboard-deck', code)
+
+    clipboard.writeText('')
+  } catch (error) {
+    // console.log("Clip board doesn't have a deck")
+  }
+
+}
 
 
 

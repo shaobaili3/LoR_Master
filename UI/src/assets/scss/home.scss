@@ -461,3 +461,21 @@
   padding: 20px;
   overflow: scroll;
 }
+
+.pop-clipboard {
+  position: fixed;
+  bottom: 60px;
+  right: 15px;
+  padding: 10px;
+  // width: 250px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  background: var(--col-light-bg);
+
+  z-index: 20;
+
+  .pop-title {
+    color: white;
+  }
+}
