@@ -293,13 +293,13 @@
       visibility: hidden;
       opacity: 0;
       transition: visibility 0s $trans, opacity $trans;
-      width: 250px;
+      width: 200px;
       max-height: 400px;
       overflow: auto;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 4px;
-      grid-auto-rows: 110px;
+      grid-auto-rows: 90px;
       place-items: center;
       box-sizing: border-box;
       .card {

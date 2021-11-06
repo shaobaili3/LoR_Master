@@ -42,7 +42,7 @@
       <span><i class="fas fa-trophy"></i></span>
     </button>
     <button class="left-nav-btn" 
-      
+      v-if="IS_ELECTRON"
       :class="{selected: currentPage == PANELS.decklib}" 
       @click="setCurrentPage(PANELS.decklib)">
       <span><i class="fas fa-star"></i></span>
@@ -53,11 +53,15 @@
         <div class="card" @click="openURL('https://masteringruneterra.com/')">
           <img src="https://masteringruneterra.com/wp-content/uploads/2021/09/MasteringRuneterraWebsiteLogo-300x129.webp">
         </div>
-        <div class="card" @click="openURL(`https://playruneterra.com/${locale.replace('_', '-')}/news`)">
-          <img src="https://images.contentstack.io/v3/assets/blt0eb2a2986b796d29/blt8ba1ec1b0013e362/5ea53af4ae23d30cd1dfb3e4/lor-logo.png">
+        <div class="card square" @click="openURL('https://runeterraccg.com/')">
+          <img src="https://runeterraccg.com/wp-content/uploads/2020/05/RuneterraCCG.com-Square-Logo.png">
         </div>
+        
         <div class="card square" @click="openURL('https://www.swimstrim.com/')">
           <img src="https://www.swimstrim.com/packs/media/images/logo-8b7cd382.png">
+        </div>
+        <div class="card sqaure" @click="openURL(lorNewsURL)">
+          <img src="https://images.contentstack.io/v3/assets/blt0eb2a2986b796d29/blt8ba1ec1b0013e362/5ea53af4ae23d30cd1dfb3e4/lor-logo.png">
         </div>
         <div class="card square" @click="openURL('https://runeterra.ar/')">
           <img src="https://cdnruneterra.ar/assets/img/logo_ar_black.png">
@@ -307,6 +311,9 @@ export default {
       }
       return `https://lmtservice.herokuapp.com`
     },
+    lorNewsURL() {
+      return `https://playruneterra.com/${this.locale.replace('_', '-')}/news`
+    },
   },
   mounted() {
     console.log("Mounted")
@@ -314,6 +321,7 @@ export default {
     console.log("$store.state.locale", this.locale)
 
     console.log("Is Electron:", this.IS_ELECTRON)
+
     
     // Testing switching locale
     // if (process.env.NODE_ENV == "development") {
