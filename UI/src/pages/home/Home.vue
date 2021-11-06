@@ -541,6 +541,10 @@ export default {
     },
     requestStatusInfo() {
       // Keeps requesting status
+
+      if (!IS_ELECTRON) {
+        return
+      }
       
       // DevStatus
       if (process.env.NODE_ENV == "development") {
