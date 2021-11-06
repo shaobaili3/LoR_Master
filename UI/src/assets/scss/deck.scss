@@ -9,6 +9,8 @@
   transition-property: height, margin;
   transition-duration: 0.2s;
   transition-timing-function: ease;
+
+  white-space: nowrap;
 }
 
 .loading.zeroHeight {
@@ -181,9 +183,11 @@ body {
   text-align: center;
   height: calc(100% - 84px); // 34px and 50px
 
-  &#history {
-    height: calc(100% - 108px);
-  }
+  overflow-x: hidden;
+
+  // &#history {
+  //   height: calc(100% - 108px);
+  // }
 }
 
 

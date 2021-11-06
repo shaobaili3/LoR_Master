@@ -466,10 +466,15 @@
   position: fixed;
   bottom: 60px;
   right: 15px;
-  padding: 10px;
+  padding: 10px 15px;
   // width: 250px;
   display: flex;
   flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
   border-radius: 10px;
   background: var(--col-light-bg);
 

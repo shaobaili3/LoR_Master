@@ -63,7 +63,7 @@ export default {
     }
 
     .row.deck .row {
-        width: 100%;
+        /* width: 100%; */
         display: flex;
         align-items: center;
         gap: 5px;
