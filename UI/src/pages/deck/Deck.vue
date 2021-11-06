@@ -11,18 +11,18 @@
 
         <div class="tabs" v-if="!isLoading">
             <div class="tab-title-group">
-                <div class="tab-title" @click="showOppo" :class="{active: isShowOppo}">
+                <div class="tab-title" @click="switchTab(TABS.oppo)" :class="{active: isShowOppo}">
                     <i class="fas fa-swords"></i>
                 </div>
-                <div class="tab-title" @click="showOppoGrave" :class="{active: isShowOppoGrave}">
+                <div class="tab-title" @click="switchTab(TABS.oppog)" :class="{active: isShowOppoGrave}">
                     <i class="fas fa-tombstone-alt"></i>
                 </div>
             </div>
             <div class="tab-title-group">
-                <div class="tab-title" @click="showMy" :class="{active: isShowMy}">
+                <div class="tab-title" @click="switchTab(TABS.my)" :class="{active: isShowMy}">
                     <i class="fas fa-user-cowboy"></i>
                 </div>
-                <div class="tab-title" @click="showMyGrave" :class="{active: isShowMyGrave}">
+                <div class="tab-title" @click="switchTab(TABS.myg)" :class="{active: isShowMyGrave}">
                     <i class="fas fa-tombstone-alt"></i>                
                 </div>
             </div>
@@ -150,6 +150,7 @@ export default {
             currentTab: TABS.my,
 
             LAYERS: LAYERS,
+            TABS: TABS,
 
             cardsInHandNum: null,
 
@@ -291,18 +292,31 @@ export default {
                 window.makeVisible()
             }
         },
-        showOppo() {
-            this.currentTab = TABS.oppo
+        switchTab(newTab) {
+            
+            if (this.IS_ELECTRON) {
+                this.sendUserEvent({
+                    category: "Tracker Event",
+                    action: "Switch Tab",
+                    label: "From: " + this.currentTab + " | To: " + newTab,
+                    value: null,
+                })
+            }
+
+            this.currentTab = newTab
         },
-        showMy() {
-            this.currentTab = TABS.my
-        },
-        showOppoGrave() {
-            this.currentTab = TABS.oppog
-        },
-        showMyGrave() {
-            this.currentTab = TABS.myg
-        },
+        // showOppo() {
+        //     this.currentTab = TABS.oppo
+        // },
+        // showMy() {
+        //     this.currentTab = TABS.my
+        // },
+        // showOppoGrave() {
+        //     this.currentTab = TABS.oppog
+        // },
+        // showMyGrave() {
+        //     this.currentTab = TABS.myg
+        // },
         // showCode() {
         //     this.currentTab = TABS.code
         // },

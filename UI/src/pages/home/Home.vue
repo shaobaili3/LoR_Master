@@ -742,7 +742,6 @@ export default {
           } else {
             console.log('error', e)
             this.localHistoryLoading = false
-
             this.sendUserEvent({
               category: "Main Window Requests",
               action: "Got Local History Result [Fail]",
