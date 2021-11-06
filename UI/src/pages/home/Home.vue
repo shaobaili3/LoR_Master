@@ -41,7 +41,8 @@
       @click="setCurrentPage(PANELS.leaderboard)">
       <span><i class="fas fa-trophy"></i></span>
     </button>
-    <button class="left-nav-btn" v-if="IS_ELECTRON"
+    <button class="left-nav-btn" 
+      
       :class="{selected: currentPage == PANELS.decklib}" 
       @click="setCurrentPage(PANELS.decklib)">
       <span><i class="fas fa-star"></i></span>

@@ -117,7 +117,7 @@ export default {
           }, [])
 
           // console.log("Champ names",champNames)
-          this.decks.push({
+          this.decks.unshift({
             title: champNames.join(' '),
             code: pasteContent,
           })

@@ -30,7 +30,10 @@
 
         <div id="history" class="tab-content" v-if="isShowOppo && !isLoading">
 
-            <div class="loading" v-if="matchInfos.length <= 0">{{loadingOppoText}}</div>
+            <div class="loading" v-if="matchInfos.length <= 0"
+                :class="{'zeroHeight': oppoPinnedId !== null}">
+                {{loadingOppoText}}
+            </div>
             
             <match-info 
                 v-for="(match, index) in matchInfos" 
@@ -47,7 +50,11 @@
                 :total="matchTotalNum"
                 :history="match.history"
             ></match-info>
-
+            
+            <tracker-layer 
+                @showDeck="onPinOppo" v-if="matchInfos.length <= 0"
+                :pinDeckId="oppoPinnedId"
+            ></tracker-layer>
         </div>
 
         <div class="tab-content" v-if="isShowMy && !isLoading">
@@ -65,19 +72,18 @@
             <deck-detail :deck="myGraveCode" :baseDeck="myGraveCode" :showCopy="false"></deck-detail>
         </div>
 
-        
-
         <div class="tab-content" v-if="isShowCode">
             <deck-regions :deck="deckCode" :fixedWidth="false"></deck-regions>
             <deck-detail :baseDeck="deckCode"></deck-detail>
         </div>
 
-        <div class="layerpanel" :class="{expanded: currentLayer != LAYERS.base}" v-if="!isLoading">
+        <div class="layerpanel fixed" :class="{expanded: currentLayer != LAYERS.base}" v-if="!isLoading">
             <div v-if="currentLayer == LAYERS.base" class="footer-text">{{$t('tracker.cardsInHand', {num: cardsInHandNum})}}</div>
             <button v-if="currentLayer == LAYERS.base" @click="onOpenDecklib" class="btn btn-decklib">Open Deck Library</button>
-
-            <tracker-layer v-if="currentLayer == LAYERS.decklib" @back="setLayer(LAYERS.base)"></tracker-layer>
-
+            <button class="btn btn-back" v-if="currentLayer != LAYERS.base" @click="onLayerBack">
+                <span><i class="fas fa-caret-down"></i></span>
+            </button>
+            <tracker-layer v-if="currentLayer == LAYERS.decklib"></tracker-layer>
         </div>
 
     </div>
@@ -151,6 +157,7 @@ export default {
             startingDeckCode: null,
             oppoGraveCode: null,
             myGraveCode: null,
+            oppoPinnedId: null,
 
             oppoName: null,
             oppoRank: null,
@@ -562,7 +569,15 @@ export default {
         },
         setLayer(newLayer) {
             this.currentLayer = newLayer
-        }
+        },
+        onLayerBack() {
+            this.currentLayer -= 1
+        },
+        onPinOppo(code, id) {
+            console.log("Pinning", code, id)
+            // this.oppoPinnedCode = code
+            this.oppoPinnedId = id
+        },
     }
 
 }

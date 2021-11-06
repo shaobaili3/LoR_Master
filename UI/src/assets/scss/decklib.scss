@@ -1,4 +1,8 @@
 .decklib {
+
+  height: calc(100% - 35px);
+  position: relative;
+
   .title {
     font-size: 32px;
     text-align: left;
@@ -72,6 +76,9 @@
     gap: 15px;
     // grid-template-columns: repeat(2, 1fr);
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+
+    max-height: 100%;
+    overflow-y: scroll;
 
     .deck-block {
       padding: 10px;

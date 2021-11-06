@@ -1,14 +1,10 @@
 <template>
   <div class="decklib">
-    <button class="btn btn-back" @click="onBack">
-      <span><i class="fas fa-caret-down"></i></span>
-    </button>
     <div class="decks-container">
       <div class="deck-block" @click="showDeck($event, id)" v-for="(deck, id) in decks" :key="id">
         <div class="decklib-deck-title">
           {{deck.title}}
         </div>
-        <div @click="handleDelete(id)" class="btn-delete btn"><span><i class="fas fa-trash"></i></span></div>
         <deck-preview 
           :deck="deck.code">
         </deck-preview>
@@ -19,7 +15,7 @@
       <button class="btn btn-back" @click="onBackSecond">
         <span><i class="fas fa-caret-down"></i></span>
       </button>
-      <deck-detail v-if="showDeckIndex !== null" :baseDeck="decks[showDeckIndex].code" :showCopy="false"></deck-detail>
+      <deck-detail v-if="showDeckIndex !== null" :baseDeck="decks[showDeckIndex].code" :showCopy="true"></deck-detail>
     </div>
   </div>
 </template>
@@ -29,16 +25,25 @@ import DeckPreview from '../deck/DeckPreview.vue'
 import '../../assets/scss/decklib.scss'
 import DeckDetail from '../deck/DeckDetail.vue'
 
+import { showDeckMixin } from '../mixins'
+
 export default {
   components: { DeckPreview, DeckDetail },
+  mixins: [showDeckMixin],
   emits: ['back'],
+  props: {
+    pinDeckId: Number,
+  },
   data() {
     return {
       decks: [],
       showDeckIndex: null,
     }
   },
+  computed() {
+  },
   mounted() {
+    console.log(this.pinDeckId)
     this.initStore()
   },
   methods: {
@@ -55,9 +60,31 @@ export default {
           }
         })
       } else {
-        
         // Sample data
         this.decks = [
+          {
+            title: "Bandle Nox",
+            code: 'CQBACAIDG4EAKCQBOSCADGABUYA2OANPAHBACAYBAIDC4AICAMEQIBIKFGQADQABYYAQCAIDAMGQ'
+          },
+          {
+            title: "Draven Sion",
+            code: 'CECACAIDCQAQIBAQAMCQGAIJBUCACBBGE4WTIAYBAEBS4AIBAQAQCAYDB4CACAQDBEAQGBASAICQGBAGAMAQGCZDGM'
+          },
+          {
+            title: "Thresh Asol",
+            code: 'CQBQCBIKV4AQEAIFFA2AKAYJC5KFMXDAAQAQCBIZAECASDIBAUCQ6AQDBFEVOAYBAQCTQAQDBERTGAYBAUAQ6HI'
+          }, {
+            title: "Bandle Nox",
+            code: 'CQBACAIDG4EAKCQBOSCADGABUYA2OANPAHBACAYBAIDC4AICAMEQIBIKFGQADQABYYAQCAIDAMGQ'
+          },
+          {
+            title: "Draven Sion",
+            code: 'CECACAIDCQAQIBAQAMCQGAIJBUCACBBGE4WTIAYBAEBS4AIBAQAQCAYDB4CACAQDBEAQGBASAICQGBAGAMAQGCZDGM'
+          },
+          {
+            title: "Thresh Asol",
+            code: 'CQBQCBIKV4AQEAIFFA2AKAYJC5KFMXDAAQAQCBIZAECASDIBAUCQ6AQDBFEVOAYBAQCTQAQDBERTGAYBAUAQ6HI'
+          },
           {
             title: "Bandle Nox",
             code: 'CQBACAIDG4EAKCQBOSCADGABUYA2OANPAHBACAYBAIDC4AICAMEQIBIKFGQADQABYYAQCAIDAMGQ'
@@ -72,19 +99,21 @@ export default {
           }
         ]
       }
-    },
-    onBack() {
-      console.log("Go back!")
-      this.$emit('back')
+
+      if (this.pinDeckId != null) {
+        this.showDeckIndex = this.pinDeckId
+      }
     },
     onBackSecond() {
       this.showDeckIndex = null
+      this.$emit('showDeck', null, null)
     },
     showDeck(event, id) {
       if (!event.target.className.includes('trash')) {
         // Not deleting the deck
         // this.$emit('showDeck', deck)
         this.showDeckIndex = id
+        this.$emit('showDeck', this.decks[id].code, id)
       }
     },
   }
