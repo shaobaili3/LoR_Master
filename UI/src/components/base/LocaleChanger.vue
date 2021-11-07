@@ -27,7 +27,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
   .locale-changer {
     display: flex;
     justify-content: space-between;

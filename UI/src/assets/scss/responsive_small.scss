@@ -1,3 +1,7 @@
+.mobile-btn {
+  display: none;
+}
+
 @media only screen and (max-width: 595px) {
   
   .mobile-btn {
@@ -8,6 +12,8 @@
 
     padding: 6px 15px;
     border-bottom-right-radius: 10px;
+
+    z-index: 4;
 
     &:active {
       background: var(--col-lighter-bg);
@@ -23,5 +29,66 @@
       left: 0px;
     }
   }
+
+  $content-margin-top: 50px;
+
+  .content {
+    margin-left: 0px;
+    margin-top: $content-margin-top;
+    width: 100%;
+    min-width: 0px;
+  }
+
+  .fullheight {
+    .main-content-container {
+      height: calc(100vh - $content-margin-top);
+    }
+  }
+
+  .main-content-container {
+    padding: 0px 10px;
+    width: 100%;
+
+    box-sizing: border-box;
+
+    .info-help {
+      .info-lp {
+        text-align: right;
+        min-width: 50px;
+      }
+
+      .info-rank {
+        min-width: 40px;
+      }
+    }
+  }
+
+  #btn-group-regions, .region-tabs {
+    justify-content: center;
+  }
+
+  .settings-list-item {
+
+    .locale-changer {
+      display: block;
+      
+      text-align: left;
+
+      .locale-changer-title {
+        padding: 10px 0px;
+      }
+
+      .select-container {
+        width: 100%;
+
+        .custom-select {
+          width: 100%;
+        }
+      }
+      
+    }
+  }
+
+  
 
 }

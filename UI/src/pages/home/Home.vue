@@ -183,7 +183,6 @@
 
 import '../../assets/scss/tooltips.scss'
 import '../../assets/scss/home.scss'
-import '../../assets/scss/responsive.scss'
 
 import BaseWindowControls from '../../components/base/BaseWindowControls.vue'
 import axios from 'axios'
@@ -198,6 +197,8 @@ import { mapActions } from 'vuex'
 import PanelSearch from '../../components/panels/PanelSearch.vue'
 import PanelDeckLib from '../../components/panels/PanelDeckLib.vue'
 import DeckPreview from '../../components/deck/DeckPreview.vue'
+
+import '../../assets/scss/responsive.scss'
 
 const requestDataWaitTime = 400 //ms
 const requestHistoryWaitTime = 100 //ms

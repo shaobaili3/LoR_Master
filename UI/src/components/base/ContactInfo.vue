@@ -42,7 +42,12 @@ export default {
     },
     methods: {
         openURL(url) {
-            window.openExternal(url);
+            if (window.openExternal) {
+                window.openExternal(url);
+            } else {
+                window.open(url, '_blank').focus();
+            }
+            
         },
     }
 }
