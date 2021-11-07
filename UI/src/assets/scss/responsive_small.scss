@@ -118,18 +118,44 @@
   .summary-container {
     display: block;
     position: relative;
+    padding: 0px;
 
     .summary-item {
       width: 100%;
       padding-top: 5px;
+      padding-bottom: 0px;
+
+      .detail  {
+        display: inline;
+        padding-right: 10px;
+        padding-left: 10px;
+        border-right: 1px solid var(--col-lighter-grey);
+
+        &:first-child {
+          padding-left: 4px;
+        }
+
+        .pre-info {
+          border-right: none;
+        }
+      }
+
+      &.decks-summary {
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }
+
+      &.history-summary {
+        text-align: left;
+        padding-left: 4px;
+        div {
+          display: inline;
+          padding-right: 10px;
+        }
+      }
     }
     
-    .history-summary {
-      width: 50%;
-      position: absolute;
-      top: 0px;
-      right: 0px;
-    }
   }
 
 }
@@ -158,7 +184,7 @@
               width: 100%;
               .icon-container {
                 justify-content: center;
-                padding-top: 5px;
+                padding: 6px;
               }
             }
           }

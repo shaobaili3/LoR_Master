@@ -246,6 +246,7 @@ export default {
         margin-right: 5px;
         border-radius: 50px;
         cursor: default;
+        white-space: nowrap;
     }
 
     .match-info-badge:hover {
