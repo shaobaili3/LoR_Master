@@ -6,14 +6,14 @@
             ></i>
         </div>
         <div class="row opponent">
-            <p @click="search" class="match-info-title default">
-                vs <span class="name"
+            <p @click="search" class="match-info-title">
+                <span class="desktop">vs </span><span class="name"
                         :class="{'search': region}"
                     >{{opponentName}}</span>
             </p>
-            <div class="opponent-info default" v-if="opponentRank"><i class="fas fa-trophy"></i> {{opponentRank}}</div>
+            <div class="opponent-info" v-if="opponentRank"><i class="fas fa-trophy"></i> {{opponentRank}}</div>
             <div class="history-info">{{timeString}}</div>
-            <div class="history-info" v-if="rounds">{{rounds}} {{$t('str.rounds')}}</div>
+            <div class="history-info desktop" v-if="rounds">{{rounds}} {{$t('str.rounds')}}</div>
             <div class="history-info" v-if="details" >{{ moment(new Date(details.endTime) - new Date(details.startTime)).format('m:ss') }}</div>
             <div class="match-info-badge" v-for="(badge, index) in filteredBadges" :key="index" >
                 <span v-if="badge=='recent' || badge=='frequent'" class="match-info-badge-icon fa" :class="{'fa-clock': badge=='recent', 'fa-angle-double-up': badge=='frequent'}"></span>
@@ -24,7 +24,7 @@
             <!-- <div class="text-vs">VS</div> -->
             <!-- <deck-preview @click="showDeck" :deck="deck"></deck-preview> -->
             <span class="vs-text">
-                <span class="default">VS</span>
+                <span>VS</span>
                 <span class="mobile">
                     <p @click="search" class="match-info-title">
                     vs <span class="name"
