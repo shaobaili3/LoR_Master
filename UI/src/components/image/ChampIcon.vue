@@ -1,5 +1,7 @@
 <template>
-    <div class="icon" :class="{champ: code != ''}" :style=" {backgroundImage: getChampionImgUrl}"></div>
+    <div class="icon" :class="{champ: code}" :style=" {backgroundImage: getChampionImgUrl}">
+        <div v-if="count && count != 3" class="count">{{count}}</div>
+    </div>
 </template>
 
 <script>
@@ -16,10 +18,11 @@ export default {
     },
     props: {
         code: String,
+        count: Number,
     },
     computed: {
         getChampionImgUrl() {
-            if (this.code == "") {
+            if (!this.code) {
                 return "none"
             }
             // const champImageBaseUrl = 'https://raw.githubusercontent.com/painttist/lor-champ-icons/master/images/cards/cropped/';
@@ -40,13 +43,14 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 
     .icon {
         
         display: block;
         margin-right: 0;
         margin-left: 0;
+        position: relative;
 
         padding: 9px;
         text-align: center;
@@ -62,8 +66,30 @@ export default {
         background-position: 50% 50%;
         background-size: cover;
 
+        
+        
+
         /* background-image: url('../assets/images/cards/cropped/01DE012-cropped.png'); */
     }
+
+    .count {
+        position: absolute;
+        top: -3px;
+        right: -4px;
+        font-size: 0.5em;
+        padding: 1px 5px;
+        border-radius: 100%;
+
+        background: var(--col-light-bg);
+        color: var(--cark-white);
+    }
+
+    // .won {
+    //     .count {
+    //         background: var(--col-gold);
+    //         color: black;
+    //     }
+    // }
 
     .icon.champ {
         border-radius: 30px;
