@@ -1,6 +1,9 @@
 <template>
 
-  <div class="left-nav">
+  <div class="left-nav-btn mobile-btn" @click="expandLeftNav">
+    <span><i class="fas fa-list"></i></span>
+  </div>
+  <div class="left-nav" :class="{'expanded': leftNavExpanded}">
     <div class="left-nav-btn logo no-click" v-if="!IS_ELECTRON">
       <picture>
         <source srcset="@/assets/images/logo/logo.webp" type="image/webp">
@@ -86,7 +89,7 @@
   
   <base-window-controls v-if="IS_ELECTRON" :title="''" :titleType="'window'"></base-window-controls>
   
-  <div class="content" :class="{fullheight: !IS_ELECTRON}">
+  <div class="content" :class="{fullheight: !IS_ELECTRON}" @click="shrinkLeftNav">
     <div class="main-content-container" v-if="currentPage == PANELS.my">
       <player-matches 
         @search="searchPlayer($event)"
@@ -180,6 +183,7 @@
 
 import '../../assets/scss/tooltips.scss'
 import '../../assets/scss/home.scss'
+import '../../assets/scss/responsive.scss'
 
 import BaseWindowControls from '../../components/base/BaseWindowControls.vue'
 import axios from 'axios'
@@ -277,7 +281,7 @@ export default {
       portNum: '26531',
 
       clipboardDeck: null,
-
+      leftNavExpanded: false,
     }
   },
   computed: {
@@ -355,6 +359,14 @@ export default {
     ...mapActions([
       'changeLocale'
     ]),
+
+    expandLeftNav() {
+      this.leftNavExpanded = true
+    },
+
+    shrinkLeftNav() {
+      this.leftNavExpanded = false
+    },
 
     initStore() {
       window.ipcRenderer.send('request-store', 'ui-locale')

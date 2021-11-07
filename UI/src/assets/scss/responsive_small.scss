@@ -1,0 +1,27 @@
+@media only screen and (max-width: 595px) {
+  
+  .mobile-btn {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: flex;
+
+    padding: 6px 15px;
+    border-bottom-right-radius: 10px;
+
+    &:active {
+      background: var(--col-lighter-bg);
+    }
+  }
+
+  .left-nav {
+    left: -80px;
+
+    transition: left 0.25s ease;
+
+    &.expanded {
+      left: 0px;
+    }
+  }
+
+}
