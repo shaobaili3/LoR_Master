@@ -2,8 +2,12 @@
   display: none;
 }
 
+.mobile {
+  display: none;
+}
+
 @media only screen and (max-width: 595px) {
-  
+
   .mobile-btn {
     position: absolute;
     top: 0px;
@@ -22,6 +26,8 @@
 
   .left-nav {
     left: -80px;
+    height: 100%;
+    box-sizing: border-box;
 
     transition: left 0.25s ease;
 
@@ -32,16 +38,30 @@
 
   $content-margin-top: 50px;
 
+  html, body, #app {
+    height: 100%;
+  }
+
   .content {
     margin-left: 0px;
-    margin-top: $content-margin-top;
+    margin-top: 0px;
+    padding-top: $content-margin-top;
+    height: 100%;
     width: 100%;
     min-width: 0px;
+
+    box-sizing: border-box;
+  }
+
+  .deck-content-container.fullheight {
+    margin-top: 0px;
+    padding-top: $content-margin-top;
+    height: calc(100% - $content-margin-top);
   }
 
   .fullheight {
     .main-content-container {
-      height: calc(100vh - $content-margin-top);
+      height: 100%;
     }
   }
 
@@ -89,6 +109,75 @@
     }
   }
 
-  
+  // Player Info Display
 
+  .player-name {
+    padding-top: 5px;
+  }
+
+  .summary-container {
+    display: block;
+    position: relative;
+
+    .summary-item {
+      width: 100%;
+      padding-top: 5px;
+    }
+    
+    .history-summary {
+      width: 50%;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+    }
+  }
+
+}
+
+@media screen and (max-width: 420px) {
+  // Match History Display
+
+  .match-history-container {
+    .match-history {
+      .row {
+        overflow-x: scroll;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+
+        &.decklist {
+          // display: block;
+          // text-align: left;
+          .row.deck {
+            // justify-content: flex-start;
+            // display: inline-block;
+            // width: 30%;
+            .row {
+              display: block;
+              width: 100%;
+              .icon-container {
+                justify-content: center;
+                padding-top: 5px;
+              }
+            }
+          }
+        }
+      }
+
+      // .default {
+      //   display: none;
+      // }
+
+      // .vs-text {
+      //   display: inline;
+      //   padding-left: 0px;
+
+      //   .mobile, .match-info-title, .opponent-info {
+      //     display: inline;
+      //   }
+      // }
+
+    }
+  }
 }

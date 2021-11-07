@@ -6,12 +6,12 @@
             ></i>
         </div>
         <div class="row opponent">
-            <p @click="search" class="match-info-title">
+            <p @click="search" class="match-info-title default">
                 vs <span class="name"
                         :class="{'search': region}"
                     >{{opponentName}}</span>
             </p>
-            <div class="opponent-info" v-if="opponentRank"><i class="fas fa-trophy"></i> {{opponentRank}}</div>
+            <div class="opponent-info default" v-if="opponentRank"><i class="fas fa-trophy"></i> {{opponentRank}}</div>
             <div class="history-info">{{timeString}}</div>
             <div class="history-info" v-if="rounds">{{rounds}} {{$t('str.rounds')}}</div>
             <div class="history-info" v-if="details" >{{ moment(new Date(details.endTime) - new Date(details.startTime)).format('m:ss') }}</div>
@@ -23,7 +23,17 @@
             <deck-preview @click="showDeck(deck)" :deck="deck" :won="won" :fixedWidth="true"></deck-preview>
             <!-- <div class="text-vs">VS</div> -->
             <!-- <deck-preview @click="showDeck" :deck="deck"></deck-preview> -->
-            <span class="vs-text">VS</span>
+            <span class="vs-text">
+                <span class="default">VS</span>
+                <span class="mobile">
+                    <p @click="search" class="match-info-title">
+                    vs <span class="name"
+                            :class="{'search': region}"
+                        >{{opponentName}}</span>
+                    </p>
+                    <div class="opponent-info" v-if="opponentRank"><i class="fas fa-trophy"></i> {{opponentRank}}</div>
+                </span>
+            </span>
             <deck-preview @click="showDeck(opponentDeck)" :deck="opponentDeck" :won="won" :fixedWidth="true"></deck-preview>
         </div>
         <div class="divider" v-if="details && showDetail" :class="{'won': won}"></div>
@@ -159,7 +169,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 
     .divider {
         margin-left: auto;

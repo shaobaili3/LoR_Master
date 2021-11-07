@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="sticky-top">
+    <div class="sticky-top search">
       <div class="region-tabs">
         <div
           class="region-option"

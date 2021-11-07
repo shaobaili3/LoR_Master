@@ -2,7 +2,7 @@
     <div class="sticky-top">
         <div class="player-name">{{playerName}}</div>
         <div class="summary-container">
-            <div class="player-summary">
+            <div class="summary-item player-summary">
                 <div class="detail rank" v-if="playerRank">
                     <span class="pre-info"><i class="fas fa-trophy"></i></span> 
                     {{playerRank}}</div>
@@ -13,7 +13,7 @@
                     <span class="pre-info"><i class="fas" :class="playerRegion === 'sea' ? 'fa-globe-asia' : 'fa-globe-'+playerRegion"></i></span>
                     {{playerRegionFC}}</div>
             </div>
-            <div class="decks-summary" @wheel.prevent="horizontalScroll">
+            <div class="summary-item decks-summary" @wheel.prevent="horizontalScroll">
                 <div class="champion-icons btn" 
                 v-for="(obj, index) in uniqueDeckCodes" :key="index"
                 :class="{active: filterDeckCode == obj.deck}"
@@ -21,7 +21,7 @@
                     <deck-champs :deck="obj.deck" :showRegion="true" :fixedWidth="false"></deck-champs>
                 </div>
             </div>
-            <div class="history-summary">
+            <div class="summary-item history-summary">
                 <div class="winrate" v-if="winrate">{{winrate}} <span class="subtext">{{$t('dash.winRate')}}</span></div>
                 <div class="winloss" v-if="winloss">{{winloss}}</div>
             </div>
@@ -234,7 +234,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss">
 
     .player-name {
         font-size: 24px;
@@ -357,8 +357,15 @@ export default {
 
     .main-content-container.search .sticky-top{
         position: sticky;
-        top: 97px;
+        top: 102px;
         background: var(--col-background);
+
+        &.search {
+            top: 0px;
+            padding-bottom: 5px;;
+        }
     }
+
+    
 
 </style>
