@@ -52,7 +52,7 @@
             ></match-info>
         </div>
 
-        <div class="layerpanel"  :class="{expanded: currentLayer != LAYERS.base}" v-if="!isLoading && isShowOppo">
+        <div class="layerpanel"  :class="{expanded: currentLayer != LAYERS.base}" v-if="isShowOppo">
                 <button v-if="currentLayer == LAYERS.base" @click="onOpenDecklib" class="btn btn-decklib">Open Deck Library</button>
                 <button class="btn btn-back" v-if="currentLayer != LAYERS.base" @click="onLayerBack">
                     <span><i class="fas fa-caret-down"></i></span>
