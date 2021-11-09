@@ -1,7 +1,7 @@
 .decklib {
 
   width: 100%;
-  height: calc(100% - 60px);
+  height: calc(100% - 26px);
   position: relative;
 
   .title {
@@ -91,8 +91,6 @@
       cursor: pointer;
       border-radius: 10px;
 
-      
-
       &:hover {
         background: var(--col-dark-grey);
         .icon.champ {
@@ -135,3 +133,14 @@
     }
   }
 }
+
+@media screen and (min-width: 250px) {
+
+  .main-content-container {
+    .decks-container {
+      grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    }
+  }
+  
+}
+

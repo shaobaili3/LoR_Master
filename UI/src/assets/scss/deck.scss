@@ -60,15 +60,15 @@ body {
 
 .layerpanel {
   position: absolute;
-  bottom: 0px;
-  &.fixed {
-    height: 35px;
-    position: fixed;
-    z-index: 20;
-  }
-  height: 35px;
+  bottom: 40px;
+  // &.fixed {
+  //   height: 35px;
+  //   position: fixed;
+  //   z-index: 20;
+  // }
+  padding: 5px;
+  height: 40px;
   width: 100%;
-  padding: 5px 0 8px 0;
   text-align: center;
   align-content: center;
   justify-content: center;
@@ -76,10 +76,12 @@ body {
   box-sizing: border-box;
   z-index: 10;
   transition: height 0.2s ease;
+
+  overflow: hidden;
   
-  &:hover {
-    height: max(20vh, 60px);
-  }
+  // &:hover {
+  //   height: max(50%, 200px);
+  // }
   &.second {
     height: 0px;
     padding: 0px;
@@ -88,31 +90,29 @@ body {
   }
   &.expanded {
     overflow-y: scroll;
-    height: 100%;
+    height: calc(100% - 43px - 40px - 50px); // header, footer, nav
     &.fixed {
       height: calc(100vh - 43px);
     }
     padding: 0px;
     &.second {
+      height: 100%;
       padding: 0px;
+      bottom: 0px;
     }
-  }
-  .footer-text {
-    display: block;
-    width: 100%;
   }
   .btn {
     background: var(--col-dark-grey);
     color: white;
     border: none;
     border-radius: 8px;
-    padding: 10px;
+    padding: 7px 10px;
     cursor: pointer;
     &.btn-delete {
       display: none;
     }
     &.btn-decklib {
-      margin-top: 20px;
+      // margin-top: 20px;
     }
     &.btn-back {
       display: flex;
@@ -122,16 +122,15 @@ body {
       padding: 4px 10px;
       position: sticky;
       top: 0px;
-      margin-bottom: 10px;
+      margin-bottom: 2px;
       border-radius: 0px 0px 8px 8px;
       color: var(--col-dark-white);
 
       z-index: 20;
-
-      &:hover {
-        background: var(--col-grey);
-        color: white;
-      }
+    }
+    &:hover {
+      background: var(--col-grey);
+      color: white;
     }
   }
 }
@@ -182,6 +181,7 @@ body {
   width: 100%;
   text-align: center;
   height: calc(100% - 85px); // 35px and 50px
+  position: relative;
 
   overflow-x: hidden;
 
@@ -203,4 +203,18 @@ body {
 
 .tab-text {
   padding: 0px 0px 2px 0px;
+}
+
+.footer {
+  display: flex;
+  height: 40px;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .footer-text {
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
 }

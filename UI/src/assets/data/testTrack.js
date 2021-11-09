@@ -49,7 +49,7 @@ module.exports = {
   },
   "positional_rectangles": {
       "GameState": "InProgress",
-      "OpponentName": "decks_easythresh_name",
+      "OpponentName": "Storm",
       "PlayerName": "FlyingFish",
       "Rectangles": [
           {

@@ -50,12 +50,18 @@
                 :total="matchTotalNum"
                 :history="match.history"
             ></match-info>
-            
-            <tracker-layer 
-                @showDeck="onPinOppo" v-if="matchInfos.length <= 0"
-                :pinDeckId="oppoPinnedId"
-            ></tracker-layer>
         </div>
+
+        <div class="layerpanel"  :class="{expanded: currentLayer != LAYERS.base}" v-if="!isLoading && isShowOppo">
+                <button v-if="currentLayer == LAYERS.base" @click="onOpenDecklib" class="btn btn-decklib">Open Deck Library</button>
+                <button class="btn btn-back" v-if="currentLayer != LAYERS.base" @click="onLayerBack">
+                    <span><i class="fas fa-caret-down"></i></span>
+                </button>
+                <tracker-layer v-if="currentLayer != LAYERS.base"
+                    @showDeck="onPinOppo"
+                    :pinDeckId="oppoPinnedId"
+                ></tracker-layer>
+            </div>
 
         <div class="tab-content" v-if="isShowMy && !isLoading">
             <deck-regions :deck="startingDeckCode" :fixedWidth="false"></deck-regions>
@@ -77,14 +83,17 @@
             <deck-detail :baseDeck="deckCode"></deck-detail>
         </div>
 
-        <div class="layerpanel fixed" :class="{expanded: currentLayer != LAYERS.base}" v-if="!isLoading">
-            <div v-if="currentLayer == LAYERS.base" class="footer-text">{{$t('tracker.cardsInHand', {num: cardsInHandNum})}}</div>
+        <div class="footer">
+            <div class="footer-text">{{$t('tracker.cardsInHand', {num: cardsInHandNum})}}</div>
+        </div>
+
+        <!-- <div class="layerpanel fixed" :class="{expanded: currentLayer != LAYERS.base}" v-if="!isLoading">    
             <button v-if="currentLayer == LAYERS.base" @click="onOpenDecklib" class="btn btn-decklib">Open Deck Library</button>
             <button class="btn btn-back" v-if="currentLayer != LAYERS.base" @click="onLayerBack">
                 <span><i class="fas fa-caret-down"></i></span>
             </button>
             <tracker-layer v-if="currentLayer == LAYERS.decklib"></tracker-layer>
-        </div>
+        </div> -->
 
     </div>
 </template>
@@ -218,7 +227,10 @@ export default {
             return false
         },
         apiBase() {
-            return `http://127.0.0.1:${this.portNum}`
+            if (this.IS_ELECTRON) {
+                return `http://127.0.0.1:${this.portNum}`
+            }
+            return `https://lmtservice.herokuapp.com`
         },
     },
     mounted() {
@@ -244,9 +256,9 @@ export default {
             this.initChangeLocale()
         }
         
+        this.requestStatusInfo()
         this.requestTrackInfo()
         // this.requestServerInfo()
-        this.requestStatusInfo()
         
     },
     methods: {
@@ -364,7 +376,16 @@ export default {
         requestStatusInfo() {
             
             if (!this.IS_ELECTRON) {
-                this.processTrackInfo(require('../../assets/data/testStatus'))
+                var data = require('../../assets/data/testStatus')
+                this.server = data.server
+                if (data.language) {
+                    var newLocale = data.language.replace('-', '_').toLowerCase()
+                    if (this.locale != newLocale) {
+                        console.log("Switch Locale", this.locale, newLocale)
+                        this.changeLocale(newLocale)
+                    }
+                }
+
                 return
             }
 
@@ -404,6 +425,13 @@ export default {
         requestOppoInfo() {
             // Getting opponent rank, lp and tag
             // Once per opponent change
+
+            if (!this.IS_ELECTRON) {
+                this.oppoTag = "5961"
+                this.oppoName = "Storm"
+                this.requestOpponentHistory()
+                return
+            }
 
             axios.get(`${this.apiBase}/opInfo`)
                 .then((response) => {
@@ -545,8 +573,8 @@ export default {
                 // Changes Match Info
                 console.log("New Match Info")
 
-                window.showWindow()
-                this.showOppo()
+                if (window.showWindow) window.showWindow()
+                this.switchTab(TABS.oppo)
             }
             
             this.matchTotalNum = 0;

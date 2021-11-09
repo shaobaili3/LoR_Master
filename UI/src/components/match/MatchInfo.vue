@@ -231,6 +231,11 @@ export default {
         align-items: baseline;
     }
 
+    .row.opponent {
+        overflow-x: hidden;
+        /* flex-wrap: wrap; */
+    }
+
     .row.decklist {
         /* justify-content: space-between; */
         justify-content: center;

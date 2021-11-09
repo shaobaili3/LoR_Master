@@ -116,7 +116,7 @@ export default {
         margin-left: 0px;
         margin-top: 2px;
         background-color: var(--col-background);
-        z-index: 3;
+        z-index: 100;
     }
 
     #menu-bg {

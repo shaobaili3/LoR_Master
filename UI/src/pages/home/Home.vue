@@ -45,7 +45,7 @@
       <span><i class="fas fa-trophy"></i></span>
     </button>
     <button class="left-nav-btn" 
-      v-if="IS_ELECTRON"
+      
       :class="{selected: currentPage == PANELS.decklib}" 
       @click="setCurrentPage(PANELS.decklib)">
       <span><i class="fas fa-star"></i></span>
@@ -111,7 +111,7 @@
       <leaderboard :apiBase="apiBase" @search="searchPlayer($event)"></leaderboard>
     </div>
 
-    <div class="main-content-container search" v-if="currentPage == PANELS.decklib">
+    <div class="main-content-container deck-library" v-if="currentPage == PANELS.decklib">
       <panel-deck-lib ref="deckLib" @showDeck="showDeck"></panel-deck-lib>
     </div>
 
