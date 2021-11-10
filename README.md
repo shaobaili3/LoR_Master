@@ -1,5 +1,5 @@
 
-# LoR Master Tracker-beta
+# Legends of Runeterra Deck Tracker - LoR Master Tracker
 
 <p align="center">
 <img src="Preview/logo2.jpg"width="480" height="270"/>
