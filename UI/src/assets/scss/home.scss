@@ -218,7 +218,7 @@
   width: 80px;
   height: 100vh;
   background: var(--col-light-bg);
-  z-index: 5;
+  z-index: 105;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -383,7 +383,7 @@
   width: 100vw;
   height: 45px;
   background: var(--col-lighter-bg);
-  z-index: 6;
+  z-index: 110;
   display: flex;
   justify-content: space-between;
   align-items: center;
