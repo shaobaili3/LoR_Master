@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import BaseWindowControls from '../../components/BaseWindowControls.vue';
+import BaseWindowControls from '../../components/base/BaseWindowControls.vue';
 export default {
     components: { BaseWindowControls },
     mounted() {

@@ -26,7 +26,7 @@
 </template>
 
 <script>
-import CardImage from './image/CardImage.vue'
+import CardImage from '../image/CardImage.vue'
 
 export default {
     components: {

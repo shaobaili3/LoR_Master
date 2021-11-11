@@ -28,6 +28,8 @@ var startHidden = false
 var isWin = process.platform === "win32"
 var port = defaultPort
 
+process.env.IS_ELECTRON = "electron"
+
 // -----------------------------------------------
 // --- app entry points ---
 // -----------------------------------------------
@@ -53,14 +55,14 @@ detectPortAndStartService()
 
 app.on('ready', () => {
   // --- registers global shortcuts ---
-  globalShortcut.register('Alt+CommandOrControl+E', () => {
+  // globalShortcut.register('Alt+CommandOrControl+E', () => {
     // console.log('Electron loves global shortcuts!')
-    toggleDeckWindow()
-  })
+    // toggleDeckWindow()
+  // })
 
-  globalShortcut.register('Alt+CommandOrControl+W', () => {
-    toggleMinDeckWindow()
-  })
+  // globalShortcut.register('Alt+CommandOrControl+W', () => {
+    // toggleMinDeckWindow()
+  // })
   
   if (developmentMode) {
     globalShortcut.register('Alt+CommandOrControl+T', () => {
@@ -429,6 +431,7 @@ function newMainWindow() {
   let windowWidth = 800 // (335)
   let windowMaxWidth = 1200
   let windowMinWidth = 700
+  let windowMinHeight = 730
   let windowHeight = height * 0.7
   // let windowXPadding = 200
   // let windowYPadding = 20
@@ -443,7 +446,7 @@ function newMainWindow() {
   mainWindow = new BrowserWindow({
     maxWidth: windowMaxWidth,
     minWidth: windowMinWidth,
-    minHeight: headerHeight,
+    minHeight: windowMinHeight,
     width: windowWidth, 
     height: windowHeight, 
     x: (width - windowWidth) / 2 + xOffSet,
@@ -456,7 +459,7 @@ function newMainWindow() {
       // nodeIntegration: true,
       // enableRemoteModule: true,
       contextIsolation: false,
-      preload: __dirname + '/appsrc/preload.js',
+      preload: __dirname + '/src/preload.js',
     }
   })
 
@@ -479,6 +482,11 @@ function newMainWindow() {
   })
 
   mainWindow.on('hide', () => {
+  })
+
+  mainWindow.on('focus', () => {
+    // console.log("Main window Focus")
+    processClipboard()
   })
 
   mainWindow.once('ready-to-show', () => {
@@ -536,7 +544,7 @@ function newDeckWindow() {
       // nodeIntegration: true,
       // enableRemoteModule: true,
       contextIsolation: false,
-      preload: __dirname + '/appsrc/preload.js',
+      preload: __dirname + '/src/preload.js',
     },
     // show: false
     // titleBarStyle: 'hiddenInset'
@@ -613,7 +621,7 @@ function newInfoWindow() {
       // nodeIntegration: true,
       // enableRemoteModule: true,
       contextIsolation: false,
-      preload: __dirname + '/appsrc/preload.js',
+      preload: __dirname + '/src/preload.js',
     }
     // titleBarStyle: 'hiddenInset'
   })
@@ -804,7 +812,29 @@ function getEnvLocale(env) {
   return env.LC_ALL || env.LC_MESSAGES || env.LANG || env.LANGUAGE;
 }
 
+// -----------------------------------------------
+// --- Clipboard ---
+// -----------------------------------------------
 
+function processClipboard() {
+  const { clipboard } = require('electron')
+
+  const code = clipboard.readText()
+
+  // Maybe put this into Renderer?
+  const encoder = require('./src/modules/runeterra/DeckEncoder')
+
+  try {
+    let deck = encoder.decode(code)
+    console.log("Clip board has a deck")
+    if (mainWindow) mainWindow.webContents.send('handle-clipboard-deck', code)
+
+    clipboard.writeText('')
+  } catch (error) {
+    // console.log("Clip board doesn't have a deck")
+  }
+
+}
 
 
 

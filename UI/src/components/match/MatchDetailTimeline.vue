@@ -74,7 +74,7 @@
 </template>
 
 <script>
-import CardImage from './image/CardImage.vue'
+import CardImage from '../image/CardImage.vue'
 // import CardPreview from './CardPreview.vue'
 
 import moment from 'moment'

@@ -28,7 +28,7 @@
 
 <script>
 
-import DeckEncoder from '../modules/runeterra/DeckEncoder'
+import DeckEncoder from '../../modules/runeterra/DeckEncoder'
 import CardPreview from './CardPreview.vue'
 
 export default {
@@ -203,7 +203,7 @@ export default {
 
     .deck-detail.fixed-height {
         height: 100%;
-        overflow: scroll;
+        overflow-y: scroll;
     }
 
     .actions {    

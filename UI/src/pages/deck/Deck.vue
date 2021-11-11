@@ -11,18 +11,18 @@
 
         <div class="tabs" v-if="!isLoading">
             <div class="tab-title-group">
-                <div class="tab-title" @click="showOppo" :class="{active: isShowOppo}">
+                <div class="tab-title" @click="switchTab(TABS.oppo)" :class="{active: isShowOppo}">
                     <i class="fas fa-swords"></i>
                 </div>
-                <div class="tab-title" @click="showOppoGrave" :class="{active: isShowOppoGrave}">
+                <div class="tab-title" @click="switchTab(TABS.oppog)" :class="{active: isShowOppoGrave}">
                     <i class="fas fa-tombstone-alt"></i>
                 </div>
             </div>
             <div class="tab-title-group">
-                <div class="tab-title" @click="showMy" :class="{active: isShowMy}">
+                <div class="tab-title" @click="switchTab(TABS.my)" :class="{active: isShowMy}">
                     <i class="fas fa-user-cowboy"></i>
                 </div>
-                <div class="tab-title" @click="showMyGrave" :class="{active: isShowMyGrave}">
+                <div class="tab-title" @click="switchTab(TABS.myg)" :class="{active: isShowMyGrave}">
                     <i class="fas fa-tombstone-alt"></i>                
                 </div>
             </div>
@@ -30,7 +30,10 @@
 
         <div id="history" class="tab-content" v-if="isShowOppo && !isLoading">
 
-            <div class="loading" v-if="matchInfos.length <= 0">{{loadingOppoText}}</div>
+            <div class="loading" v-if="matchInfos.length <= 0"
+                :class="{'zeroHeight': oppoPinnedId !== null}">
+                {{loadingOppoText}}
+            </div>
             
             <match-info 
                 v-for="(match, index) in matchInfos" 
@@ -47,8 +50,18 @@
                 :total="matchTotalNum"
                 :history="match.history"
             ></match-info>
-
         </div>
+
+        <div class="layerpanel"  :class="{expanded: currentLayer != LAYERS.base}" v-if="isShowOppo">
+                <button v-if="currentLayer == LAYERS.base" @click="onOpenDecklib" class="btn btn-decklib">Open Deck Library</button>
+                <button class="btn btn-back" v-if="currentLayer != LAYERS.base" @click="onLayerBack">
+                    <span><i class="fas fa-caret-down"></i></span>
+                </button>
+                <tracker-layer v-if="currentLayer != LAYERS.base"
+                    @showDeck="onPinOppo"
+                    :pinDeckId="oppoPinnedId"
+                ></tracker-layer>
+            </div>
 
         <div class="tab-content" v-if="isShowMy && !isLoading">
             <deck-regions :deck="startingDeckCode" :fixedWidth="false"></deck-regions>
@@ -65,16 +78,22 @@
             <deck-detail :deck="myGraveCode" :baseDeck="myGraveCode" :showCopy="false"></deck-detail>
         </div>
 
-        
-
         <div class="tab-content" v-if="isShowCode">
             <deck-regions :deck="deckCode" :fixedWidth="false"></deck-regions>
             <deck-detail :baseDeck="deckCode"></deck-detail>
         </div>
 
-        <div class="footer" v-if="!isLoading">
+        <div class="footer" v-if="!isLoading"> 
             <div class="footer-text">{{$t('tracker.cardsInHand', {num: cardsInHandNum})}}</div>
         </div>
+
+        <!-- <div class="layerpanel fixed" :class="{expanded: currentLayer != LAYERS.base}" v-if="!isLoading">    
+            <button v-if="currentLayer == LAYERS.base" @click="onOpenDecklib" class="btn btn-decklib">Open Deck Library</button>
+            <button class="btn btn-back" v-if="currentLayer != LAYERS.base" @click="onLayerBack">
+                <span><i class="fas fa-caret-down"></i></span>
+            </button>
+            <tracker-layer v-if="currentLayer == LAYERS.decklib"></tracker-layer>
+        </div> -->
 
     </div>
 </template>
@@ -82,14 +101,19 @@
 
 <script>
 
-import MatchInfo from '../../components/MatchInfo.vue'
+import MatchInfo from '../../components/match/MatchInfo.vue'
 import axios from 'axios'
-import BaseWindowControls from '../../components/BaseWindowControls.vue'
-import DeckDetail from '../../components/DeckDetail.vue'
-import DeckRegions from '../../components/DeckRegions.vue'
+import BaseWindowControls from '../../components/base/BaseWindowControls.vue'
+import DeckDetail from '../../components/deck/DeckDetail.vue'
+import DeckRegions from '../../components/deck/DeckRegions.vue'
 import DeckEncoder from '../../modules/runeterra/DeckEncoder'
 
 import { mapActions } from 'vuex'
+
+import '../../assets/scss/tooltips.scss'
+import '../../assets/scss/deck.scss'
+
+import TrackerLayer from '../../components/tracker/TrackerLayer.vue'
 
 const requestDataWaitTime = 100; // ms
 const requestServerWaitTime = 3000; //ms
@@ -106,6 +130,12 @@ const TABS = {
     myg: 4,
 }
 
+const LAYERS = {
+    base: 0,
+    decklib: 1,
+    deckdetail: 2,
+}
+
 var lastTrackTime, lastServerRequestTime, lastStatusRequestTime;
 
 export default {
@@ -114,6 +144,7 @@ export default {
         MatchInfo,
         DeckDetail,
         DeckRegions,
+        TrackerLayer,
     },
     data() {
         return {
@@ -127,12 +158,16 @@ export default {
             titleType: null,
             currentTab: TABS.my,
 
+            LAYERS: LAYERS,
+            TABS: TABS,
+
             cardsInHandNum: null,
 
             currentDeckCode: null,
             startingDeckCode: null,
             oppoGraveCode: null,
             myGraveCode: null,
+            oppoPinnedId: null,
 
             oppoName: null,
             oppoRank: null,
@@ -141,7 +176,9 @@ export default {
 
             lorRunning: false,
 
-            portNum: '26531'
+            portNum: '26531',
+
+            currentLayer: 0,
         }
     },
     computed: {
@@ -190,7 +227,10 @@ export default {
             return false
         },
         apiBase() {
-            return `http://127.0.0.1:${this.portNum}`
+            if (this.IS_ELECTRON) {
+                return `http://127.0.0.1:${this.portNum}`
+            }
+            return `https://lmtservice.herokuapp.com`
         },
     },
     mounted() {
@@ -200,24 +240,26 @@ export default {
         // console.log("Mounted")
         // this.requestData()
         console.log("Page Deck Mounted")
-        console.log("Webcontents ID", window.getID())
 
         this.infoType = "match"
 
         // this.hideWindow()
-        window.ipcRenderer.on('return-port', (event, port) => {
-            console.log("New Port:", port)
-            this.portNum = port
-        })
+        if (this.IS_ELECTRON) {
+            window.ipcRenderer.on('return-port', (event, port) => {
+                console.log("New Port:", port)
+                this.portNum = port
+            })
 
-        window.ipcRenderer.send("get-port")
+            window.ipcRenderer.send("get-port")
 
+            this.initStore()
+            this.initChangeLocale()
+        }
+        
+        this.requestStatusInfo()
         this.requestTrackInfo()
         // this.requestServerInfo()
-        this.requestStatusInfo()
         
-        this.initStore()
-        this.initChangeLocale()
     },
     methods: {
 
@@ -262,18 +304,31 @@ export default {
                 window.makeVisible()
             }
         },
-        showOppo() {
-            this.currentTab = TABS.oppo
+        switchTab(newTab) {
+            
+            if (this.IS_ELECTRON) {
+                this.sendUserEvent({
+                    category: "Tracker Event",
+                    action: "Switch Tab",
+                    label: "From: " + this.currentTab + " | To: " + newTab,
+                    value: null,
+                })
+            }
+
+            this.currentTab = newTab
         },
-        showMy() {
-            this.currentTab = TABS.my
-        },
-        showOppoGrave() {
-            this.currentTab = TABS.oppog
-        },
-        showMyGrave() {
-            this.currentTab = TABS.myg
-        },
+        // showOppo() {
+        //     this.currentTab = TABS.oppo
+        // },
+        // showMy() {
+        //     this.currentTab = TABS.my
+        // },
+        // showOppoGrave() {
+        //     this.currentTab = TABS.oppog
+        // },
+        // showMyGrave() {
+        //     this.currentTab = TABS.myg
+        // },
         // showCode() {
         //     this.currentTab = TABS.code
         // },
@@ -318,35 +373,22 @@ export default {
                     { console.log('error', e) }
                 })
         },
-        // requestServerInfo() {
-        //     lastServerRequestTime = Date.now()
-        //     axios.get(`${this.apiBase}/process`)
-        //         .then((response) => {
-        //             // console.log(response.data)
-
-        //             var elapsedTime = Date.now() - lastServerRequestTime // ms
-        //             // console.log("Elapsed ", elapsedTime)
-                    
-        //             this.server = response.data.server
-
-        //             // console.log("Server", this.server)
-
-        //             if (requestServerWaitTime > elapsedTime) {
-        //                 setTimeout(this.requestServerInfo, requestServerWaitTime - elapsedTime); 
-        //             } else {
-        //                 this.requestServerInfo()
-        //             }
-                    
-        //         })
-        //         .catch((e) => {
-        //             if (axios.isCancel(e)) {
-        //                 console.log("Request cancelled");
-        //             } else 
-        //             { console.log('error', e) }
-        //             this.requestServerInfo()
-        //         })
-        // },
         requestStatusInfo() {
+            
+            if (!this.IS_ELECTRON) {
+                var data = require('../../assets/data/testStatus')
+                this.server = data.server
+                if (data.language) {
+                    var newLocale = data.language.replace('-', '_').toLowerCase()
+                    if (this.locale != newLocale) {
+                        console.log("Switch Locale", this.locale, newLocale)
+                        this.changeLocale(newLocale)
+                    }
+                }
+
+                return
+            }
+
             // Keeps requesting status
             lastStatusRequestTime = Date.now()
             axios.get(`${this.apiBase}/status`)
@@ -384,6 +426,13 @@ export default {
             // Getting opponent rank, lp and tag
             // Once per opponent change
 
+            if (!this.IS_ELECTRON) {
+                this.oppoTag = "5961"
+                this.oppoName = "Storm"
+                this.requestOpponentHistory()
+                return
+            }
+
             axios.get(`${this.apiBase}/opInfo`)
                 .then((response) => {
                     var op = response.data
@@ -405,6 +454,20 @@ export default {
                 })
         },
         requestTrackInfo() {
+
+            if (!this.IS_ELECTRON) {
+
+                if (!this.startingDeckCode) {
+                    Math.random() > 0.2 ? this.processTrackInfo(require('../../assets/data/testTrack')) : this.processTrackInfo({
+                        positional_rectangles: null
+                    })
+                } else {
+                    this.processTrackInfo(require('../../assets/data/testTrack'))
+                }
+                
+                setTimeout(this.requestTrackInfo, 1000);
+                return
+            }
 
             lastTrackTime = Date.now()
             axios.get(`${this.apiBase}/track`)
@@ -510,8 +573,8 @@ export default {
                 // Changes Match Info
                 console.log("New Match Info")
 
-                window.showWindow()
-                this.showOppo()
+                if (window.showWindow) window.showWindow()
+                this.switchTab(TABS.oppo)
             }
             
             this.matchTotalNum = 0;
@@ -533,232 +596,32 @@ export default {
 
         },
         handleGameEnd() {
-            window.ipcRenderer.send("game-end-trigger")
+            if (this.IS_ELECTRON) {
+                window.ipcRenderer.send("game-end-trigger")
+            }
         },
         handleGameStart() {
-            window.ipcRenderer.send("game-start-trigger")
-        }
+            if (this.IS_ELECTRON) {
+                window.ipcRenderer.send("game-start-trigger")
+            }
+        },
+
+        onOpenDecklib() {
+            this.currentLayer = LAYERS.decklib
+        },
+        setLayer(newLayer) {
+            this.currentLayer = newLayer
+        },
+        onLayerBack() {
+            this.currentLayer -= 1
+        },
+        onPinOppo(code, id) {
+            console.log("Pinning", code, id)
+            // this.oppoPinnedCode = code
+            this.oppoPinnedId = id
+        },
     }
 
 }
 
 </script>
-
-<style lang="scss">
-    .tooltip {
-        position: relative;
-
-        .tooltiptext {
-            visibility: hidden;
-            opacity: 0;
-
-            transition: visibility 0s linear 200ms, opacity 200ms ease;
-
-            display: block;
-            /* width: 120px; */
-            font-size: 16px;
-
-            white-space: nowrap;
-            background-color: black;
-            color: #fff;
-            text-align: center;
-            border-radius: 6px;
-            padding: 8px 10px;
-
-            box-sizing: border-box;
-
-            position: absolute;
-            z-index: 10;
-
-            /* Position the tooltip */
-            bottom: 0%;
-            left: 50%;
-            transform:translateX(-50%);
-            
-            /* Position the tooltip */
-            &.top {
-                bottom: 120%;
-                left: 50%;
-                transform:translateX(-50%);
-            }
-
-            &.right {
-                top: 50%;
-                bottom: auto;
-                left: 105%;
-                transform: translateY(-50%);
-            }
-
-            &.left {
-                top: 50%;
-                bottom: auto;
-                right: 105%;
-                left: auto;
-                transform: translateY(-50%);
-            }
-
-            &.top-end {
-                top: auto;
-                bottom: 120%;
-                left: auto;
-                right: 0%;
-                transform:translateX(0%);
-            }
-
-            &.top-start {
-                top: auto;
-                bottom: 120%;
-                left: 0%;
-                right: auto;
-                transform:translateX(0%);
-            }
-
-            &.top-bottom-right {
-                bottom: 100%;
-                right: -10px;
-                left: auto;
-                transform: none;
-                margin-bottom: 22px;
-            }
-        
-            /* left: 50%; */
-            /* margin-left: -50%; */
-            .fas {
-                margin-right: 5px;
-            }
-        }
-
-        &:hover {
-            .tooltiptext {
-                visibility: visible;
-                opacity: 1;
-                transition: visibility 0s linear 0s, opacity 200ms ease;
-            }
-        }
-    }
-</style>
-
-
-<style scoped>
-
-    .invisible {
-        display: none;
-    }
-    
-    .loading {
-        margin-top: 20px;
-        font-size: 1.2em;
-    }
-
-    .errorText {
-        margin-top: 20px;
-        font-size: 1.2em;
-    }
-
-    #title {
-        margin-top: 0px;
-        margin-bottom: 40px;
-    
-    }
-
-    #subtitle {
-        margin-top: 80px;
-        margin-bottom: 20px;
-    }
-
-    #history {
-        /* margin-top: 40px; */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        max-width: 280px;
-        /* min-width: 270px; */
-        width: 100%;
-
-        /* margin: 3px 3px 3px 3px; */
-
-        /* font-size: 0.9em; */
-    }
-
-    #content {
-        margin-top: 40px;
-    }
-
-    .footer {
-        display: flex;
-        /* height: 30px; */
-        position: fixed;
-        bottom: 0px;
-        width: 100%;
-        text-align: center;
-        align-content: center;
-        justify-content: center;
-        padding: 5px 0 8px 0;;
-        background: var(--col-background);
-    }
-
-    .tabs {
-        display: flex;
-        position: sticky;
-        top: 40px;
-        width: calc(100% - 20px);
-        max-width: 280px;
-        
-        justify-content: space-evenly;
-        align-items: center;
-        gap: 10px;
-        padding: 10px 10px;
-        
-        z-index: 2;
-        background: var(--col-background);
-    }
-
-    .tab-title-group {
-        flex: 1 1 0;
-        display: flex;
-        background: var(--col-dark-grey);
-        padding: 5px 0px;
-        border-radius: 20px;
-    }
-
-    .tab-title {
-        flex: 1 1 0;
-        color: var(--col-lighter-grey);
-        cursor: pointer;
-        text-align: center;
-        background: var(--col-dark-grey);
-        padding: 0px 0px;
-        border-radius: 20px;
-    }
-
-    .tab-title:hover {
-        color: white;
-        /* background: var(--col-grey); */
-    }
-
-    .tab-title.active {
-        color: white;
-    }
-
-    .tab-content {
-        max-width: 280px;
-        width: 100%;
-        text-align: center;
-    }
-
-    /* Styling Deck Content */
-    .tab-content .icon-content {
-        /* position: sticky;
-        z-index: 2;
-        top: 90px;
-        background: var(--col-background); */
-        padding: 0px 0px 5px 0px;
-    }
-
-    .tab-text {
-        padding: 0px 0px 2px 0px;
-    }
-
-
-
-</style>

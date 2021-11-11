@@ -1,6 +1,6 @@
 <template>
     <div class="icon-container">
-        <champ-icon v-for="(champ, index) in getChamps" :key="index" :code="champ"></champ-icon>
+        <champ-icon v-for="(champ, index) in getChamps" :key="index" :code="champ.code" :count="champ.count"></champ-icon>
         <div class="extra-champ" :class="{'fixed-width': fixedWidth }" v-if="extraChampString">{{extraChampString}}</div>
         <deck-regions v-if="getChamps.length <= 0 && showRegion" :deck="deck" :fixedWidth="fixedWidth"></deck-regions>
     </div>
@@ -8,9 +8,9 @@
 
 <script>
 
-import DeckEncoder from '../modules/runeterra/DeckEncoder'
-import championCards from '../assets/data/champion.js'
-import ChampIcon from './image/ChampIcon.vue'
+import DeckEncoder from '../../modules/runeterra/DeckEncoder'
+import championCards from '../../assets/data/champion.js'
+import ChampIcon from '../image/ChampIcon.vue'
 import DeckRegions from './DeckRegions.vue'
 
 // const maxChamp = 2;
@@ -63,7 +63,11 @@ export default {
                     var champCode = championCards.champions[i]
                     var cardCode = deck[j].code
                     if (cardCode == champCode) {
-                        champs.push(champCode)
+                        let champ = {
+                            count: deck[j].count,
+                            code: champCode
+                        }
+                        champs.push(champ)
                     }
                 }
             }
@@ -71,7 +75,11 @@ export default {
             if (this.fixedWidth) {
                 var fillerIcons = this.maxChamp - champs.length
                 for (let i = 0; i < fillerIcons; i++) {
-                    champs.push("")
+                    let champ = {
+                        count: null,
+                        code: null
+                    }
+                    champs.push(champ)
                 }
             }
             return champs

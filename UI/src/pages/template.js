@@ -20,6 +20,7 @@ const store = createStore({
         return {
             locale: 'en_us',
             sets: sets_en_combined,
+            IS_ELECTRON: window.ipcRenderer !== undefined,
         }
     },
     mutations: {
@@ -69,7 +70,9 @@ app.mixin({
     computed: {
         ...mapState([
             'locale',
-            'sets'
+            'sets',
+            'IS_ELECTRON',
+            'API',
         ])
     },
     methods: {

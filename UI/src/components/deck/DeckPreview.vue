@@ -10,8 +10,8 @@
 
 <script>
 
-import DeckEncoder from '../modules/runeterra/DeckEncoder'
-import championCards from '../assets/data/champion.js'
+import DeckEncoder from '../../modules/runeterra/DeckEncoder'
+import championCards from '../../assets/data/champion.js'
 import DeckChamps from './DeckChamps.vue';
 import DeckRegions from './DeckRegions.vue';
 //https://painttist.github.io/lor-champ-icons/data/champion.js
@@ -45,7 +45,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 
     .row {
         display: flex;
@@ -63,7 +63,7 @@ export default {
     }
 
     .row.deck .row {
-        width: 100%;
+        /* width: 100%; */
         display: flex;
         align-items: center;
         gap: 5px;

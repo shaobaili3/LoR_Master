@@ -45,7 +45,7 @@
 <script>
 // const axios = require('axios')
 import axios from 'axios'
-import LeaderboardPlayer from '../components/LeaderboardPlayer.vue'
+import LeaderboardPlayer from './LeaderboardPlayer.vue'
 
 const REGION_ID = {
     NA: 0, EU: 1, AS: 2, SEA: 3
@@ -124,7 +124,7 @@ export default {
         getLeaderboard(regionID) {
 
             // Return if using npm run serve
-            if (process.env.NODE_ENV == "development") { return }
+            // if (process.env.NODE_ENV == "development") { return }
 
             lastLeaderboardRequestTime = Date.now()
 
@@ -199,7 +199,7 @@ export default {
 </script>
 
 
-<style lang="scss" scoped>
+<style lang="scss">
 
     .info-help {
         color: white;
@@ -211,6 +211,8 @@ export default {
         align-items: center;
         justify-content: space-around;
         border-radius: 5px;
+
+        white-space: nowrap;
     }
 
     .info-rank {

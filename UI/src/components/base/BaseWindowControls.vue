@@ -70,14 +70,14 @@ export default {
   // }
     methods: {
         shrinkToggle() {
-            window.toggleShrinkWindow() // Defined in appsrc > preload.js
+            if (this.IS_ELECTRON) window.toggleShrinkWindow() // Defined in appsrc > preload.js
         },
         minApp() {
-            window.minWindow() // Defined in appsrc > preload.js
+            if (this.IS_ELECTRON) window.minWindow() // Defined in appsrc > preload.js
             //   console.log("Closing App")
         },
         closeApp() {
-            window.hideWindow()
+            if (this.IS_ELECTRON) window.hideWindow()
         },
         checkIsMin() {
             if (window.isMin)
@@ -116,7 +116,7 @@ export default {
         margin-left: 0px;
         margin-top: 2px;
         background-color: var(--col-background);
-        z-index: 3;
+        z-index: 100;
     }
 
     #menu-bg {
