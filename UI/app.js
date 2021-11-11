@@ -431,6 +431,7 @@ function newMainWindow() {
   let windowWidth = 800 // (335)
   let windowMaxWidth = 1200
   let windowMinWidth = 700
+  let windowMinHeight = 730
   let windowHeight = height * 0.7
   // let windowXPadding = 200
   // let windowYPadding = 20
@@ -445,7 +446,7 @@ function newMainWindow() {
   mainWindow = new BrowserWindow({
     maxWidth: windowMaxWidth,
     minWidth: windowMinWidth,
-    minHeight: headerHeight,
+    minHeight: windowMinHeight,
     width: windowWidth, 
     height: windowHeight, 
     x: (width - windowWidth) / 2 + xOffSet,

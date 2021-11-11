@@ -83,7 +83,7 @@
             <deck-detail :baseDeck="deckCode"></deck-detail>
         </div>
 
-        <div class="footer">
+        <div class="footer" v-if="!isLoading"> 
             <div class="footer-text">{{$t('tracker.cardsInHand', {num: cardsInHandNum})}}</div>
         </div>
 
