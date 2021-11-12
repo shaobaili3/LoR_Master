@@ -105,16 +105,7 @@ def track():
 
 @app.route("/history/<string:server>/<string:name>/<string:tag>", methods=['get'])
 def history(server, name, tag):
-    if server == 'sea':
-        print('history: Riot API not suppport SEA')
-        return jsonify([])
-    settingInspect = Setting()
-    settingInspect.riotServer = Server._value2member_map_[server]
-    networkInspect = Network(settingInspect)
-    riotInspect = Riot(networkInspect, cacheModel)
-    playerInspect = Player(riotInspect, leaderboardModel)
-    playerInspect.inspectFlask(name, tag, 10)
-    return jsonify([summary.__dict__ for summary in playerInspect.summaries.values()])
+    return jsonify(herokuModel.gethHistory(server, name, tag))
 
 
 @app.route("/name/<string:server>/<string:playername>", methods=['get'])
@@ -161,7 +152,8 @@ def search(name, tag, server):
 @app.route("/leaderboard/<string:server>", methods=['get'])
 def get_leaderboard(server):
     # refactor to leaderboard model
-    board = leaderboardModel.getLeaderboard(server)
+    #board = leaderboardModel.getLeaderboard(server)
+    board = herokuModel.getMatches(server)
     boardWithTag = []
     playlistDict = {}
     if board is None:
