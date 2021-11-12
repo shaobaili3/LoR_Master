@@ -12,11 +12,11 @@ class Local:
         self.setting = setting
         self.cache = cache
         self.session = requests.Session()
-        
+
         self.reset()
 
-
     # call this function after changes server in the tracker
+
     def reset(self):
         self.opponentName = None
         self.opponentTag = None
@@ -190,7 +190,7 @@ class Local:
         except Exception as e:
             print('updateMyDeck Error: ', e)
             return
-        if details['DeckCode'] is None:
+        if details['CardsInDeck'] is None:
             print('updateMyDeck Match is not start')
             return
         currentCards = details['CardsInDeck']
