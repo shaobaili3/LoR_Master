@@ -2,7 +2,7 @@ import requests
 import Models.network
 
 LEADERBOARD_HEROKU = 'https://lmtservice.herokuapp.com/leaderboard/'
-HISTORY_HEROKU = 'https://lmtservice.herokuapp.com/history/'
+HISTORY_HEROKU = 'https://lormaster.herokuapp.com/history/'
 
 class Heroku():
     def __init__(self) -> None:
