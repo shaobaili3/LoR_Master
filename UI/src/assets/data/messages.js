@@ -383,7 +383,7 @@ module.exports = {
       player: {
         placeholder: "Exemplo: Storm#5961",
       },
-      prompt: "⬆ Enter name and tag to search",
+      prompt: "⬆ Digite o nome e a tag do jogador para procurar",
     },
     tooltips: {
       lorlogin: "Por favor, faça login no LoR",
