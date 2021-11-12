@@ -76,4 +76,5 @@ export default { champions: [
   "05SH014",
   "05SI009", // End of Set 5 First expansion
   
+  "05PZ022", // Jayce
 ]}
