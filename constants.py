@@ -18,12 +18,12 @@ MAX_NUM_ALL = 20
 
 DefaultLanguage = 'en-US'
 
-UNSUPPORTED_MODE = ['Expeditions', 'Mods_URF', 'Power2', 'Mods_Power_1']
+UNSUPPORTED_MODE = ['Expeditions', 'Mods_URF', 'Power2', 'Mods_Power_1', 'Power_4']
 UNSUPPORTED_TYPE = ['AI']
 # temp remove AI for debug
 # UNSUPPORTED_TYPE = []
 SUPPORTED_MODE = ['SeasonalTournamentLobby',
-                  'LastCallQualifierGauntletLobby', 'Bo3ChallengeLobby', 'StandardGauntlet']
+                  'LastCallQualifierGauntletLobby', 'Bo3ChallengeLobby', 'StandardGauntlet', 'Constructed']
 
 appDir = user_data_dir('LMT', DISPLAY_TITLE)
 

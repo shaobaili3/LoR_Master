@@ -95,8 +95,9 @@ class Player:
                 if gameMode in cs.UNSUPPORTED_MODE:
                     continue
 
-                if gameType in cs.UNSUPPORTED_TYPE:
+                if gameMode not in cs.SUPPORTED_MODE:
                     continue
+                
                 self.addPlayerInfo(detail)
                 self.matchesJson.append(detail)
                 matchNum += 1
