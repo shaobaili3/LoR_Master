@@ -22,8 +22,8 @@
         {{error}}
       </div>
     </div>
-    <div class="decks-container">
-      <div class="deck-block" @click="showDeck($event, deck.code)" v-for="(deck, id) in decks" :key="id">
+    <div class="decks-container gap-4">
+      <div class="deck-block p-2.5" @click="showDeck($event, deck.code)" v-for="(deck, id) in decks" :key="id">
         <div class="decklib-deck-title">
           {{deck.title}}
         </div>

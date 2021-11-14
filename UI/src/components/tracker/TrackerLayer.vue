@@ -1,7 +1,7 @@
 <template>
   <div class="decklib">
-    <div class="decks-container">
-      <div class="deck-block" @click="showDeck($event, id)" v-for="(deck, id) in decks" :key="id">
+    <div class="decks-container gap-1.5 xxs:gap-2">
+      <div class="deck-block p-1 xxs:p-2 xs:p-2.5 " @click="showDeck($event, id)" v-for="(deck, id) in decks" :key="id">
         <div class="decklib-deck-title">
           {{deck.title}}
         </div>

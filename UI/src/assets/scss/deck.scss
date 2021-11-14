@@ -66,8 +66,8 @@ body {
   //   position: fixed;
   //   z-index: 20;
   // }
-  padding: 5px;
-  height: 40px;
+  // padding: 5px;
+  // height: 50px;
   width: 100%;
   text-align: center;
   align-content: center;
@@ -106,20 +106,15 @@ body {
     color: white;
     border: none;
     border-radius: 8px;
-    padding: 7px 10px;
     cursor: pointer;
     &.btn-delete {
       display: none;
-    }
-    &.btn-decklib {
-      // margin-top: 20px;
     }
     &.btn-back {
       display: flex;
       align-items: center;
       justify-content: center;
       width: 100%;
-      padding: 4px 10px;
       position: sticky;
       top: 0px;
       margin-bottom: 2px;

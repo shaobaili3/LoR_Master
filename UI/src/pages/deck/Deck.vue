@@ -52,8 +52,8 @@
             ></match-info>
         </div>
 
-        <div class="layerpanel max-w-[280px]"  :class="{expanded: currentLayer != LAYERS.base}" v-if="isShowOppo">
-                <button v-if="currentLayer == LAYERS.base" @click="onOpenDecklib" class="btn btn-decklib">Open Deck Library</button>
+        <div class="layerpanel max-w-[280px] h-10"  :class="{expanded: currentLayer != LAYERS.base}" v-if="isShowOppo">
+                <button v-if="currentLayer == LAYERS.base" @click="onOpenDecklib" class="btn btn-decklib text-sm py-1 px-2 xxs:text-base xxs:py-2">Open Deck Library</button>
                 <button class="btn btn-back" v-if="currentLayer != LAYERS.base" @click="onLayerBack">
                     <span><i class="fas fa-caret-down"></i></span>
                 </button>
@@ -86,14 +86,6 @@
         <div class="footer" v-if="!isLoading"> 
             <div class="footer-text">{{$t('tracker.cardsInHand', {num: cardsInHandNum})}}</div>
         </div>
-
-        <!-- <div class="layerpanel fixed" :class="{expanded: currentLayer != LAYERS.base}" v-if="!isLoading">    
-            <button v-if="currentLayer == LAYERS.base" @click="onOpenDecklib" class="btn btn-decklib">Open Deck Library</button>
-            <button class="btn btn-back" v-if="currentLayer != LAYERS.base" @click="onLayerBack">
-                <span><i class="fas fa-caret-down"></i></span>
-            </button>
-            <tracker-layer v-if="currentLayer == LAYERS.decklib"></tracker-layer>
-        </div> -->
 
     </div>
 </template>
