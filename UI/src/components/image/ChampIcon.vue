@@ -66,9 +66,6 @@ export default {
         background-position: 50% 50%;
         background-size: cover;
 
-        
-        
-
         /* background-image: url('../assets/images/cards/cropped/01DE012-cropped.png'); */
     }
 
@@ -76,7 +73,7 @@ export default {
         position: absolute;
         top: -3px;
         right: -4px;
-        font-size: 0.5em;
+        font-size: 0.6em;
         padding: 1px 5px;
         border-radius: 100%;
 

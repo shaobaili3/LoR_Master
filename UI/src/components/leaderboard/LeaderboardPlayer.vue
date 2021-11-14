@@ -27,7 +27,6 @@ export default {
         color: white;
         background-color: var(--col-dark-grey);
         width: 100%;
-        height: 40px;
         padding: 5px 0px;
         margin: 0px 0px;
         align-items: center;

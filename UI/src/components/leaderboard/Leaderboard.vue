@@ -205,7 +205,6 @@ export default {
         color: white;
         background-color: var(--col-light-grey);
         width: 100%;
-        height: 30px;
         padding: 5px 0px;
         margin: 20px 0px 0px 0px;
         align-items: center;

@@ -327,10 +327,6 @@ export default {
         async getSubData() {
             if (window.sock)
             for await (const [topic, msg] of window.sock) {
-                // console.log("Received Sub:", topic.toString(), " message:", msg.toString())
-                // this.oppoName = msg.toString()
-                // window.testData = msg.toString()
-                // console.log(mainWindow)
                 this.processRawData(msg)
             }
         },

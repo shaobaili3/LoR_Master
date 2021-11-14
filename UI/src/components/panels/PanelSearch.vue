@@ -63,8 +63,8 @@
       @show-deck="showDeck"
       :playerName="playerName"
       :playerRegion="playerRegion"
-      :playerRank="playerRank.toString()"
-      :playerLP="playerLP.toString()"
+      :playerRank="playerRank"
+      :playerLP="playerLP"
       :matches="matches"
     >
     </player-matches>
