@@ -89,6 +89,8 @@
   
   <base-window-controls v-if="IS_ELECTRON" :title="''" :titleType="'window'"></base-window-controls>
   
+  <base-top-nav v-if="!IS_ELECTRON"></base-top-nav>
+
   <div v-if="!IS_ELECTRON" class="content w-auto mt-0 min-w-0 pl-3 absolute transition-spacing z-10 invisible md:visible" 
     :class="{'ml-[-300px]': isAdHidden && isAdClosed}">
     <div class="ad overflow-hidden relative block w-[300px] h-[250px] transition-opacity bg-gray-800 rounded-lg"
@@ -214,6 +216,7 @@ import PanelDeckLib from '../../components/panels/PanelDeckLib.vue'
 import DeckPreview from '../../components/deck/DeckPreview.vue'
 
 import '../../assets/scss/responsive.scss'
+import BaseTopNav from '../../components/base/BaseTopNav.vue'
 
 const requestDataWaitTime = 400 //ms
 const requestHistoryWaitTime = 100 //ms
@@ -281,6 +284,7 @@ export default {
     PanelSearch,
     PanelDeckLib,
     DeckPreview,
+    BaseTopNav,
   },
   data() {
     return {
