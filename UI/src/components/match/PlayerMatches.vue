@@ -30,14 +30,14 @@
 
     <div class="no-content" v-if="totalMatches == 0">{{$t('str.error.playerNoHistory')}}</div>
 
-    <div class="match-history-container" v-if="!isLoading">
+    <div class="match-history-container">
         <match-history 
             @show-deck="showDeck"
             @search="searchPlayer({region: match.region, name: match.opponentName, tag: match.opponentTag})"
             v-for="(match, index) in filteredMatches" :key="index"
-            :opponentName="match.opponentName" 
-            :opponentRank="match.opponentRank"
-            :opponentLp="match.opponentLp"
+            :opponentName="match.opponentName.toString()" 
+            :opponentRank="match.opponentRank.toString()"
+            :opponentLp="match.opponentLp.toString()"
             :deck="match.deck"
             :opponentDeck="match.opponentDeck"
             :rounds="match.rounds"

@@ -91,7 +91,7 @@
   
   <base-top-nav v-if="!IS_ELECTRON"></base-top-nav>
 
-  <div v-if="!IS_ELECTRON" class="content w-auto mt-0 min-w-0 pl-3 absolute transition-spacing z-10 invisible md:visible" 
+  <div v-if="!IS_ELECTRON" class="content mt-[-23px] w-auto min-w-0 pl-4 absolute transition-spacing z-10 invisible md:visible" 
     :class="{'ml-[-300px]': isAdHidden && isAdClosed}">
     <div class="ad overflow-hidden relative block w-[300px] h-[250px] transition-opacity bg-gray-800 rounded-lg"
       @mouseleave="hideAds"
