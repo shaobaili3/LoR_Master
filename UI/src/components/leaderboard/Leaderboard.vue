@@ -20,7 +20,7 @@
                 <div class="search-icon right" @click="clearSearch" v-if="searchText!=''"><span><i class="fas fa-times"></i></span></div>
             </div>
 
-            <div class="flex info-help">
+            <div class="flex info-help h-10">
                 <div class="info-rank">{{$t('leaderboard.rank')}}</div>
                 <div class="info-name">{{$t('leaderboard.name')}}</div>
                 <div class="info-lp">{{$t('leaderboard.points')}}</div>

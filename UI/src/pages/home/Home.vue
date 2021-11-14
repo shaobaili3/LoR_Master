@@ -4,7 +4,7 @@
     <span><i class="fas fa-list"></i></span>
   </div>
   <div class="left-nav" :class="{'expanded': leftNavExpanded}">
-    <div class="left-nav-btn logo no-click" v-if="!IS_ELECTRON">
+    <div class="left-nav-btn logo no-click" v-if="!IS_ELECTRON" @mouseenter="showAds">
       <picture>
         <source srcset="@/assets/images/logo/logo.webp" type="image/webp">
         <source srcset="@/assets/images/logo/logo.png" type="image/png">
@@ -89,6 +89,21 @@
   
   <base-window-controls v-if="IS_ELECTRON" :title="''" :titleType="'window'"></base-window-controls>
   
+  <div v-if="!IS_ELECTRON" class="content w-auto mt-0 min-w-0 pl-3 absolute transition-spacing z-10 invisible md:visible" 
+    :class="{'ml-[-300px]': isAdHidden && isAdClosed}">
+    <div class="ad overflow-hidden relative block w-[300px] h-[250px] transition-opacity bg-gray-800 rounded-lg"
+      @mouseleave="hideAds"
+    >
+      <button class="absolute top-1 right-1" @click="closeAds">
+        <i class="p-2 fas fa-times"></i>
+      </button>
+      <div class="w-full h-full">
+        <p class="text-lg py-5">Have you tried our <a class="text-xl text-gold-400 cursor-pointer" href="https://lormaster.com" target="_blank"><br>LoR Master Tracker</a> yet?</p>
+        <a class="text-xl text-gold-400 cursor-pointer" href="https://lormaster.com" target="_blank"><img src="../../assets/images/promo/tracker.png" alt="" srcset=""></a>
+      </div>
+    </div>
+  </div>
+  
   <div class="content" :class="{fullheight: !IS_ELECTRON}" @click="shrinkLeftNav">
     <div class="main-content-container" v-if="currentPage == PANELS.my">
       <player-matches 
@@ -138,7 +153,7 @@
     </div>
   </div>
 
-  <div class="deck-content-container" :class="{hidden: !isShowDeck, fullheight: !IS_ELECTRON}">
+  <div class="deck-content-container" :class="{hide: !isShowDeck, fullheight: !IS_ELECTRON}">
     <div class="deck-content-top-bar">
       <button class="collapse-btn" @click="hideDeck"><span><i class="fas fa-chevron-right"></i></span></button>
       <deck-regions :deck="deckCode" :fixedWidth="false"></deck-regions>
@@ -236,6 +251,24 @@ const PANELS = {
   settings: 5,
 }
 
+function setCookie(name, value, expDay, expHour, expMin) {
+  let date = new Date();
+  date.setTime(date.getTime() + (expDay * 24 * 60 * 60 * 1000) + (expHour * 60 * 60 * 1000) + (expMin * 60 * 1000));
+  const expires = "expires=" + date.toUTCString();
+  document.cookie = name + "=" + value + "; " + expires + "; path=/";
+}
+
+function getCookie(name) {
+  const cname = name + "=";
+  const decoded = decodeURIComponent(document.cookie); //to be careful
+  const arr = decoded .split('; ');
+  let res;
+  arr.forEach(val => {
+      if (val.indexOf(cname) === 0) res = val.substring(name.length);
+  })
+  return res;
+}
+
 export default {
   components: { 
     BaseWindowControls,
@@ -283,6 +316,9 @@ export default {
 
       clipboardDeck: null,
       leftNavExpanded: false,
+
+      isAdHidden: true,
+      isAdClosed: true,
     }
   },
   computed: {
@@ -327,6 +363,10 @@ export default {
 
     console.log("Is Electron:", this.IS_ELECTRON)
 
+    setTimeout(() => {
+      this.showAds()
+    }, 60000);
+
     
     // Testing switching locale
     // if (process.env.NODE_ENV == "development") {
@@ -360,6 +400,23 @@ export default {
     ...mapActions([
       'changeLocale'
     ]),
+
+    showAds() {
+      this.isAdHidden = false
+    },
+
+    hideAds() {
+      this.isAdHidden = true
+    },
+
+    openAds() {
+      this.isAdClosed = false
+    },
+
+    closeAds() {
+      this.isAdClosed = true
+      this.hideAds()
+    },
 
     expandLeftNav() {
       this.leftNavExpanded = true

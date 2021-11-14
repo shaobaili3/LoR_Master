@@ -1,5 +1,5 @@
 <template>
-    <div class="info flex" :class="{champion: isChampion}">
+    <div class="info flex h-12" :class="{champion: isChampion}">
         <div class="info-rank">{{rank}}</div>
         <div class="info-name">{{name}}</div>
         <div class="info-lp">{{lp}}</div>

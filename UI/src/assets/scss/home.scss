@@ -164,7 +164,7 @@
   transition: right 0.2s ease;
   z-index: 6;
 
-  &.hidden {
+  &.hide {
     right: -250px;
   }
 
