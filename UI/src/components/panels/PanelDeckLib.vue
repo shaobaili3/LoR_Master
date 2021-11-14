@@ -1,5 +1,6 @@
 <template>
   <div class="decklib">
+    <modal-warning ref="warningModal"></modal-warning>
     <div class="title">{{$t('decklib.title')}}</div>
     <div class="btn-container">
       <!-- <button class="btn btn-add">
@@ -27,7 +28,7 @@
         <div class="decklib-deck-title">
           {{deck.title}}
         </div>
-        <div @click="handleDelete(id)" class="btn-delete btn"><span><i class="fas fa-trash"></i></span></div>
+        <div @click="onClickDelete(id)" class="btn-delete btn"><span><i class="fas fa-trash"></i></span></div>
         <deck-preview 
           :deck="deck.code">
         </deck-preview>
@@ -44,9 +45,10 @@ import DeckPreview from '../deck/DeckPreview.vue'
 import {showDeckMixin} from '../mixins'
 
 import DeckEncoder from '../../modules/runeterra/DeckEncoder'
+import ModalWarning from '../modals/ModalWarning.vue'
 
 export default {
-  components: { DeckPreview },
+  components: { DeckPreview, ModalWarning },
   mixins: [showDeckMixin],
   data() {
     return {
@@ -99,7 +101,7 @@ export default {
       }
     },
     showDeck(event, deck) {
-      if (!event.target.className.includes('trash')) {
+      if (!event.target.className.includes('btn-delete')) {
         // Not deleting the deck
         this.$emit('showDeck', deck)
       }
@@ -145,6 +147,16 @@ export default {
           this.error = ""
         }, 2000)
       }
+    },
+    onClickDelete(id) {
+      this.$refs.warningModal.showPanel([
+      () => {
+        console.log("Confirm Delete")
+      },
+      () => {
+        console.log("Nothing happens")
+      },
+      ], "")
     },
     handleDelete(id) {
       this.decks.splice(id, 1)
