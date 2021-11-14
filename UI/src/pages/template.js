@@ -100,3 +100,5 @@ app.mixin({
 
 app.mount('#app')
 }
+
+import "tailwindcss/tailwind.css"

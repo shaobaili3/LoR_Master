@@ -120,11 +120,6 @@ body {
     animation-play-state: paused;
 }
 
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 input::placeholder {
     @apply text-gray-300;
 }

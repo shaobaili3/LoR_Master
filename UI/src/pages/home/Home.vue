@@ -45,7 +45,7 @@
       <span><i class="fas fa-trophy"></i></span>
     </button>
     <button class="left-nav-btn" 
-      
+      v-if="IS_ELECTRON || NODE_ENV === 'development' "
       :class="{selected: currentPage == PANELS.decklib}" 
       @click="setCurrentPage(PANELS.decklib)">
       <span><i class="fas fa-star"></i></span>
@@ -91,12 +91,12 @@
   
   <base-top-nav v-if="!IS_ELECTRON"></base-top-nav>
 
-  <div v-if="!IS_ELECTRON" class="content mt-[-23px] w-auto min-w-0 pl-4 absolute transition-spacing z-10 invisible md:visible" 
-    :class="{'ml-[-300px]': isAdHidden && isAdClosed}">
+  <div v-if="!IS_ELECTRON" class="mt-[-23px] text-center w-auto min-w-0 pl-4 absolute transition-spacing z-10 invisible md:visible" 
+    :class="{'ml-[-300px]': isAdHidden && isAdClosed, 'ml-20': !(isAdHidden && isAdClosed)}">
     <div class="ad overflow-hidden relative block w-[300px] h-[250px] transition-opacity bg-gray-800 rounded-lg"
       @mouseleave="hideAds"
     >
-      <button class="absolute top-1 right-1" @click="closeAds">
+      <button class="absolute top-1 right-1 text-white" @click="closeAds">
         <i class="p-2 fas fa-times"></i>
       </button>
       <div class="w-full h-full">
@@ -359,6 +359,9 @@ export default {
     lorNewsURL() {
       return `https://playruneterra.com/${this.locale.replace('_', '-')}/news`
     },
+    NODE_ENV() {
+      return process.env.NODE_ENV
+    }
   },
   mounted() {
     console.log("Mounted")
