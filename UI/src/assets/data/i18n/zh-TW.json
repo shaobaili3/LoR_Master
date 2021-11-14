@@ -1,0 +1,110 @@
+{
+  "lang": "繁體中文",
+  "appName": "LoR Master Tracker 魔盒",
+  "str": {
+    "settings": "設置",
+    "loading": "加載中...",
+    "languages": "主界面語言",
+    "invalidDeck": "牌組代碼錯誤",
+    "copy": "複製",
+    "copied": "複製成功！",
+    "rounds": "回合",
+    "error": {
+      "unkown": "哪裡出了一些問題",
+      "playerNotFound": "未找到玩家",
+      "playerNoHistory": "未找到歷史記錄",
+      "localApiError": "請打開第三方端口"
+    },
+    "regions": {
+      "americas": "美洲",
+      "europe": "歐洲",
+      "asia": "亞洲",
+      "sea": "東南亞"
+    },
+    "times": {
+      "sec": "{t} 秒前",
+      "min": "{t} 分鐘前",
+      "hour": "{t} 小時前",
+      "hours": "{t} 小時前",
+      "day": "{t} 天前",
+      "days": "{t} 天前"
+    },
+    "no": "否",
+    "yes": "是",
+    "tracker": "記牌器",
+    "clipboard": "剪貼板",
+    "requestConfirm": "你確定麼？"
+  },
+  "loading": {
+    "readyToRock": "準備就緒 🤘",
+    "history": "努力加載歷史中...",
+    "nohistory": "沒有找到歷史數據"
+  },
+  "tracker": {
+    "tabs": {
+      "oppoPlayed": "對手已打出",
+      "myPlayed": "我方已打出"
+    },
+    "cardsInHand": "手牌數: {num}"
+  },
+  "leaderboard": {
+    "rank": "排名",
+    "name": "玩家",
+    "points": "分數"
+  },
+  "matches": {
+    "usage": "{num}% 使用率",
+    "game": "{num} 場",
+    "games": "{num} 場",
+    "badges": {
+      "Ranked": "排位",
+      "Bo3Challenge": "三局兩勝",
+      "StandardGauntlet": "武鬥場",
+      "Normal": "普通",
+      "LastCallQualifierGauntlet": "終極武鬥場",
+      "SeasonalTournament": "季賽",
+      "AI": "電腦"
+    }
+  },
+  "dash": {
+    "winRate": "勝率",
+    "winloss": "{win}勝 {loss}負"
+  },
+  "search": {
+    "leaderboard": {
+      "base": "搜索",
+      "numPlayer": "搜索 {num} 名玩家"
+    },
+    "player": {
+      "placeholder": "例：Storm#5961"
+    },
+    "prompt": "⬆ 請輸入名字與後綴"
+  },
+  "tooltips": {
+    "lorlogin": "LoR 未登錄 / 無記錄",
+    "incompleteDeck": "卡牌缺失"
+  },
+  "contact": {
+    "messageBox": {
+      "placeholder": "來一條建議？",
+      "messageSent": "已發送",
+      "confirm": "確定？",
+      "send": "發送"
+    },
+    "contactUs": "聯繫我們",
+    "broughtWithLove": "為你傾❤️打造:"
+  },
+  "settings": {
+    "options": {
+      "autoLaunch": "開機自動啟動:"
+    },
+    "enabled": "開啟",
+    "enable": "開啟",
+    "disabled": "關閉",
+    "disable": "關閉"
+  },
+  "decklib": {
+    "title": "牌組庫",
+    "placeholder": "黏貼代碼以保存"
+  }
+}

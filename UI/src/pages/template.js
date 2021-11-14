@@ -7,6 +7,8 @@ import sets_en from '../../../Resource/en_us.json'
 
 const sets_en_combined = [].concat(...sets_en)
 
+import messages from '@/assets/data/messages.js'
+
 export default (App) => {
 
 const locales = ['de_de', 'en_us', 'es_es', 'es_mx', 'fr_fr', 'it_it', 'ja_jp', 'ko_kr', 'pl_pl', 'pt_br', 'th_th', 'tr_tr', 'ru_ru', 'zh_tw']
@@ -53,8 +55,6 @@ const store = createStore({
     }
     
 })
-
-const messages = require('@/assets/data/messages.js')
 
 const i18n = createI18n({
     locale: 'English', // set locale

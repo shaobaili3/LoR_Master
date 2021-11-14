@@ -7,7 +7,7 @@
             {{loadingText}}
         </div> 
 
-        <div class="errorText" v-if="isInvalidDeckCode && isShowCode">{{$t('invalidDeck')}}</div>
+        <div class="errorText" v-if="isInvalidDeckCode && isShowCode">{{$t('str.invalidDeck')}}</div>
 
         <div class="tabs" v-if="!isLoading">
             <div class="tab-title-group">
