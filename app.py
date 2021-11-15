@@ -33,7 +33,7 @@ sentry_sdk.init(
 master.startMasterWorker()
 leaderboardModel = Leaderboard()
 cacheModel = Cache()
-herokuModel = Heroku()
+herokuModel = Heroku(leaderboardModel)
 
 class FlaskApp(Flask):
     def __init__(self, *args, **kwargs):
@@ -123,3 +123,7 @@ def welcome():
     info = {}
     info['matchNum'] = len(cacheModel.matchDetails)
     return jsonify(info)
+
+is_gunicorn = "gunicorn" in os.environ.get("SERVER_SOFTWARE", "")
+if not is_gunicorn:
+    app.run(port='26531', debug=True, use_reloader=False)
