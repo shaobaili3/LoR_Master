@@ -105,7 +105,7 @@ def track():
 
 @app.route("/history/<string:server>/<string:name>/<string:tag>", methods=['get'])
 def history(server, name, tag):
-    return jsonify(herokuModel.gethHistory(server, name, tag))
+    return jsonify(herokuModel.getHistory(server, name, tag))
 
 
 @app.route("/name/<string:server>/<string:playername>", methods=['get'])
