@@ -17,6 +17,7 @@ from flask import Flask, jsonify
 from flask_cors import CORS
 import os
 import constants
+from Models.heroku import Heroku
 
 from random import randrange
 
@@ -32,6 +33,7 @@ sentry_sdk.init(
 master.startMasterWorker()
 leaderboardModel = Leaderboard()
 cacheModel = Cache()
+herokuModel = Heroku()
 
 class FlaskApp(Flask):
     def __init__(self, *args, **kwargs):
@@ -54,16 +56,7 @@ app.config["DEVELOPMENT"] = False
 
 @app.route("/history/<string:server>/<string:name>/<string:tag>", methods=['get'])
 def history(server, name, tag):
-    if server == 'sea':
-        print('history: Riot API not suppport SEA')
-        return jsonify([])
-    settingInspect = Setting()
-    settingInspect.riotServer = Server._value2member_map_[server]
-    networkInspect = Network(settingInspect)
-    riotInspect = Riot(networkInspect, cacheModel)
-    playerInspect = Player(riotInspect, leaderboardModel)
-    playerInspect.inspectFlask(name, tag, 10)
-    return jsonify([summary.__dict__ for summary in playerInspect.summaries.values()])
+    return jsonify(herokuModel.getHistory(server, name, tag))
 
 
 @app.route("/name/<string:server>/<string:playername>", methods=['get'])
@@ -90,16 +83,7 @@ def get_names(server, playername):
 
 @app.route("/search/<string:server>/<string:name>/<string:tag>", methods=['get'])
 def search(name, tag, server):
-    settingModel = Setting()
-    settingModel.riotServer = Server._value2member_map_[server]
-    maxNum = 20
-    riotModel = Riot(Network(settingModel), cacheModel)
-    playerModel = Player(riotModel, leaderboardModel)
-    playerModel.inspectFlask(name, tag, maxNum)
-    if playerModel.error is None:
-        return jsonify(playerModel.matchesJson)
-    else:
-        return jsonify(playerModel.error), playerModel.error['status']['code']
+    return jsonify(herokuModel.getSearch(server, name, tag))
 
 
 @app.route("/leaderboard/<string:server>", methods=['get'])

@@ -3,7 +3,7 @@ import Models.network
 
 LEADERBOARD_HEROKU = 'https://lmtservice.herokuapp.com/leaderboard/'
 HISTORY_HEROKU = 'https://lormaster.herokuapp.com/history/'
-
+SEARCH_HEROKU = 'https://lormaster.herokuapp.com/search/'
 class Heroku():
     def __init__(self) -> None:
         self.session = requests.Session()
@@ -24,7 +24,7 @@ class Heroku():
         print(leaderboardRequest.status_code)
         return None
 
-    def gethHistory(self, server, name, id):
+    def getHistory(self, server, name, id):
         leaderboardLink = HISTORY_HEROKU + server + '/' + name + '/' + id
         try:
             historyRequest = self.session.get(
@@ -38,4 +38,20 @@ class Heroku():
             
         print(historyRequest.headers)
         print(historyRequest.status_code)
+        return None
+
+    def getSearch(self, server, name, id):
+        detailLink = SEARCH_HEROKU + server + '/' + name + '/' + id
+        try:
+            detailRequest = self.session.get(
+                detailLink, proxies=Models.network.getProxy())
+        except requests.exceptions.RequestException as e:
+            print('getMatches error: ', e)
+            return None
+        
+        if detailRequest.ok:
+            return detailRequest.json()
+            
+        print(detailRequest.headers)
+        print(detailRequest.status_code)
         return None
