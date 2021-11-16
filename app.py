@@ -13,7 +13,7 @@ from Models.setting import Server
 from Models.cache import Cache
 from Models import master
 import json
-from flask import Flask, jsonify
+from flask import Flask, jsonify, redirect
 from flask_cors import CORS
 import os
 import constants
@@ -83,7 +83,7 @@ def get_names(server, playername):
 
 @app.route("/search/<string:server>/<string:name>/<string:tag>", methods=['get'])
 def search(name, tag, server):
-    return jsonify(herokuModel.getSearch(server, name, tag))
+    return redirect("https://lormaster.herokuapp.com/search/" + server + '/' + name + '/' + tag)
 
 
 @app.route("/leaderboard/<string:server>", methods=['get'])
