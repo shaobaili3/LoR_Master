@@ -28,7 +28,7 @@
         <div class="decklib-deck-title">
           {{deck.title}}
         </div>
-        <div @click="onClickDelete(id)" class="btn-delete btn"><span><i class="fas fa-trash"></i></span></div>
+        <div @click.stop="onClickDelete(id)" class="btn-delete btn"><span><i class="fas fa-trash"></i></span></div>
         <deck-preview 
           :deck="deck.code">
         </deck-preview>

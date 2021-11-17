@@ -101,7 +101,8 @@ export default {
     /* border-radius: 4px; */
 }
 
-.cardContainer:hover .cardDisplay {
+.cardContainer:hover .cardDisplay,
+.cardContainer:focus .cardDisplay {
     /* display: block; */
     /* visibility: initial; */
     /* position: relative; */
