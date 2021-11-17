@@ -1,8 +1,9 @@
 <template>
     <div class="cardContainer group"
-        :class="{empty: count == 0, spell: typeRef == 'Spell', unit: typeRef == 'Unit', 
-        champ: typeRef == 'Champion', landmark: typeRef == 'Landmark',
-        unknown: typeRef == 'Unkown'
+        :class="{
+            empty: count == 0, spell: typeRef == 'Spell', unit: typeRef == 'Unit', 
+            champ: typeRef == 'Champion', landmark: typeRef == 'Landmark',
+            unknown: typeRef == 'Unkown'
         }"
         :style="{background: getCardPreviewBackgroundStyle()}">
         <div class="cardContent cardCost">{{cost}}</div>
@@ -70,7 +71,7 @@ export default {
             
             // const gradient = "linear-gradient(90deg, rgb(191, 176, 131) 30%, rgba(191, 176, 131, 0) 70%),"
             var gradient
-            if (this.supertype == "Champion") {
+            if (this.typeRef == "Champion") {
                 gradient = "linear-gradient(90deg, var(--col-darker-gold) 30%, rgba(158, 114, 18, 0) 70%),"
             } else {
                 gradient = `${grayOverlay},`

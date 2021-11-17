@@ -95,8 +95,8 @@ export default {
 
             if (baseDeck) {
                 // make sure cards not in current Deck are shown
-                console.log("baseDeck", baseDeck)
-                console.log("extra", this.extra)
+                // console.log("baseDeck", baseDeck)
+                // console.log("extra", this.extra)
                 for (var j in baseDeck) {
                     // Loop through base deck
                     var cardCode = baseDeck[j].code
@@ -125,7 +125,7 @@ export default {
                     if (card) {
 
                         var typeRef = ""
-                        if (card.supertype != "") {
+                        if (card.supertype != "" || card.rarityRef == "Champion") {
                             typeRef = "Champion"
                         } else if (card.spellSpeedRef != "") {
                             typeRef = "Spell"

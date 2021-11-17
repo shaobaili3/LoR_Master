@@ -25,13 +25,18 @@
     </div>
     <div class="decks-container gap-4">
       <div class="deck-block p-2.5" @click="showDeck($event, deck.code)" v-for="(deck, id) in decks" :key="id">
-        <div class="decklib-deck-title">
-          {{deck.title}}
+        <div class="decklib-deck-title text-left" :title="deck.title">
+          {{deck.title}} <span v-if="deck.date" class="block text-xs font-light text-gray-200">{{format(new Date(deck.date), "HH:mm | yyyy-MM-dd")}}</span>
         </div>
         <div @click.stop="onClickDelete(id)" class="btn-delete btn"><span><i class="fas fa-trash"></i></span></div>
-        <deck-preview 
-          :deck="deck.code">
-        </deck-preview>
+        <div class="version tooltip">
+          <span class="tooltiptext top pointer-events-none max-w-full overflow-x-hidden overflow-ellipsis">
+            {{deck.code}}
+          </span>
+          <deck-preview 
+            :deck="deck.code">
+          </deck-preview>
+        </div>
       </div>
     </div>
   </div>
@@ -46,6 +51,7 @@ import {showDeckMixin} from '../mixins'
 
 import DeckEncoder from '../../modules/runeterra/DeckEncoder'
 import ModalWarning from '../modals/ModalWarning.vue'
+import { format, subDays } from 'date-fns'
 
 export default {
   components: { DeckPreview, ModalWarning },
@@ -64,6 +70,8 @@ export default {
     this.initStore()
   },
   methods: {
+    format: format,
+    subDays: subDays,
     initStore() {
       if (window.ipcRenderer) {
         window.ipcRenderer.send('request-store', 'deck-lib')
@@ -87,17 +95,22 @@ export default {
         this.decks = [
           {
             title: "Bandle Nox",
+            date: Date.now() - 10,
             code: 'CQBACAIDG4EAKCQBOSCADGABUYA2OANPAHBACAYBAIDC4AICAMEQIBIKFGQADQABYYAQCAIDAMGQ'
           },
           {
             title: "Draven Sion",
+            date: Date.now() - 30000,
             code: 'CECACAIDCQAQIBAQAMCQGAIJBUCACBBGE4WTIAYBAEBS4AIBAQAQCAYDB4CACAQDBEAQGBASAICQGBAGAMAQGCZDGM'
           },
           {
             title: "Thresh Asol",
+            date: Date.now() - 12394123,
             code: 'CQBQCBIKV4AQEAIFFA2AKAYJC5KFMXDAAQAQCBIZAECASDIBAUCQ6AQDBFEVOAYBAQCTQAQDBERTGAYBAUAQ6HI'
           }
         ]
+
+        this.loaded = true
       }
     },
     showDeck(event, deck) {
@@ -114,7 +127,7 @@ export default {
     onPaste(event) {
       event.preventDefault();
       let pasteContent = (event.clipboardData || window.clipboardData).getData('text');
-      this.processPate(pasteContent)
+      this.processPaste(pasteContent)
     },
     processPaste(deckCode) {
       console.log("Process Paste")
@@ -134,8 +147,16 @@ export default {
           }
           return names
         }, [])
+        let i = 0;
+        let newTitle = champNames.join(' ')
+        while (this.decks.findIndex((item) => item.title == newTitle) != -1 && i < 1000) {
+          i+= 1;
+          newTitle = `#${i} ` + champNames.join(' ');
+          console.log(newTitle)
+        }
         this.decks.unshift({
-          title: champNames.join(' '),
+          title: newTitle,
+          date: new Date(),
           code: deckCode,
         })
         this.updateStore()
@@ -157,7 +178,7 @@ export default {
       () => {
         console.log("Nothing happens")
       },
-      ], "")
+      ], `${this.$t('str.delete')},${this.decks[id].title}`)
     },
     handleDelete(id) {
       this.decks.splice(id, 1)

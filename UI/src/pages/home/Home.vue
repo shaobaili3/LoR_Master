@@ -52,7 +52,7 @@
     </button>
     <div class="left-nav-btn menu no-click">
       <span><i class="fas fa-books"></i></span>
-      <div class="menu-content right">
+      <div class="menu-content right top-auto sm:top-0 sm:bottom-auto">
         <div class="card" @click="openURL('https://masteringruneterra.com/')">
           <img src="https://masteringruneterra.com/wp-content/uploads/2021/09/MasteringRuneterraWebsiteLogo-300x129.webp">
         </div>
@@ -406,7 +406,7 @@ export default {
           this.$i18n.locale = locale
           console.log("Change ui locale to", locale)
         }
-        if (cardLocale && this.cardLocales.includes(locale)) {
+        if (cardLocale && this.cardLocales.includes(cardLocale)) {
           this.changeLocale(cardLocale)
           console.log("Change card locale to", cardLocale)
         }
@@ -460,13 +460,16 @@ export default {
       if (this.scrollTops && this.scrollTops[id] && this.scrollTops[id].scrollTop) {
         oldSt = this.scrollTops[id].scrollTop 
       }
+
+      const speedThresh = 25;
+      const heightThresh = 180;
       
       let st = tar.scrollTop
-      if (oldSt && oldSt < st) {
+      if (oldSt && st - oldSt > speedThresh && st > heightThresh) {
         // Scrolling down
         tar.classList.add('scrollDown')
         tar.classList.remove('scrollUp')
-      } else {
+      } else if (oldSt && oldSt - st > speedThresh) {
         // Scrolling Up
         tar.classList.add('scrollUp')
         tar.classList.remove('scrollDown')
