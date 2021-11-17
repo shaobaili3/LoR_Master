@@ -163,7 +163,7 @@ export default {
 
                 }
             }
-            console.log(cards)
+            // console.log(cards)
             return cards.sort(function (a, b) {
                 if (a.type === "Unknown") {
                     return 1

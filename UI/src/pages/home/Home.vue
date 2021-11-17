@@ -145,7 +145,10 @@
           <button class="settings-btn" v-if="!autoLaunch" @click="setAutoLaunch(true)">{{ $t('settings.enable') }}</button>
         </div>
         <div class="settings-list-item">
-          <locale-changer></locale-changer>
+          <locale-changer :title="$t('str.languages')" :options="$i18n.availableLocales" :optionDefault="$i18n.locale" :input="changeMainUILocale"></locale-changer>
+        </div>
+        <div class="settings-list-item">
+          <locale-changer :title="$t('settings.options.cardLanguage')" :swapNames="cardLocaleNames" :options="cardLocales" :optionDefault="locale" :input="changeCardLocale"></locale-changer>
         </div>
       </div>
 
@@ -222,6 +225,8 @@ const requestDataWaitTime = 400 //ms
 const requestHistoryWaitTime = 100 //ms
 const requestStatusWaitTime = 1000 //ms
 const inputNameListLength = 10;
+
+import { locales as cardLocales, localeNames as cardLocaleNames} from '../template'
 
 // import ua from 'universal-analytics'
 
@@ -325,6 +330,9 @@ export default {
       isAdClosed: true,
 
       scrollTops: {},
+
+      cardLocales: cardLocales,
+      cardLocaleNames: cardLocaleNames,
     }
   },
   computed: {
@@ -374,7 +382,7 @@ export default {
 
     setTimeout(() => {
       this.showAds()
-    }, 60000);
+    }, 5 * 60 * 1000);
 
     
     // Testing switching locale
@@ -389,8 +397,22 @@ export default {
       // var test = 'Hello'
       
       this.requestStatusInfo()
+
+      if (!this.IS_ELECTRON) {
+        let myStorage = window.localStorage;
+        let locale = myStorage.getItem('ui-locale')
+        let cardLocale = myStorage.getItem('card-locale')
+        if (locale && this.$i18n.availableLocales.includes(locale)) {
+          this.$i18n.locale = locale
+          console.log("Change ui locale to", locale)
+        }
+        if (cardLocale && this.cardLocales.includes(locale)) {
+          this.changeLocale(cardLocale)
+          console.log("Change card locale to", cardLocale)
+        }
+        return
+      }
       
-      if (!window.ipcRenderer) { return }
       this.handleGameEnd()
       this.requestVersionData()
       this.initLocalSettings()
@@ -409,6 +431,24 @@ export default {
     ...mapActions([
       'changeLocale'
     ]),
+
+    changeMainUILocale(newLocale) {
+      console.log("Changing locale")
+      this.$i18n.locale = newLocale
+      if (window.ipcRenderer) {
+        window.ipcRenderer.send('changed-locale', newLocale)
+      } else {
+        window.localStorage.setItem('ui-locale', newLocale)
+      }
+    },
+
+    changeCardLocale(newLocale) {
+      console.log("Change Card Locale to:", newLocale)
+      this.changeLocale(newLocale)
+      if (!this.IS_ELECTRON) {
+        window.localStorage.setItem('card-locale', newLocale)
+      }
+    },
 
     handleContentScroll(event) {
       this.shrinkLeftNav()

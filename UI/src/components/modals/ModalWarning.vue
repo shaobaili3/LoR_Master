@@ -5,14 +5,14 @@
         <div class="text-sm px-4 py-2 whitespace-pre text-center">{{message}}</div>
         <div class="buttons gap-2 mt-auto mb-2">
           <button @click="onConfirmBtn" class="p-2 btn-default btn-actions btn-primary rounded-md">
-            <div class="flex items-center justify-center">
-              <unicon name="check" class="fill-current"></unicon>
+            <div class="flex items-center justify-center h-8">
+              <i class="fas fa-check "></i>
             </div>
             {{$t('str.yes')}}
           </button>
           <button  @click="onLaterBtn" class="p-2 btn-default btn-actions btn-secondary rounded-md">
-            <div class="flex items-center justify-center">
-              <unicon name="times" class="fill-current"></unicon>
+            <div class="flex items-center justify-center h-8">
+              <i class="fas fa-times"></i>
             </div>
             {{$t('str.no')}}
           </button>

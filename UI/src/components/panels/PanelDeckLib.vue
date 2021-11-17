@@ -152,6 +152,7 @@ export default {
       this.$refs.warningModal.showPanel([
       () => {
         console.log("Confirm Delete")
+        this.handleDelete(id)
       },
       () => {
         console.log("Nothing happens")
