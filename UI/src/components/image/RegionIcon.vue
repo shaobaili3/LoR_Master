@@ -1,5 +1,5 @@
 <template>
-    <div class="icon h-7 w-7 xxs:w-8 xxs:h-8 xs:w-9 xs:h-9" :class="{'faction': faction != -1}" :style=" {backgroundImage: getRegionImgUrl}"></div>
+    <div class="icon h-7 w-7 xxs:w-8 xxs:h-8 xs:w-8 xs:h-8 sm:h-10 sm:w-10 " :class="{'faction': faction != -1}" :style=" {backgroundImage: getRegionImgUrl}"></div>
 </template>
 
 <script>

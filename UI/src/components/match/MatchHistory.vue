@@ -5,7 +5,7 @@
                 :class="{'fa-chevron-down': !showDetail, 'fa-chevron-up': showDetail}"
             ></i>
         </div>
-        <div class="row opponent">
+        <div class="row opponent overflow-x-scroll no-scrollbar">
             <p @click="search" class="match-info-title">
                 <span class="desktop">vs </span><span class="name"
                         :class="{'search': region}"

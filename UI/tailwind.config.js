@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
   mode: 'jit',
   purge: [
@@ -5,11 +7,12 @@ module.exports = {
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    screens: {
+      'xxs': '190px',
+      'xs': '275px',
+      ...defaultTheme.screens,
+    },
     extend: {
-      screens: {
-        'xxs': '190px',
-        'xs': '275px',
-      },
       colors: {
         gold: {
           300: 'rgb(252, 196, 40)',

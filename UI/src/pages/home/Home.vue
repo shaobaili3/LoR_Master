@@ -107,7 +107,7 @@
   </div>
   
   <div class="content" :class="{fullheight: !IS_ELECTRON}" @click="shrinkLeftNav">
-    <div class="main-content-container" v-if="currentPage == PANELS.my">
+    <div class="main-content-container" v-if="currentPage == PANELS.my" @scroll="shrinkLeftNav">
       <player-matches 
         @search="searchPlayer($event)"
         @show-deck="showDeck"
@@ -120,23 +120,23 @@
       </player-matches>
     </div>
 
-    <div class="main-content-container search" v-if="currentPage == PANELS.search">
+    <div class="main-content-container search" v-if="currentPage == PANELS.search" @scroll="shrinkLeftNav">
       <panel-search ref="panelSearch" :apiBase="apiBase" @showDeck="showDeck"></panel-search>
     </div>
 
-    <div class="main-content-container leaderboard" v-if="currentPage == PANELS.leaderboard">
+    <div class="main-content-container leaderboard" v-if="currentPage == PANELS.leaderboard" @scroll="shrinkLeftNav">
       <leaderboard :apiBase="apiBase" @search="searchPlayer($event)"></leaderboard>
     </div>
 
-    <div class="main-content-container deck-library" v-if="currentPage == PANELS.decklib">
+    <div class="main-content-container deck-library" v-if="currentPage == PANELS.decklib" @scroll="shrinkLeftNav">
       <panel-deck-lib ref="deckLib" @showDeck="showDeck"></panel-deck-lib>
     </div>
 
-    <div class="main-content-container contact" v-if="currentPage == PANELS.contact">
+    <div class="main-content-container contact" v-if="currentPage == PANELS.contact" @scroll="shrinkLeftNav">
       <contact-info :apiBase="apiBase"></contact-info>
     </div>
 
-    <div class="main-content-container settings" v-if="currentPage == PANELS.settings">
+    <div class="main-content-container settings" v-if="currentPage == PANELS.settings" @scroll="shrinkLeftNav">
       <div class="title">{{$t('str.settings')}}</div>
       <div class="settings-list">
         <div class="settings-list-item" v-if="IS_ELECTRON">
@@ -160,7 +160,7 @@
       <button class="collapse-btn" @click="hideDeck"><span><i class="fas fa-chevron-right"></i></span></button>
       <deck-regions :deck="deckCode" :fixedWidth="false"></deck-regions>
     </div>
-    <div class="deck-content-detail">
+    <div class="deck-content-detail" :fixedHeight="!IS_ELECTRON">
       <deck-detail :baseDeck="deckCode" :fixedHeight="true"></deck-detail>
     </div>
   </div>

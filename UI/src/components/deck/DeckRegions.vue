@@ -1,5 +1,5 @@
 <template>
-    <div class="icon-container">
+    <div class="icon-container gap-0.5 sm:gap-1 p-0 sm:p-1">
         <region-icon class="region-icon" v-for="(faction, index) in getFactions" :key="index" :faction="faction"></region-icon>
     </div>
 </template>
@@ -110,7 +110,7 @@ export default {
         display: flex;
         /* padding: 4px; */
 
-        gap: 2px;
+        /* gap: 2px; */
         
         align-items: center;
         justify-content: center;

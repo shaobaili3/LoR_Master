@@ -89,7 +89,9 @@ export default {
             }
 
             // Append extra played cards to baseDeck
-            baseDeck = baseDeck.concat(this.extra)
+            if (baseDeck && this.extra) {
+                baseDeck = baseDeck.concat(this.extra)
+            }
 
             if (baseDeck) {
                 // make sure cards not in current Deck are shown
