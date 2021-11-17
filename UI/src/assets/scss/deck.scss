@@ -180,9 +180,10 @@ body {
 
   overflow-x: hidden;
 
-  // &#history {
-  //   height: calc(100% - 108px);
-  // }
+  &#history {
+    height: calc(100% - 125px);
+    margin-bottom: 40px;
+  }
 }
 
 

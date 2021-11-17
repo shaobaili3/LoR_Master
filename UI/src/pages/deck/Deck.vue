@@ -9,23 +9,24 @@
 
         <div class="tabs px-0 xxs:px-1 xs:px-2" v-if="!isLoading">
             <div class="tab-title-group">
-                <div class="tab-title" @click="switchTab(TABS.oppo)" :class="{active: isShowOppo}">
+                <div class="tab-title text-sm xxs:text-base xs:text-lg" @click="switchTab(TABS.oppo)" :class="{active: isShowOppo}">
                     <i class="fas fa-swords"></i>
                 </div>
-                <div class="tab-title" @click="switchTab(TABS.oppog)" :class="{active: isShowOppoGrave}">
+                <div class="tab-title text-sm xxs:text-base xs:text-lg" @click="switchTab(TABS.oppog)" :class="{active: isShowOppoGrave}">
                     <i class="fas fa-tombstone-alt"></i>
                 </div>
             </div>
             <div class="tab-title-group">
-                <div class="tab-title" @click="switchTab(TABS.my)" :class="{active: isShowMy}">
+                <div class="tab-title text-sm xxs:text-base xs:text-lg" @click="switchTab(TABS.my)" :class="{active: isShowMy}">
                     <i class="fas fa-user-cowboy"></i>
                 </div>
-                <div class="tab-title" @click="switchTab(TABS.myg)" :class="{active: isShowMyGrave}">
+                <div class="tab-title text-sm xxs:text-base xs:text-lg" @click="switchTab(TABS.myg)" :class="{active: isShowMyGrave}">
                     <i class="fas fa-tombstone-alt"></i>                
                 </div>
             </div>
         </div>
 
+        <!-- Opponent History -->
         <div id="history" class="tab-content" v-if="isShowOppo && !isLoading">
 
             <div class="loading" v-if="matchInfos.length <= 0"
@@ -50,17 +51,17 @@
             ></match-info>
         </div>
 
-        <!-- Opponent History -->
-        <div class="layerpanel max-w-[280px] h-10"  :class="{expanded: currentLayer != LAYERS.base}" v-if="isShowOppo">
-                <button v-if="currentLayer == LAYERS.base" @click="onOpenDecklib" class="btn btn-decklib text-sm py-1 px-2 xxs:text-base xxs:py-2">Open Deck Library</button>
-                <button class="btn btn-back" v-if="currentLayer != LAYERS.base" @click="onLayerBack">
-                    <span><i class="fas fa-caret-down"></i></span>
-                </button>
-                <tracker-layer v-if="currentLayer != LAYERS.base"
-                    @showDeck="onPinOppo"
-                    :pinDeckId="oppoPinnedId"
-                ></tracker-layer>
-            </div>
+        
+        <div class="layerpanel max-w-[280px] h-10 p-2"  :class="{expanded: currentLayer != LAYERS.base}" v-if="isShowOppo">
+            <button v-if="currentLayer == LAYERS.base" @click="onOpenDecklib" class="btn btn-decklib text-sm py-1 px-2 xxs:text-base xxs:py-2">Open Deck Library</button>
+            <button class="btn btn-back" v-if="currentLayer != LAYERS.base" @click="onLayerBack">
+                <span><i class="fas fa-caret-down"></i></span>
+            </button>
+            <tracker-layer v-if="currentLayer != LAYERS.base"
+                @showDeck="onPinOppo"
+                :pinDeckId="oppoPinnedId"
+            ></tracker-layer>
+        </div>
 
         <!-- Oppo Played -->
         <div class="tab-content" v-if="isShowOppoGrave && !isLoading">
@@ -139,7 +140,6 @@ export default {
         return {
             rawDataString: null,
             matchInfos: [],
-            matchTotalNum: 0,
             request: null,
             
             infoType: null,
@@ -222,6 +222,10 @@ export default {
                 return `http://127.0.0.1:${this.portNum}`
             }
             return `https://lmtservice.herokuapp.com`
+        },
+        matchTotalNum() {
+            console.log(this.matchInfos)
+            return this.matchInfos.reduce((total, item) => total + item.matches, 0)
         },
     },
     mounted() {
@@ -430,11 +434,11 @@ export default {
             if (!this.IS_ELECTRON) {
 
                 if (!this.startingDeckCode) {
-                    Math.random() > 0.2 ? this.processTrackInfo(require('../../assets/data/testTrackLab')) : this.processTrackInfo({
+                    Math.random() > 0.2 ? this.processTrackInfo(require('../../assets/data/testTrack')) : this.processTrackInfo({
                         positional_rectangles: null
                     })
                 } else {
-                    this.processTrackInfo(require('../../assets/data/testTrackLab'))
+                    this.processTrackInfo(require('../../assets/data/testTrack'))
                 }
                 
                 setTimeout(this.requestTrackInfo, 1000);
@@ -567,21 +571,7 @@ export default {
                 this.switchTab(TABS.oppo)
             }
             
-            this.matchTotalNum = 0;
             this.matchInfos = data;
-
-            console.log("Match Info Updated: ")
-            console.log(this.matchInfos)
-
-            for (const i in data) {
-                // this.matchTotalNum += match.matches
-                this.matchTotalNum += data[i].matches
-
-                // when total matchNum bigger than 10, set it to 10 for better display.
-                if (this.matchTotalNum > 10) {
-                    this.matchTotalNum = 10
-                }
-            }
             // console.log(this.matchTotalNum)
 
         },

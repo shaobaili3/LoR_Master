@@ -16,7 +16,7 @@
         </div>
         <div class="row match-history-dots">
             <div class="match-history-summary">{{wonNum}} W - {{lostNum}} L </div>
-            <div class="dot" :class="{'won' : isWonGame(index), 'played' : isPlayedGame(index)}" v-for="index in total" :key="index"></div>
+            <div class="dot" :class="{'won' : isWonGame(index), 'played' : isPlayedGame(index)}" v-for="index in 10" :key="index"></div>
             
         </div>
         <div class="row decklist">
