@@ -120,23 +120,23 @@
       </player-matches>
     </div>
 
-    <div class="main-content-container search" v-if="currentPage == PANELS.search" @scroll="shrinkLeftNav">
+    <div class="main-content-container search" v-if="currentPage == PANELS.search" @scroll="handleContentScroll">
       <panel-search ref="panelSearch" :apiBase="apiBase" @showDeck="showDeck"></panel-search>
     </div>
 
-    <div class="main-content-container leaderboard" v-if="currentPage == PANELS.leaderboard" @scroll="shrinkLeftNav">
+    <div class="main-content-container leaderboard" v-if="currentPage == PANELS.leaderboard" @scroll="handleContentScroll">
       <leaderboard :apiBase="apiBase" @search="searchPlayer($event)"></leaderboard>
     </div>
 
-    <div class="main-content-container deck-library" v-if="currentPage == PANELS.decklib" @scroll="shrinkLeftNav">
+    <div class="main-content-container deck-library" v-if="currentPage == PANELS.decklib" @scroll="handleContentScroll">
       <panel-deck-lib ref="deckLib" @showDeck="showDeck"></panel-deck-lib>
     </div>
 
-    <div class="main-content-container contact" v-if="currentPage == PANELS.contact" @scroll="shrinkLeftNav">
+    <div class="main-content-container contact" v-if="currentPage == PANELS.contact" @scroll="handleContentScroll">
       <contact-info :apiBase="apiBase"></contact-info>
     </div>
 
-    <div class="main-content-container settings" v-if="currentPage == PANELS.settings" @scroll="shrinkLeftNav">
+    <div class="main-content-container settings" v-if="currentPage == PANELS.settings" @scroll="handleContentScroll">
       <div class="title">{{$t('str.settings')}}</div>
       <div class="settings-list">
         <div class="settings-list-item" v-if="IS_ELECTRON">
@@ -323,6 +323,8 @@ export default {
 
       isAdHidden: true,
       isAdClosed: true,
+
+      scrollTops: {},
     }
   },
   computed: {
@@ -407,6 +409,31 @@ export default {
     ...mapActions([
       'changeLocale'
     ]),
+
+    handleContentScroll(event) {
+      this.shrinkLeftNav()
+
+      let tar = event.target
+
+      let id = tar.toString()
+      let oldSt = null
+      if (this.scrollTops && this.scrollTops[id] && this.scrollTops[id].scrollTop) {
+        oldSt = this.scrollTops[id].scrollTop 
+      }
+      
+      let st = tar.scrollTop
+      if (oldSt && oldSt < st) {
+        // Scrolling down
+        tar.classList.add('scrollDown')
+        tar.classList.remove('scrollUp')
+      } else {
+        // Scrolling Up
+        tar.classList.add('scrollUp')
+        tar.classList.remove('scrollDown')
+      }
+      this.scrollTops[id] = {scrollTop: st}
+      
+    },
 
     showAds() {
       this.isAdHidden = false

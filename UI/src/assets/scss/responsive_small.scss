@@ -8,6 +8,10 @@
 
 @media only screen and (max-width: 595px) {
 
+  .scrollDown .sticky-top {
+    transform: translateY(-100%);
+  }
+
   .mobile-btn {
     position: absolute;
     top: 0px;

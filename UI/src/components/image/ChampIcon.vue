@@ -1,5 +1,5 @@
 <template>
-    <div class="icon h-7 w-7 xxs:w-8 xxs:h-8 xs:w-8 xs:h-8 sm:h-10 sm:w-10" :class="{champ: code}" :style=" {backgroundImage: getChampionImgUrl}">
+    <div class="icon h-7 w-7 xxs:w-8 xxs:h-8 xs:w-9 xs:h-9 sm:h-10 sm:w-10" :class="{champ: code}" :style=" {backgroundImage: getChampionImgUrl}">
         <div v-if="count && count != 3" class="count">{{count}}</div>
     </div>
 </template>

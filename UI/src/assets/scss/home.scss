@@ -426,7 +426,11 @@
   top: 0;
   background: var(--col-background);
   z-index: 2;
+
+  transition: transform 0.3s ease;
 }
+
+
 
 
 /* Settings Page */
