@@ -1,10 +1,23 @@
 <template>
-    <div class="cardContainer"
-        :class="{empty: count == 0, spell: typeRef == 'Spell', unit: typeRef == 'Unit', champ: typeRef == 'Champion', landmark: typeRef == 'Landmark'}"
+    <div class="cardContainer group"
+        :class="{empty: count == 0, spell: typeRef == 'Spell', unit: typeRef == 'Unit', 
+        champ: typeRef == 'Champion', landmark: typeRef == 'Landmark',
+        unknown: typeRef == 'Unkown'
+        }"
         :style="{background: getCardPreviewBackgroundStyle()}">
         <div class="cardContent cardCost">{{cost}}</div>
         <div class="cardContent cardName">{{name}}</div>
         <div class="cardContent cardCount">x{{count}}</div>
+        <div v-if="type === 'Unknown'" class="
+            lab-secret
+            transition-opacity opacity-0 group-hover:opacity-100 
+            absolute left-1/2 top-0 transform -translate-x-1/2
+            px-4 bg-black h-full flex items-center justify-center
+            whitespace-nowrap z-10 pointer-events-none
+            w-full 
+            ">
+            {{$t('str.labSecrets')}}
+        </div>
         <card-image class="cardDisplay" :code="code" :set="set"></card-image>
     </div>
 </template>
@@ -43,6 +56,16 @@ export default {
     methods: {
         getCardPreviewBackgroundStyle() {
             // const champImageBaseUrl = 'https://raw.githubusercontent.com/painttist/lor-champ-icons/master/images/cards/cropped/';
+            // const unkown = 'https://cdn-lor.mobalytics.gg/production/images/subscribe-banner.jpg'
+            
+            const grayOverlay = 'linear-gradient(90deg, rgb(65, 65, 65) 30%, rgba(65, 65, 65, 0) 70%)'
+
+            // const colored = 'linear-gradient(94deg, rgba(73,213,245,1) 44%, rgba(167,79,255,1) 90%)'
+            const colored2 = 'linear-gradient(120deg, rgba(19,28,69,1) 10%, rgba(73,213,245,1) 50%, rgba(167,79,255,1) 90%)'
+            if (this.typeRef === "Unknown") {
+                return `${colored2}`
+            }
+            
             const cardPreviewUrlBase = 'https://cdn-lor.mobalytics.gg/production/images/cards-preview/';
             
             // const gradient = "linear-gradient(90deg, rgb(191, 176, 131) 30%, rgba(191, 176, 131, 0) 70%),"
@@ -50,7 +73,7 @@ export default {
             if (this.supertype == "Champion") {
                 gradient = "linear-gradient(90deg, var(--col-darker-gold) 30%, rgba(158, 114, 18, 0) 70%),"
             } else {
-                gradient = "linear-gradient(90deg, rgb(65, 65, 65) 30%, rgba(65, 65, 65, 0) 70%),"
+                gradient = `${grayOverlay},`
             }
             
             return gradient + "url(" + cardPreviewUrlBase + this.code + ".webp) right top no-repeat"
@@ -62,6 +85,10 @@ export default {
 
 <style scoped>
 
+.lab-secret {
+    background: linear-gradient(120deg, rgba(0,20,20,1) 14%, rgba(255,154,38,1) 14%, rgba(255,154,38,1) 23%, rgba(0,20,20,1) 23%, rgba(0,20,20,1) 42%, rgba(255,154,38,1) 42%, rgba(250,155,43,1) 53%, rgba(0,20,20,1) 53%, rgba(0,20,20,1) 72%, rgba(255,154,38,1) 72%, rgba(248,156,46,1) 81%, rgba(0,20,20,1) 81%);
+    /* background: linear-gradient(120deg, rgba(0,0,0,1) 14%, rgba(255,154,38,1) 14%, rgba(240,159,55,1) 23%, rgba(0,0,0,1) 23%, rgba(0,0,0,1) 72%, rgba(186,117,35,1) 72%, rgba(248,156,46,1) 81%, rgba(0,0,0,1) 81%); */
+}
 .cardContainer {
     max-width: 320px;
     display: flex;
@@ -79,8 +106,6 @@ export default {
     /* visibility: initial; */
     /* position: relative; */
     opacity: 1;
-
-    transition: opacity 0.15s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .cardContainer.empty .cardCount{
@@ -97,6 +122,7 @@ export default {
     left: 0;
 
     pointer-events: none;
+    @apply transition-opacity;
 
     width: 100%;
     height: auto;

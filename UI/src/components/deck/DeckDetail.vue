@@ -57,6 +57,10 @@ export default {
             type: Boolean,
             default: false,
         },
+        extra: {
+            type: Array,
+            default: () => [],
+        }
     },
     watch: {
         // locale(newLoacle, oldLocale) {
@@ -84,15 +88,24 @@ export default {
                 // return cards
             }
 
+            // Append extra played cards to baseDeck
+            baseDeck = baseDeck.concat(this.extra)
+
             if (baseDeck) {
                 // make sure cards not in current Deck are shown
+                console.log("baseDeck", baseDeck)
+                console.log("extra", this.extra)
                 for (var j in baseDeck) {
                     // Loop through base deck
                     var cardCode = baseDeck[j].code
                     // Get full information from the sets collection
                     var card = this.sets.find(card => card.cardCode == cardCode)
                     var cardCount = baseDeck[j].count
+                    var baseCount = baseDeck[j].count
                     
+                    // Append extra played cards to playedDeck as well?
+                    // deck = deck.concat(this.extra)
+
                     if (deck) {
                         // make sure currentDeck exist
                         
@@ -123,19 +136,36 @@ export default {
                         cards.push({
                             code: cardCode, 
                             name: card.name,
-                            count: cardCount, 
+                            count: cardCount,
+                            baseCount: baseCount,
                             cost: card.cost, 
                             type: card.type,
                             typeRef: typeRef,
                             supertype: card.supertype,
                             set: card.set
                         })
+                    } else if (cardCode && cardCount) {
+                        cards.push({
+                            code: cardCode, 
+                            // name: `?`.repeat(Math.floor( 2 + Math.random() * 4)) + `${Math.random() > 0.35 ? ' ': ''}` + `?`.repeat(Math.floor( 2 + Math.random() * 4)),
+                            name: "???",
+                            count: cardCount,
+                            baseCount: baseCount,
+                            cost: "?", 
+                            type: "Unknown",
+                            typeRef: "Unknown",
+                            supertype: null,
+                            set: "1",
+                        })
                     }
 
                 }
             }
-
+            console.log(cards)
             return cards.sort(function (a, b) {
+                if (a.type === "Unknown") {
+                    return 1
+                }
                 if (a.supertype == b.supertype) {
                     if (a.type == b.type) {
                         return a.cost > b.cost ? 1 : -1
@@ -150,7 +180,7 @@ export default {
         },
         isValid() {
             return this.cards.reduce((prev, card) => {
-                return prev + card.count
+                return prev + card.baseCount
             }, 0) == 40
         }
     },

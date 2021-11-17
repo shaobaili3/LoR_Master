@@ -1,5 +1,5 @@
 <template>
-    <base-window-controls :canClose="false" :canShrink="true" :playerName="oppoName" :playerRank="oppoRank" :titleType="infoType" :deck="deckCode"></base-window-controls>
+    <base-window-controls :canClose="false" :canShrink="true" :playerName="oppoName" :playerRank="oppoRank" :titleType="infoType"></base-window-controls>
     
     <div id="content">
 
@@ -7,9 +7,7 @@
             {{loadingText}}
         </div> 
 
-        <div class="errorText" v-if="isInvalidDeckCode && isShowCode">{{$t('str.invalidDeck')}}</div>
-
-        <div class="tabs" v-if="!isLoading">
+        <div class="tabs px-0 xxs:px-1 xs:px-2" v-if="!isLoading">
             <div class="tab-title-group">
                 <div class="tab-title" @click="switchTab(TABS.oppo)" :class="{active: isShowOppo}">
                     <i class="fas fa-swords"></i>
@@ -52,6 +50,7 @@
             ></match-info>
         </div>
 
+        <!-- Opponent History -->
         <div class="layerpanel max-w-[280px] h-10"  :class="{expanded: currentLayer != LAYERS.base}" v-if="isShowOppo">
                 <button v-if="currentLayer == LAYERS.base" @click="onOpenDecklib" class="btn btn-decklib text-sm py-1 px-2 xxs:text-base xxs:py-2">Open Deck Library</button>
                 <button class="btn btn-back" v-if="currentLayer != LAYERS.base" @click="onLayerBack">
@@ -63,24 +62,22 @@
                 ></tracker-layer>
             </div>
 
+        <!-- Oppo Played -->
+        <div class="tab-content" v-if="isShowOppoGrave && !isLoading">
+            <div class="tab-text">{{$t('tracker.tabs.oppoPlayed')}}</div>
+            <deck-detail :deck="oppoGraveCode" :baseDeck="oppoGraveCode" :showCopy="false" :extra="oppoGraveExtraCards"></deck-detail>
+        </div>
+
+        <!-- My Deck -->
         <div class="tab-content" v-if="isShowMy && !isLoading">
             <deck-regions :deck="startingDeckCode" :fixedWidth="false"></deck-regions>
             <deck-detail :deck="currentDeckCode" :baseDeck="startingDeckCode"></deck-detail>
         </div>
 
-        <div class="tab-content" v-if="isShowOppoGrave && !isLoading">
-            <div class="tab-text">{{$t('tracker.tabs.oppoPlayed')}}</div>
-            <deck-detail :deck="oppoGraveCode" :baseDeck="oppoGraveCode" :showCopy="false"></deck-detail>
-        </div>
-
+        <!-- My Played -->
         <div class="tab-content" v-if="isShowMyGrave && !isLoading">
             <div class="tab-text">{{$t('tracker.tabs.myPlayed')}}</div>
-            <deck-detail :deck="myGraveCode" :baseDeck="myGraveCode" :showCopy="false"></deck-detail>
-        </div>
-
-        <div class="tab-content" v-if="isShowCode">
-            <deck-regions :deck="deckCode" :fixedWidth="false"></deck-regions>
-            <deck-detail :baseDeck="deckCode"></deck-detail>
+            <deck-detail :baseDeck="myPlayedCode" :showCopy="false" :extra="myPlayedExtraCards"></deck-detail>
         </div>
 
         <div class="footer" v-if="!isLoading"> 
@@ -99,6 +96,7 @@ import BaseWindowControls from '../../components/base/BaseWindowControls.vue'
 import DeckDetail from '../../components/deck/DeckDetail.vue'
 import DeckRegions from '../../components/deck/DeckRegions.vue'
 import DeckEncoder from '../../modules/runeterra/DeckEncoder'
+import Card from '../../modules/runeterra/Card'
 
 import { mapActions } from 'vuex'
 
@@ -117,9 +115,8 @@ const requestStatusWaitTime = 1000; //ms
 const TABS = {
     oppo: 0,
     my: 1,
-    code: 2,
-    oppog: 3,
-    myg: 4,
+    oppog: 2,
+    myg: 3,
 }
 
 const LAYERS = {
@@ -158,8 +155,13 @@ export default {
             currentDeckCode: null,
             startingDeckCode: null,
             oppoGraveCode: null,
-            myGraveCode: null,
+            myPlayedCode: null,
             oppoPinnedId: null,
+
+            startingExtraCards: null,
+            myGraveExtraCards: null,
+            myPlayedExtraCards: null,
+            oppoGraveExtraCards: null,
 
             oppoName: null,
             oppoRank: null,
@@ -193,9 +195,6 @@ export default {
         },
         isShowMy() {
             return this.currentTab == TABS.my
-        },
-        isShowCode() {
-            return this.currentTab == TABS.code
         },
         isShowOppoGrave(){
             return this.currentTab == TABS.oppog
@@ -309,21 +308,6 @@ export default {
 
             this.currentTab = newTab
         },
-        // showOppo() {
-        //     this.currentTab = TABS.oppo
-        // },
-        // showMy() {
-        //     this.currentTab = TABS.my
-        // },
-        // showOppoGrave() {
-        //     this.currentTab = TABS.oppog
-        // },
-        // showMyGrave() {
-        //     this.currentTab = TABS.myg
-        // },
-        // showCode() {
-        //     this.currentTab = TABS.code
-        // },
         async getSubData() {
             if (window.sock)
             for await (const [topic, msg] of window.sock) {
@@ -446,11 +430,11 @@ export default {
             if (!this.IS_ELECTRON) {
 
                 if (!this.startingDeckCode) {
-                    Math.random() > 0.2 ? this.processTrackInfo(require('../../assets/data/testTrack')) : this.processTrackInfo({
+                    Math.random() > 0.2 ? this.processTrackInfo(require('../../assets/data/testTrackLab')) : this.processTrackInfo({
                         positional_rectangles: null
                     })
                 } else {
-                    this.processTrackInfo(require('../../assets/data/testTrack'))
+                    this.processTrackInfo(require('../../assets/data/testTrackLab'))
                 }
                 
                 setTimeout(this.requestTrackInfo, 1000);
@@ -515,6 +499,7 @@ export default {
                 this.oppoLp = null
                 this.matchTotalNum = 0
                 this.matchInfos = []
+                
             }
             
             if (data.deck_tracker) {
@@ -525,22 +510,39 @@ export default {
                         this.handleGameStart()
                     }
                 }
-                this.startingDeckCode = data.deck_tracker.deckCode
-                this.currentDeckCode = data.deck_tracker.currentDeckCode
-                this.oppoGraveCode = data.deck_tracker.opGraveyardCode
-                this.myGraveCode = data.deck_tracker.myPlayedCardsCode
+
+                let startingCards = DeckEncoder.encodeCardsObj(data.deck_tracker.cardsInDeck)
+                let myGraveCards = DeckEncoder.encodeCardsObj(data.deck_tracker.myGraveyard)
+                let myPlayedCards = DeckEncoder.encodeCardsObj(data.deck_tracker.myPlayedCards)
+                let oppoGraveCards = DeckEncoder.encodeCardsObj(data.deck_tracker.oppoGraveCards)
+
+                this.startingExtraCards = startingCards.extra
+                this.myGraveExtraCards = myGraveCards.extra
+                this.myPlayedExtraCards = myPlayedCards.extra
+                this.oppoGraveExtraCards = oppoGraveCards.extra
+
+                this.startingDeckCode = this.startingDeckCode || data.deck_tracker.deckCode || startingCards.code
+                this.currentDeckCode = data.deck_tracker.currentDeckCode || startingCards.code
+                this.oppoGraveCode = data.deck_tracker.opGraveyardCode|| oppoGraveCards.code
+                this.myPlayedCode = data.deck_tracker.myPlayedCardsCode || myPlayedCards.code
                 this.cardsInHandNum = data.deck_tracker.cardsInHandNum
                 
             } else {
                 if (this.startingDeckCode != null) {
                     // switching from having deck code
+                    console.log("Handle Game End")
                     this.handleGameEnd()
                 }
                 this.startingDeckCode = null
                 this.currentDeckCode = null
-                this.myGraveCode = null
+                this.myPlayedCode = null
                 this.oppoGraveCode = null
                 this.cardsInHandNum = null
+
+                this.startingExtraCards = null
+                this.myGraveExtraCards = null
+                this.myPlayedExtraCards = null
+                this.oppoGraveExtraCards = null
 
                 this.hideWindow()
             }

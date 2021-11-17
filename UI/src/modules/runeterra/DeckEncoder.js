@@ -80,6 +80,56 @@ class DeckEncoder {
     ])
   }
 
+  // Should be in the format of 
+  // cards: {
+  //   "01PZ009": 3
+  //   ...
+  // }
+  static encodeCardsObj(cards) {
+
+    
+    
+    // .map((mapped, item) => {
+    //   item.code.length > 7 ? mapped.extra.push(item) : mapped.collect.push(item)
+    // }, {extra: [], collect: []})
+
+    // console.log(cards)
+
+    if (!cards) {
+      return { 
+        code: "",
+        extra: ""
+      }
+    }
+    
+    try {
+      let cardsMapped = Object.keys(cards).reduce(
+        (val, key) => {
+          // console.log("Key", key)
+          if (key.length > 7 ) {
+            // console.log("Non collect")
+            val.extra.push(new Card(key, cards[key]))
+            return val
+          } else {
+            val.cards.push(new Card(key, cards[key]))
+            return val
+          }
+        }, {extra: [], cards: []}
+      )
+
+      // console.log("cardsMapped", cardsMapped)
+      let code = DeckEncoder.encode(cardsMapped.cards)
+      // console.log("code", code)
+
+      return { 
+        code: code,
+        extra: cardsMapped.extra
+      }
+    } catch (err) {
+        console.log(err.message)
+    }
+  }
+
   static encodeNofs (nOfs) {
     return nOfs
       .sort((a, b) => a.code.localeCompare(b.code))
