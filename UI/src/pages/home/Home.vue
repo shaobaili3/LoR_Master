@@ -203,6 +203,7 @@
 
 import '../../assets/scss/tooltips.scss'
 import '../../assets/scss/home.scss'
+import '../../assets/scss/transitions.scss'
 
 import BaseWindowControls from '../../components/base/BaseWindowControls.vue'
 import axios from 'axios'

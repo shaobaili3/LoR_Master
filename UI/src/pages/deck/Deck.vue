@@ -106,6 +106,12 @@ import { mapActions } from 'vuex'
 
 import '../../assets/scss/tooltips.scss'
 import '../../assets/scss/deck.scss'
+import '../../assets/scss/transitions.scss'
+
+const testTrackData = require('../../assets/data/testTrackLab')
+const testStatusData = require('../../assets/data/testStatusEN')
+
+// const testStatusData = require('../../assets/data/testStatus')
 
 import TrackerLayer from '../../components/tracker/TrackerLayer.vue'
 
@@ -355,7 +361,7 @@ export default {
         requestStatusInfo() {
             
             if (!this.IS_ELECTRON) {
-                var data = require('../../assets/data/testStatus')
+                var data = testStatusData
                 this.server = data.server
                 if (data.language) {
                     var newLocale = data.language.replace('-', '_').toLowerCase()
@@ -437,11 +443,11 @@ export default {
             if (!this.IS_ELECTRON) {
 
                 if (!this.startingDeckCode) {
-                    Math.random() > 0.2 ? this.processTrackInfo(require('../../assets/data/testTrack')) : this.processTrackInfo({
+                    Math.random() > 0.2 ? this.processTrackInfo(testTrackData) : this.processTrackInfo({
                         positional_rectangles: null
                     })
                 } else {
-                    this.processTrackInfo(require('../../assets/data/testTrack'))
+                    this.processTrackInfo(testTrackData)
                 }
                 
                 setTimeout(this.requestTrackInfo, 1000);

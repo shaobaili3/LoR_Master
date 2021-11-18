@@ -1,4 +1,5 @@
 <template>
+    
     <div class="match" :class="{won: won, loss: !won}">
         <div class="row opponent">
             <!-- <router-link class="opponent-name btn" :to="opponentLink">
@@ -26,7 +27,9 @@
         </div>
     </div>
 
-    <deck-detail v-if="visibleDeck == 1" :baseDeck="deck"></deck-detail>
+    <transition name="height">
+        <deck-detail v-if="visibleDeck == 1" :baseDeck="deck"></deck-detail>
+    </transition>
 
 </template>
 

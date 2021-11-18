@@ -1,4 +1,5 @@
 <template>
+<div class="w-full">
     <div class="deck-detail" 
     :class="{'fixed-height': fixedHeight}"
     v-if="cards.length > 0">
@@ -24,6 +25,7 @@
             <div class="tooltiptext top-end" v-if="!isValid">{{$t('tooltips.incompleteDeck')}}</div>
         </div>
     </div>
+</div>
 </template>
 
 <script>
