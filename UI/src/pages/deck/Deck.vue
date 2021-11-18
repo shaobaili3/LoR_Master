@@ -52,8 +52,11 @@
         </div>
 
         
-        <div class="layerpanel max-w-[280px] h-10 p-2"  :class="{expanded: currentLayer != LAYERS.base}" v-if="isShowOppo">
-            <button v-if="currentLayer == LAYERS.base" @click="onOpenDecklib" class="btn btn-decklib text-sm py-1 px-2 xxs:text-base xxs:py-2">Open Deck Library</button>
+        <div class="layerpanel max-w-[280px] h-10 p-2 xxs:h-11 xxs:p-1"  :class="{expanded: currentLayer != LAYERS.base}" v-if="isShowOppo">
+            <button v-if="currentLayer == LAYERS.base" @click="onOpenDecklib" 
+                class="btn btn-decklib text-sm py-1 px-2 xxs:text-base">
+                Open Deck Library
+            </button>
             <button class="btn btn-back" v-if="currentLayer != LAYERS.base" @click="onLayerBack">
                 <span><i class="fas fa-caret-down"></i></span>
             </button>

@@ -25,7 +25,7 @@
     </div>
     <div class="decks-container gap-4">
       <div class="deck-block p-2.5" @click="showDeck($event, deck.code)" v-for="(deck, id) in decks" :key="id">
-        <div class="decklib-deck-title text-left" :title="deck.title">
+        <div class="decklib-deck-title text-left py-1 px-2" :title="deck.title">
           {{deck.title}} <span v-if="deck.date" class="block text-xs font-light text-gray-200">{{format(new Date(deck.date), "HH:mm | yyyy-MM-dd")}}</span>
         </div>
         <div @click.stop="onClickDelete(id)" class="btn-delete btn"><span><i class="fas fa-trash"></i></span></div>

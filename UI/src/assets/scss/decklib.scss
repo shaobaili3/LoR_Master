@@ -104,8 +104,11 @@
       }
 
       .decklib-deck-title {
-        padding: 5px 5px 10px 5px;
+        // padding: 5px 5px 8px 5px;
         max-width: calc(100% - 40px);
+        &.w-full {
+          max-width: none;
+        }
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
