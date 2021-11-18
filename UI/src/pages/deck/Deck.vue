@@ -1,5 +1,5 @@
 <template>
-    <base-window-controls :canClose="false" :canShrink="true" :playerName="oppoName" :playerRank="oppoRank" :titleType="infoType"></base-window-controls>
+    <base-window-controls :canClose="false" :canShrink="true" :playerName="oppoName" :playerRank="oppoRank" :playerLP="oppoLp" :titleType="infoType"></base-window-controls>
     
     <div id="content">
 
@@ -108,9 +108,9 @@ import '../../assets/scss/tooltips.scss'
 import '../../assets/scss/deck.scss'
 import '../../assets/scss/transitions.scss'
 
-const testTrackData = require('../../assets/data/testTrackLab')
+const testTrackData = require('../../assets/data/testTrack')
+// const testTrackData = require('../../assets/data/testTrackLab')
 const testStatusData = require('../../assets/data/testStatusEN')
-
 // const testStatusData = require('../../assets/data/testStatus')
 
 import TrackerLayer from '../../components/tracker/TrackerLayer.vue'
@@ -414,6 +414,8 @@ export default {
             if (!this.IS_ELECTRON) {
                 this.oppoTag = "5961"
                 this.oppoName = "Storm"
+                this.oppoRank = 123
+                this.oppoLp = 321
                 this.requestOpponentHistory()
                 return
             }
