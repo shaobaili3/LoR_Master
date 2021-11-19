@@ -4,6 +4,7 @@ from sentry_sdk.integrations.flask import FlaskIntegration
 import sentry_sdk
 import threading
 import time
+from Models import leaderboard
 from Models.leaderboard import Leaderboard
 from Models.setting import Setting
 from Models.local import Local
@@ -56,7 +57,7 @@ sentry_sdk.set_context("info", {
 master.startMasterWorker()
 leaderboardModel = Leaderboard()
 cacheModel = Cache()
-herokuModel = Heroku()
+herokuModel = Heroku(leaderboard)
 
 settingTrack = Setting()
 localTrack = Local(settingTrack, cacheModel)
