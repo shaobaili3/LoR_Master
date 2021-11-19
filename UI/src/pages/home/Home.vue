@@ -11,14 +11,13 @@
         <img class="logo" height="50px" src="@/assets/images/logo/logo.png" alt="">
       </picture>
     </div>
-    <button class="left-nav-btn tooltip"
+    <button class="left-nav-btn tooltip" v-if="IS_ELECTRON"
       :class="{
         selected: currentPage == PANELS.my,
         disabled: !lorRunning
       }" 
       @click="handleProfileClick"
       :disabled="!lorRunning"
-      v-if="IS_ELECTRON"
     >
       <span class="icon-default"
         v-if="!localHistoryLoading"><i class="fas fa-user-circle"></i></span>
@@ -44,8 +43,7 @@
       @click="setCurrentPage(PANELS.leaderboard)">
       <span><i class="fas fa-trophy"></i></span>
     </button>
-    <button class="left-nav-btn" 
-      v-if="IS_ELECTRON || NODE_ENV === 'development' "
+    <button class="left-nav-btn" v-if="IS_ELECTRON || NODE_ENV === 'development' "
       :class="{selected: currentPage == PANELS.decklib}" 
       @click="setCurrentPage(PANELS.decklib)">
       <span><i class="fas fa-star"></i></span>
