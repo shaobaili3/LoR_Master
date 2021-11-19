@@ -11,7 +11,7 @@ remote.initialize()
 const isPackaged = app.isPackaged
 const isDev = process.argv.includes('--dev')
 
-const developmentMode = true && !(isPackaged) || isDev
+const developmentMode = false && !(isPackaged) || isDev
 
 const closeWithoutTracker = false
 const headerHeight = 45 // Repeated in preload.js
@@ -506,7 +506,7 @@ function newDeckWindow() {
 
   const {width, height} = electron.screen.getPrimaryDisplay().workAreaSize
 
-  const defaultTrackerWidth = 240
+  const defaultTrackerWidth = width > 1920 ? 230 : 200
   const defaultTrackerHeight = height * 0.7
   const defaultTrackerX = 20
   const defaultTrackerY = height / 2 - defaultTrackerHeight / 2
