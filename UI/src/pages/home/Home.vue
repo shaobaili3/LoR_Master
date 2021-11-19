@@ -150,6 +150,10 @@
         <div class="settings-list-item">
           <locale-changer :title="$t('settings.options.cardLanguage')" :swapNames="cardLocaleNames" :options="cardLocales" :optionDefault="locale" :input="changeCardLocale"></locale-changer>
         </div>
+        <div class="settings-list-item" v-if="IS_ELECTRON">
+          <div class="settings-title">{{ $t('settings.options.resetTrackerBounds') }}</div>
+          <button class="settings-btn" @click="resetTrackerWindow">{{ $t('settings.reset') }}</button>
+        </div>
       </div>
 
       <!-- <div class="debug-info">
@@ -432,6 +436,12 @@ export default {
     ...mapActions([
       'changeLocale'
     ]),
+
+    resetTrackerWindow() {
+      if (this.IS_ELECTRON) {
+        window.ipcRenderer.send('reset-deck-window-bounds')
+      }
+    },
 
     changeMainUILocale(newLocale) {
       console.log("Changing locale")

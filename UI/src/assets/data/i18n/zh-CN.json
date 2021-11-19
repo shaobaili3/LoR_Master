@@ -99,12 +99,14 @@
   "settings": {
     "options": {
       "autoLaunch": "开机自动启动:",
-      "cardLanguage": "卡牌语言"
+      "cardLanguage": "卡牌语言",
+      "resetTrackerBounds": "重置记牌器位置与尺寸"
     },
     "enabled": "开启",
     "enable": "开启",
     "disabled": "关闭",
-    "disable": "关闭"
+    "disable": "关闭",
+    "reset": "重置"
   },
   "decklib": {
     "title": "牌组库",
