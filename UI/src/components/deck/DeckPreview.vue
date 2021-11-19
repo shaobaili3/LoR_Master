@@ -3,7 +3,7 @@
         <div class="row" :class="{fixedWidth: fixedWidth}">
             <deck-regions :deck="deck" :fixedWidth="false"></deck-regions>
             <deck-champs :deck="deck" :fixedWidth="!cheveron"></deck-champs>
-            <div v-if="cheveron" class="icon cheveron fa fa-chevron-down"></div>
+            <div v-if="cheveron" class="icon cheveron fa" :class="{'fa-chevron-down': !isShown, 'fa-chevron-up': isShown}"></div>
         </div>
     </div>
 </template>
@@ -34,6 +34,10 @@ export default {
             default: false,
         },
         fixedWidth: { // 180px vs 100%
+            type: Boolean,
+            default: false,
+        },
+        isShown: {
             type: Boolean,
             default: false,
         }

@@ -21,7 +21,7 @@
             
         </div>
         <div class="row decklist">
-            <deck-preview @click="showDeck" :deck="deck" :won="won" :cheveron="true"></deck-preview>
+            <deck-preview @click="showDeck" :isShown="visibleDeck != 0" :deck="deck" :won="won" :cheveron="true"></deck-preview>
             <!-- <div class="text-vs">VS</div> -->
             <!-- <deck-preview @click="showDeck" :deck="deck"></deck-preview> -->
         </div>
