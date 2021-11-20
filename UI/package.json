@@ -1,31 +1,84 @@
 {
   "name": "lor-master-tracker",
-  "productName": "LoR Master Tracker",
-  "author": {
-    "name" : "LoR Master",
-    "email" : "shaobaili3@gmail.com",
-    "url" : "http://www.lormaster.com/"
-  },
-  "version": "0.10.3",
+  "version": "0.10.4",
   "private": true,
-  "main": "app.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/shaobaili3/LoR_Master"
+  "author": {
+    "name": "LoR Master",
+    "email": "shaobaili3@gmail.com",
+    "url": "http://www.lormaster.com/"
   },
   "scripts": {
-    "dev": "vue-cli-service build && electron app.js",
-    "dev-hidden": "vue-cli-service build && electron app.js --hidden",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "deploy": "deploy.sh",
-    "start": "electron app.js",
-    "package": "electron-packager ./ LoRMasterTracker --out ./app --app-version %npm_package_version% --overwrite --icon=image.ico",
     "build-installer": "electron-builder",
     "build-pack": "electron-builder --dir",
-    "build-pub": "electron-builder -p always"
+    "build-pub": "electron-builder -p always",
+    "dev": "chcp 65001 && vue-cli-service build && electron app.js",
+    "dev-electron": "chcp 65001 && electron app.js --dev",
+    "dev-hidden": "vue-cli-service build && electron app.js --hidden",
+    "package": "electron-packager ./ LoRMasterTracker --out ./app --app-version %npm_package_version% --overwrite --icon=image.ico",
+    "start": "electron app.js"
   },
+  "main": "app.js",
+  "dependencies": {
+    "@electron/remote": "^2.0.1",
+    "auto-launch": "^5.0.5",
+    "axios": "^0.21.4",
+    "core-js": "^3.6.5",
+    "date-fns": "^2.25.0",
+    "detect-port": "^1.3.0",
+    "electron-log": "^4.4.1",
+    "electron-store": "^8.0.1",
+    "electron-updater": "^4.3.9",
+    "moment": "^2.29.1",
+    "runeterra": "^2.0.0",
+    "tasklist": "^4.0.1",
+    "universal-analytics": "^0.4.23",
+    "vue": "^3.0.0",
+    "vue-i18n": "^9.2.0-beta.7",
+    "vue-router": "^4.0.3",
+    "vuex": "^4.0.0-rc.2"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~5.0.0-rc.0",
+    "@vue/cli-plugin-eslint": "~5.0.0-rc.0",
+    "@vue/cli-service": "~5.0.0-rc.0",
+    "@vue/compiler-sfc": "^3.0.0",
+    "autoprefixer": "^10.4.0",
+    "babel-eslint": "^10.1.0",
+    "electron": "^15.1.0",
+    "electron-builder": "^22.11.7",
+    "electron-packager": "^15.2.0",
+    "eslint": "^7.5.0",
+    "eslint-plugin-vue": "^7.0.0-0",
+    "postcss": "^8.3.11",
+    "sass": "^1.42.1",
+    "sass-loader": "^10.2.0",
+    "tailwindcss": "^2.2.19"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/vue3-essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {
+      "no-unused-vars": "off"
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
   "build": {
     "appId": "com.lor-master-tracker.tracker",
     "productName": "LoRMasterTracker",
@@ -62,57 +115,9 @@
       "shortcutName": "LoR Master Tracker"
     }
   },
-  "dependencies": {
-    "@electron/remote": "^2.0.1",
-    "auto-launch": "^5.0.5",
-    "axios": "^0.21.4",
-    "core-js": "^3.6.5",
-    "detect-port": "^1.3.0",
-    "electron-log": "^4.4.1",
-    "electron-store": "^8.0.1",
-    "electron-updater": "^4.3.9",
-    "moment": "^2.29.1",
-    "runeterra": "^2.0.0",
-    "tasklist": "^4.0.1",
-    "universal-analytics": "^0.4.23",
-    "vue": "^3.0.0",
-    "vue-i18n": "^9.2.0-beta.7",
-    "vue-router": "^4.0.3",
-    "vuex": "^4.0.0-rc.2"
-  },
-  "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-eslint": "~4.5.0",
-    "@vue/cli-service": "~4.5.0",
-    "@vue/compiler-sfc": "^3.0.0",
-    "babel-eslint": "^10.1.0",
-    "electron": "^15.1.0",
-    "electron-builder": "^22.11.7",
-    "electron-packager": "^15.2.0",
-    "eslint": "^6.8.0",
-    "eslint-plugin-vue": "^7.0.0-0",
-    "sass": "^1.42.1",
-    "sass-loader": "^10.2.0"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/vue3-essential",
-      "eslint:recommended"
-    ],
-    "parserOptions": {
-      "parser": "babel-eslint"
-    },
-    "rules": {
-      "no-unused-vars": "off"
-    }
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
-  ]
+  "productName": "LoR Master Tracker",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shaobaili3/LoR_Master"
+  }
 }

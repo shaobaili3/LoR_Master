@@ -4,21 +4,20 @@
     <span><i class="fas fa-list"></i></span>
   </div>
   <div class="left-nav" :class="{'expanded': leftNavExpanded}">
-    <div class="left-nav-btn logo no-click" v-if="!IS_ELECTRON">
+    <div class="left-nav-btn logo no-click" v-if="!IS_ELECTRON" @mouseenter="showAds">
       <picture>
         <source srcset="@/assets/images/logo/logo.webp" type="image/webp">
         <source srcset="@/assets/images/logo/logo.png" type="image/png">
         <img class="logo" height="50px" src="@/assets/images/logo/logo.png" alt="">
       </picture>
     </div>
-    <button class="left-nav-btn tooltip"
+    <button class="left-nav-btn tooltip" v-if="IS_ELECTRON"
       :class="{
         selected: currentPage == PANELS.my,
         disabled: !lorRunning
       }" 
       @click="handleProfileClick"
       :disabled="!lorRunning"
-      v-if="IS_ELECTRON"
     >
       <span class="icon-default"
         v-if="!localHistoryLoading"><i class="fas fa-user-circle"></i></span>
@@ -44,15 +43,14 @@
       @click="setCurrentPage(PANELS.leaderboard)">
       <span><i class="fas fa-trophy"></i></span>
     </button>
-    <button class="left-nav-btn" 
-      
+    <button class="left-nav-btn" v-if="IS_ELECTRON || NODE_ENV === 'development' "
       :class="{selected: currentPage == PANELS.decklib}" 
       @click="setCurrentPage(PANELS.decklib)">
       <span><i class="fas fa-star"></i></span>
     </button>
     <div class="left-nav-btn menu no-click">
       <span><i class="fas fa-books"></i></span>
-      <div class="menu-content right">
+      <div class="menu-content right top-auto sm:top-0 sm:bottom-auto">
         <div class="card" @click="openURL('https://masteringruneterra.com/')">
           <img src="https://masteringruneterra.com/wp-content/uploads/2021/09/MasteringRuneterraWebsiteLogo-300x129.webp">
         </div>
@@ -89,8 +87,25 @@
   
   <base-window-controls v-if="IS_ELECTRON" :title="''" :titleType="'window'"></base-window-controls>
   
+  <base-top-nav v-if="!IS_ELECTRON"></base-top-nav>
+
+  <div v-if="!IS_ELECTRON" class="mt-[-23px] text-center w-auto min-w-0 pl-4 absolute transition-spacing z-10 invisible md:visible" 
+    :class="{'ml-[-300px]': isAdHidden && isAdClosed, 'ml-20': !(isAdHidden && isAdClosed)}">
+    <div class="ad overflow-hidden relative block w-[300px] h-[250px] transition-opacity bg-gray-800 rounded-lg"
+      @mouseleave="hideAds"
+    >
+      <button class="absolute top-1 right-1 text-white" @click="closeAds">
+        <i class="p-2 fas fa-times"></i>
+      </button>
+      <div class="w-full h-full">
+        <p class="text-lg py-5">Have you tried our <a class="text-xl text-gold-400 cursor-pointer" href="https://lormaster.com" target="_blank"><br>LoR Master Tracker</a> yet?</p>
+        <a class="text-xl text-gold-400 cursor-pointer" href="https://lormaster.com" target="_blank"><img src="../../assets/images/promo/tracker.png" alt="" srcset=""></a>
+      </div>
+    </div>
+  </div>
+  
   <div class="content" :class="{fullheight: !IS_ELECTRON}" @click="shrinkLeftNav">
-    <div class="main-content-container" v-if="currentPage == PANELS.my">
+    <div class="main-content-container" v-if="currentPage == PANELS.my" @scroll="shrinkLeftNav">
       <player-matches 
         @search="searchPlayer($event)"
         @show-deck="showDeck"
@@ -103,23 +118,23 @@
       </player-matches>
     </div>
 
-    <div class="main-content-container search" v-if="currentPage == PANELS.search">
+    <div class="main-content-container search" v-if="currentPage == PANELS.search" @scroll="handleContentScroll">
       <panel-search ref="panelSearch" :apiBase="apiBase" @showDeck="showDeck"></panel-search>
     </div>
 
-    <div class="main-content-container leaderboard" v-if="currentPage == PANELS.leaderboard">
+    <div class="main-content-container leaderboard" v-if="currentPage == PANELS.leaderboard" @scroll="handleContentScroll">
       <leaderboard :apiBase="apiBase" @search="searchPlayer($event)"></leaderboard>
     </div>
 
-    <div class="main-content-container deck-library" v-if="currentPage == PANELS.decklib">
+    <div class="main-content-container deck-library" v-if="currentPage == PANELS.decklib" @scroll="handleContentScroll">
       <panel-deck-lib ref="deckLib" @showDeck="showDeck"></panel-deck-lib>
     </div>
 
-    <div class="main-content-container contact" v-if="currentPage == PANELS.contact">
+    <div class="main-content-container contact" v-if="currentPage == PANELS.contact" @scroll="handleContentScroll">
       <contact-info :apiBase="apiBase"></contact-info>
     </div>
 
-    <div class="main-content-container settings" v-if="currentPage == PANELS.settings">
+    <div class="main-content-container settings" v-if="currentPage == PANELS.settings" @scroll="handleContentScroll">
       <div class="title">{{$t('str.settings')}}</div>
       <div class="settings-list">
         <div class="settings-list-item" v-if="IS_ELECTRON">
@@ -128,7 +143,14 @@
           <button class="settings-btn" v-if="!autoLaunch" @click="setAutoLaunch(true)">{{ $t('settings.enable') }}</button>
         </div>
         <div class="settings-list-item">
-          <locale-changer></locale-changer>
+          <locale-changer :title="$t('str.languages')" :options="$i18n.availableLocales" :optionDefault="$i18n.locale" :input="changeMainUILocale"></locale-changer>
+        </div>
+        <div class="settings-list-item">
+          <locale-changer :title="$t('settings.options.cardLanguage')" :swapNames="cardLocaleNames" :options="cardLocales" :optionDefault="locale" :input="changeCardLocale"></locale-changer>
+        </div>
+        <div class="settings-list-item" v-if="IS_ELECTRON">
+          <div class="settings-title">{{ $t('settings.options.resetTrackerBounds') }}</div>
+          <button class="settings-btn" @click="resetTrackerWindow">{{ $t('settings.reset') }}</button>
         </div>
       </div>
 
@@ -138,12 +160,12 @@
     </div>
   </div>
 
-  <div class="deck-content-container" :class="{hidden: !isShowDeck, fullheight: !IS_ELECTRON}">
+  <div class="deck-content-container" :class="{hide: !isShowDeck, fullheight: !IS_ELECTRON}">
     <div class="deck-content-top-bar">
       <button class="collapse-btn" @click="hideDeck"><span><i class="fas fa-chevron-right"></i></span></button>
       <deck-regions :deck="deckCode" :fixedWidth="false"></deck-regions>
     </div>
-    <div class="deck-content-detail">
+    <div class="deck-content-detail" :fixedHeight="!IS_ELECTRON">
       <deck-detail :baseDeck="deckCode" :fixedHeight="true"></deck-detail>
     </div>
   </div>
@@ -183,6 +205,7 @@
 
 import '../../assets/scss/tooltips.scss'
 import '../../assets/scss/home.scss'
+import '../../assets/scss/transitions.scss'
 
 import BaseWindowControls from '../../components/base/BaseWindowControls.vue'
 import axios from 'axios'
@@ -199,11 +222,14 @@ import PanelDeckLib from '../../components/panels/PanelDeckLib.vue'
 import DeckPreview from '../../components/deck/DeckPreview.vue'
 
 import '../../assets/scss/responsive.scss'
+import BaseTopNav from '../../components/base/BaseTopNav.vue'
 
 const requestDataWaitTime = 400 //ms
 const requestHistoryWaitTime = 100 //ms
 const requestStatusWaitTime = 1000 //ms
 const inputNameListLength = 10;
+
+import { locales as cardLocales, localeNames as cardLocaleNames} from '../template'
 
 // import ua from 'universal-analytics'
 
@@ -236,6 +262,24 @@ const PANELS = {
   settings: 5,
 }
 
+function setCookie(name, value, expDay, expHour, expMin) {
+  let date = new Date();
+  date.setTime(date.getTime() + (expDay * 24 * 60 * 60 * 1000) + (expHour * 60 * 60 * 1000) + (expMin * 60 * 1000));
+  const expires = "expires=" + date.toUTCString();
+  document.cookie = name + "=" + value + "; " + expires + "; path=/";
+}
+
+function getCookie(name) {
+  const cname = name + "=";
+  const decoded = decodeURIComponent(document.cookie); //to be careful
+  const arr = decoded .split('; ');
+  let res;
+  arr.forEach(val => {
+      if (val.indexOf(cname) === 0) res = val.substring(name.length);
+  })
+  return res;
+}
+
 export default {
   components: { 
     BaseWindowControls,
@@ -248,6 +292,7 @@ export default {
     PanelSearch,
     PanelDeckLib,
     DeckPreview,
+    BaseTopNav,
   },
   data() {
     return {
@@ -283,6 +328,14 @@ export default {
 
       clipboardDeck: null,
       leftNavExpanded: false,
+
+      isAdHidden: true,
+      isAdClosed: true,
+
+      scrollTops: {},
+
+      cardLocales: cardLocales,
+      cardLocaleNames: cardLocaleNames,
     }
   },
   computed: {
@@ -314,11 +367,14 @@ export default {
       if (this.IS_ELECTRON) {
         return `http://127.0.0.1:${this.portNum}`
       }
-      return `https://lmtservice.herokuapp.com`
+      return `https://lormaster.herokuapp.com`
     },
     lorNewsURL() {
       return `https://playruneterra.com/${this.locale.replace('_', '-')}/news`
     },
+    NODE_ENV() {
+      return process.env.NODE_ENV
+    }
   },
   mounted() {
     console.log("Mounted")
@@ -327,6 +383,10 @@ export default {
 
     console.log("Is Electron:", this.IS_ELECTRON)
 
+    // Advertisements
+    // setTimeout(() => {
+    //   this.showAds()
+    // }, 15 * 60 * 1000);
     
     // Testing switching locale
     // if (process.env.NODE_ENV == "development") {
@@ -340,8 +400,22 @@ export default {
       // var test = 'Hello'
       
       this.requestStatusInfo()
+
+      if (!this.IS_ELECTRON) {
+        let myStorage = window.localStorage;
+        let locale = myStorage.getItem('ui-locale')
+        let cardLocale = myStorage.getItem('card-locale')
+        if (locale && this.$i18n.availableLocales.includes(locale)) {
+          this.$i18n.locale = locale
+          console.log("Change ui locale to", locale)
+        }
+        if (cardLocale && this.cardLocales.includes(cardLocale)) {
+          this.changeLocale(cardLocale)
+          console.log("Change card locale to", cardLocale)
+        }
+        return
+      }
       
-      if (!window.ipcRenderer) { return }
       this.handleGameEnd()
       this.requestVersionData()
       this.initLocalSettings()
@@ -360,6 +434,75 @@ export default {
     ...mapActions([
       'changeLocale'
     ]),
+
+    resetTrackerWindow() {
+      if (this.IS_ELECTRON) {
+        window.ipcRenderer.send('reset-deck-window-bounds')
+      }
+    },
+
+    changeMainUILocale(newLocale) {
+      console.log("Changing locale")
+      this.$i18n.locale = newLocale
+      if (window.ipcRenderer) {
+        window.ipcRenderer.send('changed-locale', newLocale)
+      } else {
+        window.localStorage.setItem('ui-locale', newLocale)
+      }
+    },
+
+    changeCardLocale(newLocale) {
+      console.log("Change Card Locale to:", newLocale)
+      this.changeLocale(newLocale)
+      if (!this.IS_ELECTRON) {
+        window.localStorage.setItem('card-locale', newLocale)
+      }
+    },
+
+    handleContentScroll(event) {
+      this.shrinkLeftNav()
+
+      let tar = event.target
+
+      let id = tar.toString()
+      let oldSt = null
+      if (this.scrollTops && this.scrollTops[id] && this.scrollTops[id].scrollTop) {
+        oldSt = this.scrollTops[id].scrollTop 
+      }
+
+      const speedThresh = 25;
+      const heightThresh = 180;
+      
+      let st = tar.scrollTop
+      if (oldSt && st - oldSt > speedThresh && st > heightThresh) {
+        // Scrolling down
+        tar.classList.add('scrollDown')
+        tar.classList.remove('scrollUp')
+      } else if (oldSt && oldSt - st > speedThresh) {
+        // Scrolling Up
+        tar.classList.add('scrollUp')
+        tar.classList.remove('scrollDown')
+      }
+      this.scrollTops[id] = {scrollTop: st}
+      
+    },
+
+    showAds() {
+      this.isAdHidden = false
+    },
+
+    hideAds() {
+      this.isAdHidden = true
+    },
+
+    openAds() {
+      this.isAdClosed = false
+    },
+
+    closeAds() {
+      this.isAdClosed = true
+      this.hideAds()
+    },
 
     expandLeftNav() {
       this.leftNavExpanded = true

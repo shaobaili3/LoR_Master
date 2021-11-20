@@ -1,7 +1,7 @@
 <template>
 	<div class="custom-select" :tabindex="tabindex" @blur="open = false">
 		<div class="selected" :class="{ open: open }" @click="open = !open">
-			{{ selected }}
+			{{ swapNames ? swapNames[selectedIndex] : selected }}
 		</div>
 		<div class="items" :class="{ selectHide: !open }">
 			<div
@@ -13,7 +13,7 @@
 					$emit('input', option);
 				"
 			>
-				{{ option }}
+				{{ swapNames ? swapNames[i] : option }}
 			</div>
 		</div>
 	</div>
@@ -36,10 +36,15 @@ export default {
 			required: false,
 			default: 0,
 		},
+		swapNames: {
+			type: Array,
+			require: false,
+			default: null,
+		}
 	},
 	data() {
 		return {
-			selected: this.default
+			selected: this.default && this.options.length > 0 && this.options.includes(this.default)
 				? this.default
 				: this.options.length > 0
 				? this.options[0]
@@ -48,8 +53,14 @@ export default {
 		};
 	},
 	mounted() {
+		console.log(this.swapNames)
 		this.$emit("input", this.selected);
 	},
+	computed: {
+		selectedIndex() {
+			return this.options.findIndex((val) => val == this.selected)
+		}
+	}
 };
 </script>
 

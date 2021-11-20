@@ -1,5 +1,5 @@
 <template>
-    <div class="icon" :class="{'faction': faction != -1}" :style=" {backgroundImage: getRegionImgUrl}"></div>
+    <div class="icon h-7 w-7 xxs:w-8 xxs:h-8 xs:w-9 xs:h-9 sm:h-10 sm:w-10 " :class="{'faction': faction != -1}" :style=" {backgroundImage: getRegionImgUrl}"></div>
 </template>
 
 <script>
@@ -35,7 +35,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 
     .icon {
         
@@ -47,8 +47,8 @@ export default {
         text-align: center;
         /* line-height: 30px; */
         /* vertical-align: middle; */
-        width: 18px;
-        height: 18px;
+        /* width: 18px;
+        height: 18px; */
         color: white;
 
         /* background-color: white; */
@@ -56,6 +56,7 @@ export default {
 
         background-position: 50% 50%;
         background-size: cover;
+        background-repeat: no-repeat;
 
         /* background-image: url('../assets/images/cards/cropped/01DE012-cropped.png'); */
     }
@@ -75,19 +76,5 @@ export default {
         opacity: 1;
         filter: brightness(0) invert(1) drop-shadow(1px 2px 1px rgba(0, 0, 0, 0.6));
     } */
-
-    @media screen and (max-width: 275px) {
-        .icon {
-            width: 15px;
-            height: 15px;
-        }
-    }
-
-    @media screen and (max-width: 190px) {
-        .icon {
-            width: 12px;
-            height: 12px;
-        }
-    }
 
 </style>

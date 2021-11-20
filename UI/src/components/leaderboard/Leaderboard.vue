@@ -20,7 +20,7 @@
                 <div class="search-icon right" @click="clearSearch" v-if="searchText!=''"><span><i class="fas fa-times"></i></span></div>
             </div>
 
-            <div class="flex info-help">
+            <div class="flex info-help h-10">
                 <div class="info-rank">{{$t('leaderboard.rank')}}</div>
                 <div class="info-name">{{$t('leaderboard.name')}}</div>
                 <div class="info-lp">{{$t('leaderboard.points')}}</div>
@@ -205,7 +205,6 @@ export default {
         color: white;
         background-color: var(--col-light-grey);
         width: 100%;
-        height: 30px;
         padding: 5px 0px;
         margin: 20px 0px 0px 0px;
         align-items: center;

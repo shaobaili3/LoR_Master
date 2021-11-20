@@ -30,7 +30,7 @@
 
     <div class="no-content" v-if="totalMatches == 0">{{$t('str.error.playerNoHistory')}}</div>
 
-    <div class="match-history-container" v-if="!isLoading">
+    <div class="match-history-container">
         <match-history 
             @show-deck="showDeck"
             @search="searchPlayer({region: match.region, name: match.opponentName, tag: match.opponentTag})"
@@ -362,7 +362,8 @@ export default {
 
         &.search {
             top: 0px;
-            padding-bottom: 5px;;
+            padding-bottom: 5px;
+            z-index: 3;
         }
     }
 

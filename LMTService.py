@@ -4,6 +4,7 @@ from sentry_sdk.integrations.flask import FlaskIntegration
 import sentry_sdk
 import threading
 import time
+from Models import leaderboard
 from Models.leaderboard import Leaderboard
 from Models.setting import Setting
 from Models.local import Local
@@ -56,7 +57,7 @@ sentry_sdk.set_context("info", {
 master.startMasterWorker()
 leaderboardModel = Leaderboard()
 cacheModel = Cache()
-herokuModel = Heroku()
+herokuModel = Heroku(leaderboardModel)
 
 settingTrack = Setting()
 localTrack = Local(settingTrack, cacheModel)
@@ -132,6 +133,18 @@ def get_names(server, playername):
 
 @app.route("/search/<string:server>/<string:name>/<string:tag>", methods=['get'])
 def search(name, tag, server):
+    matchIds = []
+    details = herokuModel.getSearch(server, name, tag)
+    for detail in details:
+        cacheModel.matches[detail['metadata']['match_id']] = detail
+        matchIds.append(detail['metadata']['match_id'])
+
+    for playername in details[0]['playernames']:
+        fullName = playername.split('#', 1)
+        if name.lower() == fullName[0].lower():
+            name = fullName[0]
+            tag = fullName[1]
+    saveMatchIdsInCache(server, name, tag, matchIds)
     settingModel = Setting()
     settingModel.riotServer = Server._value2member_map_[server]
     maxNum = constants.MAX_NUM_INSPECT
@@ -139,12 +152,22 @@ def search(name, tag, server):
         maxNum = 20
     riotModel = Riot(Network(settingModel), cacheModel)
     playerModel = Player(riotModel, leaderboardModel)
-    playerModel.inspectFlask(name, tag, maxNum)
+    playerModel.inspectFlask(name, tag, cacheModel.matches[name + tag + server])
     if playerModel.error is None:
         return jsonify(playerModel.matchesJson)
     else:
         return jsonify(playerModel.error), playerModel.error['status']['code']
 
+
+def saveMatchIdsInCache(server, name, tag, matchIds):
+    uniqueName = name + tag + server
+    matchIdsCache = cacheModel.matches.get(uniqueName)
+    if matchIdsCache is not None:
+        new = matchIds + list(set(matchIdsCache) - set(matchIds))
+        cacheModel.matches[uniqueName] = new
+    else:
+        cacheModel.matches[uniqueName] = matchIds
+    cacheModel.save()
 
 # @app.route("/leaderboard/<string:server>", methods=['get'])
 # def get_leaderboard(server):
@@ -152,8 +175,8 @@ def search(name, tag, server):
 @app.route("/leaderboard/<string:server>", methods=['get'])
 def get_leaderboard(server):
     # refactor to leaderboard model
-    #board = leaderboardModel.getLeaderboard(server)
-    board = herokuModel.getMatches(server)
+    board = leaderboardModel.getLeaderboard(server)
+    #board = herokuModel.getMatches(server)
     boardWithTag = []
     playlistDict = {}
     if board is None:

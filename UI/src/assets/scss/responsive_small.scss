@@ -8,6 +8,10 @@
 
 @media only screen and (max-width: 595px) {
 
+  .scrollDown .sticky-top {
+    transform: translateY(-100%);
+  }
+
   .mobile-btn {
     position: absolute;
     top: 0px;
@@ -56,7 +60,7 @@
   .deck-content-container.fullheight {
     margin-top: 0px;
     padding-top: $content-margin-top;
-    height: calc(100% - $content-margin-top);
+    height: calc(100%);
   }
 
   .fullheight {
@@ -184,7 +188,8 @@
               width: 100%;
               .icon-container {
                 justify-content: center;
-                padding: 6px;
+                gap: 10px;
+                padding: 2px;
               }
             }
           }

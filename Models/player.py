@@ -1,5 +1,6 @@
 import constants as cs
 from uiModels import DeckSummary
+import Models.heroku
 
 
 class Player:
@@ -51,24 +52,23 @@ class Player:
             fill = 'E' * (matchNum - len(self.summaries[key].history))
             self.summaries[key].history = fill + self.summaries[key].history
 
-    def inspectFlask(self, name, tag, maxNum=cs.MAX_NUM_ALL):
+    def inspectFlask(self, name, tag, matchIds):
         self.error = None
         self.matchesJson = []
         self.summaries = {}
-        puuid = self.riot.getPlayerPUUID(name, tag)
-        if puuid is None:
-            errorMessage = str(
-                '' + name + '#' + tag + ' does not exist. Please check player name and player tag')
-            self.setError(errorMessage, 0)
-            return
-        matchIds = self.riot.getMatches(puuid)
+        # puuid = self.riot.getPlayerPUUID(name, tag)
+        # if puuid is None:
+        #     errorMessage = str(
+        #         '' + name + '#' + tag + ' does not exist. Please check player name and player tag')
+        #     self.setError(errorMessage, 0)
+        #     return
         if matchIds is None:
             errorMessage = str(name + '#' + tag +
                                ' has no recent match records')
             self.setError(errorMessage, 1)
             return
         matchNum = self.processMatchIds(
-            matchIds, puuid, name, tag, maxNum)
+            matchIds, name, tag)
 
         if matchNum == 0:
             errorMessage = str(name + '#' + tag +
@@ -76,19 +76,19 @@ class Player:
             self.setError(errorMessage, 2)
             return
 
-    def processMatchIds(self, matchIds, puuid, name, tag, maxNum):
+    def processMatchIds(self, matchIds, name, tag):
         deckCodes = []
         matchNum = 0
         for matchId in matchIds:
             try:
                 # If match number bigger than MAX, getDetail will only ruturn data from cache
                 id = name + '#' + tag
-                detail = self.riot.getDetail(matchId, matchNum, maxNum, id)
+                detail = self.riot.getDetail(matchId, matchNum, 20, id)
                 if detail is None:
                     continue
                 gameMode = detail['info']['game_mode']
                 gameType = detail['info']['game_type']
-                startTime = detail['info']['game_start_time_utc']
+                # startTime = detail['info']['game_start_time_utc']
 
                 print(matchId, gameMode, gameType)
 
@@ -101,40 +101,46 @@ class Player:
                 if gameType in cs.UNSUPPORTED_TYPE:
                     continue
                 
+                if detail.get('playernames') is None:
+                    return
+
                 self.addPlayerInfo(detail)
                 self.matchesJson.append(detail)
                 matchNum += 1
-                riotId = detail['metadata']['participants']
-                outcome = None
-                myDetails = None
-                myIndex = 1
-                if riotId[0] == puuid:
-                    myIndex = 0
-                else:
-                    # differnet APIs has df puuid, has to double check if equal playernames when may using caching data
-                    indexName = self.riot.getPlayerName(riotId[0])
-                    if indexName[0].lower() == name.lower() and indexName[1].lower() == tag.lower():
-                        myIndex = 0
-                myDetails = detail['info']['players'][myIndex]
-                outcome = myDetails["game_outcome"]
-                self.addMatchToSummary(
-                    myDetails['deck_code'], outcome, startTime)
-                deckCodes.append(myDetails['deck_code'])
+                # riotId = detail['metadata']['participants']
+                # outcome = None
+                # myDetails = None
+                # myIndex = 1
+                # if riotId[0] == puuid:
+                #     myIndex = 0
+                # else:
+                #     # differnet APIs has df puuid, has to double check if equal playernames when may using caching data
+                #     indexName = self.riot.getPlayerName(riotId[0])
+                #     if indexName[0].lower() == name.lower() and indexName[1].lower() == tag.lower():
+                #         myIndex = 0
+                # myDetails = detail['info']['players'][myIndex]
+                # outcome = myDetails["game_outcome"]
+                # self.addMatchToSummary(
+                #     myDetails['deck_code'], outcome, startTime)
+                # deckCodes.append(myDetails['deck_code'])
             except Exception as e:
                 print('Read MatchId Error match id: ', matchId, e)
                 continue
         return matchNum
 
     def addPlayerInfo(self, detail):
+        if detail.get('player_info') is not None:
+            return
         try:
-            playerPuuids = detail['metadata']['participants']
+            playerPuuids = detail['playernames']
         except Exception as e:
             print('processMatchDetail error', e)
             return detail
         playernames = []
         player_info = []
-        for puuid in playerPuuids:
-            name, tag = self.riot.getPlayerName(puuid)
+        for name in playernames:
+            fullName = name.split('#', 1)
+            name, tag = fullName[0], fullName[1]
             rank, lp = self.leaderboard.checkRank(
                 name, self.riot.network.setting.riotServer)
             playernames.append(name + '#' + tag)

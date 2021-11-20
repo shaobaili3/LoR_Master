@@ -71,8 +71,7 @@ class Heroku():
         for name in playerNames:
             fullName = name.split('#', 1)
             name, tag = fullName[0], fullName[1]
-            rank, lp = self.leaderboard.checkRank(
-                name, server)
+            rank, lp = self.leaderboard.checkRank(name, server)
             playernames.append(name + '#' + tag)
             player_info.append(
                 {'name': name, 'tag': tag, 'rank': rank, 'lp': lp})

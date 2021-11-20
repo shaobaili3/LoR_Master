@@ -1,5 +1,5 @@
 <template>
-    <base-window-controls :canClose="false" :canShrink="true" :playerName="oppoName" :playerRank="oppoRank" :titleType="infoType" :deck="deckCode"></base-window-controls>
+    <base-window-controls :canClose="false" :canShrink="true" :playerName="oppoName" :playerRank="oppoRank" :playerLP="oppoLp" :titleType="infoType"></base-window-controls>
     
     <div id="content">
 
@@ -7,27 +7,26 @@
             {{loadingText}}
         </div> 
 
-        <div class="errorText" v-if="isInvalidDeckCode && isShowCode">{{$t('invalidDeck')}}</div>
-
-        <div class="tabs" v-if="!isLoading">
+        <div class="tabs px-0 xxs:px-1 xs:px-2" v-if="!isLoading">
             <div class="tab-title-group">
-                <div class="tab-title" @click="switchTab(TABS.oppo)" :class="{active: isShowOppo}">
+                <div class="tab-title text-sm xxs:text-base xs:text-lg" @click="switchTab(TABS.oppo)" :class="{active: isShowOppo}">
                     <i class="fas fa-swords"></i>
                 </div>
-                <div class="tab-title" @click="switchTab(TABS.oppog)" :class="{active: isShowOppoGrave}">
+                <div class="tab-title text-sm xxs:text-base xs:text-lg" @click="switchTab(TABS.oppog)" :class="{active: isShowOppoGrave}">
                     <i class="fas fa-tombstone-alt"></i>
                 </div>
             </div>
             <div class="tab-title-group">
-                <div class="tab-title" @click="switchTab(TABS.my)" :class="{active: isShowMy}">
+                <div class="tab-title text-sm xxs:text-base xs:text-lg" @click="switchTab(TABS.my)" :class="{active: isShowMy}">
                     <i class="fas fa-user-cowboy"></i>
                 </div>
-                <div class="tab-title" @click="switchTab(TABS.myg)" :class="{active: isShowMyGrave}">
+                <div class="tab-title text-sm xxs:text-base xs:text-lg" @click="switchTab(TABS.myg)" :class="{active: isShowMyGrave}">
                     <i class="fas fa-tombstone-alt"></i>                
                 </div>
             </div>
         </div>
 
+        <!-- Opponent History -->
         <div id="history" class="tab-content" v-if="isShowOppo && !isLoading">
 
             <div class="loading" v-if="matchInfos.length <= 0"
@@ -52,48 +51,42 @@
             ></match-info>
         </div>
 
-        <div class="layerpanel"  :class="{expanded: currentLayer != LAYERS.base}" v-if="isShowOppo">
-                <button v-if="currentLayer == LAYERS.base" @click="onOpenDecklib" class="btn btn-decklib">Open Deck Library</button>
-                <button class="btn btn-back" v-if="currentLayer != LAYERS.base" @click="onLayerBack">
-                    <span><i class="fas fa-caret-down"></i></span>
-                </button>
-                <tracker-layer v-if="currentLayer != LAYERS.base"
-                    @showDeck="onPinOppo"
-                    :pinDeckId="oppoPinnedId"
-                ></tracker-layer>
-            </div>
+        
+        <div class="layerpanel max-w-[280px] h-10 p-2 xxs:h-11 xxs:p-1"  :class="{expanded: currentLayer != LAYERS.base}" v-if="isShowOppo">
+            <button v-if="currentLayer == LAYERS.base" @click="onOpenDecklib" 
+                class="btn btn-decklib text-sm py-1 px-2 xxs:text-base">
+                Open Deck Library
+            </button>
+            <button class="btn btn-back" v-if="currentLayer != LAYERS.base" @click="onLayerBack">
+                <span><i class="fas fa-caret-down"></i></span>
+            </button>
+            <tracker-layer v-if="currentLayer != LAYERS.base"
+                @showDeck="onPinOppo"
+                :pinDeckId="oppoPinnedId"
+            ></tracker-layer>
+        </div>
 
+        <!-- Oppo Played -->
+        <div class="tab-content" v-if="isShowOppoGrave && !isLoading">
+            <div class="tab-text">{{$t('tracker.tabs.oppoPlayed')}}</div>
+            <deck-detail :deck="oppoGraveCode" :baseDeck="oppoGraveCode" :showCopy="false" :extra="oppoGraveExtraCards"></deck-detail>
+        </div>
+
+        <!-- My Deck -->
         <div class="tab-content" v-if="isShowMy && !isLoading">
             <deck-regions :deck="startingDeckCode" :fixedWidth="false"></deck-regions>
             <deck-detail :deck="currentDeckCode" :baseDeck="startingDeckCode"></deck-detail>
         </div>
 
-        <div class="tab-content" v-if="isShowOppoGrave && !isLoading">
-            <div class="tab-text">{{$t('tracker.tabs.oppoPlayed')}}</div>
-            <deck-detail :deck="oppoGraveCode" :baseDeck="oppoGraveCode" :showCopy="false"></deck-detail>
-        </div>
-
+        <!-- My Played -->
         <div class="tab-content" v-if="isShowMyGrave && !isLoading">
             <div class="tab-text">{{$t('tracker.tabs.myPlayed')}}</div>
-            <deck-detail :deck="myGraveCode" :baseDeck="myGraveCode" :showCopy="false"></deck-detail>
-        </div>
-
-        <div class="tab-content" v-if="isShowCode">
-            <deck-regions :deck="deckCode" :fixedWidth="false"></deck-regions>
-            <deck-detail :baseDeck="deckCode"></deck-detail>
+            <deck-detail :baseDeck="myPlayedCode" :showCopy="false" :extra="myPlayedExtraCards"></deck-detail>
         </div>
 
         <div class="footer" v-if="!isLoading"> 
             <div class="footer-text">{{$t('tracker.cardsInHand', {num: cardsInHandNum})}}</div>
         </div>
-
-        <!-- <div class="layerpanel fixed" :class="{expanded: currentLayer != LAYERS.base}" v-if="!isLoading">    
-            <button v-if="currentLayer == LAYERS.base" @click="onOpenDecklib" class="btn btn-decklib">Open Deck Library</button>
-            <button class="btn btn-back" v-if="currentLayer != LAYERS.base" @click="onLayerBack">
-                <span><i class="fas fa-caret-down"></i></span>
-            </button>
-            <tracker-layer v-if="currentLayer == LAYERS.decklib"></tracker-layer>
-        </div> -->
 
     </div>
 </template>
@@ -107,11 +100,18 @@ import BaseWindowControls from '../../components/base/BaseWindowControls.vue'
 import DeckDetail from '../../components/deck/DeckDetail.vue'
 import DeckRegions from '../../components/deck/DeckRegions.vue'
 import DeckEncoder from '../../modules/runeterra/DeckEncoder'
+import Card from '../../modules/runeterra/Card'
 
 import { mapActions } from 'vuex'
 
 import '../../assets/scss/tooltips.scss'
 import '../../assets/scss/deck.scss'
+import '../../assets/scss/transitions.scss'
+
+const testTrackData = require('../../assets/data/testTrack')
+// const testTrackData = require('../../assets/data/testTrackLab')
+const testStatusData = require('../../assets/data/testStatusEN')
+// const testStatusData = require('../../assets/data/testStatus')
 
 import TrackerLayer from '../../components/tracker/TrackerLayer.vue'
 
@@ -125,9 +125,8 @@ const requestStatusWaitTime = 1000; //ms
 const TABS = {
     oppo: 0,
     my: 1,
-    code: 2,
-    oppog: 3,
-    myg: 4,
+    oppog: 2,
+    myg: 3,
 }
 
 const LAYERS = {
@@ -150,7 +149,6 @@ export default {
         return {
             rawDataString: null,
             matchInfos: [],
-            matchTotalNum: 0,
             request: null,
             
             infoType: null,
@@ -166,8 +164,13 @@ export default {
             currentDeckCode: null,
             startingDeckCode: null,
             oppoGraveCode: null,
-            myGraveCode: null,
+            myPlayedCode: null,
             oppoPinnedId: null,
+
+            startingExtraCards: null,
+            myGraveExtraCards: null,
+            myPlayedExtraCards: null,
+            oppoGraveExtraCards: null,
 
             oppoName: null,
             oppoRank: null,
@@ -202,9 +205,6 @@ export default {
         isShowMy() {
             return this.currentTab == TABS.my
         },
-        isShowCode() {
-            return this.currentTab == TABS.code
-        },
         isShowOppoGrave(){
             return this.currentTab == TABS.oppog
         },
@@ -230,7 +230,11 @@ export default {
             if (this.IS_ELECTRON) {
                 return `http://127.0.0.1:${this.portNum}`
             }
-            return `https://lmtservice.herokuapp.com`
+            return `https://lormaster.herokuapp.com`
+        },
+        matchTotalNum() {
+            console.log(this.matchInfos)
+            return this.matchInfos.reduce((total, item) => total + item.matches, 0)
         },
     },
     mounted() {
@@ -317,28 +321,9 @@ export default {
 
             this.currentTab = newTab
         },
-        // showOppo() {
-        //     this.currentTab = TABS.oppo
-        // },
-        // showMy() {
-        //     this.currentTab = TABS.my
-        // },
-        // showOppoGrave() {
-        //     this.currentTab = TABS.oppog
-        // },
-        // showMyGrave() {
-        //     this.currentTab = TABS.myg
-        // },
-        // showCode() {
-        //     this.currentTab = TABS.code
-        // },
         async getSubData() {
             if (window.sock)
             for await (const [topic, msg] of window.sock) {
-                // console.log("Received Sub:", topic.toString(), " message:", msg.toString())
-                // this.oppoName = msg.toString()
-                // window.testData = msg.toString()
-                // console.log(mainWindow)
                 this.processRawData(msg)
             }
         },
@@ -376,7 +361,7 @@ export default {
         requestStatusInfo() {
             
             if (!this.IS_ELECTRON) {
-                var data = require('../../assets/data/testStatus')
+                var data = testStatusData
                 this.server = data.server
                 if (data.language) {
                     var newLocale = data.language.replace('-', '_').toLowerCase()
@@ -429,6 +414,8 @@ export default {
             if (!this.IS_ELECTRON) {
                 this.oppoTag = "5961"
                 this.oppoName = "Storm"
+                this.oppoRank = 123
+                this.oppoLp = 321
                 this.requestOpponentHistory()
                 return
             }
@@ -458,11 +445,11 @@ export default {
             if (!this.IS_ELECTRON) {
 
                 if (!this.startingDeckCode) {
-                    Math.random() > 0.2 ? this.processTrackInfo(require('../../assets/data/testTrack')) : this.processTrackInfo({
+                    Math.random() > 0.2 ? this.processTrackInfo(testTrackData) : this.processTrackInfo({
                         positional_rectangles: null
                     })
                 } else {
-                    this.processTrackInfo(require('../../assets/data/testTrack'))
+                    this.processTrackInfo(testTrackData)
                 }
                 
                 setTimeout(this.requestTrackInfo, 1000);
@@ -527,6 +514,7 @@ export default {
                 this.oppoLp = null
                 this.matchTotalNum = 0
                 this.matchInfos = []
+                
             }
             
             if (data.deck_tracker) {
@@ -537,22 +525,39 @@ export default {
                         this.handleGameStart()
                     }
                 }
-                this.startingDeckCode = data.deck_tracker.deckCode
-                this.currentDeckCode = data.deck_tracker.currentDeckCode
-                this.oppoGraveCode = data.deck_tracker.opGraveyardCode
-                this.myGraveCode = data.deck_tracker.myPlayedCardsCode
+
+                let startingCards = DeckEncoder.encodeCardsObj(data.deck_tracker.cardsInDeck)
+                let myGraveCards = DeckEncoder.encodeCardsObj(data.deck_tracker.myGraveyard)
+                let myPlayedCards = DeckEncoder.encodeCardsObj(data.deck_tracker.myPlayedCards)
+                let oppoGraveCards = DeckEncoder.encodeCardsObj(data.deck_tracker.oppoGraveCards)
+
+                this.startingExtraCards = startingCards.extra
+                this.myGraveExtraCards = myGraveCards.extra
+                this.myPlayedExtraCards = myPlayedCards.extra
+                this.oppoGraveExtraCards = oppoGraveCards.extra
+
+                this.startingDeckCode = this.startingDeckCode || data.deck_tracker.deckCode || startingCards.code
+                this.currentDeckCode = data.deck_tracker.currentDeckCode || startingCards.code
+                this.oppoGraveCode = data.deck_tracker.opGraveyardCode|| oppoGraveCards.code
+                this.myPlayedCode = data.deck_tracker.myPlayedCardsCode || myPlayedCards.code
                 this.cardsInHandNum = data.deck_tracker.cardsInHandNum
                 
             } else {
                 if (this.startingDeckCode != null) {
                     // switching from having deck code
+                    console.log("Handle Game End")
                     this.handleGameEnd()
                 }
                 this.startingDeckCode = null
                 this.currentDeckCode = null
-                this.myGraveCode = null
+                this.myPlayedCode = null
                 this.oppoGraveCode = null
                 this.cardsInHandNum = null
+
+                this.startingExtraCards = null
+                this.myGraveExtraCards = null
+                this.myPlayedExtraCards = null
+                this.oppoGraveExtraCards = null
 
                 this.hideWindow()
             }
@@ -577,21 +582,7 @@ export default {
                 this.switchTab(TABS.oppo)
             }
             
-            this.matchTotalNum = 0;
             this.matchInfos = data;
-
-            console.log("Match Info Updated: ")
-            console.log(this.matchInfos)
-
-            for (const i in data) {
-                // this.matchTotalNum += match.matches
-                this.matchTotalNum += data[i].matches
-
-                // when total matchNum bigger than 10, set it to 10 for better display.
-                if (this.matchTotalNum > 10) {
-                    this.matchTotalNum = 10
-                }
-            }
             // console.log(this.matchTotalNum)
 
         },

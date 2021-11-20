@@ -1,8 +1,12 @@
 <template>
   <div class="decklib">
-    <div class="decks-container">
-      <div class="deck-block" @click="showDeck($event, id)" v-for="(deck, id) in decks" :key="id">
-        <div class="decklib-deck-title">
+    <div class="decks-container gap-1.5 xxs:gap-2">
+      
+      <div class="deck-block p-1 xxs:p-2 xs:p-2.5" @click="showDeck($event, id)" v-for="(deck, id) in decks" :key="id">
+        <div class="text-xs text-gray-200 px-1" v-if="deck.date">
+          <span :class="{'text-gold-300': deck.date > new Date() - RecentDeckThresh}">{{format(new Date(deck.date), "HH:mm")}} </span>{{ format(new Date(deck.date), " | yyyy-MM-dd")}}
+        </div>
+        <div class="decklib-deck-title w-full text-left px-1">
           {{deck.title}}
         </div>
         <deck-preview 
@@ -25,7 +29,11 @@ import DeckPreview from '../deck/DeckPreview.vue'
 import '../../assets/scss/decklib.scss'
 import DeckDetail from '../deck/DeckDetail.vue'
 
+import { format, subDays } from 'date-fns'
+
 import { showDeckMixin } from '../mixins'
+
+const RecentDeckThresh = 5*60*1000 // 5 minutes, for highlight recent imported decks
 
 export default {
   components: { DeckPreview, DeckDetail },
@@ -33,6 +41,9 @@ export default {
   emits: ['back'],
   props: {
     pinDeckId: Number,
+  },
+  created() {
+    this.RecentDeckThresh = RecentDeckThresh;
   },
   data() {
     return {
@@ -47,6 +58,8 @@ export default {
     this.initStore()
   },
   methods: {
+    format: format,
+    subDays: subDays,
     initStore() {
       if (window.ipcRenderer) {
         window.ipcRenderer.send('request-store', 'deck-lib')
@@ -63,40 +76,24 @@ export default {
         // Sample data
         this.decks = [
           {
-            title: "Bandle Nox",
+            title: "Fizz Poppy",
+            date: new Date(),
             code: 'CQBACAIDG4EAKCQBOSCADGABUYA2OANPAHBACAYBAIDC4AICAMEQIBIKFGQADQABYYAQCAIDAMGQ'
           },
           {
             title: "Draven Sion",
+            date: new Date() - 60000,
             code: 'CECACAIDCQAQIBAQAMCQGAIJBUCACBBGE4WTIAYBAEBS4AIBAQAQCAYDB4CACAQDBEAQGBASAICQGBAGAMAQGCZDGM'
           },
           {
-            title: "Thresh Asol",
+            title: "Thresh Aurelion Sol",
+            date: new Date() - 600000,
             code: 'CQBQCBIKV4AQEAIFFA2AKAYJC5KFMXDAAQAQCBIZAECASDIBAUCQ6AQDBFEVOAYBAQCTQAQDBERTGAYBAUAQ6HI'
           }, {
             title: "Bandle Nox",
+            date: new Date() - 6000000,
             code: 'CQBACAIDG4EAKCQBOSCADGABUYA2OANPAHBACAYBAIDC4AICAMEQIBIKFGQADQABYYAQCAIDAMGQ'
           },
-          {
-            title: "Draven Sion",
-            code: 'CECACAIDCQAQIBAQAMCQGAIJBUCACBBGE4WTIAYBAEBS4AIBAQAQCAYDB4CACAQDBEAQGBASAICQGBAGAMAQGCZDGM'
-          },
-          {
-            title: "Thresh Asol",
-            code: 'CQBQCBIKV4AQEAIFFA2AKAYJC5KFMXDAAQAQCBIZAECASDIBAUCQ6AQDBFEVOAYBAQCTQAQDBERTGAYBAUAQ6HI'
-          },
-          {
-            title: "Bandle Nox",
-            code: 'CQBACAIDG4EAKCQBOSCADGABUYA2OANPAHBACAYBAIDC4AICAMEQIBIKFGQADQABYYAQCAIDAMGQ'
-          },
-          {
-            title: "Draven Sion",
-            code: 'CECACAIDCQAQIBAQAMCQGAIJBUCACBBGE4WTIAYBAEBS4AIBAQAQCAYDB4CACAQDBEAQGBASAICQGBAGAMAQGCZDGM'
-          },
-          {
-            title: "Thresh Asol",
-            code: 'CQBQCBIKV4AQEAIFFA2AKAYJC5KFMXDAAQAQCBIZAECASDIBAUCQ6AQDBFEVOAYBAQCTQAQDBERTGAYBAUAQ6HI'
-          }
         ]
       }
 

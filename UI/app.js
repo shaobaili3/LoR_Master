@@ -428,11 +428,11 @@ function newMainWindow() {
   let {width, height} = electron.screen.getPrimaryDisplay().workAreaSize
 
   // --- mainWindow ---
-  let windowWidth = 800 // (335)
+  let windowWidth = 1000 // (335)
   let windowMaxWidth = 1200
   let windowMinWidth = 700
   let windowMinHeight = 730
-  let windowHeight = height * 0.7
+  let windowHeight = 800
   // let windowXPadding = 200
   // let windowYPadding = 20
   let xOffSet = 0
@@ -504,76 +504,83 @@ function newMainWindow() {
 
 function newDeckWindow() {
 
+  const {width, height} = electron.screen.getPrimaryDisplay().workAreaSize
+
+  const defaultTrackerWidth = width > 1920 ? 230 : 200
+  const defaultTrackerHeight = height * 0.7
+  const defaultTrackerX = 20
+  const defaultTrackerY = height / 2 - defaultTrackerHeight / 2
+  const defaultTrackerMaxWidth = 290
+  const defaultTrackerMinWidth = 170
+
+  const devConsoleWidth = 400
+
+  function resetDeckWindowBounds() {
+    let defaultBounds = { 
+      x: defaultTrackerX, 
+      y: defaultTrackerY, 
+      width: defaultTrackerWidth, 
+      height: defaultTrackerHeight
+    }
+    if (deckWindow) deckWindow.setBounds(defaultBounds)
+    store.set('ui-deck-bounds', defaultBounds)
+  }
+
+  ipcMain.on('reset-deck-window-bounds', resetDeckWindowBounds)
+
+
   if (deckWindow) {
     deckWindow.show()
     return
   }
 
-  let {width, height} = electron.screen.getPrimaryDisplay().workAreaSize
-  // let factor = electron.screen.getPrimaryDisplay().scaleFactor
-  // console.log("Scale Factor:", factor)
-
   // --- deckWindow ---
-  let windowWidth = 240 // (335)
-  let windowMaxWidth = 290
-  let windowMinWidth = 170
-  // let window.windowWidth = windowWidth
-  let windowHeight = height * 0.7
-  let windowPadding = 20
+  let windowMaxWidth = defaultTrackerMaxWidth
+  let windowMinWidth = defaultTrackerMinWidth
+
+  let bounds = store.get('ui-deck-bounds')
+  let windowX, windowY, windowWidth, windowHeight
+
+  if (bounds == null) {
+    // Default
+    windowX = defaultTrackerX
+    windowY = defaultTrackerY
+    windowWidth = defaultTrackerWidth
+    windowHeight = defaultTrackerHeight
+    resetDeckWindowBounds()
+  } else {
+    windowX = bounds.x ?? defaultTrackerX
+    windowY = bounds.y ?? defaultTrackerY
+    windowWidth = bounds.width ?? defaultTrackerWidth
+    windowHeight = bounds.height ?? defaultTrackerHeight
+  }
 
   if (developmentMode) {
-    windowWidth = windowWidth + 400
-    windowMaxWidth = windowWidth + 400
+    windowWidth = windowWidth + devConsoleWidth
+    windowMaxWidth = defaultTrackerMaxWidth + devConsoleWidth
   }
 
   deckWindow = new BrowserWindow({
     maxWidth: windowMaxWidth,
     minWidth: windowMinWidth,
     minHeight: headerHeight,
+    x: windowX,
+    y: windowY,
     width: windowWidth, 
-    height: windowHeight, 
-    // x: width - windowWidth - windowPadding,
-    // y: height - windowHeight - windowPadding,
-    x: windowPadding,
-    y: height / 2 - windowHeight / 2,
+    height: windowHeight,
     frame: false,
     resizable: true,
     skipTaskbar: true,
     show: false,
     webPreferences: {
-      // nodeIntegration: true,
-      // enableRemoteModule: true,
       contextIsolation: false,
       preload: __dirname + '/src/preload.js',
     },
-    // show: false
-    // titleBarStyle: 'hiddenInset'
   })
 
   remote.enable(deckWindow.webContents)
-  // deckWindow.loadURL(require('url').format({
-  //   pathname: path.join(__dirname, 'dist/index.html'),
-  //   protocol: 'file:',
-  //   slashes: true
-  // }))
-  // deckWindow.hide()
-  
   deckWindow.loadURL(`file://${__dirname}/dist/deck.html`)
   
-  // console.log("Is development?", process.env.NODE_ENV === 'development')
-
-  // Attempted to use a bug? to turn off snapAssist on Windows
-  // if (!snapAssist) { 
-  //   var minSize = deckWindow.getMinimumSize()
-  //   var maxSize = deckWindow.getMaximumSize()
-    
-  //   deckWindow.setResizable(true)
-  //   deckWindow.setMinimumSize(minSize[0], minSize[1])
-  //   deckWindow.setMaximumSize(maxSize[0], maxSize[1])
-  //   // deckWindow.setMinimumSize
-  // }
-
-  // deckWindow.removeMenu()
   deckWindow.setAlwaysOnTop(true, level = "pop-up-menu")
   deckWindow.on('closed', () => {
     deckWindow = null
@@ -586,6 +593,20 @@ function newDeckWindow() {
   deckWindow.on('minimize', () => {
     deckWindow.setSkipTaskbar(false)
   })
+
+  const handleMoveResize = () => {
+    let bounds = deckWindow.getBounds()
+    console.log("Tracker Window Moved or Resized", bounds)
+    store.set('ui-deck-bounds', {
+      x: bounds.x,
+      y: bounds.y,
+      width: developmentMode? bounds.width - devConsoleWidth : bounds.width,
+      height: bounds.height,
+    })
+  }
+
+  deckWindow.on('moved', handleMoveResize)
+  deckWindow.on('resized', handleMoveResize)
 
   if (developmentMode) deckWindow.webContents.openDevTools()
 
@@ -664,7 +685,6 @@ function toggleDeckWindow() {
     console.log(e)
   }
 }
-
 
 // -----------------------------------------------
 // --- Alerts ---

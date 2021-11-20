@@ -1,5 +1,5 @@
 <template>
-    <div class="icon" :class="{champ: code}" :style=" {backgroundImage: getChampionImgUrl}">
+    <div class="icon h-7 w-7 xxs:w-8 xxs:h-8 xs:w-9 xs:h-9 sm:h-10 sm:w-10" :class="{champ: code}" :style=" {backgroundImage: getChampionImgUrl}">
         <div v-if="count && count != 3" class="count">{{count}}</div>
     </div>
 </template>
@@ -43,7 +43,7 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 
     .icon {
         
@@ -56,8 +56,8 @@ export default {
         text-align: center;
         /* line-height: 30px; */
         /* vertical-align: middle; */
-        width: 18px;
-        height: 18px;
+        // width: 18px;
+        // height: 18px;
         color: white;
 
         /* background-color: white; */
@@ -66,9 +66,6 @@ export default {
         background-position: 50% 50%;
         background-size: cover;
 
-        
-        
-
         /* background-image: url('../assets/images/cards/cropped/01DE012-cropped.png'); */
     }
 
@@ -76,7 +73,7 @@ export default {
         position: absolute;
         top: -3px;
         right: -4px;
-        font-size: 0.5em;
+        font-size: 0.6em;
         padding: 1px 5px;
         border-radius: 100%;
 
@@ -102,18 +99,18 @@ export default {
         box-shadow: 1px 2px 5px -2px #000000;
     } */
 
-    @media screen and (max-width: 275px) {
-        .icon {
-            width: 15px;
-            height: 15px;
-        }
-    }
+    // @media screen and (max-width: 275px) {
+    //     .icon {
+    //         width: 15px;
+    //         height: 15px;
+    //     }
+    // }
 
-    @media screen and (max-width: 190px) {
-        .icon {
-            width: 12px;
-            height: 12px;
-        }
-    }
+    // @media screen and (max-width: 190px) {
+    //     .icon {
+    //         width: 12px;
+    //         height: 12px;
+    //     }
+    // }
 
 </style>

@@ -101,8 +101,10 @@ class Riot:
 
     def getDetail(self, matchId, matchIndex=1, max_num=constants.MAX_NUM_ALL, id=None):
         # If matchIndex bigger than MAX, only pull data from cache
-        if matchId in self.cache.matchDetails or matchIndex > max_num - 1:
-            return self.cache.matchDetails.get(matchId)
+        #if matchId in self.cache.matchDetails or matchIndex > max_num - 1:
+        detail = self.cache.matchDetails.get(matchId)
+        self.addLocalInfo(detail, id)
+        return detail
         detailsLink = self.network.getDetailsLink(matchId)
         try:
             detailsRequest = self.session.get(

@@ -7,9 +7,12 @@ import sets_en from '../../../Resource/en_us.json'
 
 const sets_en_combined = [].concat(...sets_en)
 
-export default (App) => {
+import messages from '@/assets/data/messages.js'
 
-const locales = ['de_de', 'en_us', 'es_es', 'es_mx', 'fr_fr', 'it_it', 'ja_jp', 'ko_kr', 'pl_pl', 'pt_br', 'th_th', 'tr_tr', 'ru_ru', 'zh_tw']
+export const locales = ['de_de', 'en_us', 'es_es', 'es_mx', 'fr_fr', 'it_it', 'ja_jp', 'ko_kr', 'pl_pl', 'pt_br', 'th_th', 'tr_tr', 'ru_ru', 'zh_tw']
+export const localeNames = ['German', 'English', 'Spanish (Spain)', 'Spanish (Mexico)', 'French', 'Italian',  'Japanese', 'Korean', 'Polish', 'Portuguese', 'Thai', 'Turkish', 'Russian', 'Chinese']
+
+export default (App) => {
 
 locales.forEach(lo => {
     window[lo] = () => import('../../../Resource/'+lo+'.json')
@@ -53,8 +56,6 @@ const store = createStore({
     }
     
 })
-
-const messages = require('@/assets/data/messages.js')
 
 const i18n = createI18n({
     locale: 'English', // set locale
@@ -100,3 +101,5 @@ app.mixin({
 
 app.mount('#app')
 }
+
+import "tailwindcss/tailwind.css"

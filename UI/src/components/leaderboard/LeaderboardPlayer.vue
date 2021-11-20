@@ -1,5 +1,5 @@
 <template>
-    <div class="info flex" :class="{champion: isChampion}">
+    <div class="info flex h-12" :class="{champion: isChampion}">
         <div class="info-rank">{{rank}}</div>
         <div class="info-name">{{name}}</div>
         <div class="info-lp">{{lp}}</div>
@@ -27,7 +27,6 @@ export default {
         color: white;
         background-color: var(--col-dark-grey);
         width: 100%;
-        height: 40px;
         padding: 5px 0px;
         margin: 0px 0px;
         align-items: center;

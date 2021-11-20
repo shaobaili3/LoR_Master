@@ -1,4 +1,5 @@
 <template>
+    
     <div class="match" :class="{won: won, loss: !won}">
         <div class="row opponent">
             <!-- <router-link class="opponent-name btn" :to="opponentLink">
@@ -16,17 +17,19 @@
         </div>
         <div class="row match-history-dots">
             <div class="match-history-summary">{{wonNum}} W - {{lostNum}} L </div>
-            <div class="dot" :class="{'won' : isWonGame(index), 'played' : isPlayedGame(index)}" v-for="index in total" :key="index"></div>
+            <div class="dot" :class="{'won' : isWonGame(index), 'played' : isPlayedGame(index)}" v-for="index in 10" :key="index"></div>
             
         </div>
         <div class="row decklist">
-            <deck-preview @click="showDeck" :deck="deck" :won="won" :cheveron="true"></deck-preview>
+            <deck-preview @click="showDeck" :isShown="visibleDeck != 0" :deck="deck" :won="won" :cheveron="true"></deck-preview>
             <!-- <div class="text-vs">VS</div> -->
             <!-- <deck-preview @click="showDeck" :deck="deck"></deck-preview> -->
         </div>
     </div>
 
-    <deck-detail v-if="visibleDeck == 1" :baseDeck="deck"></deck-detail>
+    <transition name="height">
+        <deck-detail v-if="visibleDeck == 1" :baseDeck="deck"></deck-detail>
+    </transition>
 
 </template>
 

@@ -16,7 +16,7 @@
     align-items: center;
     justify-content: flex-start;
 
-    padding: 0px 0px 15px 0px;
+    padding: 0px 0px 16px 0px;
 
     position: relative;
 
@@ -74,7 +74,7 @@
   .decks-container {
     display: grid;
     width: 100%;
-    gap: 15px;
+    // gap: 15px;
     // grid-template-columns: repeat(2, 1fr);
     grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
 
@@ -82,7 +82,7 @@
     overflow-y: scroll;
 
     .deck-block {
-      padding: 10px;
+      // padding: 10px;
       display: flex;
       flex-wrap: wrap;
 
@@ -104,8 +104,11 @@
       }
 
       .decklib-deck-title {
-        padding: 5px 5px 10px 5px;
+        // padding: 5px 5px 8px 5px;
         max-width: calc(100% - 40px);
+        &.w-full {
+          max-width: none;
+        }
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;

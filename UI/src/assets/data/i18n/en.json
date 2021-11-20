@@ -1,0 +1,116 @@
+{
+  "lang": "English",
+  "appName": "LoR Master Tracker",
+  "str": {
+    "settings": "Settings",
+    "loading": "Loading...",
+    "languages": "Main UI Languages",
+    "invalidDeck": "Invalid Deck Code",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "rounds": "Rounds",
+    "clipboard": "Clipboard",
+    "tracker": "Tracker",
+    "requestConfirm": "Are you sure?",
+    "yes": "Yes",
+    "no": "No",
+    "error": {
+      "unkown": "Something went wrong",
+      "playerNotFound": "Player not found",
+      "playerNoHistory": "No history found",
+      "localApiError": "Please enable 3rd party API",
+      "internalServiceError": "Internal Server Error"
+    },
+    "regions": {
+      "americas": "Americas",
+      "europe": "Europe",
+      "asia": "Asia",
+      "sea": "SEA"
+    },
+    "times": {
+      "sec": "{t} sec. ago",
+      "min": "{t} min. ago",
+      "hour": "{t} hour ago",
+      "hours": "{t} hours ago",
+      "day": "{t} day ago",
+      "days": "{t} days ago"
+    },
+    "labSecrets": "LAB SECRETS!",
+    "delete": "Delete"
+  },
+  "loading": {
+    "readyToRock": "Ready to rock 🤘",
+    "history": "Loading History...",
+    "nohistory": "History unavailable"
+  },
+  "tracker": {
+    "tabs": {
+      "oppoPlayed": "Opponent Played",
+      "myPlayed": "My Played"
+    },
+    "cardsInHand": "Cards in Hand: {num}"
+  },
+  "leaderboard": {
+    "rank": "Rank",
+    "name": "Name",
+    "points": "Points"
+  },
+  "matches": {
+    "usage": "{num}% Usage",
+    "game": "{num} game",
+    "games": "{num} games",
+    "badges": {
+      "Ranked": "Ranked",
+      "Bo3Challenge": "Bo3 Challenge",
+      "StandardGauntlet": "Gauntlet",
+      "Normal": "Normal",
+      "LastCallQualifierGauntlet": "Last Chance Gauntlet",
+      "SeasonalTournament": "Seasonal",
+      "AI": "AI"
+    }
+  },
+  "dash": {
+    "winRate": "WIN",
+    "winloss": "{win}W {loss}L"
+  },
+  "search": {
+    "leaderboard": {
+      "base": "Search",
+      "numPlayer": "Search {num} players"
+    },
+    "player": {
+      "placeholder": "eg.Storm#5961"
+    },
+    "prompt": "⬆ Enter name and tag to search"
+  },
+  "tooltips": {
+    "lorlogin": "Please login LoR",
+    "incompleteDeck": "Incomplete Deck"
+  },
+  "contact": {
+    "messageBox": {
+      "placeholder": "Any suggestions?",
+      "messageSent": "Message Sent",
+      "confirm": "Confirm?",
+      "send": "Send"
+    },
+    "contactUs": "Contact Us",
+    "broughtWithLove": "Brought to you with ❤️ by"
+  },
+  "settings": {
+    "options": {
+      "autoLaunch": "Auto Launch on Startup:",
+      "cardLanguage": "Card Text Language",
+      "resetTrackerBounds": "Reset Tracker Position & Size"
+    },
+    "enabled": "Enabled",
+    "enable": "Enable",
+    "disabled": "Disabled",
+    "disable": "Disable",
+    "reset": "Reset"
+  },
+  "decklib": {
+    "title": "Deck Library",
+    "placeholder": "Paste your deck code here"
+  }
+}

@@ -1,13 +1,13 @@
 <template>
   <div class="locale-changer">
     <div class="locale-changer-title">
-      {{$t('str.languages')}}
+      {{title}}
     </div>
     <div class="select-container">
       <!-- <select v-model="$i18n.locale">
         <option v-for="locale in $i18n.availableLocales" :key="`locale-${locale}`" :value="locale">{{ locale }}</option>
       </select> -->
-      <base-select :options="$i18n.availableLocales" :default="$i18n.locale" @input="changeLocale($event)"></base-select>
+      <base-select :swapNames="swapNames" :options="options" :default="optionDefault" @input="input($event)"></base-select>
     </div>
   </div>
 </template>
@@ -16,14 +16,13 @@
 import BaseSelect from './BaseSelect.vue'
 export default {
   components: { BaseSelect },
-  methods: {
-    changeLocale(newLocale) {
-      this.$i18n.locale = newLocale
-      if (window.ipcRenderer) {
-        window.ipcRenderer.send('changed-locale', newLocale)
-      }
-    }
-  }
+  props: {
+    title: String,
+    options: Array,
+    optionDefault: String,
+    input: Function,
+    swapNames: Array
+  },
 }
 </script>
 

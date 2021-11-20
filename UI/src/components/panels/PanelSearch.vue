@@ -153,6 +153,8 @@ export default {
         return this.$t("str.error.playerNotFound");
       } else if (error == 1 || error == 2) {
         return this.$t("str.error.playerNoHistory");
+      } else if (error == 4) {
+        return this.$t("str.error.internalServiceError");
       } else {
         return this.$t("str.error.unkown");
       }
@@ -452,9 +454,14 @@ export default {
             console.log("Request cancelled");
           } else {
             console.log("error", e);
+            
             if (e.response) {
-              var data = e.response.data;
-              this.errorHistory(data.status.error);
+              if (e.response.status == 500) {
+                this.errorHistory(4); // Internal sercive error
+              } else {
+                var data = e.response.data;
+                this.errorHistory((data.status && data.status.error) || 3); // give a 3 so that there is a fallback
+              }
             } else {
               this.errorHistory(3); // Unkown Error
             }
@@ -541,7 +548,7 @@ export default {
         // Processing for normal Data
         for (var key in data) {
           var match = data[key];
-          if (!match) continue; // Skip if null history
+          if (!match || !match.player_info || !match.player_info[0] || !match.player_info[0].name) continue; // Skip if null history
 
           var isFirstPlayer =
             match.player_info[0].name.toLowerCase() == playerName.toLowerCase();
