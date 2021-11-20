@@ -548,7 +548,7 @@ export default {
         // Processing for normal Data
         for (var key in data) {
           var match = data[key];
-          if (!match) continue; // Skip if null history
+          if (!match || !match.player_info || !match.player_info[0] || !match.player_info[0].name) continue; // Skip if null history
 
           var isFirstPlayer =
             match.player_info[0].name.toLowerCase() == playerName.toLowerCase();
