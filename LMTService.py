@@ -57,7 +57,7 @@ sentry_sdk.set_context("info", {
 master.startMasterWorker()
 leaderboardModel = Leaderboard()
 cacheModel = Cache()
-herokuModel = Heroku(leaderboard)
+herokuModel = Heroku(leaderboardModel)
 
 settingTrack = Setting()
 localTrack = Local(settingTrack, cacheModel)
@@ -133,18 +133,19 @@ def get_names(server, playername):
 
 @app.route("/search/<string:server>/<string:name>/<string:tag>", methods=['get'])
 def search(name, tag, server):
-    settingModel = Setting()
-    settingModel.riotServer = Server._value2member_map_[server]
-    maxNum = constants.MAX_NUM_INSPECT
-    if (name + '#' + tag).lower() == settingTrack.playerId.lower():
-        maxNum = 20
-    riotModel = Riot(Network(settingModel), cacheModel)
-    playerModel = Player(riotModel, leaderboardModel)
-    playerModel.inspectFlask(name, tag, maxNum)
-    if playerModel.error is None:
-        return jsonify(playerModel.matchesJson)
-    else:
-        return jsonify(playerModel.error), playerModel.error['status']['code']
+    return jsonify(herokuModel.getSearch(server, name, tag))
+    # settingModel = Setting()
+    # settingModel.riotServer = Server._value2member_map_[server]
+    # maxNum = constants.MAX_NUM_INSPECT
+    # if (name + '#' + tag).lower() == settingTrack.playerId.lower():
+    #     maxNum = 20
+    # riotModel = Riot(Network(settingModel), cacheModel)
+    # playerModel = Player(riotModel, leaderboardModel)
+    # playerModel.inspectFlask(name, tag, maxNum)
+    # if playerModel.error is None:
+    #     return jsonify(playerModel.matchesJson)
+    # else:
+    #     return jsonify(playerModel.error), playerModel.error['status']['code']
 
 
 # @app.route("/leaderboard/<string:server>", methods=['get'])
@@ -153,8 +154,8 @@ def search(name, tag, server):
 @app.route("/leaderboard/<string:server>", methods=['get'])
 def get_leaderboard(server):
     # refactor to leaderboard model
-    #board = leaderboardModel.getLeaderboard(server)
-    board = herokuModel.getMatches(server)
+    board = leaderboardModel.getLeaderboard(server)
+    #board = herokuModel.getMatches(server)
     boardWithTag = []
     playlistDict = {}
     if board is None:

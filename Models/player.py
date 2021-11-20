@@ -1,5 +1,6 @@
 import constants as cs
 from uiModels import DeckSummary
+import Models.heroku
 
 
 class Player:
