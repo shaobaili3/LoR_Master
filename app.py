@@ -13,7 +13,7 @@ from Models.setting import Server
 from Models.cache import Cache
 from Models import master
 import json
-from flask import Flask, jsonify
+from flask import Flask, jsonify, redirect
 from flask_cors import CORS
 import os
 import constants
@@ -33,7 +33,7 @@ sentry_sdk.init(
 master.startMasterWorker()
 leaderboardModel = Leaderboard()
 cacheModel = Cache()
-herokuModel = Heroku()
+herokuModel = Heroku(leaderboardModel)
 
 class FlaskApp(Flask):
     def __init__(self, *args, **kwargs):
@@ -83,43 +83,48 @@ def get_names(server, playername):
 
 @app.route("/search/<string:server>/<string:name>/<string:tag>", methods=['get'])
 def search(name, tag, server):
-    return jsonify(herokuModel.getSearch(server, name, tag))
+    return redirect("https://lormaster.herokuapp.com/search/" + server + '/' + name + '/' + tag)
 
 
 @app.route("/leaderboard/<string:server>", methods=['get'])
 def get_leaderboard(server):
-    # refactor to leaderboard model
-    board = leaderboardModel.getLeaderboard(server)
-    boardWithTag = []
-    playlistDict = {}
-    if board is None:
-        return jsonify(boardWithTag)
-    nameListPath = constants.getCacheFilePath(server.lower() + '.json')
-    if not os.path.isfile(nameListPath):
-        nameListPath = 'Resource/' + server.lower() + '.json'
-    try:
-        with open(nameListPath, 'r', encoding='utf-8') as fp:
-            playlistDict = json.load(fp)
-    except Exception as e:
-        print('Restful: unable to load player list', e)
-    for player in board:
-        change = player['rankChange']
-        if isinstance(change,int):
-            if change > 0:
-                player['rankChange'] = '+' + str(change)
-            elif change < 0:
-                player['rankChange'] = str(change)
-            else:
-                player['rankChange'] = ''
-        if player['name'] in playlistDict:
-            player['tag'] = playlistDict[player['name']]
-        else:
-            player['tag'] = ''
-        boardWithTag.append(player)
-    return jsonify(boardWithTag)
+    # # refactor to leaderboard model
+    # board = leaderboardModel.getLeaderboard(server)
+    # boardWithTag = []
+    # playlistDict = {}
+    # if board is None:
+    #     return jsonify(boardWithTag)
+    # nameListPath = constants.getCacheFilePath(server.lower() + '.json')
+    # if not os.path.isfile(nameListPath):
+    #     nameListPath = 'Resource/' + server.lower() + '.json'
+    # try:
+    #     with open(nameListPath, 'r', encoding='utf-8') as fp:
+    #         playlistDict = json.load(fp)
+    # except Exception as e:
+    #     print('Restful: unable to load player list', e)
+    # for player in board:
+    #     change = player['rankChange']
+    #     if isinstance(change,int):
+    #         if change > 0:
+    #             player['rankChange'] = '+' + str(change)
+    #         elif change < 0:
+    #             player['rankChange'] = str(change)
+    #         else:
+    #             player['rankChange'] = ''
+    #     if player['name'] in playlistDict:
+    #         player['tag'] = playlistDict[player['name']]
+    #     else:
+    #         player['tag'] = ''
+    #     boardWithTag.append(player)
+    # return jsonify(boardWithTag)
+    return redirect("https://lormaster.herokuapp.com/ccgboard/" + server)
 
 @app.route("/", methods=['get'])
 def welcome():
     info = {}
     info['matchNum'] = len(cacheModel.matchDetails)
     return jsonify(info)
+
+is_gunicorn = "gunicorn" in os.environ.get("SERVER_SOFTWARE", "")
+if not is_gunicorn:
+    app.run(port='26531', debug=True, use_reloader=False)
