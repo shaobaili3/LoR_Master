@@ -1,1 +1,1 @@
-web: gunicorn app:app WEB_CONCURRENCY=1
+web: gunicorn app:app
