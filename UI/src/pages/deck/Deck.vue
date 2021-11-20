@@ -230,7 +230,7 @@ export default {
             if (this.IS_ELECTRON) {
                 return `http://127.0.0.1:${this.portNum}`
             }
-            return `https://lmtservice.herokuapp.com`
+            return `https://lormaster.herokuapp.com`
         },
         matchTotalNum() {
             console.log(this.matchInfos)

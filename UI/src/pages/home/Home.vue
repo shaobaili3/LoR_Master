@@ -367,7 +367,7 @@ export default {
       if (this.IS_ELECTRON) {
         return `http://127.0.0.1:${this.portNum}`
       }
-      return `https://lmtservice.herokuapp.com`
+      return `https://lormaster.herokuapp.com`
     },
     lorNewsURL() {
       return `https://playruneterra.com/${this.locale.replace('_', '-')}/news`
@@ -383,10 +383,10 @@ export default {
 
     console.log("Is Electron:", this.IS_ELECTRON)
 
-    setTimeout(() => {
-      this.showAds()
-    }, 5 * 60 * 1000);
-
+    // Advertisements
+    // setTimeout(() => {
+    //   this.showAds()
+    // }, 15 * 60 * 1000);
     
     // Testing switching locale
     // if (process.env.NODE_ENV == "development") {
