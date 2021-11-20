@@ -11,7 +11,7 @@ remote.initialize()
 const isPackaged = app.isPackaged
 const isDev = process.argv.includes('--dev')
 
-const developmentMode = false && !(isPackaged) || isDev
+const developmentMode = true && !(isPackaged) || isDev
 
 const closeWithoutTracker = false
 const headerHeight = 45 // Repeated in preload.js
