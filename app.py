@@ -88,35 +88,36 @@ def search(name, tag, server):
 
 @app.route("/leaderboard/<string:server>", methods=['get'])
 def get_leaderboard(server):
-    # refactor to leaderboard model
-    board = leaderboardModel.getLeaderboard(server)
-    boardWithTag = []
-    playlistDict = {}
-    if board is None:
-        return jsonify(boardWithTag)
-    nameListPath = constants.getCacheFilePath(server.lower() + '.json')
-    if not os.path.isfile(nameListPath):
-        nameListPath = 'Resource/' + server.lower() + '.json'
-    try:
-        with open(nameListPath, 'r', encoding='utf-8') as fp:
-            playlistDict = json.load(fp)
-    except Exception as e:
-        print('Restful: unable to load player list', e)
-    for player in board:
-        change = player['rankChange']
-        if isinstance(change,int):
-            if change > 0:
-                player['rankChange'] = '+' + str(change)
-            elif change < 0:
-                player['rankChange'] = str(change)
-            else:
-                player['rankChange'] = ''
-        if player['name'] in playlistDict:
-            player['tag'] = playlistDict[player['name']]
-        else:
-            player['tag'] = ''
-        boardWithTag.append(player)
-    return jsonify(boardWithTag)
+    # # refactor to leaderboard model
+    # board = leaderboardModel.getLeaderboard(server)
+    # boardWithTag = []
+    # playlistDict = {}
+    # if board is None:
+    #     return jsonify(boardWithTag)
+    # nameListPath = constants.getCacheFilePath(server.lower() + '.json')
+    # if not os.path.isfile(nameListPath):
+    #     nameListPath = 'Resource/' + server.lower() + '.json'
+    # try:
+    #     with open(nameListPath, 'r', encoding='utf-8') as fp:
+    #         playlistDict = json.load(fp)
+    # except Exception as e:
+    #     print('Restful: unable to load player list', e)
+    # for player in board:
+    #     change = player['rankChange']
+    #     if isinstance(change,int):
+    #         if change > 0:
+    #             player['rankChange'] = '+' + str(change)
+    #         elif change < 0:
+    #             player['rankChange'] = str(change)
+    #         else:
+    #             player['rankChange'] = ''
+    #     if player['name'] in playlistDict:
+    #         player['tag'] = playlistDict[player['name']]
+    #     else:
+    #         player['tag'] = ''
+    #     boardWithTag.append(player)
+    # return jsonify(boardWithTag)
+    return redirect("https://lormaster.herokuapp.com/ccgboard/" + server)
 
 @app.route("/", methods=['get'])
 def welcome():
