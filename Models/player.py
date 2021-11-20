@@ -101,6 +101,9 @@ class Player:
                 if gameType in cs.UNSUPPORTED_TYPE:
                     continue
                 
+                if detail.get('playernames') is None:
+                    return
+
                 self.addPlayerInfo(detail)
                 self.matchesJson.append(detail)
                 matchNum += 1
