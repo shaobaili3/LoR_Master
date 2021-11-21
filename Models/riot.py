@@ -1,3 +1,4 @@
+from os import device_encoding
 import Models.network
 import requests
 import constants
@@ -104,6 +105,7 @@ class Riot:
         #if matchId in self.cache.matchDetails or matchIndex > max_num - 1:
         detail = self.cache.matchDetails.get(matchId)
         self.addLocalInfo(detail, id)
+        print('gettail', detail, matchId)
         return detail
         detailsLink = self.network.getDetailsLink(matchId)
         try:
@@ -145,6 +147,8 @@ class Riot:
         return detail
 
     def addLocalInfo(self, detail, id):
+        if detail is None:
+            return
         if 'local' in detail:
             return
         detail['local'] = {}
