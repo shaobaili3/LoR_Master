@@ -145,7 +145,7 @@
         <div class="settings-list-item">
           <locale-changer :title="$t('str.languages')" :options="$i18n.availableLocales" :optionDefault="$i18n.locale" :input="changeMainUILocale"></locale-changer>
         </div>
-        <div class="settings-list-item">
+        <div class="settings-list-item" v-if="!IS_ELECTRON">
           <locale-changer :title="$t('settings.options.cardLanguage')" :swapNames="cardLocaleNames" :options="cardLocales" :optionDefault="locale" :input="changeCardLocale"></locale-changer>
         </div>
         <div class="settings-list-item" v-if="IS_ELECTRON">

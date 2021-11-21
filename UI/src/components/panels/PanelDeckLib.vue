@@ -87,6 +87,8 @@ export default {
               console.log("Process pasteBuffer")
               this.processPaste(this.pasteBuffer)
             }
+          } else if (key == 'deck-lib') {
+            this.loaded = true
           }
         })
       } else {
