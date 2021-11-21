@@ -457,6 +457,7 @@ export default {
             }
 
             lastTrackTime = Date.now()
+            // console.log("requestTrackInfo")
             axios.get(`${this.apiBase}/track`)
                 .then((response) => {
 
@@ -525,18 +526,23 @@ export default {
                         this.handleGameStart()
                     }
                 }
-
-                let startingCards = DeckEncoder.encodeCardsObj(data.deck_tracker.cardsInDeck)
-                let myGraveCards = DeckEncoder.encodeCardsObj(data.deck_tracker.myGraveyard)
-                let myPlayedCards = DeckEncoder.encodeCardsObj(data.deck_tracker.myPlayedCards)
-                let oppoGraveCards = DeckEncoder.encodeCardsObj(data.deck_tracker.oppoGraveCards)
+                
+                let startingCards, myGraveCards, myPlayedCards, oppoGraveCards
+                try {
+                    startingCards = DeckEncoder.encodeCardsObj(data.deck_tracker.cardsInDeck)
+                    myGraveCards = DeckEncoder.encodeCardsObj(data.deck_tracker.myGraveyard)
+                    myPlayedCards = DeckEncoder.encodeCardsObj(data.deck_tracker.myPlayedCards)
+                    oppoGraveCards = DeckEncoder.encodeCardsObj(data.deck_tracker.oppoGraveCards)
+                } catch (error) {
+                    console.log(error)
+                }
 
                 this.startingExtraCards = startingCards.extra
                 this.myGraveExtraCards = myGraveCards.extra
                 this.myPlayedExtraCards = myPlayedCards.extra
                 this.oppoGraveExtraCards = oppoGraveCards.extra
 
-                this.startingDeckCode = this.startingDeckCode || data.deck_tracker.deckCode || startingCards.code
+                this.startingDeckCode = data.deck_tracker.deckCode || startingCards.code
                 this.currentDeckCode = data.deck_tracker.currentDeckCode || startingCards.code
                 this.oppoGraveCode = data.deck_tracker.opGraveyardCode|| oppoGraveCards.code
                 this.myPlayedCode = data.deck_tracker.myPlayedCardsCode || myPlayedCards.code
