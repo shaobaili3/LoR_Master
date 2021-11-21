@@ -80,7 +80,7 @@ class Player:
         deckCodes = []
         matchNum = 0
         for matchId in matchIds:
-            try:
+            #try:
                 # If match number bigger than MAX, getDetail will only ruturn data from cache
                 id = name + '#' + tag
                 detail = self.riot.getDetail(matchId, matchNum, 20, id)
@@ -123,9 +123,9 @@ class Player:
                 # self.addMatchToSummary(
                 #     myDetails['deck_code'], outcome, startTime)
                 # deckCodes.append(myDetails['deck_code'])
-            except Exception as e:
-                print('Read MatchId Error match id: ', matchId, e)
-                continue
+            # except Exception as e:
+            #     print('Read MatchId Error match id: ', matchId, e)
+            #     continue
         return matchNum
 
     def addPlayerInfo(self, detail):

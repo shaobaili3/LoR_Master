@@ -1,5 +1,5 @@
 <template>
-<div class="w-full">
+<div class="w-full h-full">
     <div class="deck-detail" 
     :class="{'fixed-height': fixedHeight}"
     v-if="cards.length > 0">

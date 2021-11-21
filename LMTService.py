@@ -135,16 +135,18 @@ def get_names(server, playername):
 def search(name, tag, server):
     matchIds = []
     details = herokuModel.getSearch(server, name, tag)
-    for detail in details:
-        cacheModel.matches[detail['metadata']['match_id']] = detail
-        matchIds.append(detail['metadata']['match_id'])
+    
+    if isinstance(details, list):
+        for detail in details:
+            cacheModel.matchDetails[detail['metadata']['match_id']] = detail
+            matchIds.append(detail['metadata']['match_id'])
 
-    for playername in details[0]['playernames']:
-        fullName = playername.split('#', 1)
-        if name.lower() == fullName[0].lower():
-            name = fullName[0]
-            tag = fullName[1]
-    saveMatchIdsInCache(server, name, tag, matchIds)
+        for playername in details[0]['playernames']:
+            fullName = playername.split('#', 1)
+            if name.lower() == fullName[0].lower():
+                name = fullName[0]
+                tag = fullName[1]
+        saveMatchIdsInCache(server, name, tag, matchIds)
     settingModel = Setting()
     settingModel.riotServer = Server._value2member_map_[server]
     maxNum = constants.MAX_NUM_INSPECT
