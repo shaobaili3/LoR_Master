@@ -205,6 +205,8 @@ function recordUserEvent(eventCategory, eventAction, eventLabel, eventValue) {
 autoUpdater.logger = require('electron-log')
 autoUpdater.logger.transports.file.level = 'info'
 
+// autoUpdater.channel = "beta"
+
 autoUpdater.on('checking-for-update', () => {
   console.log("Checking for Update...")
   if (mainWindow) mainWindow.webContents.send('checking-for-update')
