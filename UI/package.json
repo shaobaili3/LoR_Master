@@ -1,6 +1,6 @@
 {
   "name": "lor-master-tracker",
-  "version": "0.10.6",
+  "version": "0.10.7",
   "private": true,
   "author": {
     "name": "LoR Master",
@@ -15,8 +15,9 @@
     "build-installer": "electron-builder",
     "build-pack": "electron-builder --dir",
     "build-pub": "electron-builder -p always",
-    "dev": "chcp 65001 && vue-cli-service build && electron app.js",
-    "dev-electron": "chcp 65001 && electron app.js --dev",
+    "init": "chcp 65001",
+    "dev": "vue-cli-service build && electron app.js",
+    "dev-electron": "electron app.js",
     "dev-hidden": "vue-cli-service build && electron app.js --hidden",
     "package": "electron-packager ./ LoRMasterTracker --out ./app --app-version %npm_package_version% --overwrite --icon=image.ico",
     "start": "electron app.js"

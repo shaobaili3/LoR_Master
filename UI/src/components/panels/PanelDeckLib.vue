@@ -162,6 +162,7 @@ export default {
           code: deckCode,
         })
         this.updateStore()
+        this.pasteBuffer = null
         this.$emit('pasted')
       } catch (error) {
         console.log(error)
@@ -180,7 +181,7 @@ export default {
       () => {
         console.log("Nothing happens")
       },
-      ], `${this.$t('str.delete')},${this.decks[id].title}`)
+      ], `${this.$t('str.delete')} ${this.decks[id].title}`)
     },
     handleDelete(id) {
       this.decks.splice(id, 1)
