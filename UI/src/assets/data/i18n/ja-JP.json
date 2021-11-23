@@ -13,7 +13,8 @@
       "unkown": "予期せぬエラー",
       "playerNotFound": "プレイヤーが見つかりません",
       "playerNoHistory": "対戦履歴が見つかりません",
-      "localApiError": "本ソフトを使うには、ゲーム設定の「サードパーティーエンドポイントを有効にする」をチェックしてください"
+      "localApiError": "本ソフトを使うには、ゲーム設定の「サードパーティーエンドポイントを有効にする」をチェックしてください",
+      "internalServiceError": "只今本ソフトのサーバーに問題が発生しております"
     },
     "regions": {
       "americas": "アメリカサーバー",
@@ -29,11 +30,13 @@
       "day": "{t} 日前",
       "days": "{t} 日前"
     },
-    "yes": "はい",
-    "delete": "消去",
-    "requestConfirm": "本気ですか？",
+    "clipboard": "クリップボード",
     "no": "いいえ",
-    "clipboard": "クリップボード"
+    "yes": "はい",
+    "tracker": "トラッカー",
+    "requestConfirm": "確認しますか？",
+    "labSecrets": "ラボ・シークレット！",
+    "delete": "削除"
   },
   "loading": {
     "readyToRock": "準備万端 🤘",
@@ -82,6 +85,7 @@
   },
   "tooltips": {
     "lorlogin": "LoRがログインしていません"
+    "incompleteDeck": "不完全なデッキ"
   },
   "contact": {
     "messageBox": {
@@ -96,14 +100,18 @@
   "settings": {
     "options": {
       "autoLaunch": "パソコン起動時に本ソフトを自動起動する:"
+      "cardLanguage": "カードの表示言語",
+      "resetTrackerBounds": "本ソフトの位置とサイズをリセットする"
     },
     "enabled": "起動する",
     "enable": "起動する",
     "disabled": "起動しない",
     "disable": "起動しない"
+    "reset": "リセット"
   },
   "decklib": {
     "placeholder": "ここにデッキコードを貼り付けます",
     "title": "デッキライブラリ"
   }
 }
+// translated by 月影　Twitter:@zzzzzzbh
