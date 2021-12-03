@@ -154,7 +154,7 @@ def search(name, tag, server):
         maxNum = 20
     riotModel = Riot(Network(settingModel), cacheModel)
     playerModel = Player(riotModel, leaderboardModel)
-    playerModel.inspectFlask(name, tag, cacheModel.matches[name + tag + server])
+    playerModel.inspectFlask(name, tag, cacheModel.matches.get(name + tag + server))
     if playerModel.error is None:
         return jsonify(playerModel.matchesJson)
     else:
