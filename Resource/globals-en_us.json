@@ -26,6 +26,11 @@
       "nameRef": "Support"
     },
     {
+      "description": "Effect when unit strikes with an attack",
+      "name": "Attack Strike",
+      "nameRef": "AttackStrike"
+    },
+    {
       "description": "Highest Power, with ties broken by highest Health then highest Cost.",
       "name": "Strongest",
       "nameRef": "Strongest"
@@ -46,9 +51,24 @@
       "nameRef": "Behold"
     },
     {
+      "description": "This is how much Mana you need to spend to play this card.",
+      "name": "Cost",
+      "nameRef": "Cost"
+    },
+    {
       "description": "Get this effect when the round ends.",
       "name": "Round End",
       "nameRef": "RoundEnd"
+    },
+    {
+      "description": "This is how much damage the unit can withstand. If it reaches zero, the unit dies.",
+      "name": "Health",
+      "nameRef": "Health"
+    },
+    {
+      "description": "This is how much damage the unit deals when it strikes.",
+      "name": "Power",
+      "nameRef": "Power"
     },
     {
       "description": "Get this effect when this unit attacks.",
@@ -348,6 +368,11 @@
       "nameRef": "Stun"
     },
     {
+      "description": "Each round, the first time an allied card targets me, grant me +1|+1.",
+      "name": "Fated",
+      "nameRef": "Fated"
+    },
+    {
       "description": "Missing Translation",
       "name": "Can block Elusives",
       "nameRef": "BlockElusive"
@@ -456,61 +481,61 @@
   "regions": [
     {
       "abbreviation": "MT",
-      "iconAbsolutePath": "http://dd.b.pvp.net/2_19_0/core/en_us/img/regions/icon-targon.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/2_21_0/core/en_us/img/regions/icon-targon.png",
       "name": "Targon",
       "nameRef": "Targon"
     },
     {
       "abbreviation": "NX",
-      "iconAbsolutePath": "http://dd.b.pvp.net/2_19_0/core/en_us/img/regions/icon-noxus.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/2_21_0/core/en_us/img/regions/icon-noxus.png",
       "name": "Noxus",
       "nameRef": "Noxus"
     },
     {
       "abbreviation": "DE",
-      "iconAbsolutePath": "http://dd.b.pvp.net/2_19_0/core/en_us/img/regions/icon-demacia.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/2_21_0/core/en_us/img/regions/icon-demacia.png",
       "name": "Demacia",
       "nameRef": "Demacia"
     },
     {
       "abbreviation": "FR",
-      "iconAbsolutePath": "http://dd.b.pvp.net/2_19_0/core/en_us/img/regions/icon-freljord.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/2_21_0/core/en_us/img/regions/icon-freljord.png",
       "name": "Freljord",
       "nameRef": "Freljord"
     },
     {
       "abbreviation": "SI",
-      "iconAbsolutePath": "http://dd.b.pvp.net/2_19_0/core/en_us/img/regions/icon-shadowisles.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/2_21_0/core/en_us/img/regions/icon-shadowisles.png",
       "name": "Shadow Isles",
       "nameRef": "ShadowIsles"
     },
     {
       "abbreviation": "IO",
-      "iconAbsolutePath": "http://dd.b.pvp.net/2_19_0/core/en_us/img/regions/icon-ionia.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/2_21_0/core/en_us/img/regions/icon-ionia.png",
       "name": "Ionia",
       "nameRef": "Ionia"
     },
     {
       "abbreviation": "SH",
-      "iconAbsolutePath": "http://dd.b.pvp.net/2_19_0/core/en_us/img/regions/icon-shurima.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/2_21_0/core/en_us/img/regions/icon-shurima.png",
       "name": "Shurima",
       "nameRef": "Shurima"
     },
     {
       "abbreviation": "BW",
-      "iconAbsolutePath": "http://dd.b.pvp.net/2_19_0/core/en_us/img/regions/icon-bilgewater.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/2_21_0/core/en_us/img/regions/icon-bilgewater.png",
       "name": "Bilgewater",
       "nameRef": "Bilgewater"
     },
     {
       "abbreviation": "PZ",
-      "iconAbsolutePath": "http://dd.b.pvp.net/2_19_0/core/en_us/img/regions/icon-piltoverzaun.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/2_21_0/core/en_us/img/regions/icon-piltoverzaun.png",
       "name": "Piltover & Zaun",
       "nameRef": "PiltoverZaun"
     },
     {
       "abbreviation": "BC",
-      "iconAbsolutePath": "http://dd.b.pvp.net/2_19_0/core/en_us/img/regions/icon-bandlecity.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/2_21_0/core/en_us/img/regions/icon-bandlecity.png",
       "name": "Bandle City",
       "nameRef": "BandleCity"
     }
@@ -553,32 +578,32 @@
   ],
   "sets": [
     {
-      "iconAbsolutePath": "http://dd.b.pvp.net/2_19_0/core/en_us/img/sets/set3.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/2_21_0/core/en_us/img/sets/set3.png",
       "name": "Call of the Mountain",
       "nameRef": "Set3"
     },
     {
-      "iconAbsolutePath": "http://dd.b.pvp.net/2_19_0/core/en_us/img/sets/set1.png",
-      "name": "Foundations",
-      "nameRef": "Set1"
-    },
-    {
-      "iconAbsolutePath": "http://dd.b.pvp.net/2_19_0/core/en_us/img/sets/set2.png",
-      "name": "Rising Tides",
-      "nameRef": "Set2"
-    },
-    {
-      "iconAbsolutePath": "http://dd.b.pvp.net/2_19_0/core/en_us/img/sets/set4.png",
-      "name": "Empires of the Ascended",
-      "nameRef": "Set4"
-    },
-    {
-      "iconAbsolutePath": "http://dd.b.pvp.net/2_19_0/core/en_us/img/sets/set5.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/2_21_0/core/en_us/img/sets/set5.png",
       "name": "Beyond the Bandlewood",
       "nameRef": "Set5"
     },
     {
-      "iconAbsolutePath": "http://dd.b.pvp.net/2_19_0/core/en_us/img/sets/setevent.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/2_21_0/core/en_us/img/sets/set1.png",
+      "name": "Foundations",
+      "nameRef": "Set1"
+    },
+    {
+      "iconAbsolutePath": "http://dd.b.pvp.net/2_21_0/core/en_us/img/sets/set2.png",
+      "name": "Rising Tides",
+      "nameRef": "Set2"
+    },
+    {
+      "iconAbsolutePath": "http://dd.b.pvp.net/2_21_0/core/en_us/img/sets/set4.png",
+      "name": "Empires of the Ascended",
+      "nameRef": "Set4"
+    },
+    {
+      "iconAbsolutePath": "http://dd.b.pvp.net/2_21_0/core/en_us/img/sets/setevent.png",
       "name": "Events",
       "nameRef": "SetEvent"
     }

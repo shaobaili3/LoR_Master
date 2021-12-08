@@ -91,6 +91,8 @@ class FlaskApp(Flask):
 app = FlaskApp(__name__)
 
 
+
+
 @app.route("/process", methods=['get'])
 def process():
     process_info = {}
@@ -135,7 +137,7 @@ def get_names(server, playername):
 def search(name, tag, server):
     matchIds = []
     details = herokuModel.getSearch(server, name, tag)
-    
+
     if isinstance(details, list):
         for detail in details:
             cacheModel.matchDetails[detail['metadata']['match_id']] = detail
@@ -154,7 +156,8 @@ def search(name, tag, server):
         maxNum = 20
     riotModel = Riot(Network(settingModel), cacheModel)
     playerModel = Player(riotModel, leaderboardModel)
-    playerModel.inspectFlask(name, tag, cacheModel.matches[name + tag + server])
+    playerModel.inspectFlask(
+        name, tag, cacheModel.matches.get(name + tag + server))
     if playerModel.error is None:
         return jsonify(playerModel.matchesJson)
     else:
@@ -174,6 +177,8 @@ def saveMatchIdsInCache(server, name, tag, matchIds):
 # @app.route("/leaderboard/<string:server>", methods=['get'])
 # def get_leaderboard(server):
 #     return jsonify(herokuModel.getMatches(server))
+
+
 @app.route("/leaderboard/<string:server>", methods=['get'])
 def get_leaderboard(server):
     # refactor to leaderboard model
@@ -199,15 +204,15 @@ def get_leaderboard(server):
         boardWithTag.append(player)
     return jsonify(boardWithTag)
 
+
 @app.route("/opInfo", methods=['get'])
 def opInfo():
     opInfo = {}
-    localTrack.updateTagByName()
     opInfo['name'] = localTrack.opponentName
     # will break here if opponentName is None
     if localTrack.opponentName.startswith('deckname_') or localTrack.opponentName.startswith('decks_'):
         opInfo['name'] = 'AI'
-    opInfo['tag'] = localTrack.opponentTag
+    opInfo['tag'] = get_tag_by_name(localTrack.opponentName)
     opInfo['rank'], opInfo['lp'] = leaderboardModel.checkRank(
         localTrack.opponentName, settingTrack.riotServer)
     return jsonify(opInfo)
@@ -239,6 +244,25 @@ def get_local():
 def report(message):
     sentry_sdk.capture_message(message)
     return jsonify('OK')
+
+
+def get_tag_by_name(name):
+    opponent_tag = None
+    if name is None:
+        print('updateTagByName:', 'game not start')
+        return opponent_tag
+    name_path = constants.getCacheFilePath(
+        localTrack.setting.riotServer.lower() + '.json')
+    if not os.path.isfile(name_path):
+        name_path = 'Resource/' + localTrack.setting.riotServer.lower() + '.json'
+    with open(name_path, 'r', encoding='utf-8') as fp:
+        names = json.load(fp)
+        if name in names:
+            opponent_tag = names[name]
+            return opponent_tag
+        return herokuModel.getTag(localTrack.setting.riotServer.lower(), name)
+    return opponent_tag
+
 
 if isDebug:
     app.run(port=args.port, debug=True, use_reloader=False)

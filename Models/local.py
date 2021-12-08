@@ -244,30 +244,6 @@ class Local:
 
         return self.trackJson
 
-    def updateTagByName(self):
-        if self.opponentName is None:
-            print('updateTagByName:', 'game not start')
-            return
-        nameListPath = constants.getCacheFilePath(
-            self.setting.riotServer.lower() + '.json')
-        if not os.path.isfile(nameListPath):
-            nameListPath = 'Resource/' + self.setting.riotServer.lower() + '.json'
-        try:
-            with open(nameListPath, 'r', encoding='utf-8') as fp:
-                names = json.load(fp)
-                if self.opponentName in names:
-                    self.opponentTag = names[self.opponentName]
-                    return
-            with open(('Resource/' + self.setting.riotServer + '.dat'), 'r', encoding="utf-8") as search:
-                for line in search:
-                    fullName = line.rstrip().split('#')
-                    if self.opponentName == fullName[0]:
-                        self.opponentTag = fullName[1]
-                        return
-        except Exception as e:
-            print('updateTagByName', e)
-        self.opponentTag = None
-
     def getLocalLink(self):
         return cs.IP_KEY + self.setting.port + cs.LOCAL_MATCH
 

@@ -20,7 +20,8 @@
     "dev-electron": "electron app.js",
     "dev-hidden": "vue-cli-service build && electron app.js --hidden",
     "package": "electron-packager ./ LoRMasterTracker --out ./app --app-version %npm_package_version% --overwrite --icon=image.ico",
-    "start": "electron app.js"
+    "start": "electron app.js",
+    "get-icon": "node ./devtool/getNewChampIcon.js"
   },
   "main": "app.js",
   "dependencies": {

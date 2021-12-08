@@ -4,25 +4,27 @@ import Models.network
 LEADERBOARD_HEROKU = 'https://lmtservice.herokuapp.com/leaderboard/'
 HISTORY_HEROKU = 'https://lormaster.herokuapp.com/history/'
 SEARCH_HEROKU = 'https://lormaster.herokuapp.com/search/'
+TAG_HEROKU = 'https://lormaster.herokuapp.com/tag/'
+
+
 class Heroku():
     def __init__(self, leaderboard) -> None:
         self.leaderboard = leaderboard
         self.session = requests.Session()
 
-    def getMatches(self, server):
-        leaderboardLink = LEADERBOARD_HEROKU + server
+    def getTag(self, server, name):
+        tagLink = TAG_HEROKU + server + '/' + name
         try:
-            leaderboardRequest = self.session.get(
-                leaderboardLink, proxies=Models.network.getProxy())
+            tagRequest = self.session.get(
+                tagLink, proxies=Models.network.getProxy())
         except requests.exceptions.RequestException as e:
             print('getMatches error: ', e)
             return None
-        
-        if leaderboardRequest.ok:
-            return leaderboardRequest.json()
-        
-        print(leaderboardRequest.headers)
-        print(leaderboardRequest.status_code)
+        if tagRequest.ok:
+            return tagRequest.json()
+
+        print(tagRequest.headers)
+        print(tagRequest.status_code)
         return None
 
     def getHistory(self, server, name, id):
@@ -33,10 +35,10 @@ class Heroku():
         except requests.exceptions.RequestException as e:
             print('getMatches error: ', e)
             return None
-        
+
         if historyRequest.ok:
             return historyRequest.json()
-            
+
         print(historyRequest.headers)
         print(historyRequest.status_code)
         return None
@@ -49,13 +51,13 @@ class Heroku():
         except requests.exceptions.RequestException as e:
             print('getMatches error: ', e)
             return None
-        
+
         if detailRequest.ok:
             details = detailRequest.json()
             for detail in details:
                 self.addPlayerInfo(detail, server)
             return details
-            
+
         print(detailRequest.headers)
         print(detailRequest.status_code)
         return None
