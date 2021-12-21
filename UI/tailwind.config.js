@@ -1,11 +1,10 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
-  mode: 'jit',
-  purge: [
-    './src/**/*.{vue,js,ts,jsx,tsx}'
+  content: [
+    './src/components/**/*.vue',
+    './src/pages/**/*.vue'
   ],
-  darkMode: false, // or 'media' or 'class'
   theme: {
     screens: {
       'xxs': '190px',
@@ -37,9 +36,6 @@ module.exports = {
         'spacing': 'margin, padding',
       }
     },
-  },
-  variants: {
-    
   },
   plugins: [],
 }

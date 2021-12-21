@@ -73,9 +73,9 @@ export default {
         gap: 5px;
     }
 
-    .row.deck .row.fixedWidth {
+    /* .row.deck .row.fixedWidth {
         width: 160px;
-    }
+    } */
 
     .row.deck.cheveron {
         justify-content: flex-start;
