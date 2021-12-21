@@ -63,7 +63,7 @@ const store = createStore({
             // console.log(this.sets)
         },
         addChampsFromDeck( { commit }, { champs, deckCode } ) {
-            commit('pushChampsFromDeck', { deckCode: deckCode, champs: champs })
+            commit('pushChampsFromDeck', Object.freeze({ deckCode: deckCode, champs: champs }))
         }
     }
     
