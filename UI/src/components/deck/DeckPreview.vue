@@ -1,6 +1,6 @@
 <template>
     <div class="row deck btn" :class="{won: won, loss: !won, cheveron: cheveron}">
-        <div class="row" :class="{fixedWidth: fixedWidth}">
+        <div class="row" :class="{'w-[160px] sm:w-[190px]': fixedWidth}">
             <deck-regions :deck="deck" :fixedWidth="false"></deck-regions>
             <deck-champs :deck="deck" :fixedWidth="!cheveron"></deck-champs>
             <div v-if="cheveron" class="icon cheveron fa" :class="{'fa-chevron-down': !isShown, 'fa-chevron-up': isShown}"></div>
@@ -72,10 +72,6 @@ export default {
         align-items: center;
         gap: 5px;
     }
-
-    /* .row.deck .row.fixedWidth {
-        width: 160px;
-    } */
 
     .row.deck.cheveron {
         justify-content: flex-start;

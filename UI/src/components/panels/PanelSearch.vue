@@ -19,8 +19,10 @@
             :class="{ active: searchText != '' }"
             @click="searchHistory"
           >
-            <span v-if="!isSameSearch"><i class="fas fa-search"></i></span>
-            <span v-if="isSameSearch"><i class="fas fa-redo-alt"></i></span>
+            <span v-if="isLoading"><i class="fas fa-redo-alt fa-spin"></i></span>
+            <span v-if="!isLoading && !isSameSearch"><i class="fas fa-search"></i></span>
+            <span v-if="!isLoading && isSameSearch && !isUpdated"><i class="fas fa-redo-alt"></i></span>
+            <span v-if="!isLoading && isSameSearch && isUpdated"><i class="fas fa-check"></i></span>
           </button>
 
           <input
@@ -58,7 +60,7 @@
     </div>
     <!-- Player Info -->
     <player-matches
-      v-if="!isLoading && playerName && matches.length > 0"
+      v-if="playerName && matches.length > 0"
       @search="searchPlayer($event)"
       @show-deck="showDeck"
       :playerName="playerName"
@@ -66,6 +68,7 @@
       :playerRank="playerRank"
       :playerLP="playerLP"
       :matches="matches"
+      ref="searchPlayerMatch"
     >
     </player-matches>
 
@@ -91,6 +94,8 @@ const requestDataWaitTime = 400 //ms
 const requestHistoryWaitTime = 100 //ms
 const requestStatusWaitTime = 1000 //ms
 const inputNameListLength = 10;
+
+const requestRefreshDelay = 5000 //ms
 
 let cancelToken, localCancleToken
 var lastStatusRequestTime
@@ -129,6 +134,9 @@ export default {
       searchText: "",
       isLoading: false,
       isError: false,
+
+      lastUpdated: null, // Used to calculate isUpdated
+      isUpdated: false,
 
       errorType: "",
 
@@ -489,6 +497,11 @@ export default {
         lp: null,
       };
 
+      // Set selected filter to null
+      if (this.$refs.searchPlayerMatch && this.$refs.searchPlayerMatch.setFilterDeckCode) {
+        this.$refs.searchPlayerMatch.setFilterDeckCode(null)
+      }
+
       if (!data) return matchInfo;
 
       if (playerServer == "sea") {
@@ -649,6 +662,12 @@ export default {
           });
         }
       }
+
+      this.lastUpdated = Date.now()
+      this.isUpdated = true
+      window.setTimeout(() => {
+        this.isUpdated = false
+      }, requestRefreshDelay);
 
       return matchInfo;
     },
