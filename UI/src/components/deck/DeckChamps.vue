@@ -52,6 +52,13 @@ export default {
         },
         getChampsFromDeck() {
             var deck = null
+
+            // this.$store.dispatch('getData')
+            let cache = this.$store.getters.champsFromDeck[this.deck]
+            if (cache) {
+                return cache
+            }
+
             try { deck = DeckEncoder.decode(this.deck)} catch(err) {
                 console.log(err)
                 console.log(this.deck)
@@ -59,18 +66,27 @@ export default {
             }
             var champs = []
             for (var j in deck) {
-                for (var i in championCards.champions) {
-                    var champCode = championCards.champions[i]
-                    var cardCode = deck[j].code
-                    if (cardCode == champCode) {
-                        let champ = {
-                            count: deck[j].count,
-                            code: champCode
-                        }
-                        champs.push(champ)
+                let champCode = deck[j].code
+                if (championCards.champObj[champCode] != null) {
+                    let champ = {
+                        count: deck[j].count,
+                        code: champCode
                     }
+                    champs.push(champ)
                 }
+                // for (var i in championCards.champions) {
+                //     var champCode = championCards.champions[i]
+                //     var cardCode = deck[j].code
+                //     if (cardCode == champCode) {
+                //         let champ = {
+                //             count: deck[j].count,
+                //             code: champCode
+                //         }
+                //         champs.push(champ)
+                //     }
+                // }
             }
+            this.$store.dispatch('addChampsFromDeck', {champs: champs, deckCode: this.deck})
             // Add filler champ icons
             if (this.fixedWidth) {
                 var fillerIcons = this.maxChamp - champs.length

@@ -5,6 +5,8 @@ import '@/assets/css/global.css'
 import { createStore, mapState, mapMutations } from 'vuex'
 import sets_en from '../../../Resource/en_us.json'
 
+// concat to get rid of first layer array
+// reduce to convert array to key-value pair
 const sets_en_combined = [].concat(...sets_en)
 
 import messages from '@/assets/data/messages.js'
@@ -24,7 +26,11 @@ const store = createStore({
             locale: 'en_us',
             sets: sets_en_combined,
             IS_ELECTRON: window.ipcRenderer !== undefined,
+            _champsFromDeck: {},
         }
+    },
+    getters: {
+        champsFromDeck: (state) => state._champsFromDeck
     },
     mutations: {
         setLocale (state, newLocale) {
@@ -32,6 +38,9 @@ const store = createStore({
         },
         loadSets (state, newSets) {
             state.sets = newSets
+        },
+        pushChampsFromDeck (state, newChampsFromDeck) {
+            state._champsFromDeck[newChampsFromDeck.deckCode] = newChampsFromDeck.champs
         }
     },
     actions: {
@@ -53,6 +62,9 @@ const store = createStore({
             commit('loadSets', [].concat(...loadModule.default))
             // console.log(this.sets)
         },
+        addChampsFromDeck( { commit }, { champs, deckCode } ) {
+            commit('pushChampsFromDeck', { deckCode: deckCode, champs: champs })
+        }
     }
     
 })

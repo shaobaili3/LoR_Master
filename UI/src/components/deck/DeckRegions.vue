@@ -18,7 +18,7 @@ import DeckEncoder from '../../modules/runeterra/DeckEncoder'
 
 import en_us_array from '../../../../Resource/en_us.json'
 
-const en_us = [].concat(...en_us_array)
+const en_us = [].concat(...en_us_array).reduce((a, v) => ({ ...a, [v.cardCode]: v}), {}) 
 
 // console.log("EN_US in Deck Regions:", en_us)
 
@@ -76,7 +76,7 @@ export default {
             for (var j in cards) {
                 
                 var cardCode = cards[j].code
-                var card = en_us.find(card => card.cardCode == cardCode)
+                var card = en_us[cardCode]
                 if (card) {
                     if (card.regions && card.regions.length == 1) {
                         // Only considers mono region cards

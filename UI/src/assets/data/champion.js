@@ -1,17 +1,21 @@
 import sets_en from '../../../../Resource/en_us.json'
 
 var champs = []
+var champObj = {}
 
 sets_en.forEach(set => {
   set.forEach(card => {
     if (card.rarityRef == "Champion" && card.collectible) {
-      champs.push(card.cardCode)
+      var code = card.cardCode
+      champs.push(code)
+      champObj[code] = code
     }
   })
 });
 
 export default {
-  champions: champs
+  champions: champs,
+  champObj: champObj
 }
 
 
