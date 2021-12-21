@@ -1,5 +1,5 @@
 <template>
-  <teleport to="body">
+  <!-- <teleport to="body"> -->
     <transition name="fade">
       <modal :message="$t('str.requestConfirm')" v-if="opened">
         <div class="text-sm px-4 py-4 whitespace-pre text-center">{{message}}</div>
@@ -19,7 +19,7 @@
         </div>
       </modal>
     </transition>
-  </teleport>
+  <!-- </teleport> -->
   
 </template>
 

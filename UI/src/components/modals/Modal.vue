@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="z-[200] fixed">
     <!--Overlay Effect-->
     <div
       class="fixed inset-0 bg-gray-900 bg-opacity-50 overflow-y-auto h-full w-full z-[200]"
