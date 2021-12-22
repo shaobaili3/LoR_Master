@@ -26,6 +26,7 @@ const store = createStore({
             locale: 'en_us',
             sets: sets_en_combined,
             IS_ELECTRON: window.ipcRenderer !== undefined,
+            IS_DEV: process.env.NODE_ENV === 'development',
             _champsFromDeck: {},
         }
     },
@@ -111,7 +112,8 @@ app.mixin({
     }
 })
 
-app.mount('#app')
+return app
+
 }
 
 import "tailwindcss/tailwind.css"

@@ -2,4 +2,6 @@ import App from './Home.vue'
 
 import template from '../template'
 
-template(App)
+const app = template(App)
+
+app.mount('#app')

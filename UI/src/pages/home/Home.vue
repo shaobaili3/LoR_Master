@@ -3,7 +3,7 @@
   <div class="left-nav-btn mobile-btn" @click="expandLeftNav">
     <span><i class="fas fa-list"></i></span>
   </div>
-  <div class="left-nav" :class="{'expanded': leftNavExpanded}">
+  <div class="left-nav overflow-y-scroll" :class="{'expanded': leftNavExpanded}">
     <div class="left-nav-btn logo no-click" v-if="!IS_ELECTRON" @mouseenter="showAds">
       <picture>
         <source srcset="@/assets/images/logo/logo.webp" type="image/webp">
@@ -43,46 +43,53 @@
       @click="setCurrentPage(PANELS.leaderboard)">
       <span><i class="fas fa-trophy"></i></span>
     </button>
-    <button class="left-nav-btn" v-if="IS_ELECTRON || NODE_ENV === 'development' "
+    <button class="left-nav-btn" v-if="IS_ELECTRON || IS_DEV "
       :class="{selected: currentPage == PANELS.decklib}" 
       @click="setCurrentPage(PANELS.decklib)">
       <span><i class="fas fa-star"></i></span>
     </button>
-    <div class="left-nav-btn menu no-click">
+    <button class="left-nav-btn hidden sm:flex"
+      :class="{'text-gold-200': isOpenBookshelf}"
+      @click="toggleBookshelf()">
       <span><i class="fas fa-books"></i></span>
-      <div class="menu-content right top-auto sm:top-0 sm:bottom-auto">
-        <div class="card" @click="openURL('https://masteringruneterra.com/')">
-          <img src="https://masteringruneterra.com/wp-content/uploads/2021/09/MasteringRuneterraWebsiteLogo-300x129.webp">
-        </div>
-        <div class="card square" @click="openURL('https://runeterraccg.com/')">
-          <img src="https://runeterraccg.com/wp-content/uploads/2020/05/RuneterraCCG.com-Square-Logo.png">
-        </div>
-        
-        <div class="card square" @click="openURL('https://www.swimstrim.com/')">
-          <img src="https://www.swimstrim.com/packs/media/images/logo-8b7cd382.png">
-        </div>
-        <div class="card sqaure" @click="openURL(lorNewsURL)">
-          <img src="https://images.contentstack.io/v3/assets/blt0eb2a2986b796d29/blt8ba1ec1b0013e362/5ea53af4ae23d30cd1dfb3e4/lor-logo.png">
-        </div>
-        <div class="card square" @click="openURL('https://runeterra.ar/')">
-          <img src="https://cdnruneterra.ar/assets/img/logo_ar_black.png">
-        </div>
-        <!-- <div class="card" @click="openURL('https://masteringruneterra.com/')">
-          <img src="https://picsum.photos/400/210">
-        </div> -->
-      </div>
-    </div>
-    <button class="left-nav-btn nav-bottom" 
+    </button>
+    <!-- Divider -->
+    <div class=" flex-1 "></div> 
+    <button class="left-nav-btn text-gray-300" 
       :class="{selected: currentPage == PANELS.contact}" 
       @click="setCurrentPage(PANELS.contact)">
       <span><i class="fas fa-comment-alt-smile"></i></span>
     </button>
-    <button class="left-nav-btn nav-bottom" 
-      :class="{selected: currentPage == PANELS.settings}" 
+    <button class="left-nav-btn text-gray-300" 
+      :class="{
+        selected: currentPage == PANELS.settings,
+        ' mb-14 ': IS_ELECTRON,
+        ' mb-5 ': !IS_ELECTRON 
+      }" 
       @click="setCurrentPage(PANELS.settings)">
       <span><i class="fas fa-cog"></i></span>
     </button>
+  </div>
+
+  <div class="menu-content hidden sm:grid absolute left-[98px] top-6 bottom-auto"
+    :class="{'hide': !isOpenBookshelf}"
+  >
+    <div class="card" @click="openURL('https://masteringruneterra.com/')">
+      <img src="https://masteringruneterra.com/wp-content/uploads/2021/09/MasteringRuneterraWebsiteLogo-300x129.webp">
+    </div>
+    <div class="card square" @click="openURL('https://runeterraccg.com/')">
+      <img src="https://runeterraccg.com/wp-content/uploads/2020/05/RuneterraCCG.com-Square-Logo.png">
+    </div>
     
+    <div class="card square" @click="openURL('https://www.swimstrim.com/')">
+      <img src="https://www.swimstrim.com/packs/media/images/logo-8b7cd382.png">
+    </div>
+    <div class="card sqaure" @click="openURL(lorNewsURL)">
+      <img src="https://images.contentstack.io/v3/assets/blt0eb2a2986b796d29/blt8ba1ec1b0013e362/5ea53af4ae23d30cd1dfb3e4/lor-logo.png">
+    </div>
+    <div class="card square" @click="openURL('https://runeterra.ar/')">
+      <img src="https://cdnruneterra.ar/assets/img/logo_ar_black.png">
+    </div>
   </div>
   
   <base-window-controls v-if="IS_ELECTRON" :title="''" :titleType="'window'"></base-window-controls>
@@ -229,6 +236,8 @@ const requestHistoryWaitTime = 100 //ms
 const requestStatusWaitTime = 1000 //ms
 const inputNameListLength = 10;
 
+// IS_ELECTRON & IS_DEV defined in template.js
+
 import { locales as cardLocales, localeNames as cardLocaleNames} from '../template'
 
 // import ua from 'universal-analytics'
@@ -303,6 +312,8 @@ export default {
       isShowDeck: false,
       deckCode: null,
 
+      isOpenBookshelf: false,
+
       version: "",
       remoteVersion: "",
       downloadUrl: null,
@@ -371,9 +382,6 @@ export default {
     },
     lorNewsURL() {
       return `https://playruneterra.com/${this.locale.replace('_', '-')}/news`
-    },
-    NODE_ENV() {
-      return process.env.NODE_ENV
     }
   },
   mounted() {
@@ -434,6 +442,11 @@ export default {
     ...mapActions([
       'changeLocale'
     ]),
+
+    toggleBookshelf() {
+      // this.$refs.bookshelfContent.classList.toggle('hide')
+      this.isOpenBookshelf = !this.isOpenBookshelf
+    },
 
     resetTrackerWindow() {
       if (this.IS_ELECTRON) {
