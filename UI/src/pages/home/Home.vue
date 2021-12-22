@@ -49,18 +49,18 @@
       <span><i class="fas fa-star"></i></span>
     </button>
     <button class="left-nav-btn hidden sm:flex"
-      :class="{'text-gold-200': isOpenBookshelf}"
+      :class="{'text-gold-200 light-gold': isOpenBookshelf}"
       @click="toggleBookshelf()">
       <span><i class="fas fa-books"></i></span>
     </button>
     <!-- Divider -->
     <div class=" flex-1 "></div> 
-    <button class="left-nav-btn text-gray-300" 
+    <button class="left-nav-btn text-gray-300 gray" 
       :class="{selected: currentPage == PANELS.contact}" 
       @click="setCurrentPage(PANELS.contact)">
       <span><i class="fas fa-comment-alt-smile"></i></span>
     </button>
-    <button class="left-nav-btn text-gray-300" 
+    <button class="left-nav-btn text-gray-300 gray" 
       :class="{
         selected: currentPage == PANELS.settings,
         ' mb-14 ': IS_ELECTRON,
@@ -71,7 +71,7 @@
     </button>
   </div>
 
-  <div class="menu-content hidden sm:grid absolute left-[98px] top-6 bottom-auto"
+  <div class="menu-content hidden sm:grid absolute left-[98px] top-6 bottom-auto z-[120]"
     :class="{'hide': !isOpenBookshelf}"
   >
     <div class="card" @click="openURL('https://masteringruneterra.com/')">
