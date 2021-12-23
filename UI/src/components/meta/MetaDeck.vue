@@ -1,8 +1,8 @@
 <template>
   <div class="py-2">
-    <div class="flex gap-2 items-baseline">
+    <div class="flex-wrap justify-center md:justify-start flex gap-2 items-center md:items-baseline">
       <deck-preview class="max-w-[200px]" :deck="code" @click.stop="showDeck"></deck-preview>
-      <div class="flex gap-2">
+      <div class="block sm:flex gap-2">
         <!-- Summary -->
         <p>{{playNum}} Matches</p>
         <p>{{(playRate*100).toFixed(2)}}% Play Rate</p>
@@ -16,7 +16,12 @@
       }"
       ></div>
     </div>
-    <p>{{(winRate*100).toFixed(2)}}% <span class=" text-sm text-gray-300 hover:text-gray-200">{{(winRateBounds.lower*100).toFixed(2)}}%-{{(winRateBounds.upper*100).toFixed(2)}}%</span></p>
+    <p 
+    class=" block w-full text-left"
+      :style="{
+        paddingLeft: `${winRateBounds.lower*100}%`
+      }"
+    >{{(winRate*100).toFixed(2)}}% <span class=" text-sm text-gray-300 hover:text-gray-200">{{(winRateBounds.lower*100).toFixed(2)}}%-{{(winRateBounds.upper*100).toFixed(2)}}%</span></p>
     
   </div>
 </template>

@@ -1,7 +1,13 @@
 <template>
   <div>
     <p class="title text-3xl text-left pb-5 pt-3 sticky-top">Meta</p>
-    <p class="sub-title text-left pb-2">Last 5 days | Patch 1.xx | 221k Matches</p>
+    
+    <div v-if="isLoading" class="text-2xl pb-5">
+      <i class="fas fa-circle-notch fa-spin"></i>
+      {{ $t("str.loading") }}
+    </div>
+    
+    <p v-if="metaGroups" class="sub-title text-left pb-2">Last 5 days | Patch 1.xx | 221k Matches</p>
     <div v-if="metaGroups">
       <div class="py-1" v-for="group in metaGroups" :key="group.id">
         <meta-group :group="group"></meta-group>
@@ -27,7 +33,8 @@ export default {
   },
   computed: {
     ...mapState('metaData',[
-      'metaGroups'
+      'metaGroups',
+      'isLoading'
     ])
   },
   methods: {
