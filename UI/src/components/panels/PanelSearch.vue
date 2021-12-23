@@ -67,6 +67,7 @@
       :playerRegion="playerRegion"
       :playerRank="playerRank"
       :playerLP="playerLP"
+      :playerTag="playerTag"
       :matches="matches"
       ref="searchPlayerMatch"
     >

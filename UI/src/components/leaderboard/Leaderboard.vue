@@ -56,9 +56,13 @@ const REGION_NAMES = ["americas", "europe", "asia", "sea"]
 const requestLeaderboardWaitTime = 1000 //ms
 var lastLeaderboardRequestTime
 
+import { mapState, mapActions, mapGetters } from 'vuex'
+
 export default {
     mounted() {
-        this.getLeaderboard(this.activeRegion)
+        // this.getLeaderboard(this.activeRegion)
+        // console.log("Mounted Leaderboard")
+        this.fetchLeaderboard(this.activeRegion)
     },
     data() {
         return {
@@ -66,12 +70,12 @@ export default {
             activeRegion: 0,
             regions: REGION_ID,
             request: null,
-            isLoading: false,
             searchText: "",
             signedIn: false,
             dataStartTime: 0,
         }
     },
+    
     props: {
         apiBase: {
             type: String,
@@ -89,11 +93,18 @@ export default {
         },
     },
     computed: {
+        ...mapState('leaderboardData', [
+            'leaderboard',
+            'isLoading'
+        ]),
         filteredPlayers() {
+            if (!this.leaderboard || !this.leaderboard[this.activeRegion]) {
+                return null
+            }
             if (this.searchText) {
                 var searchText = this.searchText
                 var filteredPlayers = []
-                var prefilteredPlayer = this.rawPlayers
+                var prefilteredPlayer = this.leaderboard[this.activeRegion]
                 for (var i = 0; i < prefilteredPlayer.length; i++) {
                     if (prefilteredPlayer[i].name.toLowerCase().indexOf(searchText.toLowerCase()) !== -1) {
                         filteredPlayers.push(prefilteredPlayer[i])
@@ -105,11 +116,11 @@ export default {
 
                 return filteredPlayers
             }
-            return this.rawPlayers;
+            return this.leaderboard[this.activeRegion];
         },
         searchPlaceHolder() {
-            if (this.rawPlayers) {
-                return this.$t('search.leaderboard.numPlayer', {num: this.rawPlayers.length})
+            if (this.leaderboard && this.leaderboard[this.activeRegion]) {
+                return this.$t('search.leaderboard.numPlayer', {num: this.leaderboard[this.activeRegion].length})
             } else {
                 return this.$t('search.leaderboard.base')
             }
@@ -117,60 +128,14 @@ export default {
     },
     components: { LeaderboardPlayer },
     methods: {
+        ...mapActions('leaderboardData', [
+            'fetchLeaderboard'
+        ]),
         clearSearch() {
             this.searchText = ""
             document.querySelector("#search-input").focus()
         },
-        getLeaderboard(regionID) {
-
-            // Return if using npm run serve
-            // if (process.env.NODE_ENV == "development") { return }
-
-            lastLeaderboardRequestTime = Date.now()
-
-            this.isLoading = true
-
-            var region = REGION_NAMES[regionID]
-
-            if (this.request) this.cancelLeaderboard()
-            const axiosSource = axios.CancelToken.source()
-            this.request = { cancel: axiosSource.cancel, msg: "Loading..." }
-
-            var api_link = `${this.apiBase}/leaderboard/${region}`
-
-            axios.get(api_link, {cancelToken: axiosSource.token} )
-            .then((res) => {
-                this.rawPlayers = res.data
-                this.isLoading = false
-            })
-            .catch((e) => {
-                if (axios.isCancel(e)) {
-                    console.log("Request cancelled")
-                } else 
-                { 
-                    console.log('error', e)
-                    // if (!e.status) {
-                    //     console.log("Network Error")
-                    //     // return
-                    // }
-
-                    var elapsedTime = Date.now() - lastLeaderboardRequestTime // ms
-                    if (elapsedTime > requestLeaderboardWaitTime) {
-                        setTimeout(() => {this.getLeaderboard(regionID)}, 100);
-                    } else {
-                        setTimeout(() => {this.getLeaderboard(regionID)}, requestLeaderboardWaitTime - elapsedTime);
-                    }
-                    
-                }
-            })
-        },
-
-        cancelLeaderboard() {
-            this.request.cancel()
-        },
-
         switchRegion(regionID) {
-
             this.sendUserEvent({
                 category: "Main Window Leaderboard",
                 action: "Select Region",
@@ -179,10 +144,8 @@ export default {
             })
 
             if (this.activeRegion != regionID) {
-                
-                this.getLeaderboard(regionID)
+                this.fetchLeaderboard(regionID)
                 this.activeRegion = regionID
-                
             }
 
         },

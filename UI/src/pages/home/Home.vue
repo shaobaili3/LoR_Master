@@ -51,7 +51,7 @@
     <button class="left-nav-btn" 
       :class="{selected: currentPage == PANELS.meta}" 
       @click="setCurrentPage(PANELS.meta)">
-      <span><i class="fas fa-calendar-day"></i></span>
+      <span><i class="fas fa-trees"></i></span>
     </button>
     <button class="left-nav-btn hidden sm:flex"
       :class="{'text-gold-200 light-gold': isOpenBookshelf}"
@@ -126,6 +126,7 @@
         :playerRegion="localPlayerInfo.server"
         :playerRank="localPlayerInfo.rank"
         :playerLP="localPlayerInfo.lp"
+        :playerTag="localPlayerInfo.tag"
         :matches="localMatches"
       >
       </player-matches>
@@ -355,8 +356,6 @@ export default {
       autoLaunch: null,
       debugInfos: "",
 
-      portNum: '26531',
-
       clipboardDeck: null,
       leftNavExpanded: false,
 
@@ -394,13 +393,13 @@ export default {
       }
       return this.$t('str.loading') 
     },
-    apiBase() {
-      if (this.IS_ELECTRON) {
-        return `http://127.0.0.1:${this.portNum}`
-      }
-      return `https://lormaster.herokuapp.com`
-      // return 'https://85pj77.deta.dev'
-    },
+    // apiBase() {
+    //   if (this.IS_ELECTRON) {
+    //     return `http://127.0.0.1:${this.portNum}`
+    //   }
+    //   return `https://lormaster.herokuapp.com`
+    //   // return 'https://85pj77.deta.dev'
+    // },
     lorNewsURL() {
       return `https://playruneterra.com/${this.locale.replace('_', '-')}/news`
     }
@@ -614,7 +613,8 @@ export default {
 
       window.ipcRenderer.on('return-port', (event, port) => {
         console.log("New Port:", port)
-        this.portNum = port
+        // this.portNum = port
+        this.$store.commit('setPortNum', port)
       })
 
       window.ipcRenderer.send("get-port")

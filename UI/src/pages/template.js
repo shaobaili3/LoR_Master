@@ -2,7 +2,7 @@ import { createApp } from 'vue'
 import { createI18n } from 'vue-i18n'
 import '@/assets/css/global.css'
 
-import { createStore, mapState, mapMutations } from 'vuex'
+import { createStore, mapState, mapGetters, mapMutations } from 'vuex'
 import sets_en from '../../../Resource/en_us.json'
 
 // concat to get rid of first layer array
@@ -18,6 +18,7 @@ import mitt from 'mitt'
 
 import champsFromDeck from '../store/modules/champsFromDeck'
 import metaData from '../store/modules/metaData'
+import leaderboardData from '../store/modules/leaderboardData'
 
 export default (App) => {
 
@@ -28,17 +29,26 @@ locales.forEach(lo => {
 const store = createStore({
     modules: {
         champsFromDeck,
-        metaData
+        metaData,
+        leaderboardData
     },
     state () {
         return {
             locale: 'en_us',
+            portNum: '26531',
             sets: sets_en_combined,
             IS_ELECTRON: window.ipcRenderer !== undefined,
             IS_DEV: process.env.NODE_ENV === 'development',
         }
     },
     getters: {
+        apiBase( state ) {
+            if (state.IS_ELECTRON) {
+                return `http://127.0.0.1:${state.portNum}`
+            }
+            return `https://lormaster.herokuapp.com`
+            // return 'https://85pj77.deta.dev'
+        },
     },
     mutations: {
         setLocale (state, newLocale) {
@@ -47,6 +57,9 @@ const store = createStore({
         loadSets (state, newSets) {
             state.sets = newSets
         },
+        setPortNum (state, newPort) {
+            state.portNum = newPort
+        }
     },
     actions: {
         changeLocale ({ dispatch, commit }, newLocale) {
@@ -87,10 +100,13 @@ app.mixin({
     computed: {
         ...mapState([
             'locale',
+            'portNum',
             'sets',
             'IS_ELECTRON',
             'IS_DEV',
-            'API',
+        ]),
+        ...mapGetters([
+            'apiBase'
         ])
     },
     methods: {

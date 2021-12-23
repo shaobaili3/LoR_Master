@@ -3,12 +3,12 @@
         <div class="player-name">{{playerName}}</div>
         <div class="summary-container">
             <div class="summary-item player-summary">
-                <div class="detail rank" v-if="playerRank">
+                <div class="detail rank" v-if="rank">
                     <span class="pre-info"><i class="fas fa-trophy"></i></span> 
-                    {{playerRank}}</div>
-                <div class="detail lp" v-if="playerLP || playerLP === 0">
+                    {{rank}}</div>
+                <div class="detail lp" v-if="lp || lp === 0">
                     <span class="pre-info"><i class="iconfy">LP</i></span>
-                    {{playerLP}}</div>
+                    {{lp}}</div>
                 <div class="detail region" v-if="playerRegion">
                     <span class="pre-info"><i class="fas" :class="playerRegion === 'sea' ? 'fa-globe-asia' : 'fa-globe-'+playerRegion"></i></span>
                     {{playerRegionFC}}</div>
@@ -55,6 +55,13 @@ import DeckChamps from '../deck/DeckChamps.vue';
 import MatchHistory from '../match/MatchHistory.vue';
 
 
+const REGION_ID = {
+    americas: 0,
+    europe: 1,
+    asia: 2,
+    sea: 3,
+};
+
 // Some helper math functions
 function FLip(x) {
     return 1 - x
@@ -89,11 +96,15 @@ export default {
         DeckChamps
     },
     mounted() {
+        if (this.missingRankLp) {
+            this.$store.dispatch('leaderboardData/fetchLeaderboard', REGION_ID[this.playerRegion])
+        }
     },
     props: {
         playerName: String,
         playerRank: String,
         playerLP: String,
+        playerTag: String,
         playerRegion: String,
         matches: Array,
     },
@@ -120,6 +131,49 @@ export default {
         }
     },
     computed: {
+
+        missingRankLp() {
+            return !this.playerLP && !this.playerRank && this.playerName && this.playerTag && this.playerRegion
+        },
+
+        leaderboard() {
+            console.log("Trying access leaderboard")
+            console.log(this.playerName, this.playerTag)
+            if (this.missingRankLp) {
+                console.log("Leaderboard access from matches")
+                var lead = this.$store.state.leaderboardData.leaderboard
+                console.log(lead)
+                if (lead && lead[REGION_ID[this.playerRegion]]) {
+                    return lead[REGION_ID[this.playerRegion]].find((val) => {
+                        return val.name == this.playerName && val.tag == this.playerTag
+                    })
+                }
+            }
+            return null
+        },
+
+        lp() {
+            if (this.playerLP) {
+                return this.playerLP
+            } else {
+                if (this.leaderboard) {
+                    return this.leaderboard.lp
+                }
+            }
+            return null
+        },
+
+        rank() {
+            if (this.playerRank) {
+                return this.playerRank
+            } else {
+                if (this.leaderboard) {
+                    console.log(this.leaderboard)
+                    return this.leaderboard.rank + 1 // Because raw rank data starts at 0
+                }
+            }
+            return null
+        },
         
         playerRegionFC() {
             return this.$t('str.regions.'+this.playerRegion)
