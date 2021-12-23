@@ -14,6 +14,11 @@ import messages from '@/assets/data/messages.js'
 export const locales = ['de_de', 'en_us', 'es_es', 'es_mx', 'fr_fr', 'it_it', 'ja_jp', 'ko_kr', 'pl_pl', 'pt_br', 'th_th', 'tr_tr', 'ru_ru', 'zh_tw']
 export const localeNames = ['German', 'English', 'Spanish (Spain)', 'Spanish (Mexico)', 'French', 'Italian',  'Japanese', 'Korean', 'Polish', 'Portuguese', 'Thai', 'Turkish', 'Russian', 'Chinese']
 
+import mitt from 'mitt'
+
+import champsFromDeck from '../store/modules/champsFromDeck'
+import metaData from '../store/modules/metaData'
+
 export default (App) => {
 
 locales.forEach(lo => {
@@ -21,17 +26,19 @@ locales.forEach(lo => {
 });
 
 const store = createStore({
+    modules: {
+        champsFromDeck,
+        metaData
+    },
     state () {
         return {
             locale: 'en_us',
             sets: sets_en_combined,
             IS_ELECTRON: window.ipcRenderer !== undefined,
             IS_DEV: process.env.NODE_ENV === 'development',
-            _champsFromDeck: {},
         }
     },
     getters: {
-        champsFromDeck: (state) => state._champsFromDeck
     },
     mutations: {
         setLocale (state, newLocale) {
@@ -40,9 +47,6 @@ const store = createStore({
         loadSets (state, newSets) {
             state.sets = newSets
         },
-        pushChampsFromDeck (state, newChampsFromDeck) {
-            state._champsFromDeck[newChampsFromDeck.deckCode] = newChampsFromDeck.champs
-        }
     },
     actions: {
         changeLocale ({ dispatch, commit }, newLocale) {
@@ -63,9 +67,6 @@ const store = createStore({
             commit('loadSets', [].concat(...loadModule.default))
             // console.log(this.sets)
         },
-        addChampsFromDeck( { commit }, { champs, deckCode } ) {
-            commit('pushChampsFromDeck', Object.freeze({ deckCode: deckCode, champs: champs }))
-        }
     }
     
 })
@@ -78,6 +79,8 @@ const i18n = createI18n({
 
 const app = createApp(App)
 
+const emitter = mitt()
+app.config.globalProperties.$emitter = emitter
 app.use(i18n).use(store)
 
 app.mixin({
@@ -86,6 +89,7 @@ app.mixin({
             'locale',
             'sets',
             'IS_ELECTRON',
+            'IS_DEV',
             'API',
         ])
     },

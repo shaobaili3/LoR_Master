@@ -213,6 +213,10 @@
   box-sizing: border-box;
 }
 
+.main-content-container.wide {
+  max-width: 1200px;
+}
+
 .fullheight .main-content-container {
   height: calc(100vh - 43px);
 }

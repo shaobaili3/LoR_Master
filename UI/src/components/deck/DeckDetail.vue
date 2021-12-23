@@ -71,7 +71,8 @@ export default {
     },
     computed: {
         deckDetailLink() {
-            return "https://lor.mobalytics.gg/decks/code/" + this.baseDeck
+            return '/?code=' + this.baseDeck
+            // return "https://lor.mobalytics.gg/decks/code/" + this.baseDeck
         },
         cards() {
             var cards = []
@@ -188,6 +189,9 @@ export default {
             }, 0) == 40
         }
     },
+    emits: [
+        'showDetail'
+    ],
     methods: {
         copyDeckcode() {
             const copyToClipboard = str => {
@@ -215,7 +219,17 @@ export default {
             setTimeout(() => {this.copied = false}, 1250)
         },
         openURL(url) {
-            window.openExternal(url);
+            if (this.IS_ELECTRON) {
+                // window.openExternal(url)
+                // window.open(url)
+                // console.log(window.location + url)
+                // window.location.replace(window.location + url)
+                // window.location.reload() 
+                // window.location+url
+                this.$emit('showDetail', this.baseDeck)
+            } else {
+                window.open(url, "_blank")
+            }
         }
     },
     

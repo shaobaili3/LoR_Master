@@ -48,6 +48,11 @@
       @click="setCurrentPage(PANELS.decklib)">
       <span><i class="fas fa-star"></i></span>
     </button>
+    <button class="left-nav-btn" 
+      :class="{selected: currentPage == PANELS.meta}" 
+      @click="setCurrentPage(PANELS.meta)">
+      <span><i class="fas fa-calendar-day"></i></span>
+    </button>
     <button class="left-nav-btn hidden sm:flex"
       :class="{'text-gold-200 light-gold': isOpenBookshelf}"
       @click="toggleBookshelf()">
@@ -73,6 +78,7 @@
 
   <div class="menu-content hidden sm:grid absolute left-[98px] top-6 bottom-auto z-[120]"
     :class="{'hide': !isOpenBookshelf}"
+    @mouseleave="toggleBookshelf()"
   >
     <div class="card" @click="openURL('https://masteringruneterra.com/')">
       <img src="https://masteringruneterra.com/wp-content/uploads/2021/09/MasteringRuneterraWebsiteLogo-300x129.webp">
@@ -137,6 +143,14 @@
       <panel-deck-lib ref="deckLib" @showDeck="showDeck"></panel-deck-lib>
     </div>
 
+    <div class="main-content-container wide deck-code" v-if="currentPage == PANELS.deckcode" @scroll="handleContentScroll">
+      <panel-deck-code :code="pageDeckCode"></panel-deck-code>
+    </div>
+
+    <div class="main-content-container meta" v-if="currentPage == PANELS.meta" @scroll="handleContentScroll">
+      <panel-meta></panel-meta>
+    </div>
+
     <div class="main-content-container contact" v-if="currentPage == PANELS.contact" @scroll="handleContentScroll">
       <contact-info :apiBase="apiBase"></contact-info>
     </div>
@@ -173,7 +187,7 @@
       <deck-regions :deck="deckCode" :fixedWidth="false"></deck-regions>
     </div>
     <div class="deck-content-detail" :fixedHeight="!IS_ELECTRON">
-      <deck-detail :baseDeck="deckCode" :fixedHeight="true"></deck-detail>
+      <deck-detail @show-detail="showDeckDetail($event)" :baseDeck="deckCode" :fixedHeight="true" :showURL="true"></deck-detail>
     </div>
   </div>
 
@@ -239,6 +253,8 @@ const inputNameListLength = 10;
 // IS_ELECTRON & IS_DEV defined in template.js
 
 import { locales as cardLocales, localeNames as cardLocaleNames} from '../template'
+import PanelDeckCode from '../../components/panels/PanelDeckCode.vue'
+import PanelMeta from '../../components/panels/PanelMeta.vue'
 
 // import ua from 'universal-analytics'
 
@@ -266,9 +282,10 @@ const PANELS = {
   search: 1,
   leaderboard: 2,
   decklib: 3,
-  
-  contact: 4,
-  settings: 5,
+  deckcode: 4,
+  meta: 5,
+  contact: 6,
+  settings: 7,
 }
 
 function setCookie(name, value, expDay, expHour, expMin) {
@@ -290,7 +307,7 @@ function getCookie(name) {
 }
 
 export default {
-  components: { 
+  components: {
     BaseWindowControls,
     DeckRegions,
     Leaderboard,
@@ -302,7 +319,9 @@ export default {
     PanelDeckLib,
     DeckPreview,
     BaseTopNav,
-  },
+    PanelDeckCode,
+    PanelMeta
+},
   data() {
     return {
       // rawDataString: null,
@@ -320,7 +339,8 @@ export default {
       updateProcess: 0,
       updateDownloaded: false,
 
-      currentPage: PANELS.search,
+      currentPage: PANELS.leaderboard,
+      pageDeckCode: null,
 
       PANELS: PANELS,
 
@@ -379,6 +399,7 @@ export default {
         return `http://127.0.0.1:${this.portNum}`
       }
       return `https://lormaster.herokuapp.com`
+      // return 'https://85pj77.deta.dev'
     },
     lorNewsURL() {
       return `https://playruneterra.com/${this.locale.replace('_', '-')}/news`
@@ -402,6 +423,9 @@ export default {
     // }
     
     // console.log(this.user)
+
+    this.processWindowLocation()
+    this.initEventBusses()
 
     try {
 
@@ -442,6 +466,27 @@ export default {
     ...mapActions([
       'changeLocale'
     ]),
+
+    initEventBusses() {
+      this.$emitter.on('showDeck', (e) => 
+      {
+        this.showDeck(e)
+      }) // deckCode
+    },
+
+    processWindowLocation() {
+      let search = window.location.search
+      var params = new URLSearchParams(search)
+      if (params.has('code')) {
+        this.showDeckDetail(params.get('code'))
+      }
+    },
+
+    showDeckDetail(code) {
+      this.pageDeckCode = code
+      this.setCurrentPage(PANELS.deckcode)
+      this.hideDeck()
+    },
 
     toggleBookshelf() {
       // this.$refs.bookshelfContent.classList.toggle('hide')
@@ -500,30 +545,20 @@ export default {
       
     },
 
-    showAds() {
-      this.isAdHidden = false
-    },
+    showAds() { this.isAdHidden = false },
 
-    hideAds() {
-      this.isAdHidden = true
-    },
+    hideAds() { this.isAdHidden = true },
 
-    openAds() {
-      this.isAdClosed = false
-    },
+    openAds() { this.isAdClosed = false },
 
     closeAds() {
       this.isAdClosed = true
       this.hideAds()
     },
 
-    expandLeftNav() {
-      this.leftNavExpanded = true
-    },
+    expandLeftNav() { this.leftNavExpanded = true },
 
-    shrinkLeftNav() {
-      this.leftNavExpanded = false
-    },
+    shrinkLeftNav() { this.leftNavExpanded = false },
 
     initStore() {
       window.ipcRenderer.send('request-store', 'ui-locale')

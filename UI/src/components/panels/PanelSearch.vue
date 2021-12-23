@@ -19,7 +19,7 @@
             :class="{ active: searchText != '' }"
             @click="searchHistory"
           >
-            <span v-if="isLoading"><i class="fas fa-redo-alt fa-spin"></i></span>
+            <span v-if="isLoading"><i class="fas fa-redo-alt fa-spin-fast"></i></span>
             <span v-if="!isLoading && !isSameSearch"><i class="fas fa-search"></i></span>
             <span v-if="!isLoading && isSameSearch && !isUpdated"><i class="fas fa-redo-alt"></i></span>
             <span v-if="!isLoading && isSameSearch && isUpdated"><i class="fas fa-check"></i></span>

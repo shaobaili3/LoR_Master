@@ -1,14 +1,14 @@
 <template>
     <div class="cardContainer group"
         :class="{
-            empty: count == 0, spell: typeRef == 'Spell', unit: typeRef == 'Unit', 
-            champ: typeRef == 'Champion', landmark: typeRef == 'Landmark',
-            unknown: typeRef == 'Unkown'
+            empty: card.count == 0, spell: card.typeRef == 'Spell', unit: card.typeRef == 'Unit', 
+            champ: card.typeRef == 'Champion', landmark: card.typeRef == 'Landmark',
+            unknown: card.typeRef == 'Unkown'
         }"
         :style="{background: getCardPreviewBackgroundStyle()}">
-        <div class="cardContent cardCost">{{cost}}</div>
-        <div class="cardContent cardName">{{name}}</div>
-        <div class="cardContent cardCount">x{{count}}</div>
+        <div class="cardContent cardCost max-w-[30px]">{{card.cost}}</div>
+        <div class="cardContent cardName">{{card.name}}</div>
+        <div v-if="card.count >= 0" class="cardContent cardCount">x{{card.count}}</div>
         <div v-if="type === 'Unknown'" class="
             lab-secret
             transition-opacity opacity-0 group-hover:opacity-100 
@@ -37,14 +37,61 @@ var lastStatusRequestTime
 export default {
     components: { CardImage },
     mounted() {
+        if (!this.name && this.code) {
+            
+            var card = this.sets.find(card => card.cardCode == this.code)
+
+            var typeRef = ""
+            if (card.supertype != "" || card.rarityRef == "Champion") {
+                typeRef = "Champion"
+            } else if (card.spellSpeedRef != "") {
+                typeRef = "Spell"
+            } else if (card.keywordRefs && card.keywordRefs.includes("LandmarkVisualOnly")) {
+                typeRef = "Landmark"
+            } else {
+                typeRef = "Unit"
+            }
+
+            // cards.push({
+            //     code: cardCode, 
+            //     name: card.name,
+            //     count: cardCount,
+            //     baseCount: baseCount,
+            //     cost: card.cost, 
+            //     type: card.type,
+            //     typeRef: typeRef,
+            //     supertype: card.supertype,
+            //     set: card.set
+            // })
+            
+            this.card.name = card.name
+            this.card.cost = card.cost
+        }
     },
     data() {
-        return {}
+        return {
+            card: {
+                name: this.name,
+                count: this.count,
+                cost: this.cost,
+                type: this.type,
+                typeRef: this.typeRef,
+
+                supertype: this.supertype,
+                set: this.set
+            }
+        }
     }, 
     props: {
-        code: String,
+        code: {
+            type: String,
+            required: true
+        },
         name: String,
-        count: Number,
+        count: {
+            type: Number,
+            default: -1
+        },
         cost: Number,
         type: String,
         typeRef: String,

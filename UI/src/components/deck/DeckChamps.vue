@@ -88,6 +88,7 @@ export default {
             }
             this.$store.dispatch('addChampsFromDeck', {champs: champs, deckCode: this.deck})
             // Add filler champ icons
+            
             if (this.fixedWidth) {
                 var fillerIcons = this.maxChamp - champs.length
                 for (let i = 0; i < fillerIcons; i++) {
@@ -95,7 +96,10 @@ export default {
                         count: null,
                         code: null
                     }
-                    champs.push(champ)
+                    // Return a deep copy so the stored cache is not modified
+                    var filledChamps = champs.map(a => ({...a}));
+                    filledChamps.push(champ)
+                    return filledChamps
                 }
             }
             return champs
