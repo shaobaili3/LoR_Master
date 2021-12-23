@@ -2,10 +2,10 @@
   <div class="py-2">
     <div class="flex-wrap justify-center md:justify-start flex gap-2 items-center md:items-baseline">
       <deck-preview class="max-w-[200px]" :deck="code" @click.stop="showDeck"></deck-preview>
-      <div class="block sm:flex gap-2">
+      <div class="block sm:flex gap-4">
         <!-- Summary -->
-        <p>{{playNum}} Matches</p>
-        <p>{{(playRate*100).toFixed(2)}}% Play Rate</p>
+        <p>{{$t("matches.games", {num: playNum})}}</p>
+        <p>{{$t('matches.usage', {num: (playRate*100).toFixed(2)})}}</p>
       </div>
     </div>
     <div class="w-full h-1 bg-gray-200 rounded-full my-2 relative">
