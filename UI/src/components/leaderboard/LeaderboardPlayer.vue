@@ -3,8 +3,8 @@
     <div class="info group relative" :class="{ champion: isChampion }">
       <div class="w-full h-10 flex justify-around items-center">
         <div class="info-rank">{{ rank }}</div>
-        <div class="info-name group-hover:invisible">{{ name }}</div>
-        <div class="info-lp group-hover:invisible">{{ lp }}</div>
+        <div class="info-name md:group-hover:invisible">{{ name }}</div>
+        <div class="info-lp md:group-hover:invisible">{{ lp }}</div>
       </div>
       <div class="hidden absolute h-10 left-0 top-1/2 -translate-y-1/2 md:group-hover:flex w-full justify-end items-center">
         

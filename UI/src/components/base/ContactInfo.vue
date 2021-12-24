@@ -8,6 +8,8 @@
             @FlyingFishLoR</span></p>
             <p class="contact-detail"><i class="fab fa-qq"></i> <span class="text-link" @click="openURL('https://qm.qq.com/cgi-bin/qm/qr?k=nartXgATr58IXdisbHL4C4vaje8Stssz&jump_from=webapi')">
             939286502</span></p>
+            <p class="contact-detail"><i class="fab fa-discord"></i> <span class="text-link" @click="openURL('https://discord.gg/aes45bMjAz')">
+            LoR Master Discord</span></p>
         </div>
         <div class="footer">
             <p>{{$t('contact.broughtWithLove')}} 

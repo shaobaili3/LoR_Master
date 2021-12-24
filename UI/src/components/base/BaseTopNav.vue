@@ -1,13 +1,18 @@
 <template>
   <div>
     <div class="absolute top-0 right-0 p-1 text-white flex justify-end items-center gap-2">
+      <a class="hover:no-underline" target="_blank" href="https://discord.gg/aes45bMjAz">
+        <div class="h-9 flex justify-center items-center px-2">
+          <i class="fab fa-discord" aria-label="Discord"></i>
+        </div>
+      </a>
       <a class="hover:no-underline" target="_blank" href="https://github.com/shaobaili3/LoR_Master" >
-        <div class="h-9  flex justify-center items-center px-2">
+        <div class="h-9 flex justify-center items-center px-2">
           <i class="fab fa-github" aria-label="Github"></i>
         </div>
       </a>
       <a class="hover:no-underline" target="_blank" href="https://twitter.com/storm_lor" >
-        <div class="h-9  flex justify-center items-center px-2 ">
+        <div class="h-9 flex justify-center items-center px-2 ">
           <i class="fab fa-twitter" aria-label="Twitter"></i>
         </div>
       </a>

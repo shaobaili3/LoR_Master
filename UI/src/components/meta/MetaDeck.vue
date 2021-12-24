@@ -5,7 +5,7 @@
         :class="{
           ' pointer-events-none opacity-50': isFeature
         }"
-      :fixedWidth="true" :deck="code" @click.stop="showDeck"></deck-preview>
+      :fixedWidth="true" :deck="code" @click.stop></deck-preview>
       <div class="block sm:flex gap-3">
         <!-- Summary -->
         <p>{{$t("matches.games", {num: playNum})}}</p>

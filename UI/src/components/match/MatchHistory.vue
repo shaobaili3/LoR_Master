@@ -20,7 +20,7 @@
                 {{$t('matches.badges.'+badge.replace(/\s+/g, ''))}}</div>
         </div>
         <div class="row decklist">
-            <deck-preview @click="showDeck(deck)" :deck="deck" :won="won" :fixedWidth="true"></deck-preview>
+            <deck-preview @click.stop :deck="deck" :won="won" :fixedWidth="true"></deck-preview>
             <!-- <div class="text-vs">VS</div> -->
             <!-- <deck-preview @click="showDeck" :deck="deck"></deck-preview> -->
             <span class="vs-text">
@@ -34,7 +34,7 @@
                     <div class="opponent-info" v-if="opponentRank"><i class="fas fa-trophy"></i> {{opponentRank}}</div>
                 </span>
             </span>
-            <deck-preview @click="showDeck(opponentDeck)" :deck="opponentDeck" :won="won" :fixedWidth="true"></deck-preview>
+            <deck-preview @click.stop :deck="opponentDeck" :won="won" :fixedWidth="true"></deck-preview>
         </div>
         <div class="divider" v-if="details && showDetail" :class="{'won': won}"></div>
         <match-detail-mulligan v-if="details && showDetail" 

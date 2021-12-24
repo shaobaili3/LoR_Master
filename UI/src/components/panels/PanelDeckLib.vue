@@ -34,6 +34,7 @@
             {{deck.code}}
           </span>
           <deck-preview 
+            :click-to-show="false"
             :deck="deck.code">
           </deck-preview>
         </div>
