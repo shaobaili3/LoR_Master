@@ -1,7 +1,7 @@
 <template>
   <div class="py-2">
     <div class="flex-wrap justify-center md:justify-start flex gap-2 items-center md:items-baseline">
-      <deck-preview class="max-w-[200px]" :deck="code" @click.stop="showDeck"></deck-preview>
+      <deck-preview class="max-w-[200px]" :fixedWidth="true" :deck="code" @click.stop="showDeck"></deck-preview>
       <div class="block sm:flex gap-3 md:pl-2">
         <!-- Summary -->
         <p>{{$t("matches.games", {num: playNum})}}</p>

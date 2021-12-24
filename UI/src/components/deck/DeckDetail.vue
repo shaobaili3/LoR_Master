@@ -3,7 +3,7 @@
     <div class="deck-detail" 
     :class="{'fixed-height': fixedHeight}"
     v-if="cards.length > 0">
-        <card-preview v-for="(card, index) in cards" :key="index"
+        <card-preview v-for="card in cards" :key="card.name"
         :name="card.name"
         :cost="card.cost"
         :count="card.count"
