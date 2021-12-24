@@ -36,6 +36,7 @@ const store = createStore({
         return {
             locale: 'en_us',
             portNum: '26531',
+            sets_en: sets_en_combined.reduce((a, v) => ({ ...a, [v.cardCode]: v}), {}) ,
             sets: sets_en_combined,
             IS_ELECTRON: window.ipcRenderer !== undefined,
             IS_DEV: process.env.NODE_ENV === 'development',
@@ -102,6 +103,7 @@ app.mixin({
             'locale',
             'portNum',
             'sets',
+            'sets_en',
             'IS_ELECTRON',
             'IS_DEV',
         ]),

@@ -35,7 +35,11 @@
                 :key="index" 
                 :rank="player.rank + 1" 
                 :name="player.name" 
-                :lp="player.lp">
+                :lp="player.lp"
+                :deck="player.deck_code"
+                :winRate="player.game_latest_rank_win_rate"
+                :lastRankTime="player.game_latest_rank_time"
+                >
             </leaderboard-player>
         </div>
 

@@ -1,8 +1,12 @@
 <template>
   <div class="py-2">
     <div class="flex-wrap justify-center md:justify-start flex gap-2 items-center md:items-baseline">
-      <deck-preview class="max-w-[200px]" :fixedWidth="true" :deck="code" @click.stop="showDeck"></deck-preview>
-      <div class="block sm:flex gap-3 md:pl-2">
+      <deck-preview v-if="code" class="max-w-[200px] md:mr-2"
+        :class="{
+          ' pointer-events-none opacity-50': isFeature
+        }"
+      :fixedWidth="true" :deck="code" @click.stop="showDeck"></deck-preview>
+      <div class="block sm:flex gap-3">
         <!-- Summary -->
         <p>{{$t("matches.games", {num: playNum})}}</p>
         <p>{{$t('matches.usage', {num: (playRate*100).toFixed(2)})}}</p>
@@ -22,8 +26,8 @@
             left: player.win_rate * 100 + '%',
           }"
         >
-          <div class="hidden group-hover:block absolute right-0 top-2 min-w-[10rem] w-fit pointer-events-none text-left ml-2 pl-2 pr-2 py-2 bg-gray-800">
-            <p class="text-sm text-gray-300">
+          <div class="hidden group-hover:block absolute right-0 top-2 min-w-[10rem] w-fit pointer-events-none text-left ml-2 pl-2 pr-2 py-2 bg-gray-700">
+            <p class="text-sm text-gray-200">
               <span class="pre-info"><i class="fas" :class="player.server === 'sea' ? 'fa-globe-asia' : 'fa-globe-'+player.server"></i></span>
               {{$t('str.regions.'+player.server)}}
             </p>
@@ -31,8 +35,7 @@
             <p>
               {{$t("matches.games", {num: player.count})}}
             </p>
-            <p>{{(player.win_rate * 100).toFixed(2) + '% ' + $t('dash.winRate')}}</p>
-            
+            <p>{{$t('matches.winRate', {num: (player.win_rate * 100).toFixed(2)})}}</p>
           </div>
         </div>
       </div>
@@ -59,7 +62,9 @@ export default {
     "playNum",
     "playRate",
     "winRate",
-    "players"
+    "players",
+
+    "isFeature"
   ],
   computed: {
     winRateBounds() {

@@ -1,5 +1,5 @@
 <template>
-    <div class="row deck btn" :class="{won: won, loss: !won, cheveron: cheveron}">
+    <div class="row deck btn" @click="showDeck" :class="{won: won, loss: !won, cheveron: cheveron}">
         <div class="row" :class="{'w-[160px] sm:w-[190px]': fixedWidth}">
             <deck-regions :deck="deck" :fixedWidth="false"></deck-regions>
             <deck-champs :deck="deck" :fixedWidth="!cheveron"></deck-champs>
@@ -40,11 +40,20 @@ export default {
         isShown: {
             type: Boolean,
             default: false,
+        },
+        clickToShow: {
+            type: Boolean,
+            default: true,
         }
     },
     computed: {
     },
     methods: {
+        showDeck() {
+            if (this.clickToShow) {
+                this.$emitter.emit('showDeck', this.deck)
+            }
+        }
     }
 }
 </script>

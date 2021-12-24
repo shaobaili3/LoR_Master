@@ -54,10 +54,12 @@
   "leaderboard": {
     "rank": "Rank",
     "name": "Name",
-    "points": "Points"
+    "points": "Points",
+    "lastRank": "Last Rank:"
   },
   "matches": {
-    "usage": "{num}% Usage",
+    "usage": "{num}% usage",
+    "winRate": "{num}% win",
     "game": "{num} game",
     "games": "{num} games",
     "badges": {
