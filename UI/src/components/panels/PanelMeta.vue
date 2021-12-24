@@ -9,7 +9,7 @@
     
     <!-- <p v-if="metaGroups" class="sub-title text-left pb-2">{{$t("matches.games", {num: totalGames})}}</p> -->
     <div v-if="metaGroups">
-      <div class="py-1" v-for="group in metaGroups" :key="group.id">
+      <div class="py-1" v-for="group in metaGroups" :key="group._id">
         <meta-group :group="group"></meta-group>
       </div>
     </div>
