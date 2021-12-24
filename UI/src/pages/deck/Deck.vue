@@ -5,7 +5,7 @@
     :playerName="oppoName"
     :playerRank="oppoRank"
     :playerLP="oppoLp"
-    :titleType="infoType"
+    :titleType="'match'"
   ></base-window-controls>
 
   <div id="content">
@@ -200,7 +200,6 @@ export default {
       matchInfos: [],
       request: null,
 
-      infoType: null,
       deckCode: null,
       titleType: null,
       currentTab: TABS.my,
@@ -237,7 +236,6 @@ export default {
   },
   computed: {
     isLoading() {
-      // if (this.infoType == "deckCode" && this.deckCode != "") return false
       if (this.currentDeckCode || this.startingDeckCode) return false;
       if (this.matchInfos.length > 0) return false;
       return (
@@ -267,12 +265,6 @@ export default {
     isShowMyGrave() {
       return this.currentTab == TABS.myg;
     },
-    // showMatch() {
-    //     if (this.infoType == "deckCode") {
-    //         return false
-    //     }
-    //     return true
-    // },
     isInvalidDeckCode() {
       try {
         var deck = DeckEncoder.decode(this.deckCode);
@@ -300,8 +292,6 @@ export default {
     // console.log("Mounted")
     // this.requestData()
     console.log("Page Deck Mounted");
-
-    this.infoType = "match";
 
     // this.hideWindow()
     if (this.IS_ELECTRON) {
@@ -384,11 +374,12 @@ export default {
         "Request Opponent History for " + this.oppoName + "#" + this.oppoTag
       );
 
-      this.requestOpponentHistoryError = null
+      this.requestOpponentHistoryError = null;
 
-      var api = `${this.apiBase}/history/${this.server}/${this.oppoName}/${this.oppoTag}`
-      
-      axios.get(api)
+      var api = `${this.apiBase}/history/${this.server}/${this.oppoName}/${this.oppoTag}`;
+
+      axios
+        .get(api)
         .then((response) => {
           console.log("Opponent Data", response.data);
           this.processOpponentHistory(response.data);
@@ -435,10 +426,11 @@ export default {
 
       // Keeps requesting status
       lastStatusRequestTime = Date.now();
-      axios.get(`${this.apiBase}/status`) // status
+      axios
+        .get(`${this.apiBase}/status`) // status
         .then((response) => {
           var elapsedTime = Date.now() - lastStatusRequestTime; // ms
-          
+
           if (response && response.data) {
             var data = response.data;
             this.server = data.server;
@@ -450,9 +442,9 @@ export default {
               }
             }
           } else {
-            console.log("/status parse data error")
+            console.log("/status parse data error");
           }
-          
+
           if (requestStatusWaitTime > elapsedTime) {
             setTimeout(
               this.requestStatusInfo,
@@ -487,7 +479,6 @@ export default {
       axios
         .get(`${this.apiBase}/opInfo`)
         .then((response) => {
-
           if (response && response.data) {
             var op = response.data;
             if (op.rank !== "") {
@@ -500,9 +491,8 @@ export default {
 
             this.requestOpponentHistory();
           } else {
-            console.log("/opInfo parse data error")
+            console.log("/opInfo parse data error");
           }
-          
         })
         .catch((e) => {
           if (axios.isCancel(e)) {
@@ -533,13 +523,12 @@ export default {
       axios
         .get(`${this.apiBase}/track`)
         .then((response) => {
-
           if (response && response.data) {
-            this.processTrackInfo(response.data);  
+            this.processTrackInfo(response.data);
           } else {
-            console.log("/track parse data error")
+            console.log("/track parse data error");
           }
-          
+
           var elapsedTime = Date.now() - lastTrackTime; // ms
           if (requestDataWaitTime > elapsedTime) {
             setTimeout(
@@ -624,24 +613,24 @@ export default {
           oppoGraveCards = DeckEncoder.encodeCardsObj(
             data.deck_tracker.oppoGraveCards
           );
+          // Handles cards that are not encodable
+          this.startingExtraCards = startingCards.extra;
+          this.myGraveExtraCards = myGraveCards.extra;
+          this.myPlayedExtraCards = myPlayedCards.extra;
+          this.oppoGraveExtraCards = oppoGraveCards.extra;
+
+          this.startingDeckCode =
+            data.deck_tracker.deckCode || startingCards.code;
+          this.currentDeckCode =
+            data.deck_tracker.currentDeckCode || startingCards.code;
+          this.oppoGraveCode =
+            data.deck_tracker.opGraveyardCode || oppoGraveCards.code;
+          this.myPlayedCode =
+            data.deck_tracker.myPlayedCardsCode || myPlayedCards.code;
+          this.cardsInHandNum = data.deck_tracker.cardsInHandNum;
         } catch (error) {
           console.log(error);
         }
-
-        this.startingExtraCards = startingCards.extra;
-        this.myGraveExtraCards = myGraveCards.extra;
-        this.myPlayedExtraCards = myPlayedCards.extra;
-        this.oppoGraveExtraCards = oppoGraveCards.extra;
-
-        this.startingDeckCode =
-          data.deck_tracker.deckCode || startingCards.code;
-        this.currentDeckCode =
-          data.deck_tracker.currentDeckCode || startingCards.code;
-        this.oppoGraveCode =
-          data.deck_tracker.opGraveyardCode || oppoGraveCards.code;
-        this.myPlayedCode =
-          data.deck_tracker.myPlayedCardsCode || myPlayedCards.code;
-        this.cardsInHandNum = data.deck_tracker.cardsInHandNum;
       } else {
         if (this.startingDeckCode != null) {
           // switching from having deck code
