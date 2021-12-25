@@ -86,6 +86,7 @@ export default {
                 //     }
                 // }
             }
+            champs = champs.sort((a, b) => a.code > b.code ? 1 : -1)
             this.$store.dispatch('addChampsFromDeck', {champs: champs, deckCode: this.deck})
             // Add filler champ icons
             
@@ -134,9 +135,10 @@ export default {
 
     .extra-champ.fixed-width {
         position: absolute;
-        top: 0;
-        right: -20px;
-        transform: translate(0, 50%);
+        bottom: -3px;
+        right: -7px;
+        /* background: var(--col-background); */
+        border-radius: 5px;
     }
 
     /*     

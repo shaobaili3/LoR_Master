@@ -1,17 +1,18 @@
 <template>
   <div
-    class="px-2 rounded-lg transition-colors"
+    class="px-2 rounded-lg transition-colors hover:bg-gray-800"
     :class="{
       'bg-gray-800': expand && !hasFeature,
     }"
   >
-    <meta-deck
-      :code="recommended"
-      :isFeature="hasFeature && this.group.feature.deck_code == recommended"
+    <meta-deck class="cursor-pointer"
+      :code="recomended"
+      :isFeature="hasFeature && this.group.feature.deck_code == recomended"
       :playNum="group.play_num"
       :playRate="group.play_rate"
       :winRate="group.win_rate"
       :players="group.players"
+      :linkDetail="!noDetail"
       @click="expand = !expand"
     ></meta-deck>
     <transition name="height">
@@ -45,12 +46,16 @@
 import MetaDeck from "../meta/MetaDeck.vue";
 export default {
   components: { MetaDeck },
-  props: ["group"],
+  props: {
+    group: Object,
+    noDetail: Boolean
+  },
   computed: {
     hasFeature() {
       return this.group && this.group.feature;
     },
-    recommended() {
+    recomended() {
+      if (!(this.group && this.group.decks)) return null;
       var highest = 0;
       var code = null;
       for (let deck of this.group.decks) {

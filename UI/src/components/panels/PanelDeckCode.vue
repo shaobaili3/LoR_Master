@@ -23,7 +23,7 @@
 
         <div v-if="!isLoading && deckStats" class="pb-4">
           <div class="text-3xl pb-3">Meta Stats</div>
-          <meta-group :group="deckStats" ></meta-group>
+          <meta-group :no-detail="true" :group="deckStats" ></meta-group>
           <div class="text-3xl pb-3">Matchups</div>
           <meta-matchup :matchups="deckStats.matchup"></meta-matchup>
         </div>

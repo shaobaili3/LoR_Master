@@ -1,26 +1,34 @@
 <template>
-  <div v-if="matchups">
-    <div v-for="matchup in matchups" :key="matchup._id">
-      <div class="flex items-center">
-        <deck-preview
-          class="max-w-[200px] md:mr-2"
-          :fixedWidth="true"
-          :deck="'CQCACAYGCEBAEBQYDIBAKBQFBMDQKCQEDIUDDJQBXQA4MAIBAECQUAICAECAMCQBAUFKOAI'"
-        ></deck-preview>
-        <div class="block sm:flex gap-3">
-          <!-- Summary -->
-          <p>{{$t("matches.games", {num: matchup.match_num})}}</p>
-          <p>{{$t('matches.winRate', {num: (matchup.win_rate * 100).toFixed(2)})}}</p>
-        </div>
+  <div class="block lg:flex justify-around" v-if="matchups">
+    <div class="block mb-4">
+      <div class="text-center py-4">Good against</div>
+      <div v-for="matchup in good" :key="matchup._id">
+        <meta-matchup-item :matchup="matchup"></meta-matchup-item>
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="text-center py-4">Bad against</div>
+      <div v-for="matchup in bad" :key="matchup._id">
+        <meta-matchup-item :matchup="matchup"></meta-matchup-item>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import DeckPreview from "../deck/DeckPreview.vue";
+import MetaMatchupItem from "./MetaMatchupItem.vue";
 export default {
-  components: { DeckPreview },
+  components: { MetaMatchupItem },
+  mounted() {},
   props: ["matchups"],
+  computed: {
+    good() {
+      return this.matchups?.filter((matchup) => matchup.win_rate >= 0.5).sort((a, b) => a.win_rate < b.win_rate ? 1 : -1);
+    },
+    bad() {
+      return this.matchups?.filter((matchup) => matchup.win_rate < 0.5).sort((a, b) => a.win_rate > b.win_rate ? 1 : -1);
+    },
+  },
 };
 </script>

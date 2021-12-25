@@ -173,6 +173,9 @@ export default {
                 }
                 if (a.supertype == b.supertype) {
                     if (a.type == b.type) {
+                        if (a.cost == b.cost) {
+                            return a.code > b.code ? 1 : -1
+                        }
                         return a.cost > b.cost ? 1 : -1
                     }
                     return a.type > b.type ? 1 : -1

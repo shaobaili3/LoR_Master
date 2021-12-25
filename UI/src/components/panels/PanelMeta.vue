@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="mb-32">
     <p class="title text-3xl text-left pb-5 pt-3 sticky-top">{{$t("str.meta")}}</p>
     
     <div v-if="isLoading" class="text-2xl pb-5">

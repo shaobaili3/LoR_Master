@@ -58,21 +58,23 @@
         {{ loadingOppoText }}
       </div>
 
-      <match-info
-        v-for="(match, index) in matchInfos"
-        :key="index"
-        :opponentName="match.opponentName"
-        :rounds="match.rounds"
-        :time="match.time"
-        :startTime="match.startTime"
-        :matches="match.matches"
-        :winrate="match.winrate"
-        :badges="match.badge"
-        :opponentDeck="match.opponentDeck"
-        :deck="match.deckCode"
-        :total="matchTotalNum"
-        :history="match.history"
-      ></match-info>
+      <div v-if="matchInfos && matchInfos.length > 0">
+        <match-info
+          v-for="match in matchInfos"
+          :key="match.opponentName"
+          :opponentName="match.opponentName"
+          :rounds="match.rounds"
+          :time="match.time"
+          :startTime="match.startTime"
+          :matches="match.matches"
+          :winrate="match.winrate"
+          :badges="match.badge"
+          :opponentDeck="match.opponentDeck"
+          :deck="match.deckCode"
+          :total="matchTotalNum"
+          :history="match.history"
+        ></match-info>
+      </div>
     </div>
 
     <div

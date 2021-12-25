@@ -1,26 +1,36 @@
 <template>
   <div class="py-2">
-    <div class="flex-wrap justify-center md:justify-start flex gap-2 items-center md:items-baseline">
-      <deck-preview v-if="code" class="max-w-[200px] md:mr-2"
+    <div class="relative flex-wrap justify-center md:justify-start flex gap-2 items-center">
+      <deck-preview v-if="code" class="max-w-[220px] md:mr-2"
         :class="{
-          ' pointer-events-none opacity-50': isFeature
+          ' pointer-events-none bg-gray-200/40': isFeature
         }"
       :fixedWidth="true" :deck="code" @click.stop></deck-preview>
-      <div class="block sm:flex gap-3">
+      <div class=" flex flex-row sm:flex-col gap-3 sm:gap-0 items-start">
         <!-- Summary -->
-        <p>{{$t("matches.games", {num: playNum})}}</p>
-        <p>{{$t('matches.usage', {num: (playRate*100).toFixed(2)})}}</p>
+        <p class="text-sm text-gray-200">{{$t('matches.usage', {num: (playRate*100).toFixed(2)})}}</p>
+        <p class="text-lg">{{$t("matches.games", {num: playNum})}}</p>
       </div>
+      <button class="p-2 text-white/50 hover:text-white hover:bg-gray-500 rounded-md absolute right-0" v-if="linkDetail" @click="openURL(detailLink)">
+        <span>{{$t('str.detail')}}</span><i class="pl-1 fas fa-external-link-alt"></i>
+      </button>
     </div>
     <div class="w-full h-1 bg-gray-200 rounded-full my-2 relative">
-      <div class="h-2 bg-gold-300 absolute -translate-y-1/2 top-1/2 rounded-full"
+      
+      <div class="h-2 bg-gold-400 absolute -translate-y-1/2 top-1/2 rounded-l-full"
       :style="{
-        width: winRateBounds.gap * 100 + '%',
+        width: winRateBounds.gap * 50 + '%',
         left: winRateBounds.lower * 100 + '%',
       }"
       ></div>
+      <div class="h-2 bg-gold-200 absolute -translate-y-1/2 top-1/2 rounded-r-full"
+      :style="{
+        width: winRateBounds.gap * 50 + '%',
+        left: winRate * 100 + '%',
+      }"
+      ></div>
       <div v-for="player in players" :key="player._id">
-        <div class="h-2 w-2 bg-gold-200 absolute -translate-y-1/2 top-1/2 rounded-full group hover:z-10"
+        <div class="h-2 w-2 bg-sky-300 absolute -translate-y-1/2 top-1/2 rounded-full group hover:z-10"
           v-if="player.win_rate > winRateBounds.upper"
           :style="{
             left: player.win_rate * 100 + '%',
@@ -45,7 +55,7 @@
       :style="{
         paddingLeft: `${winRateBounds.lower*100}%`
       }"
-    >{{(winRate*100).toFixed(2)}}% <span class=" text-sm text-gray-300 hover:text-gray-200">{{(winRateBounds.lower*100).toFixed(2)}}%-{{(winRateBounds.upper*100).toFixed(2)}}%</span></p>
+    >{{(winRate*100).toFixed(2)}}% <span class=" text-sm text-gray-300 hover:text-gray-100 pl-1 hover:pl-2 transition-spacing">{{(winRateBounds.lower*100).toFixed(2)}}% - {{(winRateBounds.upper*100).toFixed(2)}}%</span></p>
     
   </div>
 </template>
@@ -64,7 +74,8 @@ export default {
     "winRate",
     "players",
 
-    "isFeature"
+    "isFeature",
+    "linkDetail"
   ],
   computed: {
     winRateBounds() {
@@ -74,12 +85,29 @@ export default {
         upper: this.winRate + interval,
         gap: interval*2,
       }
-    }
+    },
+    detailLink() {
+        return '/?code=' + this.code
+        // return "https://lor.mobalytics.gg/decks/code/" + this.baseDeck
+    },
   },
   methods: {
     showDeck() {
       this.$emitter.emit('showDeck', this.code)
-    }
+    },
+    openURL(url) {
+            if (this.IS_ELECTRON) {
+                // window.openExternal(url)
+                // window.open(url)
+                // console.log(window.location + url)
+                // window.location.replace(window.location + url)
+                // window.location.reload() 
+                // window.location+url
+                this.$emit('showDetail', this.code)
+            } else {
+                window.open(url, "_blank")
+            }
+        }
   }
 }
 </script>
