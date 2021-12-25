@@ -97,13 +97,7 @@ export default {
     },
     openURL(url) {
             if (this.IS_ELECTRON) {
-                // window.openExternal(url)
-                // window.open(url)
-                // console.log(window.location + url)
-                // window.location.replace(window.location + url)
-                // window.location.reload() 
-                // window.location+url
-                this.$emit('showDetail', this.code)
+                this.$emitter.emit('showDeckDetail', this.code)
             } else {
                 window.open(url, "_blank")
             }

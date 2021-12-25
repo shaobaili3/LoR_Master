@@ -471,6 +471,10 @@ export default {
       {
         this.showDeck(e)
       }) // deckCode
+      this.$emitter.on('showDeckDetail', (e) => 
+      {
+        this.showDeckDetail(e)
+      }) // deckCode
     },
 
     processWindowLocation() {

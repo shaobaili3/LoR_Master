@@ -3,7 +3,7 @@
 
         <!-- <h1 id="title">LoR Master Leaderboard</h1> -->
 
-        <div class="sticky-top">
+        <div class="sticky-top leaderboard-sticky-top">
 
             <div id="btn-group-regions" class="flex">
                 <button id="btn-na" class="btn" :class="{active: activeRegion == 0}" @click="switchRegion(regions.NA)">NA</button>
@@ -202,6 +202,9 @@ export default {
         position: sticky;
         top: 0;
         background: var(--col-background);
+    }
+
+    .leaderboard-sticky-top {
         padding-bottom: 5px;
     }
 

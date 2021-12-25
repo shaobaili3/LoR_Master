@@ -36,6 +36,7 @@ const store = createStore({
         return {
             locale: 'en_us',
             portNum: '26531',
+            API_WEB: 'https://lormaster.herokuapp.com',
             sets_en: sets_en_combined.reduce((a, v) => ({ ...a, [v.cardCode]: v}), {}) ,
             sets: sets_en_combined,
             IS_ELECTRON: window.ipcRenderer !== undefined,
@@ -104,6 +105,7 @@ app.mixin({
             'portNum',
             'sets',
             'sets_en',
+            'API_WEB',
             'IS_ELECTRON',
             'IS_DEV',
         ]),

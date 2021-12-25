@@ -1,6 +1,6 @@
 // const API = 'https://lormaster.herokuapp.com/meta'
 // const API = 'http://runeterraccg.herokuapp.com/ccgmeta'
-const API = 'https://lormaster.herokuapp.com/archetypes'
+// const API = 'https://lormaster.herokuapp.com/archetypes'
 
 const requestWaitTime = 1000 // ms
 import axios from 'axios'
@@ -84,7 +84,7 @@ export default {
     //   // }).catch((err) => console.log(err))
     // }
 
-    fetchMetaGroups({ commit, state, rootGetters, dispatch }) {
+    fetchMetaGroups({ commit, state, rootState, dispatch }) {
       commit('setLastRequestTime', Date.now())
       commit('setIsLoading', true)
 
@@ -92,9 +92,11 @@ export default {
       const axiosSource = axios.CancelToken.source();
       state.request = { cancel: axiosSource.cancel, msg: "Loading..." };
 
+      var api_link = `${rootState.API_WEB}/archetypes`;
+
       // var api_link = `${rootGetters.apiBase}/meta`;
       // var promise = new Promise(resolve => setTimeout(resolve, 1000))
-      var promise = axios.get(API, { cancelToken: axiosSource.token })
+      var promise = axios.get(api_link, { cancelToken: axiosSource.token })
       promise
         .then((res) => {
           // console.log(res)

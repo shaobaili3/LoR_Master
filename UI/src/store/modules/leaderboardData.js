@@ -39,7 +39,7 @@ export default {
     cancelLeaderboard({ state }) {
       state.request.cancel();
     },
-    fetchLeaderboard({ commit, state, rootGetters, dispatch }, regionID) {
+    fetchLeaderboard({ commit, state, rootState, dispatch }, regionID) {
       commit('setLastRequestTime', Date.now())
       commit('setIsLoading', true)
 
@@ -49,7 +49,7 @@ export default {
       const axiosSource = axios.CancelToken.source();
       state.request = { cancel: axiosSource.cancel, msg: "Loading..." };
 
-      var api_link = `${rootGetters.apiBase}/leaderboard/${region}`;
+      var api_link = `${rootState.API_WEB}/leaderboard/${region}`;
 
       axios
         .get(api_link, { cancelToken: axiosSource.token })
