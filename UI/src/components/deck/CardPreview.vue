@@ -8,7 +8,7 @@
         :style="{background: getCardPreviewBackgroundStyle()}">
         <div class="cardContent cardCost max-w-[30px]">{{card.cost}}</div>
         <div class="cardContent cardName">{{card.name}}</div>
-        <div v-if="card.count >= 0" class="cardContent cardCount">x{{card.count}}</div>
+        <div v-if="card.count && card.count >= 0" class="cardContent cardCount">x{{card.count}}</div>
         <div v-if="type === 'Unknown'" class="
             lab-secret
             transition-opacity opacity-0 group-hover:opacity-100 

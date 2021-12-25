@@ -28,7 +28,7 @@
     </div>
 
     <transition name="height">
-        <deck-detail v-if="visibleDeck == 1" :baseDeck="deck"></deck-detail>
+        <deck-detail v-if="visibleDeck == 1" :baseDeck="deck" :hideNum="true" :fullHeight="false"></deck-detail>
     </transition>
 
 </template>
