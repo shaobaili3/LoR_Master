@@ -19,10 +19,18 @@
             :class="{ active: searchText != '' }"
             @click="searchHistory"
           >
-            <span v-if="isLoading"><i class="fas fa-redo-alt fa-spin-fast"></i></span>
-            <span v-if="!isLoading && !isSameSearch"><i class="fas fa-search"></i></span>
-            <span v-if="!isLoading && isSameSearch && !isUpdated"><i class="fas fa-redo-alt"></i></span>
-            <span v-if="!isLoading && isSameSearch && isUpdated"><i class="fas fa-check"></i></span>
+            <span v-if="isLoading || isUpdating"
+              ><i class="fas fa-redo-alt fa-spin-fast"></i
+            ></span>
+            <span v-if="!(isLoading || isUpdating) && !isSameSearch"
+              ><i class="fas fa-search"></i
+            ></span>
+            <span v-if="!(isLoading || isUpdating) && isSameSearch && !isUpdated"
+              ><i class="fas fa-redo-alt"></i
+            ></span>
+            <span v-if="!(isLoading || isUpdating) && isSameSearch && isUpdated"
+              ><i class="fas fa-check"></i
+            ></span>
           </button>
 
           <input
@@ -74,12 +82,16 @@
     </player-matches>
 
     <div class="status-text">
-      <span v-if="!isLoading && !isError && matches.length <= 0">
+      <span v-if="!(isLoading || isUpdating) && !isError && matches.length <= 0">
         {{ $t("search.prompt") }}
       </span>
       <span v-if="isLoading">
         <i class="fas fa-circle-notch fa-spin"></i>
         {{ $t("str.loading") }}
+      </span>
+      <span v-if="isUpdating">
+        <i class="fas fa-circle-notch fa-spin"></i>
+        {{ $t("str.updating") }}
       </span>
       <span v-if="isError">
         <!-- <i class="fas fa-circle-notch fa-spin"></i> -->
@@ -90,32 +102,31 @@
 </template>
 
 <script>
-
-const requestDataWaitTime = 400 //ms
-const requestHistoryWaitTime = 100 //ms
-const requestStatusWaitTime = 1000 //ms
+const requestDataWaitTime = 400; //ms
+const requestHistoryWaitTime = 100; //ms
+const requestStatusWaitTime = 1000; //ms
 const inputNameListLength = 10;
 
-const requestRefreshDelay = 5000 //ms
+const requestRefreshDelay = 5000; //ms
 
-let cancelToken, localCancleToken
-var lastStatusRequestTime
-var requestHistoryTimeout, prevHistoryRequest
+let cancelToken, localCancleToken;
+var lastStatusRequestTime;
+var requestHistoryTimeout, prevHistoryRequest;
 
 const regionNames = {
-    'NA': 'americas',
-    'EU': 'europe',
-    'AS': 'asia',
-}
+  NA: "americas",
+  EU: "europe",
+  AS: "asia",
+};
 
 const regionShort = {
-    'americas': 'NA',
-    'europe' : 'EU',
-    'asia' : 'AS',
-}
+  americas: "NA",
+  europe: "EU",
+  asia: "AS",
+};
 
 import PlayerMatches from "../match/PlayerMatches.vue";
-import axios from 'axios';
+import axios from "axios";
 
 export default {
   components: {
@@ -134,9 +145,8 @@ export default {
       playerRegion: null,
       searchText: "",
       isLoading: false,
+      isUpdating: false,
       isError: false,
-
-      lastUpdated: null, // Used to calculate isUpdated
       isUpdated: false,
 
       errorType: "",
@@ -206,14 +216,13 @@ export default {
   emits: {
     showDeck: (deck) => {
       if (deck) {
-        return true
+        return true;
       } else {
-        return false
+        return false;
       }
-    }
+    },
   },
   methods: {
-
     selectRegion(region) {
       this.sendUserEvent({
         category: "Main Window Search",
@@ -229,13 +238,13 @@ export default {
       this.searchName();
     },
     searchPlayer(data) {
-      this.searchText = data.name
-      this.selectRegion(data.region)
-      this.resetInputFocus()
+      this.searchText = data.name;
+      this.selectRegion(data.region);
+      this.resetInputFocus();
 
-      this.playerName = data.name
-      this.playerTag = data.tag
-      this.requestHistoryData()
+      this.playerName = data.name;
+      this.playerTag = data.tag;
+      this.requestHistoryData();
     },
     // Search bar
     clearSearch() {
@@ -431,6 +440,7 @@ export default {
 
       this.isLoading = true;
       this.isError = false;
+      this.isUpdated = false;
       this.playerRegion = regionNames[this.selectedRegion];
 
       prevHistoryRequest = newRequest;
@@ -457,13 +467,68 @@ export default {
           });
 
           this.processSearchHistory(response.data);
+
+          // Second request to makesure that the data is updated
+          this.isUpdating = true;
+
+          this.sendUserEvent({
+            category: "Main Window Requests",
+            action: "Update Search",
+            label: "URL: " + newRequest,
+            value: null,
+          });
+
+          const requestUpdateHistoryStartTime = Date.now();
+
+          cancelToken = axios.CancelToken.source();
+          axios
+            .get(newRequest, { cancelToken: cancelToken.token })
+            .then((response) => {
+              this.isUpdating = false;
+              this.isUpdated = true;
+
+              this.sendUserEvent({
+                category: "Main Window Requests",
+                action: "Updated Search Result [Success]",
+                label: "URL: " + newRequest,
+                value: Date.now() - requestUpdateHistoryStartTime,
+              });
+
+              this.processSearchHistory(response.data);
+            })
+            .catch((e) => {
+              if (axios.isCancel(e)) {
+                console.log("Request (update) cancelled");
+              } else {
+                console.log("error", e);
+
+                if (e.response) {
+                  if (e.response.status == 500) {
+                    this.errorHistory(4); // Internal sercive error
+                  } else {
+                    var data = e.response.data;
+                    this.errorHistory((data.status && data.status.error) || 3); // give a 3 so that there is a fallback
+                  }
+                } else {
+                  this.errorHistory(3); // Unkown Error
+                }
+                this.isLoading = false;
+
+                this.sendUserEvent({
+                  category: "Main Window Requests",
+                  action: "Updated Search Result [Fail]",
+                  label: "Type: " + this.errorType + " | URL: " + newRequest,
+                  value: Date.now() - requestUpdateHistoryStartTime,
+                });
+              }
+            });
         })
         .catch((e) => {
           if (axios.isCancel(e)) {
             console.log("Request cancelled");
           } else {
             console.log("error", e);
-            
+
             if (e.response) {
               if (e.response.status == 500) {
                 this.errorHistory(4); // Internal sercive error
@@ -486,7 +551,7 @@ export default {
         });
     },
     showDeck(deck) {
-      this.$emit('showDeck', deck)
+      this.$emit("showDeck", deck);
     },
     processHistory(data, playerName, playerServer) {
       console.log("Process History!", playerName, playerServer);
@@ -499,8 +564,11 @@ export default {
       };
 
       // Set selected filter to null
-      if (this.$refs.searchPlayerMatch && this.$refs.searchPlayerMatch.setFilterDeckCode) {
-        this.$refs.searchPlayerMatch.setFilterDeckCode(null)
+      if (
+        this.$refs.searchPlayerMatch &&
+        this.$refs.searchPlayerMatch.setFilterDeckCode
+      ) {
+        this.$refs.searchPlayerMatch.setFilterDeckCode(null);
       }
 
       if (!data) return matchInfo;
@@ -562,7 +630,13 @@ export default {
         // Processing for normal Data
         for (var key in data) {
           var match = data[key];
-          if (!match || !match.player_info || !match.player_info[0] || !match.player_info[0].name) continue; // Skip if null history
+          if (
+            !match ||
+            !match.player_info ||
+            !match.player_info[0] ||
+            !match.player_info[0].name
+          )
+            continue; // Skip if null history
 
           var isFirstPlayer =
             match.player_info[0].name.toLowerCase() == playerName.toLowerCase();
@@ -663,12 +737,6 @@ export default {
           });
         }
       }
-
-      this.lastUpdated = Date.now()
-      this.isUpdated = true
-      window.setTimeout(() => {
-        this.isUpdated = false
-      }, requestRefreshDelay);
 
       return matchInfo;
     },

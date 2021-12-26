@@ -20,6 +20,9 @@ import champsFromDeck from '../store/modules/champsFromDeck'
 import metaData from '../store/modules/metaData'
 import leaderboardData from '../store/modules/leaderboardData'
 
+const API_WEB_BASE = "https://lmttest.herokuapp.com" // For testing
+// const API_WEB_BASE = "https://lormaster.herokuapp.com"
+
 export default (App) => {
 
 locales.forEach(lo => {
@@ -36,7 +39,7 @@ const store = createStore({
         return {
             locale: 'en_us',
             portNum: '26531',
-            API_WEB: 'https://lormaster.herokuapp.com',
+            API_WEB: API_WEB_BASE,
             sets_en: sets_en_combined.reduce((a, v) => ({ ...a, [v.cardCode]: v}), {}) ,
             sets: sets_en_combined,
             IS_ELECTRON: window.ipcRenderer !== undefined,
@@ -48,7 +51,7 @@ const store = createStore({
             if (state.IS_ELECTRON) {
                 return `http://127.0.0.1:${state.portNum}`
             }
-            return `https://lormaster.herokuapp.com`
+            return API_WEB_BASE
             // return 'https://85pj77.deta.dev'
         },
     },
