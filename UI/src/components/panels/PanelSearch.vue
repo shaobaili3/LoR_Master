@@ -25,7 +25,8 @@
             <span v-if="!(isLoading || isUpdating) && !isSameSearch"
               ><i class="fas fa-search"></i
             ></span>
-            <span v-if="!(isLoading || isUpdating) && isSameSearch && !isUpdated"
+            <span
+              v-if="!(isLoading || isUpdating) && isSameSearch && !isUpdated"
               ><i class="fas fa-redo-alt"></i
             ></span>
             <span v-if="!(isLoading || isUpdating) && isSameSearch && isUpdated"
@@ -82,7 +83,9 @@
     </player-matches>
 
     <div class="status-text">
-      <span v-if="!(isLoading || isUpdating) && !isError && matches.length <= 0">
+      <span
+        v-if="!(isLoading || isUpdating) && !isError && matches.length <= 0"
+      >
         {{ $t("search.prompt") }}
       </span>
       <span v-if="isLoading">
@@ -455,7 +458,12 @@ export default {
       const requestHistoryStartTime = Date.now();
 
       axios
-        .get(newRequest, { cancelToken: cancelToken.token }) // Pass the cancel token
+        .get(newRequest, {
+          headers: {
+            is_update: 0,
+          },
+          cancelToken: cancelToken.token,
+        }) // Pass the cancel token
         .then((response) => {
           this.isLoading = false;
 
@@ -482,7 +490,12 @@ export default {
 
           cancelToken = axios.CancelToken.source();
           axios
-            .get(newRequest, { cancelToken: cancelToken.token })
+            .get(newRequest, {
+              headers: {
+                is_update: 1,
+              },
+              cancelToken: cancelToken.token,
+            })
             .then((response) => {
               this.isUpdating = false;
               this.isUpdated = true;
