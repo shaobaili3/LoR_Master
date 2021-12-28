@@ -376,17 +376,17 @@ export default {
       }
     },
     clearInfo() {
-      this.playerName = "";
-      this.playerTag = "";
+      // this.playerName = "";
+      // this.playerTag = "";
       this.playerRank = null;
       this.playerLP = null;
       this.playerRegion = null;
       this.matches = [];
     },
     errorHistory(error) {
-      // if (!this.isUpdating) {
-      //   this.clearInfo();
-      // }
+      if (!this.isUpdating) {
+        this.clearInfo();
+      }
       this.isError = true;
       this.errorType = error;
       // this.playerName = "No history found"
