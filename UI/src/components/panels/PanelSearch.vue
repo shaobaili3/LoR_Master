@@ -342,6 +342,13 @@ export default {
           this.playerTag
         ) {
           // When trying to search the same people, do a refresh (update only)
+
+          if (this.isError) {
+            // Unless it is error, in this case do a full refresh
+            this.requestHistoryData()
+            return
+          }
+
           this.requestHistoryUpdate();
           this.resetInputFocus();
 
