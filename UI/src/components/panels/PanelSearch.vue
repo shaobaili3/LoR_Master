@@ -290,6 +290,8 @@ export default {
       this.searchHistory();
     },
     searchHistory() {
+
+      console.log("Search History")
       var splited;
       if (
         this.inputNameList.length > 0 &&
@@ -345,10 +347,13 @@ export default {
 
           if (this.isError) {
             // Unless it is error, in this case do a full refresh
+            console.log("Refresh when error")
             this.requestHistoryData()
+            this.resetInputFocus();
             return
           }
 
+          console.log("Refresh & update only")
           this.requestHistoryUpdate();
           this.resetInputFocus();
 
@@ -379,9 +384,9 @@ export default {
       this.matches = [];
     },
     errorHistory(error) {
-      if (!this.isUpdating) {
-        this.clearInfo();
-      }
+      // if (!this.isUpdating) {
+      //   this.clearInfo();
+      // }
       this.isError = true;
       this.errorType = error;
       // this.playerName = "No history found"
