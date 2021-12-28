@@ -53,7 +53,7 @@ export default {
 		};
 	},
 	mounted() {
-		console.log(this.swapNames)
+		// console.log(this.swapNames)
 		this.$emit("input", this.selected);
 	},
 	computed: {

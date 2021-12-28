@@ -579,7 +579,7 @@ export default {
     },
     processHistory(data, playerName, playerServer) {
       console.log("Process History!", playerName, playerServer);
-      console.log(data);
+      // console.log(data);
 
       var matchInfo = {
         matches: [],

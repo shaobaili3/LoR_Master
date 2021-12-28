@@ -670,7 +670,7 @@ export default {
         this.setCurrentPage(PANELS.search)
         this.$nextTick(() => {
           // Wait until the panel search mounts
-          console.log(this.$refs)
+          // console.log(this.$refs)
           this.$refs.panelSearch.searchPlayer(data)
         })
       }
@@ -988,7 +988,7 @@ export default {
     },
     processHistory(data, playerName, playerServer) {
       console.log("Process History!", playerName, playerServer)
-      console.log(data)
+      // console.log(data)
 
       var matchInfo = {
         matches: [],

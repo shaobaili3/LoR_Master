@@ -319,7 +319,7 @@ export default {
       window.ipcRenderer.send("request-store", "ui-locale");
 
       window.ipcRenderer.on("reply-store", (event, key, val) => {
-        console.log("Got store", key, val);
+        // console.log("Got store", key, val);
 
         if (key == "ui-locale" && val) {
           this.$i18n.locale = val;
