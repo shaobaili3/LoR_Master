@@ -1,3 +1,6 @@
+const Sentry = require("@sentry/electron");
+
+Sentry.init({ dsn: "https://18f2ad8a49d54543880b7e1852dd10b8@o958702.ingest.sentry.io/6126340" });
 
 const electron = require('electron')
 const { app, Tray, Menu, MenuItem, globalShortcut , ipcMain} = require('electron')

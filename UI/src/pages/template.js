@@ -20,8 +20,8 @@ import champsFromDeck from '../store/modules/champsFromDeck'
 import metaData from '../store/modules/metaData'
 import leaderboardData from '../store/modules/leaderboardData'
 
-const API_WEB_BASE = "https://lmttest.herokuapp.com" // For testing
-// const API_WEB_BASE = "https://lormaster.herokuapp.com"
+// const API_WEB_BASE = "https://lmttest.herokuapp.com" // For testing
+const API_WEB_BASE = "https://lormaster.herokuapp.com"
 
 export default (App) => {
 
