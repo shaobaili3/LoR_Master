@@ -15,7 +15,7 @@
             <div class="history-info">{{timeString}}</div>
             <div class="history-info desktop" v-if="rounds">{{rounds}} {{$t('str.rounds')}}</div>
             <div class="history-info" v-if="details" >{{ moment(new Date(details.endTime) - new Date(details.startTime)).format('m:ss') }}</div>
-            <div class="match-info-badge" v-for="(badge, index) in filteredBadges" :key="index" >
+            <div class="match-info-badge" v-for="badge in filteredBadges" :key="badge" >
                 <span v-if="badge=='recent' || badge=='frequent'" class="match-info-badge-icon fa" :class="{'fa-clock': badge=='recent', 'fa-angle-double-up': badge=='frequent'}"></span>
                 {{$t('matches.badges.'+badge.replace(/\s+/g, ''))}}</div>
         </div>

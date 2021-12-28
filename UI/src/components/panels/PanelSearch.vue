@@ -341,8 +341,8 @@ export default {
           splited[0] == this.playerName &&
           this.playerTag
         ) {
-          // When trying to search the same people, do a refresh
-          this.requestHistoryData();
+          // When trying to search the same people, do a refresh (update only)
+          this.requestHistoryUpdate();
           this.resetInputFocus();
 
           this.sendUserEvent({
@@ -372,7 +372,9 @@ export default {
       this.matches = [];
     },
     errorHistory(error) {
-      this.clearInfo();
+      if (!this.isUpdating) {
+        this.clearInfo();
+      }
       this.isError = true;
       this.errorType = error;
       // this.playerName = "No history found"
@@ -414,6 +416,72 @@ export default {
           }
         });
     },
+    requestHistoryUpdate() {
+      // Second request to makesure that the data is updated
+      this.isUpdating = true;
+      this.isUpdated = false;
+
+      var newRequest = `${this.apiBase}/search/${
+        regionNames[this.selectedRegion]
+      }/${this.playerName}/${this.playerTag}`;
+
+      this.sendUserEvent({
+        category: "Main Window Requests",
+        action: "Update Search",
+        label: "URL: " + newRequest,
+        value: null,
+      });
+
+      const requestUpdateHistoryStartTime = Date.now();
+
+      cancelToken = axios.CancelToken.source();
+      axios
+        .get(newRequest, {
+          headers: {
+            is_update: 1,
+          },
+          cancelToken: cancelToken.token,
+        })
+        .then((response) => {
+          this.isUpdating = false;
+          this.isUpdated = true;
+
+          this.sendUserEvent({
+            category: "Main Window Requests",
+            action: "Updated Search Result [Success]",
+            label: "URL: " + newRequest,
+            value: Date.now() - requestUpdateHistoryStartTime,
+          });
+
+          this.processSearchHistory(response.data);
+        })
+        .catch((e) => {
+          if (axios.isCancel(e)) {
+            console.log("Request (update) cancelled");
+          } else {
+            console.log("error", e);
+
+            if (e.response) {
+              if (e.response.status == 500) {
+                this.errorHistory(4); // Internal sercive error
+              } else {
+                var data = e.response.data;
+                this.errorHistory((data.status && data.status.error) || 3); // give a 3 so that there is a fallback
+              }
+            } else {
+              this.errorHistory(3); // Unkown Error
+            }
+            this.isUpdating = false;
+
+            this.sendUserEvent({
+              category: "Main Window Requests",
+              action: "Updated Search Result [Fail]",
+              label: "Type: " + this.errorType + " | URL: " + newRequest,
+              value: Date.now() - requestUpdateHistoryStartTime,
+            });
+          }
+        });
+    },
     requestHistoryData() {
       if (this.localHistoryLoading) {
         // Before start, wait until old local search resolves
@@ -444,6 +512,7 @@ export default {
       this.isLoading = true;
       this.isError = false;
       this.isUpdated = false;
+      this.isUpdating = false;
       this.playerRegion = regionNames[this.selectedRegion];
 
       prevHistoryRequest = newRequest;
@@ -476,65 +545,7 @@ export default {
 
           this.processSearchHistory(response.data);
 
-          // Second request to makesure that the data is updated
-          this.isUpdating = true;
-
-          this.sendUserEvent({
-            category: "Main Window Requests",
-            action: "Update Search",
-            label: "URL: " + newRequest,
-            value: null,
-          });
-
-          const requestUpdateHistoryStartTime = Date.now();
-
-          cancelToken = axios.CancelToken.source();
-          axios
-            .get(newRequest, {
-              headers: {
-                is_update: 1,
-              },
-              cancelToken: cancelToken.token,
-            })
-            .then((response) => {
-              this.isUpdating = false;
-              this.isUpdated = true;
-
-              this.sendUserEvent({
-                category: "Main Window Requests",
-                action: "Updated Search Result [Success]",
-                label: "URL: " + newRequest,
-                value: Date.now() - requestUpdateHistoryStartTime,
-              });
-
-              this.processSearchHistory(response.data);
-            })
-            .catch((e) => {
-              if (axios.isCancel(e)) {
-                console.log("Request (update) cancelled");
-              } else {
-                console.log("error", e);
-
-                if (e.response) {
-                  if (e.response.status == 500) {
-                    this.errorHistory(4); // Internal sercive error
-                  } else {
-                    var data = e.response.data;
-                    this.errorHistory((data.status && data.status.error) || 3); // give a 3 so that there is a fallback
-                  }
-                } else {
-                  this.errorHistory(3); // Unkown Error
-                }
-                this.isLoading = false;
-
-                this.sendUserEvent({
-                  category: "Main Window Requests",
-                  action: "Updated Search Result [Fail]",
-                  label: "Type: " + this.errorType + " | URL: " + newRequest,
-                  value: Date.now() - requestUpdateHistoryStartTime,
-                });
-              }
-            });
+          this.requestHistoryUpdate()
         })
         .catch((e) => {
           if (axios.isCancel(e)) {

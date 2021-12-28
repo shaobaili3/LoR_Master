@@ -15,7 +15,7 @@
             </div>
             <div class="summary-item decks-summary" @wheel.prevent="horizontalScroll">
                 <div class="champion-icons btn" 
-                v-for="(obj, index) in uniqueDeckCodes" :key="index"
+                v-for="obj in uniqueDeckCodes" :key="obj.deck"
                 :class="{active: filterDeckCode == obj.deck}"
                 @click="setFilterDeckCode(obj.deck)">
                     <deck-champs :deck="obj.deck" :showRegion="true" :fixedWidth="false"></deck-champs>
@@ -34,7 +34,7 @@
         <match-history 
             @show-deck="showDeck"
             @search="searchPlayer({region: match.region, name: match.opponentName, tag: match.opponentTag})"
-            v-for="(match, index) in filteredMatches" :key="index"
+            v-for="match in filteredMatches" :key="match.time"
             :opponentName="match.opponentName" 
             :opponentRank="match.opponentRank"
             :opponentLp="match.opponentLp"
@@ -199,7 +199,7 @@ export default {
         filteredMatches() {
             if (!this.matches) return null
             if (!this.filterDeckCode) return this.matches.filter(n => n) // filters out null decks
-            return this.matches.filter(x => x.deck == this.filterDeckCode) // filters according to deck code
+            return this.matches.filter(x => x.deck == this.filterDeckCode && x.time) // filters according to deck code & check to make sure time is set
         },
         totalWins() {
             if (!this.filteredMatches) return null
