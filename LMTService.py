@@ -17,7 +17,7 @@ from Models import master
 from Models.process import readLog
 from Models.heroku import Heroku
 import json
-from flask import Flask, jsonify
+from flask import Flask, jsonify, redirect
 import io
 import sys
 import os
@@ -108,60 +108,34 @@ def track():
 
 @app.route("/history/<string:server>/<string:name>/<string:tag>", methods=['get'])
 def history(server, name, tag):
-    return jsonify(herokuModel.getHistory(server, name, tag))
+    return redirect("https://lormaster.herokuapp.com/history/" + server + '/' + name + '/' + tag)
 
 
 @app.route("/name/<string:server>/<string:playername>", methods=['get'])
 def get_names(server, playername):
-    # to-do move functions to master model
-    playernames = set()
-    nameListPath = constants.getCacheFilePath(server.lower() + '.json')
-    if not os.path.isfile(nameListPath):
-        nameListPath = 'Resource/' + server.lower() + '.json'
-    try:
-        with open(nameListPath, 'r', encoding='utf-8') as fp:
-            names = json.load(fp)
-            for name in names.items():
-                playernames.add(name[0] + '#' + name[1])
-    except Exception as e:
-        print('updatePlayernames', e)
-    playerList = set()
-    for name in playernames:
-        if name[0:len(playername)].lower() == playername.lower():
-            playerList.add(name)
-    returnList = jsonify(list(playerList))
-    return returnList
-
+    # # to-do move functions to master model
+    # playernames = set()
+    # nameListPath = constants.getCacheFilePath(server.lower() + '.json')
+    # if not os.path.isfile(nameListPath):
+    #     nameListPath = 'Resource/' + server.lower() + '.json'
+    # try:
+    #     with open(nameListPath, 'r', encoding='utf-8') as fp:
+    #         names = json.load(fp)
+    #         for name in names.items():
+    #             playernames.add(name[0] + '#' + name[1])
+    # except Exception as e:
+    #     print('updatePlayernames', e)
+    # playerList = set()
+    # for name in playernames:
+    #     if name[0:len(playername)].lower() == playername.lower():
+    #         playerList.add(name)
+    # returnList = jsonify(list(playerList))
+    # return returnList
+    return redirect("https://lormaster.herokuapp.com/name/" + server + '/' + playername)
 
 @app.route("/search/<string:server>/<string:name>/<string:tag>", methods=['get'])
 def search(name, tag, server):
-    matchIds = []
-    details = herokuModel.getSearch(server, name, tag)
-
-    if isinstance(details, list):
-        for detail in details:
-            cacheModel.matchDetails[detail['metadata']['match_id']] = detail
-            matchIds.append(detail['metadata']['match_id'])
-
-        for playername in details[0]['playernames']:
-            fullName = playername.split('#', 1)
-            if name.lower() == fullName[0].lower():
-                name = fullName[0]
-                tag = fullName[1]
-        saveMatchIdsInCache(server, name, tag, matchIds)
-    settingModel = Setting()
-    settingModel.riotServer = Server._value2member_map_[server]
-    maxNum = constants.MAX_NUM_INSPECT
-    if (name + '#' + tag).lower() == settingTrack.playerId.lower():
-        maxNum = 20
-    riotModel = Riot(Network(settingModel), cacheModel)
-    playerModel = Player(riotModel, leaderboardModel)
-    playerModel.inspectFlask(
-        name, tag, cacheModel.matches.get(name + tag + server))
-    if playerModel.error is None:
-        return jsonify(playerModel.matchesJson)
-    else:
-        return jsonify(playerModel.error), playerModel.error['status']['code']
+    return redirect("https://lormaster.herokuapp.com/search/" + server + '/' + name + '/' + tag)
 
 
 def saveMatchIdsInCache(server, name, tag, matchIds):
@@ -174,35 +148,9 @@ def saveMatchIdsInCache(server, name, tag, matchIds):
         cacheModel.matches[uniqueName] = matchIds
     cacheModel.save()
 
-# @app.route("/leaderboard/<string:server>", methods=['get'])
-# def get_leaderboard(server):
-#     return jsonify(herokuModel.getMatches(server))
-
-
 @app.route("/leaderboard/<string:server>", methods=['get'])
 def get_leaderboard(server):
-    # refactor to leaderboard model
-    board = leaderboardModel.getLeaderboard(server)
-    #board = herokuModel.getMatches(server)
-    boardWithTag = []
-    playlistDict = {}
-    if board is None:
-        return jsonify(boardWithTag)
-    nameListPath = constants.getCacheFilePath(server.lower() + '.json')
-    if not os.path.isfile(nameListPath):
-        nameListPath = 'Resource/' + server.lower() + '.json'
-    try:
-        with open(nameListPath, 'r', encoding='utf-8') as fp:
-            playlistDict = json.load(fp)
-    except Exception as e:
-        print('Restful: unable to load player list', e)
-    for player in board:
-        if player['name'] in playlistDict:
-            player['tag'] = playlistDict[player['name']]
-        else:
-            player['tag'] = ''
-        boardWithTag.append(player)
-    return jsonify(boardWithTag)
+    return redirect("https://lormaster.herokuapp.com/leaderboard/" + server)
 
 
 @app.route("/opInfo", methods=['get'])
@@ -212,7 +160,7 @@ def opInfo():
     # will break here if opponentName is None
     if localTrack.opponentName.startswith('deckname_') or localTrack.opponentName.startswith('decks_'):
         opInfo['name'] = 'AI'
-    opInfo['tag'] = get_tag_by_name(localTrack.opponentName)
+    opInfo['tag'] = 'S'
     opInfo['rank'], opInfo['lp'] = leaderboardModel.checkRank(
         localTrack.opponentName, settingTrack.riotServer)
     return jsonify(opInfo)
@@ -244,25 +192,6 @@ def get_local():
 def report(message):
     sentry_sdk.capture_message(message)
     return jsonify('OK')
-
-
-def get_tag_by_name(name):
-    opponent_tag = None
-    if name is None:
-        print('updateTagByName:', 'game not start')
-        return opponent_tag
-    name_path = constants.getCacheFilePath(
-        localTrack.setting.riotServer.lower() + '.json')
-    if not os.path.isfile(name_path):
-        name_path = 'Resource/' + localTrack.setting.riotServer.lower() + '.json'
-    with open(name_path, 'r', encoding='utf-8') as fp:
-        names = json.load(fp)
-        if name in names:
-            opponent_tag = names[name]
-            return opponent_tag
-        return herokuModel.getTag(localTrack.setting.riotServer.lower(), name)
-    return opponent_tag
-
 
 if isDebug:
     app.run(port=args.port, debug=True, use_reloader=False)
