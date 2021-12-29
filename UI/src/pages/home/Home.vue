@@ -904,7 +904,7 @@ export default {
       if (server === 'sea') {
         apiLink = `${this.apiBase}/local`
       } else {
-        apiLink = `${this.apiBase}/search/${server}/${name}/${tag}`
+        apiLink = `${this.API_WEB}/search/${server}/${name}/${tag}`
       }
 
       console.log("Request Local History", apiLink)

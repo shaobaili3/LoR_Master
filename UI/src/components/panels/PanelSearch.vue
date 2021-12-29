@@ -401,7 +401,7 @@ export default {
     requestNameData() {
       axios
         .get(
-          `${this.apiBase}/name/${regionNames[this.selectedRegion]}/${
+          `${this.API_WEB}/name/${regionNames[this.selectedRegion]}/${
             this.searchText
           }`
         )
@@ -433,7 +433,7 @@ export default {
       this.isUpdating = true;
       this.isUpdated = false;
 
-      var newRequest = `${this.apiBase}/search/${
+      var newRequest = `${this.API_WEB}/search/${
         regionNames[this.selectedRegion]
       }/${this.playerName}/${this.playerTag}`;
 
@@ -505,7 +505,7 @@ export default {
         return;
       }
 
-      var newRequest = `${this.apiBase}/search/${
+      var newRequest = `${this.API_WEB}/search/${
         regionNames[this.selectedRegion]
       }/${this.playerName}/${this.playerTag}`;
       if (prevHistoryRequest == newRequest && this.isLoading) {

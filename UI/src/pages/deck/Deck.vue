@@ -58,7 +58,7 @@
         {{ loadingOppoText }}
       </div>
 
-      <div v-if="matchInfos && matchInfos.length > 0">
+      <div class="w-full" v-if="matchInfos && matchInfos.length > 0">
         <match-info
           v-for="match in matchInfos"
           :key="match.opponentName"
@@ -229,6 +229,7 @@ export default {
       oppoLp: null,
 
       requestOpponentHistoryError: null,
+      isLoadingOpponentHistory: false,
 
       lorRunning: false,
 
@@ -271,7 +272,7 @@ export default {
     },
     loadingOppoText() {
       if (this.requestOpponentHistoryError) return this.$t("loading.nohistory");
-      if (this.oppoName) return this.$t("loading.history");
+      if (this.isLoadingOpponentHistory) return this.$t("loading.history");
       return this.$t("loading.nohistory");
     },
     isShowOppo() {
@@ -395,14 +396,16 @@ export default {
         "Request Opponent History for " + this.oppoName 
       );
 
+      this.isLoadingOpponentHistory = true;
       this.requestOpponentHistoryError = null;
 
-      var api = `${this.apiBase}/history/${this.server}/${this.oppoName}`;
+      var api = `${this.API_WEB}/history/${this.server}/${this.oppoName}`;
 
       axios
         .get(api)
         .then((response) => {
           console.log("Opponent Data", response.data);
+          this.isLoadingOpponentHistory = false;
           this.processOpponentHistory(response.data);
         })
         .catch((e) => {
@@ -415,7 +418,7 @@ export default {
         });
     },
     requestTestOppoHistory() {
-      const stormHistoryAPI = `${this.apiBase}/history/americas/storm`;
+      const stormHistoryAPI = `${this.API_WEB}/history/americas/storm`;
       axios
         .get(stormHistoryAPI)
         .then((response) => {
