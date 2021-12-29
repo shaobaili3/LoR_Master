@@ -45,6 +45,8 @@ export default {
 
       var region = REGION_NAMES[regionID];
 
+      if (!region) return // if region is undefined
+
       if (state.request) dispatch('cancelLeaderboard');
       const axiosSource = axios.CancelToken.source();
       state.request = { cancel: axiosSource.cancel, msg: "Loading..." };
