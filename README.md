@@ -43,7 +43,7 @@ LoR Master Tracker is a open source deck tracker for League of Runeterra.
     Master Leaderboard is powered by open-source [LMT Crawler](https://github.com/LoR-Master-Tracker/LoR-Player-Crawler). You can inspect master players via clicking player names.
 ![c](Preview/leaderboard.png)
 
-* **Deck Code Viewer(Coming soon)**
+* **Deck Code Viewer**
 
     The deck viewer can be displayed in-game and outside the game via entering the deck codes.
 
