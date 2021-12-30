@@ -482,6 +482,10 @@ export default {
       var params = new URLSearchParams(search)
       if (params.has('code')) {
         this.showDeckDetail(params.get('code'))
+      } else if (window.location.search.includes('/meta')) {
+        this.setCurrentPage(PANELS.meta)
+      } else if (window.location.search.includes('/search')) {
+        this.setCurrentPage(PANELS.search)
       }
     },
 

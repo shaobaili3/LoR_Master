@@ -303,7 +303,7 @@ export default {
       return `https://lormaster.herokuapp.com`;
     },
     matchTotalNum() {
-      console.log(this.matchInfos);
+      // console.log(this.matchInfos);
       return this.matchInfos.reduce((total, item) => total + item.matches, 0);
     },
   },
