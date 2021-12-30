@@ -405,7 +405,7 @@ export default {
     }
   },
   mounted() {
-    console.log("Mounted")
+    console.log("Page Home Mounted")
     console.log("Node Environment:", process.env.NODE_ENV)
     console.log("$store.state.locale", this.locale)
 

@@ -541,9 +541,9 @@ function newDeckWindow() {
   const { width, height } = electron.screen.getPrimaryDisplay().workAreaSize;
 
   const defaultTrackerWidth = width > 1920 ? 230 : 200;
-  const defaultTrackerHeight = height * 0.7;
+  const defaultTrackerHeight = Math.floor(height * 0.7);
   const defaultTrackerX = 20;
-  const defaultTrackerY = height / 2 - defaultTrackerHeight / 2;
+  const defaultTrackerY = Math.floor(height / 2 - defaultTrackerHeight / 2);
   const defaultTrackerMaxWidth = 290;
   const defaultTrackerMinWidth = 170;
 
