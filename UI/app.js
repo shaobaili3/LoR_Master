@@ -299,7 +299,7 @@ setInterval(() => {
 function checkForUpdates() {
   if (isWin) {
     autoUpdater.checkForUpdates().catch((err) => {
-      console.log(err);
+      console.log(err); // Should no longer report uncaught error due to connection lose
     });
   }
 }
