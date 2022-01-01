@@ -15,25 +15,25 @@
         </div>
 
         <div v-if="noInfo">
-          <div class="text-3xl pb-3">No detail found</div>
+          <div class="text-3xl pb-3">{{ $t('str.noDetail') }}</div>
         </div>
 
         <!-- Meta -->
 
         <div v-if="!isLoading && deckStats" class="pb-4">
-          <div class="text-3xl pb-3">Archetype Stats</div>
+          <div class="text-3xl pb-3">{{ $t('deckCode.archetypeStats') }}</div>
           <meta-group :no-detail="true" :group="deckStats"></meta-group>
-          <div class="text-3xl pb-3">Archetype Matchups</div>
+          <div class="text-3xl pb-3">{{ $t('deckCode.archetypeMatchups') }}</div>
           <meta-matchup :matchups="deckStats.matchup"></meta-matchup>
         </div>
 
         <!-- Mulligan -->
 
         <div v-if="keeps || swaps" class="pb-6">
-          <div class="text-3xl pb-3">Mulligan Guide</div>
+          <div class="text-3xl pb-3">{{ $t('deckCode.mulliganGuide') }}</div>
           <div class="block sm:flex w-full">
             <div class="w-full sm:w-1/2" v-if="keeps">
-              <div class="text-xl pb-2">Keep</div>
+              <div class="text-xl pb-2">{{ $t('deckCode.keep') }}</div>
               <div
                 class="flex w-full items-center"
                 v-for="keep in keeps"
@@ -44,7 +44,7 @@
               </div>
             </div>
             <div class="w-full sm:w-1/2" v-if="swaps">
-              <div class="text-xl pb-2">Mulligan</div>
+              <div class="text-xl pb-2">{{ $t('deckCode.mulligan') }}</div>
               <div
                 class="flex w-full items-center"
                 v-for="swap in swaps"
