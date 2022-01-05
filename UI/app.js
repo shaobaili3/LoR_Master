@@ -1,26 +1,31 @@
+const Sentry = require("@sentry/electron")
 
-const electron = require('electron')
-const { app, Tray, Menu, MenuItem, globalShortcut , ipcMain} = require('electron')
-const { autoUpdater } = require('electron-updater')
+Sentry.init({
+  dsn: "https://18f2ad8a49d54543880b7e1852dd10b8@o958702.ingest.sentry.io/6126340",
+})
+
+const electron = require("electron")
+const { app, Tray, Menu, MenuItem, globalShortcut, ipcMain } = require("electron")
+const { autoUpdater } = require("electron-updater")
 // const app = electron.app
 const BrowserWindow = electron.BrowserWindow
-const path = require('path')
-const remote = require('@electron/remote/main')
+const path = require("path")
+const remote = require("@electron/remote/main")
 remote.initialize()
 
 const isPackaged = app.isPackaged
-const isDev = process.argv.includes('--dev')
+const isDev = process.argv.includes("--dev")
 
-const developmentMode = true && !(isPackaged) || isDev
+const developmentMode = (true && !isPackaged) || isDev
 
 const closeWithoutTracker = false
 const headerHeight = 45 // Repeated in preload.js
 const defaultRatio = 2.3 // Repeated in preload.js
 
-const defaultPort = '26531'
+const defaultPort = "26531"
 
 const spawnService = true || isPackaged
-const spawnPython = true && !(isPackaged)
+const spawnPython = true && !isPackaged
 
 let currentVersion = ""
 var startHidden = false
@@ -41,7 +46,7 @@ if (!gotTheLock) {
   console.log("Another Instance is alreaedy running")
   app.quit()
 } else {
-  app.on('second-instance', (event, commandLine, workingDirectory) => {
+  app.on("second-instance", (event, commandLine, workingDirectory) => {
     // Someone tried to run a second instance, we should focus our window.
     if (mainWindow) {
       if (mainWindow.isMinimized()) mainWindow.restore()
@@ -53,19 +58,19 @@ if (!gotTheLock) {
 
 detectPortAndStartService()
 
-app.on('ready', () => {
+app.on("ready", () => {
   // --- registers global shortcuts ---
   // globalShortcut.register('Alt+CommandOrControl+E', () => {
-    // console.log('Electron loves global shortcuts!')
-    // toggleDeckWindow()
+  // console.log('Electron loves global shortcuts!')
+  // toggleDeckWindow()
   // })
 
   // globalShortcut.register('Alt+CommandOrControl+W', () => {
-    // toggleMinDeckWindow()
+  // toggleMinDeckWindow()
   // })
-  
+
   if (developmentMode) {
-    globalShortcut.register('Alt+CommandOrControl+T', () => {
+    globalShortcut.register("Alt+CommandOrControl+T", () => {
       requestTestHistory()
     })
   }
@@ -73,15 +78,15 @@ app.on('ready', () => {
   if (app.isPackaged) {
     currentVersion = app.getVersion()
   } else {
-    currentVersion = require('./package.json').version
+    currentVersion = require("./package.json").version
     autoUpdater.autoDownload = false
-    autoUpdater.currentVersion = require('./package.json').version
+    autoUpdater.currentVersion = require("./package.json").version
   }
 
   appReady()
 })
 
-app.on('window-all-closed', () => {
+app.on("window-all-closed", () => {
   // console.log("All Window Closed")
   // if (process.platform !== 'darwin') {
   // app.quit()
@@ -92,26 +97,25 @@ app.on('window-all-closed', () => {
 //   console.log("Window Blur", window)
 // })
 
-app.on('activate', () => {
+app.on("activate", () => {
   newMainWindow()
 })
 
 function showAlert(title, message) {
-  const { dialog } = require('electron')
+  const { dialog } = require("electron")
   dialog.showMessageBox({
     title: title,
-    message: message
+    message: message,
   })
 }
 
 const appReady = () => {
-  
   console.log("--------")
   console.log("App Ready")
   console.log("--------")
   console.log("Process Args:", process.argv)
 
-  startHidden = process.argv.includes('--hidden')
+  startHidden = process.argv.includes("--hidden")
 
   // --- deckWindow ---
   newDeckWindow()
@@ -128,19 +132,18 @@ const appReady = () => {
 
   console.log("Is Packaged?", app.isPackaged)
   console.log("Version: ", currentVersion)
-  
+
   // newAlert()
 
   // if (app.isPackaged) {
-    // Init Auto Launch on startup only on packaged app
-    // enableAutoLaunch()
+  // Init Auto Launch on startup only on packaged app
+  // enableAutoLaunch()
   // }
 }
 
-
 function requestTestHistory() {
   if (deckWindow) {
-    deckWindow.webContents.send('request-test-history')
+    deckWindow.webContents.send("request-test-history")
   }
 }
 
@@ -148,20 +151,20 @@ function requestTestHistory() {
 // --- Google Analytics (UA) ---
 // -----------------------------------------------
 
-const ua = require('universal-analytics')
-var user; 
-var userSet = false;
+const ua = require("universal-analytics")
+var user
+var userSet = false
 
-ipcMain.on('user-init', (event, uid) => {
+ipcMain.on("user-init", (event, uid) => {
   console.log("Init User: ", uid)
 
   userSet = true
 
   // if (!isPackaged || isDev) return
-  
-  user = ua('UA-209481840-1', uid, {strictCidFormat: false});
-  user.set("ds", "app");
-  user.set("uid", uid);
+
+  user = ua("UA-209481840-1", uid, { strictCidFormat: false })
+  user.set("ds", "app")
+  user.set("uid", uid)
 
   var eventCategory = "App"
   var eventAction = "Initialize"
@@ -171,8 +174,7 @@ ipcMain.on('user-init', (event, uid) => {
   recordUserEvent(eventCategory, eventAction, eventLabel, eventValue)
 })
 
-ipcMain.on('user-event', (event, eventInfo) => {
-
+ipcMain.on("user-event", (event, eventInfo) => {
   var eventCategory = eventInfo.category
   var eventAction = eventInfo.action
   var eventLabel = eventInfo.label
@@ -182,13 +184,12 @@ ipcMain.on('user-event', (event, eventInfo) => {
 })
 
 function recordUserEvent(eventCategory, eventAction, eventLabel, eventValue) {
-  
   console.log(eventCategory, "|", eventAction, "|", eventLabel, "|", eventValue)
   // if (!isPackaged || isDev) return
 
   if (!userSet) {
-    user = ua('UA-209481840-1');
-    user.set("ds", "app");
+    user = ua("UA-209481840-1")
+    user.set("ds", "app")
 
     userSet = true
   }
@@ -199,70 +200,68 @@ function recordUserEvent(eventCategory, eventAction, eventLabel, eventValue) {
 }
 
 // -----------------------------------------------
-// --- Auto Updater --- 
+// --- Auto Updater ---
 // -----------------------------------------------
 
-autoUpdater.logger = require('electron-log')
-autoUpdater.logger.transports.file.level = 'info'
+autoUpdater.logger = require("electron-log")
+autoUpdater.logger.transports.file.level = "info"
 
 // autoUpdater.channel = "beta"
 
-autoUpdater.on('checking-for-update', () => {
+autoUpdater.on("checking-for-update", () => {
   console.log("Checking for Update...")
-  if (mainWindow) mainWindow.webContents.send('checking-for-update')
+  if (mainWindow) mainWindow.webContents.send("checking-for-update")
 })
 
-autoUpdater.on('update-available', (info) => {
+autoUpdater.on("update-available", (info) => {
   console.log("Update available")
   console.log("Version", info.version)
   console.log("Release Data", info.releaseDate)
-  if (mainWindow) mainWindow.webContents.send('update-available', info)
+  if (mainWindow) mainWindow.webContents.send("update-available", info)
 })
 
-autoUpdater.on('update-not-available', () => {
-  console.log('Update not available')
-  if (mainWindow) mainWindow.webContents.send('update-not-available')
+autoUpdater.on("update-not-available", () => {
+  console.log("Update not available")
+  if (mainWindow) mainWindow.webContents.send("update-not-available")
 })
 
-autoUpdater.on('download-progress', (progress) => {
+autoUpdater.on("download-progress", (progress) => {
   console.log(`Progress ${Math.floor(progress.percent)}`)
-  if (mainWindow) mainWindow.webContents.send('download-process', progress)
+  if (mainWindow) mainWindow.webContents.send("download-process", progress)
 })
 
-autoUpdater.on('update-downloaded', (info) => {
+autoUpdater.on("update-downloaded", (info) => {
   console.log("Update downloaded")
   // autoUpdater.quitAndInstall(true)
-  if (mainWindow) mainWindow.webContents.send('update-downloaded', info)
+  if (mainWindow) mainWindow.webContents.send("update-downloaded", info)
 })
 
-autoUpdater.on('error', (err) => {
+autoUpdater.on("error", (err) => {
   console.log(err)
 })
 
-ipcMain.on('check-update', (event) => {
+ipcMain.on("check-update", (event) => {
   checkForUpdates()
 })
 
-ipcMain.on('install-update', (event) => {
+ipcMain.on("install-update", (event) => {
   autoUpdater.quitAndInstall(true, true)
 })
 
-ipcMain.on('game-start-trigger', () => {
+ipcMain.on("game-start-trigger", () => {
   console.log("Handling Game Start")
   recordUserEvent("Tracker Event", "Game Start", new Date().toUTCString(), null)
-
 })
 
-ipcMain.on('game-end-trigger', () => {
+ipcMain.on("game-end-trigger", () => {
   console.log("Handling Game End")
 
   recordUserEvent("Tracker Event", "Game End", new Date().toUTCString(), null)
-  if (mainWindow) mainWindow.webContents.send('game-end-handle')
+  if (mainWindow) mainWindow.webContents.send("game-end-handle")
 })
 
-ipcMain.on('get-port', (event, args) => {
-
-  event.sender.send('return-port', port)
+ipcMain.on("get-port", (event, args) => {
+  event.sender.send("return-port", port)
   // if (mainWindow) mainWindow.webContents.send('return-port', port)
   // if (deckWindow) deckWindow.webContents.send('return-port', port)
 })
@@ -272,7 +271,11 @@ setInterval(() => {
 }, 1000 * 60 * 15)
 
 function checkForUpdates() {
-  if (isWin) autoUpdater.checkForUpdates()
+  if (isWin) {
+    autoUpdater.checkForUpdates().catch((err) => {
+      console.log(err) // Should no longer report uncaught error due to connection lose
+    })
+  }
 }
 
 // -----------------------------------------------
@@ -281,35 +284,39 @@ function checkForUpdates() {
 
 let tray = null
 function initTray() {
-  tray = new Tray(__dirname + '/image.ico')
+  tray = new Tray(__dirname + "/image.ico")
   const contextMenu = Menu.buildFromTemplate([
     // { label: 'Item1', type: 'radio' },
     // { label: 'Item2', type: 'radio' },
     // { label: 'Item3', type: 'radio', checked: true },
     // { label: 'Item4', type: 'radio' },
-    { 
-      label: 'Open',
+    {
+      label: "Open",
       click: () => {
         newMainWindow()
-      }
+      },
     },
     {
-      label: 'About',
-      click: () => { newInfoWindow() }
+      label: "About",
+      click: () => {
+        newInfoWindow()
+      },
     },
-    { type: 'separator' },
+    { type: "separator" },
     {
-      label: 'Quit',
-      click: () => { app.quit() }
-    }
+      label: "Quit",
+      click: () => {
+        app.quit()
+      },
+    },
   ])
-  tray.setToolTip('LoR Master Tracker')
-  tray.on('click', ()=>{
-      // tray.popUpContextMenu()
-      // console.log("Tray Clicked")
-      newMainWindow()
+  tray.setToolTip("LoR Master Tracker")
+  tray.on("click", () => {
+    // tray.popUpContextMenu()
+    // console.log("Tray Clicked")
+    newMainWindow()
   })
-  
+
   tray.setContextMenu(contextMenu)
 
   console.log("Tray Created")
@@ -320,17 +327,21 @@ function initTray() {
 // -----------------------------------------------
 
 const menu = new Menu()
-menu.append(new MenuItem({
-  label: 'Electron',
-  submenu: [{
-    role: 'help',
-    accelerator: process.platform === 'darwin' ? 'Alt+Cmd+I' : 'Alt+Shift+I',
-    click: () => { 
-      console.log('New Info Window') 
-      newInfoWindow()
-    }
-  }]
-}))
+menu.append(
+  new MenuItem({
+    label: "Electron",
+    submenu: [
+      {
+        role: "help",
+        accelerator: process.platform === "darwin" ? "Alt+Cmd+I" : "Alt+Shift+I",
+        click: () => {
+          console.log("New Info Window")
+          newInfoWindow()
+        },
+      },
+    ],
+  })
+)
 
 Menu.setApplicationMenu(menu)
 
@@ -339,14 +350,13 @@ Menu.setApplicationMenu(menu)
 // -----------------------------------------------
 
 function detectPortAndStartService() {
-  
-  const detect = require('detect-port')
+  const detect = require("detect-port")
   detect(port, (err, _port) => {
     if (err) {
       console.log(err)
       return
     }
-  
+
     if (port == _port) {
       console.log(`port: ${port} was not occupied`)
     } else {
@@ -354,12 +364,11 @@ function detectPortAndStartService() {
     }
 
     if (spawnService) {
-
       // Only if spawning service will the port be changed
       port = _port
 
-      if (mainWindow) mainWindow.webContents.send('return-port', port)
-      if (deckWindow) deckWindow.webContents.send('return-port', port)
+      if (mainWindow) mainWindow.webContents.send("return-port", port)
+      if (deckWindow) deckWindow.webContents.send("return-port", port)
 
       startLMTService(port)
     }
@@ -367,47 +376,47 @@ function detectPortAndStartService() {
 }
 
 function startLMTService(port) {
-
   console.log("--------------------")
   console.log("Starting LMT Service", "Port equals to: ", port)
   console.log("--------------------")
 
-  const { spawn } = require('child_process')
+  const { spawn } = require("child_process")
 
   var proc
 
-  var devarg = developmentMode ? 'dev' : 'prod'
+  var devarg = developmentMode ? "dev" : "prod"
 
   var args = [`--port=${port}`, `--status=${devarg}`]
 
   if (spawnPython) {
-    proc = spawn('python', ['./LMTService.py', ...args], {cwd: '../'})
+    proc = spawn("python", ["./LMTService.py", ...args], { cwd: "../" })
   } else {
     var backend, execPath
     if (app.isPackaged) {
-      execPath = path.dirname(app.getPath('exe'))
+      execPath = path.dirname(app.getPath("exe"))
     } else {
       execPath = __dirname
     }
-    backend = path.join(execPath, 'backend', 'LMTService', 'LMTService.exe')
-    proc = spawn(backend, args, {cwd: path.join(execPath, 'backend', 'LMTService')})
+    backend = path.join(execPath, "backend", "LMTService", "LMTService.exe")
+    proc = spawn(backend, args, {
+      cwd: path.join(execPath, "backend", "LMTService"),
+    })
   }
-  
-  proc.stdout.on('data', function (data) {
-    console.log("data: ", data.toString('utf8'))
+
+  proc.stdout.on("data", function (data) {
+    console.log("data: ", data.toString("utf8"))
   })
-  proc.stderr.on('data', (data) => {
+  proc.stderr.on("data", (data) => {
     // console.log(`stderr: ${data}`) // when error
   })
 
-  proc.on('close', (code) => {
+  proc.on("close", (code) => {
     console.log(`Child process close all stdio with code ${code}`)
     startLMTService(port)
   })
-  proc.on('exit', (code) => {
+  proc.on("exit", (code) => {
     console.log(`Child process exited with code ${code}`)
   })
-
 }
 
 // -----------------------------------------------
@@ -421,13 +430,12 @@ let mainWindow = null
 let allWindows = []
 
 function newMainWindow() {
-
   if (mainWindow) {
     mainWindow.show()
     return
   }
 
-  let {width, height} = electron.screen.getPrimaryDisplay().workAreaSize
+  let { width, height } = electron.screen.getPrimaryDisplay().workAreaSize
 
   // --- mainWindow ---
   let windowWidth = 1200 // (335)
@@ -449,54 +457,52 @@ function newMainWindow() {
     maxWidth: windowMaxWidth,
     minWidth: windowMinWidth,
     minHeight: windowMinHeight,
-    width: windowWidth, 
-    height: windowHeight, 
+    width: windowWidth,
+    height: windowHeight,
     x: (width - windowWidth) / 2 + xOffSet,
     y: (height - windowHeight) / 2,
     frame: false,
     resizable: true,
     show: false,
-    backgroundColor: '#1c1c1f',
+    backgroundColor: "#1c1c1f",
     webPreferences: {
       // nodeIntegration: true,
       // enableRemoteModule: true,
       contextIsolation: false,
-      preload: __dirname + '/src/preload.js',
-    }
+      preload: __dirname + "/src/preload.js",
+    },
   })
 
   remote.enable(mainWindow.webContents)
 
-  const mainWindowUrl = require('url').format({
-    protocol: 'file',
+  const mainWindowUrl = require("url").format({
+    protocol: "file",
     slashes: true,
-    pathname: require('path').join(__dirname, 'dist', 'index.html')
+    pathname: require("path").join(__dirname, "dist", "index.html"),
   })
 
   // console.log(mainWindowUrl)
   // mainWindow.loadURL(`file://${__dirname}/dist/index.html`)
   mainWindow.loadURL(mainWindowUrl)
-  
+
   // mainWindow.setAlwaysOnTop(true, level = "pop-up-menu")
-  mainWindow.on('closed', () => {
+  mainWindow.on("closed", () => {
     mainWindow = null
     // app.quit()
   })
 
-  mainWindow.on('hide', () => {
-  })
+  mainWindow.on("hide", () => {})
 
-  mainWindow.on('focus', () => {
+  mainWindow.on("focus", () => {
     // console.log("Main window Focus")
     processClipboard()
   })
 
-  mainWindow.once('ready-to-show', () => {
-    
+  mainWindow.once("ready-to-show", () => {
     if (!startHidden) mainWindow.show()
 
-    mainWindow.webContents.send('app-version', currentVersion)
-    mainWindow.webContents.send('debug-info-display', process.argv)
+    mainWindow.webContents.send("app-version", currentVersion)
+    mainWindow.webContents.send("debug-info-display", process.argv)
   })
 
   if (developmentMode) mainWindow.webContents.openDevTools()
@@ -505,31 +511,29 @@ function newMainWindow() {
 }
 
 function newDeckWindow() {
-
-  const {width, height} = electron.screen.getPrimaryDisplay().workAreaSize
+  const { width, height } = electron.screen.getPrimaryDisplay().workAreaSize
 
   const defaultTrackerWidth = width > 1920 ? 230 : 200
-  const defaultTrackerHeight = height * 0.7
+  const defaultTrackerHeight = Math.floor(height * 0.7)
   const defaultTrackerX = 20
-  const defaultTrackerY = height / 2 - defaultTrackerHeight / 2
+  const defaultTrackerY = Math.floor(height / 2 - defaultTrackerHeight / 2)
   const defaultTrackerMaxWidth = 290
   const defaultTrackerMinWidth = 170
 
   const devConsoleWidth = 400
 
   function resetDeckWindowBounds() {
-    let defaultBounds = { 
-      x: defaultTrackerX, 
-      y: defaultTrackerY, 
-      width: defaultTrackerWidth, 
-      height: defaultTrackerHeight
+    let defaultBounds = {
+      x: defaultTrackerX,
+      y: defaultTrackerY,
+      width: defaultTrackerWidth,
+      height: defaultTrackerHeight,
     }
     if (deckWindow) deckWindow.setBounds(defaultBounds)
-    store.set('ui-deck-bounds', defaultBounds)
+    store.set("ui-deck-bounds", defaultBounds)
   }
 
-  ipcMain.on('reset-deck-window-bounds', resetDeckWindowBounds)
-
+  ipcMain.on("reset-deck-window-bounds", resetDeckWindowBounds)
 
   if (deckWindow) {
     deckWindow.show()
@@ -540,7 +544,7 @@ function newDeckWindow() {
   let windowMaxWidth = defaultTrackerMaxWidth
   let windowMinWidth = defaultTrackerMinWidth
 
-  let bounds = store.get('ui-deck-bounds')
+  let bounds = store.get("ui-deck-bounds")
   let windowX, windowY, windowWidth, windowHeight
 
   if (bounds == null) {
@@ -568,7 +572,7 @@ function newDeckWindow() {
     minHeight: headerHeight,
     x: windowX,
     y: windowY,
-    width: windowWidth, 
+    width: windowWidth,
     height: windowHeight,
     frame: false,
     resizable: true,
@@ -576,39 +580,39 @@ function newDeckWindow() {
     show: false,
     webPreferences: {
       contextIsolation: false,
-      preload: __dirname + '/src/preload.js',
+      preload: __dirname + "/src/preload.js",
     },
   })
 
   remote.enable(deckWindow.webContents)
   deckWindow.loadURL(`file://${__dirname}/dist/deck.html`)
-  
-  deckWindow.setAlwaysOnTop(true, level = "pop-up-menu")
-  deckWindow.on('closed', () => {
+
+  deckWindow.setAlwaysOnTop(true, (level = "pop-up-menu"))
+  deckWindow.on("closed", () => {
     deckWindow = null
   })
 
-  deckWindow.on('restore', () => {
+  deckWindow.on("restore", () => {
     deckWindow.setSkipTaskbar(true)
   })
 
-  deckWindow.on('minimize', () => {
+  deckWindow.on("minimize", () => {
     deckWindow.setSkipTaskbar(false)
   })
 
   const handleMoveResize = () => {
     let bounds = deckWindow.getBounds()
     console.log("Tracker Window Moved or Resized", bounds)
-    store.set('ui-deck-bounds', {
+    store.set("ui-deck-bounds", {
       x: bounds.x,
       y: bounds.y,
-      width: developmentMode? bounds.width - devConsoleWidth : bounds.width,
+      width: developmentMode ? bounds.width - devConsoleWidth : bounds.width,
       height: bounds.height,
     })
   }
 
-  deckWindow.on('moved', handleMoveResize)
-  deckWindow.on('resized', handleMoveResize)
+  deckWindow.on("moved", handleMoveResize)
+  deckWindow.on("resized", handleMoveResize)
 
   if (developmentMode) deckWindow.webContents.openDevTools()
 
@@ -616,17 +620,16 @@ function newDeckWindow() {
 }
 
 function newInfoWindow() {
-
   if (infoWindow) {
     infoWindow.show()
     return
   }
 
-  let {width, height} = electron.screen.getPrimaryDisplay().workAreaSize
+  let { width, height } = electron.screen.getPrimaryDisplay().workAreaSize
   // let factor = electron.screen.getPrimaryDisplay().scaleFactor
 
   // --- infoWindow ---
-  let windowWidth = 270 
+  let windowWidth = 270
   let windowHeight = 270
 
   if (developmentMode) {
@@ -634,8 +637,8 @@ function newInfoWindow() {
   }
 
   infoWindow = new BrowserWindow({
-    width: windowWidth, 
-    height: windowHeight, 
+    width: windowWidth,
+    height: windowHeight,
     x: width / 2 - windowWidth / 2,
     y: height / 2 - windowHeight / 2,
     frame: false,
@@ -644,8 +647,8 @@ function newInfoWindow() {
       // nodeIntegration: true,
       // enableRemoteModule: true,
       contextIsolation: false,
-      preload: __dirname + '/src/preload.js',
-    }
+      preload: __dirname + "/src/preload.js",
+    },
     // titleBarStyle: 'hiddenInset'
   })
 
@@ -654,8 +657,8 @@ function newInfoWindow() {
   infoWindow.loadURL(`file://${__dirname}/dist/info.html`)
   // console.log("Is development?", process.env.NODE_ENV === 'development')
 
-  infoWindow.setAlwaysOnTop(true, level = "pop-up-menu")
-  infoWindow.on('closed', () => {
+  infoWindow.setAlwaysOnTop(true, (level = "pop-up-menu"))
+  infoWindow.on("closed", () => {
     infoWindow = null
   })
 
@@ -666,7 +669,7 @@ function newInfoWindow() {
 
 function showDeckWindow() {
   try {
-    deckWindow.webContents.executeJavaScript('window.showWindow()')  
+    deckWindow.webContents.executeJavaScript("window.showWindow()")
   } catch (e) {
     console.log(e)
   }
@@ -682,7 +685,7 @@ function toggleMinDeckWindow() {
 
 function toggleDeckWindow() {
   try {
-    deckWindow.webContents.executeJavaScript('window.toggleWindow()')  
+    deckWindow.webContents.executeJavaScript("window.toggleWindow()")
   } catch (e) {
     console.log(e)
   }
@@ -692,10 +695,7 @@ function toggleDeckWindow() {
 // --- Alerts ---
 // -----------------------------------------------
 
-function newAlert() {
-
-
-}
+function newAlert() {}
 
 // ipcMain.on('custom-alert', (event, args) => {
 //   console.log("Alert", args)
@@ -706,38 +706,37 @@ function newAlert() {
 //   newAlert("LoR Master Tracker Hidden", "Click on icon to show, Right click for more")
 // }, 1000 * 5)
 
-
 // -----------------------------------------------
 // --- Auto Launch ---
 // -----------------------------------------------
 
-var AutoLaunch = require('auto-launch')
+var AutoLaunch = require("auto-launch")
 var autoLauncher = new AutoLaunch({
-    name: 'LoR Master Tracker',
-    isHidden: true
+  name: "LoR Master Tracker",
+  isHidden: true,
 })
 
 function checkAutoLaunch() {
-
-  autoLauncher.isEnabled().then(
-    function(isEnabled) {
+  autoLauncher
+    .isEnabled()
+    .then(function (isEnabled) {
       console.log("Auto Launch Enabled: ", isEnabled)
       sendAutoLaunchToMain(isEnabled)
-    }
-  ).catch(function(err){
+    })
+    .catch(function (err) {
       console.log(err)
-  })
+    })
 }
 
 function sendAutoLaunchToMain(isEnabled) {
-  if (mainWindow) (mainWindow.webContents.send('check-auto-launch-return', isEnabled))
+  if (mainWindow) mainWindow.webContents.send("check-auto-launch-return", isEnabled)
 }
 
-ipcMain.on('check-auto-launch', (event, args) => {
+ipcMain.on("check-auto-launch", (event, args) => {
   checkAutoLaunch()
 })
 
-ipcMain.on('set-auto-launch', (event, enable) => {
+ipcMain.on("set-auto-launch", (event, enable) => {
   if (enable) {
     enableAutoLaunch()
   } else {
@@ -746,11 +745,10 @@ ipcMain.on('set-auto-launch', (event, enable) => {
   checkAutoLaunch()
 })
 
-
 // var quitOnClose = false
 
 // ipcMain.on('set-quit-on-close', (event, enable) => {
-  
+
 // })
 
 function enableAutoLaunch() {
@@ -761,17 +759,16 @@ function disableAutoLaunch() {
   autoLauncher.disable()
 }
 
-
 // -----------------------------------------------
 // --- Store ---
 // -----------------------------------------------
 
-const Store = require('electron-store');
-const store = new Store();
+const Store = require("electron-store")
+const store = new Store()
 
-console.log("Storing data at", app.getPath('userData'))
+console.log("Storing data at", app.getPath("userData"))
 
-if (store.get('ui-locale') == null) {
+if (store.get("ui-locale") == null) {
   // First time language setting
   var systemLang = getEnvLocale()
   console.log("No Language Set | System Locale", systemLang)
@@ -779,59 +776,57 @@ if (store.get('ui-locale') == null) {
   var newLocale = ""
 
   if (!systemLang) {
-    newLocale = 'English'
-  } else if (systemLang.includes('zh_CN')) {
+    newLocale = "English"
+  } else if (systemLang.includes("zh_CN")) {
     // 简体中文
-    newLocale = '简体中文'
-  } else if (systemLang.includes('zh')) {
+    newLocale = "简体中文"
+  } else if (systemLang.includes("zh")) {
     // 繁体中文
-    newLocale = '繁體中文'
+    newLocale = "繁體中文"
   }
 
   if (newLocale != "") {
-    store.set('ui-locale', newLocale)
+    store.set("ui-locale", newLocale)
 
-    BrowserWindow.getAllWindows().forEach(bw => {
-        console.log("-- sending to", bw.id)
-        bw.webContents.send('to-change-locale', newLocale) 
-    });
+    BrowserWindow.getAllWindows().forEach((bw) => {
+      console.log("-- sending to", bw.id)
+      bw.webContents.send("to-change-locale", newLocale)
+    })
   }
-  
-
 } else {
-  console.log('Language set to', store.get('ui-locale'), " | System Locale", getEnvLocale())
+  console.log("Language set to", store.get("ui-locale"), " | System Locale", getEnvLocale())
 }
 
-ipcMain.on('request-store', (event, key) => {
-  event.sender.send('reply-store', key, store.get(key));
-});
+ipcMain.on("request-store", (event, key) => {
+  event.sender.send("reply-store", key, store.get(key))
+})
 
-ipcMain.on('save-store', (event, key, val) => {
+ipcMain.on("save-store", (event, key, val) => {
   store.set(key, val)
-});
+})
 
 // -----------------------------------------------
 // --- Locale ---
 // -----------------------------------------------
 
-ipcMain.on('changed-locale', (event, newLocale) => {
+ipcMain.on("changed-locale", (event, newLocale) => {
   console.log("Changing Locale to", newLocale, ", from", event.sender.id)
-  store.set('ui-locale', newLocale)
+  store.set("ui-locale", newLocale)
 
-  BrowserWindow.getAllWindows().forEach(bw => {
+  BrowserWindow.getAllWindows().forEach((bw) => {
     if (bw && bw.webContents.id != event.sender.id) {
       console.log("-- sending to", bw.webContents.id)
-      bw.webContents.send('to-change-locale', newLocale)
+      bw.webContents.send("to-change-locale", newLocale)
     } else {
       console.log("-- not sending to", bw.webContents.id)
     }
-  });
+  })
 })
 
 function getEnvLocale(env) {
-  env = env || process.env;
+  env = env || process.env
 
-  return env.LC_ALL || env.LC_MESSAGES || env.LANG || env.LANGUAGE;
+  return env.LC_ALL || env.LC_MESSAGES || env.LANG || env.LANGUAGE
 }
 
 // -----------------------------------------------
@@ -839,36 +834,28 @@ function getEnvLocale(env) {
 // -----------------------------------------------
 
 function processClipboard() {
-  const { clipboard } = require('electron')
+  const { clipboard } = require("electron")
 
   const code = clipboard.readText()
 
   // Maybe put this into Renderer?
-  const encoder = require('./src/modules/runeterra/DeckEncoder')
+  const encoder = require("./src/modules/runeterra/DeckEncoder")
 
   try {
     let deck = encoder.decode(code)
     console.log("Clip board has a deck")
-    if (mainWindow) mainWindow.webContents.send('handle-clipboard-deck', code)
+    if (mainWindow) mainWindow.webContents.send("handle-clipboard-deck", code)
 
-    clipboard.writeText('')
+    clipboard.writeText("")
   } catch (error) {
     // console.log("Clip board doesn't have a deck")
   }
-
 }
-
-
-
-
-
-
-
 
 // --- Use these to check for old running python app ---
 
-const tasklist = require('tasklist')
-const { cp } = require('fs')
+const tasklist = require("tasklist")
+const { cp } = require("fs")
 /*
 	[
 		{
@@ -884,16 +871,21 @@ const { cp } = require('fs')
 
 var isCheckingTracker = false
 async function checkTracker() {
-
   isCheckingTracker = true
-  
+
   // Check Python Process with window name containing LoR Master Tracker
-  var pythonList = await tasklist({filter: ["IMAGENAME eq python.exe"], verbose: true})
-  pythonList = pythonList.filter(ps => ps.windowTitle.indexOf("LoR Master Tracker") != -1)
+  var pythonList = await tasklist({
+    filter: ["IMAGENAME eq python.exe"],
+    verbose: true,
+  })
+  pythonList = pythonList.filter((ps) => ps.windowTitle.indexOf("LoR Master Tracker") != -1)
 
   // Check LoRMasterTracker.exe process
-  var trackerList = await tasklist({filter: ["IMAGENAME eq LoRMasterTracker.exe"], verbose: false})
-  
+  var trackerList = await tasklist({
+    filter: ["IMAGENAME eq LoRMasterTracker.exe"],
+    verbose: false,
+  })
+
   // console.log(list.filter(ps => ps.imageName.indexOf('python') != -1))
   // console.log("\n pythonList", pythonList.length)
   // console.log("trackerList", trackerList.length)

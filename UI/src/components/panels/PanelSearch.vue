@@ -290,6 +290,8 @@ export default {
       this.searchHistory();
     },
     searchHistory() {
+
+      console.log("Search History")
       var splited;
       if (
         this.inputNameList.length > 0 &&
@@ -342,6 +344,16 @@ export default {
           this.playerTag
         ) {
           // When trying to search the same people, do a refresh (update only)
+
+          if (this.isError) {
+            // Unless it is error, in this case do a full refresh
+            console.log("Refresh when error")
+            this.requestHistoryData()
+            this.resetInputFocus();
+            return
+          }
+
+          console.log("Refresh & update only")
           this.requestHistoryUpdate();
           this.resetInputFocus();
 
@@ -364,8 +376,8 @@ export default {
       }
     },
     clearInfo() {
-      this.playerName = "";
-      this.playerTag = "";
+      // this.playerName = "";
+      // this.playerTag = "";
       this.playerRank = null;
       this.playerLP = null;
       this.playerRegion = null;
@@ -389,7 +401,7 @@ export default {
     requestNameData() {
       axios
         .get(
-          `${this.apiBase}/name/${regionNames[this.selectedRegion]}/${
+          `${this.API_WEB}/name/${regionNames[this.selectedRegion]}/${
             this.searchText
           }`
         )
@@ -421,7 +433,7 @@ export default {
       this.isUpdating = true;
       this.isUpdated = false;
 
-      var newRequest = `${this.apiBase}/search/${
+      var newRequest = `${this.API_WEB}/search/${
         regionNames[this.selectedRegion]
       }/${this.playerName}/${this.playerTag}`;
 
@@ -493,7 +505,7 @@ export default {
         return;
       }
 
-      var newRequest = `${this.apiBase}/search/${
+      var newRequest = `${this.API_WEB}/search/${
         regionNames[this.selectedRegion]
       }/${this.playerName}/${this.playerTag}`;
       if (prevHistoryRequest == newRequest && this.isLoading) {
@@ -579,7 +591,7 @@ export default {
     },
     processHistory(data, playerName, playerServer) {
       console.log("Process History!", playerName, playerServer);
-      console.log(data);
+      // console.log(data);
 
       var matchInfo = {
         matches: [],

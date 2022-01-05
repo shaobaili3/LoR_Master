@@ -49,7 +49,7 @@ module.exports = {
   },
   "positional_rectangles": {
       "GameState": "InProgress",
-      "OpponentName": "Storm",
+      "OpponentName": "Lumus11",
       "PlayerName": "FlyingFish",
       "Rectangles": [
           {

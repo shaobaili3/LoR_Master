@@ -20,8 +20,7 @@ import champsFromDeck from '../store/modules/champsFromDeck'
 import metaData from '../store/modules/metaData'
 import leaderboardData from '../store/modules/leaderboardData'
 
-const API_WEB_BASE = "https://lmttest.herokuapp.com" // For testing
-// const API_WEB_BASE = "https://lormaster.herokuapp.com"
+const API_WEB_BASE = process.env.VUE_APP_LMT_SERVER == "test" ? "https://lmttest.herokuapp.com" : "https://lormaster.herokuapp.com"
 
 export default (App) => {
 
@@ -40,7 +39,7 @@ const store = createStore({
             locale: 'en_us',
             portNum: '26531',
             API_WEB: API_WEB_BASE,
-            sets_en: sets_en_combined.reduce((a, v) => ({ ...a, [v.cardCode]: v}), {}) ,
+            sets_en: sets_en_combined.reduce((a, v) => ({ ...a, [v.cardCode]: v}), {}) , // convert from array to key-value pair
             sets: sets_en_combined,
             IS_ELECTRON: window.ipcRenderer !== undefined,
             IS_DEV: process.env.NODE_ENV === 'development',

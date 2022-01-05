@@ -58,7 +58,7 @@
         {{ loadingOppoText }}
       </div>
 
-      <div v-if="matchInfos && matchInfos.length > 0">
+      <div class="w-full" v-if="matchInfos && matchInfos.length > 0">
         <match-info
           v-for="match in matchInfos"
           :key="match.opponentName"
@@ -151,7 +151,7 @@ import DeckRegions from "../../components/deck/DeckRegions.vue";
 import DeckEncoder from "../../modules/runeterra/DeckEncoder";
 import Card from "../../modules/runeterra/Card";
 
-import { mapActions } from "vuex";
+import { mapActions, mapState } from "vuex";
 
 import "../../assets/scss/tooltips.scss";
 import "../../assets/scss/deck.scss";
@@ -170,6 +170,8 @@ const requestStatusWaitTime = 1000; //ms
 
 // const portNum = "26531"
 // const API_BASE = `http://127.0.0.1:${portNum}`
+
+const REGION_NAMES = ["americas", "europe", "asia", "sea"];
 
 const TABS = {
   oppo: 0,
@@ -224,10 +226,10 @@ export default {
 
       oppoName: null,
       oppoRank: null,
-      oppoTag: null,
       oppoLp: null,
 
       requestOpponentHistoryError: null,
+      isLoadingOpponentHistory: false,
 
       lorRunning: false,
 
@@ -237,6 +239,10 @@ export default {
     };
   },
   computed: {
+    ...mapState('leaderboardData', {
+      leaderboard: 'leaderboard',
+      isLeaderboardLoading: 'isLoading'
+    }),
     isLoading() {
       if (this.currentDeckCode || this.startingDeckCode) return false;
       if (this.matchInfos.length > 0) return false;
@@ -247,12 +253,26 @@ export default {
       );
       // return true
     },
+    oppoLeaderboard() {
+      var regionID = REGION_NAMES.indexOf(this.server)
+      if (regionID >= 0) {
+        console.log("Leaderboard access from deck tracker")
+        var lead = this.leaderboard
+        // console.log(lead)
+        if (lead && lead[regionID]) {
+          return lead[regionID].find((val) => {
+            return val.name == this.oppoName
+          })
+        }
+      }
+      return null
+    },
     loadingText() {
       return this.$t("loading.readyToRock");
     },
     loadingOppoText() {
       if (this.requestOpponentHistoryError) return this.$t("loading.nohistory");
-      if (this.oppoName && this.oppoTag) return this.$t("loading.history");
+      if (this.isLoadingOpponentHistory) return this.$t("loading.history");
       return this.$t("loading.nohistory");
     },
     isShowOppo() {
@@ -283,7 +303,7 @@ export default {
       return `https://lormaster.herokuapp.com`;
     },
     matchTotalNum() {
-      console.log(this.matchInfos);
+      // console.log(this.matchInfos);
       return this.matchInfos.reduce((total, item) => total + item.matches, 0);
     },
   },
@@ -294,7 +314,7 @@ export default {
     // console.log("Mounted")
     // this.requestData()
     console.log("Page Deck Mounted");
-
+    
     // this.hideWindow()
     if (this.IS_ELECTRON) {
       window.ipcRenderer.on("return-port", (event, port) => {
@@ -313,13 +333,13 @@ export default {
     // this.requestServerInfo()
   },
   methods: {
-    ...mapActions(["changeLocale"]),
+    ...mapActions(["changeLocale", 'leaderboardData/fetchLeaderboard']),
 
     initStore() {
       window.ipcRenderer.send("request-store", "ui-locale");
 
       window.ipcRenderer.on("reply-store", (event, key, val) => {
-        console.log("Got store", key, val);
+        // console.log("Got store", key, val);
 
         if (key == "ui-locale" && val) {
           this.$i18n.locale = val;
@@ -373,17 +393,19 @@ export default {
       // http://192.168.20.4:${portNum}/history/asia/J01/J01
 
       console.log(
-        "Request Opponent History for " + this.oppoName + "#" + this.oppoTag
+        "Request Opponent History for " + this.oppoName 
       );
 
+      this.isLoadingOpponentHistory = true;
       this.requestOpponentHistoryError = null;
 
-      var api = `${this.apiBase}/history/${this.server}/${this.oppoName}/${this.oppoTag}`;
+      var api = `${this.API_WEB}/history/${this.server}/${this.oppoName}`;
 
       axios
         .get(api)
         .then((response) => {
           console.log("Opponent Data", response.data);
+          this.isLoadingOpponentHistory = false;
           this.processOpponentHistory(response.data);
         })
         .catch((e) => {
@@ -396,7 +418,7 @@ export default {
         });
     },
     requestTestOppoHistory() {
-      const stormHistoryAPI = `${this.apiBase}/history/americas/storm/5961`;
+      const stormHistoryAPI = `${this.API_WEB}/history/americas/storm`;
       axios
         .get(stormHistoryAPI)
         .then((response) => {
@@ -415,6 +437,10 @@ export default {
       if (!this.IS_ELECTRON) {
         var data = testStatusData;
         this.server = data.server;
+        var regionID = REGION_NAMES.indexOf(this.server)
+        if (regionID >= 0) {
+          this['leaderboardData/fetchLeaderboard'](regionID);
+        }
         if (data.language) {
           var newLocale = data.language.replace("-", "_").toLowerCase();
           if (this.locale != newLocale) {
@@ -435,7 +461,11 @@ export default {
 
           if (response && response.data) {
             var data = response.data;
-            this.server = data.server;
+            if (data.server && this.server != data.server) {
+              this.server = data.server;
+              var regionID = REGION_NAMES.indexOf(this.server)
+              this['leaderboardData/fetchLeaderboard'](regionID);
+            }
             if (data.language) {
               var newLocale = data.language.replace("-", "_").toLowerCase();
               if (this.locale != newLocale) {
@@ -469,40 +499,10 @@ export default {
       // Getting opponent rank, lp and tag
       // Once per opponent change
 
-      if (!this.IS_ELECTRON) {
-        this.oppoTag = "5961";
-        this.oppoName = "Storm";
-        this.oppoRank = 123;
-        this.oppoLp = 321;
-        this.requestOpponentHistory();
-        return;
-      }
-
-      axios
-        .get(`${this.apiBase}/opInfo`)
-        .then((response) => {
-          if (response && response.data) {
-            var op = response.data;
-            if (op.rank !== "") {
-              this.oppoRank = op.rank + 1;
-            }
-            this.oppoTag = op.tag;
-            console.log("opInfo:", op.name);
-            this.oppoName = op.name;
-            this.oppoLp = op.lp;
-
-            this.requestOpponentHistory();
-          } else {
-            console.log("/opInfo parse data error");
-          }
-        })
-        .catch((e) => {
-          if (axios.isCancel(e)) {
-            // console.log("Request cancelled");
-          } else {
-            console.log("error", e);
-          }
-        });
+      // if (!this.IS_ELECTRON) {
+      //   this.oppoName = "Lumus11";
+      // }
+      this.requestOpponentHistory();
     },
     requestTrackInfo() {
       if (!this.IS_ELECTRON) {
@@ -565,19 +565,23 @@ export default {
         data.positional_rectangles.OpponentName
       ) {
         // Check if there is opponent
-        var opName = data.positional_rectangles.OpponentName;
+        var trackOppoName = data.positional_rectangles.OpponentName;
 
-        if (opName.includes("_")) {
+        if (trackOppoName.includes("_")) {
           // opponent is AI
           this.oppoName = "AI";
           this.makeWindowVisible();
         } else if (
           !this.oppoName ||
-          this.oppoName.toLowerCase() != opName.toLowerCase()
+          this.oppoName.toLowerCase() != trackOppoName.toLowerCase()
         ) {
           // If there is no oppoName set or there is a change in the name
-          console.log("Track Info:", opName);
-          this.oppoName = opName;
+          console.log("Track Info:", trackOppoName);
+          this.oppoName = trackOppoName;
+          
+          this.oppoRank = this.oppoLeaderboard?.rank
+          this.oppoLp = this.oppoLeaderboard?.lp
+          
           this.requestOppoInfo();
           this.makeWindowVisible();
         }
@@ -585,7 +589,6 @@ export default {
         // Clear Info about opponent and matches if there is no opponent
 
         this.oppoName = null;
-        this.oppoTag = null;
         this.oppoRank = null;
         this.oppoLp = null;
         this.matchTotalNum = 0;

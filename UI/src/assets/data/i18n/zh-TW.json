@@ -39,7 +39,8 @@
     "delete": "刪除",
     "meta": "環境",
     "detail": "詳情",
-    "updating": "更新中..."
+    "updating": "更新中...",
+    "noDetail": "未找到詳情"
   },
   "loading": {
     "readyToRock": "準備就緒 🤘",
@@ -116,5 +117,12 @@
   "decklib": {
     "title": "牌組庫",
     "placeholder": "黏貼代碼以保存"
+  },
+  "deckCode": {
+    "archetypeStats": "體系數據",
+    "archetypeMatchups": "體系對局",
+    "mulliganGuide": "換牌策略",
+    "keep": "保留",
+    "mulligan": "替換"
   }
 }

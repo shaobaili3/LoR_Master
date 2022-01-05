@@ -142,7 +142,7 @@ export default {
             if (this.missingRankLp) {
                 console.log("Leaderboard access from matches")
                 var lead = this.$store.state.leaderboardData.leaderboard
-                console.log(lead)
+                // console.log(lead)
                 if (lead && lead[REGION_ID[this.playerRegion]]) {
                     return lead[REGION_ID[this.playerRegion]].find((val) => {
                         return val.name == this.playerName && val.tag == this.playerTag
@@ -168,7 +168,7 @@ export default {
                 return this.playerRank
             } else {
                 if (this.leaderboard) {
-                    console.log(this.leaderboard)
+                    // console.log(this.leaderboard)
                     return this.leaderboard.rank + 1 // Because raw rank data starts at 0
                 }
             }

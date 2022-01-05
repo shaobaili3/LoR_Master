@@ -7,6 +7,10 @@ const {
 
 const shell = require('electron').shell
 
+const Sentry = require("@sentry/electron");
+
+Sentry.init({ dsn: "https://18f2ad8a49d54543880b7e1852dd10b8@o958702.ingest.sentry.io/6126340" });
+
 var win = remote.getCurrentWindow()
 
 window.closeWindow = function() {

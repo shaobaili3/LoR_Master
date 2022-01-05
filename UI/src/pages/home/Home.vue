@@ -405,7 +405,7 @@ export default {
     }
   },
   mounted() {
-    console.log("Mounted")
+    console.log("Page Home Mounted")
     console.log("Node Environment:", process.env.NODE_ENV)
     console.log("$store.state.locale", this.locale)
 
@@ -482,6 +482,10 @@ export default {
       var params = new URLSearchParams(search)
       if (params.has('code')) {
         this.showDeckDetail(params.get('code'))
+      } else if (window.location.search.includes('/meta')) {
+        this.setCurrentPage(PANELS.meta)
+      } else if (window.location.search.includes('/search')) {
+        this.setCurrentPage(PANELS.search)
       }
     },
 
@@ -670,7 +674,7 @@ export default {
         this.setCurrentPage(PANELS.search)
         this.$nextTick(() => {
           // Wait until the panel search mounts
-          console.log(this.$refs)
+          // console.log(this.$refs)
           this.$refs.panelSearch.searchPlayer(data)
         })
       }
@@ -904,7 +908,7 @@ export default {
       if (server === 'sea') {
         apiLink = `${this.apiBase}/local`
       } else {
-        apiLink = `${this.apiBase}/search/${server}/${name}/${tag}`
+        apiLink = `${this.API_WEB}/search/${server}/${name}/${tag}`
       }
 
       console.log("Request Local History", apiLink)
@@ -988,7 +992,7 @@ export default {
     },
     processHistory(data, playerName, playerServer) {
       console.log("Process History!", playerName, playerServer)
-      console.log(data)
+      // console.log(data)
 
       var matchInfo = {
         matches: [],

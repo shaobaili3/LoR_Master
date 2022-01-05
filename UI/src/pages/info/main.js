@@ -9,7 +9,8 @@ import { createStore, mapState, mapMutations } from 'vuex'
 const store = createStore({
   state () {
     return {
-      locale: 'en_us'
+      locale: 'en_us',
+      IS_ELECTRON: window.ipcRenderer !== undefined,
     }
   },
   mutations: {
@@ -34,7 +35,8 @@ app.use(i18n).use(store)
 app.mixin({
   computed: {
     ...mapState([
-      'locale'
+      'locale',
+      'IS_ELECTRON'
     ])
   },
   methods: {

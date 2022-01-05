@@ -27,7 +27,7 @@
     <div
       class="actions"
       :class="{ 'fixed-height': fixedHeight }"
-      v-if="showCopy && this.baseDeck"
+      v-if="showCopy && this.baseDeck && this.cards.length > 0"
     >
       <!-- <a class="actions-btn" :href="deckDetailLink" target="_blank"><span class="actions-icon fa fa-external-link-alt"></span>Detail</a> -->
       <div class="actions-btn" v-if="showURL" @click="openURL(deckDetailLink)">
@@ -36,10 +36,10 @@
       <div class="actions-btn tooltip" @click="copyDeckcode">
         <span
           class="actions-icon far fa-copy"
-          :class="{ 'fa-exclamation-triangle': !isValid }"
+          :class="{ 'fa-exclamation-triangle': !isFull }"
         ></span
         >{{ copyText }}
-        <div class="tooltiptext top-end" v-if="!isValid">
+        <div class="tooltiptext top-end" v-if="!isFull">
           {{ $t("tooltips.incompleteDeck") }}
         </div>
       </div>
@@ -218,7 +218,7 @@ export default {
     copyText() {
       return this.copied ? this.$t("str.copied") : this.$t("str.copy");
     },
-    isValid() {
+    isFull() {
       return (
         this.cards.reduce((prev, card) => {
           return prev + card.baseCount;

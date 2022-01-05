@@ -94,7 +94,6 @@ export default {
 
       var api_link = `${rootState.API_WEB}/archetypes`;
 
-      // var api_link = `${rootGetters.apiBase}/meta`;
       // var promise = new Promise(resolve => setTimeout(resolve, 1000))
       var promise = axios.get(api_link, { cancelToken: axiosSource.token })
       promise

@@ -7,7 +7,6 @@
         <deck-detail class="max-w-[250px]" :base-deck="code"></deck-detail>
       </div>
       <div class="w-full md:w-3/4 px-4 text-left" v-if="deck">
-      
         <!-- Loading -->
 
         <div v-if="loadingStats || isLoading" class="text-2xl pb-4">
@@ -16,25 +15,25 @@
         </div>
 
         <div v-if="noInfo">
-          <div class="text-3xl pb-3">No detail found</div>
+          <div class="text-3xl pb-3">{{ $t('str.noDetail') }}</div>
         </div>
 
         <!-- Meta -->
 
         <div v-if="!isLoading && deckStats" class="pb-4">
-          <div class="text-3xl pb-3">Meta Stats</div>
-          <meta-group :no-detail="true" :group="deckStats" ></meta-group>
-          <div class="text-3xl pb-3">Matchups</div>
+          <div class="text-3xl pb-3">{{ $t('deckCode.archetypeStats') }}</div>
+          <meta-group :no-detail="true" :group="deckStats"></meta-group>
+          <div class="text-3xl pb-3">{{ $t('deckCode.archetypeMatchups') }}</div>
           <meta-matchup :matchups="deckStats.matchup"></meta-matchup>
         </div>
 
         <!-- Mulligan -->
 
         <div v-if="keeps || swaps" class="pb-6">
-          <div class="text-3xl pb-3">Mulligan Guide</div>
+          <div class="text-3xl pb-3">{{ $t('deckCode.mulliganGuide') }}</div>
           <div class="block sm:flex w-full">
             <div class="w-full sm:w-1/2" v-if="keeps">
-              <div class="text-xl pb-2">Keep</div>
+              <div class="text-xl pb-2">{{ $t('deckCode.keep') }}</div>
               <div
                 class="flex w-full items-center"
                 v-for="keep in keeps"
@@ -45,7 +44,7 @@
               </div>
             </div>
             <div class="w-full sm:w-1/2" v-if="swaps">
-              <div class="text-xl pb-2">Mulligan</div>
+              <div class="text-xl pb-2">{{ $t('deckCode.mulligan') }}</div>
               <div
                 class="flex w-full items-center"
                 v-for="swap in swaps"
@@ -57,8 +56,6 @@
             </div>
           </div>
         </div>
-        
-        
       </div>
     </div>
   </div>
@@ -123,7 +120,72 @@ export default {
     ...mapState("metaData", ["metaGroups", "isLoading"]),
     noInfo() {
       // Not loading and no information
-      return !(this.loadingStats || this.isLoading) && !(this.keeps || this.swaps) && !(this.deckStats)
+      return (
+        !(this.loadingStats || this.isLoading) &&
+        !(this.keeps || this.swaps) &&
+        !this.deckStats
+      );
+    },
+    getDecodedDeck() {
+      var deck = null;
+      if (this.code) {
+        try {
+          deck = DeckEncoder.decode(this.code);
+        } catch (error) {
+          console.log(error);
+          return null;
+        }
+      }
+      return deck;
+    },
+    getFactions() {
+      var cards = this.getDecodedDeck;
+      if (!cards) return null;
+
+      var factionIDs = [];
+      for (var j in cards) {
+        var cardCode = cards[j].code;
+        var card = this.sets_en[cardCode];
+        if (card) {
+          if (card.regions && card.regions.length == 1) {
+            // Only considers mono region cards
+            var regionID = regionRefID[card.regionRefs[0]];
+
+            if (factionIDs.indexOf(regionID) == -1) {
+              factionIDs.push(regionID);
+            }
+          }
+        }
+      }
+      return factionIDs;
+    },
+    getChamps() {
+      var deck = this.getDecodedDeck;
+      if (!deck) return null;
+
+      var champs = [];
+      for (var j in deck) {
+        let cardCode = deck[j].code;
+        if (championCards.champObj[cardCode] != null) {
+          var card = this.sets_en[cardCode];
+          if (card) {
+            let champ = {
+              count: deck[j].count,
+              code: cardCode,
+              name: card.name
+            };
+            champs.push(champ);
+          }
+        }
+      }
+      champs = champs.sort((a, b) => (a.count > b.count ? 1 : -1));
+      return champs;
+    },
+    archetypeID() {
+      var factionNames = this.getFactions.map((id) => regionNames[id]).sort();
+      var champNames = this.getChamps.slice(0,2).map(champ => champ.name).sort();
+      var IDString = factionNames.join(" ") + " " + champNames.join(" ")
+      return IDString;
     },
     deckStats() {
       if (this.metaGroups) {
@@ -131,9 +193,9 @@ export default {
           let stats = group.decks.find((deck) => {
             return deck.deck_code == this.code;
           });
-          if (stats) {
-            let newGroup = { ...group }
-            newGroup.feature = stats
+          if (group._id == this.archetypeID) {
+            let newGroup = { ...group };
+            newGroup.feature = stats;
             return newGroup;
           }
         }
@@ -164,8 +226,8 @@ export default {
     },
 
     async requestDeckStats() {
-      this.loadingStats = true;
-      await new Promise((resolve) => setTimeout(resolve, 2000));
+      // this.loadingStats = true;
+      // await new Promise((resolve) => setTimeout(resolve, 2000));
       this.processDeckStats({});
     },
     processDeckStats(data) {
