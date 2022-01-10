@@ -184,6 +184,9 @@ export default {
     archetypeID() {
       var factionNames = this.getFactions.map((id) => regionNames[id]).sort();
       var champNames = this.getChamps.slice(0,2).map(champ => champ.name).sort();
+      if (this.getChamps.length == 0) {
+        champNames = ["No-Champion"];
+      }
       var IDString = factionNames.join(" ") + " " + champNames.join(" ")
       return IDString;
     },
