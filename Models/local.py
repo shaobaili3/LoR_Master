@@ -1,9 +1,9 @@
 import requests
 import constants as cs
 from Models.deck import getDeckCode
+import requests
+import datetime
 import json
-import os
-import constants
 from datetime import datetime
 
 
@@ -66,7 +66,7 @@ class Local:
 
     # get latest game result and update self.gameId
     def getResult(self):
-        playerId = self.setting.playerId.lower()
+        riot_id_lower = self.setting.playerId.lower()
         try:
             resultRequest = self.session.get(self.getResultLink())
             resultJson = resultRequest.json()
@@ -77,8 +77,8 @@ class Local:
             self.gameId = None
             return
         # self.startTime = str(datetime.utcnow())
-        if playerId not in self.cache.localMatches:
-            self.cache.localMatches[playerId] = []
+        if riot_id_lower not in self.cache.localMatches:
+            self.cache.localMatches[riot_id_lower] = []
         localMatch = {}
         localMatch['startTime'] = self.startTime
         localMatch['endTime'] = datetime.utcnow().isoformat()
@@ -86,8 +86,18 @@ class Local:
         localMatch['opponentName'] = self.opponentName
         localMatch['opponentTag'] = self.opponentTag
         localMatch['deck_tracker'] = self.trackerDict
-        self.cache.localMatches[playerId].insert(0, localMatch)
+        localMatch['riot_id'] = self.setting.playerId
+        localMatch['_id'] = self.setting.playerId
+        self.cache.localMatches[riot_id_lower].insert(0, localMatch)
         self.cache.saveLocal()
+        try:
+            data = {}
+            url = "https://lmttest.herokuapp.com/tracker"
+            headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
+            response = requests.post(url, data=json.dumps(localMatch), headers=headers)
+            print(response.text)
+        except requests.exceptions.HTTPError as e:
+            print('post error', e.response)
         return localPlayerWon
 
     def updateTracker(self):
