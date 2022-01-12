@@ -87,11 +87,9 @@ class Local:
         localMatch['opponentTag'] = self.opponentTag
         localMatch['deck_tracker'] = self.trackerDict
         localMatch['riot_id'] = self.setting.playerId
-        localMatch['_id'] = self.setting.playerId
         self.cache.localMatches[riot_id_lower].insert(0, localMatch)
         self.cache.saveLocal()
         try:
-            data = {}
             url = "https://lmttest.herokuapp.com/tracker"
             headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
             response = requests.post(url, data=json.dumps(localMatch), headers=headers)
