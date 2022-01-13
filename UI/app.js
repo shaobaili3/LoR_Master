@@ -480,10 +480,12 @@ function newMainWindow() {
     slashes: true,
     pathname: require("path").join(__dirname, "dist", "index.html"),
   })
-
-  // console.log(mainWindowUrl)
-  // mainWindow.loadURL(`file://${__dirname}/dist/index.html`)
-  mainWindow.loadURL(mainWindowUrl)
+  
+  if (developmentMode) {
+    mainWindow.loadURL("http://localhost:8080/index.html")
+  } else {
+    mainWindow.loadURL(mainWindowUrl)
+  }
 
   // mainWindow.setAlwaysOnTop(true, level = "pop-up-menu")
   mainWindow.on("closed", () => {
@@ -505,7 +507,7 @@ function newMainWindow() {
     mainWindow.webContents.send("debug-info-display", process.argv)
   })
 
-  if (developmentMode) mainWindow.webContents.openDevTools()
+  if (developmentMode) mainWindow.webContents.openDevTools({ mode: "right" })
 
   allWindows.push(mainWindow)
 }
@@ -561,10 +563,10 @@ function newDeckWindow() {
     windowHeight = bounds.height ?? defaultTrackerHeight
   }
 
-  if (developmentMode) {
-    windowWidth = windowWidth + devConsoleWidth
-    windowMaxWidth = defaultTrackerMaxWidth + devConsoleWidth
-  }
+  // if (developmentMode) {
+  //   windowWidth = windowWidth + devConsoleWidth
+  //   windowMaxWidth = defaultTrackerMaxWidth + devConsoleWidth
+  // }
 
   deckWindow = new BrowserWindow({
     maxWidth: windowMaxWidth,
@@ -585,7 +587,13 @@ function newDeckWindow() {
   })
 
   remote.enable(deckWindow.webContents)
-  deckWindow.loadURL(`file://${__dirname}/dist/deck.html`)
+
+  if (developmentMode) {
+    deckWindow.loadURL("http://localhost:8080/deck.html")
+  } else {
+    deckWindow.loadURL(`file://${__dirname}/dist/deck.html`)
+  }
+  
 
   deckWindow.setAlwaysOnTop(true, (level = "pop-up-menu"))
   deckWindow.on("closed", () => {
@@ -614,7 +622,7 @@ function newDeckWindow() {
   deckWindow.on("moved", handleMoveResize)
   deckWindow.on("resized", handleMoveResize)
 
-  if (developmentMode) deckWindow.webContents.openDevTools()
+  if (developmentMode) deckWindow.webContents.openDevTools({ mode: "undocked" })
 
   allWindows.push(deckWindow)
 }

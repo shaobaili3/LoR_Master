@@ -156,7 +156,6 @@ const mix = function (color_1, color_2, weight) {
 export default {
   components: { DeckPreview },
   mounted() {
-    console.log(this.gradientString)
   },
   props: ["code", "playNum", "playRate", "winRate", "players", "isFeature", "linkDetail"],
   computed: {

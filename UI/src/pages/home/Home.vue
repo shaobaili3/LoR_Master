@@ -758,15 +758,15 @@ export default {
         return
       }
       
-      // DevStatus
-      if (process.env.NODE_ENV == "development") {
-        console.log("Request Status Data")
-        const testRegion = 'sea'
-        // const testRegion = 'americas'
-        const testStatus = `{"language": "zh-TW", "lorRunning": true, "playerId": "FlyingFish#1111","port": "21337","server": "${testRegion}"}`
-        this.processStatusInfo(JSON.parse(testStatus))
-        return
-      } 
+      // DevLocal
+      // if (process.env.NODE_ENV == "development") {
+      //   console.log("Request Status Data")
+      //   const testRegion = 'sea'
+      //   // const testRegion = 'americas'
+      //   const testStatus = `{"language": "zh-TW", "lorRunning": true, "playerId": "FlyingFish#1111","port": "21337","server": "${testRegion}"}`
+      //   this.processStatusInfo(JSON.parse(testStatus))
+      //   return
+      // } 
 
       lastStatusRequestTime = Date.now()
       axios.get(`${this.apiBase}/status`)
@@ -859,26 +859,26 @@ export default {
       console.log("Request Local History")
 
       // DevLocal
-      if (process.env.NODE_ENV == "development") {
+      // if (process.env.NODE_ENV == "development") {
 
-        // const testData = require('../../assets/data/testLocalHistoryData')
-        const testData = require('../../assets/data/testLocalData')['flyingfish#0000']
+      //   // const testData = require('../../assets/data/testLocalHistoryData')
+      //   const testData = require('../../assets/data/testLocalData')['flyingfish#0000']
 
-        // this.playerName = "FlyingFish"
-        // this.playerRegion = "americas"
-        // this.processSearchHistory(testData)
+      //   // this.playerName = "FlyingFish"
+      //   // this.playerRegion = "americas"
+      //   // this.processSearchHistory(testData)
 
-        // pass
-        // this.processLocalHistory(testData['flyingfish#0000'])
-        this.localHistoryLoading = true
-        setTimeout(() => {
-          this.localHistoryLoading = false
-          Math.random() > 0.5 ? this.processLocalHistory(testData) : this.processLocalHistory([])
-        }, 1000)
+      //   // pass
+      //   // this.processLocalHistory(testData['flyingfish#0000'])
+      //   this.localHistoryLoading = true
+      //   setTimeout(() => {
+      //     this.localHistoryLoading = false
+      //     Math.random() > 0.5 ? this.processLocalHistory(testData) : this.processLocalHistory([])
+      //   }, 1000)
         
 
-        return
-      }
+      //   return
+      // }
 
       if (this.localHistoryLoading) {
         // Don't do anything if there is already a local search request

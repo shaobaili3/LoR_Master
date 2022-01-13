@@ -591,7 +591,6 @@ export default {
         this.oppoName = null;
         this.oppoRank = null;
         this.oppoLp = null;
-        this.matchTotalNum = 0;
         this.matchInfos = [];
       }
 
