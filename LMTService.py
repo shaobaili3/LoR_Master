@@ -14,6 +14,7 @@ import argparse
 import time
 import threading
 from waitress import serve
+from flask_cors import CORS
 
 argParser = argparse.ArgumentParser()
 argParser.add_argument('--port', action='store', type=int, default=26531)
@@ -61,6 +62,8 @@ class FlaskApp(Flask):
         work.start()
 
 app = FlaskApp(__name__)
+CORS(app)
+
 
 @app.route("/track", methods=['get'])
 def track():
