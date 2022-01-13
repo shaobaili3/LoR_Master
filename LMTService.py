@@ -11,6 +11,8 @@ import io
 import sys
 import constants
 import argparse
+import time
+import threading
 from waitress import serve
 
 argParser = argparse.ArgumentParser()
@@ -47,6 +49,16 @@ localTrack = Local(settingTrack, cacheModel)
 class FlaskApp(Flask):
     def __init__(self, *args, **kwargs):
         super(FlaskApp, self).__init__(*args, **kwargs)
+        self.processWork()
+
+    def processWork(self):
+        def run_work():
+            while True:
+                readLog(settingTrack)
+                time.sleep(3)
+        work = threading.Thread(target=run_work)
+        work.daemon = True
+        work.start()
 
 app = FlaskApp(__name__)
 

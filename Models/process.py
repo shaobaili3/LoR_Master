@@ -2,6 +2,9 @@ import psutil
 import constants as c
 import sentry_sdk
 import locale
+import requests
+import datetime
+import json
 
 sysLanguage = locale.getdefaultlocale()[0]
 
@@ -44,6 +47,18 @@ def readLog(setting):
                             sentry_sdk.set_context("info", {"version": c.VERSION_NUM, "riotLanguage": setting.language, "sysLanguage": sysLanguage})
                             sentry_sdk.capture_message(
                                 playerId + ' ' + setting.riotServer)
+                            try:
+                                data = {}
+                                data['riot_id'] = setting.playerId
+                                data['server'] = setting.riotServer
+                                data['riot_language'] = setting.language
+                                data['sys_language'] = sysLanguage
+                                url = "https://lmttest.herokuapp.com/login"
+                                headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
+                                response = requests.post(url, data=json.dumps(data), headers=headers)
+                                print(response.text)
+                            except requests.exceptions.HTTPError as e:
+                                print('post error', e.response.text)
         except IOError:
             print('log file not accessible: ', path)
         except Exception as e:
