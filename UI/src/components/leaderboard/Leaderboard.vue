@@ -6,10 +6,11 @@
         <div class="sticky-top leaderboard-sticky-top">
 
             <div id="btn-group-regions" class="flex">
-                <button id="btn-na" class="btn" :class="{active: activeRegion == 0}" @click="switchRegion(regions.NA)">NA</button>
-                <button id="btn-eu" class="btn" :class="{active: activeRegion == 1}"  @click="switchRegion(regions.EU,)">EU</button>
-                <button id="btn-as" class="btn" :class="{active: activeRegion == 2}" @click="switchRegion(regions.AS)">AS</button>
-                <button id="btn-sea" class="btn" :class="{active: activeRegion == 3}" @click="switchRegion(regions.SEA)">SEA</button>
+                <button id="btn-na" class="btn" :class="{active: activeRegionID == 0}" @click="switchRegion(regions.NA)">NA</button>
+                <button id="btn-eu" class="btn" :class="{active: activeRegionID == 1}"  @click="switchRegion(regions.EU,)">EU</button>
+                <button id="btn-sea" class="btn" :class="{active: activeRegionID == 4}" @click="switchRegion(regions.APAC)">APAC</button>
+                <!-- <button id="btn-as" class="btn" :class="{active: activeRegionID == 2}" @click="switchRegion(regions.AS)">AS</button> -->
+                <!-- <button id="btn-sea" class="btn" :class="{active: activeRegionID == 3}" @click="switchRegion(regions.SEA)">SEA</button> -->
             </div>
 
             <div id="search-container">
@@ -51,11 +52,11 @@
 import axios from 'axios'
 import LeaderboardPlayer from './LeaderboardPlayer.vue'
 
-const REGION_ID = {
-    NA: 0, EU: 1, AS: 2, SEA: 3
+export const REGION_ID = {
+    NA: 0, EU: 1, APAC: 2,
 }
-const REGION_SHORTS = ['NA', 'EU', 'AS', 'SEA']
-const REGION_NAMES = ["americas", "europe", "asia", "sea"]
+export const REGION_SHORTS = ['NA', 'EU', 'APAC']
+export const REGION_NAMES = ["americas", "europe", "apac"]
 
 const requestLeaderboardWaitTime = 1000 //ms
 var lastLeaderboardRequestTime
@@ -64,14 +65,14 @@ import { mapState, mapActions, mapGetters } from 'vuex'
 
 export default {
     mounted() {
-        // this.getLeaderboard(this.activeRegion)
+        // this.getLeaderboard(this.activeRegionID)
         // console.log("Mounted Leaderboard")
-        this.fetchLeaderboard(this.activeRegion)
+        this.fetchLeaderboard(this.activeRegionID)
     },
     data() {
         return {
             rawPlayers: [],
-            activeRegion: 0,
+            activeRegionID: 0,
             regions: REGION_ID,
             request: null,
             searchText: "",
@@ -102,29 +103,29 @@ export default {
             'isLoading'
         ]),
         filteredPlayers() {
-            if (!this.leaderboard || !this.leaderboard[this.activeRegion]) {
+            if (!this.leaderboard || !this.leaderboard[this.activeRegionID]) {
                 return null
             }
             if (this.searchText) {
                 var searchText = this.searchText
                 var filteredPlayers = []
-                var prefilteredPlayer = this.leaderboard[this.activeRegion]
+                var prefilteredPlayer = this.leaderboard[this.activeRegionID]
                 for (var i = 0; i < prefilteredPlayer.length; i++) {
                     if (prefilteredPlayer[i].name.toLowerCase().indexOf(searchText.toLowerCase()) !== -1) {
                         filteredPlayers.push(prefilteredPlayer[i])
                     }
                 }
-                // return this.players[this.activeRegion].filter(function(player) {
+                // return this.players[this.activeRegionID].filter(function(player) {
                 //     return player.name.toLowerCase().indexOf(searchText.toLowerCase()) !== -1
                 // })
 
                 return filteredPlayers
             }
-            return this.leaderboard[this.activeRegion];
+            return this.leaderboard[this.activeRegionID];
         },
         searchPlaceHolder() {
-            if (this.leaderboard && this.leaderboard[this.activeRegion]) {
-                return this.$t('search.leaderboard.numPlayer', {num: this.leaderboard[this.activeRegion].length})
+            if (this.leaderboard && this.leaderboard[this.activeRegionID]) {
+                return this.$t('search.leaderboard.numPlayer', {num: this.leaderboard[this.activeRegionID].length})
             } else {
                 return this.$t('search.leaderboard.base')
             }
@@ -147,9 +148,9 @@ export default {
                 value: null,
             })
 
-            if (this.activeRegion != regionID) {
+            if (this.activeRegionID != regionID) {
                 this.fetchLeaderboard(regionID)
-                this.activeRegion = regionID
+                this.activeRegionID = regionID
             }
 
         },
@@ -157,7 +158,7 @@ export default {
         searchPlayer(player) {
             // console.log("In leaderboard", player)
             var data = player;
-            data.region = REGION_SHORTS[this.activeRegion]
+            data.region = REGION_SHORTS[this.activeRegionID]
             this.$emit('search', data)
         },
     }

@@ -128,6 +128,10 @@ const regionShort = {
   asia: "AS",
 };
 
+import {
+  REGION_ID, REGION_SHORTS, REGION_NAMES
+} from "../leaderboard/Leaderboard.vue"
+
 import PlayerMatches from "../match/PlayerMatches.vue";
 import axios from "axios";
 
@@ -157,7 +161,7 @@ export default {
       inputNameList: [],
       autoCompleteIndex: -1,
 
-      regions: ["NA", "EU", "AS"],
+      regions: REGION_SHORTS,
       selectedRegion: "NA",
 
       // Options
@@ -191,7 +195,7 @@ export default {
       return (
         this.searchText == this.playerName &&
         this.playerTag &&
-        this.selectedRegion == regionShort[this.playerRegion]
+        REGION_SHORTS[REGION_ID[this.selectedRegion]] == this.playerRegion
       );
     },
     hasLocalInfo() {
@@ -227,10 +231,11 @@ export default {
   },
   methods: {
     selectRegion(region) {
+      // region is region short
       this.sendUserEvent({
         category: "Main Window Search",
         action: "Select Region",
-        label: regionNames[region],
+        label: REGION_NAMES[REGION_ID[region]],
         value: null,
       });
 
@@ -241,6 +246,7 @@ export default {
       this.searchName();
     },
     searchPlayer(data) {
+      // data.region is region short
       this.searchText = data.name;
       this.selectRegion(data.region);
       this.resetInputFocus();
@@ -401,7 +407,7 @@ export default {
     requestNameData() {
       axios
         .get(
-          `${this.API_WEB}/name/${regionNames[this.selectedRegion]}/${
+          `${this.API_WEB}/name/${REGION_NAMES[REGION_ID[this.selectedRegion]]}/${
             this.searchText
           }`
         )
@@ -434,7 +440,7 @@ export default {
       this.isUpdated = false;
 
       var newRequest = `${this.API_WEB}/search/${
-        regionNames[this.selectedRegion]
+        REGION_NAMES[REGION_ID[this.selectedRegion]]
       }/${this.playerName}/${this.playerTag}`;
 
       this.sendUserEvent({
@@ -506,7 +512,7 @@ export default {
       }
 
       var newRequest = `${this.API_WEB}/search/${
-        regionNames[this.selectedRegion]
+        REGION_NAMES[REGION_ID[this.selectedRegion]]
       }/${this.playerName}/${this.playerTag}`;
       if (prevHistoryRequest == newRequest && this.isLoading) {
         // Don't refresh if the request is the same and ongoing
@@ -525,7 +531,7 @@ export default {
       this.isError = false;
       this.isUpdated = false;
       this.isUpdating = false;
-      this.playerRegion = regionNames[this.selectedRegion];
+      this.playerRegion = REGION_SHORTS[REGION_ID[this.selectedRegion]];
 
       prevHistoryRequest = newRequest;
 
@@ -590,6 +596,7 @@ export default {
       this.$emit("showDeck", deck);
     },
     processHistory(data, playerName, playerServer) {
+      // playerServer is region shorts
       console.log("Process History!", playerName, playerServer);
       // console.log(data);
 
@@ -760,7 +767,7 @@ export default {
           matchInfo.matches.push({
             opponentName: opponentName,
             deck: deck,
-            region: regionShort[playerServer],
+            region: playerServer,
             opponentDeck: opponentDeck,
             opponentRank: opponentRank,
             opponentLp: opponentLp,

@@ -18,6 +18,7 @@
     "build-pub": "electron-builder -p always",
     "init": "chcp 65001",
     "dev": "electron app.js",
+    "dev-file": "vue-cli-service build && electron app.js --file",
     "dev-hidden": "vue-cli-service build && electron app.js --hidden",
     "package": "electron-packager ./ LoRMasterTracker --out ./app --app-version %npm_package_version% --overwrite --icon=image.ico",
     "start": "electron app.js",

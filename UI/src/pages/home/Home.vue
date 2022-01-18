@@ -257,6 +257,10 @@ import { locales as cardLocales, localeNames as cardLocaleNames} from '../templa
 import PanelDeckCode from '../../components/panels/PanelDeckCode.vue'
 import PanelMeta from '../../components/panels/PanelMeta.vue'
 
+import {
+  REGION_ID, REGION_SHORTS, REGION_NAMES
+} from "../../components/leaderboard/Leaderboard.vue"
+
 // import ua from 'universal-analytics'
 
 // const portNum = "26531"
@@ -327,7 +331,7 @@ export default {
     return {
       // rawDataString: null,
       
-      regions: ["NA", "EU", "AS"],
+      regions: REGION_SHORTS,
 
       isShowDeck: false,
       deckCode: null,

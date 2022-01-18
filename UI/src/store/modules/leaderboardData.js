@@ -1,11 +1,6 @@
-const REGION_ID = {
-  NA: 0,
-  EU: 1,
-  AS: 2,
-  SEA: 3,
-};
-const REGION_SHORTS = ["NA", "EU", "AS", "SEA"];
-const REGION_NAMES = ["americas", "europe", "asia", "sea"];
+import {
+  REGION_ID, REGION_SHORTS, REGION_NAMES
+} from "../../components/leaderboard/Leaderboard.vue"
 
 const requestLeaderboardWaitTime = 1000 // ms
 

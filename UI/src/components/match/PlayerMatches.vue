@@ -10,7 +10,11 @@
                     <span class="pre-info"><i class="iconfy">LP</i></span>
                     {{lp}}</div>
                 <div class="detail region" v-if="playerRegion">
-                    <span class="pre-info"><i class="fas" :class="playerRegion === 'sea' ? 'fa-globe-asia' : 'fa-globe-'+playerRegion"></i></span>
+                    <span class="pre-info"><i class="fas" :class="{
+                            'fa-globe-asia': playerRegion === 'APAC',
+                            'fa-globe-europe': playerRegion === 'EU',
+                            'fa-globe-americas': playerRegion === 'NA'
+                        }"></i></span>
                     {{playerRegionFC}}</div>
             </div>
             <div class="summary-item decks-summary" @wheel.prevent="horizontalScroll">
@@ -54,13 +58,7 @@
 import DeckChamps from '../deck/DeckChamps.vue';
 import MatchHistory from '../match/MatchHistory.vue';
 
-
-const REGION_ID = {
-    americas: 0,
-    europe: 1,
-    asia: 2,
-    sea: 3,
-};
+import { REGION_ID, REGION_SHORTS, REGION_NAMES } from "../leaderboard/Leaderboard.vue"
 
 // Some helper math functions
 function FLip(x) {
@@ -105,7 +103,7 @@ export default {
         playerRank: String,
         playerLP: String,
         playerTag: String,
-        playerRegion: String,
+        playerRegion: String, // region shorts
         matches: Array,
     },
     data() {
@@ -176,7 +174,7 @@ export default {
         },
         
         playerRegionFC() {
-            return this.$t('str.regions.'+this.playerRegion)
+            return this.$t('str.regions.'+ REGION_NAMES[REGION_ID[this.playerRegion]])
         },
         
         uniqueDeckCodes() {

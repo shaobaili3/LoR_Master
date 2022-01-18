@@ -15,6 +15,7 @@ remote.initialize()
 
 const isPackaged = app.isPackaged
 const isDev = process.argv.includes("--dev")
+const useFile = process.argv.includes("--file")
 
 const developmentMode = (true && !isPackaged) || isDev
 
@@ -447,11 +448,11 @@ function newMainWindow() {
   // let windowYPadding = 20
   let xOffSet = 0
 
-  if (developmentMode) {
-    windowWidth = windowWidth + 400
-    windowMaxWidth = windowWidth + 400
-    xOffSet = 350
-  }
+  // if (developmentMode) {
+  //   windowWidth = windowWidth + 400
+  //   windowMaxWidth = windowWidth + 400
+  //   xOffSet = 350
+  // }
 
   mainWindow = new BrowserWindow({
     maxWidth: windowMaxWidth,
@@ -481,7 +482,7 @@ function newMainWindow() {
     pathname: require("path").join(__dirname, "dist", "index.html"),
   })
   
-  if (developmentMode) {
+  if (developmentMode && !useFile) {
     mainWindow.loadURL("http://localhost:8080/index.html")
   } else {
     mainWindow.loadURL(mainWindowUrl)
@@ -507,7 +508,7 @@ function newMainWindow() {
     mainWindow.webContents.send("debug-info-display", process.argv)
   })
 
-  if (developmentMode) mainWindow.webContents.openDevTools({ mode: "right" })
+  if (developmentMode) mainWindow.webContents.openDevTools({ mode: "undocked" })
 
   allWindows.push(mainWindow)
 }
@@ -588,7 +589,7 @@ function newDeckWindow() {
 
   remote.enable(deckWindow.webContents)
 
-  if (developmentMode) {
+  if (developmentMode && !useFile) {
     deckWindow.loadURL("http://localhost:8080/deck.html")
   } else {
     deckWindow.loadURL(`file://${__dirname}/dist/deck.html`)
