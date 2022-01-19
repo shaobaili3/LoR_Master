@@ -8,7 +8,7 @@
             <div id="btn-group-regions" class="flex">
                 <button id="btn-na" class="btn" :class="{active: activeRegionID == 0}" @click="switchRegion(regions.NA)">NA</button>
                 <button id="btn-eu" class="btn" :class="{active: activeRegionID == 1}"  @click="switchRegion(regions.EU,)">EU</button>
-                <button id="btn-sea" class="btn" :class="{active: activeRegionID == 4}" @click="switchRegion(regions.APAC)">APAC</button>
+                <button id="btn-sea" class="btn" :class="{active: activeRegionID == 2}" @click="switchRegion(regions.APAC)">APAC</button>
                 <!-- <button id="btn-as" class="btn" :class="{active: activeRegionID == 2}" @click="switchRegion(regions.AS)">AS</button> -->
                 <!-- <button id="btn-sea" class="btn" :class="{active: activeRegionID == 3}" @click="switchRegion(regions.SEA)">SEA</button> -->
             </div>

@@ -616,60 +616,61 @@ export default {
 
       if (!data) return matchInfo;
 
-      if (playerServer == "sea") {
-        // sea players only have local data
-        for (let match of data) {
-          let opponentName,
-            opponentRank,
-            opponentLp,
-            opponentTag,
-            opponentDeck,
-            deck,
-            rounds,
-            win,
-            time,
-            order;
+      // if (playerServer == "sea") {
+      //   // sea players only have local data
+      //   for (let match of data) {
+      //     let opponentName,
+      //       opponentRank,
+      //       opponentLp,
+      //       opponentTag,
+      //       opponentDeck,
+      //       deck,
+      //       rounds,
+      //       win,
+      //       time,
+      //       order;
 
-          matchInfo.rank = match.playerRank; // Currently no value
-          matchInfo.lp = match.playerLp; // Currently no value
+      //     matchInfo.rank = match.playerRank; // Currently no value
+      //     matchInfo.lp = match.playerLp; // Currently no value
 
-          opponentName = match.opponentName;
-          opponentTag = null; // Cannot get
-          opponentRank = match.opponentRank; // Currently no value
-          opponentLp = match.opponentLp; // Currently no value
-          opponentDeck = match.deck_tracker.opGraveyardCode;
-          deck = match.deck_tracker.deckCode;
-          rounds = null; // Cannot get
-          win = match.localPlayerWon;
-          time = match.startTime;
-          order = null; // Cannot get
+      //     opponentName = match.opponentName;
+      //     opponentTag = null; // Cannot get
+      //     opponentRank = match.opponentRank; // Currently no value
+      //     opponentLp = match.opponentLp; // Currently no value
+      //     opponentDeck = match.deck_tracker.opGraveyardCode;
+      //     deck = match.deck_tracker.deckCode;
+      //     rounds = null; // Cannot get
+      //     win = match.localPlayerWon;
+      //     time = match.startTime;
+      //     order = null; // Cannot get
 
-          let badges = []; // Currently no value
+      //     let badges = []; // Currently no value
 
-          let details = {
-            openHand: match.deck_tracker.openHand,
-            replacedHand: match.deck_tracker.replacedHand,
-            timeline: match.deck_tracker.timeline,
-            startTime: match.startTime,
-            endTime: match.endTime,
-          };
+      //     let details = {
+      //       openHand: match.deck_tracker.openHand,
+      //       replacedHand: match.deck_tracker.replacedHand,
+      //       timeline: match.deck_tracker.timeline,
+      //       startTime: match.startTime,
+      //       endTime: match.endTime,
+      //     };
 
-          matchInfo.matches.push({
-            opponentName: opponentName,
-            deck: deck,
-            region: regionShort[this.localPlayerInfo.server],
-            opponentDeck: opponentDeck,
-            opponentRank: opponentRank,
-            opponentLp: opponentLp,
-            opponentTag: opponentTag,
-            rounds: rounds,
-            win: win,
-            time: time,
-            badges: badges,
-            details: details,
-          });
-        }
-      } else {
+      //     matchInfo.matches.push({
+      //       opponentName: opponentName,
+      //       deck: deck,
+      //       region: regionShort[this.localPlayerInfo.server],
+      //       opponentDeck: opponentDeck,
+      //       opponentRank: opponentRank,
+      //       opponentLp: opponentLp,
+      //       opponentTag: opponentTag,
+      //       rounds: rounds,
+      //       win: win,
+      //       time: time,
+      //       badges: badges,
+      //       details: details,
+      //     });
+      //   }
+      // } else 
+      {
         // Processing for normal Data
         for (var key in data) {
           var match = data[key];
@@ -767,7 +768,7 @@ export default {
           matchInfo.matches.push({
             opponentName: opponentName,
             deck: deck,
-            region: playerServer,
+            region: playerServer, // region short passed in, essentially this.playerRegion
             opponentDeck: opponentDeck,
             opponentRank: opponentRank,
             opponentLp: opponentLp,
