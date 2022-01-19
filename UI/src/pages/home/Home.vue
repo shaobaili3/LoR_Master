@@ -673,8 +673,8 @@ export default {
 
       console.log("Search Player", data)
 
-      if (this.regions.includes(data.region)) {
-        // SEA will not be included
+      if (data.tag) {
+        // Only player with tag can be clicked 
         this.setCurrentPage(PANELS.search)
         this.$nextTick(() => {
           // Wait until the panel search mounts
