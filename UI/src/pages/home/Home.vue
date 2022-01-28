@@ -434,6 +434,8 @@ export default {
       'changeLocale'
     ]),
 
+    ...mapActions('deckLibData', ['deckLibPaste']),
+
     initEventBusses() {
       this.$emitter.on('showDeck', (e) => 
       {
@@ -531,16 +533,17 @@ export default {
     },
 
     processPaste() {
+      this.deckLibPaste(this.clipboardDeck)
       this.setCurrentPage(PANELS.decklib)
-
-      this.$nextTick(() => {
-        let lib = this.$refs.deckLib
-        if (lib) {
-          console.log("handled-paste")
-          lib.processPaste(this.clipboardDeck)
-          this.clipboardDeck = null
-        }
-      })
+      this.clipboardDeck = null
+      // this.$nextTick(() => {
+      //   let lib = this.$refs.deckLib
+      //   if (lib) {
+      //     console.log("handled-paste")
+      //     lib.processPaste(this.clipboardDeck)
+      //     this.clipboardDeck = null
+      //   }
+      // })
     },
 
     // Change Locale

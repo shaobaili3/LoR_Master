@@ -9,16 +9,12 @@
   },
   "scripts": {
     "init": "chcp 65001",
-
     "serve": "vue-cli-service serve",
     "serve-test": "vue-cli-service serve --mode staging",
-    
     "dev": "electron app.js",
     "dev-file": "vue-cli-service build && electron app.js --file",
     "dev-hidden": "vue-cli-service build && electron app.js --hidden",
-    
     "deploy": "deploy.sh",
-
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "build-installer": "electron-builder",
@@ -42,6 +38,7 @@
     "electron-updater": "^4.3.9",
     "mitt": "^3.0.0",
     "moment": "^2.29.1",
+    "pinia": "^2.0.10",
     "runeterra": "^2.0.0",
     "tasklist": "^4.0.1",
     "universal-analytics": "^0.4.23",

@@ -4,6 +4,7 @@ import '@/assets/css/global.css'
 
 import { createStore, mapState, mapGetters, mapMutations } from 'vuex'
 import sets_en from '../../../Resource/en_us.json'
+import { createPinia } from 'pinia'
 
 // concat to get rid of first layer array
 // reduce to convert array to key-value pair
@@ -19,6 +20,7 @@ import mitt from 'mitt'
 import champsFromDeck from '../store/modules/champsFromDeck'
 import metaData from '../store/modules/metaData'
 import leaderboardData from '../store/modules/leaderboardData'
+import deckLibData from '../store/modules/deckLibData'
 
 const API_WEB_BASE = process.env.VUE_APP_LMT_SERVER == "test" ? "https://lmttest.herokuapp.com" : "https://lormaster.herokuapp.com"
 
@@ -32,7 +34,8 @@ const store = createStore({
     modules: {
         champsFromDeck,
         metaData,
-        leaderboardData
+        leaderboardData,
+        deckLibData
     },
     state () {
         return {
@@ -98,7 +101,9 @@ const app = createApp(App)
 
 const emitter = mitt()
 app.config.globalProperties.$emitter = emitter
-app.use(i18n).use(store)
+app.use(i18n)
+app.use(store)
+app.use(createPinia())
 
 app.mixin({
     computed: {

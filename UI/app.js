@@ -74,6 +74,10 @@ app.on("ready", () => {
     globalShortcut.register("Alt+CommandOrControl+T", () => {
       requestTestHistory()
     })
+    globalShortcut.register('CommandOrControl+R', function() {
+      console.log('Reload Window')
+      mainWindow.reload()
+    })
   }
 
   if (app.isPackaged) {
@@ -813,6 +817,7 @@ ipcMain.on("request-store", (event, key) => {
 })
 
 ipcMain.on("save-store", (event, key, val) => {
+  console.log(`Saving to Store | Key: ${key}`)
   store.set(key, val)
 })
 
