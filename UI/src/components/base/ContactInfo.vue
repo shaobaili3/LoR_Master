@@ -18,7 +18,7 @@
                 FlyingFish</span>
             </p>
         </div>
-        <contact-message-box :apiBase="apiBase"></contact-message-box>
+        <contact-message-box></contact-message-box>
         
     </div>
 </template>
@@ -32,12 +32,6 @@ export default {
     },
     data() {
         return {}
-    },
-    props: {
-        apiBase: {
-            type: String,
-            required: true
-        }
     },
     mounted() {
         

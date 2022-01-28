@@ -133,11 +133,11 @@
     </div>
 
     <div class="main-content-container search" v-if="currentPage == PANELS.search" @scroll="handleContentScroll">
-      <panel-search ref="panelSearch" :apiBase="apiBase" @showDeck="showDeck"></panel-search>
+      <panel-search ref="panelSearch" @showDeck="showDeck"></panel-search>
     </div>
 
     <div class="main-content-container leaderboard" v-if="currentPage == PANELS.leaderboard" @scroll="handleContentScroll">
-      <leaderboard :apiBase="apiBase" @search="searchPlayer($event)"></leaderboard>
+      <leaderboard @search="searchPlayer($event)"></leaderboard>
     </div>
 
     <div class="main-content-container deck-library" v-if="currentPage == PANELS.decklib" @scroll="handleContentScroll">
@@ -153,7 +153,7 @@
     </div>
 
     <div class="main-content-container contact" v-if="currentPage == PANELS.contact" @scroll="handleContentScroll">
-      <contact-info :apiBase="apiBase"></contact-info>
+      <contact-info></contact-info>
     </div>
 
     <div class="main-content-container settings" v-if="currentPage == PANELS.settings" @scroll="handleContentScroll">
@@ -375,13 +375,6 @@ export default {
       }
       return this.$t('str.loading') 
     },
-    // apiBase() {
-    //   if (this.IS_ELECTRON) {
-    //     return `http://127.0.0.1:${this.portNum}`
-    //   }
-    //   return `https://lormaster.herokuapp.com`
-    //   // return 'https://85pj77.deta.dev'
-    // },
     lorNewsURL() {
       return `https://playruneterra.com/${this.locale.replace('_', '-')}/news`
     }

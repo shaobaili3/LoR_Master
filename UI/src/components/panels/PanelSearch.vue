@@ -140,7 +140,6 @@ export default {
     PlayerMatches,
   },
   props: {
-    apiBase: String,
   },
   data() {
     return {

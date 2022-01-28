@@ -30,14 +30,7 @@ export default {
             doubleCheck: false,
         }
     },
-    props: {
-        apiBase: {
-            type: String,
-            required: true
-        }
-    },
     mounted() {
-        
     },
     methods: {
         checkInput() {
@@ -46,19 +39,7 @@ export default {
         },
         sendMessage() {
             if (this.doubleCheck) {
-                // console.log("Message is", this.message)
-                // axios.post(`${this.apiBase}/report`, {
-                //     firstName: 'Fred',
-                //     lastName: 'Flintstone'
-                // })
-                // .then(function (response) {
-                // console.log(response);
-                // })
-                // .catch(function (error) {
-                // console.log(error);
-                // });
-
-                var reportUrl = `${this.apiBase}/report/${encodeURIComponent(this.message)}`
+                var reportUrl = `${this.API_WEB}/report/${encodeURIComponent(this.message)}`
                 console.log('Sending url', reportUrl)
                 axios.get(reportUrl).then((response) => {
                     console.log("Send Report Success")

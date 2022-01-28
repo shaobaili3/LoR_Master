@@ -296,12 +296,6 @@ export default {
       }
       return false;
     },
-    apiBase() {
-      if (this.IS_ELECTRON) {
-        return `http://127.0.0.1:${this.portNum}`;
-      }
-      return `https://lormaster.herokuapp.com`;
-    },
     matchTotalNum() {
       // console.log(this.matchInfos);
       return this.matchInfos.reduce((total, item) => total + item.matches, 0);
@@ -314,6 +308,7 @@ export default {
     // console.log("Mounted")
     // this.requestData()
     console.log("Page Deck Mounted");
+    console.log(`API BASE: ${this.apiBase}`);
     
     // this.hideWindow()
     if (this.IS_ELECTRON) {

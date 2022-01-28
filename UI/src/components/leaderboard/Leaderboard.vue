@@ -80,13 +80,6 @@ export default {
             dataStartTime: 0,
         }
     },
-    
-    props: {
-        apiBase: {
-            type: String,
-            required: true
-        }
-    },
     emits: {
         search: ({ region, name, tag }) => {
             if (region && name && tag) {
