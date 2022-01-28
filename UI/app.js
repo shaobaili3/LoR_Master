@@ -242,6 +242,7 @@ autoUpdater.on("error", (err) => {
 })
 
 ipcMain.on("check-update", (event) => {
+  mainWindow.webContents.send("app-version", currentVersion)
   checkForUpdates()
 })
 
@@ -503,7 +504,7 @@ function newMainWindow() {
 
   mainWindow.once("ready-to-show", () => {
     if (!startHidden) mainWindow.show()
-
+    console.log("-- Main Window Ready -- ")
     mainWindow.webContents.send("app-version", currentVersion)
     mainWindow.webContents.send("debug-info-display", process.argv)
   })
