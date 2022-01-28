@@ -31,7 +31,9 @@
     >
       <!-- <a class="actions-btn" :href="deckDetailLink" target="_blank"><span class="actions-icon fa fa-external-link-alt"></span>Detail</a> -->
       <div class="actions-btn" v-if="showURL" @click="openURL(deckDetailLink)">
-        <span class="actions-icon fa fa-external-link-alt"></span>Detail
+        <span class="actions-icon fa fa-external-link-alt"></span>{{
+          $t('str.detail')
+        }}
       </div>
       <div class="actions-btn tooltip" @click="copyDeckcode">
         <span

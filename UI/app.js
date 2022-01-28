@@ -533,6 +533,7 @@ function newDeckWindow() {
       height: defaultTrackerHeight,
     }
     if (deckWindow) deckWindow.setBounds(defaultBounds)
+    console.log("Reset UI Deck Bounds")
     store.set("ui-deck-bounds", defaultBounds)
   }
 
