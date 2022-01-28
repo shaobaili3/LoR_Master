@@ -121,7 +121,6 @@
     <div class="main-content-container" v-if="currentPage == PANELS.my" @scroll="shrinkLeftNav">
       <player-matches 
         @search="searchPlayer($event)"
-        @show-deck="showDeck"
         :playerName="localPlayerInfo.name"
         :playerRegion="localPlayerInfo.server"
         :playerRank="localPlayerInfo.rank"
@@ -133,7 +132,7 @@
     </div>
 
     <div class="main-content-container search" v-if="currentPage == PANELS.search" @scroll="handleContentScroll">
-      <panel-search ref="panelSearch" @showDeck="showDeck"></panel-search>
+      <panel-search ref="panelSearch"></panel-search>
     </div>
 
     <div class="main-content-container leaderboard" v-if="currentPage == PANELS.leaderboard" @scroll="handleContentScroll">
@@ -141,7 +140,7 @@
     </div>
 
     <div class="main-content-container deck-library" v-if="currentPage == PANELS.decklib" @scroll="handleContentScroll">
-      <panel-deck-lib ref="deckLib" @showDeck="showDeck"></panel-deck-lib>
+      <panel-deck-lib ref="deckLib"></panel-deck-lib>
     </div>
 
     <div class="main-content-container wide deck-code" v-if="currentPage == PANELS.deckcode" @scroll="handleContentScroll">
@@ -167,7 +166,7 @@
       <deck-regions :deck="deckCode" :fixedWidth="false"></deck-regions>
     </div>
     <div class="deck-content-detail" :fixedHeight="!IS_ELECTRON">
-      <deck-detail @show-detail="showDeckDetail($event)" :baseDeck="deckCode" :fixedHeight="true" :showURL="true"></deck-detail>
+      <deck-detail :baseDeck="deckCode" :fixedHeight="true" :showURL="true"></deck-detail>
     </div>
   </div>
 

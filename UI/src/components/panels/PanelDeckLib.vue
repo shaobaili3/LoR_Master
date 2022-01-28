@@ -119,7 +119,7 @@ export default {
     showDeck(event, deck) {
       if (!event.target.className.includes('btn-delete')) {
         // Not deleting the deck
-        this.$emit('showDeck', deck)
+        this.$emitter.emit("showDeck", deck);
       }
     },
     updateStore() {

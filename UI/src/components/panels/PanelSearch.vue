@@ -71,7 +71,6 @@
     <player-matches
       v-if="playerName && matches.length > 0"
       @search="searchPlayer($event)"
-      @show-deck="showDeck"
       :playerName="playerName"
       :playerRegion="playerRegion"
       :playerRank="playerRank"
@@ -217,15 +216,6 @@ export default {
         return `Latest: ${this.remoteVersion}`;
       }
       return this.$t("str.loading");
-    },
-  },
-  emits: {
-    showDeck: (deck) => {
-      if (deck) {
-        return true;
-      } else {
-        return false;
-      }
     },
   },
   methods: {
@@ -590,9 +580,6 @@ export default {
             });
           }
         });
-    },
-    showDeck(deck) {
-      this.$emit("showDeck", deck);
     },
     processHistory(data, playerName, playerServer) {
       // playerServer is region shorts

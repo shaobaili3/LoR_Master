@@ -21,8 +21,6 @@
         </div>
         <div class="row decklist">
             <deck-preview @click.stop :deck="deck" :won="won" :fixedWidth="true"></deck-preview>
-            <!-- <div class="text-vs">VS</div> -->
-            <!-- <deck-preview @click="showDeck" :deck="deck"></deck-preview> -->
             <span class="vs-text">
                 <span>VS</span>
                 <span class="mobile">
@@ -73,7 +71,7 @@ export default {
             moment: moment,
         }
     },
-    emits: ['showDeck', 'search'],
+    emits: ['search'],
     props: {
         opponentName: String,
         opponentRank: String,
@@ -147,12 +145,6 @@ export default {
                 label: this.deck,
                 value: null,
             })
-        },
-        showDeck(deck) {
-            // console.log("Show Deck", deck)
-            this.$emit('showDeck', deck)
-            // console.log(window)
-            // console.log(window.testData)
         },
         search() {
             // console.log("Match History Search")

@@ -265,7 +265,8 @@ export default {
         // window.location.replace(window.location + url)
         // window.location.reload()
         // window.location+url
-        this.$emit("showDetail", this.baseDeck);
+        // this.$emit("showDetail", this.baseDeck);
+        this.$emitter.emit("showDeckDetail", this.baseDeck);
       } else {
         window.open(url, "_blank");
       }

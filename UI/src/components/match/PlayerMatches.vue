@@ -35,8 +35,7 @@
     <div class="no-content" v-if="totalMatches == 0">{{$t('str.error.playerNoHistory')}}</div>
 
     <div class="match-history-container">
-        <match-history 
-            @show-deck="showDeck"
+        <match-history
             @search="searchPlayer({region: match.region, name: match.opponentName, tag: match.opponentTag})"
             v-for="match in filteredMatches" :key="match.time"
             :opponentName="match.opponentName" 
@@ -120,13 +119,6 @@ export default {
                 return false
             }
         },
-        showDeck: (deck) => {
-            if (deck) {
-                return true
-            } else {
-                return false
-            }
-        }
     },
     computed: {
 
@@ -273,13 +265,6 @@ export default {
 
         searchPlayer(data) {
             this.$emit('search', data)
-        },
-
-        showDeck(deck) {
-            // console.log("Show Deck", deck)
-            this.$emit('showDeck', deck)
-            // console.log(window)
-            // console.log(window.testData)
         },
     }
 
