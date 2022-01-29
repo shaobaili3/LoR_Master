@@ -1,5 +1,4 @@
 <template>
-
   <div class="left-nav-btn mobile-btn" @click="expandLeftNav">
     <span><i class="fas fa-list"></i></span>
   </div>
@@ -291,10 +290,22 @@ export default {
   },
   mounted() {
     console.log("Page Home Mounted")
-    // console.log(`Current Route: ${this.$route.name}, ${this.$route.fullPath}`)
-    if (!this.$route.name) {
-      this.$router.push({ name: "home" })
+    console.log(`Current Route: ${this.$route.name}, ${window.location}`)
+    // if (!this.$route.name && this.$route.fullPath == "/") {
+    //   this.$router.push({ name: "home" })
+    // }
+
+    if (window.location.search[1] === "/") {
+      var decoded = window.location.search
+        .slice(1)
+        .split("&")
+        .map(function (s) {
+          return s.replace(/~and~/g, "&")
+        })
+        .join("?")
+      this.$router.replace(window.location.pathname.slice(0, -1) + decoded + window.location.hash)
     }
+
     console.log("Node Environment:", process.env.NODE_ENV)
     console.log("$store.state.locale", this.locale)
 
@@ -359,8 +370,8 @@ export default {
       var params = new URLSearchParams(search)
       if (params.has("code")) {
         this.$router.push({
-          name: 'code',
-          query: { code: params.get("code")}
+          name: "code",
+          query: { code: params.get("code") },
         })
       }
     },
