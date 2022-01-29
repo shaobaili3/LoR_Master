@@ -1,4 +1,5 @@
 <template>
+
   <div class="left-nav-btn mobile-btn" @click="expandLeftNav">
     <span><i class="fas fa-list"></i></span>
   </div>
@@ -10,40 +11,41 @@
         <img class="logo" height="50px" src="@/assets/images/logo/logo.png" alt="" />
       </picture>
     </div>
-    <button class="left-nav-btn" v-if="IS_ELECTRON" :class="{ selected: currentPage == PANELS.my, disabled: !lorRunning }" @click="setCurrentPage(PANELS.my)" :disabled="!lorRunning">
+    <router-link :to="{ name: 'profile' }" class="left-nav-btn" v-if="IS_ELECTRON" :class="{ selected: $route.name == 'profile', disabled: !lorRunning }" @click="setCurrentPage(PANELS.my)" :disabled="!lorRunning">
       <span><i class="fas fa-user-circle"></i></span>
-    </button>
-    <button class="left-nav-btn" :class="{ selected: currentPage == PANELS.search }" @click="setCurrentPage(PANELS.search)">
+    </router-link>
+    <router-link :to="{ name: 'search' }" class="left-nav-btn" :class="{ selected: $route.name == 'search' }" @click="setCurrentPage(PANELS.search)">
       <span><i class="fas fa-search"></i></span>
-    </button>
-    <button class="left-nav-btn" :class="{ selected: currentPage == PANELS.leaderboard }" @click="setCurrentPage(PANELS.leaderboard)">
+    </router-link>
+    <router-link :to="{ name: 'leaderboard' }" class="left-nav-btn" :class="{ selected: $route.name == 'leaderboard' }" @click="setCurrentPage(PANELS.leaderboard)">
       <span><i class="fas fa-trophy"></i></span>
-    </button>
-    <button class="left-nav-btn" v-if="IS_ELECTRON || IS_DEV" :class="{ selected: currentPage == PANELS.decklib }" @click="setCurrentPage(PANELS.decklib)">
+    </router-link>
+    <router-link :to="{ name: 'decklib' }" class="left-nav-btn" v-if="IS_ELECTRON || IS_DEV" :class="{ selected: $route.name == 'decklib' }" @click="setCurrentPage(PANELS.decklib)">
       <span><i class="fas fa-star"></i></span>
-    </button>
-    <button class="left-nav-btn" :class="{ selected: currentPage == PANELS.meta }" @click="setCurrentPage(PANELS.meta)">
+    </router-link>
+    <router-link :to="{ name: 'meta' }" class="left-nav-btn" :class="{ selected: $route.name == 'meta' }" @click="setCurrentPage(PANELS.meta)">
       <span><i class="fas fa-trees"></i></span>
-    </button>
+    </router-link>
     <button class="left-nav-btn hidden sm:flex" :class="{ 'text-gold-200 light-gold': isOpenBookshelf }" @click="toggleBookshelf()">
       <span><i class="fas fa-books"></i></span>
     </button>
     <!-- Divider -->
     <div class="flex-1"></div>
-    <button class="left-nav-btn text-gray-300 gray" :class="{ selected: currentPage == PANELS.contact }" @click="setCurrentPage(PANELS.contact)">
+    <router-link :to="{ name: 'contact' }" class="left-nav-btn text-gray-300 gray" :class="{ selected: $route.name == 'contact' }" @click="setCurrentPage(PANELS.contact)">
       <span><i class="fas fa-comment-alt-smile"></i></span>
-    </button>
-    <button
+    </router-link>
+    <router-link
+      :to="{ name: 'settings' }"
       class="left-nav-btn text-gray-300 gray"
       :class="{
-        selected: currentPage == PANELS.settings,
+        selected: $route.name == 'settings',
         ' mb-14 ': IS_ELECTRON,
         ' mb-5 ': !IS_ELECTRON,
       }"
       @click="setCurrentPage(PANELS.settings)"
     >
       <span><i class="fas fa-cog"></i></span>
-    </button>
+    </router-link>
   </div>
 
   <div class="menu-content hidden sm:grid absolute left-[98px] top-6 bottom-auto z-[120]" :class="{ hide: !isOpenBookshelf }" @mouseleave="toggleBookshelf()">
@@ -84,36 +86,8 @@
   </div>
 
   <div class="content" :class="{ fullheight: !IS_ELECTRON }" @click="shrinkLeftNav">
-    <div class="main-content-container" v-if="currentPage == PANELS.my" @scroll="shrinkLeftNav">
-      <panel-profile></panel-profile>
-    </div>
-
-    <div class="main-content-container search" v-if="currentPage == PANELS.search" @scroll="handleContentScroll">
-      <panel-search ref="panelSearch"></panel-search>
-    </div>
-
-    <div class="main-content-container leaderboard" v-if="currentPage == PANELS.leaderboard" @scroll="handleContentScroll">
-      <leaderboard @search="searchPlayer($event)"></leaderboard>
-    </div>
-
-    <div class="main-content-container deck-library" v-if="currentPage == PANELS.decklib" @scroll="handleContentScroll">
-      <panel-deck-lib ref="deckLib"></panel-deck-lib>
-    </div>
-
-    <div class="main-content-container wide deck-code" v-if="currentPage == PANELS.deckcode" @scroll="handleContentScroll">
-      <panel-deck-code :code="pageDeckCode"></panel-deck-code>
-    </div>
-
-    <div class="main-content-container meta" v-if="currentPage == PANELS.meta" @scroll="handleContentScroll">
-      <panel-meta></panel-meta>
-    </div>
-
-    <div class="main-content-container contact" v-if="currentPage == PANELS.contact" @scroll="handleContentScroll">
-      <contact-info></contact-info>
-    </div>
-
-    <div class="main-content-container settings" v-if="currentPage == PANELS.settings" @scroll="handleContentScroll">
-      <panel-settings></panel-settings>
+    <div class="main-content-container" @scroll="handleContentScroll">
+      <router-view :key="$route.fullPath"></router-view>
     </div>
   </div>
 
@@ -246,17 +220,9 @@ export default {
   components: {
     BaseWindowControls,
     DeckRegions,
-    Leaderboard,
     DeckDetail,
-    ContactInfo,
-    PanelSearch,
-    PanelDeckLib,
     DeckPreview,
     BaseTopNav,
-    PanelDeckCode,
-    PanelMeta,
-    PanelSettings,
-    PanelProfile,
   },
   data() {
     return {
@@ -325,6 +291,10 @@ export default {
   },
   mounted() {
     console.log("Page Home Mounted")
+    // console.log(`Current Route: ${this.$route.name}, ${this.$route.fullPath}`)
+    if (!this.$route.name) {
+      this.$router.push({ name: "home" })
+    }
     console.log("Node Environment:", process.env.NODE_ENV)
     console.log("$store.state.locale", this.locale)
 
@@ -464,7 +434,7 @@ export default {
 
       window.ipcRenderer.on("reply-store", (event, key, val) => {
         if (key == "ui-locale" && val) {
-          this.$i18n.locale = val
+          if (this.$i18n) this.$i18n.locale = val
           console.log("Change locale to", val)
         }
       })
@@ -495,7 +465,7 @@ export default {
     // Change Locale
     initChangeLocale() {
       window.ipcRenderer.on("to-change-locale", (event, newLocale) => {
-        this.$i18n.locale = newLocale
+        if (this.$i18n) this.$i18n.locale = newLocale
         console.log("Changing locale to", newLocale)
       })
     },
@@ -518,7 +488,9 @@ export default {
         label: label,
         value: null,
       })
-      this.currentPage = page
+      // TODO proper push history
+      // this.$router.push("/login")
+      // this.currentPage = page
     },
     searchPlayer(data) {
       this.sendUserEvent({
@@ -531,12 +503,10 @@ export default {
       console.log("Search Player", data)
 
       if (data.tag) {
-        // Only player with tag can be clicked
-        this.setCurrentPage(PANELS.search)
-        this.$nextTick(() => {
-          // Wait until the panel search mounts
-          // console.log(this.$refs)
-          this.$refs.panelSearch.searchPlayer(data)
+        // Only player with tag can be clicked=
+        this.$router.push({
+          name: "search",
+          query: data,
         })
       }
     },

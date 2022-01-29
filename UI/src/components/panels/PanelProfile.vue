@@ -1,5 +1,5 @@
 <template>
-  <div class="text-xl" v-if="localHistoryLoading">{{$t('str.loading')}}</div>
+  <div class="text-3xl" v-if="localHistoryLoading">{{$t('str.loading')}}</div>
   <PlayerMatches v-if="!localHistoryLoading" :playerName="name" :playerRegion="server" :playerTag="tag" :matches="playerMatches"></PlayerMatches>
 </template>
 

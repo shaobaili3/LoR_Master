@@ -211,7 +211,7 @@ export default {
                   return boardItem.name == val.opponentName && boardItem.tag == val.opponentTag
                 })
                 if (leadItem) {
-                  val.opponentRank = leadItem.rank + 1
+                  val.opponentRank = (leadItem.rank + 1).toString()
                 }
               }
             }
@@ -291,7 +291,13 @@ export default {
     },
 
     searchPlayer(data) {
-      this.$emit("search", data)
+      if (data.tag) {
+        // Only player with tag can be clicked=
+        this.$router.push({
+          name: 'search',
+          query: { name: data.name, tag: data.tag , region: data.region}
+        })
+      }
     },
   },
 }

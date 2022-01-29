@@ -146,9 +146,13 @@ export default {
 
     searchPlayer(player) {
       // console.log("In leaderboard", player)
-      var data = player
-      data.region = REGION_SHORTS[this.activeRegionID]
-      this.$emit("search", data)
+      if (player.tag) {
+        // Only player with tag can be clicked=
+        this.$router.push({
+          name: 'search',
+          query: { name: player.name, tag: player.tag , region: REGION_SHORTS[this.activeRegionID]}
+        })
+      }
     },
   },
 }

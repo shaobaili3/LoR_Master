@@ -24,15 +24,15 @@
 </template>
 
 <script>
-import LocaleChanger from '../base/LocaleChanger.vue'
-import { locales as cardLocales, localeNames as cardLocaleNames} from '../../pages/template'
+import LocaleChanger from "../base/LocaleChanger.vue"
+import { locales as cardLocales, localeNames as cardLocaleNames } from "../../pages/template"
 
-import { useBaseStore } from '../../store/StoreBase'
-import { mapActions, mapWritableState } from 'pinia'
+import { useBaseStore } from "../../store/StoreBase"
+import { mapActions, mapWritableState } from "pinia"
 
 export default {
   components: {
-    LocaleChanger
+    LocaleChanger,
   },
   data() {
     return {
@@ -44,7 +44,7 @@ export default {
     }
   },
   computed: {
-    ...mapWritableState(useBaseStore, ['portNum'])
+    ...mapWritableState(useBaseStore, ["portNum"]),
   },
   mounted() {
     try {
@@ -57,37 +57,37 @@ export default {
     }
   },
   methods: {
-    ...mapActions(useBaseStore, ['changeLocale']),
+    ...mapActions(useBaseStore, ["changeLocale"]),
 
     changeMainUILocale(newLocale) {
       console.log("Changing locale")
       this.$i18n.locale = newLocale
       if (window.ipcRenderer) {
-        window.ipcRenderer.send('changed-locale', newLocale)
+        window.ipcRenderer.send("changed-locale", newLocale)
       } else {
-        window.localStorage.setItem('ui-locale', newLocale)
+        window.localStorage.setItem("ui-locale", newLocale)
       }
     },
     changeCardLocale(newLocale) {
       console.log("Change Card Locale to:", newLocale)
       this.changeLocale(newLocale)
       if (!this.IS_ELECTRON) {
-        window.localStorage.setItem('card-locale', newLocale)
+        window.localStorage.setItem("card-locale", newLocale)
       }
     },
 
     // Local Settings
     initLocalSettings() {
-      window.ipcRenderer.on('check-auto-launch-return', (event, isEnabled) => {
+      window.ipcRenderer.on("check-auto-launch-return", (event, isEnabled) => {
         this.autoLaunch = isEnabled
       })
 
-      window.ipcRenderer.on('debug-info-display', (event, info) => {
+      window.ipcRenderer.on("debug-info-display", (event, info) => {
         console.log(info)
         this.debugInfos = info
       })
 
-      window.ipcRenderer.on('return-port', (event, port) => {
+      window.ipcRenderer.on("return-port", (event, port) => {
         console.log("New Port:", port)
         // this.portNum = port
         // this.$store.commit('setPortNum', port)
@@ -103,14 +103,22 @@ export default {
       window.ipcRenderer.send("check-auto-launch")
     },
     setAutoLaunch(enable) {
-      window.ipcRenderer.send('set-auto-launch', enable)
+      window.ipcRenderer.send("set-auto-launch", enable)
     },
 
     resetTrackerWindow() {
       if (this.IS_ELECTRON) {
-        window.ipcRenderer.send('reset-deck-window-bounds')
+        window.ipcRenderer.send("reset-deck-window-bounds")
       }
     },
-  }
+  },
 }
 </script>
+
+<style scoped>
+.title {
+  font-size: 32px;
+  text-align: left;
+  padding: 10px 0px 20px 0px;
+}
+</style>
