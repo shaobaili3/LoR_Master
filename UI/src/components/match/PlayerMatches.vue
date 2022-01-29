@@ -65,7 +65,7 @@
 import DeckChamps from "../deck/DeckChamps.vue"
 import MatchHistory from "../match/MatchHistory.vue"
 
-import { REGION_ID, REGION_SHORTS, REGION_NAMES } from "../leaderboard/Leaderboard.vue"
+import { REGION_ID, REGION_SHORTS, REGION_NAMES } from "../panels/PanelLeaderboard.vue"
 
 // Some helper math functions
 function FLip(x) {

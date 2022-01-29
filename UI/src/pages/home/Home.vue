@@ -86,7 +86,7 @@
   </div>
 
   <div class="content" :class="{ fullheight: !IS_ELECTRON }" @click="shrinkLeftNav">
-    <div class="main-content-container" @scroll="handleContentScroll">
+    <div class="" @scroll="handleContentScroll">
       <router-view :key="$route.fullPath"></router-view>
     </div>
   </div>
@@ -142,10 +142,10 @@ import "../../assets/scss/transitions.scss"
 import BaseWindowControls from "../../components/base/BaseWindowControls.vue"
 
 import DeckRegions from "../../components/deck/DeckRegions.vue"
-import Leaderboard from "../../components/leaderboard/Leaderboard.vue"
+import Leaderboard from "../../components/panels/PanelLeaderboard.vue"
 import DeckDetail from "../../components/deck/DeckDetail.vue"
 
-import ContactInfo from "../../components/base/ContactInfo.vue"
+import ContactInfo from "../../components/panels/PanelContact.vue"
 
 import { useBaseStore } from "../../store/StoreBase"
 import { useDeckLibStore } from "../../store/StoreDeckLib"
@@ -169,7 +169,7 @@ import { locales as cardLocales, localeNames as cardLocaleNames } from "../templ
 import PanelDeckCode from "../../components/panels/PanelDeckCode.vue"
 import PanelMeta from "../../components/panels/PanelMeta.vue"
 
-import { REGION_ID, REGION_SHORTS, REGION_NAMES } from "../../components/leaderboard/Leaderboard.vue"
+import { REGION_ID, REGION_SHORTS, REGION_NAMES } from "../../components/panels/PanelLeaderboard.vue"
 import PanelSettings from "../../components/panels/PanelSettings.vue"
 import PanelProfile from "../../components/panels/PanelProfile.vue"
 
@@ -358,11 +358,10 @@ export default {
       let search = window.location.search
       var params = new URLSearchParams(search)
       if (params.has("code")) {
-        this.showDeckDetail(params.get("code"))
-      } else if (window.location.search.includes("/meta")) {
-        this.setCurrentPage(PANELS.meta)
-      } else if (window.location.search.includes("/search")) {
-        this.setCurrentPage(PANELS.search)
+        this.$router.push({
+          name: 'code',
+          query: { code: params.get("code")}
+        })
       }
     },
 

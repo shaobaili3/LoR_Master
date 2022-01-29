@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="main-content-container">
     <div class="sticky-top search">
       <div class="region-tabs">
         <div class="region-option" v-for="(region, index) in regions" :class="{ selected: selectedRegion == region }" :key="index" @click="selectRegion(region)">
@@ -96,7 +96,7 @@ const regionShort = {
   asia: "AS",
 }
 
-import { REGION_ID, REGION_SHORTS, REGION_NAMES } from "../leaderboard/Leaderboard.vue"
+import { REGION_ID, REGION_SHORTS, REGION_NAMES } from "./PanelLeaderboard.vue"
 
 import PlayerMatches from "../match/PlayerMatches.vue"
 import axios from "axios"

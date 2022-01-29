@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="main-content-container wide">
     <p class="text-3xl text-left pb-5 pt-3 sticky-top">{{ title }}</p>
     <p class="text-left">{{ error }}</p>
     <div class="block md:flex">

@@ -1,55 +1,52 @@
 <template>
-  <!-- <div id="content"> -->
+  <div class="main-content-container">
+  
+    <div class="sticky-top leaderboard-sticky-top">
+      <div id="btn-group-regions" class="flex">
+        <button id="btn-na" class="btn" :class="{ active: activeRegionID == 0 }" @click="switchRegion(regions.NA)">NA</button>
+        <button id="btn-eu" class="btn" :class="{ active: activeRegionID == 1 }" @click="switchRegion(regions.EU)">EU</button>
+        <button id="btn-sea" class="btn" :class="{ active: activeRegionID == 2 }" @click="switchRegion(regions.APAC)">APAC</button>
+        <!-- <button id="btn-as" class="btn" :class="{active: activeRegionID == 2}" @click="switchRegion(regions.AS)">AS</button> -->
+        <!-- <button id="btn-sea" class="btn" :class="{active: activeRegionID == 3}" @click="switchRegion(regions.SEA)">SEA</button> -->
+      </div>
 
-  <!-- <h1 id="title">LoR Master Leaderboard</h1> -->
+      <div id="search-container">
+        <div class="search-icon left" v-if="!isLoading"><i class="fa fa-search"></i></div>
+        <div class="search-icon left loading" v-if="isLoading"><i class="fa fa-circle-notch fa-spin"></i></div>
+        <input spellcheck="false" autocomplete="off" v-model="searchText" id="search-input" type="text" :placeholder="isLoading ? $t('str.loading') : searchPlaceHolder" :disabled="isLoading" />
+        <div class="search-icon right" @click="clearSearch" v-if="searchText != ''">
+          <span><i class="fas fa-times"></i></span>
+        </div>
+      </div>
 
-  <div class="sticky-top leaderboard-sticky-top">
-    <div id="btn-group-regions" class="flex">
-      <button id="btn-na" class="btn" :class="{ active: activeRegionID == 0 }" @click="switchRegion(regions.NA)">NA</button>
-      <button id="btn-eu" class="btn" :class="{ active: activeRegionID == 1 }" @click="switchRegion(regions.EU)">EU</button>
-      <button id="btn-sea" class="btn" :class="{ active: activeRegionID == 2 }" @click="switchRegion(regions.APAC)">APAC</button>
-      <!-- <button id="btn-as" class="btn" :class="{active: activeRegionID == 2}" @click="switchRegion(regions.AS)">AS</button> -->
-      <!-- <button id="btn-sea" class="btn" :class="{active: activeRegionID == 3}" @click="switchRegion(regions.SEA)">SEA</button> -->
-    </div>
-
-    <div id="search-container">
-      <div class="search-icon left" v-if="!isLoading"><i class="fa fa-search"></i></div>
-      <div class="search-icon left loading" v-if="isLoading"><i class="fa fa-circle-notch fa-spin"></i></div>
-      <input spellcheck="false" autocomplete="off" v-model="searchText" id="search-input" type="text" :placeholder="isLoading ? $t('str.loading') : searchPlaceHolder" :disabled="isLoading" />
-      <div class="search-icon right" @click="clearSearch" v-if="searchText != ''">
-        <span><i class="fas fa-times"></i></span>
+      <div class="flex info-help h-10">
+        <div class="info-rank">{{ $t("leaderboard.rank") }}</div>
+        <div class="info-name">{{ $t("leaderboard.name") }}</div>
+        <div class="info-lp">{{ $t("leaderboard.points") }}</div>
       </div>
     </div>
 
-    <div class="flex info-help h-10">
-      <div class="info-rank">{{ $t("leaderboard.rank") }}</div>
-      <div class="info-name">{{ $t("leaderboard.name") }}</div>
-      <div class="info-lp">{{ $t("leaderboard.points") }}</div>
+    <div id="ladder">
+      <leaderboard-player
+        v-for="(player, index) in filteredPlayers"
+        @click="searchPlayer(player)"
+        :key="index"
+        :rank="player.rank + 1"
+        :name="player.name"
+        :lp="player.lp"
+        :deck="player.deck_code"
+        :winRate="player.game_latest_rank_win_rate"
+        :lastRankTime="player.game_latest_rank_time"
+      >
+      </leaderboard-player>
     </div>
   </div>
-
-  <div id="ladder">
-    <leaderboard-player
-      v-for="(player, index) in filteredPlayers"
-      @click="searchPlayer(player)"
-      :key="index"
-      :rank="player.rank + 1"
-      :name="player.name"
-      :lp="player.lp"
-      :deck="player.deck_code"
-      :winRate="player.game_latest_rank_win_rate"
-      :lastRankTime="player.game_latest_rank_time"
-    >
-    </leaderboard-player>
-  </div>
-
-  <!-- </div> -->
 </template>
 
 <script>
 // const axios = require('axios')
 import axios from "axios"
-import LeaderboardPlayer from "./LeaderboardPlayer.vue"
+import LeaderboardPlayer from "../leaderboard/LeaderboardPlayer.vue"
 
 export const REGION_ID = {
   NA: 0,
@@ -149,8 +146,8 @@ export default {
       if (player.tag) {
         // Only player with tag can be clicked=
         this.$router.push({
-          name: 'search',
-          query: { name: player.name, tag: player.tag , region: REGION_SHORTS[this.activeRegionID]}
+          name: "search",
+          query: { name: player.name, tag: player.tag, region: REGION_SHORTS[this.activeRegionID] },
         })
       }
     },

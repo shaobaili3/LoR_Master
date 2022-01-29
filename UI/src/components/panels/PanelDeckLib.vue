@@ -1,5 +1,5 @@
 <template>
-  <div class="decklib">
+  <div class="decklib main-content-container">
     <modal-warning ref="warningModal"></modal-warning>
     <div class="title">{{ $t("decklib.title") }}</div>
     <div class="btn-container">

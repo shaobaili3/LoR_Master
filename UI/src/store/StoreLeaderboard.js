@@ -1,6 +1,6 @@
 import { defineStore } from "pinia"
 
-import { REGION_ID, REGION_SHORTS, REGION_NAMES } from "../components/leaderboard/Leaderboard.vue"
+import { REGION_ID, REGION_SHORTS, REGION_NAMES } from "../components/panels/PanelLeaderboard.vue"
 
 const requestLeaderboardWaitTime = 1000 // ms
 

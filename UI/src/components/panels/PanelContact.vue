@@ -1,5 +1,5 @@
 <template>
-    <div class="contact-info">
+    <div class="contact-info main-content-container">
         <p class="title">{{$t('contact.contactUs')}}</p>
         <div class="contact-details-container">
             <p class="contact-detail"><i class="fab fa-twitter"></i> <span class="text-link" @click="openURL('https://twitter.com/storm_lor')">
@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import ContactMessageBox from './ContactMessageBox.vue';
+import ContactMessageBox from '../base/ContactMessageBox.vue';
 export default {
     components: {
         ContactMessageBox

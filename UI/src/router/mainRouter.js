@@ -4,8 +4,8 @@ import PanelProfile from "../components/panels/PanelProfile.vue"
 import PanelMeta from "../components/panels/PanelMeta.vue"
 import PanelDeckLib from "../components/panels/PanelDeckLib.vue"
 import PanelDeckCode from "../components/panels/PanelDeckCode.vue"
-import PanelLeaderboard from "../components/leaderboard/Leaderboard.vue"
-import ContactInfoVue from "../components/base/ContactInfo.vue"
+import PanelLeaderboard from "../components/panels/PanelLeaderboard.vue"
+import ContactInfoVue from "../components/panels/PanelContact.vue"
 
 export default [
   { name: "home", path: "/", component: PanelLeaderboard },
@@ -14,7 +14,7 @@ export default [
   { name: "profile", path: "/profile", component: PanelProfile },
   { name: "meta", path: "/meta", component: PanelMeta },
   { name: "decklib", path: "/decklib", component: PanelDeckLib },
-  { name: "code", path: "/code", component: PanelDeckCode },
+  { name: "code", path: "/code", component: PanelDeckCode, props: route => ({ code: route.query.code })},
   { name: "leaderboard", path: "/leaderboard", component: PanelLeaderboard },
   { name: "contact", path: "/contact", component: ContactInfoVue }
 ]

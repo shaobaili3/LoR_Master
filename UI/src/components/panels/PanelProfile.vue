@@ -1,6 +1,8 @@
 <template>
-  <div class="text-3xl" v-if="localHistoryLoading">{{$t('str.loading')}}</div>
-  <PlayerMatches v-if="!localHistoryLoading" :playerName="name" :playerRegion="server" :playerTag="tag" :matches="playerMatches"></PlayerMatches>
+  <div class="main-content-container">
+    <div class="text-3xl" v-if="localHistoryLoading">{{ $t("str.loading") }}</div>
+    <PlayerMatches v-if="!localHistoryLoading" :playerName="name" :playerRegion="server" :playerTag="tag" :matches="playerMatches"></PlayerMatches>
+  </div>
 </template>
 
 <script setup>

@@ -18,10 +18,6 @@ export const localeNames = ['German', 'English', 'Spanish (Spain)', 'Spanish (Me
 
 import mitt from 'mitt'
 
-import metaData from '../store/modules/metaData'
-import leaderboardData from '../store/modules/leaderboardData'
-import deckLibData from '../store/modules/deckLibData'
-
 const API_WEB_BASE = process.env.VUE_APP_LMT_SERVER == "test" ? "https://lmttest.herokuapp.com" : "https://lormaster.herokuapp.com"
 
 export default (App) => {
@@ -29,66 +25,6 @@ export default (App) => {
 locales.forEach(lo => {
     window[lo] = () => import('../../../Resource/'+lo+'.json')
 });
-
-// const store = createStore({
-//     modules: {
-//         metaData,
-//         leaderboardData,
-//         deckLibData
-//     },
-//     state () {
-//         return {
-//             locale: 'en_us',
-//             portNum: '26531',
-//             API_WEB: API_WEB_BASE,
-//             sets_en: sets_en_combined.reduce((a, v) => ({ ...a, [v.cardCode]: v}), {}) , // convert from array to key-value pair
-//             sets: sets_en_combined,
-//             IS_ELECTRON: window.ipcRenderer !== undefined,
-//             IS_DEV: process.env.NODE_ENV === 'development',
-//         }
-//     },
-//     getters: {
-//         apiBase( state ) {
-//             if (state.IS_ELECTRON) {
-//                 return `http://127.0.0.1:${state.portNum}`
-//             }
-//             return API_WEB_BASE
-//             // return 'https://85pj77.deta.dev'
-//         },
-//     },
-//     mutations: {
-//         setLocale (state, newLocale) {
-//             state.locale = newLocale
-//         },
-//         loadSets (state, newSets) {
-//             state.sets = newSets
-//         },
-//         setPortNum (state, newPort) {
-//             state.portNum = newPort
-//         }
-//     },
-//     actions: {
-//         changeLocale ({ dispatch, commit }, newLocale) {
-//             commit('setLocale',newLocale)
-//             dispatch('loadSetsJson', newLocale)
-//         },
-//         async loadSetsJson({ commit }, locale) {
-//             console.log("Computing Sets", locale)
-//             var loadModule
-
-//             if (!locales.includes(locale)) {
-//                 console.log("Invalid locale, default to en_us")
-//                 loadModule = await window['en_us']()
-//             } else {
-//                 loadModule = await window[locale]()
-//             }
-
-//             commit('loadSets', [].concat(...loadModule.default))
-//             // console.log(this.sets)
-//         },
-//     }
-    
-// })
 
 const i18n = createI18n({
     locale: 'English', // set locale
