@@ -151,7 +151,7 @@ import DeckRegions from "../../components/deck/DeckRegions.vue";
 import DeckEncoder from "../../modules/runeterra/DeckEncoder";
 import Card from "../../modules/runeterra/Card";
 
-import { mapActions, mapState } from "vuex";
+import { mapActions, mapState } from "pinia";
 
 import "../../assets/scss/tooltips.scss";
 import "../../assets/scss/deck.scss";
@@ -163,6 +163,8 @@ const testStatusData = require("../../assets/data/testStatusEN");
 // const testStatusData = require('../../assets/data/testStatus')
 
 import TrackerLayer from "../../components/tracker/TrackerLayer.vue";
+import { useLeaderboardStore } from "../../store/StoreLeaderboard";
+import { useBaseStore } from "../../store/StoreBase";
 
 const requestDataWaitTime = 100; // ms
 const requestServerWaitTime = 3000; //ms
@@ -328,7 +330,8 @@ export default {
     // this.requestServerInfo()
   },
   methods: {
-    ...mapActions(["changeLocale", 'leaderboardData/fetchLeaderboard']),
+    ...mapActions(useBaseStore, ["changeLocale"]),
+    ...mapActions(useLeaderboardStore, ["fetchLeaderboard"]),
 
     initStore() {
       window.ipcRenderer.send("request-store", "ui-locale");
@@ -434,7 +437,7 @@ export default {
         this.server = data.server;
         var regionID = REGION_NAMES.indexOf(this.server)
         if (regionID >= 0) {
-          this['leaderboardData/fetchLeaderboard'](regionID);
+          this.fetchLeaderboard(regionID);
         }
         if (data.language) {
           var newLocale = data.language.replace("-", "_").toLowerCase();
@@ -459,7 +462,7 @@ export default {
             if (data.server && this.server != data.server) {
               this.server = data.server;
               var regionID = REGION_NAMES.indexOf(this.server)
-              this['leaderboardData/fetchLeaderboard'](regionID);
+              this.fetchLeaderboard(regionID);
             }
             if (data.language) {
               var newLocale = data.language.replace("-", "_").toLowerCase();

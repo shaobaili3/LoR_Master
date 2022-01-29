@@ -32,13 +32,15 @@
 </template>
 
 <script>
-import { mapState } from "vuex";
+
+import { useMetaStore } from "../../store/StoreMeta";
+import { mapState } from "pinia";
 import DeckPreview from "../deck/DeckPreview.vue";
 export default {
   components: { DeckPreview },
   props: ["matchup"],
   computed: {
-    ...mapState("metaData", ["metaGroups", "isLoading"]),
+    ...mapState(useMetaStore, ["metaGroups", "isLoading"]),
   },
 };
 </script>

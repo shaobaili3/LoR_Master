@@ -94,9 +94,10 @@ import DeckDetail from "../deck/DeckDetail.vue";
 
 import championCards from "../../assets/data/champion.js";
 
-import { mapState, mapActions } from "vuex";
+import { mapState, mapActions } from "pinia";
 import MetaGroup from "../meta/MetaGroup.vue";
 import MetaMatchup from "../meta/MetaMatchup.vue";
+import { useMetaStore } from "../../store/StoreMeta";
 
 export default {
   mounted() {
@@ -117,7 +118,7 @@ export default {
     };
   },
   computed: {
-    ...mapState("metaData", ["metaGroups", "isLoading"]),
+    ...mapState(useMetaStore, ["metaGroups", "isLoading"]),
     noInfo() {
       // Not loading and no information
       return (
@@ -208,7 +209,7 @@ export default {
     },
   },
   methods: {
-    ...mapActions("metaData", ["fetchMetaGroups"]),
+    ...mapActions(useMetaStore, ["fetchMetaGroups"]),
     processDeck() {
       try {
         let deck = DeckEncoder.decode(this.code);

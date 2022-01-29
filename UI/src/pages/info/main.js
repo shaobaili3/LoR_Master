@@ -4,21 +4,8 @@ import { createI18n } from 'vue-i18n'
 import App from './Info.vue'
 import '@/assets/css/global.css'
 
-import { createStore, mapState, mapMutations } from 'vuex'
-
-const store = createStore({
-  state () {
-    return {
-      locale: 'en_us',
-      IS_ELECTRON: window.ipcRenderer !== undefined,
-    }
-  },
-  mutations: {
-    changeLocale (state, newLocale) {
-        state.locale = newLocale
-    }
-  }
-})
+import { useBaseStore } from '../../store/StoreBase'
+import { createPinia, mapState, mapActions } from 'pinia'
 
 const messages = require('@/assets/data/messages.js')
 
@@ -30,19 +17,18 @@ const i18n = createI18n({
 
 const app = createApp(App)
 
-app.use(i18n).use(store)
+app.use(i18n)
+app.use(createPinia())
 
 app.mixin({
   computed: {
-    ...mapState([
+    ...mapState(useBaseStore, [
       'locale',
       'IS_ELECTRON'
     ])
   },
   methods: {
-    ...mapMutations([
-      'changeLocale'
-    ]),
+    ...mapActions(useBaseStore, ['changeLocale'])
   }
 })
 

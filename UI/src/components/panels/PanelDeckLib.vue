@@ -45,7 +45,9 @@ import { showDeckMixin } from "../mixins"
 
 import ModalWarning from "../modals/ModalWarning.vue"
 import { format, subDays } from "date-fns"
-import { mapActions, mapState } from 'vuex'
+import { mapActions, mapState } from 'pinia'
+
+import { useDeckLibStore } from "../../store/StoreDeckLib"
 
 export default {
   components: { DeckPreview, ModalWarning },
@@ -56,19 +58,18 @@ export default {
     }
   },
   computed: {
-    ...mapState('deckLibData', ["decks", "loaded", "error", "pasteBuffer"]),
+    ...mapState(useDeckLibStore, ["decks", "loaded", "error", "pasteBuffer"]),
   },
   emits: ["pasted"],
   mounted() {
     this.initStore()
-    console.log(this.pasteBuffer)
     if (this.pasteBuffer) {
       this.processPaste(this.pasteBuffer)
       this.pasteBuffer = null
     }
   },
   methods: {
-    ...mapActions('deckLibData', ["initStore", "processPaste", "handleDelete"]),
+    ...mapActions(useDeckLibStore, ["initStore", "processPaste", "handleDelete"]),
     format: format,
     subDays: subDays,
     showDeck(event, deck) {

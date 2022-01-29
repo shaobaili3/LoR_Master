@@ -54,10 +54,11 @@ export default {
             var deck = null
 
             // this.$store.dispatch('getData')
-            let cache = this.$store.getters.champsFromDeck[this.deck]
-            if (cache) {
-                return cache
-            }
+            // let cache = this.$store.getters.champsFromDeck[this.deck]
+            // if (cache) {
+            //     console.log(`Getting Champs Cache Hit | ${Date.now() - startTime}`)
+            //     return cache
+            // }
 
             try { deck = DeckEncoder.decode(this.deck)} catch(err) {
                 console.log(err)
@@ -74,20 +75,9 @@ export default {
                     }
                     champs.push(champ)
                 }
-                // for (var i in championCards.champions) {
-                //     var champCode = championCards.champions[i]
-                //     var cardCode = deck[j].code
-                //     if (cardCode == champCode) {
-                //         let champ = {
-                //             count: deck[j].count,
-                //             code: champCode
-                //         }
-                //         champs.push(champ)
-                //     }
-                // }
             }
             champs = champs.sort((a, b) => a.code > b.code ? 1 : -1)
-            this.$store.dispatch('addChampsFromDeck', {champs: champs, deckCode: this.deck})
+            // this.$store.dispatch('addChampsFromDeck', {champs: champs, deckCode: this.deck})
             // Add filler champ icons
             
             if (this.fixedWidth) {

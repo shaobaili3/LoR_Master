@@ -1,48 +1,34 @@
 <template>
   <div class="mb-32">
-    <p class="title text-3xl text-left pb-5 pt-3 sticky-top">{{$t("str.meta")}}</p>
-    
-    <div v-if="isLoading" class="text-2xl pb-5">
+    <p class="title text-3xl text-left pb-5 pt-3 sticky-top">{{ $t("str.meta") }}</p>
+
+    <div v-if="store.isMetaLoading" class="text-2xl pb-5">
       <i class="fas fa-circle-notch fa-spin"></i>
       {{ $t("str.loading") }}
     </div>
-    
+
     <!-- <p v-if="metaGroups" class="sub-title text-left pb-2">{{$t("matches.games", {num: totalGames})}}</p> -->
-    <div v-if="metaGroups">
-      <div class="py-1" v-for="group in metaGroups" :key="group._id">
+    <div v-if="store.metaGroups">
+      <div class="py-1" v-for="group in store.metaGroups" :key="group._id">
         <meta-group :group="group"></meta-group>
       </div>
     </div>
   </div>
 </template>
 
-<script>
-import MetaGroup from '../meta/MetaGroup.vue'
+<script setup>
+import MetaGroup from "../meta/MetaGroup.vue"
 
-import { mapState, mapActions } from 'vuex'
+import { useMetaStore } from "../../store/StoreMeta"
 
-export default {
-  components: { MetaGroup },
-  mounted() {
-    this.fetchMetaGroups()
-  },
-  data() {
-    return {
-      groups: null,
-      totalGames: 200000
-    }
-  },
-  computed: {
-    ...mapState('metaData',[
-      'metaGroups',
-      'isLoading'
-    ])
-  },
-  methods: {
-    ...mapActions('metaData', [
-      'fetchMetaGroups'
-    ]),
-  }
+import { ref, onMounted } from "vue"
 
-}
+const store = useMetaStore()
+
+const fetchMetaGroups = store.fetchMetaGroups
+
+onMounted(() => {
+  fetchMetaGroups()
+})
+
 </script>

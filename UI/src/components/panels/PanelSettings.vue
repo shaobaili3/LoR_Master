@@ -26,7 +26,9 @@
 <script>
 import LocaleChanger from '../base/LocaleChanger.vue'
 import { locales as cardLocales, localeNames as cardLocaleNames} from '../../pages/template'
-import { mapActions } from 'vuex'
+
+import { useBaseStore } from '../../store/StoreBase'
+import { mapActions, mapWritableState } from 'pinia'
 
 export default {
   components: {
@@ -41,6 +43,9 @@ export default {
       debugInfos: "",
     }
   },
+  computed: {
+    ...mapWritableState(useBaseStore, ['portNum'])
+  },
   mounted() {
     try {
       if (!this.IS_ELECTRON) {
@@ -52,9 +57,7 @@ export default {
     }
   },
   methods: {
-    ...mapActions([
-      'changeLocale'
-    ]),
+    ...mapActions(useBaseStore, ['changeLocale']),
 
     changeMainUILocale(newLocale) {
       console.log("Changing locale")
@@ -87,7 +90,8 @@ export default {
       window.ipcRenderer.on('return-port', (event, port) => {
         console.log("New Port:", port)
         // this.portNum = port
-        this.$store.commit('setPortNum', port)
+        // this.$store.commit('setPortNum', port)
+        this.portNum = port
       })
 
       window.ipcRenderer.send("get-port")
