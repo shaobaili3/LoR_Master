@@ -53,13 +53,6 @@ export default {
         getChampsFromDeck() {
             var deck = null
 
-            // this.$store.dispatch('getData')
-            // let cache = this.$store.getters.champsFromDeck[this.deck]
-            // if (cache) {
-            //     console.log(`Getting Champs Cache Hit | ${Date.now() - startTime}`)
-            //     return cache
-            // }
-
             try { deck = DeckEncoder.decode(this.deck)} catch(err) {
                 console.log(err)
                 console.log(this.deck)

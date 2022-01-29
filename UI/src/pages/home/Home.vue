@@ -10,23 +10,8 @@
         <img class="logo" height="50px" src="@/assets/images/logo/logo.png" alt="" />
       </picture>
     </div>
-    <button
-      class="left-nav-btn tooltip"
-      v-if="IS_ELECTRON"
-      :class="{
-        selected: currentPage == PANELS.my,
-        disabled: !lorRunning,
-      }"
-      @click="handleProfileClick"
-      :disabled="!lorRunning"
-    >
-      <span class="icon-default" v-if="!localHistoryLoading"><i class="fas fa-user-circle"></i></span>
-      <span class="icon-default icon-hover" v-if="localHistoryLoading"><i class="fas fa-redo-alt fa-spin-fast"></i></span>
-      <span class="icon-hover" v-if="lorRunning && !localHistoryLoading && !(!hasLocalInfo || localPlayerInfo.server != 'sea')"><i class="fas fa-check"></i></span>
-      <span class="icon-hover" v-if="lorRunning && !localHistoryLoading && (!hasLocalInfo || localPlayerInfo.server != 'sea')"><i class="fas fa-redo-alt"></i></span>
-
-      <div v-if="!lorRunning || !localPlayerInfo.playerId" class="tooltiptext right">{{ $t("tooltips.lorlogin") }}</div>
-      <div v-if="lorRunning && localPlayerInfo.playerId && !hasLocalInfo" class="tooltiptext right">{{ $t("str.error.playerNoHistory") }}</div>
+    <button class="left-nav-btn" v-if="IS_ELECTRON" :class="{ selected: currentPage == PANELS.my, disabled: !lorRunning }" @click="setCurrentPage(PANELS.my)" :disabled="!lorRunning">
+      <span><i class="fas fa-user-circle"></i></span>
     </button>
     <button class="left-nav-btn" :class="{ selected: currentPage == PANELS.search }" @click="setCurrentPage(PANELS.search)">
       <span><i class="fas fa-search"></i></span>
@@ -100,16 +85,7 @@
 
   <div class="content" :class="{ fullheight: !IS_ELECTRON }" @click="shrinkLeftNav">
     <div class="main-content-container" v-if="currentPage == PANELS.my" @scroll="shrinkLeftNav">
-      <player-matches
-        @search="searchPlayer($event)"
-        :playerName="localPlayerInfo.name"
-        :playerRegion="localPlayerInfo.server"
-        :playerRank="localPlayerInfo.rank"
-        :playerLP="localPlayerInfo.lp"
-        :playerTag="localPlayerInfo.tag"
-        :matches="localMatches"
-      >
-      </player-matches>
+      <panel-profile></panel-profile>
     </div>
 
     <div class="main-content-container search" v-if="currentPage == PANELS.search" @scroll="handleContentScroll">
@@ -190,17 +166,17 @@ import "../../assets/scss/home.scss"
 import "../../assets/scss/transitions.scss"
 
 import BaseWindowControls from "../../components/base/BaseWindowControls.vue"
-import axios from "axios"
+
 import DeckRegions from "../../components/deck/DeckRegions.vue"
 import Leaderboard from "../../components/leaderboard/Leaderboard.vue"
-import PlayerMatches from "../../components/match/PlayerMatches.vue"
 import DeckDetail from "../../components/deck/DeckDetail.vue"
 
 import ContactInfo from "../../components/base/ContactInfo.vue"
 
 import { useBaseStore } from "../../store/StoreBase"
 import { useDeckLibStore } from "../../store/StoreDeckLib"
-import { mapActions } from "pinia"
+import { useStatusStore } from "../../store/StoreStatus"
+import { mapState, mapActions } from "pinia"
 import PanelSearch from "../../components/panels/PanelSearch.vue"
 import PanelDeckLib from "../../components/panels/PanelDeckLib.vue"
 import DeckPreview from "../../components/deck/DeckPreview.vue"
@@ -210,7 +186,7 @@ import BaseTopNav from "../../components/base/BaseTopNav.vue"
 
 const requestDataWaitTime = 400 //ms
 const requestHistoryWaitTime = 100 //ms
-const requestStatusWaitTime = 1000 //ms
+
 const inputNameListLength = 10
 
 // IS_ELECTRON & IS_DEV defined in template.js
@@ -221,6 +197,7 @@ import PanelMeta from "../../components/panels/PanelMeta.vue"
 
 import { REGION_ID, REGION_SHORTS, REGION_NAMES } from "../../components/leaderboard/Leaderboard.vue"
 import PanelSettings from "../../components/panels/PanelSettings.vue"
+import PanelProfile from "../../components/panels/PanelProfile.vue"
 
 // import ua from 'universal-analytics'
 
@@ -228,19 +205,12 @@ import PanelSettings from "../../components/panels/PanelSettings.vue"
 // const API_BASE = `http://127.0.0.1:${portNum}`
 
 let cancelToken, localCancleToken
-var lastStatusRequestTime
 var requestHistoryTimeout, prevHistoryRequest
 
 const regionNames = {
   NA: "americas",
   EU: "europe",
   AS: "asia",
-}
-
-const regionShort = {
-  americas: "NA",
-  europe: "EU",
-  asia: "AS",
 }
 
 const PANELS = {
@@ -277,7 +247,6 @@ export default {
     BaseWindowControls,
     DeckRegions,
     Leaderboard,
-    PlayerMatches,
     DeckDetail,
     ContactInfo,
     PanelSearch,
@@ -287,6 +256,7 @@ export default {
     PanelDeckCode,
     PanelMeta,
     PanelSettings,
+    PanelProfile,
   },
   data() {
     return {
@@ -310,13 +280,6 @@ export default {
 
       PANELS: PANELS,
 
-      lorRunning: null,
-      localApiEnabled: true,
-      localMatches: [],
-      localPlayerInfo: {}, // playerId, server, language, rank, lp
-      localHistoryLoading: false,
-      localHistoryWaiting: false,
-
       clipboardDeck: null,
       leftNavExpanded: false,
 
@@ -330,6 +293,8 @@ export default {
     }
   },
   computed: {
+    ...mapState(useStatusStore, ["localApiEnabled", "localPlayerID", "localServer", "lorRunning"]),
+
     isUpdatedVersion() {
       return this.version == this.remoteVersion
     },
@@ -378,14 +343,15 @@ export default {
     try {
       // var test = 'Hello'
 
-      this.requestStatusInfo()
+      const statusStore = useStatusStore()
+      statusStore.requestStatusInfo()
 
       if (!this.IS_ELECTRON) {
         let myStorage = window.localStorage
         let locale = myStorage.getItem("ui-locale")
         let cardLocale = myStorage.getItem("card-locale")
         if (locale && this.$i18n.availableLocales.includes(locale)) {
-          this.$i18n.locale = locale
+          if (this.$i18n) this.$i18n.locale = locale
           console.log("Change ui locale to", locale)
         }
         if (cardLocale && this.cardLocales.includes(cardLocale)) {
@@ -535,9 +501,9 @@ export default {
     },
 
     handleProfileClick() {
-      if (!this.hasLocalInfo || (this.currentPage == PANELS.my && this.localPlayerInfo.server != "sea")) {
-        this.requestLocalHistory()
-      }
+      // if (!this.hasLocalInfo || (this.currentPage == PANELS.my && this.localPlayerInfo.server != "sea")) {
+      //   this.requestLocalHistory()
+      // }
       this.setCurrentPage(PANELS.my)
     },
 
@@ -643,216 +609,7 @@ export default {
 
       window.ipcRenderer.send("check-update")
     },
-    requestStatusInfo() {
-      // Keeps requesting status
 
-      if (!this.IS_ELECTRON) {
-        return
-      }
-
-      // DevLocal
-      // if (process.env.NODE_ENV == "development") {
-      //   console.log("Request Status Data")
-      //   const testRegion = 'sea'
-      //   // const testRegion = 'americas'
-      //   const testStatus = `{"language": "zh-TW", "lorRunning": true, "playerId": "FlyingFish#1111","port": "21337","server": "${testRegion}"}`
-      //   this.processStatusInfo(JSON.parse(testStatus))
-      //   return
-      // }
-
-      lastStatusRequestTime = Date.now()
-      axios
-        .get(`${this.apiBase}/status`)
-        .then((response) => {
-          this.processStatusInfo(response.data)
-          var elapsedTime = Date.now() - lastStatusRequestTime // ms
-          if (requestStatusWaitTime > elapsedTime) {
-            setTimeout(this.requestStatusInfo, requestStatusWaitTime - elapsedTime)
-          } else {
-            setTimeout(this.requestStatusInfo, 100)
-          }
-        })
-        .catch((e) => {
-          if (axios.isCancel(e)) {
-            console.log("Request cancelled")
-          } else {
-            console.log("error", e)
-            var elapsedTime = Date.now() - lastStatusRequestTime // ms
-            if (elapsedTime > requestStatusWaitTime) {
-              setTimeout(this.requestStatusInfo, 100)
-            } else {
-              setTimeout(this.requestStatusInfo, requestStatusWaitTime - elapsedTime)
-            }
-          }
-        })
-    },
-    initAnalytics(uid) {
-      if (window.ipcRenderer) {
-        window.ipcRenderer.send("user-init", uid)
-      }
-    },
-    processStatusInfo(data) {
-      var updateLocalPlayer = false
-      if (this.localPlayerInfo.playerId != data.playerId) {
-        // there is a change in player ID
-        updateLocalPlayer = true
-
-        if (data.playerId) {
-          try {
-            this.initAnalytics(data.playerId)
-            // window.ipcRenderer.send('user-init', data.playerId)
-          } catch (error) {
-            console.log(error)
-          }
-        }
-      }
-
-      if (data.playerId != "") {
-        this.localPlayerInfo.playerId = data.playerId
-        var nameid = data.playerId.split("#")
-        var oldName = this.localPlayerInfo.name
-        var oldTag = this.localPlayerInfo.tag
-
-        this.localPlayerInfo.name = nameid[0]
-        this.localPlayerInfo.tag = nameid[1]
-
-        if (this.localMatches.length <= 0) {
-          // if the matches are still empty
-          // updateLocalPlayer = true
-        }
-      } else {
-        this.localPlayerInfo.playerId = null
-        this.localPlayerInfo.name = null
-        this.localPlayerInfo.tag = null
-
-        this.localMatches = []
-      }
-
-      this.localPlayerInfo.server = data.server
-      this.localPlayerInfo.language = data.language
-
-      if (updateLocalPlayer) {
-        this.requestLocalHistory()
-      }
-
-      if (data.language) {
-        var newLocale = data.language.replace("-", "_").toLowerCase()
-        if (this.locale != newLocale) {
-          console.log("Switch Locale", this.locale, newLocale)
-          this.changeLocale(newLocale)
-        }
-      }
-      // console.log(this.locale)
-
-      this.lorRunning = data.lorRunning
-      this.localApiEnabled = data.isLocalApiEnable
-    },
-    requestLocalHistory() {
-      console.log("Request Local History")
-
-      // DevLocal
-      // if (process.env.NODE_ENV == "development") {
-
-      //   // const testData = require('../../assets/data/testLocalHistoryData')
-      //   const testData = require('../../assets/data/testLocalData')['flyingfish#0000']
-
-      //   // this.playerName = "FlyingFish"
-      //   // this.playerRegion = "americas"
-      //   // this.processSearchHistory(testData)
-
-      //   // pass
-      //   // this.processLocalHistory(testData['flyingfish#0000'])
-      //   this.localHistoryLoading = true
-      //   setTimeout(() => {
-      //     this.localHistoryLoading = false
-      //     Math.random() > 0.5 ? this.processLocalHistory(testData) : this.processLocalHistory([])
-      //   }, 1000)
-
-      //   return
-      // }
-
-      if (this.localHistoryLoading) {
-        // Don't do anything if there is already a local search request
-        return
-      }
-
-      // Now ready for a new request
-      //Check if there are any previous pending requests
-      if (typeof localCancleToken != typeof undefined) {
-        localCancleToken.cancel("Operation canceled due to new request.")
-      }
-
-      //Save the cancel token for the current request
-      localCancleToken = axios.CancelToken.source()
-
-      var server = this.localPlayerInfo.server
-      var name = this.localPlayerInfo.name
-      var tag = this.localPlayerInfo.tag
-
-      if (!(server && name && tag)) {
-        // Checks to see if there is all the information
-        // Don't do anything if not enough data
-        return
-      }
-
-      let apiLink
-      if (server === "sea") {
-        apiLink = `${this.apiBase}/local`
-      } else {
-        apiLink = `${this.API_WEB}/search/${server}/${name}/${tag}`
-      }
-
-      console.log("Request Local History", apiLink)
-      this.localHistoryLoading = true
-
-      this.sendUserEvent({
-        category: "Main Window Requests",
-        action: "Request Local History",
-        label: "URL: " + apiLink,
-        value: null,
-      })
-
-      const requestLocalHistoryStartTime = Date.now()
-
-      axios
-        .get(apiLink, { cancelToken: localCancleToken.token }) // Pass the cancel token
-        .then((response) => {
-          this.localHistoryLoading = false
-
-          if (response.data == "Error") {
-            console.log("Local History Search Error")
-          } else {
-            this.sendUserEvent({
-              category: "Main Window Requests",
-              action: "Got Local History Result [Success]",
-              label: "URL: " + apiLink,
-              value: Date.now() - requestLocalHistoryStartTime,
-            })
-
-            if (server === "sea") {
-              let key = (name + "#" + tag).toLowerCase()
-              // console.log('Current key', key)
-              this.processLocalHistory(response.data[key])
-            } else {
-              this.processLocalHistory(response.data)
-            }
-          }
-        })
-        .catch((e) => {
-          if (axios.isCancel(e)) {
-            console.log("Request cancelled")
-          } else {
-            console.log("error", e)
-            this.localHistoryLoading = false
-            this.sendUserEvent({
-              category: "Main Window Requests",
-              action: "Got Local History Result [Fail]",
-              label: "URL: " + apiLink,
-              value: Date.now() - requestLocalHistoryStartTime,
-            })
-          }
-        })
-    },
     showDeck(deck) {
       if (this.deckCode == deck && this.isShowDeck == true) {
         this.isShowDeck = false
@@ -876,166 +633,6 @@ export default {
       })
 
       this.isShowDeck = false
-    },
-    processHistory(data, playerName, playerServer) {
-      console.log("Process History!", playerName, playerServer)
-      // console.log(data)
-
-      var matchInfo = {
-        matches: [],
-        rank: null,
-        lp: null,
-      }
-
-      if (!data) return matchInfo
-
-      if (playerServer == "sea") {
-        // sea players only have local data
-        for (let match of data) {
-          let opponentName, opponentRank, opponentLp, opponentTag, opponentDeck, deck, rounds, win, time, order
-
-          matchInfo.rank = match.playerRank // Currently no value
-          matchInfo.lp = match.playerLp // Currently no value
-
-          opponentName = match.opponentName
-          opponentTag = null // Cannot get
-          opponentRank = match.opponentRank // Currently no value
-          opponentLp = match.opponentLp // Currently no value
-          opponentDeck = match.deck_tracker.opGraveyardCode
-          deck = match.deck_tracker.deckCode
-          rounds = null // Cannot get
-          win = match.localPlayerWon
-          time = match.startTime
-          order = null // Cannot get
-
-          let badges = [] // Currently no value
-
-          let details = {
-            openHand: match.deck_tracker.openHand,
-            replacedHand: match.deck_tracker.replacedHand,
-            timeline: match.deck_tracker.timeline,
-            startTime: match.startTime,
-            endTime: match.endTime,
-          }
-
-          matchInfo.matches.push({
-            opponentName: opponentName,
-            deck: deck,
-            region: regionShort[this.localPlayerInfo.server],
-            opponentDeck: opponentDeck,
-            opponentRank: opponentRank,
-            opponentLp: opponentLp,
-            opponentTag: opponentTag,
-            rounds: rounds,
-            win: win,
-            time: time,
-            badges: badges,
-            details: details,
-          })
-        }
-      } else {
-        // Processing for normal Data
-        for (var key in data) {
-          var match = data[key]
-          if (!match) continue // Skip if null history
-
-          var isFirstPlayer = match.player_info[0].name.toLowerCase() == playerName.toLowerCase()
-          var player, playerGame, opponent, opponentGame
-          var info = match.info
-          var details = null
-
-          if (match.local && match.local.deck_tracker) {
-            details = {
-              openHand: match.local.deck_tracker.openHand,
-              replacedHand: match.local.deck_tracker.replacedHand,
-              timeline: match.local.deck_tracker.timeline,
-              startTime: match.local.startTime,
-              endTime: match.local.endTime,
-            }
-          }
-
-          var opponentName, opponentRank, opponentLp, opponentTag, opponentDeck, deck, rounds, win, time, order
-
-          if (isFirstPlayer) {
-            playerGame = info.players[0]
-            opponentGame = info.players[1]
-
-            player = match.player_info[0]
-            opponent = match.player_info[1]
-          } else {
-            playerGame = info.players[1]
-            opponentGame = info.players[0]
-
-            player = match.player_info[1]
-            opponent = match.player_info[0]
-          }
-
-          if (!playerGame || !opponentGame || !player || !opponent) continue
-
-          opponentName = opponent.name
-
-          if (opponent.rank !== "") {
-            opponentRank = opponent.rank + 1 // rank starts from 0
-          } else {
-            opponentRank = "" // ranks can be empty
-          }
-
-          opponentLp = opponent.lp
-          opponentTag = opponent.tag
-
-          if (!matchInfo.rank && player.rank !== "") {
-            matchInfo.rank = player.rank + 1 // player.rank starts from 0
-          }
-
-          if (!matchInfo.lp) matchInfo.lp = player.lp
-
-          deck = playerGame.deck_code
-          opponentDeck = opponentGame.deck_code
-          order = playerGame.order_of_play
-          win = playerGame.game_outcome == "win"
-          rounds = info.total_turn_count
-          var badges = []
-          if (info.game_mode)
-            badges.push(
-              info.game_mode
-                .replace(/([A-Z])/g, " $1")
-                .trim()
-                .replace("Lobby", "")
-            )
-          if (info.game_type)
-            badges.push(
-              info.game_type
-                .replace(/([A-Z])/g, " $1")
-                .trim()
-                .replace("Lobby", "")
-            )
-
-          time = info.game_start_time_utc
-
-          matchInfo.matches.push({
-            opponentName: opponentName,
-            deck: deck,
-            region: regionShort[playerServer],
-            opponentDeck: opponentDeck,
-            opponentRank: opponentRank,
-            opponentLp: opponentLp,
-            opponentTag: opponentTag,
-            rounds: rounds,
-            win: win,
-            time: time,
-            badges: badges,
-            details: details,
-          })
-        }
-      }
-
-      return matchInfo
-    },
-    processLocalHistory(data) {
-      var info = this.processHistory(data, this.localPlayerInfo.name, this.localPlayerInfo.server)
-      this.localMatches = info.matches
-      this.localPlayerInfo.rank = info.rank
-      this.localPlayerInfo.lp = info.lp
     },
   },
 }

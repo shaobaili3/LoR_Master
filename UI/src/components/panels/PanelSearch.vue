@@ -165,8 +165,6 @@ export default {
       // Options
       autoLaunch: null,
       debugInfos: "",
-
-      portNum: "26531",
     };
   },
   computed: {

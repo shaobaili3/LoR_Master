@@ -21,9 +21,9 @@ export const useBaseStore = defineStore("base", {
     }
   },
   getters: {
-    apiBase: () => {
-      if (this.IS_ELECTRON) {
-        return `http://127.0.0.1:${this.portNum}`
+    apiBase: (state) => {
+      if (state.IS_ELECTRON) {
+        return `http://127.0.0.1:${state.portNum}`
       }
       return API_WEB_BASE
       // return 'https://85pj77.deta.dev'
