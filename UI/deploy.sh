@@ -9,11 +9,14 @@ npm run build
 # navigate into the build output directory
 cd dist
 
+cp index.html 404.html
+
 # if you are deploying to a custom domain
 echo 'app.lormaster.com' > CNAME
 
 git init
 git add -A
+git reset HEAD -- deck.html
 git commit -m 'deploy'
 git branch -m master main
 
