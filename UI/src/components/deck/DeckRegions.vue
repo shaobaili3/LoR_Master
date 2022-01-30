@@ -121,7 +121,7 @@ export default {
     .btn:hover .icon-container .icon.faction, 
     .btn.active .icon-container .icon.faction {
         opacity: 1;
-        filter: brightness(0) invert(1) drop-shadow(1px 2px 1px rgba(0, 0, 0, 0.6));
+        filter: brightness(1.25) drop-shadow(1px 2px 1px rgba(0, 0, 0, 0.6));
     }
 
     
