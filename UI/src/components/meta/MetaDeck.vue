@@ -168,7 +168,7 @@ export default {
       }
     },
     detailLink() {
-      return "/?code=" + this.code
+      return "/code?code=" + this.code
       // return "https://lor.mobalytics.gg/decks/code/" + this.baseDeck
     },
   },

@@ -69,7 +69,7 @@ export default {
                     champs.push(champ)
                 }
             }
-            champs = champs.sort((a, b) => a.code > b.code ? 1 : -1)
+            champs = champs.sort((a, b) => a.code > b.code ? -1 : 1)
             // this.$store.dispatch('addChampsFromDeck', {champs: champs, deckCode: this.deck})
             // Add filler champ icons
             

@@ -23,9 +23,7 @@ export const useMetaStore = defineStore('meta', {
     },
     fetchMetaGroups() {
       this.lastRequestTime = Date.now()
-      console.log("Loading Meta Group Fetching")
       this.isMetaLoading = true
-      console.log(this.isMetaLoading)
 
       if (this.request) this.cancelRequest
       const axiosSource = axios.CancelToken.source()
@@ -37,9 +35,7 @@ export const useMetaStore = defineStore('meta', {
       var promise = axios.get(api_link, { cancelToken: axiosSource.token })
       promise
         .then((res) => {
-          console.log("Loading Meta Group Fetching Done")
           this.isMetaLoading = false
-          console.log(this.isMetaLoading)
           if (res && res.data) {
             if (res.data.data) {
               this.metaGroups = res.data.data // res.data

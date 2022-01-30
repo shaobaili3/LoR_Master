@@ -98,7 +98,7 @@ export default {
   },
   computed: {
     deckDetailLink() {
-      return "/?code=" + this.baseDeck;
+      return "/code?code=" + this.baseDeck;
       // return "https://lor.mobalytics.gg/decks/code/" + this.baseDeck
     },
     cards() {

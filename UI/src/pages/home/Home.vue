@@ -139,23 +139,18 @@ import "../../assets/scss/home.scss"
 import "../../assets/scss/transitions.scss"
 
 import BaseWindowControls from "../../components/base/BaseWindowControls.vue"
+import BaseTopNav from "../../components/base/BaseTopNav.vue"
 
 import DeckRegions from "../../components/deck/DeckRegions.vue"
-import Leaderboard from "../../components/panels/PanelLeaderboard.vue"
+import DeckPreview from "../../components/deck/DeckPreview.vue"
 import DeckDetail from "../../components/deck/DeckDetail.vue"
-
-import ContactInfo from "../../components/panels/PanelContact.vue"
 
 import { useBaseStore } from "../../store/StoreBase"
 import { useDeckLibStore } from "../../store/StoreDeckLib"
 import { useStatusStore } from "../../store/StoreStatus"
 import { mapState, mapActions } from "pinia"
-import PanelSearch from "../../components/panels/PanelSearch.vue"
-import PanelDeckLib from "../../components/panels/PanelDeckLib.vue"
-import DeckPreview from "../../components/deck/DeckPreview.vue"
 
 import "../../assets/scss/responsive.scss"
-import BaseTopNav from "../../components/base/BaseTopNav.vue"
 
 const requestDataWaitTime = 400 //ms
 const requestHistoryWaitTime = 100 //ms
@@ -165,12 +160,8 @@ const inputNameListLength = 10
 // IS_ELECTRON & IS_DEV defined in template.js
 
 import { locales as cardLocales, localeNames as cardLocaleNames } from "../template"
-import PanelDeckCode from "../../components/panels/PanelDeckCode.vue"
-import PanelMeta from "../../components/panels/PanelMeta.vue"
 
 import { REGION_ID, REGION_SHORTS, REGION_NAMES } from "../../components/panels/PanelLeaderboard.vue"
-import PanelSettings from "../../components/panels/PanelSettings.vue"
-import PanelProfile from "../../components/panels/PanelProfile.vue"
 
 // import ua from 'universal-analytics'
 
@@ -290,10 +281,7 @@ export default {
   },
   mounted() {
     console.log("Page Home Mounted")
-    console.log(`Current Route: ${this.$route.name}, ${window.location}`)
-    // if (!this.$route.name && this.$route.fullPath == "/") {
-    //   this.$router.push({ name: "home" })
-    // }
+    console.log(`Current Route: ${this.$route.name}, ${window.location.hash}`)
 
     if (window.location.search[1] === "/") {
       var decoded = window.location.search
@@ -304,6 +292,8 @@ export default {
         })
         .join("?")
       this.$router.replace(window.location.pathname.slice(0, -1) + decoded + window.location.hash)
+    } else if (!this.$route.name && window.location.hash == "") {
+      this.$router.push({ name: "leaderboard" })
     }
 
     console.log("Node Environment:", process.env.NODE_ENV)

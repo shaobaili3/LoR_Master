@@ -179,7 +179,7 @@ export default {
           }
         }
       }
-      champs = champs.sort((a, b) => (a.count > b.count ? 1 : -1));
+      champs = champs.sort((a, b) => (a.count > b.count ? -1 : 1));
       return champs;
     },
     archetypeID() {
@@ -189,6 +189,7 @@ export default {
         champNames = ["No-Champion"];
       }
       var IDString = factionNames.join(" ") + " " + champNames.join(" ")
+      console.log(`Archetype ID ${IDString}`)
       return IDString;
     },
     deckStats() {
