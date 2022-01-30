@@ -97,7 +97,7 @@ export default {
                 }
             }
             
-            return factionIDs
+            return factionIDs.sort((a,b) => a-b)
         }
     },
     methods: {
