@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex-1 w-fit flex justify-center btn rounded p-1"
+    class="flex-1 w-fit flex justify-center hover:bg-gray-700 btn rounded p-1"
     @click="showDeck"
     :class="{
       won: won,
@@ -111,12 +111,12 @@ export default {
 }
 
 .btn.won:hover {
-  background-color: var(--col-gold);
+  background-color: var(--col-darker-gold);
   cursor: pointer;
 }
 
 .btn.loss:hover {
-  background-color: var(--col-lighter-grey);
+  /* background-color: var(--col-lighter-grey); */
   cursor: pointer;
 }
 
