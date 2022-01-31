@@ -43,7 +43,7 @@
 
     <div class="no-content" v-if="totalMatches == 0">{{ $t("str.error.playerNoHistory") }}</div>
 
-    <div class="flex-1 overflow-y-scroll">
+    <div v-if="totalMatches > 0" class="flex-1 overflow-y-scroll">
       <match-history
         @search="searchPlayer({ region: match.region, name: match.opponentName, tag: match.opponentTag })"
         v-for="match in filteredMatches"

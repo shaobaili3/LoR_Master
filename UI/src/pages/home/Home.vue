@@ -10,7 +10,7 @@
         <img class="logo" height="50px" src="@/assets/images/logo/logo.png" alt="" />
       </picture>
     </div>
-    <router-link :to="{ name: 'profile' }" class="left-nav-btn" v-if="IS_ELECTRON" :class="{ selected: $route.name == 'profile', disabled: !lorRunning }" @click="setCurrentPage(PANELS.my)" :disabled="!lorRunning">
+    <router-link :to="{ name: 'profile' }" class="left-nav-btn" v-if="IS_ELECTRON || IS_DEV" :class="{ selected: $route.name == 'profile', disabled: !lorRunning }" @click="setCurrentPage(PANELS.my)" :disabled="!lorRunning">
       <span><i class="fas fa-user-circle"></i></span>
     </router-link>
     <router-link :to="{ name: 'search' }" class="left-nav-btn" :class="{ selected: $route.name == 'search' }" @click="setCurrentPage(PANELS.search)">

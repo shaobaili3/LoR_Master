@@ -1,7 +1,11 @@
 <template>
-  <div class="main-content-container">
-    <div class="text-3xl" v-if="localHistoryLoading">{{ $t("str.loading") }}</div>
-    <PlayerMatches v-if="!localHistoryLoading" :playerName="name" :playerRegion="server" :playerTag="tag" :matches="playerMatches"></PlayerMatches>
+  <div class="flex justify-center h-full">
+    <div class="max-w-xl flex-1 w-0">
+      <div class="flex flex-col h-full px-2 sm:px-0">
+        <div class="text-3xl" v-if="localHistoryLoading">{{ $t("str.loading") }}</div>
+        <PlayerMatches v-if="!localHistoryLoading" :playerName="name" :playerRegion="server" :playerTag="tag" :matches="playerMatches"></PlayerMatches>
+      </div>
+    </div>
   </div>
 </template>
 
