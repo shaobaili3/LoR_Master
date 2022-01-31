@@ -143,10 +143,7 @@ export default {
     },
 
     leaderboard() {
-      console.log("Trying access leaderboard")
-      console.log(this.playerName, this.playerTag)
       if (this.missingRankLp) {
-        console.log("Leaderboard access from matches")
         const lead = this.leaderboardStore.leaderboard
         if (lead && lead[REGION_ID[this.playerRegion]]) {
           return lead[REGION_ID[this.playerRegion]].find((val) => {

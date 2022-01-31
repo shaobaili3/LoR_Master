@@ -47,6 +47,9 @@
     </router-link>
   </div>
 
+  <div class="bg-gray-900/50 z-10 absolute top-0 left-0 block sm:hidden w-screen h-screen" v-if="leftNavExpanded" @click="shrinkLeftNav">
+  </div>
+
   <div class="menu-content hidden sm:grid absolute left-[98px] top-6 bottom-auto z-[120]" :class="{ hide: !isOpenBookshelf }" @mouseleave="toggleBookshelf()">
     <div class="card" @click="openURL('https://masteringruneterra.com/')">
       <img src="https://masteringruneterra.com/wp-content/uploads/2021/09/MasteringRuneterraWebsiteLogo-300x129.webp" />

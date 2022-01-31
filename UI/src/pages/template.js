@@ -7,6 +7,9 @@ import { createPinia, mapState, mapActions } from 'pinia'
 
 import { useBaseStore } from '../store/StoreBase'
 
+import VueVirtualScroller from 'vue-virtual-scroller'
+import 'vue-virtual-scroller/dist/vue-virtual-scroller.css'
+
 // concat to get rid of first layer array
 // reduce to convert array to key-value pair
 const sets_en_combined = [].concat(...sets_en)
@@ -37,8 +40,8 @@ const app = createApp(App)
 const emitter = mitt()
 app.config.globalProperties.$emitter = emitter
 app.use(i18n)
-// app.use(store)
 app.use(createPinia())
+app.use(VueVirtualScroller)
 
 app.mixin({
     computed: {

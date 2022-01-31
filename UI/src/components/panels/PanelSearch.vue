@@ -1,14 +1,14 @@
 <template>
   <div class="flex justify-center h-full">
     <div class="max-w-xl flex-1 w-0">
-      <div class="flex flex-col h-full">
+      <div class="flex flex-col h-full px-2 sm:px-0">
         <div class="z-[1]">
           <div class="region-tabs">
             <div class="region-option" v-for="(region, index) in regions" :class="{ selected: selectedRegion == region }" :key="index" @click="selectRegion(region)">
               {{ region }}
             </div>
           </div>
-          <div class="search-bar-container px-2 sm:px-0">
+          <div class="search-bar-container ">
             <div class="search-bar-input-container">
               <button class="search-btn inside left" :class="{ active: searchText != '' }" @click="searchHistory">
                 <span v-if="isLoading || isUpdating"><i class="fas fa-redo-alt fa-spin-fast"></i></span>
@@ -538,7 +538,6 @@ export default {
     },
     processHistory(data, playerName, playerServer) {
       // playerServer is region shorts
-      console.log("Process History!", playerName, playerServer)
       // console.log(data);
 
       var matchInfo = {

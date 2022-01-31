@@ -138,7 +138,6 @@ function requestLocalHistory() {
     })
 }
 function processHistory(data, playerName, playerServer) {
-  console.log("Process History!", playerName, playerServer)
   // console.log(data)
 
   var matchInfo = {
