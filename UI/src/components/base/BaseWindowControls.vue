@@ -1,7 +1,7 @@
 <template>
   <div id="menu-bg"></div>
   <div id="menu" class="">
-    <div v-if="IS_ELECTRON" @click="$router.go(-1)" class="route-back no-drag py-2 px-3 cursor-pointer ml-[90px] mt-2 z-[110] text-white"><i class="fas fa-chevron-left"></i> {{ $t("str.back") }}</div>
+    <div v-if="IS_ELECTRON && titleType != 'match'" @click="$router.go(-1)" class="route-back no-drag py-2 px-3 cursor-pointer ml-[90px] mt-2 z-[110] text-white"><i class="fas fa-chevron-left"></i> {{ $t("str.back") }}</div>
     <div class="window-title" :title="title" v-if="titleType == 'window'">
       {{ title }}
     </div>
@@ -98,6 +98,10 @@ export default {
 <style lang="scss" scoped>
 .no-drag {
   -webkit-app-region: no-drag;
+}
+
+.can-drag {
+  -webkit-app-region: drag;
 }
 
 #menu {

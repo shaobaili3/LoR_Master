@@ -2,7 +2,7 @@
   <div class="left-nav-btn mobile-btn" @click="expandLeftNav">
     <span><i class="fas fa-list"></i></span>
   </div>
-  <div class="left-nav overflow-y-scroll" :class="{ expanded: leftNavExpanded }">
+  <div class="left-nav overflow-y-scroll no-scrollbar" :class="{ expanded: leftNavExpanded }">
     <div class="left-nav-btn logo no-click" v-if="!IS_ELECTRON" @mouseenter="showAds">
       <picture>
         <source srcset="@/assets/images/logo/logo.webp" type="image/webp" />
@@ -70,7 +70,8 @@
 
   <base-top-nav v-if="!IS_ELECTRON"></base-top-nav>
 
-  <div v-if="!IS_ELECTRON" class="mt-[-23px] text-center w-auto min-w-0 pl-4 absolute transition-spacing z-10 invisible md:visible" :class="{ 'ml-[-300px]': isAdHidden && isAdClosed, 'ml-20': !(isAdHidden && isAdClosed) }">
+  <!-- Ads -->
+  <!-- <div v-if="!IS_ELECTRON" class="mt-[-23px] text-center w-auto min-w-0 pl-4 absolute transition-spacing z-10 invisible md:visible" :class="{ 'ml-[-300px]': isAdHidden && isAdClosed, 'ml-20': !(isAdHidden && isAdClosed) }">
     <div class="ad overflow-hidden relative block w-[300px] h-[250px] transition-opacity bg-gray-800 rounded-lg" @mouseleave="hideAds">
       <button class="absolute top-1 right-1 text-white" @click="closeAds">
         <i class="p-2 fas fa-times"></i>
@@ -82,10 +83,10 @@
         <a class="text-xl text-gold-400 cursor-pointer" href="https://lormaster.com" target="_blank"><img src="../../assets/images/promo/tracker.png" alt="" srcset="" /></a>
       </div>
     </div>
-  </div>
+  </div> -->
 
-  <div class="content" :class="{ fullheight: !IS_ELECTRON }" @click="shrinkLeftNav">
-    <div class="" @scroll="handleContentScroll">
+  <div class="block text-white text-center pt-nav" :class="{ 'h-main-electron': IS_ELECTRON, 'h-main-web': !IS_ELECTRON }" @click="shrinkLeftNav">
+    <div class="h-full" @scroll="handleContentScroll">
       <router-view :key="$route.fullPath"></router-view>
     </div>
   </div>
@@ -281,7 +282,7 @@ export default {
   },
   mounted() {
     console.log("Page Home Mounted")
-    console.log(`Current Route: ${this.$route.name}, ${window.location.hash}`)
+    console.log(`Current Route: ${this.$route.name}, ${window.location.pathname}`)
 
     if (window.location.search[1] === "/") {
       var decoded = window.location.search
@@ -292,7 +293,7 @@ export default {
         })
         .join("?")
       this.$router.replace(window.location.pathname.slice(0, -1) + decoded + window.location.hash)
-    } else if (!this.$route.name && window.location.hash == "") {
+    } else if (!this.$route.name && window.location.pathname == "/index.html") {
       this.$router.push({ name: "leaderboard" })
     }
 

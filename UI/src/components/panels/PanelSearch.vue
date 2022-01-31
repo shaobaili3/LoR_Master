@@ -1,73 +1,80 @@
 <template>
-  <div class="main-content-container">
-    <div class="sticky-top search">
-      <div class="region-tabs">
-        <div class="region-option" v-for="(region, index) in regions" :class="{ selected: selectedRegion == region }" :key="index" @click="selectRegion(region)">
-          {{ region }}
-        </div>
-      </div>
-      <div class="search-bar-container">
-        <div class="search-bar-input-container">
-          <button class="search-btn inside left" :class="{ active: searchText != '' }" @click="searchHistory">
-            <span v-if="isLoading || isUpdating"><i class="fas fa-redo-alt fa-spin-fast"></i></span>
-            <span v-if="!(isLoading || isUpdating) && !isSameSearch"><i class="fas fa-search"></i></span>
-            <span v-if="!(isLoading || isUpdating) && isSameSearch && !isUpdated"><i class="fas fa-redo-alt"></i></span>
-            <span v-if="!(isLoading || isUpdating) && isSameSearch && isUpdated"><i class="fas fa-check"></i></span>
-          </button>
+  <div class="flex justify-center h-full">
+    <div class="max-w-xl flex-1 w-0">
+      <div class="flex flex-col h-full">
+        <div class="z-[1]">
+          <div class="region-tabs">
+            <div class="region-option" v-for="(region, index) in regions" :class="{ selected: selectedRegion == region }" :key="index" @click="selectRegion(region)">
+              {{ region }}
+            </div>
+          </div>
+          <div class="search-bar-container px-2 sm:px-0">
+            <div class="search-bar-input-container">
+              <button class="search-btn inside left" :class="{ active: searchText != '' }" @click="searchHistory">
+                <span v-if="isLoading || isUpdating"><i class="fas fa-redo-alt fa-spin-fast"></i></span>
+                <span v-if="!(isLoading || isUpdating) && !isSameSearch"><i class="fas fa-search"></i></span>
+                <span v-if="!(isLoading || isUpdating) && isSameSearch && !isUpdated"><i class="fas fa-redo-alt"></i></span>
+                <span v-if="!(isLoading || isUpdating) && isSameSearch && isUpdated"><i class="fas fa-check"></i></span>
+              </button>
 
-          <input
-            spellcheck="false"
-            autocomplete="off"
-            class="search-bar"
-            @keyup="searchName"
-            @keyup.enter="searchHistory"
-            @keyup.up="autoCompleteIndexMinus"
-            @keyup.down="autoCompleteIndexPlus"
-            @focus="searchName"
-            v-model="searchText"
-            :placeholder="$t('search.player.placeholder')"
-          />
-          <button class="search-btn inside right" @click="clearSearch" v-if="searchText != ''">
-            <span><i class="fas fa-times"></i></span>
-          </button>
-        </div>
-        <div class="search-bar-auto-complete">
-          <div class="auto-complete-item" v-for="(name, index) in filteredInputNameList" :key="index" :class="{ selected: autoCompleteIndex == index }" @click="searchHistoryAutoComplete(index)">
-            {{ name }}
+              <input
+                spellcheck="false"
+                autocomplete="off"
+                class="search-bar"
+                @keyup="searchName"
+                @keyup.enter="searchHistory"
+                @keyup.up="autoCompleteIndexMinus"
+                @keyup.down="autoCompleteIndexPlus"
+                @focus="searchName"
+                v-model="searchText"
+                :placeholder="$t('search.player.placeholder')"
+              />
+              <button class="search-btn inside right" @click="clearSearch" v-if="searchText != ''">
+                <span><i class="fas fa-times"></i></span>
+              </button>
+            </div>
+            <div class="search-bar-auto-complete">
+              <div class="auto-complete-item" v-for="(name, index) in filteredInputNameList" :key="index" :class="{ selected: autoCompleteIndex == index }" @click="searchHistoryAutoComplete(index)">
+                {{ name }}
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-    <!-- Player Info -->
-    <player-matches
-      v-if="playerName && matches.length > 0"
-      @search="searchPlayer($event)"
-      :playerName="playerName"
-      :playerRegion="playerRegion"
-      :playerRank="playerRank"
-      :playerLP="playerLP"
-      :playerTag="playerTag"
-      :matches="matches"
-      ref="searchPlayerMatch"
-    >
-    </player-matches>
 
-    <div class="status-text">
-      <span v-if="!(isLoading || isUpdating) && !isError && matches.length <= 0">
-        {{ $t("search.prompt") }}
-      </span>
-      <span v-if="isLoading">
-        <i class="fas fa-circle-notch fa-spin"></i>
-        {{ $t("str.loading") }}
-      </span>
-      <span v-if="isUpdating">
-        <i class="fas fa-circle-notch fa-spin"></i>
-        {{ $t("str.updating") }}
-      </span>
-      <span v-if="isError">
-        <!-- <i class="fas fa-circle-notch fa-spin"></i> -->
-        {{ errorText }}
-      </span>
+        <div v-if="playerName && matches.length > 0" class="flex-1 h-0">
+          <!-- Player Info -->
+          <player-matches
+            v-if="playerName && matches.length > 0"
+            @search="searchPlayer($event)"
+            :playerName="playerName"
+            :playerRegion="playerRegion"
+            :playerRank="playerRank"
+            :playerLP="playerLP"
+            :playerTag="playerTag"
+            :matches="matches"
+            ref="searchPlayerMatch"
+          >
+          </player-matches>
+        </div>
+
+        <div class="text-2xl my-4" v-if="isLoading || isUpdating || isError || matches.length <= 0">
+          <span v-if="!(isLoading || isUpdating) && !isError && matches.length <= 0">
+            {{ $t("search.prompt") }}
+          </span>
+          <span v-if="isLoading">
+            <i class="fas fa-circle-notch fa-spin"></i>
+            {{ $t("str.loading") }}
+          </span>
+          <span v-if="isUpdating">
+            <i class="fas fa-circle-notch fa-spin"></i>
+            {{ $t("str.updating") }}
+          </span>
+          <span v-if="isError">
+            <!-- <i class="fas fa-circle-notch fa-spin"></i> -->
+            {{ errorText }}
+          </span>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -709,8 +716,4 @@ export default {
 }
 </script>
 
-<style scoped>
-.sticky-top.search {
-  z-index: 2;
-}
-</style>
+<style scoped></style>

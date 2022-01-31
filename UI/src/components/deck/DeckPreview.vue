@@ -1,6 +1,6 @@
 <template>
   <div
-    class="row deck btn"
+    class=" flex-1 w-0 flex justify-center btn rounded p-1"
     @click="showDeck"
     :class="{ won: won, loss: !won, cheveron: cheveron, invisible: !deck }"
   >

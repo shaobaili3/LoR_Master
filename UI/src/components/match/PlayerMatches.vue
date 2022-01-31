@@ -1,63 +1,66 @@
 <template>
-  <div class="sticky-top">
-    <div class="player-name">{{ playerName }}</div>
-    <div class="summary-container">
-      <div class="summary-item player-summary">
-        <div class="detail rank" v-if="rank">
-          <span class="pre-info"><i class="fas fa-trophy"></i></span>
-          {{ rank }}
-        </div>
-        <div class="detail lp" v-if="lp || lp === 0">
-          <span class="pre-info"><i class="iconfy">LP</i></span>
-          {{ lp }}
-        </div>
-        <div class="detail region" v-if="playerRegion">
-          <span class="pre-info"
-            ><i
-              class="fas"
-              :class="{
-                'fa-globe-asia': playerRegion === 'APAC',
-                'fa-globe-europe': playerRegion === 'EU',
-                'fa-globe-americas': playerRegion === 'NA',
-              }"
-            ></i
-          ></span>
-          {{ playerRegionFC }}
-        </div>
-      </div>
-      <div class="summary-item decks-summary" @wheel.prevent="horizontalScroll">
-        <div class="champion-icons btn" v-for="obj in uniqueDeckCodes" :key="obj.deck" :class="{ active: filterDeckCode == obj.deck }" @click="setFilterDeckCode(obj.deck)">
-          <deck-champs :deck="obj.deck" :showRegion="true" :fixedWidth="false"></deck-champs>
-        </div>
-      </div>
-      <div class="summary-item history-summary">
-        <div class="winrate" v-if="winrate">
-          {{ winrate }} <span class="subtext">{{ $t("dash.winRate") }}</span>
-        </div>
-        <div class="winloss" v-if="winloss">{{ winloss }}</div>
+  <div class="flex flex-col h-full">
+    <div v-if="false" class="summary-item decks-summary" @wheel.prevent="horizontalScroll">
+      <div class="champion-icons btn" v-for="obj in uniqueDeckCodes" :key="obj.deck" :class="{ active: filterDeckCode == obj.deck }" @click="setFilterDeckCode(obj.deck)">
+        <deck-champs :deck="obj.deck" :showRegion="true" :fixedWidth="false"></deck-champs>
       </div>
     </div>
-  </div>
+    <div class="px-2 sm:px-0">
+      <div class="player-name">{{ playerName }}</div>
+      <div class="summary-container block sm:flex">
+        <div class="summary-item player-summary">
+          <div class="detail rank" v-if="rank">
+            <span class="pre-info"><i class="fas fa-trophy"></i></span>
+            {{ rank }}
+          </div>
+          <div class="detail lp" v-if="lp || lp === 0">
+            <span class="pre-info"><i class="iconfy">LP</i></span>
+            {{ lp }}
+          </div>
+          <div class="detail region" v-if="playerRegion">
+            <span class="pre-info"
+              ><i
+                class="fas"
+                :class="{
+                  'fa-globe-asia': playerRegion === 'APAC',
+                  'fa-globe-europe': playerRegion === 'EU',
+                  'fa-globe-americas': playerRegion === 'NA',
+                }"
+              ></i
+            ></span>
+            {{ playerRegionFC }}
+          </div>
+        </div>
 
-  <div class="no-content" v-if="totalMatches == 0">{{ $t("str.error.playerNoHistory") }}</div>
+        <div class="summary-item history-summary">
+          <div class="winrate" v-if="winrate">
+            {{ winrate }} <span class="subtext">{{ $t("dash.winRate") }}</span>
+          </div>
+          <div class="winloss" v-if="winloss">{{ winloss }}</div>
+        </div>
+      </div>
+    </div>
 
-  <div class="match-history-container">
-    <match-history
-      @search="searchPlayer({ region: match.region, name: match.opponentName, tag: match.opponentTag })"
-      v-for="match in filteredMatches"
-      :key="match.time"
-      :opponentName="match.opponentName"
-      :opponentRank="match.opponentRank"
-      :opponentLp="match.opponentLp"
-      :deck="match.deck"
-      :opponentDeck="match.opponentDeck"
-      :rounds="match.rounds"
-      :win="match.win"
-      :time="match.time"
-      :badges="match.badges"
-      :details="match.details"
-      :region="match.region"
-    ></match-history>
+    <div class="no-content" v-if="totalMatches == 0">{{ $t("str.error.playerNoHistory") }}</div>
+
+    <div class="flex-1 overflow-y-scroll">
+      <match-history
+        @search="searchPlayer({ region: match.region, name: match.opponentName, tag: match.opponentTag })"
+        v-for="match in filteredMatches"
+        :key="match.time"
+        :opponentName="match.opponentName"
+        :opponentRank="match.opponentRank"
+        :opponentLp="match.opponentLp"
+        :deck="match.deck"
+        :opponentDeck="match.opponentDeck"
+        :rounds="match.rounds"
+        :win="match.win"
+        :time="match.time"
+        :badges="match.badges"
+        :details="match.details"
+        :region="match.region"
+      ></match-history>
+    </div>
   </div>
 </template>
 
@@ -204,7 +207,6 @@ export default {
           .filter((n) => n)
           .map((val) => {
             if ((!val.opponentRank || val.opponentRank == "") && val.opponentName && val.opponentTag && val.region) {
-              
               const lead = this.leaderboardStore.leaderboard
               if (lead && lead[REGION_ID[val.region]]) {
                 let leadItem = lead[REGION_ID[val.region]].find((boardItem) => {
@@ -294,8 +296,8 @@ export default {
       if (data.tag) {
         // Only player with tag can be clicked=
         this.$router.push({
-          name: 'search',
-          query: { name: data.name, tag: data.tag , region: data.region}
+          name: "search",
+          query: { name: data.name, tag: data.tag, region: data.region },
         })
       }
     },
@@ -316,7 +318,6 @@ export default {
 
 .summary-container {
   padding: 5px 0px 15px 0px;
-  display: flex;
   gap: 10px;
   justify-content: space-between;
   align-items: center;
