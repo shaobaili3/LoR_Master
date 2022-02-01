@@ -1,17 +1,17 @@
 <template>
-  <div class="flex justify-center h-full">
+  <div class="flex justify-center h-full overflow-y-auto">
     <div class="max-w-5xl flex-1 w-0">
       <div class="flex flex-col h-full px-2 sm:px-0">
         <p class="text-3xl text-left pb-5 pt-3 sticky-top">{{ title }}</p>
         <p class="text-left">{{ error }}</p>
         <div class="block md:flex flex-1 h-0">
           <div class="w-full md:w-1/4 flex flex-col">
-            <div class="w-full flex flex-1 h-0 justify-center md:justify-start overflow-y-auto no-scrollbar">
+            <div class="w-full max-h-96 sm:max-h-full flex flex-1 h-0 justify-center md:justify-start overflow-y-auto sm:overflow-y-visible">
               <deck-detail class="max-w-[250px]" :base-deck="code"></deck-detail>
             </div>
           </div>
           <div class="w-full md:w-3/4 px-4 text-left flex flex-col" v-if="deck">
-            <div class="flex-1 h-0 overflow-y-auto">
+            <div class="flex-1 h-0">
               <!-- Loading -->
 
               <div v-if="loadingStats || isLoading" class="text-2xl pb-4">
@@ -26,9 +26,9 @@
               <!-- Meta -->
 
               <div v-if="!isLoading && deckStats" class="pb-4">
-                <div class="text-3xl pb-3">{{ $t("deckCode.archetypeStats") }}</div>
+                <div class="text-3xl pb-3 pt-4 sm:pt-0">{{ $t("deckCode.archetypeStats") }}</div>
                 <meta-group :no-detail="true" :group="deckStats"></meta-group>
-                <div class="text-3xl pb-3">{{ $t("deckCode.archetypeMatchups") }}</div>
+                <div class="text-3xl pb-3 pt-4">{{ $t("deckCode.archetypeMatchups") }}</div>
                 <meta-matchup :matchups="deckStats.matchup"></meta-matchup>
               </div>
 
@@ -62,7 +62,7 @@
 </template>
 
 <script>
-const regionRefID = {
+export const regionRefID = {
   Demacia: 0,
   Freljord: 1,
   Ionia: 2,
@@ -75,7 +75,7 @@ const regionRefID = {
   BandleCity: 10,
 }
 
-const regionNames = {
+export const regionNames = {
   0: "faction_Demacia_Name",
   1: "faction_Freljord_Name",
   2: "faction_Ionia_Name",

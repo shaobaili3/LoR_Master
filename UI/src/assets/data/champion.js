@@ -18,6 +18,10 @@ export default {
   champObj: champObj
 }
 
+export const championCards = {
+  champions: champs,
+  champObj: champObj
+}
 
 // export default { champions: [
 //   "01DE012",

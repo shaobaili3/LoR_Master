@@ -1,5 +1,5 @@
 <template>
-  <div class="block lg:flex justify-around" v-if="matchups">
+  <div class="flex justify-around" v-if="matchups">
     <div class="block mb-4">
       <div class="text-center py-4">Good against</div>
       <div v-for="matchup in good" :key="matchup._id">

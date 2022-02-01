@@ -88,7 +88,7 @@
     </div>
   </div> -->
 
-  <div class="block text-white text-center pt-nav" :class="{ 'h-main-electron': IS_ELECTRON, 'h-main-web': !IS_ELECTRON }" @click="shrinkLeftNav">
+  <div class="block text-white text-center pt-nav sm:pl-20" :class="{ 'h-main-electron': IS_ELECTRON, 'h-main-web': !IS_ELECTRON }" @click="shrinkLeftNav">
     <div class="h-full" @scroll="handleContentScroll">
       <router-view :key="$route.fullPath"></router-view>
     </div>
@@ -104,6 +104,9 @@
     <div class="deck-content-detail" :fixedHeight="!IS_ELECTRON">
       <deck-detail :baseDeck="deckCode" :fixedHeight="true" :showURL="true"></deck-detail>
     </div>
+  </div>
+
+  <div class="bg-gray-900/50 z-[5] absolute top-0 left-0 block sm:hidden w-screen h-screen" v-if="isShowDeck" @click="hideDeck">
   </div>
 
   <div class="bottom-bar" v-if="IS_ELECTRON">

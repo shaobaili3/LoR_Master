@@ -22,12 +22,12 @@
         </div>
 
         <div class="grid grid-cols-12 h-14 sticky top-0 z-[2] bg-gray-900 items-center text-sm whitespace-nowrap">
-          <div class="px-2 bg-gray-900">{{ $t("leaderboard.rank") }}</div>
+          <div class="sm:px-2 bg-gray-900">{{ $t("leaderboard.rank") }}</div>
           <div class="px-2 col-span-4 sm:col-span-3 bg-gray-900">{{ $t("leaderboard.name") }}</div>
-          <div class="px-2 col-span-2 sm:col-span-1">{{ $t("leaderboard.points") }}</div>
+          <div class="sm:px-2 col-span-2 sm:col-span-1">{{ $t("leaderboard.points") }}</div>
           <div class="px-2 hidden sm:block sm:col-span-2">{{ $t("leaderboard.lastRank") }}</div>
           <div class="px-2 hidden sm:block sm:col-span-2">{{ $t("leaderboard.lastX", { num: 10 }) }}</div>
-          <div class="px-2 col-span-4 sm:col-span-3">{{ $t("leaderboard.recent") }}</div>
+          <div class="px-2 col-span-5 sm:col-span-3">{{ $t("leaderboard.recent") }}</div>
         </div>
 
         <RecycleScroller v-if="filteredPlayers" :tag="td" class="block rounded-md flex-1 w-full h-0 overflow-y-auto" :items="filteredPlayers" :item-size="64" key-field="rank">

@@ -14,7 +14,7 @@
       </div>
     </div>
 
-    <div class="col-span-4 sm:col-span-3">
+    <div class="col-span-5 sm:col-span-3">
       <deck-preview v-if="deck" @click.stop :deck="deck" :fixed-width="true" :size="1"></deck-preview>
     </div>
   </div>

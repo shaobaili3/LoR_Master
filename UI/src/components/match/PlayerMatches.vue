@@ -5,61 +5,83 @@
         <deck-champs :deck="obj.deck" :showRegion="true" :fixedWidth="false"></deck-champs>
       </div>
     </div>
-    <div class="px-2 sm:px-0">
-      <div class="player-name">{{ playerName }}</div>
-      <div class="summary-container block sm:flex">
-        <div class="summary-item player-summary">
-          <div class="detail rank" v-if="rank">
-            <span class="pre-info"><i class="fas fa-trophy"></i></span>
-            {{ rank }}
+
+    <div class="block sm:grid grid-cols-5 items-end pb-4">
+      <div class="px-2 sm:px-0 col-span-4">
+        <div class="player-name">{{ playerName }}</div>
+        <div class="gap-4 sm:gap-6 justify-start items-center pt-2 flex text-left">
+          <div v-if="rank">
+            <div class="text-sm text-gray-300"><i class="fas fa-trophy"></i> Rank</div>
+            <div class="text-lg">No. {{ rank }}</div>
           </div>
-          <div class="detail lp" v-if="lp || lp === 0">
-            <span class="pre-info"><i class="iconfy">LP</i></span>
-            {{ lp }}
+
+          <div v-if="lp">
+            <div class="text-sm text-gray-300">
+              <i class="fas fa-map-marker-alt"></i> Points
+            </div>
+            <div class="text-lg">
+              {{ lp }}
+            </div>
           </div>
-          <div class="detail region" v-if="playerRegion">
-            <span class="pre-info"
-              ><i
+
+          <div v-if="server">
+            <div class="text-sm text-gray-300">
+              <i
                 class="fas"
                 :class="{
                   'fa-globe-asia': playerRegion === 'APAC',
                   'fa-globe-europe': playerRegion === 'EU',
                   'fa-globe-americas': playerRegion === 'NA',
                 }"
-              ></i
-            ></span>
-            {{ playerRegionFC }}
+              ></i>
+              Server
+            </div>
+            <div class="text-lg">
+              {{ playerRegionFC }}
+            </div>
           </div>
-        </div>
 
-        <div class="summary-item history-summary">
-          <div class="winrate" v-if="winrate">
-            {{ winrate }} <span class="subtext">{{ $t("dash.winRate") }}</span>
+          <div v-if="games24hr">
+            <div class="text-sm text-gray-300">
+              {{ $t("matches.lastNumHour", { num: 24 }) }}
+            </div>
+            <div class="text-lg">
+              {{ $t("matches.games", { num: games24hr }) }}
+            </div>
           </div>
-          <div class="winloss" v-if="winloss">{{ winloss }}</div>
         </div>
+      </div>
+      <div class="text-left px-2 pt-2 sm:p-0"  v-if="winrate">
+        <div class="text-sm text-gray-300">
+          {{ $t("matches.games", { num: totalMatches }) }}
+        </div>
+        <div class="text-2xl">
+          {{ winrate }} <span class="subtext">{{ $t("dash.winRate") }}</span>
+        </div>
+        <div class="text-sm text-gray-300" v-if="winloss">{{ winloss }}</div>
       </div>
     </div>
 
     <div class="no-content" v-if="totalMatches == 0">{{ $t("str.error.playerNoHistory") }}</div>
 
-    <div v-if="totalMatches > 0" class="flex-1 overflow-y-scroll">
-      <match-history
-        @search="searchPlayer({ region: match.region, name: match.opponentName, tag: match.opponentTag })"
-        v-for="match in filteredMatches"
-        :key="match.time"
-        :opponentName="match.opponentName"
-        :opponentRank="match.opponentRank"
-        :opponentLp="match.opponentLp"
-        :deck="match.deck"
-        :opponentDeck="match.opponentDeck"
-        :rounds="match.rounds"
-        :win="match.win"
-        :time="match.time"
-        :badges="match.badges"
-        :details="match.details"
-        :region="match.region"
-      ></match-history>
+    <div v-if="totalMatches > 0" class="flex-1 overflow-y-auto">
+      <RecycleScroller :items="filteredMatches" :item-size="104" key-field="time">
+        <template v-slot="{ item }">
+          <match-history
+            @search="searchPlayer({ region: item.region, name: item.opponentName, tag: item.opponentTag })"
+            :opponentName="item.opponentName"
+            :opponentRank="item.opponentRank"
+            :opponentLp="item.opponentLp"
+            :deck="item.deck"
+            :opponentDeck="item.opponentDeck"
+            :rounds="item.rounds"
+            :win="item.win"
+            :time="item.time"
+            :badges="item.badges"
+            :details="item.details"
+            :region="item.region"
+          ></match-history></template
+      ></RecycleScroller>
     </div>
   </div>
 </template>
@@ -223,6 +245,14 @@ export default {
     totalWins() {
       if (!this.filteredMatches) return null
       return this.filteredMatches.reduce((total, match) => (match.win ? total + 1 : total), 0) // adds up all the wins
+    },
+    games24hr() {
+      if (!this.matches) return 0
+      return this.matches.reduce((total, match) => {
+        var date = new Date(match.time)
+        var daysElapsed = (Date.now() - date) / 1000 / 60 / 60 / 24
+        return daysElapsed < 1 ? total + 1 : total
+      }, 0)
     },
     totalMatches() {
       return this.filteredMatches.length

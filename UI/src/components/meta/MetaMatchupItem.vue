@@ -17,7 +17,7 @@
           ).deck_code
       "
     ></deck-preview>
-    <div class="sm:flex gap-2 sm:gap-0 flex-col">
+    <div class=" text-center sm:text-left sm:flex gap-2 sm:gap-0 flex-col">
       <!-- Summary -->
       <p class="text-sm text-gray-200">{{ $t("matches.games", { num: matchup.match_num }) }}</p>
       <p class="text-lg">
