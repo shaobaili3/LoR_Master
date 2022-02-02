@@ -65,6 +65,7 @@
                 backgroundColor: closestColor(player.win_rate),
                 left: player.win_rate * 100 + '%',
               }"
+              @click="routePlayerProfile(player)"
             >
               <div
                 class="
@@ -151,6 +152,8 @@ const Z = 1.96 // 95% confidence
 
 import { winRateToColor, winrateGradient } from "../../modules/utils/colorUtils"
 
+import { REGION_SHORTS, REGION_ID, REGION_NAMES } from "../panels/PanelLeaderboard.vue"
+
 const gradientString =
   "linear-gradient(90deg, " +
   winrateGradient
@@ -196,6 +199,14 @@ export default {
     }
   },
   methods: {
+    routePlayerProfile(player) {
+      var splited = player.riot_id.split("#")
+      console.log(player.server)
+      this.$router.push({
+        path: "/search",
+        query: { name: splited[0], tag: splited[1], region: REGION_SHORTS[REGION_NAMES.indexOf(player.server)] },
+      })
+    },
     showDeck() {
       this.$emitter.emit("showDeck", this.code)
     },

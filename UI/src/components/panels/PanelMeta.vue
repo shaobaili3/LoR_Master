@@ -14,11 +14,11 @@
         <!-- <p v-if="metaGroups" class="pb-2 text-left sub-title">{{$t("matches.games", {num: totalGames})}}</p> -->
         <div v-if="filteredMeta && filteredMeta.length > 0" class="flex-1 h-0">
           <div class="py-1 pb-4" v-for="group in filteredMeta" :key="group._id">
-            <meta-group :group="group"></meta-group>
+            <MetaGroup :group="group"></MetaGroup>
           </div>
         </div>
 
-        <div v-if="!filteredMeta || filteredMeta.length == 0">
+        <div v-if="!store.isMetaLoading && (!filteredMeta || filteredMeta.length == 0)">
           {{ $t("str.noDetail") }}
         </div>
       </div>
