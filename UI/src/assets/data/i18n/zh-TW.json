@@ -42,7 +42,8 @@
     "detail": "詳情",
     "updating": "更新中...",
     "noDetail": "未找到詳情",
-    "back": "返回"
+    "back": "返回",
+    "archetypes": "體系"
   },
   "loading": {
     "readyToRock": "準備就緒 🤘",
@@ -79,7 +80,11 @@
     },
     "winRate": "{num}% 勝率",
     "meta": "{num}% 環境",
-    "build": "{num}% 構築"
+    "build": "{num}% 構築",
+    "winStreak": "{num} 連勝！",
+    "recommendedCurrent": "推薦（當前）：",
+    "recommended": "推薦：",
+    "current": "當前："
   },
   "dash": {
     "winRate": "勝率",
@@ -130,6 +135,8 @@
     "archetypeMatchups": "體系對局",
     "mulliganGuide": "換牌策略",
     "keep": "保留",
-    "mulligan": "替換"
+    "mulligan": "替換",
+    "goodMatchup": "優勢對局",
+    "badMatchup": "劣勢對局"
   }
 }

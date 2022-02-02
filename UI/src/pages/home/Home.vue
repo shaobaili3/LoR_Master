@@ -10,16 +10,34 @@
         <img class="logo" height="50px" src="@/assets/images/logo/logo.png" alt="" />
       </picture>
     </div>
-    <router-link :to="{ name: 'profile' }" class="left-nav-btn" v-if="IS_ELECTRON || IS_DEV" :class="{ selected: $route.name == 'profile', disabled: !lorRunning }" @click="setCurrentPage(PANELS.my)" :disabled="!lorRunning">
+    <router-link
+      :to="{ name: 'profile' }"
+      class="left-nav-btn"
+      v-if="IS_ELECTRON || IS_DEV"
+      :class="{ selected: $route.name == 'profile', disabled: !lorRunning }"
+      @click="setCurrentPage(PANELS.my)"
+      :disabled="!lorRunning"
+    >
       <span><i class="fas fa-user-circle"></i></span>
     </router-link>
     <router-link :to="{ name: 'search' }" class="left-nav-btn" :class="{ selected: $route.name == 'search' }" @click="setCurrentPage(PANELS.search)">
       <span><i class="fas fa-search"></i></span>
     </router-link>
-    <router-link :to="{ name: 'leaderboard' }" class="left-nav-btn" :class="{ selected: $route.name == 'leaderboard' }" @click="setCurrentPage(PANELS.leaderboard)">
+    <router-link
+      :to="{ name: 'leaderboard' }"
+      class="left-nav-btn"
+      :class="{ selected: $route.name == 'leaderboard' }"
+      @click="setCurrentPage(PANELS.leaderboard)"
+    >
       <span><i class="fas fa-trophy"></i></span>
     </router-link>
-    <router-link :to="{ name: 'decklib' }" class="left-nav-btn" v-if="IS_ELECTRON || IS_DEV" :class="{ selected: $route.name == 'decklib' }" @click="setCurrentPage(PANELS.decklib)">
+    <router-link
+      :to="{ name: 'decklib' }"
+      class="left-nav-btn"
+      v-if="IS_ELECTRON || IS_DEV"
+      :class="{ selected: $route.name == 'decklib' }"
+      @click="setCurrentPage(PANELS.decklib)"
+    >
       <span><i class="fas fa-star"></i></span>
     </router-link>
     <router-link :to="{ name: 'meta' }" class="left-nav-btn" :class="{ selected: $route.name == 'meta' }" @click="setCurrentPage(PANELS.meta)">
@@ -30,7 +48,12 @@
     </button>
     <!-- Divider -->
     <div class="flex-1"></div>
-    <router-link :to="{ name: 'contact' }" class="left-nav-btn text-gray-300 gray" :class="{ selected: $route.name == 'contact' }" @click="setCurrentPage(PANELS.contact)">
+    <router-link
+      :to="{ name: 'contact' }"
+      class="left-nav-btn text-gray-300 gray"
+      :class="{ selected: $route.name == 'contact' }"
+      @click="setCurrentPage(PANELS.contact)"
+    >
       <span><i class="fas fa-comment-alt-smile"></i></span>
     </router-link>
     <router-link
@@ -47,8 +70,7 @@
     </router-link>
   </div>
 
-  <div class="bg-gray-900/50 z-10 absolute top-0 left-0 block sm:hidden w-screen h-screen" v-if="leftNavExpanded" @click="shrinkLeftNav">
-  </div>
+  <div class="bg-gray-900/50 z-10 absolute top-0 left-0 block sm:hidden w-screen h-screen" v-if="leftNavExpanded" @click="shrinkLeftNav"></div>
 
   <div class="menu-content hidden sm:grid absolute left-[98px] top-6 bottom-auto z-[120]" :class="{ hide: !isOpenBookshelf }" @mouseleave="toggleBookshelf()">
     <div class="card" @click="openURL('https://masteringruneterra.com/')">
@@ -106,8 +128,7 @@
     </div>
   </div>
 
-  <div class="bg-gray-900/50 z-[5] absolute top-0 left-0 block sm:hidden w-screen h-screen" v-if="isShowDeck" @click="hideDeck">
-  </div>
+  <div class="bg-gray-900/50 z-[5] absolute top-0 left-0 block sm:hidden w-screen h-screen" v-if="isShowDeck" @click="hideDeck"></div>
 
   <div class="bottom-bar" v-if="IS_ELECTRON">
     <div class="left">

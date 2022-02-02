@@ -29,11 +29,11 @@ import { dateFNSLocales } from "../../assets/data/messages"
 export default {
   components: { DeckPreview },
   props: {
-    rank: Number,
+    rank: String,
     name: String,
     lp: Number,
     deck: String,
-    winRate: Number,
+    winRate: String,
     lastRankTime: String,
   },
   computed: {

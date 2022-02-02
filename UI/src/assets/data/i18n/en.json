@@ -42,7 +42,8 @@
     "delete": "Delete",
     "detail": "Detail",
     "noDetail": "No detail found",
-    "back": "Back"
+    "back": "Back",
+    "archetypes": "Archetypes"
   },
   "loading": {
     "readyToRock": "Ready to rock 🤘",
@@ -80,7 +81,11 @@
     },
     "lastNumHour": "Last {num} hr",
     "build": "{num}% build",
-    "meta": "{num}% meta"
+    "meta": "{num}% meta",
+    "winStreak": "{num} games win streak!",
+    "recommendedCurrent": "Recommended (Current):",
+    "recommended": "Recommended:",
+    "current": "Current:"
   },
   "dash": {
     "winRate": "WIN",
@@ -131,6 +136,11 @@
     "archetypeMatchups": "Archetype Matchups",
     "mulliganGuide": "Mulligan Guide",
     "keep": "Keep",
-    "mulligan": "Mulligan"
+    "mulligan": "Mulligan",
+    "goodMatchup": "Good Matchups",
+    "badMatchup": "Bad Matchups"
+  },
+  "filter": {
+    "placeHolder": "Filter Cards, Champions, Regions..."
   }
 }

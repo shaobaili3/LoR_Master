@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-center h-full">
+  <div class="flex justify-center h-full px-4">
     <div class="max-w-3xl flex-1 w-0">
       <div class="flex flex-col h-full px-2 sm:px-0">
         <div class="">
@@ -14,7 +14,15 @@
           <div id="search-container">
             <div class="search-icon left" v-if="!isLoading"><i class="fa fa-search"></i></div>
             <div class="search-icon left loading" v-if="isLoading"><i class="fa fa-circle-notch fa-spin"></i></div>
-            <input spellcheck="false" autocomplete="off" v-model="searchText" id="search-input" type="text" :placeholder="isLoading ? $t('str.loading') : searchPlaceHolder" :disabled="isLoading" />
+            <input
+              spellcheck="false"
+              autocomplete="off"
+              v-model="searchText"
+              id="search-input"
+              type="text"
+              :placeholder="isLoading ? $t('str.loading') : searchPlaceHolder"
+              :disabled="isLoading"
+            />
             <div class="search-icon right" @click="clearSearch" v-if="searchText != ''">
               <span><i class="fas fa-times"></i></span>
             </div>
@@ -30,9 +38,23 @@
           <div class="px-2 col-span-5 sm:col-span-3">{{ $t("leaderboard.recent") }}</div>
         </div>
 
-        <RecycleScroller v-if="filteredPlayers" :tag="td" class="block rounded-md flex-1 w-full h-0 overflow-y-auto" :items="filteredPlayers" :item-size="64" key-field="rank">
+        <RecycleScroller
+          v-if="filteredPlayers"
+          class="block rounded-md flex-1 w-full h-0 overflow-y-auto"
+          :items="filteredPlayers"
+          :item-size="64"
+          key-field="rank"
+        >
           <template v-slot="{ item }"
-            ><leaderboard-player @click="searchPlayer(item)" :rank="(item.rank + 1).toString()" :name="item.name" :lp="item.lp" :deck="item.deck_code" :winRate="item.game_latest_rank_win_rate" :lastRankTime="item.game_latest_rank_time">
+            ><leaderboard-player
+              @click="searchPlayer(item)"
+              :rank="(item.rank + 1).toString()"
+              :name="item.name"
+              :lp="item.lp"
+              :deck="item.deck_code"
+              :winRate="item.game_latest_rank_win_rate?.toString()"
+              :lastRankTime="item.game_latest_rank_time"
+            >
             </leaderboard-player
           ></template>
         </RecycleScroller>
@@ -61,6 +83,7 @@ import { useLeaderboardStore } from "../../store/StoreLeaderboard"
 import { mapState, mapActions } from "pinia"
 
 export default {
+  components: { LeaderboardPlayer },
   mounted() {
     // this.getLeaderboard(this.activeRegionID)
     // console.log("Mounted Leaderboard")
@@ -118,7 +141,6 @@ export default {
       }
     },
   },
-  components: { LeaderboardPlayer },
   methods: {
     ...mapActions(useLeaderboardStore, ["fetchLeaderboard"]),
     clearSearch() {

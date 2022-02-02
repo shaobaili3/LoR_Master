@@ -7,10 +7,10 @@
       loss: !won,
       cheveron: cheveron,
       invisible: !deck,
-      'scale-75 -my-2 -mx-3': size == 1,
+      'scale-75 -my-2 -mx-4': size == 1,
     }"
   >
-    <div class="row" :class="{ 'w-[160px] sm:w-[190px]': fixedWidth }">
+    <div class="flex items-center" :class="{ 'w-[160px] sm:w-[190px]': fixedWidth }">
       <deck-regions :deck="deck" :fixedWidth="true"></deck-regions>
       <deck-champs :deck="deck" :fixedWidth="!cheveron"></deck-champs>
       <div v-if="cheveron" class="icon cheveron fa" :class="{ 'fa-chevron-down': !isShown, 'fa-chevron-up': isShown }"></div>

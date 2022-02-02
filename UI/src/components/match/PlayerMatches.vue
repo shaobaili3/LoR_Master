@@ -16,15 +16,13 @@
           </div>
 
           <div v-if="lp">
-            <div class="text-sm text-gray-300">
-              <i class="fas fa-map-marker-alt"></i> Points
-            </div>
+            <div class="text-sm text-gray-300"><i class="fas fa-map-marker-alt"></i> Points</div>
             <div class="text-lg">
               {{ lp }}
             </div>
           </div>
 
-          <div v-if="server">
+          <div v-if="playerRegion">
             <div class="text-sm text-gray-300">
               <i
                 class="fas"
@@ -51,7 +49,7 @@
           </div>
         </div>
       </div>
-      <div class="text-left px-2 pt-2 sm:p-0"  v-if="winrate">
+      <div class="text-left px-2 pt-2 sm:p-0" v-if="winrate">
         <div class="text-sm text-gray-300">
           {{ $t("matches.games", { num: totalMatches }) }}
         </div>
@@ -65,7 +63,27 @@
     <div class="no-content" v-if="totalMatches == 0">{{ $t("str.error.playerNoHistory") }}</div>
 
     <div v-if="totalMatches > 0" class="flex-1 overflow-y-auto">
-      <RecycleScroller :items="filteredMatches" :item-size="104" key-field="time">
+      <match-history
+        v-for="(item, index) in filteredMatches"
+        :key="item.time+filter"
+        @search="searchPlayer({ region: item.region, name: item.opponentName, tag: item.opponentTag })"
+        :opponentName="item.opponentName"
+        :opponentRank="item.opponentRank"
+        :opponentLp="item.opponentLp"
+        :deck="item.deck"
+        :opponentDeck="item.opponentDeck"
+        :rounds="item.rounds"
+        :win="item.win"
+        :time="item.time"
+        :badges="item.badges"
+        :details="item.details"
+        :region="item.region"
+        :winStreak="item.winStreak"
+        :isDateBreak="item.isDateBreak"
+        :index="index"
+        @screenshot="downloadStreakScreenshot"
+      ></match-history>
+      <!-- <RecycleScroller :items="filteredMatches" :item-size="104" key-field="time">
         <template v-slot="{ item }">
           <match-history
             @search="searchPlayer({ region: item.region, name: item.opponentName, tag: item.opponentTag })"
@@ -81,7 +99,7 @@
             :details="item.details"
             :region="item.region"
           ></match-history></template
-      ></RecycleScroller>
+      ></RecycleScroller> -->
     </div>
   </div>
 </template>
@@ -89,6 +107,8 @@
 <script>
 import DeckChamps from "../deck/DeckChamps.vue"
 import MatchHistory from "../match/MatchHistory.vue"
+
+import html2canvas from "html2canvas"
 
 import { REGION_ID, REGION_SHORTS, REGION_NAMES } from "../panels/PanelLeaderboard.vue"
 
@@ -141,6 +161,7 @@ export default {
     playerTag: String,
     playerRegion: String, // region shorts
     matches: Array,
+    filter: String,
   },
   data() {
     return {
@@ -221,10 +242,13 @@ export default {
     },
     filteredMatches() {
       if (!this.matches) return null
-      if (!this.filterDeckCode)
+      if (!this.filterDeckCode) {
+        var winStreak = 0
+        var days = 1
         return this.matches
           .filter((n) => n)
-          .map((val) => {
+          .map((val, index, array) => {
+            // Loading in Rank from Leaderboard
             if ((!val.opponentRank || val.opponentRank == "") && val.opponentName && val.opponentTag && val.region) {
               const lead = this.leaderboardStore.leaderboard
               if (lead && lead[REGION_ID[val.region]]) {
@@ -237,9 +261,27 @@ export default {
               }
             }
 
+            val.isDateBreak = false
+            val.winStreak = 0
+
+            if (val.win) {
+              winStreak += 1
+            } else {
+              if (winStreak >= 5) array[index - winStreak].winStreak = winStreak
+              winStreak = 0
+            }
+
+            var date = new Date(val.time)
+            var daysElapsed = (Date.now() - date) / 1000 / 60 / 60 / 24
+
+            if (daysElapsed >= days) {
+              val.isDateBreak = true
+              days = Math.ceil(daysElapsed)
+            }
+
             return val
           }) // filters out null decks
-
+      }
       return this.matches.filter((x) => x.deck == this.filterDeckCode && x.time) // filters according to deck code & check to make sure time is set
     },
     totalWins() {
@@ -268,6 +310,11 @@ export default {
     },
   },
   methods: {
+    downloadStreakScreenshot(index) {
+      // html2canvas(this.$el).then(function (canvas) {
+      //   document.body.appendChild(canvas)
+      // })
+    },
     // Helpers
     animateScroll(el, distance, duration) {
       var scrollAmount = 0

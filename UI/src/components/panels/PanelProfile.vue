@@ -117,13 +117,8 @@ function requestLocalHistory() {
           value: Date.now() - requestLocalHistoryStartTime,
         })
 
-        if (server === "sea") {
-          let key = (name + "#" + tag).toLowerCase()
-          // console.log('Current key', key)
-          processLocalHistory(response.data[key])
-        } else {
-          processLocalHistory(response.data)
-        }
+        processLocalHistory(response.data)
+
       }
     })
     .catch((e) => {

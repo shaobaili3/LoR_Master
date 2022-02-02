@@ -1,7 +1,7 @@
 <template>
   <div class="flex justify-center h-full">
-    <div v-if="playerName && matches.length > 0" class="hidden lg:flex flex-col w-1/4 max-w-xs pr-6">
-      <div class="text-xl text-center pb-4">Archetypes</div>
+    <div v-if="playerName && matches.length > 0" class="hidden lg:flex flex-col flex-1 max-w-xs pr-6">
+      <div class="text-xl text-center pb-4">{{ $t("str.archetypes") }}</div>
       <div class="flex flex-col gap-4 flex-1 h-0 overflow-y-auto">
         <div class="group rounded transition-colors" v-for="obj in uniqueArchetypes" :key="obj.id" :class="{ 'bg-gray-700': filterDeckID == obj.id }">
           <div class="flex items-center">
@@ -14,14 +14,14 @@
               </div>
               <div
                 :style="{
-                  color: white //winRateToColor(obj.win / obj.freq),
+                  color: winRateToColor(obj.win / obj.freq),
                 }"
               >
                 {{ $t("matches.winRate", { num: Math.floor((obj.win / obj.freq) * 1000) / 10 }) }}
               </div>
             </div>
             <div
-              class="group-hover:block px-2 h-full cursor-pointer text-gray-200 hover:text-gray-50"
+              class="group-hover:block px-2 pr-4 h-full cursor-pointer text-gray-200 hover:text-gray-50"
               :class="{
                 hidden: filterDeckID != obj.id,
               }"
@@ -38,7 +38,13 @@
       <div class="flex flex-col h-full px-2 sm:px-0">
         <div class="z-[1]">
           <div class="region-tabs">
-            <div class="region-option" v-for="(region, index) in regions" :class="{ selected: selectedRegion == region }" :key="index" @click="selectRegion(region)">
+            <div
+              class="region-option"
+              v-for="(region, index) in regions"
+              :class="{ selected: selectedRegion == region }"
+              :key="index"
+              @click="selectRegion(region)"
+            >
               {{ region }}
             </div>
           </div>
@@ -68,7 +74,13 @@
               </button>
             </div>
             <div class="search-bar-auto-complete">
-              <div class="auto-complete-item" v-for="(name, index) in filteredInputNameList" :key="index" :class="{ selected: autoCompleteIndex == index }" @click="searchHistoryAutoComplete(index)">
+              <div
+                class="auto-complete-item"
+                v-for="(name, index) in filteredInputNameList"
+                :key="index"
+                :class="{ selected: autoCompleteIndex == index }"
+                @click="searchHistoryAutoComplete(index)"
+              >
                 {{ name }}
               </div>
             </div>
@@ -110,7 +122,7 @@
         </div>
       </div>
     </div>
-    <div v-if="playerName && matches.length > 0" class="hidden lg:block w-1/6"></div>
+    <div v-if="playerName && matches.length > 0" class="hidden xl:block w-1/6"></div>
   </div>
 </template>
 
@@ -219,7 +231,7 @@ export default {
         decks_freq_array[index] = { id: key, decks: item.decks, freq: item.freq, win: item.win }
       })
 
-      decks_freq_array.sort((a, b) => b.freq - a.freq)
+      decks_freq_array.sort((a, b) => (b.win / b.freq > a.win / a.freq ? 1 : -1))
       // Large num in front
 
       return decks_freq_array
@@ -652,6 +664,8 @@ export default {
         rank: null,
         lp: null,
       }
+
+      this.filterDeckID = null
 
       // Set selected filter to null
       if (this.$refs.searchPlayerMatch && this.$refs.searchPlayerMatch.setFilterDeckCode) {
