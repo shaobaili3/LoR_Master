@@ -152,7 +152,7 @@ const Z = 1.96 // 95% confidence
 
 import { winRateToColor, winrateGradient } from "../../modules/utils/colorUtils"
 
-import { REGION_SHORTS, REGION_ID, REGION_NAMES } from "../panels/PanelLeaderboard.vue"
+import { regionNameToShorts } from "../panels/PanelLeaderboard.vue"
 
 const gradientString =
   "linear-gradient(90deg, " +
@@ -201,10 +201,9 @@ export default {
   methods: {
     routePlayerProfile(player) {
       var splited = player.riot_id.split("#")
-      console.log(player.server)
       this.$router.push({
         path: "/search",
-        query: { name: splited[0], tag: splited[1], region: REGION_SHORTS[REGION_NAMES.indexOf(player.server)] },
+        query: { name: splited[0], tag: splited[1], region: regionNameToShorts(player.server) },
       })
     },
     showDeck() {

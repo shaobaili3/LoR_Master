@@ -5,14 +5,10 @@
       'h-full': fullHeight,
     }"
   >
-    <div
-      class="deck-detail"
-      :class="{ 'fixed-height': fixedHeight }"
-      v-if="cards.length > 0"
-    >
+    <div class="deck-detail" :class="{ 'fixed-height': fixedHeight }" v-if="cards.length > 0">
       <card-preview
         v-for="card in cards"
-        :key="card.name+card.count"
+        :key="card.name + card.count"
         :name="card.name"
         :cost="card.cost"
         :count="hideNum ? null : card.count"
@@ -24,23 +20,13 @@
         >{{ card.name }}</card-preview
       >
     </div>
-    <div
-      class="actions"
-      :class="{ 'fixed-height': fixedHeight }"
-      v-if="showCopy && this.baseDeck && this.cards.length > 0"
-    >
+    <div class="actions" :class="{ 'fixed-height': fixedHeight }" v-if="showCopy && this.baseDeck && this.cards.length > 0">
       <!-- <a class="actions-btn" :href="deckDetailLink" target="_blank"><span class="actions-icon fa fa-external-link-alt"></span>Detail</a> -->
       <div class="actions-btn" v-if="showURL" @click="openURL(deckDetailLink)">
-        <span class="actions-icon fa fa-external-link-alt"></span>{{
-          $t('str.detail')
-        }}
+        <span class="actions-icon fa fa-external-link-alt"></span>{{ $t("str.detail") }}
       </div>
       <div class="actions-btn tooltip" @click="copyDeckcode">
-        <span
-          class="actions-icon far fa-copy"
-          :class="{ 'fa-exclamation-triangle': !isFull }"
-        ></span
-        >{{ copyText }}
+        <span class="actions-icon far fa-copy" :class="{ 'fa-exclamation-triangle': !isFull }"></span>{{ copyText }}
         <div class="tooltiptext top-end" v-if="!isFull">
           {{ $t("tooltips.incompleteDeck") }}
         </div>
@@ -50,8 +36,8 @@
 </template>
 
 <script>
-import DeckEncoder from "../../modules/runeterra/DeckEncoder";
-import CardPreview from "./CardPreview.vue";
+import DeckEncoder from "../../modules/runeterra/DeckEncoder"
+import CardPreview from "./CardPreview.vue"
 
 export default {
   components: {
@@ -61,7 +47,7 @@ export default {
   data() {
     return {
       copied: false,
-    };
+    }
   },
   props: {
     deck: String,
@@ -89,7 +75,7 @@ export default {
     fullHeight: {
       type: Boolean,
       default: true,
-    }
+    },
   },
   watch: {
     // locale(newLoacle, oldLocale) {
@@ -98,35 +84,35 @@ export default {
   },
   computed: {
     deckDetailLink() {
-      return "/code?code=" + this.baseDeck;
+      return "/code?code=" + this.baseDeck
       // return "https://lor.mobalytics.gg/decks/code/" + this.baseDeck
     },
     cards() {
-      var cards = [];
+      var cards = []
 
-      if (this.sets == null) return cards;
+      if (this.sets == null) return cards
 
-      var deck = null;
+      var deck = null
       if (this.deck)
         try {
-          deck = DeckEncoder.decode(this.deck);
+          deck = DeckEncoder.decode(this.deck)
         } catch (err) {
-          console.log(err);
+          console.log(err)
           // return cards
         }
 
-      var baseDeck = null;
+      var baseDeck = null
       if (this.baseDeck)
         try {
-          baseDeck = DeckEncoder.decode(this.baseDeck);
+          baseDeck = DeckEncoder.decode(this.baseDeck)
         } catch (err) {
-          console.log(err);
+          console.log(err)
           // return cards
         }
 
       // Append extra played cards to baseDeck
       if (baseDeck && this.extra) {
-        baseDeck = baseDeck.concat(this.extra);
+        baseDeck = baseDeck.concat(this.extra)
       }
 
       if (baseDeck) {
@@ -135,11 +121,11 @@ export default {
         // console.log("extra", this.extra)
         for (var j in baseDeck) {
           // Loop through base deck
-          var cardCode = baseDeck[j].code;
+          var cardCode = baseDeck[j].code
           // Get full information from the sets collection
-          var card = this.sets.find((card) => card.cardCode == cardCode);
-          var cardCount = baseDeck[j].count;
-          var baseCount = baseDeck[j].count;
+          var card = this.sets.find((card) => card.cardCode == cardCode)
+          var cardCount = baseDeck[j].count
+          var baseCount = baseDeck[j].count
 
           // Append extra played cards to playedDeck as well?
           // deck = deck.concat(this.extra)
@@ -148,29 +134,26 @@ export default {
             // make sure currentDeck exist
 
             // Finding the same card in current deck
-            var currentCard = deck.find((card) => card.code == cardCode);
+            var currentCard = deck.find((card) => card.code == cardCode)
 
             // Get the current card copy count
             if (currentCard) {
-              cardCount = currentCard.count;
+              cardCount = currentCard.count
             } else {
-              cardCount = 0;
+              cardCount = 0
             }
           }
 
           if (card) {
-            var typeRef = "";
+            var typeRef = ""
             if (card.supertype != "" || card.rarityRef == "Champion") {
-              typeRef = "Champion";
+              typeRef = "Champion"
             } else if (card.spellSpeedRef != "") {
-              typeRef = "Spell";
-            } else if (
-              card.keywordRefs &&
-              card.keywordRefs.includes("LandmarkVisualOnly")
-            ) {
-              typeRef = "Landmark";
+              typeRef = "Spell"
+            } else if (card.keywordRefs && card.keywordRefs.includes("LandmarkVisualOnly")) {
+              typeRef = "Landmark"
             } else {
-              typeRef = "Unit";
+              typeRef = "Unit"
             }
 
             cards.push({
@@ -183,7 +166,7 @@ export default {
               typeRef: typeRef,
               supertype: card.supertype,
               set: card.set,
-            });
+            })
           } else if (cardCode && cardCount) {
             cards.push({
               code: cardCode,
@@ -196,66 +179,63 @@ export default {
               typeRef: "Unknown",
               supertype: null,
               set: "1",
-            });
+            })
           }
         }
       }
       // console.log(cards)
       return cards.sort(function (a, b) {
         if (a.type === "Unknown") {
-          return 1;
+          return 1
         }
         if (a.supertype == b.supertype) {
           if (a.type == b.type) {
             if (a.cost == b.cost) {
-              return a.code > b.code ? 1 : -1;
+              return a.code > b.code ? 1 : -1
             }
-            return a.cost > b.cost ? 1 : -1;
+            return a.cost > b.cost ? 1 : -1
           }
-          return a.type > b.type ? 1 : -1;
+          return a.type > b.type ? 1 : -1
         }
-        return a.supertype < b.supertype ? 1 : -1;
-      });
+        return a.supertype < b.supertype ? 1 : -1
+      })
     },
     copyText() {
-      return this.copied ? this.$t("str.copied") : this.$t("str.copy");
+      return this.copied ? this.$t("str.copied") : this.$t("str.copy")
     },
     isFull() {
       return (
         this.cards.reduce((prev, card) => {
-          return prev + card.baseCount;
+          return prev + card.baseCount
         }, 0) == 40
-      );
+      )
     },
   },
   emits: ["showDetail"],
   methods: {
     copyDeckcode() {
       const copyToClipboard = (str) => {
-        const el = document.createElement("textarea");
-        el.value = str;
-        el.setAttribute("readonly", "");
-        el.style.position = "absolute";
-        el.style.left = "-9999px";
-        document.body.appendChild(el);
-        const selected =
-          document.getSelection().rangeCount > 0
-            ? document.getSelection().getRangeAt(0)
-            : false;
-        el.select();
-        document.execCommand("copy");
-        document.body.removeChild(el);
+        const el = document.createElement("textarea")
+        el.value = str
+        el.setAttribute("readonly", "")
+        el.style.position = "absolute"
+        el.style.left = "-9999px"
+        document.body.appendChild(el)
+        const selected = document.getSelection().rangeCount > 0 ? document.getSelection().getRangeAt(0) : false
+        el.select()
+        document.execCommand("copy")
+        document.body.removeChild(el)
         if (selected) {
-          document.getSelection().removeAllRanges();
-          document.getSelection().addRange(selected);
+          document.getSelection().removeAllRanges()
+          document.getSelection().addRange(selected)
         }
-      };
+      }
 
-      copyToClipboard(this.baseDeck);
-      this.copied = true;
+      copyToClipboard(this.baseDeck)
+      this.copied = true
       setTimeout(() => {
-        this.copied = false;
-      }, 1250);
+        this.copied = false
+      }, 1250)
     },
     openURL(url) {
       if (this.IS_ELECTRON) {
@@ -266,13 +246,14 @@ export default {
         // window.location.reload()
         // window.location+url
         // this.$emit("showDetail", this.baseDeck);
-        this.$emitter.emit("showDeckDetail", this.baseDeck);
+        this.$emitter.emit("showDeckDetail", this.baseDeck)
       } else {
-        window.open(url, "_blank");
+        //window.open(url, "_blank")
+        this.$router.push(url)
       }
     },
   },
-};
+}
 </script>
 
 <style>

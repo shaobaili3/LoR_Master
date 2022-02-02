@@ -50,7 +50,19 @@ export default {
     getChampsFromDeck() {
       var deck = null
 
-      if (!this.deck) return []
+      var champs = []
+
+      if (!this.deck) {
+        if (this.fixedWidth) {
+          for (let i = 0; i < this.maxChamp; i++) {
+            champs.push({
+              count: null,
+              code: null,
+            })
+          }
+        }
+        return champs
+      }
 
       try {
         deck = DeckEncoder.decode(this.deck)
@@ -59,7 +71,7 @@ export default {
         console.log(this.deck)
         return []
       }
-      var champs = []
+
       for (var j in deck) {
         let champCode = deck[j].code
         if (championCards.champObj[champCode] != null) {
@@ -70,21 +82,17 @@ export default {
           champs.push(champ)
         }
       }
-      champs = champs.sort((a, b) => (a.count > b.count ? -1 : 1))
-      // this.$store.dispatch('addChampsFromDeck', {champs: champs, deckCode: this.deck})
-      // Add filler champ icons
+
+      champs.sort((a, b) => (a.count > b.count ? -1 : 1))
 
       if (this.fixedWidth) {
         var fillerIcons = this.maxChamp - champs.length
         for (let i = 0; i < fillerIcons; i++) {
-          let champ = {
+          // Return a deep copy so the stored cache is not modified
+          champs.push({
             count: null,
             code: null,
-          }
-          // Return a deep copy so the stored cache is not modified
-          var filledChamps = champs.map((a) => ({ ...a }))
-          filledChamps.push(champ)
-          return filledChamps
+          })
         }
       }
       return champs
