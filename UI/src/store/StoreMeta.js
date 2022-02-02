@@ -8,11 +8,11 @@ import axios from "axios"
 import { defineStore } from "pinia"
 import { useBaseStore } from "./StoreBase"
 
-export const useMetaStore = defineStore('meta', {
+export const useMetaStore = defineStore("meta", {
   state: () => {
     return {
       request: null,
-      metaGroups: null,
+      metaGroups: [],
       lastRequestTime: null,
       isMetaLoading: true,
     }

@@ -3,7 +3,7 @@
     <div class="flex-1 w-0 max-w-5xl">
       <div class="flex flex-col h-full px-2 sm:px-0">
         <p class="pt-3 pb-5 text-3xl text-left sticky-top">{{ title }}</p>
-        <p class="text-left">{{ error }}</p>
+        <p v-if="error" class="text-left">{{ $t("str.invalidDeck") }}</p>
         <div class="flex-1 block h-0 md:flex">
           <div class="flex flex-col w-full md:w-1/4">
             <div
@@ -12,11 +12,10 @@
               <deck-detail class="max-w-[250px]" :base-deck="code"></deck-detail>
             </div>
           </div>
-          <div class="flex flex-col w-full px-4 text-left md:w-3/4" v-if="deck">
+          <div class="flex flex-col w-full px-4 text-left md:w-3/4" v-if="isValid">
             <div class="flex-1 h-0">
               <!-- Loading -->
-
-              <div v-if="loadingStats || isLoading" class="pb-4 text-2xl">
+              <div v-if="loadingStats || store.archetypeLoading" class="pb-4 text-2xl">
                 <span><i class="fas fa-circle-notch fa-spin"></i></span>
                 <span class="pl-2">{{ $t("str.loading") }}</span>
               </div>
@@ -26,12 +25,15 @@
               </div>
 
               <!-- Meta -->
-
-              <div v-if="!isLoading && deckStats" class="pb-4">
+              <div v-if="!store.archetypeLoading && deckStats" class="pb-4">
                 <div class="pt-4 pb-3 text-3xl sm:pt-0">{{ $t("deckCode.archetypeStats") }}</div>
                 <meta-group :no-detail="true" :group="deckStats"></meta-group>
                 <div class="pt-4 pb-3 text-3xl">{{ $t("deckCode.archetypeMatchups") }}</div>
-                <meta-matchup :matchups="deckStats.matchup"></meta-matchup>
+                <meta-matchup v-if="!metaStore.isMetaLoading" :matchups="deckStats.matchup"></meta-matchup>
+                <div class="text-2xl" v-if="metaStore.isMetaLoading">
+                  <span><i class="fas fa-circle-notch fa-spin"></i></span>
+                  <span class="pl-2">{{ $t("str.loading") }}</span>
+                </div>
               </div>
 
               <!-- Mulligan -->
@@ -102,169 +104,79 @@ export const factionNames = {
   9: "Mt Targon",
   10: "Bandle City",
 }
+</script>
 
+<script setup>
+import { ref, onMounted, defineProps, computed } from "vue"
 import DeckEncoder from "../../modules/runeterra/DeckEncoder"
 import CardPreview from "../deck/CardPreview.vue"
 import DeckDetail from "../deck/DeckDetail.vue"
 
-import championCards from "../../assets/data/champion.js"
-
-import { mapState, mapActions } from "pinia"
 import MetaGroup from "../meta/MetaGroup.vue"
 import MetaMatchup from "../meta/MetaMatchup.vue"
 import { useMetaStore } from "../../store/StoreMeta"
+import { getDeckID } from "./PanelMeta.vue"
+import { useBaseStore } from "../../store/StoreBase"
 
-export default {
-  mounted() {
-    console.log("PANEL CODE:", this.code)
-    this.processDeck()
-    this.fetchMetaGroups()
-  },
-  props: ["code"],
-  data() {
-    return {
-      error: "",
-      title: "Deck Detail",
-      deck: null,
-      keeps: null,
-      swaps: null,
+import { useArchetypeStore } from "../../store/StoreArchetype"
 
-      loadingStats: true,
+let error = ref("")
+let title = ref("Deck Detail")
+let isValid = ref(false)
+let loadingStats = ref(false)
+let deckID = ref("")
+
+const store = useArchetypeStore()
+const metaStore = useMetaStore()
+
+const props = defineProps({
+  code: String,
+})
+
+onMounted(() => {
+  // console.log("PANEL CODE:", props.code)
+  metaStore.fetchMetaGroups()
+  processDeck()
+})
+
+const deckStats = computed(() => {
+  if (store.archetypeDetails) {
+    if (deckID.value in store.archetypeDetails) {
+      let group = store.archetypeDetails[deckID.value]
+      let feature = group.decks.find((deck) => {
+        return deck.deck_code == props.code
+      })
+      let newGroup = { ...group }
+      newGroup.feature = feature
+      return newGroup
     }
-  },
-  computed: {
-    ...mapState(useMetaStore, ["metaGroups", "isLoading"]),
-    noInfo() {
-      // Not loading and no information
-      return !(this.loadingStats || this.isLoading) && !(this.keeps || this.swaps) && !this.deckStats
-    },
-    getDecodedDeck() {
-      var deck = null
-      if (this.code) {
-        try {
-          deck = DeckEncoder.decode(this.code)
-        } catch (error) {
-          console.log(error)
-          return null
-        }
-      }
-      return deck
-    },
-    getFactions() {
-      var cards = this.getDecodedDeck
-      if (!cards) return null
+  }
 
-      var factionIDs = []
-      for (var j in cards) {
-        var cardCode = cards[j].code
-        var card = this.sets_en[cardCode]
-        if (card) {
-          if (card.regions && card.regions.length == 1) {
-            // Only considers mono region cards
-            var regionID = regionRefID[card.regionRefs[0]]
+  return null
+})
 
-            if (factionIDs.indexOf(regionID) == -1) {
-              factionIDs.push(regionID)
-            }
-          }
-        }
-      }
-      return factionIDs
-    },
-    getChamps() {
-      var deck = this.getDecodedDeck
-      if (!deck) return null
+const noInfo = computed(() => {
+  return !(loadingStats.value || store.archetypeLoading) && !deckStats.value
+})
 
-      var champs = []
-      for (var j in deck) {
-        let cardCode = deck[j].code
-        if (championCards.champObj[cardCode] != null) {
-          var card = this.sets_en[cardCode]
-          if (card) {
-            let champ = {
-              count: deck[j].count,
-              code: cardCode,
-              name: card.name,
-            }
-            champs.push(champ)
-          }
-        }
+function processDeck() {
+  const baseStore = useBaseStore()
+  try {
+    let deck = DeckEncoder.decode(props.code)
+    isValid.value = true
+    deckID.value = getDeckID(props.code)
+    store.fetchArchetypeDetail(deckID.value)
+    let champNames = deck.reduce((names, card) => {
+      let info = baseStore.sets.find((info) => info.cardCode == card.code)
+      if (info.rarityRef === "Champion") {
+        names.push(info.name)
       }
-      champs = champs.sort((a, b) => (a.count > b.count ? -1 : 1))
-      return champs
-    },
-    archetypeID() {
-      var factionNames = this.getFactions.map((id) => regionNames[id]).sort()
-      var champNames = this.getChamps
-        .slice(0, 2)
-        .map((champ) => champ.name)
-        .sort()
-      if (this.getChamps.length == 0) {
-        champNames = ["No-Champion"]
-      }
-      var IDString = factionNames.join(" ") + " " + champNames.join(" ")
-      console.log(`Archetype ID ${IDString}`)
-      return IDString
-    },
-    deckStats() {
-      if (this.metaGroups) {
-        for (let group of this.metaGroups) {
-          let stats = group.decks.find((deck) => {
-            return deck.deck_code == this.code
-          })
-          if (group._id == this.archetypeID) {
-            let newGroup = { ...group }
-            newGroup.feature = stats
-            return newGroup
-          }
-        }
-      }
-
-      return null
-    },
-  },
-  methods: {
-    ...mapActions(useMetaStore, ["fetchMetaGroups"]),
-    processDeck() {
-      try {
-        let deck = DeckEncoder.decode(this.code)
-        this.deck = deck
-        this.requestDeckStats()
-        let champNames = deck.reduce((names, card) => {
-          let info = this.sets.find((info) => info.cardCode == card.code)
-          if (info.rarityRef === "Champion") {
-            names.push(info.name)
-          }
-          return names
-        }, [])
-        this.title = champNames.join(" ")
-      } catch (err) {
-        console.log(err)
-        this.error = this.$t("str.invalidDeck")
-      }
-    },
-
-    async requestDeckStats() {
-      // this.loadingStats = true;
-      // await new Promise((resolve) => setTimeout(resolve, 2000));
-      this.processDeckStats({})
-    },
-    processDeckStats(data) {
-      this.loadingStats = false
-      // this.keeps = [
-      //   { code: this.deck[0].code, rate: 3 },
-      //   { code: this.deck[1].code, rate: 2 },
-      //   { code: this.deck[2].code, rate: 1.3 },
-      //   { code: this.deck[3].code, rate: 0.8 },
-      // ];
-      // this.swaps = [
-      //   { code: this.deck[4].code, rate: 3.1 },
-      //   { code: this.deck[5].code, rate: 2.1 },
-      //   { code: this.deck[6].code, rate: 1.9 },
-      //   { code: this.deck[7].code, rate: 0.9 },
-      // ];
-    },
-  },
-  components: { DeckDetail, CardPreview, MetaGroup, MetaMatchup },
+      return names
+    }, [])
+    title.value = champNames.join(" ")
+  } catch (err) {
+    console.log(err)
+    error.value = err
+  }
 }
 </script>

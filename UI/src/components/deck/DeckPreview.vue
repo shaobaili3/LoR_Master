@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex-1 w-fit flex justify-center hover:bg-gray-700 btn rounded p-1"
+    class="flex justify-center flex-1 p-1 rounded w-fit hover:bg-gray-700 btn"
     @click="showDeck"
     :class="{
       won: won,

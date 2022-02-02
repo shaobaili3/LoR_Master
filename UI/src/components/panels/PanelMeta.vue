@@ -26,23 +26,13 @@
   </div>
 </template>
 
-<script setup>
-import MetaGroup from "../meta/MetaGroup.vue"
-
-import { useMetaStore } from "../../store/StoreMeta"
-
-import { ref, onMounted, computed } from "vue"
-import MetaFilter from "../meta/MetaFilter.vue"
-
+<script>
 import DeckEncoder from "../../modules/runeterra/DeckEncoder"
 import { useBaseStore } from "../../store/StoreBase"
 import { regionNames, regionRefID } from "./PanelDeckCode.vue"
 import { championCards } from "../../assets/data/champion"
 
-const store = useMetaStore()
-const baseStore = useBaseStore()
-
-function getDecodedDeck(code) {
+export const getDecodedDeck = (code) => {
   var deck = null
   if (code) {
     try {
@@ -55,7 +45,8 @@ function getDecodedDeck(code) {
   return deck
 }
 
-function getFactions(code) {
+export const getFactions = (code) => {
+  const baseStore = useBaseStore()
   var cards = getDecodedDeck(code)
   if (!cards) return null
 
@@ -77,7 +68,8 @@ function getFactions(code) {
   return factionIDs
 }
 
-function getChamps(code) {
+export const getChamps = (code) => {
+  const baseStore = useBaseStore()
   var deck = getDecodedDeck(code)
   if (!deck) return null
 
@@ -100,7 +92,7 @@ function getChamps(code) {
   return champs
 }
 
-function getDeckID(code) {
+export const getDeckID = (code) => {
   var factionNames = getFactions(code)
     .map((id) => regionNames[id])
     .sort()
@@ -112,9 +104,19 @@ function getDeckID(code) {
     champNames = ["No-Champion"]
   }
   var IDString = factionNames.join(" ") + " " + champNames.join(" ")
-  // console.log(`Archetype ID ${IDString}`)
   return IDString
 }
+</script>
+
+<script setup>
+import MetaGroup from "../meta/MetaGroup.vue"
+
+import { useMetaStore } from "../../store/StoreMeta"
+
+import { ref, onMounted, computed } from "vue"
+import MetaFilter from "../meta/MetaFilter.vue"
+
+const store = useMetaStore()
 
 const fetchMetaGroups = store.fetchMetaGroups
 
@@ -127,8 +129,6 @@ const filter = ref([])
 function updateFilter(newFilter) {
   filter.value = newFilter
 }
-
-console.log(store.metaGroups)
 
 const filteredMeta = computed(() => {
   if (!store.metaGroups) return null

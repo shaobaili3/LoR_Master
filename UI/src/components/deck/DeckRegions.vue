@@ -67,6 +67,7 @@ export default {
       var factionIDs = []
 
       var cards = null
+      if (!this.deck) return []
       try {
         cards = DeckEncoder.decode(this.deck)
       } catch (err) {
