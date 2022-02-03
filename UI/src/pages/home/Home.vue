@@ -2,7 +2,7 @@
   <div class="left-nav-btn mobile-btn" @click="expandLeftNav">
     <span><i class="fas fa-list"></i></span>
   </div>
-  <div class="left-nav overflow-y-scroll no-scrollbar" :class="{ expanded: leftNavExpanded }">
+  <div class="overflow-y-scroll left-nav no-scrollbar" :class="{ expanded: leftNavExpanded }">
     <div class="left-nav-btn logo no-click" v-if="!IS_ELECTRON" @mouseenter="showAds">
       <picture>
         <source srcset="@/assets/images/logo/logo.webp" type="image/webp" />
@@ -43,14 +43,17 @@
     <router-link :to="{ name: 'meta' }" class="left-nav-btn" :class="{ selected: $route.name == 'meta' }" @click="setCurrentPage(PANELS.meta)">
       <span><i class="fas fa-trees"></i></span>
     </router-link>
-    <button class="left-nav-btn hidden sm:flex" :class="{ 'text-gold-200 light-gold': isOpenBookshelf }" @click="toggleBookshelf()">
+    <button class="hidden left-nav-btn sm:flex" :class="{ 'text-gold-200 light-gold': isOpenBookshelf }" @click="toggleBookshelf()">
       <span><i class="fas fa-books"></i></span>
     </button>
+    <router-link :to="{ name: 'test' }" class="left-nav-btn" :class="{ selected: $route.name == 'test' }">
+      <span><i class="fas fa-wrench"></i></span>
+    </router-link>
     <!-- Divider -->
     <div class="flex-1"></div>
     <router-link
       :to="{ name: 'contact' }"
-      class="left-nav-btn text-gray-300 gray"
+      class="text-gray-300 left-nav-btn gray"
       :class="{ selected: $route.name == 'contact' }"
       @click="setCurrentPage(PANELS.contact)"
     >
@@ -58,7 +61,7 @@
     </router-link>
     <router-link
       :to="{ name: 'settings' }"
-      class="left-nav-btn text-gray-300 gray"
+      class="text-gray-300 left-nav-btn gray"
       :class="{
         selected: $route.name == 'settings',
         ' mb-14 ': IS_ELECTRON,
@@ -70,7 +73,7 @@
     </router-link>
   </div>
 
-  <div class="bg-gray-900/50 z-10 absolute top-0 left-0 block sm:hidden w-screen h-screen" v-if="leftNavExpanded" @click="shrinkLeftNav"></div>
+  <div class="absolute top-0 left-0 z-10 block w-screen h-screen bg-gray-900/50 sm:hidden" v-if="leftNavExpanded" @click="shrinkLeftNav"></div>
 
   <div class="menu-content hidden sm:grid absolute left-[98px] top-6 bottom-auto z-[120]" :class="{ hide: !isOpenBookshelf }" @mouseleave="toggleBookshelf()">
     <div class="card" @click="openURL('https://masteringruneterra.com/')">
@@ -98,19 +101,19 @@
   <!-- Ads -->
   <!-- <div v-if="!IS_ELECTRON" class="mt-[-23px] text-center w-auto min-w-0 pl-4 absolute transition-spacing z-10 invisible md:visible" :class="{ 'ml-[-300px]': isAdHidden && isAdClosed, 'ml-20': !(isAdHidden && isAdClosed) }">
     <div class="ad overflow-hidden relative block w-[300px] h-[250px] transition-opacity bg-gray-800 rounded-lg" @mouseleave="hideAds">
-      <button class="absolute top-1 right-1 text-white" @click="closeAds">
+      <button class="absolute text-white top-1 right-1" @click="closeAds">
         <i class="p-2 fas fa-times"></i>
       </button>
       <div class="w-full h-full">
-        <p class="text-lg py-5">
-          Have you tried our <a class="text-xl text-gold-400 cursor-pointer" href="https://lormaster.com" target="_blank"><br />LoR Master Tracker</a> yet?
+        <p class="py-5 text-lg">
+          Have you tried our <a class="text-xl cursor-pointer text-gold-400" href="https://lormaster.com" target="_blank"><br />LoR Master Tracker</a> yet?
         </p>
-        <a class="text-xl text-gold-400 cursor-pointer" href="https://lormaster.com" target="_blank"><img src="../../assets/images/promo/tracker.png" alt="" srcset="" /></a>
+        <a class="text-xl cursor-pointer text-gold-400" href="https://lormaster.com" target="_blank"><img src="../../assets/images/promo/tracker.png" alt="" srcset="" /></a>
       </div>
     </div>
   </div> -->
 
-  <div class="block text-white text-center pt-nav sm:pl-20" :class="{ 'h-main-electron': IS_ELECTRON, 'h-main-web': !IS_ELECTRON }" @click="shrinkLeftNav">
+  <div class="block text-center text-white pt-nav sm:pl-20" :class="{ 'h-main-electron': IS_ELECTRON, 'h-main-web': !IS_ELECTRON }" @click="shrinkLeftNav">
     <div class="h-full" @scroll="handleContentScroll">
       <router-view :key="$route.fullPath"></router-view>
     </div>

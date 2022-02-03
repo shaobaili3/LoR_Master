@@ -1,14 +1,19 @@
 <template>
   <div class="flex justify-center h-full">
-    <div v-if="playerName && matches.length > 0" class="hidden lg:flex flex-col flex-1 max-w-xs pr-6">
-      <div class="text-xl text-center pb-4">{{ $t("str.archetypes") }}</div>
-      <div class="flex flex-col gap-4 flex-1 h-0 overflow-y-auto">
-        <div class="group rounded transition-colors" v-for="obj in uniqueArchetypes" :key="obj.id" :class="{ 'bg-gray-700': filterDeckID == obj.id }">
+    <div v-if="playerName && matches.length > 0" class="flex-col flex-1 hidden max-w-xs pr-6 lg:flex">
+      <div class="pb-4 text-xl text-center">{{ $t("str.archetypes") }}</div>
+      <div class="flex flex-col flex-1 h-0 gap-4 overflow-y-auto">
+        <div
+          class="transition-colors rounded group"
+          v-for="obj in uniqueArchetypes"
+          :key="obj.id"
+          :class="{ 'bg-gray-700': filterDeckID == obj.id }"
+        >
           <div class="flex items-center">
             <div>
               <deck-preview :fixedWidth="true" class="p-2" :deck="obj.decks[0]" :size="1"></deck-preview>
             </div>
-            <div class="text-left flex-1 w-0">
+            <div class="flex-1 w-0 text-left">
               <div class="text-gray-200">
                 {{ $t("matches.games", { num: obj.freq }) }}
               </div>
@@ -21,7 +26,7 @@
               </div>
             </div>
             <div
-              class="group-hover:block px-2 pr-4 h-full cursor-pointer text-gray-200 hover:text-gray-50"
+              class="h-full px-2 pr-4 text-gray-200 cursor-pointer group-hover:block hover:text-gray-50"
               :class="{
                 hidden: filterDeckID != obj.id,
               }"
@@ -34,7 +39,7 @@
       </div>
       <div class="h-1/2"></div>
     </div>
-    <div class="max-w-xl flex-1 w-0">
+    <div class="flex-1 w-0 max-w-xl">
       <div class="flex flex-col h-full px-2 sm:px-0">
         <div class="z-[1]">
           <div class="region-tabs">
@@ -103,7 +108,7 @@
           </player-matches>
         </div>
 
-        <div class="text-2xl my-4" v-if="isLoading || isUpdating || isError || matches.length <= 0">
+        <div class="my-4 text-2xl" v-if="isLoading || isUpdating || isError || matches.length <= 0">
           <span v-if="!(isLoading || isUpdating) && !isError && matches.length <= 0">
             {{ $t("search.prompt") }}
           </span>
@@ -122,7 +127,7 @@
         </div>
       </div>
     </div>
-    <div v-if="playerName && matches.length > 0" class="hidden xl:block w-1/6"></div>
+    <div v-if="playerName && matches.length > 0" class="hidden w-1/6 xl:block"></div>
   </div>
 </template>
 
@@ -336,7 +341,7 @@ export default {
     searchPlayer(data) {
       // data.region is region short
       this.searchText = data.name
-      this.selectRegion(data.region)
+      this.selectedRegion = data.region
       this.resetInputFocus()
 
       this.playerName = data.name
@@ -607,6 +612,7 @@ export default {
 
       const requestHistoryStartTime = Date.now()
 
+      console.log("Start Request", requestHistoryStartTime)
       axios
         .get(newRequest, {
           headers: {
@@ -625,6 +631,8 @@ export default {
           })
 
           this.processSearchHistory(response.data)
+
+          console.log("Request Took", Date.now() - requestHistoryStartTime)
 
           this.requestHistoryUpdate()
         })

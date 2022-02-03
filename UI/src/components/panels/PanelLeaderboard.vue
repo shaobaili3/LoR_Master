@@ -170,8 +170,8 @@ export default {
     },
 
     searchPlayer(player) {
-      // console.log("In leaderboard", player)
       if (player.tag) {
+        console.log("Leaderboard before router push", Date.now())
         // Only player with tag can be clicked=
         this.$router.push({
           name: "search",

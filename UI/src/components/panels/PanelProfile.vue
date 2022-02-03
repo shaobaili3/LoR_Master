@@ -1,9 +1,18 @@
 <template>
   <div class="flex justify-center h-full">
-    <div class="max-w-xl flex-1 w-0">
+    <!-- <SignIn></SignIn> -->
+    <!-- Center Column -->
+    <div class="flex-1 w-0 max-w-xl">
+      <!-- Vertical Flex -->
       <div class="flex flex-col h-full px-2 sm:px-0">
         <div class="text-3xl" v-if="localHistoryLoading">{{ $t("str.loading") }}</div>
-        <PlayerMatches v-if="!localHistoryLoading" :playerName="name" :playerRegion="server" :playerTag="tag" :matches="playerMatches"></PlayerMatches>
+        <PlayerMatches
+          v-if="!localHistoryLoading"
+          :playerName="name"
+          :playerRegion="server"
+          :playerTag="tag"
+          :matches="playerMatches"
+        ></PlayerMatches>
       </div>
     </div>
   </div>
@@ -17,6 +26,7 @@ import PlayerMatches from "../match/PlayerMatches.vue"
 import axios from "axios"
 
 import { ref, onMounted } from "vue"
+import SignIn from "../signin/SignIn.vue"
 
 const store = useStatusStore()
 const baseStore = useBaseStore()
@@ -118,7 +128,6 @@ function requestLocalHistory() {
         })
 
         processLocalHistory(response.data)
-
       }
     })
     .catch((e) => {
