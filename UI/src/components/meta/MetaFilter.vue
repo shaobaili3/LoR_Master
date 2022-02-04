@@ -96,23 +96,18 @@ onMounted(() => {
   if (oldFilter) {
     tags.value = JSON.parse(oldFilter)
   }
-  emitFilter()
+  emits("bindFilter", tags.value)
 })
 
 const hasAutoComplete = computed(() => {
   return autoCompleteItems.value.length > 0
 })
 
-const emits = defineEmits(["updateFilter"])
-
-function emitFilter() {
-  window.localStorage.setItem("lmt-panel-meta-filter", JSON.stringify(tags.value))
-  emits("updateFilter", tags.value)
-}
+const emits = defineEmits(["bindFilter"])
 
 function clearTags() {
-  tags.value = []
-  emitFilter()
+  tags.value.splice(0, tags.value.length)
+  window.localStorage.setItem("lmt-panel-meta-filter", JSON.stringify(tags.value))
 }
 
 function addACToFilter(item) {
@@ -194,19 +189,17 @@ function addItemToTags(item) {
   if (item.code) {
     if (!tags.value.includes(item.code)) {
       tags.value.push(item.code)
-      emitFilter()
     }
   } else if (item.name) {
     if (!tags.value.includes(item.name)) {
       tags.value.push(item.name)
-      emitFilter()
     }
   } else {
     if (!tags.value.includes(item)) {
       tags.value.push(item)
-      emitFilter()
     }
   }
+  window.localStorage.setItem("lmt-panel-meta-filter", JSON.stringify(tags.value))
 }
 
 function onKeyUp(e) {
@@ -224,9 +217,8 @@ function onKeyUp(e) {
             tags.value.push(tag)
           }
         })
-        emitFilter()
+        window.localStorage.setItem("lmt-panel-meta-filter", JSON.stringify(tags.value))
       }
-      console.log(tags.value)
     }
 
     e.target.value = ""
@@ -243,6 +235,7 @@ function onKeyDown(e) {
     // Handle deleting tags using backspace
     if (val == "") {
       tags.value.pop()
+      window.localStorage.setItem("lmt-panel-meta-filter", JSON.stringify(tags.value))
     }
   }
 
@@ -272,8 +265,6 @@ function checkACIndexBounds() {
 }
 
 function handleDeleteTag(index) {
-  console.log(tags.value)
   tags.value.splice(index, 1)
-  emitFilter()
 }
 </script>

@@ -27,7 +27,7 @@
               <!-- Meta -->
               <div v-if="!store.archetypeLoading && deckStats" class="pb-4">
                 <div class="pt-4 pb-3 text-3xl sm:pt-0">{{ $t("deckCode.archetypeStats") }}</div>
-                <meta-group :no-detail="true" :group="deckStats"></meta-group>
+                <meta-group :no-detail="true" :selfExpand="true" :group="deckStats"></meta-group>
                 <div class="pt-4 pb-3 text-3xl">{{ $t("deckCode.archetypeMatchups") }}</div>
                 <meta-matchup v-if="!metaStore.isMetaLoading" :matchups="deckStats.matchup"></meta-matchup>
                 <div class="text-2xl" v-if="metaStore.isMetaLoading">

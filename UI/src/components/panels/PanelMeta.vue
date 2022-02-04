@@ -4,7 +4,7 @@
       <div class="flex flex-col h-full px-2 sm:px-0">
         <p class="pt-3 pb-5 text-3xl text-left title">{{ $t("str.meta") }}</p>
 
-        <MetaFilter class="sticky top-0 z-[5] bg-gray-900" @update-filter="updateFilter"></MetaFilter>
+        <MetaFilter class="sticky top-0 z-[5] bg-gray-900" @bind-filter="bindFilter"></MetaFilter>
 
         <div v-if="store.isMetaLoading" class="pb-5 text-2xl">
           <i class="fas fa-circle-notch fa-spin"></i>
@@ -136,7 +136,7 @@ onMounted(() => {
 
 const filter = ref([])
 
-function updateFilter(newFilter) {
+function bindFilter(newFilter) {
   filter.value = newFilter
 }
 
