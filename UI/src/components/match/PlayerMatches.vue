@@ -187,9 +187,6 @@ export default {
       this.leaderboardStore.fetchLeaderboard(REGION_ID[this.playerRegion])
       // this.$store.dispatch('leaderboardData/fetchLeaderboard', REGION_ID[this.playerRegion])
     }
-    this.$nextTick(() => {
-      window.addEventListener("resize", this.onResize)
-    })
   },
   props: {
     playerName: String,
@@ -203,7 +200,6 @@ export default {
   data() {
     return {
       filterDeckCode: null,
-      windowWidth: window.innerWidth,
     }
   },
   emits: {
@@ -219,13 +215,6 @@ export default {
   computed: {
     ...mapStores(useLeaderboardStore),
 
-    scrollerItemSize() {
-      if (this.windowWidth < 640) {
-        return 95
-      } else {
-        return 105
-      }
-    },
     missingRankLp() {
       return !this.playerLP && !this.playerRank && this.playerName && this.playerTag && this.playerRegion
     },
@@ -355,10 +344,6 @@ export default {
     },
   },
   methods: {
-    onResize() {
-      this.windowWidth = window.innerWidth
-    },
-
     downloadStreakScreenshot(index) {
       // html2canvas(this.$el).then(function (canvas) {
       //   document.body.appendChild(canvas)
