@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex justify-center flex-1 p-1 rounded cursor-pointer w-fit hover:bg-gray-700 btn"
+    class="flex justify-center flex-1 p-1 rounded cursor-pointer border-inherit w-fit hover:bg-gray-900 btn"
     @click="showDeck"
     :class="{
       won: won,
@@ -10,7 +10,7 @@
       'scale-75 -my-2 -mx-4': size == 1,
     }"
   >
-    <div class="flex items-center" :class="{ 'w-[160px] sm:w-[190px]': fixedWidth }">
+    <div class="flex items-center border-inherit" :class="{ 'w-[160px] sm:w-[190px]': fixedWidth }">
       <deck-regions :deck="deck" :fixedWidth="true"></deck-regions>
       <deck-champs :deck="deck" :fixedWidth="!cheveron"></deck-champs>
       <div v-if="cheveron" class="icon cheveron fa" :class="{ 'fa-chevron-down': !isShown, 'fa-chevron-up': isShown }"></div>

@@ -1,11 +1,13 @@
 <template>
   <div
+    class="mr-1"
     :class="{
-      'h-[94px] sm:h-[106px]': !winStreak && !isDateBreak,
-      'h-[118px] sm:h-[130px]': isDateBreak,
-      'h-[126px] sm:h-[138px]': winStreak,
+      'h-[96px] sm:h-[108px]': !winStreak && !isDateBreak,
+      'h-[120px] sm:h-[132px]': isDateBreak,
+      'h-[128px] sm:h-[140px]': winStreak,
     }"
   >
+    <!-- Win Streak -->
     <div class="flex justify-between pt-1 pb-1" v-if="winStreak">
       <div class="pl-2 text-left">
         {{ $t("matches.winStreak", { num: winStreak }) }}
@@ -14,15 +16,19 @@
         Download Screenshot
       </div> -->
     </div>
+    <!-- Time String -->
     <div class="pb-1 pl-2 text-sm text-left text-gray-200" v-if="isDateBreak && !winStreak">
       {{ timeString }}
     </div>
-    <div class="match-history match" :class="{ 'won bg-gradient-to-b from-yellow-500 to-amber-600': won, 'loss bg-gray-800': !won }">
+    <div
+      class="border-2 match-history match"
+      :class="{ 'won border-yellow-500 bg-gray-800': won, 'loss bg-gray-700 border-gray-700': !won }"
+    >
       <div class="btn-expand-detail" v-if="details" @click="toggleDetail">
         <i class="fas" :class="{ 'fa-chevron-down': !showDetail, 'fa-chevron-up': showDetail }"></i>
       </div>
       <div class="overflow-x-scroll row opponent no-scrollbar">
-        <p @click="search" class="match-info-title">
+        <p @click="search" class="match-info-title text-inherit">
           <i class="fas" :class="{ 'fa-pennant pr-2': win, '': !win }"></i>
           <span class="desktop">vs </span>
           <span class="name" :class="{ search: region }">{{ opponentName }}</span>
@@ -39,7 +45,7 @@
           {{ $t("matches.badges." + badge.replace(/\s+/g, "")) }}
         </div>
       </div>
-      <div class="row decklist">
+      <div class="flex items-center justify-around border-zinc-200">
         <deck-preview @click.stop :deck="deck" :won="won" :fixedWidth="false"></deck-preview>
         <span class="vs-text">
           <span>VS</span>
@@ -58,7 +64,6 @@
         :startHand="details.openHand"
         :endHand="details.replacedHand"
       ></match-detail-mulligan>
-
       <match-detail-timeline v-if="details && showDetail" :time="time" :details="details"></match-detail-timeline>
     </div>
   </div>
@@ -227,8 +232,8 @@ export default {
 
   /* overflow: hidden; */
 
-  border-left: 3px solid var(--col-background);
-  border-right: 3px solid var(--col-background);
+  // border-left: 3px solid var(--col-background);
+  // border-right: 3px solid var(--col-background);
 
   font-size: 1em;
 }
@@ -239,8 +244,8 @@ export default {
 
 .match-info-badge {
   font-size: 0.7em;
-  color: rgba(255, 255, 255, 0.8);
-  background: rgba(255, 255, 255, 0.2);
+  // color: rgba(255, 255, 255, 0.8);
+  // background: rgba(255, 255, 255, 0.2);
   padding: 3px 8px;
   margin-right: 5px;
   border-radius: 50px;
@@ -249,25 +254,25 @@ export default {
 }
 
 .match-info-badge:hover {
-  color: rgba(255, 255, 255, 1);
-  background: rgba(255, 255, 255, 0.3);
+  // color: rgba(255, 255, 255, 1);
+  // background: rgba(255, 255, 255, 0.3);
 }
 
 .history-info {
   font-size: 0.8em;
-  color: rgba(255, 255, 255, 0.7);
+  // color: rgba(255, 255, 255, 0.7);
   padding: 8px 6px;
   cursor: default;
   white-space: nowrap;
 }
 
 .history-info:hover {
-  color: rgba(255, 255, 255, 1);
+  // color: rgba(255, 255, 255, 1);
 }
 
 .opponent-info {
   font-size: 0.8em;
-  color: rgba(255, 255, 255, 1);
+  // color: rgba(255, 255, 255, 1);
   padding: 8px 6px 8px 0px;
   cursor: default;
   white-space: nowrap;
@@ -311,18 +316,18 @@ export default {
   width: 10px;
   border-radius: 10px;
 
-  background-color: var(--col-background);
-  opacity: 0.1;
+  // background-color: var(--col-background);
+  // opacity: 0.1;
 }
 
 .row.match-history-dots .dot.played {
-  opacity: 0.3;
-  background: rgb(255, 255, 255);
+  // opacity: 0.3;
+  // background: rgb(255, 255, 255);
 }
 
 .row.match-history-dots .dot.played.won {
-  opacity: 0.7;
-  background: rgb(255, 255, 255);
+  // opacity: 0.7;
+  // background: rgb(255, 255, 255);
 }
 
 /* .row.match-history-dots:hover .dot {
@@ -330,18 +335,18 @@ export default {
     } */
 
 .row.match-history-dots:hover .dot {
-  opacity: 0.05;
+  // opacity: 0.05;
 }
 
 .row.match-history-dots:hover .dot.played {
   /* display: initial; */
-  opacity: 0.5;
+  // opacity: 0.5;
   /* background-color: var(--col-background); */
 }
 
 .match-history-dots:hover .dot.played.won {
   opacity: 1;
-  background: rgb(255, 255, 255);
+  // background: rgb(255, 255, 255);
   box-shadow: 1px 2px 5px -2px #000000;
 }
 
