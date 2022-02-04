@@ -1,63 +1,142 @@
 <template>
-  <div class="sticky-top">
-    <div class="player-name">{{ playerName }}</div>
-    <div class="summary-container">
-      <div class="summary-item player-summary">
-        <div class="detail rank" v-if="rank">
-          <span class="pre-info"><i class="fas fa-trophy"></i></span>
-          {{ rank }}
-        </div>
-        <div class="detail lp" v-if="lp || lp === 0">
-          <span class="pre-info"><i class="iconfy">LP</i></span>
-          {{ lp }}
-        </div>
-        <div class="detail region" v-if="playerRegion">
-          <span class="pre-info"
-            ><i
-              class="fas"
-              :class="{
-                'fa-globe-asia': playerRegion === 'APAC',
-                'fa-globe-europe': playerRegion === 'EU',
-                'fa-globe-americas': playerRegion === 'NA',
-              }"
-            ></i
-          ></span>
-          {{ playerRegionFC }}
-        </div>
-      </div>
-      <div class="summary-item decks-summary" @wheel.prevent="horizontalScroll">
-        <div class="champion-icons btn" v-for="obj in uniqueDeckCodes" :key="obj.deck" :class="{ active: filterDeckCode == obj.deck }" @click="setFilterDeckCode(obj.deck)">
-          <deck-champs :deck="obj.deck" :showRegion="true" :fixedWidth="false"></deck-champs>
-        </div>
-      </div>
-      <div class="summary-item history-summary">
-        <div class="winrate" v-if="winrate">
-          {{ winrate }} <span class="subtext">{{ $t("dash.winRate") }}</span>
-        </div>
-        <div class="winloss" v-if="winloss">{{ winloss }}</div>
+  <div class="flex flex-col h-full">
+    <div v-if="false" class="summary-item decks-summary" @wheel.prevent="horizontalScroll">
+      <div
+        class="champion-icons btn"
+        v-for="obj in uniqueDeckCodes"
+        :key="obj.deck"
+        :class="{ active: filterDeckCode == obj.deck }"
+        @click="setFilterDeckCode(obj.deck)"
+      >
+        <deck-champs :deck="obj.deck" :showRegion="true" :fixedWidth="false"></deck-champs>
       </div>
     </div>
-  </div>
 
-  <div class="no-content" v-if="totalMatches == 0">{{ $t("str.error.playerNoHistory") }}</div>
+    <div class="items-end block grid-cols-5 pb-4 sm:grid">
+      <div class="col-span-4 px-2 sm:px-0">
+        <div class="player-name">{{ playerName }}</div>
+        <div class="flex items-center justify-start gap-4 pt-2 text-left sm:gap-6">
+          <div v-if="rank">
+            <div class="text-sm text-gray-300"><i class="fas fa-trophy"></i> Rank</div>
+            <div class="text-lg">No. {{ rank }}</div>
+          </div>
 
-  <div class="match-history-container">
-    <match-history
-      @search="searchPlayer({ region: match.region, name: match.opponentName, tag: match.opponentTag })"
-      v-for="match in filteredMatches"
-      :key="match.time"
-      :opponentName="match.opponentName"
-      :opponentRank="match.opponentRank"
-      :opponentLp="match.opponentLp"
-      :deck="match.deck"
-      :opponentDeck="match.opponentDeck"
-      :rounds="match.rounds"
-      :win="match.win"
-      :time="match.time"
-      :badges="match.badges"
-      :details="match.details"
-      :region="match.region"
-    ></match-history>
+          <div v-if="lp">
+            <div class="text-sm text-gray-300"><i class="fas fa-map-marker-alt"></i> Points</div>
+            <div class="text-lg">
+              {{ lp }}
+            </div>
+          </div>
+
+          <div v-if="playerRegion">
+            <div class="text-sm text-gray-300">
+              <i
+                class="fas"
+                :class="{
+                  'fa-globe-asia': playerRegion === 'APAC',
+                  'fa-globe-europe': playerRegion === 'EU',
+                  'fa-globe-americas': playerRegion === 'NA',
+                }"
+              ></i>
+              Server
+            </div>
+            <div class="text-lg">
+              {{ playerRegionFC }}
+            </div>
+          </div>
+
+          <div v-if="games24hr">
+            <div class="text-sm text-gray-300">
+              {{ $t("matches.lastNumHour", { num: 24 }) }}
+            </div>
+            <div class="text-lg">
+              {{ $t("matches.games", { num: games24hr }) }}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="px-2 pt-2 text-left sm:p-0" v-if="winrate">
+        <div class="text-sm text-gray-300">
+          {{ $t("matches.games", { num: totalMatches }) }}
+        </div>
+        <div class="text-2xl">
+          {{ winrate }} <span class="subtext">{{ $t("dash.winRate") }}</span>
+        </div>
+        <div class="text-sm text-gray-300" v-if="winloss">{{ winloss }}</div>
+      </div>
+    </div>
+
+    <div class="no-content" v-if="totalMatches == 0">{{ $t("str.error.playerNoHistory") }}</div>
+
+    <DynamicScroller :items="filteredMatches" :min-item-size="50" class="flex-1 overflow-y-auto" key-field="time">
+      <template v-slot="{ item, index, active }">
+        <DynamicScrollerItem :item="item" :active="active" :size-dependencies="[item.winStreak, item.isDateBreak]" :data-index="index">
+          <match-history
+            @search="searchPlayer({ region: item.region, name: item.opponentName, tag: item.opponentTag })"
+            :opponentName="item.opponentName"
+            :opponentRank="item.opponentRank"
+            :opponentLp="item.opponentLp"
+            :deck="item.deck"
+            :opponentDeck="item.opponentDeck"
+            :rounds="item.rounds"
+            :win="item.win"
+            :time="item.time"
+            :badges="item.badges"
+            :details="item.details"
+            :region="item.region"
+            :winStreak="item.winStreak"
+            :isDateBreak="item.isDateBreak"
+            :index="index"
+          ></match-history>
+        </DynamicScrollerItem>
+      </template>
+    </DynamicScroller>
+
+    <!-- <RecycleScroller
+      v-if="totalMatches > 0"
+      class="flex-1 overflow-y-auto"
+      :items="filteredMatches"
+      :item-size="scrollerItemSize"
+      key-field="time"
+    >
+      <template v-slot="{ item }">
+        <match-history
+          @search="searchPlayer({ region: item.region, name: item.opponentName, tag: item.opponentTag })"
+          :opponentName="item.opponentName"
+          :opponentRank="item.opponentRank"
+          :opponentLp="item.opponentLp"
+          :deck="item.deck"
+          :opponentDeck="item.opponentDeck"
+          :rounds="item.rounds"
+          :win="item.win"
+          :time="item.time"
+          :badges="item.badges"
+          :details="item.details"
+          :region="item.region"
+        ></match-history></template
+    ></RecycleScroller> -->
+    <!-- <div v-if="totalMatches > 0" class="flex-1 overflow-y-auto">
+      <match-history
+        v-for="(item, index) in filteredMatches"
+        :key="item.time + filter"
+        @search="searchPlayer({ region: item.region, name: item.opponentName, tag: item.opponentTag })"
+        :opponentName="item.opponentName"
+        :opponentRank="item.opponentRank"
+        :opponentLp="item.opponentLp"
+        :deck="item.deck"
+        :opponentDeck="item.opponentDeck"
+        :rounds="item.rounds"
+        :win="item.win"
+        :time="item.time"
+        :badges="item.badges"
+        :details="item.details"
+        :region="item.region"
+        :winStreak="item.winStreak"
+        :isDateBreak="item.isDateBreak"
+        :index="index"
+      ></match-history>
+      
+    </div> -->
   </div>
 </template>
 
@@ -116,6 +195,7 @@ export default {
     playerTag: String,
     playerRegion: String, // region shorts
     matches: Array,
+    filter: String,
   },
   data() {
     return {
@@ -140,10 +220,7 @@ export default {
     },
 
     leaderboard() {
-      console.log("Trying access leaderboard")
-      console.log(this.playerName, this.playerTag)
       if (this.missingRankLp) {
-        console.log("Leaderboard access from matches")
         const lead = this.leaderboardStore.leaderboard
         if (lead && lead[REGION_ID[this.playerRegion]]) {
           return lead[REGION_ID[this.playerRegion]].find((val) => {
@@ -199,12 +276,14 @@ export default {
     },
     filteredMatches() {
       if (!this.matches) return null
-      if (!this.filterDeckCode)
+      if (!this.filterDeckCode) {
+        var winStreak = 0
+        var days = 1
         return this.matches
           .filter((n) => n)
-          .map((val) => {
+          .map((val, index, array) => {
+            // Loading in Rank from Leaderboard
             if ((!val.opponentRank || val.opponentRank == "") && val.opponentName && val.opponentTag && val.region) {
-              
               const lead = this.leaderboardStore.leaderboard
               if (lead && lead[REGION_ID[val.region]]) {
                 let leadItem = lead[REGION_ID[val.region]].find((boardItem) => {
@@ -216,14 +295,40 @@ export default {
               }
             }
 
+            val.isDateBreak = false
+            val.winStreak = 0
+
+            if (val.win) {
+              winStreak += 1
+            } else {
+              if (winStreak >= 5) array[index - winStreak].winStreak = winStreak
+              winStreak = 0
+            }
+
+            var date = new Date(val.time)
+            var daysElapsed = (Date.now() - date) / 1000 / 60 / 60 / 24
+
+            if (daysElapsed >= days) {
+              val.isDateBreak = true
+              days = Math.ceil(daysElapsed)
+            }
+
             return val
           }) // filters out null decks
-
+      }
       return this.matches.filter((x) => x.deck == this.filterDeckCode && x.time) // filters according to deck code & check to make sure time is set
     },
     totalWins() {
       if (!this.filteredMatches) return null
       return this.filteredMatches.reduce((total, match) => (match.win ? total + 1 : total), 0) // adds up all the wins
+    },
+    games24hr() {
+      if (!this.matches) return 0
+      return this.matches.reduce((total, match) => {
+        var date = new Date(match.time)
+        var daysElapsed = (Date.now() - date) / 1000 / 60 / 60 / 24
+        return daysElapsed < 1 ? total + 1 : total
+      }, 0)
     },
     totalMatches() {
       return this.filteredMatches.length
@@ -239,6 +344,11 @@ export default {
     },
   },
   methods: {
+    downloadStreakScreenshot(index) {
+      // html2canvas(this.$el).then(function (canvas) {
+      //   document.body.appendChild(canvas)
+      // })
+    },
     // Helpers
     animateScroll(el, distance, duration) {
       var scrollAmount = 0
@@ -294,8 +404,8 @@ export default {
       if (data.tag) {
         // Only player with tag can be clicked=
         this.$router.push({
-          name: 'search',
-          query: { name: data.name, tag: data.tag , region: data.region}
+          name: "search",
+          query: { name: data.name, tag: data.tag, region: data.region },
         })
       }
     },
@@ -316,7 +426,6 @@ export default {
 
 .summary-container {
   padding: 5px 0px 15px 0px;
-  display: flex;
   gap: 10px;
   justify-content: space-between;
   align-items: center;

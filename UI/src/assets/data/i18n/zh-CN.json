@@ -42,7 +42,8 @@
     "detail": "详情",
     "updating": "更新中...",
     "noDetail": "未找到详情",
-    "back": "返回"
+    "back": "返回",
+    "archetypes": "体系"
   },
   "loading": {
     "readyToRock": "准备就绪 🤘",
@@ -59,7 +60,10 @@
   "leaderboard": {
     "rank": "排名",
     "name": "玩家",
-    "points": "分数"
+    "points": "分数",
+    "recent": "近期牌组",
+    "lastX": "最近 {num} 场",
+    "lastRank": "最近排位"
   },
   "matches": {
     "usage": "{num}% 使用率",
@@ -74,7 +78,13 @@
       "SeasonalTournament": "季赛",
       "AI": "电脑"
     },
-    "winRate": "{num}% 胜率"
+    "winRate": "{num}% 胜率",
+    "meta": "{num}% 环境",
+    "build": "{num}% 构筑",
+    "winStreak": "{num} 连胜！",
+    "recommendedCurrent": "推荐（当前）：",
+    "recommended": "推荐：",
+    "current": "当前："
   },
   "dash": {
     "winRate": "胜率",
@@ -125,6 +135,8 @@
     "archetypeMatchups": "体系对局",
     "mulliganGuide": "换牌策略",
     "keep": "保留",
-    "mulligan": "替换"
+    "mulligan": "替换",
+    "goodMatchup": "优势对局",
+    "badMatchup": "劣势对局"
   }
 }

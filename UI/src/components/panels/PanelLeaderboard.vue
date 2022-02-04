@@ -1,44 +1,64 @@
 <template>
-  <div class="main-content-container">
-  
-    <div class="sticky-top leaderboard-sticky-top">
-      <div id="btn-group-regions" class="flex">
-        <button id="btn-na" class="btn" :class="{ active: activeRegionID == 0 }" @click="switchRegion(regions.NA)">NA</button>
-        <button id="btn-eu" class="btn" :class="{ active: activeRegionID == 1 }" @click="switchRegion(regions.EU)">EU</button>
-        <button id="btn-sea" class="btn" :class="{ active: activeRegionID == 2 }" @click="switchRegion(regions.APAC)">APAC</button>
-        <!-- <button id="btn-as" class="btn" :class="{active: activeRegionID == 2}" @click="switchRegion(regions.AS)">AS</button> -->
-        <!-- <button id="btn-sea" class="btn" :class="{active: activeRegionID == 3}" @click="switchRegion(regions.SEA)">SEA</button> -->
-      </div>
+  <div class="flex justify-center h-full px-4">
+    <div class="flex-1 w-0 max-w-3xl">
+      <div class="flex flex-col h-full px-2 sm:px-0">
+        <div class="">
+          <div id="btn-group-regions" class="flex">
+            <button id="btn-na" class="btn" :class="{ active: activeRegionID == 0 }" @click="switchRegion(regions.NA)">NA</button>
+            <button id="btn-eu" class="btn" :class="{ active: activeRegionID == 1 }" @click="switchRegion(regions.EU)">EU</button>
+            <button id="btn-sea" class="btn" :class="{ active: activeRegionID == 2 }" @click="switchRegion(regions.APAC)">APAC</button>
+            <!-- <button id="btn-as" class="btn" :class="{active: activeRegionID == 2}" @click="switchRegion(regions.AS)">AS</button> -->
+            <!-- <button id="btn-sea" class="btn" :class="{active: activeRegionID == 3}" @click="switchRegion(regions.SEA)">SEA</button> -->
+          </div>
 
-      <div id="search-container">
-        <div class="search-icon left" v-if="!isLoading"><i class="fa fa-search"></i></div>
-        <div class="search-icon left loading" v-if="isLoading"><i class="fa fa-circle-notch fa-spin"></i></div>
-        <input spellcheck="false" autocomplete="off" v-model="searchText" id="search-input" type="text" :placeholder="isLoading ? $t('str.loading') : searchPlaceHolder" :disabled="isLoading" />
-        <div class="search-icon right" @click="clearSearch" v-if="searchText != ''">
-          <span><i class="fas fa-times"></i></span>
+          <div id="search-container">
+            <div class="search-icon left" v-if="!isLoading"><i class="fa fa-search"></i></div>
+            <div class="search-icon left loading" v-if="isLoading"><i class="fa fa-circle-notch fa-spin"></i></div>
+            <input
+              spellcheck="false"
+              autocomplete="off"
+              v-model="searchText"
+              id="search-input"
+              type="text"
+              :placeholder="isLoading ? $t('str.loading') : searchPlaceHolder"
+              :disabled="isLoading"
+            />
+            <div class="search-icon right" @click="clearSearch" v-if="searchText != ''">
+              <span><i class="fas fa-times"></i></span>
+            </div>
+          </div>
         </div>
-      </div>
 
-      <div class="flex info-help h-10">
-        <div class="info-rank">{{ $t("leaderboard.rank") }}</div>
-        <div class="info-name">{{ $t("leaderboard.name") }}</div>
-        <div class="info-lp">{{ $t("leaderboard.points") }}</div>
-      </div>
-    </div>
+        <div class="grid grid-cols-12 h-14 sticky top-0 z-[2] bg-gray-900 items-center text-sm whitespace-nowrap">
+          <div class="bg-gray-900 sm:px-2">{{ $t("leaderboard.rank") }}</div>
+          <div class="col-span-4 px-2 bg-gray-900 sm:col-span-3">{{ $t("leaderboard.name") }}</div>
+          <div class="col-span-2 sm:px-2 sm:col-span-1">{{ $t("leaderboard.points") }}</div>
+          <div class="hidden px-2 sm:block sm:col-span-2">{{ $t("leaderboard.lastRank") }}</div>
+          <div class="hidden px-2 sm:block sm:col-span-2">{{ $t("leaderboard.lastX", { num: 10 }) }}</div>
+          <div class="col-span-5 px-2 sm:col-span-3">{{ $t("leaderboard.recent") }}</div>
+        </div>
 
-    <div id="ladder">
-      <leaderboard-player
-        v-for="(player, index) in filteredPlayers"
-        @click="searchPlayer(player)"
-        :key="index"
-        :rank="player.rank + 1"
-        :name="player.name"
-        :lp="player.lp"
-        :deck="player.deck_code"
-        :winRate="player.game_latest_rank_win_rate"
-        :lastRankTime="player.game_latest_rank_time"
-      >
-      </leaderboard-player>
+        <RecycleScroller
+          v-if="filteredPlayers"
+          class="flex-1 block w-full h-0 overflow-y-auto rounded-md"
+          :items="filteredPlayers"
+          :item-size="64"
+          key-field="rank"
+        >
+          <template v-slot="{ item }"
+            ><leaderboard-player
+              @click="searchPlayer(item)"
+              :rank="(item.rank + 1).toString()"
+              :name="item.name"
+              :lp="item.lp"
+              :deck="item.deck_code"
+              :winRate="item.game_latest_rank_win_rate?.toString()"
+              :lastRankTime="item.game_latest_rank_time"
+            >
+            </leaderboard-player
+          ></template>
+        </RecycleScroller>
+      </div>
     </div>
   </div>
 </template>
@@ -56,6 +76,14 @@ export const REGION_ID = {
 export const REGION_SHORTS = ["NA", "EU", "APAC"]
 export const REGION_NAMES = ["americas", "europe", "apac"]
 
+export const regionNameToShorts = (name) => {
+  if (name == "sea") {
+    return "APAC"
+  } else {
+    return REGION_SHORTS[REGION_NAMES.indexOf(name)]
+  }
+}
+
 const requestLeaderboardWaitTime = 1000 //ms
 var lastLeaderboardRequestTime
 
@@ -63,6 +91,7 @@ import { useLeaderboardStore } from "../../store/StoreLeaderboard"
 import { mapState, mapActions } from "pinia"
 
 export default {
+  components: { LeaderboardPlayer },
   mounted() {
     // this.getLeaderboard(this.activeRegionID)
     // console.log("Mounted Leaderboard")
@@ -108,9 +137,9 @@ export default {
         //     return player.name.toLowerCase().indexOf(searchText.toLowerCase()) !== -1
         // })
 
-        return filteredPlayers.slice(0, 100) // TODO implement better way to improve this performence
+        return filteredPlayers // TODO implement better way to improve this performence
       }
-      return this.leaderboard[this.activeRegionID].slice(0, 100)
+      return this.leaderboard[this.activeRegionID]
     },
     searchPlaceHolder() {
       if (this.leaderboard && this.leaderboard[this.activeRegionID]) {
@@ -120,7 +149,6 @@ export default {
       }
     },
   },
-  components: { LeaderboardPlayer },
   methods: {
     ...mapActions(useLeaderboardStore, ["fetchLeaderboard"]),
     clearSearch() {
@@ -142,8 +170,8 @@ export default {
     },
 
     searchPlayer(player) {
-      // console.log("In leaderboard", player)
       if (player.tag) {
+        console.log("Leaderboard before router push", Date.now())
         // Only player with tag can be clicked=
         this.$router.push({
           name: "search",

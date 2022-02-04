@@ -1,66 +1,59 @@
 <template>
-  <div>
-    <div class="info group relative" :class="{ champion: isChampion }">
-      <div class="w-full h-10 flex justify-around items-center">
-        <div class="info-rank">{{ rank }}</div>
-        <div class="info-name md:group-hover:invisible">{{ name }}</div>
-        <div class="info-lp md:group-hover:invisible">{{ lp }}</div>
+  <div class="grid grid-cols-12 items-center bg-gray-600 group hover:bg-gray-800 cursor-pointer group relative h-16">
+    <div class="bg-gray-600 group-hover:bg-gray-800 z-[1]">{{ rank }}</div>
+    <div class="col-span-4 sm:col-span-3 bg-gray-600 group-hover:bg-gray-800 z[1] overflow-hidden text-ellipsis">{{ name }}</div>
+    <div class="col-span-2 sm:col-span-1">{{ lp }}</div>
+    <div class="hidden sm:block sm:col-span-2">
+      <div v-if="lastRankTime" class="text-sm text-white text-opacity-70">
+        {{ lastRank }}
       </div>
-      <div class="hidden absolute h-10 left-0 top-1/2 -translate-y-1/2 md:group-hover:flex w-full justify-end items-center">
-        
-        <div class="text-left w-[41%]">
-          <div v-if="winRate">
-            {{ $t("matches.winRate", { num: winRate }) }}
-          </div>
-          <div v-if="lastRankTime" class="text-sm opacity-70">
-            {{ $t('leaderboard.lastRank') + ' ' + lastRank }}
-          </div>
-        </div>
-        <div class=" scale-75" v-if="deck">
-          <deck-preview
-            :won="isChampion"
-            @click.stop
-            :deck="deck"
-            :fixed-width="true"
-          ></deck-preview>
-        </div>
-        
+    </div>
+    <div class="hidden sm:block sm:col-span-2">
+      <div v-if="winRate">
+        {{ $t("matches.winRate", { num: winRate }) }}
       </div>
+    </div>
+
+    <div class="col-span-5 sm:col-span-3">
+      <deck-preview v-if="deck" @click.stop :deck="deck" :fixed-width="true" :size="1"></deck-preview>
     </div>
   </div>
 </template>
 
 <script>
-import DeckPreview from "../deck/DeckPreview.vue";
-import { format, formatDistance } from "date-fns";
+import DeckPreview from "../deck/DeckPreview.vue"
+import { format, formatDistanceStrict } from "date-fns"
+
+import { dateFNSLocales } from "../../assets/data/messages"
+
 export default {
   components: { DeckPreview },
   props: {
-    rank: Number,
+    rank: String,
     name: String,
     lp: Number,
     deck: String,
-    winRate: Number,
+    winRate: String,
     lastRankTime: String,
   },
   computed: {
     lastRank() {
       // return format(new Date(this.lastRankTime), "HH:mm | yyyy-MM-dd")
-      return formatDistance(new Date(this.lastRankTime), new Date(), {
+      return formatDistanceStrict(new Date(this.lastRankTime), new Date(), {
         addSuffix: true,
-      });
+        locale: dateFNSLocales[this.$i18n.locale],
+      })
     },
     isChampion() {
-      return this.rank == 1;
+      return this.rank == 1
     },
   },
-};
+}
 </script>
 
 <style>
 .info {
   color: white;
-  background-color: var(--col-dark-grey);
   width: 100%;
   padding: 5px 0px;
   margin: 0px 0px;

@@ -2,7 +2,7 @@
   <div class="left-nav-btn mobile-btn" @click="expandLeftNav">
     <span><i class="fas fa-list"></i></span>
   </div>
-  <div class="left-nav overflow-y-scroll" :class="{ expanded: leftNavExpanded }">
+  <div class="overflow-y-scroll left-nav no-scrollbar" :class="{ expanded: leftNavExpanded }">
     <div class="left-nav-btn logo no-click" v-if="!IS_ELECTRON" @mouseenter="showAds">
       <picture>
         <source srcset="@/assets/images/logo/logo.webp" type="image/webp" />
@@ -10,32 +10,58 @@
         <img class="logo" height="50px" src="@/assets/images/logo/logo.png" alt="" />
       </picture>
     </div>
-    <router-link :to="{ name: 'profile' }" class="left-nav-btn" v-if="IS_ELECTRON" :class="{ selected: $route.name == 'profile', disabled: !lorRunning }" @click="setCurrentPage(PANELS.my)" :disabled="!lorRunning">
+    <router-link
+      :to="{ name: 'profile' }"
+      class="left-nav-btn"
+      v-if="IS_ELECTRON || IS_DEV"
+      :class="{ selected: $route.name == 'profile', disabled: !lorRunning }"
+      @click="setCurrentPage(PANELS.my)"
+      :disabled="!lorRunning"
+    >
       <span><i class="fas fa-user-circle"></i></span>
     </router-link>
     <router-link :to="{ name: 'search' }" class="left-nav-btn" :class="{ selected: $route.name == 'search' }" @click="setCurrentPage(PANELS.search)">
       <span><i class="fas fa-search"></i></span>
     </router-link>
-    <router-link :to="{ name: 'leaderboard' }" class="left-nav-btn" :class="{ selected: $route.name == 'leaderboard' }" @click="setCurrentPage(PANELS.leaderboard)">
+    <router-link
+      :to="{ name: 'leaderboard' }"
+      class="left-nav-btn"
+      :class="{ selected: $route.name == 'leaderboard' }"
+      @click="setCurrentPage(PANELS.leaderboard)"
+    >
       <span><i class="fas fa-trophy"></i></span>
     </router-link>
-    <router-link :to="{ name: 'decklib' }" class="left-nav-btn" v-if="IS_ELECTRON || IS_DEV" :class="{ selected: $route.name == 'decklib' }" @click="setCurrentPage(PANELS.decklib)">
+    <router-link
+      :to="{ name: 'decklib' }"
+      class="left-nav-btn"
+      v-if="IS_ELECTRON || IS_DEV"
+      :class="{ selected: $route.name == 'decklib' }"
+      @click="setCurrentPage(PANELS.decklib)"
+    >
       <span><i class="fas fa-star"></i></span>
     </router-link>
     <router-link :to="{ name: 'meta' }" class="left-nav-btn" :class="{ selected: $route.name == 'meta' }" @click="setCurrentPage(PANELS.meta)">
       <span><i class="fas fa-trees"></i></span>
     </router-link>
-    <button class="left-nav-btn hidden sm:flex" :class="{ 'text-gold-200 light-gold': isOpenBookshelf }" @click="toggleBookshelf()">
+    <button class="hidden left-nav-btn sm:flex" :class="{ 'text-gold-200 light-gold': isOpenBookshelf }" @click="toggleBookshelf()">
       <span><i class="fas fa-books"></i></span>
     </button>
+    <router-link :to="{ name: 'test' }" class="left-nav-btn" :class="{ selected: $route.name == 'test' }">
+      <span><i class="fas fa-wrench"></i></span>
+    </router-link>
     <!-- Divider -->
     <div class="flex-1"></div>
-    <router-link :to="{ name: 'contact' }" class="left-nav-btn text-gray-300 gray" :class="{ selected: $route.name == 'contact' }" @click="setCurrentPage(PANELS.contact)">
+    <router-link
+      :to="{ name: 'contact' }"
+      class="text-gray-300 left-nav-btn gray"
+      :class="{ selected: $route.name == 'contact' }"
+      @click="setCurrentPage(PANELS.contact)"
+    >
       <span><i class="fas fa-comment-alt-smile"></i></span>
     </router-link>
     <router-link
       :to="{ name: 'settings' }"
-      class="left-nav-btn text-gray-300 gray"
+      class="text-gray-300 left-nav-btn gray"
       :class="{
         selected: $route.name == 'settings',
         ' mb-14 ': IS_ELECTRON,
@@ -46,6 +72,8 @@
       <span><i class="fas fa-cog"></i></span>
     </router-link>
   </div>
+
+  <div class="absolute top-0 left-0 z-10 block w-screen h-screen bg-gray-900/50 sm:hidden" v-if="leftNavExpanded" @click="shrinkLeftNav"></div>
 
   <div class="menu-content hidden sm:grid absolute left-[98px] top-6 bottom-auto z-[120]" :class="{ hide: !isOpenBookshelf }" @mouseleave="toggleBookshelf()">
     <div class="card" @click="openURL('https://masteringruneterra.com/')">
@@ -70,22 +98,23 @@
 
   <base-top-nav v-if="!IS_ELECTRON"></base-top-nav>
 
-  <div v-if="!IS_ELECTRON" class="mt-[-23px] text-center w-auto min-w-0 pl-4 absolute transition-spacing z-10 invisible md:visible" :class="{ 'ml-[-300px]': isAdHidden && isAdClosed, 'ml-20': !(isAdHidden && isAdClosed) }">
+  <!-- Ads -->
+  <!-- <div v-if="!IS_ELECTRON" class="mt-[-23px] text-center w-auto min-w-0 pl-4 absolute transition-spacing z-10 invisible md:visible" :class="{ 'ml-[-300px]': isAdHidden && isAdClosed, 'ml-20': !(isAdHidden && isAdClosed) }">
     <div class="ad overflow-hidden relative block w-[300px] h-[250px] transition-opacity bg-gray-800 rounded-lg" @mouseleave="hideAds">
-      <button class="absolute top-1 right-1 text-white" @click="closeAds">
+      <button class="absolute text-white top-1 right-1" @click="closeAds">
         <i class="p-2 fas fa-times"></i>
       </button>
       <div class="w-full h-full">
-        <p class="text-lg py-5">
-          Have you tried our <a class="text-xl text-gold-400 cursor-pointer" href="https://lormaster.com" target="_blank"><br />LoR Master Tracker</a> yet?
+        <p class="py-5 text-lg">
+          Have you tried our <a class="text-xl cursor-pointer text-gold-400" href="https://lormaster.com" target="_blank"><br />LoR Master Tracker</a> yet?
         </p>
-        <a class="text-xl text-gold-400 cursor-pointer" href="https://lormaster.com" target="_blank"><img src="../../assets/images/promo/tracker.png" alt="" srcset="" /></a>
+        <a class="text-xl cursor-pointer text-gold-400" href="https://lormaster.com" target="_blank"><img src="../../assets/images/promo/tracker.png" alt="" srcset="" /></a>
       </div>
     </div>
-  </div>
+  </div> -->
 
-  <div class="content" :class="{ fullheight: !IS_ELECTRON }" @click="shrinkLeftNav">
-    <div class="" @scroll="handleContentScroll">
+  <div class="block text-center text-white pt-nav sm:pl-20" :class="{ 'h-main-electron': IS_ELECTRON, 'h-main-web': !IS_ELECTRON }" @click="shrinkLeftNav">
+    <div class="h-full" @scroll="handleContentScroll">
       <router-view :key="$route.fullPath"></router-view>
     </div>
   </div>
@@ -101,6 +130,8 @@
       <deck-detail :baseDeck="deckCode" :fixedHeight="true" :showURL="true"></deck-detail>
     </div>
   </div>
+
+  <div class="bg-gray-900/50 z-[5] absolute top-0 left-0 block sm:hidden w-screen h-screen" v-if="isShowDeck" @click="hideDeck"></div>
 
   <div class="bottom-bar" v-if="IS_ELECTRON">
     <div class="left">
@@ -139,23 +170,18 @@ import "../../assets/scss/home.scss"
 import "../../assets/scss/transitions.scss"
 
 import BaseWindowControls from "../../components/base/BaseWindowControls.vue"
+import BaseTopNav from "../../components/base/BaseTopNav.vue"
 
 import DeckRegions from "../../components/deck/DeckRegions.vue"
-import Leaderboard from "../../components/panels/PanelLeaderboard.vue"
+import DeckPreview from "../../components/deck/DeckPreview.vue"
 import DeckDetail from "../../components/deck/DeckDetail.vue"
-
-import ContactInfo from "../../components/panels/PanelContact.vue"
 
 import { useBaseStore } from "../../store/StoreBase"
 import { useDeckLibStore } from "../../store/StoreDeckLib"
 import { useStatusStore } from "../../store/StoreStatus"
 import { mapState, mapActions } from "pinia"
-import PanelSearch from "../../components/panels/PanelSearch.vue"
-import PanelDeckLib from "../../components/panels/PanelDeckLib.vue"
-import DeckPreview from "../../components/deck/DeckPreview.vue"
 
 import "../../assets/scss/responsive.scss"
-import BaseTopNav from "../../components/base/BaseTopNav.vue"
 
 const requestDataWaitTime = 400 //ms
 const requestHistoryWaitTime = 100 //ms
@@ -165,12 +191,8 @@ const inputNameListLength = 10
 // IS_ELECTRON & IS_DEV defined in template.js
 
 import { locales as cardLocales, localeNames as cardLocaleNames } from "../template"
-import PanelDeckCode from "../../components/panels/PanelDeckCode.vue"
-import PanelMeta from "../../components/panels/PanelMeta.vue"
 
 import { REGION_ID, REGION_SHORTS, REGION_NAMES } from "../../components/panels/PanelLeaderboard.vue"
-import PanelSettings from "../../components/panels/PanelSettings.vue"
-import PanelProfile from "../../components/panels/PanelProfile.vue"
 
 // import ua from 'universal-analytics'
 
@@ -290,10 +312,7 @@ export default {
   },
   mounted() {
     console.log("Page Home Mounted")
-    console.log(`Current Route: ${this.$route.name}, ${window.location}`)
-    // if (!this.$route.name && this.$route.fullPath == "/") {
-    //   this.$router.push({ name: "home" })
-    // }
+    console.log(`Current Route: ${this.$route.name}, ${window.location.pathname}`)
 
     if (window.location.search[1] === "/") {
       var decoded = window.location.search
@@ -304,6 +323,8 @@ export default {
         })
         .join("?")
       this.$router.replace(window.location.pathname.slice(0, -1) + decoded + window.location.hash)
+    } else if (!this.$route.name && window.location.pathname == "/index.html") {
+      this.$router.push({ name: "leaderboard" })
     }
 
     console.log("Node Environment:", process.env.NODE_ENV)

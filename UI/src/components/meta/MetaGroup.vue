@@ -13,6 +13,7 @@
       :winRate="group.win_rate"
       :players="group.players"
       :linkDetail="!noDetail"
+      :isSummary="true"
       @click="expand = !expand"
     ></meta-deck>
     <transition name="height">

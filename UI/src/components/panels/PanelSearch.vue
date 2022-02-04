@@ -1,74 +1,134 @@
 <template>
-  <div class="main-content-container">
-    <div class="sticky-top search">
-      <div class="region-tabs">
-        <div class="region-option" v-for="(region, index) in regions" :class="{ selected: selectedRegion == region }" :key="index" @click="selectRegion(region)">
-          {{ region }}
-        </div>
-      </div>
-      <div class="search-bar-container">
-        <div class="search-bar-input-container">
-          <button class="search-btn inside left" :class="{ active: searchText != '' }" @click="searchHistory">
-            <span v-if="isLoading || isUpdating"><i class="fas fa-redo-alt fa-spin-fast"></i></span>
-            <span v-if="!(isLoading || isUpdating) && !isSameSearch"><i class="fas fa-search"></i></span>
-            <span v-if="!(isLoading || isUpdating) && isSameSearch && !isUpdated"><i class="fas fa-redo-alt"></i></span>
-            <span v-if="!(isLoading || isUpdating) && isSameSearch && isUpdated"><i class="fas fa-check"></i></span>
-          </button>
-
-          <input
-            spellcheck="false"
-            autocomplete="off"
-            class="search-bar"
-            @keyup="searchName"
-            @keyup.enter="searchHistory"
-            @keyup.up="autoCompleteIndexMinus"
-            @keyup.down="autoCompleteIndexPlus"
-            @focus="searchName"
-            v-model="searchText"
-            :placeholder="$t('search.player.placeholder')"
-          />
-          <button class="search-btn inside right" @click="clearSearch" v-if="searchText != ''">
-            <span><i class="fas fa-times"></i></span>
-          </button>
-        </div>
-        <div class="search-bar-auto-complete">
-          <div class="auto-complete-item" v-for="(name, index) in filteredInputNameList" :key="index" :class="{ selected: autoCompleteIndex == index }" @click="searchHistoryAutoComplete(index)">
-            {{ name }}
+  <div class="flex justify-center h-full">
+    <div v-if="playerName && matches.length > 0" class="flex-col flex-1 hidden max-w-[350px] pr-6 lg:flex">
+      <div class="pb-4 text-xl text-center">{{ $t("str.archetypes") }}</div>
+      <div class="flex flex-col flex-1 h-0 gap-4 overflow-y-auto">
+        <div
+          class="transition-colors rounded group"
+          v-for="obj in uniqueArchetypes"
+          :key="obj.id"
+          :class="{ 'bg-gray-700': filterDeckID == obj.id }"
+        >
+          <div class="flex items-center">
+            <div>
+              <deck-preview :fixedWidth="true" class="p-2" :deck="obj.decks[0]" :size="1"></deck-preview>
+            </div>
+            <div class="flex-1 w-0 text-left">
+              <div class="text-gray-200">
+                {{ $t("matches.games", { num: obj.freq }) }}
+              </div>
+              <div
+                class="overflow-hidden whitespace-nowrap text-ellipsis"
+                :style="{
+                  color: winRateToColor(obj.win / obj.freq),
+                }"
+              >
+                {{ $t("matches.winRate", { num: Math.floor((obj.win / obj.freq) * 1000) / 10 }) }}
+              </div>
+            </div>
+            <div
+              class="h-full px-2 pr-4 text-gray-200 cursor-pointer group-hover:visible hover:text-gray-50"
+              :class="{
+                invisible: filterDeckID != obj.id,
+              }"
+              @click="setFilterArchetype(obj.id)"
+            >
+              <i class="fas fa-filter"></i>
+            </div>
           </div>
         </div>
       </div>
+      <div class="h-1/2"></div>
     </div>
-    <!-- Player Info -->
-    <player-matches
-      v-if="playerName && matches.length > 0"
-      @search="searchPlayer($event)"
-      :playerName="playerName"
-      :playerRegion="playerRegion"
-      :playerRank="playerRank"
-      :playerLP="playerLP"
-      :playerTag="playerTag"
-      :matches="matches"
-      ref="searchPlayerMatch"
-    >
-    </player-matches>
+    <div class="flex-1 w-0 max-w-xl">
+      <div class="flex flex-col h-full px-2 sm:px-0">
+        <div class="z-[1]">
+          <div class="region-tabs">
+            <div
+              class="region-option"
+              v-for="(region, index) in regions"
+              :class="{ selected: selectedRegion == region }"
+              :key="index"
+              @click="selectRegion(region)"
+            >
+              {{ region }}
+            </div>
+          </div>
+          <div class="search-bar-container">
+            <div class="search-bar-input-container">
+              <button class="search-btn inside left" :class="{ active: searchText != '' }" @click="searchHistory">
+                <span v-if="isLoading || isUpdating"><i class="fas fa-redo-alt fa-spin-fast"></i></span>
+                <span v-if="!(isLoading || isUpdating) && !isSameSearch"><i class="fas fa-search"></i></span>
+                <span v-if="!(isLoading || isUpdating) && isSameSearch && !isUpdated"><i class="fas fa-redo-alt"></i></span>
+                <span v-if="!(isLoading || isUpdating) && isSameSearch && isUpdated"><i class="fas fa-check"></i></span>
+              </button>
 
-    <div class="status-text">
-      <span v-if="!(isLoading || isUpdating) && !isError && matches.length <= 0">
-        {{ $t("search.prompt") }}
-      </span>
-      <span v-if="isLoading">
-        <i class="fas fa-circle-notch fa-spin"></i>
-        {{ $t("str.loading") }}
-      </span>
-      <span v-if="isUpdating">
-        <i class="fas fa-circle-notch fa-spin"></i>
-        {{ $t("str.updating") }}
-      </span>
-      <span v-if="isError">
-        <!-- <i class="fas fa-circle-notch fa-spin"></i> -->
-        {{ errorText }}
-      </span>
+              <input
+                spellcheck="false"
+                autocomplete="off"
+                class="search-bar"
+                @keyup="searchName"
+                @keyup.enter="searchHistory"
+                @keyup.up="autoCompleteIndexMinus"
+                @keyup.down="autoCompleteIndexPlus"
+                @focus="searchName"
+                v-model="searchText"
+                :placeholder="$t('search.player.placeholder')"
+              />
+              <button class="search-btn inside right" @click="clearSearch" v-if="searchText != ''">
+                <span><i class="fas fa-times"></i></span>
+              </button>
+            </div>
+            <div class="search-bar-auto-complete">
+              <div
+                class="auto-complete-item"
+                v-for="(name, index) in filteredInputNameList"
+                :key="index"
+                :class="{ selected: autoCompleteIndex == index }"
+                @click="searchHistoryAutoComplete(index)"
+              >
+                {{ name }}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div v-if="playerName && matches.length > 0" class="flex-1 h-0">
+          <!-- Player Info -->
+          <player-matches
+            v-if="playerName && matches.length > 0"
+            @search="searchPlayer($event)"
+            :playerName="playerName"
+            :playerRegion="playerRegion"
+            :playerRank="playerRank"
+            :playerLP="playerLP"
+            :playerTag="playerTag"
+            :matches="filteredMatches"
+            ref="searchPlayerMatch"
+          >
+          </player-matches>
+        </div>
+
+        <div class="my-4 text-2xl" v-if="isLoading || isUpdating || isError || matches.length <= 0">
+          <span v-if="!(isLoading || isUpdating) && !isError && matches.length <= 0">
+            {{ $t("search.prompt") }}
+          </span>
+          <span v-if="isLoading">
+            <i class="fas fa-circle-notch fa-spin"></i>
+            {{ $t("str.loading") }}
+          </span>
+          <span v-if="isUpdating">
+            <i class="fas fa-circle-notch fa-spin"></i>
+            {{ $t("str.updating") }}
+          </span>
+          <span v-if="isError">
+            <!-- <i class="fas fa-circle-notch fa-spin"></i> -->
+            {{ errorText }}
+          </span>
+        </div>
+      </div>
     </div>
+    <div v-if="playerName && matches.length > 0" class="hidden w-1/6 xl:block"></div>
   </div>
 </template>
 
@@ -84,26 +144,25 @@ let cancelToken, localCancleToken
 var lastStatusRequestTime
 var requestHistoryTimeout, prevHistoryRequest
 
-const regionNames = {
-  NA: "americas",
-  EU: "europe",
-  AS: "asia",
-}
-
-const regionShort = {
-  americas: "NA",
-  europe: "EU",
-  asia: "AS",
-}
+import { regionNames, regionRefID } from "./PanelDeckCode.vue"
 
 import { REGION_ID, REGION_SHORTS, REGION_NAMES } from "./PanelLeaderboard.vue"
 
+import DeckEncoder from "../../modules/runeterra/DeckEncoder"
+import { championCards } from "../../assets/data/champion"
+
 import PlayerMatches from "../match/PlayerMatches.vue"
+import DeckChamps from "../deck/DeckChamps.vue"
 import axios from "axios"
+import DeckRegions from "../deck/DeckRegions.vue"
+import DeckPreview from "../deck/DeckPreview.vue"
+
+import { winRateToColor } from "../../modules/utils/colorUtils"
 
 export default {
   components: {
     PlayerMatches,
+    DeckPreview,
   },
   props: {
     player: String,
@@ -135,9 +194,71 @@ export default {
       // Options
       autoLaunch: null,
       debugInfos: "",
+
+      filterDeckID: null,
     }
   },
   computed: {
+    filteredMatches() {
+      if (!this.matches) return null
+      if (!this.filterDeckID) return this.matches
+      return this.matches.filter((val) => {
+        return val.deckID == this.filterDeckID
+      })
+    },
+    hasSearchInfo() {
+      return this.player && this.region && this.tag && REGION_SHORTS.indexOf(this.region) != -1
+    },
+    uniqueArchetypes() {
+      if (!this.matches) return null
+      var decks = this.matches.map((x) => ({ code: x.deck, id: x.deckID, win: x.win }))
+      var decks_freq = decks.reduce((a, x) => {
+        var v = x.id
+        if (a[v]) {
+          a[v].freq = a[v].freq + 1
+          a[v].win += x.win ? 1 : 0
+          if (!a[v].decks.includes(x.code)) {
+            a[v].decks.push(x.code)
+          }
+        } else {
+          var decks = []
+          decks.push(x.code)
+          a[v] = {
+            freq: 1,
+            decks: decks,
+            win: x.win ? 1 : 0,
+          }
+        }
+        return a
+      }, {})
+      var decks_freq_array = []
+      Object.keys(decks_freq).map(function (key, index) {
+        var item = decks_freq[key]
+        decks_freq_array[index] = { id: key, decks: item.decks, freq: item.freq, win: item.win }
+      })
+
+      decks_freq_array.sort((a, b) => (b.win / b.freq > a.win / a.freq ? 1 : -1))
+      // Large num in front
+
+      return decks_freq_array
+    },
+    uniqueDeckCodes() {
+      if (!this.matches) return null
+      var decks = this.matches.map((x) => x.deck)
+      var decks_freq = decks.reduce((a, v) => {
+        a[v] = a[v] ? a[v] + 1 : 1
+        return a
+      }, {})
+      var decks_freq_array = []
+      Object.keys(decks_freq).map(function (key, index) {
+        decks_freq_array[index] = { deck: key, num: decks_freq[key] }
+      })
+
+      decks_freq_array.sort((a, b) => b.num - a.num)
+      // Large num in front
+
+      return decks_freq_array
+    },
     errorText() {
       var error = this.errorType
       console.log("Processing error text from type", error)
@@ -183,7 +304,7 @@ export default {
     },
   },
   mounted() {
-    if (this.player && this.region && this.tag && REGION_SHORTS.indexOf(this.region) != -1) {
+    if (this.hasSearchInfo) {
       this.searchPlayer({
         name: this.player,
         region: this.region,
@@ -192,6 +313,17 @@ export default {
     }
   },
   methods: {
+    winRateToColor: winRateToColor,
+    showDeck(code) {
+      this.$emitter.emit("showDeck", code)
+    },
+    setFilterArchetype(deckID) {
+      if (this.filterDeckID == deckID) {
+        this.filterDeckID = null
+      } else {
+        this.filterDeckID = deckID
+      }
+    },
     selectRegion(region) {
       // region is region short
       this.sendUserEvent({
@@ -210,7 +342,7 @@ export default {
     searchPlayer(data) {
       // data.region is region short
       this.searchText = data.name
-      this.selectRegion(data.region)
+      this.selectedRegion = data.region
       this.resetInputFocus()
 
       this.playerName = data.name
@@ -481,6 +613,7 @@ export default {
 
       const requestHistoryStartTime = Date.now()
 
+      console.log("Start Request", requestHistoryStartTime)
       axios
         .get(newRequest, {
           headers: {
@@ -499,6 +632,8 @@ export default {
           })
 
           this.processSearchHistory(response.data)
+
+          console.log("Request Took", Date.now() - requestHistoryStartTime)
 
           this.requestHistoryUpdate()
         })
@@ -531,7 +666,6 @@ export default {
     },
     processHistory(data, playerName, playerServer) {
       // playerServer is region shorts
-      console.log("Process History!", playerName, playerServer)
       // console.log(data);
 
       var matchInfo = {
@@ -539,6 +673,8 @@ export default {
         rank: null,
         lp: null,
       }
+
+      this.filterDeckID = null
 
       // Set selected filter to null
       if (this.$refs.searchPlayerMatch && this.$refs.searchPlayerMatch.setFilterDeckCode) {
@@ -680,9 +816,12 @@ export default {
 
           time = info.game_start_time_utc
 
+          var deckID = this.getDeckID(deck)
+
           matchInfo.matches.push({
             opponentName: opponentName,
             deck: deck,
+            deckID: deckID,
             region: playerServer, // region short passed in, essentially this.playerRegion
             opponentDeck: opponentDeck,
             opponentRank: opponentRank,
@@ -699,6 +838,76 @@ export default {
 
       return matchInfo
     },
+    getDecodedDeck(code) {
+      var deck = null
+      if (code) {
+        try {
+          deck = DeckEncoder.decode(code)
+        } catch (error) {
+          console.log(error)
+          return null
+        }
+      }
+      return deck
+    },
+    getFactions(code) {
+      var cards = this.getDecodedDeck(code)
+      if (!cards) return null
+
+      var factionIDs = []
+      for (var j in cards) {
+        var cardCode = cards[j].code
+        var card = this.sets_en[cardCode]
+        if (card) {
+          if (card.regions && card.regions.length == 1) {
+            // Only considers mono region cards
+            var regionID = regionRefID[card.regionRefs[0]]
+
+            if (factionIDs.indexOf(regionID) == -1) {
+              factionIDs.push(regionID)
+            }
+          }
+        }
+      }
+      return factionIDs
+    },
+    getChamps(code) {
+      var deck = this.getDecodedDeck(code)
+      if (!deck) return null
+
+      var champs = []
+      for (var j in deck) {
+        let cardCode = deck[j].code
+        if (championCards.champObj[cardCode] != null) {
+          var card = this.sets_en[cardCode]
+          if (card) {
+            let champ = {
+              count: deck[j].count,
+              code: cardCode,
+              name: card.name,
+            }
+            champs.push(champ)
+          }
+        }
+      }
+      champs = champs.sort((a, b) => (a.count > b.count ? -1 : 1))
+      return champs
+    },
+    getDeckID(code) {
+      var factionNames = this.getFactions(code)
+        .map((id) => regionNames[id])
+        .sort()
+      var champNames = this.getChamps(code)
+        .slice(0, 2)
+        .map((champ) => champ.name)
+        .sort()
+      if (this.getChamps.length == 0) {
+        champNames = ["No-Champion"]
+      }
+      var IDString = factionNames.join(" ") + " " + champNames.join(" ")
+      // console.log(`Archetype ID ${IDString}`)
+      return IDString
+    },
     processSearchHistory(data) {
       var Info = this.processHistory(data, this.playerName, this.playerRegion)
       this.matches = Info.matches
@@ -709,8 +918,4 @@ export default {
 }
 </script>
 
-<style scoped>
-.sticky-top.search {
-  z-index: 2;
-}
-</style>
+<style scoped></style>
