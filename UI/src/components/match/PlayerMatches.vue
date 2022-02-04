@@ -1,15 +1,21 @@
 <template>
   <div class="flex flex-col h-full">
     <div v-if="false" class="summary-item decks-summary" @wheel.prevent="horizontalScroll">
-      <div class="champion-icons btn" v-for="obj in uniqueDeckCodes" :key="obj.deck" :class="{ active: filterDeckCode == obj.deck }" @click="setFilterDeckCode(obj.deck)">
+      <div
+        class="champion-icons btn"
+        v-for="obj in uniqueDeckCodes"
+        :key="obj.deck"
+        :class="{ active: filterDeckCode == obj.deck }"
+        @click="setFilterDeckCode(obj.deck)"
+      >
         <deck-champs :deck="obj.deck" :showRegion="true" :fixedWidth="false"></deck-champs>
       </div>
     </div>
 
-    <div class="block sm:grid grid-cols-5 items-end pb-4">
-      <div class="px-2 sm:px-0 col-span-4">
+    <div class="items-end block grid-cols-5 pb-4 sm:grid">
+      <div class="col-span-4 px-2 sm:px-0">
         <div class="player-name">{{ playerName }}</div>
-        <div class="gap-4 sm:gap-6 justify-start items-center pt-2 flex text-left">
+        <div class="flex items-center justify-start gap-4 pt-2 text-left sm:gap-6">
           <div v-if="rank">
             <div class="text-sm text-gray-300"><i class="fas fa-trophy"></i> Rank</div>
             <div class="text-lg">No. {{ rank }}</div>
@@ -49,7 +55,7 @@
           </div>
         </div>
       </div>
-      <div class="text-left px-2 pt-2 sm:p-0" v-if="winrate">
+      <div class="px-2 pt-2 text-left sm:p-0" v-if="winrate">
         <div class="text-sm text-gray-300">
           {{ $t("matches.games", { num: totalMatches }) }}
         </div>
@@ -62,10 +68,57 @@
 
     <div class="no-content" v-if="totalMatches == 0">{{ $t("str.error.playerNoHistory") }}</div>
 
-    <div v-if="totalMatches > 0" class="flex-1 overflow-y-auto">
+    <DynamicScroller :items="filteredMatches" :min-item-size="50" class="flex-1 overflow-y-auto" key-field="time">
+      <template v-slot="{ item, index, active }">
+        <DynamicScrollerItem :item="item" :active="active" :size-dependencies="[item.winStreak, item.isDateBreak]" :data-index="index">
+          <match-history
+            @search="searchPlayer({ region: item.region, name: item.opponentName, tag: item.opponentTag })"
+            :opponentName="item.opponentName"
+            :opponentRank="item.opponentRank"
+            :opponentLp="item.opponentLp"
+            :deck="item.deck"
+            :opponentDeck="item.opponentDeck"
+            :rounds="item.rounds"
+            :win="item.win"
+            :time="item.time"
+            :badges="item.badges"
+            :details="item.details"
+            :region="item.region"
+            :winStreak="item.winStreak"
+            :isDateBreak="item.isDateBreak"
+            :index="index"
+          ></match-history>
+        </DynamicScrollerItem>
+      </template>
+    </DynamicScroller>
+
+    <!-- <RecycleScroller
+      v-if="totalMatches > 0"
+      class="flex-1 overflow-y-auto"
+      :items="filteredMatches"
+      :item-size="scrollerItemSize"
+      key-field="time"
+    >
+      <template v-slot="{ item }">
+        <match-history
+          @search="searchPlayer({ region: item.region, name: item.opponentName, tag: item.opponentTag })"
+          :opponentName="item.opponentName"
+          :opponentRank="item.opponentRank"
+          :opponentLp="item.opponentLp"
+          :deck="item.deck"
+          :opponentDeck="item.opponentDeck"
+          :rounds="item.rounds"
+          :win="item.win"
+          :time="item.time"
+          :badges="item.badges"
+          :details="item.details"
+          :region="item.region"
+        ></match-history></template
+    ></RecycleScroller> -->
+    <!-- <div v-if="totalMatches > 0" class="flex-1 overflow-y-auto">
       <match-history
         v-for="(item, index) in filteredMatches"
-        :key="item.time+filter"
+        :key="item.time + filter"
         @search="searchPlayer({ region: item.region, name: item.opponentName, tag: item.opponentTag })"
         :opponentName="item.opponentName"
         :opponentRank="item.opponentRank"
@@ -81,34 +134,15 @@
         :winStreak="item.winStreak"
         :isDateBreak="item.isDateBreak"
         :index="index"
-        @screenshot="downloadStreakScreenshot"
       ></match-history>
-      <!-- <RecycleScroller :items="filteredMatches" :item-size="104" key-field="time">
-        <template v-slot="{ item }">
-          <match-history
-            @search="searchPlayer({ region: item.region, name: item.opponentName, tag: item.opponentTag })"
-            :opponentName="item.opponentName"
-            :opponentRank="item.opponentRank"
-            :opponentLp="item.opponentLp"
-            :deck="item.deck"
-            :opponentDeck="item.opponentDeck"
-            :rounds="item.rounds"
-            :win="item.win"
-            :time="item.time"
-            :badges="item.badges"
-            :details="item.details"
-            :region="item.region"
-          ></match-history></template
-      ></RecycleScroller> -->
-    </div>
+      
+    </div> -->
   </div>
 </template>
 
 <script>
 import DeckChamps from "../deck/DeckChamps.vue"
 import MatchHistory from "../match/MatchHistory.vue"
-
-import html2canvas from "html2canvas"
 
 import { REGION_ID, REGION_SHORTS, REGION_NAMES } from "../panels/PanelLeaderboard.vue"
 
@@ -153,6 +187,9 @@ export default {
       this.leaderboardStore.fetchLeaderboard(REGION_ID[this.playerRegion])
       // this.$store.dispatch('leaderboardData/fetchLeaderboard', REGION_ID[this.playerRegion])
     }
+    this.$nextTick(() => {
+      window.addEventListener("resize", this.onResize)
+    })
   },
   props: {
     playerName: String,
@@ -166,6 +203,7 @@ export default {
   data() {
     return {
       filterDeckCode: null,
+      windowWidth: window.innerWidth,
     }
   },
   emits: {
@@ -181,6 +219,13 @@ export default {
   computed: {
     ...mapStores(useLeaderboardStore),
 
+    scrollerItemSize() {
+      if (this.windowWidth < 640) {
+        return 95
+      } else {
+        return 105
+      }
+    },
     missingRankLp() {
       return !this.playerLP && !this.playerRank && this.playerName && this.playerTag && this.playerRegion
     },
@@ -310,6 +355,10 @@ export default {
     },
   },
   methods: {
+    onResize() {
+      this.windowWidth = window.innerWidth
+    },
+
     downloadStreakScreenshot(index) {
       // html2canvas(this.$el).then(function (canvas) {
       //   document.body.appendChild(canvas)

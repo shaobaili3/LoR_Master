@@ -1,6 +1,6 @@
 <template>
   <div class="flex justify-center h-full">
-    <div v-if="playerName && matches.length > 0" class="flex-col flex-1 hidden max-w-xs pr-6 lg:flex">
+    <div v-if="playerName && matches.length > 0" class="flex-col flex-1 hidden max-w-[350px] pr-6 lg:flex">
       <div class="pb-4 text-xl text-center">{{ $t("str.archetypes") }}</div>
       <div class="flex flex-col flex-1 h-0 gap-4 overflow-y-auto">
         <div
@@ -18,6 +18,7 @@
                 {{ $t("matches.games", { num: obj.freq }) }}
               </div>
               <div
+                class="overflow-hidden whitespace-nowrap text-ellipsis"
                 :style="{
                   color: winRateToColor(obj.win / obj.freq),
                 }"
@@ -26,9 +27,9 @@
               </div>
             </div>
             <div
-              class="h-full px-2 pr-4 text-gray-200 cursor-pointer group-hover:block hover:text-gray-50"
+              class="h-full px-2 pr-4 text-gray-200 cursor-pointer group-hover:visible hover:text-gray-50"
               :class="{
-                hidden: filterDeckID != obj.id,
+                invisible: filterDeckID != obj.id,
               }"
               @click="setFilterArchetype(obj.id)"
             >

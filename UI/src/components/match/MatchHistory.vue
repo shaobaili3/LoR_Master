@@ -1,21 +1,27 @@
 <template>
-  <div>
-    <div class="pt-2 flex justify-between" v-if="winStreak">
-      <div class="text-left pl-2">
+  <div
+    :class="{
+      'h-[94px] sm:h-[106px]': !winStreak && !isDateBreak,
+      'h-[118px] sm:h-[130px]': isDateBreak,
+      'h-[126px] sm:h-[138px]': winStreak,
+    }"
+  >
+    <div class="flex justify-between pt-1 pb-1" v-if="winStreak">
+      <div class="pl-2 text-left">
         {{ $t("matches.winStreak", { num: winStreak }) }}
       </div>
       <!-- <div class="text-right cursor-pointer" @click="downloadStreakScreenshot">
         Download Screenshot
       </div> -->
     </div>
-    <div class="text-sm text-gray-200 text-left pl-2 pt-1" v-if="isDateBreak && !winStreak">
+    <div class="pb-1 pl-2 text-sm text-left text-gray-200" v-if="isDateBreak && !winStreak">
       {{ timeString }}
     </div>
     <div class="match-history match" :class="{ won: won, loss: !won }">
       <div class="btn-expand-detail" v-if="details" @click="toggleDetail">
         <i class="fas" :class="{ 'fa-chevron-down': !showDetail, 'fa-chevron-up': showDetail }"></i>
       </div>
-      <div class="row opponent overflow-x-scroll no-scrollbar">
+      <div class="overflow-x-scroll row opponent no-scrollbar">
         <p @click="search" class="match-info-title">
           <i class="fas" :class="{ 'fa-pennant pr-2': win, '': !win }"></i>
           <span class="desktop">vs </span>
@@ -24,9 +30,12 @@
         <div class="opponent-info" v-if="opponentRank"><i class="fas fa-trophy"></i> {{ opponentRank }}</div>
         <div class="history-info">{{ timeString }}</div>
         <div class="history-info desktop" v-if="rounds">{{ rounds }} {{ $t("str.rounds") }}</div>
-        <div class="history-info" v-if="details">{{ moment(new Date(details.endTime) - new Date(details.startTime)).format("m:ss") }}</div>
         <div class="match-info-badge" v-for="badge in filteredBadges" :key="badge">
-          <span v-if="badge == 'recent' || badge == 'frequent'" class="match-info-badge-icon fa" :class="{ 'fa-clock': badge == 'recent', 'fa-angle-double-up': badge == 'frequent' }"></span>
+          <span
+            v-if="badge == 'recent' || badge == 'frequent'"
+            class="match-info-badge-icon fa"
+            :class="{ 'fa-clock': badge == 'recent', 'fa-angle-double-up': badge == 'frequent' }"
+          ></span>
           {{ $t("matches.badges." + badge.replace(/\s+/g, "")) }}
         </div>
       </div>
@@ -44,7 +53,11 @@
         <deck-preview @click.stop :deck="opponentDeck" :won="won" :fixedWidth="false"></deck-preview>
       </div>
       <div class="divider" v-if="details && showDetail" :class="{ won: won }"></div>
-      <match-detail-mulligan v-if="details && showDetail" :startHand="details.openHand" :endHand="details.replacedHand"></match-detail-mulligan>
+      <match-detail-mulligan
+        v-if="details && showDetail"
+        :startHand="details.openHand"
+        :endHand="details.replacedHand"
+      ></match-detail-mulligan>
 
       <match-detail-timeline v-if="details && showDetail" :time="time" :details="details"></match-detail-timeline>
     </div>
@@ -56,7 +69,8 @@ import DeckPreview from "../deck/DeckPreview.vue"
 import MatchDetailMulligan from "../match/MatchDetailMulligan.vue"
 import MatchDetailTimeline from "../match/MatchDetailTimeline.vue"
 
-import moment from "moment"
+import { format, formatDistanceStrict } from "date-fns"
+import { dateFNSLocales } from "../../assets/data/messages"
 
 export default {
   components: {
@@ -71,11 +85,12 @@ export default {
     return {
       visibleDeck: 0,
       showDetail: false,
-      moment: moment,
     }
   },
   emits: ["search", "screenshot"],
   props: {
+    // opponentName, opponentRank, opponentLp, opponentDeck
+    // deck, rounds, win, time, badges, details, region, winStreak, isDateBreak
     opponentName: String,
     opponentRank: String,
     opponentLp: String,
@@ -93,36 +108,41 @@ export default {
   },
   computed: {
     timeString() {
-      var date = new Date(this.time)
-      var time
+      // var date = new Date(this.time)
+      // var time
 
-      var milliElapsed = Date.now() - date
-      var secondsElapsed = milliElapsed / 1000
-      var minElapse = secondsElapsed / 60
-      var hoursElapse = minElapse / 60
-      var daysElapsed = hoursElapse / 24
+      // var milliElapsed = Date.now() - date
+      // var secondsElapsed = milliElapsed / 1000
+      // var minElapse = secondsElapsed / 60
+      // var hoursElapse = minElapse / 60
+      // var daysElapsed = hoursElapse / 24
 
-      if (secondsElapsed < 60) {
-        time = this.$t("str.times.sec", { t: Math.floor(secondsElapsed) })
-      } else if (minElapse < 60) {
-        time = this.$t("str.times.min", { t: Math.floor(minElapse) })
-      } else if (hoursElapse < 24) {
-        if (Math.floor(hoursElapse) == 1) {
-          time = this.$t("str.times.hour", { t: Math.floor(hoursElapse) })
-        } else {
-          time = this.$t("str.times.hours", { t: Math.floor(hoursElapse) })
-        }
-      } else if (daysElapsed < 7) {
-        if (Math.floor(daysElapsed) == 1) {
-          time = this.$t("str.times.day", { t: Math.floor(daysElapsed) })
-        } else {
-          time = this.$t("str.times.days", { t: Math.floor(daysElapsed) })
-        }
-      } else {
-        time = date.toLocaleDateString()
-      }
+      // if (secondsElapsed < 60) {
+      //   time = this.$t("str.times.sec", { t: Math.floor(secondsElapsed) })
+      // } else if (minElapse < 60) {
+      //   time = this.$t("str.times.min", { t: Math.floor(minElapse) })
+      // } else if (hoursElapse < 24) {
+      //   if (Math.floor(hoursElapse) == 1) {
+      //     time = this.$t("str.times.hour", { t: Math.floor(hoursElapse) })
+      //   } else {
+      //     time = this.$t("str.times.hours", { t: Math.floor(hoursElapse) })
+      //   }
+      // } else if (daysElapsed < 7) {
+      //   if (Math.floor(daysElapsed) == 1) {
+      //     time = this.$t("str.times.day", { t: Math.floor(daysElapsed) })
+      //   } else {
+      //     time = this.$t("str.times.days", { t: Math.floor(daysElapsed) })
+      //   }
+      // } else {
+      //   time = date.toLocaleDateString()
+      // }
 
-      return time
+      return formatDistanceStrict(new Date(this.time), new Date(), {
+        addSuffix: true,
+        locale: dateFNSLocales[this.$i18n.locale],
+      })
+
+      // return time
     },
     opponentLink() {
       return "/profile/" + this.opponentName
@@ -144,7 +164,7 @@ export default {
   },
   methods: {
     downloadStreakScreenshot() {
-      this.$emit('screenshot', this.index)
+      this.$emit("screenshot", this.index)
     },
     toggleDetail() {
       this.showDetail = !this.showDetail
@@ -209,7 +229,6 @@ export default {
 
   border-left: 3px solid var(--col-background);
   border-right: 3px solid var(--col-background);
-  margin-top: 4px;
 
   font-size: 1em;
 }
