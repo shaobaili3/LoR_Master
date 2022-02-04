@@ -68,7 +68,6 @@ export default {
         deck = DeckEncoder.decode(this.deck)
       } catch (err) {
         console.log(err)
-        console.log(this.deck)
         return []
       }
 
@@ -83,7 +82,7 @@ export default {
         }
       }
 
-      champs.sort((a, b) => (a.count > b.count ? -1 : 1))
+      champs.sort((a, b) => (a.count > b.count ? -1 : a.count == b.count ? a.code - b.code : 1))
 
       if (this.fixedWidth) {
         var fillerIcons = this.maxChamp - champs.length
