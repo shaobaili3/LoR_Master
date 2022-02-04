@@ -85,7 +85,8 @@ export default {
             if (factionIDs.indexOf(regionID) == -1) {
               factionIDs.push(regionID)
             }
-          }
+            
+            return factionIDs.sort((a,b) => a-b)
         }
       }
 
@@ -109,7 +110,11 @@ export default {
   display: flex;
   /* padding: 4px; */
 
-  /* gap: 2px; */
+    .btn:hover .icon-container .icon.faction, 
+    .btn.active .icon-container .icon.faction {
+        opacity: 1;
+        filter: brightness(1.25) drop-shadow(1px 2px 1px rgba(0, 0, 0, 0.6));
+    }
 
   align-items: center;
   justify-content: center;
