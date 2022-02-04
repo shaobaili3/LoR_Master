@@ -1,10 +1,10 @@
 <template>
   <div class="flex justify-center h-full px-4 overflow-y-scroll">
     <div class="flex-1 w-0 max-w-4xl">
-      <div class="flex flex-col h-full px-2 sm:px-0">
+      <div class="flex flex-col px-2 sm:px-0">
         <p class="pt-3 pb-5 text-3xl text-left title">{{ $t("str.meta") }}</p>
 
-        <MetaFilter @update-filter="updateFilter"></MetaFilter>
+        <MetaFilter class="sticky top-0 z-10 bg-gray-900" @update-filter="updateFilter"></MetaFilter>
 
         <div v-if="store.isMetaLoading" class="pb-5 text-2xl">
           <i class="fas fa-circle-notch fa-spin"></i>

@@ -17,7 +17,7 @@
     <div class="pb-1 pl-2 text-sm text-left text-gray-200" v-if="isDateBreak && !winStreak">
       {{ timeString }}
     </div>
-    <div class="match-history match" :class="{ won: won, loss: !won }">
+    <div class="match-history match" :class="{ 'won bg-gradient-to-b from-yellow-500 to-amber-600': won, 'loss bg-gray-800': !won }">
       <div class="btn-expand-detail" v-if="details" @click="toggleDetail">
         <i class="fas" :class="{ 'fa-chevron-down': !showDetail, 'fa-chevron-up': showDetail }"></i>
       </div>
@@ -218,7 +218,7 @@ export default {
   display: flex;
   width: 100%;
   flex-direction: column;
-  background: linear-gradient(60deg, var(--col-grey), var(--col-lighter-grey));
+  // background: linear-gradient(60deg, var(--col-grey), var(--col-lighter-grey));
   box-sizing: border-box;
   padding: 5px;
   border-radius: 6px;
@@ -233,27 +233,9 @@ export default {
   font-size: 1em;
 }
 
-.match.won {
-  /* background: linear-gradient(-60deg,rgb(224, 171, 24), rgb(78, 78, 78) 60%); */
-  /* box-shadow: inset 0px 0px 0px 2px var(--col-gold); */
-  background: linear-gradient(60deg, var(--col-dark-gold), var(--col-gold));
-  /* box-shadow: 2px solid gold; */
-  /* background: linear-gradient(90deg,rgb(224, 171, 24) 1%, rgb(94, 94, 94) 1%); */
-}
-
-.match.loss {
-  /* background: linear-gradient(300deg,rgb(224, 171, 24), rgb(94, 94, 94)); */
-  /* background: linear-gradient(300deg,rgb(224, 171, 24) 20%, rgb(94, 94, 94) 20%); */
-  /* background: linear-gradient(-90deg,rgb(224, 171, 24) 1%, rgb(94, 94, 94) 1%); */
-}
-
-.match-info-badge-icon {
-  /* margin-right: 3px; */
-  /* width: 10px; */
-  /* display: flex; */
-  /* align-content: center; */
-  /* justify-content: center; */
-}
+// .match.won {
+// background: linear-gradient(60deg, var(--col-dark-gold), var(--col-gold));
+// }
 
 .match-info-badge {
   font-size: 0.7em;
