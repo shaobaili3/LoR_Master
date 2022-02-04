@@ -21,7 +21,6 @@ export const useLeaderboardStore = defineStore("leaderboard", {
       if (this.request) this.request.cancel()
     },
     fetchLeaderboard(regionID) {
-
       const baseStore = useBaseStore()
 
       this.lastLeaderboardRequestTime = Date.now()

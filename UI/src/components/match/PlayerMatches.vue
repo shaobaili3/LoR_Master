@@ -68,7 +68,7 @@
 
     <div class="no-content" v-if="totalMatches == 0">{{ $t("str.error.playerNoHistory") }}</div>
 
-    <DynamicScroller :items="filteredMatches" :min-item-size="50" class="flex-1 overflow-y-auto" key-field="time">
+    <DynamicScroller :items="filteredMatches" :min-item-size="50" key-field="time" class="flex-1 overflow-y-auto">
       <template v-slot="{ item, index, active }">
         <DynamicScrollerItem :item="item" :active="active" :size-dependencies="[item.winStreak, item.isDateBreak]" :data-index="index">
           <match-history

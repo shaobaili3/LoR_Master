@@ -1,5 +1,5 @@
 <template>
-  <div class="flex gap-0.5 sm:gap-1 p-0 sm:p-1 border-inherit">
+  <div class="flex gap-0.5 sm:gap-1 p-0 sm:p-1 border-zinc-200">
     <champ-icon v-for="(champ, index) in getChamps" :key="index" :code="champ.code" :count="champ.count"></champ-icon>
     <!-- <div class="extra-champ" :class="{'fixed-width': fixedWidth }" v-if="extraChampString">{{extraChampString}}</div> -->
     <deck-regions v-if="getChamps.length <= 0 && showRegion" :deck="deck" :fixedWidth="fixedWidth"></deck-regions>

@@ -80,18 +80,24 @@ export const getTypeRefFromCard = (card) => {
 </script>
 
 <script setup>
-import { ref, defineEmits, computed } from "vue"
+import { ref, defineEmits, computed, defineProps, toRefs, onMounted } from "vue"
 import MetaFilterTags, { TAG_TYPES } from "./MetaFilterTags.vue"
 
 import { useBaseStore } from "../../store/StoreBase"
 import CardPreview from "../deck/CardPreview.vue"
+
 const baseStore = useBaseStore()
-
 const autoCompleteItems = ref([])
-
 const filterInput = ref(null)
-
 const tags = ref([])
+
+onMounted(() => {
+  let oldFilter = window.localStorage.getItem("lmt-panel-meta-filter")
+  if (oldFilter) {
+    tags.value = JSON.parse(oldFilter)
+  }
+  emitFilter()
+})
 
 const hasAutoComplete = computed(() => {
   return autoCompleteItems.value.length > 0
@@ -100,6 +106,7 @@ const hasAutoComplete = computed(() => {
 const emits = defineEmits(["updateFilter"])
 
 function emitFilter() {
+  window.localStorage.setItem("lmt-panel-meta-filter", JSON.stringify(tags.value))
   emits("updateFilter", tags.value)
 }
 
@@ -265,6 +272,7 @@ function checkACIndexBounds() {
 }
 
 function handleDeleteTag(index) {
+  console.log(tags.value)
   tags.value.splice(index, 1)
   emitFilter()
 }

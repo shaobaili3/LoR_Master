@@ -1,11 +1,14 @@
 <template>
   <div
-    class="px-2 rounded-lg transition-colors hover:bg-gray-800"
+    class="px-4 mr-2 transition-colors rounded-lg hover:bg-gray-800"
     :class="{
       'bg-gray-800': expand && !hasFeature,
+      'h-[552px]': expand,
+      'h-[92px]': !expand,
     }"
   >
-    <meta-deck class="cursor-pointer"
+    <meta-deck
+      class="cursor-pointer"
       :code="recomended"
       :isFeature="hasFeature && this.group.feature.deck_code == recomended"
       :playNum="group.play_num"
@@ -14,67 +17,63 @@
       :players="group.players"
       :linkDetail="!noDetail"
       :isSummary="true"
-      @click="expand = !expand"
     ></meta-deck>
-    <transition name="height">
-      <div v-if="expand" class="pl-4">
-        <div v-for="deck in group.decks" :key="deck.deck_code">
-          <meta-deck
-            :isFeature="hasFeature && this.group.feature.deck_code == deck.deck_code"
-            :code="deck.deck_code"
-            :playNum="deck.play_num"
-            :playRate="deck.play_rate"
-            :winRate="deck.win_rate"
-          ></meta-deck>
-        </div>
-      </div>
-    </transition>
-    <transition name="height">
-      <div v-if="!expand && hasFeature" class="pl-4">
+    <!-- <transition name="height"> -->
+    <div v-if="expand" class="pl-4">
+      <div v-for="deck in group.decks" :key="deck.deck_code">
         <meta-deck
-          :isFeature="true"
-          :code="this.group.feature.deck_code"
-          :playNum="this.group.feature.play_num"
-          :playRate="this.group.feature.play_rate"
-          :winRate="this.group.feature.win_rate"
+          :isFeature="hasFeature && this.group.feature.deck_code == deck.deck_code"
+          :code="deck.deck_code"
+          :playNum="deck.play_num"
+          :playRate="deck.play_rate"
+          :winRate="deck.win_rate"
         ></meta-deck>
       </div>
-    </transition>
+    </div>
+    <!-- </transition> -->
+    <!-- <transition name="height"> -->
+    <div v-if="!expand && hasFeature" class="pl-4">
+      <meta-deck
+        :isFeature="true"
+        :code="this.group.feature.deck_code"
+        :playNum="this.group.feature.play_num"
+        :playRate="this.group.feature.play_rate"
+        :winRate="this.group.feature.win_rate"
+      ></meta-deck>
+    </div>
+    <!-- </transition> -->
   </div>
 </template>
 
 <script>
-import MetaDeck from "../meta/MetaDeck.vue";
+import MetaDeck from "../meta/MetaDeck.vue"
 export default {
   components: { MetaDeck },
   props: {
     group: Object,
-    noDetail: Boolean
+    noDetail: Boolean,
   },
   computed: {
     hasFeature() {
-      return this.group && this.group.feature;
+      return this.group && this.group.feature
     },
     recomended() {
-      if (!(this.group && this.group.decks)) return null;
-      var highest = 0;
-      var code = null;
+      if (!(this.group && this.group.decks)) return null
+      var highest = 0
+      var code = null
       for (let deck of this.group.decks) {
         if (deck.win_rate > highest) {
-          highest = deck.win_rate;
-          code = deck.deck_code;
+          highest = deck.win_rate
+          code = deck.deck_code
         }
       }
-      return code;
+      return code
+    },
+    expand() {
+      return this.group?.expanded
     },
   },
-  data() {
-    return {
-      expand: false,
-    };
-  },
-};
+}
 </script>
 
-<style>
-</style>
+<style></style>

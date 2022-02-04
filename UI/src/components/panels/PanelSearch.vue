@@ -2,9 +2,9 @@
   <div class="flex justify-center h-full">
     <div v-if="playerName && matches.length > 0" class="flex-col flex-1 hidden max-w-[350px] pr-6 lg:flex">
       <div class="pb-4 text-xl text-center">{{ $t("str.archetypes") }}</div>
-      <div class="flex flex-col flex-1 h-0 gap-4 overflow-y-auto">
+      <div class="flex flex-col flex-1 h-0 gap-1 overflow-y-auto">
         <div
-          class="transition-colors rounded group"
+          class="py-1 transition-colors rounded group"
           v-for="obj in uniqueArchetypes"
           :key="obj.id"
           :class="{ 'bg-gray-700': filterDeckID == obj.id }"

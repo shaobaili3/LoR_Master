@@ -15,10 +15,12 @@
         <p
           class="text-xl"
           :style="{
-            color: closestColor(winRate),
+            color: closestColor(
+              winRateBounds.lower + (winRateBounds.upper - winRateBounds.lower) * Math.min(1, Math.max(0, 0.5 - winRateBounds.gap))
+            ),
           }"
         >
-          {{ (winRate * 100).toFixed(2) }}% <span class="text-base"> | ± {{ (winRateBounds.gap * 100).toFixed(2) }}</span>
+          {{ (winRate * 100).toFixed(2) }}% <span class="text-base"> | ± {{ (winRateBounds.gap * 50).toFixed(2) }}</span>
         </p>
       </div>
 
@@ -48,11 +50,11 @@
           <div
             class="absolute h-2 -translate-y-1/2 rounded-full top-1/2"
             :style="{
-              background: winRateBounds.gap < 0.05 ? closestColor(winRateBounds.lower) : closestColor(winRate),
+              background: closestColor(
+                winRateBounds.lower + (winRateBounds.upper - winRateBounds.lower) * Math.min(1, Math.max(0, 0.5 - winRateBounds.gap))
+              ),
               width: `max(0.5rem, ${Math.max(winRateBounds.gap * 100, 1)}%)`,
               left: winRateBounds.lower * 100 + '%',
-              backgroundSize: (1 / winRateBounds.gap) * 100 + '%',
-              backgroundPosition: winRate * 100 + '%',
             }"
           ></div>
 
@@ -183,8 +185,8 @@ export default {
     winRateBounds() {
       var interval = Z * Math.sqrt((this.winRate * (1 - this.winRate)) / this.playNum)
       return {
-        lower: this.winRate - interval,
-        upper: this.winRate + interval,
+        lower: Math.max(0, this.winRate - interval),
+        upper: Math.min(1, this.winRate + interval),
         gap: interval * 2,
       }
     },

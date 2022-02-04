@@ -46,6 +46,8 @@ const mix = function (color_1, color_2, weight) {
 }
 
 export const winRateToColor = (ratio) => {
+  if (ratio < 0) return winrateGradient[0][0]
+
   for (let index in winrateGradient) {
     var gradient = winrateGradient[index]
     if (ratio < gradient[1]) {

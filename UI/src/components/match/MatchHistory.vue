@@ -22,21 +22,28 @@
     </div>
     <div
       class="border-2 match-history match"
-      :class="{ 'won border-yellow-500 bg-gray-800': won, 'loss bg-gray-700 border-gray-700': !won }"
+      :class="{ 'won border-yellow-500 bg-zinc-800': won, 'loss bg-zinc-700/80 border-zinc-700/80': !won }"
     >
       <div class="btn-expand-detail" v-if="details" @click="toggleDetail">
         <i class="fas" :class="{ 'fa-chevron-down': !showDetail, 'fa-chevron-up': showDetail }"></i>
       </div>
-      <div class="overflow-x-scroll row opponent no-scrollbar">
-        <p @click="search" class="match-info-title text-inherit">
+      <div class="overflow-x-scroll row opponent no-scrollbar" :class="{ 'text-white': won }">
+        <p @click="search" class="match-info-title text-inherit" :class="{ 'text-yellow-400': won }">
           <i class="fas" :class="{ 'fa-pennant pr-2': win, '': !win }"></i>
-          <span class="desktop">vs </span>
-          <span class="name" :class="{ search: region }">{{ opponentName }}</span>
+          <span class="">vs </span>
+          <span :class="{ 'cursor-pointer hover:underline underline-offset-2': region }">{{ opponentName }}</span>
         </p>
-        <div class="opponent-info" v-if="opponentRank"><i class="fas fa-trophy"></i> {{ opponentRank }}</div>
-        <div class="history-info">{{ timeString }}</div>
-        <div class="history-info desktop" v-if="rounds">{{ rounds }} {{ $t("str.rounds") }}</div>
-        <div class="match-info-badge" v-for="badge in filteredBadges" :key="badge">
+        <div class="opponent-info" :class="{ 'text-yellow-400': won }" v-if="opponentRank">
+          <i class="fas fa-trophy"></i> {{ opponentRank }}
+        </div>
+        <div class="history-info opacity-80">{{ timeString }}</div>
+        <div class="history-info opacity-80" v-if="rounds">{{ rounds }} {{ $t("str.rounds") }}</div>
+        <div
+          class="match-info-badge opacity-80"
+          :class="{ 'bg-stone-600': won, 'bg-zinc-600': !won }"
+          v-for="badge in filteredBadges"
+          :key="badge"
+        >
           <span
             v-if="badge == 'recent' || badge == 'frequent'"
             class="match-info-badge-icon fa"
@@ -45,16 +52,10 @@
           {{ $t("matches.badges." + badge.replace(/\s+/g, "")) }}
         </div>
       </div>
-      <div class="flex items-center justify-around border-zinc-200">
+      <div class="flex items-center justify-around">
         <deck-preview @click.stop :deck="deck" :won="won" :fixedWidth="false"></deck-preview>
-        <span class="vs-text">
+        <span class="vs-text" :class="{ 'text-white': won }">
           <span>VS</span>
-          <span class="mobile">
-            <p @click="search" class="match-info-title">
-              vs <span class="name" :class="{ search: region }">{{ opponentName }}</span>
-            </p>
-            <div class="opponent-info" v-if="opponentRank"><i class="fas fa-trophy"></i> {{ opponentRank }}</div>
-          </span>
         </span>
         <deck-preview @click.stop :deck="opponentDeck" :won="won" :fixedWidth="false"></deck-preview>
       </div>

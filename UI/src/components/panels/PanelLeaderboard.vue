@@ -34,7 +34,7 @@
           <div class="col-span-4 px-2 bg-gray-900 sm:col-span-3">{{ $t("leaderboard.name") }}</div>
           <div class="col-span-2 sm:px-2 sm:col-span-1">{{ $t("leaderboard.points") }}</div>
           <div class="hidden px-2 sm:block sm:col-span-2">{{ $t("leaderboard.lastRank") }}</div>
-          <div class="hidden px-2 sm:block sm:col-span-2">{{ $t("leaderboard.lastX", { num: 10 }) }}</div>
+          <div class="hidden px-2 sm:block sm:col-span-2">{{ $t("leaderboard.lastX", { num: 20 }) }}</div>
           <div class="col-span-5 px-2 sm:col-span-3">{{ $t("leaderboard.recent") }}</div>
         </div>
 
@@ -52,7 +52,7 @@
               :name="item.name"
               :lp="item.lp"
               :deck="item.deck_code"
-              :winRate="item.game_latest_rank_win_rate?.toString()"
+              :winRate="item.game_latest_rank_win_rate"
               :lastRankTime="item.game_latest_rank_time"
             >
             </leaderboard-player
@@ -65,7 +65,7 @@
 
 <script>
 // const axios = require('axios')
-import axios from "axios"
+// import axios from "axios"
 import LeaderboardPlayer from "../leaderboard/LeaderboardPlayer.vue"
 
 export const REGION_ID = {
@@ -95,6 +95,11 @@ export default {
   mounted() {
     // this.getLeaderboard(this.activeRegionID)
     // console.log("Mounted Leaderboard")
+    let oldRegion = window.localStorage.getItem("leaderboard-region")
+    if (oldRegion) {
+      this.activeRegionID = oldRegion
+    }
+
     this.fetchLeaderboard(this.activeRegionID)
   },
   data() {
@@ -166,6 +171,7 @@ export default {
       if (this.activeRegionID != regionID) {
         this.fetchLeaderboard(regionID)
         this.activeRegionID = regionID
+        window.localStorage.setItem("leaderboard-region", regionID)
       }
     },
 

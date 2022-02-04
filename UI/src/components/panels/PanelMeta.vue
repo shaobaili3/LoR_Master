@@ -1,10 +1,10 @@
 <template>
-  <div class="flex justify-center h-full px-4 overflow-y-scroll">
+  <div class="flex justify-center h-full px-4">
     <div class="flex-1 w-0 max-w-4xl">
-      <div class="flex flex-col px-2 sm:px-0">
+      <div class="flex flex-col h-full px-2 sm:px-0">
         <p class="pt-3 pb-5 text-3xl text-left title">{{ $t("str.meta") }}</p>
 
-        <MetaFilter class="sticky top-0 z-10 bg-gray-900" @update-filter="updateFilter"></MetaFilter>
+        <MetaFilter class="sticky top-0 z-[5] bg-gray-900" @update-filter="updateFilter"></MetaFilter>
 
         <div v-if="store.isMetaLoading" class="pb-5 text-2xl">
           <i class="fas fa-circle-notch fa-spin"></i>
@@ -12,11 +12,21 @@
         </div>
 
         <!-- <p v-if="metaGroups" class="pb-2 text-left sub-title">{{$t("matches.games", {num: totalGames})}}</p> -->
-        <div v-if="filteredMeta && filteredMeta.length > 0" class="flex-1 h-0">
-          <div class="py-1 pb-4" v-for="group in filteredMeta" :key="group._id">
-            <MetaGroup :group="group"></MetaGroup>
-          </div>
-        </div>
+        <DynamicScroller
+          :items="filteredMeta"
+          :min-item-size="90"
+          key-field="_id"
+          v-if="filteredMeta && filteredMeta.length > 0"
+          class="flex-1 h-0"
+        >
+          <template v-slot="{ item, index, active }">
+            <DynamicScrollerItem :item="item" :active="active" :size-dependencies="[item.expanded]" :data-index="index">
+              <div class="py-1 pb-4">
+                <MetaGroup @click="metaGroupOnClick(item._id)" :group="item"></MetaGroup>
+              </div>
+            </DynamicScrollerItem>
+          </template>
+        </DynamicScroller>
 
         <div v-if="!store.isMetaLoading && (!filteredMeta || filteredMeta.length == 0)">
           {{ $t("str.noDetail") }}
@@ -171,4 +181,13 @@ const filteredMeta = computed(() => {
 
   return store.metaGroups
 })
+
+function metaGroupOnClick(id) {
+  const item = store.metaGroups.find((item) => item._id == id)
+  if (item) {
+    item.expanded = !item.expanded
+  }
+  // store.metaGroups[index].expanded = !store.metaGroups[index].expanded
+  // console.log(store.metaGroups[index].expanded)
+}
 </script>

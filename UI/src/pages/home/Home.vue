@@ -20,7 +20,12 @@
     >
       <span><i class="fas fa-user-circle"></i></span>
     </router-link>
-    <router-link :to="{ name: 'search' }" class="left-nav-btn" :class="{ selected: $route.name == 'search' }" @click="setCurrentPage(PANELS.search)">
+    <router-link
+      :to="{ name: 'search' }"
+      class="left-nav-btn"
+      :class="{ selected: $route.name == 'search' }"
+      @click="setCurrentPage(PANELS.search)"
+    >
       <span><i class="fas fa-search"></i></span>
     </router-link>
     <router-link
@@ -40,13 +45,18 @@
     >
       <span><i class="fas fa-star"></i></span>
     </router-link>
-    <router-link :to="{ name: 'meta' }" class="left-nav-btn" :class="{ selected: $route.name == 'meta' }" @click="setCurrentPage(PANELS.meta)">
+    <router-link
+      :to="{ name: 'meta' }"
+      class="left-nav-btn"
+      :class="{ selected: $route.name == 'meta' }"
+      @click="setCurrentPage(PANELS.meta)"
+    >
       <span><i class="fas fa-trees"></i></span>
     </router-link>
     <button class="hidden left-nav-btn sm:flex" :class="{ 'text-gold-200 light-gold': isOpenBookshelf }" @click="toggleBookshelf()">
       <span><i class="fas fa-books"></i></span>
     </button>
-    <router-link :to="{ name: 'test' }" class="left-nav-btn" :class="{ selected: $route.name == 'test' }">
+    <router-link v-if="IS_DEV" :to="{ name: 'test' }" class="left-nav-btn" :class="{ selected: $route.name == 'test' }">
       <span><i class="fas fa-wrench"></i></span>
     </router-link>
     <!-- Divider -->
@@ -73,9 +83,17 @@
     </router-link>
   </div>
 
-  <div class="absolute top-0 left-0 z-10 block w-screen h-screen bg-gray-900/50 sm:hidden" v-if="leftNavExpanded" @click="shrinkLeftNav"></div>
+  <div
+    class="absolute top-0 left-0 z-10 block w-screen h-screen bg-gray-900/50 sm:hidden"
+    v-if="leftNavExpanded"
+    @click="shrinkLeftNav"
+  ></div>
 
-  <div class="menu-content hidden sm:grid absolute left-[98px] top-6 bottom-auto z-[120]" :class="{ hide: !isOpenBookshelf }" @mouseleave="toggleBookshelf()">
+  <div
+    class="menu-content hidden sm:grid absolute left-[98px] top-6 bottom-auto z-[120]"
+    :class="{ hide: !isOpenBookshelf }"
+    @mouseleave="toggleBookshelf()"
+  >
     <div class="card" @click="openURL('https://masteringruneterra.com/')">
       <img src="https://masteringruneterra.com/wp-content/uploads/2021/09/MasteringRuneterraWebsiteLogo-300x129.webp" />
     </div>
@@ -113,7 +131,11 @@
     </div>
   </div> -->
 
-  <div class="block text-center text-white pt-nav sm:pl-20" :class="{ 'h-main-electron': IS_ELECTRON, 'h-main-web': !IS_ELECTRON }" @click="shrinkLeftNav">
+  <div
+    class="block text-center text-white pt-nav sm:pl-20"
+    :class="{ 'h-main-electron': IS_ELECTRON, 'h-main-web': !IS_ELECTRON }"
+    @click="shrinkLeftNav"
+  >
     <div class="h-full" @scroll="handleContentScroll">
       <router-view :key="$route.fullPath"></router-view>
     </div>
