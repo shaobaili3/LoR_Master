@@ -11,6 +11,7 @@ echo 'app.lormaster.com' > CNAME
 
 git init
 git add -A
+git reset HEAD -- deck.html
 git commit -m 'deploy'
 git branch -m master main
 

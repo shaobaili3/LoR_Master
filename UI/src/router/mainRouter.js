@@ -10,8 +10,42 @@ import ContactInfo from "../components/panels/PanelContact.vue"
 import PanelTest from "../components/panels/PanelTest.vue"
 
 export default [
-  { name: "home", path: "/", component: PanelLeaderboard },
-  { name: "settings", path: "/settings", component: PanelSettings },
+  {
+    name: "home",
+    path: "/",
+    component: PanelLeaderboard,
+    meta: {
+      title: "Home | LoR Master App",
+      metaTags: [
+        {
+          name: "description",
+          content: "The home page of our example app.",
+        },
+        {
+          property: "og:description",
+          content: "The home page of our example app.",
+        },
+      ],
+    },
+  },
+  {
+    name: "settings",
+    path: "/settings",
+    component: PanelSettings,
+    meta: {
+      title: "Settings | LoR Master App",
+      metaTags: [
+        {
+          name: "description",
+          content: "The home page of our example app.",
+        },
+        {
+          property: "og:description",
+          content: "The home page of our example app.",
+        },
+      ],
+    },
+  },
   {
     name: "search",
     path: "/search",
@@ -22,7 +56,20 @@ export default [
   { name: "meta", path: "/meta", component: PanelMeta },
   { name: "decklib", path: "/decklib", component: PanelDeckLib },
   { name: "code", path: "/code", component: PanelDeckCode, props: (route) => ({ code: route.query.code }) },
-  { name: "leaderboard", path: "/leaderboard", component: PanelLeaderboard },
+  {
+    name: "leaderboard",
+    path: "/leaderboard",
+    component: PanelLeaderboard,
+    meta: {
+      title: "Leaderboard | LoR Master App",
+      metaTags: [
+        {
+          name: "description",
+          content: "The leaderboard of lor master app.",
+        },
+      ],
+    },
+  },
   { name: "contact", path: "/contact", component: ContactInfo },
   { name: "test", path: "/test", component: PanelTest },
 ]
