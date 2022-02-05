@@ -1,4 +1,3 @@
-
 # Legends of Runeterra Deck Tracker - LoR Master Tracker
 
 <p align="center">
@@ -15,38 +14,42 @@
 LoR Master Tracker is a open source deck tracker for League of Runeterra.
 
 ## [Download](https://lormaster.com/)
-* [Lastest Version](https://github.com/shaobaili3/LoR_Master/releases/latest)
-* [Changelogs](https://github.com/shaobaili3/lor_master/releases)
+
+- [Lastest Version](https://github.com/shaobaili3/LoR_Master/releases/latest)
+- [Changelogs](https://github.com/shaobaili3/lor_master/releases)
 
 ## Features
 
-* **Player Profile**
+- **Player Profile**
 
-    Player Profile displays all your match history with analytical data.
-![n](Preview/profile.png)
+      Player Profile displays all your match history with analytical data.
 
-* **Player Inspector**
+  ![n](Preview/profile.png)
 
-    By simply providing the player name, Player Inspector shows match history and statistics. Multiple Language player names are supported.
-![n](Preview/inspect.png)
+- **Player Inspector**
 
-* **Deck Tracker**
+      By simply providing the player name, Player Inspector shows match history and statistics. Multiple Language player names are supported.
 
-    At the game beginning, players' decks, opponent history, rank, both graveyards and cards in hand number automatically revealed by real-time deck tracker.
-![c](Preview/tracker2.png)
-![c](Preview/tracker.png)   
-    > ### Disclaimer:
-    > Opponent history are pulled from recent 10 matches by [Riot API](https://developer.riotgames.com/apis). Riot suggested website [DAK.GG](https://dak.gg/lor) provides the same functionality. We are looking forward to getting feedback from the community and Riot.
+  ![n](Preview/inspect.png)
 
-* **Master Leaderboard**
+- **Deck Tracker**
 
-    Master Leaderboard is powered by open-source [LMT Crawler](https://github.com/LoR-Master-Tracker/LoR-Player-Crawler). You can inspect master players via clicking player names.
-![c](Preview/leaderboard.png)
+      At the game beginning, players' decks, opponent history, rank, both graveyards and cards in hand number automatically revealed by real-time deck tracker.
 
-* **Deck Code Viewer**
+  ![c](Preview/tracker2.png)
+  ![c](Preview/tracker.png)
 
-    The deck viewer can be displayed in-game and outside the game via entering the deck codes.
+  > ### Disclaimer: > Opponent history are pulled from recent 10 matches by [Riot API](https://developer.riotgames.com/apis). Riot suggested website [DAK.GG](https://dak.gg/lor) provides the same functionality. We are looking forward to getting feedback from the community and Riot.
 
+- **Master Leaderboard**
+
+      Master Leaderboard is powered by open-source [LMT Crawler](https://github.com/LoR-Master-Tracker/LoR-Player-Crawler). You can inspect master players via clicking player names.
+
+  ![c](Preview/leaderboard.png)
+
+- **Deck Code Viewer**
+
+  The deck viewer can be displayed in-game and outside the game via entering the deck codes.
 
 ## Development
 
@@ -56,34 +59,39 @@ LoR Master Tracker backend service is written by [Python3](https://www.python.or
 
 Pre-requisites:
 
-* To run command line tools, you'll need to configure Python3
-* npm
+- To run command line tools, you'll need to configure Python3
+- npm
 
 1. Clone or Download the repository:
 
-  ```shell
-  git clone https://github.com/shaobaili3/LoR_Master
-  ```
+```shell
+git clone https://github.com/shaobaili3/LoR_Master
+```
 
 2. Run Python Service
 
-  ```shell
-  pip install -r requirements.txt
-  python LMTService.py
-  ```
+```shell
+pip install -r requirements.txt
+python LMTService.py
+```
 
-  If this errors out, make sure that you have an `Python3` environment
-  variable pointing to the right path.
+If this errors out, make sure that you have an `Python3` environment
+variable pointing to the right path.
 
 3. Run Electron User Interface
 
-  ```shell
-  cd UI
-  npm install
-  npm run dev
-  ```
+```javascript
+cd UI
+npm install
 
-  Make sure you are in `UI` directory.
+// This will start a server. Served page can be accessed directly using browser as Web app version
+npm run serve
+
+// this will start Electron, accessing that served page but as Electron App version
+npm run dev
+```
+
+Make sure you are in `UI` directory.
 
 ## FAQ
 
