@@ -1,12 +1,22 @@
 <template>
   <div>
-    <li class="h-8 pl-2 bg-gray-700 rounded" v-if="type == TAG_TYPES.string">
-      <span v-if="getCard">
+    <li class="flex items-center h-8 pl-2 bg-gray-700 rounded" v-if="type == TAG_TYPES.string">
+      <div class="flex gap-2" v-if="getCard">
+        <ChampIcon
+          v-if="getCard.supertype != '' || getCard.rarityRef == 'Champion'"
+          class="block w-6 h-6 bg-cover border-[1px] border-zinc-200 rounded-full"
+          :customClass="true"
+          :code="getCard.cardCode"
+        ></ChampIcon>
         {{ getCard.name }}
-      </span>
-      <span v-if="!getCard">
+      </div>
+      <div class="flex items-center gap-2" v-else-if="getFaction != null">
+        <RegionIcon class="w-6 h-6" :faction="getFaction" :fixedSize="false"></RegionIcon>
         {{ content }}
-      </span>
+      </div>
+      <div v-else-if="!getCard">
+        {{ content }}
+      </div>
       <i class="p-2 cursor-pointer fas fa-times" @click="deleteTag"></i>
     </li>
   </div>
@@ -27,6 +37,11 @@ export default {}
 import { defineProps, defineEmits, computed } from "vue"
 import CardPreview from "../deck/CardPreview.vue"
 import { useBaseStore } from "../../store/StoreBase"
+import ChampIcon from "../image/ChampIcon.vue"
+
+import { factionNames } from "../panels/PanelDeckCode.vue"
+import RegionIcon from "../image/RegionIcon.vue"
+
 const baseStore = useBaseStore()
 
 const props = defineProps({
@@ -42,6 +57,11 @@ const getCard = computed(() => {
     return card
   }
   return null
+})
+
+const getFaction = computed(() => {
+  let factionID = Object.values(factionNames).findIndex((val) => val == props.content)
+  return factionID
 })
 
 const emits = defineEmits(["delete"])

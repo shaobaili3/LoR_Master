@@ -1,8 +1,8 @@
 <template>
   <div class="py-2">
-    <div class="relative flex items-center justify-center gap-2 whitespace-nowrap md:justify-start">
+    <div class="relative flex items-center justify-center gap-2 md:justify-start">
       <!-- Summary -->
-      <div class="flex flex-col items-start w-32 gap-0">
+      <div class="flex flex-col items-start w-32 gap-0 whitespace-nowrap">
         <p class="text-sm text-gray-200">
           <span v-if="isSummary">
             {{ $t("matches.meta", { num: (playRate * 100).toFixed(2) }) }}
@@ -11,14 +11,15 @@
             {{ $t("matches.build", { num: (playRate * 100).toFixed(2) }) }}
           </span>
         </p>
-        <p class="text-base">{{ $t("matches.games", { num: playNum }) }}</p>
+        <p class="text-sm sm:text-base">{{ $t("matches.games", { num: playNum }) }}</p>
         <p
-          class="text-xl"
+          class="text-lg sm:text-xl"
           :style="{
             color: closestColor(winRateBounds.centerAdjusted),
           }"
         >
-          {{ (winRate * 100).toFixed(2) }}% <span class="text-base"> | ± {{ (winRateBounds.gap * 50).toFixed(2) }}</span>
+          {{ (winRate * 100).toFixed(2) }}%
+          <span class="block text-sm sm:text-base sm:inline"> | ± {{ (winRateBounds.gap * 50).toFixed(2) }}</span>
         </p>
       </div>
 

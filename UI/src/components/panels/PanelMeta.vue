@@ -1,7 +1,7 @@
 <template>
-  <div class="flex justify-center h-full px-4">
+  <div class="flex justify-center h-full px-2">
     <div class="flex-1 w-0 max-w-4xl">
-      <div class="flex flex-col h-full px-2 sm:px-0">
+      <div class="flex flex-col h-full sm:px-0">
         <p class="pt-3 pb-5 text-3xl text-left title">{{ $t("str.meta") }}</p>
 
         <MetaFilter class="sticky top-0 z-[5] bg-gray-900" @bind-filter="bindFilter"></MetaFilter>

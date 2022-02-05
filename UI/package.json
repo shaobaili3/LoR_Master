@@ -8,21 +8,21 @@
     "url": "http://www.lormaster.com/"
   },
   "scripts": {
-    "init": "chcp 65001",
     "serve": "vue-cli-service serve",
-    "serve-test": "vue-cli-service serve --mode staging",
-    "dev": "electron app.js",
-    "dev-file": "vue-cli-service build && electron app.js --file",
-    "dev-hidden": "vue-cli-service build && electron app.js --hidden",
-    "deploy": "deploy.sh",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
+    "deploy": "deploy.sh",
     "build-installer": "electron-builder",
     "build-pack": "electron-builder --dir",
     "build-pub": "electron-builder -p always",
+    "dev": "electron app.js",
+    "dev-file": "vue-cli-service build && electron app.js --file",
+    "dev-hidden": "vue-cli-service build && electron app.js --hidden",
+    "get-icon": "node ./devtool/getNewChampIcon.js",
+    "init": "chcp 65001",
     "package": "electron-packager ./ LoRMasterTracker --out ./app --app-version %npm_package_version% --overwrite --icon=image.ico",
-    "start": "electron app.js",
-    "get-icon": "node ./devtool/getNewChampIcon.js"
+    "serve-test": "vue-cli-service serve --mode staging",
+    "start": "electron app.js"
   },
   "main": "app.js",
   "dependencies": {
@@ -51,8 +51,8 @@
     "vuex": "^4.0.0-rc.2"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "~5.0.0-rc.0",
-    "@vue/cli-plugin-eslint": "~5.0.0-rc.0",
+    "@vue/cli-plugin-babel": "~5.0.0-rc.2",
+    "@vue/cli-plugin-eslint": "~5.0.0-rc.2",
     "@vue/cli-service": "~5.0.0-rc.0",
     "@vue/compiler-sfc": "^3.0.0",
     "autoprefixer": "^10.4.0",
