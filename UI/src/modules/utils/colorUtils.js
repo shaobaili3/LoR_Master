@@ -61,8 +61,9 @@ export const winrateGradientSimple = [
   ["a3e635", 0.6],
   ["92da24", 0.7],
   ["84cc16", 0.8],
-  ["50c532", 0.91],
-  ["2eddf7", 0.99],
+  ["50c532", 0.9],
+  ["38bdf8", 0.95],
+  ["d8b4fe", 0.99],
 ]
 
 // export const winrateGradient = [

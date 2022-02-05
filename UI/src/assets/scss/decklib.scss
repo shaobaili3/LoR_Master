@@ -85,21 +85,7 @@
       flex-wrap: wrap;
 
       width: auto;
-      background: var(--col-darker-grey);
-      cursor: pointer;
       border-radius: 10px;
-
-      &:hover {
-        background: var(--col-dark-grey);
-        .icon.champ {
-          border: 2px solid rgba(255, 255, 255, 1);
-          box-shadow: 1px 2px 5px -2px #000000;
-        }
-        .icon.faction {
-          opacity: 1;
-          filter: brightness(0) invert(1) drop-shadow(1 px 2 px 1 px rgba(0, 0, 0, 0.6));
-        }
-      }
 
       .decklib-deck-title {
         // padding: 5px 5px 8px 5px;

@@ -1,6 +1,6 @@
 <template>
   <div class="flex justify-center h-full">
-    <div class="max-w-xl flex-1 w-0">
+    <div class="flex-1 w-0 max-w-xl">
       <div class="flex flex-col h-full px-2 sm:px-0 decklib">
         <modal-warning ref="warningModal"></modal-warning>
         <div class="title">{{ $t("decklib.title") }}</div>
@@ -9,7 +9,14 @@
         <span><i class="fas fa-plus"></i></span>
       </button> -->
           <div class="input-bar-container">
-            <input spellcheck="false" autocomplete="off" class="search-bar" @paste="onPaste" v-model="codeText" :placeholder="$t('decklib.placeholder')" />
+            <input
+              spellcheck="false"
+              autocomplete="off"
+              class="search-bar"
+              @paste="onPaste"
+              v-model="codeText"
+              :placeholder="$t('decklib.placeholder')"
+            />
             <div class="icon inside left">
               <span><i class="fas fa-paste"></i></span>
             </div>
@@ -19,16 +26,24 @@
           </div>
         </div>
         <div class="flex flex-1 h-0 overflow-y-auto">
-          <div class="decks-container h-fit gap-4">
-            <div class="deck-block p-2.5" @click="showDeck($event, deck.code)" v-for="(deck, id) in decks" :key="id">
-              <div class="decklib-deck-title text-left py-1 px-2" :title="deck.title">
-                {{ deck.title }} <span v-if="deck.date" class="block text-xs font-light text-gray-200">{{ format(new Date(deck.date), "HH:mm | yyyy-MM-dd") }}</span>
+          <div class="gap-4 decks-container h-fit">
+            <div
+              class="deck-block p-2.5 bg-gray-700 hover:bg-gray-800 transition-colors cursor-pointer"
+              @click="showDeck($event, deck.code)"
+              v-for="(deck, id) in decks"
+              :key="id"
+            >
+              <div class="px-2 py-1 text-left decklib-deck-title" :title="deck.title">
+                {{ deck.title }}
+                <span v-if="deck.date" class="block text-xs font-light text-gray-200">{{
+                  format(new Date(deck.date), "HH:mm | yyyy-MM-dd")
+                }}</span>
               </div>
               <div @click.stop="onClickDelete(id)" class="btn-delete btn">
                 <span><i class="fas fa-trash"></i></span>
               </div>
               <div class="version tooltip">
-                <span class="tooltiptext top pointer-events-none max-w-full overflow-x-hidden overflow-ellipsis">
+                <span class="max-w-full overflow-x-hidden pointer-events-none tooltiptext top overflow-ellipsis">
                   {{ deck.code }}
                 </span>
                 <deck-preview :click-to-show="false" :deck="deck.code"> </deck-preview>
