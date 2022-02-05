@@ -1,24 +1,52 @@
 <template>
-  <div class="flex justify-center h-full px-4">
+  <div class="flex justify-center h-full px-2 sm:px-4">
     <div class="flex-1 w-0 max-w-3xl">
       <div class="flex flex-col h-full px-2 sm:px-0">
-        <div class="">
-          <div id="btn-group-regions" class="flex">
-            <button id="btn-na" class="btn" :class="{ active: activeRegionID == 0 }" @click="switchRegion(regions.NA)">NA</button>
-            <button id="btn-eu" class="btn" :class="{ active: activeRegionID == 1 }" @click="switchRegion(regions.EU)">EU</button>
-            <button id="btn-sea" class="btn" :class="{ active: activeRegionID == 2 }" @click="switchRegion(regions.APAC)">APAC</button>
+        <h1 class="flex items-end w-full text-left sm:block sm:text-white title">
+          <div class="hidden sm:flex-initial sm:pb-4 sm:w-auto text-ellipsis">
+            Leaderboard
+            <h2 class="hidden text-base text-gray-300 sm:pl-4 sm:inline">Your best source for knowing top players & master meta</h2>
+          </div>
+
+          <!-- Buttons -->
+          <div class="flex justify-end gap-2 w-fit h-[32px]">
+            <button
+              class="text-base border-b-2 w-[60px]"
+              :class="{ ' text-white  border-gold-400': activeRegionID == 0, 'text-gold-400 border-transparent': activeRegionID != 0 }"
+              @click="switchRegion(regions.NA)"
+            >
+              NA
+            </button>
+            <button
+              class="text-base border-b-2 w-[60px]"
+              :class="{ ' text-white  border-gold-400': activeRegionID == 1, 'text-gold-400 border-transparent': activeRegionID != 1 }"
+              @click="switchRegion(regions.EU)"
+            >
+              EU
+            </button>
+            <button
+              class="text-base border-b-2 w-[60px]"
+              :class="{ ' text-white  border-gold-400': activeRegionID == 2, 'text-gold-400 border-transparent': activeRegionID != 2 }"
+              @click="switchRegion(regions.APAC)"
+            >
+              APAC
+            </button>
             <!-- <button id="btn-as" class="btn" :class="{active: activeRegionID == 2}" @click="switchRegion(regions.AS)">AS</button> -->
             <!-- <button id="btn-sea" class="btn" :class="{active: activeRegionID == 3}" @click="switchRegion(regions.SEA)">SEA</button> -->
           </div>
+        </h1>
 
-          <div id="search-container">
+        <!-- Search bar -->
+        <div class="">
+          <div class="mt-2 relative h-[50px]">
             <div class="search-icon left" v-if="!isLoading"><i class="fa fa-search"></i></div>
             <div class="search-icon left loading" v-if="isLoading"><i class="fa fa-circle-notch fa-spin"></i></div>
             <input
+              id="search-input"
+              class="rounded-[25px] rounded-tl-none"
               spellcheck="false"
               autocomplete="off"
               v-model="searchText"
-              id="search-input"
               type="text"
               :placeholder="isLoading ? $t('str.loading') : searchPlaceHolder"
               :disabled="isLoading"
@@ -29,13 +57,14 @@
           </div>
         </div>
 
-        <div class="grid grid-cols-12 h-14 sticky top-0 z-[2] bg-gray-900 items-center text-sm whitespace-nowrap">
+        <!-- Headers -->
+        <div class="grid grid-cols-12 h-11 pt-1 sticky top-0 z-[2] bg-gray-900 items-center text-sm whitespace-nowrap">
           <div class="bg-gray-900 sm:px-2">{{ $t("leaderboard.rank") }}</div>
-          <div class="col-span-4 px-2 bg-gray-900 sm:col-span-3">{{ $t("leaderboard.name") }}</div>
+          <div class="col-span-5 px-2 bg-gray-900 sm:col-span-3">{{ $t("leaderboard.name") }}</div>
           <div class="col-span-2 sm:px-2 sm:col-span-1">{{ $t("leaderboard.points") }}</div>
           <div class="hidden px-2 sm:block sm:col-span-2">{{ $t("leaderboard.lastRank") }}</div>
           <div class="hidden px-2 sm:block sm:col-span-2">{{ $t("leaderboard.lastX", { num: 20 }) }}</div>
-          <div class="col-span-5 px-2 sm:col-span-3">{{ $t("leaderboard.recent") }}</div>
+          <div class="col-span-4 px-2 sm:col-span-3">{{ $t("leaderboard.recent") }}</div>
         </div>
 
         <RecycleScroller
@@ -177,7 +206,6 @@ export default {
 
     searchPlayer(player) {
       if (player.tag) {
-        console.log("Leaderboard before router push", Date.now())
         // Only player with tag can be clicked=
         this.$router.push({
           name: "search",
@@ -230,12 +258,11 @@ export default {
   padding-bottom: 5px;
 }
 
-#search-container {
-  position: relative;
-  margin-top: 15px;
-  /* width: 420px; */
-  height: 50px;
-}
+// #search-container {
+//   position: relative;
+//   /* width: 420px; */
+//   height: 50px;
+// }
 
 #search-input {
   color: white;
@@ -248,7 +275,6 @@ export default {
   border: none;
   background-color: var(--col-darker-grey);
   padding: 20px 20px 20px 50px;
-  border-radius: 40px;
   box-sizing: border-box;
 }
 
@@ -303,10 +329,6 @@ export default {
 #title {
   margin-top: 0px;
   margin-bottom: 40px;
-}
-
-#btn-group-regions {
-  border-radius: 5px;
 }
 
 #btn-group-regions .btn {

@@ -6,7 +6,7 @@
       <p class="text-sm text-gray-200">
         {{ $t("matches.games", { num: matchup.match_num }) }}
       </p>
-      <p class="text-lg">
+      <p class="text-lg" :style="{ color: winRateToColor(matchup.win_rate) }">
         {{
           $t("matches.winRate", {
             num: (matchup.win_rate * 100).toFixed(2),
@@ -21,6 +21,8 @@
 import { useMetaStore } from "../../store/StoreMeta"
 import { mapState } from "pinia"
 import DeckPreview from "../deck/DeckPreview.vue"
+import { winRateToColor } from "../../modules/utils/colorUtils"
+
 export default {
   components: { DeckPreview },
   props: ["matchup"],
@@ -41,6 +43,9 @@ export default {
       }
       return null
     },
+  },
+  methods: {
+    winRateToColor: winRateToColor,
   },
 }
 </script>

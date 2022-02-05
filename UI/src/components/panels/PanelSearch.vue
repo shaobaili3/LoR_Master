@@ -261,7 +261,6 @@ export default {
     },
     errorText() {
       var error = this.errorType
-      console.log("Processing error text from type", error)
       if (error == 0) {
         return this.$t("str.error.playerNotFound")
       } else if (error == 1 || error == 2) {
@@ -390,7 +389,6 @@ export default {
       this.searchHistory()
     },
     searchHistory() {
-      console.log("Search History")
       var splited
       if (this.inputNameList.length > 0 && this.inputNameList[this.autoCompleteIndex]) {
         // Use auto complete to fill the search
@@ -613,7 +611,6 @@ export default {
 
       const requestHistoryStartTime = Date.now()
 
-      console.log("Start Request", requestHistoryStartTime)
       axios
         .get(newRequest, {
           headers: {
@@ -632,8 +629,6 @@ export default {
           })
 
           this.processSearchHistory(response.data)
-
-          console.log("Request Took", Date.now() - requestHistoryStartTime)
 
           this.requestHistoryUpdate()
         })

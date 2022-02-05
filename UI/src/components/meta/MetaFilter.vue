@@ -266,5 +266,6 @@ function checkACIndexBounds() {
 
 function handleDeleteTag(index) {
   tags.value.splice(index, 1)
+  window.localStorage.setItem("lmt-panel-meta-filter", JSON.stringify(tags.value))
 }
 </script>

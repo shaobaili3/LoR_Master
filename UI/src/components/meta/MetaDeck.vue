@@ -15,9 +15,7 @@
         <p
           class="text-xl"
           :style="{
-            color: closestColor(
-              winRateBounds.lower + (winRateBounds.upper - winRateBounds.lower) * Math.min(1, Math.max(0, 0.5 - winRateBounds.gap))
-            ),
+            color: closestColor(winRateBounds.centerAdjusted),
           }"
         >
           {{ (winRate * 100).toFixed(2) }}% <span class="text-base"> | ± {{ (winRateBounds.gap * 50).toFixed(2) }}</span>
@@ -50,10 +48,8 @@
           <div
             class="absolute h-2 -translate-y-1/2 rounded-full top-1/2"
             :style="{
-              background: closestColor(
-                winRateBounds.lower + (winRateBounds.upper - winRateBounds.lower) * Math.min(1, Math.max(0, 0.5 - winRateBounds.gap))
-              ),
-              width: `max(0.5rem, ${Math.max(winRateBounds.gap * 100, 1)}%)`,
+              background: closestColor(winRateBounds.centerAdjusted),
+              width: `max(0.5rem, min(${(winRateBounds.upper - winRateBounds.lower) * 100}%, ${winRateBounds.gap * 100}%))`,
               left: winRateBounds.lower * 100 + '%',
             }"
           ></div>
@@ -127,14 +123,16 @@
               }"
               >{{ (winRateBounds.lower * 100).toFixed(2) }}%</span
             >
-            -
-            <span
-              class="inline-block w-12 text-left"
-              :style="{
-                color: closestColor(winRateBounds.upper),
-              }"
-              >{{ (winRateBounds.upper * 100).toFixed(2) }}%
-            </span>
+            <span v-if="winRateBounds.lower != winRateBounds.upper">
+              -
+              <span
+                class="inline-block w-12 text-left"
+                :style="{
+                  color: closestColor(winRateBounds.upper),
+                }"
+                >{{ (winRateBounds.upper * 100).toFixed(2) }}%
+              </span></span
+            >
           </div>
         </div>
       </div>
@@ -152,18 +150,18 @@ import DeckPreview from "../deck/DeckPreview.vue"
 
 const Z = 1.96 // 95% confidence
 
-import { winRateToColor, winrateGradient } from "../../modules/utils/colorUtils"
+import { winRateToColor, winrateGradient, winRateToMonoColor } from "../../modules/utils/colorUtils"
 
 import { regionNameToShorts } from "../panels/PanelLeaderboard.vue"
 
-const gradientString =
-  "linear-gradient(90deg, " +
-  winrateGradient
-    .map((e) => {
-      return `#${e[0]} ${e[1] * 100}%`
-    })
-    .join(", ") +
-  ")"
+// const gradientString =
+//   "linear-gradient(90deg, " +
+//   winrateGradient
+//     .map((e) => {
+//       return `#${e[0]} ${e[1] * 100}%`
+//     })
+//     .join(", ") +
+//   ")"
 
 export default {
   components: { DeckPreview },
@@ -184,10 +182,14 @@ export default {
   computed: {
     winRateBounds() {
       var interval = Z * Math.sqrt((this.winRate * (1 - this.winRate)) / this.playNum)
+      var lower = Math.max(0, this.winRate - interval)
+      var upper = Math.min(1, this.winRate + interval)
+      var gap = interval * 2
       return {
-        lower: Math.max(0, this.winRate - interval),
-        upper: Math.min(1, this.winRate + interval),
-        gap: interval * 2,
+        lower: lower,
+        upper: upper,
+        gap: gap,
+        centerAdjusted: lower + (upper - lower) * Math.min(1, Math.max(0.2, 0.5 - gap)),
       }
     },
     detailLink() {
@@ -197,7 +199,7 @@ export default {
   },
   data() {
     return {
-      gradientString: gradientString,
+      // gradientString: gradientString,
     }
   },
   methods: {
