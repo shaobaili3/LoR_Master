@@ -149,7 +149,7 @@
       <deck-regions :deck="deckCode" :fixedWidth="false"></deck-regions>
     </div>
     <div class="deck-content-detail" :fixedHeight="!IS_ELECTRON">
-      <deck-detail :baseDeck="deckCode" :fixedHeight="true" :showURL="true"></deck-detail>
+      <deck-detail :baseDeck="deckCode" :fixedHeight="true" :showURL="true" :showAdd="true"></deck-detail>
     </div>
   </div>
 
@@ -178,8 +178,12 @@
     </div>
   </div>
 
-  <div class="pop-clipboard" v-if="clipboardDeck">
-    <div class="pop-title">{{ $t("str.clipboard") }}</div>
+  <div class="fixed z-20 flex flex-col items-start justify-center px-4 py-2 bg-gray-700 rounded-md bottom-16 right-4" v-if="clipboardDeck">
+    <i class="absolute w-4 h-4 text-gray-200 cursor-pointer top-4 right-4 fas fa-times" @click="onCloseFastClipboard"></i>
+    <div class="text-lg text-white">{{ $t("str.clipboard") }}</div>
+    <div class="text-sm text-gray-200">
+      {{ $t("decklib.saveTo") }}
+    </div>
     <deck-preview :deck="clipboardDeck" @click="processPaste"></deck-preview>
   </div>
 </template>
@@ -399,6 +403,32 @@ export default {
 
     ...mapActions(useDeckLibStore, ["deckLibPaste"]),
 
+    onCloseFastClipboard() {
+      const copyToClipboard = (str) => {
+        const el = document.createElement("textarea") // Create a <textarea> element
+        el.value = str // Set its value to the string that you want copied
+        el.setAttribute("readonly", "") // Make it readonly to be tamper-proof
+        el.style.position = "absolute"
+        el.style.left = "-9999px" // Move outside the screen to make it invisible
+        document.body.appendChild(el) // Append the <textarea> element to the HTML document
+        const selected =
+          document.getSelection().rangeCount > 0 // Check if there is any content selected previously
+            ? document.getSelection().getRangeAt(0) // Store selection if found
+            : false // Mark as false to know no selection existed before
+        el.select() // Select the <textarea> content
+        document.execCommand("copy") // Copy - only works as a result of a user action (e.g. click events)
+        document.body.removeChild(el) // Remove the <textarea> element
+        if (selected) {
+          // If a selection existed before copying
+          document.getSelection().removeAllRanges() // Unselect everything on the HTML document
+          document.getSelection().addRange(selected) // Restore the original selection
+        }
+      }
+
+      copyToClipboard(this.clipboardDeck)
+      this.clipboardDeck = null
+    },
+
     initEventBusses() {
       this.$emitter.on("showDeck", (e) => {
         this.showDeck(e)
@@ -503,7 +533,7 @@ export default {
 
     processPaste() {
       this.deckLibPaste(this.clipboardDeck)
-      this.setCurrentPage(PANELS.decklib)
+      this.$router.push({ name: "decklib" })
       this.clipboardDeck = null
       // this.$nextTick(() => {
       //   let lib = this.$refs.deckLib

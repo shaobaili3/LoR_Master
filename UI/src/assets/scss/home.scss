@@ -493,26 +493,3 @@ $mid-radius: 10px;
   padding: 20px;
   overflow: scroll;
 }
-
-.pop-clipboard {
-  position: fixed;
-  bottom: 60px;
-  right: 15px;
-  padding: 10px 15px;
-  // width: 250px;
-  display: flex;
-  flex-direction: column;
-
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-
-  border-radius: 10px;
-  background: var(--col-light-bg);
-
-  z-index: 20;
-
-  .pop-title {
-    color: white;
-  }
-}

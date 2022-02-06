@@ -22,11 +22,15 @@
     </div>
     <div class="actions" :class="{ 'fixed-height': fixedHeight }" v-if="showCopy && this.baseDeck && this.cards.length > 0">
       <!-- <a class="actions-btn" :href="deckDetailLink" target="_blank"><span class="actions-icon fa fa-external-link-alt"></span>Detail</a> -->
+      <div class="actions-btn" v-if="showAdd" @click="addToDeckLib">
+        <span class="actions-icon fa fa-star"></span>{{ this.saved ? this.$t("decklib.saved") : this.$t("decklib.save") }}
+      </div>
       <div class="actions-btn" v-if="showURL" @click="openURL(deckDetailLink)">
         <span class="actions-icon fa fa-external-link-alt"></span>{{ $t("str.detail") }}
       </div>
       <div class="actions-btn tooltip" @click="copyDeckcode">
-        <span class="actions-icon far fa-copy" :class="{ 'fa-exclamation-triangle': !isFull }"></span>{{ copyText }}
+        <span class="actions-icon far fa-copy" :class="{ 'fa-exclamation-triangle': !isFull }"></span
+        >{{ this.copied ? this.$t("str.copied") : this.$t("str.copy") }}
         <div class="tooltiptext top-end" v-if="!isFull">
           {{ $t("tooltips.incompleteDeck") }}
         </div>
@@ -39,6 +43,11 @@
 import DeckEncoder from "../../modules/runeterra/DeckEncoder"
 import CardPreview from "./CardPreview.vue"
 
+import { useDeckLibStore } from "../../store/StoreDeckLib"
+import { mapActions } from "pinia"
+
+const fadeTimeout = 1250
+
 export default {
   components: {
     CardPreview,
@@ -47,6 +56,7 @@ export default {
   data() {
     return {
       copied: false,
+      saved: false,
     }
   },
   props: {
@@ -57,6 +67,10 @@ export default {
       default: true,
     },
     showURL: {
+      type: Boolean,
+      default: false,
+    },
+    showAdd: {
       type: Boolean,
       default: false,
     },
@@ -200,9 +214,6 @@ export default {
         return a.supertype < b.supertype ? 1 : -1
       })
     },
-    copyText() {
-      return this.copied ? this.$t("str.copied") : this.$t("str.copy")
-    },
     isFull() {
       return (
         this.cards.reduce((prev, card) => {
@@ -213,6 +224,15 @@ export default {
   },
   emits: ["showDetail"],
   methods: {
+    ...mapActions(useDeckLibStore, ["deckLibPaste"]),
+    addToDeckLib() {
+      if (this.deckLibPaste(this.baseDeck)) {
+        this.saved = true
+        setTimeout(() => {
+          this.saved = false
+        }, fadeTimeout)
+      }
+    },
     copyDeckcode() {
       const copyToClipboard = (str) => {
         const el = document.createElement("textarea")
@@ -235,22 +255,11 @@ export default {
       this.copied = true
       setTimeout(() => {
         this.copied = false
-      }, 1250)
+      }, fadeTimeout)
     },
     openURL(url) {
-      if (this.IS_ELECTRON) {
-        // window.openExternal(url)
-        // window.open(url)
-        // console.log(window.location + url)
-        // window.location.replace(window.location + url)
-        // window.location.reload()
-        // window.location+url
-        // this.$emit("showDetail", this.baseDeck);
-        this.$emitter.emit("showDeckDetail", this.baseDeck)
-      } else {
-        //window.open(url, "_blank")
-        this.$router.push(url)
-      }
+      this.$emitter.emit("showDeckDetail", this.baseDeck)
+      this.$router.push(url)
     },
   },
 }

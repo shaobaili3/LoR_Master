@@ -101,6 +101,7 @@ export const useDeckLibStore = defineStore("deckLib", {
         await this.initStore()
       }
       this.processPaste(deckCode)
+      return true
     },
     handleDelete(id) {
       this.decks.splice(id, 1)

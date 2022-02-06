@@ -4,8 +4,8 @@
       <div class="flex flex-col h-full px-2 sm:px-0">
         <h1 class="flex items-end w-full text-left sm:block sm:text-white title">
           <div class="hidden sm:block sm:text-3xl sm:flex-initial sm:pb-4 sm:w-auto text-ellipsis">
-            Leaderboard
-            <h2 class="hidden text-base text-gray-300 sm:pl-4 sm:inline">Best for discovering Top players & understanding Master meta</h2>
+            {{ $t("str.leaderboard") }}
+            <h2 class="hidden text-base text-gray-300 sm:pl-4 sm:inline">{{ $t("leaderboard.desc") }}</h2>
           </div>
 
           <!-- Buttons -->

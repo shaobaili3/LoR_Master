@@ -80,7 +80,6 @@ export default {
   computed: {
     ...mapState(useDeckLibStore, ["decks", "loaded", "error", "pasteBuffer"]),
   },
-  emits: ["pasted"],
   mounted() {
     this.initStore()
     if (this.pasteBuffer) {
