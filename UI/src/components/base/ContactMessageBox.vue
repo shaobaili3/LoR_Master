@@ -1,135 +1,186 @@
 <template>
-    <div class="contact-message-box">
-        <textarea spellcheck="false" rows="3" autocomplete='off' type="text" 
-            class="input-textarea"
-            :class="{doubleCheck: doubleCheck}"
-            v-model="message"
-            :placeholder="$t('contact.messageBox.placeholder')"
-            @keyup="checkInput"
-        ></textarea>
-        <button class="send-btn" 
-            :class="{active: message!='', doubleCheck: doubleCheck}"
-            @click="sendMessage">
-            <span v-if="messageSent">{{$t('contact.messageBox.messageSent')}} <i class="fas fa-check"></i></span>
-            <span v-if="doubleCheck && !messageSent">{{$t('contact.messageBox.confirm')}}</span>
-            <span v-if="!doubleCheck && !messageSent">{{$t('contact.messageBox.send')}}</span>
-        </button>
+  <div class="contact-message-box">
+    <textarea
+      spellcheck="false"
+      rows="3"
+      autocomplete="off"
+      type="text"
+      class="input-textarea"
+      :class="{ doubleCheck: doubleCheck }"
+      v-model="message"
+      :placeholder="$t('contact.messageBox.placeholder')"
+      @keyup="onKeyUp"
+    ></textarea>
+    <div class="flex">
+      <div
+        class="pl-2 text-sm"
+        :class="{ 'text-gray-500': message.length <= maxCharLimit, 'text-orange-600': message.length > maxCharLimit }"
+      >
+        {{ message.length }}
+      </div>
+      <button class="mt-1 send-btn" :class="{ active: message != '', doubleCheck: doubleCheck }" @click="sendMessage">
+        <span v-if="messageSending">{{ $t("contact.messageBox.messageSending") }} <i class="fas fa-spin fa-spinner-third"></i></span>
+        <span v-else-if="messageSent">{{ $t("contact.messageBox.messageSent") }} <i class="fas fa-check"></i></span>
+        <span v-else-if="doubleCheck">{{ $t("contact.messageBox.confirm") }}</span>
+        <span v-else>{{ $t("contact.messageBox.send") }}</span>
+      </button>
     </div>
+    <div v-if="errorMessage.length > 0" class="text-orange-600">
+      {{ errorMessage }}
+    </div>
+  </div>
 </template>
 
-<script>
-import axios from 'axios'
+<script setup>
+import axios from "axios"
+import { ref } from "vue"
+import { useStatusStore } from "../../store/StoreStatus"
+import { useBaseStore } from "../../store/StoreBase"
 
-export default {
-    components: {
+const baseStore = useBaseStore()
+const statusStore = useStatusStore()
 
-    },
-    data() {
-        return {
-            message: "",
-            doubleCheck: false,
-        }
-    },
-    mounted() {
-    },
-    methods: {
-        checkInput() {
-            this.doubleCheck = false
-            this.messageSent = false
-        },
-        sendMessage() {
-            if (this.doubleCheck) {
-                var reportUrl = `${this.API_WEB}/report/${encodeURIComponent(this.message)}`
-                console.log('Sending url', reportUrl)
-                axios.get(reportUrl).then((response) => {
-                    console.log("Send Report Success")
-                }).catch(err => {console.log(err)})
+const maxCharLimit = 3000
 
-                this.handleMessageSent()
-            } else if (this.message != "") {
-                this.doubleCheck = true
-            }
-        },
-        handleMessageSent() {
-            this.doubleCheck = false
-            this.messageSent = true
-            this.message = ""
-        },
-        openURL(url) {
-            window.openExternal(url);
-        },
-    }
+const message = ref("")
+const doubleCheck = ref(false)
+const messageSent = ref(false)
+const messageSending = ref(false)
+
+const errorMessage = ref("")
+
+function onKeyUp() {
+  doubleCheck.value = false
+  messageSent.value = false
+  messageSending.value = false
+}
+
+function validate() {
+  return message.value.length <= maxCharLimit
+}
+
+function handleMessageError(err) {
+  errorMessage.value = err
+}
+
+function postRequest() {
+  // const reportURL = `${this.API_WEB}/report/${encodeURIComponent(message.value)}`
+  var reportUrl = `${baseStore.API_WEB}/feedback`
+  axios
+    .post(reportUrl, {
+      time: Date.now(),
+      platform: baseStore.IS_ELECTRON ? "electron" : "web",
+      lor_running: statusStore.lorRunning,
+      local_api_enabled: statusStore.localApiEnabled,
+      server: statusStore.localServer,
+      player_id: statusStore.localPlayerID,
+      message: message.value,
+    })
+    .then((response) => {
+      console.log("Send Report Success")
+      handleMessageSent()
+    })
+    .catch((err) => {
+      console.log(err)
+      handleMessageError(err.toString())
+    })
+}
+
+function sendMessage() {
+  if (!validate()) {
+    handleMessageError(`Max length exceeded ${maxCharLimit}`)
+    return
+  }
+
+  if (doubleCheck.value) {
+    postRequest()
+    handleMessageSending()
+  } else if (message.value != "") {
+    doubleCheck.value = true
+  }
+}
+
+function handleMessageSending() {
+  doubleCheck.value = false
+  messageSending.value = true
+}
+
+function handleMessageSent() {
+  doubleCheck.value = false
+  messageSending.value = false
+  messageSent.value = true
+  message.value = ""
+}
+
+function openURL(url) {
+  window.openExternal(url)
 }
 </script>
 
 <style scoped>
+.contact-message-box {
+  font-size: 16px;
+}
 
-    .contact-message-box {
-        font-size: 16px;
-    }
+.text-link {
+  text-decoration: underline;
+  cursor: pointer;
+}
 
-    .text-link {
-        text-decoration: underline;
-        cursor: pointer;
-    }
+.input-textarea {
+  width: 100%;
 
-    .input-textarea {
-        width: 100%;
+  margin-top: 20px;
+  padding: 10px;
 
-        margin-top: 20px;
-        padding: 10px;
-        
-        background-color: var(--col-darker-grey);
-        color: white;
-        
-        outline: 0px;
-        border: 0px;
-        border-radius: 6px;
+  background-color: var(--col-darker-grey);
+  color: white;
 
-        font-size: inherit;
-        box-sizing: border-box;
-        resize: none;
+  outline: 0px;
+  border: 0px;
+  border-radius: 6px;
 
-        transition: background-color 0.35s ease;
-    }
+  font-size: inherit;
+  box-sizing: border-box;
+  resize: none;
 
-    .input-textarea:focus {
-        background-color: var(--col-dark-grey);
-    }
+  transition: background-color 0.35s ease;
+}
 
-    .send-btn {
-        display: block;
-        min-height: 30px;
-        min-width: 50px;
-        
-        margin-top: 8px;
-        margin-left: auto;
-        padding: 8px 15px;
+.input-textarea:focus {
+  background-color: var(--col-dark-grey);
+}
 
-        background-color: var(--col-dark-grey);
-        color: var(--col-dark-white);
-        
-        outline: 0px;
-        border: 0px;
-        border-radius: 6px;
+.send-btn {
+  display: block;
+  min-height: 30px;
+  min-width: 50px;
 
-        font-size: inherit;
+  margin-left: auto;
+  padding: 8px 15px;
 
-        transition: background-color 0.35s ease;
-    }
+  background-color: var(--col-dark-grey);
+  color: var(--col-dark-white);
 
-    .send-btn.active {
-        cursor: pointer;
-        color: white;
-    }
+  outline: 0px;
+  border: 0px;
+  border-radius: 6px;
 
-    .send-btn.active:hover {
-        background-color: var(--col-light-grey);
-    }
+  font-size: inherit;
 
-    .send-btn.active.doubleCheck {
-        background-color: var(--col-gold);
-    }
+  transition: background-color 0.35s ease;
+}
 
+.send-btn.active {
+  cursor: pointer;
+  color: white;
+}
 
+.send-btn.active:hover {
+  background-color: var(--col-light-grey);
+}
+
+.send-btn.active.doubleCheck {
+  background-color: var(--col-gold);
+}
 </style>

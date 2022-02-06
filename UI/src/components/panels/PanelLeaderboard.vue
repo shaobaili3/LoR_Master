@@ -3,7 +3,8 @@
     <div class="flex-1 w-0 max-w-3xl">
       <div class="flex flex-col h-full px-2 sm:px-0">
         <h1 class="flex items-end w-full text-left sm:block sm:text-white title">
-          <div class="hidden sm:block sm:text-3xl sm:flex-initial sm:pb-4 sm:w-auto text-ellipsis">
+          <!-- Title -->
+          <div v-if="!IS_ELECTRON" class="hidden sm:block sm:text-3xl sm:flex-initial sm:pb-4 sm:w-auto text-ellipsis">
             {{ $t("str.leaderboard") }}
             <h2 class="hidden text-base text-gray-300 sm:pl-4 sm:inline">{{ $t("leaderboard.desc") }}</h2>
           </div>
@@ -43,7 +44,8 @@
             <div class="search-icon left loading" v-if="isLoading"><i class="fa fa-circle-notch fa-spin"></i></div>
             <input
               id="search-input"
-              class="rounded-[25px] rounded-tl-none"
+              class="rounded-[25px]"
+              :class="{ 'rounded-tl-none': activeRegionID == 0 }"
               spellcheck="false"
               autocomplete="off"
               v-model="searchText"
@@ -58,7 +60,7 @@
         </div>
 
         <!-- Headers -->
-        <div class="grid grid-cols-12 h-11 pt-1 sticky top-0 z-[2] bg-gray-900 items-center text-sm whitespace-nowrap">
+        <div class="grid grid-cols-12 h-12 pt-1 sticky top-0 z-[2] bg-gray-900 items-center text-sm whitespace-nowrap">
           <div class="bg-gray-900 sm:px-2">{{ $t("leaderboard.rank") }}</div>
           <div class="col-span-5 px-2 bg-gray-900 sm:col-span-3">{{ $t("leaderboard.name") }}</div>
           <div class="col-span-2 sm:px-2 sm:col-span-1">{{ $t("leaderboard.points") }}</div>

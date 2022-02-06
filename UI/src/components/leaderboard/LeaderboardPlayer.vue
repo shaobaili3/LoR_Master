@@ -23,7 +23,10 @@
       <div
         v-if="lastRankTime"
         class="text-sm text-white"
-        :class="{ 'text-opacity-70': Date.now() - new Date(this.lastRankTime) > 1000 * 60 * 60 * 24 }"
+        :class="{
+          'text-opacity-70': Date.now() - new Date(this.lastRankTime) > 1000 * 60 * 60 * 24,
+          'text-opacity-40': Date.now() - new Date(this.lastRankTime) > 1000 * 60 * 60 * 24 * 7,
+        }"
       >
         {{ lastRank }}
       </div>
