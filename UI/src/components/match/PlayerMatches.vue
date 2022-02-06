@@ -27,12 +27,12 @@
         </div>
         <div class="flex items-center justify-start gap-4 pt-2 text-left sm:gap-6">
           <div v-if="rank">
-            <div class="text-sm text-gray-300"><i class="fas fa-trophy"></i> Rank</div>
+            <div class="text-sm text-gray-300"><i class="fas fa-trophy"></i> {{ $t("leaderboard.rank") }}</div>
             <div class="text-lg">No. {{ rank }}</div>
           </div>
 
           <div v-if="lp">
-            <div class="text-sm text-gray-300"><i class="fas fa-map-marker-alt"></i> Points</div>
+            <div class="text-sm text-gray-300"><i class="fas fa-map-marker-alt"></i> {{ $t("leaderboard.points") }}</div>
             <div class="text-lg">
               {{ lp }}
             </div>
@@ -48,7 +48,7 @@
                   'fa-globe-americas': playerRegion === 'NA',
                 }"
               ></i>
-              Server
+              {{ $t("str.server") }}
             </div>
             <div class="text-lg">
               {{ playerRegionFC }}

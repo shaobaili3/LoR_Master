@@ -8,7 +8,7 @@
     <div class="flex-1 w-0"></div>
     <button
       class="invisible pl-2 pr-4 cursor-pointer group-hover:hover:text-white group-hover:visible group-hover:text-gray-300"
-      @click="onDelete"
+      @click.stop="onDelete"
     >
       <i class="fas fa-trash-alt"></i>
     </button>
@@ -33,7 +33,6 @@ function onDelete() {
 }
 
 function handleBookmarkClick() {
-  console.log(router)
   router.push({
     path: "/search",
     query: { name: props.bookmark.name, tag: props.bookmark.tag, region: props.bookmark.region },

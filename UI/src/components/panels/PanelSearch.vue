@@ -5,7 +5,7 @@
       <div class="pb-4 text-xl text-center">
         {{ $t("search.bookmarks") }}
       </div>
-      <div class="flex flex-col flex-shrink gap-1 mb-4 overflow-y-auto bg-gray-800 rounded-lg">
+      <div class="flex flex-col flex-shrink gap-1 mb-4 max-h-[25%] overflow-y-auto bg-gray-800 rounded-lg">
         <i18n-t keypath="search.noBookmarks" tag="div" class="py-2 text-gray-200" v-if="!bookmarks || bookmarks.length <= 0">
           <i class="px-1 fas fa-bookmark"></i>
         </i18n-t>
@@ -797,8 +797,8 @@ export default {
 
           opponentName = opponent.name
 
-          if (opponent.rank && opponent.rank !== "") {
-            opponentRank = (opponent.rank + 1).toString // rank starts from 0
+          if (opponent.rank && opponent.rank !== "" && opponent.rank != null) {
+            opponentRank = (opponent.rank + 1).toString() // rank starts from 0
           } else {
             opponentRank = "" // ranks can be empty
           }
@@ -806,8 +806,8 @@ export default {
           opponentLp = opponent.lp
           opponentTag = opponent.tag
 
-          if (!matchInfo.rank && player.rank !== "") {
-            matchInfo.rank = player.rank + 1 // player.rank starts from 0
+          if (!matchInfo.rank && player.rank !== "" && player.rank != null) {
+            matchInfo.rank = (player.rank + 1).toString() // player.rank starts from 0
           }
 
           if (!matchInfo.lp) matchInfo.lp = player.lp
