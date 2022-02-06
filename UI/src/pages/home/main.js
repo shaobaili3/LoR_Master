@@ -7,7 +7,7 @@ import { createRouter, createWebHistory } from "vue-router"
 const app = template(App)
 
 import routes from "../../router/mainRouter"
-const router = createRouter({
+export const router = createRouter({
   history: createWebHistory(),
   routes, // short for `routes: routes`
 })

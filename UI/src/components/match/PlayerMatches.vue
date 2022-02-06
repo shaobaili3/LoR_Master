@@ -14,7 +14,17 @@
 
     <div class="items-end block grid-cols-5 pb-4 sm:grid">
       <div class="col-span-4 px-2 sm:px-0">
-        <div class="player-name">{{ playerName }}</div>
+        <div class="player-name">
+          {{ playerName }}
+          <i
+            class="pl-2 text-base cursor-pointer fas fa-bookmark hover:text-white"
+            :class="{
+              'text-gray-200 ': bookmarkIndex == null || bookmarkIndex == -1,
+              'text-white': bookmarkIndex != null && bookmarkIndex != -1,
+            }"
+            @click="handleBookmarkClick"
+          ></i>
+        </div>
         <div class="flex items-center justify-start gap-4 pt-2 text-left sm:gap-6">
           <div v-if="rank">
             <div class="text-sm text-gray-300"><i class="fas fa-trophy"></i> Rank</div>
@@ -177,6 +187,21 @@ function firstCap(string) {
 import { useLeaderboardStore } from "../../store/StoreLeaderboard"
 import { mapStores } from "pinia"
 
+import { useBookmarkStore } from "../../store/StoreBookmark"
+
+export const getLeaderboardFromPlayer = (regionShort, name, tag) => {
+  const leaderboardStore = useLeaderboardStore()
+  const lead = leaderboardStore.leaderboard
+  if (lead && lead[REGION_ID[regionShort]]) {
+    return lead[REGION_ID[regionShort]].find((val) => {
+      return val.name == name && val.tag == tag
+    })
+  } else {
+    leaderboardStore.fetchLeaderboard(REGION_ID[regionShort])
+  }
+  return null
+}
+
 export default {
   components: {
     MatchHistory,
@@ -213,7 +238,11 @@ export default {
     },
   },
   computed: {
-    ...mapStores(useLeaderboardStore),
+    ...mapStores(useLeaderboardStore, useBookmarkStore),
+
+    bookmarkIndex() {
+      return this.bookmarkStore?.bookmarks?.findIndex((bookmark) => this.playerName == bookmark.name && this.playerTag == bookmark.tag)
+    },
 
     missingRankLp() {
       return !this.playerLP && !this.playerRank && this.playerName && this.playerTag && this.playerRegion
@@ -221,12 +250,7 @@ export default {
 
     leaderboard() {
       if (this.missingRankLp) {
-        const lead = this.leaderboardStore.leaderboard
-        if (lead && lead[REGION_ID[this.playerRegion]]) {
-          return lead[REGION_ID[this.playerRegion]].find((val) => {
-            return val.name == this.playerName && val.tag == this.playerTag
-          })
-        }
+        return getLeaderboardFromPlayer(this.playerRegion, this.playerName, this.playerTag)
       }
       return null
     },
@@ -344,6 +368,13 @@ export default {
     },
   },
   methods: {
+    handleBookmarkClick() {
+      if (this.bookmarkIndex != null && this.bookmarkIndex != -1) {
+        this.bookmarkStore.deleteBookmark(this.bookmarkIndex)
+      } else {
+        this.bookmarkStore.addBookmark({ name: this.playerName, tag: this.playerTag, region: this.playerRegion })
+      }
+    },
     downloadStreakScreenshot(index) {
       // html2canvas(this.$el).then(function (canvas) {
       //   document.body.appendChild(canvas)

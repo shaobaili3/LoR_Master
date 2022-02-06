@@ -74,8 +74,8 @@ app.on("ready", () => {
     globalShortcut.register("Alt+CommandOrControl+T", () => {
       requestTestHistory()
     })
-    globalShortcut.register('CommandOrControl+R', function() {
-      console.log('Reload Window')
+    globalShortcut.register("CommandOrControl+R", function () {
+      console.log("Reload Window")
       mainWindow.reload()
     })
   }
@@ -486,7 +486,7 @@ function newMainWindow() {
     slashes: true,
     pathname: require("path").join(__dirname, "dist", "index.html"),
   })
-  
+
   if (developmentMode && !useFile) {
     mainWindow.loadURL("http://localhost:8080/index.html")
   } else {
@@ -600,7 +600,6 @@ function newDeckWindow() {
   } else {
     deckWindow.loadURL(`file://${__dirname}/dist/deck.html`)
   }
-  
 
   deckWindow.setAlwaysOnTop(true, (level = "pop-up-menu"))
   deckWindow.on("closed", () => {
@@ -813,7 +812,7 @@ if (store.get("ui-locale") == null) {
 }
 
 ipcMain.on("request-store", (event, key) => {
-  event.sender.send("reply-store", key, store.get(key))
+  event.sender.send(`reply-store-${key}`, store.get(key))
 })
 
 ipcMain.on("save-store", (event, key, val) => {

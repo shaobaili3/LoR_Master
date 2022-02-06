@@ -118,6 +118,8 @@ export const regionNameToShorts = (name) => {
 const requestLeaderboardWaitTime = 1000 //ms
 var lastLeaderboardRequestTime
 
+const leaderboardStorageID = "lmt-settings-leaderboard-region"
+
 import { useLeaderboardStore } from "../../store/StoreLeaderboard"
 import { mapState, mapActions } from "pinia"
 
@@ -126,7 +128,7 @@ export default {
   mounted() {
     // this.getLeaderboard(this.activeRegionID)
     // console.log("Mounted Leaderboard")
-    let oldRegion = window.localStorage.getItem("leaderboard-region")
+    let oldRegion = window.localStorage.getItem(leaderboardStorageID)
     if (oldRegion) {
       this.activeRegionID = oldRegion
     }
@@ -202,7 +204,7 @@ export default {
       if (this.activeRegionID != regionID) {
         this.fetchLeaderboard(regionID)
         this.activeRegionID = regionID
-        window.localStorage.setItem("leaderboard-region", regionID)
+        window.localStorage.setItem(leaderboardStorageID, regionID)
       }
     },
 

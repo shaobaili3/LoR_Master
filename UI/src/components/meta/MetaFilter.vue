@@ -91,8 +91,10 @@ const autoCompleteItems = ref([])
 const filterInput = ref(null)
 const tags = ref([])
 
+const metaFilterStorageID = "lmt-settings-meta-filter"
+
 onMounted(() => {
-  let oldFilter = window.localStorage.getItem("lmt-panel-meta-filter")
+  let oldFilter = window.localStorage.getItem(metaFilterStorageID)
   if (oldFilter) {
     tags.value = JSON.parse(oldFilter)
   }
@@ -105,9 +107,13 @@ const hasAutoComplete = computed(() => {
 
 const emits = defineEmits(["bindFilter"])
 
+function saveToLocalStorage() {
+  window.localStorage.setItem(metaFilterStorageID, JSON.stringify(tags.value))
+}
+
 function clearTags() {
   tags.value.splice(0, tags.value.length)
-  window.localStorage.setItem("lmt-panel-meta-filter", JSON.stringify(tags.value))
+  saveToLocalStorage()
 }
 
 function addACToFilter(item) {
@@ -199,7 +205,7 @@ function addItemToTags(item) {
       tags.value.push(item)
     }
   }
-  window.localStorage.setItem("lmt-panel-meta-filter", JSON.stringify(tags.value))
+  saveToLocalStorage()
 }
 
 function onKeyUp(e) {
@@ -217,7 +223,7 @@ function onKeyUp(e) {
             tags.value.push(tag)
           }
         })
-        window.localStorage.setItem("lmt-panel-meta-filter", JSON.stringify(tags.value))
+        saveToLocalStorage()
       }
     }
 
@@ -235,7 +241,7 @@ function onKeyDown(e) {
     // Handle deleting tags using backspace
     if (val == "") {
       tags.value.pop()
-      window.localStorage.setItem("lmt-panel-meta-filter", JSON.stringify(tags.value))
+      saveToLocalStorage()
     }
   }
 
@@ -266,6 +272,6 @@ function checkACIndexBounds() {
 
 function handleDeleteTag(index) {
   tags.value.splice(index, 1)
-  window.localStorage.setItem("lmt-panel-meta-filter", JSON.stringify(tags.value))
+  saveToLocalStorage()
 }
 </script>

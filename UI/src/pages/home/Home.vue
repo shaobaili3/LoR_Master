@@ -396,9 +396,8 @@ export default {
       statusStore.requestStatusInfo()
 
       if (!this.IS_ELECTRON) {
-        let myStorage = window.localStorage
-        let locale = myStorage.getItem("ui-locale")
-        let cardLocale = myStorage.getItem("card-locale")
+        let locale = window.localStorage.getItem("lmt-settings-ui-locale")
+        let cardLocale = window.localStorage.getItem("lmt-settings-card-locale")
         if (locale && this.$i18n.availableLocales.includes(locale)) {
           if (this.$i18n) this.$i18n.locale = locale
           console.log("Change ui locale to", locale)
@@ -515,8 +514,8 @@ export default {
     initStore() {
       window.ipcRenderer.send("request-store", "ui-locale")
 
-      window.ipcRenderer.on("reply-store", (event, key, val) => {
-        if (key == "ui-locale" && val) {
+      window.ipcRenderer.on("reply-store-ui-locale", (_event, val) => {
+        if (val) {
           if (this.$i18n) this.$i18n.locale = val
           console.log("Change locale to", val)
         }

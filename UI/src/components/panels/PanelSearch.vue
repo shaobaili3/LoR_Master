@@ -1,8 +1,23 @@
 <template>
-  <div class="flex justify-center h-full">
-    <div v-if="playerName && matches.length > 0" class="flex-col flex-1 hidden max-w-[350px] pr-6 lg:flex">
-      <div class="pb-4 text-xl text-center">{{ $t("str.archetypes") }}</div>
-      <div class="flex flex-col flex-1 h-0 gap-1 overflow-y-auto">
+  <div class="flex justify-center h-full gap-6">
+    <div class="flex-col flex-1 hidden max-w-[350px] lg:flex">
+      <!-- Bookmarked Players -->
+      <div class="pb-4 text-xl text-center">
+        {{ $t("search.bookmarks") }}
+      </div>
+      <div class="flex flex-col flex-shrink gap-1 mb-4 overflow-y-auto bg-gray-800 rounded-lg">
+        <i18n-t keypath="search.noBookmarks" tag="div" class="py-2 text-gray-200" v-if="!bookmarks || bookmarks.length <= 0">
+          <i class="px-1 fas fa-bookmark"></i>
+        </i18n-t>
+        <div v-if="bookmarks && bookmarks.length > 0">
+          <div v-for="(bookmark, index) in bookmarks" :key="bookmark.name + bookmark.id">
+            <search-bookmark :bookmark="bookmark" :index="index"></search-bookmark>
+          </div>
+        </div>
+      </div>
+      <!-- Archetypes -->
+      <div v-if="playerName && matches.length > 0" class="pb-4 text-xl text-center">{{ $t("str.archetypes") }}</div>
+      <div v-if="playerName && matches.length > 0" class="flex flex-col flex-1 h-0 gap-1 mb-4 overflow-y-auto">
         <div
           class="py-1 transition-colors rounded group"
           v-for="obj in uniqueArchetypes"
@@ -38,9 +53,10 @@
           </div>
         </div>
       </div>
-      <div class="h-1/2"></div>
+
+      <div class="h-1/4"></div>
     </div>
-    <div class="flex-1 w-0 max-w-xl">
+    <div class="flex-1 w-0 max-w-2xl">
       <div class="flex flex-col h-full px-2 sm:px-0">
         <div class="z-[1]">
           <div class="region-tabs">
@@ -128,7 +144,6 @@
         </div>
       </div>
     </div>
-    <div v-if="playerName && matches.length > 0" class="hidden w-1/6 xl:block"></div>
   </div>
 </template>
 
@@ -159,10 +174,15 @@ import DeckPreview from "../deck/DeckPreview.vue"
 
 import { winRateToColor } from "../../modules/utils/colorUtils"
 
+import { mapState, mapActions } from "pinia"
+import { useBookmarkStore } from "../../store/StoreBookmark"
+import SearchBookmark from "../search/SearchBookmark.vue"
+
 export default {
   components: {
     PlayerMatches,
     DeckPreview,
+    SearchBookmark,
   },
   props: {
     player: String,
@@ -199,6 +219,8 @@ export default {
     }
   },
   computed: {
+    ...mapState(useBookmarkStore, ["bookmarks"]),
+
     filteredMatches() {
       if (!this.matches) return null
       if (!this.filterDeckID) return this.matches
@@ -310,8 +332,10 @@ export default {
         tag: this.tag,
       })
     }
+    this.initStore()
   },
   methods: {
+    ...mapActions(useBookmarkStore, ["initStore"]),
     winRateToColor: winRateToColor,
     showDeck(code) {
       this.$emitter.emit("showDeck", code)
@@ -912,5 +936,3 @@ export default {
   },
 }
 </script>
-
-<style scoped></style>

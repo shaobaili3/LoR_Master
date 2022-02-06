@@ -1,21 +1,19 @@
 <template>
   <div class="decklib">
     <div class="decks-container gap-1.5 xxs:gap-2">
-      
       <div class="deck-block p-1 xxs:p-2 xs:p-2.5" @click="showDeck($event, id)" v-for="(deck, id) in decks" :key="id">
-        <div class="text-xs text-gray-200 px-1" v-if="deck.date">
-          <span :class="{'text-gold-300': deck.date > new Date() - RecentDeckThresh}">{{format(new Date(deck.date), "HH:mm")}} </span>{{ format(new Date(deck.date), " | yyyy-MM-dd")}}
+        <div class="px-1 text-xs text-gray-200" v-if="deck.date">
+          <span :class="{ 'text-gold-300': deck.date > new Date() - RecentDeckThresh }">{{ format(new Date(deck.date), "HH:mm") }} </span
+          >{{ format(new Date(deck.date), " | yyyy-MM-dd") }}
         </div>
-        <div class="decklib-deck-title w-full text-left px-1">
-          {{deck.title}}
+        <div class="w-full px-1 text-left decklib-deck-title">
+          {{ deck.title }}
         </div>
-        <deck-preview 
-          :deck="deck.code">
-        </deck-preview>
+        <deck-preview :deck="deck.code"> </deck-preview>
       </div>
     </div>
 
-    <div class="layerpanel second" :class="{expanded: showDeckIndex !== null}">
+    <div class="layerpanel second" :class="{ expanded: showDeckIndex !== null }">
       <button class="btn btn-back" @click="onBackSecond">
         <span><i class="fas fa-caret-down"></i></span>
       </button>
@@ -25,25 +23,25 @@
 </template>
 
 <script>
-import DeckPreview from '../deck/DeckPreview.vue'
-import '../../assets/scss/decklib.scss'
-import DeckDetail from '../deck/DeckDetail.vue'
+import DeckPreview from "../deck/DeckPreview.vue"
+import "../../assets/scss/decklib.scss"
+import DeckDetail from "../deck/DeckDetail.vue"
 
-import { format, subDays } from 'date-fns'
+import { format, subDays } from "date-fns"
 
-import { showDeckMixin } from '../mixins'
+import { showDeckMixin } from "../mixins"
 
-const RecentDeckThresh = 5*60*1000 // 5 minutes, for highlight recent imported decks
+const RecentDeckThresh = 5 * 60 * 1000 // 5 minutes, for highlight recent imported decks
 
 export default {
   components: { DeckPreview, DeckDetail },
   mixins: [showDeckMixin],
-  emits: ['back'],
+  emits: ["back"],
   props: {
     pinDeckId: Number,
   },
   created() {
-    this.RecentDeckThresh = RecentDeckThresh;
+    this.RecentDeckThresh = RecentDeckThresh
   },
   data() {
     return {
@@ -51,8 +49,7 @@ export default {
       showDeckIndex: null,
     }
   },
-  computed() {
-  },
+  computed() {},
   mounted() {
     console.log(this.pinDeckId)
     this.initStore()
@@ -62,13 +59,11 @@ export default {
     subDays: subDays,
     initStore() {
       if (window.ipcRenderer) {
-        window.ipcRenderer.send('request-store', 'deck-lib')
+        window.ipcRenderer.send("request-store", "deck-lib")
 
-        window.ipcRenderer.on('reply-store', (event, key, val) => {
-          console.log("Got store", key, val)
-
-          if (key == 'deck-lib' && val) {
-            // console.log("Deck Lib", val)
+        window.ipcRenderer.on("reply-store-deck-lib", (_event, val) => {
+          if (val) {
+            console.log("Got Deck Lib Store")
             this.decks = JSON.parse(val)
           }
         })
@@ -78,21 +73,22 @@ export default {
           {
             title: "Fizz Poppy",
             date: new Date(),
-            code: 'CQBACAIDG4EAKCQBOSCADGABUYA2OANPAHBACAYBAIDC4AICAMEQIBIKFGQADQABYYAQCAIDAMGQ'
+            code: "CQBACAIDG4EAKCQBOSCADGABUYA2OANPAHBACAYBAIDC4AICAMEQIBIKFGQADQABYYAQCAIDAMGQ",
           },
           {
             title: "Draven Sion",
             date: new Date() - 60000,
-            code: 'CECACAIDCQAQIBAQAMCQGAIJBUCACBBGE4WTIAYBAEBS4AIBAQAQCAYDB4CACAQDBEAQGBASAICQGBAGAMAQGCZDGM'
+            code: "CECACAIDCQAQIBAQAMCQGAIJBUCACBBGE4WTIAYBAEBS4AIBAQAQCAYDB4CACAQDBEAQGBASAICQGBAGAMAQGCZDGM",
           },
           {
             title: "Thresh Aurelion Sol",
             date: new Date() - 600000,
-            code: 'CQBQCBIKV4AQEAIFFA2AKAYJC5KFMXDAAQAQCBIZAECASDIBAUCQ6AQDBFEVOAYBAQCTQAQDBERTGAYBAUAQ6HI'
-          }, {
+            code: "CQBQCBIKV4AQEAIFFA2AKAYJC5KFMXDAAQAQCBIZAECASDIBAUCQ6AQDBFEVOAYBAQCTQAQDBERTGAYBAUAQ6HI",
+          },
+          {
             title: "Bandle Nox",
             date: new Date() - 6000000,
-            code: 'CQBACAIDG4EAKCQBOSCADGABUYA2OANPAHBACAYBAIDC4AICAMEQIBIKFGQADQABYYAQCAIDAMGQ'
+            code: "CQBACAIDG4EAKCQBOSCADGABUYA2OANPAHBACAYBAIDC4AICAMEQIBIKFGQADQABYYAQCAIDAMGQ",
           },
         ]
       }
@@ -103,16 +99,16 @@ export default {
     },
     onBackSecond() {
       this.showDeckIndex = null
-      this.$emit('showDeck', null, null)
+      this.$emit("showDeck", null, null)
     },
     showDeck(event, id) {
-      if (!event.target.className.includes('trash')) {
+      if (!event.target.className.includes("trash")) {
         // Not deleting the deck
         // this.$emit('showDeck', deck)
         this.showDeckIndex = id
-        this.$emit('showDeck', this.decks[id].code, id)
+        this.$emit("showDeck", this.decks[id].code, id)
       }
     },
-  }
+  },
 }
 </script>
