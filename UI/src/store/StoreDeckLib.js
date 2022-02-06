@@ -3,7 +3,9 @@ import { defineStore } from "pinia"
 
 import { useBaseStore } from "./StoreBase"
 
-export const useDeckLibStore = defineStore("deckLib", {
+const storeid = "deckLib"
+
+export const useDeckLibStore = defineStore(storeid, {
   state: () => {
     return {
       decks: [],
@@ -30,31 +32,16 @@ export const useDeckLibStore = defineStore("deckLib", {
         })
       } else {
         // Sample data
-        var decks = [
-          {
-            title: "Bandle Nox",
-            date: Date.now() - 10,
-            code: "CQBACAIDG4EAKCQBOSCADGABUYA2OANPAHBACAYBAIDC4AICAMEQIBIKFGQADQABYYAQCAIDAMGQ",
-          },
-          {
-            title: "Draven Sion",
-            date: Date.now() - 30000,
-            code: "CECACAIDCQAQIBAQAMCQGAIJBUCACBBGE4WTIAYBAEBS4AIBAQAQCAYDB4CACAQDBEAQGBASAICQGBAGAMAQGCZDGM",
-          },
-          {
-            title: "Thresh Asol",
-            date: Date.now() - 12394123,
-            code: "CQBQCBIKV4AQEAIFFA2AKAYJC5KFMXDAAQAQCBIZAECASDIBAUCQ6AQDBFEVOAYBAQCTQAQDBERTGAYBAUAQ6HI",
-          },
-        ]
-
-        this.decks = decks
+        this.decks = JSON.parse(window.localStorage.getItem(`lmt-settings-${storeid}`))
+        if (this.decks == null) this.decks = []
         this.loaded = true
       }
     },
     updateStore() {
       if (window.ipcRenderer) {
         window.ipcRenderer.send("save-store", "deck-lib", JSON.stringify(this.decks, null, "\t"))
+      } else {
+        window.localStorage.setItem(`lmt-settings-${storeid}`, JSON.stringify(this.decks))
       }
     },
     processPaste(deckCode) {

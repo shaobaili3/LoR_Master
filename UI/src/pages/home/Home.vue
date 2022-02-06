@@ -39,7 +39,6 @@
     <router-link
       :to="{ name: 'decklib' }"
       class="left-nav-btn"
-      v-if="IS_ELECTRON || IS_DEV"
       :class="{ selected: $route.name == 'decklib' }"
       @click="setCurrentPage(PANELS.decklib)"
     >

@@ -17,10 +17,11 @@
         <div class="player-name">
           {{ playerName }}
           <i
-            class="pl-2 text-base cursor-pointer fas fa-bookmark hover:text-white"
+            v-if="playerName && playerTag && playerRegion"
+            class="hidden pl-2 text-base cursor-pointer lg:inline fas fa-bookmark hover:text-white"
             :class="{
               'text-gray-200 ': bookmarkIndex == null || bookmarkIndex == -1,
-              'text-white': bookmarkIndex != null && bookmarkIndex != -1,
+              'text-gold-200': bookmarkIndex != null && bookmarkIndex != -1,
             }"
             @click="handleBookmarkClick"
           ></i>
