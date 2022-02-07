@@ -32,14 +32,15 @@ module.exports = {
       transitionProperty: {
         height: "height",
         spacing: "margin, padding",
+        rounded: "border-radius, background-color",
       },
       height: {
-        'main-electron': "calc(100vh - 45px)",
-        'main-web': "100vh",
+        "main-electron": "calc(100vh - 45px)",
+        "main-web": "100vh",
       },
       padding: {
-        'nav': '43px'
-      }
+        nav: "43px",
+      },
     },
   },
   plugins: [],

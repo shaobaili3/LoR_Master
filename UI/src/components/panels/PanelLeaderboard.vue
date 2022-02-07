@@ -44,7 +44,7 @@
             <div class="search-icon left loading" v-if="isLoading"><i class="fa fa-circle-notch fa-spin"></i></div>
             <input
               id="search-input"
-              class="rounded-[25px] focus:bg-gray-700 bg-gray-800 transition-colors"
+              class="rounded-[25px] focus:bg-gray-700 bg-gray-800 transition-rounded"
               :class="{ 'rounded-tl-md': activeRegionID == 0 }"
               spellcheck="false"
               autocomplete="off"

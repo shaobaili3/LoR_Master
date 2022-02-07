@@ -12,7 +12,7 @@
             <input
               spellcheck="false"
               autocomplete="off"
-              class="search-bar"
+              class="transition-colors bg-gray-800 search-bar focus:bg-gray-700"
               @paste="onPaste"
               v-model="codeText"
               :placeholder="$t('decklib.placeholder')"
