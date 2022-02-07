@@ -17,7 +17,7 @@
       </div>
       <!-- Archetypes -->
       <div v-if="playerName && matches.length > 0" class="pb-4 text-xl text-center">{{ $t("str.archetypes") }}</div>
-      <div v-if="playerName && matches.length > 0" class="flex flex-col flex-1 h-0 gap-1 mb-4 overflow-y-auto">
+      <div v-if="playerName && matches.length > 0" class="flex flex-col flex-shrink gap-1 mb-4 overflow-y-auto bg-gray-800 rounded-lg">
         <div
           class="py-1 transition-colors rounded group"
           v-for="obj in uniqueArchetypes"
@@ -637,9 +637,6 @@ export default {
 
       axios
         .get(newRequest, {
-          headers: {
-            is_update: 0,
-          },
           cancelToken: cancelToken.token,
         }) // Pass the cancel token
         .then((response) => {

@@ -88,7 +88,6 @@ function sendRequest() {
       var currentDuration = Date.now() - reqeustStartTime
       requestDuration.value = currentDuration
       console.log(`Got response in ${currentDuration} ms`)
-      console.log(response)
     })
     .catch((e) => {
       isLoading.value = false
