@@ -5,7 +5,7 @@
     <div class="relative pb-4">
       <i class="absolute text-base fas fa-filter left-4 top-3.5" :class="{ 'text-gray-200': !(tags.length > 0) }"></i>
       <ul
-        class="flex flex-wrap items-center w-full gap-2 pl-12 pr-12 bg-gray-800"
+        class="flex flex-wrap items-center w-full gap-2 pl-12 pr-12 transition-colors bg-gray-800 focus-within:bg-gray-700"
         :class="{ 'rounded-[40px]': !hasAutoComplete, ' rounded-t-[25px]': hasAutoComplete }"
       >
         <MetaFilterTags
@@ -36,8 +36,8 @@
       <div v-if="hasAutoComplete" class="absolute z-10 w-full text-left bg-gray-800 pb-5 rounded-b-[25px]">
         <div
           v-for="(item, index) in autoCompleteItems"
-          class="relative px-12 cursor-pointer hover:bg-gray-700"
-          :class="{ 'bg-gray-700': autoCompleteIndex == index }"
+          class="relative px-12 mb-1 cursor-pointer hover:bg-gray-600"
+          :class="{ 'bg-gray-700 ': autoCompleteIndex == index }"
           :key="item"
           @click="addACToFilter(item)"
         >

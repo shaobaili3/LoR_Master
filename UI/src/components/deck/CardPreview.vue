@@ -1,6 +1,6 @@
 <template>
   <div
-    class="cardContainer group"
+    class="mt-1 cardContainer group"
     :class="{
       empty: card.count == 0,
       spell: card.typeRef == 'Spell',
@@ -8,7 +8,7 @@
       champ: card.typeRef == 'Champion',
       landmark: card.typeRef == 'Landmark',
       unknown: card.typeRef == 'Unkown',
-      'rounded overflow-hidden': noPreview,
+      'rounded overflow-hidden mt-0 mb-1': noPreview,
     }"
     :style="{ background: getCardPreviewBackgroundStyle() }"
   >
@@ -162,9 +162,6 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 4px;
-  cursor: default;
-
   position: relative;
   /* border-radius: 4px; */
 }

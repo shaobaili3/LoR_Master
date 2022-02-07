@@ -19,7 +19,7 @@
       <div v-if="playerName && matches.length > 0" class="pb-4 text-xl text-center">{{ $t("str.archetypes") }}</div>
       <div v-if="playerName && matches.length > 0" class="flex flex-col flex-shrink gap-1 mb-4 overflow-y-auto bg-gray-800 rounded-lg">
         <div
-          class="py-1 transition-colors rounded group"
+          class="py-1 transition-colors rounded"
           v-for="obj in uniqueArchetypes"
           :key="obj.id"
           :class="{ 'bg-gray-700': filterDeckID == obj.id }"
@@ -28,27 +28,29 @@
             <div>
               <deck-preview :fixedWidth="true" class="p-2" :deck="obj.decks[0]" :size="1"></deck-preview>
             </div>
-            <div class="flex-1 w-0 text-left">
-              <div class="text-gray-200">
-                {{ $t("matches.games", { num: obj.freq }) }}
+            <div class="flex flex-1 w-0 cursor-pointer group" @click="setFilterArchetype(obj.id)">
+              <div class="flex-1 w-0 text-left">
+                <div class="text-gray-200">
+                  {{ $t("matches.games", { num: obj.freq }) }}
+                </div>
+                <div
+                  class="overflow-hidden whitespace-nowrap text-ellipsis"
+                  :style="{
+                    color: winRateToColor(obj.win / obj.freq),
+                  }"
+                >
+                  {{ $t("matches.winRate", { num: Math.floor((obj.win / obj.freq) * 1000) / 10 }) }}
+                </div>
               </div>
               <div
-                class="overflow-hidden whitespace-nowrap text-ellipsis"
-                :style="{
-                  color: winRateToColor(obj.win / obj.freq),
+                class="flex items-center px-2 pr-4 text-gray-200 cursor-pointer group-hover:visible"
+                :class="{
+                  invisible: filterDeckID != obj.id,
+                  'text-gray-50': filterDeckID == obj.id,
                 }"
               >
-                {{ $t("matches.winRate", { num: Math.floor((obj.win / obj.freq) * 1000) / 10 }) }}
+                <i class="fas fa-filter"></i>
               </div>
-            </div>
-            <div
-              class="h-full px-2 pr-4 text-gray-200 cursor-pointer group-hover:visible hover:text-gray-50"
-              :class="{
-                invisible: filterDeckID != obj.id,
-              }"
-              @click="setFilterArchetype(obj.id)"
-            >
-              <i class="fas fa-filter"></i>
             </div>
           </div>
         </div>
@@ -82,12 +84,17 @@
               <input
                 spellcheck="false"
                 autocomplete="off"
-                class="search-bar"
+                class="bg-gray-800 search-bar focus:bg-gray-700"
+                :class="{
+                  'rounded-tl-md': selectedRegion == 'NA',
+                  'rounded-b-none rounded-t-[25px]': hasNameAutoComplete && isInputFocused,
+                }"
                 @keyup="searchName"
                 @keyup.enter="searchHistory"
                 @keyup.up="autoCompleteIndexMinus"
                 @keyup.down="autoCompleteIndexPlus"
-                @focus="searchName"
+                @keydown="onKeyDown"
+                @focus="onInputFocus"
                 v-model="searchText"
                 :placeholder="$t('search.player.placeholder')"
               />
@@ -95,15 +102,20 @@
                 <span><i class="fas fa-times"></i></span>
               </button>
             </div>
-            <div class="search-bar-auto-complete">
+            <!-- Auto Complete -->
+            <div
+              v-if="hasNameAutoComplete && isInputFocused"
+              class="top-[50px] absolute z-10 w-full text-left bg-gray-800 pb-5 rounded-b-[25px] max-h-[calc(80vh-140px)] overflow-y-auto"
+            >
               <div
-                class="auto-complete-item"
-                v-for="(name, index) in filteredInputNameList"
+                class="pl-12 auto-complete-item"
+                v-for="(player, index) in filteredInputNameList"
                 :key="index"
-                :class="{ selected: autoCompleteIndex == index }"
+                :class="{ 'bg-gray-700': autoCompleteIndex == index }"
                 @click="searchHistoryAutoComplete(index)"
+                :ref="setAutoCompleteRefs"
               >
-                {{ name }}
+                <search-auto-complete-item :player="player"></search-auto-complete-item>
               </div>
             </div>
           </div>
@@ -151,7 +163,6 @@
 const requestDataWaitTime = 400 //ms
 const requestHistoryWaitTime = 100 //ms
 const requestStatusWaitTime = 1000 //ms
-const inputNameListLength = 10
 
 const requestRefreshDelay = 5000 //ms
 
@@ -177,12 +188,14 @@ import { winRateToColor } from "../../modules/utils/colorUtils"
 import { mapState, mapActions } from "pinia"
 import { useBookmarkStore } from "../../store/StoreBookmark"
 import SearchBookmark from "../search/SearchBookmark.vue"
+import SearchAutoCompleteItem from "../search/SearchAutoCompleteItem.vue"
 
 export default {
   components: {
     PlayerMatches,
     DeckPreview,
     SearchBookmark,
+    SearchAutoCompleteItem,
   },
   props: {
     player: String,
@@ -206,7 +219,9 @@ export default {
       errorType: "",
 
       inputNameList: [],
-      autoCompleteIndex: -1,
+      autoCompleteIndex: 0,
+      isInputFocused: false,
+      autoCompleteRefs: [],
 
       regions: REGION_SHORTS,
       selectedRegion: "NA",
@@ -220,6 +235,10 @@ export default {
   },
   computed: {
     ...mapState(useBookmarkStore, ["bookmarks"]),
+
+    hasNameAutoComplete() {
+      return this.filteredInputNameList && this.filteredInputNameList.length > 0
+    },
 
     filteredMatches() {
       if (!this.matches) return null
@@ -297,7 +316,8 @@ export default {
       return this.version == this.remoteVersion
     },
     filteredInputNameList() {
-      return this.inputNameList.map((i) => i.split("#")[0])
+      // return this.inputNameList.map((i) => i.split("#")[0])
+      return this.inputNameList
     },
     isSameSearch() {
       return this.searchText == this.playerName && this.playerTag && REGION_SHORTS[REGION_ID[this.selectedRegion]] == this.playerRegion
@@ -337,6 +357,7 @@ export default {
   methods: {
     ...mapActions(useBookmarkStore, ["initStore"]),
     winRateToColor: winRateToColor,
+
     showDeck(code) {
       this.$emitter.emit("showDeck", code)
     },
@@ -378,8 +399,14 @@ export default {
       this.searchName()
       document.querySelector(".search-bar").focus()
     },
+    onInputFocus() {
+      this.isInputFocused = true
+    },
+    onInputBlur() {
+      this.isInputFocused = false
+    },
     searchName() {
-      if (this.searchText.length > 0) {
+      if (this.searchText.length > 0 && !this.searchText.includes("#")) {
         this.requestNameData()
       } else {
         this.resetInputNameList()
@@ -387,7 +414,7 @@ export default {
     },
     resetInputNameList() {
       this.inputNameList = []
-      this.autoCompleteIndex = -1
+      this.autoCompleteIndex = 0
     },
     resetInputFocus() {
       var searchBar = document.querySelector(".search-bar")
@@ -395,16 +422,28 @@ export default {
       this.resetInputNameList()
     },
     // Search bar Auto Complete
+    setAutoCompleteRefs(el) {
+      if (el) {
+        this.autoCompleteRefs.push(el)
+      }
+    },
     autoCompleteIndexPlus() {
       this.autoCompleteIndex += 1
-      if (this.autoCompleteIndex > inputNameListLength - 1) {
-        this.autoCompleteIndex = inputNameListLength - 1
+      if (this.autoCompleteIndex > this.inputNameList.length - 1) {
+        this.autoCompleteIndex = 0
       }
+      this.autoCompleteRefs[this.autoCompleteIndex].scrollIntoViewIfNeeded({ behavior: "smooth" })
     },
     autoCompleteIndexMinus() {
       this.autoCompleteIndex -= 1
-      if (this.autoCompleteIndex < -1) {
-        this.autoCompleteIndex = -1
+      if (this.autoCompleteIndex < 0) {
+        this.autoCompleteIndex = this.inputNameList.length - 1
+      }
+      this.autoCompleteRefs[this.autoCompleteIndex].scrollIntoViewIfNeeded({ behavior: "smooth" })
+    },
+    onKeyDown(e) {
+      if (e.key == "ArrowUp" || e.key == "ArrowDown") {
+        e.preventDefault()
       }
     },
     searchHistoryAutoComplete(index) {
@@ -417,9 +456,9 @@ export default {
       if (this.inputNameList.length > 0 && this.inputNameList[this.autoCompleteIndex]) {
         // Use auto complete to fill the search
         // Sets player info for search
-        splited = this.inputNameList[this.autoCompleteIndex].split("#")
-        this.playerName = splited[0]
-        this.playerTag = splited[1]
+        var item = this.inputNameList[this.autoCompleteIndex]
+        this.playerName = item.name
+        this.playerTag = item.tag
 
         this.searchText = this.playerName
 
@@ -510,7 +549,7 @@ export default {
     },
     requestNameData() {
       axios
-        .get(`${this.API_WEB}/name/${REGION_NAMES[REGION_ID[this.selectedRegion]]}/${this.searchText}`)
+        .get(`${this.API_WEB}/names/${REGION_NAMES[REGION_ID[this.selectedRegion]]}/${this.searchText}`)
         .then((response) => {
           if (response.data == "Error") {
             // Error
@@ -518,7 +557,7 @@ export default {
             // console.log(response.data)
             if (document.querySelector(".search-bar") == document.activeElement) {
               // If the search bar is still in focus
-              this.inputNameList = response.data.slice(0, inputNameListLength)
+              this.inputNameList = response.data
             } else {
               this.resetInputNameList()
             }

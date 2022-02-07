@@ -138,7 +138,7 @@
         </div>
       </div>
 
-      <button class="p-2 rounded-md text-white/50 hover:text-white hover:bg-gray-500" v-if="linkDetail" @click="openURL(detailLink)">
+      <button class="z-[1] p-2 rounded-md text-white/50 hover:text-white hover:bg-gray-500" v-if="linkDetail" @click="openURL(detailLink)">
         <span>{{ $t("str.detail") }}</span>
         <i class="pl-1 fas fa-external-link-alt"></i>
       </button>

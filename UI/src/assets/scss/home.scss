@@ -60,7 +60,7 @@
       border-radius: 0px 4px 4px 4px;
       background: var(--col-background); */
   border: none;
-  background-color: var(--col-darker-grey);
+  // background-color: var(--col-darker-grey);
   padding: 0px 20px 0px 50px;
   border-radius: 40px;
   box-sizing: border-box;
@@ -68,7 +68,7 @@
 
 .search-bar:focus {
   outline: 0px;
-  background: var(--col-dark-grey);
+  // background: var(--col-dark-grey);
 }
 
 .search-bar-auto-complete {

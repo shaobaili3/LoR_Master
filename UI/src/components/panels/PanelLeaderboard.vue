@@ -44,8 +44,8 @@
             <div class="search-icon left loading" v-if="isLoading"><i class="fa fa-circle-notch fa-spin"></i></div>
             <input
               id="search-input"
-              class="rounded-[25px]"
-              :class="{ 'rounded-tl-none': activeRegionID == 0 }"
+              class="rounded-[25px] focus:bg-gray-700 bg-gray-800 transition-colors"
+              :class="{ 'rounded-tl-md': activeRegionID == 0 }"
               spellcheck="false"
               autocomplete="off"
               v-model="searchText"
@@ -277,14 +277,14 @@ export default {
   height: 100%;
 
   border: none;
-  background-color: var(--col-darker-grey);
+  // background-color: var(--col-darker-grey);
   padding: 20px 20px 20px 50px;
   box-sizing: border-box;
 }
 
 #search-input:focus {
   outline: none;
-  background-color: var(--col-dark-grey);
+  // background-color: var(--col-dark-grey);
   /* box-shadow: 0px 0px 10px 2px var(--col-gold); */
 }
 
