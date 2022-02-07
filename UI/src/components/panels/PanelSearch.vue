@@ -19,7 +19,7 @@
       <div v-if="playerName && matches.length > 0" class="pb-4 text-xl text-center">{{ $t("str.archetypes") }}</div>
       <div v-if="playerName && matches.length > 0" class="flex flex-col flex-shrink gap-1 mb-4 overflow-y-auto bg-gray-800 rounded-lg">
         <div
-          class="py-1 transition-colors rounded"
+          class="py-1 transition-colors rounded hover:bg-gray-600"
           v-for="obj in uniqueArchetypes"
           :key="obj.id"
           :class="{ 'bg-gray-700': filterDeckID == obj.id }"
@@ -43,9 +43,9 @@
                 </div>
               </div>
               <div
-                class="flex items-center px-2 pr-4 text-gray-200 cursor-pointer group-hover:visible"
+                class="flex items-center px-2 pr-4 text-gray-200 transition-opacity cursor-pointer group-hover:opacity-100"
                 :class="{
-                  invisible: filterDeckID != obj.id,
+                  'opacity-0': filterDeckID != obj.id,
                   'text-gray-50': filterDeckID == obj.id,
                 }"
               >
@@ -341,7 +341,7 @@ export default {
       if (!this.matches) return null
       if (!this.filterDeckID) return this.matches
       return this.matches.filter((val) => {
-        return val.deckID == this.filterDeckID
+        return getDeckID(val.deck) == this.filterDeckID
       })
     },
     hasSearchInfo() {

@@ -82,7 +82,16 @@ export default {
         }
       }
 
-      champs.sort((a, b) => (a.count > b.count ? -1 : a.count == b.count ? a.code - b.code : 1))
+      champs.sort((a, b) => {
+        if (a.count > b.count) {
+          return -1
+        } else if (a.count == b.count) {
+          if (a.code > b.code) {
+            return -1
+          }
+        }
+        return 1
+      })
 
       if (this.fixedWidth) {
         var fillerIcons = this.maxChamp - champs.length

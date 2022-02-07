@@ -1,5 +1,8 @@
 <template>
-  <div class="flex items-center gap-2 py-2 pl-4 cursor-pointer group hover:bg-gray-600 whitespace-nowrap" @click="handleBookmarkClick">
+  <div
+    class="flex items-center gap-2 py-2 pl-4 transition-colors cursor-pointer group hover:bg-gray-600 whitespace-nowrap"
+    @click="handleBookmarkClick"
+  >
     <div class="flex-shrink pr-2 overflow-hidden text-ellipsis">{{ bookmark.name }}</div>
 
     <div class="text-sm text-gray-200" v-if="bookmark.region">
@@ -11,7 +14,7 @@
     </div>
     <div class="flex-1 w-0"></div>
     <button
-      class="invisible pl-2 pr-4 cursor-pointer group-hover:hover:text-white group-hover:visible group-hover:text-gray-300"
+      class="pl-2 pr-4 text-gray-300 transition-opacity opacity-0 cursor-pointer hover:text-white group-hover:opacity-100"
       @click.stop="onDelete"
     >
       <i class="fas fa-trash-alt"></i>

@@ -165,6 +165,7 @@ function processDeck() {
     let deck = DeckEncoder.decode(props.code)
     isValid.value = true
     deckID.value = getDeckID(props.code)
+    console.log(deckID.value)
     store.fetchArchetypeDetail(deckID.value)
     let champNames = deck.reduce((names, card) => {
       let info = baseStore.sets.find((info) => info.cardCode == card.code)

@@ -158,7 +158,23 @@
     <div class="left">
       <div class="app-name url" @click="openURL('https://www.lormaster.com')">{{ $t("appName") }}</div>
       <div v-if="!localApiEnabled && lorRunning && IS_ELECTRON" class="api-warning warning">
-        <small><i class="fas fa-exclamation-triangle"></i>{{ $t("str.error.localApiError") }}</small>
+        <i class="pr-1 text-sm fas fa-exclamation-triangle"></i>{{ $t("str.error.localApiError") }}
+      </div>
+      <div v-if="IS_ELECTRON && !backendRunning" class="flex gap-2 pl-2">
+        <div class="text-red-400"><i class="pr-1 text-sm fas fa-exclamation-triangle"></i>{{ $t("str.error.backend") }}</div>
+        <div
+          class="px-2 py-1 text-gray-200 bg-gray-500 rounded-md cursor-pointer hover:bg-gray-400 hover:text-white"
+          @click="restartBackend"
+        >
+          {{ $t("str.retry") }}
+        </div>
+        <router-link
+          v-if="$route.name != 'contact'"
+          :to="{ name: 'contact' }"
+          class="px-2 py-1 text-gray-200 bg-gray-500 rounded-md cursor-pointer hover:no-underline hover:bg-gray-400 hover:text-white"
+        >
+          {{ $t("str.support") }}
+        </router-link>
       </div>
     </div>
     <div class="right">
@@ -204,7 +220,7 @@ import DeckDetail from "../../components/deck/DeckDetail.vue"
 import { useBaseStore } from "../../store/StoreBase"
 import { useDeckLibStore } from "../../store/StoreDeckLib"
 import { useStatusStore } from "../../store/StoreStatus"
-import { mapState, mapActions } from "pinia"
+import { mapState, mapActions, mapWritableState } from "pinia"
 
 import "../../assets/scss/responsive.scss"
 
@@ -326,8 +342,7 @@ export default {
     }
   },
   computed: {
-    ...mapState(useStatusStore, ["localApiEnabled", "localPlayerID", "localServer", "lorRunning"]),
-
+    ...mapState(useStatusStore, ["localApiEnabled", "localPlayerID", "localServer", "lorRunning", "backendRunning"]),
     isUpdatedVersion() {
       return this.version == this.remoteVersion
     },
@@ -409,6 +424,7 @@ export default {
       }
 
       this.handleGameEnd()
+      this.handleBackEndClose()
       this.requestVersionData()
       this.initStore()
       this.initChangeLocale()
@@ -419,7 +435,7 @@ export default {
   },
   methods: {
     ...mapActions(useBaseStore, ["changeLocale"]),
-
+    ...mapActions(useStatusStore, ["restartBackend"]),
     ...mapActions(useDeckLibStore, ["deckLibPaste"]),
 
     onCloseFastClipboard() {
@@ -619,6 +635,11 @@ export default {
       window.ipcRenderer.on("game-end-handle", (event) => {
         console.log("Game Ended: Requesting local history")
         this.requestLocalHistory()
+      })
+    },
+    handleBackEndClose() {
+      window.ipcRenderer.on("backend-closed", (event) => {
+        console.log("Back end closed")
       })
     },
     requestVersionData() {

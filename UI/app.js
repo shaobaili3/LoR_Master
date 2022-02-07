@@ -355,7 +355,10 @@ Menu.setApplicationMenu(menu)
 // --- Backend Service ---
 // -----------------------------------------------
 
+var lmtServiceStarted = false
 function detectPortAndStartService() {
+  if (lmtServiceStarted) return
+
   const detect = require("detect-port")
   detect(port, (err, _port) => {
     if (err) {
@@ -386,6 +389,9 @@ function startLMTService(port) {
   console.log("Starting LMT Service", "Port equals to: ", port)
   console.log("--------------------")
 
+  if (lmtServiceStarted) return
+
+  lmtServiceStarted = true
   const { spawn } = require("child_process")
 
   var proc
@@ -418,12 +424,21 @@ function startLMTService(port) {
 
   proc.on("close", (code) => {
     console.log(`Child process close all stdio with code ${code}`)
-    startLMTService(port)
+    lmtServiceStarted = false
+    if (mainWindow) {
+      mainWindow.webContents.send("backend-closed")
+    } else {
+      startLMTService(port)
+    }
   })
   proc.on("exit", (code) => {
     console.log(`Child process exited with code ${code}`)
   })
 }
+
+ipcMain.on("backend-restart", (event, enable) => {
+  detectPortAndStartService()
+})
 
 // -----------------------------------------------
 // --- BrowserWindows ---
@@ -869,8 +884,8 @@ function processClipboard() {
 
 // --- Use these to check for old running python app ---
 
-const tasklist = require("tasklist")
-const { cp } = require("fs")
+// const tasklist = require("tasklist")
+// const { cp } = require("fs")
 /*
 	[
 		{
@@ -884,38 +899,38 @@ const { cp } = require("fs")
 	]
 	*/
 
-var isCheckingTracker = false
-async function checkTracker() {
-  isCheckingTracker = true
+// var isCheckingTracker = false
+// async function checkTracker() {
+//   isCheckingTracker = true
 
-  // Check Python Process with window name containing LoR Master Tracker
-  var pythonList = await tasklist({
-    filter: ["IMAGENAME eq python.exe"],
-    verbose: true,
-  })
-  pythonList = pythonList.filter((ps) => ps.windowTitle.indexOf("LoR Master Tracker") != -1)
+//   // Check Python Process with window name containing LoR Master Tracker
+//   var pythonList = await tasklist({
+//     filter: ["IMAGENAME eq python.exe"],
+//     verbose: true,
+//   })
+//   pythonList = pythonList.filter((ps) => ps.windowTitle.indexOf("LoR Master Tracker") != -1)
 
-  // Check LoRMasterTracker.exe process
-  var trackerList = await tasklist({
-    filter: ["IMAGENAME eq LoRMasterTracker.exe"],
-    verbose: false,
-  })
+//   // Check LoRMasterTracker.exe process
+//   var trackerList = await tasklist({
+//     filter: ["IMAGENAME eq LoRMasterTracker.exe"],
+//     verbose: false,
+//   })
 
-  // console.log(list.filter(ps => ps.imageName.indexOf('python') != -1))
-  // console.log("\n pythonList", pythonList.length)
-  // console.log("trackerList", trackerList.length)
+//   // console.log(list.filter(ps => ps.imageName.indexOf('python') != -1))
+//   // console.log("\n pythonList", pythonList.length)
+//   // console.log("trackerList", trackerList.length)
 
-  if (pythonList.length + trackerList.length <= 0) {
-    // There is no tracker running
-    console.log("No tracker running")
-    // app.quit()
-    if (deckWindow) deckWindow.close()
-    // app.exit()
-  } else {
-    // if (!deckWindow) appReady()
-  }
+//   if (pythonList.length + trackerList.length <= 0) {
+//     // There is no tracker running
+//     console.log("No tracker running")
+//     // app.quit()
+//     if (deckWindow) deckWindow.close()
+//     // app.exit()
+//   } else {
+//     // if (!deckWindow) appReady()
+//   }
 
-  setTimeout(checkTracker, 1000)
-}
+//   setTimeout(checkTracker, 1000)
+// }
 
 // checkTracker()

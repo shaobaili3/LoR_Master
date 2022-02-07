@@ -12,6 +12,8 @@ export const useStatusStore = defineStore("status", {
       localApiEnabled: false,
       localServer: null,
       localPlayerID: null,
+
+      backendRunning: true,
     }
   },
   actions: {
@@ -22,6 +24,8 @@ export const useStatusStore = defineStore("status", {
     },
     processStatusInfo(data) {
       const baseStore = useBaseStore()
+
+      this.backendRunning = true
 
       if (data.language) {
         var newLocale = data.language.replace("-", "_").toLowerCase()
@@ -72,6 +76,7 @@ export const useStatusStore = defineStore("status", {
           if (axios.isCancel(e)) {
             console.log("Request cancelled")
           } else {
+            this.backendRunning = false
             console.log("error", e)
             var elapsedTime = Date.now() - this.lastStatusRequestTime // ms
             if (elapsedTime > requestStatusWaitTime) {
@@ -81,6 +86,11 @@ export const useStatusStore = defineStore("status", {
             }
           }
         })
+    },
+    restartBackend() {
+      if (window.ipcRenderer && !this.backendRunning) {
+        window.ipcRenderer.send("backend-restart")
+      }
     },
   },
 })
