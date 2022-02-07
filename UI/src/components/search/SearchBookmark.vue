@@ -1,9 +1,21 @@
 <template>
-  <div class="flex gap-2 py-2 pl-4 cursor-pointer group hover:bg-gray-600" @click="handleBookmarkClick">
-    <div>{{ bookmark.name }}</div>
+  <div class="flex items-center gap-2 py-2 pl-4 cursor-pointer group hover:bg-gray-600 whitespace-nowrap" @click="handleBookmarkClick">
+    <div class="flex-shrink pr-2 overflow-hidden text-ellipsis">{{ bookmark.name }}</div>
 
-    <div v-if="leaderboardInfo && leaderboardInfo.rank != null" class="pl-4 text-gray-200">
-      <i class="pr-2 text-sm fas fa-trophy"></i>{{ leaderboardInfo.rank + 1 }}
+    <div class="text-sm text-gray-200" v-if="bookmark.region">
+      <i
+        class="pr-1 fas"
+        :class="{
+          'fa-globe-asia': bookmark.region == 'APAC',
+          'fa-globe-europe': bookmark.region == 'EU',
+          'fa-globe-americas': bookmark.region == 'NA',
+        }"
+      ></i
+      >{{ bookmark.region }}
+    </div>
+
+    <div class="text-sm text-gray-200" v-if="leaderboardInfo && leaderboardInfo.rank != null">
+      <i class="pr-1 fas fa-trophy"></i>{{ leaderboardInfo.rank + 1 }}
     </div>
     <div class="flex-1 w-0"></div>
     <button

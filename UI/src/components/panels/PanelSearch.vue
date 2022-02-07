@@ -222,6 +222,7 @@ export default {
       autoCompleteIndex: 0,
       isInputFocused: false,
       autoCompleteRefs: [],
+      autoCompleteRequestController: null,
 
       regions: REGION_SHORTS,
       selectedRegion: "NA",
@@ -407,19 +408,19 @@ export default {
     },
     searchName() {
       if (this.searchText.length > 0 && !this.searchText.includes("#")) {
-        this.requestNameData()
+        this.requestAutoComplete()
       } else {
-        this.resetInputNameList()
+        this.resetAutoComplete()
       }
     },
-    resetInputNameList() {
+    resetAutoComplete() {
       this.inputNameList = []
       this.autoCompleteIndex = 0
     },
     resetInputFocus() {
       var searchBar = document.querySelector(".search-bar")
       if (searchBar) searchBar.blur()
-      this.resetInputNameList()
+      this.resetAutoComplete()
     },
     // Search bar Auto Complete
     setAutoCompleteRefs(el) {
@@ -547,19 +548,26 @@ export default {
         window.open(url)
       }
     },
-    requestNameData() {
+    requestAutoComplete() {
+      // Abort not completed requests
+      if (this.autoCompleteRequestController) this.autoCompleteRequestController.abort()
+
+      const api = `${this.API_WEB}/names/${REGION_NAMES[REGION_ID[this.selectedRegion]]}/${this.searchText}`
+      const controller = new AbortController()
+      this.autoCompleteRequestController = controller
+
       axios
-        .get(`${this.API_WEB}/names/${REGION_NAMES[REGION_ID[this.selectedRegion]]}/${this.searchText}`)
+        .get(api, { signal: controller.signal })
         .then((response) => {
           if (response.data == "Error") {
             // Error
           } else {
             // console.log(response.data)
-            if (document.querySelector(".search-bar") == document.activeElement) {
+            if (document.querySelector(".search-bar") == document.activeElement && this.searchText) {
               // If the search bar is still in focus
               this.inputNameList = response.data
             } else {
-              this.resetInputNameList()
+              this.resetAutoComplete()
             }
           }
         })
