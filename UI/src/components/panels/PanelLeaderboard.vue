@@ -108,11 +108,13 @@ export const REGION_SHORTS = ["NA", "EU", "APAC"]
 export const REGION_NAMES = ["americas", "europe", "apac"]
 
 export const regionNameToShorts = (name) => {
-  if (name == "sea") {
+  if (name == "sea" || name == "asia") {
     return "APAC"
   } else {
-    return REGION_SHORTS[REGION_NAMES.indexOf(name)]
+    let nameIndex = REGION_NAMES.indexOf(name)
+    if (nameIndex != -1) return REGION_SHORTS[nameIndex]
   }
+  return null
 }
 
 const requestLeaderboardWaitTime = 1000 //ms

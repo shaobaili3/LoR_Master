@@ -104,15 +104,21 @@ export const getChamps = (code) => {
 
 export const getDeckID = (code) => {
   var factionNames = getFactions(code)
-    .map((id) => regionNames[id])
-    .sort()
+  if (factionNames) {
+    factionNames.map((id) => regionNames[id]).sort()
+  } else return null
   var champNames = getChamps(code)
-    .slice(0, 2)
-    .map((champ) => champ.name)
-    .sort()
-  if (getChamps.length == 0) {
-    champNames = ["No-Champion"]
-  }
+  if (champNames) {
+    if (champNames.length == 0) {
+      champNames = ["No-Champion"]
+    } else {
+      champNames
+        .slice(0, 2)
+        .map((champ) => champ.name)
+        .sort()
+    }
+  } else return null
+
   var IDString = factionNames.join(" ") + " " + champNames.join(" ")
   return IDString
 }

@@ -23,11 +23,6 @@ export const useStatusStore = defineStore("status", {
     processStatusInfo(data) {
       const baseStore = useBaseStore()
 
-      if (data.playerId && this.localPlayerID != data.playerId) {
-        // there is a new valid player ID
-        this.initAnalytics(data.playerId)
-      }
-
       if (data.language) {
         var newLocale = data.language.replace("-", "_").toLowerCase()
         if (baseStore.locale != newLocale) {
@@ -37,9 +32,20 @@ export const useStatusStore = defineStore("status", {
       }
 
       this.lorRunning = data.lorRunning
-      this.localApiEnabled = data.isLocalApiEnable
-      this.localServer = data.server
-      this.localPlayerID = data.playerId
+      if (!data.lorRunning) {
+        this.localApiEnabled = null
+        this.localServer = null
+        this.localPlayerID = null
+      } else {
+        this.localApiEnabled = data.isLocalApiEnable
+        this.localServer = data.server
+
+        if (data.playerId && data.playerId != "" && this.localPlayerID != data.playerId) {
+          // there is a new valid player ID
+          this.initAnalytics(data.playerId)
+        }
+        this.localPlayerID = data.playerId
+      }
     },
     requestStatusInfo() {
       // Keeps requesting status

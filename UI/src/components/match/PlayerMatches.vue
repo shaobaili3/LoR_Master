@@ -83,7 +83,7 @@
       <template v-slot="{ item, index, active }">
         <DynamicScrollerItem :item="item" :active="active" :size-dependencies="[item.winStreak, item.isDateBreak]" :data-index="index">
           <match-history
-            @search="searchPlayer({ region: item.region, name: item.opponentName, tag: item.opponentTag })"
+            @search="searchPlayer({ region: playerRegion, name: item.opponentName, tag: item.opponentTag })"
             :opponentName="item.opponentName"
             :opponentRank="item.opponentRank"
             :opponentLp="item.opponentLp"
@@ -94,7 +94,7 @@
             :time="item.time"
             :badges="item.badges"
             :details="item.details"
-            :region="item.region"
+            :region="playerRegion"
             :winStreak="item.winStreak"
             :isDateBreak="item.isDateBreak"
             :index="index"
@@ -191,6 +191,7 @@ import { mapStores } from "pinia"
 import { useBookmarkStore } from "../../store/StoreBookmark"
 
 export const getLeaderboardFromPlayer = (regionShort, name, tag) => {
+  if (!(regionShort && name && tag)) return null
   const leaderboardStore = useLeaderboardStore()
   const lead = leaderboardStore.leaderboard
   if (lead && lead[REGION_ID[regionShort]]) {
@@ -209,15 +210,10 @@ export default {
     DeckChamps,
   },
   mounted() {
-    if (this.missingRankLp) {
-      this.leaderboardStore.fetchLeaderboard(REGION_ID[this.playerRegion])
-      // this.$store.dispatch('leaderboardData/fetchLeaderboard', REGION_ID[this.playerRegion])
-    }
+    this.leaderboardStore.fetchLeaderboard(REGION_ID[this.playerRegion])
   },
   props: {
     playerName: String,
-    playerRank: String,
-    playerLP: String,
     playerTag: String,
     playerRegion: String, // region shorts
     matches: Array,
@@ -245,15 +241,8 @@ export default {
       return this.bookmarkStore?.bookmarks?.findIndex((bookmark) => this.playerName == bookmark.name && this.playerTag == bookmark.tag)
     },
 
-    missingRankLp() {
-      return !this.playerLP && !this.playerRank && this.playerName && this.playerTag && this.playerRegion
-    },
-
     leaderboard() {
-      if (this.missingRankLp) {
-        return getLeaderboardFromPlayer(this.playerRegion, this.playerName, this.playerTag)
-      }
-      return null
+      return getLeaderboardFromPlayer(this.playerRegion, this.playerName, this.playerTag)
     },
 
     lp() {

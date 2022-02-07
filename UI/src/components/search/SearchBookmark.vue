@@ -3,15 +3,7 @@
     <div class="flex-shrink pr-2 overflow-hidden text-ellipsis">{{ bookmark.name }}</div>
 
     <div class="text-sm text-gray-200" v-if="bookmark.region">
-      <i
-        class="pr-1 fas"
-        :class="{
-          'fa-globe-asia': bookmark.region == 'APAC',
-          'fa-globe-europe': bookmark.region == 'EU',
-          'fa-globe-americas': bookmark.region == 'NA',
-        }"
-      ></i
-      >{{ bookmark.region }}
+      <i class="pr-1 fas" :class="getRegionFaGlobeClass(bookmark.region)"></i>{{ bookmark.region }}
     </div>
 
     <div class="text-sm text-gray-200" v-if="leaderboardInfo && leaderboardInfo.rank != null">
@@ -26,6 +18,14 @@
     </button>
   </div>
 </template>
+
+<script>
+export const getRegionFaGlobeClass = (regionShort) => {
+  if (regionShort == "APAC") return "fa-globe-asia"
+  else if (regionShort == "EU") return "fa-globe-europe"
+  return "fa-globe-americas"
+}
+</script>
 
 <script setup>
 import { defineProps, computed } from "vue"

@@ -84,7 +84,21 @@
               <input
                 spellcheck="false"
                 autocomplete="off"
-                class="bg-gray-800 search-bar focus:bg-gray-700 transition-rounded"
+                class="
+                  bg-gray-800
+                  search-bar
+                  rounded-[25px]
+                  focus:bg-gray-700
+                  transition-rounded
+                  w-full
+                  h-[50px]
+                  text-white
+                  border-none
+                  pr-5
+                  pl-12
+                  text-base
+                  outline-none
+                "
                 :class="{
                   'rounded-tl-md': selectedRegion == 'NA',
                   'rounded-b-none rounded-t-[25px]': hasNameAutoComplete && isInputFocused,
@@ -128,11 +142,8 @@
             @search="searchPlayer($event)"
             :playerName="playerName"
             :playerRegion="playerRegion"
-            :playerRank="playerRank"
-            :playerLP="playerLP"
             :playerTag="playerTag"
             :matches="filteredMatches"
-            ref="searchPlayerMatch"
           >
           </player-matches>
         </div>
@@ -189,6 +200,91 @@ import { mapState, mapActions } from "pinia"
 import { useBookmarkStore } from "../../store/StoreBookmark"
 import SearchBookmark from "../search/SearchBookmark.vue"
 import SearchAutoCompleteItem from "../search/SearchAutoCompleteItem.vue"
+
+import { getDeckID } from "./PanelMeta.vue"
+
+export const processSearchRequestRawData = (data, playerName) => {
+  // playerServer is region shorts
+
+  var matches = []
+  if (!data) return matches
+
+  // Processing for normal Data
+  for (var key in data) {
+    var match = data[key]
+    var info = match.info
+    var playersInfo = match.player_info
+
+    if (!match || !playersInfo || !playersInfo[0] || !playersInfo[0].name) continue // Skip if null history
+
+    var isFirstPlayer = playersInfo[0].name.toLowerCase() == playerName.toLowerCase()
+    var player, playerGame, opponent, opponentGame
+
+    var details = null
+
+    // Process local info
+    if (match.local && match.local.deck_tracker) {
+      details = {
+        openHand: match.local.deck_tracker.openHand,
+        replacedHand: match.local.deck_tracker.replacedHand,
+        timeline: match.local.deck_tracker.timeline,
+        startTime: match.local.startTime,
+        endTime: match.local.endTime,
+      }
+    }
+
+    // Because the info orders are not confirmed
+    if (isFirstPlayer) {
+      playerGame = info.players[0] // Players Game Information
+      opponentGame = info.players[1] // Opponents Game Information
+      player = playersInfo[0]
+      opponent = playersInfo[1]
+    } else {
+      playerGame = info.players[1]
+      opponentGame = info.players[0]
+      player = playersInfo[1]
+      opponent = playersInfo[0]
+    }
+
+    // Skip if info not complete
+    if (!playerGame || !opponentGame || !player || !opponent) continue
+
+    var badges = []
+    if (info.game_mode)
+      badges.push(
+        info.game_mode
+          .replace(/([A-Z])/g, " $1")
+          .trim()
+          .replace("Lobby", "")
+      )
+    if (info.game_type)
+      badges.push(
+        info.game_type
+          .replace(/([A-Z])/g, " $1")
+          .trim()
+          .replace("Lobby", "")
+      )
+
+    //"game_version": "live_3_01_12",
+    var version = info.game_version.replace("live_", "").replace("_0", ".").replace("_", ".")
+
+    matches.push({
+      opponentName: opponent.name,
+      opponentTag: opponent.tag,
+      opponentDeck: opponentGame.deck_code,
+      deck: playerGame.deck_code,
+      rounds: info.total_turn_count,
+      win: playerGame.game_outcome == "win",
+      time: info.game_start_time_utc,
+      badges: badges,
+      details: details,
+      order: playerGame.order_of_play,
+      version: version,
+    })
+  }
+
+  return matches
+}
 
 export default {
   components: {
@@ -253,10 +349,10 @@ export default {
     },
     uniqueArchetypes() {
       if (!this.matches) return null
-      var decks = this.matches.map((x) => ({ code: x.deck, id: x.deckID, win: x.win }))
+      var decks = this.matches.map((x) => ({ code: x.deck, id: getDeckID(x.deck), win: x.win }))
       var decks_freq = decks.reduce((a, x) => {
         var v = x.id
-        if (a[v]) {
+        if (v && a[v]) {
           a[v].freq = a[v].freq + 1
           a[v].win += x.win ? 1 : 0
           if (!a[v].decks.includes(x.code)) {
@@ -614,7 +710,7 @@ export default {
             value: Date.now() - requestUpdateHistoryStartTime,
           })
 
-          this.processSearchHistory(response.data)
+          this.matches = processSearchRequestRawData(response.data, this.playerName)
         })
         .catch((e) => {
           if (axios.isCancel(e)) {
@@ -696,7 +792,7 @@ export default {
             value: Date.now() - requestHistoryStartTime,
           })
 
-          this.processSearchHistory(response.data)
+          this.matches = processSearchRequestRawData(response.data, this.playerName)
 
           this.requestHistoryUpdate()
         })
@@ -727,256 +823,49 @@ export default {
           }
         })
     },
-    processHistory(data, playerName, playerServer) {
-      // playerServer is region shorts
-      // console.log(data);
-
-      var matchInfo = {
-        matches: [],
-        rank: null,
-        lp: null,
-      }
-
-      this.filterDeckID = null
-
-      // Set selected filter to null
-      if (this.$refs.searchPlayerMatch && this.$refs.searchPlayerMatch.setFilterDeckCode) {
-        this.$refs.searchPlayerMatch.setFilterDeckCode(null)
-      }
-
-      if (!data) return matchInfo
-
-      // if (playerServer == "sea") {
-      //   // sea players only have local data
-      //   for (let match of data) {
-      //     let opponentName,
-      //       opponentRank,
-      //       opponentLp,
-      //       opponentTag,
-      //       opponentDeck,
-      //       deck,
-      //       rounds,
-      //       win,
-      //       time,
-      //       order;
-
-      //     matchInfo.rank = match.playerRank; // Currently no value
-      //     matchInfo.lp = match.playerLp; // Currently no value
-
-      //     opponentName = match.opponentName;
-      //     opponentTag = null; // Cannot get
-      //     opponentRank = match.opponentRank; // Currently no value
-      //     opponentLp = match.opponentLp; // Currently no value
-      //     opponentDeck = match.deck_tracker.opGraveyardCode;
-      //     deck = match.deck_tracker.deckCode;
-      //     rounds = null; // Cannot get
-      //     win = match.localPlayerWon;
-      //     time = match.startTime;
-      //     order = null; // Cannot get
-
-      //     let badges = []; // Currently no value
-
-      //     let details = {
-      //       openHand: match.deck_tracker.openHand,
-      //       replacedHand: match.deck_tracker.replacedHand,
-      //       timeline: match.deck_tracker.timeline,
-      //       startTime: match.startTime,
-      //       endTime: match.endTime,
-      //     };
-
-      //     matchInfo.matches.push({
-      //       opponentName: opponentName,
-      //       deck: deck,
-      //       region: regionShort[this.localPlayerInfo.server],
-      //       opponentDeck: opponentDeck,
-      //       opponentRank: opponentRank,
-      //       opponentLp: opponentLp,
-      //       opponentTag: opponentTag,
-      //       rounds: rounds,
-      //       win: win,
-      //       time: time,
-      //       badges: badges,
-      //       details: details,
-      //     });
-      //   }
-      // } else
-      {
-        // Processing for normal Data
-        for (var key in data) {
-          var match = data[key]
-          if (!match || !match.player_info || !match.player_info[0] || !match.player_info[0].name) continue // Skip if null history
-
-          var isFirstPlayer = match.player_info[0].name.toLowerCase() == playerName.toLowerCase()
-          var player, playerGame, opponent, opponentGame
-          var info = match.info
-          var details = null
-
-          if (match.local && match.local.deck_tracker) {
-            details = {
-              openHand: match.local.deck_tracker.openHand,
-              replacedHand: match.local.deck_tracker.replacedHand,
-              timeline: match.local.deck_tracker.timeline,
-              startTime: match.local.startTime,
-              endTime: match.local.endTime,
-            }
-          }
-
-          var opponentName, opponentRank, opponentLp, opponentTag, opponentDeck, deck, rounds, win, time, order
-
-          if (isFirstPlayer) {
-            playerGame = info.players[0]
-            opponentGame = info.players[1]
-
-            player = match.player_info[0]
-            opponent = match.player_info[1]
-          } else {
-            playerGame = info.players[1]
-            opponentGame = info.players[0]
-
-            player = match.player_info[1]
-            opponent = match.player_info[0]
-          }
-
-          if (!playerGame || !opponentGame || !player || !opponent) continue
-
-          opponentName = opponent.name
-
-          if (opponent.rank && opponent.rank !== "" && opponent.rank != null) {
-            opponentRank = (opponent.rank + 1).toString() // rank starts from 0
-          } else {
-            opponentRank = "" // ranks can be empty
-          }
-
-          opponentLp = opponent.lp
-          opponentTag = opponent.tag
-
-          if (!matchInfo.rank && player.rank !== "" && player.rank != null) {
-            matchInfo.rank = (player.rank + 1).toString() // player.rank starts from 0
-          }
-
-          if (!matchInfo.lp) matchInfo.lp = player.lp
-
-          deck = playerGame.deck_code
-          opponentDeck = opponentGame.deck_code
-          order = playerGame.order_of_play
-          win = playerGame.game_outcome == "win"
-          rounds = info.total_turn_count
-          var badges = []
-          if (info.game_mode)
-            badges.push(
-              info.game_mode
-                .replace(/([A-Z])/g, " $1")
-                .trim()
-                .replace("Lobby", "")
-            )
-          if (info.game_type)
-            badges.push(
-              info.game_type
-                .replace(/([A-Z])/g, " $1")
-                .trim()
-                .replace("Lobby", "")
-            )
-
-          time = info.game_start_time_utc
-
-          var deckID = this.getDeckID(deck)
-
-          matchInfo.matches.push({
-            opponentName: opponentName,
-            deck: deck,
-            deckID: deckID,
-            region: playerServer, // region short passed in, essentially this.playerRegion
-            opponentDeck: opponentDeck,
-            opponentRank: opponentRank,
-            opponentLp: opponentLp,
-            opponentTag: opponentTag,
-            rounds: rounds,
-            win: win,
-            time: time,
-            badges: badges,
-            details: details,
-          })
-        }
-      }
-
-      return matchInfo
-    },
-    getDecodedDeck(code) {
-      var deck = null
-      if (code) {
-        try {
-          deck = DeckEncoder.decode(code)
-        } catch (error) {
-          console.log(error)
-          return null
-        }
-      }
-      return deck
-    },
-    getFactions(code) {
-      var cards = this.getDecodedDeck(code)
-      if (!cards) return null
-
-      var factionIDs = []
-      for (var j in cards) {
-        var cardCode = cards[j].code
-        var card = this.sets_en[cardCode]
-        if (card) {
-          if (card.regions && card.regions.length == 1) {
-            // Only considers mono region cards
-            var regionID = regionRefID[card.regionRefs[0]]
-
-            if (factionIDs.indexOf(regionID) == -1) {
-              factionIDs.push(regionID)
-            }
-          }
-        }
-      }
-      return factionIDs
-    },
-    getChamps(code) {
-      var deck = this.getDecodedDeck(code)
-      if (!deck) return null
-
-      var champs = []
-      for (var j in deck) {
-        let cardCode = deck[j].code
-        if (championCards.champObj[cardCode] != null) {
-          var card = this.sets_en[cardCode]
-          if (card) {
-            let champ = {
-              count: deck[j].count,
-              code: cardCode,
-              name: card.name,
-            }
-            champs.push(champ)
-          }
-        }
-      }
-      champs = champs.sort((a, b) => (a.count > b.count ? -1 : 1))
-      return champs
-    },
-    getDeckID(code) {
-      var factionNames = this.getFactions(code)
-        .map((id) => regionNames[id])
-        .sort()
-      var champNames = this.getChamps(code)
-        .slice(0, 2)
-        .map((champ) => champ.name)
-        .sort()
-      if (this.getChamps.length == 0) {
-        champNames = ["No-Champion"]
-      }
-      var IDString = factionNames.join(" ") + " " + champNames.join(" ")
-      // console.log(`Archetype ID ${IDString}`)
-      return IDString
-    },
-    processSearchHistory(data) {
-      var Info = this.processHistory(data, this.playerName, this.playerRegion)
-      this.matches = Info.matches
-      this.playerRank = Info.rank
-      this.playerLP = Info.lp
-    },
+    getDeckID: getDeckID,
   },
 }
+
+// // Demo Data
+// {
+//   info: {
+//     game_mode: "SeasonalTournamentLobby",
+//     game_start_time_utc: "Sun, 06 Feb 2022 02:01:07 GMT",
+//     game_type: "",
+//     game_version: "live_3_01_12",
+//     players: [
+//       {
+//         archetype: "faction_BandleCity_Name faction_ShadowIsles_Name Senna Veigar",
+//         deck_code: "CQBQCAIFFABAKBIIBEDAKCRRHFOV4YVGAEBAEAIFAEOQEBIKAHIQCAQBAQCTQBABAUHRGFBO",
+//         deck_id: "d67464e8-7b58-491e-83d3-0a764ed3a174_live_tour_deck_1",
+//         factions: ["faction_BandleCity_Name", "faction_ShadowIsles_Name"],
+//         game_outcome: "win",
+//         order_of_play: 1,
+//         puuid: "irldRzmkWeat7CWIAw5c_v-xwst8IV__BM5HEC6PvfMZxhX3cOR96Yvm1mTlWLPkvnR9WRDfQSgY5A",
+//       },
+//       {
+//         archetype: "faction_Demacia_Name faction_MtTargon_Name Pantheon Shyvana",
+//         deck_code: "CICQCAYJLQAQIAAOAIAQACI2AIBQACYOAICQSAYGAMAQEAABAECAAAQDAMEQGIZTAMAQGCKVAIAQADIPAMBQAAICAY",
+//         deck_id: "d67464e8-7b58-491e-83d3-0a764ed3a174_live_tour_deck_2",
+//         factions: ["faction_Demacia_Name", "faction_MtTargon_Name"],
+//         game_outcome: "loss",
+//         order_of_play: 0,
+//         puuid: "aL1HBeYrs2AC3Axu83sUGTDfj0Khd_u5RbK7YMl_kmxk8U0ZCxj4iyQWXpjVfAQk5mPtBX0Neqz_Qg",
+//       },
+//     ],
+//     total_turn_count: 60,
+//   },
+//   player_info: [
+//     {
+//       name: "nobody",
+//       tag: "5547",
+//     },
+//     {
+//       name: "Kevor24",
+//       tag: "NA1",
+//     },
+//   ],
+//   server: "americas",
+// }
 </script>
