@@ -9,9 +9,12 @@
   },
   "scripts": {
     "serve": "vue-cli-service serve",
+    "serve:beta": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "build:beta": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "deploy": "deploy.sh",
+    "deploy:beta": "deploy_beta.sh",
     "build-installer": "electron-builder",
     "build-pack": "electron-builder --dir",
     "build-pub": "electron-builder -p always",
@@ -21,7 +24,7 @@
     "get-icon": "node ./devtool/getNewChampIcon.js",
     "init": "chcp 65001",
     "package": "electron-packager ./ LoRMasterTracker --out ./app --app-version %npm_package_version% --overwrite --icon=image.ico",
-    "serve-test": "vue-cli-service serve --mode staging",
+    "serve:staging": "vue-cli-service serve --mode staging",
     "start": "electron app.js"
   },
   "main": "app.js",
