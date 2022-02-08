@@ -3,7 +3,7 @@
     <div class="flex-1 w-0 max-w-xl">
       <div class="flex flex-col h-full px-2 sm:px-0 decklib">
         <modal-warning ref="warningModal"></modal-warning>
-        <div class="title">{{ $t("decklib.title") }}</div>
+        <div class="pb-4 text-3xl text-left title">{{ $t("decklib.title") }}</div>
         <div class="btn-container">
           <!-- <button class="btn btn-add">
         <span><i class="fas fa-plus"></i></span>

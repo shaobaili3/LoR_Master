@@ -1,13 +1,13 @@
 <template>
-  <div class="flex justify-center h-full gap-6">
-    <div class="flex-col flex-1 hidden max-w-[350px] lg:flex">
+  <div class="flex h-full justify-center gap-6">
+    <div class="hidden max-w-[350px] flex-1 flex-col lg:flex">
       <!-- Bookmarked Players -->
-      <div class="pb-4 text-xl text-center">
+      <div class="pb-4 text-center text-xl">
         {{ $t("search.bookmarks") }}
       </div>
-      <div class="flex flex-col flex-shrink gap-1 mb-4 max-h-[25%] overflow-y-auto bg-gray-800 rounded-lg">
+      <div class="mb-4 flex max-h-[25%] flex-shrink flex-col gap-1 overflow-y-auto rounded-lg bg-gray-800">
         <i18n-t keypath="search.noBookmarks" tag="div" class="py-2 text-gray-200" v-if="!bookmarks || bookmarks.length <= 0">
-          <i class="px-1 fas fa-bookmark"></i>
+          <i class="fas fa-bookmark px-1"></i>
         </i18n-t>
         <div v-if="bookmarks && bookmarks.length > 0">
           <div v-for="(bookmark, index) in bookmarks" :key="bookmark.name + bookmark.id">
@@ -16,10 +16,10 @@
         </div>
       </div>
       <!-- Archetypes -->
-      <div v-if="playerName && matches.length > 0" class="pb-4 text-xl text-center">{{ $t("str.archetypes") }}</div>
-      <div v-if="playerName && matches.length > 0" class="flex flex-col flex-shrink gap-1 mb-4 overflow-y-auto bg-gray-800 rounded-lg">
+      <div v-if="playerName && matches.length > 0" class="pb-4 text-center text-xl">{{ $t("str.archetypes") }}</div>
+      <div v-if="playerName && matches.length > 0" class="mb-4 flex flex-shrink flex-col gap-1 overflow-y-auto rounded-lg bg-gray-800">
         <div
-          class="py-1 transition-colors rounded hover:bg-gray-600"
+          class="rounded py-1 transition-colors hover:bg-gray-600"
           v-for="obj in uniqueArchetypes"
           :key="obj.id"
           :class="{ 'bg-gray-700': filterDeckID == obj.id }"
@@ -28,13 +28,13 @@
             <div>
               <deck-preview :fixedWidth="true" class="p-2" :deck="obj.decks[0]" :size="1"></deck-preview>
             </div>
-            <div class="flex flex-1 w-0 cursor-pointer group" @click="setFilterArchetype(obj.id)">
-              <div class="flex-1 w-0 text-left">
+            <div class="group flex w-0 flex-1 cursor-pointer" @click="setFilterArchetype(obj.id)">
+              <div class="w-0 flex-1 text-left">
                 <div class="text-gray-200">
                   {{ $t("matches.games", { num: obj.freq }) }}
                 </div>
                 <div
-                  class="overflow-hidden whitespace-nowrap text-ellipsis"
+                  class="overflow-hidden text-ellipsis whitespace-nowrap"
                   :style="{
                     color: winRateToColor(obj.win / obj.freq),
                   }"
@@ -43,7 +43,7 @@
                 </div>
               </div>
               <div
-                class="flex items-center px-2 pr-4 text-gray-200 transition-opacity cursor-pointer group-hover:opacity-100"
+                class="flex cursor-pointer items-center px-2 pr-4 text-gray-200 transition-opacity group-hover:opacity-100"
                 :class="{
                   'opacity-0': filterDeckID != obj.id,
                   'text-gray-50': filterDeckID == obj.id,
@@ -58,8 +58,8 @@
 
       <div class="h-1/4"></div>
     </div>
-    <div class="flex-1 w-0 max-w-2xl">
-      <div class="flex flex-col h-full px-2 sm:px-0">
+    <div class="w-0 max-w-2xl flex-1">
+      <div class="flex h-full flex-col px-2 sm:px-0">
         <div class="z-[1]">
           <div class="region-tabs">
             <div
@@ -72,7 +72,7 @@
               {{ region }}
             </div>
           </div>
-          <div class="search-bar-container">
+          <div class="width-full relative mt-4 flex flex-nowrap">
             <div class="search-bar-input-container">
               <button class="search-btn inside left" :class="{ active: searchText != '' }" @click="searchHistory">
                 <span v-if="isLoading || isUpdating"><i class="fas fa-redo-alt fa-spin-fast"></i></span>
@@ -84,7 +84,20 @@
               <input
                 spellcheck="false"
                 autocomplete="off"
-                class="w-full h-12 pl-12 pr-5 text-base text-white transition-colors bg-gray-800 border-none outline-none  search-bar rounded-3xl focus:bg-gray-700"
+                class="
+                  search-bar
+                  h-12
+                  w-full
+                  rounded-3xl
+                  border-none
+                  bg-gray-800
+                  pl-12
+                  pr-5
+                  text-base text-white
+                  outline-none
+                  transition-colors
+                  focus:bg-gray-700
+                "
                 :class="{
                   'rounded-b-none rounded-t-[25px]': hasNameAutoComplete && isInputFocused,
                 }"
@@ -104,10 +117,10 @@
             <!-- Auto Complete -->
             <div
               v-if="hasNameAutoComplete && isInputFocused"
-              class="top-12 absolute z-10 w-full text-left bg-gray-800 pb-5 rounded-b-[25px] max-h-[calc(80vh-140px)] overflow-y-auto"
+              class="absolute top-12 z-10 max-h-[calc(80vh-140px)] w-full overflow-y-auto rounded-b-[25px] bg-gray-800 pb-5 text-left"
             >
               <div
-                class="pl-12 auto-complete-item"
+                class="auto-complete-item pl-12"
                 v-for="(player, index) in filteredInputNameList"
                 :key="index"
                 :class="{ 'bg-gray-700': autoCompleteIndex == index }"
@@ -120,7 +133,7 @@
           </div>
         </div>
 
-        <div v-if="playerName && matches.length > 0" class="flex-1 h-0">
+        <div v-if="playerName && matches.length > 0" class="h-0 flex-1">
           <!-- Player Info -->
           <player-matches
             v-if="playerName && matches.length > 0"

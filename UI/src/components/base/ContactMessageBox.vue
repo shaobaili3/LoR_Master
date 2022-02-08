@@ -1,11 +1,14 @@
 <template>
   <div class="contact-message-box">
+    <div class="text-gold-200 pb-1" v-if="showAskContact">
+      {{ $t("contact.leaveContact") }}
+    </div>
     <textarea
       spellcheck="false"
-      rows="3"
+      rows="4"
       autocomplete="off"
       type="text"
-      class="input-textarea"
+      class="input-textarea bg-gray-800 transition-colors focus:bg-gray-700"
       :class="{ doubleCheck: doubleCheck }"
       v-model="message"
       :placeholder="$t('contact.messageBox.placeholder')"
@@ -18,7 +21,11 @@
       >
         {{ message.length }}
       </div>
-      <button class="mt-1 send-btn" :class="{ active: message != '', doubleCheck: doubleCheck }" @click="sendMessage">
+      <button
+        class="send-btn mt-1 cursor-default bg-gray-700 text-gray-200 transition-colors"
+        :class="{ 'text-gray-50 hover:cursor-pointer hover:bg-gray-500': message.length > 0 }"
+        @click="sendMessage"
+      >
         <span v-if="messageSending">{{ $t("contact.messageBox.messageSending") }} <i class="fas fa-spin fa-spinner-third"></i></span>
         <span v-else-if="messageSent">{{ $t("contact.messageBox.messageSent") }} <i class="fas fa-check"></i></span>
         <span v-else-if="doubleCheck">{{ $t("contact.messageBox.confirm") }}</span>
@@ -44,6 +51,7 @@ const maxCharLimit = 3000
 
 const message = ref("")
 const doubleCheck = ref(false)
+const showAskContact = ref(false)
 const messageSent = ref(false)
 const messageSending = ref(false)
 
@@ -53,6 +61,7 @@ function onKeyUp() {
   doubleCheck.value = false
   messageSent.value = false
   messageSending.value = false
+  if (validate()) errorMessage.value = ""
 }
 
 function validate() {
@@ -87,10 +96,14 @@ function postRequest() {
 }
 
 function sendMessage() {
+  if (message.value.length <= 0) return
+
   if (!validate()) {
     handleMessageError(`Max length exceeded ${maxCharLimit}`)
     return
   }
+
+  showAskContact.value = true
 
   if (doubleCheck.value) {
     postRequest()
@@ -109,6 +122,7 @@ function handleMessageSent() {
   doubleCheck.value = false
   messageSending.value = false
   messageSent.value = true
+  showAskContact.value = false
   message.value = ""
 }
 
@@ -130,10 +144,8 @@ function openURL(url) {
 .input-textarea {
   width: 100%;
 
-  margin-top: 20px;
   padding: 10px;
 
-  background-color: var(--col-darker-grey);
   color: white;
 
   outline: 0px;
@@ -143,12 +155,6 @@ function openURL(url) {
   font-size: inherit;
   box-sizing: border-box;
   resize: none;
-
-  transition: background-color 0.35s ease;
-}
-
-.input-textarea:focus {
-  background-color: var(--col-dark-grey);
 }
 
 .send-btn {
@@ -158,9 +164,6 @@ function openURL(url) {
 
   margin-left: auto;
   padding: 8px 15px;
-
-  background-color: var(--col-dark-grey);
-  color: var(--col-dark-white);
 
   outline: 0px;
   border: 0px;
@@ -172,7 +175,6 @@ function openURL(url) {
 }
 
 .send-btn.active {
-  cursor: pointer;
   color: white;
 }
 

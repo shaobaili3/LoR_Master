@@ -1,8 +1,8 @@
 <template>
-  <div class="flex justify-center h-full px-2">
-    <div class="flex-1 w-0 max-w-4xl">
-      <div class="flex flex-col h-full sm:px-0">
-        <p class="pt-3 pb-5 text-3xl text-left title">{{ $t("str.meta") }}</p>
+  <div class="flex h-full justify-center px-2">
+    <div class="w-0 max-w-4xl flex-1">
+      <div class="flex h-full flex-col sm:px-0">
+        <p class="title pb-4 text-left text-3xl">{{ $t("str.meta") }}</p>
 
         <MetaFilter class="sticky top-0 z-[5] bg-gray-900" @bind-filter="bindFilter"></MetaFilter>
 
@@ -17,7 +17,7 @@
           :min-item-size="90"
           key-field="_id"
           v-if="filteredMeta && filteredMeta.length > 0"
-          class="flex-1 h-0"
+          class="h-0 flex-1"
         >
           <template v-slot="{ item, index, active }">
             <DynamicScrollerItem :item="item" :active="active" :size-dependencies="[item.expanded]" :data-index="index">

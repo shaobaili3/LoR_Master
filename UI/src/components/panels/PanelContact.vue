@@ -1,16 +1,32 @@
 <template>
-  <div class="flex justify-center h-full">
-    <div class="max-w-xl flex-1 w-0">
-      <div class="flex flex-col h-full px-2 sm:px-0 contact-info">
+  <div class="flex h-full justify-center">
+    <div class="w-0 max-w-xl flex-1">
+      <div class="contact-info flex h-full flex-col px-2 sm:px-0">
         <p class="title">{{ $t("contact.contactUs") }}</p>
         <div class="contact-details-container">
-          <p class="contact-detail"><i class="fab fa-twitter"></i> <span class="text-link" @click="openURL('https://twitter.com/storm_lor')"> @Storm_lor</span></p>
-          <p class="contact-detail"><i class="fab fa-twitter"></i> <span class="text-link" @click="openURL('https://twitter.com/FlyingFishLoR')"> @FlyingFishLoR</span></p>
-          <p class="contact-detail"><i class="fab fa-qq"></i> <span class="text-link" @click="openURL('https://qm.qq.com/cgi-bin/qm/qr?k=nartXgATr58IXdisbHL4C4vaje8Stssz&jump_from=webapi')"> 939286502</span></p>
-          <p class="contact-detail"><i class="fab fa-discord"></i> <span class="text-link" @click="openURL('https://discord.gg/aes45bMjAz')"> LoR Master Discord</span></p>
+          <p class="contact-detail">
+            <i class="fab fa-twitter"></i> <span class="text-link" @click="openURL('https://twitter.com/storm_lor')"> @Storm_lor</span>
+          </p>
+          <p class="contact-detail">
+            <i class="fab fa-twitter"></i>
+            <span class="text-link" @click="openURL('https://twitter.com/FlyingFishLoR')"> @FlyingFishLoR</span>
+          </p>
+          <p class="contact-detail">
+            <i class="fab fa-qq"></i>
+            <span class="text-link" @click="openURL('https://qm.qq.com/cgi-bin/qm/qr?k=nartXgATr58IXdisbHL4C4vaje8Stssz&jump_from=webapi')">
+              939286502</span
+            >
+          </p>
+          <p class="contact-detail">
+            <i class="fab fa-discord"></i>
+            <span class="text-link" @click="openURL('https://discord.gg/aes45bMjAz')"> LoR Master Discord</span>
+          </p>
         </div>
-        <div class="footer">
-          <p>{{ $t("contact.broughtWithLove") }} <span class="text-link" @click="openURL('https://twitter.com/storm_lor')"> Storm</span> & <span class="text-link" @click="openURL('https://twitter.com/FlyingFishLoR')"> FlyingFish</span></p>
+        <div class="footer pb-4">
+          <p>
+            {{ $t("contact.broughtWithLove") }} <span class="text-link" @click="openURL('https://twitter.com/storm_lor')"> Storm</span> &
+            <span class="text-link" @click="openURL('https://twitter.com/FlyingFishLoR')"> FlyingFish</span>
+          </p>
         </div>
         <contact-message-box></contact-message-box>
       </div>
