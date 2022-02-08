@@ -18,4 +18,4 @@ class Setting():
         self.playerId = ''
         self.language = c.DefaultLanguage
         self.isLorRunning = False
-        self.isLocalApiEnable = False
+        self.isLocalApiEnable = True
