@@ -356,6 +356,8 @@ Menu.setApplicationMenu(menu)
 // -----------------------------------------------
 
 var lmtServiceStarted = false
+const lmstServiceRetryLimit = 3
+var lmstServiceRetryCount = 0
 function detectPortAndStartService() {
   if (lmtServiceStarted) return
 
@@ -416,7 +418,7 @@ function startLMTService(port) {
   }
 
   proc.stdout.on("data", function (data) {
-    console.log("data: ", data.toString("utf8"))
+    if (developmentMode) console.log("data: ", data.toString("utf8"))
   })
   proc.stderr.on("data", (data) => {
     // console.log(`stderr: ${data}`) // when error
@@ -424,11 +426,17 @@ function startLMTService(port) {
 
   proc.on("close", (code) => {
     console.log(`Child process close all stdio with code ${code}`)
+
     lmtServiceStarted = false
+
+    if (lmstServiceRetryCount < lmstServiceRetryLimit) {
+      lmstServiceRetryCount += 1
+      console.log(`Retrying ${lmstServiceRetryCount} time`)
+      startLMTService(port)
+    }
+
     if (mainWindow) {
       mainWindow.webContents.send("backend-closed")
-    } else {
-      startLMTService(port)
     }
   })
   proc.on("exit", (code) => {
@@ -437,6 +445,7 @@ function startLMTService(port) {
 }
 
 ipcMain.on("backend-restart", (event, enable) => {
+  lmstServiceRetryCount = 0
   detectPortAndStartService()
 })
 

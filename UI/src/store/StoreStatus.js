@@ -77,6 +77,7 @@ export const useStatusStore = defineStore("status", {
             console.log("Request cancelled")
           } else {
             this.backendRunning = false
+            this.lorRunning = null
             console.log("error", e)
             var elapsedTime = Date.now() - this.lastStatusRequestTime // ms
             if (elapsedTime > requestStatusWaitTime) {
