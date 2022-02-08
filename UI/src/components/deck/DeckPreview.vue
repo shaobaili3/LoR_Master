@@ -1,13 +1,13 @@
 <template>
   <div
-    class="flex justify-center flex-1 p-1 rounded cursor-pointer w-fit btn"
+    class="btn flex w-fit flex-1 cursor-pointer justify-center rounded-md p-1"
     @click="showDeck"
     :class="{
       won: won,
       loss: !won,
       cheveron: cheveron,
       invisible: !deck,
-      'scale-75 -my-2 -mx-4': size == 1,
+      '-mx-5 -my-2 scale-75': size == 1,
     }"
   >
     <div class="flex items-center" :class="{ 'w-[160px] sm:w-[190px]': fixedWidth }">

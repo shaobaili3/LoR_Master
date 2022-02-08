@@ -1,6 +1,6 @@
 <template>
   <div
-    class="px-4 mr-2 transition-colors rounded-lg hover:bg-gray-800"
+    class="mr-2 rounded-lg px-4 transition-colors duration-150 hover:bg-gray-800"
     :class="{
       'bg-gray-800': expand && !hasFeature && !selfExpand,
       'h-[552px]': expand && !selfExpand,

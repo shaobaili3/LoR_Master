@@ -26,9 +26,14 @@
         >
           <div class="flex items-center">
             <div>
-              <deck-preview :fixedWidth="true" class="p-2" :deck="obj.decks[0]" :size="1"></deck-preview>
+              <deck-preview
+                :fixedWidth="true"
+                class="p-2 transition-colors hover:bg-gray-800"
+                :deck="obj.decks[0]"
+                :size="1"
+              ></deck-preview>
             </div>
-            <div class="group flex w-0 flex-1 cursor-pointer" @click="setFilterArchetype(obj.id)">
+            <div class="group flex w-0 flex-1 cursor-pointer pl-1" @click="setFilterArchetype(obj.id)">
               <div class="w-0 flex-1 text-left">
                 <div class="text-gray-200">
                   {{ $t("matches.games", { num: obj.freq }) }}

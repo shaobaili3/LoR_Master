@@ -17,21 +17,21 @@
       </div> -->
     </div>
     <!-- Time String -->
-    <div class="pb-1 pl-2 text-sm text-left text-gray-200" v-if="isDateBreak && !winStreak">
+    <div class="pb-1 pl-2 text-left text-sm text-gray-200" v-if="isDateBreak && !winStreak">
       {{ timeString }}
     </div>
     <div
-      class="border-2 match-history match"
-      :class="{ 'won border-yellow-500 bg-zinc-800': won, 'loss bg-zinc-700/80 border-zinc-700/80': !won }"
+      class="match-history match border-2"
+      :class="{ 'won border-yellow-500 bg-zinc-800': won, 'loss border-zinc-700 bg-zinc-700': !won }"
     >
       <div class="btn-expand-detail" v-if="details" @click="toggleDetail">
         <i class="fas" :class="{ 'fa-chevron-down': !showDetail, 'fa-chevron-up': showDetail }"></i>
       </div>
-      <div class="overflow-x-scroll row opponent no-scrollbar" :class="{ 'text-white': won }">
+      <div class="row opponent no-scrollbar overflow-x-scroll" :class="{ 'text-white': won }">
         <p @click="search" class="match-info-title text-inherit" :class="{ 'text-yellow-400': won }">
           <i class="fas" :class="{ 'fa-pennant pr-2': win, '': !win }"></i>
-          <span class="">vs </span>
-          <span :class="{ 'cursor-pointer hover:underline underline-offset-2': region }">{{ opponentName }}</span>
+          <span>vs </span>
+          <span :class="{ 'cursor-pointer underline-offset-2 hover:underline': region }">{{ opponentName }}</span>
         </p>
         <div class="opponent-info" :class="{ 'text-yellow-400': won }" v-if="opponentRank">
           <i class="fas fa-trophy"></i> {{ opponentRank }}
@@ -40,7 +40,7 @@
         <div class="history-info opacity-80" v-if="rounds">{{ rounds }} {{ $t("str.rounds") }}</div>
         <div
           class="match-info-badge opacity-80"
-          :class="{ 'bg-stone-600': won, 'bg-zinc-600': !won }"
+          :class="{ 'bg-zinc-600': won, 'bg-zinc-800': !won }"
           v-for="badge in filteredBadges"
           :key="badge"
         >
@@ -53,11 +53,23 @@
         </div>
       </div>
       <div class="flex items-center justify-around">
-        <deck-preview @click.stop :deck="deck" :won="won" :fixedWidth="false"></deck-preview>
-        <span class="vs-text" :class="{ 'text-white': won }">
-          <span>VS</span>
-        </span>
-        <deck-preview @click.stop :deck="opponentDeck" :won="won" :fixedWidth="false"></deck-preview>
+        <deck-preview
+          class="transition-colors"
+          :class="{ 'hover:bg-zinc-700': won, 'hover:bg-zinc-800': !won }"
+          @click.stop
+          :deck="deck"
+          :won="won"
+          :fixedWidth="false"
+        ></deck-preview>
+        <div class="sm:px-8">VS</div>
+        <deck-preview
+          class="transition-colors"
+          :class="{ 'hover:bg-zinc-700': won, 'hover:bg-zinc-800': !won }"
+          @click.stop
+          :deck="opponentDeck"
+          :won="won"
+          :fixedWidth="false"
+        ></deck-preview>
       </div>
       <div class="divider" v-if="details && showDetail" :class="{ won: won }"></div>
       <match-detail-mulligan
@@ -292,10 +304,6 @@ export default {
   /* justify-content: space-between; */
   justify-content: space-around;
   align-items: center;
-}
-
-.vs-text {
-  padding: 0px 10px;
 }
 
 .match-history-dots {

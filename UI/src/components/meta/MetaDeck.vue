@@ -2,7 +2,7 @@
   <div class="py-2">
     <div class="relative flex items-center justify-center gap-2 md:justify-start">
       <!-- Summary -->
-      <div class="flex flex-col items-start w-32 gap-0 whitespace-nowrap">
+      <div class="flex w-32 flex-col items-start gap-0 whitespace-nowrap">
         <p class="text-sm text-gray-200">
           <span v-if="isSummary">
             {{ $t("matches.meta", { num: (playRate * 100).toFixed(2) }) }}
@@ -19,20 +19,21 @@
           }"
         >
           {{ (winRate * 100).toFixed(2) }}%
-          <span class="block text-sm sm:text-base sm:inline"> | ± {{ (winRateBounds.gap * 50).toFixed(2) }}</span>
+          <span class="block text-sm sm:inline sm:text-base"> | ± {{ (winRateBounds.gap * 50).toFixed(2) }}</span>
         </p>
       </div>
 
+      <!-- Deck Preview -->
       <div class="flex flex-col items-start">
         <div v-if="isSummary" class="pl-2 text-sm text-gray-200">
           <span v-if="isFeature">{{ $t("matches.recommendedCurrent") }}</span>
           <span v-if="!isFeature">{{ $t("matches.recommended") }}</span>
         </div>
         <div v-if="!isSummary && isFeature" class="pl-2 text-sm text-gray-200">{{ $t("matches.current") }}</div>
-        <div v-if="!isSummary && !isFeature" class="w-full h-4 text-sm text-gray-200"></div>
+        <div v-if="!isSummary && !isFeature" class="h-4 w-full text-sm text-gray-200"></div>
         <deck-preview
           v-if="code"
-          class="max-w-[220px] md:mr-2"
+          class="max-w-[220px] transition-colors hover:bg-gray-600 md:mr-2"
           :class="{
             ' pointer-events-none': isFeature,
           }"
@@ -43,11 +44,11 @@
       </div>
 
       <!-- Bar -->
-      <div class="relative hidden sm:block sm:flex-1 sm:w-0">
-        <div class="relative w-full h-1 my-2 bg-gray-400 rounded-full">
+      <div class="relative hidden sm:block sm:w-0 sm:flex-1">
+        <div class="relative my-2 h-1 w-full rounded-full bg-gray-400">
           <!-- Range   -->
           <div
-            class="absolute h-2 -translate-y-1/2 rounded-full top-1/2"
+            class="absolute top-1/2 h-2 -translate-y-1/2 rounded-full"
             :style="{
               background: closestColor(winRateBounds.centerAdjusted),
               width: `max(0.5rem, min(${(winRateBounds.upper - winRateBounds.lower) * 100}%, ${winRateBounds.gap * 100}%))`,
@@ -57,54 +58,7 @@
 
           <!-- Player Dots -->
           <div v-for="player in players" :key="player._id">
-            <div
-              class="absolute w-2 h-2 -translate-y-1/2 rounded-full top-1/2 group hover:z-10"
-              v-if="player.win_rate > winRate"
-              :style="{
-                backgroundColor: closestColor(player.win_rate),
-                left: player.win_rate * 100 + '%',
-              }"
-              @click="routePlayerProfile(player)"
-            >
-              <div
-                class="
-                  hidden
-                  group-hover:block
-                  absolute
-                  right-0
-                  top-2
-                  min-w-[10rem]
-                  w-fit
-                  pointer-events-none
-                  text-left
-                  ml-2
-                  pl-2
-                  pr-2
-                  py-2
-                  bg-gray-700
-                "
-              >
-                <p class="text-sm text-gray-200">
-                  <span class="pre-info">
-                    <i class="fas" :class="player.server === 'sea' ? 'fa-globe-asia' : 'fa-globe-' + player.server"></i>
-                  </span>
-                  {{ $t("str.regions." + player.server) }}
-                </p>
-                <p class="text-xl">{{ player.riot_id.split("#")[0] }}</p>
-                <p class="text-gray-200">{{ $t("matches.games", { num: player.count }) }}</p>
-                <p
-                  :style="{
-                    color: closestColor(player.win_rate),
-                  }"
-                >
-                  {{
-                    $t("matches.winRate", {
-                      num: (player.win_rate * 100).toFixed(2),
-                    })
-                  }}
-                </p>
-              </div>
-            </div>
+            <meta-bar-player-dot :player="player"></meta-bar-player-dot>
           </div>
         </div>
 
@@ -138,9 +92,13 @@
         </div>
       </div>
 
-      <button class="z-[1] p-2 rounded-md text-white/50 hover:text-white hover:bg-gray-500" v-if="linkDetail" @click="openURL(detailLink)">
+      <button
+        class="z-[1] rounded-md p-2 text-white/50 transition-colors hover:bg-gray-500 hover:text-white"
+        v-if="linkDetail"
+        @click="openURL(detailLink)"
+      >
         <span>{{ $t("str.detail") }}</span>
-        <i class="pl-1 fas fa-caret-right"></i>
+        <i class="fas fa-caret-right pl-1"></i>
       </button>
     </div>
   </div>
@@ -154,6 +112,7 @@ const Z = 1.96 // 95% confidence
 import { winRateToColor, winrateGradient, winRateToMonoColor } from "../../modules/utils/colorUtils"
 
 import { regionNameToShorts } from "../panels/PanelLeaderboard.vue"
+import MetaBarPlayerDot from "./MetaBarPlayerDot.vue"
 
 // const gradientString =
 //   "linear-gradient(90deg, " +
@@ -165,7 +124,7 @@ import { regionNameToShorts } from "../panels/PanelLeaderboard.vue"
 //   ")"
 
 export default {
-  components: { DeckPreview },
+  components: { DeckPreview, MetaBarPlayerDot },
   mounted() {},
   props: {
     code: String,
@@ -204,13 +163,6 @@ export default {
     }
   },
   methods: {
-    routePlayerProfile(player) {
-      var splited = player.riot_id.split("#")
-      this.$router.push({
-        path: "/search",
-        query: { name: splited[0], tag: splited[1], region: regionNameToShorts(player.server) },
-      })
-    },
     showDeck() {
       this.$emitter.emit("showDeck", this.code)
     },

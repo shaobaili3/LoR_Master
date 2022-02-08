@@ -1,25 +1,38 @@
 <template>
   <div
-    class="relative grid items-center h-16 grid-cols-12 bg-gray-700 cursor-pointer sm:mr-1 group hover:bg-gray-800"
+    class="
+      group
+      relative
+      grid
+      h-16
+      cursor-pointer
+      grid-cols-12
+      items-center
+      bg-gray-700
+      transition-colors
+      duration-150
+      hover:bg-gray-800
+      sm:mr-1
+    "
     :class="{
-      'border-2 border-yellow-500 rounded-t-md': rank == '1',
+      'rounded-t-md border-2 border-yellow-500': rank == '1',
       'border-2 border-t-0 border-zinc-200': rank == '2',
-      'border-2 border-t-0 border-red-300 rounded-b-md': rank == '3',
+      'rounded-b-md border-2 border-t-0 border-red-300': rank == '3',
     }"
   >
-    <div class="group-hover:bg-gray-800 z-[1]">
-      <div v-if="rank == '1'"><i class="text-yellow-500 fas fa-crown"></i></div>
+    <div class="z-[1]">
+      <div v-if="rank == '1'"><i class="fas fa-crown text-yellow-500"></i></div>
       <div v-else-if="rank == '2'"><i class="fas fa-crown text-zinc-200"></i></div>
-      <div v-else-if="rank == '3'"><i class="text-red-300 fas fa-crown"></i></div>
+      <div v-else-if="rank == '3'"><i class="fas fa-crown text-red-300"></i></div>
       <div v-else>
         {{ rank }}
       </div>
     </div>
-    <div class="col-span-5 pl-2 sm:col-span-3 group-hover:bg-gray-800 z[1] whitespace-nowrap overflow-hidden text-ellipsis">
+    <div class="z[1] col-span-5 overflow-hidden text-ellipsis whitespace-nowrap pl-2 sm:col-span-3">
       {{ name }}
     </div>
     <div class="col-span-2 sm:col-span-1">{{ lp }}</div>
-    <div class="hidden sm:block sm:col-span-2">
+    <div class="hidden sm:col-span-2 sm:block">
       <div
         v-if="lastRankTime"
         class="text-sm text-white"
@@ -31,14 +44,21 @@
         {{ lastRank }}
       </div>
     </div>
-    <div class="hidden sm:block sm:col-span-2">
+    <div class="hidden sm:col-span-2 sm:block">
       <div v-if="winRate != null" :style="{ color: winRateToSimpleColor(winRate) /*0.6 + 0.4 * winRate*/ }">
         {{ $t("matches.winRate", { num: (winRate * 100).toFixed(0) }) }}
       </div>
     </div>
 
     <div class="col-span-4 sm:col-span-3">
-      <deck-preview v-if="deck" @click.stop :deck="deck" :fixed-width="true" :size="1"></deck-preview>
+      <deck-preview
+        class="transition-colors hover:bg-gray-600"
+        v-if="deck"
+        @click.stop
+        :deck="deck"
+        :fixed-width="true"
+        :size="1"
+      ></deck-preview>
     </div>
   </div>
 </template>
