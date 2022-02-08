@@ -84,9 +84,8 @@
               <input
                 spellcheck="false"
                 autocomplete="off"
-                class="w-full h-12 pl-12 pr-5 text-base text-white bg-gray-800 border-none outline-none  rounded-3xl focus:bg-gray-700 transition-rounded"
+                class="w-full h-12 pl-12 pr-5 text-base text-white transition-colors bg-gray-800 border-none outline-none  search-bar rounded-3xl focus:bg-gray-700"
                 :class="{
-                  'rounded-tl-md': selectedRegion == 'NA',
                   'rounded-b-none rounded-t-[25px]': hasNameAutoComplete && isInputFocused,
                 }"
                 @keyup="searchName"
@@ -105,7 +104,7 @@
             <!-- Auto Complete -->
             <div
               v-if="hasNameAutoComplete && isInputFocused"
-              class="top-[50px] absolute z-10 w-full text-left bg-gray-800 pb-5 rounded-b-[25px] max-h-[calc(80vh-140px)] overflow-y-auto"
+              class="top-12 absolute z-10 w-full text-left bg-gray-800 pb-5 rounded-b-[25px] max-h-[calc(80vh-140px)] overflow-y-auto"
             >
               <div
                 class="pl-12 auto-complete-item"
@@ -157,11 +156,7 @@
 </template>
 
 <script>
-const requestDataWaitTime = 400 //ms
 const requestHistoryWaitTime = 100 //ms
-const requestStatusWaitTime = 1000 //ms
-
-const requestRefreshDelay = 5000 //ms
 
 let cancelToken, localCancleToken
 var lastStatusRequestTime

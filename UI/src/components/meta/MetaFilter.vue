@@ -3,7 +3,7 @@
   <div class>
     <!-- Tag Box -->
     <div class="relative pb-4">
-      <i class="absolute text-base fas fa-filter left-4 top-3.5" :class="{ 'text-gray-200': !(tags.length > 0) }"></i>
+      <i class="absolute text-base fas fa-filter left-5 top-3" :class="{ 'text-gray-200': !(tags.length > 0) }"></i>
       <ul
         class="flex flex-wrap items-center w-full gap-2 pl-12 pr-12 transition-colors bg-gray-800 focus-within:bg-gray-700"
         :class="{ 'rounded-[40px]': !hasAutoComplete, ' rounded-t-[25px]': hasAutoComplete }"
