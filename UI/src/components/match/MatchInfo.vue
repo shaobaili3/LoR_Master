@@ -8,8 +8,18 @@
         <!-- {{matches}} / {{total}} -->
         {{ $t("matches.usage", { num: useRate }) }}
       </p>
-      <div class="match-info-badge" v-for="(badge, index) in badges" :key="index">
-        <span class="match-info-badge-icon fa" :class="{ 'fa-clock': badge == 'recent', 'fa-angle-double-up': badge == 'frequent' }"></span>
+      <div
+        class="match-info-badge"
+        v-for="(badge, index) in badges"
+        :key="index"
+      >
+        <span
+          class="match-info-badge-icon fa"
+          :class="{
+            'fa-clock': badge == 'recent',
+            'fa-angle-double-up': badge == 'frequent',
+          }"
+        ></span>
         {{ badge }}
       </div>
       <div class="history-info">{{ timeString }}</div>
@@ -17,7 +27,12 @@
     </div>
     <div class="row match-history-dots">
       <div class="match-history-summary">{{ wonNum }} W - {{ lostNum }} L</div>
-      <div class="dot" :class="{ won: isWonGame(index), played: isPlayedGame(index) }" v-for="index in 10" :key="index"></div>
+      <div
+        class="dot"
+        :class="{ won: isWonGame(index), played: isPlayedGame(index) }"
+        v-for="index in 10"
+        :key="index"
+      ></div>
     </div>
     <div class="row decklist">
       <deck-preview
@@ -34,13 +49,18 @@
   </div>
 
   <transition name="height">
-    <deck-detail v-if="visibleDeck == 1" :baseDeck="deck" :hideNum="true" :fullHeight="false"></deck-detail>
+    <deck-detail
+      v-if="visibleDeck == 1"
+      :baseDeck="deck"
+      :hideNum="true"
+      :fullHeight="false"
+    ></deck-detail>
   </transition>
 </template>
 
 <script>
-import DeckDetail from "../deck/DeckDetail.vue"
-import DeckPreview from "../deck/DeckPreview.vue"
+import DeckDetail from "../deck/DeckDetail.vue";
+import DeckPreview from "../deck/DeckPreview.vue";
 
 export default {
   components: {
@@ -48,12 +68,12 @@ export default {
     DeckPreview,
   },
   mounted() {
-    this.subscribeData()
+    this.subscribeData();
   },
   data() {
     return {
       visibleDeck: 0,
-    }
+    };
   },
   props: {
     opponentName: String,
@@ -70,56 +90,58 @@ export default {
   },
   computed: {
     timeString() {
-      var date = new Date(this.startTime)
-      var time
+      var date = new Date(this.startTime);
+      var time;
 
-      var milliElapsed = Date.now() - date
-      var secondsElapsed = milliElapsed / 1000
-      var minElapse = secondsElapsed / 60
-      var hoursElapse = minElapse / 60
-      var daysElapsed = hoursElapse / 24
+      var milliElapsed = Date.now() - date;
+      var secondsElapsed = milliElapsed / 1000;
+      var minElapse = secondsElapsed / 60;
+      var hoursElapse = minElapse / 60;
+      var daysElapsed = hoursElapse / 24;
 
       if (secondsElapsed < 60) {
-        time = this.$t("str.times.sec", { t: Math.floor(secondsElapsed) })
+        time = this.$t("str.times.sec", { t: Math.floor(secondsElapsed) });
       } else if (minElapse < 60) {
-        time = this.$t("str.times.min", { t: Math.floor(minElapse) })
+        time = this.$t("str.times.min", { t: Math.floor(minElapse) });
       } else if (hoursElapse < 24) {
         if (Math.floor(hoursElapse) == 1) {
-          time = this.$t("str.times.hour", { t: Math.floor(hoursElapse) })
+          time = this.$t("str.times.hour", { t: Math.floor(hoursElapse) });
         } else {
-          time = this.$t("str.times.hours", { t: Math.floor(hoursElapse) })
+          time = this.$t("str.times.hours", { t: Math.floor(hoursElapse) });
         }
       } else if (daysElapsed < 7) {
         if (Math.floor(daysElapsed) == 1) {
-          time = this.$t("str.times.day", { t: Math.floor(daysElapsed) })
+          time = this.$t("str.times.day", { t: Math.floor(daysElapsed) });
         } else {
-          time = this.$t("str.times.days", { t: Math.floor(daysElapsed) })
+          time = this.$t("str.times.days", { t: Math.floor(daysElapsed) });
         }
       } else {
-        time = date.toLocaleDateString()
+        time = date.toLocaleDateString();
       }
 
-      return time
+      return time;
     },
 
     opponentLink() {
-      return "/profile/" + this.opponentName
+      return "/profile/" + this.opponentName;
     },
     won() {
       // return parseFloat(this.winrate) > 0.5;
-      return true
+      return true;
     },
     useRate() {
-      return Math.floor((this.matches / this.total) * 100)
+      return Math.floor((this.matches / this.total) * 100);
     },
     wonNum() {
-      return (this.history.match(/W/g) || []).length
+      return (this.history.match(/W/g) || []).length;
     },
     lostNum() {
-      return (this.history.match(/L/g) || []).length
+      return (this.history.match(/L/g) || []).length;
     },
     gamesString() {
-      return this.matches > 1 ? this.$t("matches.games", { num: this.matches }) : this.$t("matches.game", { num: this.matches })
+      return this.matches > 1
+        ? this.$t("matches.games", { num: this.matches })
+        : this.$t("matches.game", { num: this.matches });
     },
   },
   methods: {
@@ -127,31 +149,31 @@ export default {
       // console.log("Show Deck")
       // console.log(window)
       // console.log(window.testData)
-      if (this.visibleDeck == 1) this.visibleDeck = 0
-      else this.visibleDeck = 1
+      if (this.visibleDeck == 1) this.visibleDeck = 0;
+      else this.visibleDeck = 1;
     },
     showOpponentDeck() {
       // console.log("Show Oppo Deck")
-      if (this.visibleDeck == 2) this.visibleDeck = 0
-      else this.visibleDeck = 2
+      if (this.visibleDeck == 2) this.visibleDeck = 0;
+      else this.visibleDeck = 2;
     },
     subscribeData() {
       // console.log(window)
     },
     isWonGame(index) {
-      var i = index - 1
+      var i = index - 1;
       // console.log(this.history)
-      if (i >= this.history.length) return false
-      return this.history[i] == "W"
+      if (i >= this.history.length) return false;
+      return this.history[i] == "W";
     },
     isPlayedGame(index) {
-      var i = index - 1
+      var i = index - 1;
       // console.log(this.history)
-      if (i >= this.history.length) return false
-      return this.history[i] == "W" || this.history[i] == "L"
+      if (i >= this.history.length) return false;
+      return this.history[i] == "W" || this.history[i] == "L";
     },
   },
-}
+};
 </script>
 
 <style scoped>

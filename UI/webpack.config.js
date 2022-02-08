@@ -1,6 +1,6 @@
 export default {
-  target: 'electron-renderer',
+  target: "electron-renderer",
   output: {
-    publicPath: argv.mode === 'production' ? '/' : '/',
-  }
+    publicPath: argv.mode === "production" ? "/" : "/",
+  },
 }

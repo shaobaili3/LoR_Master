@@ -5,19 +5,40 @@
       <div class="pb-4 text-center text-xl">
         {{ $t("search.bookmarks") }}
       </div>
-      <div class="mb-4 flex max-h-[25%] flex-shrink flex-col gap-1 overflow-y-auto rounded-lg bg-gray-800">
-        <i18n-t keypath="search.noBookmarks" tag="div" class="py-2 text-gray-200" v-if="!bookmarks || bookmarks.length <= 0">
+      <div
+        class="mb-4 flex max-h-[25%] flex-shrink flex-col gap-1 overflow-y-auto rounded-lg bg-gray-800"
+      >
+        <i18n-t
+          keypath="search.noBookmarks"
+          tag="div"
+          class="py-2 text-gray-200"
+          v-if="!bookmarks || bookmarks.length <= 0"
+        >
           <i class="fas fa-bookmark px-1"></i>
         </i18n-t>
         <div v-if="bookmarks && bookmarks.length > 0">
-          <div v-for="(bookmark, index) in bookmarks" :key="bookmark.name + bookmark.id">
-            <search-bookmark :bookmark="bookmark" :index="index"></search-bookmark>
+          <div
+            v-for="(bookmark, index) in bookmarks"
+            :key="bookmark.name + bookmark.id"
+          >
+            <search-bookmark
+              :bookmark="bookmark"
+              :index="index"
+            ></search-bookmark>
           </div>
         </div>
       </div>
       <!-- Archetypes -->
-      <div v-if="playerName && matches.length > 0" class="pb-4 text-center text-xl">{{ $t("str.archetypes") }}</div>
-      <div v-if="playerName && matches.length > 0" class="mb-4 flex flex-shrink flex-col gap-1 overflow-y-auto rounded-lg bg-gray-800">
+      <div
+        v-if="playerName && matches.length > 0"
+        class="pb-4 text-center text-xl"
+      >
+        {{ $t("str.archetypes") }}
+      </div>
+      <div
+        v-if="playerName && matches.length > 0"
+        class="mb-4 flex flex-shrink flex-col gap-1 overflow-y-auto rounded-lg bg-gray-800"
+      >
         <div
           class="rounded py-1 transition-colors hover:bg-gray-600"
           v-for="obj in uniqueArchetypes"
@@ -33,7 +54,10 @@
                 :size="1"
               ></deck-preview>
             </div>
-            <div class="group flex w-0 flex-1 cursor-pointer pl-1" @click="setFilterArchetype(obj.id)">
+            <div
+              class="group flex w-0 flex-1 cursor-pointer pl-1"
+              @click="setFilterArchetype(obj.id)"
+            >
               <div class="w-0 flex-1 text-left">
                 <div class="text-gray-200">
                   {{ $t("matches.games", { num: obj.freq }) }}
@@ -44,7 +68,11 @@
                     color: winRateToColor(obj.win / obj.freq),
                   }"
                 >
-                  {{ $t("matches.winRate", { num: Math.floor((obj.win / obj.freq) * 1000) / 10 }) }}
+                  {{
+                    $t("matches.winRate", {
+                      num: Math.floor((obj.win / obj.freq) * 1000) / 10,
+                    })
+                  }}
                 </div>
               </div>
               <div
@@ -79,32 +107,36 @@
           </div>
           <div class="width-full relative mt-4 flex flex-nowrap">
             <div class="search-bar-input-container">
-              <button class="search-btn inside left" :class="{ active: searchText != '' }" @click="searchHistory">
-                <span v-if="isLoading || isUpdating"><i class="fas fa-redo-alt fa-spin-fast"></i></span>
-                <span v-if="!(isLoading || isUpdating) && !isSameSearch"><i class="fas fa-search"></i></span>
-                <span v-if="!(isLoading || isUpdating) && isSameSearch && !isUpdated"><i class="fas fa-redo-alt"></i></span>
-                <span v-if="!(isLoading || isUpdating) && isSameSearch && isUpdated"><i class="fas fa-check"></i></span>
+              <button
+                class="search-btn inside left"
+                :class="{ active: searchText != '' }"
+                @click="searchHistory"
+              >
+                <span v-if="isLoading || isUpdating"
+                  ><i class="fas fa-redo-alt fa-spin-fast"></i
+                ></span>
+                <span v-if="!(isLoading || isUpdating) && !isSameSearch"
+                  ><i class="fas fa-search"></i
+                ></span>
+                <span
+                  v-if="
+                    !(isLoading || isUpdating) && isSameSearch && !isUpdated
+                  "
+                  ><i class="fas fa-redo-alt"></i
+                ></span>
+                <span
+                  v-if="!(isLoading || isUpdating) && isSameSearch && isUpdated"
+                  ><i class="fas fa-check"></i
+                ></span>
               </button>
 
               <input
                 spellcheck="false"
                 autocomplete="off"
-                class="
-                  search-bar
-                  h-12
-                  w-full
-                  rounded-3xl
-                  border-none
-                  bg-gray-800
-                  pl-12
-                  pr-5
-                  text-base text-white
-                  outline-none
-                  transition-colors
-                  focus:bg-gray-700
-                "
+                class="search-bar h-12 w-full rounded-3xl border-none bg-gray-800 pl-12 pr-5 text-base text-white outline-none transition-colors focus:bg-gray-700"
                 :class="{
-                  'rounded-b-none rounded-t-[25px]': hasNameAutoComplete && isInputFocused,
+                  'rounded-b-none rounded-t-[25px]':
+                    hasNameAutoComplete && isInputFocused,
                 }"
                 @keyup="searchName"
                 @keyup.enter="searchHistory"
@@ -115,7 +147,11 @@
                 v-model="searchText"
                 :placeholder="$t('search.player.placeholder')"
               />
-              <button class="search-btn inside right" @click="clearSearch" v-if="searchText != ''">
+              <button
+                class="search-btn inside right"
+                @click="clearSearch"
+                v-if="searchText != ''"
+              >
                 <span><i class="fas fa-times"></i></span>
               </button>
             </div>
@@ -132,7 +168,9 @@
                 @click="searchHistoryAutoComplete(index)"
                 :ref="setAutoCompleteRefs"
               >
-                <search-auto-complete-item :player="player"></search-auto-complete-item>
+                <search-auto-complete-item
+                  :player="player"
+                ></search-auto-complete-item>
               </div>
             </div>
           </div>
@@ -151,8 +189,13 @@
           </player-matches>
         </div>
 
-        <div class="my-4 text-2xl" v-if="isLoading || isUpdating || isError || matches.length <= 0">
-          <span v-if="!(isLoading || isUpdating) && !isError && matches.length <= 0">
+        <div
+          class="my-4 text-2xl"
+          v-if="isLoading || isUpdating || isError || matches.length <= 0"
+        >
+          <span
+            v-if="!(isLoading || isUpdating) && !isError && matches.length <= 0"
+          >
             {{ $t("search.prompt") }}
           </span>
           <span v-if="isLoading">
@@ -174,52 +217,54 @@
 </template>
 
 <script>
-const requestHistoryWaitTime = 100 //ms
+const requestHistoryWaitTime = 100; //ms
 
-let cancelToken, localCancleToken
-var lastStatusRequestTime
-var requestHistoryTimeout, prevHistoryRequest
+let cancelToken, localCancleToken;
+var lastStatusRequestTime;
+var requestHistoryTimeout, prevHistoryRequest;
 
-import { regionNames, regionRefID } from "./PanelDeckCode.vue"
+import { regionNames, regionRefID } from "./PanelDeckCode.vue";
 
-import { REGION_ID, REGION_SHORTS, REGION_NAMES } from "./PanelLeaderboard.vue"
+import { REGION_ID, REGION_SHORTS, REGION_NAMES } from "./PanelLeaderboard.vue";
 
-import DeckEncoder from "../../modules/runeterra/DeckEncoder"
-import { championCards } from "../../assets/data/champion"
+import DeckEncoder from "../../modules/runeterra/DeckEncoder";
+import { championCards } from "../../assets/data/champion";
 
-import PlayerMatches from "../match/PlayerMatches.vue"
-import DeckChamps from "../deck/DeckChamps.vue"
-import axios from "axios"
-import DeckRegions from "../deck/DeckRegions.vue"
-import DeckPreview from "../deck/DeckPreview.vue"
+import PlayerMatches from "../match/PlayerMatches.vue";
+import DeckChamps from "../deck/DeckChamps.vue";
+import axios from "axios";
+import DeckRegions from "../deck/DeckRegions.vue";
+import DeckPreview from "../deck/DeckPreview.vue";
 
-import { winRateToColor } from "../../modules/utils/colorUtils"
+import { winRateToColor } from "../../modules/utils/colorUtils";
 
-import { mapState, mapActions } from "pinia"
-import { useBookmarkStore } from "../../store/StoreBookmark"
-import SearchBookmark from "../search/SearchBookmark.vue"
-import SearchAutoCompleteItem from "../search/SearchAutoCompleteItem.vue"
+import { mapState, mapActions } from "pinia";
+import { useBookmarkStore } from "../../store/StoreBookmark";
+import SearchBookmark from "../search/SearchBookmark.vue";
+import SearchAutoCompleteItem from "../search/SearchAutoCompleteItem.vue";
 
-import { getDeckID } from "./PanelMeta.vue"
+import { getDeckID } from "./PanelMeta.vue";
 
 export const processSearchRequestRawData = (data, playerName) => {
   // playerServer is region shorts
 
-  var matches = []
-  if (!data) return matches
+  var matches = [];
+  if (!data) return matches;
 
   // Processing for normal Data
   for (var key in data) {
-    var match = data[key]
-    var info = match.info
-    var playersInfo = match.player_info
+    var match = data[key];
+    var info = match.info;
+    var playersInfo = match.player_info;
 
-    if (!match || !playersInfo || !playersInfo[0] || !playersInfo[0].name) continue // Skip if null history
+    if (!match || !playersInfo || !playersInfo[0] || !playersInfo[0].name)
+      continue; // Skip if null history
 
-    var isFirstPlayer = playersInfo[0].name.toLowerCase() == playerName.toLowerCase()
-    var player, playerGame, opponent, opponentGame
+    var isFirstPlayer =
+      playersInfo[0].name.toLowerCase() == playerName.toLowerCase();
+    var player, playerGame, opponent, opponentGame;
 
-    var details = null
+    var details = null;
 
     // Process local info
     if (match.local && match.local.deck_tracker) {
@@ -229,43 +274,46 @@ export const processSearchRequestRawData = (data, playerName) => {
         timeline: match.local.deck_tracker.timeline,
         startTime: match.local.startTime,
         endTime: match.local.endTime,
-      }
+      };
     }
 
     // Because the info orders are not confirmed
     if (isFirstPlayer) {
-      playerGame = info.players[0] // Players Game Information
-      opponentGame = info.players[1] // Opponents Game Information
-      player = playersInfo[0]
-      opponent = playersInfo[1]
+      playerGame = info.players[0]; // Players Game Information
+      opponentGame = info.players[1]; // Opponents Game Information
+      player = playersInfo[0];
+      opponent = playersInfo[1];
     } else {
-      playerGame = info.players[1]
-      opponentGame = info.players[0]
-      player = playersInfo[1]
-      opponent = playersInfo[0]
+      playerGame = info.players[1];
+      opponentGame = info.players[0];
+      player = playersInfo[1];
+      opponent = playersInfo[0];
     }
 
     // Skip if info not complete
-    if (!playerGame || !opponentGame || !player || !opponent) continue
+    if (!playerGame || !opponentGame || !player || !opponent) continue;
 
-    var badges = []
+    var badges = [];
     if (info.game_mode)
       badges.push(
         info.game_mode
           .replace(/([A-Z])/g, " $1")
           .trim()
           .replace("Lobby", "")
-      )
+      );
     if (info.game_type)
       badges.push(
         info.game_type
           .replace(/([A-Z])/g, " $1")
           .trim()
           .replace("Lobby", "")
-      )
+      );
 
     //"game_version": "live_3_01_12",
-    var version = info.game_version.replace("live_", "").replace("_0", ".").replace("_", ".")
+    var version = info.game_version
+      .replace("live_", "")
+      .replace("_0", ".")
+      .replace("_", ".");
 
     matches.push({
       opponentName: opponent.name,
@@ -279,11 +327,11 @@ export const processSearchRequestRawData = (data, playerName) => {
       details: details,
       order: playerGame.order_of_play,
       version: version,
-    })
+    });
   }
 
-  return matches
-}
+  return matches;
+};
 
 export default {
   components: {
@@ -327,117 +375,139 @@ export default {
       debugInfos: "",
 
       filterDeckID: null,
-    }
+    };
   },
   computed: {
     ...mapState(useBookmarkStore, ["bookmarks"]),
 
     hasNameAutoComplete() {
-      return this.filteredInputNameList && this.filteredInputNameList.length > 0
+      return (
+        this.filteredInputNameList && this.filteredInputNameList.length > 0
+      );
     },
 
     filteredMatches() {
-      if (!this.matches) return null
-      if (!this.filterDeckID) return this.matches
+      if (!this.matches) return null;
+      if (!this.filterDeckID) return this.matches;
       return this.matches.filter((val) => {
-        return getDeckID(val.deck) == this.filterDeckID
-      })
+        return getDeckID(val.deck) == this.filterDeckID;
+      });
     },
     hasSearchInfo() {
-      return this.player && this.region && this.tag && REGION_SHORTS.indexOf(this.region) != -1
+      return (
+        this.player &&
+        this.region &&
+        this.tag &&
+        REGION_SHORTS.indexOf(this.region) != -1
+      );
     },
     uniqueArchetypes() {
-      if (!this.matches) return null
-      var decks = this.matches.map((x) => ({ code: x.deck, id: getDeckID(x.deck), win: x.win }))
+      if (!this.matches) return null;
+      var decks = this.matches.map((x) => ({
+        code: x.deck,
+        id: getDeckID(x.deck),
+        win: x.win,
+      }));
       var decks_freq = decks.reduce((a, x) => {
-        var v = x.id
+        var v = x.id;
         if (v && a[v]) {
-          a[v].freq = a[v].freq + 1
-          a[v].win += x.win ? 1 : 0
+          a[v].freq = a[v].freq + 1;
+          a[v].win += x.win ? 1 : 0;
           if (!a[v].decks.includes(x.code)) {
-            a[v].decks.push(x.code)
+            a[v].decks.push(x.code);
           }
         } else {
-          var decks = []
-          decks.push(x.code)
+          var decks = [];
+          decks.push(x.code);
           a[v] = {
             freq: 1,
             decks: decks,
             win: x.win ? 1 : 0,
-          }
+          };
         }
-        return a
-      }, {})
-      var decks_freq_array = []
+        return a;
+      }, {});
+      var decks_freq_array = [];
       Object.keys(decks_freq).map(function (key, index) {
-        var item = decks_freq[key]
-        decks_freq_array[index] = { id: key, decks: item.decks, freq: item.freq, win: item.win }
-      })
+        var item = decks_freq[key];
+        decks_freq_array[index] = {
+          id: key,
+          decks: item.decks,
+          freq: item.freq,
+          win: item.win,
+        };
+      });
 
-      decks_freq_array.sort((a, b) => (b.win / b.freq > a.win / a.freq ? 1 : -1))
+      decks_freq_array.sort((a, b) =>
+        b.win / b.freq > a.win / a.freq ? 1 : -1
+      );
       // Large num in front
 
-      return decks_freq_array
+      return decks_freq_array;
     },
     uniqueDeckCodes() {
-      if (!this.matches) return null
-      var decks = this.matches.map((x) => x.deck)
+      if (!this.matches) return null;
+      var decks = this.matches.map((x) => x.deck);
       var decks_freq = decks.reduce((a, v) => {
-        a[v] = a[v] ? a[v] + 1 : 1
-        return a
-      }, {})
-      var decks_freq_array = []
+        a[v] = a[v] ? a[v] + 1 : 1;
+        return a;
+      }, {});
+      var decks_freq_array = [];
       Object.keys(decks_freq).map(function (key, index) {
-        decks_freq_array[index] = { deck: key, num: decks_freq[key] }
-      })
+        decks_freq_array[index] = { deck: key, num: decks_freq[key] };
+      });
 
-      decks_freq_array.sort((a, b) => b.num - a.num)
+      decks_freq_array.sort((a, b) => b.num - a.num);
       // Large num in front
 
-      return decks_freq_array
+      return decks_freq_array;
     },
     errorText() {
-      var error = this.errorType
+      var error = this.errorType;
       if (error == 0) {
-        return this.$t("str.error.playerNotFound")
+        return this.$t("str.error.playerNotFound");
       } else if (error == 1 || error == 2) {
-        return this.$t("str.error.playerNoHistory")
+        return this.$t("str.error.playerNoHistory");
       } else if (error == 4) {
-        return this.$t("str.error.internalServiceError")
+        return this.$t("str.error.internalServiceError");
       } else {
-        return this.$t("str.error.unkown")
+        return this.$t("str.error.unkown");
       }
     },
     isUpdatedVersion() {
-      return this.version == this.remoteVersion
+      return this.version == this.remoteVersion;
     },
     filteredInputNameList() {
       // return this.inputNameList.map((i) => i.split("#")[0])
-      return this.inputNameList
+      return this.inputNameList;
     },
     isSameSearch() {
-      return this.searchText == this.playerName && this.playerTag && REGION_SHORTS[REGION_ID[this.selectedRegion]] == this.playerRegion
+      return (
+        this.searchText == this.playerName &&
+        this.playerTag &&
+        REGION_SHORTS[REGION_ID[this.selectedRegion]] == this.playerRegion
+      );
     },
     hasLocalInfo() {
-      return this.localMatches && this.localMatches.length > 0
+      return this.localMatches && this.localMatches.length > 0;
     },
     versionText() {
       if (this.updateDownloaded) {
-        return "Restart"
+        return "Restart";
       }
-      return this.version
+      return this.version;
     },
     versionTooltip() {
       if (this.isUpdatedVersion) {
-        return "Updated"
+        return "Updated";
       } else if (this.updateDownloaded) {
-        return "Update on next start"
+        return "Update on next start";
       } else if (this.updateProcess > 0) {
-        return `Downloading... ${this.updateProcess}%`
+        return `Downloading... ${this.updateProcess}%`;
       } else if (this.remoteVersion) {
-        return `Latest: ${this.remoteVersion}`
+        return `Latest: ${this.remoteVersion}`;
       }
-      return this.$t("str.loading")
+      return this.$t("str.loading");
     },
   },
   mounted() {
@@ -446,22 +516,22 @@ export default {
         name: this.player,
         region: this.region,
         tag: this.tag,
-      })
+      });
     }
-    this.initStore()
+    this.initStore();
   },
   methods: {
     ...mapActions(useBookmarkStore, ["initStore"]),
     winRateToColor: winRateToColor,
 
     showDeck(code) {
-      this.$emitter.emit("showDeck", code)
+      this.$emitter.emit("showDeck", code);
     },
     setFilterArchetype(deckID) {
       if (this.filterDeckID == deckID) {
-        this.filterDeckID = null
+        this.filterDeckID = null;
       } else {
-        this.filterDeckID = deckID
+        this.filterDeckID = deckID;
       }
     },
     selectRegion(region) {
@@ -471,143 +541,158 @@ export default {
         action: "Select Region",
         label: REGION_NAMES[REGION_ID[region]],
         value: null,
-      })
+      });
 
-      this.selectedRegion = region
-      var searchBar = document.querySelector(".search-bar")
-      if (searchBar) searchBar.focus()
+      this.selectedRegion = region;
+      var searchBar = document.querySelector(".search-bar");
+      if (searchBar) searchBar.focus();
 
-      this.searchName()
+      this.searchName();
     },
     searchPlayer(data) {
       // data.region is region short
-      this.searchText = data.name
-      this.selectedRegion = data.region
-      this.resetInputFocus()
+      this.searchText = data.name;
+      this.selectedRegion = data.region;
+      this.resetInputFocus();
 
-      this.playerName = data.name
-      this.playerTag = data.tag
-      this.requestHistoryData()
+      this.playerName = data.name;
+      this.playerTag = data.tag;
+      this.requestHistoryData();
     },
     // Search bar
     clearSearch() {
-      this.searchText = ""
-      this.searchName()
-      document.querySelector(".search-bar").focus()
+      this.searchText = "";
+      this.searchName();
+      document.querySelector(".search-bar").focus();
     },
     onInputFocus() {
-      this.isInputFocused = true
+      this.isInputFocused = true;
     },
     onInputBlur() {
-      this.isInputFocused = false
+      this.isInputFocused = false;
     },
     searchName() {
       if (this.searchText.length > 0 && !this.searchText.includes("#")) {
-        this.requestAutoComplete()
+        this.requestAutoComplete();
       } else {
-        this.resetAutoComplete()
+        this.resetAutoComplete();
       }
     },
     resetAutoComplete() {
-      this.inputNameList = []
-      this.autoCompleteIndex = 0
+      this.inputNameList = [];
+      this.autoCompleteIndex = 0;
     },
     resetInputFocus() {
-      var searchBar = document.querySelector(".search-bar")
-      if (searchBar) searchBar.blur()
-      this.resetAutoComplete()
+      var searchBar = document.querySelector(".search-bar");
+      if (searchBar) searchBar.blur();
+      this.resetAutoComplete();
     },
     // Search bar Auto Complete
     setAutoCompleteRefs(el) {
       if (el) {
-        this.autoCompleteRefs.push(el)
+        this.autoCompleteRefs.push(el);
       }
     },
     autoCompleteIndexPlus() {
-      this.autoCompleteIndex += 1
+      this.autoCompleteIndex += 1;
       if (this.autoCompleteIndex > this.inputNameList.length - 1) {
-        this.autoCompleteIndex = 0
+        this.autoCompleteIndex = 0;
       }
-      this.autoCompleteRefs[this.autoCompleteIndex].scrollIntoViewIfNeeded({ behavior: "smooth" })
+      this.autoCompleteRefs[this.autoCompleteIndex].scrollIntoViewIfNeeded({
+        behavior: "smooth",
+      });
     },
     autoCompleteIndexMinus() {
-      this.autoCompleteIndex -= 1
+      this.autoCompleteIndex -= 1;
       if (this.autoCompleteIndex < 0) {
-        this.autoCompleteIndex = this.inputNameList.length - 1
+        this.autoCompleteIndex = this.inputNameList.length - 1;
       }
-      this.autoCompleteRefs[this.autoCompleteIndex].scrollIntoViewIfNeeded({ behavior: "smooth" })
+      this.autoCompleteRefs[this.autoCompleteIndex].scrollIntoViewIfNeeded({
+        behavior: "smooth",
+      });
     },
     onKeyDown(e) {
       if (e.key == "ArrowUp" || e.key == "ArrowDown") {
-        e.preventDefault()
+        e.preventDefault();
       }
     },
     searchHistoryAutoComplete(index) {
       // console.log("searchHistoryAutoComplete")
-      this.autoCompleteIndex = index
-      this.searchHistory()
+      this.autoCompleteIndex = index;
+      this.searchHistory();
     },
     searchHistory() {
-      var splited
-      if (this.inputNameList.length > 0 && this.inputNameList[this.autoCompleteIndex]) {
+      var splited;
+      if (
+        this.inputNameList.length > 0 &&
+        this.inputNameList[this.autoCompleteIndex]
+      ) {
         // Use auto complete to fill the search
         // Sets player info for search
-        var item = this.inputNameList[this.autoCompleteIndex]
-        this.playerName = item.name
-        this.playerTag = item.tag
+        var item = this.inputNameList[this.autoCompleteIndex];
+        this.playerName = item.name;
+        this.playerTag = item.tag;
 
-        this.searchText = this.playerName
+        this.searchText = this.playerName;
 
         this.sendUserEvent({
           category: "Main Window Search",
           action: "Auto Complete",
           label: this.playerName + "#" + this.playerTag,
           value: null,
-        })
+        });
 
         // Perform the actual search
-        this.requestHistoryData()
-        this.resetInputFocus()
+        this.requestHistoryData();
+        this.resetInputFocus();
       } else {
         // Use user input
-        splited = this.searchText.split("#")
-        if (splited.length == 2 && splited[0].length > 0 && splited[1].length > 0) {
+        splited = this.searchText.split("#");
+        if (
+          splited.length == 2 &&
+          splited[0].length > 0 &&
+          splited[1].length > 0
+        ) {
           // Check if format is correct
           // Sets player info for search
-          this.playerName = splited[0]
-          this.playerTag = splited[1]
+          this.playerName = splited[0];
+          this.playerTag = splited[1];
 
           this.sendUserEvent({
             category: "Main Window Search",
             action: "User Input [New]",
             label: `${this.searchText}`,
             value: null,
-          })
+          });
 
           // Perform the actual search
-          this.requestHistoryData()
-          this.resetInputFocus()
-        } else if (splited.length == 1 && splited[0] == this.playerName && this.playerTag) {
+          this.requestHistoryData();
+          this.resetInputFocus();
+        } else if (
+          splited.length == 1 &&
+          splited[0] == this.playerName &&
+          this.playerTag
+        ) {
           // When trying to search the same people, do a refresh (update only)
 
           if (this.isError) {
             // Unless it is error, in this case do a full refresh
-            console.log("Refresh when error")
-            this.requestHistoryData()
-            this.resetInputFocus()
-            return
+            console.log("Refresh when error");
+            this.requestHistoryData();
+            this.resetInputFocus();
+            return;
           }
 
-          console.log("Refresh & update only")
-          this.requestHistoryUpdate()
-          this.resetInputFocus()
+          console.log("Refresh & update only");
+          this.requestHistoryUpdate();
+          this.resetInputFocus();
 
           this.sendUserEvent({
             category: "Main Window Search",
             action: "User Input [Refresh]",
             label: `${this.searchText}`,
             value: null,
-          })
+          });
         } else {
           // Alert the player needed info
 
@@ -616,40 +701,43 @@ export default {
             action: "User Input [Error]",
             label: `${this.searchText}`,
             value: null,
-          })
+          });
         }
       }
     },
     clearInfo() {
       // this.playerName = "";
       // this.playerTag = "";
-      this.playerRank = null
-      this.playerLP = null
-      this.playerRegion = null
-      this.matches = []
+      this.playerRank = null;
+      this.playerLP = null;
+      this.playerRegion = null;
+      this.matches = [];
     },
     errorHistory(error) {
       if (!this.isUpdating) {
-        this.clearInfo()
+        this.clearInfo();
       }
-      this.isError = true
-      this.errorType = error
+      this.isError = true;
+      this.errorType = error;
       // this.playerName = "No history found"
     },
     openURL(url) {
       if (window.openExternal) {
-        window.openExternal(url)
+        window.openExternal(url);
       } else {
-        window.open(url)
+        window.open(url);
       }
     },
     requestAutoComplete() {
       // Abort not completed requests
-      if (this.autoCompleteRequestController) this.autoCompleteRequestController.abort()
+      if (this.autoCompleteRequestController)
+        this.autoCompleteRequestController.abort();
 
-      const api = `${this.API_WEB}/names/${REGION_NAMES[REGION_ID[this.selectedRegion]]}/${this.searchText}`
-      const controller = new AbortController()
-      this.autoCompleteRequestController = controller
+      const api = `${this.API_WEB}/names/${
+        REGION_NAMES[REGION_ID[this.selectedRegion]]
+      }/${this.searchText}`;
+      const controller = new AbortController();
+      this.autoCompleteRequestController = controller;
 
       axios
         .get(api, { signal: controller.signal })
@@ -658,39 +746,44 @@ export default {
             // Error
           } else {
             // console.log(response.data)
-            if (document.querySelector(".search-bar") == document.activeElement && this.searchText) {
+            if (
+              document.querySelector(".search-bar") == document.activeElement &&
+              this.searchText
+            ) {
               // If the search bar is still in focus
-              this.inputNameList = response.data
+              this.inputNameList = response.data;
             } else {
-              this.resetAutoComplete()
+              this.resetAutoComplete();
             }
           }
         })
         .catch((e) => {
           if (axios.isCancel(e)) {
-            console.log("Request cancelled")
+            console.log("Request cancelled");
           } else {
-            console.log("error", e)
+            console.log("error", e);
           }
-        })
+        });
     },
     requestHistoryUpdate() {
       // Second request to makesure that the data is updated
-      this.isUpdating = true
-      this.isUpdated = false
+      this.isUpdating = true;
+      this.isUpdated = false;
 
-      var newRequest = `${this.API_WEB}/search/${REGION_NAMES[REGION_ID[this.selectedRegion]]}/${this.playerName}/${this.playerTag}`
+      var newRequest = `${this.API_WEB}/search/${
+        REGION_NAMES[REGION_ID[this.selectedRegion]]
+      }/${this.playerName}/${this.playerTag}`;
 
       this.sendUserEvent({
         category: "Main Window Requests",
         action: "Update Search",
         label: "URL: " + newRequest,
         value: null,
-      })
+      });
 
-      const requestUpdateHistoryStartTime = Date.now()
+      const requestUpdateHistoryStartTime = Date.now();
 
-      cancelToken = axios.CancelToken.source()
+      cancelToken = axios.CancelToken.source();
       axios
         .get(newRequest, {
           headers: {
@@ -699,132 +792,143 @@ export default {
           cancelToken: cancelToken.token,
         })
         .then((response) => {
-          this.isUpdating = false
-          this.isUpdated = true
+          this.isUpdating = false;
+          this.isUpdated = true;
 
           this.sendUserEvent({
             category: "Main Window Requests",
             action: "Updated Search Result [Success]",
             label: "URL: " + newRequest,
             value: Date.now() - requestUpdateHistoryStartTime,
-          })
+          });
 
-          this.matches = processSearchRequestRawData(response.data, this.playerName)
+          this.matches = processSearchRequestRawData(
+            response.data,
+            this.playerName
+          );
         })
         .catch((e) => {
           if (axios.isCancel(e)) {
-            console.log("Request (update) cancelled")
+            console.log("Request (update) cancelled");
           } else {
-            console.log("error", e)
+            console.log("error", e);
 
             if (e.response) {
               if (e.response.status == 500) {
-                this.errorHistory(4) // Internal sercive error
+                this.errorHistory(4); // Internal sercive error
               } else {
-                var data = e.response.data
-                this.errorHistory((data.status && data.status.error) || 3) // give a 3 so that there is a fallback
+                var data = e.response.data;
+                this.errorHistory((data.status && data.status.error) || 3); // give a 3 so that there is a fallback
               }
             } else {
-              this.errorHistory(3) // Unkown Error
+              this.errorHistory(3); // Unkown Error
             }
-            this.isUpdating = false
+            this.isUpdating = false;
 
             this.sendUserEvent({
               category: "Main Window Requests",
               action: "Updated Search Result [Fail]",
               label: "Type: " + this.errorType + " | URL: " + newRequest,
               value: Date.now() - requestUpdateHistoryStartTime,
-            })
+            });
           }
-        })
+        });
     },
     requestHistoryData() {
       if (this.localHistoryLoading) {
         // Before start, wait until old local search resolves
-        if (requestHistoryTimeout) clearTimeout(requestHistoryTimeout)
-        requestHistoryTimeout = setTimeout(this.requestHistoryData, requestHistoryWaitTime)
-        return
+        if (requestHistoryTimeout) clearTimeout(requestHistoryTimeout);
+        requestHistoryTimeout = setTimeout(
+          this.requestHistoryData,
+          requestHistoryWaitTime
+        );
+        return;
       }
 
-      var newRequest = `${this.API_WEB}/search/${REGION_NAMES[REGION_ID[this.selectedRegion]]}/${this.playerName}/${this.playerTag}`
+      var newRequest = `${this.API_WEB}/search/${
+        REGION_NAMES[REGION_ID[this.selectedRegion]]
+      }/${this.playerName}/${this.playerTag}`;
       if (prevHistoryRequest == newRequest && this.isLoading) {
         // Don't refresh if the request is the same and ongoing
-        return
+        return;
       }
 
       //Check if there are any previous pending requests
       if (typeof cancelToken != typeof undefined) {
-        cancelToken.cancel("Operation canceled due to new request.")
+        cancelToken.cancel("Operation canceled due to new request.");
       }
 
       //Save the cancel token for the current request
-      cancelToken = axios.CancelToken.source()
+      cancelToken = axios.CancelToken.source();
 
-      this.isLoading = true
-      this.isError = false
-      this.isUpdated = false
-      this.isUpdating = false
-      this.playerRegion = REGION_SHORTS[REGION_ID[this.selectedRegion]]
+      this.isLoading = true;
+      this.isError = false;
+      this.isUpdated = false;
+      this.isUpdating = false;
+      this.playerRegion = REGION_SHORTS[REGION_ID[this.selectedRegion]];
 
-      prevHistoryRequest = newRequest
+      prevHistoryRequest = newRequest;
 
       this.sendUserEvent({
         category: "Main Window Requests",
         action: "Request Search",
         label: "URL: " + newRequest,
         value: null,
-      })
+      });
 
-      const requestHistoryStartTime = Date.now()
+      const requestHistoryStartTime = Date.now();
 
       axios
         .get(newRequest, {
           cancelToken: cancelToken.token,
         }) // Pass the cancel token
         .then((response) => {
-          this.isLoading = false
+          this.isLoading = false;
 
           this.sendUserEvent({
             category: "Main Window Requests",
             action: "Got Search Result [Success]",
             label: "URL: " + newRequest,
             value: Date.now() - requestHistoryStartTime,
-          })
+          });
 
-          this.matches = processSearchRequestRawData(response.data, this.playerName)
+          this.matches = processSearchRequestRawData(
+            response.data,
+            this.playerName
+          );
 
-          this.requestHistoryUpdate()
+          this.requestHistoryUpdate();
         })
         .catch((e) => {
           if (axios.isCancel(e)) {
-            console.log("Request cancelled")
+            console.log("Request cancelled");
           } else {
-            console.log("error", e)
+            console.log("error", e);
 
             if (e.response) {
               if (e.response.status == 500) {
-                this.errorHistory(4) // Internal sercive error
+                this.errorHistory(4); // Internal sercive error
               } else {
-                var data = e.response.data
-                this.errorHistory((data.status && data.status.error) || 3) // give a 3 so that there is a fallback
+                var data = e.response.data;
+                this.errorHistory((data.status && data.status.error) || 3); // give a 3 so that there is a fallback
               }
             } else {
-              this.errorHistory(3) // Unkown Error
+              this.errorHistory(3); // Unkown Error
             }
-            this.isLoading = false
+            this.isLoading = false;
 
             this.sendUserEvent({
               category: "Main Window Requests",
               action: "Got Search Result [Fail]",
               label: "Type: " + this.errorType + " | URL: " + newRequest,
               value: Date.now() - requestHistoryStartTime,
-            })
+            });
           }
-        })
+        });
     },
     getDeckID: getDeckID,
   },
-}
+};
 
 // // Demo Data
 // {

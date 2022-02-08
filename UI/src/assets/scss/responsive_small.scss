@@ -7,7 +7,6 @@
 }
 
 @media only screen and (max-width: 595px) {
-
   .scrollDown .sticky-top {
     transform: translateY(-100%);
   }
@@ -42,7 +41,9 @@
 
   $content-margin-top: 50px;
 
-  html, body, #app {
+  html,
+  body,
+  #app {
     height: 100%;
   }
 
@@ -87,15 +88,15 @@
     }
   }
 
-  #btn-group-regions, .region-tabs {
+  #btn-group-regions,
+  .region-tabs {
     justify-content: center;
   }
 
   .settings-list-item {
-
     .locale-changer {
       display: block;
-      
+
       text-align: left;
 
       .locale-changer-title {
@@ -109,7 +110,6 @@
           width: 100%;
         }
       }
-      
     }
   }
 
@@ -129,7 +129,7 @@
       padding-top: 5px;
       padding-bottom: 0px;
 
-      .detail  {
+      .detail {
         display: inline;
         padding-right: 10px;
         padding-left: 10px;
@@ -159,9 +159,7 @@
         }
       }
     }
-    
   }
-
 }
 
 @media screen and (max-width: 420px) {
@@ -212,7 +210,6 @@
       //     display: inline;
       //   }
       // }
-
     }
   }
 }

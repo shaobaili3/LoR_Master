@@ -2,11 +2,11 @@
 // const API = 'http://runeterraccg.herokuapp.com/ccgmeta'
 // const API = 'https://lormaster.herokuapp.com/archetypes'
 
-const requestWaitTime = 1000 // ms
-import axios from "axios"
+const requestWaitTime = 1000; // ms
+import axios from "axios";
 
-import { defineStore } from "pinia"
-import { useBaseStore } from "./StoreBase"
+import { defineStore } from "pinia";
+import { useBaseStore } from "./StoreBase";
 
 export const useMetaStore = defineStore("meta", {
   state: () => {
@@ -15,57 +15,57 @@ export const useMetaStore = defineStore("meta", {
       metaGroups: [],
       lastRequestTime: null,
       isMetaLoading: true,
-    }
+    };
   },
   actions: {
     cancelRequest() {
-      if (this.request) this.request.cancel()
+      if (this.request) this.request.cancel();
     },
     fetchMetaGroups() {
-      this.lastRequestTime = Date.now()
-      this.isMetaLoading = true
+      this.lastRequestTime = Date.now();
+      this.isMetaLoading = true;
 
-      if (this.request) this.cancelRequest
-      const axiosSource = axios.CancelToken.source()
-      this.request = { cancel: axiosSource.cancel, msg: "Loading..." }
-      const baseStore = useBaseStore()
-      var api_link = `${baseStore.API_WEB}/archetypes`
+      if (this.request) this.cancelRequest;
+      const axiosSource = axios.CancelToken.source();
+      this.request = { cancel: axiosSource.cancel, msg: "Loading..." };
+      const baseStore = useBaseStore();
+      var api_link = `${baseStore.API_WEB}/archetypes`;
 
       // var promise = new Promise(resolve => setTimeout(resolve, 1000))
-      var promise = axios.get(api_link, { cancelToken: axiosSource.token })
+      var promise = axios.get(api_link, { cancelToken: axiosSource.token });
       promise
         .then((res) => {
-          this.isMetaLoading = false
+          this.isMetaLoading = false;
           if (res && res.data) {
             if (res.data.data) {
-              this.metaGroups = res.data.data // res.data
+              this.metaGroups = res.data.data; // res.data
             } else {
-              this.metaGroups = res.data
+              this.metaGroups = res.data;
             }
           } else {
-            throw Error("Meta api response invalid")
+            throw Error("Meta api response invalid");
           }
         })
         .catch((e) => {
           if (axios.isCancel(e)) {
-            console.log("Request cancelled")
+            console.log("Request cancelled");
           } else {
-            console.log("error", e)
-            var elapsedTime = Date.now() - this.lastRequestTime // ms
+            console.log("error", e);
+            var elapsedTime = Date.now() - this.lastRequestTime; // ms
             if (elapsedTime > requestWaitTime) {
               setTimeout(() => {
-                this.fetchMetaGroups()
-              }, 100)
+                this.fetchMetaGroups();
+              }, 100);
             } else {
               setTimeout(() => {
-                this.fetchMetaGroups()
-              }, requestWaitTime - elapsedTime)
+                this.fetchMetaGroups();
+              }, requestWaitTime - elapsedTime);
             }
           }
-        })
+        });
     },
   },
-})
+});
 
 const testData = [
   {
@@ -77,31 +77,36 @@ const testData = [
     decks: [
       {
         play_num: 301,
-        deck_code: "CQCACAYGCEBAEBQYDIBAKBQFBMDQKCQBAQNCQMNGAG6ACAQBAUFMMAIBAUDACAA",
+        deck_code:
+          "CQCACAYGCEBAEBQYDIBAKBQFBMDQKCQBAQNCQMNGAG6ACAQBAUFMMAIBAUDACAA",
         win_rate: 0.5548172757475083,
         play_rate: 0.34321550741163054,
       },
       {
         play_num: 77,
-        deck_code: "CQCACAYGCEBAEBQYDIBAKBQFBMDAKCQEDIUDDJQBXQAQCAQFBIA4MAIDAEBAMKQBAQDAUAIFBKTQC",
+        deck_code:
+          "CQCACAYGCEBAEBQYDIBAKBQFBMDAKCQEDIUDDJQBXQAQCAQFBIA4MAIDAEBAMKQBAQDAUAIFBKTQC",
         win_rate: 0.44155844155844154,
         play_rate: 0.08779931584948689,
       },
       {
         play_num: 69,
-        deck_code: "CQCACAYGCEBAEBQYDIBAKBQFBMDQKCQEDIUDDJQBXQA4MAIBAECQUAICAECAMCQBAUFKOAI",
+        deck_code:
+          "CQCACAYGCEBAEBQYDIBAKBQFBMDQKCQEDIUDDJQBXQA4MAIBAECQUAICAECAMCQBAUFKOAI",
         win_rate: 0.6666666666666666,
         play_rate: 0.07867730900798175,
       },
       {
         play_num: 56,
-        deck_code: "CQCACAYGCEBAEBQYDIBAKBQFBMDAKCQEDIUDDJQBXQAQGAIEAYFACBIKYYAQCBIGAEAQCAQGFI",
+        deck_code:
+          "CQCACAYGCEBAEBQYDIBAKBQFBMDAKCQEDIUDDJQBXQAQGAIEAYFACBIKYYAQCBIGAEAQCAQGFI",
         win_rate: 0.42857142857142855,
         play_rate: 0.06385404789053592,
       },
       {
         play_num: 38,
-        deck_code: "CQCACAYGCEBAEBQYDIBAKBQFBMDAKCQEDIUDDJQBXQAQEAIFAYAQEBIKAHDACAIBAQDAU",
+        deck_code:
+          "CQCACAYGCEBAEBQYDIBAKBQFBMDAKCQEDIUDDJQBXQAQEAIFAYAQEBIKAHDACAIBAQDAU",
         win_rate: 0.631578947368421,
         play_rate: 0.043329532497149374,
       },
@@ -184,13 +189,15 @@ const testData = [
     decks: [
       {
         play_num: 59,
-        deck_code: "CQBQCAIFFABAKBIIBEDAKCRRHFOV4YVGAEBAEAIFCMOQIBIKAENMMAORAEAQCAIFB4",
+        deck_code:
+          "CQBQCAIFFABAKBIIBEDAKCRRHFOV4YVGAEBAEAIFCMOQIBIKAENMMAORAEAQCAIFB4",
         win_rate: 0.6610169491525424,
         play_rate: 0.08663729809104258,
       },
       {
         play_num: 44,
-        deck_code: "CQCACAIFFAAQGBIQAMCQKCAJBYCAKCQ2HFOWEAQDAECQ6EY5AMCQUAK6UYAQCAIFAUFA",
+        deck_code:
+          "CQCACAIFFAAQGBIQAMCQKCAJBYCAKCQ2HFOWEAQDAECQ6EY5AMCQUAK6UYAQCAIFAUFA",
         win_rate: 0.5,
         play_rate: 0.06461086637298091,
       },
@@ -202,13 +209,15 @@ const testData = [
       },
       {
         play_num: 34,
-        deck_code: "CQBQCAIFFABAKBIIBEEAKCQ2GE4V2XTCUYA5CAIBAECQVGABAIBAKCQBYYAQGAIFCQOS4",
+        deck_code:
+          "CQBQCAIFFABAKBIIBEEAKCQ2GE4V2XTCUYA5CAIBAECQVGABAIBAKCQBYYAQGAIFCQOS4",
         win_rate: 0.47058823529411764,
         play_rate: 0.049926578560939794,
       },
       {
         play_num: 28,
-        deck_code: "CQBQCAIFFABAKBIIBEDQKCQBGE4V2XTCUYAQEAIBAUOQCBIKDIBQCBAFHABAKCTKZUAQGAIFCMKCE",
+        deck_code:
+          "CQBQCAIFFABAKBIIBEDQKCQBGE4V2XTCUYAQEAIBAUOQCBIKDIBQCBAFHABAKCTKZUAQGAIFCMKCE",
         win_rate: 0.5,
         play_rate: 0.041116005873715125,
       },
@@ -291,31 +300,36 @@ const testData = [
     decks: [
       {
         play_num: 258,
-        deck_code: "CICQCAYABYAQIAADAMAQACINDIBQKCIDAUDAIAYJDMRTGXABAEBAAAICAEBQSEYBAQAAE",
+        deck_code:
+          "CICQCAYABYAQIAADAMAQACINDIBQKCIDAUDAIAYJDMRTGXABAEBAAAICAEBQSEYBAQAAE",
         win_rate: 0.5348837209302325,
         play_rate: 0.42225859247135844,
       },
       {
         play_num: 50,
-        deck_code: "CICQCAYABYAQIAADAMAQACINDIBQKCIDAUDAIAYJDMRTGXACAEBAAAIBAQAAEAA",
+        deck_code:
+          "CICQCAYABYAQIAADAMAQACINDIBQKCIDAUDAIAYJDMRTGXACAEBAAAIBAQAAEAA",
         win_rate: 0.76,
         play_rate: 0.08183306055646482,
       },
       {
         play_num: 35,
-        deck_code: "CICQCAYABYAQIAADAMAQACINDIBQKCIDAUDAIAYJDMRTGXACAEBAAAIBAMEWAAA",
+        deck_code:
+          "CICQCAYABYAQIAADAMAQACINDIBQKCIDAUDAIAYJDMRTGXACAEBAAAIBAMEWAAA",
         win_rate: 0.6,
         play_rate: 0.057283142389525366,
       },
       {
         play_num: 27,
-        deck_code: "CICQCAYABYAQIAADAIAQADI2AMCQSAYFAYCAGCI3EMZVYAQBAEAASAQDBEJWEAIBAIAAC",
+        deck_code:
+          "CICQCAYABYAQIAADAIAQADI2AMCQSAYFAYCAGCI3EMZVYAQBAEAASAQDBEJWEAIBAIAAC",
         win_rate: 0.7407407407407407,
         play_rate: 0.044189852700491,
       },
       {
         play_num: 24,
-        deck_code: "CICQCAYABYAQIAADAMAQACINDIBQKCIDAUDAIAYJDMRTGXABAEBAAAICAEBQSEYBAUEQU",
+        deck_code:
+          "CICQCAYABYAQIAADAMAQACINDIBQKCIDAUDAIAYJDMRTGXABAEBAAAICAEBQSEYBAUEQU",
         win_rate: 0.5416666666666666,
         play_rate: 0.03927986906710311,
       },
@@ -398,31 +412,36 @@ const testData = [
     decks: [
       {
         play_num: 100,
-        deck_code: "CQCQCAYCAUAQIAQPAECQUOQCAUBAIGQGAEBAQCYMFQZDSAYBAMBBIAIEA6FACAIFAIKQCAIBAIYQ",
+        deck_code:
+          "CQCQCAYCAUAQIAQPAECQUOQCAUBAIGQGAEBAQCYMFQZDSAYBAMBBIAIEA6FACAIFAIKQCAIBAIYQ",
         win_rate: 0.71,
         play_rate: 0.17271157167530224,
       },
       {
         play_num: 64,
-        deck_code: "CQDACAQCBIAQIAQPAECQUOQBAUBAIAQDAICRIBABAIFQYLBSAMAQIB4KAEAQKAQ2AIAQEMJZAIAQCAQIAECAEBY",
+        deck_code:
+          "CQDACAQCBIAQIAQPAECQUOQBAUBAIAQDAICRIBABAIFQYLBSAMAQIB4KAEAQKAQ2AIAQEMJZAIAQCAQIAECAEBY",
         win_rate: 0.640625,
         play_rate: 0.11053540587219343,
       },
       {
         play_num: 59,
-        deck_code: "CQCQCAYCAUAQIAQPAECQUOQDAEBAWDBSAMCQEBAVDICACAQCAUAQGAQUAECAPCQBAMAQECBMGEAQCBICA4",
+        deck_code:
+          "CQCQCAYCAUAQIAQPAECQUOQDAEBAWDBSAMCQEBAVDICACAQCAUAQGAQUAECAPCQBAMAQECBMGEAQCBICA4",
         win_rate: 0.6440677966101694,
         play_rate: 0.10189982728842832,
       },
       {
         play_num: 31,
-        deck_code: "CQDACAQCBIAQGAQFAECAEDYBAUFDUAIFAICAIAICBMGCYMQEAEBQEFABAQDYUAIBAUBBUAQBAIEDSAQBAEBDCAQCAICQQ",
+        deck_code:
+          "CQDACAQCBIAQGAQFAECAEDYBAUFDUAIFAICAIAICBMGCYMQEAEBQEFABAQDYUAIBAUBBUAQBAIEDSAQBAEBDCAQCAICQQ",
         win_rate: 0.5806451612903226,
         play_rate: 0.0535405872193437,
       },
       {
         play_num: 28,
-        deck_code: "CQCQCAYCCQAQIAQPAECQUOQCAUBAIGQEAEBAQDBMGICACAQCAUAQGAQFAECAPCQBAMAQECZRHEAQCBACA4",
+        deck_code:
+          "CQCQCAYCCQAQIAQPAECQUOQCAUBAIGQEAEBAQDBMGICACAQCAUAQGAQFAECAPCQBAMAQECZRHEAQCBACA4",
         win_rate: 0.5,
         play_rate: 0.04835924006908463,
       },
@@ -505,7 +524,8 @@ const testData = [
     decks: [
       {
         play_num: 71,
-        deck_code: "CMBAIBAGAEBQKDYGAQDRGQKEIVFFAAQBAQDAOAQEA4ARMAQBAQDAMAYEA4GRANQ",
+        deck_code:
+          "CMBAIBAGAEBQKDYGAQDRGQKEIVFFAAQBAQDAOAQEA4ARMAQBAQDAMAYEA4GRANQ",
         win_rate: 0.5492957746478874,
         play_rate: 0.13653846153846153,
       },
@@ -603,4 +623,4 @@ const testData = [
       },
     ],
   },
-]
+];

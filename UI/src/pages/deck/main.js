@@ -1,7 +1,7 @@
-import App from './Deck.vue'
+import App from "./Deck.vue";
 
-import template from '../template'
+import template from "../template";
 
-const app = template(App)
+const app = template(App);
 
-app.mount('#app')
+app.mount("#app");

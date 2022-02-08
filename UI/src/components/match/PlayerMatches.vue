@@ -1,6 +1,10 @@
 <template>
-  <div class="flex flex-col h-full">
-    <div v-if="false" class="summary-item decks-summary" @wheel.prevent="horizontalScroll">
+  <div class="flex h-full flex-col">
+    <div
+      v-if="false"
+      class="summary-item decks-summary"
+      @wheel.prevent="horizontalScroll"
+    >
       <div
         class="champion-icons btn"
         v-for="obj in uniqueDeckCodes"
@@ -8,17 +12,21 @@
         :class="{ active: filterDeckCode == obj.deck }"
         @click="setFilterDeckCode(obj.deck)"
       >
-        <deck-champs :deck="obj.deck" :showRegion="true" :fixedWidth="false"></deck-champs>
+        <deck-champs
+          :deck="obj.deck"
+          :showRegion="true"
+          :fixedWidth="false"
+        ></deck-champs>
       </div>
     </div>
 
-    <div class="items-end block grid-cols-5 pb-4 sm:grid">
+    <div class="block grid-cols-5 items-end pb-4 sm:grid">
       <div class="col-span-4 px-2 sm:px-0">
         <div class="player-name">
           {{ playerName }}
           <i
             v-if="playerName && playerTag && playerRegion"
-            class="hidden pl-2 text-base cursor-pointer lg:inline fas fa-bookmark hover:text-white"
+            class="fas fa-bookmark hidden cursor-pointer pl-2 text-base hover:text-white lg:inline"
             :class="{
               'text-gray-200 ': bookmarkIndex == null || bookmarkIndex == -1,
               'text-gold-200': bookmarkIndex != null && bookmarkIndex != -1,
@@ -26,14 +34,21 @@
             @click="handleBookmarkClick"
           ></i>
         </div>
-        <div class="flex items-center justify-start gap-4 pt-2 text-left sm:gap-6">
+        <div
+          class="flex items-center justify-start gap-4 pt-2 text-left sm:gap-6"
+        >
           <div v-if="rank">
-            <div class="text-sm text-gray-300"><i class="fas fa-trophy"></i> {{ $t("leaderboard.rank") }}</div>
+            <div class="text-sm text-gray-300">
+              <i class="fas fa-trophy"></i> {{ $t("leaderboard.rank") }}
+            </div>
             <div class="text-lg">No. {{ rank }}</div>
           </div>
 
           <div v-if="lp">
-            <div class="text-sm text-gray-300"><i class="fas fa-map-marker-alt"></i> {{ $t("leaderboard.points") }}</div>
+            <div class="text-sm text-gray-300">
+              <i class="fas fa-map-marker-alt"></i>
+              {{ $t("leaderboard.points") }}
+            </div>
             <div class="text-lg">
               {{ lp }}
             </div>
@@ -77,13 +92,31 @@
       </div>
     </div>
 
-    <div class="no-content" v-if="totalMatches == 0">{{ $t("str.error.playerNoHistory") }}</div>
+    <div class="no-content" v-if="totalMatches == 0">
+      {{ $t("str.error.playerNoHistory") }}
+    </div>
 
-    <DynamicScroller :items="filteredMatches" :min-item-size="50" key-field="time" class="flex-1 overflow-y-auto">
+    <DynamicScroller
+      :items="filteredMatches"
+      :min-item-size="50"
+      key-field="time"
+      class="flex-1 overflow-y-auto"
+    >
       <template v-slot="{ item, index, active }">
-        <DynamicScrollerItem :item="item" :active="active" :size-dependencies="[item.winStreak, item.isDateBreak]" :data-index="index">
+        <DynamicScrollerItem
+          :item="item"
+          :active="active"
+          :size-dependencies="[item.winStreak, item.isDateBreak]"
+          :data-index="index"
+        >
           <match-history
-            @search="searchPlayer({ region: playerRegion, name: item.opponentName, tag: item.opponentTag })"
+            @search="
+              searchPlayer({
+                region: playerRegion,
+                name: item.opponentName,
+                tag: item.opponentTag,
+              })
+            "
             :opponentName="item.opponentName"
             :opponentRank="item.opponentRank"
             :opponentLp="item.opponentLp"
@@ -152,57 +185,61 @@
 </template>
 
 <script>
-import DeckChamps from "../deck/DeckChamps.vue"
-import MatchHistory from "../match/MatchHistory.vue"
+import DeckChamps from "../deck/DeckChamps.vue";
+import MatchHistory from "../match/MatchHistory.vue";
 
-import { REGION_ID, REGION_SHORTS, REGION_NAMES } from "../panels/PanelLeaderboard.vue"
+import {
+  REGION_ID,
+  REGION_SHORTS,
+  REGION_NAMES,
+} from "../panels/PanelLeaderboard.vue";
 
 // Some helper math functions
 function FLip(x) {
-  return 1 - x
+  return 1 - x;
 }
 function Square(x) {
-  return x * x
+  return x * x;
 }
 function EaseOut(x) {
-  return FLip(Square(FLip(x)))
+  return FLip(Square(FLip(x)));
 }
 function Clamp(x, min, max) {
-  return Math.min(Math.max(x, min), max)
+  return Math.min(Math.max(x, min), max);
 }
 
 function filterUnique(value, index, self) {
-  return self.indexOf(value) === index
+  return self.indexOf(value) === index;
 }
 
 const frequencies = (arr) =>
   arr.reduce((a, v) => {
-    a[v] = a[v] ? a[v] + 1 : 1
-    return a
-  }, {})
+    a[v] = a[v] ? a[v] + 1 : 1;
+    return a;
+  }, {});
 
 function firstCap(string) {
-  return string.charAt(0).toUpperCase() + string.slice(1)
+  return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-import { useLeaderboardStore } from "../../store/StoreLeaderboard"
-import { mapStores } from "pinia"
+import { useLeaderboardStore } from "../../store/StoreLeaderboard";
+import { mapStores } from "pinia";
 
-import { useBookmarkStore } from "../../store/StoreBookmark"
+import { useBookmarkStore } from "../../store/StoreBookmark";
 
 export const getLeaderboardFromPlayer = (regionShort, name, tag) => {
-  if (!(regionShort && name && tag)) return null
-  const leaderboardStore = useLeaderboardStore()
-  const lead = leaderboardStore.leaderboard
+  if (!(regionShort && name && tag)) return null;
+  const leaderboardStore = useLeaderboardStore();
+  const lead = leaderboardStore.leaderboard;
   if (lead && lead[REGION_ID[regionShort]]) {
     return lead[REGION_ID[regionShort]].find((val) => {
-      return val.name == name && val.tag == tag
-    })
+      return val.name == name && val.tag == tag;
+    });
   } else {
-    leaderboardStore.fetchLeaderboard(REGION_ID[regionShort])
+    leaderboardStore.fetchLeaderboard(REGION_ID[regionShort]);
   }
-  return null
-}
+  return null;
+};
 
 export default {
   components: {
@@ -210,7 +247,7 @@ export default {
     DeckChamps,
   },
   mounted() {
-    this.leaderboardStore.fetchLeaderboard(REGION_ID[this.playerRegion])
+    this.leaderboardStore.fetchLeaderboard(REGION_ID[this.playerRegion]);
   },
   props: {
     playerName: String,
@@ -222,15 +259,15 @@ export default {
   data() {
     return {
       filterDeckCode: null,
-    }
+    };
   },
   emits: {
     search: ({ region, name, tag }) => {
       if (region && name && tag) {
-        return true
+        return true;
       } else {
-        console.warn("Invalid submit event payload!")
-        return false
+        console.warn("Invalid submit event payload!");
+        return false;
       }
     },
   },
@@ -238,131 +275,158 @@ export default {
     ...mapStores(useLeaderboardStore, useBookmarkStore),
 
     bookmarkIndex() {
-      return this.bookmarkStore?.bookmarks?.findIndex((bookmark) => this.playerName == bookmark.name && this.playerTag == bookmark.tag)
+      return this.bookmarkStore?.bookmarks?.findIndex(
+        (bookmark) =>
+          this.playerName == bookmark.name && this.playerTag == bookmark.tag
+      );
     },
 
     leaderboard() {
-      return getLeaderboardFromPlayer(this.playerRegion, this.playerName, this.playerTag)
+      return getLeaderboardFromPlayer(
+        this.playerRegion,
+        this.playerName,
+        this.playerTag
+      );
     },
 
     lp() {
       if (this.playerLP) {
-        return this.playerLP
+        return this.playerLP;
       } else {
         if (this.leaderboard) {
-          return this.leaderboard.lp
+          return this.leaderboard.lp;
         }
       }
-      return null
+      return null;
     },
 
     rank() {
       if (this.playerRank) {
-        return this.playerRank
+        return this.playerRank;
       } else {
         if (this.leaderboard) {
-          return this.leaderboard.rank + 1 // Because raw rank data starts at 0
+          return this.leaderboard.rank + 1; // Because raw rank data starts at 0
         }
       }
-      return null
+      return null;
     },
 
     playerRegionFC() {
-      return this.$t("str.regions." + REGION_NAMES[REGION_ID[this.playerRegion]])
+      return this.$t(
+        "str.regions." + REGION_NAMES[REGION_ID[this.playerRegion]]
+      );
     },
 
     uniqueDeckCodes() {
-      if (!this.matches) return null
-      var decks = this.matches.map((x) => x.deck)
+      if (!this.matches) return null;
+      var decks = this.matches.map((x) => x.deck);
       var decks_freq = decks.reduce((a, v) => {
-        a[v] = a[v] ? a[v] + 1 : 1
-        return a
-      }, {})
-      var decks_freq_array = []
+        a[v] = a[v] ? a[v] + 1 : 1;
+        return a;
+      }, {});
+      var decks_freq_array = [];
       Object.keys(decks_freq).map(function (key, index) {
-        decks_freq_array[index] = { deck: key, num: decks_freq[key] }
-      })
+        decks_freq_array[index] = { deck: key, num: decks_freq[key] };
+      });
 
-      decks_freq_array.sort((a, b) => b.num - a.num)
+      decks_freq_array.sort((a, b) => b.num - a.num);
       // Large num in front
 
-      return decks_freq_array
+      return decks_freq_array;
     },
     filteredMatches() {
-      if (!this.matches) return null
+      if (!this.matches) return null;
       if (!this.filterDeckCode) {
-        var winStreak = 0
-        var days = 1
+        var winStreak = 0;
+        var days = 1;
         return this.matches
           .filter((n) => n)
           .map((val, index, array) => {
             // Loading in Rank from Leaderboard
-            if ((!val.opponentRank || val.opponentRank == "") && val.opponentName && val.opponentTag && val.region) {
-              const lead = this.leaderboardStore.leaderboard
+            if (
+              (!val.opponentRank || val.opponentRank == "") &&
+              val.opponentName &&
+              val.opponentTag &&
+              val.region
+            ) {
+              const lead = this.leaderboardStore.leaderboard;
               if (lead && lead[REGION_ID[val.region]]) {
                 let leadItem = lead[REGION_ID[val.region]].find((boardItem) => {
-                  return boardItem.name == val.opponentName && boardItem.tag == val.opponentTag
-                })
+                  return (
+                    boardItem.name == val.opponentName &&
+                    boardItem.tag == val.opponentTag
+                  );
+                });
                 if (leadItem) {
-                  val.opponentRank = (leadItem.rank + 1).toString()
+                  val.opponentRank = (leadItem.rank + 1).toString();
                 }
               }
             }
 
-            val.isDateBreak = false
-            val.winStreak = 0
+            val.isDateBreak = false;
+            val.winStreak = 0;
 
             if (val.win) {
-              winStreak += 1
+              winStreak += 1;
             } else {
-              if (winStreak >= 5) array[index - winStreak].winStreak = winStreak
-              winStreak = 0
+              if (winStreak >= 5)
+                array[index - winStreak].winStreak = winStreak;
+              winStreak = 0;
             }
 
-            var date = new Date(val.time)
-            var daysElapsed = (Date.now() - date) / 1000 / 60 / 60 / 24
+            var date = new Date(val.time);
+            var daysElapsed = (Date.now() - date) / 1000 / 60 / 60 / 24;
 
             if (daysElapsed >= days) {
-              val.isDateBreak = true
-              days = Math.ceil(daysElapsed)
+              val.isDateBreak = true;
+              days = Math.ceil(daysElapsed);
             }
 
-            return val
-          }) // filters out null decks
+            return val;
+          }); // filters out null decks
       }
-      return this.matches.filter((x) => x.deck == this.filterDeckCode && x.time) // filters according to deck code & check to make sure time is set
+      return this.matches.filter(
+        (x) => x.deck == this.filterDeckCode && x.time
+      ); // filters according to deck code & check to make sure time is set
     },
     totalWins() {
-      if (!this.filteredMatches) return null
-      return this.filteredMatches.reduce((total, match) => (match.win ? total + 1 : total), 0) // adds up all the wins
+      if (!this.filteredMatches) return null;
+      return this.filteredMatches.reduce(
+        (total, match) => (match.win ? total + 1 : total),
+        0
+      ); // adds up all the wins
     },
     games24hr() {
-      if (!this.matches) return 0
+      if (!this.matches) return 0;
       return this.matches.reduce((total, match) => {
-        var date = new Date(match.time)
-        var daysElapsed = (Date.now() - date) / 1000 / 60 / 60 / 24
-        return daysElapsed < 1 ? total + 1 : total
-      }, 0)
+        var date = new Date(match.time);
+        var daysElapsed = (Date.now() - date) / 1000 / 60 / 60 / 24;
+        return daysElapsed < 1 ? total + 1 : total;
+      }, 0);
     },
     totalMatches() {
-      return this.filteredMatches.length
+      return this.filteredMatches.length;
     },
     winloss() {
-      if (this.totalMatches == 0) return null
-      var loss = this.totalMatches - this.totalWins
-      return this.$t("dash.winloss", { win: this.totalWins, loss: loss })
+      if (this.totalMatches == 0) return null;
+      var loss = this.totalMatches - this.totalWins;
+      return this.$t("dash.winloss", { win: this.totalWins, loss: loss });
     },
     winrate() {
-      if (this.totalMatches == 0) return null
-      return Math.floor((this.totalWins / this.totalMatches) * 100) + "%"
+      if (this.totalMatches == 0) return null;
+      return Math.floor((this.totalWins / this.totalMatches) * 100) + "%";
     },
   },
   methods: {
     handleBookmarkClick() {
       if (this.bookmarkIndex != null && this.bookmarkIndex != -1) {
-        this.bookmarkStore.deleteBookmark(this.bookmarkIndex)
+        this.bookmarkStore.deleteBookmark(this.bookmarkIndex);
       } else {
-        this.bookmarkStore.addBookmark({ name: this.playerName, tag: this.playerTag, region: this.playerRegion })
+        this.bookmarkStore.addBookmark({
+          name: this.playerName,
+          tag: this.playerTag,
+          region: this.playerRegion,
+        });
       }
     },
     downloadStreakScreenshot(index) {
@@ -372,35 +436,35 @@ export default {
     },
     // Helpers
     animateScroll(el, distance, duration) {
-      var scrollAmount = 0
-      var start, prePos
+      var scrollAmount = 0;
+      var start, prePos;
 
       function step(timestamp) {
         if (start === undefined) {
-          start = timestamp
-          prePos = 0
+          start = timestamp;
+          prePos = 0;
         }
-        const elapsed = timestamp - start
-        var newPos = distance * EaseOut(Clamp(elapsed / duration, 0, 1))
+        const elapsed = timestamp - start;
+        var newPos = distance * EaseOut(Clamp(elapsed / duration, 0, 1));
 
-        el.scrollLeft += newPos - prePos
-        prePos = newPos
+        el.scrollLeft += newPos - prePos;
+        prePos = newPos;
 
         if (elapsed < duration) {
           // Stop the animation after 2 seconds
-          window.requestAnimationFrame(step)
+          window.requestAnimationFrame(step);
         }
       }
 
-      window.requestAnimationFrame(step)
+      window.requestAnimationFrame(step);
     },
     horizontalScroll(event) {
-      var el = event.currentTarget
+      var el = event.currentTarget;
 
       if (event.deltaY > 0) {
-        this.animateScroll(el, 100, 300)
+        this.animateScroll(el, 100, 300);
       } else {
-        this.animateScroll(el, -100, 300)
+        this.animateScroll(el, -100, 300);
       }
     },
 
@@ -408,17 +472,19 @@ export default {
     setFilterDeckCode(code) {
       if (this.filterDeckCode == code) {
         // If trying to set the same, clear the filter
-        this.filterDeckCode = null
+        this.filterDeckCode = null;
       } else {
-        this.filterDeckCode = code
+        this.filterDeckCode = code;
       }
 
       this.sendUserEvent({
         category: "Main Window Matches",
-        action: this.filterDeckCode ? "Set Filter Deck Code" : "Remove Filter Deck Code",
+        action: this.filterDeckCode
+          ? "Set Filter Deck Code"
+          : "Remove Filter Deck Code",
         label: code,
         value: null,
-      })
+      });
     },
 
     searchPlayer(data) {
@@ -427,11 +493,11 @@ export default {
         this.$router.push({
           name: "search",
           query: { name: data.name, tag: data.tag, region: data.region },
-        })
+        });
       }
     },
   },
-}
+};
 </script>
 
 <style lang="scss">

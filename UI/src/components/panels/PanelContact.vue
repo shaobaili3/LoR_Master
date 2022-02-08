@@ -5,27 +5,62 @@
         <p class="title">{{ $t("contact.contactUs") }}</p>
         <div class="contact-details-container">
           <p class="contact-detail">
-            <i class="fab fa-twitter"></i> <span class="text-link" @click="openURL('https://twitter.com/storm_lor')"> @Storm_lor</span>
+            <i class="fab fa-twitter"></i>
+            <span
+              class="text-link"
+              @click="openURL('https://twitter.com/storm_lor')"
+            >
+              @Storm_lor</span
+            >
           </p>
           <p class="contact-detail">
             <i class="fab fa-twitter"></i>
-            <span class="text-link" @click="openURL('https://twitter.com/FlyingFishLoR')"> @FlyingFishLoR</span>
+            <span
+              class="text-link"
+              @click="openURL('https://twitter.com/FlyingFishLoR')"
+            >
+              @FlyingFishLoR</span
+            >
           </p>
           <p class="contact-detail">
             <i class="fab fa-qq"></i>
-            <span class="text-link" @click="openURL('https://qm.qq.com/cgi-bin/qm/qr?k=nartXgATr58IXdisbHL4C4vaje8Stssz&jump_from=webapi')">
+            <span
+              class="text-link"
+              @click="
+                openURL(
+                  'https://qm.qq.com/cgi-bin/qm/qr?k=nartXgATr58IXdisbHL4C4vaje8Stssz&jump_from=webapi'
+                )
+              "
+            >
               939286502</span
             >
           </p>
           <p class="contact-detail">
             <i class="fab fa-discord"></i>
-            <span class="text-link" @click="openURL('https://discord.gg/aes45bMjAz')"> LoR Master Discord</span>
+            <span
+              class="text-link"
+              @click="openURL('https://discord.gg/aes45bMjAz')"
+            >
+              LoR Master Discord</span
+            >
           </p>
         </div>
         <div class="footer pb-4">
           <p>
-            {{ $t("contact.broughtWithLove") }} <span class="text-link" @click="openURL('https://twitter.com/storm_lor')"> Storm</span> &
-            <span class="text-link" @click="openURL('https://twitter.com/FlyingFishLoR')"> FlyingFish</span>
+            {{ $t("contact.broughtWithLove") }}
+            <span
+              class="text-link"
+              @click="openURL('https://twitter.com/storm_lor')"
+            >
+              Storm</span
+            >
+            &
+            <span
+              class="text-link"
+              @click="openURL('https://twitter.com/FlyingFishLoR')"
+            >
+              FlyingFish</span
+            >
           </p>
         </div>
         <contact-message-box></contact-message-box>
@@ -35,25 +70,25 @@
 </template>
 
 <script>
-import ContactMessageBox from "../base/ContactMessageBox.vue"
+import ContactMessageBox from "../base/ContactMessageBox.vue";
 export default {
   components: {
     ContactMessageBox,
   },
   data() {
-    return {}
+    return {};
   },
   mounted() {},
   methods: {
     openURL(url) {
       if (window.openExternal) {
-        window.openExternal(url)
+        window.openExternal(url);
       } else {
-        window.open(url, "_blank").focus()
+        window.open(url, "_blank").focus();
       }
     },
   },
-}
+};
 </script>
 
 <style scoped>

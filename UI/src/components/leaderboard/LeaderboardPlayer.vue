@@ -1,19 +1,6 @@
 <template>
   <div
-    class="
-      group
-      relative
-      grid
-      h-16
-      cursor-pointer
-      grid-cols-12
-      items-center
-      bg-gray-700
-      transition-colors
-      duration-150
-      hover:bg-gray-800
-      sm:mr-1
-    "
+    class="group relative grid h-16 cursor-pointer grid-cols-12 items-center bg-gray-700 transition-colors duration-150 hover:bg-gray-800 sm:mr-1"
     :class="{
       'rounded-t-md border-2 border-yellow-500': rank == '1',
       'border-2 border-t-0 border-zinc-200': rank == '2',
@@ -22,13 +9,19 @@
   >
     <div class="z-[1]">
       <div v-if="rank == '1'"><i class="fas fa-crown text-yellow-500"></i></div>
-      <div v-else-if="rank == '2'"><i class="fas fa-crown text-zinc-200"></i></div>
-      <div v-else-if="rank == '3'"><i class="fas fa-crown text-red-300"></i></div>
+      <div v-else-if="rank == '2'">
+        <i class="fas fa-crown text-zinc-200"></i>
+      </div>
+      <div v-else-if="rank == '3'">
+        <i class="fas fa-crown text-red-300"></i>
+      </div>
       <div v-else>
         {{ rank }}
       </div>
     </div>
-    <div class="z[1] col-span-5 overflow-hidden text-ellipsis whitespace-nowrap pl-2 sm:col-span-3">
+    <div
+      class="z[1] col-span-5 overflow-hidden text-ellipsis whitespace-nowrap pl-2 sm:col-span-3"
+    >
       {{ name }}
     </div>
     <div class="col-span-2 sm:col-span-1">{{ lp }}</div>
@@ -37,15 +30,22 @@
         v-if="lastRankTime"
         class="text-sm text-white"
         :class="{
-          'text-opacity-70': Date.now() - new Date(lastRankTime) > 1000 * 60 * 60 * 24,
-          'text-opacity-40': Date.now() - new Date(lastRankTime) > 1000 * 60 * 60 * 24 * 7,
+          'text-opacity-70':
+            Date.now() - new Date(lastRankTime) > 1000 * 60 * 60 * 24,
+          'text-opacity-40':
+            Date.now() - new Date(lastRankTime) > 1000 * 60 * 60 * 24 * 7,
         }"
       >
         {{ lastRank }}
       </div>
     </div>
     <div class="hidden sm:col-span-2 sm:block">
-      <div v-if="winRate != null" :style="{ color: winRateToSimpleColor(winRate) /*0.6 + 0.4 * winRate*/ }">
+      <div
+        v-if="winRate != null"
+        :style="{
+          color: winRateToSimpleColor(winRate) /*0.6 + 0.4 * winRate*/,
+        }"
+      >
         {{ $t("matches.winRate", { num: (winRate * 100).toFixed(0) }) }}
       </div>
     </div>
@@ -64,14 +64,14 @@
 </template>
 
 <script setup>
-import { winRateToSimpleColor } from "../../modules/utils/colorUtils"
+import { winRateToSimpleColor } from "../../modules/utils/colorUtils";
 </script>
 
 <script>
-import DeckPreview from "../deck/DeckPreview.vue"
-import { format, formatDistanceStrict } from "date-fns"
+import DeckPreview from "../deck/DeckPreview.vue";
+import { format, formatDistanceStrict } from "date-fns";
 
-import { dateFNSLocales } from "../../assets/data/messages"
+import { dateFNSLocales } from "../../assets/data/messages";
 
 export default {
   components: { DeckPreview },
@@ -89,13 +89,13 @@ export default {
       return formatDistanceStrict(new Date(this.lastRankTime), new Date(), {
         addSuffix: true,
         locale: dateFNSLocales[this.$i18n.locale],
-      })
+      });
     },
     isChampion() {
-      return this.rank == 1
+      return this.rank == 1;
     },
   },
-}
+};
 </script>
 
 <style>

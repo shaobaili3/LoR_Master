@@ -78,7 +78,7 @@ body {
   transition: height 0.2s ease;
 
   overflow: hidden;
-  
+
   // &:hover {
   //   height: max(50%, 200px);
   // }
@@ -184,10 +184,9 @@ body {
     height: calc(100% - 125px); // 35px and 50px + 40px
     margin-bottom: 40px;
 
-    @apply xxs:h-[calc(100%-129px)] xxs:mb-[44px]; // 35px and 50px + 48px
+    @apply xxs:mb-[44px] xxs:h-[calc(100%-129px)]; // 35px and 50px + 48px
   }
 }
-
 
 /* Styling Deck Content */
 

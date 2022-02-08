@@ -1,27 +1,27 @@
-import sets_en from '../../../../Resource/en_us.json'
+import sets_en from "../../../../Resource/en_us.json";
 
-var champs = []
-var champObj = {}
+var champs = [];
+var champObj = {};
 
-sets_en.forEach(set => {
-  set.forEach(card => {
+sets_en.forEach((set) => {
+  set.forEach((card) => {
     if (card.rarityRef == "Champion" && card.collectible) {
-      var code = card.cardCode
-      champs.push(code)
-      champObj[code] = code
+      var code = card.cardCode;
+      champs.push(code);
+      champObj[code] = code;
     }
-  })
+  });
 });
 
 export default {
   champions: champs,
-  champObj: champObj
-}
+  champObj: champObj,
+};
 
 export const championCards = {
   champions: champs,
-  champObj: champObj
-}
+  champObj: champObj,
+};
 
 // export default { champions: [
 //   "01DE012",
@@ -81,10 +81,10 @@ export const championCards = {
 //   "04SH047",
 //   "04SH067",
 //   "04SH073",
-//   "04SI005", 
+//   "04SI005",
 //   "04IO005", // Set 4 Second expansion
 //   "04MT008",
-//   "04SH039", 
+//   "04SH039",
 //   "04PZ001", // Set 4 Third expansion
 //   "04BW005",
 //   "04SH019",
@@ -100,6 +100,6 @@ export const championCards = {
 //   "05PZ006",
 //   "05SH014",
 //   "05SI009", // End of Set 5 First expansion
-  
+
 //   "05PZ022", // Jayce
 // ]}

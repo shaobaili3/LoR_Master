@@ -2,7 +2,7 @@
   <div
     class=""
     :class="{
-      'icon h-7 w-7 xxs:w-8 xxs:h-8 xs:w-9 xs:h-9 sm:h-10 sm:w-10': fixedSize,
+      'icon h-7 w-7 xxs:h-8 xxs:w-8 xs:h-9 xs:w-9 sm:h-10 sm:w-10': fixedSize,
       'block bg-cover': !fixedSize,
       faction: faction != -1,
       'no-color': !colored,
@@ -15,7 +15,7 @@
 export default {
   components: {},
   data() {
-    return {}
+    return {};
   },
   mounted() {},
   props: {
@@ -32,18 +32,22 @@ export default {
   computed: {
     getRegionImgUrl() {
       if (this.faction == -1) {
-        return "none"
+        return "none";
       }
       // Remote
       // const regionImageBaseUrl = 'https://painttist.github.io/lor-champ-icons/images/regions/';
       // return "url(" + regionImageBaseUrl + regionID + ".svg)";
 
       // Local
-      return "url(" + require("../../assets/images/regions/" + this.faction + ".svg") + ")"
+      return (
+        "url(" +
+        require("../../assets/images/regions/" + this.faction + ".svg") +
+        ")"
+      );
     },
   },
   methods: {},
-}
+};
 </script>
 
 <style lang="scss">

@@ -1,11 +1,15 @@
-import { defineStore } from "pinia"
+import { defineStore } from "pinia";
 
-import { REGION_ID, REGION_SHORTS, REGION_NAMES } from "../components/panels/PanelLeaderboard.vue"
+import {
+  REGION_ID,
+  REGION_SHORTS,
+  REGION_NAMES,
+} from "../components/panels/PanelLeaderboard.vue";
 
-const requestLeaderboardWaitTime = 1000 // ms
+const requestLeaderboardWaitTime = 1000; // ms
 
-import { useBaseStore } from "./StoreBase"
-import axios from "axios"
+import { useBaseStore } from "./StoreBase";
+import axios from "axios";
 
 export const useLeaderboardStore = defineStore("leaderboard", {
   state: () => {
@@ -14,55 +18,55 @@ export const useLeaderboardStore = defineStore("leaderboard", {
       leaderboard: [],
       lastLeaderboardRequestTime: null,
       isLeaderboardLoading: false,
-    }
+    };
   },
   actions: {
     cancelLeaderboard() {
-      if (this.request) this.request.cancel()
+      if (this.request) this.request.cancel();
     },
     fetchLeaderboard(regionID) {
-      if (this.isLeaderboardLoading) return
-      const baseStore = useBaseStore()
+      if (this.isLeaderboardLoading) return;
+      const baseStore = useBaseStore();
 
-      this.lastLeaderboardRequestTime = Date.now()
-      this.isLeaderboardLoading = true
+      this.lastLeaderboardRequestTime = Date.now();
+      this.isLeaderboardLoading = true;
 
-      var region = REGION_NAMES[regionID]
+      var region = REGION_NAMES[regionID];
 
-      if (!region) return // if region is undefined
+      if (!region) return; // if region is undefined
 
-      if (this.request) this.cancelLeaderboard()
-      const axiosSource = axios.CancelToken.source()
-      this.request = { cancel: axiosSource.cancel, msg: "Loading..." }
+      if (this.request) this.cancelLeaderboard();
+      const axiosSource = axios.CancelToken.source();
+      this.request = { cancel: axiosSource.cancel, msg: "Loading..." };
 
-      var api_link = `${baseStore.API_WEB}/leaderboard/${region}`
+      var api_link = `${baseStore.API_WEB}/leaderboard/${region}`;
 
       axios
         .get(api_link, { cancelToken: axiosSource.token })
         .then((res) => {
           // this.rawPlayers = res.data;
-          this.isLeaderboardLoading = false
-          this.leaderboard[regionID] = res.data
+          this.isLeaderboardLoading = false;
+          this.leaderboard[regionID] = res.data;
         })
         .catch((e) => {
-          this.isLeaderboardLoading = false
+          this.isLeaderboardLoading = false;
           if (axios.isCancel(e)) {
-            console.log("Request cancelled")
+            console.log("Request cancelled");
           } else {
-            console.log("error", e)
+            console.log("error", e);
 
-            var elapsedTime = Date.now() - this.lastLeaderboardRequestTime // ms
+            var elapsedTime = Date.now() - this.lastLeaderboardRequestTime; // ms
             if (elapsedTime > requestLeaderboardWaitTime) {
               setTimeout(() => {
-                this.fetchLeaderboard(regionID)
-              }, 100)
+                this.fetchLeaderboard(regionID);
+              }, 100);
             } else {
               setTimeout(() => {
-                this.fetchLeaderboard(regionID)
-              }, requestLeaderboardWaitTime - elapsedTime)
+                this.fetchLeaderboard(regionID);
+              }, requestLeaderboardWaitTime - elapsedTime);
             }
           }
-        })
+        });
     },
   },
-})
+});

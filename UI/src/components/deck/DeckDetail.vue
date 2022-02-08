@@ -5,7 +5,11 @@
       'h-full': fullHeight,
     }"
   >
-    <div class="deck-detail" :class="{ 'fixed-height': fixedHeight }" v-if="cards.length > 0">
+    <div
+      class="deck-detail"
+      :class="{ 'fixed-height': fixedHeight }"
+      v-if="cards.length > 0"
+    >
       <card-preview
         v-for="card in cards"
         :key="card.name + card.count"
@@ -20,16 +24,25 @@
         >{{ card.name }}</card-preview
       >
     </div>
-    <div class="actions" :class="{ 'fixed-height': fixedHeight }" v-if="showCopy && this.baseDeck && this.cards.length > 0">
+    <div
+      class="actions"
+      :class="{ 'fixed-height': fixedHeight }"
+      v-if="showCopy && this.baseDeck && this.cards.length > 0"
+    >
       <!-- <a class="actions-btn" :href="deckDetailLink" target="_blank"><span class="actions-icon fa fa-external-link-alt"></span>Detail</a> -->
       <div class="actions-btn" v-if="showAdd" @click="addToDeckLib">
-        <span class="actions-icon fa fa-star"></span>{{ this.saved ? this.$t("decklib.saved") : this.$t("decklib.save") }}
+        <span class="actions-icon fa fa-star"></span
+        >{{ this.saved ? this.$t("decklib.saved") : this.$t("decklib.save") }}
       </div>
       <div class="actions-btn" v-if="showURL" @click="openURL(deckDetailLink)">
-        <span class="actions-icon fa fa-external-link-alt"></span>{{ $t("str.detail") }}
+        <span class="actions-icon fa fa-external-link-alt"></span
+        >{{ $t("str.detail") }}
       </div>
       <div class="actions-btn tooltip" @click="copyDeckcode">
-        <span class="actions-icon far fa-copy" :class="{ 'fa-exclamation-triangle': !isFull }"></span
+        <span
+          class="actions-icon far fa-copy"
+          :class="{ 'fa-exclamation-triangle': !isFull }"
+        ></span
         >{{ this.copied ? this.$t("str.copied") : this.$t("str.copy") }}
         <div class="tooltiptext top-end" v-if="!isFull">
           {{ $t("tooltips.incompleteDeck") }}
@@ -40,15 +53,15 @@
 </template>
 
 <script>
-import DeckEncoder from "../../modules/runeterra/DeckEncoder"
-import CardPreview from "./CardPreview.vue"
+import DeckEncoder from "../../modules/runeterra/DeckEncoder";
+import CardPreview from "./CardPreview.vue";
 
-import { useDeckLibStore } from "../../store/StoreDeckLib"
-import { mapActions } from "pinia"
+import { useDeckLibStore } from "../../store/StoreDeckLib";
+import { mapActions } from "pinia";
 
-import { copyToClipboard } from "../../pages/home/Home.vue"
+import { copyToClipboard } from "../../pages/home/Home.vue";
 
-const fadeTimeout = 1250
+const fadeTimeout = 1250;
 
 export default {
   components: {
@@ -59,7 +72,7 @@ export default {
     return {
       copied: false,
       saved: false,
-    }
+    };
   },
   props: {
     deck: String,
@@ -100,35 +113,35 @@ export default {
   },
   computed: {
     deckDetailLink() {
-      return "/code?code=" + this.baseDeck
+      return "/code?code=" + this.baseDeck;
       // return "https://lor.mobalytics.gg/decks/code/" + this.baseDeck
     },
     cards() {
-      var cards = []
+      var cards = [];
 
-      if (this.sets == null) return cards
+      if (this.sets == null) return cards;
 
-      var deck = null
+      var deck = null;
       if (this.deck)
         try {
-          deck = DeckEncoder.decode(this.deck)
+          deck = DeckEncoder.decode(this.deck);
         } catch (err) {
-          console.log(err)
+          console.log(err);
           // return cards
         }
 
-      var baseDeck = null
+      var baseDeck = null;
       if (this.baseDeck)
         try {
-          baseDeck = DeckEncoder.decode(this.baseDeck)
+          baseDeck = DeckEncoder.decode(this.baseDeck);
         } catch (err) {
-          console.log(err)
+          console.log(err);
           // return cards
         }
 
       // Append extra played cards to baseDeck
       if (baseDeck && this.extra) {
-        baseDeck = baseDeck.concat(this.extra)
+        baseDeck = baseDeck.concat(this.extra);
       }
 
       if (baseDeck) {
@@ -137,11 +150,11 @@ export default {
         // console.log("extra", this.extra)
         for (var j in baseDeck) {
           // Loop through base deck
-          var cardCode = baseDeck[j].code
+          var cardCode = baseDeck[j].code;
           // Get full information from the sets collection
-          var card = this.sets.find((card) => card.cardCode == cardCode)
-          var cardCount = baseDeck[j].count
-          var baseCount = baseDeck[j].count
+          var card = this.sets.find((card) => card.cardCode == cardCode);
+          var cardCount = baseDeck[j].count;
+          var baseCount = baseDeck[j].count;
 
           // Append extra played cards to playedDeck as well?
           // deck = deck.concat(this.extra)
@@ -150,26 +163,29 @@ export default {
             // make sure currentDeck exist
 
             // Finding the same card in current deck
-            var currentCard = deck.find((card) => card.code == cardCode)
+            var currentCard = deck.find((card) => card.code == cardCode);
 
             // Get the current card copy count
             if (currentCard) {
-              cardCount = currentCard.count
+              cardCount = currentCard.count;
             } else {
-              cardCount = 0
+              cardCount = 0;
             }
           }
 
           if (card) {
-            var typeRef = ""
+            var typeRef = "";
             if (card.supertype != "" || card.rarityRef == "Champion") {
-              typeRef = "Champion"
+              typeRef = "Champion";
             } else if (card.spellSpeedRef != "") {
-              typeRef = "Spell"
-            } else if (card.keywordRefs && card.keywordRefs.includes("LandmarkVisualOnly")) {
-              typeRef = "Landmark"
+              typeRef = "Spell";
+            } else if (
+              card.keywordRefs &&
+              card.keywordRefs.includes("LandmarkVisualOnly")
+            ) {
+              typeRef = "Landmark";
             } else {
-              typeRef = "Unit"
+              typeRef = "Unit";
             }
 
             cards.push({
@@ -182,7 +198,7 @@ export default {
               typeRef: typeRef,
               supertype: card.supertype,
               set: card.set,
-            })
+            });
           } else if (cardCode && cardCount) {
             cards.push({
               code: cardCode,
@@ -195,33 +211,33 @@ export default {
               typeRef: "Unknown",
               supertype: null,
               set: "1",
-            })
+            });
           }
         }
       }
       // console.log(cards)
       return cards.sort(function (a, b) {
         if (a.type === "Unknown") {
-          return 1
+          return 1;
         }
         if (a.supertype == b.supertype) {
           if (a.type == b.type) {
             if (a.cost == b.cost) {
-              return a.code > b.code ? 1 : -1
+              return a.code > b.code ? 1 : -1;
             }
-            return a.cost > b.cost ? 1 : -1
+            return a.cost > b.cost ? 1 : -1;
           }
-          return a.type > b.type ? 1 : -1
+          return a.type > b.type ? 1 : -1;
         }
-        return a.supertype < b.supertype ? 1 : -1
-      })
+        return a.supertype < b.supertype ? 1 : -1;
+      });
     },
     isFull() {
       return (
         this.cards.reduce((prev, card) => {
-          return prev + card.baseCount
+          return prev + card.baseCount;
         }, 0) == 40
-      )
+      );
     },
   },
   emits: ["showDetail"],
@@ -229,25 +245,25 @@ export default {
     ...mapActions(useDeckLibStore, ["deckLibPaste"]),
     addToDeckLib() {
       if (this.deckLibPaste(this.baseDeck)) {
-        this.saved = true
+        this.saved = true;
         setTimeout(() => {
-          this.saved = false
-        }, fadeTimeout)
+          this.saved = false;
+        }, fadeTimeout);
       }
     },
     copyDeckcode() {
-      copyToClipboard(this.baseDeck)
-      this.copied = true
+      copyToClipboard(this.baseDeck);
+      this.copied = true;
       setTimeout(() => {
-        this.copied = false
-      }, fadeTimeout)
+        this.copied = false;
+      }, fadeTimeout);
     },
     openURL(url) {
-      this.$emitter.emit("showDeckDetail", this.baseDeck)
-      this.$router.push(url)
+      this.$emitter.emit("showDeckDetail", this.baseDeck);
+      this.$router.push(url);
     },
   },
-}
+};
 </script>
 
 <style>

@@ -1,7 +1,13 @@
 <template>
-  <div class="flex flex-col items-center justify-center mb-4 sm:mb-2 sm:flex-row">
-    <deck-preview class="max-w-[200px] md:mr-2" :fixedWidth="true" :deck="deckCode"></deck-preview>
-    <div class="flex-col gap-2 text-center sm:text-left sm:flex sm:gap-0">
+  <div
+    class="mb-4 flex flex-col items-center justify-center sm:mb-2 sm:flex-row"
+  >
+    <deck-preview
+      class="max-w-[200px] md:mr-2"
+      :fixedWidth="true"
+      :deck="deckCode"
+    ></deck-preview>
+    <div class="flex-col gap-2 text-center sm:flex sm:gap-0 sm:text-left">
       <!-- Summary -->
       <p class="text-sm text-gray-200">
         {{ $t("matches.games", { num: matchup.match_num }) }}
@@ -18,10 +24,10 @@
 </template>
 
 <script>
-import { useMetaStore } from "../../store/StoreMeta"
-import { mapState } from "pinia"
-import DeckPreview from "../deck/DeckPreview.vue"
-import { winRateToColor } from "../../modules/utils/colorUtils"
+import { useMetaStore } from "../../store/StoreMeta";
+import { mapState } from "pinia";
+import DeckPreview from "../deck/DeckPreview.vue";
+import { winRateToColor } from "../../modules/utils/colorUtils";
 
 export default {
   components: { DeckPreview },
@@ -29,23 +35,25 @@ export default {
   computed: {
     ...mapState(useMetaStore, ["metaGroups", "isLoading"]),
     deckCode() {
-      let decksInfo = this.metaGroups.find((group) => group._id == this.matchup._id)
+      let decksInfo = this.metaGroups.find(
+        (group) => group._id == this.matchup._id
+      );
       if (decksInfo && decksInfo.decks) {
         return decksInfo.decks.reduce(
           (highest, deck) => {
             if (deck.win_rate > highest.win_rate) {
-              return deck
+              return deck;
             }
-            return highest
+            return highest;
           },
           { deck_code: null, win_rate: 0 }
-        ).deck_code
+        ).deck_code;
       }
-      return null
+      return null;
     },
   },
   methods: {
     winRateToColor: winRateToColor,
   },
-}
+};
 </script>

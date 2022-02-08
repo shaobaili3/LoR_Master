@@ -57,7 +57,7 @@
   transition: visibility 0s linear 300ms, opacity 300ms;
 }
 
-.search-bar-input-container:focus-within+.search-bar-auto-complete {
+.search-bar-input-container:focus-within + .search-bar-auto-complete {
   opacity: 1;
   visibility: visible;
   transition: visibility 0s linear 0s, opacity 300ms;
@@ -144,7 +144,6 @@
   }
 }
 
-
 .deck-content-top-bar {
   height: 50px;
   display: flex;
@@ -217,11 +216,11 @@ $mid-radius: 10px;
   color: var(--col-gold);
 
   &.gray {
-    @apply text-gray-300
+    @apply text-gray-300;
   }
 
   &.light-gold {
-    @apply text-gold-200
+    @apply text-gold-200;
   }
 
   background: none;
@@ -245,7 +244,6 @@ $mid-radius: 10px;
   }
 
   &.menu {
-    
     position: relative;
     transition: background-color $trans, color $trans;
     &::before {
@@ -272,7 +270,6 @@ $mid-radius: 10px;
         transition: visibility 0s linear 0s, opacity $trans;
       }
     }
-    
   }
 }
 
@@ -293,7 +290,7 @@ $mid-radius: 10px;
     transition: visibility 0s $trans, opacity $trans;
   }
   transition: visibility 0s linear 0s, opacity $trans;
-  
+
   width: 200px;
   max-height: 400px;
   overflow: auto;
@@ -349,7 +346,7 @@ $mid-radius: 10px;
   margin-top: auto;
 }
 
-.left-nav-btn.nav-bottom~.left-nav-btn.nav-bottom {
+.left-nav-btn.nav-bottom ~ .left-nav-btn.nav-bottom {
   margin-top: 0px;
 }
 
@@ -422,9 +419,6 @@ $mid-radius: 10px;
 
   transition: transform 0.3s ease;
 }
-
-
-
 
 /* Settings Page */
 

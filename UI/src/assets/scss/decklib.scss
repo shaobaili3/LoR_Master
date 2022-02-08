@@ -1,5 +1,4 @@
 .decklib {
-
   width: 100%;
   position: relative;
 
@@ -14,7 +13,6 @@
     position: relative;
 
     .input-bar-container {
-
       position: relative;
       width: 100%;
       display: flex;
@@ -116,12 +114,9 @@
 }
 
 @media screen and (min-width: 250px) {
-
   .main-content-container {
     .decks-container {
       grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
     }
   }
-  
 }
-
