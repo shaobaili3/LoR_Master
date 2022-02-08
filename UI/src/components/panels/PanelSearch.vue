@@ -84,21 +84,7 @@
               <input
                 spellcheck="false"
                 autocomplete="off"
-                class="
-                  bg-gray-800
-                  search-bar
-                  rounded-[25px]
-                  focus:bg-gray-700
-                  transition-rounded
-                  w-full
-                  h-[50px]
-                  text-white
-                  border-none
-                  pr-5
-                  pl-12
-                  text-base
-                  outline-none
-                "
+                class="w-full h-12 pl-12 pr-5 text-base text-white bg-gray-800 border-none outline-none  rounded-3xl focus:bg-gray-700 transition-rounded"
                 :class="{
                   'rounded-tl-md': selectedRegion == 'NA',
                   'rounded-b-none rounded-t-[25px]': hasNameAutoComplete && isInputFocused,

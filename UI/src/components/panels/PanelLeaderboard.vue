@@ -39,12 +39,12 @@
 
         <!-- Search bar -->
         <div class="">
-          <div class="mt-2 relative h-[50px]">
+          <div class="relative h-12 mt-2">
             <div class="search-icon left" v-if="!isLoading"><i class="fa fa-search"></i></div>
             <div class="search-icon left loading" v-if="isLoading"><i class="fa fa-circle-notch fa-spin"></i></div>
             <input
               id="search-input"
-              class="rounded-[25px] focus:bg-gray-700 bg-gray-800 transition-rounded"
+              class="bg-gray-800 rounded-3xl focus:bg-gray-700 transition-rounded"
               :class="{ 'rounded-tl-md': activeRegionID == 0 }"
               spellcheck="false"
               autocomplete="off"

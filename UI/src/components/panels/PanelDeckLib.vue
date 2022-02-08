@@ -12,7 +12,7 @@
             <input
               spellcheck="false"
               autocomplete="off"
-              class="transition-colors bg-gray-800 search-bar focus:bg-gray-700"
+              class="w-full h-12 pl-12 pr-5 transition-colors bg-gray-800 outline-none focus:bg-gray-700 rounded-3xl"
               @paste="onPaste"
               v-model="codeText"
               :placeholder="$t('decklib.placeholder')"
