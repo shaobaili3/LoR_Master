@@ -8,18 +8,28 @@
     @click="routePlayerProfile(player)"
   >
     <div
-      class="pointer-events-none absolute right-0 top-2 z-10 ml-2 hidden w-fit min-w-[10rem] rounded-lg bg-gray-700 py-2 pl-2 pr-2 text-left group-hover:block"
+      class="
+        pointer-events-none
+        absolute
+        right-0
+        top-2
+        z-10
+        ml-2
+        hidden
+        w-fit
+        min-w-[10rem]
+        rounded-lg
+        bg-gray-700
+        py-2
+        pl-2
+        pr-2
+        text-left
+        group-hover:block
+      "
     >
       <p class="text-sm text-gray-200">
         <span class="pre-info">
-          <i
-            class="fas"
-            :class="
-              player.server === 'sea'
-                ? 'fa-globe-asia'
-                : 'fa-globe-' + player.server
-            "
-          ></i>
+          <i class="fas" :class="player.server === 'sea' ? 'fa-globe-asia' : 'fa-globe-' + player.server"></i>
         </span>
         {{ $t("str.regions." + player.server) }}
       </p>
@@ -43,14 +53,14 @@
 </template>
 
 <script setup>
-import { defineProps } from "vue";
-import { winRateToColor } from "../../modules/utils/colorUtils";
-import { regionNameToShorts } from "../panels/PanelLeaderboard.vue";
+import { defineProps } from "vue"
+import { winRateToColor } from "../../modules/utils/colorUtils"
+import { regionNameToShorts } from "../panels/PanelLeaderboard.vue"
 
-import { router } from "../../pages/home/main";
+import { router } from "../../pages/home/main"
 
 function routePlayerProfile(player) {
-  var splited = player.riot_id.split("#");
+  var splited = player.riot_id.split("#")
   router.push({
     path: "/search",
     query: {
@@ -58,10 +68,10 @@ function routePlayerProfile(player) {
       tag: splited[1],
       region: regionNameToShorts(player.server),
     },
-  });
+  })
 }
 
 defineProps({
   player: Object,
-});
+})
 </script>

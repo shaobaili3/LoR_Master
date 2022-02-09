@@ -101,14 +101,15 @@
   "search": {
     "leaderboard": {
       "base": "搜索",
-      "numPlayer": "搜索 {num} 名玩家"
+      "numPlayer": "搜索 {num} 名大师玩家"
     },
     "player": {
-      "placeholder": "例：Storm#5961"
+      "placeholder": "搜索全部玩家 例：Storm#5961"
     },
     "prompt": "⬆ 请输入名字与后缀",
     "bookmarks": "书签",
-    "noBookmarks": "点击玩家名字旁的 {0} 添加书签"
+    "noBookmarks": "点击玩家名字旁的 {0} 添加书签",
+    "noSuggestion": "没有数据，添加 #tag 部分精准搜索"
   },
   "tooltips": {
     "lorlogin": "LoR 未登录",

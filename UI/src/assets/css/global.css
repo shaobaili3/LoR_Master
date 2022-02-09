@@ -118,9 +118,9 @@ body {
   animation-play-state: paused;
 }
 
-input::placeholder {
+/* input::placeholder {
   @apply text-gray-300;
-}
+} */
 
 /* Chrome, Safari and Opera */
 .no-scrollbar::-webkit-scrollbar {
@@ -131,3 +131,15 @@ input::placeholder {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+
+
+/* Floating Vue Themes */
+/* Style */
+/* .v-popper--theme-card-tooltip .v-popper__inner {
+  padding: 0px;
+  background: rgba(0,0,0,0);
+}
+
+.v-popper--theme-card-tooltip .v-popper__arrow-outer {
+  border-color: rgba(0, 0, 0, 0);
+} */

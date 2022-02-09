@@ -2,14 +2,9 @@
   <div class="flex h-full justify-center px-2 sm:px-4">
     <div class="w-0 max-w-3xl flex-1">
       <div class="flex h-full flex-col px-2 sm:px-0">
-        <h1
-          class="title flex w-full items-end text-left sm:block sm:text-white"
-        >
+        <h1 class="title flex w-full items-end text-left sm:block sm:text-white">
           <!-- Title -->
-          <div
-            v-if="!IS_ELECTRON"
-            class="hidden text-ellipsis sm:block sm:w-auto sm:flex-initial sm:pb-4 sm:text-3xl"
-          >
+          <div v-if="!IS_ELECTRON" class="hidden text-ellipsis sm:block sm:w-auto sm:flex-initial sm:pb-4 sm:text-3xl">
             {{ $t("str.leaderboard") }}
             <h2 class="hidden text-base text-gray-300 sm:inline sm:pl-4">
               {{ $t("leaderboard.desc") }}
@@ -22,7 +17,7 @@
               class="w-[60px] border-b-2 text-base"
               :class="{
                 ' border-gold-400  text-white': activeRegionID == 0,
-                'border-transparent text-gold-400': activeRegionID != 0,
+                'text-gold-400 border-transparent': activeRegionID != 0,
               }"
               @click="switchRegion(regions.NA)"
             >
@@ -32,7 +27,7 @@
               class="w-[60px] border-b-2 text-base"
               :class="{
                 ' border-gold-400  text-white': activeRegionID == 1,
-                'border-transparent text-gold-400': activeRegionID != 1,
+                'text-gold-400 border-transparent': activeRegionID != 1,
               }"
               @click="switchRegion(regions.EU)"
             >
@@ -42,7 +37,7 @@
               class="w-[60px] border-b-2 text-base"
               :class="{
                 ' border-gold-400  text-white': activeRegionID == 2,
-                'border-transparent text-gold-400': activeRegionID != 2,
+                'text-gold-400 border-transparent': activeRegionID != 2,
               }"
               @click="switchRegion(regions.APAC)"
             >
@@ -64,7 +59,7 @@
             </div>
             <input
               id="search-input"
-              class="rounded-3xl bg-gray-800 transition-colors focus:bg-gray-700"
+              class="rounded-3xl bg-gray-800 placeholder-gray-300 transition-colors focus:bg-gray-700"
               spellcheck="false"
               autocomplete="off"
               v-model="searchText"
@@ -72,20 +67,14 @@
               :placeholder="isLoading ? $t('str.loading') : searchPlaceHolder"
               :disabled="isLoading"
             />
-            <div
-              class="search-icon right"
-              @click="clearSearch"
-              v-if="searchText != ''"
-            >
+            <div class="search-icon right" @click="clearSearch" v-if="searchText != ''">
               <span><i class="fas fa-times"></i></span>
             </div>
           </div>
         </div>
 
         <!-- Headers -->
-        <div
-          class="sticky top-0 z-[2] grid h-12 grid-cols-12 items-center whitespace-nowrap bg-gray-900 pt-1 text-sm"
-        >
+        <div class="sticky top-0 z-[2] grid h-12 grid-cols-12 items-center whitespace-nowrap bg-gray-900 pt-1 text-sm">
           <div class="bg-gray-900 sm:px-2">{{ $t("leaderboard.rank") }}</div>
           <div class="col-span-5 bg-gray-900 px-2 sm:col-span-3">
             {{ $t("leaderboard.name") }}
@@ -96,9 +85,12 @@
           <div class="hidden px-2 sm:col-span-2 sm:block">
             {{ $t("leaderboard.lastRank") }}
           </div>
+          <!-- "$t('leaderboard.lastRankTip')" -->
+
           <div class="hidden px-2 sm:col-span-2 sm:block">
             {{ $t("leaderboard.lastX", { num: 20 }) }}
           </div>
+
           <div class="col-span-4 px-2 sm:col-span-3">
             {{ $t("leaderboard.recent") }}
           </div>
@@ -132,45 +124,45 @@
 <script>
 // const axios = require('axios')
 // import axios from "axios"
-import LeaderboardPlayer from "../leaderboard/LeaderboardPlayer.vue";
+import LeaderboardPlayer from "../leaderboard/LeaderboardPlayer.vue"
 
 export const REGION_ID = {
   NA: 0,
   EU: 1,
   APAC: 2,
-};
-export const REGION_SHORTS = ["NA", "EU", "APAC"];
-export const REGION_NAMES = ["americas", "europe", "apac"];
+}
+export const REGION_SHORTS = ["NA", "EU", "APAC"]
+export const REGION_NAMES = ["americas", "europe", "apac"]
 
 export const regionNameToShorts = (name) => {
   if (name == "sea" || name == "asia") {
-    return "APAC";
+    return "APAC"
   } else {
-    let nameIndex = REGION_NAMES.indexOf(name);
-    if (nameIndex != -1) return REGION_SHORTS[nameIndex];
+    let nameIndex = REGION_NAMES.indexOf(name)
+    if (nameIndex != -1) return REGION_SHORTS[nameIndex]
   }
-  return null;
-};
+  return null
+}
 
-const requestLeaderboardWaitTime = 1000; //ms
-var lastLeaderboardRequestTime;
+const requestLeaderboardWaitTime = 1000 //ms
+var lastLeaderboardRequestTime
 
-const leaderboardStorageID = "lmt-settings-leaderboard-region";
+const leaderboardStorageID = "lmt-settings-leaderboard-region"
 
-import { useLeaderboardStore } from "../../store/StoreLeaderboard";
-import { mapState, mapActions } from "pinia";
+import { useLeaderboardStore } from "../../store/StoreLeaderboard"
+import { mapState, mapActions } from "pinia"
 
 export default {
   components: { LeaderboardPlayer },
   mounted() {
     // this.getLeaderboard(this.activeRegionID)
     // console.log("Mounted Leaderboard")
-    let oldRegion = window.localStorage.getItem(leaderboardStorageID);
+    let oldRegion = window.localStorage.getItem(leaderboardStorageID)
     if (oldRegion) {
-      this.activeRegionID = oldRegion;
+      this.activeRegionID = oldRegion
     }
 
-    this.fetchLeaderboard(this.activeRegionID);
+    this.fetchLeaderboard(this.activeRegionID)
   },
   data() {
     return {
@@ -181,15 +173,15 @@ export default {
       searchText: "",
       signedIn: false,
       dataStartTime: 0,
-    };
+    }
   },
   emits: {
     search: ({ region, name, tag }) => {
       if (region && name && tag) {
-        return true;
+        return true
       } else {
-        console.warn("Invalid submit event payload!");
-        return false;
+        console.warn("Invalid submit event payload!")
+        return false
       }
     },
   },
@@ -200,44 +192,40 @@ export default {
     }),
     filteredPlayers() {
       if (!this.leaderboard || !this.leaderboard[this.activeRegionID]) {
-        return null;
+        return null
       }
       if (this.searchText) {
-        var searchText = this.searchText;
-        var filteredPlayers = [];
-        var prefilteredPlayer = this.leaderboard[this.activeRegionID];
+        var searchText = this.searchText
+        var filteredPlayers = []
+        var prefilteredPlayer = this.leaderboard[this.activeRegionID]
         for (var i = 0; i < prefilteredPlayer.length; i++) {
-          if (
-            prefilteredPlayer[i].name
-              .toLowerCase()
-              .indexOf(searchText.toLowerCase()) !== -1
-          ) {
-            filteredPlayers.push(prefilteredPlayer[i]);
+          if (prefilteredPlayer[i].name.toLowerCase().indexOf(searchText.toLowerCase()) !== -1) {
+            filteredPlayers.push(prefilteredPlayer[i])
           }
         }
         // return this.players[this.activeRegionID].filter(function(player) {
         //     return player.name.toLowerCase().indexOf(searchText.toLowerCase()) !== -1
         // })
 
-        return filteredPlayers; // TODO implement better way to improve this performence
+        return filteredPlayers // TODO implement better way to improve this performence
       }
-      return this.leaderboard[this.activeRegionID];
+      return this.leaderboard[this.activeRegionID]
     },
     searchPlaceHolder() {
       if (this.leaderboard && this.leaderboard[this.activeRegionID]) {
         return this.$t("search.leaderboard.numPlayer", {
           num: this.leaderboard[this.activeRegionID].length,
-        });
+        })
       } else {
-        return this.$t("search.leaderboard.base");
+        return this.$t("search.leaderboard.base")
       }
     },
   },
   methods: {
     ...mapActions(useLeaderboardStore, ["fetchLeaderboard"]),
     clearSearch() {
-      this.searchText = "";
-      document.querySelector("#search-input").focus();
+      this.searchText = ""
+      document.querySelector("#search-input").focus()
     },
     switchRegion(regionID) {
       this.sendUserEvent({
@@ -245,12 +233,12 @@ export default {
         action: "Select Region",
         label: REGION_NAMES[regionID],
         value: null,
-      });
+      })
 
       if (this.activeRegionID != regionID) {
-        this.fetchLeaderboard(regionID);
-        this.activeRegionID = regionID;
-        window.localStorage.setItem(leaderboardStorageID, regionID);
+        this.fetchLeaderboard(regionID)
+        this.activeRegionID = regionID
+        window.localStorage.setItem(leaderboardStorageID, regionID)
       }
     },
 
@@ -264,11 +252,11 @@ export default {
             tag: player.tag,
             region: REGION_SHORTS[this.activeRegionID],
           },
-        });
+        })
       }
     },
   },
-};
+}
 </script>
 
 <style lang="scss">

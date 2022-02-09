@@ -70,7 +70,8 @@
     "lastRank": "Last Ranked",
     "recent": "Recent Decks",
     "lastX": "Last {num} Games",
-    "desc": "Best for discovering Top Players & understanding Master Meta!"
+    "desc": "Best for discovering Top Players & understanding Master Meta!",
+    "lastRankTip": "Ranked games only"
   },
   "matches": {
     "usage": "{num}% usage",
@@ -101,14 +102,15 @@
   "search": {
     "leaderboard": {
       "base": "Search",
-      "numPlayer": "Search {num} players"
+      "numPlayer": "Search {num} Master Players"
     },
     "player": {
-      "placeholder": "eg.Storm#5961"
+      "placeholder": "Search all players. eg.Storm#5961"
     },
     "prompt": "⬆ Enter name and tag to search",
     "bookmarks": "Bookmarks",
-    "noBookmarks": "Click {0} next to player names to add"
+    "noBookmarks": "Click {0} next to player names to add",
+    "noSuggestion": "No suggestions, try add #tag for preciese search"
   },
   "tooltips": {
     "lorlogin": "Please login LoR",

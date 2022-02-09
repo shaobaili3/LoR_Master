@@ -24,7 +24,7 @@
           @keyup="onKeyUp"
           @keydown="onKeyDown"
           ref="filterInput"
-          class="h-12 flex-1 bg-gray-800/0 outline-0"
+          class="h-12 flex-1 bg-gray-800/0 placeholder-gray-300 outline-0"
           type="text"
           @keyup.up="autoCompleteIndexMinus"
           @keyup.down="autoCompleteIndexPlus"

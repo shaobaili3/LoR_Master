@@ -20,6 +20,7 @@
     "build-pub": "electron-builder -p always",
     "dev": "electron app.js",
     "dev-file": "vue-cli-service build && electron app.js --file",
+    "dev-file-skip": "electron app.js --file",
     "dev-hidden": "vue-cli-service build && electron app.js --hidden",
     "get-icon": "node ./devtool/getNewChampIcon.js",
     "init": "chcp 65001",

@@ -14,7 +14,7 @@
             <input
               spellcheck="false"
               autocomplete="off"
-              class="h-12 w-full rounded-3xl bg-gray-800 pl-12 pr-5 outline-none transition-colors focus:bg-gray-700"
+              class="h-12 w-full rounded-3xl bg-gray-800 pl-12 pr-5 placeholder-gray-300 outline-none transition-colors focus:bg-gray-700"
               @paste="onPaste"
               v-model="codeText"
               :placeholder="$t('decklib.placeholder')"
@@ -35,28 +35,20 @@
               v-for="(deck, id) in decks"
               :key="id"
             >
-              <div
-                class="decklib-deck-title px-2 py-1 text-left"
-                :title="deck.title"
-              >
+              <div class="decklib-deck-title px-2 py-1 text-left" :title="deck.title">
                 {{ deck.title }}
-                <span
-                  v-if="deck.date"
-                  class="block text-xs font-light text-gray-200"
-                  >{{ format(new Date(deck.date), "HH:mm | yyyy-MM-dd") }}</span
-                >
+                <span v-if="deck.date" class="block text-xs font-light text-gray-200">{{
+                  format(new Date(deck.date), "HH:mm | yyyy-MM-dd")
+                }}</span>
               </div>
               <div @click.stop="onClickDelete(id)" class="btn-delete btn">
                 <span><i class="fas fa-trash"></i></span>
               </div>
               <div class="version tooltip">
-                <span
-                  class="tooltiptext top pointer-events-none max-w-full overflow-x-hidden overflow-ellipsis"
-                >
+                <span class="tooltiptext top pointer-events-none max-w-full overflow-x-hidden overflow-ellipsis">
                   {{ deck.code }}
                 </span>
-                <deck-preview :click-to-show="false" :deck="deck.code">
-                </deck-preview>
+                <deck-preview :click-to-show="false" :deck="deck.code"> </deck-preview>
               </div>
             </div>
           </div>
@@ -67,17 +59,17 @@
 </template>
 
 <script>
-const IS_ELECTRON = window.ipcRenderer !== undefined;
-import "../../assets/scss/decklib.scss";
-import DeckPreview from "../deck/DeckPreview.vue";
+const IS_ELECTRON = window.ipcRenderer !== undefined
+import "../../assets/scss/decklib.scss"
+import DeckPreview from "../deck/DeckPreview.vue"
 
-import { showDeckMixin } from "../mixins";
+import { showDeckMixin } from "../mixins"
 
-import ModalWarning from "../modals/ModalWarning.vue";
-import { format, subDays } from "date-fns";
-import { mapActions, mapState } from "pinia";
+import ModalWarning from "../modals/ModalWarning.vue"
+import { format, subDays } from "date-fns"
+import { mapActions, mapState } from "pinia"
 
-import { useDeckLibStore } from "../../store/StoreDeckLib";
+import { useDeckLibStore } from "../../store/StoreDeckLib"
 
 export default {
   components: { DeckPreview, ModalWarning },
@@ -85,53 +77,47 @@ export default {
   data() {
     return {
       codeText: "",
-    };
+    }
   },
   computed: {
     ...mapState(useDeckLibStore, ["decks", "loaded", "error", "pasteBuffer"]),
   },
   mounted() {
-    this.initStore();
+    this.initStore()
     if (this.pasteBuffer) {
-      this.processPaste(this.pasteBuffer);
-      this.pasteBuffer = null;
+      this.processPaste(this.pasteBuffer)
+      this.pasteBuffer = null
     }
   },
   methods: {
-    ...mapActions(useDeckLibStore, [
-      "initStore",
-      "processPaste",
-      "handleDelete",
-    ]),
+    ...mapActions(useDeckLibStore, ["initStore", "processPaste", "handleDelete"]),
     format: format,
     subDays: subDays,
     showDeck(event, deck) {
       if (!event.target.className.includes("btn-delete")) {
         // Not deleting the deck
-        this.$emitter.emit("showDeck", deck);
+        this.$emitter.emit("showDeck", deck)
       }
     },
     onPaste(event) {
-      event.preventDefault();
-      let pasteContent = (event.clipboardData || window.clipboardData).getData(
-        "text"
-      );
-      this.processPaste(pasteContent);
+      event.preventDefault()
+      let pasteContent = (event.clipboardData || window.clipboardData).getData("text")
+      this.processPaste(pasteContent)
     },
     onClickDelete(id) {
       this.$refs.warningModal.showPanel(
         [
           () => {
-            console.log("Confirm Delete");
-            this.handleDelete(id);
+            console.log("Confirm Delete")
+            this.handleDelete(id)
           },
           () => {
-            console.log("Nothing happens");
+            console.log("Nothing happens")
           },
         ],
         `${this.$t("str.delete")} ${this.decks[id].title}`
-      );
+      )
     },
   },
-};
+}
 </script>

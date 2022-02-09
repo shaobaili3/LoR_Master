@@ -1,17 +1,12 @@
 <template>
-  <div class="icon-container gap-0.5 p-0 sm:gap-1 sm:p-1">
-    <region-icon
-      class="region-icon"
-      v-for="(faction, index) in getFactions"
-      :key="index"
-      :faction="faction"
-    ></region-icon>
+  <div class="icon-container gap-0.5 p-0 sm:p-1">
+    <region-icon class="region-icon" v-for="(faction, index) in getFactions" :key="index" :faction="faction"></region-icon>
   </div>
 </template>
 
 <script>
-import RegionIcon from "../image/RegionIcon.vue";
-import DeckEncoder from "../../modules/runeterra/DeckEncoder";
+import RegionIcon from "../image/RegionIcon.vue"
+import DeckEncoder from "../../modules/runeterra/DeckEncoder"
 //https://painttist.github.io/lor-champ-icons/data/champion.js
 
 // import set1 from '../../../Resource/set1-en_us.json'
@@ -20,11 +15,9 @@ import DeckEncoder from "../../modules/runeterra/DeckEncoder";
 // import set4 from '../../../Resource/set4-en_us.json'
 // import set5 from '../../../Resource/set5-en_us.json'
 
-import en_us_array from "../../../../Resource/en_us.json";
+import en_us_array from "../../../../Resource/en_us.json"
 
-const en_us = []
-  .concat(...en_us_array)
-  .reduce((a, v) => ({ ...a, [v.cardCode]: v }), {});
+const en_us = [].concat(...en_us_array).reduce((a, v) => ({ ...a, [v.cardCode]: v }), {})
 
 // console.log("EN_US in Deck Regions:", en_us)
 
@@ -39,7 +32,7 @@ const regionRefID = {
   Shurima: 7,
   Targon: 9,
   BandleCity: 10,
-};
+}
 
 export default {
   components: {
@@ -49,7 +42,7 @@ export default {
     return {
       champs: [],
       factions: [],
-    };
+    }
   },
   mounted() {},
   props: {
@@ -68,29 +61,29 @@ export default {
   },
   computed: {
     getFactions() {
-      return this.getFactionsComplex.slice(0, this.maxFactions);
+      return this.getFactionsComplex.slice(0, this.maxFactions)
     },
     getFactionsComplex() {
-      var factionIDs = [];
+      var factionIDs = []
 
-      var cards = null;
-      if (!this.deck) return [];
+      var cards = null
+      if (!this.deck) return []
       try {
-        cards = DeckEncoder.decode(this.deck);
+        cards = DeckEncoder.decode(this.deck)
       } catch (err) {
-        return factionIDs;
+        return factionIDs
       }
 
       for (var j in cards) {
-        var cardCode = cards[j].code;
-        var card = en_us[cardCode];
+        var cardCode = cards[j].code
+        var card = en_us[cardCode]
         if (card) {
           if (card.regions && card.regions.length == 1) {
             // Only considers mono region cards
-            var regionID = regionRefID[card.regionRefs[0]];
+            var regionID = regionRefID[card.regionRefs[0]]
 
             if (factionIDs.indexOf(regionID) == -1) {
-              factionIDs.push(regionID);
+              factionIDs.push(regionID)
             }
           }
         }
@@ -98,29 +91,23 @@ export default {
 
       if (this.fixedWidth) {
         // Add filler champ icons
-        var fillerIcons = this.maxFactions - factionIDs.length;
+        var fillerIcons = this.maxFactions - factionIDs.length
         for (let i = 0; i < fillerIcons; i++) {
-          factionIDs.unshift(-1);
+          factionIDs.unshift(-1)
         }
       }
 
-      return factionIDs.sort((a, b) => a - b);
+      return factionIDs.sort((a, b) => a - b)
     },
   },
   methods: {},
-};
+}
 </script>
 
 <style scoped>
 .icon-container {
   display: flex;
-  /* padding: 4px; */
-
-  /* gap: 2px; */
-
   align-items: center;
   justify-content: center;
-
-  /* border-radius: 50px; */
 }
 </style>

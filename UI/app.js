@@ -77,6 +77,7 @@ app.on("ready", () => {
     globalShortcut.register("CommandOrControl+R", function () {
       console.log("Reload Window")
       mainWindow.reload()
+      deckWindow.reload()
     })
   }
 
@@ -594,11 +595,6 @@ function newDeckWindow() {
     windowHeight = bounds.height ?? defaultTrackerHeight
   }
 
-  // if (developmentMode) {
-  //   windowWidth = windowWidth + devConsoleWidth
-  //   windowMaxWidth = defaultTrackerMaxWidth + devConsoleWidth
-  // }
-
   deckWindow = new BrowserWindow({
     maxWidth: windowMaxWidth,
     minWidth: windowMinWidth,
@@ -644,7 +640,7 @@ function newDeckWindow() {
     store.set("ui-deck-bounds", {
       x: bounds.x,
       y: bounds.y,
-      width: developmentMode ? bounds.width - devConsoleWidth : bounds.width,
+      width: bounds.width,
       height: bounds.height,
     })
   }
