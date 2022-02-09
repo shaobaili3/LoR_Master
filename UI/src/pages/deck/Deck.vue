@@ -102,7 +102,7 @@ import DeckRegions from "../../components/deck/DeckRegions.vue"
 import DeckEncoder from "../../modules/runeterra/DeckEncoder"
 import Card from "../../modules/runeterra/Card"
 
-import { mapActions, mapState } from "pinia"
+import { useStore, mapActions, mapState } from "pinia"
 
 import "../../assets/scss/tooltips.scss"
 import "../../assets/scss/deck.scss"
@@ -192,10 +192,7 @@ export default {
     }
   },
   computed: {
-    ...mapState("leaderboardData", {
-      leaderboard: "leaderboard",
-      isLeaderboardLoading: "isLoading",
-    }),
+    ...mapState(useLeaderboardStore, ["leaderboard", "isLeaderboardLoading"]),
     isLoading() {
       if (this.currentDeckCode || this.startingDeckCode) return false
       if (this.matchInfos.length > 0) return false

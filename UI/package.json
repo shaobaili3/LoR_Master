@@ -31,6 +31,7 @@
   "main": "app.js",
   "dependencies": {
     "@electron/remote": "^2.0.1",
+    "@floating-ui/dom": "^0.2.0",
     "@sentry/electron": "^2.5.4",
     "auto-launch": "^5.0.5",
     "axios": "^0.25.0",

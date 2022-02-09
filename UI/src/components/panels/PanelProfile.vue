@@ -27,7 +27,10 @@
                 tag: localInfo.tag,
               },
             }"
-            ><div class="rounded-md bg-gray-600 p-2 px-6 text-center transition-colors hover:bg-gray-500">
+          >
+            <div
+              class="rounded-md border-2 border-gold-400 bg-gray-800 p-2 px-6 text-center text-gold-400 transition-colors hover:bg-gray-900"
+            >
               {{ $t("search.leaderboard.base") }}
             </div></router-link
           >

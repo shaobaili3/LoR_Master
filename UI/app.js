@@ -422,7 +422,7 @@ function startLMTService(port) {
     if (developmentMode) console.log("data: ", data.toString("utf8"))
   })
   proc.stderr.on("data", (data) => {
-    // console.log(`stderr: ${data}`) // when error
+    console.log(`stderr: ${data}`) // when error
   })
 
   proc.on("close", (code) => {

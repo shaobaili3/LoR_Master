@@ -1,6 +1,6 @@
 <template>
   <div
-    class="cardContainer group mt-1"
+    class="cardContainer group relative mt-1"
     :class="{
       empty: card.count == 0,
       spell: card.typeRef == 'Spell',
@@ -11,6 +11,9 @@
       'mt-0 mb-1 overflow-hidden rounded': noPreview,
     }"
     :style="{ background: getCardPreviewBackgroundStyle() }"
+    ref="container"
+    @mouseenter="onMouseEnter"
+    @mouseleave="onMouseLeave"
   >
     <div v-if="!noCost" class="cardContent cardCost max-w-[30px]">
       {{ card.cost }}
@@ -19,11 +22,33 @@
     <div v-if="card.count && card.count >= 0" class="cardContent cardCount">x{{ card.count }}</div>
     <div
       v-if="type === 'Unknown'"
-      class="lab-secret pointer-events-none absolute top-0 left-1/2 z-10 flex h-full w-full -translate-x-1/2 transform items-center justify-center whitespace-nowrap bg-black px-4 opacity-0 transition-opacity group-hover:opacity-100"
+      class="
+        lab-secret
+        pointer-events-none
+        absolute
+        top-0
+        left-1/2
+        z-10
+        flex
+        h-full
+        w-full
+        -translate-x-1/2
+        transform
+        items-center
+        justify-center
+        whitespace-nowrap
+        bg-black
+        px-4
+        opacity-0
+        transition-opacity
+        group-hover:opacity-100
+      "
     >
       {{ $t("str.labSecrets") }}
     </div>
-    <card-image v-if="!noPreview" class="cardDisplay" :code="code" :set="set"></card-image>
+    <div ref="image" class="pointer-events-none absolute z-50 aspect-[0.6640625] w-full opacity-0 transition-opacity">
+      <card-image :code="code" :set="set"></card-image>
+    </div>
   </div>
 </template>
 
@@ -33,6 +58,8 @@
 
 import axios from "axios"
 import CardImage from "../image/CardImage.vue"
+
+import { computePosition, flip } from "@floating-ui/dom"
 
 const requestStatusWaitTime = 1000 //ms
 var lastStatusRequestTime
@@ -112,6 +139,20 @@ export default {
   },
   computed: {},
   methods: {
+    onMouseEnter() {
+      if (!this.$refs.container || !this.$refs.image) return
+      computePosition(this.$refs.container, this.$refs.image, {
+        placement: "bottom",
+        middleware: [flip()],
+      }).then(({ x, y, strategy }) => {
+        this.$refs.image.style.left = `${x}px`
+        this.$refs.image.style.top = `${y}px`
+        this.$refs.image.style.opacity = "1"
+      })
+    },
+    onMouseLeave() {
+      this.$refs.image.style.opacity = "0"
+    },
     getCardPreviewBackgroundStyle() {
       // const champImageBaseUrl = 'https://raw.githubusercontent.com/painttist/lor-champ-icons/master/images/cards/cropped/';
       // const unkown = 'https://cdn-lor.mobalytics.gg/production/images/subscribe-banner.jpg'

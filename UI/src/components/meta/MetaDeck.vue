@@ -171,12 +171,12 @@ export default {
       this.$emitter.emit("showDeck", this.code)
     },
     openURL(url) {
-      if (this.IS_ELECTRON) {
-        this.$emitter.emit("showDeckDetail", this.code)
-      } else {
-        // window.open(url, "_blank")
-        this.$router.push(url)
-      }
+      // if (this.IS_ELECTRON) {
+      //   this.$emitter.emit("showDeckDetail", this.code)
+      // } else {
+      // window.open(url, "_blank")
+      this.$router.push(url)
+      // }
     },
     closestColor: winRateToColor,
   },
