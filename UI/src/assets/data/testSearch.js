@@ -1,4 +1,4 @@
-[
+;[
   // /search/americas/Minasia/OwO For testing icons with +
   {
     info: {
@@ -8,24 +8,20 @@
       game_version: "live_2_19_53",
       players: [
         {
-          deck_code:
-            "CECACAIEGQAQCBJIAICQIFIYAICQKCYPAQAQCBA3AEBAICACAECSCNICAUCBMGYFAEAQIGQBAQCR2AIFAQNACBIFAMDACBIPDEOTCMRY",
+          deck_code: "CECACAIEGQAQCBJIAICQIFIYAICQKCYPAQAQCBA3AEBAICACAECSCNICAUCBMGYFAEAQIGQBAQCR2AIFAQNACBIFAMDACBIPDEOTCMRY",
           deck_id: "06284389-a231-40f2-8293-f9dad4f979fb",
           factions: ["faction_Piltover_Name", "faction_ShadowIsles_Name"],
           game_outcome: "loss",
           order_of_play: 0,
-          puuid:
-            "qp-ebM8SyCfL2yrVpS3YBwummta-Rj9tisW7Uh7zRh7APIZjE90chOUipbEm9tmgcFL5Y4wKNzrViA",
+          puuid: "qp-ebM8SyCfL2yrVpS3YBwummta-Rj9tisW7Uh7zRh7APIZjE90chOUipbEm9tmgcFL5Y4wKNzrViA",
         },
         {
-          deck_code:
-            "CECQCAQCAUAQIAIOAIAQCAZSAIAQEIJRAMBQCBQKCYCQCAIBBQAQCAQCAEBACAQBAQAQUAIEAIKACAYBAEAQWJY",
+          deck_code: "CECQCAQCAUAQIAIOAIAQCAZSAIAQEIJRAMBQCBQKCYCQCAIBBQAQCAQCAEBACAQBAQAQUAIEAIKACAYBAEAQWJY",
           deck_id: "be6b285d-d931-4349-b2ae-2989f01357cb",
           factions: ["faction_Freljord_Name", "faction_Ionia_Name"],
           game_outcome: "win",
           order_of_play: 1,
-          puuid:
-            "_zFMDV2MQiZHgGiw84KT_hFfqmNObsmG1C4Fw32tNeAggcf-MpF5dVjHXOq9wgzaW_3v82xXlysBGQ",
+          puuid: "_zFMDV2MQiZHgGiw84KT_hFfqmNObsmG1C4Fw32tNeAggcf-MpF5dVjHXOq9wgzaW_3v82xXlysBGQ",
         },
       ],
       total_turn_count: 24,
@@ -64,24 +60,20 @@
       game_version: "live_2_19_53",
       players: [
         {
-          deck_code:
-            "CECQCAIEFYBACAIOGABAGAICCIBAGBADBUBAIBAHBQBQCAIEDIAQIAIKAMAQCAZTHEBQCAIBD4AQEBACAECACEQ",
+          deck_code: "CECQCAIEFYBACAIOGABAGAICCIBAGBADBUBAIBAHBQBQCAIEDIAQIAIKAMAQCAZTHEBQCAIBD4AQEBACAECACEQ",
           deck_id: "edc10791-766f-4456-bd02-0368d4d09367",
           factions: ["faction_Freljord_Name", "faction_Piltover_Name"],
           game_outcome: "loss",
           order_of_play: 1,
-          puuid:
-            "ldPvxWDGMbN9vg2Gk0Pais5O3XJiYAOgT35scsu5LNRPn_tstBQ8OQYxgsvrhwBlWxi4jvEEdXKNaQ",
+          puuid: "ldPvxWDGMbN9vg2Gk0Pais5O3XJiYAOgT35scsu5LNRPn_tstBQ8OQYxgsvrhwBlWxi4jvEEdXKNaQ",
         },
         {
-          deck_code:
-            "CECQCAQCAUAQIAIOAIAQCAZSAIAQEIJRAMBQCBQKCYCQCAIBBQAQCAQCAEBACAQBAQAQUAIEAIKACAYBAEAQWJY",
+          deck_code: "CECQCAQCAUAQIAIOAIAQCAZSAIAQEIJRAMBQCBQKCYCQCAIBBQAQCAQCAEBACAQBAQAQUAIEAIKACAYBAEAQWJY",
           deck_id: "be6b285d-d931-4349-b2ae-2989f01357cb",
           factions: ["faction_Freljord_Name", "faction_Ionia_Name"],
           game_outcome: "win",
           order_of_play: 0,
-          puuid:
-            "_zFMDV2MQiZHgGiw84KT_hFfqmNObsmG1C4Fw32tNeAggcf-MpF5dVjHXOq9wgzaW_3v82xXlysBGQ",
+          puuid: "_zFMDV2MQiZHgGiw84KT_hFfqmNObsmG1C4Fw32tNeAggcf-MpF5dVjHXOq9wgzaW_3v82xXlysBGQ",
         },
       ],
       total_turn_count: 25,
@@ -120,24 +112,20 @@
       game_version: "live_2_19_53",
       players: [
         {
-          deck_code:
-            "CQDACAYABYAQGAQKAECAAAQBAUFCSAQBAAER2BABAIDASDBZAQAQCAAVAEAQEEIBAIAAOAIDAIKAEAIBAADACAICCY",
+          deck_code: "CQDACAYABYAQGAQKAECAAAQBAUFCSAQBAAER2BABAIDASDBZAQAQCAAVAEAQEEIBAIAAOAIDAIKAEAIBAADACAICCY",
           deck_id: "02efdb14-41ed-4e9f-9046-c29d6edc63b0_live_cte_deck_2",
           factions: ["faction_Demacia_Name", "faction_Ionia_Name"],
           game_outcome: "win",
           order_of_play: 0,
-          puuid:
-            "_zFMDV2MQiZHgGiw84KT_hFfqmNObsmG1C4Fw32tNeAggcf-MpF5dVjHXOq9wgzaW_3v82xXlysBGQ",
+          puuid: "_zFMDV2MQiZHgGiw84KT_hFfqmNObsmG1C4Fw32tNeAggcf-MpF5dVjHXOq9wgzaW_3v82xXlysBGQ",
         },
         {
-          deck_code:
-            "CQCACAIDFYAQCBAIAQBAGAIHBAEQMBIKGFCV5JABUYA26AIBAEBQGDICAEAQGMYBAUFBU",
+          deck_code: "CQCACAIDFYAQCBAIAQBAGAIHBAEQMBIKGFCV5JABUYA26AIBAEBQGDICAEAQGMYBAUFBU",
           deck_id: "02efdb14-41ed-4e9f-9046-c29d6edc63b0_live_cte_deck_0",
           factions: ["faction_BandleCity_Name", "faction_Noxus_Name"],
           game_outcome: "loss",
           order_of_play: 1,
-          puuid:
-            "afUTyT3BTfICt0X-EOKewLMGy_8CEafLPHfESgXcY3KKWur6LnaLw4IHpQHJ04LPLGgEBuaN72yu4Q",
+          puuid: "afUTyT3BTfICt0X-EOKewLMGy_8CEafLPHfESgXcY3KKWur6LnaLw4IHpQHJ04LPLGgEBuaN72yu4Q",
         },
       ],
       total_turn_count: 19,
@@ -176,24 +164,20 @@
       game_version: "live_2_19_53",
       players: [
         {
-          deck_code:
-            "CQCACAIDFYAQCBAIAQBAGAIHBAEQMBIKGFCV5JABUYA26AIBAEBQGDICAEAQGMYBAUFBU",
+          deck_code: "CQCACAIDFYAQCBAIAQBAGAIHBAEQMBIKGFCV5JABUYA26AIBAEBQGDICAEAQGMYBAUFBU",
           deck_id: "02efdb14-41ed-4e9f-9046-c29d6edc63b0_live_cte_deck_0",
           factions: ["faction_BandleCity_Name", "faction_Noxus_Name"],
           game_outcome: "loss",
           order_of_play: 0,
-          puuid:
-            "afUTyT3BTfICt0X-EOKewLMGy_8CEafLPHfESgXcY3KKWur6LnaLw4IHpQHJ04LPLGgEBuaN72yu4Q",
+          puuid: "afUTyT3BTfICt0X-EOKewLMGy_8CEafLPHfESgXcY3KKWur6LnaLw4IHpQHJ04LPLGgEBuaN72yu4Q",
         },
         {
-          deck_code:
-            "CMBQGAICAYGCUBAEA4BRUMZWAUCAEBAFBAEQWAADAECAEAIBAQDV2AQDAICRI",
+          deck_code: "CMBQGAICAYGCUBAEA4BRUMZWAUCAEBAFBAEQWAADAECAEAIBAQDV2AQDAICRI",
           deck_id: "02efdb14-41ed-4e9f-9046-c29d6edc63b0_live_cte_deck_0",
           factions: ["faction_Ionia_Name", "faction_Shurima_Name"],
           game_outcome: "win",
           order_of_play: 1,
-          puuid:
-            "_zFMDV2MQiZHgGiw84KT_hFfqmNObsmG1C4Fw32tNeAggcf-MpF5dVjHXOq9wgzaW_3v82xXlysBGQ",
+          puuid: "_zFMDV2MQiZHgGiw84KT_hFfqmNObsmG1C4Fw32tNeAggcf-MpF5dVjHXOq9wgzaW_3v82xXlysBGQ",
         },
       ],
       total_turn_count: 21,
@@ -232,24 +216,20 @@
       game_version: "live_2_19_53",
       players: [
         {
-          deck_code:
-            "CECACAYCBEBACAQMEQBACBJIGQBQIBJVGY3QKAIBAUYQCAQCAUAQGAQFAECAEBYDAEBCKMJZAIAQCBIZAEBQEFA",
+          deck_code: "CECACAYCBEBACAQMEQBACBJIGQBQIBJVGY3QKAIBAUYQCAQCAUAQGAQFAECAEBYDAEBCKMJZAIAQCBIZAEBQEFA",
           deck_id: "02efdb14-41ed-4e9f-9046-c29d6edc63b0_live_cte_deck_1",
           factions: ["faction_Ionia_Name", "faction_ShadowIsles_Name"],
           game_outcome: "win",
           order_of_play: 1,
-          puuid:
-            "_zFMDV2MQiZHgGiw84KT_hFfqmNObsmG1C4Fw32tNeAggcf-MpF5dVjHXOq9wgzaW_3v82xXlysBGQ",
+          puuid: "_zFMDV2MQiZHgGiw84KT_hFfqmNObsmG1C4Fw32tNeAggcf-MpF5dVjHXOq9wgzaW_3v82xXlysBGQ",
         },
         {
-          deck_code:
-            "CIDACAQGCQAQGBQRAECAIBYBAUDAKAYBAQIBUNAFAUCASCQNB4LAEAIBAQJQCBIGBMAA",
+          deck_code: "CIDACAQGCQAQGBQRAECAIBYBAUDAKAYBAQIBUNAFAUCASCQNB4LAEAIBAQJQCBIGBMAA",
           deck_id: "02efdb14-41ed-4e9f-9046-c29d6edc63b0_live_cte_deck_2",
           factions: ["faction_Bilgewater_Name", "faction_Piltover_Name"],
           game_outcome: "loss",
           order_of_play: 0,
-          puuid:
-            "OxSeom15_6HjLiXUGZUze69JGhr41-8IDAI9z__mji38jZrFS80zKLU4wJPDbYHBuRSTISYQVDOwPQ",
+          puuid: "OxSeom15_6HjLiXUGZUze69JGhr41-8IDAI9z__mji38jZrFS80zKLU4wJPDbYHBuRSTISYQVDOwPQ",
         },
       ],
       total_turn_count: 4,
@@ -288,24 +268,20 @@
       game_version: "live_2_19_53",
       players: [
         {
-          deck_code:
-            "CIDACAQGCQAQGBQRAECAIBYBAUDAKAYBAQIBUNAFAUCASCQNB4LAEAIBAQJQCBIGBMAA",
+          deck_code: "CIDACAQGCQAQGBQRAECAIBYBAUDAKAYBAQIBUNAFAUCASCQNB4LAEAIBAQJQCBIGBMAA",
           deck_id: "02efdb14-41ed-4e9f-9046-c29d6edc63b0_live_cte_deck_2",
           factions: ["faction_Bilgewater_Name", "faction_Piltover_Name"],
           game_outcome: "loss",
           order_of_play: 1,
-          puuid:
-            "OxSeom15_6HjLiXUGZUze69JGhr41-8IDAI9z__mji38jZrFS80zKLU4wJPDbYHBuRSTISYQVDOwPQ",
+          puuid: "OxSeom15_6HjLiXUGZUze69JGhr41-8IDAI9z__mji38jZrFS80zKLU4wJPDbYHBuRSTISYQVDOwPQ",
         },
         {
-          deck_code:
-            "CMBQGAICAYGCUBAEA4BRUMZWAUCAEBAFBAEQWAADAECAEAIBAQDV2AQDAICRI",
+          deck_code: "CMBQGAICAYGCUBAEA4BRUMZWAUCAEBAFBAEQWAADAECAEAIBAQDV2AQDAICRI",
           deck_id: "02efdb14-41ed-4e9f-9046-c29d6edc63b0_live_cte_deck_0",
           factions: ["faction_Ionia_Name", "faction_Shurima_Name"],
           game_outcome: "win",
           order_of_play: 0,
-          puuid:
-            "_zFMDV2MQiZHgGiw84KT_hFfqmNObsmG1C4Fw32tNeAggcf-MpF5dVjHXOq9wgzaW_3v82xXlysBGQ",
+          puuid: "_zFMDV2MQiZHgGiw84KT_hFfqmNObsmG1C4Fw32tNeAggcf-MpF5dVjHXOq9wgzaW_3v82xXlysBGQ",
         },
       ],
       total_turn_count: 20,
@@ -344,14 +320,12 @@
       game_version: "live_2_20_9",
       players: [
         {
-          deck_code:
-            "CEBQCBABBYBQCBIDDUUAIAIBAMMB2MQCAIAQCAIUAMAQKDYUGECACAYFCIAQIBJYAECQKAYDAECQCEZN",
+          deck_code: "CEBQCBABBYBQCBIDDUUAIAIBAMMB2MQCAIAQCAIUAMAQKDYUGECACAYFCIAQIBJYAECQKAYDAECQCEZN",
           deck_id: "0ec2acd7-38a0-4d80-b3cb-4b23681c89e9_live_index_0",
           factions: ["faction_Freljord_Name", "faction_ShadowIsles_Name"],
           game_outcome: "loss",
           order_of_play: 1,
-          puuid:
-            "vjOuSPoNceokwh0zvRK1WBNCIVWEBYmiX60jWvXUYt0iEwSAPHpu9Hjo6dzjiPMhCH41CIeidpobcA",
+          puuid: "vjOuSPoNceokwh0zvRK1WBNCIVWEBYmiX60jWvXUYt0iEwSAPHpu9Hjo6dzjiPMhCH41CIeidpobcA",
         },
         {
           deck_code: "CMBQEAIBCQZAIBABAECQUDQEAQDR6LCCJEBAEBABBEFQGBAHBURHQAA",
@@ -359,8 +333,7 @@
           factions: ["faction_Freljord_Name", "faction_Shurima_Name"],
           game_outcome: "win",
           order_of_play: 0,
-          puuid:
-            "-x6-qtgQ0w087nJZK40cm_wd9UrJOrTYMP36whijwVVJm_oUwNLdftrH4IhJbSulAgjRTR3o79rgYQ",
+          puuid: "-x6-qtgQ0w087nJZK40cm_wd9UrJOrTYMP36whijwVVJm_oUwNLdftrH4IhJbSulAgjRTR3o79rgYQ",
         },
       ],
       total_turn_count: 21,
@@ -404,18 +377,15 @@
           factions: ["faction_Freljord_Name", "faction_Shurima_Name"],
           game_outcome: "loss",
           order_of_play: 0,
-          puuid:
-            "-x6-qtgQ0w087nJZK40cm_wd9UrJOrTYMP36whijwVVJm_oUwNLdftrH4IhJbSulAgjRTR3o79rgYQ",
+          puuid: "-x6-qtgQ0w087nJZK40cm_wd9UrJOrTYMP36whijwVVJm_oUwNLdftrH4IhJbSulAgjRTR3o79rgYQ",
         },
         {
-          deck_code:
-            "CIBQCBAFBMBQGCJDHBEQIAYFAIBQKBQCAECASDYEAMEVQWK4LYCQCAIFF4AQGBIEAECASDIBAUCQ4AQDBEG5YAI",
+          deck_code: "CIBQCBAFBMBQGCJDHBEQIAYFAIBQKBQCAECASDYEAMEVQWK4LYCQCAIFF4AQGBIEAECASDIBAUCQ4AQDBEG5YAI",
           deck_id: "0ec2acd7-38a0-4d80-b3cb-4b23681c89e9_live_index_2",
           factions: ["faction_MtTargon_Name", "faction_ShadowIsles_Name"],
           game_outcome: "win",
           order_of_play: 1,
-          puuid:
-            "vjOuSPoNceokwh0zvRK1WBNCIVWEBYmiX60jWvXUYt0iEwSAPHpu9Hjo6dzjiPMhCH41CIeidpobcA",
+          puuid: "vjOuSPoNceokwh0zvRK1WBNCIVWEBYmiX60jWvXUYt0iEwSAPHpu9Hjo6dzjiPMhCH41CIeidpobcA",
         },
       ],
       total_turn_count: 18,
@@ -454,24 +424,20 @@
       game_version: "live_2_20_9",
       players: [
         {
-          deck_code:
-            "CIBQCBAFBMBQGCJDHBEQIAYFAIBQKBQCAECASDYEAMEVQWK4LYCQCAIFF4AQGBIEAECASDIBAUCQ4AQDBEG5YAI",
+          deck_code: "CIBQCBAFBMBQGCJDHBEQIAYFAIBQKBQCAECASDYEAMEVQWK4LYCQCAIFF4AQGBIEAECASDIBAUCQ4AQDBEG5YAI",
           deck_id: "0ec2acd7-38a0-4d80-b3cb-4b23681c89e9_live_index_2",
           factions: ["faction_MtTargon_Name", "faction_ShadowIsles_Name"],
           game_outcome: "loss",
           order_of_play: 0,
-          puuid:
-            "vjOuSPoNceokwh0zvRK1WBNCIVWEBYmiX60jWvXUYt0iEwSAPHpu9Hjo6dzjiPMhCH41CIeidpobcA",
+          puuid: "vjOuSPoNceokwh0zvRK1WBNCIVWEBYmiX60jWvXUYt0iEwSAPHpu9Hjo6dzjiPMhCH41CIeidpobcA",
         },
         {
-          deck_code:
-            "CIBQCAICBQCQEAQDAUDAQCIFAMEQSGZDGPLQCAQBAEBDCAIDBFQAGAIBAIBACAYCCQAQGCKV",
+          deck_code: "CIBQCAICBQCQEAQDAUDAQCIFAMEQSGZDGPLQCAQBAEBDCAIDBFQAGAIBAIBACAYCCQAQGCKV",
           deck_id: "0ec2acd7-38a0-4d80-b3cb-4b23681c89e9_live_index_2",
           factions: ["faction_Ionia_Name", "faction_MtTargon_Name"],
           game_outcome: "win",
           order_of_play: 1,
-          puuid:
-            "-x6-qtgQ0w087nJZK40cm_wd9UrJOrTYMP36whijwVVJm_oUwNLdftrH4IhJbSulAgjRTR3o79rgYQ",
+          puuid: "-x6-qtgQ0w087nJZK40cm_wd9UrJOrTYMP36whijwVVJm_oUwNLdftrH4IhJbSulAgjRTR3o79rgYQ",
         },
       ],
       total_turn_count: 32,
@@ -510,14 +476,12 @@
       game_version: "live_2_20_9",
       players: [
         {
-          deck_code:
-            "CIBQEAICBQYQIAQCAMCQMCAFAMEQSIZTMDLQCAQBAIBASAIDBENQGAIBAIBACAYJKUAQIAQU",
+          deck_code: "CIBQEAICBQYQIAQCAMCQMCAFAMEQSIZTMDLQCAQBAIBASAIDBENQGAIBAIBACAYJKUAQIAQU",
           deck_id: "0ec2acd7-38a0-4d80-b3cb-4b23681c89e9_live_index_2",
           factions: ["faction_Ionia_Name", "faction_MtTargon_Name"],
           game_outcome: "win",
           order_of_play: 1,
-          puuid:
-            "STOHqeWYVixDxzoekNVcO_siO2hufY8YXFoojoNsQgOOxZxcaHtEPtvlfuDNUSOG8KIpi_uFoZ-Yew",
+          puuid: "STOHqeWYVixDxzoekNVcO_siO2hufY8YXFoojoNsQgOOxZxcaHtEPtvlfuDNUSOG8KIpi_uFoZ-Yew",
         },
         {
           deck_code: "CMBQEAIBCQZAIBABAECQUDQEAQDR6LCCJEBAEBABBEFQGBAHBURHQAA",
@@ -525,8 +489,7 @@
           factions: ["faction_Freljord_Name", "faction_Shurima_Name"],
           game_outcome: "loss",
           order_of_play: 0,
-          puuid:
-            "_zFMDV2MQiZHgGiw84KT_hFfqmNObsmG1C4Fw32tNeAggcf-MpF5dVjHXOq9wgzaW_3v82xXlysBGQ",
+          puuid: "_zFMDV2MQiZHgGiw84KT_hFfqmNObsmG1C4Fw32tNeAggcf-MpF5dVjHXOq9wgzaW_3v82xXlysBGQ",
         },
       ],
       total_turn_count: 45,
@@ -570,18 +533,15 @@
           factions: ["faction_Bilgewater_Name", "faction_Shurima_Name"],
           game_outcome: "win",
           order_of_play: 1,
-          puuid:
-            "STOHqeWYVixDxzoekNVcO_siO2hufY8YXFoojoNsQgOOxZxcaHtEPtvlfuDNUSOG8KIpi_uFoZ-Yew",
+          puuid: "STOHqeWYVixDxzoekNVcO_siO2hufY8YXFoojoNsQgOOxZxcaHtEPtvlfuDNUSOG8KIpi_uFoZ-Yew",
         },
         {
-          deck_code:
-            "CECACAYCBEBACAQMEQBACBJIGQBQIBJVGY3QKAIBAUYQCAQCAUAQGAQFAECAEBYDAEBCKMJZAIAQCBIZAEBQEFA",
+          deck_code: "CECACAYCBEBACAQMEQBACBJIGQBQIBJVGY3QKAIBAUYQCAQCAUAQGAQFAECAEBYDAEBCKMJZAIAQCBIZAEBQEFA",
           deck_id: "0ec2acd7-38a0-4d80-b3cb-4b23681c89e9_live_index_0",
           factions: ["faction_Ionia_Name", "faction_ShadowIsles_Name"],
           game_outcome: "loss",
           order_of_play: 0,
-          puuid:
-            "_zFMDV2MQiZHgGiw84KT_hFfqmNObsmG1C4Fw32tNeAggcf-MpF5dVjHXOq9wgzaW_3v82xXlysBGQ",
+          puuid: "_zFMDV2MQiZHgGiw84KT_hFfqmNObsmG1C4Fw32tNeAggcf-MpF5dVjHXOq9wgzaW_3v82xXlysBGQ",
         },
       ],
       total_turn_count: 14,
@@ -620,24 +580,20 @@
       game_version: "live_2_19_53",
       players: [
         {
-          deck_code:
-            "CMBQEAICAYVAIBACAQEASCYEAQDQGGRTLUCACAICBQAQGAQFAECAEBIBAQDTMAQBAEBASAIEA54Q",
+          deck_code: "CMBQEAICAYVAIBACAQEASCYEAQDQGGRTLUCACAICBQAQGAQFAECAEBIBAQDTMAQBAEBASAIEA54Q",
           deck_id: "66d3201f-43ad-4fed-bdca-92c7242ead23",
           factions: ["faction_Ionia_Name", "faction_Shurima_Name"],
           game_outcome: "loss",
           order_of_play: 0,
-          puuid:
-            "fdjGtR_zdDP_PcKD0u53NQEBTVmL3f4G6djKC8LNAtDGUZf4cRC2Y-yU5nW3pk5JmoTqdMLlPOsUJQ",
+          puuid: "fdjGtR_zdDP_PcKD0u53NQEBTVmL3f4G6djKC8LNAtDGUZf4cRC2Y-yU5nW3pk5JmoTqdMLlPOsUJQ",
         },
         {
-          deck_code:
-            "CQDACAYABYAQGAQKAECAAAQBAUFCSAQBAAER2BIBAIDASDARHEBACAIACUAQEAAHAIAQCAQWAIAQACZF",
+          deck_code: "CQDACAYABYAQGAQKAECAAAQBAUFCSAQBAAER2BIBAIDASDARHEBACAIACUAQEAAHAIAQCAQWAIAQACZF",
           deck_id: "d2bae323-a4fe-4b42-8670-16793a4f9b58",
           factions: ["faction_Demacia_Name", "faction_Ionia_Name"],
           game_outcome: "win",
           order_of_play: 1,
-          puuid:
-            "-x6-qtgQ0w087nJZK40cm_wd9UrJOrTYMP36whijwVVJm_oUwNLdftrH4IhJbSulAgjRTR3o79rgYQ",
+          puuid: "-x6-qtgQ0w087nJZK40cm_wd9UrJOrTYMP36whijwVVJm_oUwNLdftrH4IhJbSulAgjRTR3o79rgYQ",
         },
       ],
       total_turn_count: 5,
@@ -681,18 +637,15 @@
           factions: ["faction_Bilgewater_Name", "faction_Shurima_Name"],
           game_outcome: "loss",
           order_of_play: 1,
-          puuid:
-            "nAWTw5bhcN0mPcfrCthSvGoRqHiKNK8IrnF599-q7YOJNB9FnaYj8D7ZOQDE6DHsKnZYCX5wZqcB-Q",
+          puuid: "nAWTw5bhcN0mPcfrCthSvGoRqHiKNK8IrnF599-q7YOJNB9FnaYj8D7ZOQDE6DHsKnZYCX5wZqcB-Q",
         },
         {
-          deck_code:
-            "CECACAYCBEBACAQMEQBACBJIGQBQIBJVGY3QIAIBAUYQCAQCAUAQIAQHAMAQEJJRHEBQCAICAIAQCBIZAIBQEBIU",
+          deck_code: "CECACAYCBEBACAQMEQBACBJIGQBQIBJVGY3QIAIBAUYQCAQCAUAQIAQHAMAQEJJRHEBQCAICAIAQCBIZAIBQEBIU",
           deck_id: "0ec2acd7-38a0-4d80-b3cb-4b23681c89e9_live_index_0",
           factions: ["faction_Ionia_Name", "faction_ShadowIsles_Name"],
           game_outcome: "win",
           order_of_play: 0,
-          puuid:
-            "FD2LVB58kZqWfs0IG7xNLHBUo2ASL8VDz6hSyISdcjmpI0D0kr5sHkLM5ty9sNQC9pWkYybW7qtGaw",
+          puuid: "FD2LVB58kZqWfs0IG7xNLHBUo2ASL8VDz6hSyISdcjmpI0D0kr5sHkLM5ty9sNQC9pWkYybW7qtGaw",
         },
       ],
       total_turn_count: 33,
@@ -730,24 +683,20 @@
       game_version: "live_2_19_53",
       players: [
         {
-          deck_code:
-            "CQDACAYABYAQGAQKAECAAAQBAUFCSAQBAAER2BIBAIDASDARHEBACAIACUAQEAAHAIAQCAQWAIAQACZF",
+          deck_code: "CQDACAYABYAQGAQKAECAAAQBAUFCSAQBAAER2BIBAIDASDARHEBACAIACUAQEAAHAIAQCAQWAIAQACZF",
           deck_id: "d2bae323-a4fe-4b42-8670-16793a4f9b58",
           factions: ["faction_Demacia_Name", "faction_Ionia_Name"],
           game_outcome: "win",
           order_of_play: 0,
-          puuid:
-            "-x6-qtgQ0w087nJZK40cm_wd9UrJOrTYMP36whijwVVJm_oUwNLdftrH4IhJbSulAgjRTR3o79rgYQ",
+          puuid: "-x6-qtgQ0w087nJZK40cm_wd9UrJOrTYMP36whijwVVJm_oUwNLdftrH4IhJbSulAgjRTR3o79rgYQ",
         },
         {
-          deck_code:
-            "CMBAIBAEAEBAIBYEAQDQCHCPM4BACBAEBQCQIBYNCRJV3CQBAMAQEBAIAEBQIFQCAQDTW3I",
+          deck_code: "CMBAIBAEAEBAIBYEAQDQCHCPM4BACBAEBQCQIBYNCRJV3CQBAMAQEBAIAEBQIFQCAQDTW3I",
           deck_id: "f66dd72d-71a0-4cd8-8cd5-d71333a6dd8a",
           factions: ["faction_Piltover_Name", "faction_Shurima_Name"],
           game_outcome: "loss",
           order_of_play: 1,
-          puuid:
-            "bkMnGoNR5vCDVubZJehBmu3cgE1o4LfbHQ9WgBVkDXCVxR5ugZXUov9T55VLfnyjKr6A3RIb2HlKCA",
+          puuid: "bkMnGoNR5vCDVubZJehBmu3cgE1o4LfbHQ9WgBVkDXCVxR5ugZXUov9T55VLfnyjKr6A3RIb2HlKCA",
         },
       ],
       total_turn_count: 26,
@@ -786,24 +735,20 @@
       game_version: "live_2_19_53",
       players: [
         {
-          deck_code:
-            "CIBQCAICBQBQEAQDAUDAIAYJBERTHVYBAQAQEAQJAEBQECICAEBDCOICAMERWVIEAEAQEAQBAIBAQAIDAIKACAYJCM",
+          deck_code: "CIBQCAICBQBQEAQDAUDAIAYJBERTHVYBAQAQEAQJAEBQECICAEBDCOICAMERWVIEAEAQEAQBAIBAQAIDAIKACAYJCM",
           deck_id: "0ec2acd7-38a0-4d80-b3cb-4b23681c89e9_live_index_0",
           factions: ["faction_Ionia_Name", "faction_MtTargon_Name"],
           game_outcome: "loss",
           order_of_play: 1,
-          puuid:
-            "DJENEMfAP8cewOX-2YT8ukbUuapKouLMblkQFOSzqK5YKgsH2kWmO5VIjrQCPMdoFHqbJSSfR8G7aw",
+          puuid: "DJENEMfAP8cewOX-2YT8ukbUuapKouLMblkQFOSzqK5YKgsH2kWmO5VIjrQCPMdoFHqbJSSfR8G7aw",
         },
         {
-          deck_code:
-            "CIBQCAICBQCQEAQDAUDAQCIFAMEQSGZDGPLQCAQBAEBDCAIDBFQAGAIBAIBACAYCCQAQGCKV",
+          deck_code: "CIBQCAICBQCQEAQDAUDAQCIFAMEQSGZDGPLQCAQBAEBDCAIDBFQAGAIBAIBACAYCCQAQGCKV",
           deck_id: "0ec2acd7-38a0-4d80-b3cb-4b23681c89e9_live_index_2",
           factions: ["faction_Ionia_Name", "faction_MtTargon_Name"],
           game_outcome: "win",
           order_of_play: 0,
-          puuid:
-            "FD2LVB58kZqWfs0IG7xNLHBUo2ASL8VDz6hSyISdcjmpI0D0kr5sHkLM5ty9sNQC9pWkYybW7qtGaw",
+          puuid: "FD2LVB58kZqWfs0IG7xNLHBUo2ASL8VDz6hSyISdcjmpI0D0kr5sHkLM5ty9sNQC9pWkYybW7qtGaw",
         },
       ],
       total_turn_count: 38,
@@ -841,14 +786,12 @@
       game_version: "live_2_19_53",
       players: [
         {
-          deck_code:
-            "CIBQCAICBQBQEAQDAUDAIAYJBERTHVYBAQAQEAQJAEBQECICAEBDCOICAMERWVIEAEAQEAQBAIBAQAIDAIKACAYJCM",
+          deck_code: "CIBQCAICBQBQEAQDAUDAIAYJBERTHVYBAQAQEAQJAEBQECICAEBDCOICAMERWVIEAEAQEAQBAIBAQAIDAIKACAYJCM",
           deck_id: "0ec2acd7-38a0-4d80-b3cb-4b23681c89e9_live_index_0",
           factions: ["faction_Ionia_Name", "faction_MtTargon_Name"],
           game_outcome: "loss",
           order_of_play: 1,
-          puuid:
-            "DJENEMfAP8cewOX-2YT8ukbUuapKouLMblkQFOSzqK5YKgsH2kWmO5VIjrQCPMdoFHqbJSSfR8G7aw",
+          puuid: "DJENEMfAP8cewOX-2YT8ukbUuapKouLMblkQFOSzqK5YKgsH2kWmO5VIjrQCPMdoFHqbJSSfR8G7aw",
         },
         {
           deck_code: "CMBQEAIBCQZAIBABAECQUDQEAQDR6LCCJEBAEBABBEFQGBAHBURHQAA",
@@ -856,8 +799,7 @@
           factions: ["faction_Freljord_Name", "faction_Shurima_Name"],
           game_outcome: "win",
           order_of_play: 0,
-          puuid:
-            "FD2LVB58kZqWfs0IG7xNLHBUo2ASL8VDz6hSyISdcjmpI0D0kr5sHkLM5ty9sNQC9pWkYybW7qtGaw",
+          puuid: "FD2LVB58kZqWfs0IG7xNLHBUo2ASL8VDz6hSyISdcjmpI0D0kr5sHkLM5ty9sNQC9pWkYybW7qtGaw",
         },
       ],
       total_turn_count: 24,
@@ -895,24 +837,20 @@
       game_version: "live_2_19_53",
       players: [
         {
-          deck_code:
-            "CQDACAYABYAQGAQKAECAAAQBAUFCSAQBAAER2BIBAIDASDARHEBACAIACUAQEAAHAIAQCAQWAIAQACZF",
+          deck_code: "CQDACAYABYAQGAQKAECAAAQBAUFCSAQBAAER2BIBAIDASDARHEBACAIACUAQEAAHAIAQCAQWAIAQACZF",
           deck_id: "d2bae323-a4fe-4b42-8670-16793a4f9b58",
           factions: ["faction_Demacia_Name", "faction_Ionia_Name"],
           game_outcome: "win",
           order_of_play: 1,
-          puuid:
-            "-x6-qtgQ0w087nJZK40cm_wd9UrJOrTYMP36whijwVVJm_oUwNLdftrH4IhJbSulAgjRTR3o79rgYQ",
+          puuid: "-x6-qtgQ0w087nJZK40cm_wd9UrJOrTYMP36whijwVVJm_oUwNLdftrH4IhJbSulAgjRTR3o79rgYQ",
         },
         {
-          deck_code:
-            "CECACAIBEIAQEBIGAMAQKGRLGEBQGBICAQDAGAICAUCACBAFCACQCBILCAMR4MACAEAQKAIBAQCTO",
+          deck_code: "CECACAIBEIAQEBIGAMAQKGRLGEBQGBICAQDAGAICAUCACBAFCACQCBILCAMR4MACAEAQKAIBAQCTO",
           deck_id: "9125caac-6c01-4692-81c2-664e2876b67b",
           factions: ["faction_Freljord_Name", "faction_ShadowIsles_Name"],
           game_outcome: "loss",
           order_of_play: 0,
-          puuid:
-            "bosPx7guo4SHUDuKhlRP3hNi1ANy-7vQ82vSO_9F-RSGxH2PbW_-PqVHZhPlKSgip0CtTvKBIwrcFg",
+          puuid: "bosPx7guo4SHUDuKhlRP3hNi1ANy-7vQ82vSO_9F-RSGxH2PbW_-PqVHZhPlKSgip0CtTvKBIwrcFg",
         },
       ],
       total_turn_count: 22,
@@ -951,24 +889,20 @@
       game_version: "live_2_19_53",
       players: [
         {
-          deck_code:
-            "CQBACBIKAYDQIBYNDQTCOLKJM4BQCBIHBMBQIBZ3JRIQIBIKJGTADQAB2EAQA",
+          deck_code: "CQBACBIKAYDQIBYNDQTCOLKJM4BQCBIHBMBQIBZ3JRIQIBIKJGTADQAB2EAQA",
           deck_id: "ba9da512-1eed-4573-95d5-b8bb1fbded1a",
           factions: ["faction_BandleCity_Name", "faction_Shurima_Name"],
           game_outcome: "win",
           order_of_play: 0,
-          puuid:
-            "Vs7LxReHj6qOWyJRbyOl2D1Q1eqvN5tskfx8k0Zsa2eQsi9ijxSC8GUJ_3zPMgmtq9LdOd2jVGf_AA",
+          puuid: "Vs7LxReHj6qOWyJRbyOl2D1Q1eqvN5tskfx8k0Zsa2eQsi9ijxSC8GUJ_3zPMgmtq9LdOd2jVGf_AA",
         },
         {
-          deck_code:
-            "CQDACAYABYAQGAQKAECAAAQBAUFCSAQBAAER2BIBAIDASDARHEBACAIACUAQEAAHAIAQCAQWAIAQACZF",
+          deck_code: "CQDACAYABYAQGAQKAECAAAQBAUFCSAQBAAER2BIBAIDASDARHEBACAIACUAQEAAHAIAQCAQWAIAQACZF",
           deck_id: "d2bae323-a4fe-4b42-8670-16793a4f9b58",
           factions: ["faction_Demacia_Name", "faction_Ionia_Name"],
           game_outcome: "loss",
           order_of_play: 1,
-          puuid:
-            "-x6-qtgQ0w087nJZK40cm_wd9UrJOrTYMP36whijwVVJm_oUwNLdftrH4IhJbSulAgjRTR3o79rgYQ",
+          puuid: "-x6-qtgQ0w087nJZK40cm_wd9UrJOrTYMP36whijwVVJm_oUwNLdftrH4IhJbSulAgjRTR3o79rgYQ",
         },
       ],
       total_turn_count: 27,
@@ -1007,14 +941,12 @@
       game_version: "live_2_19_53",
       players: [
         {
-          deck_code:
-            "CQDACAYABYAQGAQKAECAAAQBAUFCSAQBAAER2BIBAIDASDARHEBACAIACUAQEAAHAIAQCAQWAIAQACZF",
+          deck_code: "CQDACAYABYAQGAQKAECAAAQBAUFCSAQBAAER2BIBAIDASDARHEBACAIACUAQEAAHAIAQCAQWAIAQACZF",
           deck_id: "d2bae323-a4fe-4b42-8670-16793a4f9b58",
           factions: ["faction_Demacia_Name", "faction_Ionia_Name"],
           game_outcome: "win",
           order_of_play: 1,
-          puuid:
-            "-x6-qtgQ0w087nJZK40cm_wd9UrJOrTYMP36whijwVVJm_oUwNLdftrH4IhJbSulAgjRTR3o79rgYQ",
+          puuid: "-x6-qtgQ0w087nJZK40cm_wd9UrJOrTYMP36whijwVVJm_oUwNLdftrH4IhJbSulAgjRTR3o79rgYQ",
         },
         {
           deck_code: "CEBQCAYDBUCACBIDCULS6BIFAMAQGBAGBUBAEBADAILAGAIFBQKCUAA",
@@ -1022,8 +954,7 @@
           factions: ["faction_Noxus_Name", "faction_ShadowIsles_Name"],
           game_outcome: "loss",
           order_of_play: 0,
-          puuid:
-            "iKNHuKkh99ukrv-VNtHfC7RMSs9loYsmd3g-KUxIJByX2wIBLnHHwqfMd78MbuI2pe3pJf5P2hGvDQ",
+          puuid: "iKNHuKkh99ukrv-VNtHfC7RMSs9loYsmd3g-KUxIJByX2wIBLnHHwqfMd78MbuI2pe3pJf5P2hGvDQ",
         },
       ],
       total_turn_count: 9,
@@ -1062,14 +993,12 @@
       game_version: "live_2_19_53",
       players: [
         {
-          deck_code:
-            "CQDACAYABYAQGAQKAECAAAQBAUFCSAQBAAER2BIBAIDASDARHEBACAIACUAQEAAHAIAQCAQWAIAQACZF",
+          deck_code: "CQDACAYABYAQGAQKAECAAAQBAUFCSAQBAAER2BIBAIDASDARHEBACAIACUAQEAAHAIAQCAQWAIAQACZF",
           deck_id: "d2bae323-a4fe-4b42-8670-16793a4f9b58",
           factions: ["faction_Demacia_Name", "faction_Ionia_Name"],
           game_outcome: "win",
           order_of_play: 1,
-          puuid:
-            "-x6-qtgQ0w087nJZK40cm_wd9UrJOrTYMP36whijwVVJm_oUwNLdftrH4IhJbSulAgjRTR3o79rgYQ",
+          puuid: "-x6-qtgQ0w087nJZK40cm_wd9UrJOrTYMP36whijwVVJm_oUwNLdftrH4IhJbSulAgjRTR3o79rgYQ",
         },
         {
           deck_code: "CQBQEAQDAMCAGAIDAIGCQCAFBIDSSMKJMB2KGANGAEAACAIFBJCQ",
@@ -1077,8 +1006,7 @@
           factions: ["faction_BandleCity_Name", "faction_Noxus_Name"],
           game_outcome: "loss",
           order_of_play: 0,
-          puuid:
-            "ZhlTzq2rdhH_mdMDLc7tqWOnohCERs8bKeOHKtMjDUrWkH8wnQLQmrNqZsLS-iT2KCQEN2M8js7lyA",
+          puuid: "ZhlTzq2rdhH_mdMDLc7tqWOnohCERs8bKeOHKtMjDUrWkH8wnQLQmrNqZsLS-iT2KCQEN2M8js7lyA",
         },
       ],
       total_turn_count: 16,
@@ -1122,8 +1050,7 @@
           factions: ["faction_Freljord_Name", "faction_Shurima_Name"],
           game_outcome: "loss",
           order_of_play: 0,
-          puuid:
-            "FD2LVB58kZqWfs0IG7xNLHBUo2ASL8VDz6hSyISdcjmpI0D0kr5sHkLM5ty9sNQC9pWkYybW7qtGaw",
+          puuid: "FD2LVB58kZqWfs0IG7xNLHBUo2ASL8VDz6hSyISdcjmpI0D0kr5sHkLM5ty9sNQC9pWkYybW7qtGaw",
         },
         {
           deck_code: "CMBAKBAGAEBQKBYPBACAOAITCY3ECRCKKAAACAIEAYCA",
@@ -1131,8 +1058,7 @@
           factions: ["faction_Bilgewater_Name", "faction_Shurima_Name"],
           game_outcome: "win",
           order_of_play: 1,
-          puuid:
-            "nAWTw5bhcN0mPcfrCthSvGoRqHiKNK8IrnF599-q7YOJNB9FnaYj8D7ZOQDE6DHsKnZYCX5wZqcB-Q",
+          puuid: "nAWTw5bhcN0mPcfrCthSvGoRqHiKNK8IrnF599-q7YOJNB9FnaYj8D7ZOQDE6DHsKnZYCX5wZqcB-Q",
         },
       ],
       total_turn_count: 11,
@@ -1170,14 +1096,12 @@
       game_version: "live_2_19_53",
       players: [
         {
-          deck_code:
-            "CECACAYCBEBACAQMEQBACBJIGQBQIBJVGY3QKAIBAUYQCAQCAUAQGAQFAECAEBYDAEBCKMJZAIAQCBIZAEBQEFA",
+          deck_code: "CECACAYCBEBACAQMEQBACBJIGQBQIBJVGY3QKAIBAUYQCAQCAUAQGAQFAECAEBYDAEBCKMJZAIAQCBIZAEBQEFA",
           deck_id: "0ec2acd7-38a0-4d80-b3cb-4b23681c89e9_live_index_0",
           factions: ["faction_Ionia_Name", "faction_ShadowIsles_Name"],
           game_outcome: "win",
           order_of_play: 1,
-          puuid:
-            "_zFMDV2MQiZHgGiw84KT_hFfqmNObsmG1C4Fw32tNeAggcf-MpF5dVjHXOq9wgzaW_3v82xXlysBGQ",
+          puuid: "_zFMDV2MQiZHgGiw84KT_hFfqmNObsmG1C4Fw32tNeAggcf-MpF5dVjHXOq9wgzaW_3v82xXlysBGQ",
         },
         {
           deck_code: "CMBQEAIBCQZAIBABAECQUDQEAQDR6LCCJEBAEBABBEFQGBAHBURHQAA",
@@ -1185,8 +1109,7 @@
           factions: ["faction_Freljord_Name", "faction_Shurima_Name"],
           game_outcome: "loss",
           order_of_play: 0,
-          puuid:
-            "B1x3l0ReJp_YtoiGz-Lt3FoMHff45ZoxG_LWeKZUT5fn7g5FFT6sAxiNGry9BiMZYTYLGsxomylqoQ",
+          puuid: "B1x3l0ReJp_YtoiGz-Lt3FoMHff45ZoxG_LWeKZUT5fn7g5FFT6sAxiNGry9BiMZYTYLGsxomylqoQ",
         },
       ],
       total_turn_count: 23,
@@ -1224,24 +1147,20 @@
       game_version: "live_2_19_53",
       players: [
         {
-          deck_code:
-            "CECQCAIACYAQEBIEAEBQACQBAQCTMCIBAUBQIBYKBQKRUKRRAAAQCBAFCA",
+          deck_code: "CECQCAIACYAQEBIEAEBQACQBAQCTMCIBAUBQIBYKBQKRUKRRAAAQCBAFCA",
           deck_id: "9044185e-ab7e-4e38-8436-50559181df88",
           factions: ["faction_Demacia_Name", "faction_ShadowIsles_Name"],
           game_outcome: "win",
           order_of_play: 0,
-          puuid:
-            "_VNCtxHmZHrIn7D_BC6Vans-BAYu3EcHxpd79f56rK4DUzdAlDaJYSfnhfbnjusoKFCh14vma4i6qw",
+          puuid: "_VNCtxHmZHrIn7D_BC6Vans-BAYu3EcHxpd79f56rK4DUzdAlDaJYSfnhfbnjusoKFCh14vma4i6qw",
         },
         {
-          deck_code:
-            "CQDACAYABYAQGAQKAECAAAQBAUFCSAQBAAER2BIBAIDASDARHEBACAIACUAQEAAHAIAQCAQWAIAQACZF",
+          deck_code: "CQDACAYABYAQGAQKAECAAAQBAUFCSAQBAAER2BIBAIDASDARHEBACAIACUAQEAAHAIAQCAQWAIAQACZF",
           deck_id: "d2bae323-a4fe-4b42-8670-16793a4f9b58",
           factions: ["faction_Demacia_Name", "faction_Ionia_Name"],
           game_outcome: "loss",
           order_of_play: 1,
-          puuid:
-            "-x6-qtgQ0w087nJZK40cm_wd9UrJOrTYMP36whijwVVJm_oUwNLdftrH4IhJbSulAgjRTR3o79rgYQ",
+          puuid: "-x6-qtgQ0w087nJZK40cm_wd9UrJOrTYMP36whijwVVJm_oUwNLdftrH4IhJbSulAgjRTR3o79rgYQ",
         },
       ],
       total_turn_count: 22,
@@ -1280,24 +1199,20 @@
       game_version: "live_2_19_53",
       players: [
         {
-          deck_code:
-            "CMBACAIBBEBAIB4AAGBACBABAQAQUAQDAEBASBIBAEBQIFQ6GIDAIBYQG45V3AYBRIAQCAYEA4GUY3I",
+          deck_code: "CMBACAIBBEBAIB4AAGBACBABAQAQUAQDAEBASBIBAEBQIFQ6GIDAIBYQG45V3AYBRIAQCAYEA4GUY3I",
           deck_id: "5ef7c493-f0f2-43ad-99c6-b9b499ab1617",
           factions: ["faction_Freljord_Name", "faction_Shurima_Name"],
           game_outcome: "loss",
           order_of_play: 1,
-          puuid:
-            "2bOumxni2cSfDHrUV6ba7OdXdpzdhDVCVbXDPFMdC9ao2uEDT_wq_UlKB_4UPr-2GKb8lm8PbiVkng",
+          puuid: "2bOumxni2cSfDHrUV6ba7OdXdpzdhDVCVbXDPFMdC9ao2uEDT_wq_UlKB_4UPr-2GKb8lm8PbiVkng",
         },
         {
-          deck_code:
-            "CQDACAYABYAQGAQKAECAAAQBAUFCSAQBAAER2BIBAIDASDARHEBACAIACUAQEAAHAIAQCAQWAIAQACZF",
+          deck_code: "CQDACAYABYAQGAQKAECAAAQBAUFCSAQBAAER2BIBAIDASDARHEBACAIACUAQEAAHAIAQCAQWAIAQACZF",
           deck_id: "d2bae323-a4fe-4b42-8670-16793a4f9b58",
           factions: ["faction_Demacia_Name", "faction_Ionia_Name"],
           game_outcome: "win",
           order_of_play: 0,
-          puuid:
-            "-x6-qtgQ0w087nJZK40cm_wd9UrJOrTYMP36whijwVVJm_oUwNLdftrH4IhJbSulAgjRTR3o79rgYQ",
+          puuid: "-x6-qtgQ0w087nJZK40cm_wd9UrJOrTYMP36whijwVVJm_oUwNLdftrH4IhJbSulAgjRTR3o79rgYQ",
         },
       ],
       total_turn_count: 8,
@@ -1341,8 +1256,7 @@
           factions: ["faction_Bilgewater_Name", "faction_Shurima_Name"],
           game_outcome: "win",
           order_of_play: 0,
-          puuid:
-            "DJENEMfAP8cewOX-2YT8ukbUuapKouLMblkQFOSzqK5YKgsH2kWmO5VIjrQCPMdoFHqbJSSfR8G7aw",
+          puuid: "DJENEMfAP8cewOX-2YT8ukbUuapKouLMblkQFOSzqK5YKgsH2kWmO5VIjrQCPMdoFHqbJSSfR8G7aw",
         },
         {
           deck_code: "CMBQEAIBCQZAIBABAECQUDQEAQDR6LCCJEBAEBABBEFQGBAHBURHQAA",
@@ -1350,8 +1264,7 @@
           factions: ["faction_Freljord_Name", "faction_Shurima_Name"],
           game_outcome: "loss",
           order_of_play: 1,
-          puuid:
-            "FD2LVB58kZqWfs0IG7xNLHBUo2ASL8VDz6hSyISdcjmpI0D0kr5sHkLM5ty9sNQC9pWkYybW7qtGaw",
+          puuid: "FD2LVB58kZqWfs0IG7xNLHBUo2ASL8VDz6hSyISdcjmpI0D0kr5sHkLM5ty9sNQC9pWkYybW7qtGaw",
         },
       ],
       total_turn_count: 14,
@@ -1394,18 +1307,15 @@
           factions: ["faction_Freljord_Name", "faction_Shurima_Name"],
           game_outcome: "loss",
           order_of_play: 1,
-          puuid:
-            "FD2LVB58kZqWfs0IG7xNLHBUo2ASL8VDz6hSyISdcjmpI0D0kr5sHkLM5ty9sNQC9pWkYybW7qtGaw",
+          puuid: "FD2LVB58kZqWfs0IG7xNLHBUo2ASL8VDz6hSyISdcjmpI0D0kr5sHkLM5ty9sNQC9pWkYybW7qtGaw",
         },
         {
-          deck_code:
-            "CIBQCAICBQBQEAQDAUDAIAYJBERTHVYBAQAQEAQJAEBQECICAEBDCOICAMERWVIEAEAQEAQBAIBAQAIDAIKACAYJCM",
+          deck_code: "CIBQCAICBQBQEAQDAUDAIAYJBERTHVYBAQAQEAQJAEBQECICAEBDCOICAMERWVIEAEAQEAQBAIBAQAIDAIKACAYJCM",
           deck_id: "0ec2acd7-38a0-4d80-b3cb-4b23681c89e9_live_index_0",
           factions: ["faction_Ionia_Name", "faction_MtTargon_Name"],
           game_outcome: "win",
           order_of_play: 0,
-          puuid:
-            "DJENEMfAP8cewOX-2YT8ukbUuapKouLMblkQFOSzqK5YKgsH2kWmO5VIjrQCPMdoFHqbJSSfR8G7aw",
+          puuid: "DJENEMfAP8cewOX-2YT8ukbUuapKouLMblkQFOSzqK5YKgsH2kWmO5VIjrQCPMdoFHqbJSSfR8G7aw",
         },
       ],
       total_turn_count: 23,
@@ -1443,24 +1353,20 @@
       game_version: "live_2_19_53",
       players: [
         {
-          deck_code:
-            "CICACAYGBAAQIBQKAIBAMBJNAMAQKDZJGECQCAYGBEAQGBIIAECQKCYCAIDBCGQDAECQWIBVAIAQIBIFAIAQKDBC",
+          deck_code: "CICACAYGBAAQIBQKAIBAMBJNAMAQKDZJGECQCAYGBEAQGBIIAECQKCYCAIDBCGQDAECQWIBVAIAQIBIFAIAQKDBC",
           deck_id: "4ee65501-2821-4b8c-9366-a057044aaa49",
           factions: ["faction_Bilgewater_Name", "faction_ShadowIsles_Name"],
           game_outcome: "loss",
           order_of_play: 0,
-          puuid:
-            "GtT_eQ4wyjL0YlqKhw8VRH1gcGTTflwkXqfuE6KGYOewiCHZA0h_mOpMeuki_F1Gjw3vccDbTij7xw",
+          puuid: "GtT_eQ4wyjL0YlqKhw8VRH1gcGTTflwkXqfuE6KGYOewiCHZA0h_mOpMeuki_F1Gjw3vccDbTij7xw",
         },
         {
-          deck_code:
-            "CMBQEBAHGZTQGBAFAM3DOBABAUFSQMBRAMAQCBJCAICAOO3ZAMCAKBAQGUAQCAIFDE",
+          deck_code: "CMBQEBAHGZTQGBAFAM3DOBABAUFSQMBRAMAQCBJCAICAOO3ZAMCAKBAQGUAQCAIFDE",
           deck_id: "b67c35a6-451a-4a57-a870-d218f961f73d",
           factions: ["faction_ShadowIsles_Name", "faction_Shurima_Name"],
           game_outcome: "win",
           order_of_play: 1,
-          puuid:
-            "-x6-qtgQ0w087nJZK40cm_wd9UrJOrTYMP36whijwVVJm_oUwNLdftrH4IhJbSulAgjRTR3o79rgYQ",
+          puuid: "-x6-qtgQ0w087nJZK40cm_wd9UrJOrTYMP36whijwVVJm_oUwNLdftrH4IhJbSulAgjRTR3o79rgYQ",
         },
       ],
       total_turn_count: 21,
@@ -1499,24 +1405,20 @@
       game_version: "live_2_19_47",
       players: [
         {
-          deck_code:
-            "CECACAYCBEBACAQMEQBACBJIGQBQIBJVGY3QIAIBAUYQCAQCAUAQIAQHAMAQEJJRHEBQCAICAIAQCBIZAIBQEBIU",
+          deck_code: "CECACAYCBEBACAQMEQBACBJIGQBQIBJVGY3QIAIBAUYQCAQCAUAQIAQHAMAQEJJRHEBQCAICAIAQCBIZAIBQEBIU",
           deck_id: "255666ab-9a94-41dd-8725-dee0da2c4404",
           factions: ["faction_Ionia_Name", "faction_ShadowIsles_Name"],
           game_outcome: "loss",
           order_of_play: 0,
-          puuid:
-            "FD2LVB58kZqWfs0IG7xNLHBUo2ASL8VDz6hSyISdcjmpI0D0kr5sHkLM5ty9sNQC9pWkYybW7qtGaw",
+          puuid: "FD2LVB58kZqWfs0IG7xNLHBUo2ASL8VDz6hSyISdcjmpI0D0kr5sHkLM5ty9sNQC9pWkYybW7qtGaw",
         },
         {
-          deck_code:
-            "CQDACAYABYAQGAQKAECAAAQBAUFCSAYBAAERKHIDAEBAMCIMAQAQCAALAEBAABYBAMBBIAQBAIITSAA",
+          deck_code: "CQDACAYABYAQGAQKAECAAAQBAUFCSAYBAAERKHIDAEBAMCIMAQAQCAALAEBAABYBAMBBIAQBAIITSAA",
           deck_id: "8e6bdf91-6c94-430c-84ff-10ee97964d82",
           factions: ["faction_Demacia_Name", "faction_Ionia_Name"],
           game_outcome: "win",
           order_of_play: 1,
-          puuid:
-            "6dw7dO4G_FC9HwZ0M6jwC_1r9K8tS_9kgvDbbKS7ZThEoOYR7bbKeing5FQHsNLwitqOOPNLb3vPEw",
+          puuid: "6dw7dO4G_FC9HwZ0M6jwC_1r9K8tS_9kgvDbbKS7ZThEoOYR7bbKeing5FQHsNLwitqOOPNLb3vPEw",
         },
       ],
       total_turn_count: 25,
@@ -1554,24 +1456,20 @@
       game_version: "live_2_19_47",
       players: [
         {
-          deck_code:
-            "CECACAIBAMAQCBJIAECACDQCAMAQMFQDAECAKOAEAECQCDYTDEDACAIBBMGBIJZSAIAQIAIKAIAQKHJB",
+          deck_code: "CECACAIBAMAQCBJIAECACDQCAMAQMFQDAECAKOAEAECQCDYTDEDACAIBBMGBIJZSAIAQIAIKAIAQKHJB",
           deck_id: "0ec2acd7-38a0-4d80-b3cb-4b23681c89e9_live_index_1",
           factions: ["faction_Freljord_Name", "faction_ShadowIsles_Name"],
           game_outcome: "loss",
           order_of_play: 0,
-          puuid:
-            "FD2LVB58kZqWfs0IG7xNLHBUo2ASL8VDz6hSyISdcjmpI0D0kr5sHkLM5ty9sNQC9pWkYybW7qtGaw",
+          puuid: "FD2LVB58kZqWfs0IG7xNLHBUo2ASL8VDz6hSyISdcjmpI0D0kr5sHkLM5ty9sNQC9pWkYybW7qtGaw",
         },
         {
-          deck_code:
-            "CICQCAQBAIAQGBQIAECAMCQBAUDACBYCAYFSAIJCFU5DYAICAIDBIJQCAECACCQCAIDAEEQ",
+          deck_code: "CICQCAQBAIAQGBQIAECAMCQBAUDACBYCAYFSAIJCFU5DYAICAIDBIJQCAECACCQCAIDAEEQ",
           deck_id: "0ec2acd7-38a0-4d80-b3cb-4b23681c89e9_live_index_2",
           factions: ["faction_Bilgewater_Name", "faction_Freljord_Name"],
           game_outcome: "win",
           order_of_play: 1,
-          puuid:
-            "M3KbYvTZHEhFcfigK_O6JnyNDfYdh3-gJGwq9RWE-Mt3N52vgwYatgrNF9A7cxGeyoXLXLFozjPANA",
+          puuid: "M3KbYvTZHEhFcfigK_O6JnyNDfYdh3-gJGwq9RWE-Mt3N52vgwYatgrNF9A7cxGeyoXLXLFozjPANA",
         },
       ],
       total_turn_count: 17,
@@ -1609,14 +1507,12 @@
       game_version: "live_2_19_53",
       players: [
         {
-          deck_code:
-            "CQDACAYABYAQGAQKAECAAAQBAUFCSAQBAAER2BIBAIDASDARHEBACAIACUAQEAAHAIAQCAQWAIAQACZF",
+          deck_code: "CQDACAYABYAQGAQKAECAAAQBAUFCSAQBAAER2BIBAIDASDARHEBACAIACUAQEAAHAIAQCAQWAIAQACZF",
           deck_id: "d2bae323-a4fe-4b42-8670-16793a4f9b58",
           factions: ["faction_Demacia_Name", "faction_Ionia_Name"],
           game_outcome: "win",
           order_of_play: 1,
-          puuid:
-            "-x6-qtgQ0w087nJZK40cm_wd9UrJOrTYMP36whijwVVJm_oUwNLdftrH4IhJbSulAgjRTR3o79rgYQ",
+          puuid: "-x6-qtgQ0w087nJZK40cm_wd9UrJOrTYMP36whijwVVJm_oUwNLdftrH4IhJbSulAgjRTR3o79rgYQ",
         },
         {
           deck_code: "CMBAIAIFA4GBKKQGAQDRIJRWG5TYUAICAIAQKBAKAMCAODKRLUAA",
@@ -1624,8 +1520,7 @@
           factions: ["faction_ShadowIsles_Name", "faction_Shurima_Name"],
           game_outcome: "loss",
           order_of_play: 0,
-          puuid:
-            "AN0iPI2tNTSpm0E3ymqRjV2WXrmQLS3ZZPM15AVqmsvo_xOoqZHfN9G_HfC25Xg8_zkMDXn51tY0Gg",
+          puuid: "AN0iPI2tNTSpm0E3ymqRjV2WXrmQLS3ZZPM15AVqmsvo_xOoqZHfN9G_HfC25Xg8_zkMDXn51tY0Gg",
         },
       ],
       total_turn_count: 12,
@@ -1664,24 +1559,20 @@
       game_version: "live_2_19_53",
       players: [
         {
-          deck_code:
-            "CIBQCAICBQCQEAQDAUDAQCIFAMEQSGZDGPLQCAQBAEBDCAIDBFQAGAIBAIBACAYCCQAQGCKV",
+          deck_code: "CIBQCAICBQCQEAQDAUDAQCIFAMEQSGZDGPLQCAQBAEBDCAIDBFQAGAIBAIBACAYCCQAQGCKV",
           deck_id: "0ec2acd7-38a0-4d80-b3cb-4b23681c89e9_live_index_2",
           factions: ["faction_Ionia_Name", "faction_MtTargon_Name"],
           game_outcome: "win",
           order_of_play: 1,
-          puuid:
-            "_zFMDV2MQiZHgGiw84KT_hFfqmNObsmG1C4Fw32tNeAggcf-MpF5dVjHXOq9wgzaW_3v82xXlysBGQ",
+          puuid: "_zFMDV2MQiZHgGiw84KT_hFfqmNObsmG1C4Fw32tNeAggcf-MpF5dVjHXOq9wgzaW_3v82xXlysBGQ",
         },
         {
-          deck_code:
-            "CIBQCAQBAIAQIBQKBABAMCYUEAQSELJ2HQBQCAYGBAAQKBQBAIBAMARGAIAQEBQSAECACCQ",
+          deck_code: "CIBQCAQBAIAQIBQKBABAMCYUEAQSELJ2HQBQCAYGBAAQKBQBAIBAMARGAIAQEBQSAECACCQ",
           deck_id: "0ec2acd7-38a0-4d80-b3cb-4b23681c89e9_live_index_0",
           factions: ["faction_Bilgewater_Name", "faction_Freljord_Name"],
           game_outcome: "loss",
           order_of_play: 0,
-          puuid:
-            "B1x3l0ReJp_YtoiGz-Lt3FoMHff45ZoxG_LWeKZUT5fn7g5FFT6sAxiNGry9BiMZYTYLGsxomylqoQ",
+          puuid: "B1x3l0ReJp_YtoiGz-Lt3FoMHff45ZoxG_LWeKZUT5fn7g5FFT6sAxiNGry9BiMZYTYLGsxomylqoQ",
         },
       ],
       total_turn_count: 38,
@@ -1724,18 +1615,15 @@
           factions: ["faction_Bilgewater_Name", "faction_Shurima_Name"],
           game_outcome: "win",
           order_of_play: 1,
-          puuid:
-            "DJENEMfAP8cewOX-2YT8ukbUuapKouLMblkQFOSzqK5YKgsH2kWmO5VIjrQCPMdoFHqbJSSfR8G7aw",
+          puuid: "DJENEMfAP8cewOX-2YT8ukbUuapKouLMblkQFOSzqK5YKgsH2kWmO5VIjrQCPMdoFHqbJSSfR8G7aw",
         },
         {
-          deck_code:
-            "CIBQCAICBQCQEAQDAUDAQCIFAMEQSGZDGPLQCAQBAEBDCAIDBFQAGAIBAIBACAYCCQAQGCKV",
+          deck_code: "CIBQCAICBQCQEAQDAUDAQCIFAMEQSGZDGPLQCAQBAEBDCAIDBFQAGAIBAIBACAYCCQAQGCKV",
           deck_id: "0ec2acd7-38a0-4d80-b3cb-4b23681c89e9_live_index_2",
           factions: ["faction_Ionia_Name", "faction_MtTargon_Name"],
           game_outcome: "loss",
           order_of_play: 0,
-          puuid:
-            "FD2LVB58kZqWfs0IG7xNLHBUo2ASL8VDz6hSyISdcjmpI0D0kr5sHkLM5ty9sNQC9pWkYybW7qtGaw",
+          puuid: "FD2LVB58kZqWfs0IG7xNLHBUo2ASL8VDz6hSyISdcjmpI0D0kr5sHkLM5ty9sNQC9pWkYybW7qtGaw",
         },
       ],
       total_turn_count: 36,
@@ -1773,24 +1661,20 @@
       game_version: "live_2_19_53",
       players: [
         {
-          deck_code:
-            "CIBQCAICBQCQEAQDAUDAQCIFAMEQSGZDGPLQCAQBAEBDCAIDBFQAGAIBAIBACAYCCQAQGCKV",
+          deck_code: "CIBQCAICBQCQEAQDAUDAQCIFAMEQSGZDGPLQCAQBAEBDCAIDBFQAGAIBAIBACAYCCQAQGCKV",
           deck_id: "993647a4-fab9-410e-bc5d-6394de477352",
           factions: ["faction_Ionia_Name", "faction_MtTargon_Name"],
           game_outcome: "win",
           order_of_play: 1,
-          puuid:
-            "_zFMDV2MQiZHgGiw84KT_hFfqmNObsmG1C4Fw32tNeAggcf-MpF5dVjHXOq9wgzaW_3v82xXlysBGQ",
+          puuid: "_zFMDV2MQiZHgGiw84KT_hFfqmNObsmG1C4Fw32tNeAggcf-MpF5dVjHXOq9wgzaW_3v82xXlysBGQ",
         },
         {
-          deck_code:
-            "CECQCAIEDEAQEAABAEBAICABAMAA4BAFAQDASDIOAQAQEAAHAECQIAQCAEAAMBYEAECBWNBVHIAA",
+          deck_code: "CECQCAIEDEAQEAABAEBAICABAMAA4BAFAQDASDIOAQAQEAAHAECQIAQCAEAAMBYEAECBWNBVHIAA",
           deck_id: "c02bb4b7-9afa-4e9a-b1d1-7af5b7f0ee6b",
           factions: ["faction_Demacia_Name", "faction_Piltover_Name"],
           game_outcome: "loss",
           order_of_play: 0,
-          puuid:
-            "sIw7sZCRp1q6FrPcClIp7R1gKioguz6IhBiqF5i8J3KgHStQ3uzWxrMgCUDLsp2VfjFKLHWW7yyT4g",
+          puuid: "sIw7sZCRp1q6FrPcClIp7R1gKioguz6IhBiqF5i8J3KgHStQ3uzWxrMgCUDLsp2VfjFKLHWW7yyT4g",
         },
       ],
       total_turn_count: 26,
@@ -1828,24 +1712,20 @@
       game_version: "live_2_19_53",
       players: [
         {
-          deck_code:
-            "CECACAYCBEBACAQMEQBACBJIGQBQIBJVGY3QKAIBAUYQCAQCAUAQGAQFAECAEBYDAEBCKMJZAIAQCBIZAEBQEFA",
+          deck_code: "CECACAYCBEBACAQMEQBACBJIGQBQIBJVGY3QKAIBAUYQCAQCAUAQGAQFAECAEBYDAEBCKMJZAIAQCBIZAEBQEFA",
           deck_id: "0ec2acd7-38a0-4d80-b3cb-4b23681c89e9_live_index_0",
           factions: ["faction_Ionia_Name", "faction_ShadowIsles_Name"],
           game_outcome: "loss",
           order_of_play: 1,
-          puuid:
-            "_zFMDV2MQiZHgGiw84KT_hFfqmNObsmG1C4Fw32tNeAggcf-MpF5dVjHXOq9wgzaW_3v82xXlysBGQ",
+          puuid: "_zFMDV2MQiZHgGiw84KT_hFfqmNObsmG1C4Fw32tNeAggcf-MpF5dVjHXOq9wgzaW_3v82xXlysBGQ",
         },
         {
-          deck_code:
-            "CIBQCAQBAIAQIBQKBABAMCYUEAQSELJ2HQBQCAYGBAAQKBQBAIBAMARGAIAQEBQSAECACCQ",
+          deck_code: "CIBQCAQBAIAQIBQKBABAMCYUEAQSELJ2HQBQCAYGBAAQKBQBAIBAMARGAIAQEBQSAECACCQ",
           deck_id: "0ec2acd7-38a0-4d80-b3cb-4b23681c89e9_live_index_0",
           factions: ["faction_Bilgewater_Name", "faction_Freljord_Name"],
           game_outcome: "win",
           order_of_play: 0,
-          puuid:
-            "B1x3l0ReJp_YtoiGz-Lt3FoMHff45ZoxG_LWeKZUT5fn7g5FFT6sAxiNGry9BiMZYTYLGsxomylqoQ",
+          puuid: "B1x3l0ReJp_YtoiGz-Lt3FoMHff45ZoxG_LWeKZUT5fn7g5FFT6sAxiNGry9BiMZYTYLGsxomylqoQ",
         },
       ],
       total_turn_count: 28,
@@ -1888,18 +1768,15 @@
           factions: ["faction_MtTargon_Name", "faction_Piltover_Name"],
           game_outcome: "loss",
           order_of_play: 1,
-          puuid:
-            "M98Dx9x32AHl9cGKLW5IS8tiMdR5__SGG3KWA6pTAeJCWYAVRWSoNT5BhidJYHI3USP0-MCMXAs9bA",
+          puuid: "M98Dx9x32AHl9cGKLW5IS8tiMdR5__SGG3KWA6pTAeJCWYAVRWSoNT5BhidJYHI3USP0-MCMXAs9bA",
         },
         {
-          deck_code:
-            "CQDACAYABYAQGAQKAECAAAQBAUFCSAQBAAER2BIBAIDASDARHEBACAIACUAQEAAHAIAQCAQWAIAQACZF",
+          deck_code: "CQDACAYABYAQGAQKAECAAAQBAUFCSAQBAAER2BIBAIDASDARHEBACAIACUAQEAAHAIAQCAQWAIAQACZF",
           deck_id: "d2bae323-a4fe-4b42-8670-16793a4f9b58",
           factions: ["faction_Demacia_Name", "faction_Ionia_Name"],
           game_outcome: "win",
           order_of_play: 0,
-          puuid:
-            "-x6-qtgQ0w087nJZK40cm_wd9UrJOrTYMP36whijwVVJm_oUwNLdftrH4IhJbSulAgjRTR3o79rgYQ",
+          puuid: "-x6-qtgQ0w087nJZK40cm_wd9UrJOrTYMP36whijwVVJm_oUwNLdftrH4IhJbSulAgjRTR3o79rgYQ",
         },
       ],
       total_turn_count: 6,
@@ -1943,18 +1820,15 @@
           factions: ["faction_Freljord_Name", "faction_Shurima_Name"],
           game_outcome: "loss",
           order_of_play: 1,
-          puuid:
-            "FD2LVB58kZqWfs0IG7xNLHBUo2ASL8VDz6hSyISdcjmpI0D0kr5sHkLM5ty9sNQC9pWkYybW7qtGaw",
+          puuid: "FD2LVB58kZqWfs0IG7xNLHBUo2ASL8VDz6hSyISdcjmpI0D0kr5sHkLM5ty9sNQC9pWkYybW7qtGaw",
         },
         {
-          deck_code:
-            "CECQCAIDCQAQGAYPAECAIEADAUBQCCINAQAQIJRHFU2AEAIBAMFQCAIEAEBQCAYECIBAKAYEBQBQCAZDFYZQ",
+          deck_code: "CECQCAIDCQAQGAYPAECAIEADAUBQCCINAQAQIJRHFU2AEAIBAMFQCAIEAEBQCAYECIBAKAYEBQBQCAZDFYZQ",
           deck_id: "0ec2acd7-38a0-4d80-b3cb-4b23681c89e9_live_index_0",
           factions: ["faction_Noxus_Name", "faction_Piltover_Name"],
           game_outcome: "win",
           order_of_play: 0,
-          puuid:
-            "nAWTw5bhcN0mPcfrCthSvGoRqHiKNK8IrnF599-q7YOJNB9FnaYj8D7ZOQDE6DHsKnZYCX5wZqcB-Q",
+          puuid: "nAWTw5bhcN0mPcfrCthSvGoRqHiKNK8IrnF599-q7YOJNB9FnaYj8D7ZOQDE6DHsKnZYCX5wZqcB-Q",
         },
       ],
       total_turn_count: 24,
@@ -1992,24 +1866,20 @@
       game_version: "live_2_19_47",
       players: [
         {
-          deck_code:
-            "CECACAIBAMAQCBJIAECACDQCAMAQMFQDAECAKOAEAECQCDYTDEDACAIBBMGBIJZSAIAQIAIKAIAQKHJB",
+          deck_code: "CECACAIBAMAQCBJIAECACDQCAMAQMFQDAECAKOAEAECQCDYTDEDACAIBBMGBIJZSAIAQIAIKAIAQKHJB",
           deck_id: "0ec2acd7-38a0-4d80-b3cb-4b23681c89e9_live_index_1",
           factions: ["faction_Freljord_Name", "faction_ShadowIsles_Name"],
           game_outcome: "loss",
           order_of_play: 1,
-          puuid:
-            "FD2LVB58kZqWfs0IG7xNLHBUo2ASL8VDz6hSyISdcjmpI0D0kr5sHkLM5ty9sNQC9pWkYybW7qtGaw",
+          puuid: "FD2LVB58kZqWfs0IG7xNLHBUo2ASL8VDz6hSyISdcjmpI0D0kr5sHkLM5ty9sNQC9pWkYybW7qtGaw",
         },
         {
-          deck_code:
-            "CECACBAECABACAYCCQCACBBGE4WTIBIFAMAQIBQJBUAQCAYECIBACAIDEMAQGAYP",
+          deck_code: "CECACBAECABACAYCCQCACBBGE4WTIBIFAMAQIBQJBUAQCAYECIBACAIDEMAQGAYP",
           deck_id: "0ec2acd7-38a0-4d80-b3cb-4b23681c89e9_live_index_1",
           factions: ["faction_Noxus_Name", "faction_Piltover_Name"],
           game_outcome: "win",
           order_of_play: 0,
-          puuid:
-            "M3KbYvTZHEhFcfigK_O6JnyNDfYdh3-gJGwq9RWE-Mt3N52vgwYatgrNF9A7cxGeyoXLXLFozjPANA",
+          puuid: "M3KbYvTZHEhFcfigK_O6JnyNDfYdh3-gJGwq9RWE-Mt3N52vgwYatgrNF9A7cxGeyoXLXLFozjPANA",
         },
       ],
       total_turn_count: 21,
@@ -2047,24 +1917,20 @@
       game_version: "live_2_19_53",
       players: [
         {
-          deck_code:
-            "CQDACAYABYAQGAQKAECAAAQBAUFCSAQBAAER2BIBAIDASDARHEBACAIACUAQEAAHAIAQCAQWAIAQACZF",
+          deck_code: "CQDACAYABYAQGAQKAECAAAQBAUFCSAQBAAER2BIBAIDASDARHEBACAIACUAQEAAHAIAQCAQWAIAQACZF",
           deck_id: "d2bae323-a4fe-4b42-8670-16793a4f9b58",
           factions: ["faction_Demacia_Name", "faction_Ionia_Name"],
           game_outcome: "loss",
           order_of_play: 1,
-          puuid:
-            "-x6-qtgQ0w087nJZK40cm_wd9UrJOrTYMP36whijwVVJm_oUwNLdftrH4IhJbSulAgjRTR3o79rgYQ",
+          puuid: "-x6-qtgQ0w087nJZK40cm_wd9UrJOrTYMP36whijwVVJm_oUwNLdftrH4IhJbSulAgjRTR3o79rgYQ",
         },
         {
-          deck_code:
-            "CQBQCAQEBABACBBEGQDAKCQEFAY2MANPAG6ACBABAECBWAIEAQDQCBIECEBAKCQBS4AQGAIDAQFQCBAECEAQKBAM",
+          deck_code: "CQBQCAQEBABACBBEGQDAKCQEFAY2MANPAG6ACBABAECBWAIEAQDQCBIECEBAKCQBS4AQGAIDAQFQCBAECEAQKBAM",
           deck_id: "6398e801-f4e1-4996-99df-551434773f15",
           factions: ["faction_BandleCity_Name", "faction_Piltover_Name"],
           game_outcome: "win",
           order_of_play: 0,
-          puuid:
-            "JxCVE46AUymqZ0QDQrcfUUoXBCSsfurtzeJ_7af4_ycLs7cuDtSR6cDL7h4RMrPhaQj-Wult2G3i7w",
+          puuid: "JxCVE46AUymqZ0QDQrcfUUoXBCSsfurtzeJ_7af4_ycLs7cuDtSR6cDL7h4RMrPhaQj-Wult2G3i7w",
         },
       ],
       total_turn_count: 32,
@@ -2103,24 +1969,20 @@
       game_version: "live_2_19_53",
       players: [
         {
-          deck_code:
-            "CQDACAYABYAQGAQKAECAAAQBAUFCSAQBAAER2BIBAIDASDARHEBACAIACUAQEAAHAIAQCAQWAIAQACZF",
+          deck_code: "CQDACAYABYAQGAQKAECAAAQBAUFCSAQBAAER2BIBAIDASDARHEBACAIACUAQEAAHAIAQCAQWAIAQACZF",
           deck_id: "d2bae323-a4fe-4b42-8670-16793a4f9b58",
           factions: ["faction_Demacia_Name", "faction_Ionia_Name"],
           game_outcome: "win",
           order_of_play: 1,
-          puuid:
-            "-x6-qtgQ0w087nJZK40cm_wd9UrJOrTYMP36whijwVVJm_oUwNLdftrH4IhJbSulAgjRTR3o79rgYQ",
+          puuid: "-x6-qtgQ0w087nJZK40cm_wd9UrJOrTYMP36whijwVVJm_oUwNLdftrH4IhJbSulAgjRTR3o79rgYQ",
         },
         {
-          deck_code:
-            "CQBACAYJ3MAQIBIECYMBSGQFAEAQIEYBAUFK6AICAQEQIDACAUCBKGYFAMEQ6FZTKRLQEAIBAQCAEAYJAIEQ",
+          deck_code: "CQBACAYJ3MAQIBIECYMBSGQFAEAQIEYBAUFK6AICAQEQIDACAUCBKGYFAMEQ6FZTKRLQEAIBAQCAEAYJAIEQ",
           deck_id: "1adb70ac-de53-44c5-987f-e870192c09bb",
           factions: ["faction_MtTargon_Name", "faction_Piltover_Name"],
           game_outcome: "loss",
           order_of_play: 0,
-          puuid:
-            "GFQnQSfJ-nz78y1GrJli2Sv8uLJRP1ESajkngBZI2iU4mD3KFupbfCUBq4GckAmoYAtzF7ThEEgxAg",
+          puuid: "GFQnQSfJ-nz78y1GrJli2Sv8uLJRP1ESajkngBZI2iU4mD3KFupbfCUBq4GckAmoYAtzF7ThEEgxAg",
         },
       ],
       total_turn_count: 19,
@@ -2159,24 +2021,20 @@
       game_version: "live_2_19_53",
       players: [
         {
-          deck_code:
-            "CQDACAYABYAQGAQKAECAAAQBAUFCSAQBAAER2BIBAIDASDARHEBACAIACUAQEAAHAIAQCAQWAIAQACZF",
+          deck_code: "CQDACAYABYAQGAQKAECAAAQBAUFCSAQBAAER2BIBAIDASDARHEBACAIACUAQEAAHAIAQCAQWAIAQACZF",
           deck_id: "d2bae323-a4fe-4b42-8670-16793a4f9b58",
           factions: ["faction_Demacia_Name", "faction_Ionia_Name"],
           game_outcome: "win",
           order_of_play: 1,
-          puuid:
-            "-x6-qtgQ0w087nJZK40cm_wd9UrJOrTYMP36whijwVVJm_oUwNLdftrH4IhJbSulAgjRTR3o79rgYQ",
+          puuid: "-x6-qtgQ0w087nJZK40cm_wd9UrJOrTYMP36whijwVVJm_oUwNLdftrH4IhJbSulAgjRTR3o79rgYQ",
         },
         {
-          deck_code:
-            "CMCACAYBBEAQIAIOAECAPAQBAQAQCAIDBELAEAYBAECCSKQEAQDRANR3NICACAIBGIAQEAIHAECACCQCAQDV3AAB",
+          deck_code: "CMCACAYBBEAQIAIOAECAPAQBAQAQCAIDBELAEAYBAECCSKQEAQDRANR3NICACAIBGIAQEAIHAECACCQCAQDV3AAB",
           deck_id: "e88713a8-1770-4285-b014-5f3cddfa8d0b",
           factions: ["faction_Freljord_Name", "faction_Shurima_Name"],
           game_outcome: "loss",
           order_of_play: 0,
-          puuid:
-            "VVRXwqrxnpVi7G2hfAbCMlw-GrHgqAa8IR2mGwZlTuDYEshH8z-0MxysdYLOH3rtMOG7Whnky1VUog",
+          puuid: "VVRXwqrxnpVi7G2hfAbCMlw-GrHgqAa8IR2mGwZlTuDYEshH8z-0MxysdYLOH3rtMOG7Whnky1VUog",
         },
       ],
       total_turn_count: 1,
@@ -2215,24 +2073,20 @@
       game_version: "live_2_19_53",
       players: [
         {
-          deck_code:
-            "CQDACAYABYAQGAQKAECAAAQBAUFCSAQBAAER2BIBAIDASDARHEBACAIACUAQEAAHAIAQCAQWAIAQACZF",
+          deck_code: "CQDACAYABYAQGAQKAECAAAQBAUFCSAQBAAER2BIBAIDASDARHEBACAIACUAQEAAHAIAQCAQWAIAQACZF",
           deck_id: "d2bae323-a4fe-4b42-8670-16793a4f9b58",
           factions: ["faction_Demacia_Name", "faction_Ionia_Name"],
           game_outcome: "win",
           order_of_play: 0,
-          puuid:
-            "-x6-qtgQ0w087nJZK40cm_wd9UrJOrTYMP36whijwVVJm_oUwNLdftrH4IhJbSulAgjRTR3o79rgYQ",
+          puuid: "-x6-qtgQ0w087nJZK40cm_wd9UrJOrTYMP36whijwVVJm_oUwNLdftrH4IhJbSulAgjRTR3o79rgYQ",
         },
         {
-          deck_code:
-            "CECACAIEGQAQCBJIAICQIFIYAICQKCYPAQAQCBA3AEBAICACAECSCNICAUCBMGYFAEAQIGQBAQCR2AIFAQNACBIFAMDACBIPDEOTCMRY",
+          deck_code: "CECACAIEGQAQCBJIAICQIFIYAICQKCYPAQAQCBA3AEBAICACAECSCNICAUCBMGYFAEAQIGQBAQCR2AIFAQNACBIFAMDACBIPDEOTCMRY",
           deck_id: "73c8733e-84fe-4c0e-9ff6-344eaaf9d338",
           factions: ["faction_Piltover_Name", "faction_ShadowIsles_Name"],
           game_outcome: "loss",
           order_of_play: 1,
-          puuid:
-            "vZGb6QOukCMu2u036D8puLX2IUN7KvxbsvariWQJhp5SDXCKFLNkWMuf8B2qLJwxUkSw9ZWmsqoZuQ",
+          puuid: "vZGb6QOukCMu2u036D8puLX2IUN7KvxbsvariWQJhp5SDXCKFLNkWMuf8B2qLJwxUkSw9ZWmsqoZuQ",
         },
       ],
       total_turn_count: 7,
@@ -2263,4 +2117,4 @@
     playernames: ["Minasia#OwO", "Bard no r#NA1"],
     server: "americas",
   },
-];
+]

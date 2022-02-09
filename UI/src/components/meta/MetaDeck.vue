@@ -1,8 +1,6 @@
 <template>
   <div class="py-2">
-    <div
-      class="relative flex items-center justify-center gap-2 md:justify-start"
-    >
+    <div class="relative flex items-center justify-center gap-2 md:justify-start">
       <!-- Summary -->
       <div class="flex w-32 flex-col items-start gap-0 whitespace-nowrap">
         <p class="text-sm text-gray-200">
@@ -23,9 +21,7 @@
           }"
         >
           {{ (winRate * 100).toFixed(2) }}%
-          <span class="block text-sm sm:inline sm:text-base">
-            | ± {{ (winRateBounds.gap * 50).toFixed(2) }}</span
-          >
+          <span class="block text-sm sm:inline sm:text-base"> | ± {{ (winRateBounds.gap * 50).toFixed(2) }}</span>
         </p>
       </div>
 
@@ -38,10 +34,7 @@
         <div v-if="!isSummary && isFeature" class="pl-2 text-sm text-gray-200">
           {{ $t("matches.current") }}
         </div>
-        <div
-          v-if="!isSummary && !isFeature"
-          class="h-4 w-full text-sm text-gray-200"
-        ></div>
+        <div v-if="!isSummary && !isFeature" class="h-4 w-full text-sm text-gray-200"></div>
         <deck-preview
           v-if="code"
           class="max-w-[220px] transition-colors hover:bg-gray-600 md:mr-2"
@@ -62,9 +55,7 @@
             class="absolute top-1/2 h-2 -translate-y-1/2 rounded-full"
             :style="{
               background: closestColor(winRateBounds.centerAdjusted),
-              width: `max(0.5rem, min(${
-                (winRateBounds.upper - winRateBounds.lower) * 100
-              }%, ${winRateBounds.gap * 100}%))`,
+              width: `max(0.5rem, min(${(winRateBounds.upper - winRateBounds.lower) * 100}%, ${winRateBounds.gap * 100}%))`,
               left: winRateBounds.lower * 100 + '%',
             }"
           ></div>
@@ -118,18 +109,14 @@
 </template>
 
 <script>
-import DeckPreview from "../deck/DeckPreview.vue";
+import DeckPreview from "../deck/DeckPreview.vue"
 
-const Z = 1.96; // 95% confidence
+const Z = 1.96 // 95% confidence
 
-import {
-  winRateToColor,
-  winrateGradient,
-  winRateToMonoColor,
-} from "../../modules/utils/colorUtils";
+import { winRateToColor, winrateGradient, winRateToMonoColor } from "../../modules/utils/colorUtils"
 
-import { regionNameToShorts } from "../panels/PanelLeaderboard.vue";
-import MetaBarPlayerDot from "./MetaBarPlayerDot.vue";
+import { regionNameToShorts } from "../panels/PanelLeaderboard.vue"
+import MetaBarPlayerDot from "./MetaBarPlayerDot.vue"
 
 // const gradientString =
 //   "linear-gradient(90deg, " +
@@ -158,42 +145,40 @@ export default {
   },
   computed: {
     winRateBounds() {
-      var interval =
-        Z * Math.sqrt((this.winRate * (1 - this.winRate)) / this.playNum);
-      var lower = Math.max(0, this.winRate - interval);
-      var upper = Math.min(1, this.winRate + interval);
-      var gap = interval * 2;
+      var interval = Z * Math.sqrt((this.winRate * (1 - this.winRate)) / this.playNum)
+      var lower = Math.max(0, this.winRate - interval)
+      var upper = Math.min(1, this.winRate + interval)
+      var gap = interval * 2
       return {
         lower: lower,
         upper: upper,
         gap: gap,
-        centerAdjusted:
-          lower + (upper - lower) * Math.min(1, Math.max(0.2, 0.5 - gap)),
-      };
+        centerAdjusted: lower + (upper - lower) * Math.min(1, Math.max(0.2, 0.5 - gap)),
+      }
     },
     detailLink() {
-      return "/code?code=" + this.code;
+      return "/code?code=" + this.code
       // return "https://lor.mobalytics.gg/decks/code/" + this.baseDeck
     },
   },
   data() {
     return {
       // gradientString: gradientString,
-    };
+    }
   },
   methods: {
     showDeck() {
-      this.$emitter.emit("showDeck", this.code);
+      this.$emitter.emit("showDeck", this.code)
     },
     openURL(url) {
       if (this.IS_ELECTRON) {
-        this.$emitter.emit("showDeckDetail", this.code);
+        this.$emitter.emit("showDeckDetail", this.code)
       } else {
         // window.open(url, "_blank")
-        this.$router.push(url);
+        this.$router.push(url)
       }
     },
     closestColor: winRateToColor,
   },
-};
+}
 </script>

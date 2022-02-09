@@ -15,7 +15,7 @@
 export default {
   components: {},
   data() {
-    return {};
+    return {}
   },
   mounted() {},
   props: {
@@ -32,22 +32,18 @@ export default {
   computed: {
     getRegionImgUrl() {
       if (this.faction == -1) {
-        return "none";
+        return "none"
       }
       // Remote
       // const regionImageBaseUrl = 'https://painttist.github.io/lor-champ-icons/images/regions/';
       // return "url(" + regionImageBaseUrl + regionID + ".svg)";
 
       // Local
-      return (
-        "url(" +
-        require("../../assets/images/regions/" + this.faction + ".svg") +
-        ")"
-      );
+      return "url(" + require("../../assets/images/regions/" + this.faction + ".svg") + ")"
     },
   },
   methods: {},
-};
+}
 </script>
 
 <style lang="scss">

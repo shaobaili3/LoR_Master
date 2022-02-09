@@ -17,7 +17,7 @@
               class="w-[60px] border-b-2 text-base"
               :class="{
                 ' border-gold-400  text-white': activeRegionID == 0,
-                'text-gold-400 border-transparent': activeRegionID != 0,
+                'border-transparent text-gold-400': activeRegionID != 0,
               }"
               @click="switchRegion(regions.NA)"
             >
@@ -27,7 +27,7 @@
               class="w-[60px] border-b-2 text-base"
               :class="{
                 ' border-gold-400  text-white': activeRegionID == 1,
-                'text-gold-400 border-transparent': activeRegionID != 1,
+                'border-transparent text-gold-400': activeRegionID != 1,
               }"
               @click="switchRegion(regions.EU)"
             >
@@ -37,7 +37,7 @@
               class="w-[60px] border-b-2 text-base"
               :class="{
                 ' border-gold-400  text-white': activeRegionID == 2,
-                'text-gold-400 border-transparent': activeRegionID != 2,
+                'border-transparent text-gold-400': activeRegionID != 2,
               }"
               @click="switchRegion(regions.APAC)"
             >

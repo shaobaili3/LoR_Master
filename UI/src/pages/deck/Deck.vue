@@ -13,20 +13,20 @@
       {{ loadingText }}
     </div>
 
-    <div class="tabs xxs:px-1 xs:px-2 px-0" v-if="!isLoading">
+    <div class="tabs px-0 xxs:px-1 xs:px-2" v-if="!isLoading">
       <div class="tab-title-group">
-        <div class="tab-title xxs:text-base xs:text-lg text-sm" @click="switchTab(TABS.oppo)" :class="{ active: isShowOppo }">
+        <div class="tab-title text-sm xxs:text-base xs:text-lg" @click="switchTab(TABS.oppo)" :class="{ active: isShowOppo }">
           <i class="fas fa-swords"></i>
         </div>
-        <div class="tab-title xxs:text-base xs:text-lg text-sm" @click="switchTab(TABS.oppog)" :class="{ active: isShowOppoGrave }">
+        <div class="tab-title text-sm xxs:text-base xs:text-lg" @click="switchTab(TABS.oppog)" :class="{ active: isShowOppoGrave }">
           <i class="fas fa-tombstone-alt"></i>
         </div>
       </div>
       <div class="tab-title-group">
-        <div class="tab-title xxs:text-base xs:text-lg text-sm" @click="switchTab(TABS.my)" :class="{ active: isShowMy }">
+        <div class="tab-title text-sm xxs:text-base xs:text-lg" @click="switchTab(TABS.my)" :class="{ active: isShowMy }">
           <i class="fas fa-user-cowboy"></i>
         </div>
-        <div class="tab-title xxs:text-base xs:text-lg text-sm" @click="switchTab(TABS.myg)" :class="{ active: isShowMyGrave }">
+        <div class="tab-title text-sm xxs:text-base xs:text-lg" @click="switchTab(TABS.myg)" :class="{ active: isShowMyGrave }">
           <i class="fas fa-tombstone-alt"></i>
         </div>
       </div>
@@ -57,8 +57,8 @@
       </div>
     </div>
 
-    <div class="layerpanel xxs:h-11 xxs:p-1 h-10 max-w-[280px] p-2" :class="{ expanded: currentLayer != LAYERS.base }" v-if="isShowOppo">
-      <button v-if="currentLayer == LAYERS.base" @click="onOpenDecklib" class="btn btn-decklib xxs:text-base px-2 py-1 text-sm">
+    <div class="layerpanel h-10 max-w-[280px] p-2 xxs:h-11 xxs:p-1" :class="{ expanded: currentLayer != LAYERS.base }" v-if="isShowOppo">
+      <button v-if="currentLayer == LAYERS.base" @click="onOpenDecklib" class="btn btn-decklib px-2 py-1 text-sm xxs:text-base">
         Open Deck Library
       </button>
       <button class="btn btn-back" v-if="currentLayer != LAYERS.base" @click="onLayerBack">

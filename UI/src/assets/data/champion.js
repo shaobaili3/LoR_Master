@@ -1,27 +1,27 @@
-import sets_en from "../../../../Resource/en_us.json";
+import sets_en from "../../../../Resource/en_us.json"
 
-var champs = [];
-var champObj = {};
+var champs = []
+var champObj = {}
 
 sets_en.forEach((set) => {
   set.forEach((card) => {
     if (card.rarityRef == "Champion" && card.collectible) {
-      var code = card.cardCode;
-      champs.push(code);
-      champObj[code] = code;
+      var code = card.cardCode
+      champs.push(code)
+      champObj[code] = code
     }
-  });
-});
+  })
+})
 
 export default {
   champions: champs,
   champObj: champObj,
-};
+}
 
 export const championCards = {
   champions: champs,
   champObj: champObj,
-};
+}
 
 // export default { champions: [
 //   "01DE012",

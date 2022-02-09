@@ -50,7 +50,7 @@ export const winrateGradientV2 = [
   ["3b82f6", 0.91],
   ["1d4ed8", 0.99],
   ["d8b4fe", 1.01],
-];
+]
 
 export const winrateGradientSimple = [
   ["f33535", 0.0],
@@ -63,7 +63,7 @@ export const winrateGradientSimple = [
   ["84cc16", 0.8],
   ["50c532", 0.9],
   ["38bdf8", 0.95],
-];
+]
 
 // export const winrateGradient = [
 //   ["ef4444", 0.0],
@@ -99,59 +99,59 @@ export const winrateGradientSimple = [
 
 const mix = function (color_1, color_2, weight) {
   function d2h(d) {
-    return d.toString(16);
+    return d.toString(16)
   } // convert a decimal value to hex
   function h2d(h) {
-    return parseInt(h, 16);
+    return parseInt(h, 16)
   } // convert a hex value to decimal
 
-  weight = typeof weight !== "undefined" ? weight : 50; // set the weight to 50%, if that argument is omitted
+  weight = typeof weight !== "undefined" ? weight : 50 // set the weight to 50%, if that argument is omitted
 
-  var color = "#";
+  var color = "#"
 
   for (var i = 0; i <= 5; i += 2) {
     // loop through each of the 3 hex pairs—red, green, and blue
     var v1 = h2d(color_1.substr(i, 2)), // extract the current pairs
       v2 = h2d(color_2.substr(i, 2)),
       // combine the current pairs from each source color, according to the specified weight
-      val = d2h(Math.floor(v2 + (v1 - v2) * (weight / 100.0)));
+      val = d2h(Math.floor(v2 + (v1 - v2) * (weight / 100.0)))
 
     while (val.length < 2) {
-      val = "0" + val;
+      val = "0" + val
     } // prepend a '0' if val results in a single digit
 
-    color += val; // concatenate val to our new color string
+    color += val // concatenate val to our new color string
   }
 
-  return color; // PROFIT!
-};
+  return color // PROFIT!
+}
 
 export const winRateToColor = (ratio) => {
-  var colorArray = winrateGradientV2;
-  if (ratio < 0) return "#" + colorArray[0][0];
-  if (ratio >= colorArray.at(-1)[1]) return "#" + colorArray.at(-1)[0];
+  var colorArray = winrateGradientV2
+  if (ratio < 0) return "#" + colorArray[0][0]
+  if (ratio >= colorArray.at(-1)[1]) return "#" + colorArray.at(-1)[0]
 
   for (let index in colorArray) {
-    var gradient = colorArray[index];
+    var gradient = colorArray[index]
     if (gradient[1] > ratio) {
-      var last = colorArray[index - 1];
-      var percent = ((ratio - last[1]) / (gradient[1] - last[1])) * 100;
-      return mix(gradient[0], last[0], percent);
+      var last = colorArray[index - 1]
+      var percent = ((ratio - last[1]) / (gradient[1] - last[1])) * 100
+      return mix(gradient[0], last[0], percent)
     }
   }
-  return "#" + colorArray[0][0];
-};
+  return "#" + colorArray[0][0]
+}
 
 export const winRateToSimpleColor = (ratio) => {
-  var colorArray = winrateGradientSimple;
-  if (ratio <= 0) return "#" + colorArray[0][0];
-  if (ratio >= colorArray.at(-1)[1]) return "#" + colorArray.at(-1)[0];
+  var colorArray = winrateGradientSimple
+  if (ratio <= 0) return "#" + colorArray[0][0]
+  if (ratio >= colorArray.at(-1)[1]) return "#" + colorArray.at(-1)[0]
 
   for (let index in colorArray) {
-    var gradient = colorArray[index];
+    var gradient = colorArray[index]
     if (gradient[1] > ratio) {
-      return "#" + colorArray[index - 1][0];
+      return "#" + colorArray[index - 1][0]
     }
   }
-  return "#fff";
-};
+  return "#fff"
+}

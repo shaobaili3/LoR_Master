@@ -95,21 +95,7 @@
               <input
                 spellcheck="false"
                 autocomplete="off"
-                class="
-                  search-bar
-                  h-12
-                  w-full
-                  rounded-3xl
-                  border-none
-                  bg-gray-800
-                  pl-12
-                  pr-5
-                  text-base text-white
-                  placeholder-gray-300
-                  outline-none
-                  transition-colors
-                  focus:bg-gray-700
-                "
+                class="search-bar h-12 w-full rounded-3xl border-none bg-gray-800 pl-12 pr-5 text-base text-white placeholder-gray-300 outline-none transition-colors focus:bg-gray-700"
                 :class="{
                   'rounded-b-none rounded-t-[25px]':
                     (hasNameAutoComplete || (searchText.length > 3 && !(searchText == playerName))) && isInputFocused,

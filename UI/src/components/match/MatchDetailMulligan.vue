@@ -2,11 +2,7 @@
   <div class="mulligan">
     <!-- <p class="title-text">Mulligan</p> -->
     <div class="images-contaienr">
-      <div
-        class="card-container"
-        v-for="(card, index) in startHandFiltered"
-        :key="index"
-      >
+      <div class="card-container" v-for="(card, index) in startHandFiltered" :key="index">
         <i v-if="card.kept" class="indicator fas fa-check"></i>
         <i v-if="!card.kept" class="indicator fas fa-sync-alt"></i>
         <card-image class="img" :code="card.CardCode"></card-image>
@@ -14,12 +10,7 @@
       <div class="arrow">
         <i class="fas fa-arrow-right"></i>
       </div>
-      <div
-        class="card-container"
-        v-for="(card, index) in endHandFiltered"
-        :class="{ kept: card.kept }"
-        :key="index"
-      >
+      <div class="card-container" v-for="(card, index) in endHandFiltered" :class="{ kept: card.kept }" :key="index">
         <i v-if="card.kept" class="indicator fas fa-check"></i>
         <i v-if="!card.kept" class="indicator fas fa-plus"></i>
         <card-image class="img" :code="card.CardCode"></card-image>
@@ -29,7 +20,7 @@
 </template>
 
 <script>
-import CardImage from "../image/CardImage.vue";
+import CardImage from "../image/CardImage.vue"
 
 export default {
   components: {
@@ -37,7 +28,7 @@ export default {
   },
   mounted() {},
   data() {
-    return {};
+    return {}
   },
   props: {
     startHand: Array,
@@ -47,30 +38,30 @@ export default {
     startHandFiltered() {
       return this.startHand
         .filter((card) => {
-          return card.CardCode !== "face" && card.LocalPlayer;
+          return card.CardCode !== "face" && card.LocalPlayer
         })
         .map((card) => {
           card.kept = this.endHand.find((c) => {
-            return c.CardID == card.CardID;
-          });
-          return card;
-        });
+            return c.CardID == card.CardID
+          })
+          return card
+        })
     },
     endHandFiltered() {
       return this.endHand
         .filter((card) => {
-          return card.CardCode !== "face" && card.LocalPlayer;
+          return card.CardCode !== "face" && card.LocalPlayer
         })
         .map((card) => {
           card.kept = this.startHand.find((c) => {
-            return c.CardID == card.CardID;
-          });
-          return card;
-        });
+            return c.CardID == card.CardID
+          })
+          return card
+        })
     },
   },
   methods: {},
-};
+}
 </script>
 
 <style lang="scss" scoped>

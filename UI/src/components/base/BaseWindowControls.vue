@@ -17,9 +17,7 @@
     <div class="menu-title-deck" v-if="titleType == 'deckCode'">Deck Info</div>
     <div class="menu-sub-title" v-if="titleType == 'match' && playerRank">
       <i class="fas fa-trophy"></i> {{ playerRank }}
-      <span class="extra-info pl-2"
-        ><i class="iconfy pr-2">LP</i>{{ playerLP }}</span
-      >
+      <span class="extra-info pl-2"><i class="iconfy pr-2">LP</i>{{ playerLP }}</span>
     </div>
     <div class="menu-fill"></div>
     <div v-if="canMin" class="menu-item" @click="minApp()">
@@ -69,21 +67,17 @@ export default {
   data() {
     return {
       isWindowMin: false,
-    };
+    }
   },
   mounted() {
-    window.addEventListener("resize", this.checkIsMin);
+    window.addEventListener("resize", this.checkIsMin)
   },
   unmounted() {
-    window.removeEventListener("resize", this.checkIsMin);
+    window.removeEventListener("resize", this.checkIsMin)
   },
   computed: {
     playerInfoString() {
-      return (
-        this.playerName +
-        (this.playerRank ? " Rank:" + this.playerRank : "") +
-        (this.playerLP ? " LP:" + this.playerLP : "")
-      );
+      return this.playerName + (this.playerRank ? " Rank:" + this.playerRank : "") + (this.playerLP ? " LP:" + this.playerLP : "")
     },
   },
   // components: {
@@ -91,20 +85,20 @@ export default {
   // }
   methods: {
     shrinkToggle() {
-      if (this.IS_ELECTRON) window.toggleShrinkWindow(); // Defined in appsrc > preload.js
+      if (this.IS_ELECTRON) window.toggleShrinkWindow() // Defined in appsrc > preload.js
     },
     minApp() {
-      if (this.IS_ELECTRON) window.minWindow(); // Defined in appsrc > preload.js
+      if (this.IS_ELECTRON) window.minWindow() // Defined in appsrc > preload.js
       //   console.log("Closing App")
     },
     closeApp() {
-      if (this.IS_ELECTRON) window.hideWindow();
+      if (this.IS_ELECTRON) window.hideWindow()
     },
     checkIsMin() {
-      if (window.isMin) this.isWindowMin = window.isMin();
+      if (window.isMin) this.isWindowMin = window.isMin()
     },
   },
-};
+}
 </script>
 
 <style lang="scss" scoped>

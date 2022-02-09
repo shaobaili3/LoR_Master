@@ -23,14 +23,14 @@
 <script></script>
 
 <script setup>
-import { onMounted } from "vue";
+import { onMounted } from "vue"
 
 onMounted(() => {
   window.onSignIn = (googleUser) => {
-    console.log("Succesfully Singed in!!!", googleUser);
-  };
-  let gsi = document.createElement("script");
-  gsi.setAttribute("src", "https://accounts.google.com/gsi/client");
-  document.head.appendChild(gsi);
-});
+    console.log("Succesfully Singed in!!!", googleUser)
+  }
+  let gsi = document.createElement("script")
+  gsi.setAttribute("src", "https://accounts.google.com/gsi/client")
+  document.head.appendChild(gsi)
+})
 </script>

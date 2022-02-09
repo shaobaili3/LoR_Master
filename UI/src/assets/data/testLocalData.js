@@ -7,8 +7,7 @@ module.exports = {
       opponentName: "SageGODno1",
       opponentTag: null,
       deck_tracker: {
-        deckCode:
-          "CQBAEBAHCSFACCAFBJ2IIAMFAGQADJQBU4A26AOAAEAQKBIKMBXYCAMMAG4QCAA",
+        deckCode: "CQBAEBAHCSFACCAFBJ2IIAMFAGQADJQBU4A26AOAAEAQKBIKMBXYCAMMAG4QCAA",
         cardsInDeck: {
           "04SH020": 2,
           "04SH138": 1,
@@ -26,8 +25,7 @@ module.exports = {
           "05BC140": 1,
           "05BC185": 1,
         },
-        currentDeckCode:
-          "CEAQIBIKQUA2MANHAGXQCAQBAQDRIBAFBJ2IIANAAHAACAQBAQDYUAIFAUFGA34BAGGADOIB",
+        currentDeckCode: "CEAQIBIKQUA2MANHAGXQCAQBAQDRIBAFBJ2IIANAAHAACAQBAQDYUAIFAUFGA34BAGGADOIB",
         opGraveyard: {
           "04SH074": 2,
           "04SH016": 1,
@@ -450,8 +448,7 @@ module.exports = {
       opponentName: "AG 莫有光",
       opponentTag: null,
       deck_tracker: {
-        deckCode:
-          "CQBAEBAHCSFACBYFBJ2IIAMFAGQADJQBU4A26AIBAUCQUYEBAGGADOIBYAAQEAIEA43AEBIKAFUQ",
+        deckCode: "CQBAEBAHCSFACBYFBJ2IIAMFAGQADJQBU4A26AIBAUCQUYEBAGGADOIBYAAQEAIEA43AEBIKAFUQ",
         cardsInDeck: {
           "04SH020": 3,
           "04SH138": 3,
@@ -470,8 +467,7 @@ module.exports = {
           "05BC001": 1,
           "05BC105": 1,
         },
-        currentDeckCode:
-          "CEBACBIKU4AQEBAHCSFACAIHAUFGBBABQUAYYANAAGXQDOIBAIAQIBZWAUCQUALJOSAQDJQB",
+        currentDeckCode: "CEBACBIKU4AQEBAHCSFACAIHAUFGBBABQUAYYANAAGXQDOIBAIAQIBZWAUCQUALJOSAQDJQB",
         opGraveyard: {
           "04SH074": 2,
           "04SH080": 2,
@@ -894,8 +890,7 @@ module.exports = {
       opponentName: "Nidhug",
       opponentTag: null,
       deck_tracker: {
-        deckCode:
-          "CMBQCAIEGQCQIBABAICAODAFAQDQCCYNDQTQEAIBAQTQCBAHJ4BACBAHRIAQEBIECEKA",
+        deckCode: "CMBQCAIEGQCQIBABAICAODAFAQDQCCYNDQTQEAIBAQTQCBAHJ4BACBAHRIAQEBIECEKA",
         cardsInDeck: {
           "01PZ052": 2,
           "04PZ001": 1,
@@ -909,8 +904,7 @@ module.exports = {
           "04SH079": 1,
           "04SH138": 1,
         },
-        currentDeckCode:
-          "CEBACBAEAIAQIBY4AMAQCBBUAECAIBADAQDQCCZHAMAQIBABAEAQIJYCAQDU7CQB",
+        currentDeckCode: "CEBACBAEAIAQIBY4AMAQCBBUAECAIBADAQDQCCZHAMAQIBABAEAQIJYCAQDU7CQB",
         opGraveyard: {
           "03BW015": 2,
           "03BW008": 2,
@@ -926,8 +920,7 @@ module.exports = {
           "01NX046": 1,
           "01NX046T1": 1,
         },
-        opGraveyardCode:
-          "CEAQCAQGEYBQCAQDBEAQEBQEAIBQMCAPAUAQIBQKAEBAMLIBAQBQEAIBAMXAEAQDA4EA",
+        opGraveyardCode: "CEAQCAQGEYBQCAQDBEAQEBQEAIBQMCAPAUAQIBQKAEBAMLIBAQBQEAIBAMXAEAQDA4EA",
         myGraveyard: {},
         myGraveyardCode: "CEAAAAA",
         myPlayedCards: {
@@ -947,8 +940,7 @@ module.exports = {
           "04SH013": 2,
           "04SH060T1": 1,
         },
-        myPlayedCardsCode:
-          "CEAAEAIEA4GQEBAEAEGAIAIEAQCAEBIECEKAEAIEE42AIBAHAEFSOTYEAQCAO",
+        myPlayedCardsCode: "CEAAEAIEA4GQEBAEAEGAIAIEAQCAEBIECEKAEAIEE42AIBAHAEFSOTYEAQCAO",
         cardsInHandNum: 3,
         openHand: [
           {
@@ -1643,8 +1635,7 @@ module.exports = {
           "04SH066": 1,
           "04SH076": 2,
         },
-        currentDeckCode:
-          "CEBACBAEBQBAIBYBQAAQEAIEAQBAKBAHBMGRYJ2MAMAQCBBUAECAOQQCAQCACBA",
+        currentDeckCode: "CEBACBAEBQBAIBYBQAAQEAIEAQBAKBAHBMGRYJ2MAMAQCBBUAECAOQQCAQCACBA",
         opGraveyard: {
           "03MT014": 1,
           "03DE011": 1,
@@ -2162,8 +2153,7 @@ module.exports = {
       opponentName: "wodiu",
       opponentTag: null,
       deck_tracker: {
-        deckCode:
-          "CQCACAIEHAAQGAAOAMAQABQLFIBQKCQEGFCQGAIBAAOQEAQAAEBAGBIKAENLSAIDAECAAAQBAUFJOAICAEAAOLY",
+        deckCode: "CQCACAIEHAAQGAAOAMAQABQLFIBQKCQEGFCQGAIBAAOQEAQAAEBAGBIKAENLSAIDAECAAAQBAUFJOAICAEAAOLY",
         cardsInDeck: {
           "01PZ056": 3,
           "03DE014": 3,
@@ -2180,8 +2170,7 @@ module.exports = {
           "04DE002": 1,
           "01DE047": 1,
         },
-        currentDeckCode:
-          "CECACAIEHAAQGAAOAEAQABQBAUFAIAYBAEACUAICAAAQEBIKDIYQIAICAABACBIKAEAQIAACAMAQACY5F4",
+        currentDeckCode: "CECACAIEHAAQGAAOAEAQABQBAUFAIAYBAEACUAICAAAQEBIKDIYQIAICAABACBIKAEAQIAACAMAQACY5F4",
         opGraveyard: {
           "05BC175": 1,
           "05BC167": 1,
@@ -2198,8 +2187,7 @@ module.exports = {
           "03PZ003T11": 3,
           "05BC151": 1,
         },
-        opGraveyardCode:
-          "CEAACAIFBLBQCAYBAMEQWAIDAQBQQBIKAQCXJFYBTAA2AANHAGXQC",
+        opGraveyardCode: "CEAACAIFBLBQCAYBAMEQWAIDAQBQQBIKAQCXJFYBTAA2AANHAGXQC",
         myGraveyard: {},
         myGraveyardCode: "CEAAAAA",
         myPlayedCards: {
@@ -2880,8 +2868,7 @@ module.exports = {
       opponentName: "decks_badbarriers_name",
       opponentTag: null,
       deck_tracker: {
-        deckCode:
-          "CICACAIADIAQIAAUAMBQSDSXMQCAGAAGBAFQ4AQBAIAACAYDBEBTGYADAEAQABYBAQAAEAYDBEDCMVI",
+        deckCode: "CICACAIADIAQIAAUAMBQSDSXMQCAGAAGBAFQ4AQBAIAACAYDBEBTGYADAEAQABYBAQAAEAYDBEDCMVI",
         cardsInDeck: {
           "01DE026": 3,
           "04DE020": 2,
@@ -2901,8 +2888,7 @@ module.exports = {
           "03MT006": 1,
           "03MT038": 1,
         },
-        currentDeckCode:
-          "CEBQCAIADIBAGCKXMQBAGAAGBACACBAACQAQEAABAIBQACYOAQBQSAYOGNQAGAIBAADQCBAAAIBAGCIGEY",
+        currentDeckCode: "CEBQCAIADIBAGCKXMQBAGAAGBACACBAACQAQEAABAIBQACYOAQBQSAYOGNQAGAIBAADQCBAAAIBAGCIGEY",
         opGraveyard: {},
         opGraveyardCode: "CEAAAAA",
         myGraveyard: {},
@@ -3122,8 +3108,7 @@ module.exports = {
           "02NX004": 1,
           "05BC166": 1,
         },
-        currentDeckCode:
-          "CEBQCAQDAMBACAYMFABQKCTAUMA26AICAEAQGAQCAUFCS5ACAEBAGBADAUFDCSNGAE",
+        currentDeckCode: "CEBQCAQDAMBACAYMFABQKCTAUMA26AICAEAQGAQCAUFCS5ACAEBAGBADAUFDCSNGAE",
         opGraveyard: {
           "01IO005": 2,
           "01IO017": 2,
@@ -3626,8 +3611,7 @@ module.exports = {
           "02NX004": 2,
           "05BC166": 2,
         },
-        currentDeckCode:
-          "CEBQCAQDAMBQCAYCBQUAQBIKA4UTCSLAOSRQDLYBAIAQEAYEAECQVJQBAA",
+        currentDeckCode: "CEBQCAQDAMBQCAYCBQUAQBIKA4UTCSLAOSRQDLYBAIAQEAYEAECQVJQBAA",
         opGraveyard: {},
         opGraveyardCode: "CEAAAAA",
         myGraveyard: {},
@@ -3721,8 +3705,7 @@ module.exports = {
           "02NX004": 1,
           "05BC166": 2,
         },
-        currentDeckCode:
-          "CEBQCAQDAMBQCAYCBQUAKBIKA4YUS5FDAEAQGBIKMCTADLYBAIAQKCRJAEBAGBA",
+        currentDeckCode: "CEBQCAQDAMBQCAYCBQUAKBIKA4YUS5FDAEAQGBIKMCTADLYBAIAQKCRJAEBAGBA",
         opGraveyard: {},
         opGraveyardCode: "CEAAAAA",
         myGraveyard: {},
@@ -3932,8 +3915,7 @@ module.exports = {
       opponentName: "PentaKen",
       opponentTag: null,
       deck_tracker: {
-        deckCode:
-          "CICACAIADIAQIAAUAMBQSDSXMQCAGAAGBAFQ4AQBAIAACAYDBEBTGYADAEAQABYBAQAAEAYDBEDCMVI",
+        deckCode: "CICACAIADIAQIAAUAMBQSDSXMQCAGAAGBAFQ4AQBAIAACAYDBEBTGYADAEAQABYBAQAAEAYDBEDCMVI",
         cardsInDeck: {
           "01DE026": 2,
           "04DE020": 3,
@@ -3954,8 +3936,7 @@ module.exports = {
           "03MT038": 1,
           "03MT085": 1,
         },
-        currentDeckCode:
-          "CEBACBAACQAQGCLEAQAQCAA2AEBAAAICAMAAMCYDAMETGV3AAQAQCAAHAECAAAQCAMAAQDQFAMEQGBQOEZKQ",
+        currentDeckCode: "CEBACBAACQAQGCLEAQAQCAA2AEBAAAICAMAAMCYDAMETGV3AAQAQCAAHAECAAAQCAMAAQDQFAMEQGBQOEZKQ",
         opGraveyard: {
           "01IO057": 2,
           "01IO026": 1,
@@ -4406,8 +4387,7 @@ module.exports = {
           "05BC163": 2,
           "05BC166": 2,
         },
-        currentDeckCode:
-          "CEAQCBIKA4BACAIDBQDAKCRRJFQHJIYBUYAQGAICAMBQCBIKFEBACAYCFA",
+        currentDeckCode: "CEAQCBIKA4BACAIDBQDAKCRRJFQHJIYBUYAQGAICAMBQCBIKFEBACAYCFA",
         opGraveyard: {
           "05BC073": 1,
           "05BC073T1": 1,
@@ -4428,8 +4408,7 @@ module.exports = {
           "04SH039": 1,
           "05SH011T1": 1,
         },
-        opGraveyardCode:
-          "CEAQCBIHBMBQCBIHA4AQKCUYAEBAIBZFEYBQCBIHBYBQIBZHLFNAIBIKAYNBWSIGAQDQM",
+        opGraveyardCode: "CEAQCBIHBMBQCBIHA4AQKCUYAEBAIBZFEYBQCBIHBYBQIBZHLFNAIBIKAYNBWSIGAQDQM",
         myGraveyard: {},
         myGraveyardCode: "CEAAAAA",
         myPlayedCards: {
@@ -4449,8 +4428,7 @@ module.exports = {
           "01NX012": 1,
           "02NX004": 2,
         },
-        myPlayedCardsCode:
-          "CEAQCBIKV4AQGAIFBIUQEAIDAIUAEAQDAMCAEAIBAMGAQBIKBIYUSYDUTAA2GAOAAE",
+        myPlayedCardsCode: "CEAQCBIKV4AQGAIFBIUQEAIDAIUAEAQDAMCAEAIBAMGAQBIKBIYUSYDUTAA2GAOAAE",
         cardsInHandNum: 2,
         openHand: [
           {
@@ -5273,8 +5251,7 @@ module.exports = {
           "02NX004": 1,
           "05BC166": 2,
         },
-        currentDeckCode:
-          "CEBACAIDAIBQKCQHMCRQCAQBAEBQYBIFBIUTC5FGAGXQCAYBAEBSQAIFBJEQEAQDAMCA",
+        currentDeckCode: "CEBACAIDAIBQKCQHMCRQCAQBAEBQYBIFBIUTC5FGAGXQCAYBAEBSQAIFBJEQEAQDAMCA",
         opGraveyard: {
           "01FR003": 2,
           "02FR001": 1,
@@ -5288,8 +5265,7 @@ module.exports = {
           "02NX009": 1,
           "03NX013": 1,
         },
-        opGraveyardCode:
-          "CEAACAIBAEBQMAIBAMXACAIBCQAQGAICAEBQGDICAIBQQCIDAIAQCAQK",
+        opGraveyardCode: "CEAACAIBAEBQMAIBAMXACAIBCQAQGAICAEBQGDICAIBQQCIDAIAQCAQK",
         myGraveyard: {},
         myGraveyardCode: "CEAAAAA",
         myPlayedCards: {
@@ -5307,8 +5283,7 @@ module.exports = {
           "05BC116": 1,
           "05BC129": 1,
         },
-        myPlayedCardsCode:
-          "CEAAGAIFBJEQCAQDAMAQCAZIAQAQIBZKAEAQGDACAIBQICIGAUFCSMLUQEA26AOAAE",
+        myPlayedCardsCode: "CEAAGAIFBJEQCAQDAMAQCAZIAQAQIBZKAEAQGDACAIBQICIGAUFCSMLUQEA26AOAAE",
         cardsInHandNum: 0,
         openHand: [
           {
@@ -5792,4 +5767,4 @@ module.exports = {
       },
     },
   ],
-};
+}

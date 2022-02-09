@@ -16,21 +16,14 @@
       {{ card.cost }}
     </div>
     <div class="cardContent cardName">{{ card.name }}</div>
-    <div v-if="card.count && card.count >= 0" class="cardContent cardCount">
-      x{{ card.count }}
-    </div>
+    <div v-if="card.count && card.count >= 0" class="cardContent cardCount">x{{ card.count }}</div>
     <div
       v-if="type === 'Unknown'"
       class="lab-secret pointer-events-none absolute top-0 left-1/2 z-10 flex h-full w-full -translate-x-1/2 transform items-center justify-center whitespace-nowrap bg-black px-4 opacity-0 transition-opacity group-hover:opacity-100"
     >
       {{ $t("str.labSecrets") }}
     </div>
-    <card-image
-      v-if="!noPreview"
-      class="cardDisplay"
-      :code="code"
-      :set="set"
-    ></card-image>
+    <card-image v-if="!noPreview" class="cardDisplay" :code="code" :set="set"></card-image>
   </div>
 </template>
 
@@ -38,30 +31,27 @@
 // Image from mobalytics | 220x40
 // https://cdn-lor.mobalytics.gg/production/images/cards-preview/01DE029.webp
 
-import axios from "axios";
-import CardImage from "../image/CardImage.vue";
+import axios from "axios"
+import CardImage from "../image/CardImage.vue"
 
-const requestStatusWaitTime = 1000; //ms
-var lastStatusRequestTime;
+const requestStatusWaitTime = 1000 //ms
+var lastStatusRequestTime
 
 export default {
   components: { CardImage },
   mounted() {
     if (!this.name && this.code) {
-      var card = this.sets.find((card) => card.cardCode == this.code);
+      var card = this.sets.find((card) => card.cardCode == this.code)
 
-      var typeRef = "";
+      var typeRef = ""
       if (card.supertype != "" || card.rarityRef == "Champion") {
-        typeRef = "Champion";
+        typeRef = "Champion"
       } else if (card.spellSpeedRef != "") {
-        typeRef = "Spell";
-      } else if (
-        card.keywordRefs &&
-        card.keywordRefs.includes("LandmarkVisualOnly")
-      ) {
-        typeRef = "Landmark";
+        typeRef = "Spell"
+      } else if (card.keywordRefs && card.keywordRefs.includes("LandmarkVisualOnly")) {
+        typeRef = "Landmark"
       } else {
-        typeRef = "Unit";
+        typeRef = "Unit"
       }
 
       // cards.push({
@@ -76,8 +66,8 @@ export default {
       //     set: card.set
       // })
 
-      this.card.name = card.name;
-      this.card.cost = card.cost;
+      this.card.name = card.name
+      this.card.cost = card.cost
     }
   },
   data() {
@@ -92,7 +82,7 @@ export default {
         supertype: this.supertype,
         set: this.set,
       },
-    };
+    }
   },
   props: {
     code: {
@@ -126,38 +116,28 @@ export default {
       // const champImageBaseUrl = 'https://raw.githubusercontent.com/painttist/lor-champ-icons/master/images/cards/cropped/';
       // const unkown = 'https://cdn-lor.mobalytics.gg/production/images/subscribe-banner.jpg'
 
-      const grayOverlay =
-        "linear-gradient(90deg, rgb(65, 65, 65) 30%, rgba(65, 65, 65, 0) 70%)";
+      const grayOverlay = "linear-gradient(90deg, rgb(65, 65, 65) 30%, rgba(65, 65, 65, 0) 70%)"
 
       // const colored = 'linear-gradient(94deg, rgba(73,213,245,1) 44%, rgba(167,79,255,1) 90%)'
-      const colored2 =
-        "linear-gradient(120deg, rgba(19,28,69,1) 10%, rgba(73,213,245,1) 50%, rgba(167,79,255,1) 90%)";
+      const colored2 = "linear-gradient(120deg, rgba(19,28,69,1) 10%, rgba(73,213,245,1) 50%, rgba(167,79,255,1) 90%)"
       if (this.typeRef === "Unknown") {
-        return `${colored2}`;
+        return `${colored2}`
       }
 
-      const cardPreviewUrlBase =
-        "https://cdn-lor.mobalytics.gg/production/images/cards-preview/";
+      const cardPreviewUrlBase = "https://cdn-lor.mobalytics.gg/production/images/cards-preview/"
 
       // const gradient = "linear-gradient(90deg, rgb(191, 176, 131) 30%, rgba(191, 176, 131, 0) 70%),"
-      var gradient;
+      var gradient
       if (this.typeRef == "Champion") {
-        gradient =
-          "linear-gradient(90deg, var(--col-darker-gold) 30%, rgba(158, 114, 18, 0) 70%),";
+        gradient = "linear-gradient(90deg, var(--col-darker-gold) 30%, rgba(158, 114, 18, 0) 70%),"
       } else {
-        gradient = `${grayOverlay},`;
+        gradient = `${grayOverlay},`
       }
 
-      return (
-        gradient +
-        "url(" +
-        cardPreviewUrlBase +
-        this.code +
-        ".webp) right top no-repeat"
-      );
+      return gradient + "url(" + cardPreviewUrlBase + this.code + ".webp) right top no-repeat"
     },
   },
-};
+}
 </script>
 
 <style scoped>

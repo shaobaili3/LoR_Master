@@ -18,7 +18,7 @@ export default {
   // components: {
   //   MainLayout
   // }
-};
+}
 </script>
 
 <style scoped>

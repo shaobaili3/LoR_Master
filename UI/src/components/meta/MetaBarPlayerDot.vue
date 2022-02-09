@@ -8,24 +8,7 @@
     @click="routePlayerProfile(player)"
   >
     <div
-      class="
-        pointer-events-none
-        absolute
-        right-0
-        top-2
-        z-10
-        ml-2
-        hidden
-        w-fit
-        min-w-[10rem]
-        rounded-lg
-        bg-gray-700
-        py-2
-        pl-2
-        pr-2
-        text-left
-        group-hover:block
-      "
+      class="pointer-events-none absolute right-0 top-2 z-10 ml-2 hidden w-fit min-w-[10rem] rounded-lg bg-gray-700 py-2 pl-2 pr-2 text-left group-hover:block"
     >
       <p class="text-sm text-gray-200">
         <span class="pre-info">

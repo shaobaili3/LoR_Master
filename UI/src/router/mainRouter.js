@@ -1,13 +1,13 @@
-import PanelSettings from "../components/panels/PanelSettings.vue";
-import PanelSearch from "../components/panels/PanelSearch.vue";
-import PanelProfile from "../components/panels/PanelProfile.vue";
-import PanelMeta from "../components/panels/PanelMeta.vue";
-import PanelDeckLib from "../components/panels/PanelDeckLib.vue";
-import PanelDeckCode from "../components/panels/PanelDeckCode.vue";
-import PanelLeaderboard from "../components/panels/PanelLeaderboard.vue";
-import ContactInfo from "../components/panels/PanelContact.vue";
+import PanelSettings from "../components/panels/PanelSettings.vue"
+import PanelSearch from "../components/panels/PanelSearch.vue"
+import PanelProfile from "../components/panels/PanelProfile.vue"
+import PanelMeta from "../components/panels/PanelMeta.vue"
+import PanelDeckLib from "../components/panels/PanelDeckLib.vue"
+import PanelDeckCode from "../components/panels/PanelDeckCode.vue"
+import PanelLeaderboard from "../components/panels/PanelLeaderboard.vue"
+import ContactInfo from "../components/panels/PanelContact.vue"
 
-import PanelTest from "../components/panels/PanelTest.vue";
+import PanelTest from "../components/panels/PanelTest.vue"
 
 export default [
   {
@@ -81,4 +81,4 @@ export default [
   },
   { name: "contact", path: "/contact", component: ContactInfo },
   { name: "test", path: "/test", component: PanelTest },
-];
+]

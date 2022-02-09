@@ -27,22 +27,13 @@
       <button
         class="send-btn mt-1 cursor-default bg-gray-700 text-gray-200 transition-colors"
         :class="{
-          'text-gray-50 hover:cursor-pointer hover:bg-gray-500':
-            message.length > 0,
+          'text-gray-50 hover:cursor-pointer hover:bg-gray-500': message.length > 0,
         }"
         @click="sendMessage"
       >
-        <span v-if="messageSending"
-          >{{ $t("contact.messageBox.messageSending") }}
-          <i class="fas fa-spin fa-spinner-third"></i
-        ></span>
-        <span v-else-if="messageSent"
-          >{{ $t("contact.messageBox.messageSent") }}
-          <i class="fas fa-check"></i
-        ></span>
-        <span v-else-if="doubleCheck">{{
-          $t("contact.messageBox.confirm")
-        }}</span>
+        <span v-if="messageSending">{{ $t("contact.messageBox.messageSending") }} <i class="fas fa-spin fa-spinner-third"></i></span>
+        <span v-else-if="messageSent">{{ $t("contact.messageBox.messageSent") }} <i class="fas fa-check"></i></span>
+        <span v-else-if="doubleCheck">{{ $t("contact.messageBox.confirm") }}</span>
         <span v-else>{{ $t("contact.messageBox.send") }}</span>
       </button>
     </div>
@@ -53,42 +44,42 @@
 </template>
 
 <script setup>
-import axios from "axios";
-import { ref } from "vue";
-import { useStatusStore } from "../../store/StoreStatus";
-import { useBaseStore } from "../../store/StoreBase";
+import axios from "axios"
+import { ref } from "vue"
+import { useStatusStore } from "../../store/StoreStatus"
+import { useBaseStore } from "../../store/StoreBase"
 
-const baseStore = useBaseStore();
-const statusStore = useStatusStore();
+const baseStore = useBaseStore()
+const statusStore = useStatusStore()
 
-const maxCharLimit = 3000;
+const maxCharLimit = 3000
 
-const message = ref("");
-const doubleCheck = ref(false);
-const showAskContact = ref(false);
-const messageSent = ref(false);
-const messageSending = ref(false);
+const message = ref("")
+const doubleCheck = ref(false)
+const showAskContact = ref(false)
+const messageSent = ref(false)
+const messageSending = ref(false)
 
-const errorMessage = ref("");
+const errorMessage = ref("")
 
 function onKeyUp() {
-  doubleCheck.value = false;
-  messageSent.value = false;
-  messageSending.value = false;
-  if (validate()) errorMessage.value = "";
+  doubleCheck.value = false
+  messageSent.value = false
+  messageSending.value = false
+  if (validate()) errorMessage.value = ""
 }
 
 function validate() {
-  return message.value.length <= maxCharLimit;
+  return message.value.length <= maxCharLimit
 }
 
 function handleMessageError(err) {
-  errorMessage.value = err;
+  errorMessage.value = err
 }
 
 function postRequest() {
   // const reportURL = `${this.API_WEB}/report/${encodeURIComponent(message.value)}`
-  var reportUrl = `${baseStore.API_WEB}/feedback`;
+  var reportUrl = `${baseStore.API_WEB}/feedback`
   axios
     .post(reportUrl, {
       time: Date.now(),
@@ -100,48 +91,48 @@ function postRequest() {
       message: message.value,
     })
     .then((response) => {
-      console.log("Send Report Success");
-      handleMessageSent();
+      console.log("Send Report Success")
+      handleMessageSent()
     })
     .catch((err) => {
-      console.log(err);
-      handleMessageError(err.toString());
-    });
+      console.log(err)
+      handleMessageError(err.toString())
+    })
 }
 
 function sendMessage() {
-  if (message.value.length <= 0) return;
+  if (message.value.length <= 0) return
 
   if (!validate()) {
-    handleMessageError(`Max length exceeded ${maxCharLimit}`);
-    return;
+    handleMessageError(`Max length exceeded ${maxCharLimit}`)
+    return
   }
 
-  showAskContact.value = true;
+  showAskContact.value = true
 
   if (doubleCheck.value) {
-    postRequest();
-    handleMessageSending();
+    postRequest()
+    handleMessageSending()
   } else if (message.value != "") {
-    doubleCheck.value = true;
+    doubleCheck.value = true
   }
 }
 
 function handleMessageSending() {
-  doubleCheck.value = false;
-  messageSending.value = true;
+  doubleCheck.value = false
+  messageSending.value = true
 }
 
 function handleMessageSent() {
-  doubleCheck.value = false;
-  messageSending.value = false;
-  messageSent.value = true;
-  showAskContact.value = false;
-  message.value = "";
+  doubleCheck.value = false
+  messageSending.value = false
+  messageSent.value = true
+  showAskContact.value = false
+  message.value = ""
 }
 
 function openURL(url) {
-  window.openExternal(url);
+  window.openExternal(url)
 }
 </script>
 

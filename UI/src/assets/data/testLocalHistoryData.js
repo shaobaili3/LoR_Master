@@ -7,24 +7,20 @@ module.exports = [
       game_version: "live_2_17_8",
       players: [
         {
-          deck_code:
-            "CQDACAQAA4AQGAAOAEBQECQBAUFCSAYBAAERKHIFAEBAMCIMCE4QCAIEAABAEAIBAABQCAQCBI",
+          deck_code: "CQDACAQAA4AQGAAOAEBQECQBAUFCSAYBAAERKHIFAEBAMCIMCE4QCAIEAABAEAIBAABQCAQCBI",
           deck_id: "1b4a7a69-37dc-4fda-a934-25b4040605ef",
           factions: ["faction_Demacia_Name", "faction_Ionia_Name"],
           game_outcome: "loss",
           order_of_play: 1,
-          puuid:
-            "g-cLJ05atWuNQVVSEDUqP-5Kmv2llKOlPyUvWdRCYR7xCxHX90NajeSC2vIioSFlhp7x85y3xRzbpg",
+          puuid: "g-cLJ05atWuNQVVSEDUqP-5Kmv2llKOlPyUvWdRCYR7xCxHX90NajeSC2vIioSFlhp7x85y3xRzbpg",
         },
         {
-          deck_code:
-            "CIBQEAQDAMCAIAIDAIGCKKAGAIDBMIBGFU5DYAIBAUDACAQBAEBTGAICAMCQ",
+          deck_code: "CIBQEAQDAMCAIAIDAIGCKKAGAIDBMIBGFU5DYAIBAUDACAQBAEBTGAICAMCQ",
           deck_id: "2eb110b2-d725-4c42-8a52-f04822c1bf85",
           factions: ["faction_Bilgewater_Name", "faction_Noxus_Name"],
           game_outcome: "win",
           order_of_play: 0,
-          puuid:
-            "e_-8l79-lCvakUC9T37eRk5uEHugQskA9B8k8kcwQIeniWICC_JcXJBvNcK_GfJsg1Wxyp2S1AzUzw",
+          puuid: "e_-8l79-lCvakUC9T37eRk5uEHugQskA9B8k8kcwQIeniWICC_JcXJBvNcK_GfJsg1Wxyp2S1AzUzw",
         },
       ],
       total_turn_count: 22,
@@ -53,8 +49,7 @@ module.exports = [
           "02NX004": 1,
           "05BC166": 2,
         },
-        currentDeckCode:
-          "CEBACAIDAIBQKCQHMCRQCAQBAEBQYBIFBIUTC5FGAGXQCAYBAEBSQAIFBJEQEAQDAMCA",
+        currentDeckCode: "CEBACAIDAIBQKCQHMCRQCAQBAEBQYBIFBIUTC5FGAGXQCAYBAEBSQAIFBJEQEAQDAMCA",
         opGraveyard: {
           "01FR003": 2,
           "02FR001": 1,
@@ -68,8 +63,7 @@ module.exports = [
           "02NX009": 1,
           "03NX013": 1,
         },
-        opGraveyardCode:
-          "CEAACAIBAEBQMAIBAMXACAIBCQAQGAICAEBQGDICAIBQQCIDAIAQCAQK",
+        opGraveyardCode: "CEAACAIBAEBQMAIBAMXACAIBCQAQGAICAEBQGDICAIBQQCIDAIAQCAQK",
         myGraveyard: {},
         myGraveyardCode: "CEAAAAA",
         myPlayedCards: {
@@ -87,8 +81,7 @@ module.exports = [
           "05BC116": 1,
           "05BC129": 1,
         },
-        myPlayedCardsCode:
-          "CEAAGAIFBJEQCAQDAMAQCAZIAQAQIBZKAEAQGDACAIBQICIGAUFCSMLUQEA26AOAAE",
+        myPlayedCardsCode: "CEAAGAIFBJEQCAQDAMAQCAZIAQAQIBZKAEAQGDACAIBQICIGAUFCSMLUQEA26AOAAE",
         cardsInHandNum: 0,
         openHand: [
           {
@@ -603,14 +596,12 @@ module.exports = [
       game_version: "live_2_17_8",
       players: [
         {
-          deck_code:
-            "CQCACAIADIAQKCVPAEBAGAAIBYBQGCIJHFLQIAIBAAHQCAQAAEAQGAAGAUBQSIZTKZQGIAQBAEAAOAQDBEBVK",
+          deck_code: "CQCACAIADIAQKCVPAEBAGAAIBYBQGCIJHFLQIAIBAAHQCAQAAEAQGAAGAUBQSIZTKZQGIAQBAEAAOAQDBEBVK",
           deck_id: "098427cb-bb08-462f-9041-1c1c0d805956",
           factions: ["faction_Demacia_Name", "faction_MtTargon_Name"],
           game_outcome: "win",
           order_of_play: 0,
-          puuid:
-            "e_-8l79-lCvakUC9T37eRk5uEHugQskA9B8k8kcwQIeniWICC_JcXJBvNcK_GfJsg1Wxyp2S1AzUzw",
+          puuid: "e_-8l79-lCvakUC9T37eRk5uEHugQskA9B8k8kcwQIeniWICC_JcXJBvNcK_GfJsg1Wxyp2S1AzUzw",
         },
         {
           deck_code: "CQBQEAQDAMCAGAIDAIGCQCAFBIDSSMKJMB2KGANGAEAACAIFBJCQ",
@@ -618,8 +609,7 @@ module.exports = [
           factions: ["faction_BandleCity_Name", "faction_Noxus_Name"],
           game_outcome: "loss",
           order_of_play: 1,
-          puuid:
-            "XClXVfkFKKrXiKpQg_qo9A3W5VCs4qWKO-jf0H_RI0l5LskHDIWf3l829CczLc4U-TUIWMUvgD0HnQ",
+          puuid: "XClXVfkFKKrXiKpQg_qo9A3W5VCs4qWKO-jf0H_RI0l5LskHDIWf3l829CczLc4U-TUIWMUvgD0HnQ",
         },
       ],
       total_turn_count: 38,
@@ -642,10 +632,8 @@ module.exports = [
           "03MT100": 1,
         },
         cardsInHandNum: 7,
-        currentDeckCode:
-          "CEAQCAYJK4CACAIADIAQGAAOAEBAAAIEAMEQSOKWMABQCAYAAYAQCAAHAMBQSA2VMQ",
-        deckCode:
-          "CQCACAIADIAQKCVPAEBAGAAIBYBQGCIJHFLQIAIBAAHQCAQAAEAQGAAGAUBQSIZTKZQGIAQBAEAAOAQDBEBVK",
+        currentDeckCode: "CEAQCAYJK4CACAIADIAQGAAOAEBAAAIEAMEQSOKWMABQCAYAAYAQCAAHAMBQSA2VMQ",
+        deckCode: "CQCACAIADIAQKCVPAEBAGAAIBYBQGCIJHFLQIAIBAAHQCAQAAEAQGAAGAUBQSIZTKZQGIAQBAEAAOAQDBEBVK",
         myGraveyard: {},
         myGraveyardCode: "CEAAAAA",
         myPlayedCards: {
@@ -666,8 +654,7 @@ module.exports = [
           "05BC175": 3,
           "05BC188": 1,
         },
-        myPlayedCardsCode:
-          "CEAQCBIKV4AQEAIBAAHQCAYABACACAYAAYAQKCV4AEAQCAA2BIBQSBAJEMSTGOKBIZNWI",
+        myPlayedCardsCode: "CEAQCBIKV4AQEAIBAAHQCAYABACACAYAAYAQKCV4AEAQCAA2BIBQSBAJEMSTGOKBIZNWI",
         opGraveyard: {
           "01NX002": 2,
           "01NX011": 1,
@@ -686,8 +673,7 @@ module.exports = [
           "05BC164": 3,
           "05BC166": 1,
         },
-        opGraveyardCode:
-          "CEAQCBIKUQAQEAQBAMBCQAYFBIDTC5ADAEAQIFABAEBQWBQFBIFEKSMMAGRQDJQB",
+        opGraveyardCode: "CEAQCBIKUQAQEAQBAMBCQAYFBIDTC5ADAEAQIFABAEBQWBQFBIFEKSMMAGRQDJQB",
         openHand: [
           {
             CardCode: "face",
@@ -1412,24 +1398,20 @@ module.exports = [
       game_version: "live_2_16_17",
       players: [
         {
-          deck_code:
-            "CQCACAQEBAAQKBAMAIAQIJBUAUCQUBBIGGTADPABAQAQCBA3AECAIBYBAUCBCAYFBIAZQANPAEAQCAIEE4",
+          deck_code: "CQCACAQEBAAQKBAMAIAQIJBUAUCQUBBIGGTADPABAQAQCBA3AECAIBYBAUCBCAYFBIAZQANPAEAQCAIEE4",
           deck_id: "02efdb14-41ed-4e9f-9046-c29d6edc63b0_live_cte_deck_2",
           factions: ["faction_BandleCity_Name", "faction_Piltover_Name"],
           game_outcome: "win",
           order_of_play: 1,
-          puuid:
-            "ScuovCdD2kPWCZKxhvz24txFliTEx7t_BTW6cPWHgh2smTuo5r-2Ul7GNoRsK0_yUfvG7AjVHgrnLg",
+          puuid: "ScuovCdD2kPWCZKxhvz24txFliTEx7t_BTW6cPWHgh2smTuo5r-2Ul7GNoRsK0_yUfvG7AjVHgrnLg",
         },
         {
-          deck_code:
-            "CICACAYFCAAQIBQOAECQKCIDAIDBUJRNAUAQGBQIAECAKOACAECSEMICAUCQGDQDAIDAEBAIAIBACBIBEEBAGBIIBQ",
+          deck_code: "CICACAYFCAAQIBQOAECQKCIDAIDBUJRNAUAQGBQIAECAKOACAECSEMICAUCQGDQDAIDAEBAIAIBACBIBEEBAGBIIBQ",
           deck_id: "02efdb14-41ed-4e9f-9046-c29d6edc63b0_live_cte_deck_2",
           factions: ["faction_Bilgewater_Name", "faction_ShadowIsles_Name"],
           game_outcome: "loss",
           order_of_play: 0,
-          puuid:
-            "CaDI74yIz9mLFbUqVioqVcUx9RsgXfY2uLe0hjHMcWa3nKcvKkIEKlCuxqinlJLcY2nQjqvisjLziQ",
+          puuid: "CaDI74yIz9mLFbUqVioqVcUx9RsgXfY2uLe0hjHMcWa3nKcvKkIEKlCuxqinlJLcY2nQjqvisjLziQ",
         },
       ],
       total_turn_count: 34,
@@ -1480,8 +1462,7 @@ module.exports = [
           "02NX004": 1,
           "05BC166": 1,
         },
-        currentDeckCode:
-          "CEBQCAQDAMBACAYMFABQKCTAUMA26AICAEAQGAQCAUFCS5ACAEBAGBADAUFDCSNGAE",
+        currentDeckCode: "CEBQCAQDAMBACAYMFABQKCTAUMA26AICAEAQGAQCAUFCS5ACAEBAGBADAUFDCSNGAE",
         opGraveyard: {
           "01IO005": 2,
           "01IO017": 2,
@@ -1969,24 +1950,20 @@ module.exports = [
       game_version: "live_2_16_17",
       players: [
         {
-          deck_code:
-            "CQBACAIDG4FAKCQBFF2IIAMYAGTADJYBV4A4EAOGAEBQCAQGFYAQEAYJAECQVQABAEAQGAYN",
+          deck_code: "CQBACAIDG4FAKCQBFF2IIAMYAGTADJYBV4A4EAOGAEBQCAQGFYAQEAYJAECQVQABAEAQGAYN",
           deck_id: "02efdb14-41ed-4e9f-9046-c29d6edc63b0_live_cte_deck_1",
           factions: ["faction_BandleCity_Name", "faction_Noxus_Name"],
           game_outcome: "win",
           order_of_play: 0,
-          puuid:
-            "ScuovCdD2kPWCZKxhvz24txFliTEx7t_BTW6cPWHgh2smTuo5r-2Ul7GNoRsK0_yUfvG7AjVHgrnLg",
+          puuid: "ScuovCdD2kPWCZKxhvz24txFliTEx7t_BTW6cPWHgh2smTuo5r-2Ul7GNoRsK0_yUfvG7AjVHgrnLg",
         },
         {
-          deck_code:
-            "CICACAYFCAAQIBQOAECQKCIDAIDBUJRNAUAQGBQIAECAKOACAECSEMICAUCQGDQDAIDAEBAIAIBACBIBEEBAGBIIBQ",
+          deck_code: "CICACAYFCAAQIBQOAECQKCIDAIDBUJRNAUAQGBQIAECAKOACAECSEMICAUCQGDQDAIDAEBAIAIBACBIBEEBAGBIIBQ",
           deck_id: "02efdb14-41ed-4e9f-9046-c29d6edc63b0_live_cte_deck_2",
           factions: ["faction_Bilgewater_Name", "faction_ShadowIsles_Name"],
           game_outcome: "loss",
           order_of_play: 1,
-          puuid:
-            "CaDI74yIz9mLFbUqVioqVcUx9RsgXfY2uLe0hjHMcWa3nKcvKkIEKlCuxqinlJLcY2nQjqvisjLziQ",
+          puuid: "CaDI74yIz9mLFbUqVioqVcUx9RsgXfY2uLe0hjHMcWa3nKcvKkIEKlCuxqinlJLcY2nQjqvisjLziQ",
         },
       ],
       total_turn_count: 43,
@@ -2023,24 +2000,20 @@ module.exports = [
       game_version: "live_2_16_17",
       players: [
         {
-          deck_code:
-            "CQCACAIDCQAQKCUYAEBQKAYBBEGQKAIEAETCOLJUAUAQCAZOAEBAGCIBAMCBEAIEAQIACBIDAYAA",
+          deck_code: "CQCACAIDCQAQKCUYAEBQKAYBBEGQKAIEAETCOLJUAUAQCAZOAEBAGCIBAMCBEAIEAQIACBIDAYAA",
           deck_id: "02efdb14-41ed-4e9f-9046-c29d6edc63b0_live_cte_deck_0",
           factions: ["faction_Noxus_Name", "faction_Piltover_Name"],
           game_outcome: "win",
           order_of_play: 1,
-          puuid:
-            "ScuovCdD2kPWCZKxhvz24txFliTEx7t_BTW6cPWHgh2smTuo5r-2Ul7GNoRsK0_yUfvG7AjVHgrnLg",
+          puuid: "ScuovCdD2kPWCZKxhvz24txFliTEx7t_BTW6cPWHgh2smTuo5r-2Ul7GNoRsK0_yUfvG7AjVHgrnLg",
         },
         {
-          deck_code:
-            "CIBQCAICBQCQEAQDAUDAQCIFAMEQSGZDGPLQCAQBAMBBIAIEAIKAEAIDBFKQEAICAIYQ",
+          deck_code: "CIBQCAICBQCQEAQDAUDAQCIFAMEQSGZDGPLQCAQBAMBBIAIEAIKAEAIDBFKQEAICAIYQ",
           deck_id: "02efdb14-41ed-4e9f-9046-c29d6edc63b0_live_cte_deck_0",
           factions: ["faction_Ionia_Name", "faction_MtTargon_Name"],
           game_outcome: "loss",
           order_of_play: 0,
-          puuid:
-            "Mn8o8em5qVkrzBda2Fe7Tjsc-xPgnhxre-0kZBXHwuiR2mugPcG5eBgLeXuaSSR1PdfiLX2LKpMZRQ",
+          puuid: "Mn8o8em5qVkrzBda2Fe7Tjsc-xPgnhxre-0kZBXHwuiR2mugPcG5eBgLeXuaSSR1PdfiLX2LKpMZRQ",
         },
       ],
       total_turn_count: 25,
@@ -2077,24 +2050,20 @@ module.exports = [
       game_version: "live_2_16_17",
       players: [
         {
-          deck_code:
-            "CIBQCAICBQCQEAQDAUDAQCIFAMEQSGZDGPLQCAQBAMBBIAIEAIKAEAIDBFKQEAICAIYQ",
+          deck_code: "CIBQCAICBQCQEAQDAUDAQCIFAMEQSGZDGPLQCAQBAMBBIAIEAIKAEAIDBFKQEAICAIYQ",
           deck_id: "02efdb14-41ed-4e9f-9046-c29d6edc63b0_live_cte_deck_0",
           factions: ["faction_Ionia_Name", "faction_MtTargon_Name"],
           game_outcome: "loss",
           order_of_play: 0,
-          puuid:
-            "Mn8o8em5qVkrzBda2Fe7Tjsc-xPgnhxre-0kZBXHwuiR2mugPcG5eBgLeXuaSSR1PdfiLX2LKpMZRQ",
+          puuid: "Mn8o8em5qVkrzBda2Fe7Tjsc-xPgnhxre-0kZBXHwuiR2mugPcG5eBgLeXuaSSR1PdfiLX2LKpMZRQ",
         },
         {
-          deck_code:
-            "CQBACAIDG4FAKCQBFF2IIAMYAGTADJYBV4A4EAOGAEBQCAQGFYAQEAYJAECQVQABAEAQGAYN",
+          deck_code: "CQBACAIDG4FAKCQBFF2IIAMYAGTADJYBV4A4EAOGAEBQCAQGFYAQEAYJAECQVQABAEAQGAYN",
           deck_id: "02efdb14-41ed-4e9f-9046-c29d6edc63b0_live_cte_deck_1",
           factions: ["faction_BandleCity_Name", "faction_Noxus_Name"],
           game_outcome: "win",
           order_of_play: 1,
-          puuid:
-            "ScuovCdD2kPWCZKxhvz24txFliTEx7t_BTW6cPWHgh2smTuo5r-2Ul7GNoRsK0_yUfvG7AjVHgrnLg",
+          puuid: "ScuovCdD2kPWCZKxhvz24txFliTEx7t_BTW6cPWHgh2smTuo5r-2Ul7GNoRsK0_yUfvG7AjVHgrnLg",
         },
       ],
       total_turn_count: 28,
@@ -2131,24 +2100,20 @@ module.exports = [
       game_version: "live_2_16_17",
       players: [
         {
-          deck_code:
-            "CECACAYCBEBACBJIGQBQCAQMEQ4QGBAFGU3DOBABAEBCKAIBAUYQCAQCAUBAGAQFCQBQCAICGEAQCBIZAECAEBY",
+          deck_code: "CECACAYCBEBACBJIGQBQCAQMEQ4QGBAFGU3DOBABAEBCKAIBAUYQCAQCAUBAGAQFCQBQCAICGEAQCBIZAECAEBY",
           deck_id: "02efdb14-41ed-4e9f-9046-c29d6edc63b0_live_cte_deck_2",
           factions: ["faction_Ionia_Name", "faction_ShadowIsles_Name"],
           game_outcome: "win",
           order_of_play: 1,
-          puuid:
-            "Mn8o8em5qVkrzBda2Fe7Tjsc-xPgnhxre-0kZBXHwuiR2mugPcG5eBgLeXuaSSR1PdfiLX2LKpMZRQ",
+          puuid: "Mn8o8em5qVkrzBda2Fe7Tjsc-xPgnhxre-0kZBXHwuiR2mugPcG5eBgLeXuaSSR1PdfiLX2LKpMZRQ",
         },
         {
-          deck_code:
-            "CQBACAIDG4FAKCQBFF2IIAMYAGTADJYBV4A4EAOGAEBQCAQGFYAQEAYJAECQVQABAEAQGAYN",
+          deck_code: "CQBACAIDG4FAKCQBFF2IIAMYAGTADJYBV4A4EAOGAEBQCAQGFYAQEAYJAECQVQABAEAQGAYN",
           deck_id: "02efdb14-41ed-4e9f-9046-c29d6edc63b0_live_cte_deck_1",
           factions: ["faction_BandleCity_Name", "faction_Noxus_Name"],
           game_outcome: "loss",
           order_of_play: 0,
-          puuid:
-            "ScuovCdD2kPWCZKxhvz24txFliTEx7t_BTW6cPWHgh2smTuo5r-2Ul7GNoRsK0_yUfvG7AjVHgrnLg",
+          puuid: "ScuovCdD2kPWCZKxhvz24txFliTEx7t_BTW6cPWHgh2smTuo5r-2Ul7GNoRsK0_yUfvG7AjVHgrnLg",
         },
       ],
       total_turn_count: 24,
@@ -2185,24 +2150,20 @@ module.exports = [
       game_version: "live_2_16_17",
       players: [
         {
-          deck_code:
-            "CMBQCBIHBMCAIAIBAUFA4BIEA4GSYQSJPACACAIBCQAQIAIGAECAOWICAUDQODAA",
+          deck_code: "CMBQCBIHBMCAIAIBAUFA4BIEA4GSYQSJPACACAIBCQAQIAIGAECAOWICAUDQODAA",
           deck_id: "02efdb14-41ed-4e9f-9046-c29d6edc63b0_live_cte_deck_2",
           factions: ["faction_Freljord_Name", "faction_Shurima_Name"],
           game_outcome: "win",
           order_of_play: 0,
-          puuid:
-            "OK8pzvvpp9x8GocKeksK6ZLZfPkdBvCeFqqq9nUDcnhrGBfhWteV7fn2kRaNA7WEFFgtk06Q9c5tzA",
+          puuid: "OK8pzvvpp9x8GocKeksK6ZLZfPkdBvCeFqqq9nUDcnhrGBfhWteV7fn2kRaNA7WEFFgtk06Q9c5tzA",
         },
         {
-          deck_code:
-            "CQCACAQEBAAQKBAMAIAQIJBUAUCQUBBIGGTADPABAQAQCBA3AECAIBYBAUCBCAYFBIAZQANPAEAQCAIEE4",
+          deck_code: "CQCACAQEBAAQKBAMAIAQIJBUAUCQUBBIGGTADPABAQAQCBA3AECAIBYBAUCBCAYFBIAZQANPAEAQCAIEE4",
           deck_id: "02efdb14-41ed-4e9f-9046-c29d6edc63b0_live_cte_deck_2",
           factions: ["faction_BandleCity_Name", "faction_Piltover_Name"],
           game_outcome: "loss",
           order_of_play: 1,
-          puuid:
-            "ScuovCdD2kPWCZKxhvz24txFliTEx7t_BTW6cPWHgh2smTuo5r-2Ul7GNoRsK0_yUfvG7AjVHgrnLg",
+          puuid: "ScuovCdD2kPWCZKxhvz24txFliTEx7t_BTW6cPWHgh2smTuo5r-2Ul7GNoRsK0_yUfvG7AjVHgrnLg",
         },
       ],
       total_turn_count: 22,
@@ -2239,24 +2200,20 @@ module.exports = [
       game_version: "live_2_16_17",
       players: [
         {
-          deck_code:
-            "CICQCAQGDAAQGBQRAECAMDQCAUDAKCYHAMEQSIZIFIZWFVYBAEAQGCKVAEBAEBRLFU",
+          deck_code: "CICQCAQGDAAQGBQRAECAMDQCAUDAKCYHAMEQSIZIFIZWFVYBAEAQGCKVAEBAEBRLFU",
           deck_id: "db2b86fd-e8f7-46ba-8c97-a5340f73e146",
           factions: ["faction_Bilgewater_Name", "faction_MtTargon_Name"],
           game_outcome: "loss",
           order_of_play: 0,
-          puuid:
-            "0-9CMvbaep3h5ALBEMqVfMxRf-4aTgiOlK5D9eDu29PuizWLgIQmlH2NcTqkRc2BDriCECoLzLXTGg",
+          puuid: "0-9CMvbaep3h5ALBEMqVfMxRf-4aTgiOlK5D9eDu29PuizWLgIQmlH2NcTqkRc2BDriCECoLzLXTGg",
         },
         {
-          deck_code:
-            "CQBQCAIFFABAKBIIBEEAKCQEDIYTSXK6MKTACAQBAECRIAQFBIA5CAIBAEAQKHI",
+          deck_code: "CQBQCAIFFABAKBIIBEEAKCQEDIYTSXK6MKTACAQBAECRIAQFBIA5CAIBAEAQKHI",
           deck_id: "6bdc2470-a83c-4708-a4ff-7dd7cfd91da1",
           factions: ["faction_BandleCity_Name", "faction_ShadowIsles_Name"],
           game_outcome: "win",
           order_of_play: 1,
-          puuid:
-            "27JoCV_eIv1SdA89BfP-r7Ra2Vfbeoa_4GC2XqnoZD2wyDO5Zrv3-j2pJcc_-R_0GB4fidUQAheMyQ",
+          puuid: "27JoCV_eIv1SdA89BfP-r7Ra2Vfbeoa_4GC2XqnoZD2wyDO5Zrv3-j2pJcc_-R_0GB4fidUQAheMyQ",
         },
       ],
       total_turn_count: 16,
@@ -2293,24 +2250,20 @@ module.exports = [
       game_version: "live_2_16_17",
       players: [
         {
-          deck_code:
-            "CICQCAQGDAAQGBQRAECAMDQCAUDAKCYHAMEQSIZIFIZWFVYBAEAQGCKVAEBAEBRLFU",
+          deck_code: "CICQCAQGDAAQGBQRAECAMDQCAUDAKCYHAMEQSIZIFIZWFVYBAEAQGCKVAEBAEBRLFU",
           deck_id: "db2b86fd-e8f7-46ba-8c97-a5340f73e146",
           factions: ["faction_Bilgewater_Name", "faction_MtTargon_Name"],
           game_outcome: "win",
           order_of_play: 1,
-          puuid:
-            "0-9CMvbaep3h5ALBEMqVfMxRf-4aTgiOlK5D9eDu29PuizWLgIQmlH2NcTqkRc2BDriCECoLzLXTGg",
+          puuid: "0-9CMvbaep3h5ALBEMqVfMxRf-4aTgiOlK5D9eDu29PuizWLgIQmlH2NcTqkRc2BDriCECoLzLXTGg",
         },
         {
-          deck_code:
-            "CQBQCBIGAECAKCQHIVE2MAIFAIDAIGRAFU6AGAICAYPQCBAGBIAQKCQ2AIAQKCTAAMBAMAQSHI",
+          deck_code: "CQBQCBIGAECAKCQHIVE2MAIFAIDAIGRAFU6AGAICAYPQCBAGBIAQKCQ2AIAQKCTAAMBAMAQSHI",
           deck_id: "bf53ef27-38b1-461d-8b20-53821c081036",
           factions: ["faction_BandleCity_Name", "faction_Bilgewater_Name"],
           game_outcome: "loss",
           order_of_play: 0,
-          puuid:
-            "fWRknsMabZSQhgD3a_ss3lbH72iSdIm_OOvrmZBga18vgMtDUt5wo43ZeZUVPBxcc-VDc02O1iDaog",
+          puuid: "fWRknsMabZSQhgD3a_ss3lbH72iSdIm_OOvrmZBga18vgMtDUt5wo43ZeZUVPBxcc-VDc02O1iDaog",
         },
       ],
       total_turn_count: 19,
@@ -2347,24 +2300,20 @@ module.exports = [
       game_version: "live_2_16_17",
       players: [
         {
-          deck_code:
-            "CQCACAQEBAAQKBAMAIAQIJBUAUCQUBBIGGTADPABAQAQCBA3AECAIBYBAUCBCAYFBIAZQANPAEAQCAIEE4",
+          deck_code: "CQCACAQEBAAQKBAMAIAQIJBUAUCQUBBIGGTADPABAQAQCBA3AECAIBYBAUCBCAYFBIAZQANPAEAQCAIEE4",
           deck_id: "02efdb14-41ed-4e9f-9046-c29d6edc63b0_live_cte_deck_2",
           factions: ["faction_BandleCity_Name", "faction_Piltover_Name"],
           game_outcome: "loss",
           order_of_play: 1,
-          puuid:
-            "mtRHBmgGcxHqw2qXkbRj4lmJAlbqutP8f8pp83cPltYPUEWmhSyZIPJahEH0ewTqEr-BDRPmYoDEoA",
+          puuid: "mtRHBmgGcxHqw2qXkbRj4lmJAlbqutP8f8pp83cPltYPUEWmhSyZIPJahEH0ewTqEr-BDRPmYoDEoA",
         },
         {
-          deck_code:
-            "CICACAQBAIAQGBQIAECAMCQHAIDAWFBAEEWTUPACAECQMAIDAIDAEIRGAIAQEBQEAEBQCFQ",
+          deck_code: "CICACAQBAIAQGBQIAECAMCQHAIDAWFBAEEWTUPACAECQMAIDAIDAEIRGAIAQEBQEAEBQCFQ",
           deck_id: "02efdb14-41ed-4e9f-9046-c29d6edc63b0_live_cte_deck_1",
           factions: ["faction_Bilgewater_Name", "faction_Freljord_Name"],
           game_outcome: "win",
           order_of_play: 0,
-          puuid:
-            "ydfywiBgURQIjzzkbKzwL96mf3vyjd04fAx7UoLUimSZIYWipb2N2gltZrapRbhTf9zhO4fHeCNyeQ",
+          puuid: "ydfywiBgURQIjzzkbKzwL96mf3vyjd04fAx7UoLUimSZIYWipb2N2gltZrapRbhTf9zhO4fHeCNyeQ",
         },
       ],
       total_turn_count: 34,
@@ -2393,4 +2342,4 @@ module.exports = [
     ],
     playernames: ["Storm#5961", "CleverWong#1997"],
   },
-];
+]

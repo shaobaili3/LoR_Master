@@ -19,9 +19,7 @@
         {{ rank }}
       </div>
     </div>
-    <div
-      class="z[1] col-span-5 overflow-hidden text-ellipsis whitespace-nowrap pl-2 sm:col-span-3"
-    >
+    <div class="z[1] col-span-5 overflow-hidden text-ellipsis whitespace-nowrap pl-2 sm:col-span-3">
       {{ name }}
     </div>
     <div class="col-span-2 sm:col-span-1">{{ lp }}</div>
@@ -30,10 +28,8 @@
         v-if="lastRankTime"
         class="text-sm text-white"
         :class="{
-          'text-opacity-70':
-            Date.now() - new Date(lastRankTime) > 1000 * 60 * 60 * 24,
-          'text-opacity-40':
-            Date.now() - new Date(lastRankTime) > 1000 * 60 * 60 * 24 * 7,
+          'text-opacity-70': Date.now() - new Date(lastRankTime) > 1000 * 60 * 60 * 24,
+          'text-opacity-40': Date.now() - new Date(lastRankTime) > 1000 * 60 * 60 * 24 * 7,
         }"
       >
         {{ lastRank }}
@@ -64,14 +60,14 @@
 </template>
 
 <script setup>
-import { winRateToSimpleColor } from "../../modules/utils/colorUtils";
+import { winRateToSimpleColor } from "../../modules/utils/colorUtils"
 </script>
 
 <script>
-import DeckPreview from "../deck/DeckPreview.vue";
-import { format, formatDistanceStrict } from "date-fns";
+import DeckPreview from "../deck/DeckPreview.vue"
+import { format, formatDistanceStrict } from "date-fns"
 
-import { dateFNSLocales } from "../../assets/data/messages";
+import { dateFNSLocales } from "../../assets/data/messages"
 
 export default {
   components: { DeckPreview },
@@ -89,13 +85,13 @@ export default {
       return formatDistanceStrict(new Date(this.lastRankTime), new Date(), {
         addSuffix: true,
         locale: dateFNSLocales[this.$i18n.locale],
-      });
+      })
     },
     isChampion() {
-      return this.rank == 1;
+      return this.rank == 1
     },
   },
-};
+}
 </script>
 
 <style>

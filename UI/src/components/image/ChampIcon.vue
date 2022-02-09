@@ -2,8 +2,7 @@
   <div
     :class="{
       champ: code,
-      'icon h-7 w-7 xxs:h-8 xxs:w-8 xs:h-9 xs:w-9 sm:h-10 sm:w-10':
-        !customClass,
+      'icon h-7 w-7 xxs:h-8 xxs:w-8 xs:h-9 xs:w-9 sm:h-10 sm:w-10': !customClass,
     }"
     :style="{ backgroundImage: getChampionImgUrl }"
   >
@@ -15,7 +14,7 @@
 export default {
   components: {},
   data() {
-    return {};
+    return {}
   },
   mounted() {},
   props: {
@@ -29,7 +28,7 @@ export default {
   computed: {
     getChampionImgUrl() {
       if (!this.code) {
-        return "none";
+        return "none"
       }
       // const champImageBaseUrl = 'https://raw.githubusercontent.com/painttist/lor-champ-icons/master/images/cards/cropped/';
       // const champImageBaseUrl = 'https://painttist.github.io/lor-champ-icons/images/cards/cropped/';
@@ -37,17 +36,15 @@ export default {
 
       // -- Local
       // - v1
-      var fileName = this.code + "-cropped.png";
+      var fileName = this.code + "-cropped.png"
       // return "url('" + cardImages[fileName] + "')"
 
       // - v2
-      return (
-        "url(" + require("../../assets/images/cards/cropped/" + fileName) + ")"
-      );
+      return "url(" + require("../../assets/images/cards/cropped/" + fileName) + ")"
     },
   },
   methods: {},
-};
+}
 </script>
 
 <style lang="scss">

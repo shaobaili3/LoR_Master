@@ -7,18 +7,13 @@
       <!-- <select v-model="$i18n.locale">
         <option v-for="locale in $i18n.availableLocales" :key="`locale-${locale}`" :value="locale">{{ locale }}</option>
       </select> -->
-      <base-select
-        :swapNames="swapNames"
-        :options="options"
-        :default="optionDefault"
-        @input="input($event)"
-      ></base-select>
+      <base-select :swapNames="swapNames" :options="options" :default="optionDefault" @input="input($event)"></base-select>
     </div>
   </div>
 </template>
 
 <script>
-import BaseSelect from "./BaseSelect.vue";
+import BaseSelect from "./BaseSelect.vue"
 export default {
   components: { BaseSelect },
   props: {
@@ -28,7 +23,7 @@ export default {
     input: Function,
     swapNames: Array,
   },
-};
+}
 </script>
 
 <style>

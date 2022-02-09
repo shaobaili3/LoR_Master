@@ -17,22 +17,18 @@
 </template>
 
 <script>
-import MetaMatchupItem from "./MetaMatchupItem.vue";
+import MetaMatchupItem from "./MetaMatchupItem.vue"
 export default {
   components: { MetaMatchupItem },
   mounted() {},
   props: ["matchups"],
   computed: {
     good() {
-      return this.matchups
-        ?.filter((matchup) => matchup.win_rate >= 0.5)
-        .sort((a, b) => (a.win_rate < b.win_rate ? 1 : -1));
+      return this.matchups?.filter((matchup) => matchup.win_rate >= 0.5).sort((a, b) => (a.win_rate < b.win_rate ? 1 : -1))
     },
     bad() {
-      return this.matchups
-        ?.filter((matchup) => matchup.win_rate < 0.5)
-        .sort((a, b) => (a.win_rate > b.win_rate ? 1 : -1));
+      return this.matchups?.filter((matchup) => matchup.win_rate < 0.5).sort((a, b) => (a.win_rate > b.win_rate ? 1 : -1))
     },
   },
-};
+}
 </script>

@@ -5,4 +5,4 @@ module.exports = {
   playerId: "FlyingFish#1111",
   port: "21337",
   server: "americas",
-};
+}

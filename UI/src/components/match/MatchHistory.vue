@@ -17,10 +17,7 @@
       </div> -->
     </div>
     <!-- Time String -->
-    <div
-      class="pb-1 pl-2 text-left text-sm text-gray-200"
-      v-if="isDateBreak && !winStreak"
-    >
+    <div class="pb-1 pl-2 text-left text-sm text-gray-200" v-if="isDateBreak && !winStreak">
       {{ timeString }}
     </div>
     <div
@@ -39,15 +36,8 @@
           }"
         ></i>
       </div>
-      <div
-        class="row opponent no-scrollbar overflow-x-scroll"
-        :class="{ 'text-white': won }"
-      >
-        <p
-          @click="search"
-          class="match-info-title text-inherit"
-          :class="{ 'text-yellow-400': won }"
-        >
+      <div class="row opponent no-scrollbar overflow-x-scroll" :class="{ 'text-white': won }">
+        <p @click="search" class="match-info-title text-inherit" :class="{ 'text-yellow-400': won }">
           <i class="fas" :class="{ 'fa-pennant pr-2': win, '': !win }"></i>
           <span>vs </span>
           <span
@@ -57,17 +47,11 @@
             >{{ opponentName }}</span
           >
         </p>
-        <div
-          class="opponent-info"
-          :class="{ 'text-yellow-400': won }"
-          v-if="opponentRank"
-        >
+        <div class="opponent-info" :class="{ 'text-yellow-400': won }" v-if="opponentRank">
           <i class="fas fa-trophy"></i> {{ opponentRank }}
         </div>
         <div class="history-info opacity-80">{{ timeString }}</div>
-        <div class="history-info opacity-80" v-if="rounds">
-          {{ rounds }} {{ $t("str.rounds") }}
-        </div>
+        <div class="history-info opacity-80" v-if="rounds">{{ rounds }} {{ $t("str.rounds") }}</div>
         <div
           class="match-info-badge opacity-80"
           :class="{ 'bg-zinc-600': won, 'bg-zinc-800': !won }"
@@ -104,32 +88,24 @@
           :fixedWidth="false"
         ></deck-preview>
       </div>
-      <div
-        class="divider"
-        v-if="details && showDetail"
-        :class="{ won: won }"
-      ></div>
+      <div class="divider" v-if="details && showDetail" :class="{ won: won }"></div>
       <match-detail-mulligan
         v-if="details && showDetail"
         :startHand="details.openHand"
         :endHand="details.replacedHand"
       ></match-detail-mulligan>
-      <match-detail-timeline
-        v-if="details && showDetail"
-        :time="time"
-        :details="details"
-      ></match-detail-timeline>
+      <match-detail-timeline v-if="details && showDetail" :time="time" :details="details"></match-detail-timeline>
     </div>
   </div>
 </template>
 
 <script>
-import DeckPreview from "../deck/DeckPreview.vue";
-import MatchDetailMulligan from "../match/MatchDetailMulligan.vue";
-import MatchDetailTimeline from "../match/MatchDetailTimeline.vue";
+import DeckPreview from "../deck/DeckPreview.vue"
+import MatchDetailMulligan from "../match/MatchDetailMulligan.vue"
+import MatchDetailTimeline from "../match/MatchDetailTimeline.vue"
 
-import { format, formatDistanceStrict } from "date-fns";
-import { dateFNSLocales } from "../../assets/data/messages";
+import { format, formatDistanceStrict } from "date-fns"
+import { dateFNSLocales } from "../../assets/data/messages"
 
 export default {
   components: {
@@ -144,7 +120,7 @@ export default {
     return {
       visibleDeck: 0,
       showDetail: false,
-    };
+    }
   },
   emits: ["search", "screenshot"],
   props: {
@@ -199,53 +175,53 @@ export default {
       return formatDistanceStrict(new Date(this.time), new Date(), {
         addSuffix: true,
         locale: dateFNSLocales[this.$i18n.locale],
-      });
+      })
 
       // return time
     },
     opponentLink() {
-      return "/profile/" + this.opponentName;
+      return "/profile/" + this.opponentName
     },
     won() {
       // return parseFloat(this.winrate) > 0.5;
-      return this.win;
+      return this.win
     },
     filteredBadges() {
-      if (!this.badges) return null;
+      if (!this.badges) return null
       var filtered = this.badges
         .map((b) => b.trim())
         .filter((badge, pos, self) => {
           // remove "Constructed" and duplicates
-          return !badge.includes("Constructed") && self.indexOf(badge) == pos;
-        });
-      return filtered;
+          return !badge.includes("Constructed") && self.indexOf(badge) == pos
+        })
+      return filtered
     },
   },
   methods: {
     downloadStreakScreenshot() {
-      this.$emit("screenshot", this.index);
+      this.$emit("screenshot", this.index)
     },
     toggleDetail() {
-      this.showDetail = !this.showDetail;
+      this.showDetail = !this.showDetail
 
       this.sendUserEvent({
         category: "Main Window Match",
         action: this.showDetail ? "Show Detail" : "Hide Detail",
         label: this.deck,
         value: null,
-      });
+      })
     },
     search() {
       // console.log("Match History Search")
-      this.$emit("search");
+      this.$emit("search")
     },
     showOpponentDeck() {
       // console.log("Show Oppo Deck")
-      if (this.visibleDeck == 2) this.visibleDeck = 0;
-      else this.visibleDeck = 2;
+      if (this.visibleDeck == 2) this.visibleDeck = 0
+      else this.visibleDeck = 2
     },
   },
-};
+}
 </script>
 
 <style lang="scss">

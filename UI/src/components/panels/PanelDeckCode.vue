@@ -9,22 +9,13 @@
             <div
               class="flex h-0 max-h-96 w-full flex-1 justify-center overflow-y-auto sm:max-h-full sm:overflow-y-visible md:justify-start"
             >
-              <deck-detail
-                class="max-w-[250px]"
-                :base-deck="code"
-              ></deck-detail>
+              <deck-detail class="max-w-[250px]" :base-deck="code"></deck-detail>
             </div>
           </div>
-          <div
-            class="flex w-full flex-col px-4 text-left md:w-3/4"
-            v-if="isValid"
-          >
+          <div class="flex w-full flex-col px-4 text-left md:w-3/4" v-if="isValid">
             <div class="h-0 flex-1">
               <!-- Loading -->
-              <div
-                v-if="loadingStats || store.archetypeLoading"
-                class="pb-4 text-2xl"
-              >
+              <div v-if="loadingStats || store.archetypeLoading" class="pb-4 text-2xl">
                 <span><i class="fas fa-circle-notch fa-spin"></i></span>
                 <span class="pl-2">{{ $t("str.loading") }}</span>
               </div>
@@ -38,18 +29,11 @@
                 <div class="pt-4 pb-3 text-3xl sm:pt-0">
                   {{ $t("deckCode.archetypeStats") }}
                 </div>
-                <meta-group
-                  :no-detail="true"
-                  :selfExpand="true"
-                  :group="deckStats"
-                ></meta-group>
+                <meta-group :no-detail="true" :selfExpand="true" :group="deckStats"></meta-group>
                 <div class="pt-4 pb-3 text-3xl">
                   {{ $t("deckCode.archetypeMatchups") }}
                 </div>
-                <meta-matchup
-                  v-if="!metaStore.isMetaLoading"
-                  :matchups="deckStats.matchup"
-                ></meta-matchup>
+                <meta-matchup v-if="!metaStore.isMetaLoading" :matchups="deckStats.matchup"></meta-matchup>
                 <div class="text-2xl" v-if="metaStore.isMetaLoading">
                   <span><i class="fas fa-circle-notch fa-spin"></i></span>
                   <span class="pl-2">{{ $t("str.loading") }}</span>
@@ -65,15 +49,8 @@
                 <div class="block w-full sm:flex">
                   <div class="w-full sm:w-1/2" v-if="keeps">
                     <div class="pb-2 text-xl">{{ $t("deckCode.keep") }}</div>
-                    <div
-                      class="flex w-full items-center"
-                      v-for="keep in keeps"
-                      :key="keep.code"
-                    >
-                      <card-preview
-                        class="flex-1"
-                        :code="keep.code"
-                      ></card-preview>
+                    <div class="flex w-full items-center" v-for="keep in keeps" :key="keep.code">
+                      <card-preview class="flex-1" :code="keep.code"></card-preview>
                       <div class="px-4">+{{ keep.rate }}%</div>
                     </div>
                   </div>
@@ -81,15 +58,8 @@
                     <div class="pb-2 text-xl">
                       {{ $t("deckCode.mulligan") }}
                     </div>
-                    <div
-                      class="flex w-full items-center"
-                      v-for="swap in swaps"
-                      :key="swap.code"
-                    >
-                      <card-preview
-                        class="flex-1"
-                        :code="swap.code"
-                      ></card-preview>
+                    <div class="flex w-full items-center" v-for="swap in swaps" :key="swap.code">
+                      <card-preview class="flex-1" :code="swap.code"></card-preview>
                       <div class="px-4">-{{ swap.rate }}%</div>
                     </div>
                   </div>
@@ -115,7 +85,7 @@ export const regionRefID = {
   Shurima: 7,
   Targon: 9,
   BandleCity: 10,
-};
+}
 
 export const regionNames = {
   0: "faction_Demacia_Name",
@@ -128,7 +98,7 @@ export const regionNames = {
   7: "faction_Shurima_Name",
   9: "faction_MtTargon_Name",
   10: "faction_BandleCity_Name",
-};
+}
 
 export const factionNames = {
   0: "Demacia",
@@ -141,81 +111,81 @@ export const factionNames = {
   7: "Shurima",
   9: "Mt Targon",
   10: "Bandle City",
-};
+}
 </script>
 
 <script setup>
-import { ref, onMounted, defineProps, computed } from "vue";
-import DeckEncoder from "../../modules/runeterra/DeckEncoder";
-import CardPreview from "../deck/CardPreview.vue";
-import DeckDetail from "../deck/DeckDetail.vue";
+import { ref, onMounted, defineProps, computed } from "vue"
+import DeckEncoder from "../../modules/runeterra/DeckEncoder"
+import CardPreview from "../deck/CardPreview.vue"
+import DeckDetail from "../deck/DeckDetail.vue"
 
-import MetaGroup from "../meta/MetaGroup.vue";
-import MetaMatchup from "../meta/MetaMatchup.vue";
-import { useMetaStore } from "../../store/StoreMeta";
-import { getDeckID } from "./PanelMeta.vue";
-import { useBaseStore } from "../../store/StoreBase";
+import MetaGroup from "../meta/MetaGroup.vue"
+import MetaMatchup from "../meta/MetaMatchup.vue"
+import { useMetaStore } from "../../store/StoreMeta"
+import { getDeckID } from "./PanelMeta.vue"
+import { useBaseStore } from "../../store/StoreBase"
 
-import { useArchetypeStore } from "../../store/StoreArchetype";
+import { useArchetypeStore } from "../../store/StoreArchetype"
 
-let error = ref("");
-let title = ref("Deck Detail");
-let isValid = ref(false);
-let loadingStats = ref(false);
-let deckID = ref("");
+let error = ref("")
+let title = ref("Deck Detail")
+let isValid = ref(false)
+let loadingStats = ref(false)
+let deckID = ref("")
 
-const store = useArchetypeStore();
-const metaStore = useMetaStore();
+const store = useArchetypeStore()
+const metaStore = useMetaStore()
 
 const props = defineProps({
   code: String,
-});
+})
 
 onMounted(() => {
   // console.log("PANEL CODE:", props.code)
-  metaStore.fetchMetaGroups();
-  processDeck();
-});
+  metaStore.fetchMetaGroups()
+  processDeck()
+})
 
 const deckStats = computed(() => {
   if (store.archetypeDetails) {
     if (deckID.value in store.archetypeDetails) {
-      let group = store.archetypeDetails[deckID.value];
+      let group = store.archetypeDetails[deckID.value]
       let feature = group.decks.find((deck) => {
-        return deck.deck_code == props.code;
-      });
-      let newGroup = { ...group };
-      newGroup.feature = feature;
-      return newGroup;
+        return deck.deck_code == props.code
+      })
+      let newGroup = { ...group }
+      newGroup.feature = feature
+      return newGroup
     }
   }
 
-  return null;
-});
+  return null
+})
 
 const noInfo = computed(() => {
-  return !(loadingStats.value || store.archetypeLoading) && !deckStats.value;
-});
+  return !(loadingStats.value || store.archetypeLoading) && !deckStats.value
+})
 
 function processDeck() {
-  const baseStore = useBaseStore();
+  const baseStore = useBaseStore()
   try {
-    let deck = DeckEncoder.decode(props.code);
-    isValid.value = true;
-    deckID.value = getDeckID(props.code);
-    console.log(deckID.value);
-    store.fetchArchetypeDetail(deckID.value);
+    let deck = DeckEncoder.decode(props.code)
+    isValid.value = true
+    deckID.value = getDeckID(props.code)
+    console.log(deckID.value)
+    store.fetchArchetypeDetail(deckID.value)
     let champNames = deck.reduce((names, card) => {
-      let info = baseStore.sets.find((info) => info.cardCode == card.code);
+      let info = baseStore.sets.find((info) => info.cardCode == card.code)
       if (info.rarityRef === "Champion") {
-        names.push(info.name);
+        names.push(info.name)
       }
-      return names;
-    }, []);
-    title.value = champNames.join(" ");
+      return names
+    }, [])
+    title.value = champNames.join(" ")
   } catch (err) {
-    console.log(err);
-    error.value = err;
+    console.log(err)
+    error.value = err
   }
 }
 </script>

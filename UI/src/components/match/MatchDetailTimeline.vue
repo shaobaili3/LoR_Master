@@ -5,35 +5,14 @@
             <line @mouseenter="lineHover($event, 1)" x1="20" y1="0" x2="20" y2="20"></line>
         </svg> -->
     <!-- <p class="title-text">Timeline</p> -->
-    <div
-      class="hover-container"
-      v-if="displayInfo"
-      :style="{ left: displayInfo.left + 'px', top: displayInfo.top + 'px' }"
-    >
-      <div
-        class="time-indicator"
-        v-if="displayInfo.code"
-        :class="{ first: displayInfo.first }"
-      ></div>
+    <div class="hover-container" v-if="displayInfo" :style="{ left: displayInfo.left + 'px', top: displayInfo.top + 'px' }">
+      <div class="time-indicator" v-if="displayInfo.code" :class="{ first: displayInfo.first }"></div>
       <p class="time-text" v-if="displayInfo.time">
-        {{
-          moment(
-            new Date(displayInfo.time) - new Date(details.startTime)
-          ).format("mm:ss")
-        }}
+        {{ moment(new Date(displayInfo.time) - new Date(details.startTime)).format("mm:ss") }}
       </p>
-      <card-image
-        class="card-hover"
-        v-if="displayInfo.code"
-        :code="displayInfo.code"
-      ></card-image>
+      <card-image class="card-hover" v-if="displayInfo.code" :code="displayInfo.code"></card-image>
     </div>
-    <div
-      class="timeline-container"
-      @wheel.prevent="handleScroll"
-      :class="{ grabbing: grabbing }"
-      @scroll="whenScrolled"
-    >
+    <div class="timeline-container" @wheel.prevent="handleScroll" :class="{ grabbing: grabbing }" @scroll="whenScrolled">
       <div class="timeline-content" :style="{ width: zoom + '%' }">
         <!-- <div class="gridline" v-for="i in 10"
                     :key="i"
@@ -96,16 +75,16 @@
 </template>
 
 <script>
-import CardImage from "../image/CardImage.vue";
+import CardImage from "../image/CardImage.vue"
 // import CardPreview from './CardPreview.vue'
 
-import moment from "moment";
+import moment from "moment"
 
-let pos = { top: 0, left: 0, x: 0, y: 0 };
+let pos = { top: 0, left: 0, x: 0, y: 0 }
 
-const gameEndAddTime = 10; // sec
-const minZoom = 100; // percent
-const maxZoom = 3000; // percent
+const gameEndAddTime = 10 // sec
+const minZoom = 100 // percent
+const maxZoom = 3000 // percent
 
 export default {
   components: {
@@ -113,10 +92,10 @@ export default {
     // CardPreview,
   },
   mounted() {
-    this.ele = document.querySelectorAll(".timeline-container");
+    this.ele = document.querySelectorAll(".timeline-container")
 
     for (const el of this.ele) {
-      el.addEventListener("mousedown", this.mouseDownHandler);
+      el.addEventListener("mousedown", this.mouseDownHandler)
     }
   },
   data() {
@@ -137,56 +116,56 @@ export default {
 
       mouseMoveListener: null,
       mouseUpListener: null,
-    };
+    }
   },
   props: {
     details: Object,
   },
   computed: {
     matchTime() {
-      var startTime = new Date(this.details.startTime);
-      console.log("Start time", startTime);
-      var endTime = new Date(this.details.endTime);
-      console.log("End time", endTime);
+      var startTime = new Date(this.details.startTime)
+      console.log("Start time", startTime)
+      var endTime = new Date(this.details.endTime)
+      console.log("End time", endTime)
 
-      var secDiff = Math.floor((endTime - startTime) / 1000);
-      console.log("Match Time: ", secDiff);
-      return secDiff;
+      var secDiff = Math.floor((endTime - startTime) / 1000)
+      console.log("Match Time: ", secDiff)
+      return secDiff
     },
     timelineFiltered() {
       return this.details.timeline.filter((card) => {
-        return card.CardCode != "face";
-      });
+        return card.CardCode != "face"
+      })
     },
     timePercents() {
-      var percents = [];
-      var matchTime = this.matchTime;
-      var times = this.timelineFiltered;
+      var percents = []
+      var matchTime = this.matchTime
+      var times = this.timelineFiltered
 
-      var date = new Date(this.details.startTime);
+      var date = new Date(this.details.startTime)
 
-      var remain = 100;
+      var remain = 100
 
       times.forEach((time) => {
-        var cardDate = new Date(time.playTime);
+        var cardDate = new Date(time.playTime)
 
-        var secDiff = Math.floor((cardDate - date) / 1000);
-        var percent = (secDiff / matchTime) * 100;
+        var secDiff = Math.floor((cardDate - date) / 1000)
+        var percent = (secDiff / matchTime) * 100
 
-        percents.push(percent);
-      });
+        percents.push(percent)
+      })
 
-      percents.push(remain); // Last one for the last item
+      percents.push(remain) // Last one for the last item
 
-      return percents;
+      return percents
     },
   },
   methods: {
     whenScrolled(event) {
-      this.scrollLeft = event.currentTarget.scrollLeft;
+      this.scrollLeft = event.currentTarget.scrollLeft
     },
     mouseDownHandler(e) {
-      this.grabbing = true;
+      this.grabbing = true
 
       pos = {
         // The current scroll
@@ -195,42 +174,42 @@ export default {
         // Get the current mouse position
         x: e.clientX,
         y: e.clientY,
-      };
+      }
 
-      const tar = e.currentTarget;
+      const tar = e.currentTarget
 
       this.mouseMoveListener = (ev) => {
-        this.mouseMoveHandler(ev, tar);
-      };
+        this.mouseMoveHandler(ev, tar)
+      }
       this.mouseUpListener = (ev) => {
-        this.mouseUpHandler(ev, tar);
-      };
+        this.mouseUpHandler(ev, tar)
+      }
 
-      document.addEventListener("mousemove", this.mouseMoveListener);
-      document.addEventListener("mouseup", this.mouseUpListener);
+      document.addEventListener("mousemove", this.mouseMoveListener)
+      document.addEventListener("mouseup", this.mouseUpListener)
     },
     mouseMoveHandler(e, tar) {
       // How far the mouse has been moved
 
-      const dx = e.clientX - pos.x;
-      const dy = e.clientY - pos.y;
+      const dx = e.clientX - pos.x
+      const dy = e.clientY - pos.y
 
       // Scroll the element
-      tar.scrollLeft = pos.left - dx;
+      tar.scrollLeft = pos.left - dx
     },
     mouseUpHandler() {
       // HAndle Mouse Up
-      this.grabbing = false;
+      this.grabbing = false
 
-      document.removeEventListener("mousemove", this.mouseMoveListener);
-      document.removeEventListener("mouseup", this.mouseUpListener);
+      document.removeEventListener("mousemove", this.mouseMoveListener)
+      document.removeEventListener("mouseup", this.mouseUpListener)
     },
     iconHover(event, card) {
-      var tar = event.currentTarget;
-      var rect = tar.getBoundingClientRect();
+      var tar = event.currentTarget
+      var rect = tar.getBoundingClientRect()
 
-      var left = rect.x + rect.width;
-      var top = rect.y + rect.height;
+      var left = rect.x + rect.width
+      var top = rect.y + rect.height
 
       this.displayInfo = {
         code: card.CardCode,
@@ -238,56 +217,54 @@ export default {
         left: left,
         top: top,
         first: card.LocalPlayer,
-      };
+      }
     },
     iconLeave(event) {
-      this.displayInfo = null;
+      this.displayInfo = null
     },
     handleScroll(event) {
-      var el = event.currentTarget;
+      var el = event.currentTarget
 
-      let box = el.getBoundingClientRect();
-      var elWidth = box.width;
+      let box = el.getBoundingClientRect()
+      var elWidth = box.width
 
-      const zoomSpeed = 1.2;
+      const zoomSpeed = 1.2
 
       if (event.deltaY > 0) {
         // Zoom out
-        let newZoom = this.zoom / zoomSpeed;
+        let newZoom = this.zoom / zoomSpeed
         if (newZoom <= minZoom) {
-          newZoom = minZoom;
+          newZoom = minZoom
         }
-        this.zoom = newZoom;
+        this.zoom = newZoom
 
-        let offset = event.clientX - box.x;
-        let offsetZoomed = offset / zoomSpeed;
-        const newScroolLeft =
-          el.scrollLeft / zoomSpeed - (offset - offsetZoomed);
+        let offset = event.clientX - box.x
+        let offsetZoomed = offset / zoomSpeed
+        const newScroolLeft = el.scrollLeft / zoomSpeed - (offset - offsetZoomed)
 
         this.$nextTick(() => {
-          el.scrollLeft = newScroolLeft;
-        });
+          el.scrollLeft = newScroolLeft
+        })
       } else {
         // Zoom in
 
-        let newZoom = this.zoom * zoomSpeed;
+        let newZoom = this.zoom * zoomSpeed
         if (newZoom >= maxZoom) {
-          newZoom = maxZoom;
+          newZoom = maxZoom
         }
 
-        let offset = event.clientX - box.x;
-        let offsetZoomed = offset * zoomSpeed;
-        const newScroolLeft =
-          el.scrollLeft * zoomSpeed + (offsetZoomed - offset);
+        let offset = event.clientX - box.x
+        let offsetZoomed = offset * zoomSpeed
+        const newScroolLeft = el.scrollLeft * zoomSpeed + (offsetZoomed - offset)
 
-        this.zoom = newZoom;
+        this.zoom = newZoom
         this.$nextTick(() => {
-          el.scrollLeft = newScroolLeft;
-        });
+          el.scrollLeft = newScroolLeft
+        })
       }
     },
   },
-};
+}
 </script>
 
 <style lang="scss" scoped>
@@ -489,8 +466,7 @@ export default {
           opacity: 0;
           filter: drop-shadow(3px 3px 2px rgba(43, 38, 27, 0.6));
           z-index: 10;
-          transition: visibility 0s linear 0.3s,
-            opacity 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+          transition: visibility 0s linear 0.3s, opacity 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 
           pointer-events: none;
         }

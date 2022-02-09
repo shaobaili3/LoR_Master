@@ -4,15 +4,7 @@
       {{ swapNames ? swapNames[selectedIndex] : selected }}
     </div>
     <div class="items" :class="{ selectHide: !open }">
-      <div
-        v-for="(option, i) of options"
-        :key="i"
-        @click="
-          selected = option;
-          open = false;
-          $emit('input', option);
-        "
-      >
+      <div v-for="(option, i) of options" :key="i" @click="onOptionClick(option)">
         {{ swapNames ? swapNames[i] : option }}
       </div>
     </div>
@@ -45,26 +37,31 @@ export default {
   data() {
     return {
       selected:
-        this.default &&
-        this.options.length > 0 &&
-        this.options.includes(this.default)
+        this.default && this.options.length > 0 && this.options.includes(this.default)
           ? this.default
           : this.options.length > 0
           ? this.options[0]
           : null,
       open: false,
-    };
+    }
   },
   mounted() {
     // console.log(this.swapNames)
-    this.$emit("input", this.selected);
+    this.$emit("input", this.selected)
   },
   computed: {
     selectedIndex() {
-      return this.options.findIndex((val) => val == this.selected);
+      return this.options.findIndex((val) => val == this.selected)
     },
   },
-};
+  methods: {
+    onOptionClick(option) {
+      this.selected = option
+      this.open = false
+      this.$emit("input", option)
+    },
+  },
+}
 </script>
 
 <style scoped>

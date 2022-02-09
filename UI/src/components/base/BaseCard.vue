@@ -14,7 +14,7 @@ export default {
   props: {
     to: String,
   },
-};
+}
 </script>
 
 <style scoped>

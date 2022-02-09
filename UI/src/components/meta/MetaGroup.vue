@@ -23,9 +23,7 @@
       <div v-if="expand" class="pl-4" @click.stop>
         <div v-for="deck in group.decks" :key="deck.deck_code">
           <meta-deck
-            :isFeature="
-              hasFeature && this.group.feature.deck_code == deck.deck_code
-            "
+            :isFeature="hasFeature && this.group.feature.deck_code == deck.deck_code"
             :code="deck.deck_code"
             :playNum="deck.play_num"
             :playRate="deck.play_rate"
@@ -49,7 +47,7 @@
 </template>
 
 <script>
-import MetaDeck from "../meta/MetaDeck.vue";
+import MetaDeck from "../meta/MetaDeck.vue"
 export default {
   components: { MetaDeck },
   props: {
@@ -63,34 +61,34 @@ export default {
   data() {
     return {
       selfExpanded: false,
-    };
+    }
   },
   computed: {
     hasFeature() {
-      return this.group && this.group.feature;
+      return this.group && this.group.feature
     },
     recomended() {
-      if (!(this.group && this.group.decks)) return null;
-      var highest = 0;
-      var code = null;
+      if (!(this.group && this.group.decks)) return null
+      var highest = 0
+      var code = null
       for (let deck of this.group.decks) {
         if (deck.win_rate > highest) {
-          highest = deck.win_rate;
-          code = deck.deck_code;
+          highest = deck.win_rate
+          code = deck.deck_code
         }
       }
-      return code;
+      return code
     },
     expand() {
-      return this.selfExpand ? this.selfExpanded : this.group?.expanded;
+      return this.selfExpand ? this.selfExpanded : this.group?.expanded
     },
   },
   methods: {
     onSelfExpand() {
-      this.selfExpanded = !this.selfExpanded;
+      this.selfExpanded = !this.selfExpanded
     },
   },
-};
+}
 </script>
 
 <style></style>

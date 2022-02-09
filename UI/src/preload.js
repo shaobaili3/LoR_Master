@@ -1,58 +1,58 @@
-const remote = require("@electron/remote");
+const remote = require("@electron/remote")
 
-const { contextBridge, ipcRenderer } = require("electron");
+const { contextBridge, ipcRenderer } = require("electron")
 
-const shell = require("electron").shell;
+const shell = require("electron").shell
 
-const Sentry = require("@sentry/electron");
+const Sentry = require("@sentry/electron")
 
 Sentry.init({
   dsn: "https://18f2ad8a49d54543880b7e1852dd10b8@o958702.ingest.sentry.io/6126340",
-});
+})
 
-var win = remote.getCurrentWindow();
+var win = remote.getCurrentWindow()
 
 window.closeWindow = function () {
   // console.log("Close window")
-  win.close();
-};
+  win.close()
+}
 
 window.hideWindow = function () {
-  win.hide();
-};
+  win.hide()
+}
 
 window.setSkipTaskbar = function (bool) {
-  win.setSkipTaskbar(bool);
-};
+  win.setSkipTaskbar(bool)
+}
 
 window.toggleWindow = function () {
   if (win.isMinimized()) {
-    window.showWindow();
+    window.showWindow()
   } else {
-    window.toggleShrinkWindow();
+    window.toggleShrinkWindow()
   }
-};
+}
 
 window.showWindow = function () {
   if (win.isMinimized()) {
-    win.restore();
+    win.restore()
   }
   if (window.isMin()) {
-    window.expandWindow();
+    window.expandWindow()
   }
   // win.show()
   // console.log("Show Window")
-};
+}
 
 window.makeVisible = function () {
   if (!win.isVisible()) {
-    win.show();
+    win.show()
   }
-};
+}
 
 window.getID = function () {
-  return win.webContents.id;
-};
+  return win.webContents.id
+}
 
 window.minWindow = function () {
   // console.log('Closing')
@@ -61,100 +61,100 @@ window.minWindow = function () {
   // win.close()
 
   // Minimize to Taskbar
-  win.minimize();
+  win.minimize()
 
   // remote.app.relaunch()
   // remote.app.exit(0)
-};
+}
 
-var clientHeight = 0;
-const headerHeight = 45; // Repeated in app.js
-const defaultRatio = 2.3; // Repeated in app.js
-const minHeight = 170;
-const defaultHeight = screen.height * 0.6;
+var clientHeight = 0
+const headerHeight = 45 // Repeated in app.js
+const defaultRatio = 2.3 // Repeated in app.js
+const minHeight = 170
+const defaultHeight = screen.height * 0.6
 
 window.expandWindow = function () {
-  let w = win.getSize()[0];
-  let h = win.getSize()[1];
+  let w = win.getSize()[0]
+  let h = win.getSize()[1]
 
   if (clientHeight <= headerHeight) {
     // in case recorded height is too small, reset it to default
-    clientHeight = defaultHeight;
+    clientHeight = defaultHeight
   }
-  h = clientHeight;
+  h = clientHeight
 
-  win.setSize(w, h, false);
-};
+  win.setSize(w, h, false)
+}
 
 window.shrinkWindow = function () {
-  let w = win.getSize()[0];
-  let h = win.getSize()[1];
+  let w = win.getSize()[0]
+  let h = win.getSize()[1]
 
   if (h > minHeight) {
     // record height and minimize
-    clientHeight = h;
-    h = headerHeight;
+    clientHeight = h
+    h = headerHeight
   } else {
     if (h > headerHeight) {
       // shrink to min when too small but no record
-      h = headerHeight;
+      h = headerHeight
     }
   }
 
-  win.setSize(w, h, false);
-};
+  win.setSize(w, h, false)
+}
 
 window.toggleShrinkWindow = function () {
-  let w = win.getSize()[0];
-  let h = win.getSize()[1];
+  let w = win.getSize()[0]
+  let h = win.getSize()[1]
   // window.minimize()
   // window.setSize(window.getSize[0], 45, true)
 
   if (h > minHeight) {
     // record height and minimize
-    clientHeight = h;
-    h = headerHeight;
+    clientHeight = h
+    h = headerHeight
   } else {
     if (h > headerHeight) {
       // shrink to min when too small but no record
-      h = headerHeight;
+      h = headerHeight
     } else {
       // expand to recorded height
       if (clientHeight <= headerHeight) {
-        clientHeight = defaultHeight;
+        clientHeight = defaultHeight
       }
-      h = clientHeight;
+      h = clientHeight
     }
   }
 
-  win.setSize(w, h, false);
+  win.setSize(w, h, false)
   // console.log(win.getSize())
-};
+}
 
 window.openExternal = function (url) {
-  shell.openExternal(url);
-};
+  shell.openExternal(url)
+}
 
 window.isMin = function () {
   // window.minimize()
 
   // window.setSize(window.getSize[0], 45, true)
   // let w = win.getSize()[0]
-  let h = win.getSize()[1];
+  let h = win.getSize()[1]
 
   if (h > headerHeight) {
-    return false;
+    return false
   } else {
-    return true;
+    return true
   }
-};
+}
 
 // --- Auto Update Logics ---
 
 // window.appVersion = null
 // window.appVersionLatest = null
 
-window.ipcRenderer = ipcRenderer;
+window.ipcRenderer = ipcRenderer
 
 // ipcRenderer.on('app-version', (event, arg) => {
 //     console.log(arg)
