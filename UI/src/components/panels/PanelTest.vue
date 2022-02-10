@@ -61,12 +61,39 @@
         </div>
       </div>
     </div>
+
+    <div class="flex justify-center">
+      <Tooltip>
+        <div class="mt-5 w-fit text-gold-400" :class="{ 'bg-gray-600': isLoading }">Hello!</div>
+        <template #float="floatProps">
+          <div class="transition-opacity" :class="{ 'opacity-100': floatProps.visible, 'opacity-0': !floatProps.visible }">Tooltip</div>
+        </template>
+      </Tooltip>
+
+      <div
+        class="mt-5 w-fit text-gold-400"
+        :class="{ 'bg-white': isLoading }"
+        v-tooltip="{
+          content: '123',
+          tag: 'div',
+          class: 'p-2 bg-gray-800 text-white',
+        }"
+      >
+        Hello!
+      </div>
+    </div>
+
+    <div class="max-w-[200px]">
+      <img class="drop-shadow" src="https://dd.b.pvp.net/latest/set5/en_us/img/cards/05BC093.png" />
+    </div>
   </div>
 </template>
 
 <script setup>
 import { onMounted, ref } from "vue"
 import axios from "axios"
+
+import Tooltip from "../base/Tooltip.vue"
 
 import { winRateToColor, winrateGradientV2, winRateToSimpleColor } from "../../modules/utils/colorUtils"
 

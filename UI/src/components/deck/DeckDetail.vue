@@ -23,13 +23,14 @@
     <div class="actions" :class="{ 'fixed-height': fixedHeight }" v-if="showCopy && this.baseDeck && this.cards.length > 0">
       <!-- <a class="actions-btn" :href="deckDetailLink" target="_blank"><span class="actions-icon fa fa-external-link-alt"></span>Detail</a> -->
       <div class="actions-btn" v-if="showAdd" @click="addToDeckLib">
-        <span class="actions-icon fa fa-star"></span>{{ this.saved ? this.$t("decklib.saved") : this.$t("decklib.save") }}
+        <span class="actions-icon fa-star" :class="{ fal: this.saved, fas: !this.saved }"></span
+        >{{ this.saved ? this.$t("decklib.saved") : this.$t("decklib.save") }}
       </div>
       <div class="actions-btn" v-if="showURL" @click="openURL(deckDetailLink)">
-        <span class="actions-icon fa fa-external-link-alt"></span>{{ $t("str.detail") }}
+        <span class="actions-icon fas fa-analytics"></span>{{ $t("str.detail") }}
       </div>
       <div class="actions-btn tooltip" @click="copyDeckcode">
-        <span class="actions-icon far fa-copy" :class="{ 'fa-exclamation-triangle': !isFull }"></span
+        <span class="actions-icon fa-copy" :class="{ 'fa-exclamation-triangle': !isFull, fal: this.copied, fas: !this.copied }"></span
         >{{ this.copied ? this.$t("str.copied") : this.$t("str.copy") }}
         <div class="tooltiptext top-end" v-if="!isFull">
           {{ $t("tooltips.incompleteDeck") }}

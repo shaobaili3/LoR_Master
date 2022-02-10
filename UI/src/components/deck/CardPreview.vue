@@ -96,6 +96,15 @@ export default {
       this.card.name = card.name
       this.card.cost = card.cost
     }
+
+    if (!this.$refs.container || !this.$refs.image) return
+    computePosition(this.$refs.container, this.$refs.image, {
+      placement: "bottom",
+      middleware: [flip()],
+    }).then(({ x, y, strategy }) => {
+      this.$refs.image.style.left = `${x}px`
+      this.$refs.image.style.top = `${y}px`
+    })
   },
   data() {
     return {
@@ -239,7 +248,7 @@ export default {
   /* height: 100px; */
   /* background: white; */
 
-  filter: drop-shadow(3px 3px 2px rgba(43, 38, 27, 0.6));
+  /* filter: drop-shadow(3px 3px 2px rgba(43, 38, 27, 0.6)); */
 
   z-index: 10;
 

@@ -1,0 +1,77 @@
+<script>
+import { ref, h, withDirectives, onMounted, onUpdated } from "vue"
+
+const logDom = {
+  mounted(el, value) {
+    console.log(el)
+    console.log(value.value.value) // ref -> floatRef -> Dom
+  },
+}
+
+import { computePosition, flip } from "@floating-ui/dom"
+
+export default {
+  props: {
+    msg: {
+      type: String,
+      default: "123",
+    },
+  },
+  setup(props, { attrs, slots }) {
+    const count = ref(1)
+
+    var slotItem = h("div", slots.default())
+
+    const baseRef = ref(null)
+    const floatRef = ref(null)
+
+    const isFloatShown = ref(false)
+
+    const showFloat = () => {
+      // floatRef.value.classList.remove("invisible")
+      // floatRef.value.classList.add("visible")
+      isFloatShown.value = true
+    }
+
+    const hideFloat = () => {
+      // floatRef.value.classList.remove("visible")
+      // floatRef.value.classList.add("invisible")
+      isFloatShown.value = false
+    }
+
+    const repositionFloat = () => {
+      computePosition(baseRef.value, floatRef.value, {
+        placement: "top",
+      }).then(({ x, y }) => {
+        // console.log(x, y)
+        Object.assign(floatRef.value.style, {
+          left: `${x}px`,
+          top: `${y}px`,
+        })
+      })
+    }
+
+    onMounted(() => {
+      repositionFloat()
+    })
+
+    onUpdated(() => {
+      repositionFloat()
+    })
+
+    // return the render function
+    // return () => h("div", props, [props.msg + count.value, slotItem])
+    // return () => [...slots.default(), h("div", attrs, "123")]
+    // https://vuejs.org/api/render-function.html#withdirectives
+    // [Directive, value, argument, modifier]
+    // return () => [withDirectives(slots.default()[0], [[logDom, floatRef]]), h(slots.float()[0], { ref: (el) => (floatRef.value = el) })]
+    return () => [
+      h(slots.default()[0], { ref: (el) => (baseRef.value = el), onMouseenter: showFloat, onMouseleave: hideFloat }),
+      h(slots.float({ visible: isFloatShown.value })[0], {
+        style: "position:absolute;",
+        ref: (el) => (floatRef.value = el),
+      }),
+    ]
+  },
+}
+</script>

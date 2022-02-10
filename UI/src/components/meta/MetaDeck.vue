@@ -101,8 +101,7 @@
         v-if="linkDetail"
         @click="openURL(detailLink)"
       >
-        <span>{{ $t("str.detail") }}</span>
-        <i class="fas fa-caret-right pl-1"></i>
+        <i class="fas fa-analytics pr-2"></i><span>{{ $t("str.detail") }}</span>
       </button>
     </div>
   </div>

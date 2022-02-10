@@ -62,7 +62,6 @@ export const useDeckLibStore = defineStore(storeid, {
         while (this.decks.findIndex((item) => item.title == newTitle) != -1 && i < 1000) {
           i += 1
           newTitle = `#${i} ` + champNames.join(" ")
-          console.log(newTitle)
         }
         this.decks.unshift({
           title: newTitle,

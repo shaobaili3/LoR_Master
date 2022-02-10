@@ -1,5 +1,5 @@
 <template>
-  <img class="m-auto object-contain drop-shadow-lg" :src="getCardDisplayUrl" alt="" />
+  <img class="m-auto object-contain drop-shadow-dark" :src="getCardDisplayUrl" alt="" />
 </template>
 
 <script>

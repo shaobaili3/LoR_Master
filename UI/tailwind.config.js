@@ -1,7 +1,7 @@
 const defaultTheme = require("tailwindcss/defaultTheme")
 
 module.exports = {
-  content: ["./src/components/**/*.vue", "./src/pages/**/*.vue"],
+  content: ["./src/components/**/*.vue", "./src/pages/**/*.vue", "./src/directives/**/*.js"],
   theme: {
     screens: {
       xxs: "190px",
@@ -40,6 +40,9 @@ module.exports = {
       },
       padding: {
         nav: "43px",
+      },
+      dropShadow: {
+        dark: "0 5px 2px rgba(0, 0, 0, 0.8)",
       },
     },
   },

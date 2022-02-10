@@ -9,6 +9,8 @@ import { useBaseStore } from "../store/StoreBase"
 import VueVirtualScroller from "vue-virtual-scroller"
 // import Popper from "vue3-popper"
 
+import TooltipDirective from "../directives/TooltipDirective"
+
 import "vue-virtual-scroller/dist/vue-virtual-scroller.css"
 import "@/assets/css/global.css"
 
@@ -73,6 +75,8 @@ export default (App) => {
   app.use(i18n)
   app.use(createPinia())
   app.use(VueVirtualScroller)
+
+  app.directive("tooltip", TooltipDirective)
   // app.component("Popper", Popper)
   // app.use(FloatingVue, {
   //   themes: {

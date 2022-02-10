@@ -87,7 +87,7 @@
           </div>
           <!-- "$t('leaderboard.lastRankTip')" -->
 
-          <div class="hidden px-2 sm:col-span-2 sm:block">
+          <div class="hidden px-2 sm:col-span-2 sm:block" v-tooltip="{ content: $t('leaderboard.lastRankTip') }">
             {{ $t("leaderboard.lastX", { num: 20 }) }}
           </div>
 
