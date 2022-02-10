@@ -1,10 +1,10 @@
 <template>
   <div
-    class="mr-1"
+    class="mr-1.5"
     :class="{
-      'h-[96px] sm:h-[108px]': !winStreak && !isDateBreak,
-      'h-[120px] sm:h-[132px]': isDateBreak,
-      'h-[128px] sm:h-[140px]': winStreak,
+      'h-[96px] sm:h-[110px]': !winStreak && !isDateBreak,
+      'h-[120px] sm:h-[134px]': isDateBreak,
+      'h-[128px] sm:h-[142px]': winStreak,
     }"
   >
     <!-- Win Streak -->
@@ -20,13 +20,17 @@
     <div class="pb-1 pl-2 text-left text-sm text-gray-200" v-if="isDateBreak && !winStreak">
       {{ timeString }}
     </div>
+
+    <!-- Match History Container -->
+    <!-- 'shadow-glow-sm shadow-sky-400 transition-shadow hover:shadow-glow hover:shadow-sky-400': won, -->
     <div
-      class="match-history match border-2"
+      class="relative flex w-full flex-col overflow-hidden rounded-lg p-1 py-1.5"
       :class="{
-        'won border-yellow-500 bg-zinc-800': won,
-        'loss border-zinc-700 bg-zinc-700': !won,
+        ' bg-gradient-to-r from-sky-900 to-gray-800': won,
+        'bg-gray-800': !won,
       }"
     >
+      <i class="fas fa-trophy absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/4 rotate-12 text-7xl text-gray-200/10" v-if="won"></i>
       <div class="btn-expand-detail" v-if="details" @click="toggleDetail">
         <i
           class="fas"
@@ -36,52 +40,48 @@
           }"
         ></i>
       </div>
-      <div class="row opponent no-scrollbar overflow-x-scroll" :class="{ 'text-white': won }">
-        <p @click="search" class="match-info-title text-inherit" :class="{ 'text-yellow-400': won }">
-          <i class="fas" :class="{ 'fa-pennant pr-2': win, '': !win }"></i>
+      <!-- Name & Detail -->
+      <div class="no-scrollbar flex items-baseline gap-2 overflow-x-scroll whitespace-nowrap" :class="{ 'text-white': won }">
+        <!-- text-[#f33535] -->
+        <div @click="search" class="pl-1.5 text-base" :class="{ 'text-white ': won, 'text-gray-200': !won }">
+          <!-- <i class="fas" :class="{ 'fa-pennant pr-2': win, '': !win }"></i> -->
           <span>vs </span>
           <span
             :class="{
-              'cursor-pointer underline-offset-2 hover:underline': region,
+              'cursor-pointer underline-offset-2 transition-colors hover:text-white hover:underline': region,
             }"
             >{{ opponentName }}</span
           >
-        </p>
-        <div class="opponent-info" :class="{ 'text-yellow-400': won }" v-if="opponentRank">
-          <i class="fas fa-trophy"></i> {{ opponentRank }}
         </div>
-        <div class="history-info opacity-80">{{ timeString }}</div>
-        <div class="history-info opacity-80" v-if="rounds">{{ rounds }} {{ $t("str.rounds") }}</div>
-        <div
-          class="match-info-badge opacity-80"
-          :class="{ 'bg-zinc-600': won, 'bg-zinc-800': !won }"
-          v-for="badge in filteredBadges"
-          :key="badge"
-        >
+        <div class="" :class="{ 'text-yellow-400': won }" v-if="opponentRank"><i class="fas fa-trophy"></i> {{ opponentRank }}</div>
+        <div class="text-xs text-gray-200">{{ timeString }}</div>
+        <div class="text-xs text-gray-200" v-if="rounds">{{ rounds }} {{ $t("str.rounds") }}</div>
+        <div class="rounded-full bg-gray-900 px-2 py-1 text-xs text-gray-200" v-for="badge in filteredBadges" :key="badge">
           <span
             v-if="badge == 'recent' || badge == 'frequent'"
-            class="match-info-badge-icon fa"
+            class="fa"
             :class="{
               'fa-clock': badge == 'recent',
               'fa-angle-double-up': badge == 'frequent',
             }"
           ></span>
-          {{ $t("matches.badges." + badge.replace(/\s+/g, "")) }}
+          {{ $t(getBadgeTranslateKey(badge)) }}
         </div>
       </div>
-      <div class="flex items-center justify-around">
+      <!-- Deck Preview -->
+      <div class="flex items-center justify-around pt-2">
+        <!-- Left -->
         <deck-preview
-          class="transition-colors"
-          :class="{ 'hover:bg-zinc-700': won, 'hover:bg-zinc-800': !won }"
+          class="py-1 transition-colors hover:bg-white/10"
           @click.stop
           :deck="deck"
           :won="won"
           :fixedWidth="false"
         ></deck-preview>
         <div class="sm:px-8">VS</div>
+        <!-- Right -->
         <deck-preview
-          class="transition-colors"
-          :class="{ 'hover:bg-zinc-700': won, 'hover:bg-zinc-800': !won }"
+          class="py-1 transition-colors hover:bg-white/10"
           @click.stop
           :deck="opponentDeck"
           :won="won"
@@ -106,6 +106,19 @@ import MatchDetailTimeline from "../match/MatchDetailTimeline.vue"
 
 import { format, formatDistanceStrict } from "date-fns"
 import { dateFNSLocales } from "../../assets/data/messages"
+
+export const filterBadges = (badges) => {
+  return badges
+    .map((b) => b.trim())
+    .filter((badge, pos, self) => {
+      // remove "Constructed" and duplicates
+      return !badge.includes("Constructed") && self.indexOf(badge) == pos
+    })
+}
+
+export const getBadgeTranslateKey = (badge) => {
+  return "matches.badges." + badge.replace(/\s+/g, "")
+}
 
 export default {
   components: {
@@ -188,16 +201,11 @@ export default {
     },
     filteredBadges() {
       if (!this.badges) return null
-      var filtered = this.badges
-        .map((b) => b.trim())
-        .filter((badge, pos, self) => {
-          // remove "Constructed" and duplicates
-          return !badge.includes("Constructed") && self.indexOf(badge) == pos
-        })
-      return filtered
+      return filterBadges(this.badges)
     },
   },
   methods: {
+    getBadgeTranslateKey,
     downloadStreakScreenshot() {
       this.$emit("screenshot", this.index)
     },
@@ -283,21 +291,12 @@ export default {
   white-space: nowrap;
 }
 
-.match-info-badge:hover {
-  // color: rgba(255, 255, 255, 1);
-  // background: rgba(255, 255, 255, 0.3);
-}
-
 .history-info {
   font-size: 0.8em;
   // color: rgba(255, 255, 255, 0.7);
   padding: 8px 6px;
   cursor: default;
   white-space: nowrap;
-}
-
-.history-info:hover {
-  // color: rgba(255, 255, 255, 1);
 }
 
 .opponent-info {
@@ -344,30 +343,6 @@ export default {
 
   // background-color: var(--col-background);
   // opacity: 0.1;
-}
-
-.row.match-history-dots .dot.played {
-  // opacity: 0.3;
-  // background: rgb(255, 255, 255);
-}
-
-.row.match-history-dots .dot.played.won {
-  // opacity: 0.7;
-  // background: rgb(255, 255, 255);
-}
-
-/* .row.match-history-dots:hover .dot {
-        display: none;
-    } */
-
-.row.match-history-dots:hover .dot {
-  // opacity: 0.05;
-}
-
-.row.match-history-dots:hover .dot.played {
-  /* display: initial; */
-  // opacity: 0.5;
-  /* background-color: var(--col-background); */
 }
 
 .match-history-dots:hover .dot.played.won {

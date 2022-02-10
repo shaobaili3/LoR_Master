@@ -27,6 +27,7 @@ module.exports = {
           400: "rgb(94, 94, 94)",
           300: "rgb(124, 124, 124)",
           200: "#acacac",
+          150: "#dcdcdc",
         },
       },
       transitionProperty: {
@@ -43,6 +44,10 @@ module.exports = {
       },
       dropShadow: {
         dark: "0 5px 2px rgba(0, 0, 0, 0.8)",
+      },
+      boxShadow: {
+        glow: "0 0 12px 0px",
+        "glow-sm": "0 0 4px 0px",
       },
     },
   },

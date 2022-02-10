@@ -11,7 +11,7 @@
     "serve": "vue-cli-service serve",
     "serve:beta": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "build:beta": "vue-cli-service build",
+    "build:beta": "vue-cli-service build --mode beta",
     "lint": "vue-cli-service lint",
     "deploy": "deploy.sh",
     "deploy:beta": "deploy_beta.sh",

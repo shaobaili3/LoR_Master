@@ -1,10 +1,23 @@
 <template>
   <div
-    class="group relative grid h-16 cursor-pointer grid-cols-12 items-center bg-gray-700 transition-colors duration-150 hover:bg-gray-800 sm:mr-1"
+    class="
+      group
+      relative
+      grid
+      h-16
+      cursor-pointer
+      grid-cols-12
+      items-center
+      bg-gray-700
+      transition-colors
+      duration-150
+      hover:bg-gray-800
+      sm:mr-1
+    "
     :class="{
-      'rounded-t-md border-2 border-yellow-500': rank == '1',
-      'border-2 border-t-0 border-zinc-200': rank == '2',
-      'rounded-b-md border-2 border-t-0 border-red-300': rank == '3',
+      'rounded-t-md border-b-2  border-yellow-500': rank == '1',
+      'border-b-2  border-zinc-200': rank == '2',
+      'rounded-b-md border-b-2 border-red-300': rank == '3',
     }"
   >
     <div class="z-[1]">

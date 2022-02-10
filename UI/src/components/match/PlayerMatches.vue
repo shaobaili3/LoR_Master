@@ -1,6 +1,6 @@
 <template>
   <div class="flex h-full flex-col">
-    <div v-if="false" class="summary-item decks-summary" @wheel.prevent="horizontalScroll">
+    <!-- <div v-if="false" class="summary-item decks-summary" @wheel.prevent="horizontalScroll">
       <div
         class="champion-icons btn"
         v-for="obj in uniqueDeckCodes"
@@ -10,8 +10,9 @@
       >
         <deck-champs :deck="obj.deck" :showRegion="true" :fixedWidth="false"></deck-champs>
       </div>
-    </div>
+    </div> -->
 
+    <!-- Summary -->
     <div class="block grid-cols-5 items-end pb-4 sm:grid">
       <div class="col-span-4 px-2 sm:px-0">
         <div class="player-name">
@@ -113,52 +114,6 @@
         </DynamicScrollerItem>
       </template>
     </DynamicScroller>
-
-    <!-- <RecycleScroller
-      v-if="totalMatches > 0"
-      class="flex-1 overflow-y-auto"
-      :items="filteredMatches"
-      :item-size="scrollerItemSize"
-      key-field="time"
-    >
-      <template v-slot="{ item }">
-        <match-history
-          @search="searchPlayer({ region: item.region, name: item.opponentName, tag: item.opponentTag })"
-          :opponentName="item.opponentName"
-          :opponentRank="item.opponentRank"
-          :opponentLp="item.opponentLp"
-          :deck="item.deck"
-          :opponentDeck="item.opponentDeck"
-          :rounds="item.rounds"
-          :win="item.win"
-          :time="item.time"
-          :badges="item.badges"
-          :details="item.details"
-          :region="item.region"
-        ></match-history></template
-    ></RecycleScroller> -->
-    <!-- <div v-if="totalMatches > 0" class="flex-1 overflow-y-auto">
-      <match-history
-        v-for="(item, index) in filteredMatches"
-        :key="item.time + filter"
-        @search="searchPlayer({ region: item.region, name: item.opponentName, tag: item.opponentTag })"
-        :opponentName="item.opponentName"
-        :opponentRank="item.opponentRank"
-        :opponentLp="item.opponentLp"
-        :deck="item.deck"
-        :opponentDeck="item.opponentDeck"
-        :rounds="item.rounds"
-        :win="item.win"
-        :time="item.time"
-        :badges="item.badges"
-        :details="item.details"
-        :region="item.region"
-        :winStreak="item.winStreak"
-        :isDateBreak="item.isDateBreak"
-        :index="index"
-      ></match-history>
-      
-    </div> -->
   </div>
 </template>
 
@@ -218,7 +173,7 @@ export const getLeaderboardFromPlayer = (regionShort, name, tag) => {
 export default {
   components: {
     MatchHistory,
-    DeckChamps,
+    // DeckChamps,
   },
   mounted() {
     this.leaderboardStore.fetchLeaderboard(REGION_ID[this.playerRegion])
@@ -234,16 +189,6 @@ export default {
     return {
       filterDeckCode: null,
     }
-  },
-  emits: {
-    search: ({ region, name, tag }) => {
-      if (region && name && tag) {
-        return true
-      } else {
-        console.warn("Invalid submit event payload!")
-        return false
-      }
-    },
   },
   computed: {
     ...mapStores(useLeaderboardStore, useBookmarkStore),

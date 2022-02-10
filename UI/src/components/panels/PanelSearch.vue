@@ -2,8 +2,8 @@
   <div class="flex h-full justify-center gap-6">
     <div class="hidden max-w-[350px] flex-1 flex-col lg:flex">
       <!-- Bookmarked Players -->
-      <div class="pb-4 text-center text-xl">
-        {{ $t("search.bookmarks") }}
+      <div class="pb-3 text-center text-lg">
+        {{ $t("search.bookmarks").toUpperCase() }}
       </div>
       <div class="mb-4 flex max-h-[25%] flex-shrink flex-col gap-1 overflow-y-auto rounded-lg bg-gray-800">
         <i18n-t keypath="search.noBookmarks" tag="div" class="py-2 text-gray-200" v-if="!bookmarks || bookmarks.length <= 0">
@@ -15,59 +15,82 @@
           </div>
         </div>
       </div>
-      <!-- Archetypes -->
-      <div v-if="playerName && matches.length > 0" class="pb-4 text-center text-xl">
-        {{ $t("str.archetypes") }}
-      </div>
-      <div v-if="playerName && matches.length > 0" class="mb-4 flex flex-shrink flex-col gap-1 overflow-y-auto rounded-lg bg-gray-800">
-        <div
-          class="rounded py-1 transition-colors hover:bg-gray-600"
-          v-for="obj in uniqueArchetypes"
-          :key="obj.id"
-          :class="{ 'bg-gray-700': filterDeckID == obj.id }"
-        >
-          <div class="flex items-center">
-            <div>
-              <deck-preview
-                :fixedWidth="true"
-                class="p-2 transition-colors hover:bg-gray-800"
-                :deck="obj.decks[0]"
-                :size="1"
-              ></deck-preview>
-            </div>
-            <div class="group flex w-0 flex-1 cursor-pointer pl-1" @click="setFilterArchetype(obj.id)">
-              <div class="w-0 flex-1 text-left">
-                <div class="text-gray-200">
-                  {{ $t("matches.games", { num: obj.freq }) }}
+      <!-- Filters -->
+      <div v-if="playerName && matches.length > 0" class="flex flex-shrink flex-col overflow-y-auto">
+        <div class="pb-2 text-center text-lg">
+          {{ $t("str.filter").toUpperCase() }}
+        </div>
+        <!-- Game Types -->
+        <div class="pb-2 pl-1 text-left text-sm text-gray-300">
+          <i class="fas fa-chess pr-1"></i>
+          {{ $t("str.gameType") }}
+        </div>
+        <div class="flex flex-wrap gap-2 pb-4">
+          <div
+            v-for="(value, key) in uniqueBadges"
+            :key="value"
+            @click="setFilterBadge(key)"
+            class="cursor-pointer whitespace-nowrap rounded-full px-2 py-1 text-sm transition-colors hover:bg-gray-600 hover:text-white"
+            :class="{ 'bg-gray-700 text-gray-100': this.filterBadge == key, 'bg-gray-800 text-gray-200': this.filterBadge != key }"
+          >
+            {{ $t(getBadgeTranslateKey(key)) }} <span class="rounded-full px-1">{{ value }}</span>
+          </div>
+        </div>
+        <!-- Archetypes -->
+        <div class="pb-2 pl-1 text-left text-sm text-gray-300">
+          <i class="fas fa-book-alt pr-1"></i>
+          {{ $t("str.archetypes") }}
+        </div>
+        <div class="mb-4 flex flex-shrink flex-col gap-1 overflow-y-auto rounded-lg bg-gray-800">
+          <div
+            class="rounded py-1 transition-colors hover:bg-gray-600"
+            v-for="obj in uniqueArchetypes"
+            :key="obj.id"
+            :class="{ 'bg-gray-700': filterDeckID == obj.id }"
+          >
+            <div class="flex items-center">
+              <div>
+                <deck-preview
+                  :fixedWidth="true"
+                  class="p-2 transition-colors hover:bg-gray-800"
+                  :deck="obj.decks[0]"
+                  :size="1"
+                ></deck-preview>
+              </div>
+              <div class="group flex w-0 flex-1 cursor-pointer pl-1" @click="setFilterArchetype(obj.id)">
+                <div class="w-0 flex-1 text-left">
+                  <div class="text-gray-200">
+                    {{ $t("matches.games", { num: obj.freq }) }}
+                  </div>
+                  <div
+                    class="overflow-hidden text-ellipsis whitespace-nowrap"
+                    :style="{
+                      color: winRateToColor(obj.win / obj.freq),
+                    }"
+                  >
+                    {{
+                      $t("matches.winRate", {
+                        num: Math.floor((obj.win / obj.freq) * 1000) / 10,
+                      })
+                    }}
+                  </div>
                 </div>
                 <div
-                  class="overflow-hidden text-ellipsis whitespace-nowrap"
-                  :style="{
-                    color: winRateToColor(obj.win / obj.freq),
+                  class="flex cursor-pointer items-center px-2 pr-4 text-gray-200 transition-opacity group-hover:opacity-100"
+                  :class="{
+                    'opacity-0': filterDeckID != obj.id,
+                    'text-gray-50': filterDeckID == obj.id,
                   }"
                 >
-                  {{
-                    $t("matches.winRate", {
-                      num: Math.floor((obj.win / obj.freq) * 1000) / 10,
-                    })
-                  }}
+                  <i class="fas fa-filter"></i>
                 </div>
-              </div>
-              <div
-                class="flex cursor-pointer items-center px-2 pr-4 text-gray-200 transition-opacity group-hover:opacity-100"
-                :class="{
-                  'opacity-0': filterDeckID != obj.id,
-                  'text-gray-50': filterDeckID == obj.id,
-                }"
-              >
-                <i class="fas fa-filter"></i>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="h-1/4"></div>
+      <div class="min-h-[72px]"></div>
     </div>
     <div class="w-0 max-w-2xl flex-1">
       <div class="flex h-full flex-col px-2 sm:px-0">
@@ -95,7 +118,21 @@
               <input
                 spellcheck="false"
                 autocomplete="off"
-                class="search-bar h-12 w-full rounded-3xl border-none bg-gray-800 pl-12 pr-5 text-base text-white placeholder-gray-300 outline-none transition-colors focus:bg-gray-700"
+                class="
+                  search-bar
+                  h-12
+                  w-full
+                  rounded-3xl
+                  border-none
+                  bg-gray-800
+                  pl-12
+                  pr-5
+                  text-base text-white
+                  placeholder-gray-300
+                  outline-none
+                  transition-colors
+                  focus:bg-gray-700
+                "
                 :class="{
                   'rounded-b-none rounded-t-[25px]':
                     (hasNameAutoComplete || (searchText.length > 3 && !(searchText == playerName))) && isInputFocused,
@@ -144,7 +181,6 @@
           <!-- Player Info -->
           <player-matches
             v-if="playerName && matches.length > 0"
-            @search="searchPlayer($event)"
             :playerName="playerName"
             :playerRegion="playerRegion"
             :playerTag="playerTag"
@@ -203,6 +239,7 @@ import SearchBookmark from "../search/SearchBookmark.vue"
 import SearchAutoCompleteItem from "../search/SearchAutoCompleteItem.vue"
 
 import { getDeckID } from "./PanelMeta.vue"
+import { filterBadges, getBadgeTranslateKey } from "../match/MatchHistory.vue"
 
 export const processSearchRequestRawData = (data, playerName) => {
   // playerServer is region shorts
@@ -254,14 +291,14 @@ export const processSearchRequestRawData = (data, playerName) => {
     if (info.game_mode)
       badges.push(
         info.game_mode
-          .replace(/([A-Z])/g, " $1")
+          .replace(/([A-Z])/g, "$1")
           .trim()
           .replace("Lobby", "")
       )
     if (info.game_type)
       badges.push(
         info.game_type
-          .replace(/([A-Z])/g, " $1")
+          .replace(/([A-Z])/g, "$1")
           .trim()
           .replace("Lobby", "")
       )
@@ -329,6 +366,7 @@ export default {
       debugInfos: "",
 
       filterDeckID: null,
+      filterBadge: null,
     }
   },
   computed: {
@@ -340,13 +378,42 @@ export default {
 
     filteredMatches() {
       if (!this.matches) return null
-      if (!this.filterDeckID) return this.matches
-      return this.matches.filter((val) => {
-        return getDeckID(val.deck) == this.filterDeckID
-      })
+      var filtered = this.matches
+      if (this.filterDeckID) {
+        filtered = filtered.filter((val) => {
+          return getDeckID(val.deck) == this.filterDeckID
+        })
+      }
+
+      if (this.filterBadge) {
+        filtered = filtered.filter((val) => {
+          return val.badges.includes(this.filterBadge)
+        })
+      }
+
+      return filtered
     },
     hasSearchInfo() {
       return this.player && this.region && this.tag && REGION_SHORTS.indexOf(this.region) != -1
+    },
+    uniqueBadges() {
+      if (!this.matches) return null
+
+      const badgesCount = {}
+
+      for (const match of this.matches) {
+        var filtered = filterBadges(match.badges)
+        for (const badge of filtered) {
+          badgesCount[badge] = badgesCount[badge] ? badgesCount[badge] + 1 : 1
+        }
+      }
+
+      return Object.keys(badgesCount)
+        .sort()
+        .reduce(function (result, key) {
+          result[key] = badgesCount[key]
+          return result
+        }, {})
     },
     uniqueArchetypes() {
       if (!this.matches) return null
@@ -463,10 +530,19 @@ export default {
   },
   methods: {
     ...mapActions(useBookmarkStore, ["initStore"]),
-    winRateToColor: winRateToColor,
+
+    getBadgeTranslateKey,
+    winRateToColor,
 
     showDeck(code) {
       this.$emitter.emit("showDeck", code)
+    },
+    setFilterBadge(badge) {
+      if (this.filterBadge == badge) {
+        this.filterBadge = null
+      } else {
+        this.filterBadge = badge
+      }
     },
     setFilterArchetype(deckID) {
       if (this.filterDeckID == deckID) {
@@ -567,41 +643,51 @@ export default {
       if (this.inputNameList.length > 0 && this.inputNameList[this.autoCompleteIndex]) {
         // Use auto complete to fill the search
         // Sets player info for search
+
         var item = this.inputNameList[this.autoCompleteIndex]
-        this.playerName = item.name
-        this.playerTag = item.tag
-
-        this.searchText = this.playerName
-
-        this.sendUserEvent({
-          category: "Main Window Search",
-          action: "Auto Complete",
-          label: this.playerName + "#" + this.playerTag,
-          value: null,
+        this.$router.push({
+          name: "search",
+          query: { name: item.name, tag: item.tag, region: this.selectedRegion },
         })
 
+        // this.playerName = item.name
+        // this.playerTag = item.tag
+        // this.searchText = this.playerName
+
+        // this.sendUserEvent({
+        //   category: "Main Window Search",
+        //   action: "Auto Complete",
+        //   label: this.playerName + "#" + this.playerTag,
+        //   value: null,
+        // })
+
         // Perform the actual search
-        this.requestHistoryData()
-        this.resetInputFocus()
+        // this.requestHistoryData()
+        // this.resetInputFocus()
       } else {
         // Use user input
         splited = this.searchText.split("#")
         if (splited.length == 2 && splited[0].length > 0 && splited[1].length > 0) {
           // Check if format is correct
           // Sets player info for search
-          this.playerName = splited[0]
-          this.playerTag = splited[1]
+          // this.playerName = splited[0]
+          // this.playerTag = splited[1]
 
-          this.sendUserEvent({
-            category: "Main Window Search",
-            action: "User Input [New]",
-            label: `${this.searchText}`,
-            value: null,
+          this.$router.push({
+            name: "search",
+            query: { name: splited[0], tag: splited[1], region: this.selectedRegion },
           })
 
-          // Perform the actual search
-          this.requestHistoryData()
-          this.resetInputFocus()
+          // this.sendUserEvent({
+          //   category: "Main Window Search",
+          //   action: "User Input [New]",
+          //   label: `${this.searchText}`,
+          //   value: null,
+          // })
+
+          // // Perform the actual search
+          // this.requestHistoryData()
+          // this.resetInputFocus()
         } else if (splited.length == 1 && splited[0] == this.playerName && this.playerTag) {
           // When trying to search the same people, do a refresh (update only)
 
@@ -737,7 +823,13 @@ export default {
                 this.errorHistory(4) // Internal sercive error
               } else {
                 var data = e.response.data
-                this.errorHistory((data.status && data.status.error) || 3) // give a 3 so that there is a fallback
+                var errorCode = (data.status && data.status.error) || 3
+                if (errorCode == 1 || errorCode == 2) {
+                  // No History Error
+                  this.requestHistoryUpdate()
+                } else {
+                  this.errorHistory(errorCode) // give a 3 so that there is a fallback
+                }
               }
             } else {
               this.errorHistory(3) // Unkown Error

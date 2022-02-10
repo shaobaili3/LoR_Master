@@ -13,6 +13,8 @@ const TooltipDirective = {
     floatDom.classList.add("opacity-0")
     floatDom.classList.add("absolute")
     floatDom.classList.add("transition-opacity")
+    floatDom.classList.add("z-100")
+    floatDom.classList.add("pointer-events-none")
     el.appendChild(floatDom)
 
     const repositionFloat = () => {
