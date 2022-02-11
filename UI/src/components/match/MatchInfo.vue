@@ -23,16 +23,19 @@
     </div>
     <div class="row match-history-dots">
       <div class="match-history-summary">{{ wonNum }} W - {{ lostNum }} L</div>
-      <div class="dot" :class="{ won: isWonGame(index), played: isPlayedGame(index) }" v-for="index in 10" :key="index"></div>
+      <div
+        class="dot"
+        :class="{ won: isWonGame(index), played: isPlayedGame(index) }"
+        v-for="index in 10"
+        :key="index"
+      ></div>
     </div>
     <div class="row decklist">
       <deck-preview
         @click="showDeck"
         :clickToShow="false"
-        :isShown="visibleDeck != 0"
+        class="h-12 gap-0.5 py-2 px-2 hover:bg-white/10"
         :deck="deck"
-        :won="won"
-        :cheveron="true"
       ></deck-preview>
       <!-- <div class="text-vs">VS</div> -->
       <!-- <deck-preview @click="showDeck" :deck="deck"></deck-preview> -->
@@ -40,7 +43,12 @@
   </div>
 
   <transition name="height">
-    <deck-detail v-if="visibleDeck == 1" :baseDeck="deck" :hideNum="true" :fullHeight="false"></deck-detail>
+    <deck-detail
+      v-if="visibleDeck == 1"
+      :baseDeck="deck"
+      :hideNum="true"
+      :fullHeight="false"
+    ></deck-detail>
   </transition>
 </template>
 
@@ -125,7 +133,9 @@ export default {
       return (this.history.match(/L/g) || []).length
     },
     gamesString() {
-      return this.matches > 1 ? this.$t("matches.games", { num: this.matches }) : this.$t("matches.game", { num: this.matches })
+      return this.matches > 1
+        ? this.$t("matches.games", { num: this.matches })
+        : this.$t("matches.game", { num: this.matches })
     },
   },
   methods: {

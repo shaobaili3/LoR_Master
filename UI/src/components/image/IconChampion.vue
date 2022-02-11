@@ -1,11 +1,13 @@
 <template>
   <div
-    :class="{
-      champ: code,
-      'icon h-7 w-7 xxs:h-8 xxs:w-8 xs:h-9 xs:w-9 sm:h-10 sm:w-10': !customClass,
-    }"
+    class="relative aspect-square h-full rounded-full bg-cover bg-center"
+    :class="{ 'border-2 border-zinc-200': this.code, 'border-0 bg-gray-200/20': !this.code }"
     :style="{ backgroundImage: getChampionImgUrl }"
   >
+    <div
+      v-if="!this.code"
+      class="fas fa-helmet-battle absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 scale-125 opacity-10"
+    ></div>
     <div v-if="count && count != 3" class="count">{{ count }}</div>
   </div>
 </template>

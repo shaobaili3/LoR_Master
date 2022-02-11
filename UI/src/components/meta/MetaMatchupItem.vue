@@ -1,6 +1,10 @@
 <template>
   <div class="mb-4 flex flex-col items-center justify-center sm:mb-2 sm:flex-row">
-    <deck-preview class="max-w-[200px] transition-colors hover:bg-gray-700 md:mr-2" :fixedWidth="true" :deck="deckCode"></deck-preview>
+    <deck-preview
+      class="mr-2 h-14 gap-1 py-2 px-3 transition-colors hover:bg-gray-700"
+      :fixedWidth="true"
+      :deck="deckCode"
+    ></deck-preview>
     <div class="flex-col gap-2 text-center sm:flex sm:gap-0 sm:text-left">
       <!-- Summary -->
       <p class="text-sm text-gray-200">

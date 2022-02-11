@@ -46,9 +46,9 @@
       </div>
     </div>
 
-    <div class="col-span-4 sm:col-span-3">
+    <div class="col-span-4 flex justify-center sm:col-span-3">
       <deck-preview
-        class="transition-colors hover:bg-gray-600"
+        class="h-12 gap-0.5 p-1 py-2.5 hover:bg-gray-600 sm:h-12 sm:gap-1 sm:p-2"
         v-if="deck"
         @click.stop
         :deck="deck"

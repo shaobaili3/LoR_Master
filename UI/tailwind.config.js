@@ -4,8 +4,8 @@ module.exports = {
   content: ["./src/components/**/*.vue", "./src/pages/**/*.vue", "./src/directives/**/*.js"],
   theme: {
     screens: {
-      xxs: "190px",
-      xs: "275px",
+      "2xs": "191px",
+      xs: "240px",
       ...defaultTheme.screens,
     },
     extend: {
@@ -29,6 +29,9 @@ module.exports = {
           200: "#acacac",
           150: "#dcdcdc",
         },
+      },
+      opacity: {
+        15: ".15",
       },
       transitionProperty: {
         height: "height",

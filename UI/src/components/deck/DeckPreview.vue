@@ -1,36 +1,17 @@
 <template>
   <div
-    class="btn flex w-fit flex-1 cursor-pointer justify-center rounded-md p-1"
+    class="flex w-fit cursor-pointer items-center justify-center rounded-md transition-colors"
     @click="showDeck"
-    :class="{
-      won: won,
-      loss: !won,
-      cheveron: cheveron,
-      invisible: !deck,
-      '-mx-5 -my-2 scale-75': size == 1,
-    }"
   >
-    <div class="flex items-center" :class="{ 'w-[160px] sm:w-[190px]': fixedWidth }">
-      <deck-regions :deck="deck" :fixedWidth="true"></deck-regions>
-      <deck-champs :deck="deck" :fixedWidth="!cheveron"></deck-champs>
-      <div v-if="cheveron" class="icon cheveron fa" :class="{ 'fa-chevron-down': !isShown, 'fa-chevron-up': isShown }"></div>
-    </div>
+    <deck-regions :deck="deck"></deck-regions>
+    <deck-champs :deck="deck"></deck-champs>
   </div>
 </template>
 
 <script>
-import DeckEncoder from "../../modules/runeterra/DeckEncoder"
-import championCards from "../../assets/data/champion.js"
 import DeckChamps from "./DeckChamps.vue"
 import DeckRegions from "./DeckRegions.vue"
 //https://painttist.github.io/lor-champ-icons/data/champion.js
-
-const DeckPreviewSize = {
-  xs: 0,
-  sm: 1,
-  md: 2,
-  lg: 3,
-}
 
 export default {
   components: {
@@ -43,27 +24,9 @@ export default {
   mounted() {},
   props: {
     deck: String,
-    won: Boolean,
-    cheveron: {
-      type: Boolean,
-      default: false,
-    },
-    fixedWidth: {
-      // 180px vs 100%
-      type: Boolean,
-      default: false,
-    },
-    isShown: {
-      type: Boolean,
-      default: false,
-    },
     clickToShow: {
       type: Boolean,
       default: true,
-    },
-    size: {
-      typeof: DeckPreviewSize,
-      default: DeckPreviewSize.md,
     },
   },
   computed: {},

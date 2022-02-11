@@ -5,14 +5,27 @@
             <line @mouseenter="lineHover($event, 1)" x1="20" y1="0" x2="20" y2="20"></line>
         </svg> -->
     <!-- <p class="title-text">Timeline</p> -->
-    <div class="hover-container" v-if="displayInfo" :style="{ left: displayInfo.left + 'px', top: displayInfo.top + 'px' }">
-      <div class="time-indicator" v-if="displayInfo.code" :class="{ first: displayInfo.first }"></div>
+    <div
+      class="hover-container"
+      v-if="displayInfo"
+      :style="{ left: displayInfo.left + 'px', top: displayInfo.top + 'px' }"
+    >
+      <div
+        class="time-indicator"
+        v-if="displayInfo.code"
+        :class="{ first: displayInfo.first }"
+      ></div>
       <p class="time-text" v-if="displayInfo.time">
         {{ moment(new Date(displayInfo.time) - new Date(details.startTime)).format("mm:ss") }}
       </p>
-      <card-image class="card-hover" v-if="displayInfo.code" :code="displayInfo.code"></card-image>
+      <image-card class="card-hover" v-if="displayInfo.code" :code="displayInfo.code"></image-card>
     </div>
-    <div class="timeline-container" @wheel.prevent="handleScroll" :class="{ grabbing: grabbing }" @scroll="whenScrolled">
+    <div
+      class="timeline-container"
+      @wheel.prevent="handleScroll"
+      :class="{ grabbing: grabbing }"
+      @scroll="whenScrolled"
+    >
       <div class="timeline-content" :style="{ width: zoom + '%' }">
         <!-- <div class="gridline" v-for="i in 10"
                     :key="i"
@@ -62,23 +75,17 @@
             <!-- side way -->
             <!-- <polygon points="10,5 7.5,9.33 2.5,9.33 0,5 2.5,0.67 7.5,0.67"></polygon> -->
           </svg>
-
-          <!-- <card-image :code="card.CardCode" @mousedown.prevent="" :style="{'margin-left': -scrollLeft+'px'}"></card-image> -->
         </div>
-        <!-- <div class="card-icon event"  -->
-        <!-- :style="{'padding-left': 'calc('+timePercents[details.timeline.length]+'% - 10px)'}"> -->
-        <!-- <div class="tooltiptext top-end">Game End</div> -->
-        <!-- </div> -->
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import CardImage from "../image/CardImage.vue"
 // import CardPreview from './CardPreview.vue'
 
 import moment from "moment"
+import ImageCard from "../image/ImageCard.vue"
 
 let pos = { top: 0, left: 0, x: 0, y: 0 }
 
@@ -88,8 +95,7 @@ const maxZoom = 3000 // percent
 
 export default {
   components: {
-    CardImage,
-    // CardPreview,
+    ImageCard,
   },
   mounted() {
     this.ele = document.querySelectorAll(".timeline-container")

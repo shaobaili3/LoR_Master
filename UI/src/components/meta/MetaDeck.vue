@@ -21,12 +21,14 @@
           }"
         >
           {{ (winRate * 100).toFixed(2) }}%
-          <span class="block text-sm sm:inline sm:text-base"> | ± {{ (winRateBounds.gap * 50).toFixed(2) }}</span>
+          <span class="block text-sm sm:inline sm:text-base">
+            | ± {{ (winRateBounds.gap * 50).toFixed(2) }}</span
+          >
         </p>
       </div>
 
       <!-- Deck Preview -->
-      <div class="flex flex-col items-start">
+      <div class="flex w-fit flex-col items-start">
         <div v-if="isSummary" class="pl-2 text-sm text-gray-200">
           <span v-if="isFeature">{{ $t("matches.recommendedCurrent") }}</span>
           <span v-if="!isFeature">{{ $t("matches.recommended") }}</span>
@@ -37,11 +39,10 @@
         <div v-if="!isSummary && !isFeature" class="h-4 w-full text-sm text-gray-200"></div>
         <deck-preview
           v-if="code"
-          class="max-w-[220px] transition-colors hover:bg-gray-600 md:mr-2"
+          class="mt-0.5 aspect-[3.5/1] h-14 gap-1.5 py-2 transition-colors hover:bg-gray-600"
           :class="{
             ' pointer-events-none': isFeature,
           }"
-          :fixedWidth="true"
           :deck="code"
           @click.stop
         ></deck-preview>
@@ -55,7 +56,9 @@
             class="absolute top-1/2 h-2 -translate-y-1/2 rounded-full"
             :style="{
               background: closestColor(winRateBounds.centerAdjusted),
-              width: `max(0.5rem, min(${(winRateBounds.upper - winRateBounds.lower) * 100}%, ${winRateBounds.gap * 100}%))`,
+              width: `max(0.5rem, min(${(winRateBounds.upper - winRateBounds.lower) * 100}%, ${
+                winRateBounds.gap * 100
+              }%))`,
               left: winRateBounds.lower * 100 + '%',
             }"
           ></div>

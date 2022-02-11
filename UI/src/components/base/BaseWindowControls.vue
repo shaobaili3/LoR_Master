@@ -1,6 +1,11 @@
 <template>
-  <div id="menu-bg"></div>
-  <div id="menu" class="">
+  <!-- Top Bar BG -->
+  <div class="fixed left-0 top-0 z-[2] h-[35px] w-full bg-gray-900 2xs:h-[45px]"></div>
+  <!-- Might need to add some margin for resize capabilities -->
+  <div
+    class="can-drag fixed top-0 left-0 z-[100] mt-[2px] flex h-[33px] w-full items-center justify-end bg-gray-900 2xs:h-[43px]"
+  >
+    <!-- Back Button -->
     <div
       v-if="IS_ELECTRON && titleType != 'match'"
       @click="$router.go(-1)"
@@ -8,26 +13,48 @@
     >
       <i class="fas fa-chevron-left"></i> {{ $t("str.back") }}
     </div>
-    <div class="window-title" :title="title" v-if="titleType == 'window'">
+    <!-- Title -->
+    <div class="absolute left-3 text-white" :title="title" v-if="titleType == 'window'">
       {{ title }}
     </div>
-    <div class="menu-title" v-if="titleType == 'match'">
+    <!-- In Game Title -->
+    <div
+      class="left-0 overflow-hidden text-ellipsis whitespace-nowrap pl-2 text-sm text-white 2xs:pl-4 2xs:text-base"
+      v-if="titleType == 'match'"
+    >
       {{ playerName }}
     </div>
-    <div class="menu-title-deck" v-if="titleType == 'deckCode'">Deck Info</div>
-    <div class="menu-sub-title" v-if="titleType == 'match' && playerRank">
+    <!-- Player Info -->
+    <div
+      class="left-0 ml-1 whitespace-nowrap text-xs text-gray-200 2xs:ml-2 2xs:text-sm"
+      v-if="titleType == 'match' && playerRank"
+    >
       <i class="fas fa-trophy"></i> {{ playerRank }}
-      <span class="extra-info pl-2"><i class="iconfy pr-2">LP</i>{{ playerLP }}</span>
+      <span class="pl-1 2xs:pl-2"><i class="pr-1 font-black 2xs:pr-2">LP</i>{{ playerLP }}</span>
     </div>
-    <div class="menu-fill"></div>
-    <div v-if="canMin" class="menu-item" @click="minApp()">
+    <!-- Middle Expansion -->
+    <div class="w-0 flex-1"></div>
+    <!-- Right Buttons -->
+    <div
+      v-if="canMin"
+      class="no-drag flex h-full w-10 min-w-[30px] cursor-pointer items-center justify-center text-sm text-gold-300 hover:text-white 2xs:text-base"
+      @click="minApp()"
+    >
       <span><i class="fas fa-minus"></i></span>
     </div>
-    <div v-if="canShrink" class="menu-item" @click="shrinkToggle()">
+    <div
+      v-if="canShrink"
+      class="no-drag flex h-full w-10 min-w-[30px] cursor-pointer items-center justify-center text-sm text-gold-300 hover:text-white 2xs:text-base"
+      @click="shrinkToggle()"
+    >
       <span v-if="!isWindowMin"><i class="fas fa-compress-alt"></i></span>
       <span v-if="isWindowMin"><i class="fas fa-expand-alt"></i></span>
     </div>
-    <div v-if="canClose" class="menu-item" @click="closeApp()">
+    <div
+      v-if="canClose"
+      class="no-drag flex h-full w-10 min-w-[30px] cursor-pointer items-center justify-center text-sm text-gold-300 hover:text-white 2xs:text-base"
+      @click="closeApp()"
+    >
       <span><i class="fas fa-times"></i></span>
     </div>
 
@@ -77,7 +104,11 @@ export default {
   },
   computed: {
     playerInfoString() {
-      return this.playerName + (this.playerRank ? " Rank:" + this.playerRank : "") + (this.playerLP ? " LP:" + this.playerLP : "")
+      return (
+        this.playerName +
+        (this.playerRank ? " Rank:" + this.playerRank : "") +
+        (this.playerLP ? " LP:" + this.playerLP : "")
+      )
     },
   },
   // components: {
@@ -108,152 +139,5 @@ export default {
 
 .can-drag {
   -webkit-app-region: drag;
-}
-
-#menu {
-  -webkit-app-region: drag;
-
-  cursor: default;
-
-  display: flex;
-
-  position: fixed;
-  top: 0px;
-  left: 0px;
-
-  /* flex-direction: column; */
-  align-items: center;
-  justify-content: flex-end;
-
-  box-sizing: content-box;
-
-  height: 18px;
-  padding: 10px 0px 15px 0px;
-  width: 100%;
-
-  margin-left: 0px;
-  margin-top: 2px;
-  background-color: var(--col-background);
-  z-index: 100;
-}
-
-#menu-bg {
-  cursor: default;
-  position: fixed;
-  top: 0px;
-  left: 0px;
-
-  height: 20px;
-  padding: 10px 0px 15px 0px;
-  width: 100%;
-
-  margin-left: 0px;
-  margin-top: 0px;
-  background-color: var(--col-background);
-  z-index: 2;
-
-  box-sizing: content-box;
-}
-
-.window-title {
-  color: white;
-  position: absolute;
-  left: 12px;
-}
-
-.iconfy {
-  font-size: 1em;
-  font-weight: 900;
-}
-
-.menu-title {
-  left: 0;
-  padding-left: 16px;
-  /* margin-right: auto; */
-  color: white;
-  font-size: 1em;
-
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-
-  &:hover {
-    position: absolute;
-    width: 100vw;
-    background: var(--col-background);
-  }
-}
-
-.menu-sub-title {
-  left: 0;
-  margin-left: 10px;
-  /* margin-right: auto; */
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 0.9em;
-
-  /* direction: rtl; */
-
-  white-space: nowrap;
-  /* overflow: scroll; */
-  /* text-overflow: hidden; */
-
-  &:hover {
-    position: absolute;
-    width: 100vw;
-    background: var(--col-background);
-
-    margin-left: 0px;
-    padding-left: 16px;
-
-    .extra-info {
-      display: inline;
-    }
-  }
-
-  .extra-info {
-    display: none;
-  }
-}
-
-.menu-fill {
-  width: 0px;
-  left: 0;
-  margin-left: 0px;
-  margin-right: auto;
-}
-
-.menu-title-deck {
-  left: 0;
-  margin-left: 16px;
-  margin-right: auto;
-  color: white;
-  font-size: 1em;
-}
-
-.menu-item {
-  display: flex;
-  /* border: 1px var(--col-gold)enrod solid; */
-  color: var(--col-gold);
-  /* background-color:white; */
-  -webkit-app-region: no-drag;
-
-  width: 40px;
-  min-width: 30px;
-  /* height: 60px; */
-  align-items: center;
-  justify-content: center;
-
-  font-size: 1em;
-
-  /* border-radius: 0px 10px 0px 0px; */
-
-  /* margin: 10px 0px 10px 0px; */
-  /* border-right: 2px solid transparent; */
-}
-
-.menu-item:hover {
-  /* border-right: 2px solid var(--col-gold); */
-  color: white;
-  cursor: pointer;
 }
 </style>

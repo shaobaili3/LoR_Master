@@ -1,7 +1,12 @@
 <template>
   <div class="decklib">
-    <div class="decks-container gap-1.5 xxs:gap-2">
-      <div class="deck-block p-1 xxs:p-2 xs:p-2.5" @click="showDeck($event, id)" v-for="(deck, id) in decks" :key="id">
+    <div class="decks-container gap-1.5">
+      <div
+        class="deck-block p-2.5"
+        @click="showDeck($event, id)"
+        v-for="(deck, id) in decks"
+        :key="id"
+      >
         <div class="px-1 text-xs text-gray-200" v-if="deck.date">
           <span
             :class="{
@@ -21,7 +26,11 @@
       <button class="btn btn-back" @click="onBackSecond">
         <span><i class="fas fa-caret-down"></i></span>
       </button>
-      <deck-detail v-if="showDeckIndex !== null" :baseDeck="decks[showDeckIndex].code" :showCopy="true"></deck-detail>
+      <deck-detail
+        v-if="showDeckIndex !== null"
+        :baseDeck="decks[showDeckIndex].code"
+        :showCopy="true"
+      ></deck-detail>
     </div>
   </div>
 </template>
