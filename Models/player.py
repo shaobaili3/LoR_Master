@@ -1,7 +1,8 @@
 import constants as cs
 from uiModels import DeckSummary
 import Models.heroku
-
+import threading
+import time
 
 class Player:
     def __init__(self, riot, leaderboard):

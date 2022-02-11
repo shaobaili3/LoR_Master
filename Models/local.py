@@ -5,7 +5,8 @@ import requests
 import datetime
 import json
 from datetime import datetime
-
+import time
+import threading
 
 class Local:
     def __init__(self, setting, cache):
@@ -260,3 +261,14 @@ class Local:
 
     def getResultLink(self):
         return cs.IP_KEY + self.setting.port + cs.LOCAL_RESULT
+
+
+    def getWorker(self):
+        while True:
+            time.sleep(0.2)
+            self.updateStatusFlask()
+
+    def startWorker(self):
+        n = threading.Thread(target=self.updateStatusFlask)
+        n.daemon = True
+        n.start()

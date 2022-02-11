@@ -48,6 +48,7 @@ settingTrack = Setting()
 localTrack = Local(settingTrack, cacheModel)
 processTrack = Process(settingTrack)
 processTrack.startProcessWorker()
+localTrack.startWorker()
 
 class FlaskApp(Flask):
     def __init__(self, *args, **kwargs):
@@ -59,7 +60,7 @@ CORS(app)
 
 @app.route("/track", methods=['get'])
 def track():
-    return jsonify(localTrack.updateStatusFlask())
+    return jsonify(localTrack.trackJson)
 
 @app.route("/status", methods=['get'])
 def get_status():
