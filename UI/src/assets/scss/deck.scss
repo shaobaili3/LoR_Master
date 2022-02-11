@@ -33,10 +33,6 @@
   margin-bottom: 20px;
 }
 
-body {
-  height: calc(100vh - 43px);
-}
-
 #app {
   height: 100%;
 }
@@ -171,32 +167,6 @@ body {
   color: white;
 }
 
-.tab-content {
-  max-width: 280px;
-  width: 100%;
-  text-align: center;
-  height: calc(100% - 85px); // 35px and 50px
-  position: relative;
-
-  overflow-x: hidden;
-
-  &#history {
-    height: calc(100% - 125px); // 35px and 50px + 40px
-    margin-bottom: 40px;
-
-    @apply xxs:mb-[44px] xxs:h-[calc(100%-129px)]; // 35px and 50px + 48px
-  }
-}
-
-/* Styling Deck Content */
-
-.tab-content .icon-content {
-  /* position: sticky;
-      z-index: 2;
-      top: 90px;
-      background: var(--col-background); */
-  padding: 0px 0px 5px 0px;
-}
 
 .tab-text {
   padding: 0px 0px 2px 0px;

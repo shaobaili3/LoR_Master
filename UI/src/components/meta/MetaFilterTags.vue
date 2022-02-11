@@ -1,13 +1,16 @@
 <template>
   <div>
-    <li class="flex h-8 items-center rounded bg-gray-700 pl-2" v-if="type == TAG_TYPES.string">
+    <li
+      class="flex h-8 items-center rounded bg-gray-700 pl-2 transition-colors hover:bg-gray-600"
+      v-if="type == TAG_TYPES.string"
+    >
       <div class="flex gap-2" v-if="getCard">
-        <ChampIcon
+        <IconChampion
           v-if="getCard.supertype != '' || getCard.rarityRef == 'Champion'"
           class="block h-6 w-6 rounded-full border-[1px] border-zinc-200 bg-cover"
           :customClass="true"
           :code="getCard.cardCode"
-        ></ChampIcon>
+        ></IconChampion>
         {{ getCard.name }}
       </div>
       <div class="flex items-center gap-2" v-else-if="getFaction != null">
@@ -37,10 +40,10 @@ export default {}
 import { defineProps, defineEmits, computed } from "vue"
 import CardPreview from "../deck/CardPreview.vue"
 import { useBaseStore } from "../../store/StoreBase"
-import ChampIcon from "../image/ChampIcon.vue"
 
 import { factionNames } from "../panels/PanelDeckCode.vue"
-import RegionIcon from "../image/RegionIcon.vue"
+import RegionIcon from "../image/IconRegion.vue"
+import IconChampion from "../image/IconChampion.vue"
 
 const baseStore = useBaseStore()
 

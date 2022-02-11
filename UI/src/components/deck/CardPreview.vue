@@ -22,32 +22,15 @@
     <div v-if="card.count && card.count >= 0" class="cardContent cardCount">x{{ card.count }}</div>
     <div
       v-if="type === 'Unknown'"
-      class="
-        lab-secret
-        pointer-events-none
-        absolute
-        top-0
-        left-1/2
-        z-10
-        flex
-        h-full
-        w-full
-        -translate-x-1/2
-        transform
-        items-center
-        justify-center
-        whitespace-nowrap
-        bg-black
-        px-4
-        opacity-0
-        transition-opacity
-        group-hover:opacity-100
-      "
+      class="lab-secret pointer-events-none absolute top-0 left-1/2 z-10 flex h-full w-full -translate-x-1/2 transform items-center justify-center whitespace-nowrap bg-black px-4 opacity-0 transition-opacity group-hover:opacity-100"
     >
       {{ $t("str.labSecrets") }}
     </div>
-    <div ref="image" class="pointer-events-none absolute z-50 aspect-[0.6640625] w-full opacity-0 transition-opacity">
-      <card-image :code="code" :set="set"></card-image>
+    <div
+      ref="image"
+      class="pointer-events-none absolute z-50 aspect-[0.6640625] w-full opacity-0 transition-opacity"
+    >
+      <image-card :code="code" :set="set"></image-card>
     </div>
   </div>
 </template>
@@ -57,15 +40,15 @@
 // https://cdn-lor.mobalytics.gg/production/images/cards-preview/01DE029.webp
 
 import axios from "axios"
-import CardImage from "../image/CardImage.vue"
 
 import { computePosition, flip } from "@floating-ui/dom"
+import ImageCard from "../image/ImageCard.vue"
 
 const requestStatusWaitTime = 1000 //ms
 var lastStatusRequestTime
 
 export default {
-  components: { CardImage },
+  components: { ImageCard },
   mounted() {
     if (!this.name && this.code) {
       var card = this.sets.find((card) => card.cardCode == this.code)
@@ -169,7 +152,8 @@ export default {
       const grayOverlay = "linear-gradient(90deg, rgb(65, 65, 65) 30%, rgba(65, 65, 65, 0) 70%)"
 
       // const colored = 'linear-gradient(94deg, rgba(73,213,245,1) 44%, rgba(167,79,255,1) 90%)'
-      const colored2 = "linear-gradient(120deg, rgba(19,28,69,1) 10%, rgba(73,213,245,1) 50%, rgba(167,79,255,1) 90%)"
+      const colored2 =
+        "linear-gradient(120deg, rgba(19,28,69,1) 10%, rgba(73,213,245,1) 50%, rgba(167,79,255,1) 90%)"
       if (this.typeRef === "Unknown") {
         return `${colored2}`
       }

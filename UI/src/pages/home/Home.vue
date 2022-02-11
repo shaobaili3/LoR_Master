@@ -52,10 +52,19 @@
     >
       <span><i class="fas fa-trees"></i></span>
     </router-link>
-    <button class="left-nav-btn hidden sm:flex" :class="{ 'light-gold text-gold-200': isOpenBookshelf }" @click="toggleBookshelf()">
+    <button
+      class="left-nav-btn hidden sm:flex"
+      :class="{ 'light-gold text-gold-200': isOpenBookshelf }"
+      @click="toggleBookshelf()"
+    >
       <span><i class="fas fa-books"></i></span>
     </button>
-    <router-link v-if="IS_DEV" :to="{ name: 'test' }" class="left-nav-btn" :class="{ selected: $route.name == 'test' }">
+    <router-link
+      v-if="IS_DEV"
+      :to="{ name: 'test' }"
+      class="left-nav-btn"
+      :class="{ selected: $route.name == 'test' }"
+    >
       <span><i class="fas fa-wrench"></i></span>
     </router-link>
     <!-- Divider -->
@@ -94,17 +103,23 @@
     @mouseleave="toggleBookshelf()"
   >
     <div class="card" @click="openURL('https://masteringruneterra.com/')">
-      <img src="https://masteringruneterra.com/wp-content/uploads/2021/09/MasteringRuneterraWebsiteLogo-300x129.webp" />
+      <img
+        src="https://masteringruneterra.com/wp-content/uploads/2021/09/MasteringRuneterraWebsiteLogo-300x129.webp"
+      />
     </div>
     <div class="card square" @click="openURL('https://runeterraccg.com/')">
-      <img src="https://runeterraccg.com/wp-content/uploads/2020/05/RuneterraCCG.com-Square-Logo.png" />
+      <img
+        src="https://runeterraccg.com/wp-content/uploads/2020/05/RuneterraCCG.com-Square-Logo.png"
+      />
     </div>
 
     <div class="card square" @click="openURL('https://www.swimstrim.com/')">
       <img src="https://www.swimstrim.com/packs/media/images/logo-8b7cd382.png" />
     </div>
     <div class="card sqaure" @click="openURL(lorNewsURL)">
-      <img src="https://images.contentstack.io/v3/assets/blt0eb2a2986b796d29/blt8ba1ec1b0013e362/5ea53af4ae23d30cd1dfb3e4/lor-logo.png" />
+      <img
+        src="https://images.contentstack.io/v3/assets/blt0eb2a2986b796d29/blt8ba1ec1b0013e362/5ea53af4ae23d30cd1dfb3e4/lor-logo.png"
+      />
     </div>
     <div class="card square" @click="openURL('https://runeterra.ar/')">
       <img src="https://cdnruneterra.ar/assets/img/logo_ar_black.png" />
@@ -145,14 +160,25 @@
       <button class="collapse-btn" @click="hideDeck">
         <span><i class="fas fa-chevron-right"></i></span>
       </button>
-      <deck-regions :deck="deckCode" :fixedWidth="false"></deck-regions>
+      <div class="flex h-full items-center gap-1.5 py-1.5">
+        <deck-regions :deck="deckCode"></deck-regions>
+      </div>
     </div>
     <div class="deck-content-detail" :fixedHeight="!IS_ELECTRON">
-      <deck-detail :baseDeck="deckCode" :fixedHeight="true" :showURL="true" :showAdd="true"></deck-detail>
+      <deck-detail
+        :baseDeck="deckCode"
+        :fixedHeight="true"
+        :showURL="true"
+        :showAdd="true"
+      ></deck-detail>
     </div>
   </div>
 
-  <div class="absolute top-0 left-0 z-[5] block h-screen w-screen bg-gray-900/50 sm:hidden" v-if="isShowDeck" @click="hideDeck"></div>
+  <div
+    class="absolute top-0 left-0 z-[5] block h-screen w-screen bg-gray-900/50 sm:hidden"
+    v-if="isShowDeck"
+    @click="hideDeck"
+  ></div>
 
   <div class="bottom-bar" v-if="IS_ELECTRON">
     <div class="left">
@@ -163,7 +189,9 @@
         <i class="fas fa-exclamation-triangle pr-1 text-sm"></i>{{ $t("str.error.localApiError") }}
       </div>
       <div v-if="IS_ELECTRON && !backendRunning" class="flex gap-2 pl-2">
-        <div class="text-red-400"><i class="fas fa-exclamation-triangle pr-1 text-sm"></i>{{ $t("str.error.backend") }}</div>
+        <div class="text-red-400">
+          <i class="fas fa-exclamation-triangle pr-1 text-sm"></i>{{ $t("str.error.backend") }}
+        </div>
         <div
           class="cursor-pointer rounded-md bg-gray-500 px-2 py-1 text-gray-200 hover:bg-gray-400 hover:text-white"
           @click="restartBackend"
@@ -185,7 +213,11 @@
           <i class="fas fa-arrow-to-bottom"></i> {{remoteVersion}}
         </span>
         <i class="fas fa-exclamation-triangle"></i> {{version}}</div> -->
-      <div class="version tooltip" :class="{ download: updateDownloaded }" @click="installDownloadedUpdate()">
+      <div
+        class="version tooltip"
+        :class="{ download: updateDownloaded }"
+        @click="installDownloadedUpdate()"
+      >
         <span class="tooltiptext top-bottom-right">
           <span v-if="isUpdatedVersion"><i class="fas fa-check"></i></span>{{ versionTooltip }}
         </span>
@@ -195,8 +227,14 @@
     </div>
   </div>
 
-  <div class="fixed bottom-16 right-4 z-20 flex flex-col items-start justify-center rounded-md bg-gray-700 px-4 py-2" v-if="clipboardDeck">
-    <i class="fas fa-times absolute top-4 right-4 h-4 w-4 cursor-pointer text-gray-200" @click="onCloseFastClipboard"></i>
+  <div
+    class="fixed bottom-16 right-4 z-20 flex flex-col items-start justify-center rounded-md bg-gray-700 px-4 py-2"
+    v-if="clipboardDeck"
+  >
+    <i
+      class="fas fa-times absolute top-4 right-4 h-4 w-4 cursor-pointer text-gray-200"
+      @click="onCloseFastClipboard"
+    ></i>
     <div class="text-lg text-white">{{ $t("str.clipboard") }}</div>
     <div class="text-sm text-gray-200">
       {{ $t("decklib.saveTo") }}
@@ -228,7 +266,11 @@ import "../../assets/scss/responsive.scss"
 
 import { locales as cardLocales, localeNames as cardLocaleNames } from "../template"
 
-import { REGION_ID, REGION_SHORTS, REGION_NAMES } from "../../components/panels/PanelLeaderboard.vue"
+import {
+  REGION_ID,
+  REGION_SHORTS,
+  REGION_NAMES,
+} from "../../components/panels/PanelLeaderboard.vue"
 
 const requestDataWaitTime = 400 //ms
 const requestHistoryWaitTime = 100 //ms
@@ -285,7 +327,9 @@ const PANELS = {
 
 function setCookie(name, value, expDay, expHour, expMin) {
   let date = new Date()
-  date.setTime(date.getTime() + expDay * 24 * 60 * 60 * 1000 + expHour * 60 * 60 * 1000 + expMin * 60 * 1000)
+  date.setTime(
+    date.getTime() + expDay * 24 * 60 * 60 * 1000 + expHour * 60 * 60 * 1000 + expMin * 60 * 1000
+  )
   const expires = "expires=" + date.toUTCString()
   document.cookie = name + "=" + value + "; " + expires + "; path=/"
 }
@@ -344,7 +388,13 @@ export default {
     }
   },
   computed: {
-    ...mapState(useStatusStore, ["localApiEnabled", "localPlayerID", "localServer", "lorRunning", "backendRunning"]),
+    ...mapState(useStatusStore, [
+      "localApiEnabled",
+      "localPlayerID",
+      "localServer",
+      "lorRunning",
+      "backendRunning",
+    ]),
     isUpdatedVersion() {
       return this.version == this.remoteVersion
     },

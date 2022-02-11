@@ -5,8 +5,15 @@
       <div class="pb-3 text-center text-lg">
         {{ $t("search.bookmarks").toUpperCase() }}
       </div>
-      <div class="mb-4 flex max-h-[25%] flex-shrink flex-col gap-1 overflow-y-auto rounded-lg bg-gray-800">
-        <i18n-t keypath="search.noBookmarks" tag="div" class="py-2 text-gray-200" v-if="!bookmarks || bookmarks.length <= 0">
+      <div
+        class="mb-4 flex max-h-[25%] flex-shrink flex-col gap-1 overflow-y-auto rounded-lg bg-gray-800"
+      >
+        <i18n-t
+          keypath="search.noBookmarks"
+          tag="div"
+          class="py-2 text-gray-200"
+          v-if="!bookmarks || bookmarks.length <= 0"
+        >
           <i class="fas fa-bookmark px-1"></i>
         </i18n-t>
         <div v-if="bookmarks && bookmarks.length > 0">
@@ -16,7 +23,10 @@
         </div>
       </div>
       <!-- Filters -->
-      <div v-if="playerName && matches.length > 0" class="flex flex-shrink flex-col overflow-y-auto">
+      <div
+        v-if="playerName && matches.length > 0"
+        class="flex flex-shrink flex-col overflow-y-auto"
+      >
         <div class="pb-2 text-center text-lg">
           {{ $t("str.filter").toUpperCase() }}
         </div>
@@ -31,7 +41,10 @@
             :key="value"
             @click="setFilterBadge(key)"
             class="cursor-pointer whitespace-nowrap rounded-full px-2 py-1 text-sm transition-colors hover:bg-gray-600 hover:text-white"
-            :class="{ 'bg-gray-700 text-gray-100': this.filterBadge == key, 'bg-gray-800 text-gray-200': this.filterBadge != key }"
+            :class="{
+              'bg-gray-700 text-gray-100': this.filterBadge == key,
+              'bg-gray-800 text-gray-200': this.filterBadge != key,
+            }"
           >
             {{ $t(getBadgeTranslateKey(key)) }} <span class="rounded-full px-1">{{ value }}</span>
           </div>
@@ -43,7 +56,7 @@
         </div>
         <div class="mb-4 flex flex-shrink flex-col gap-1 overflow-y-auto rounded-lg bg-gray-800">
           <div
-            class="rounded py-1 transition-colors hover:bg-gray-600"
+            class="rounded transition-colors hover:bg-gray-600"
             v-for="obj in uniqueArchetypes"
             :key="obj.id"
             :class="{ 'bg-gray-700': filterDeckID == obj.id }"
@@ -51,15 +64,17 @@
             <div class="flex items-center">
               <div>
                 <deck-preview
-                  :fixedWidth="true"
-                  class="p-2 transition-colors hover:bg-gray-800"
+                  class="mx-2 h-11 gap-1 py-1.5 px-2 transition-colors hover:bg-gray-800"
                   :deck="obj.decks[0]"
-                  :size="1"
                 ></deck-preview>
               </div>
-              <div class="group flex w-0 flex-1 cursor-pointer pl-1" @click="setFilterArchetype(obj.id)">
+              <!-- Archetype Filters (Button) -->
+              <div
+                class="group flex w-0 flex-1 cursor-pointer py-1.5 pl-1"
+                @click="setFilterArchetype(obj.id)"
+              >
                 <div class="w-0 flex-1 text-left">
-                  <div class="text-gray-200">
+                  <div class="text-sm text-gray-300 group-hover:text-gray-150">
                     {{ $t("matches.games", { num: obj.freq }) }}
                   </div>
                   <div
@@ -108,34 +123,34 @@
           </div>
           <div class="width-full relative mt-4 flex flex-nowrap">
             <div class="search-bar-input-container">
-              <button class="search-btn inside left" :class="{ active: searchText != '' }" @click="searchHistory">
-                <span v-if="isLoading || isUpdating"><i class="fas fa-redo-alt fa-spin-fast"></i></span>
-                <span v-if="!(isLoading || isUpdating) && !isSameSearch"><i class="fas fa-search"></i></span>
-                <span v-if="!(isLoading || isUpdating) && isSameSearch && !isUpdated"><i class="fas fa-redo-alt"></i></span>
-                <span v-if="!(isLoading || isUpdating) && isSameSearch && isUpdated"><i class="fas fa-check"></i></span>
+              <button
+                class="search-btn inside left"
+                :class="{ active: searchText != '' }"
+                @click="searchHistory"
+              >
+                <span v-if="isLoading || isUpdating"
+                  ><i class="fas fa-redo-alt fa-spin-fast"></i
+                ></span>
+                <span v-if="!(isLoading || isUpdating) && !isSameSearch"
+                  ><i class="fas fa-search"></i
+                ></span>
+                <span v-if="!(isLoading || isUpdating) && isSameSearch && !isUpdated"
+                  ><i class="fas fa-redo-alt"></i
+                ></span>
+                <span v-if="!(isLoading || isUpdating) && isSameSearch && isUpdated"
+                  ><i class="fas fa-check"></i
+                ></span>
               </button>
 
               <input
                 spellcheck="false"
                 autocomplete="off"
-                class="
-                  search-bar
-                  h-12
-                  w-full
-                  rounded-3xl
-                  border-none
-                  bg-gray-800
-                  pl-12
-                  pr-5
-                  text-base text-white
-                  placeholder-gray-300
-                  outline-none
-                  transition-colors
-                  focus:bg-gray-700
-                "
+                class="search-bar h-12 w-full rounded-3xl border-none bg-gray-800 pl-12 pr-5 text-base text-white placeholder-gray-300 outline-none transition-colors focus:bg-gray-700"
                 :class="{
                   'rounded-b-none rounded-t-[25px]':
-                    (hasNameAutoComplete || (searchText.length > 3 && !(searchText == playerName))) && isInputFocused,
+                    (hasNameAutoComplete ||
+                      (searchText.length > 3 && !(searchText == playerName))) &&
+                    isInputFocused,
                 }"
                 @keyup="searchName"
                 @keyup.enter="searchHistory"
@@ -169,7 +184,12 @@
               </div>
             </div>
             <div
-              v-if="!hasNameAutoComplete && isInputFocused && searchText.length > 3 && !(searchText == playerName)"
+              v-if="
+                !hasNameAutoComplete &&
+                isInputFocused &&
+                searchText.length > 3 &&
+                !(searchText == playerName)
+              "
               class="absolute top-12 z-10 w-full rounded-b-[25px] bg-gray-800 pt-3 pb-3 text-left"
             >
               <span class="pl-12 text-gray-200">{{ $t("search.noSuggestion") }}</span>
@@ -226,7 +246,6 @@ import DeckEncoder from "../../modules/runeterra/DeckEncoder"
 import { championCards } from "../../assets/data/champion"
 
 import PlayerMatches from "../match/PlayerMatches.vue"
-import DeckChamps from "../deck/DeckChamps.vue"
 import axios from "axios"
 import DeckRegions from "../deck/DeckRegions.vue"
 import DeckPreview from "../deck/DeckPreview.vue"
@@ -494,7 +513,11 @@ export default {
       return this.inputNameList
     },
     isSameSearch() {
-      return this.searchText == this.playerName && this.playerTag && REGION_SHORTS[REGION_ID[this.selectedRegion]] == this.playerRegion
+      return (
+        this.searchText == this.playerName &&
+        this.playerTag &&
+        REGION_SHORTS[REGION_ID[this.selectedRegion]] == this.playerRegion
+      )
     },
     hasLocalInfo() {
       return this.localMatches && this.localMatches.length > 0
@@ -748,7 +771,9 @@ export default {
       // Abort not completed requests
       if (this.autoCompleteRequestController) this.autoCompleteRequestController.abort()
 
-      const api = `${this.API_WEB}/names/${REGION_NAMES[REGION_ID[this.selectedRegion]]}/${this.searchText}`
+      const api = `${this.API_WEB}/names/${REGION_NAMES[REGION_ID[this.selectedRegion]]}/${
+        this.searchText
+      }`
       const controller = new AbortController()
       this.autoCompleteRequestController = controller
 
@@ -759,7 +784,10 @@ export default {
             // Error
           } else {
             // console.log(response.data)
-            if (document.querySelector(".search-bar") == document.activeElement && this.searchText) {
+            if (
+              document.querySelector(".search-bar") == document.activeElement &&
+              this.searchText
+            ) {
               // If the search bar is still in focus
               this.inputNameList = response.data
             } else {
@@ -780,7 +808,9 @@ export default {
       this.isUpdating = true
       this.isUpdated = false
 
-      var newRequest = `${this.API_WEB}/search/${REGION_NAMES[REGION_ID[this.selectedRegion]]}/${this.playerName}/${this.playerTag}`
+      var newRequest = `${this.API_WEB}/search/${REGION_NAMES[REGION_ID[this.selectedRegion]]}/${
+        this.playerName
+      }/${this.playerTag}`
 
       this.sendUserEvent({
         category: "Main Window Requests",
@@ -853,7 +883,9 @@ export default {
         return
       }
 
-      var newRequest = `${this.API_WEB}/search/${REGION_NAMES[REGION_ID[this.selectedRegion]]}/${this.playerName}/${this.playerTag}`
+      var newRequest = `${this.API_WEB}/search/${REGION_NAMES[REGION_ID[this.selectedRegion]]}/${
+        this.playerName
+      }/${this.playerTag}`
       if (prevHistoryRequest == newRequest && this.isLoading) {
         // Don't refresh if the request is the same and ongoing
         return

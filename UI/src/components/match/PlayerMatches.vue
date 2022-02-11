@@ -1,17 +1,5 @@
 <template>
   <div class="flex h-full flex-col">
-    <!-- <div v-if="false" class="summary-item decks-summary" @wheel.prevent="horizontalScroll">
-      <div
-        class="champion-icons btn"
-        v-for="obj in uniqueDeckCodes"
-        :key="obj.deck"
-        :class="{ active: filterDeckCode == obj.deck }"
-        @click="setFilterDeckCode(obj.deck)"
-      >
-        <deck-champs :deck="obj.deck" :showRegion="true" :fixedWidth="false"></deck-champs>
-      </div>
-    </div> -->
-
     <!-- Summary -->
     <div class="block grid-cols-5 items-end pb-4 sm:grid">
       <div class="col-span-4 px-2 sm:px-0">
@@ -29,7 +17,9 @@
         </div>
         <div class="flex items-center justify-start gap-4 pt-2 text-left sm:gap-6">
           <div v-if="rank">
-            <div class="text-sm text-gray-300"><i class="fas fa-trophy"></i> {{ $t("leaderboard.rank") }}</div>
+            <div class="text-sm text-gray-300">
+              <i class="fas fa-trophy"></i> {{ $t("leaderboard.rank") }}
+            </div>
             <div class="text-lg">No. {{ rank }}</div>
           </div>
 
@@ -85,9 +75,19 @@
       {{ $t("str.error.playerNoHistory") }}
     </div>
 
-    <DynamicScroller :items="filteredMatches" :min-item-size="50" key-field="time" class="flex-1 overflow-y-auto">
+    <DynamicScroller
+      :items="filteredMatches"
+      :min-item-size="50"
+      key-field="time"
+      class="flex-1 overflow-y-auto"
+    >
       <template v-slot="{ item, index, active }">
-        <DynamicScrollerItem :item="item" :active="active" :size-dependencies="[item.winStreak, item.isDateBreak]" :data-index="index">
+        <DynamicScrollerItem
+          :item="item"
+          :active="active"
+          :size-dependencies="[item.winStreak, item.isDateBreak]"
+          :data-index="index"
+        >
           <match-history
             @search="
               searchPlayer({
@@ -118,7 +118,6 @@
 </template>
 
 <script>
-import DeckChamps from "../deck/DeckChamps.vue"
 import MatchHistory from "../match/MatchHistory.vue"
 
 import { REGION_ID, REGION_SHORTS, REGION_NAMES } from "../panels/PanelLeaderboard.vue"
@@ -173,7 +172,6 @@ export const getLeaderboardFromPlayer = (regionShort, name, tag) => {
 export default {
   components: {
     MatchHistory,
-    // DeckChamps,
   },
   mounted() {
     this.leaderboardStore.fetchLeaderboard(REGION_ID[this.playerRegion])
@@ -194,7 +192,9 @@ export default {
     ...mapStores(useLeaderboardStore, useBookmarkStore),
 
     bookmarkIndex() {
-      return this.bookmarkStore?.bookmarks?.findIndex((bookmark) => this.playerName == bookmark.name && this.playerTag == bookmark.tag)
+      return this.bookmarkStore?.bookmarks?.findIndex(
+        (bookmark) => this.playerName == bookmark.name && this.playerTag == bookmark.tag
+      )
     },
 
     leaderboard() {
@@ -253,7 +253,12 @@ export default {
           .filter((n) => n)
           .map((val, index, array) => {
             // Loading in Rank from Leaderboard
-            if ((!val.opponentRank || val.opponentRank == "") && val.opponentName && val.opponentTag && val.region) {
+            if (
+              (!val.opponentRank || val.opponentRank == "") &&
+              val.opponentName &&
+              val.opponentTag &&
+              val.region
+            ) {
               const lead = this.leaderboardStore.leaderboard
               if (lead && lead[REGION_ID[val.region]]) {
                 let leadItem = lead[REGION_ID[val.region]].find((boardItem) => {

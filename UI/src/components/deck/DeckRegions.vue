@@ -1,11 +1,14 @@
 <template>
-  <div class="icon-container gap-0.5 p-0 sm:p-1">
-    <region-icon class="region-icon" v-for="(faction, index) in getFactions" :key="index" :faction="faction"></region-icon>
-  </div>
+  <region-icon
+    class=""
+    v-for="(faction, index) in getFactions"
+    :key="index"
+    :faction="faction"
+  ></region-icon>
 </template>
 
 <script>
-import RegionIcon from "../image/RegionIcon.vue"
+import RegionIcon from "../image/IconRegion.vue"
 import DeckEncoder from "../../modules/runeterra/DeckEncoder"
 //https://painttist.github.io/lor-champ-icons/data/champion.js
 

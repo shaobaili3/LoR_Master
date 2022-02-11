@@ -30,7 +30,10 @@
         'bg-gray-800': !won,
       }"
     >
-      <i class="fas fa-trophy absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/4 rotate-12 text-7xl text-gray-200/10" v-if="won"></i>
+      <i
+        class="fas fa-trophy absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/4 rotate-12 text-7xl text-gray-200/10"
+        v-if="won"
+      ></i>
       <div class="btn-expand-detail" v-if="details" @click="toggleDetail">
         <i
           class="fas"
@@ -41,22 +44,36 @@
         ></i>
       </div>
       <!-- Name & Detail -->
-      <div class="no-scrollbar flex items-baseline gap-2 overflow-x-scroll whitespace-nowrap" :class="{ 'text-white': won }">
+      <div
+        class="no-scrollbar flex items-baseline gap-2 overflow-x-scroll whitespace-nowrap"
+        :class="{ 'text-white': won }"
+      >
         <!-- text-[#f33535] -->
-        <div @click="search" class="pl-1.5 text-base" :class="{ 'text-white ': won, 'text-gray-200': !won }">
+        <div
+          @click="search"
+          class="pl-1.5 text-base"
+          :class="{ 'text-white ': won, 'text-gray-200': !won }"
+        >
           <!-- <i class="fas" :class="{ 'fa-pennant pr-2': win, '': !win }"></i> -->
           <span>vs </span>
           <span
             :class="{
-              'cursor-pointer underline-offset-2 transition-colors hover:text-white hover:underline': region,
+              'cursor-pointer underline-offset-2 transition-colors hover:text-white hover:underline':
+                region,
             }"
             >{{ opponentName }}</span
           >
         </div>
-        <div class="" :class="{ 'text-yellow-400': won }" v-if="opponentRank"><i class="fas fa-trophy"></i> {{ opponentRank }}</div>
+        <div class="" :class="{ 'text-yellow-400': won }" v-if="opponentRank">
+          <i class="fas fa-trophy"></i> {{ opponentRank }}
+        </div>
         <div class="text-xs text-gray-200">{{ timeString }}</div>
         <div class="text-xs text-gray-200" v-if="rounds">{{ rounds }} {{ $t("str.rounds") }}</div>
-        <div class="rounded-full bg-gray-900 px-2 py-1 text-xs text-gray-200" v-for="badge in filteredBadges" :key="badge">
+        <div
+          class="rounded-full bg-gray-900 px-2 py-1 text-xs text-gray-200"
+          v-for="badge in filteredBadges"
+          :key="badge"
+        >
           <span
             v-if="badge == 'recent' || badge == 'frequent'"
             class="fa"
@@ -69,23 +86,23 @@
         </div>
       </div>
       <!-- Deck Preview -->
-      <div class="flex items-center justify-around pt-2">
+      <div class="flex items-center justify-around pt-1 sm:pt-2">
         <!-- Left -->
         <deck-preview
-          class="py-1 transition-colors hover:bg-white/10"
+          class="h-12 gap-0.5 py-2 px-2 sm:h-14 sm:gap-1 sm:p-2 sm:px-8"
+          :class="{
+            'hover:bg-white/15': won,
+            'hover:bg-white/10': !won,
+          }"
           @click.stop
           :deck="deck"
-          :won="won"
-          :fixedWidth="false"
         ></deck-preview>
         <div class="sm:px-8">VS</div>
         <!-- Right -->
         <deck-preview
-          class="py-1 transition-colors hover:bg-white/10"
+          class="h-12 gap-0.5 py-2 px-2 hover:bg-white/10 sm:h-14 sm:gap-1 sm:p-2 sm:px-8"
           @click.stop
           :deck="opponentDeck"
-          :won="won"
-          :fixedWidth="false"
         ></deck-preview>
       </div>
       <div class="divider" v-if="details && showDetail" :class="{ won: won }"></div>
@@ -94,7 +111,11 @@
         :startHand="details.openHand"
         :endHand="details.replacedHand"
       ></match-detail-mulligan>
-      <match-detail-timeline v-if="details && showDetail" :time="time" :details="details"></match-detail-timeline>
+      <match-detail-timeline
+        v-if="details && showDetail"
+        :time="time"
+        :details="details"
+      ></match-detail-timeline>
     </div>
   </div>
 </template>

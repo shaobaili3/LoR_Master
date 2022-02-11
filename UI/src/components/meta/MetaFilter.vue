@@ -3,7 +3,10 @@
   <div class>
     <!-- Tag Box -->
     <div class="relative pb-4">
-      <i class="fas fa-filter absolute left-5 top-4" :class="{ 'text-gray-200': !(tags.length > 0) }"></i>
+      <i
+        class="fas fa-filter absolute left-5 top-4"
+        :class="{ 'text-gray-200': !(tags.length > 0) }"
+      ></i>
       <ul
         class="flex w-full flex-wrap items-center gap-2 bg-gray-800 pl-12 pr-12 transition-colors focus-within:bg-gray-700"
         :class="{
@@ -36,7 +39,10 @@
       </ul>
 
       <!-- Auto Complete -->
-      <div v-if="hasAutoComplete" class="absolute z-10 w-full rounded-b-[25px] bg-gray-800 pb-5 text-left">
+      <div
+        v-if="hasAutoComplete"
+        class="absolute z-10 w-full rounded-b-[25px] bg-gray-800 pb-5 text-left"
+      >
         <div
           v-for="(item, index) in autoCompleteItems"
           class="relative mb-1 cursor-pointer px-12 hover:bg-gray-600"
@@ -53,11 +59,20 @@
             :typeRef="item.typeRef"
           ></CardPreview>
           <div class="flex h-9 items-center" v-if="!item.code">
-            <RegionIcon class="mr-1 h-6 w-6" v-if="item.factionID" :faction="item.factionID" :colored="true" :fixedSize="false"></RegionIcon
+            <IconRegion
+              class="mr-1 h-6 w-6"
+              v-if="item.factionID"
+              :faction="item.factionID"
+              :colored="true"
+              :fixedSize="false"
+            ></IconRegion
             >{{ item.name }}
           </div>
           <!-- Guide -->
-          <div class="absolute top-0 right-4 hidden h-full items-center text-gray-200" :class="{ 'sm:flex': autoCompleteIndex == index }">
+          <div
+            class="absolute top-0 right-4 hidden h-full items-center text-gray-200"
+            :class="{ 'sm:flex': autoCompleteIndex == index }"
+          >
             ↵ Enter
           </div>
         </div>
@@ -126,7 +141,7 @@ function addACToFilter(item) {
 }
 
 import { factionNames } from "../panels/PanelDeckCode.vue"
-import RegionIcon from "../image/RegionIcon.vue"
+import IconRegion from "../image/IconRegion.vue"
 
 function generateAutoComplete(val) {
   let newList = []

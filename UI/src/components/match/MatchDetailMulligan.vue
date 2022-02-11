@@ -5,26 +5,31 @@
       <div class="card-container" v-for="(card, index) in startHandFiltered" :key="index">
         <i v-if="card.kept" class="indicator fas fa-check"></i>
         <i v-if="!card.kept" class="indicator fas fa-sync-alt"></i>
-        <card-image class="img" :code="card.CardCode"></card-image>
+        <image-card class="img" :code="card.CardCode"></image-card>
       </div>
       <div class="arrow">
         <i class="fas fa-arrow-right"></i>
       </div>
-      <div class="card-container" v-for="(card, index) in endHandFiltered" :class="{ kept: card.kept }" :key="index">
+      <div
+        class="card-container"
+        v-for="(card, index) in endHandFiltered"
+        :class="{ kept: card.kept }"
+        :key="index"
+      >
         <i v-if="card.kept" class="indicator fas fa-check"></i>
         <i v-if="!card.kept" class="indicator fas fa-plus"></i>
-        <card-image class="img" :code="card.CardCode"></card-image>
+        <image-card class="img" :code="card.CardCode"></image-card>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import CardImage from "../image/CardImage.vue"
+import ImageCard from "../image/ImageCard.vue"
 
 export default {
   components: {
-    CardImage,
+    ImageCard,
   },
   mounted() {},
   data() {
