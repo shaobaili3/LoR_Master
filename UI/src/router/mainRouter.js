@@ -19,11 +19,11 @@ export default [
       metaTags: [
         {
           name: "description",
-          content: "The home page of our example app.",
+          content: "Your LoR companion, Leaderboard, Meta, History, Stats, Mulligan and many more!",
         },
         {
           property: "og:description",
-          content: "The home page of our example app.",
+          content: "Your LoR companion, Leaderboard, Meta, History, Stats, Mulligan and many more!",
         },
       ],
     },
@@ -37,11 +37,11 @@ export default [
       metaTags: [
         {
           name: "description",
-          content: "The home page of our example app.",
+          content: "Adjust langauge & preferences for LoR Master Web App",
         },
         {
           property: "og:description",
-          content: "The home page of our example app.",
+          content: "Your LoR companion, Leaderboard, Meta, History, Stats, Mulligan and many more!",
         },
       ],
     },
@@ -50,20 +50,99 @@ export default [
     name: "search",
     path: "/search",
     component: PanelSearch,
+    meta: {
+      title: "Player Search | LoR Master App",
+      metaTags: [
+        {
+          name: "description",
+          content:
+            "History & stats search for anyone playing LoR. Discover & bookmark top players or friends!",
+        },
+        {
+          property: "og:description",
+          content:
+            "History & stats search for anyone playing LoR. Discover & bookmark top players or friends!",
+        },
+      ],
+    },
     props: (route) => ({
       player: route.query.name,
       region: route.query.region,
       tag: route.query.tag,
     }),
   },
-  { name: "profile", path: "/profile", component: PanelProfile },
-  { name: "meta", path: "/meta", component: PanelMeta },
-  { name: "decklib", path: "/decklib", component: PanelDeckLib },
+  {
+    name: "profile",
+    path: "/profile",
+    component: PanelProfile,
+    meta: {
+      title: "Player Profile | LoR Master App",
+      metaTags: [
+        {
+          name: "description",
+          content: "View player history, winrate, archetypes & more!",
+        },
+        {
+          property: "og:description",
+          content: "View player history, winrate, archetypes & more!",
+        },
+      ],
+    },
+  },
+  {
+    name: "meta",
+    path: "/meta",
+    component: PanelMeta,
+    meta: {
+      title: "Meta Environment | LoR Master App",
+      metaTags: [
+        {
+          name: "description",
+          content: "View matchup statistics. Discover hidden gems, best builds and meta trends!",
+        },
+        {
+          property: "og:description",
+          content: "View matchup statistics. Discover hidden gems, best builds and meta trends!",
+        },
+      ],
+    },
+  },
+  {
+    name: "decklib",
+    path: "/decklib",
+    component: PanelDeckLib,
+    meta: {
+      title: "Deck Library | LoR Master App",
+      metaTags: [
+        {
+          name: "description",
+          content: "Quickly save your favourite decks and use them later!",
+        },
+        {
+          property: "og:description",
+          content: "Quickly save your favourite decks and use them later!",
+        },
+      ],
+    },
+  },
   {
     name: "code",
     path: "/code",
     component: PanelDeckCode,
     props: (route) => ({ code: route.query.code }),
+    meta: {
+      title: "Deck Detail | LoR Master App",
+      metaTags: [
+        {
+          name: "description",
+          content: "Detail and statistics about decks.",
+        },
+        {
+          property: "og:description",
+          content: "View matchup statistics. Discover hidden gems, best builds and meta trends!",
+        },
+      ],
+    },
   },
   {
     name: "leaderboard",
@@ -74,11 +153,28 @@ export default [
       metaTags: [
         {
           name: "description",
-          content: "The leaderboard of lor master app.",
+          content: "Discover top players, rising stars & meta kings!",
+        },
+        {
+          property: "og:description",
+          content: "Discover top players, rising stars & meta kings!",
         },
       ],
     },
   },
-  { name: "contact", path: "/contact", component: ContactInfo },
+  {
+    name: "contact",
+    path: "/contact",
+    component: ContactInfo,
+    meta: {
+      title: "Contact | LoR Master App",
+      metaTags: [
+        {
+          name: "description",
+          content: "Contact LoR Master dev team for support & feedbacks.",
+        },
+      ],
+    },
+  },
   { name: "test", path: "/test", component: PanelTest },
 ]

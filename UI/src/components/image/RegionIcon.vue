@@ -2,7 +2,8 @@
   <div
     class=""
     :class="{
-      'icon h-7 w-7 xxs:h-8 xxs:w-8 xs:h-9 xs:w-9 sm:h-10 sm:w-10': fixedSize,
+      'h-7 w-7 border-2 border-transparent bg-no-repeat xxs:h-8 xxs:w-8 xs:h-9 xs:w-9 sm:h-10 sm:w-10':
+        fixedSize,
       'block bg-cover': !fixedSize,
       faction: faction != -1,
       'no-color': !colored,

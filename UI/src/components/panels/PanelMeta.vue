@@ -2,7 +2,12 @@
   <div class="flex h-full justify-center px-2">
     <div class="w-0 max-w-4xl flex-1">
       <div class="flex h-full flex-col sm:px-0">
-        <p class="title pb-4 text-left text-3xl">{{ $t("str.meta") }}</p>
+        <h1 class="title pb-4 text-left text-3xl">
+          {{ $t("str.meta") }}
+          <h2 class="hidden pl-4 text-base text-gray-300 sm:inline">
+            {{ $t("meta.subtitle") }}
+          </h2>
+        </h1>
 
         <MetaFilter class="sticky top-0 z-[5] bg-gray-900" @bind-filter="bindFilter"></MetaFilter>
 
@@ -20,7 +25,12 @@
           class="h-0 flex-1"
         >
           <template v-slot="{ item, index, active }">
-            <DynamicScrollerItem :item="item" :active="active" :size-dependencies="[item.expanded]" :data-index="index">
+            <DynamicScrollerItem
+              :item="item"
+              :active="active"
+              :size-dependencies="[item.expanded]"
+              :data-index="index"
+            >
               <div class="py-1 pb-4">
                 <MetaGroup @click="metaGroupOnClick(item._id)" :group="item"></MetaGroup>
               </div>

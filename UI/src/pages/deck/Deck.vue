@@ -13,20 +13,36 @@
       {{ loadingText }}
     </div>
 
-    <div class="tabs px-0 xxs:px-1 xs:px-2" v-if="!isLoading">
+    <div class="flex w-full" v-if="!isLoading">
       <div class="tab-title-group">
-        <div class="tab-title text-sm xxs:text-base xs:text-lg" @click="switchTab(TABS.oppo)" :class="{ active: isShowOppo }">
+        <div
+          class="tab-title text-sm xxs:text-base xs:text-lg"
+          @click="switchTab(TABS.oppo)"
+          :class="{ active: isShowOppo }"
+        >
           <i class="fas fa-swords"></i>
         </div>
-        <div class="tab-title text-sm xxs:text-base xs:text-lg" @click="switchTab(TABS.oppog)" :class="{ active: isShowOppoGrave }">
+        <div
+          class="tab-title text-sm xxs:text-base xs:text-lg"
+          @click="switchTab(TABS.oppog)"
+          :class="{ active: isShowOppoGrave }"
+        >
           <i class="fas fa-tombstone-alt"></i>
         </div>
       </div>
       <div class="tab-title-group">
-        <div class="tab-title text-sm xxs:text-base xs:text-lg" @click="switchTab(TABS.my)" :class="{ active: isShowMy }">
+        <div
+          class="tab-title text-sm xxs:text-base xs:text-lg"
+          @click="switchTab(TABS.my)"
+          :class="{ active: isShowMy }"
+        >
           <i class="fas fa-user-cowboy"></i>
         </div>
-        <div class="tab-title text-sm xxs:text-base xs:text-lg" @click="switchTab(TABS.myg)" :class="{ active: isShowMyGrave }">
+        <div
+          class="tab-title text-sm xxs:text-base xs:text-lg"
+          @click="switchTab(TABS.myg)"
+          :class="{ active: isShowMyGrave }"
+        >
           <i class="fas fa-tombstone-alt"></i>
         </div>
       </div>
@@ -34,7 +50,11 @@
 
     <!-- Opponent History -->
     <div id="history" class="tab-content" v-if="isShowOppo && !isLoading">
-      <div class="loading" v-if="matchInfos.length <= 0" :class="{ zeroHeight: oppoPinnedId !== null }">
+      <div
+        class="loading"
+        v-if="matchInfos.length <= 0"
+        :class="{ zeroHeight: oppoPinnedId !== null }"
+      >
         {{ loadingOppoText }}
       </div>
 
@@ -57,20 +77,37 @@
       </div>
     </div>
 
-    <div class="layerpanel h-10 max-w-[280px] p-2 xxs:h-11 xxs:p-1" :class="{ expanded: currentLayer != LAYERS.base }" v-if="isShowOppo">
-      <button v-if="currentLayer == LAYERS.base" @click="onOpenDecklib" class="btn btn-decklib px-2 py-1 text-sm xxs:text-base">
+    <div
+      class="layerpanel h-10 max-w-[280px] p-2 xxs:h-11 xxs:p-1"
+      :class="{ expanded: currentLayer != LAYERS.base }"
+      v-if="isShowOppo"
+    >
+      <button
+        v-if="currentLayer == LAYERS.base"
+        @click="onOpenDecklib"
+        class="btn btn-decklib px-2 py-1 text-sm xxs:text-base"
+      >
         Open Deck Library
       </button>
       <button class="btn btn-back" v-if="currentLayer != LAYERS.base" @click="onLayerBack">
         <span><i class="fas fa-caret-down"></i></span>
       </button>
-      <tracker-layer v-if="currentLayer != LAYERS.base" @showDeck="onPinOppo" :pinDeckId="oppoPinnedId"></tracker-layer>
+      <tracker-layer
+        v-if="currentLayer != LAYERS.base"
+        @showDeck="onPinOppo"
+        :pinDeckId="oppoPinnedId"
+      ></tracker-layer>
     </div>
 
     <!-- Oppo Played -->
     <div class="tab-content" v-if="isShowOppoGrave && !isLoading">
       <div class="tab-text">{{ $t("tracker.tabs.oppoPlayed") }}</div>
-      <deck-detail :deck="oppoGraveCode" :baseDeck="oppoGraveCode" :showCopy="false" :extra="oppoGraveExtraCards"></deck-detail>
+      <deck-detail
+        :deck="oppoGraveCode"
+        :baseDeck="oppoGraveCode"
+        :showCopy="false"
+        :extra="oppoGraveExtraCards"
+      ></deck-detail>
     </div>
 
     <!-- My Deck -->
@@ -82,7 +119,11 @@
     <!-- My Played -->
     <div class="tab-content" v-if="isShowMyGrave && !isLoading">
       <div class="tab-text">{{ $t("tracker.tabs.myPlayed") }}</div>
-      <deck-detail :baseDeck="myPlayedCode" :showCopy="false" :extra="myPlayedExtraCards"></deck-detail>
+      <deck-detail
+        :baseDeck="myPlayedCode"
+        :showCopy="false"
+        :extra="myPlayedExtraCards"
+      ></deck-detail>
     </div>
 
     <div class="footer" v-if="!isLoading">

@@ -3,8 +3,8 @@
     class="mr-2 rounded-lg px-4 transition-colors duration-150 hover:bg-gray-800"
     :class="{
       'bg-gray-800': expand && !hasFeature && !selfExpand,
-      'h-[552px]': expand && !selfExpand,
-      'h-[92px]': !expand && !selfExpand,
+      'h-[624px] sm:h-[552px]': expand && !selfExpand,
+      'h-[104px] sm:h-[92px]': !expand && !selfExpand,
     }"
   >
     <meta-deck
