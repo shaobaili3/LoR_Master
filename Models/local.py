@@ -269,6 +269,6 @@ class Local:
             self.updateStatusFlask()
 
     def startWorker(self):
-        n = threading.Thread(target=self.updateStatusFlask)
+        n = threading.Thread(target=self.getWorker)
         n.daemon = True
         n.start()
