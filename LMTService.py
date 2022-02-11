@@ -5,7 +5,7 @@ import sentry_sdk
 from Models.setting import Setting
 from Models.local import Local
 from Models.cache import Cache
-from Models.process import readLog
+from Models.process import Process
 from flask import Flask, jsonify, redirect
 import io
 import sys
@@ -46,20 +46,12 @@ sentry_sdk.set_context("info", {
 cacheModel = Cache()
 settingTrack = Setting()
 localTrack = Local(settingTrack, cacheModel)
+processTrack = Process(settingTrack)
+processTrack.startProcessWorker()
 
 class FlaskApp(Flask):
     def __init__(self, *args, **kwargs):
         super(FlaskApp, self).__init__(*args, **kwargs)
-        self.processWork()
-
-    def processWork(self):
-        def run_work():
-            while True:
-                readLog(settingTrack)
-                time.sleep(3)
-        work = threading.Thread(target=run_work)
-        work.daemon = True
-        work.start()
 
 app = FlaskApp(__name__)
 CORS(app)
