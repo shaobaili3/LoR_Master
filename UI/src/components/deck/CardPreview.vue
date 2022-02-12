@@ -143,7 +143,7 @@ export default {
       })
     },
     onMouseLeave() {
-      this.$refs.image.style.opacity = "0"
+      if (this.$refs.image) this.$refs.image.style.opacity = "0"
     },
     getCardPreviewBackgroundStyle() {
       // const champImageBaseUrl = 'https://raw.githubusercontent.com/painttist/lor-champ-icons/master/images/cards/cropped/';

@@ -4,12 +4,15 @@
       <div class="flex h-full flex-col px-2 sm:px-0">
         <h1 class="title flex w-full items-end text-left sm:block sm:text-white">
           <!-- Title -->
-          <div v-if="!IS_ELECTRON" class="hidden text-ellipsis sm:block sm:w-auto sm:flex-initial sm:pb-4 sm:text-3xl">
-            {{ $t("str.leaderboard") }}
+          <h1
+            v-if="!IS_ELECTRON"
+            class="hidden text-ellipsis sm:block sm:w-auto sm:flex-initial sm:pb-4 sm:text-3xl"
+          >
+            <span class="pt-1 sm:pt-0">{{ $t("str.leaderboard") }}</span>
             <h2 class="hidden text-base text-gray-300 sm:inline sm:pl-4">
               {{ $t("leaderboard.desc") }}
             </h2>
-          </div>
+          </h1>
 
           <!-- Buttons -->
           <div class="flex h-[32px] w-fit justify-end gap-2">
@@ -74,7 +77,9 @@
         </div>
 
         <!-- Headers -->
-        <div class="sticky top-0 z-[2] grid h-12 grid-cols-12 items-center whitespace-nowrap bg-gray-900 pt-1 text-sm">
+        <div
+          class="sticky top-0 z-[2] grid h-12 grid-cols-12 items-center whitespace-nowrap bg-gray-900 pt-1 text-sm"
+        >
           <div class="bg-gray-900 sm:px-2">{{ $t("leaderboard.rank") }}</div>
           <div class="col-span-5 bg-gray-900 px-2 sm:col-span-3">
             {{ $t("leaderboard.name") }}
@@ -87,7 +92,10 @@
           </div>
           <!-- "$t('leaderboard.lastRankTip')" -->
 
-          <div class="hidden px-2 sm:col-span-2 sm:block" v-tooltip="{ content: $t('leaderboard.lastRankTip') }">
+          <div
+            class="hidden px-2 sm:col-span-2 sm:block"
+            v-tooltip="{ content: $t('leaderboard.lastRankTip') }"
+          >
             {{ $t("leaderboard.lastX", { num: 20 }) }}
           </div>
 

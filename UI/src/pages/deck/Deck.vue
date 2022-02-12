@@ -1,5 +1,5 @@
 <template>
-  <div class="flex h-full flex-col pt-[35px] text-white 2xs:pt-[45px]">
+  <div class="flex h-full max-w-[290px] flex-col pt-[35px] text-white 2xs:pt-[45px]">
     <base-window-controls
       :canClose="false"
       :canShrink="true"
@@ -9,7 +9,7 @@
       :titleType="'match'"
     ></base-window-controls>
 
-    <div class="flex h-0 flex-1 flex-col">
+    <div class="flex h-full flex-col">
       <!-- Loading -->
       <div class="px-1 pt-2" v-if="isLoading">
         {{ $t("loading.readyToRock") }}
@@ -43,7 +43,7 @@
       <div class="mt-1 h-0 flex-1 overflow-y-auto" ref="scrollContainer">
         <!-- Opponent History -->
         <div class="px-1 pt-1" v-if="this.currentTab == TABS.oppo && !isLoading">
-          <div class="text-center" v-if="matchInfos.length <= 0">
+          <div class="pt-1.5 pb-2 text-center" v-if="matchInfos.length <= 0">
             {{ loadingOppoText }}
           </div>
 
@@ -389,14 +389,18 @@ export default {
       }
 
       // Record current scrolltop
-
       this.tabScrollTops[this.currentTab] = this.$refs.scrollContainer.scrollTop
 
       this.currentTab = newTab
 
-      nextTick(() => {
-        this.$refs.scrollContainer.scrollTop = this.tabScrollTops[this.currentTab]
-      })
+      setTimeout(() => {
+        // this.current tab should be the new tab
+        this.$refs.scrollContainer.scrollTo({
+          top: this.tabScrollTops[this.currentTab],
+          left: 0,
+          behavior: "smooth",
+        })
+      }, 10)
     },
     requestOpponentHistory() {
       // http://192.168.20.4:${portNum}/history/asia/J01/J01
@@ -673,3 +677,11 @@ export default {
   },
 }
 </script>
+
+<style>
+html,
+body,
+#app {
+  height: 100%;
+}
+</style>

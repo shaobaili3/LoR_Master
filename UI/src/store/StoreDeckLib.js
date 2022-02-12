@@ -15,20 +15,19 @@ export const useDeckLibStore = defineStore(storeid, {
   },
   actions: {
     initStore() {
-      console.log("Init Deck Store")
-      if (this.loaded) return
+      if (this.loaded) {
+        return
+      }
       if (window.ipcRenderer) {
         this.loaded = true // Assume that the loading will never fail?
         return new Promise((resolve) => {
-          window.ipcRenderer.send("request-store", "deck-lib")
-
           window.ipcRenderer.on("reply-store-deck-lib", (_event, val) => {
             if (val) {
-              console.log("Load Deck Lib")
               this.decks = JSON.parse(val)
             }
             resolve("resolved")
           })
+          window.ipcRenderer.send("request-store", "deck-lib")
         })
       } else {
         // Sample data

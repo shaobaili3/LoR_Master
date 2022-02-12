@@ -2,7 +2,7 @@
   <div class="flex h-full justify-center px-2">
     <div class="w-0 max-w-4xl flex-1">
       <div class="flex h-full flex-col sm:px-0">
-        <h1 class="title pb-4 text-left text-3xl">
+        <h1 class="title pb-4 pt-1 text-left text-3xl sm:pt-0">
           {{ $t("str.meta") }}
           <h2 class="hidden pl-4 text-base text-gray-300 sm:inline">
             {{ $t("meta.subtitle") }}

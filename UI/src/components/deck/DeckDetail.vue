@@ -22,19 +22,24 @@
         >{{ card.name }}</card-preview
       >
     </div>
+    <!-- Action buttons -->
     <div
-      class="actions"
+      class="actions whitespace-nowrap"
       :class="{ 'fixed-height': fixedHeight }"
       v-if="showCopy && this.baseDeck && this.cards.length > 0"
     >
       <!-- <a class="actions-btn" :href="deckDetailLink" target="_blank"><span class="actions-icon fa fa-external-link-alt"></span>Detail</a> -->
+      <!-- Detail -->
+      <div class="actions-btn text-gold-300" v-if="showURL" @click="openURL(deckDetailLink)">
+        <span class="actions-icon fas fa-analytics"></span>{{ $t("str.detail") }}
+      </div>
+      <!-- Save -->
       <div class="actions-btn" v-if="showAdd" @click="addToDeckLib">
         <span class="actions-icon fa-star" :class="{ fal: this.saved, fas: !this.saved }"></span
         >{{ this.saved ? this.$t("decklib.saved") : this.$t("decklib.save") }}
       </div>
-      <div class="actions-btn" v-if="showURL" @click="openURL(deckDetailLink)">
-        <span class="actions-icon fas fa-analytics"></span>{{ $t("str.detail") }}
-      </div>
+
+      <!-- Copt -->
       <div class="actions-btn tooltip" @click="copyDeckcode">
         <span
           class="actions-icon fa-copy"
@@ -45,6 +50,10 @@
           {{ $t("tooltips.incompleteDeck") }}
         </div>
       </div>
+    </div>
+
+    <div class="py-4 text-center text-xs italic text-gray-200" v-if="!cards || cards.length == 0">
+      {{ $t("str.nothing") }}
     </div>
   </div>
 </template>

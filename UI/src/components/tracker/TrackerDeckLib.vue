@@ -5,9 +5,13 @@
     </div>
     <div v-for="(deck, index) in decks" :key="deck.date" @click="expandDeck(index)">
       <!-- {{ deck }} -->
-      <div class="mx-1 mb-1.5 bg-gray-800 pb-1.5">
+      <div class="mx-1 mb-1.5 bg-gray-800 pb-1.5 2xs:mb-2">
         <!-- Title -->
-        <div class="px-2 pt-2 pb-1 text-sm text-gray-100">{{ deck.title }}</div>
+        <div
+          class="overflow-x-hidden text-ellipsis whitespace-nowrap px-2 pt-2 pb-1 text-sm text-gray-100"
+        >
+          {{ deck.title }}
+        </div>
         <!-- Date -->
         <div class="px-2 pb-1 text-xs text-gray-200">
           {{ format(new Date(deck.date), "HH:mm | yyyy-MM-dd") }}
@@ -42,9 +46,9 @@ function expandDeck(index) {
   deckLibStore.decks[index].expanded = !deckLibStore.decks[index].expanded
 }
 
-onMounted(() => {
+onMounted(async () => {
   const deckLibStore = useDeckLibStore()
-  deckLibStore.initStore()
+  await deckLibStore.initStore()
   decks.value = deckLibStore.decks
 })
 </script>

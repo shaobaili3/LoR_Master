@@ -46,6 +46,23 @@
         </tooltip>
       </div>
 
+      <!-- History -->
+      <div class="flex flex-wrap gap-x-1 gap-y-1.5 px-1 pb-2 pt-2">
+        <div v-for="(char, index) in history.split('').slice(0, 10)" :key="index">
+          <div
+            class="h-2 w-2 rounded 2xs:h-3 2xs:w-3"
+            :class="{
+              'bg-gray-500': char == 'E',
+              'bg-red-500': char == 'L',
+              'bg-sky-400': char == 'W',
+            }"
+            :style="{
+              opacity: 1 - (0.7 * index) / 10, //total
+            }"
+          ></div>
+        </div>
+      </div>
+
       <!-- Number of Games -->
       <div
         class="flex items-baseline gap-x-1.5 whitespace-nowrap pb-1 text-xs text-gray-200 2xs:text-sm"
