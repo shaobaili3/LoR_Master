@@ -1,5 +1,5 @@
 <template>
-  <div class="flex h-full flex-col pt-[35px] 2xs:pt-[45px]">
+  <div class="flex h-full flex-col pt-[35px] text-white 2xs:pt-[45px]">
     <base-window-controls
       :canClose="false"
       :canShrink="true"
@@ -11,131 +11,155 @@
 
     <div class="flex h-0 flex-1 flex-col">
       <!-- Loading -->
-      <div class="loading" :class="{ invisible: !isLoading }">
-        {{ loadingText }}
+      <div class="px-1 pt-2" v-if="isLoading">
+        {{ $t("loading.readyToRock") }}
       </div>
 
       <!-- Title Tabs -->
-      <div class="flex h-12 w-full" v-if="!isLoading">
-        <div class="tab-title-group">
-          <div
-            class="tab-title text-sm"
-            @click="switchTab(TABS.oppo)"
-            :class="{ active: isShowOppo }"
-          >
-            <i class="fas fa-swords"></i>
-          </div>
-          <div
-            class="tab-title text-sm"
-            @click="switchTab(TABS.oppog)"
-            :class="{ active: isShowOppoGrave }"
-          >
-            <i class="fas fa-tombstone-alt"></i>
-          </div>
-        </div>
-        <div class="tab-title-group">
-          <div class="tab-title text-sm" @click="switchTab(TABS.my)" :class="{ active: isShowMy }">
-            <i class="fas fa-user-cowboy"></i>
-          </div>
-          <div
-            class="tab-title text-sm"
-            @click="switchTab(TABS.myg)"
-            :class="{ active: isShowMyGrave }"
-          >
-            <i class="fas fa-tombstone-alt"></i>
-          </div>
-        </div>
-      </div>
-
-      <!-- Opponent History -->
-      <div v-if="isShowOppo && !isLoading">
+      <div class="flex w-full justify-around gap-1 px-1 text-gray-200" v-if="!isLoading">
         <div
-          class="loading"
-          v-if="matchInfos.length <= 0"
-          :class="{ zeroHeight: oppoPinnedId !== null }"
+          class="flex-1 cursor-pointer rounded-lg bg-gray-700 py-0.5 text-center text-sm hover:bg-gray-500 hover:text-white 2xs:text-base"
+          @click="switchTab(TABS.oppo)"
+          :class="{ 'bg-gray-500 text-gray-100': this.currentTab == TABS.oppo }"
         >
-          {{ loadingOppoText }}
+          <i class="fas fa-telescope"></i>
         </div>
-
-        <div class="w-full" v-if="matchInfos && matchInfos.length > 0">
-          <match-info
-            v-for="match in matchInfos"
-            :key="match.opponentName"
-            :opponentName="match.opponentName"
-            :rounds="match.rounds"
-            :time="match.time"
-            :startTime="match.startTime"
-            :matches="match.matches"
-            :winrate="match.winrate"
-            :badges="match.badge"
-            :opponentDeck="match.opponentDeck"
-            :deck="match.deckCode"
-            :total="matchTotalNum"
-            :history="match.history"
-          ></match-info>
+        <div
+          class="flex-1 cursor-pointer rounded-lg bg-gray-700 py-0.5 text-center text-sm hover:bg-gray-500 hover:text-white 2xs:text-base"
+          @click="switchTab(TABS.my)"
+          :class="{ 'bg-gray-500 text-gray-100': this.currentTab == TABS.my }"
+        >
+          <i class="fas fa-user-cowboy"></i>
+        </div>
+        <div
+          class="flex-1 cursor-pointer rounded-lg bg-gray-700 py-0.5 text-center text-sm hover:bg-gray-500 hover:text-white 2xs:text-base"
+          @click="switchTab(TABS.grave)"
+          :class="{ 'bg-gray-500 text-gray-100': this.currentTab == TABS.grave }"
+        >
+          <i class="fas fa-tombstone"></i>
         </div>
       </div>
 
-      <div
-        class="layerpanel h-10 max-w-[280px] p-2"
-        :class="{ expanded: currentLayer != LAYERS.base }"
-        v-if="isShowOppo"
-      >
-        <button
-          v-if="currentLayer == LAYERS.base"
-          @click="onOpenDecklib"
-          class="btn btn-decklib px-2 py-1 text-sm"
-        >
-          Open Deck Library
-        </button>
-        <button class="btn btn-back" v-if="currentLayer != LAYERS.base" @click="onLayerBack">
-          <span><i class="fas fa-caret-down"></i></span>
-        </button>
-        <tracker-layer
-          v-if="currentLayer != LAYERS.base"
-          @showDeck="onPinOppo"
-          :pinDeckId="oppoPinnedId"
-        ></tracker-layer>
+      <div class="mt-1 h-0 flex-1 overflow-y-auto" ref="scrollContainer">
+        <!-- Opponent History -->
+        <div class="px-1 pt-1" v-if="this.currentTab == TABS.oppo && !isLoading">
+          <div class="text-center" v-if="matchInfos.length <= 0">
+            {{ loadingOppoText }}
+          </div>
+
+          <div class="" v-if="matchInfos && matchInfos.length > 0">
+            <match-oppo-info
+              v-for="(match, index) in matchInfos"
+              :key="match.opponentName"
+              :opponentName="match.opponentName"
+              :rounds="match.rounds"
+              :time="match.time"
+              :startTime="match.startTime"
+              :matches="match.matches"
+              :winrate="match.winrate"
+              :badges="match.badge"
+              :opponentDeck="match.opponentDeck"
+              :deck="match.deckCode"
+              :total="matchTotalNum"
+              :history="match.history"
+              :expanded="match.expanded"
+              @open="onMatchOppoOpen(index)"
+            ></match-oppo-info>
+          </div>
+        </div>
+
+        <!-- Deck Library (Also TABS.oppo) -->
+        <div v-if="this.currentTab == TABS.oppo && !isLoading">
+          <tracker-deck-lib></tracker-deck-lib>
+        </div>
+
+        <!-- Oppo Played -->
+        <div v-if="this.currentTab == TABS.grave && !isLoading">
+          <div
+            class="sticky top-0 z-10 bg-gray-900 py-1 px-2 text-left text-xs text-gray-200 2xs:text-sm"
+          >
+            <i class="fas fa-axe-battle"></i>
+            {{ $t("tracker.tabs.oppoPlayed") }}
+          </div>
+          <deck-detail
+            :deck="oppoGraveCode"
+            :baseDeck="oppoGraveCode"
+            :showCopy="false"
+            :extra="oppoGraveExtraCards"
+          ></deck-detail>
+        </div>
+
+        <!-- My Played -->
+        <div v-if="this.currentTab == TABS.grave && !isLoading">
+          <div
+            class="sticky top-0 z-10 bg-gray-900 py-1 px-2 text-left text-xs text-gray-200 2xs:text-sm"
+          >
+            <i class="fas fa-sword"></i>
+            {{ $t("tracker.tabs.myPlayed") }}
+          </div>
+          <deck-detail
+            :baseDeck="myPlayedCode"
+            :showCopy="false"
+            :extra="myPlayedExtraCards"
+          ></deck-detail>
+        </div>
+
+        <!-- My Deck -->
+        <div v-if="this.currentTab == TABS.my && !isLoading">
+          <!-- <div class="flex h-9 justify-center gap-1 pt-1">
+            <deck-regions :deck="startingDeckCode" :fixedWidth="false"></deck-regions>
+          </div> -->
+
+          <deck-detail
+            :deck="currentDeckCode"
+            :baseDeck="startingDeckCode"
+            :showCopy="false"
+            @card="onCardHover"
+          ></deck-detail>
+        </div>
       </div>
 
-      <!-- Oppo Played -->
-      <div v-if="isShowOppoGrave && !isLoading">
-        <div class="tab-text">{{ $t("tracker.tabs.oppoPlayed") }}</div>
-        <deck-detail
-          :deck="oppoGraveCode"
-          :baseDeck="oppoGraveCode"
-          :showCopy="false"
-          :extra="oppoGraveExtraCards"
-        ></deck-detail>
-      </div>
+      <!-- Footer Tabs -->
+      <div class=""></div>
 
-      <!-- My Deck -->
-      <div v-if="isShowMy && !isLoading">
-        <deck-regions :deck="startingDeckCode" :fixedWidth="false"></deck-regions>
-        <deck-detail :deck="currentDeckCode" :baseDeck="startingDeckCode"></deck-detail>
-      </div>
-
-      <!-- My Played -->
-      <div v-if="isShowMyGrave && !isLoading">
-        <div class="tab-text">{{ $t("tracker.tabs.myPlayed") }}</div>
-        <deck-detail
-          :baseDeck="myPlayedCode"
-          :showCopy="false"
-          :extra="myPlayedExtraCards"
-        ></deck-detail>
-      </div>
-
-      <div class="footer" v-if="!isLoading">
-        <div class="footer-text">
+      <div class="flex h-8 w-full flex-col justify-center text-base 2xs:h-10" v-if="!isLoading">
+        <div class="flex w-full items-center gap-2">
+          <div class="w-0 flex-1">
+            <div
+              class="flex items-center justify-center transition-opacity"
+              :class="{ 'opacity-100': showCardProb, 'opacity-0': !showCardProb }"
+            >
+              <i class="fas fa-dice pr-1.5 text-gray-200"></i>
+              <div class="w-5">{{ cardProb }}%</div>
+            </div>
+          </div>
+          <!-- Card Num -->
+          <div class="flex w-0 flex-1 items-baseline justify-center text-gray-200">
+            <!-- <i class="fas fa-layer-group"></i> -->
+            <!-- <i class="fas fa-send-backward"></i> -->
+            <!-- <i class="fas fa-archive"></i> -->
+            <i class="fas fa-scroll-old"></i>
+            <!-- <i class="fas fa-hand-paper"></i> -->
+            <!-- <i class="fas fa-copy"></i> -->
+            <!-- <div class="relative inline-block h-4 w-6 scale-90">
+              <i class="fas fa-rectangle-portrait absolute top-0 left-0"></i>
+              <i class="fas fa-rectangle-portrait absolute top-0.5 left-0.5 text-gray-900"></i>
+              <i class="far fa-rectangle-portrait absolute top-1 left-1"></i>
+            </div> -->
+            <span class="pl-2 text-white">{{ cardsInHandNum }}</span
+            ><span class="pr-2 text-sm">/10</span>
+          </div>
+        </div>
+        <!-- <div class="footer-text">
           {{ $t("tracker.cardsInHand", { num: cardsInHandNum }) }}
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import MatchInfo from "../../components/match/MatchInfo.vue"
+import MatchOppoInfo from "../../components/match/MatchOppoInfo.vue"
 import axios from "axios"
 import BaseWindowControls from "../../components/base/BaseWindowControls.vue"
 import DeckDetail from "../../components/deck/DeckDetail.vue"
@@ -157,6 +181,8 @@ const testStatusData = require("../../assets/data/testStatusEN")
 import TrackerLayer from "../../components/tracker/TrackerLayer.vue"
 import { useLeaderboardStore } from "../../store/StoreLeaderboard"
 import { useBaseStore } from "../../store/StoreBase"
+import TrackerDeckLib from "../../components/tracker/TrackerDeckLib.vue"
+import { nextTick } from "vue"
 
 const requestDataWaitTime = 100 // ms
 const requestServerWaitTime = 3000 //ms
@@ -170,8 +196,8 @@ const REGION_NAMES = ["americas", "europe", "asia", "sea"]
 const TABS = {
   oppo: 0,
   my: 1,
-  oppog: 2,
-  myg: 3,
+  grave: 3,
+  decklib: 4,
 }
 
 const LAYERS = {
@@ -187,10 +213,9 @@ var lastTrackTime, lastServerRequestTime, lastStatusRequestTime
 export default {
   components: {
     BaseWindowControls,
-    MatchInfo,
+    MatchOppoInfo,
     DeckDetail,
-    DeckRegions,
-    TrackerLayer,
+    TrackerDeckLib,
   },
   data() {
     return {
@@ -204,6 +229,8 @@ export default {
 
       LAYERS: LAYERS,
       TABS: TABS,
+
+      tabScrollTops: [],
 
       cardsInHandNum: null,
 
@@ -230,6 +257,9 @@ export default {
       portNum: "26531",
 
       currentLayer: 0,
+
+      showCardProb: false,
+      cardProb: null,
     }
   },
   computed: {
@@ -268,34 +298,10 @@ export default {
       }
       return null
     },
-    loadingText() {
-      return this.$t("loading.readyToRock")
-    },
     loadingOppoText() {
       if (this.requestOpponentHistoryError) return this.$t("loading.nohistory")
       if (this.isLoadingOpponentHistory) return this.$t("loading.history")
       return this.$t("loading.nohistory")
-    },
-    isShowOppo() {
-      return this.currentTab == TABS.oppo
-    },
-    isShowMy() {
-      return this.currentTab == TABS.my
-    },
-    isShowOppoGrave() {
-      return this.currentTab == TABS.oppog
-    },
-    isShowMyGrave() {
-      return this.currentTab == TABS.myg
-    },
-    isInvalidDeckCode() {
-      try {
-        var deck = DeckEncoder.decode(this.deckCode)
-      } catch (err) {
-        // console.log(err.message)
-        return true
-      }
-      return false
     },
     matchTotalNum() {
       // console.log(this.matchInfos);
@@ -305,7 +311,6 @@ export default {
   mounted() {
     // console.log(JSON.stringify(this.matchInfos))
     // this.getMatchInfo()
-    // this.getSubData()
     // console.log("Mounted")
     // this.requestData()
     console.log("Page Deck Mounted")
@@ -332,12 +337,16 @@ export default {
     ...mapActions(useBaseStore, ["changeLocale"]),
     ...mapActions(useLeaderboardStore, ["fetchLeaderboard"]),
 
+    onMatchOppoOpen(index) {
+      this.matchInfos[index].expanded = !this.matchInfos[index].expanded
+    },
+
     initStore() {
       window.ipcRenderer.send("request-store", "ui-locale")
 
       window.ipcRenderer.on("reply-store-ui-locale", (_event, val) => {
         // console.log("Got store", key, val);
-        if (val) {
+        if (val && this.$i18n && this.$i18n.locale) {
           this.$i18n.locale = val
           console.log("Change locale to", val)
         }
@@ -368,6 +377,8 @@ export default {
       }
     },
     switchTab(newTab) {
+      if (this.currentTab == newTab) return
+
       if (this.IS_ELECTRON) {
         this.sendUserEvent({
           category: "Tracker Event",
@@ -377,13 +388,15 @@ export default {
         })
       }
 
+      // Record current scrolltop
+
+      this.tabScrollTops[this.currentTab] = this.$refs.scrollContainer.scrollTop
+
       this.currentTab = newTab
-    },
-    async getSubData() {
-      if (window.sock)
-        for await (const [topic, msg] of window.sock) {
-          this.processRawData(msg)
-        }
+
+      nextTick(() => {
+        this.$refs.scrollContainer.scrollTop = this.tabScrollTops[this.currentTab]
+      })
     },
     requestOpponentHistory() {
       // http://192.168.20.4:${portNum}/history/asia/J01/J01
@@ -497,17 +510,7 @@ export default {
     },
     requestTrackInfo() {
       if (!this.IS_ELECTRON) {
-        if (!this.startingDeckCode) {
-          Math.random() > 0.2
-            ? this.processTrackInfo(testTrackData)
-            : this.processTrackInfo({
-                positional_rectangles: null,
-              })
-        } else {
-          this.processTrackInfo(testTrackData)
-        }
-
-        setTimeout(this.requestTrackInfo, 1000)
+        setTimeout(this.processTrackInfo(testTrackData), 1500)
         return
       }
 
@@ -530,17 +533,13 @@ export default {
           }
         })
         .catch((e) => {
-          if (axios.isCancel(e)) {
-            // console.log("Request cancelled");
-          } else {
-            console.log("error", e)
+          console.log("error", e)
 
-            var elapsedTime = Date.now() - lastTrackTime // ms
-            if (requestDataWaitTime > elapsedTime) {
-              setTimeout(this.requestTrackInfo, requestDataWaitTime - elapsedTime)
-            } else {
-              setTimeout(this.requestTrackInfo, 100)
-            }
+          var elapsedTime = Date.now() - lastTrackTime // ms
+          if (requestDataWaitTime > elapsedTime) {
+            setTimeout(this.requestTrackInfo, requestDataWaitTime - elapsedTime)
+          } else {
+            setTimeout(this.requestTrackInfo, 100)
           }
         })
     },
@@ -652,6 +651,16 @@ export default {
       }
     },
 
+    onCardHover(card) {
+      if (!card) {
+        this.showCardProb = false
+        return
+      } else {
+        this.showCardProb = true
+        this.cardProb = ((card.count / card.all) * 100).toFixed(1)
+      }
+    },
+
     onOpenDecklib() {
       this.currentLayer = LAYERS.decklib
     },
@@ -660,11 +669,6 @@ export default {
     },
     onLayerBack() {
       this.currentLayer -= 1
-    },
-    onPinOppo(code, id) {
-      console.log("Pinning", code, id)
-      // this.oppoPinnedCode = code
-      this.oppoPinnedId = id
     },
   },
 }

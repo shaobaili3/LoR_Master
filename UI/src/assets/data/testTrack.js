@@ -21,14 +21,36 @@ module.exports = {
       "05BC175": 3,
     },
     cardsInHandNum: 0,
-    currentDeckCode: "CQBQCBIKV4AQEAYABAHAEAYJHFLQIAICAAAQCAYAAYBACAAPDICAGCIJENQGIAQBAEAAOAYDBEBVKVQ",
-    deckCode: "CQCACAIADIAQKCVPAEBAGAAIBYBQGCIJHFLQIAIBAAHQCAQAAEAQGAAGAUBQSIZTKZQGIAQBAEAAOAQDBEBVK",
+    currentDeckCode:
+      "CQBQCBIKV4AQEAYABAHAEAYJHFLQIAICAAAQCAYAAYBACAAPDICAGCIJENQGIAQBAEAAOAYDBEBVKVQ",
+    deckCode:
+      "CQCACAIADIAQKCVPAEBAGAAIBYBQGCIJHFLQIAIBAAHQCAQAAEAQGAAGAUBQSIZTKZQGIAQBAEAAOAQDBEBVK",
     myGraveyard: {},
     myGraveyardCode: "CEAAAAA",
-    myPlayedCards: {},
-    myPlayedCardsCode: "CEAAAAA",
-    opGraveyard: {},
-    opGraveyardCode: "CEAAAAA",
+    myPlayedCards: {
+      "01DE007": 1,
+      "01DE015": 2,
+      "01DE026": 3,
+      "02DE001": 2,
+      "03DE006": 2,
+      "03DE008": 3,
+      "03DE014": 3,
+      "03MT003": 1,
+      "03MT009": 3,
+      "03MT035": 2,
+      "03MT051": 2,
+      "03MT057": 3,
+      "03MT085": 1,
+      "03MT086": 2,
+      "03MT087": 3,
+      "03MT096": 2,
+      "03MT100": 2,
+      "05BC175": 3,
+    },
+    myPlayedCardsCode:
+      "CQCACAIADIAQKCVPAEBAGAAIBYBQGCIJHFLQIAIBAAHQCAQAAEAQGAAGAUBQSIZTKZQGIAQBAEAAOAQDBEBVK",
+    opGraveyard: { "01IO009": 1, "01IO009T1": 1, "03NX001": 1 },
+    opGraveyardCode: "CEAAAAQBAEBASAIDAMAQ",
     openHand: {},
     opponentName: "decks_easythresh_name",
     opponentTag: null,
@@ -77,3 +99,6 @@ module.exports = {
     },
   },
 }
+
+// 20220211221457
+// http://127.0.0.1:26531/track

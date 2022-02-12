@@ -17,10 +17,16 @@
         :supertype="card.supertype"
         :set="card.set"
         :typeRef="card.typeRef"
+        @mouseenter="onCardMouseEnter(card)"
+        @mouseleave="onCardMouseLeave(card)"
         >{{ card.name }}</card-preview
       >
     </div>
-    <div class="actions" :class="{ 'fixed-height': fixedHeight }" v-if="showCopy && this.baseDeck && this.cards.length > 0">
+    <div
+      class="actions"
+      :class="{ 'fixed-height': fixedHeight }"
+      v-if="showCopy && this.baseDeck && this.cards.length > 0"
+    >
       <!-- <a class="actions-btn" :href="deckDetailLink" target="_blank"><span class="actions-icon fa fa-external-link-alt"></span>Detail</a> -->
       <div class="actions-btn" v-if="showAdd" @click="addToDeckLib">
         <span class="actions-icon fa-star" :class="{ fal: this.saved, fas: !this.saved }"></span
@@ -30,7 +36,10 @@
         <span class="actions-icon fas fa-analytics"></span>{{ $t("str.detail") }}
       </div>
       <div class="actions-btn tooltip" @click="copyDeckcode">
-        <span class="actions-icon fa-copy" :class="{ 'fa-exclamation-triangle': !isFull, fal: this.copied, fas: !this.copied }"></span
+        <span
+          class="actions-icon fa-copy"
+          :class="{ 'fa-exclamation-triangle': !isFull, fal: this.copied, fas: !this.copied }"
+        ></span
         >{{ this.copied ? this.$t("str.copied") : this.$t("str.copy") }}
         <div class="tooltiptext top-end" v-if="!isFull">
           {{ $t("tooltips.incompleteDeck") }}
@@ -224,10 +233,25 @@ export default {
         }, 0) == 40
       )
     },
+    currentCount() {
+      if (!this.cards) return 0
+      return this.cards.reduce((prev, card) => {
+        return prev + card.count
+      }, 0)
+    },
   },
-  emits: ["showDetail"],
+  emits: ["showDetail", "card"],
   methods: {
     ...mapActions(useDeckLibStore, ["deckLibPaste"]),
+    onCardMouseEnter(card) {
+      if (card) {
+        card.all = this.currentCount
+        this.$emit("card", card)
+      }
+    },
+    onCardMouseLeave(card) {
+      this.$emit("card", null)
+    },
     addToDeckLib() {
       if (this.deckLibPaste(this.baseDeck)) {
         this.saved = true

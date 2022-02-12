@@ -19,7 +19,7 @@
       {{ card.cost }}
     </div>
     <div class="cardContent cardName">{{ card.name }}</div>
-    <div v-if="card.count && card.count >= 0" class="cardContent cardCount">x{{ card.count }}</div>
+    <div v-if="card.count != null" class="cardContent cardCount">x{{ card.count }}</div>
     <div
       v-if="type === 'Unknown'"
       class="lab-secret pointer-events-none absolute top-0 left-1/2 z-10 flex h-full w-full -translate-x-1/2 transform items-center justify-center whitespace-nowrap bg-black px-4 opacity-0 transition-opacity group-hover:opacity-100"

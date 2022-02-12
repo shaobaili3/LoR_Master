@@ -16,8 +16,8 @@ export const useDeckLibStore = defineStore(storeid, {
   actions: {
     initStore() {
       console.log("Init Deck Store")
+      if (this.loaded) return
       if (window.ipcRenderer) {
-        if (this.loaded) return
         this.loaded = true // Assume that the loading will never fail?
         return new Promise((resolve) => {
           window.ipcRenderer.send("request-store", "deck-lib")

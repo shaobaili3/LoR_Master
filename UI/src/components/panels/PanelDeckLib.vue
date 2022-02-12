@@ -44,11 +44,9 @@
               <div @click.stop="onClickDelete(id)" class="btn-delete btn">
                 <span><i class="fas fa-trash"></i></span>
               </div>
-              <div class="version tooltip">
-                <span class="tooltiptext top pointer-events-none max-w-full overflow-x-hidden overflow-ellipsis">
-                  {{ deck.code }}
-                </span>
-                <deck-preview :click-to-show="false" :deck="deck.code"> </deck-preview>
+              <div class="version">
+                <deck-preview class="h-14 gap-1 py-2" :click-to-show="false" :deck="deck.code">
+                </deck-preview>
               </div>
             </div>
           </div>
@@ -59,7 +57,6 @@
 </template>
 
 <script>
-const IS_ELECTRON = window.ipcRenderer !== undefined
 import "../../assets/scss/decklib.scss"
 import DeckPreview from "../deck/DeckPreview.vue"
 

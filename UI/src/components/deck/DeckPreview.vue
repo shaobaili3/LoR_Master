@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex w-fit cursor-pointer items-center justify-center rounded-md transition-colors"
+    class="flex cursor-pointer items-center justify-center rounded-md transition-colors"
     @click="showDeck"
   >
     <deck-regions :deck="deck"></deck-regions>

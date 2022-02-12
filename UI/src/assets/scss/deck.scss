@@ -1,3 +1,8 @@
+
+body {
+  overflow:hidden; // Weird bug causing strange overflow
+}
+
 .invisible {
   display: none;
 }
@@ -165,11 +170,6 @@
 
 .tab-title.active {
   color: white;
-}
-
-
-.tab-text {
-  padding: 0px 0px 2px 0px;
 }
 
 .footer {

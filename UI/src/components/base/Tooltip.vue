@@ -8,13 +8,17 @@ const logDom = {
   },
 }
 
-import { computePosition, flip } from "@floating-ui/dom"
+import { computePosition, flip, autoPlacement, shift } from "@floating-ui/dom"
 
 export default {
   props: {
-    msg: {
+    placement: {
       type: String,
-      default: "123",
+      default: "top",
+    },
+    allowedPlacements: {
+      type: Array,
+      default: () => ["top", "bottom"],
     },
   },
   setup(props, { attrs, slots }) {
@@ -41,8 +45,9 @@ export default {
 
     const repositionFloat = () => {
       computePosition(baseRef.value, floatRef.value, {
-        placement: "top",
-      }).then(({ x, y }) => {
+        placement: props.placement,
+        middleware: [autoPlacement({ allowedPlacements: props.allowedPlacements }), shift()],
+      }).then(({ x, y, placement }) => {
         // console.log(x, y)
         Object.assign(floatRef.value.style, {
           left: `${x}px`,
@@ -66,7 +71,11 @@ export default {
     // [Directive, value, argument, modifier]
     // return () => [withDirectives(slots.default()[0], [[logDom, floatRef]]), h(slots.float()[0], { ref: (el) => (floatRef.value = el) })]
     return () => [
-      h(slots.default()[0], { ref: (el) => (baseRef.value = el), onMouseenter: showFloat, onMouseleave: hideFloat }),
+      h(slots.default()[0], {
+        ref: (el) => (baseRef.value = el),
+        onMouseenter: showFloat,
+        onMouseleave: hideFloat,
+      }),
       h(slots.float({ visible: isFloatShown.value })[0], {
         style: "position:absolute;",
         ref: (el) => (floatRef.value = el),

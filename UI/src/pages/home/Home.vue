@@ -239,7 +239,11 @@
     <div class="text-sm text-gray-200">
       {{ $t("decklib.saveTo") }}
     </div>
-    <deck-preview :deck="clipboardDeck" @click="processPaste"></deck-preview>
+    <deck-preview
+      class="h-14 w-full gap-1 py-2"
+      :deck="clipboardDeck"
+      @click="processPaste"
+    ></deck-preview>
   </div>
 </template>
 
