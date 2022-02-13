@@ -31,8 +31,12 @@
         }"
         @click="sendMessage"
       >
-        <span v-if="messageSending">{{ $t("contact.messageBox.messageSending") }} <i class="fas fa-spin fa-spinner-third"></i></span>
-        <span v-else-if="messageSent">{{ $t("contact.messageBox.messageSent") }} <i class="fas fa-check"></i></span>
+        <span v-if="messageSending"
+          >{{ $t("contact.messageBox.messageSending") }} <i class="fas fa-spin fa-spinner-third"></i
+        ></span>
+        <span v-else-if="messageSent"
+          >{{ $t("contact.messageBox.messageSent") }} <i class="fas fa-check"></i
+        ></span>
         <span v-else-if="doubleCheck">{{ $t("contact.messageBox.confirm") }}</span>
         <span v-else>{{ $t("contact.messageBox.send") }}</span>
       </button>
@@ -82,7 +86,6 @@ function postRequest() {
   var reportUrl = `${baseStore.API_WEB}/feedback`
   axios
     .post(reportUrl, {
-      time: Date.now(),
       platform: baseStore.IS_ELECTRON ? "electron" : "web",
       lor_running: statusStore.lorRunning,
       local_api_enabled: statusStore.localApiEnabled,

@@ -921,6 +921,8 @@ function processClipboard() {
 //     verbose: false,
 //   })
 
+// tasklist /fi "IMAGENAME eq LoR.exe"
+
 //   // console.log(list.filter(ps => ps.imageName.indexOf('python') != -1))
 //   // console.log("\n pythonList", pythonList.length)
 //   // console.log("trackerList", trackerList.length)

@@ -1,5 +1,5 @@
 <template>
-  <div class="py-2">
+  <div class="group py-2">
     <div class="relative flex items-center justify-center gap-2 md:justify-start">
       <!-- Summary -->
       <div class="flex w-32 flex-col items-start gap-0 whitespace-nowrap">
@@ -100,7 +100,7 @@
       </div>
 
       <button
-        class="z-[1] rounded-md p-2 text-white/50 transition-colors hover:bg-gray-500 hover:text-white"
+        class="z-[1] rounded-md p-2 text-white/50 transition-colors hover:bg-gray-500 group-hover:text-gold-300 group-hover:hover:text-white"
         v-if="linkDetail"
         @click="openURL(detailLink)"
       >

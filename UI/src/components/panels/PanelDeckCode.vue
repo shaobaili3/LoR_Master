@@ -9,7 +9,7 @@
             <div
               class="flex h-0 max-h-96 w-full flex-1 justify-center overflow-y-auto sm:max-h-full sm:overflow-y-visible md:justify-start"
             >
-              <deck-detail class="max-w-[250px]" :base-deck="code"></deck-detail>
+              <deck-detail class="max-w-[250px]" :base-deck="code" :show-add="true"></deck-detail>
             </div>
           </div>
           <div class="flex w-full flex-col px-4 text-left md:w-3/4" v-if="isValid">
@@ -33,7 +33,10 @@
                 <div class="pt-4 pb-3 text-3xl">
                   {{ $t("deckCode.archetypeMatchups") }}
                 </div>
-                <meta-matchup v-if="!metaStore.isMetaLoading" :matchups="deckStats.matchup"></meta-matchup>
+                <meta-matchup
+                  v-if="!metaStore.isMetaLoading"
+                  :matchups="deckStats.matchup"
+                ></meta-matchup>
                 <div class="text-2xl" v-if="metaStore.isMetaLoading">
                   <span><i class="fas fa-circle-notch fa-spin"></i></span>
                   <span class="pl-2">{{ $t("str.loading") }}</span>

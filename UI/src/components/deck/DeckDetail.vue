@@ -24,7 +24,7 @@
     </div>
     <!-- Action buttons -->
     <div
-      class="actions whitespace-nowrap"
+      class="actions whitespace-nowrap p-2 pt-0 text-sm 2xs:text-base"
       :class="{ 'fixed-height': fixedHeight }"
       v-if="showCopy && this.baseDeck && this.cards.length > 0"
     >
@@ -304,7 +304,6 @@ export default {
 
 .actions {
   width: 100%;
-  padding: 8px;
 
   box-sizing: border-box;
 

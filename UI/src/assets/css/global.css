@@ -141,3 +141,11 @@ body {
 .v-popper--theme-card-tooltip .v-popper__arrow-outer {
   border-color: rgba(0, 0, 0, 0);
 } */
+
+/* Fixed vue scroller stacking order */
+.vue-recycle-scroller__item-view {
+  z-index: 1;
+}
+.vue-recycle-scroller__item-view.hover {
+  z-index: 2;
+}

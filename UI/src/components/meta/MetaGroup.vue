@@ -1,6 +1,6 @@
 <template>
   <div
-    class="mr-2 rounded-lg px-4 transition-colors duration-150 hover:bg-gray-800"
+    class="group mr-2 rounded-lg px-4 transition-colors duration-150 hover:bg-gray-800"
     :class="{
       'bg-gray-800': expand && !hasFeature && !selfExpand,
       'h-[624px] sm:h-[552px]': expand && !selfExpand,
@@ -19,6 +19,13 @@
       :isSummary="true"
       @click="onSelfExpand"
     ></meta-deck>
+    <div
+      class="pointer-events-none invisible absolute left-1/2 top-[64px] -translate-x-1/2 text-gray-200 opacity-0 transition-all group-hover:top-[74px] group-hover:opacity-100 sm:visible"
+    >
+      <i class="fas pr-2" :class="{ 'fa-angle-down': !expand, 'fa-angle-up': expand }"></i>
+
+      <!-- <div class="mt-3 h-1 w-16 rounded-full bg-gray-200"></div> -->
+    </div>
     <transition :name="selfExpand ? 'height' : ''">
       <div v-if="expand" class="pl-4" @click.stop>
         <div v-for="deck in group.decks" :key="deck.deck_code">

@@ -1,5 +1,5 @@
 <script>
-import { ref, h, withDirectives, onMounted, onUpdated } from "vue"
+import { ref, h, withDirectives, onMounted, onUpdated, Teleport } from "vue"
 
 const logDom = {
   mounted(el, value) {
@@ -45,9 +45,11 @@ export default {
 
     const repositionFloat = () => {
       computePosition(baseRef.value, floatRef.value, {
+        strategy: "fixed",
         placement: props.placement,
         middleware: [autoPlacement({ allowedPlacements: props.allowedPlacements }), shift()],
       }).then(({ x, y, placement }) => {
+        // console.log(floatRef.value)
         // console.log(x, y)
         Object.assign(floatRef.value.style, {
           left: `${x}px`,
@@ -70,14 +72,25 @@ export default {
     // https://vuejs.org/api/render-function.html#withdirectives
     // [Directive, value, argument, modifier]
     // return () => [withDirectives(slots.default()[0], [[logDom, floatRef]]), h(slots.float()[0], { ref: (el) => (floatRef.value = el) })]
+
     return () => [
       h(slots.default()[0], {
         ref: (el) => (baseRef.value = el),
         onMouseenter: showFloat,
         onMouseleave: hideFloat,
       }),
+      // h(
+      //   Teleport,
+      //   {
+      //     to: "body",
+      //   },
+      //   h(slots.float({ visible: isFloatShown.value })[0], {
+      //     style: "position:fixed;",
+      //     ref: (el) => (floatRef.value = el),
+      //   })
+      // ),
       h(slots.float({ visible: isFloatShown.value })[0], {
-        style: "position:absolute;",
+        style: "position:fixed;",
         ref: (el) => (floatRef.value = el),
       }),
     ]
