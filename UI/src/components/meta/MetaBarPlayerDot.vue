@@ -36,7 +36,7 @@
         >
           {{
             $t("matches.winRate", {
-              num: (player.win_rate * 100).toFixed(2),
+              num: (player.win_rate * 100).toFixed(1),
             })
           }}
         </p>

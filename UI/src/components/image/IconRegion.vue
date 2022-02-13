@@ -2,7 +2,12 @@
   <div
     class="aspect-square h-[90%] rounded-full border-transparent bg-cover bg-center bg-no-repeat"
     :style="{ backgroundImage: getRegionImgUrl }"
-  ></div>
+  >
+    <img
+      class="invisible aspect-square h-full"
+      src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+    />
+  </div>
 </template>
 
 <script>

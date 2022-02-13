@@ -1,9 +1,13 @@
 <template>
   <div
-    class="relative aspect-square h-full rounded-full bg-cover bg-center"
+    class="relative block aspect-square h-full rounded-full bg-cover bg-center"
     :class="{ 'border-2 border-zinc-200': this.code, 'border-0 bg-gray-200/20': !this.code }"
     :style="{ backgroundImage: getChampionImgUrl }"
   >
+    <img
+      class="invisible aspect-square h-full"
+      src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+    />
     <div
       v-if="!this.code"
       class="fas fa-helmet-battle absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 scale-125 opacity-10"

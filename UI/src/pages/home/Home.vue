@@ -92,7 +92,7 @@
   </div>
 
   <div
-    class="absolute top-0 left-0 z-10 block h-screen w-screen bg-gray-900/50 sm:hidden"
+    class="absolute top-0 left-0 z-10 block h-full w-screen bg-gray-900/50 sm:hidden"
     v-if="leftNavExpanded"
     @click="shrinkLeftNav"
   ></div>
@@ -147,7 +147,7 @@
 
   <div
     class="block pt-nav text-center text-white sm:pl-20"
-    :class="{ 'h-main-electron': IS_ELECTRON, 'h-main-web': !IS_ELECTRON }"
+    :class="{ 'h-main-electron': IS_ELECTRON, 'h-full': !IS_ELECTRON }"
     @click="shrinkLeftNav"
   >
     <div class="h-full" @scroll="handleContentScroll">
@@ -175,7 +175,7 @@
   </div>
 
   <div
-    class="absolute top-0 left-0 z-[5] block h-screen w-screen bg-gray-900/50 sm:hidden"
+    class="absolute top-0 left-0 z-[5] block h-full w-screen bg-gray-900/50 sm:hidden"
     v-if="isShowDeck"
     @click="hideDeck"
   ></div>

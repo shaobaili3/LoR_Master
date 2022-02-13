@@ -30,7 +30,7 @@
       ref="image"
       class="pointer-events-none absolute z-50 aspect-[0.6640625] w-full opacity-0 transition-opacity"
     >
-      <image-card :code="code" :set="set"></image-card>
+      <image-card @load="onImageLoad" :code="code" :set="set"></image-card>
     </div>
   </div>
 </template>
@@ -80,14 +80,7 @@ export default {
       this.card.cost = card.cost
     }
 
-    if (!this.$refs.container || !this.$refs.image) return
-    computePosition(this.$refs.container, this.$refs.image, {
-      placement: "bottom",
-      middleware: [flip()],
-    }).then(({ x, y, strategy }) => {
-      this.$refs.image.style.left = `${x}px`
-      this.$refs.image.style.top = `${y}px`
-    })
+    this.computeImagePosition()
   },
   data() {
     return {
@@ -131,6 +124,19 @@ export default {
   },
   computed: {},
   methods: {
+    onImageLoad() {
+      this.computeImagePosition()
+    },
+    computeImagePosition() {
+      if (!this.$refs.container || !this.$refs.image) return
+      computePosition(this.$refs.container, this.$refs.image, {
+        placement: "bottom",
+        middleware: [flip()],
+      }).then(({ x, y, strategy }) => {
+        this.$refs.image.style.left = `${x}px`
+        this.$refs.image.style.top = `${y}px`
+      })
+    },
     onMouseEnter() {
       if (!this.$refs.container || !this.$refs.image) return
       computePosition(this.$refs.container, this.$refs.image, {

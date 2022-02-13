@@ -1,8 +1,9 @@
 <template>
   <div class="flex h-full flex-col">
     <!-- Summary -->
-    <div class="block grid-cols-5 items-end pb-4 sm:grid">
-      <div class="col-span-4 px-2 sm:px-0">
+    <div class="grid grid-cols-5 items-end pb-4 sm:grid-cols-5">
+      <!-- Left -->
+      <div class="col-span-3 px-2 sm:col-span-4 sm:px-0">
         <div class="player-name">
           {{ playerName }}
           <i
@@ -50,7 +51,7 @@
             </div>
           </div>
 
-          <div v-if="games24hr">
+          <div v-if="games24hr" class="hidden sm:block">
             <div class="text-sm text-gray-300">
               {{ $t("matches.lastNumHour", { num: 24 }) }}
             </div>
@@ -60,12 +61,18 @@
           </div>
         </div>
       </div>
-      <div class="px-2 pt-2 text-left sm:p-0" v-if="winrate">
+      <!-- Right -->
+      <div class="col-span-2 px-2 pt-2 text-left sm:col-span-1 sm:p-0" v-if="winrate">
         <div class="text-sm text-gray-300">
           {{ $t("matches.games", { num: totalMatches }) }}
         </div>
-        <div class="text-2xl">
-          {{ winrate }} <span class="subtext">{{ $t("dash.winRate") }}</span>
+        <div
+          class="whitespace-nowrap text-2xl"
+          :style="{
+            color: winRateToColor(winrate),
+          }"
+        >
+          {{ winrateString }} <span class="subtext">{{ $t("dash.winRate") }}</span>
         </div>
         <div class="text-sm text-gray-300" v-if="winloss">{{ winloss }}</div>
       </div>
@@ -121,6 +128,8 @@
 import MatchHistory from "../match/MatchHistory.vue"
 
 import { REGION_ID, REGION_SHORTS, REGION_NAMES } from "../panels/PanelLeaderboard.vue"
+
+import { winRateToColor } from "../../modules/utils/colorUtils"
 
 // Some helper math functions
 function FLip(x) {
@@ -315,10 +324,15 @@ export default {
     },
     winrate() {
       if (this.totalMatches == 0) return null
-      return Math.floor((this.totalWins / this.totalMatches) * 100) + "%"
+      return this.totalWins / this.totalMatches
+    },
+    winrateString() {
+      if (this.totalMatches == 0) return null
+      return (this.winrate * 100).toFixed(1) + "%"
     },
   },
   methods: {
+    winRateToColor,
     handleBookmarkClick() {
       if (this.bookmarkIndex != null && this.bookmarkIndex != -1) {
         this.bookmarkStore.deleteBookmark(this.bookmarkIndex)

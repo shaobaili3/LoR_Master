@@ -24,7 +24,7 @@
     </div>
     <!-- Action buttons -->
     <div
-      class="actions whitespace-nowrap p-2 pt-0 text-sm 2xs:text-base"
+      class="actions whitespace-nowrap p-2 pt-0 text-sm 2xs:pt-1 2xs:text-base"
       :class="{ 'fixed-height': fixedHeight }"
       v-if="showCopy && this.baseDeck && this.cards.length > 0"
     >

@@ -109,7 +109,7 @@
     </div>
     <div class="w-0 max-w-2xl flex-1">
       <div class="flex h-full flex-col px-2 sm:px-0">
-        <div class="z-[1]">
+        <div class="z-[2]">
           <div class="region-tabs">
             <div
               class="region-option"

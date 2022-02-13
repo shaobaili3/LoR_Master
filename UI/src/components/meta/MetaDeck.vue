@@ -20,7 +20,7 @@
             color: closestColor(winRateBounds.centerAdjusted),
           }"
         >
-          {{ (winRate * 100).toFixed(2) }}%
+          {{ (winRate * 100).toFixed(1) }}%
           <span class="block text-sm sm:inline sm:text-base">
             | ± {{ (winRateBounds.gap * 50).toFixed(2) }}</span
           >
