@@ -7,7 +7,7 @@
       <div class="flex gap-2" v-if="getCard">
         <IconChampion
           v-if="getCard.supertype != '' || getCard.rarityRef == 'Champion'"
-          class="block h-6 w-6 rounded-full border-[1px] border-zinc-200 bg-cover"
+          class="block h-6 w-6 rounded-full bg-cover"
           :customClass="true"
           :code="getCard.cardCode"
         ></IconChampion>

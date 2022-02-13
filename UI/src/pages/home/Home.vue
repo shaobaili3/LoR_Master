@@ -147,7 +147,7 @@
 
   <div
     class="block pt-nav text-center text-white sm:pl-20"
-    :class="{ 'h-main-electron': IS_ELECTRON, 'h-full': !IS_ELECTRON }"
+    :class="{ 'h-main-electron': IS_ELECTRON, 'h-full sm:h-screen': !IS_ELECTRON }"
     @click="shrinkLeftNav"
   >
     <div class="h-full" @scroll="handleContentScroll">
@@ -161,7 +161,7 @@
         <span><i class="fas fa-chevron-right"></i></span>
       </button>
       <div class="flex h-full items-center gap-1.5 py-1.5">
-        <deck-regions :deck="deckCode"></deck-regions>
+        <deck-regions :deck="deckCode" :fixedWidth="false"></deck-regions>
       </div>
     </div>
     <div class="deck-content-detail" :fixedHeight="!IS_ELECTRON">
@@ -765,3 +765,9 @@ export default {
   },
 }
 </script>
+
+<style>
+#app {
+  height: 100%;
+}
+</style>

@@ -76,7 +76,7 @@ export default {
     },
     recomended() {
       if (!(this.group && this.group.decks)) return null
-      var highest = 0
+      var highest = -1 // Somehow there can be groups with all decks 0%
       var code = null
       for (let deck of this.group.decks) {
         if (deck.win_rate > highest) {

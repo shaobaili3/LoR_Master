@@ -1,17 +1,10 @@
 <template>
-  <div
-    class="relative block aspect-square h-full rounded-full bg-cover bg-center"
-    :class="{ 'border-2 border-zinc-200': this.code, 'border-0 bg-gray-200/20': !this.code }"
-    :style="{ backgroundImage: getChampionImgUrl }"
-  >
+  <div class="relative block h-full w-auto">
     <img
-      class="invisible aspect-square h-full"
-      src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+      class="max-h-full rounded-full"
+      :class="{ 'border-2 border-zinc-200': this.code, 'border-0': !this.code }"
+      :src="getChampionImgUrl"
     />
-    <div
-      v-if="!this.code"
-      class="fas fa-helmet-battle absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 scale-125 opacity-10"
-    ></div>
     <div v-if="count && count != 3" class="count">{{ count }}</div>
   </div>
 </template>
@@ -34,7 +27,7 @@ export default {
   computed: {
     getChampionImgUrl() {
       if (!this.code) {
-        return "none"
+        return require("../../assets/images/cards/cropped/no-champion.png")
       }
       // const champImageBaseUrl = 'https://raw.githubusercontent.com/painttist/lor-champ-icons/master/images/cards/cropped/';
       // const champImageBaseUrl = 'https://painttist.github.io/lor-champ-icons/images/cards/cropped/';
@@ -46,7 +39,8 @@ export default {
       // return "url('" + cardImages[fileName] + "')"
 
       // - v2
-      return "url(" + require("../../assets/images/cards/cropped/" + fileName) + ")"
+      // return "url(" + require("../../assets/images/cards/cropped/" + fileName) + ")"
+      return require("../../assets/images/cards/cropped/" + fileName)
     },
   },
   methods: {},

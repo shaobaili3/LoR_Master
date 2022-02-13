@@ -1,12 +1,8 @@
 <template>
-  <div
-    class="aspect-square h-[90%] rounded-full border-transparent bg-cover bg-center bg-no-repeat"
-    :style="{ backgroundImage: getRegionImgUrl }"
-  >
-    <img
-      class="invisible aspect-square h-full"
-      src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-    />
+  <div class="relative block h-full w-auto">
+    <!-- Padding for some slight visual fix -->
+    <!-- :class="{ 'py-[1px] pr-[2px] opacity-20': faction == 99 }" -->
+    <img class="aspect-square max-h-full rounded-full p-0.5" :src="getRegionImgUrl" />
   </div>
 </template>
 
@@ -23,22 +19,18 @@ export default {
       type: Boolean,
       default: false,
     },
-    fixedSize: {
-      type: Boolean,
-      default: true,
-    },
   },
   computed: {
     getRegionImgUrl() {
-      if (this.faction == -1) {
-        return "none"
+      if (this.faction == 99) {
+        return require("../../assets/images/regions/no-region.png")
       }
       // Remote
       // const regionImageBaseUrl = 'https://painttist.github.io/lor-champ-icons/images/regions/';
       // return "url(" + regionImageBaseUrl + regionID + ".svg)";
 
       // Local
-      return "url(" + require("../../assets/images/regions/" + this.faction + ".svg") + ")"
+      return require("../../assets/images/regions/" + this.faction + ".svg")
     },
   },
   methods: {},

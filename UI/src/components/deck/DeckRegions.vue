@@ -64,9 +64,6 @@ export default {
   },
   computed: {
     getFactions() {
-      return this.getFactionsComplex.slice(0, this.maxFactions)
-    },
-    getFactionsComplex() {
       var factionIDs = []
 
       var cards = null
@@ -96,11 +93,11 @@ export default {
         // Add filler champ icons
         var fillerIcons = this.maxFactions - factionIDs.length
         for (let i = 0; i < fillerIcons; i++) {
-          factionIDs.unshift(-1)
+          factionIDs.push(99)
         }
       }
 
-      return factionIDs.sort((a, b) => a - b)
+      return factionIDs.sort((a, b) => a - b).slice(0, this.maxFactions)
     },
   },
   methods: {},

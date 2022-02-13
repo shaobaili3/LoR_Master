@@ -28,7 +28,7 @@
       </div>
 
       <!-- Deck Preview -->
-      <div class="flex w-fit flex-col items-start">
+      <div class="z-[1] flex w-fit flex-col items-start">
         <div v-if="isSummary" class="pl-2 text-sm text-gray-200">
           <span v-if="isFeature">{{ $t("matches.recommendedCurrent") }}</span>
           <span v-if="!isFeature">{{ $t("matches.recommended") }}</span>
@@ -39,7 +39,7 @@
         <div v-if="!isSummary && !isFeature" class="h-4 w-full text-sm text-gray-200"></div>
         <deck-preview
           v-if="code"
-          class="mt-0.5 aspect-[3.5/1] h-14 gap-1.5 py-2 transition-colors hover:bg-gray-600"
+          class="mt-0.5 h-14 gap-1 px-1.5 py-2 transition-colors hover:bg-gray-600 sm:gap-1.5 sm:px-2"
           :class="{
             ' pointer-events-none': isFeature,
           }"
