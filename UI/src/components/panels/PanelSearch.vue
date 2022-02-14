@@ -555,6 +555,8 @@ export default {
       this.searchText = this.player
       this.searchName()
       this.focusSearchBar()
+    } else {
+      this.focusSearchBar()
     }
     this.initStore()
   },

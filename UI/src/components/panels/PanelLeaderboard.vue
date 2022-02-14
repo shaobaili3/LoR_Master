@@ -180,7 +180,7 @@ export default {
 
     setTimeout(() => {
       this.$refs.leaderboardInput.focus()
-    }, 10)
+    }, 25)
   },
   data() {
     return {
