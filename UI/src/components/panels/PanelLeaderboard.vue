@@ -55,7 +55,7 @@
         <div class="">
           <div class="relative mt-4 h-12">
             <div class="search-icon left" v-if="!isLoading">
-              <i class="fa fa-search"></i>
+              <i class="fa fa-trophy"></i>
             </div>
             <div class="search-icon left loading" v-if="isLoading">
               <i class="fa fa-circle-notch fa-spin"></i>
@@ -66,9 +66,13 @@
               spellcheck="false"
               autocomplete="off"
               v-model="searchText"
+              @keyup="onKeyUp"
+              @focus="onInputFocus"
+              @blur="onInputBlur"
               type="text"
               :placeholder="isLoading ? $t('str.loading') : searchPlaceHolder"
               :disabled="isLoading"
+              ref="leaderboardInput"
             />
             <div class="search-icon right" @click="clearSearch" v-if="searchText != ''">
               <span><i class="fas fa-times"></i></span>
@@ -109,9 +113,10 @@
           class="block h-0 w-full flex-1 overflow-y-auto rounded-md"
           :items="filteredPlayers"
           :item-size="64"
-          key-field="rank"
+          key-field="name"
+          ref="scroller"
         >
-          <template v-slot="{ item }"
+          <template v-slot="{ item, index }"
             ><leaderboard-player
               @click="searchPlayer(item)"
               :rank="(item.rank + 1).toString()"
@@ -120,6 +125,8 @@
               :deck="item.deck_code"
               :winRate="item.game_latest_rank_win_rate"
               :lastRankTime="item.game_latest_rank_time"
+              :selected="inputFocused && index == selectedIndex"
+              :isSearch="searchText != '' && index == filteredPlayers.length - 1"
             >
             </leaderboard-player
           ></template>
@@ -169,8 +176,11 @@ export default {
     if (oldRegion) {
       this.activeRegionID = oldRegion
     }
-
     this.fetchLeaderboard(this.activeRegionID)
+
+    setTimeout(() => {
+      this.$refs.leaderboardInput.focus()
+    }, 10)
   },
   data() {
     return {
@@ -181,6 +191,9 @@ export default {
       searchText: "",
       signedIn: false,
       dataStartTime: 0,
+      selectedIndex: 0,
+
+      inputFocused: false,
     }
   },
   emits: {
@@ -215,6 +228,8 @@ export default {
         //     return player.name.toLowerCase().indexOf(searchText.toLowerCase()) !== -1
         // })
 
+        filteredPlayers.push({ name: searchText })
+
         return filteredPlayers // TODO implement better way to improve this performence
       }
       return this.leaderboard[this.activeRegionID]
@@ -231,6 +246,62 @@ export default {
   },
   methods: {
     ...mapActions(useLeaderboardStore, ["fetchLeaderboard"]),
+
+    selectTopItem() {
+      const scroller = this.$refs.scroller
+      const el = scroller.$el
+      let currentTopItem = Math.ceil(el.scrollTop / 64)
+      this.selectedIndex = currentTopItem
+    },
+    onInputFocus() {
+      this.inputFocused = true
+      this.selectTopItem()
+    },
+    onInputBlur() {
+      this.inputFocused = false
+    },
+    setLeaderBoardPlayerRefs(el) {
+      if (el) {
+        // this.leaderboardPlayerRefs.push(el)
+        console.log(el)
+      }
+    },
+    onKeyUp(e) {
+      const scroller = this.$refs.scroller
+      const el = scroller.$el
+      if (e.key == "ArrowDown") {
+        this.selectedIndex += 1
+        if (this.selectedIndex > this.filteredPlayers.length - 1) {
+          this.selectedIndex = 0
+          scroller.scrollToItem(0)
+        } else {
+          let minScrollTop = this.selectedIndex * 64 - el.getBoundingClientRect().height + 64 //min scrollTop to be visible
+          if (el.scrollTop < minScrollTop) {
+            this.$refs.scroller.scrollToPosition(minScrollTop)
+          }
+        }
+      } else if (e.key == "ArrowUp") {
+        this.selectedIndex -= 1
+        if (this.selectedIndex < 0) {
+          this.selectedIndex = this.filteredPlayers.length - 1
+          this.$refs.scroller.scrollToItem(this.selectedIndex)
+        } else {
+          let maxScrollTop = this.selectedIndex * 64 //max scrollTop to be visible
+          if (el.scrollTop > maxScrollTop) {
+            this.$refs.scroller.scrollToItem(this.selectedIndex)
+          }
+        }
+      } else if (e.key == "Enter") {
+        let player = this.filteredPlayers[this.selectedIndex]
+        this.searchPlayer(player)
+      } else {
+        if (this.filteredPlayers.length > 5) {
+          this.selectTopItem()
+        } else {
+          this.selectedIndex = this.filteredPlayers.length - 1
+        }
+      }
+    },
     clearSearch() {
       this.searchText = ""
       document.querySelector("#search-input").focus()
@@ -259,6 +330,13 @@ export default {
             name: player.name,
             tag: player.tag,
             region: REGION_SHORTS[this.activeRegionID],
+          },
+        })
+      } else {
+        this.$router.push({
+          name: "search",
+          query: {
+            name: player.name,
           },
         })
       }

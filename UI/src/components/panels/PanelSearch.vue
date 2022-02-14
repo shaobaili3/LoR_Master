@@ -152,7 +152,7 @@
                 :class="{
                   'rounded-b-none rounded-t-[25px]': showAutoCompleteBar,
                 }"
-                @keyup="searchName"
+                @keyup="onKeyUp"
                 @keyup.enter="searchHistory"
                 @keyup.up="autoCompleteIndexMinus"
                 @keyup.down="autoCompleteIndexPlus"
@@ -663,6 +663,11 @@ export default {
       this.autoCompleteRefs[this.autoCompleteIndex].scrollIntoViewIfNeeded({
         behavior: "smooth",
       })
+    },
+    onKeyUp(e) {
+      if (e.key != "ArrowUp" && e.key != "ArrowDown") {
+        this.searchName()
+      }
     },
     onKeyDown(e) {
       if (e.key == "ArrowUp" || e.key == "ArrowDown") {

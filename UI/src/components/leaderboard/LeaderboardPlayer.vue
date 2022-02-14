@@ -1,58 +1,78 @@
 <template>
-  <div
-    class="group relative grid h-16 cursor-pointer grid-cols-12 items-center bg-gray-700 transition-colors duration-150 hover:bg-gray-800 sm:mr-1"
-    :class="{
-      'rounded-t-md': rank == '1',
-    }"
-  >
-    <div class="z-[1]">
-      <div v-if="rank == '1'"><i class="fas fa-crown text-yellow-500"></i></div>
-      <div v-else-if="rank == '2'">
-        <i class="fas fa-crown text-zinc-200"></i>
+  <div>
+    <!-- Normal -->
+    <div
+      class="group relative grid h-16 cursor-pointer grid-cols-12 items-center transition-colors duration-150 hover:bg-gray-600 sm:mr-1"
+      :class="{
+        'bg-gray-800': !selected,
+        'bg-gray-700': selected,
+        'rounded-t-md': rank == '1',
+      }"
+      v-if="!isSearch"
+    >
+      <div class="z-[1]">
+        <div v-if="rank == '1'"><i class="fas fa-crown text-yellow-500"></i></div>
+        <div v-else-if="rank == '2'">
+          <i class="fas fa-crown text-zinc-200"></i>
+        </div>
+        <div v-else-if="rank == '3'">
+          <i class="fas fa-crown text-red-300"></i>
+        </div>
+        <div v-else>
+          {{ rank }}
+        </div>
       </div>
-      <div v-else-if="rank == '3'">
-        <i class="fas fa-crown text-red-300"></i>
-      </div>
-      <div v-else>
-        {{ rank }}
-      </div>
-    </div>
-    <div class="z[1] col-span-5 overflow-hidden text-ellipsis whitespace-nowrap pl-2 sm:col-span-3">
-      {{ name }}
-    </div>
-    <div class="col-span-2 sm:col-span-1">{{ lp }}</div>
-    <div class="hidden sm:col-span-2 sm:block">
       <div
-        v-if="lastRankTime"
-        class="text-sm text-white"
-        :class="{
-          'text-opacity-70': Date.now() - new Date(lastRankTime) > 1000 * 60 * 60 * 24,
-          'text-opacity-40': Date.now() - new Date(lastRankTime) > 1000 * 60 * 60 * 24 * 7,
-        }"
+        class="z[1] col-span-5 overflow-hidden text-ellipsis whitespace-nowrap pl-2 sm:col-span-3"
       >
-        {{ lastRank }}
+        {{ name }}
       </div>
-    </div>
-    <div class="hidden sm:col-span-2 sm:block">
-      <div
-        v-if="winRate != null"
-        :style="{
-          color: winRateToSimpleColor(winRate) /*0.6 + 0.4 * winRate*/,
-        }"
-      >
-        {{ $t("matches.winRate", { num: (winRate * 100).toFixed(0) }) }}
+      <div class="col-span-2 sm:col-span-1">{{ lp }}</div>
+      <div class="hidden sm:col-span-2 sm:block">
+        <div
+          v-if="lastRankTime"
+          class="text-sm text-white"
+          :class="{
+            'text-opacity-70': Date.now() - new Date(lastRankTime) > 1000 * 60 * 60 * 24,
+            'text-opacity-40': Date.now() - new Date(lastRankTime) > 1000 * 60 * 60 * 24 * 7,
+          }"
+        >
+          {{ lastRank }}
+        </div>
       </div>
-    </div>
+      <div class="hidden sm:col-span-2 sm:block">
+        <div
+          v-if="winRate != null"
+          :style="{
+            color: winRateToSimpleColor(winRate) /*0.6 + 0.4 * winRate*/,
+          }"
+        >
+          {{ $t("matches.winRate", { num: (winRate * 100).toFixed(0) }) }}
+        </div>
+      </div>
 
-    <div class="col-span-4 flex justify-center sm:col-span-3">
-      <deck-preview
-        class="h-12 gap-0.5 p-1 py-2.5 hover:bg-gray-600 sm:h-12 sm:gap-1 sm:p-2"
-        v-if="deck"
-        @click.stop
-        :deck="deck"
-        :fixed-width="true"
-        :size="1"
-      ></deck-preview>
+      <div class="col-span-4 flex justify-center sm:col-span-3">
+        <deck-preview
+          class="h-12 gap-0.5 p-1 py-2.5 hover:bg-gray-800 sm:h-12 sm:gap-1 sm:p-2"
+          v-if="deck"
+          @click.stop
+          :deck="deck"
+          :fixed-width="true"
+          :size="1"
+        ></deck-preview>
+      </div>
+    </div>
+    <!-- Search text -->
+    <div
+      v-if="isSearch"
+      class="relative flex h-16 cursor-pointer items-center justify-center rounded-b-md hover:bg-gray-600 sm:mr-1"
+      :class="{
+        'bg-gray-800': !selected,
+        'bg-gray-700': selected,
+      }"
+    >
+      <i class="fas fa-search pr-2"></i> {{ $t("search.leaderboard.base") }} "{{ name }}"
+      <span class="absolute right-0 px-2 text-gray-200" v-if="selected">↵ Enter</span>
     </div>
   </div>
 </template>
@@ -76,6 +96,8 @@ export default {
     deck: String,
     winRate: Number,
     lastRankTime: String,
+    selected: Boolean,
+    isSearch: Boolean,
   },
   computed: {
     lastRank() {
