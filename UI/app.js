@@ -469,20 +469,11 @@ function newMainWindow() {
   let { width, height } = electron.screen.getPrimaryDisplay().workAreaSize
 
   // --- mainWindow ---
-  let windowWidth = 1200 // (335)
-  let windowMaxWidth = 1600
-  let windowMinWidth = 700
+  let windowWidth = Math.min(width, 1440) // (335)
+  let windowMaxWidth = 1920
+  let windowMinWidth = 800
   let windowMinHeight = 730
-  let windowHeight = 800
-  // let windowXPadding = 200
-  // let windowYPadding = 20
-  let xOffSet = 0
-
-  // if (developmentMode) {
-  //   windowWidth = windowWidth + 400
-  //   windowMaxWidth = windowWidth + 400
-  //   xOffSet = 350
-  // }
+  let windowHeight = Math.min(height, 900)
 
   mainWindow = new BrowserWindow({
     maxWidth: windowMaxWidth,
@@ -490,7 +481,7 @@ function newMainWindow() {
     minHeight: windowMinHeight,
     width: windowWidth,
     height: windowHeight,
-    x: (width - windowWidth) / 2 + xOffSet,
+    x: (width - windowWidth) / 2,
     y: (height - windowHeight) / 2,
     frame: false,
     resizable: true,

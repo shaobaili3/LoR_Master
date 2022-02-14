@@ -108,11 +108,9 @@ export default {
   computed: {},
   methods: {
     onImageLoad() {
-      console.log("Image Load")
       this.computeImagePosition()
     },
     computeImagePosition() {
-      console.log("Compute Image Position")
       if (!this.$refs.container || !this.$refs.image) return
       computePosition(this.$refs.container, this.$refs.image, {
         placement: "top",
