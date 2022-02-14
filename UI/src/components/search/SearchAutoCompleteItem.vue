@@ -3,6 +3,10 @@
     <div>
       {{ player.name }}
     </div>
+    <div v-if="region && region != selectedRegion" class="pl-2 text-sm text-gray-300">
+      <i class="fas" :class="getRegionFaGlobeClass(region)"></i>
+      {{ region }}
+    </div>
     <!-- <div class="pl-2 text-sm text-gray-300">
       {{ obscureTag }}
     </div> -->
@@ -29,8 +33,10 @@ import { defineProps, computed } from "vue"
 import { getLeaderboardFromPlayer } from "../match/PlayerMatches.vue"
 
 import { regionNameToShorts } from "../panels/PanelLeaderboard.vue"
+import { getRegionFaGlobeClass } from "./SearchBookmark.vue"
 
 const props = defineProps({
+  selectedRegion: String,
   player: Object,
 })
 
@@ -39,10 +45,20 @@ import { format, formatDistanceStrict } from "date-fns"
 import { dateFNSLocales } from "../../assets/data/messages"
 
 const leaderboardInfo = computed(() => {
-  return getLeaderboardFromPlayer(regionNameToShorts(props.player.server), props.player.name, props.player.tag)
+  return getLeaderboardFromPlayer(
+    regionNameToShorts(props.player.server),
+    props.player.name,
+    props.player.tag
+  )
+})
+
+const region = computed(() => {
+  return regionNameToShorts(props.player.server)
 })
 
 const obscureTag = computed(() => {
-  return "# " + "• ".repeat(props.player.tag.length - 1) + props.player.tag[props.player.tag.length - 1]
+  return (
+    "# " + "• ".repeat(props.player.tag.length - 1) + props.player.tag[props.player.tag.length - 1]
+  )
 })
 </script>

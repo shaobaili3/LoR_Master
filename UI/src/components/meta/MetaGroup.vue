@@ -1,6 +1,6 @@
 <template>
   <div
-    class="group mr-2 rounded-lg px-4 transition-colors duration-150 hover:bg-gray-800"
+    class="group relative mr-2 rounded-lg px-4 transition-colors duration-150 hover:bg-gray-800"
     :class="{
       'bg-gray-800': expand && !hasFeature && !selfExpand,
       'h-[624px] sm:h-[552px]': expand && !selfExpand,

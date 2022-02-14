@@ -22,7 +22,9 @@ class DeckEncoder {
       throw new TypeError("The provided code does not match the required format.")
     }
     if (version > DeckEncoder.MAX_KNOWN_VERSION) {
-      throw new TypeError("The provided code requires a higher version of this library; please update.")
+      throw new TypeError(
+        "The provided code requires a higher version of this library; please update."
+      )
     }
 
     for (let i = 3; i > 0; i--) {
@@ -55,7 +57,9 @@ class DeckEncoder {
       const fourPlusFactionString = Faction.fromID(fourPlusFaction).shortCode
       const fourPlusNumberString = fourPlusNumber.toString().padStart(3, "0")
 
-      result.push(Card.from(fourPlusSetString, fourPlusFactionString, fourPlusNumberString, fourPlusCount))
+      result.push(
+        Card.from(fourPlusSetString, fourPlusFactionString, fourPlusNumberString, fourPlusCount)
+      )
     }
 
     return result
@@ -95,7 +99,7 @@ class DeckEncoder {
     if (!cards) {
       return {
         code: "",
-        extra: "",
+        extra: [],
       }
     }
 
@@ -157,7 +161,14 @@ class DeckEncoder {
   }
 
   static isValidDeck(cards) {
-    return cards.every((card) => card.code.length === 7 && !isNaN(card.id) && !isNaN(card.count) && card.faction && card.count > 0)
+    return cards.every(
+      (card) =>
+        card.code.length === 7 &&
+        !isNaN(card.id) &&
+        !isNaN(card.count) &&
+        card.faction &&
+        card.count > 0
+    )
   }
 
   static groupByFactionAndSetSorted(cards) {
@@ -180,7 +191,9 @@ class DeckEncoder {
       result.push(set)
     }
 
-    return result.sort((a, b) => a.length - b.length).map((group) => group.sort((a, b) => a.code.localeCompare(b.code)))
+    return result
+      .sort((a, b) => a.length - b.length)
+      .map((group) => group.sort((a, b) => a.code.localeCompare(b.code)))
   }
 }
 

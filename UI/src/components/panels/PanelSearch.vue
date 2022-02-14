@@ -109,8 +109,15 @@
     </div>
     <div class="w-0 max-w-2xl flex-1">
       <div class="flex h-full flex-col px-2 sm:px-0">
-        <div class="z-[2]">
+        <div class="z-[5]">
           <div class="region-tabs">
+            <div
+              class="region-option"
+              :class="{ selected: selectedRegion == null }"
+              @click="selectRegion(null)"
+            >
+              ALL
+            </div>
             <div
               class="region-option"
               v-for="(region, index) in regions"
@@ -131,15 +138,11 @@
                 <span v-if="isLoading || isUpdating"
                   ><i class="fas fa-redo-alt fa-spin-fast"></i
                 ></span>
-                <span v-if="!(isLoading || isUpdating) && !isSameSearch"
+                <span v-else-if="searchText != playerName || !playerName"
                   ><i class="fas fa-search"></i
                 ></span>
-                <span v-if="!(isLoading || isUpdating) && isSameSearch && !isUpdated"
-                  ><i class="fas fa-redo-alt"></i
-                ></span>
-                <span v-if="!(isLoading || isUpdating) && isSameSearch && isUpdated"
-                  ><i class="fas fa-check"></i
-                ></span>
+                <span v-else-if="!isUpdated || isError"><i class="fas fa-redo-alt"></i></span>
+                <span v-else><i class="fas fa-check"></i></span>
               </button>
 
               <input
@@ -147,10 +150,7 @@
                 autocomplete="off"
                 class="search-bar h-12 w-full rounded-3xl border-none bg-gray-800 pl-12 pr-5 text-base text-white placeholder-gray-300 outline-none transition-colors focus:bg-gray-700"
                 :class="{
-                  'rounded-b-none rounded-t-[25px]':
-                    (hasNameAutoComplete ||
-                      (searchText.length > 3 && !(searchText == playerName))) &&
-                    isInputFocused,
+                  'rounded-b-none rounded-t-[25px]': showAutoCompleteBar,
                 }"
                 @keyup="searchName"
                 @keyup.enter="searchHistory"
@@ -158,6 +158,7 @@
                 @keyup.down="autoCompleteIndexPlus"
                 @keydown="onKeyDown"
                 @focus="onInputFocus"
+                @blur="onInputBlur"
                 v-model="searchText"
                 :placeholder="$t('search.player.placeholder')"
               />
@@ -167,32 +168,34 @@
             </div>
             <!-- Auto Complete -->
             <div
-              v-if="hasNameAutoComplete && isInputFocused"
-              class="absolute top-12 z-10 w-full rounded-b-[25px] bg-gray-800 pb-4 text-left"
+              v-if="showAutoCompleteBar"
+              class="absolute top-12 z-10 w-full rounded-b-[25px] bg-gray-800 pb-3 text-left"
             >
-              <div class="max-h-[calc(80vh-140px)] overflow-y-auto">
+              <div class="max-h-[calc(80vh-140px)] overflow-y-auto" v-if="hasNameAutoComplete">
                 <div
                   class="auto-complete-item pl-12"
                   v-for="(player, index) in filteredInputNameList"
                   :key="index"
                   :class="{ 'bg-gray-700': autoCompleteIndex == index }"
-                  @click="searchHistoryAutoComplete(index)"
+                  @mousedown="searchHistoryAutoComplete(index)"
                   :ref="setAutoCompleteRefs"
                 >
-                  <search-auto-complete-item :player="player"></search-auto-complete-item>
+                  <search-auto-complete-item
+                    :selectedRegion="selectedRegion"
+                    :player="player"
+                  ></search-auto-complete-item>
                 </div>
               </div>
-            </div>
-            <div
-              v-if="
-                !hasNameAutoComplete &&
-                isInputFocused &&
-                searchText.length > 3 &&
-                !(searchText == playerName)
-              "
-              class="absolute top-12 z-10 w-full rounded-b-[25px] bg-gray-800 pt-3 pb-3 text-left"
-            >
-              <span class="pl-12 text-gray-200">{{ $t("search.noSuggestion") }}</span>
+              <div class="pl-12 pt-2 text-gray-200">
+                <span v-if="autoCompleteLoading">{{ $t("str.loading") }}</span>
+                <span
+                  v-else-if="
+                    !hasNameAutoComplete && searchText.length > 3 && !(searchText == playerName)
+                  "
+                >
+                  {{ $t("search.noSuggestion") }}
+                </span>
+              </div>
             </div>
           </div>
         </div>
@@ -240,14 +243,13 @@ var requestHistoryTimeout, prevHistoryRequest
 
 import { regionNames, regionRefID } from "./PanelDeckCode.vue"
 
-import { REGION_ID, REGION_SHORTS, REGION_NAMES } from "./PanelLeaderboard.vue"
+import { REGION_ID, REGION_SHORTS, REGION_NAMES, regionNameToShorts } from "./PanelLeaderboard.vue"
 
 import DeckEncoder from "../../modules/runeterra/DeckEncoder"
 import { championCards } from "../../assets/data/champion"
 
 import PlayerMatches from "../match/PlayerMatches.vue"
 import axios from "axios"
-import DeckRegions from "../deck/DeckRegions.vue"
 import DeckPreview from "../deck/DeckPreview.vue"
 
 import { winRateToColor } from "../../modules/utils/colorUtils"
@@ -376,9 +378,10 @@ export default {
       isInputFocused: false,
       autoCompleteRefs: [],
       autoCompleteRequestController: null,
+      autoCompleteLoading: false,
 
       regions: REGION_SHORTS,
-      selectedRegion: "NA",
+      selectedRegion: null,
 
       // Options
       autoLaunch: null,
@@ -390,7 +393,14 @@ export default {
   },
   computed: {
     ...mapState(useBookmarkStore, ["bookmarks"]),
-
+    showAutoCompleteBar() {
+      return (
+        (this.autoCompleteLoading ||
+          this.hasNameAutoComplete ||
+          (this.searchText.length > 3 && !(this.searchText == this.playerName))) &&
+        this.isInputFocused
+      )
+    },
     hasNameAutoComplete() {
       return this.filteredInputNameList && this.filteredInputNameList.length > 0
     },
@@ -512,13 +522,6 @@ export default {
       // return this.inputNameList.map((i) => i.split("#")[0])
       return this.inputNameList
     },
-    isSameSearch() {
-      return (
-        this.searchText == this.playerName &&
-        this.playerTag &&
-        REGION_SHORTS[REGION_ID[this.selectedRegion]] == this.playerRegion
-      )
-    },
     hasLocalInfo() {
       return this.localMatches && this.localMatches.length > 0
     },
@@ -548,6 +551,10 @@ export default {
         region: this.region,
         tag: this.tag,
       })
+    } else if (this.player) {
+      this.searchText = this.player
+      this.searchName()
+      this.focusSearchBar()
     }
     this.initStore()
   },
@@ -556,7 +563,14 @@ export default {
 
     getBadgeTranslateKey,
     winRateToColor,
-
+    focusSearchBar() {
+      var searchBar = document.querySelector(".search-bar")
+      if (searchBar) searchBar.focus()
+    },
+    blurSearchBar() {
+      var searchBar = document.querySelector(".search-bar")
+      if (searchBar) searchBar.blur()
+    },
     showDeck(code) {
       this.$emitter.emit("showDeck", code)
     },
@@ -584,8 +598,7 @@ export default {
       })
 
       this.selectedRegion = region
-      var searchBar = document.querySelector(".search-bar")
-      if (searchBar) searchBar.focus()
+      this.focusSearchBar()
 
       this.searchName()
     },
@@ -602,7 +615,7 @@ export default {
     // Search bar
     clearSearch() {
       this.searchText = ""
-      this.searchName()
+      this.resetAutoComplete()
       document.querySelector(".search-bar").focus()
     },
     onInputFocus() {
@@ -668,10 +681,22 @@ export default {
         // Sets player info for search
 
         var item = this.inputNameList[this.autoCompleteIndex]
-        this.$router.push({
-          name: "search",
-          query: { name: item.name, tag: item.tag, region: this.selectedRegion },
-        })
+
+        var region = regionNameToShorts(item.server)
+
+        if (
+          this.playerName == item.name &&
+          this.playerTag == item.tag &&
+          this.playerRegion == region
+        ) {
+          this.searchText = item.name
+          this.blurSearchBar()
+        } else {
+          this.$router.push({
+            name: "search",
+            query: { name: item.name, tag: item.tag, region: region },
+          })
+        }
 
         // this.playerName = item.name
         // this.playerTag = item.tag
@@ -771,34 +796,30 @@ export default {
       // Abort not completed requests
       if (this.autoCompleteRequestController) this.autoCompleteRequestController.abort()
 
-      const api = `${this.API_WEB}/names/${REGION_NAMES[REGION_ID[this.selectedRegion]]}/${
-        this.searchText
-      }`
+      const api = this.selectedRegion
+        ? `${this.API_WEB}/names/${REGION_NAMES[REGION_ID[this.selectedRegion]]}/${this.searchText}`
+        : `${this.API_WEB}/names/${this.searchText}`
       const controller = new AbortController()
       this.autoCompleteRequestController = controller
+      this.autoCompleteLoading = true
 
       axios
         .get(api, { signal: controller.signal })
         .then((response) => {
-          if (response.data == "Error") {
-            // Error
+          this.autoCompleteLoading = false
+          // console.log(response.data)
+          if (document.querySelector(".search-bar") == document.activeElement && this.searchText) {
+            // If the search bar is still in focus
+            this.inputNameList = response.data
           } else {
-            // console.log(response.data)
-            if (
-              document.querySelector(".search-bar") == document.activeElement &&
-              this.searchText
-            ) {
-              // If the search bar is still in focus
-              this.inputNameList = response.data
-            } else {
-              this.resetAutoComplete()
-            }
+            this.resetAutoComplete()
           }
         })
         .catch((e) => {
           if (axios.isCancel(e)) {
             console.log("Request cancelled")
           } else {
+            this.autoCompleteLoading = false
             console.log("error", e)
           }
         })
@@ -876,13 +897,6 @@ export default {
         })
     },
     requestHistoryData() {
-      if (this.localHistoryLoading) {
-        // Before start, wait until old local search resolves
-        if (requestHistoryTimeout) clearTimeout(requestHistoryTimeout)
-        requestHistoryTimeout = setTimeout(this.requestHistoryData, requestHistoryWaitTime)
-        return
-      }
-
       var newRequest = `${this.API_WEB}/search/${REGION_NAMES[REGION_ID[this.selectedRegion]]}/${
         this.playerName
       }/${this.playerTag}`

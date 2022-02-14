@@ -2,7 +2,7 @@
   <div class="flex h-full justify-center">
     <div class="w-0 max-w-xl flex-1">
       <div class="flex h-full flex-col px-2 sm:px-0">
-        <div class="pb-3 pt-1 text-left text-3xl sm:pt-0">{{ $t("str.settings") }}</div>
+        <div class="pb-3 pt-1 text-left text-3xl sm:pt-0 sm:pb-5">{{ $t("str.settings") }}</div>
         <div class="settings-list">
           <div class="settings-list-item" v-if="IS_ELECTRON">
             <div class="settings-title">

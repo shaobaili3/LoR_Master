@@ -2,7 +2,7 @@
   <div class="flex h-full justify-center overflow-y-auto">
     <div class="w-0 max-w-5xl flex-1">
       <div class="flex h-full flex-col px-2 sm:px-0">
-        <p class="sticky-top pt-3 pb-5 text-left text-3xl">{{ title }}</p>
+        <p class="pt-3 pb-5 text-left text-3xl">{{ title }}</p>
         <p v-if="error" class="text-left">{{ $t("str.invalidDeck") }}</p>
         <div class="block h-0 flex-1 md:flex">
           <div class="flex w-full flex-col md:w-1/4">

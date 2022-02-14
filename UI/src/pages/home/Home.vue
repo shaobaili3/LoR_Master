@@ -165,14 +165,14 @@
       'mt-[43px] h-[calc(100%-88px)]': IS_ELECTRON,
     }"
   >
-    <div class="flex h-[50px] justify-center">
+    <div class="relative flex h-16 justify-center">
       <button
-        class="absolute left-0 block h-[50px] w-[40px] cursor-pointer bg-none text-white"
+        class="absolute left-0 block h-full w-[40px] cursor-pointer bg-none pt-2 text-white"
         @click="hideDeck"
       >
         <span><i class="fas fa-chevron-right"></i></span>
       </button>
-      <div class="flex h-full items-center gap-1.5 py-1.5">
+      <div class="flex h-full items-center gap-1.5 pb-1.5 pt-4">
         <deck-regions :deck="deckCode" :fixedWidth="false"></deck-regions>
       </div>
     </div>
