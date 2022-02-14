@@ -14,7 +14,7 @@
         {{ getCard.name }}
       </div>
       <div class="flex items-center gap-2" v-else-if="getFaction != null">
-        <RegionIcon class="h-6 w-6" :faction="getFaction" :fixedSize="false"></RegionIcon>
+        <IconRegion class="h-6 w-6" :faction="getFaction" :fixedSize="false"></IconRegion>
         {{ content }}
       </div>
       <div v-else-if="!getCard">
@@ -44,6 +44,7 @@ import { useBaseStore } from "../../store/StoreBase"
 import { factionNames } from "../panels/PanelDeckCode.vue"
 import RegionIcon from "../image/IconRegion.vue"
 import IconChampion from "../image/IconChampion.vue"
+import IconRegion from "../image/IconRegion.vue"
 
 const baseStore = useBaseStore()
 
@@ -63,7 +64,8 @@ const getCard = computed(() => {
 })
 
 const getFaction = computed(() => {
-  let factionID = Object.values(factionNames).findIndex((val) => val == props.content)
+  var key = Object.keys(factionNames).find((key) => factionNames[key] == props.content)
+  let factionID = key ? parseInt(key) : null
   return factionID
 })
 

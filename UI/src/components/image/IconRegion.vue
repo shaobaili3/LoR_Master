@@ -1,5 +1,5 @@
 <template>
-  <div class="square relative block w-[2.5em]">
+  <div class="square relative block w-[2.35em]">
     <!-- Padding for some slight visual fix -->
     <!-- :class="{ 'py-[1px] pr-[2px] opacity-20': faction == 99 }" -->
     <img class="absolute top-0 left-0 h-full w-full object-contain" :src="getRegionImgUrl" />
