@@ -2,9 +2,7 @@
   <div
     class="group relative grid h-16 cursor-pointer grid-cols-12 items-center bg-gray-700 transition-colors duration-150 hover:bg-gray-800 sm:mr-1"
     :class="{
-      'rounded-t-md   ': rank == '1',
-      '  ': rank == '2',
-      'rounded-b-md  ': rank == '3',
+      'rounded-t-md': rank == '1',
     }"
   >
     <div class="z-[1]">

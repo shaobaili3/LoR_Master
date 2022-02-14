@@ -39,13 +39,8 @@
 // Image from mobalytics | 220x40
 // https://cdn-lor.mobalytics.gg/production/images/cards-preview/01DE029.webp
 
-import axios from "axios"
-
 import { computePosition, flip } from "@floating-ui/dom"
 import ImageCard from "../image/ImageCard.vue"
-
-const requestStatusWaitTime = 1000 //ms
-var lastStatusRequestTime
 
 export default {
   components: { ImageCard },
@@ -63,18 +58,6 @@ export default {
       } else {
         typeRef = "Unit"
       }
-
-      // cards.push({
-      //     code: cardCode,
-      //     name: card.name,
-      //     count: cardCount,
-      //     baseCount: baseCount,
-      //     cost: card.cost,
-      //     type: card.type,
-      //     typeRef: typeRef,
-      //     supertype: card.supertype,
-      //     set: card.set
-      // })
 
       this.card.name = card.name
       this.card.cost = card.cost
@@ -125,12 +108,14 @@ export default {
   computed: {},
   methods: {
     onImageLoad() {
+      console.log("Image Load")
       this.computeImagePosition()
     },
     computeImagePosition() {
+      console.log("Compute Image Position")
       if (!this.$refs.container || !this.$refs.image) return
       computePosition(this.$refs.container, this.$refs.image, {
-        placement: "bottom",
+        placement: "top",
         middleware: [flip()],
       }).then(({ x, y, strategy }) => {
         this.$refs.image.style.left = `${x}px`

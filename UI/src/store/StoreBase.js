@@ -3,7 +3,10 @@ import { defineStore } from "pinia"
 import sets_en from "../../../Resource/en_us.json"
 
 const sets_en_combined = [].concat(...sets_en)
-const API_WEB_BASE = process.env.VUE_APP_LMT_SERVER == "test" ? "https://lmttest.herokuapp.com" : "https://lormaster.herokuapp.com"
+const API_WEB_BASE =
+  process.env.VUE_APP_LMT_SERVER == "test"
+    ? "https://lmttest.herokuapp.com"
+    : "https://lormaster.herokuapp.com"
 
 export const locales = [
   "de_de",
@@ -77,6 +80,16 @@ export const useBaseStore = defineStore("base", {
       }
 
       this.sets = [].concat(...loadModule.default)
+    },
+    initPortNum() {
+      return new Promise((resolve) => {
+        window.ipcRenderer.on("return-port", (event, port) => {
+          console.log("New Port:", port)
+          this.portNum = port
+          resolve("resolved")
+        })
+        window.ipcRenderer.send("get-port")
+      })
     },
   },
 })

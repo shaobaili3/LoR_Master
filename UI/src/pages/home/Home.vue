@@ -155,16 +155,28 @@
     </div>
   </div>
 
-  <div class="deck-content-container" :class="{ hide: !isShowDeck, fullheight: !IS_ELECTRON }">
-    <div class="deck-content-top-bar">
-      <button class="collapse-btn" @click="hideDeck">
+  <!-- Right Deck View -->
+  <div
+    class="fixed top-0 z-10 flex w-[250px] flex-col bg-gray-900 transition-all"
+    :class="{
+      'right-[-250px]': !isShowDeck,
+      'right-0': isShowDeck,
+      'h-full': !IS_ELECTRON,
+      'mt-[43px] h-[calc(100%-88px)]': IS_ELECTRON,
+    }"
+  >
+    <div class="flex h-[50px] justify-center">
+      <button
+        class="absolute left-0 block h-[50px] w-[40px] cursor-pointer bg-none text-white"
+        @click="hideDeck"
+      >
         <span><i class="fas fa-chevron-right"></i></span>
       </button>
       <div class="flex h-full items-center gap-1.5 py-1.5">
         <deck-regions :deck="deckCode" :fixedWidth="false"></deck-regions>
       </div>
     </div>
-    <div class="deck-content-detail" :fixedHeight="!IS_ELECTRON">
+    <div class="h-0 flex-1" :fixedHeight="!IS_ELECTRON">
       <deck-detail
         :baseDeck="deckCode"
         :fixedHeight="true"
@@ -276,11 +288,6 @@ import {
   REGION_NAMES,
 } from "../../components/panels/PanelLeaderboard.vue"
 
-const requestDataWaitTime = 400 //ms
-const requestHistoryWaitTime = 100 //ms
-
-const inputNameListLength = 10
-
 // IS_ELECTRON & IS_DEV defined in template.js
 
 export const copyToClipboard = (str) => {
@@ -302,20 +309,6 @@ export const copyToClipboard = (str) => {
     document.getSelection().removeAllRanges() // Unselect everything on the HTML document
     document.getSelection().addRange(selected) // Restore the original selection
   }
-}
-
-// import ua from 'universal-analytics'
-
-// const portNum = "26531"
-// const API_BASE = `http://127.0.0.1:${portNum}`
-
-let cancelToken, localCancleToken
-var requestHistoryTimeout, prevHistoryRequest
-
-const regionNames = {
-  NA: "americas",
-  EU: "europe",
-  AS: "asia",
 }
 
 const PANELS = {
@@ -479,18 +472,18 @@ export default {
         return
       }
 
+      this.initPortNum()
       this.handleGameEnd()
       this.handleBackEndClose()
       this.requestVersionData()
-      this.initStore()
-      this.initChangeLocale()
+      this.initUILocale()
       this.initDeckPaste()
     } catch (error) {
       console.log(error)
     }
   },
   methods: {
-    ...mapActions(useBaseStore, ["changeLocale"]),
+    ...mapActions(useBaseStore, ["changeLocale", "initPortNum"]),
     ...mapActions(useStatusStore, ["restartBackend"]),
     ...mapActions(useDeckLibStore, ["deckLibPaste"]),
 
@@ -582,7 +575,7 @@ export default {
       this.leftNavExpanded = false
     },
 
-    initStore() {
+    initUILocale() {
       window.ipcRenderer.send("request-store", "ui-locale")
 
       window.ipcRenderer.on("reply-store-ui-locale", (_event, val) => {
@@ -590,6 +583,11 @@ export default {
           if (this.$i18n) this.$i18n.locale = val
           console.log("Change locale to", val)
         }
+      })
+
+      window.ipcRenderer.on("to-change-locale", (event, newLocale) => {
+        if (this.$i18n) this.$i18n.locale = newLocale
+        console.log("Changing locale to", newLocale)
       })
     },
 
@@ -613,14 +611,6 @@ export default {
       //     this.clipboardDeck = null
       //   }
       // })
-    },
-
-    // Change Locale
-    initChangeLocale() {
-      window.ipcRenderer.on("to-change-locale", (event, newLocale) => {
-        if (this.$i18n) this.$i18n.locale = newLocale
-        console.log("Changing locale to", newLocale)
-      })
     },
 
     handleProfileClick() {
@@ -689,8 +679,8 @@ export default {
     },
     handleGameEnd() {
       window.ipcRenderer.on("game-end-handle", (event) => {
-        console.log("Game Ended: Requesting local history")
-        this.requestLocalHistory()
+        console.log("Game Ended")
+        // this.requestLocalHistory()
       })
     },
     handleBackEndClose() {

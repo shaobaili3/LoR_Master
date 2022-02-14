@@ -1,11 +1,16 @@
 <template>
   <div
-    class="w-full"
+    class="w-full flex-col"
     :class="{
-      'h-full': fullHeight,
+      'flex h-full': fixedHeight,
+      block: !fixedHeight,
     }"
   >
-    <div class="deck-detail" :class="{ 'fixed-height': fixedHeight }" v-if="cards.length > 0">
+    <div
+      class="w-full bg-gray-900 px-1 text-white"
+      :class="{ 'flex-1 overflow-y-auto': fixedHeight }"
+      v-if="cards.length > 0"
+    >
       <card-preview
         v-for="card in cards"
         :key="card.name + card.count"
@@ -24,25 +29,27 @@
     </div>
     <!-- Action buttons -->
     <div
-      class="actions whitespace-nowrap p-2 pt-0 text-sm 2xs:pt-1 2xs:text-base"
-      :class="{ 'fixed-height': fixedHeight }"
+      class="flex w-full items-center justify-end whitespace-nowrap bg-gray-900 p-2 text-sm text-white 2xs:text-base"
       v-if="showCopy && this.baseDeck && this.cards.length > 0"
     >
-      <!-- <a class="actions-btn" :href="deckDetailLink" target="_blank"><span class="actions-icon fa fa-external-link-alt"></span>Detail</a> -->
       <!-- Detail -->
-      <div class="actions-btn text-gold-300" v-if="showURL" @click="openURL(deckDetailLink)">
-        <span class="actions-icon fas fa-analytics"></span>{{ $t("str.detail") }}
+      <div
+        class="ml-2 cursor-pointer text-gold-300"
+        v-if="showURL"
+        @click="openURL(deckDetailLink)"
+      >
+        <span class="fas fa-analytics pr-1"></span>{{ $t("str.detail") }}
       </div>
       <!-- Save -->
-      <div class="actions-btn" v-if="showAdd" @click="addToDeckLib">
-        <span class="actions-icon fa-star" :class="{ fal: this.saved, fas: !this.saved }"></span
+      <div class="ml-2 cursor-pointer" v-if="showAdd" @click="addToDeckLib">
+        <span class="fa-star pr-1" :class="{ fal: this.saved, fas: !this.saved }"></span
         >{{ this.saved ? this.$t("decklib.saved") : this.$t("decklib.save") }}
       </div>
 
       <!-- Copt -->
-      <div class="actions-btn tooltip" @click="copyDeckcode">
+      <div class="tooltip ml-2 cursor-pointer" @click="copyDeckcode">
         <span
-          class="actions-icon fa-copy"
+          class="fa-copy pr-1"
           :class="{ 'fa-exclamation-triangle': !isFull, fal: this.copied, fas: !this.copied }"
         ></span
         >{{ this.copied ? this.$t("str.copied") : this.$t("str.copy") }}
@@ -284,68 +291,4 @@ export default {
 }
 </script>
 
-<style>
-.deck-detail {
-  width: 100%;
-  box-sizing: border-box;
-  /* height: 100px; */
-  word-wrap: break-word;
-  padding: 0px 4px 8px 4px;
-  background-color: var(--col-background);
-  font-size: 0.9em;
-  border-radius: 5px;
-  color: white;
-}
-
-.deck-detail.fixed-height {
-  height: 100%;
-  overflow-y: scroll;
-}
-
-.actions {
-  width: 100%;
-
-  box-sizing: border-box;
-
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  background: var(--col-background);
-
-  color: white;
-}
-
-.actions.fixed-height {
-  position: absolute;
-  bottom: 0px;
-  right: 0px;
-}
-
-.actions-btn {
-  margin-left: 10px;
-  cursor: pointer;
-}
-
-.actions-btn:hover {
-  text-decoration: none;
-}
-
-.actions-icon {
-  padding-right: 5px;
-}
-
-a {
-  color: white;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* @media only screen and (max-width: 768px) {
-        .deck-detail {
-            width: 280px;
-        }
-    } */
-</style>
+<style></style>

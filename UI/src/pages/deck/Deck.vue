@@ -254,8 +254,6 @@ export default {
 
       lorRunning: false,
 
-      portNum: "26531",
-
       currentLayer: 0,
 
       showCardProb: false,
@@ -314,19 +312,17 @@ export default {
     // console.log("Mounted")
     // this.requestData()
     console.log("Page Deck Mounted")
-    console.log(`API BASE: ${this.apiBase}`)
+    // console.log(`API BASE: ${this.apiBase}`)
 
     // this.hideWindow()
     if (this.IS_ELECTRON) {
-      window.ipcRenderer.on("return-port", (event, port) => {
-        console.log("New Port:", port)
-        this.portNum = port
+      this.initPortNum()
+      this.initUILocale()
+
+      // The keyboard shortcut test
+      window.ipcRenderer.on("request-test-history", (event) => {
+        this.requestTestOppoHistory()
       })
-
-      window.ipcRenderer.send("get-port")
-
-      this.initStore()
-      this.initChangeLocale()
     }
 
     this.requestStatusInfo()
@@ -334,14 +330,14 @@ export default {
     // this.requestServerInfo()
   },
   methods: {
-    ...mapActions(useBaseStore, ["changeLocale"]),
+    ...mapActions(useBaseStore, ["changeLocale", "initPortNum"]),
     ...mapActions(useLeaderboardStore, ["fetchLeaderboard"]),
 
     onMatchOppoOpen(index) {
       this.matchInfos[index].expanded = !this.matchInfos[index].expanded
     },
 
-    initStore() {
+    initUILocale() {
       window.ipcRenderer.send("request-store", "ui-locale")
 
       window.ipcRenderer.on("reply-store-ui-locale", (_event, val) => {
@@ -351,21 +347,13 @@ export default {
           console.log("Change locale to", val)
         }
       })
-    },
-    // Change Locale
-    initChangeLocale() {
-      console.log("Initing Change Locale | current locale", this.$i18n.locale)
 
+      // Allow change locale message to be synced across windows
       window.ipcRenderer.on("to-change-locale", (event, newLocale) => {
         this.$i18n.locale = newLocale
         console.log("Changing locale to", newLocale)
       })
-
-      window.ipcRenderer.on("request-test-history", (event) => {
-        this.requestTestOppoHistory()
-      })
     },
-
     hideWindow() {
       if (window.hideWindow) {
         window.hideWindow()
