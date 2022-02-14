@@ -45,7 +45,7 @@
                 <span><i class="fas fa-trash"></i></span>
               </div>
               <div class="version">
-                <deck-preview class="h-14 gap-1 py-2" :click-to-show="false" :deck="deck.code">
+                <deck-preview class="gap-1 py-2 text-base" :click-to-show="false" :deck="deck.code">
                 </deck-preview>
               </div>
             </div>

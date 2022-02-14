@@ -39,7 +39,7 @@
         <div v-if="!isSummary && !isFeature" class="h-4 w-full text-sm text-gray-200"></div>
         <deck-preview
           v-if="code"
-          class="mt-0.5 h-14 gap-1 px-1.5 py-2 transition-colors hover:bg-gray-600 sm:gap-1.5 sm:px-2"
+          class="mt-0.5 gap-1 px-1.5 py-2 text-base transition-colors hover:bg-gray-600 sm:gap-1.5 sm:px-2"
           :class="{
             ' pointer-events-none': isFeature,
           }"

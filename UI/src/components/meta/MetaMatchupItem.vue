@@ -1,7 +1,7 @@
 <template>
   <div class="mb-4 flex flex-col items-center justify-center sm:mb-2 sm:flex-row">
     <deck-preview
-      class="mr-2 h-14 gap-1 py-2 px-3 transition-colors hover:bg-gray-700"
+      class="mr-2 gap-1 py-2 px-3 text-base transition-colors hover:bg-gray-700"
       :fixedWidth="true"
       :deck="deckCode"
     ></deck-preview>

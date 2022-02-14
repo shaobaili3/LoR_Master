@@ -1,8 +1,11 @@
 <template>
-  <div class="relative block h-full w-auto">
+  <div class="square relative block w-[2.5em]">
     <img
-      class="max-h-full rounded-full"
-      :class="{ 'border-2 border-zinc-200': this.code, 'border-0': !this.code }"
+      class="absolute top-0 left-0 h-full w-full rounded-full object-contain"
+      :class="{
+        'border-2 border-zinc-200': this.code,
+        'border-0': !this.code,
+      }"
       :src="getChampionImgUrl"
     />
     <div v-if="count && count != 3" class="count">{{ count }}</div>
@@ -47,7 +50,13 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+.square::after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
 .icon {
   display: block;
   margin-right: 0;

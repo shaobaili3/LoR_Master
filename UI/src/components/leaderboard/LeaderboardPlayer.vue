@@ -53,7 +53,7 @@
 
       <div class="col-span-4 flex justify-center sm:col-span-3">
         <deck-preview
-          class="h-12 gap-0.5 p-1 py-2.5 hover:bg-gray-800 sm:h-12 sm:gap-1 sm:p-2"
+          class="gap-0.5 p-1 py-2.5 text-xs hover:bg-gray-800 sm:gap-1 sm:p-2"
           v-if="deck"
           @click.stop
           :deck="deck"

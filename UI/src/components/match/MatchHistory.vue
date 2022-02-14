@@ -89,7 +89,7 @@
       <div class="flex items-center justify-around pt-1 sm:pt-2">
         <!-- Left -->
         <deck-preview
-          class="h-12 gap-0.5 py-2 px-2 sm:h-14 sm:gap-1 sm:p-2 sm:px-8"
+          class="gap-0.5 py-2 px-2 text-sm sm:gap-1 sm:p-2 sm:px-8 sm:text-base"
           :class="{
             'hover:bg-white/15': won,
             'hover:bg-white/10': !won,
@@ -100,7 +100,7 @@
         <div class="sm:px-8">VS</div>
         <!-- Right -->
         <deck-preview
-          class="h-12 gap-0.5 py-2 px-2 hover:bg-white/10 sm:h-14 sm:gap-1 sm:p-2 sm:px-8"
+          class="gap-0.5 py-2 px-2 text-sm hover:bg-white/10 sm:gap-1 sm:p-2 sm:px-8 sm:text-base"
           @click.stop
           :deck="opponentDeck"
         ></deck-preview>

@@ -64,7 +64,7 @@
             <div class="flex items-center">
               <div>
                 <deck-preview
-                  class="mx-2 h-11 gap-1 py-1.5 px-2 transition-colors hover:bg-gray-800"
+                  class="mx-2 gap-1 py-1.5 px-2 text-xs transition-colors hover:bg-gray-800"
                   :deck="obj.decks[0]"
                 ></deck-preview>
               </div>

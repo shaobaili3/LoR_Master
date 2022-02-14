@@ -109,20 +109,34 @@
       <img class="drop-shadow" src="https://dd.b.pvp.net/latest/set5/en_us/img/cards/05BC093.png" />
     </div> -->
 
-    <div class="flex h-24 w-64 bg-gray-600">
-      <!-- <div
-        class="block aspect-square h-full bg-gray-500"
-        v-for="(i, index) in new Array(4)"
-        :key="index"
-      >
-        {{ index }}
-      </div> -->
-      <div class="flex h-full w-auto justify-start gap-1">
-        <div v-for="(_, index) in new Array(4)" :key="index">
-          <img src="/img/05IO004-cropped.885281bf.png" alt="" class="max-h-full" />
-        </div>
+    <div class="flex gap-5">
+      <div class="wrapper bg-gray-600 text-xs">
+        <img class="container" src="/img/05IO004-cropped.885281bf.png" alt="" />
+        <img class="container" src="/img/5.533e93f8.svg" alt="" />
+        <img class="container" src="/img/10.cdb6bdc9.svg" alt="" />
+        <img class="container" src="/img/05BC058-cropped.ba6ed14d.png" alt="" />
       </div>
-      <!-- <div class="h-full w-1/2 flex-shrink-0"></div> -->
+
+      <div class="wrapper bg-gray-600 text-sm">
+        <img class="container" src="/img/05IO004-cropped.885281bf.png" alt="" />
+        <img class="container" src="/img/5.533e93f8.svg" alt="" />
+        <img class="container" src="/img/10.cdb6bdc9.svg" alt="" />
+        <img class="container" src="/img/05BC058-cropped.ba6ed14d.png" alt="" />
+      </div>
+
+      <div class="wrapper bg-gray-600 text-base">
+        <img class="container" src="/img/05IO004-cropped.885281bf.png" alt="" />
+        <img class="container" src="/img/5.533e93f8.svg" alt="" />
+        <img class="container" src="/img/10.cdb6bdc9.svg" alt="" />
+        <img class="container" src="/img/05BC058-cropped.ba6ed14d.png" alt="" />
+      </div>
+
+      <div class="wrapper bg-gray-600 text-lg">
+        <img class="container" src="/img/05IO004-cropped.885281bf.png" alt="" />
+        <img class="container" src="/img/5.533e93f8.svg" alt="" />
+        <img class="container" src="/img/10.cdb6bdc9.svg" alt="" />
+        <img class="container" src="/img/05BC058-cropped.ba6ed14d.png" alt="" />
+      </div>
     </div>
   </div>
 </template>
@@ -169,3 +183,19 @@ onMounted(() => {
   sendRequest()
 })
 </script>
+
+<style scoped>
+.wrapper {
+  width: auto;
+  height: auto;
+  gap: 2px;
+  padding: 2px;
+  display: flex;
+}
+
+.container {
+  width: 2.65em;
+  height: 2.65em;
+  border: 2px solid white;
+}
+</style>

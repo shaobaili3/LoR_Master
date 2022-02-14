@@ -1,8 +1,8 @@
 <template>
-  <div class="relative block h-full w-auto">
+  <div class="square relative block w-[2.5em]">
     <!-- Padding for some slight visual fix -->
     <!-- :class="{ 'py-[1px] pr-[2px] opacity-20': faction == 99 }" -->
-    <img class="aspect-square max-h-full rounded-full p-0.5" :src="getRegionImgUrl" />
+    <img class="absolute top-0 left-0 h-full w-full object-contain" :src="getRegionImgUrl" />
   </div>
 </template>
 
@@ -23,7 +23,7 @@ export default {
   computed: {
     getRegionImgUrl() {
       if (this.faction == 99) {
-        return require("../../assets/images/regions/no-region.png")
+        return require("../../assets/images/regions/no-region2.png")
       }
       // Remote
       // const regionImageBaseUrl = 'https://painttist.github.io/lor-champ-icons/images/regions/';
@@ -36,3 +36,11 @@ export default {
   methods: {},
 }
 </script>
+
+<style scoped>
+.square::after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+</style>

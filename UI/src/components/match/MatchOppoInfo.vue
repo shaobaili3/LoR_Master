@@ -77,7 +77,7 @@
         <deck-preview
           @click="showDeck"
           :clickToShow="false"
-          class="h-10 w-full gap-0.5 py-1 hover:bg-white/10 2xs:h-12 2xs:py-1.5"
+          class="w-full gap-0.5 py-1 text-xs hover:bg-white/10 2xs:gap-1 2xs:py-1.5 2xs:text-sm"
           :deck="deck"
         ></deck-preview>
         <!-- <div class="text-vs">VS</div> -->
