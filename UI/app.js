@@ -275,7 +275,7 @@ ipcMain.on("get-port", (event, args) => {
 
 setInterval(() => {
   checkForUpdates()
-}, 1000 * 60 * 15)
+}, 1000 * 60 * 15) // 15 miniutes
 
 function checkForUpdates() {
   if (isWin) {
@@ -352,6 +352,8 @@ menu.append(
 
 Menu.setApplicationMenu(menu)
 
+const log = require("electron-log")
+
 // -----------------------------------------------
 // --- Backend Service ---
 // -----------------------------------------------
@@ -394,55 +396,76 @@ function startLMTService(port) {
 
   if (lmtServiceStarted) return
 
-  lmtServiceStarted = true
-  const { spawn } = require("child_process")
+  try {
+    lmtServiceStarted = true
+    const { spawn } = require("child_process")
 
-  var proc
+    var proc
 
-  var devarg = developmentMode ? "dev" : "prod"
+    var devarg = developmentMode ? "dev" : "prod"
 
-  var args = [`--port=${port}`, `--status=${devarg}`]
+    var args = [`--port=${port}`, `--status=${devarg}`]
 
-  if (spawnPython) {
-    proc = spawn("python", ["./LMTService.py", ...args], { cwd: "../" })
-  } else {
-    var backend, execPath
-    if (app.isPackaged) {
-      execPath = path.dirname(app.getPath("exe"))
+    if (spawnPython) {
+      proc = spawn("python", ["./LMTService.py", ...args], { cwd: "../" })
     } else {
-      execPath = __dirname
+      var backend, execPath
+      if (app.isPackaged) {
+        execPath = path.dirname(app.getPath("exe"))
+      } else {
+        execPath = __dirname
+      }
+      backend = path.join(execPath, "backend", "LMTService", "LMTService.exe")
+      proc = spawn(backend, args, {
+        cwd: path.join(execPath, "backend", "LMTService"),
+      })
     }
-    backend = path.join(execPath, "backend", "LMTService", "LMTService.exe")
-    proc = spawn(backend, args, {
-      cwd: path.join(execPath, "backend", "LMTService"),
+
+    proc.stdout.on("data", function (data) {
+      if (isPackaged) {
+        log.info(`stdout: ${data}`)
+      } else {
+        if (developmentMode) console.log("data: ", data.toString("utf8"))
+      }
     })
-  }
+    proc.stderr.on("data", (data) => {
+      if (isPackaged) {
+        log.warn(`stderr: ${data}`)
+      } else {
+        console.log(`stderr: ${data}`) // when error
+      }
+    })
 
-  proc.stdout.on("data", function (data) {
-    if (developmentMode) console.log("data: ", data.toString("utf8"))
-  })
-  proc.stderr.on("data", (data) => {
-    console.log(`stderr: ${data}`) // when error
-  })
+    proc.on("close", (code) => {
+      if (isPackaged) {
+        log.warn(`Child process close all stdio with code ${code}`)
+      } else {
+        console.log(`Child process close all stdio with code ${code}`)
+      }
 
-  proc.on("close", (code) => {
-    console.log(`Child process close all stdio with code ${code}`)
+      lmtServiceStarted = false
 
+      if (lmstServiceRetryCount < lmstServiceRetryLimit) {
+        lmstServiceRetryCount += 1
+        console.log(`Retrying ${lmstServiceRetryCount} time`)
+        startLMTService(port)
+      }
+
+      if (mainWindow) {
+        mainWindow.webContents.send("backend-closed")
+      }
+    })
+    proc.on("exit", (code) => {
+      console.log(`Child process exited with code ${code}`)
+    })
+  } catch (err) {
     lmtServiceStarted = false
-
-    if (lmstServiceRetryCount < lmstServiceRetryLimit) {
-      lmstServiceRetryCount += 1
-      console.log(`Retrying ${lmstServiceRetryCount} time`)
-      startLMTService(port)
+    if (isPackaged) {
+      log.error(err)
+    } else {
+      console.log(err)
     }
-
-    if (mainWindow) {
-      mainWindow.webContents.send("backend-closed")
-    }
-  })
-  proc.on("exit", (code) => {
-    console.log(`Child process exited with code ${code}`)
-  })
+  }
 }
 
 ipcMain.on("backend-restart", (event, enable) => {

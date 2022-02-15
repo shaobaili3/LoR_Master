@@ -151,6 +151,11 @@
     @click="shrinkLeftNav"
   >
     <div class="h-full" @scroll="handleContentScroll">
+      <!-- <router-view v-slot="{ Component, route }">
+        <keep-alive :include="['PanelMeta', 'b']"> 
+          <component :is="Component" :key="route.fullPath" />
+        </keep-alive>
+      </router-view> -->
       <router-view :key="$route.fullPath"></router-view>
     </div>
   </div>
