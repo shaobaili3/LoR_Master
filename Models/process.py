@@ -71,9 +71,9 @@ class Process():
     def getInfo(self):
         while True:
             time.sleep(5)
-            self.startProcessWorker()
+            self.readLog()
 
     def startProcessWorker(self):
-        n = threading.Thread(target=self.readLog)
+        n = threading.Thread(target=self.getInfo)
         n.daemon = True
         n.start()
