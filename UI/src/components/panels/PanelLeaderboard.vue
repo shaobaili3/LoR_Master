@@ -228,7 +228,14 @@ export default {
         //     return player.name.toLowerCase().indexOf(searchText.toLowerCase()) !== -1
         // })
 
-        filteredPlayers.push({ name: searchText })
+        filteredPlayers.push({
+          name: searchText,
+          rank: "",
+          lp: 0,
+          deck: null,
+          winRate: 0,
+          lastRankTime: "",
+        })
 
         return filteredPlayers // TODO implement better way to improve this performence
       }

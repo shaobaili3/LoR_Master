@@ -7,9 +7,6 @@
           {{ $t("decklib.title") }}
         </div>
         <div class="btn-container">
-          <!-- <button class="btn btn-add">
-        <span><i class="fas fa-plus"></i></span>
-      </button> -->
           <div class="input-bar-container">
             <input
               spellcheck="false"
@@ -27,7 +24,14 @@
             {{ error }}
           </div>
         </div>
+        <div v-if="!decks || decks.length == 0">
+          <span class="py-4 text-sm italic text-gray-200">{{ $t("str.nothing") }}</span>
+          <i18n-t keypath="decklib.noDecks" tag="div" class="py-4 text-white">
+            <i class="fas fa-star px-1"></i>
+          </i18n-t>
+        </div>
         <div class="flex h-0 flex-1 overflow-y-auto">
+          <!-- Decks -->
           <div class="decks-container h-fit gap-4">
             <div
               class="deck-block cursor-pointer bg-gray-700 p-2.5 transition-colors hover:bg-gray-800"
@@ -102,18 +106,19 @@ export default {
       this.processPaste(pasteContent)
     },
     onClickDelete(id) {
-      this.$refs.warningModal.showPanel(
-        [
-          () => {
-            console.log("Confirm Delete")
-            this.handleDelete(id)
-          },
-          () => {
-            console.log("Nothing happens")
-          },
-        ],
-        `${this.$t("str.delete")} ${this.decks[id].title}`
-      )
+      // this.$refs.warningModal.showPanel(
+      //   [
+      //     () => {
+      //       console.log("Confirm Delete")
+      //       this.handleDelete(id)
+      //     },
+      //     () => {
+      //       console.log("Nothing happens")
+      //     },
+      //   ],
+      //   `${this.$t("str.delete")} ${this.decks[id].title}`
+      // )
+      this.handleDelete(id)
     },
   },
 }

@@ -109,7 +109,7 @@ export default [
   },
   {
     name: "decklib",
-    path: "/decklib",
+    path: "/library",
     component: PanelDeckLib,
     meta: {
       title: "Deck Library | LoR Master App",

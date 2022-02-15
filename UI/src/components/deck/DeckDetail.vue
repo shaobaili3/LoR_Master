@@ -40,6 +40,7 @@
       >
         <span class="fas fa-analytics pr-1"></span>{{ $t("str.detail") }}
       </div>
+      <div class="w-0 flex-1"></div>
       <!-- Save -->
       <div class="ml-2 cursor-pointer" v-if="showAdd" @click="addToDeckLib">
         <span class="fa-star pr-1" :class="{ fal: this.saved, fas: !this.saved }"></span
