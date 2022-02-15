@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beta | LoR Master App</title>
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Noto+Sans+KR&family=Noto+Sans+SC&family=Noto+Sans+TC&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@700&display=swap");
+     :root {
+      --col-light-gold: rgb(255, 210, 84);
+      --col-gold: rgb(224, 171, 24);
+      --col-mid-gold: rgb(197, 132, 11);
+      --col-dark-gold: rgb(158, 114, 18);
+      --col-darker-gold: rgb(145, 104, 18);
+      --col-background: rgb(28, 28, 31);
+      --col-light-bg: #282828;
+      --col-lighter-bg: #383838;
+      --col-grey: rgb(78, 78, 78);
+      --col-light-grey: rgb(94, 94, 94);
+      --col-lighter-grey: rgb(124, 124, 124);
+      --col-dark-grey: rgb(65, 65, 65);
+      --col-darker-grey: rgb(42, 42, 45);
+      --col-dark-white: #acacac;
+      --col-blue-light-grey: rgb(74, 104, 113);
+    }
+    
+    body {
+      background-color: var(--col-background);
+      color: white;
+    }
+    
+    * {
+      font-family: "Quicksand", "Noto Sans SC", "Noto Sans KR", "Noto Sans TC", "Noto Sans JP", sans-serif;
+    }
+    
+    .link {
+      text-decoration: none;
+      color: var(--col-gold);
+      transition: color 0.15s ease;
+    }
+    
+    .link:hover {
+      color: var(--col-light-gold);
+    }
+    
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      padding-top: 20vh;
+      max-width: 500px;
+      margin: auto;
+      text-align: center;
+    }
+    
+    h3 {
+      color: var(--col-dark-white);
+    }
+    
+    .card {
+      padding: 50px;
+      background-color: var(--col-darker-grey);
+      border-radius: 16px;
+    }
+    
+    .button {
+      cursor: pointer;
+      font-size: large;
+      padding: 10px;
+      background-color: var(--col-gold);
+      color: var(--col-background);
+      border: none;
+      outline: none;
+      display: block;
+      margin-top: 40px;
+      border-radius: 8px;
+      transition: background-color 0.15s ease;
+      text-decoration: none;
+    }
+    
+    .button:hover {
+      background-color: var(--col-light-gold);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="card">
+      <picture>
+        <source srcset="./logo.webp" type="image/webp" />
+        <source srcset="./logo.png" type="image/png" />
+        <img class="logo" height="100px" src="./logo.png" alt="" />
+      </picture>
+      <h1>Thanks for checking out LoR Master App Beta!</h1>
+      <h3>The beta is over now~ Join our <a class="link" href="https://discord.gg/aes45bMjAz">Discord</a> for lastest news and info on next beta</h3>
+      <a class="button" href="https://app.lormaster.com">Proceed to App</a>
+    </div>
+  </div>
+</body>
+
+</html>

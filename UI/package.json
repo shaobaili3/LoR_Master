@@ -15,6 +15,7 @@
     "lint": "vue-cli-service lint",
     "deploy": "deploy.sh",
     "deploy:beta": "deploy_beta.sh",
+    "deploy:beta:finish": "deploy_beta_finish.sh",
     "build-installer": "electron-builder",
     "build-pack": "electron-builder --dir",
     "build-pub": "electron-builder -p always",
