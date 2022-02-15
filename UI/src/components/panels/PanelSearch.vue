@@ -6,7 +6,7 @@
         {{ $t("search.bookmarks").toUpperCase() }}
       </div>
       <div
-        class="mb-4 flex max-h-[25%] flex-shrink flex-col gap-1 overflow-y-auto rounded-lg bg-gray-800"
+        class="mb-4 flex max-h-[25%] min-h-[40px] flex-shrink flex-col gap-1 overflow-y-auto rounded-lg bg-gray-800"
       >
         <i18n-t
           keypath="search.noBookmarks"
@@ -25,7 +25,7 @@
       <!-- Filters -->
       <div
         v-if="playerName && matches.length > 0"
-        class="flex flex-shrink flex-col overflow-y-auto"
+        class="flex flex-shrink-[2] flex-col overflow-y-auto"
       >
         <div class="pb-2 text-center text-lg">
           {{ $t("str.filter").toUpperCase() }}

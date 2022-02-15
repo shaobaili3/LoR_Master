@@ -393,12 +393,11 @@ export default {
     requestOpponentHistory() {
       // http://192.168.20.4:${portNum}/history/asia/J01/J01
 
-      console.log("Request Opponent History for " + this.oppoName)
-
       this.isLoadingOpponentHistory = true
       this.requestOpponentHistoryError = null
 
       var api = `${this.API_WEB}/history/${this.server}/${this.oppoName}`
+      console.log("Request Opponent History, api:", api)
 
       axios
         .get(api)

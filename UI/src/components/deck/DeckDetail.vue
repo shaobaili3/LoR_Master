@@ -8,7 +8,7 @@
   >
     <div
       class="w-full bg-gray-900 px-1 text-white"
-      :class="{ 'flex-1 overflow-y-auto': fixedHeight }"
+      :class="{ 'flex-1 overflow-y-scroll': fixedHeight }"
       v-if="cards.length > 0"
     >
       <card-preview

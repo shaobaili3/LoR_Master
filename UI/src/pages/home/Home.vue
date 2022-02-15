@@ -245,19 +245,19 @@
   </div>
 
   <div
-    class="fixed bottom-16 right-4 z-20 flex flex-col items-start justify-center rounded-md bg-gray-700 px-4 py-2"
+    class="fixed bottom-16 left-24 z-20 flex flex-col items-start justify-center rounded-md bg-gray-800 px-2 py-2"
     v-if="clipboardDeck"
   >
     <i
       class="fas fa-times absolute top-4 right-4 h-4 w-4 cursor-pointer text-gray-200"
       @click="onCloseFastClipboard"
     ></i>
-    <div class="text-lg text-white">{{ $t("str.clipboard") }}</div>
-    <div class="text-sm text-gray-200">
+    <div class="pl-2 text-lg text-white">{{ $t("str.clipboard") }}</div>
+    <div class="pb-2 pl-2 text-sm text-gray-200">
       {{ $t("decklib.saveTo") }}
     </div>
     <deck-preview
-      class="w-full gap-1 py-2 text-base"
+      class="w-full gap-1 py-2 px-2 text-base text-white hover:bg-gray-700"
       :deck="clipboardDeck"
       @click="processPaste"
     ></deck-preview>
