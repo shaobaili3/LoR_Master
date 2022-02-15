@@ -665,8 +665,8 @@
     "attack": 4,
     "cost": 3,
     "health": 3,
-    "description": "<link=vocab.Attack><style=Vocab>Attack</style></link>: Summon an attacking <link=card.summon><style=AssociatedCard>Living Shadow</style></link> with my stats and keywords.",
-    "descriptionRaw": "Attack: Summon an attacking Living Shadow with my stats and keywords.",
+    "description": "<link=vocab.Attack><style=Vocab>Attack</style></link>: Summon an attacking <link=card.summon><style=AssociatedCard>Living Shadow</style></link> with my stats and positive keywords.",
+    "descriptionRaw": "Attack: Summon an attacking Living Shadow with my stats and positive keywords.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "\"Few men think to look back at their shadow. It is their last mistake.\"",
@@ -2231,11 +2231,11 @@
     "regionRefs": [
       "Ionia"
     ],
-    "attack": 2,
+    "attack": 3,
     "cost": 4,
     "health": 3,
-    "description": "<link=vocab.Allegiance><style=Vocab>Allegiance</style></link>: Summon 2 different 1 cost allies from your deck.",
-    "descriptionRaw": "Allegiance: Summon 2 different 1 cost allies from your deck.",
+    "description": "<link=vocab.Allegiance><style=Vocab>Allegiance</style></link>: Summon a 1 cost ally from your deck.",
+    "descriptionRaw": "Allegiance: Summon a 1 cost ally from your deck.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "Wherever she goes, she ensures that others can follow.",
@@ -12168,7 +12168,7 @@
       "Freljord"
     ],
     "attack": 0,
-    "cost": 5,
+    "cost": 6,
     "health": 0,
     "description": "Grant an ally and all allied copies of it <link=vocab.Everywhere><style=Vocab>everywhere</style></link> +2|+2.",
     "descriptionRaw": "Grant an ally and all allied copies of it everywhere +2|+2.",
@@ -12179,10 +12179,10 @@
     "name": "Iceborn Legacy",
     "cardCode": "01FR006",
     "keywords": [
-      "Burst"
+      "Focus"
     ],
     "keywordRefs": [
-      "Burst"
+      "Focus"
     ],
     "spellSpeed": "Burst",
     "spellSpeedRef": "Burst",
