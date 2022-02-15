@@ -4,7 +4,7 @@
   "str": {
     "settings": "設定",
     "loading": "読み込み中",
-    "languages": "言語",
+    "languages": "ソフト表示言語",
     "invalidDeck": "無効なデッキコード",
     "copy": "コピー",
     "copied": "コピーしました！",
@@ -14,14 +14,15 @@
       "playerNotFound": "プレイヤーが見つかりません",
       "playerNoHistory": "対戦履歴が見つかりません",
       "localApiError": "本ソフトを使うには、ゲーム設定の「サードパーティーエンドポイントを有効にする」をチェックしてください",
-      "internalServiceError": "只今本ソフトのサーバーに問題が発生しております"
+      "internalServiceError": "只今本ソフトのサーバーに問題が発生しております",
+      "backend": "ソフトエラー"
     },
     "regions": {
       "americas": "アメリカサーバー",
       "europe": "ヨーロッパサーバー",
       "asia": "アジアサーバー",
       "sea": "東南アジアサーバー",
-      "apac": "アジア太平洋"
+      "apac": "アジア太平洋統合サーバー"
     },
     "times": {
       "sec": "{t} 秒前",
@@ -37,7 +38,22 @@
     "tracker": "トラッカー",
     "requestConfirm": "確認しますか？",
     "labSecrets": "ラボ・シークレット！",
-    "delete": "削除"
+    "delete": "削除",
+    "meta": "メタ環境",
+    "detail": "詳細",
+    "updating": "最新情報更新中...",
+    "noDetail": "詳細が見つかりません",
+    "back": "前の画面に戻る",
+    "archetypes": "テーマ",
+    "leaderboard": "リーダーボード",
+    "nothing": "ここに何もないです",
+    "server": "サーバー",
+    "retry": "リトライ",
+    "support": "サポート",
+    "filter": "フィルター",
+    "gameType": "ゲームタイプ",
+    "history": "履歴",
+    "clickToAdd": "追加するには {0} をクリックしてください"
   },
   "loading": {
     "readyToRock": "準備万端 🤘",
@@ -54,7 +70,12 @@
   "leaderboard": {
     "rank": "ランキング",
     "name": "プレイヤー名",
-    "points": "ポイント"
+    "points": "ポイント",
+    "recent": "最近使用したデッキ",
+    "lastX": "最近の {num} 回のゲーム",
+    "lastRank": "最近のランク戦",
+    "desc": "マスターランクのメタとトッププレイヤーを知るには一番良いソフト！",
+    "lastRankTip": "ランク戦だけを見る"
   },
   "matches": {
     "usage": "{num}% 使用率",
@@ -69,7 +90,14 @@
       "SeasonalTournament": "シーズントーナメント",
       "AI": "AI"
     },
-    "winRate": "{num}% 勝率"
+    "winRate": "{num}% 勝率",
+    "meta": "{num}% メタ環境占有率",
+    "build": "{num}% デッキ構成占有率",
+    "winStreak": "{num} 連勝中！",
+    "recommendedCurrent": "おすすめ（現在）：",
+    "recommended": "おすすめ：",
+    "current": "現在：",
+    "lastNumHour": "最近 {num} 時間"
   },
   "dash": {
     "winRate": "勝率",
@@ -78,12 +106,15 @@
   "search": {
     "leaderboard": {
       "base": "検索",
-      "numPlayer": " {num} 人のプレイヤーから検索"
+      "numPlayer": " {num} 人のマスタープレイヤーから検索"
     },
     "player": {
-      "placeholder": " すべて検索 例えば：Storm#5961"
+      "placeholder": " すべてのプレイヤーから検索 例えば：Storm#5961"
     },
-    "prompt": "⬆ プレイヤー名とハッシュタグを入力してください"
+    "prompt": "⬆ プレイヤー名とハッシュタグを入力してください",
+    "bookmarks": "ブックマーク",
+    "noBookmarks": "ブックマークに追加するには、名前の傍にある {0} をクリックしてください",
+    "noSuggestion": "結果が見つかりません。#tagを付けて詳しく検索します"
   },
   "tooltips": {
     "lorlogin": "LoRがログインしていません",
@@ -94,10 +125,12 @@
       "placeholder": "アドバイスを送ってくれない？",
       "messageSent": "送信しました",
       "confirm": "確認します？",
-      "send": "送信"
+      "send": "送信",
+      "messageSending": "送信しています"
     },
-    "contactUs": "開発者を連絡",
-    "broughtWithLove": "あなたのために❤️を注いで作った:"
+    "contactUs": "開発者に連絡",
+    "broughtWithLove": "あなたのために❤️を注いで作った:",
+    "leaveContact": "続けてコミュを取るために連絡先を記入しますか？"
   },
   "settings": {
     "options": {
@@ -112,7 +145,26 @@
     "reset": "リセット"
   },
   "decklib": {
+    "title": "デッキライブラリ",
     "placeholder": "ここにデッキコードを貼り付けます",
-    "title": "デッキライブラリ"
+    "save": "保存",
+    "saved": "保存しました！",
+    "saveTo": "デッキライブラリに保存します",
+    "noDecks": "デッキを保存するには {0} をクリックしてください"
+  },
+  "deckCode": {
+    "archetypeStats": "テーマの統計",
+    "archetypeMatchups": "テーマのマッチアップ",
+    "mulliganGuide": "マリガンのガイド",
+    "keep": "キープする",
+    "mulligan": "入れ替える",
+    "goodMatchup": "有利マッチアップ",
+    "badMatchup": "不利マッチアップ"
+  },
+  "filter": {
+    "placeHolder": "カード・チャンピオン・地域のフィルター"
+  },
+  "meta": {
+    "subtitle": "マッチアップを見て、知られないデッキを発見、最強構成とマスターメタ環境を把握しよう！"
   }
 }
