@@ -8,7 +8,12 @@
       }"
       :src="getChampionImgUrl"
     />
-    <div v-if="count && count != 3" class="count">{{ count }}</div>
+    <div
+      v-if="count && count != 3"
+      class="absolute -top-[0.25em] -right-[0.35em] flex h-[1.6em] w-[1.6em] items-center justify-center rounded-full bg-gray-800 text-[0.6em] text-white"
+    >
+      {{ count }}
+    </div>
   </div>
 </template>
 
@@ -56,71 +61,4 @@ export default {
   display: block;
   padding-bottom: 100%;
 }
-
-.icon {
-  display: block;
-  margin-right: 0;
-  margin-left: 0;
-  position: relative;
-
-  padding: 9px;
-  text-align: center;
-  /* line-height: 30px; */
-  /* vertical-align: middle; */
-  // width: 18px;
-  // height: 18px;
-  color: white;
-
-  /* background-color: white; */
-
-  background-position: 50% 50%;
-  background-size: cover;
-
-  /* background-image: url('../assets/images/cards/cropped/01DE012-cropped.png'); */
-}
-
-.count {
-  position: absolute;
-  top: -3px;
-  right: -4px;
-  font-size: 0.6em;
-  padding: 1px 5px;
-  border-radius: 100%;
-
-  background: var(--col-light-bg);
-  color: var(--cark-white);
-}
-
-// .won {
-//     .count {
-//         background: var(--col-gold);
-//         color: black;
-//     }
-// }
-
-.icon.champ {
-  border-radius: 30px;
-  border: 2px solid;
-  border-color: inherit;
-  /* box-shadow: -2px 2px 2px 0px rgba(43, 38, 27, 0.6) inset; */
-}
-
-/* .icon.champ:hover {
-        border: 2px solid rgba(255, 255, 255, 1);
-        box-shadow: 1px 2px 5px -2px #000000;
-    } */
-
-// @media screen and (max-width: 275px) {
-//     .icon {
-//         width: 15px;
-//         height: 15px;
-//     }
-// }
-
-// @media screen and (max-width: 190px) {
-//     .icon {
-//         width: 12px;
-//         height: 12px;
-//     }
-// }
 </style>
