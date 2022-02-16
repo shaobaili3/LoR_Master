@@ -3,7 +3,7 @@
     <div class="relative flex items-center justify-center gap-2 md:justify-start">
       <!-- Summary -->
       <div class="flex w-32 flex-col items-start gap-0 whitespace-nowrap">
-        <p class="text-sm text-gray-200">
+        <p class="w-full overflow-x-hidden text-ellipsis text-left text-sm text-gray-200">
           <span v-if="isSummary">
             {{ $t("matches.meta", { num: (playRate * 100).toFixed(2) }) }}
           </span>
@@ -100,7 +100,7 @@
       </div>
 
       <button
-        class="z-[1] rounded-md p-2 text-white/50 transition-colors hover:bg-gray-500 group-hover:text-gold-300 group-hover:hover:text-white"
+        class="z-[1] whitespace-nowrap rounded-md p-2 text-white/50 transition-colors hover:bg-gray-500 group-hover:text-gold-300 group-hover:hover:text-white"
         v-if="linkDetail"
         @click="openURL(detailLink)"
       >

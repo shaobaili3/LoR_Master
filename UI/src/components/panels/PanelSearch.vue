@@ -174,7 +174,7 @@
             >
               <div class="max-h-[calc(80vh-140px)] overflow-y-auto" v-if="hasNameAutoComplete">
                 <div
-                  class="auto-complete-item pl-12"
+                  class="cursor-pointer py-2 pr-2 pl-12 hover:bg-gray-600"
                   v-for="(player, index) in filteredInputNameList"
                   :key="index"
                   :class="{ 'bg-gray-700': autoCompleteIndex == index }"

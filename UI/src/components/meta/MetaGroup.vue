@@ -20,9 +20,11 @@
       @click="onSelfExpand"
     ></meta-deck>
     <div
-      class="pointer-events-none invisible absolute left-1/2 top-[64px] -translate-x-1/2 text-gray-200 opacity-0 transition-all group-hover:top-[74px] group-hover:opacity-100 sm:visible"
+      class="invisible absolute left-1/2 top-[64px] flex -translate-x-1/2 cursor-pointer flex-col items-center text-gray-200 opacity-0 transition-all group-hover:top-[74px] group-hover:opacity-100 sm:visible"
     >
-      <i class="fas pr-2" :class="{ 'fa-angle-down': !expand, 'fa-angle-up': expand }"></i>
+      <div class="text-xs" v-if="!expand">{{ $t("str.expand") }}</div>
+      <i class="fas" :class="{ 'fa-angle-down': !expand, 'fa-angle-up': expand }"></i>
+      <div class="text-xs" v-if="expand">{{ $t("str.collapse") }}</div>
 
       <!-- <div class="mt-3 h-1 w-16 rounded-full bg-gray-200"></div> -->
     </div>
