@@ -9,6 +9,9 @@ import ContactInfo from "../components/panels/PanelContact.vue"
 
 import PanelTest from "../components/panels/PanelTest.vue"
 
+import PanelPolicyPrivacy from "../components/panels/PanelPolicyPrivacy.vue"
+import PanelPolicyTOS from "../components/panels/PanelPolicyTOS.vue"
+
 export default [
   {
     name: "home",
@@ -176,5 +179,17 @@ export default [
       ],
     },
   },
-  { name: "test", path: "/test", component: PanelTest },
+  {
+    name: "test",
+    path: "/test",
+    component: PanelTest,
+  },
+  {
+    path: "/terms-of-service",
+    component: PanelPolicyTOS,
+  },
+  {
+    path: "/privacy",
+    component: PanelPolicyPrivacy,
+  },
 ]
