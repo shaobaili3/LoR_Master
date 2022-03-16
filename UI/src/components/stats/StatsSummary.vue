@@ -51,7 +51,7 @@ const statsDays = computed(() => {
       color: "#fff",
       datasets: [
         {
-          label: "Stats Summary",
+          label: `Stats Days (${len})`,
           data: props.statsDays.slice().reverse(),
           backgroundColor: "rgb(75, 192, 192)",
           fill: false,

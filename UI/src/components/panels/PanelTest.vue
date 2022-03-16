@@ -90,8 +90,8 @@ const rangeAPI = computed(() => {
 const { fetch: fetchStatusDays, error: statsDaysError, data: statsDays } = useRequest(rangeAPI)
 
 function newRange() {
-  if (range.value > 20) {
-    range.value = 20
+  if (range.value > 50) {
+    range.value = 50
   }
   fetchStatusDays()
 }
