@@ -63,15 +63,6 @@
   transition: visibility 0s linear 0s, opacity 300ms;
 }
 
-.auto-complete-item {
-  padding: 6px 15px 8px 9px;
-  cursor: pointer;
-}
-
-.auto-complete-item:hover,
-.auto-complete-item.selected {
-  background: var(--col-dark-grey);
-}
 
 .search-btn {
   color: var(--col-dark-white);

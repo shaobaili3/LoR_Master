@@ -14,6 +14,11 @@ export const router = createRouter({
   routes, // short for `routes: routes`
 })
 
+// To make this tree shakable, read https://vue-chart-3.netlify.app/guide/
+import { Chart, registerables } from "chart.js"
+Chart.register(...registerables)
+Chart.defaults.color = "#fff"
+
 app.use(router)
 
 router.beforeEach((to, from, next) => {
@@ -44,7 +49,9 @@ router.beforeEach((to, from, next) => {
   }
 
   // Remove any stale meta tags from the document using the key attribute we set below.
-  Array.from(document.querySelectorAll("[data-vue-router-controlled]")).map((el) => el.parentNode.removeChild(el))
+  Array.from(document.querySelectorAll("[data-vue-router-controlled]")).map((el) =>
+    el.parentNode.removeChild(el)
+  )
 
   // Skip rendering meta tags if there are none.
   if (!nearestWithMeta) return next()

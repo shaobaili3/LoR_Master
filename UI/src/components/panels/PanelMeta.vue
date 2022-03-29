@@ -9,7 +9,20 @@
           </h2>
         </h1>
 
-        <MetaFilter class="sticky top-0 z-[5] bg-gray-900" @bind-filter="bindFilter"></MetaFilter>
+        <MetaFilter class="sticky top-0 z-[5] bg-gray-900" @bind-filter="bindFilter"
+          ><div
+            v-if="store.metaUpdateTime"
+            class="absolute top-[16px] right-12 pb-2 text-right text-xs text-gray-300 transition-colors hover:text-gray-100"
+          >
+            {{ $t("str.lastUpdated") }}
+            {{
+              formatDistanceStrict(new Date(store.metaUpdateTime), new Date(), {
+                addSuffix: true,
+                locale: dateFNSLocales[$i18n.locale],
+              })
+            }}
+          </div>
+        </MetaFilter>
 
         <div v-if="store.isMetaLoading" class="pb-5 text-2xl">
           <i class="fas fa-circle-notch fa-spin"></i>
@@ -112,6 +125,8 @@ export const getChamps = (code) => {
   return champs
 }
 
+import { formatDistanceStrict } from "date-fns"
+
 export const getDeckID = (code) => {
   var factionNames = getFactions(code)
   if (factionNames) {
@@ -141,6 +156,7 @@ import { useMetaStore } from "../../store/StoreMeta"
 
 import { ref, onMounted, computed } from "vue"
 import MetaFilter from "../meta/MetaFilter.vue"
+import { dateFNSLocales } from "../../assets/data/messages"
 
 const store = useMetaStore()
 

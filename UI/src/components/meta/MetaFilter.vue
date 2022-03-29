@@ -37,6 +37,7 @@
           <span><i class="fas fa-times"></i></span>
         </button>
       </ul>
+      <slot></slot>
 
       <!-- Auto Complete -->
       <div
