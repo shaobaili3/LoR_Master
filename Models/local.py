@@ -95,7 +95,7 @@ class Local:
             headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
             response = requests.post(url, data=json.dumps(localMatch), headers=headers)
             print(response.text)
-        except requests.exceptions.HTTPError as e:
+        except requests.exceptions.RequestException as e:
             print('post error', e.response)
         return localPlayerWon
 
