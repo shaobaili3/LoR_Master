@@ -22,9 +22,9 @@
                 ' border-gold-400  text-white': activeRegionID == 0,
                 'border-transparent text-gold-400': activeRegionID != 0,
               }"
-              @click="switchRegion(regions.NA)"
+              @click="switchRegion(regions.AM)"
             >
-              NA
+              AM
             </button>
             <button
               class="w-[60px] border-b-2 text-base"
@@ -142,11 +142,11 @@
 import LeaderboardPlayer from "../leaderboard/LeaderboardPlayer.vue"
 
 export const REGION_ID = {
-  NA: 0,
+  AM: 0,
   EU: 1,
   APAC: 2,
 }
-export const REGION_SHORTS = ["NA", "EU", "APAC"]
+export const REGION_SHORTS = ["AM", "EU", "APAC"]
 export const REGION_NAMES = ["americas", "europe", "apac"]
 
 export const regionNameToShorts = (name) => {
