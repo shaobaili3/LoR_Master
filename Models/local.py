@@ -91,7 +91,7 @@ class Local:
         self.cache.localMatches[riot_id_lower].insert(0, localMatch)
         self.cache.saveLocal()
         try:
-            url = "https://lmttest.herokuapp.com/tracker"
+            url = "https://lormaster.herokuapp.com/tracker"
             headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
             response = requests.post(url, data=json.dumps(localMatch), headers=headers)
             print(response.text)
