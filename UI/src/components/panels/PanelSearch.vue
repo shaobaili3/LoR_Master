@@ -225,7 +225,7 @@
             <i class="fas fa-circle-notch fa-spin"></i>
             {{ $t("str.updating") }}
           </span>
-          <span v-if="isError">
+          <span v-if="isError && !isUpdating">
             <!-- <i class="fas fa-circle-notch fa-spin"></i> -->
             {{ errorText }}
           </span>
@@ -885,7 +885,8 @@ export default {
                 var errorCode = (data.status && data.status.error) || 3
                 if (errorCode == 1 || errorCode == 2) {
                   // No History Error
-                  this.requestHistoryUpdate()
+                  // this.requestHistoryUpdate()
+                  this.errorHistory(errorCode)
                 } else {
                   this.errorHistory(errorCode) // give a 3 so that there is a fallback
                 }
@@ -980,6 +981,8 @@ export default {
               label: "Type: " + this.errorType + " | URL: " + newRequest,
               value: Date.now() - requestHistoryStartTime,
             })
+
+            this.requestHistoryUpdate() // Attempt to update in case of 404 or something else
           }
         })
     },
