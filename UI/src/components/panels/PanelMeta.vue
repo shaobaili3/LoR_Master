@@ -72,6 +72,7 @@ export const getDecodedDeck = (code) => {
       deck = DeckEncoder.decode(code)
     } catch (error) {
       console.log(error)
+      if (error.message) console.log(error.message)
       return null
     }
   }

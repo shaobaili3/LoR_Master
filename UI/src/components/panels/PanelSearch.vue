@@ -875,9 +875,11 @@ export default {
           if (axios.isCancel(e)) {
             console.log("Request (update) cancelled")
           } else {
-            console.log("error", e)
+            console.log(e)
 
             if (e.response) {
+              if (e.response.data && e.response.data.status) console.log(e.response.data.status)
+
               if (e.response.status == 500) {
                 this.errorHistory(4) // Internal sercive error
               } else {
@@ -964,6 +966,7 @@ export default {
             console.log("error", e)
 
             if (e.response) {
+              if (e.response.data && e.response.data.status) console.log(e.response.data.status)
               if (e.response.status == 500) {
                 this.errorHistory(4) // Internal sercive error
               } else {
