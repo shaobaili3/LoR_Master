@@ -2,7 +2,7 @@
   <div class="flex h-full justify-center gap-2 px-2 sm:px-4">
     <!-- Left -->
     <div class="hidden w-0 max-w-3xl flex-1 justify-center lg:flex">
-      <div class="flex h-full flex-col text-left">
+      <div class="flex h-full w-full max-w-md flex-col text-left">
         <div class="text-xl">Rank Highlight</div>
 
         <!-- Headings -->
@@ -24,7 +24,7 @@
               {{ player.name }}
             </div>
             <div class="col-span-3 flex items-center justify-center gap-1 pl-3">
-              <div class="flex-1 text-center">{{ player.rank }}</div>
+              <div class="flex-1 text-center">{{ player.rank + 1 }}</div>
               <div class="flex-1 whitespace-nowrap text-sm text-green-300">
                 <i class="fas fa-caret-up pr-1"></i>{{ player.rank_change }}
               </div>
