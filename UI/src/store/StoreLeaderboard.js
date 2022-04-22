@@ -21,7 +21,7 @@ export const useLeaderboardStore = defineStore("leaderboard", {
       if (this.request) this.request.cancel()
     },
     fetchLeaderboard(regionID) {
-      if (this.isLeaderboardLoading) return
+      //if (this.isLeaderboardLoading) return
       const baseStore = useBaseStore()
 
       this.lastLeaderboardRequestTime = Date.now()
@@ -45,11 +45,12 @@ export const useLeaderboardStore = defineStore("leaderboard", {
           this.leaderboard[regionID] = res.data
         })
         .catch((e) => {
-          this.isLeaderboardLoading = false
           if (axios.isCancel(e)) {
             console.log("Request cancelled")
           } else {
             console.log("error", e)
+
+            this.isLeaderboardLoading = false
 
             var elapsedTime = Date.now() - this.lastLeaderboardRequestTime // ms
             if (elapsedTime > requestLeaderboardWaitTime) {

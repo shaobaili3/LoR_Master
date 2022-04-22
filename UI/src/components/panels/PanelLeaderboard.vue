@@ -3,14 +3,15 @@
     <!-- Left -->
     <div class="hidden w-0 max-w-3xl flex-1 justify-center lg:flex">
       <div class="flex h-full w-full max-w-md flex-col text-left">
-        <div class="text-xl">Rank Highlight</div>
+        <div class="text-xl">LADDER HIGHLIGHT</div>
 
         <!-- Headings -->
-        <div class="grid h-14 grid-cols-12 items-center">
-          <div class="col-span-4 overflow-hidden text-ellipsis whitespace-nowrap pl-3">
+        <div class="grid h-12 grid-cols-12 items-center text-sm">
+          <div class="col-span-3 overflow-hidden text-ellipsis whitespace-nowrap pl-3">
             {{ $t("leaderboard.name") }}
           </div>
-          <div class="col-span-3 flex justify-center">{{ $t("leaderboard.rank") }}</div>
+          <div class="col-span-2 flex justify-center">{{ $t("leaderboard.rank") }}</div>
+          <div class="col-span-2 flex justify-center">{{ $t("leaderboard.points") }}</div>
           <div class="col-span-5 flex justify-center">{{ $t("leaderboard.recent") }}</div>
         </div>
         <div class="h-0 flex-1 overflow-auto rounded-md">
@@ -20,13 +21,19 @@
             :key="player.rank"
             @click="searchPlayer(player)"
           >
-            <div class="col-span-4 overflow-hidden text-ellipsis whitespace-nowrap pl-3">
+            <div class="col-span-3 overflow-hidden text-ellipsis whitespace-nowrap pl-3">
               {{ player.name }}
             </div>
-            <div class="col-span-3 flex items-center justify-center gap-1 pl-3">
+            <div class="col-span-2 flex items-center justify-center gap-1">
               <div class="flex-1 text-center">{{ player.rank + 1 }}</div>
-              <div class="flex-1 whitespace-nowrap text-sm text-green-300">
+              <!-- <div class="flex-1 whitespace-nowrap text-sm text-green-300">
                 <i class="fas fa-caret-up pr-1"></i>{{ player.rank_change }}
+              </div> -->
+            </div>
+            <div class="col-span-2 flex items-center justify-center gap-1">
+              <div class="flex-1 text-center">{{ player.lp }}</div>
+              <div class="flex-1 whitespace-nowrap text-sm text-green-300">
+                <i class="fas fa-caret-up pr-1"></i>{{ player.lp_3_change }}
               </div>
             </div>
             <div class="col-span-5 flex justify-center">
@@ -297,7 +304,9 @@ export default {
         .concat()
         .sort((a, b) => {
           // a < b -> -1
-          return b.rank_change - a.rank_change
+          // return b.rank_change - a.rank_change
+          // return b.lp_change - a.lp_change
+          return b.lp_3_change - a.lp_3_change
         })
         .slice(0, 10)
     },

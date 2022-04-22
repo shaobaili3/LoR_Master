@@ -30,7 +30,7 @@
         </div>
 
         <!-- Select sorting function -->
-        <div v-if="!store.isMetaLoading" class="flex items-center pl-4 pb-2 text-sm">
+        <div v-if="filteredMeta.length != 0" class="flex items-center pl-4 pb-2 text-sm">
           <span class="mr-2">{{ $t("str.sort") }}</span>
           <button
             v-for="(rule, index) in sortRules"

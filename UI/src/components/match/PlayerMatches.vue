@@ -183,7 +183,9 @@ export default {
     MatchHistory,
   },
   mounted() {
-    this.leaderboardStore.fetchLeaderboard(REGION_ID[this.playerRegion])
+    if (!this.leaderboardStore && !this.leaderboardStore[REGION_ID[this.playerRegion]]) {
+      this.leaderboardStore.fetchLeaderboard(REGION_ID[this.playerRegion])
+    }
   },
   props: {
     playerName: String,
