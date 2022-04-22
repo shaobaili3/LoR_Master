@@ -29,6 +29,35 @@
           {{ $t("str.loading") }}
         </div>
 
+        <!-- Select sorting function -->
+        <div v-if="!store.isMetaLoading" class="flex items-center pl-4 pb-2 text-sm">
+          <span class="mr-2">{{ $t("str.sort") }}</span>
+          <button
+            v-for="(rule, index) in sortRules"
+            class="ml-1.5 rounded px-2 py-1 hover:bg-gray-600"
+            :class="{ 'bg-gray-600': sortRuleID == index }"
+            :key="rule"
+            @click="
+              () => {
+                if (sortRuleID != index) {
+                  sortRuleID = index
+                  isSortAscending = false
+                } else {
+                  isSortAscending = !isSortAscending
+                }
+              }
+            "
+          >
+            {{ $t(`meta.sort.${rule}`) }}
+            <span v-if="sortRuleID == index"
+              ><i
+                class="fad pl-1"
+                :class="{ 'fa-sort-up': isSortAscending, 'fa-sort-down': !isSortAscending }"
+              ></i
+            ></span>
+          </button>
+        </div>
+
         <!-- <p v-if="metaGroups" class="pb-2 text-left sub-title">{{$t("matches.games", {num: totalGames})}}</p> -->
         <DynamicScroller
           :items="filteredMeta"
@@ -167,6 +196,10 @@ onMounted(() => {
   fetchMetaGroups()
 })
 
+const sortRules = ["playRate", "winRate"]
+var isSortAscending = ref(false)
+var sortRuleID = ref(0)
+
 const filter = ref([])
 
 function bindFilter(newFilter) {
@@ -175,44 +208,58 @@ function bindFilter(newFilter) {
 
 const filteredMeta = computed(() => {
   if (!store.metaGroups) return null
+
+  const sortFn = (a, b) => {
+    // Sort by play rate
+    if (sortRuleID.value == 0) {
+      return isSortAscending.value ? -1 : 1
+    }
+    // if a < b return -1;
+    if (a.win_rate > b.win_rate) return isSortAscending.value ? 1 : -1
+    return isSortAscending.value ? -1 : 1
+  }
+
   if (filter.value.length > 0)
     // Loop through all meta group items
-    return store.metaGroups.filter((item) => {
-      // Loop through all filter items
-      for (let i = 0; i < filter.value.length; i++) {
-        const filterItem = filter.value[i]
-        // Check if it is part of ID (Factions & Champ names)
-        if (!item._id.toLowerCase().includes(filterItem.replace(/\s+/g, "").toLowerCase())) {
-          // Check if it is a filter for card name
-          if (!item.decks) return false
-          let isCard = false
-          // Loop through all decks under this group
-          for (let j = 0; j < item.decks.length; j++) {
-            let deck = item.decks[j]
-            let cards = getDecodedDeck(deck.deck_code)
-            if (!cards) continue // Something went wrong with the deck code
+    return store.metaGroups
+      .filter((item) => {
+        // Loop through all filter items
+        for (let i = 0; i < filter.value.length; i++) {
+          const filterItem = filter.value[i]
+          // Check if it is part of ID (Factions & Champ names)
+          if (!item._id.toLowerCase().includes(filterItem.replace(/\s+/g, "").toLowerCase())) {
+            // Check if it is a filter for card name
+            if (!item.decks) return false
+            let isCard = false
+            // Loop through all decks under this group
+            for (let j = 0; j < item.decks.length; j++) {
+              let deck = item.decks[j]
+              let cards = getDecodedDeck(deck.deck_code)
+              if (!cards) continue // Something went wrong with the deck code
 
-            // Loop through all cards
-            for (let k = 0; k < cards.length; k++) {
-              var cardCode = cards[k].code
-              if (filterItem == cardCode) {
-                isCard = true
-                break
+              // Loop through all cards
+              for (let k = 0; k < cards.length; k++) {
+                var cardCode = cards[k].code
+                if (filterItem == cardCode) {
+                  isCard = true
+                  break
+                }
+                // var card = baseStore.sets_en[cardCode]
+                // if (card.name.includes(filterItem)) {
+                //   console.log(card.name)
+                //   isCardName = true
+                // }
               }
-              // var card = baseStore.sets_en[cardCode]
-              // if (card.name.includes(filterItem)) {
-              //   console.log(card.name)
-              //   isCardName = true
-              // }
             }
+            if (!isCard) return false
           }
-          if (!isCard) return false
         }
-      }
-      return true
-    })
+        return true
+      })
+      .concat()
+      .sort(sortFn)
 
-  return store.metaGroups
+  return store.metaGroups.concat().sort(sortFn)
 })
 
 function metaGroupOnClick(id) {

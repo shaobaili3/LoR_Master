@@ -2,7 +2,7 @@
   <!-- Meta Search Bar -->
   <div class>
     <!-- Tag Box -->
-    <div class="relative pb-4">
+    <div class="relative pb-3">
       <i
         class="fas fa-filter absolute left-5 top-4"
         :class="{ 'text-gray-200': !(tags.length > 0) }"
@@ -105,6 +105,9 @@ import MetaFilterTags, { TAG_TYPES } from "./MetaFilterTags.vue"
 import { useBaseStore } from "../../store/StoreBase"
 import CardPreview from "../deck/CardPreview.vue"
 
+import { factionNames } from "../panels/PanelDeckCode.vue"
+import IconRegion from "../image/IconRegion.vue"
+
 const baseStore = useBaseStore()
 const autoCompleteItems = ref([])
 const filterInput = ref(null)
@@ -140,9 +143,6 @@ function addACToFilter(item) {
   filterInput.value.value = ""
   generateAutoComplete("")
 }
-
-import { factionNames } from "../panels/PanelDeckCode.vue"
-import IconRegion from "../image/IconRegion.vue"
 
 function generateAutoComplete(val) {
   let newList = []

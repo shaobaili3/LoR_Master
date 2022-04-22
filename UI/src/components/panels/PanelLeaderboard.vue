@@ -1,6 +1,50 @@
 <template>
-  <div class="flex h-full justify-center px-2 sm:px-4">
-    <div class="w-0 max-w-3xl flex-1">
+  <div class="flex h-full justify-center gap-2 px-2 sm:px-4">
+    <!-- Left -->
+    <div class="hidden w-0 max-w-3xl flex-1 justify-center lg:flex">
+      <div class="flex h-full flex-col text-left">
+        <div class="text-xl">Rank Highlight</div>
+
+        <!-- Headings -->
+        <div class="grid h-14 grid-cols-12 items-center">
+          <div class="col-span-4 overflow-hidden text-ellipsis whitespace-nowrap pl-3">
+            {{ $t("leaderboard.name") }}
+          </div>
+          <div class="col-span-3 flex justify-center">{{ $t("leaderboard.rank") }}</div>
+          <div class="col-span-5 flex justify-center">{{ $t("leaderboard.recent") }}</div>
+        </div>
+        <div class="h-0 flex-1 overflow-auto rounded-md">
+          <div
+            v-for="player in highlightOneDay"
+            class="grid h-14 cursor-pointer grid-cols-12 items-center bg-gray-800 hover:bg-gray-600"
+            :key="player.rank"
+            @click="searchPlayer(player)"
+          >
+            <div class="col-span-4 overflow-hidden text-ellipsis whitespace-nowrap pl-3">
+              {{ player.name }}
+            </div>
+            <div class="col-span-3 flex items-center justify-center gap-1 pl-3">
+              <div class="flex-1 text-center">{{ player.rank }}</div>
+              <div class="flex-1 whitespace-nowrap text-sm text-green-300">
+                <i class="fas fa-caret-up pr-1"></i>{{ player.rank_change }}
+              </div>
+            </div>
+            <div class="col-span-5 flex justify-center">
+              <deck-preview
+                class="gap-0.5 p-1 py-2.5 text-xs hover:bg-gray-800 sm:gap-1 sm:p-2"
+                v-if="player.deck_code"
+                @click.stop
+                :deck="player.deck_code"
+                :fixed-width="true"
+                :size="1"
+              ></deck-preview>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Center -->
+    <div class="w-0 max-w-3xl flex-[2]">
       <div class="flex h-full flex-col px-2 sm:px-0">
         <h1 class="title flex w-full items-end text-left sm:block sm:text-white">
           <!-- Title -->
@@ -113,7 +157,7 @@
           class="block h-0 w-full flex-1 overflow-y-auto rounded-md"
           :items="filteredPlayers"
           :item-size="64"
-          key-field="name"
+          key-field="rank"
           ref="scroller"
         >
           <template v-slot="{ item, index }"
@@ -133,6 +177,8 @@
         </RecycleScroller>
       </div>
     </div>
+    <!-- Right -->
+    <div class="hidden w-0 max-w-3xl flex-1 2xl:flex"></div>
   </div>
 </template>
 
@@ -167,8 +213,10 @@ const leaderboardStorageID = "lmt-settings-leaderboard-region"
 import { useLeaderboardStore } from "../../store/StoreLeaderboard"
 import { mapState, mapActions } from "pinia"
 
+import DeckPreview from "../deck/DeckPreview.vue"
+
 export default {
-  components: { LeaderboardPlayer },
+  components: { LeaderboardPlayer, DeckPreview },
   mounted() {
     // this.getLeaderboard(this.activeRegionID)
     // console.log("Mounted Leaderboard")
@@ -240,6 +288,18 @@ export default {
         return filteredPlayers // TODO implement better way to improve this performence
       }
       return this.leaderboard[this.activeRegionID]
+    },
+    highlightOneDay() {
+      if (!this.leaderboard || !this.leaderboard[this.activeRegionID]) {
+        return null
+      }
+      return this.leaderboard[this.activeRegionID]
+        .concat()
+        .sort((a, b) => {
+          // a < b -> -1
+          return b.rank_change - a.rank_change
+        })
+        .slice(0, 10)
     },
     searchPlaceHolder() {
       if (this.leaderboard && this.leaderboard[this.activeRegionID]) {
