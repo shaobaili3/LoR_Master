@@ -1,14 +1,17 @@
 <template>
   <div
-    class="group relative mr-2 rounded-lg px-4 transition-colors duration-150 hover:bg-gray-800"
+    class="group relative mr-2 flex items-center rounded-lg px-4 transition-colors duration-150 hover:bg-gray-800"
     :class="{
       'bg-gray-800': expand && !hasFeature && !selfExpand,
       'h-[624px] sm:h-[552px]': expand && !selfExpand,
       'h-[104px] sm:h-[92px]': !expand && !selfExpand,
     }"
   >
+    <div class="mr-4 rounded-md border-2 border-gray-600 py-0.5 px-2 text-sm text-gray-200">
+      {{ index + 1 }}
+    </div>
     <meta-deck
-      class="cursor-pointer"
+      class="flex-1 cursor-pointer"
       :code="recomended"
       :isFeature="hasFeature && this.group.feature.deck_code == recomended"
       :playNum="group.play_num"
@@ -66,6 +69,7 @@ export default {
       type: Boolean,
       default: false,
     },
+    index: Number,
   },
   data() {
     return {

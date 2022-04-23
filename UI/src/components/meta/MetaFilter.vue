@@ -6,6 +6,11 @@
       <i
         class="fas fa-filter absolute left-5 top-4"
         :class="{ 'text-gray-200': !(tags.length > 0) }"
+        @click="
+          () => {
+            emits('refresh')
+          }
+        "
       ></i>
       <ul
         class="flex w-full flex-wrap items-center gap-2 bg-gray-800 pl-12 pr-12 transition-colors focus-within:bg-gray-700"
@@ -127,7 +132,7 @@ const hasAutoComplete = computed(() => {
   return autoCompleteItems.value.length > 0
 })
 
-const emits = defineEmits(["bindFilter"])
+const emits = defineEmits(["bindFilter", "refresh"])
 
 function saveToLocalStorage() {
   window.localStorage.setItem(metaFilterStorageID, JSON.stringify(tags.value))

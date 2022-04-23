@@ -1,6 +1,6 @@
 <template>
   <div class="flex h-full justify-center px-2">
-    <div class="w-0 max-w-4xl flex-1">
+    <div class="w-0 max-w-5xl flex-1">
       <div class="flex h-full flex-col sm:px-0">
         <h1 class="title pb-4 pt-1 text-left text-3xl sm:pt-0">
           {{ $t("str.meta") }}
@@ -9,7 +9,14 @@
           </h2>
         </h1>
 
-        <MetaFilter class="sticky top-0 z-[5] bg-gray-900" @bind-filter="bindFilter"
+        <MetaFilter
+          class="sticky top-0 z-[5] bg-gray-900"
+          @bind-filter="bindFilter"
+          @refresh="
+            () => {
+              fetchMetaGroups()
+            }
+          "
           ><div
             v-if="store.metaUpdateTime"
             class="absolute top-[16px] right-12 pb-2 text-right text-xs text-gray-300 transition-colors hover:text-gray-100"
@@ -74,7 +81,11 @@
               :data-index="index"
             >
               <div class="py-1 pb-4">
-                <MetaGroup @click="metaGroupOnClick(item._id)" :group="item"></MetaGroup>
+                <MetaGroup
+                  @click="metaGroupOnClick(item._id)"
+                  :group="item"
+                  :index="index"
+                ></MetaGroup>
               </div>
             </DynamicScrollerItem>
           </template>

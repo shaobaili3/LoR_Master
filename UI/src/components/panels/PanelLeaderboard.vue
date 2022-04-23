@@ -3,7 +3,7 @@
     <!-- Left -->
     <div class="hidden w-0 max-w-3xl flex-1 justify-center lg:flex">
       <div class="flex h-full w-full max-w-md flex-col text-left">
-        <div class="text-xl">LADDER HIGHLIGHT</div>
+        <div class="text-xl">{{ $t("leaderboard.ladderHighlight").toUpperCase() }}</div>
 
         <!-- Headings -->
         <div class="grid h-12 grid-cols-12 items-center text-sm">
@@ -105,7 +105,15 @@
         <!-- Search bar -->
         <div class="">
           <div class="relative mt-4 h-12">
-            <div class="search-icon left" v-if="!isLoading">
+            <div
+              class="search-icon left"
+              v-if="!isLoading"
+              @click="
+                () => {
+                  this.fetchLeaderboard(this.activeRegionID)
+                }
+              "
+            >
               <i class="fa fa-trophy"></i>
             </div>
             <div class="search-icon left loading" v-if="isLoading">
