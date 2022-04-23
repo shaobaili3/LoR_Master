@@ -85,6 +85,7 @@
                   @click="metaGroupOnClick(item._id)"
                   :group="item"
                   :index="index"
+                  :sortRuleID="sortRuleID"
                 ></MetaGroup>
               </div>
             </DynamicScrollerItem>

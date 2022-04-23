@@ -1,6 +1,12 @@
 <template>
   <div class="group py-2">
     <div class="relative flex items-center justify-center gap-2 md:justify-start">
+      <div
+        v-if="index || index == '0'"
+        class="mr-4 rounded-md border-2 border-gray-600 py-0.5 px-2 text-sm text-gray-200"
+      >
+        {{ index + 1 }}
+      </div>
       <!-- Summary -->
       <div class="flex w-32 flex-col items-start gap-0 whitespace-nowrap">
         <p class="w-full overflow-x-hidden text-ellipsis text-left text-sm text-gray-200">
@@ -11,17 +17,27 @@
             {{ $t("matches.build", { num: (playRate * 100).toFixed(2) }) }}
           </span>
         </p>
-        <p class="text-sm sm:text-base">
+        <p
+          class="text-sm text-white"
+          :class="{
+            ' sm:text-sm': sortRuleID == 1,
+            ' sm:text-xl': sortRuleID == 0,
+          }"
+        >
           {{ $t("matches.games", { num: playNum }) }}
         </p>
         <p
-          class="text-lg sm:text-xl"
+          class="text-lg"
+          :class="{
+            'sm:text-2xl': sortRuleID == 1,
+            'text-base': sortRuleID == 0,
+          }"
           :style="{
             color: closestColor(winRateBounds.centerAdjusted),
           }"
         >
           {{ (winRate * 100).toFixed(1) }}%
-          <span class="block text-sm sm:inline sm:text-base">
+          <span class="block text-sm sm:inline sm:text-sm">
             | ± {{ (winRateBounds.gap * 50).toFixed(2) }}</span
           >
         </p>
@@ -144,6 +160,8 @@ export default {
       type: Boolean,
       default: false,
     },
+    index: Number,
+    sortRuleID: Number,
   },
   computed: {
     winRateBounds() {

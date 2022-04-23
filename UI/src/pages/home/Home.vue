@@ -113,16 +113,41 @@
       />
     </div>
 
-    <div class="card square" @click="openURL('https://www.swimstrim.com/')">
+    <!-- <div class="card square" @click="openURL('https://www.swimstrim.com/')">
       <img src="https://www.swimstrim.com/packs/media/images/logo-8b7cd382.png" />
+    </div> -->
+
+    <div class="card square" @click="openURL('https://runeterra.ar/')">
+      <img src="https://cdnruneterra.ar/assets/img/logo_ar_black.png" />
     </div>
+
+    <!-- <div class="card square" @click="openURL('https://www.llorr-stats.com/')">
+      <img src="https://www.llorr-stats.com/images/logo.png" />
+    </div> -->
+
     <div class="card sqaure" @click="openURL(lorNewsURL)">
       <img
         src="https://images.contentstack.io/v3/assets/blt0eb2a2986b796d29/blt8ba1ec1b0013e362/5ea53af4ae23d30cd1dfb3e4/lor-logo.png"
       />
     </div>
-    <div class="card square" @click="openURL('https://runeterra.ar/')">
-      <img src="https://cdnruneterra.ar/assets/img/logo_ar_black.png" />
+
+    <div
+      class="card square text-center text-white"
+      @click="openURL('https://www.llorr-stats.com/')"
+    >
+      LLoRR Stats
+    </div>
+
+    <div class="card square text-center text-white" @click="openURL('https://www.lor-meta.com/')">
+      LoR Meta Report
+    </div>
+
+    <div
+      v-if="this.locale != 'English'"
+      class="card square text-center text-white"
+      @click="openURL('https://www.loryx.wiki/')"
+    >
+      LoR 中文 Wiki
     </div>
   </div>
 

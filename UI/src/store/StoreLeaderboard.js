@@ -12,6 +12,7 @@ export const useLeaderboardStore = defineStore("leaderboard", {
     return {
       request: null,
       leaderboard: [],
+      leaderboardUpdateTime: [],
       lastLeaderboardRequestTime: null,
       isLeaderboardLoading: false,
     }
@@ -35,14 +36,15 @@ export const useLeaderboardStore = defineStore("leaderboard", {
       const axiosSource = axios.CancelToken.source()
       this.request = { cancel: axiosSource.cancel, msg: "Loading..." }
 
-      var api_link = `${baseStore.API_WEB}/leaderboard/${region}`
+      var api_link = `${baseStore.API_WEB}/rank/${region}`
 
       axios
         .get(api_link, { cancelToken: axiosSource.token })
         .then((res) => {
           // this.rawPlayers = res.data;
           this.isLeaderboardLoading = false
-          this.leaderboard[regionID] = res.data
+          this.leaderboard[regionID] = res.data.players
+          this.leaderboardUpdateTime[regionID] = res.data.time
         })
         .catch((e) => {
           if (axios.isCancel(e)) {

@@ -3,11 +3,14 @@
     <!-- Left -->
     <div class="hidden w-0 max-w-3xl flex-1 justify-center lg:flex">
       <div class="flex h-full w-full max-w-md flex-col text-left">
-        <div class="text-xl">{{ $t("leaderboard.ladderHighlight").toUpperCase() }}</div>
+        <div class="text-xl">
+          {{ $t("leaderboard.ladderHighlight").toUpperCase() }}
+          <span class="pl-2 text-sm text-gold-400">{{ REGION_SHORTS[activeRegionID] }}</span>
+        </div>
 
         <!-- Headings -->
         <div class="grid h-12 grid-cols-12 items-center text-sm">
-          <div class="col-span-3 overflow-hidden text-ellipsis whitespace-nowrap pl-3">
+          <div class="col-span-3 overflow-hidden text-ellipsis whitespace-nowrap pl-4">
             {{ $t("leaderboard.name") }}
           </div>
           <div class="col-span-2 flex justify-center">{{ $t("leaderboard.rank") }}</div>
@@ -21,7 +24,7 @@
             :key="player.rank"
             @click="searchPlayer(player)"
           >
-            <div class="col-span-3 overflow-hidden text-ellipsis whitespace-nowrap pl-3">
+            <div class="col-span-3 overflow-hidden text-ellipsis whitespace-nowrap pl-4">
               {{ player.name }}
             </div>
             <div class="col-span-2 flex items-center justify-center gap-1">
@@ -133,6 +136,18 @@
               :disabled="isLoading"
               ref="leaderboardInput"
             />
+            <div
+              v-if="updateTime && updateTime[activeRegionID]"
+              class="absolute top-[16px] right-12 pb-2 text-right text-xs text-gray-300 transition-colors hover:text-gray-100"
+            >
+              {{ $t("str.lastUpdated") }}
+              {{
+                formatDistanceStrict(new Date(updateTime[activeRegionID]), new Date(), {
+                  addSuffix: true,
+                  locale: dateFNSLocales[$i18n.locale],
+                })
+              }}
+            </div>
             <div class="search-icon right" @click="clearSearch" v-if="searchText != ''">
               <span><i class="fas fa-times"></i></span>
             </div>
@@ -201,6 +216,8 @@
 // const axios = require('axios')
 // import axios from "axios"
 import LeaderboardPlayer from "../leaderboard/LeaderboardPlayer.vue"
+import { formatDistanceStrict } from "date-fns"
+import { dateFNSLocales } from "../../assets/data/messages"
 
 export const REGION_ID = {
   AM: 0,
@@ -250,11 +267,15 @@ export default {
       rawPlayers: [],
       activeRegionID: 0,
       regions: REGION_ID,
+
       request: null,
       searchText: "",
       signedIn: false,
       dataStartTime: 0,
       selectedIndex: 0,
+
+      REGION_SHORTS,
+      dateFNSLocales,
 
       inputFocused: false,
     }
@@ -273,6 +294,7 @@ export default {
     ...mapState(useLeaderboardStore, {
       leaderboard: "leaderboard",
       isLoading: "isLeaderboardLoading",
+      updateTime: "leaderboardUpdateTime",
     }),
     filteredPlayers() {
       if (!this.leaderboard || !this.leaderboard[this.activeRegionID]) {
@@ -330,7 +352,7 @@ export default {
   },
   methods: {
     ...mapActions(useLeaderboardStore, ["fetchLeaderboard"]),
-
+    formatDistanceStrict,
     selectTopItem() {
       const scroller = this.$refs.scroller
       const el = scroller.$el
