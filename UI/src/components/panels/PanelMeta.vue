@@ -32,62 +32,70 @@
         </MetaFilter>
 
         <!-- Select sorting function -->
-        <div v-if="filteredMeta.length != 0" class="flex items-center pl-4 pb-2 text-sm">
-          <span class="mr-2 text-gold-300">{{ $t("str.sort") }}</span>
-          <button
-            v-for="(rule, index) in sortRules"
-            class="ml-1.5 rounded px-2 py-1 hover:bg-gray-600"
-            :class="{ 'bg-gray-600': sortRuleID == index }"
-            :key="rule"
-            @click="
-              () => {
-                if (sortRuleID != index) {
-                  sortRuleID = index
-                  isSortAscending = false
-                } else {
-                  isSortAscending = !isSortAscending
+        <div
+          v-if="filteredMeta.length != 0"
+          class="items-center pl-4 pb-2 text-left text-sm sm:flex"
+        >
+          <div class="pb-2 sm:pb-0">
+            <span class="mr-2 text-gold-300">{{ $t("str.sort") }}</span>
+            <button
+              v-for="(rule, index) in sortRules"
+              class="ml-1.5 rounded px-2 py-1 hover:bg-gray-600"
+              :class="{ 'bg-gray-600': sortRuleID == index }"
+              :key="rule"
+              @click="
+                () => {
+                  if (sortRuleID != index) {
+                    sortRuleID = index
+                    isSortAscending = false
+                  } else {
+                    isSortAscending = !isSortAscending
+                  }
                 }
-              }
-            "
+              "
+            >
+              {{ $t(`meta.sort.${rule}`) }}
+              <span v-if="sortRuleID == index"
+                ><i
+                  class="fad pl-1"
+                  :class="{ 'fa-sort-up': isSortAscending, 'fa-sort-down': !isSortAscending }"
+                ></i
+              ></span>
+            </button>
+          </div>
+
+          <span class="ml-2 hidden sm:block">|</span>
+
+          <div class="pb-2 sm:pb-0">
+            <span class="mr-2 text-gold-300 sm:ml-4">{{ $t("str.filter") }}</span>
+
+            <button
+              class="ml-1.5 cursor-pointer rounded py-1 px-2 hover:bg-gray-600"
+              :class="{ 'bg-gray-600': store.timeOption == index }"
+              v-for="(option, index) in timeOptionsUrl"
+              :key="option"
+              @click="
+                () => {
+                  store.timeOption = index
+                  store.fetchMetaGroups()
+                }
+              "
+            >
+              {{
+                index == 0
+                  ? $t("str.patch")
+                  : formatDuration(
+                      { days: [0, 1, 3, 7][index] },
+                      { locale: dateFNSLocales[$i18n.locale] }
+                    )
+              }}
+            </button>
+          </div>
+
+          <span class="ml-2 mr-4 hidden text-gray-300 sm:block">|</span
+          ><span class="text-gray-300 transition-colors hover:text-white"
+            >{{ $t("matches.game", { num: store.totalMatches }) }} · {{ store.version }}</span
           >
-            {{ $t(`meta.sort.${rule}`) }}
-            <span v-if="sortRuleID == index"
-              ><i
-                class="fad pl-1"
-                :class="{ 'fa-sort-up': isSortAscending, 'fa-sort-down': !isSortAscending }"
-              ></i
-            ></span>
-          </button>
-
-          <span class="ml-2">|</span
-          ><span class="mr-2 ml-4 text-gold-300">{{ $t("str.filter") }}</span>
-
-          <button
-            class="ml-1.5 cursor-pointer rounded py-1 px-2 hover:bg-gray-600"
-            :class="{ 'bg-gray-600': store.timeOption == index }"
-            v-for="(option, index) in timeOptionsUrl"
-            :key="option"
-            @click="
-              () => {
-                store.timeOption = index
-                store.fetchMetaGroups()
-              }
-            "
-          >
-            {{
-              index == 0
-                ? $t("str.patch")
-                : formatDuration(
-                    { days: [0, 1, 3, 7][index] },
-                    { locale: dateFNSLocales[$i18n.locale] }
-                  )
-            }}
-          </button>
-
-          <span class="ml-2 mr-4 text-gray-300">|</span
-          ><span class="text-gray-300 transition-colors hover:text-white">{{
-            $t("matches.game", { num: store.totalMatches })
-          }}</span>
         </div>
 
         <div v-if="store.isMetaLoading" class="pt-4 pb-5 text-2xl">

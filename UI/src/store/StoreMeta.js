@@ -20,6 +20,7 @@ export const useMetaStore = defineStore("meta", {
       isMetaLoading: true,
       timeOption: 0,
       totalMatches: 0,
+      version: "",
     }
   },
   actions: {
@@ -47,6 +48,9 @@ export const useMetaStore = defineStore("meta", {
               this.metaGroups = res.data.data // res.data
               this.metaUpdateTime = res.data.time
               this.totalMatches = res.data.match_num
+              if (res.data.version) {
+                this.version = res.data.version
+              }
             } else {
               this.metaGroups = res.data
             }
