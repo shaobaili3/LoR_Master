@@ -35,27 +35,32 @@ export const locales = [
   "tr_tr",
   "ru_ru",
   "zh_tw",
+  "zh_cn",
 ]
 export const localeNames = [
-  "German",
+  "Deutsch",
   "English",
-  "Spanish (Spain)",
-  "Spanish (Mexico)",
-  "French",
-  "Italian",
-  "Japanese",
-  "Korean",
-  "Polish",
-  "Portuguese",
-  "Thai",
-  "Turkish",
-  "Russian",
-  "Chinese",
+  "Español (ES)",
+  "Español (LATAM)",
+  "Français",
+  "Italiano",
+  "日本語",
+  "한국어",
+  "Polski",
+  "Português",
+  "คำเมือง",
+  "Türkçe",
+  "Русский язык",
+  "繁體中文",
+  "简体中文",
 ]
 
 import mitt from "mitt"
 
-const API_WEB_BASE = process.env.VUE_APP_LMT_SERVER == "test" ? "https://lmttest.herokuapp.com" : "https://lormaster.herokuapp.com"
+const API_WEB_BASE =
+  process.env.VUE_APP_LMT_SERVER == "test"
+    ? "https://lmttest.herokuapp.com"
+    : "https://lormaster.herokuapp.com"
 
 export default (App) => {
   locales.forEach((lo) => {
@@ -94,7 +99,16 @@ export default (App) => {
 
   app.mixin({
     computed: {
-      ...mapState(useBaseStore, ["locale", "portNum", "sets", "sets_en", "API_WEB", "IS_ELECTRON", "IS_DEV", "apiBase"]),
+      ...mapState(useBaseStore, [
+        "locale",
+        "portNum",
+        "sets",
+        "sets_en",
+        "API_WEB",
+        "IS_ELECTRON",
+        "IS_DEV",
+        "apiBase",
+      ]),
     },
     methods: {
       // ...mapMutations([
