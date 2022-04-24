@@ -92,8 +92,28 @@
             </button>
           </div>
 
-          <span class="ml-2 mr-4 hidden text-gray-300 sm:block">|</span
-          ><span class="text-gray-300 transition-colors hover:text-white"
+          <span class="ml-1.5 mr-2 hidden text-gray-300 sm:block">|</span>
+
+          <div>
+            <button
+              class="mr-1.5 cursor-pointer rounded py-1 px-2 hover:bg-gray-600"
+              :class="{ 'bg-gray-600': store.regionOption == index }"
+              v-for="(option, index) in ['ALL', 'NA', 'EU', 'APAC']"
+              :key="option"
+              @click="
+                () => {
+                  store.regionOption = index
+                  store.fetchMetaGroups()
+                }
+              "
+            >
+              {{ option }}
+            </button>
+          </div>
+
+          <span class="mr-2 hidden text-gray-300 sm:block">|</span>
+
+          <span class="text-gray-300 transition-colors hover:text-white"
             >{{ $t("matches.game", { num: store.totalMatches }) }} · {{ store.version }}</span
           >
         </div>

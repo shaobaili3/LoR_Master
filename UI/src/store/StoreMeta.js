@@ -10,6 +10,8 @@ import { useBaseStore } from "./StoreBase"
 
 export const timeOptionsUrl = ["archetypes", "archetypes/1", "archetypes/3", "archetypes/7"]
 
+const regionOptionsUrl = ["", "/americas", "/europe", "/apac"]
+
 export const useMetaStore = defineStore("meta", {
   state: () => {
     return {
@@ -19,6 +21,7 @@ export const useMetaStore = defineStore("meta", {
       lastRequestTime: null,
       isMetaLoading: true,
       timeOption: 0,
+      regionOption: 0,
       totalMatches: 0,
       version: "",
     }
@@ -36,7 +39,9 @@ export const useMetaStore = defineStore("meta", {
       this.request = { cancel: axiosSource.cancel, msg: "Loading..." }
       const baseStore = useBaseStore()
 
-      var api_link = `${baseStore.API_WEB}/${timeOptionsUrl[this.timeOption]}`
+      var api_link = `${baseStore.API_WEB}/${timeOptionsUrl[this.timeOption]}${
+        regionOptionsUrl[this.regionOption]
+      }`
 
       // var promise = new Promise(resolve => setTimeout(resolve, 1000))
       var promise = axios.get(api_link, { cancelToken: axiosSource.token })
