@@ -512,7 +512,7 @@ export default {
     },
     errorText() {
       var error = this.errorType
-      if (error == 0) {
+      if (error == 0 || error == 3) {
         return this.$t("str.error.playerNotFound")
       } else if (error == 1 || error == 2) {
         return this.$t("str.error.playerNoHistory")
@@ -864,17 +864,14 @@ export default {
                 this.errorHistory(4) // Internal sercive error
               } else {
                 var data = e.response.data
-                var errorCode = (data.status && data.status.error) || 3
-                if (errorCode == 1 || errorCode == 2) {
-                  // No History Error
-                  // this.requestHistoryUpdate()
-                  this.errorHistory(errorCode)
-                } else {
-                  this.errorHistory(errorCode) // give a 3 so that there is a fallback
+                var errorCode = data.status && data.status.error
+                if (errorCode == null) {
+                  errorCode = 11 // give a 11 so that there is a fallback
                 }
+                this.errorHistory(errorCode) //
               }
             } else {
-              this.errorHistory(3) // Unkown Error
+              this.errorHistory(11) // Unkown Error
             }
             this.isUpdating = false
 

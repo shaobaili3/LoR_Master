@@ -3,7 +3,10 @@
     <!-- Left -->
     <div class="hidden w-0 max-w-3xl flex-1 justify-center lg:flex">
       <div class="flex h-full w-full max-w-md flex-col text-left">
-        <LadderHighlight :activeRegionID="activeRegionID"></LadderHighlight>
+        <LadderHighlight
+          :activeRegionID="activeRegionID"
+          @searchPlayer="searchPlayer"
+        ></LadderHighlight>
       </div>
     </div>
     <!-- Center -->

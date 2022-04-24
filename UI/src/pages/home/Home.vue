@@ -494,6 +494,11 @@ export default {
         if (locale && this.$i18n.availableLocales.includes(locale)) {
           if (this.$i18n) this.$i18n.locale = locale
           console.log("Change ui locale to", locale)
+        } else {
+          // Auto detect & switch to Chinese
+          if (window.navigator.language.includes("zh")) {
+            if (this.$i18n) this.$i18n.locale = "简体中文"
+          }
         }
         if (cardLocale && this.cardLocales.includes(cardLocale)) {
           this.changeLocale(cardLocale)

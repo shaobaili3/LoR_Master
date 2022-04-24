@@ -94,7 +94,7 @@
 
           <span class="ml-1.5 mr-2 hidden text-gray-300 sm:block">|</span>
 
-          <div>
+          <div class="pb-2 sm:pb-0">
             <button
               class="mr-1.5 cursor-pointer rounded py-1 px-2 hover:bg-gray-600"
               :class="{ 'bg-gray-600': store.regionOption == index }"
