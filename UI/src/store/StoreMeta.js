@@ -30,7 +30,7 @@ export const useMetaStore = defineStore("meta", {
       this.lastRequestTime = Date.now()
       this.isMetaLoading = true
 
-      if (this.request) this.cancelRequest
+      if (this.request) this.cancelRequest()
       const axiosSource = axios.CancelToken.source()
       this.request = { cancel: axiosSource.cancel, msg: "Loading..." }
       const baseStore = useBaseStore()

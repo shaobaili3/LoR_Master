@@ -33,7 +33,7 @@
 
         <!-- Select sorting function -->
         <div v-if="filteredMeta.length != 0" class="flex items-center pl-4 pb-2 text-sm">
-          <span class="mr-2">{{ $t("str.sort") }}</span>
+          <span class="mr-2 text-gold-300">{{ $t("str.sort") }}</span>
           <button
             v-for="(rule, index) in sortRules"
             class="ml-1.5 rounded px-2 py-1 hover:bg-gray-600"
@@ -59,7 +59,8 @@
             ></span>
           </button>
 
-          <span class="ml-2">|</span><span class="mr-2 ml-4">{{ $t("str.filter") }}</span>
+          <span class="ml-2">|</span
+          ><span class="mr-2 ml-4 text-gold-300">{{ $t("str.filter") }}</span>
 
           <button
             class="ml-1.5 cursor-pointer rounded py-1 px-2 hover:bg-gray-600"
