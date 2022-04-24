@@ -8,6 +8,8 @@ import axios from "axios"
 import { defineStore } from "pinia"
 import { useBaseStore } from "./StoreBase"
 
+export const timeOptionsUrl = ["archetypes", "archetypes/1", "archetypes/3", "archetypes/7"]
+
 export const useMetaStore = defineStore("meta", {
   state: () => {
     return {
@@ -16,6 +18,8 @@ export const useMetaStore = defineStore("meta", {
       metaUpdateTime: null,
       lastRequestTime: null,
       isMetaLoading: true,
+      timeOption: 0,
+      totalMatches: 0,
     }
   },
   actions: {
@@ -30,7 +34,8 @@ export const useMetaStore = defineStore("meta", {
       const axiosSource = axios.CancelToken.source()
       this.request = { cancel: axiosSource.cancel, msg: "Loading..." }
       const baseStore = useBaseStore()
-      var api_link = `${baseStore.API_WEB}/archetypes`
+
+      var api_link = `${baseStore.API_WEB}/${timeOptionsUrl[this.timeOption]}`
 
       // var promise = new Promise(resolve => setTimeout(resolve, 1000))
       var promise = axios.get(api_link, { cancelToken: axiosSource.token })
@@ -41,6 +46,7 @@ export const useMetaStore = defineStore("meta", {
             if (res.data.data) {
               this.metaGroups = res.data.data // res.data
               this.metaUpdateTime = res.data.time
+              this.totalMatches = res.data.match_num
             } else {
               this.metaGroups = res.data
             }

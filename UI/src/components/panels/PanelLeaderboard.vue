@@ -3,54 +3,7 @@
     <!-- Left -->
     <div class="hidden w-0 max-w-3xl flex-1 justify-center lg:flex">
       <div class="flex h-full w-full max-w-md flex-col text-left">
-        <div class="text-xl">
-          {{ $t("leaderboard.ladderHighlight").toUpperCase() }}
-          <span class="pl-2 text-sm text-gold-400">{{ REGION_SHORTS[activeRegionID] }}</span>
-        </div>
-
-        <!-- Headings -->
-        <div class="grid h-12 grid-cols-12 items-center text-sm">
-          <div class="col-span-3 overflow-hidden text-ellipsis whitespace-nowrap pl-4">
-            {{ $t("leaderboard.name") }}
-          </div>
-          <div class="col-span-2 flex justify-center">{{ $t("leaderboard.rank") }}</div>
-          <div class="col-span-2 flex justify-center">{{ $t("leaderboard.points") }}</div>
-          <div class="col-span-5 flex justify-center">{{ $t("leaderboard.recent") }}</div>
-        </div>
-        <div class="h-0 flex-1 overflow-auto rounded-md">
-          <div
-            v-for="player in highlightOneDay"
-            class="grid h-14 cursor-pointer grid-cols-12 items-center bg-gray-800 hover:bg-gray-600"
-            :key="player.rank"
-            @click="searchPlayer(player)"
-          >
-            <div class="col-span-3 overflow-hidden text-ellipsis whitespace-nowrap pl-4">
-              {{ player.name }}
-            </div>
-            <div class="col-span-2 flex items-center justify-center gap-1">
-              <div class="flex-1 text-center">{{ player.rank + 1 }}</div>
-              <!-- <div class="flex-1 whitespace-nowrap text-sm text-green-300">
-                <i class="fas fa-caret-up pr-1"></i>{{ player.rank_change }}
-              </div> -->
-            </div>
-            <div class="col-span-2 flex items-center justify-center gap-1">
-              <div class="flex-1 text-center">{{ player.lp }}</div>
-              <div class="flex-1 whitespace-nowrap text-sm text-green-300">
-                <i class="fas fa-caret-up pr-1"></i>{{ player.lp_3_change }}
-              </div>
-            </div>
-            <div class="col-span-5 flex justify-center">
-              <deck-preview
-                class="gap-0.5 p-1 py-2.5 text-xs hover:bg-gray-800 sm:gap-1 sm:p-2"
-                v-if="player.deck_code"
-                @click.stop
-                :deck="player.deck_code"
-                :fixed-width="true"
-                :size="1"
-              ></deck-preview>
-            </div>
-          </div>
-        </div>
+        <LadderHighlight :activeRegionID="activeRegionID"></LadderHighlight>
       </div>
     </div>
     <!-- Center -->
@@ -78,7 +31,7 @@
               }"
               @click="switchRegion(regions.AM)"
             >
-              AM
+              {{ REGION_SHORTS[regions.AM] }}
             </button>
             <button
               class="w-[60px] border-b-2 text-base"
@@ -88,7 +41,7 @@
               }"
               @click="switchRegion(regions.EU)"
             >
-              EU
+              {{ REGION_SHORTS[regions.EU] }}
             </button>
             <button
               class="w-[60px] border-b-2 text-base"
@@ -98,7 +51,7 @@
               }"
               @click="switchRegion(regions.APAC)"
             >
-              APAC
+              {{ REGION_SHORTS[regions.APAC] }}
             </button>
             <!-- <button id="btn-as" class="btn" :class="{active: activeRegionID == 2}" @click="switchRegion(regions.AS)">AS</button> -->
             <!-- <button id="btn-sea" class="btn" :class="{active: activeRegionID == 3}" @click="switchRegion(regions.SEA)">SEA</button> -->
@@ -245,10 +198,10 @@ const leaderboardStorageID = "lmt-settings-leaderboard-region"
 import { useLeaderboardStore } from "../../store/StoreLeaderboard"
 import { mapState, mapActions } from "pinia"
 
-import DeckPreview from "../deck/DeckPreview.vue"
+import LadderHighlight from "../leaderboard/LadderHighlight.vue"
 
 export default {
-  components: { LeaderboardPlayer, DeckPreview },
+  components: { LeaderboardPlayer, LadderHighlight },
   mounted() {
     // this.getLeaderboard(this.activeRegionID)
     // console.log("Mounted Leaderboard")
@@ -326,20 +279,7 @@ export default {
       }
       return this.leaderboard[this.activeRegionID]
     },
-    highlightOneDay() {
-      if (!this.leaderboard || !this.leaderboard[this.activeRegionID]) {
-        return null
-      }
-      return this.leaderboard[this.activeRegionID]
-        .concat()
-        .sort((a, b) => {
-          // a < b -> -1
-          // return b.rank_change - a.rank_change
-          // return b.lp_change - a.lp_change
-          return b.lp_3_change - a.lp_3_change
-        })
-        .slice(0, 10)
-    },
+
     searchPlaceHolder() {
       if (this.leaderboard && this.leaderboard[this.activeRegionID]) {
         return this.$t("search.leaderboard.numPlayer", {

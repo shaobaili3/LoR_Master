@@ -31,11 +31,6 @@
           </div>
         </MetaFilter>
 
-        <div v-if="store.isMetaLoading" class="pb-5 text-2xl">
-          <i class="fas fa-circle-notch fa-spin"></i>
-          {{ $t("str.loading") }}
-        </div>
-
         <!-- Select sorting function -->
         <div v-if="filteredMeta.length != 0" class="flex items-center pl-4 pb-2 text-sm">
           <span class="mr-2">{{ $t("str.sort") }}</span>
@@ -63,6 +58,40 @@
               ></i
             ></span>
           </button>
+
+          <span class="ml-2">|</span><span class="mr-2 ml-4">{{ $t("str.filter") }}</span>
+
+          <button
+            class="ml-1.5 cursor-pointer rounded py-1 px-2 hover:bg-gray-600"
+            :class="{ 'bg-gray-600': store.timeOption == index }"
+            v-for="(option, index) in timeOptionsUrl"
+            :key="option"
+            @click="
+              () => {
+                store.timeOption = index
+                store.fetchMetaGroups()
+              }
+            "
+          >
+            {{
+              index == 0
+                ? $t("str.patch")
+                : formatDuration(
+                    { days: [0, 1, 3, 7][index] },
+                    { locale: dateFNSLocales[$i18n.locale] }
+                  )
+            }}
+          </button>
+
+          <span class="ml-2 mr-4 text-gray-300">|</span
+          ><span class="text-gray-300 transition-colors hover:text-white">{{
+            $t("matches.game", { num: store.totalMatches })
+          }}</span>
+        </div>
+
+        <div v-if="store.isMetaLoading" class="pt-4 pb-5 text-2xl">
+          <i class="fas fa-circle-notch fa-spin"></i>
+          {{ $t("str.loading") }}
         </div>
 
         <!-- <p v-if="metaGroups" class="pb-2 text-left sub-title">{{$t("matches.games", {num: totalGames})}}</p> -->
@@ -167,7 +196,7 @@ export const getChamps = (code) => {
   return champs
 }
 
-import { formatDistanceStrict } from "date-fns"
+import { formatDistanceStrict, formatDuration } from "date-fns"
 
 export const getDeckID = (code) => {
   var factionNames = getFactions(code)
@@ -194,7 +223,7 @@ export const getDeckID = (code) => {
 <script setup>
 import MetaGroup from "../meta/MetaGroup.vue"
 
-import { useMetaStore } from "../../store/StoreMeta"
+import { useMetaStore, timeOptionsUrl } from "../../store/StoreMeta"
 
 import { ref, onMounted, computed } from "vue"
 import MetaFilter from "../meta/MetaFilter.vue"

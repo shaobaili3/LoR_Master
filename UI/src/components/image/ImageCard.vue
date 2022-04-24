@@ -3,16 +3,15 @@
 </template>
 
 <script setup>
-const cardDisplayUrlBase = "https://dd.b.pvp.net/latest/"
-
 import { computed, defineProps } from "vue"
+import { useBaseStore } from "../../store/StoreBase"
+
+const cardDisplayUrlBase = "https://dd.b.pvp.net/latest/"
 
 const props = defineProps({
   code: String,
   set: String,
 })
-
-import { useBaseStore } from "../../store/StoreBase"
 
 const getCardDisplayUrl = computed(() => {
   if (!props.code) {

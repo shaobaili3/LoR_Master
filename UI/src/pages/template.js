@@ -57,11 +57,6 @@ export const localeNames = [
 
 import mitt from "mitt"
 
-const API_WEB_BASE =
-  process.env.VUE_APP_LMT_SERVER == "test"
-    ? "https://lmttest.herokuapp.com"
-    : "https://lormaster.herokuapp.com"
-
 export default (App) => {
   locales.forEach((lo) => {
     window[lo] = () => import("../../../Resource/" + lo + ".json")
