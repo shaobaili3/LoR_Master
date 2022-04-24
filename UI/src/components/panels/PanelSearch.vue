@@ -346,6 +346,12 @@ export const processSearchRequestRawData = (data, playerName) => {
   return matches
 }
 
+export const extraRegionData = (data) => {
+  if (data && data[0] && data[0].server) {
+    return data[0].server
+  }
+}
+
 export default {
   components: {
     PlayerMatches,
@@ -424,7 +430,7 @@ export default {
       return filtered
     },
     hasSearchInfo() {
-      return this.player && this.region && this.tag && REGION_SHORTS.indexOf(this.region) != -1
+      return this.player && this.tag
     },
     uniqueBadges() {
       if (!this.matches) return null
@@ -705,21 +711,6 @@ export default {
             query: { name: item.name, tag: item.tag, region: region },
           })
         }
-
-        // this.playerName = item.name
-        // this.playerTag = item.tag
-        // this.searchText = this.playerName
-
-        // this.sendUserEvent({
-        //   category: "Main Window Search",
-        //   action: "Auto Complete",
-        //   label: this.playerName + "#" + this.playerTag,
-        //   value: null,
-        // })
-
-        // Perform the actual search
-        // this.requestHistoryData()
-        // this.resetInputFocus()
       } else {
         // Use user input
         splited = this.searchText.split("#")
@@ -733,17 +724,6 @@ export default {
             name: "search",
             query: { name: splited[0], tag: splited[1], region: this.selectedRegion },
           })
-
-          // this.sendUserEvent({
-          //   category: "Main Window Search",
-          //   action: "User Input [New]",
-          //   label: `${this.searchText}`,
-          //   value: null,
-          // })
-
-          // // Perform the actual search
-          // this.requestHistoryData()
-          // this.resetInputFocus()
         } else if (splited.length == 1 && splited[0] == this.playerName && this.playerTag) {
           // When trying to search the same people, do a refresh (update only)
 
@@ -908,9 +888,12 @@ export default {
         })
     },
     requestHistoryData() {
-      var newRequest = `${this.API_WEB}/search/${REGION_NAMES[REGION_ID[this.selectedRegion]]}/${
-        this.playerName
-      }/${this.playerTag}`
+      var newRequest = this.selectedRegion
+        ? `${this.API_WEB}/search/${REGION_NAMES[REGION_ID[this.selectedRegion]]}/${
+            this.playerName
+          }/${this.playerTag}`
+        : `${this.API_WEB}/search/${this.playerName}/${this.playerTag}`
+
       if (prevHistoryRequest == newRequest && this.isLoading) {
         // Don't refresh if the request is the same and ongoing
         return
@@ -956,6 +939,9 @@ export default {
           })
 
           this.matches = processSearchRequestRawData(response.data, this.playerName)
+
+          this.selectedRegion = regionNameToShorts(extraRegionData(response.data))
+          this.playerRegion = REGION_SHORTS[REGION_ID[this.selectedRegion]]
 
           this.requestHistoryUpdate()
         })
