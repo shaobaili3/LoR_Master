@@ -158,6 +158,7 @@
             </leaderboard-player
           ></template>
         </RecycleScroller>
+        <div v-else class="block h-0 w-full flex-1 rounded-md bg-gray-800"></div>
       </div>
     </div>
     <!-- Right -->

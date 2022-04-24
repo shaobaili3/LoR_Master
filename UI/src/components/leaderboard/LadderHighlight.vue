@@ -37,7 +37,10 @@
     <div class="col-span-2 flex justify-center">{{ $t("leaderboard.points") }}</div>
     <div class="col-span-5 flex justify-center">{{ $t("leaderboard.recent") }}</div>
   </div>
-  <div class="h-0 flex-1 overflow-auto rounded-md">
+  <div
+    v-if="highlightOneDay && highlightOneDay.length > 0"
+    class="h-0 flex-1 overflow-auto rounded-md"
+  >
     <div
       v-for="player in highlightOneDay"
       class="grid h-14 cursor-pointer grid-cols-12 items-center bg-gray-800 hover:bg-gray-600"
@@ -72,6 +75,7 @@
       </div>
     </div>
   </div>
+  <div v-else class="h-0 flex-1 overflow-auto rounded-md bg-gray-800"></div>
 </template>
 
 <script setup>
