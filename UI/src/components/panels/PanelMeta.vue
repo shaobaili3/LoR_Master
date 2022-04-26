@@ -34,7 +34,7 @@
         <!-- Select sorting function -->
         <div
           v-if="filteredMeta.length != 0"
-          class="items-center pl-4 pb-2 text-left text-sm sm:flex"
+          class="items-center pl-4 pb-3 text-left text-sm sm:flex"
         >
           <div class="pb-2 sm:pb-0">
             <span class="mr-2 text-gold-300">{{ $t("str.sort") }}</span>

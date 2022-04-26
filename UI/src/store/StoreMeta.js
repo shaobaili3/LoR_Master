@@ -1,16 +1,12 @@
-// const API = 'https://lormaster.herokuapp.com/meta'
-// const API = 'http://runeterraccg.herokuapp.com/ccgmeta'
-// const API = 'https://lormaster.herokuapp.com/archetypes'
-
 const requestWaitTime = 1000 // ms
 import axios from "axios"
 
 import { defineStore } from "pinia"
 import { useBaseStore } from "./StoreBase"
 
-export const timeOptionsUrl = ["archetypes", "archetypes/1", "archetypes/3", "archetypes/7"]
+export const timeOptionsUrl = ["", "/1", "/3", "/7"]
 
-const regionOptionsUrl = ["", "/americas", "/europe", "/apac"]
+const regionOptionsUrl = ["/all", "/americas", "/europe", "/apac"]
 
 export const useMetaStore = defineStore("meta", {
   state: () => {
@@ -39,8 +35,8 @@ export const useMetaStore = defineStore("meta", {
       this.request = { cancel: axiosSource.cancel, msg: "Loading..." }
       const baseStore = useBaseStore()
 
-      var api_link = `${baseStore.API_WEB}/${timeOptionsUrl[this.timeOption]}${
-        regionOptionsUrl[this.regionOption]
+      var api_link = `${baseStore.API_WEB}/archetypes${regionOptionsUrl[this.regionOption]}${
+        timeOptionsUrl[this.timeOption]
       }`
 
       // var promise = new Promise(resolve => setTimeout(resolve, 1000))

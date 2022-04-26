@@ -51,7 +51,13 @@
         {{ player.name }}
       </div>
       <div class="col-span-2 flex items-center justify-center gap-1">
-        <div class="flex-1 text-center">{{ player.rank + 1 }}</div>
+        <div class="flex flex-1 items-center justify-center text-center">
+          <!-- <span class="text-xs"
+            >{{ player.rank + parseInt(timeOption ? player.rank_3_change : player.rank_change) + 1
+            }}<i class="fas fa-arrow-right pr-1 pl-1"></i
+          ></span> -->
+          {{ player.rank + 1 }}
+        </div>
         <!-- <div class="flex-1 whitespace-nowrap text-sm text-green-300">
                 <i class="fas fa-caret-up pr-1"></i>{{ player.rank_change }}
               </div> -->

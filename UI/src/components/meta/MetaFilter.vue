@@ -2,7 +2,7 @@
   <!-- Meta Search Bar -->
   <div class>
     <!-- Tag Box -->
-    <div class="relative pb-3">
+    <div class="relative pb-4">
       <i
         class="fas fa-filter absolute left-5 top-4"
         :class="{ 'text-gray-200': !(tags.length > 0) }"

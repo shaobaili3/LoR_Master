@@ -1,7 +1,7 @@
 <template>
-  <div class="flex h-full justify-center gap-2 px-2 sm:px-4">
+  <div class="flex h-full justify-center gap-6 px-2 sm:px-4">
     <!-- Left -->
-    <div class="hidden w-0 max-w-3xl flex-1 justify-center lg:flex">
+    <div class="hidden w-[30%] min-w-[350px] max-w-[425px] flex-shrink justify-center lg:flex">
       <div class="flex h-full w-full max-w-md flex-col text-left">
         <LadderHighlight
           :activeRegionID="activeRegionID"
@@ -165,7 +165,7 @@
       </div>
     </div>
     <!-- Right -->
-    <div class="hidden w-0 max-w-3xl flex-1 2xl:flex"></div>
+    <!-- <div class="hidden w-0 max-w-3xl flex-1 2xl:flex"></div> -->
   </div>
 </template>
 

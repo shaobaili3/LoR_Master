@@ -206,7 +206,7 @@ const LAYERS = {
   deckdetail: 2,
 }
 
-const api_error = "https://lormaster.herokuapp.com/error"
+const api_error = `${useBaseStore.API_WEB}/error`
 
 var lastTrackTime, lastServerRequestTime, lastStatusRequestTime
 

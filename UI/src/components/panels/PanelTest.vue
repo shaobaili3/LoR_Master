@@ -50,7 +50,11 @@ import { DoughnutChart, LineChart } from "vue-chart-3"
 import { useRequest } from "../../composibles/request"
 import StatsSummary from "../stats/StatsSummary.vue"
 
+import { useBaseStore } from "../../store/StoreBase"
+
 const range = ref(7)
+
+const baseStore = useBaseStore()
 
 const testData = {
   labels: ["Paris", "Nîmes", "Toulon", "Perpignan", "Autre"],
@@ -67,7 +71,7 @@ const testData = {
   ],
 }
 
-const testURL = ref("https://lormaster.herokuapp.com/search/americas/Kevor24/NA1")
+const testURL = ref(baseStore.API_WEB + "/search/americas/Kevor24/NA1")
 
 const {
   loading: testLoading,
@@ -81,10 +85,10 @@ const {
   fetch: sendStatsRequest,
   error: statsError,
   data: stats,
-} = useRequest("https://lormaster.herokuapp.com/")
+} = useRequest(baseStore.API_WEB)
 
 const rangeAPI = computed(() => {
-  return `https://lmttest.herokuapp.com/status/${range.value}`
+  return `${baseStore.API_WEB}/status/${range.value}`
 })
 
 const { fetch: fetchStatusDays, error: statsDaysError, data: statsDays } = useRequest(rangeAPI)
