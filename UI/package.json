@@ -19,7 +19,7 @@
     "build-installer": "electron-builder",
     "build-pack": "electron-builder --dir",
     "build-pub": "electron-builder -p always",
-    "dev": "electron app.js",
+    "dev": "electron app.js --dev",
     "dev:file": "vue-cli-service build && electron app.js --file",
     "dev:file:skip-build": "electron app.js --file",
     "dev:hidden": "vue-cli-service build && electron app.js --hidden",
