@@ -66,7 +66,7 @@
           <div class="relative mt-4 h-12">
             <div
               class="search-icon left"
-              v-if="!isLoading"
+              v-if="!isLoading[this.activeRegionID]"
               @click="
                 () => {
                   this.fetchLeaderboard(this.activeRegionID)
@@ -75,7 +75,7 @@
             >
               <i class="fa fa-trophy"></i>
             </div>
-            <div class="search-icon left loading" v-if="isLoading">
+            <div class="search-icon left loading" v-if="isLoading[this.activeRegionID]">
               <i class="fa fa-circle-notch fa-spin"></i>
             </div>
             <input
@@ -88,8 +88,8 @@
               @focus="onInputFocus"
               @blur="onInputBlur"
               type="text"
-              :placeholder="isLoading ? $t('str.loading') : searchPlaceHolder"
-              :disabled="isLoading"
+              :placeholder="isLoading[this.activeRegionID] ? $t('str.loading') : searchPlaceHolder"
+              :disabled="isLoading[this.activeRegionID]"
               ref="leaderboardInput"
             />
             <div
@@ -250,7 +250,7 @@ export default {
   computed: {
     ...mapState(useLeaderboardStore, {
       leaderboard: "leaderboard",
-      isLoading: "isLeaderboardLoading",
+      isLoading: "leaderboardLoading",
       updateTime: "leaderboardUpdateTime",
     }),
     filteredPlayers() {

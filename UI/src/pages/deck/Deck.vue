@@ -261,7 +261,7 @@ export default {
     }
   },
   computed: {
-    ...mapState(useLeaderboardStore, ["leaderboard", "isLeaderboardLoading"]),
+    ...mapState(useLeaderboardStore, ["leaderboard", "leaderboardLoading"]),
     oppoInfo() {
       if (!this.oppoLeaderboard) {
         return {

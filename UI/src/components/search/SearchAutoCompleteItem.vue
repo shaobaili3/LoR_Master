@@ -31,18 +31,15 @@
 import { defineProps, computed } from "vue"
 
 import { getLeaderboardFromPlayer } from "../match/PlayerMatches.vue"
-
 import { regionNameToShorts } from "../panels/PanelLeaderboard.vue"
 import { getRegionFaGlobeClass } from "./SearchBookmark.vue"
+import { format, formatDistanceStrict } from "date-fns"
+import { dateFNSLocales } from "../../assets/data/messages"
 
 const props = defineProps({
   selectedRegion: String,
   player: Object,
 })
-
-import { format, formatDistanceStrict } from "date-fns"
-
-import { dateFNSLocales } from "../../assets/data/messages"
 
 const leaderboardInfo = computed(() => {
   return getLeaderboardFromPlayer(

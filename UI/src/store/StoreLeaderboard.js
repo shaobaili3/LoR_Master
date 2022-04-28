@@ -10,29 +10,28 @@ import axios from "axios"
 export const useLeaderboardStore = defineStore("leaderboard", {
   state: () => {
     return {
-      request: null,
+      request: [],
       leaderboard: [],
       leaderboardUpdateTime: [],
-      lastLeaderboardRequestTime: null,
-      isLeaderboardLoading: false,
+      lastLeaderboardRequestTime: [],
+      leaderboardLoading: [],
     }
   },
   actions: {
-    cancelLeaderboard() {
-      if (this.request) this.request.cancel()
-    },
     fetchLeaderboard(regionID) {
-      //if (this.isLeaderboardLoading) return
       const baseStore = useBaseStore()
-
-      this.lastLeaderboardRequestTime = Date.now()
-      this.isLeaderboardLoading = true
 
       var region = REGION_NAMES[regionID]
 
       if (!region) return // if region is undefined
 
-      if (this.request) this.cancelLeaderboard()
+      if (this.leaderboardLoading[regionID]) return // if leaderboard is already loading
+
+      if (this.request[regionID]) this.request[regionID].cancel()
+
+      this.lastLeaderboardRequestTime[regionID] = Date.now()
+      this.leaderboardLoading[regionID] = true
+
       const axiosSource = axios.CancelToken.source()
       this.request = { cancel: axiosSource.cancel, msg: "Loading..." }
 
@@ -42,7 +41,7 @@ export const useLeaderboardStore = defineStore("leaderboard", {
         .get(api_link, { cancelToken: axiosSource.token })
         .then((res) => {
           // this.rawPlayers = res.data;
-          this.isLeaderboardLoading = false
+          this.leaderboardLoading[regionID] = false
           this.leaderboard[regionID] = res.data.players
           this.leaderboardUpdateTime[regionID] = res.data.time
         })
@@ -52,18 +51,18 @@ export const useLeaderboardStore = defineStore("leaderboard", {
           } else {
             console.log("error", e)
 
-            this.isLeaderboardLoading = false
+            this.leaderboardLoading[regionID] = false
 
-            var elapsedTime = Date.now() - this.lastLeaderboardRequestTime // ms
-            if (elapsedTime > requestLeaderboardWaitTime) {
-              setTimeout(() => {
-                this.fetchLeaderboard(regionID)
-              }, 100)
-            } else {
-              setTimeout(() => {
-                this.fetchLeaderboard(regionID)
-              }, requestLeaderboardWaitTime - elapsedTime)
-            }
+            // var elapsedTime = Date.now() - this.lastLeaderboardRequestTime // ms
+            // if (elapsedTime > requestLeaderboardWaitTime) {
+            //   setTimeout(() => {
+            //     this.fetchLeaderboard(regionID)
+            //   }, 100)
+            // } else {
+            //   setTimeout(() => {
+            //     this.fetchLeaderboard(regionID)
+            //   }, requestLeaderboardWaitTime - elapsedTime)
+            // }
           }
         })
     },

@@ -42,6 +42,7 @@
             </button>
           </div>
         </div>
+        <div class="pt-10 text-gray-300">LMT v{{ currentVersion }}</div>
       </div>
     </div>
   </div>
@@ -54,6 +55,8 @@ import { locales as cardLocales, localeNames as cardLocaleNames } from "../../pa
 import { useBaseStore } from "../../store/StoreBase"
 import { mapActions, mapWritableState } from "pinia"
 
+const currentVersion = require("../../../package.json").version
+
 export default {
   components: {
     LocaleChanger,
@@ -65,6 +68,7 @@ export default {
       // Options
       autoLaunch: null,
       debugInfos: "",
+      currentVersion,
     }
   },
   computed: {
