@@ -5,8 +5,8 @@ import sets_en from "../../../Resource/en_us.json"
 const sets_en_combined = [].concat(...sets_en)
 const API_WEB_BASE =
   process.env.VUE_APP_LMT_SERVER == "test"
-    ? "https://lormaster.herokuapp.com"
-    : "https://lormaster.herokuapp.com"
+    ? "https://lormaster.azurewebsites.net"
+    : "https://lormaster.azurewebsites.net"
 
 //https://lormaster.herokuapp.com
 //https://lormaster.azurewebsites.net
