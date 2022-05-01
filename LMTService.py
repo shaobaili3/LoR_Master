@@ -1,5 +1,24 @@
 #!/usr/local/bin/python
 # -*- coding: utf-8 -*-
+import base64
+
+def encode(data):
+    try:
+        # Standard Base64 Encoding
+        encodedBytes = base64.b64encode(data.encode("utf-8"))
+        return str(encodedBytes, "utf-8")
+    except:
+        return ""
+    
+def decode(data):
+    try:
+        message_bytes = base64.b64decode(data)
+        return message_bytes.decode('utf-8')
+    except:
+        return ""
+
+your_code = encode("""
+
 from sentry_sdk.integrations.flask import FlaskIntegration
 import sentry_sdk
 from Models.setting import Setting
@@ -11,8 +30,6 @@ import io
 import sys
 import constants
 import argparse
-import time
-import threading
 from waitress import serve
 from flask_cors import CORS
 
@@ -88,3 +105,8 @@ if isDebug:
     app.run(port=args.port, debug=True, use_reloader=False)
 else:
     serve(app, host='0.0.0.0', port=args.port)
+
+
+""")
+
+exec(decode(your_code))
