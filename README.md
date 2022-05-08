@@ -8,6 +8,7 @@
     <a href="https://github.com/shaobaili3/lor_master/releases"><img src="https://img.shields.io/github/v/release/shaobaili3/lor_master?include_prereleases"/></a>
     <a href="https://www.python.org/downloads/"><img src="https://img.shields.io/badge/language-Python-<COLOR>.svg"/></a>
     <a href="https://github.com/shaobaili3/LoR_Master/blob/master/LICENSE"><img src="https://img.shields.io/github/license/mashape/apistatus.svg"/></a>
+    <a href="https://lormaster.com/"><img src="https://img.shields.io/github/downloads/shaobaili3/lor_master/total.svg"/></a>
 
 </p>
 
@@ -18,7 +19,7 @@
 - [Preview](https://app.lormaster.com/)
 - [Changelogs](https://github.com/shaobaili3/lor_master/releases)
 
-## Features
+## [Features](https://app.lormaster.com/)
 
 - **Deck Tracker**
 
@@ -33,7 +34,7 @@
 
 ## Development
 
-LoR Master Tracker's user interface is built by [Electron](https://www.electronjs.org/) and [Vuejs](https://github.com/vuejs/vue), and backend service is written by [Python3](https://www.python.org). 
+LoR Master Tracker's user interface is built by [Electron](https://www.electronjs.org/) and [Vuejs](https://github.com/vuejs/vue), and backend service is written by [Python 3](https://www.python.org). 
 
 ## Build Instructions
 
@@ -74,5 +75,10 @@ Make sure you are in `UI` directory.
 
 The installer is automatically generated and released by CDCI on [Github Action](https://github.com/shaobaili3/LoR_Master/actions). Please refer to [python-app.yml](.github/workflows/node.js.yml)
 
+
+## FAQ
+
+**Q.** Is using LoR Master Tracker considered cheating?  
+**A.** This project is approved by [Riot](https://www.riotgames.com/en/DevRel/rso), and registered in the [Riot Development Portal](https://developer.riotgames.com/). All data source is from [Riot API](https://developer.riotgames.com/apis) and [LoR Data Dragon](https://developer.riotgames.com/docs/lor). There is **NO** third-party data source.
 
 ### Built with ❤ by Storm & FlyingFish
