@@ -96,12 +96,20 @@ function concatFiles() {
   }
 }
 
+function generateSimplifiedChinese() {
+  const chineseConv = require("chinese-conv")
+  let data = chineseConv.sify(fs.readFileSync(`./src/data/zh_tw.json`, "utf8"))
+  fs.writeFileSync(`./src/data/zh_cn.json`, data)
+}
+
 allProgress(promises, (p) => {
   console.log(`Progress: ${p.toFixed(2)}% Done`)
 }).then(() => {
   console.log("All files are donwloaded.")
   concatFiles()
   console.log("Concated files generated.")
+  generateSimplifiedChinese()
+  console.log("Simplifeid Chinese generated.")
 })
 
 // concatFiles()
