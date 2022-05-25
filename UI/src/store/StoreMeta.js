@@ -6,7 +6,7 @@ import { useBaseStore } from "./StoreBase"
 
 export const timeOptionsUrl = ["", "/1", "/3", "/7"]
 
-const regionOptionsUrl = ["/all", "/americas", "/europe", "/apac"]
+export const regionOptionsUrl = ["/all", "/americas", "/europe", "/apac"]
 
 export const useMetaStore = defineStore("meta", {
   state: () => {

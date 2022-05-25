@@ -1,0 +1,4731 @@
+[
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06BC036.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06BC036-full.png"
+      }
+    ],
+    "regions": [
+      "バンドルシティ"
+    ],
+    "regionRefs": [
+      "BandleCity"
+    ],
+    "attack": 2,
+    "cost": 3,
+    "health": 2,
+    "description": "召喚時、ランダムな「ヨードル」を手札に1枚生成する。\r\n<link=vocab.Attack><style=Vocab>アタック</style></link>: 他の味方の「ヨードル」すべてに+1|+0を付与する。",
+    "descriptionRaw": "召喚時、ランダムな「ヨードル」を手札に1枚生成する。\r\nアタック: 他の味方の「ヨードル」すべてに+1|+0を付与する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「パパロはみんなの人気者だよ！夏になると世界中の珍しいものをお土産に持ち帰ってきてね、その全部が美味しかったり、キレイだったり、ハチャメチャだったり、美味しくてキレイでハチャメチャだったりするの！」\n- 期待の新兵 エイヴァ",
+    "artistName": "Kudos Productions",
+    "name": "大冒険家 パパロ",
+    "cardCode": "06BC036",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "エピック",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "ヨードル"
+    ],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "05BC141",
+      "05BC216",
+      "05BC191"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06BC040.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06BC040-full.png"
+      }
+    ],
+    "regions": [
+      "バンドルシティ"
+    ],
+    "regionRefs": [
+      "BandleCity"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "<link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>フリーティング</style></link>を持つ<link=card.spell3><style=AssociatedCard>英雄譚</style></link>、<link=card.spell2><style=AssociatedCard>ヨードルの発明品</style></link>、<link=card.spell1><style=AssociatedCard>守護者の鉄鎚</style></link>のいずれかを手札に1枚生成する。",
+    "descriptionRaw": "フリーティングを持つ英雄譚、ヨードルの発明品、守護者の鉄鎚のいずれかを手札に1枚生成する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "ゲームに誘われて断るヨードルはいないが、途中でルールが変わることはよくある。",
+    "artistName": "Kudos Productions",
+    "name": "バンドルシティ・テルストーン",
+    "cardCode": "06BC040",
+    "keywords": [
+      "バースト"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "バースト",
+    "spellSpeedRef": "Burst",
+    "rarity": "コモン",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スペル",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU001T3"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06BC044.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06BC044-full.png"
+      }
+    ],
+    "regions": [
+      "バンドルシティ"
+    ],
+    "regionRefs": [
+      "BandleCity"
+    ],
+    "attack": 0,
+    "cost": 5,
+    "health": 0,
+    "description": "敵1体に2ダメージを与え、別の敵1体を<link=keyword.Stun><sprite name=Stunned><style=Keyword>スタン</style></link>させる。デッキに<link=card.chime><style=AssociatedCard>チャイム</style></link>をランダムに3個設置する。",
+    "descriptionRaw": "敵1体に2ダメージを与え、別の敵1体をスタンさせる。デッキにチャイムをランダムに3個設置する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「ねえママ、“流離いの庇護者”さんはどこに行くの？」\n「庇護者さんはどこにでも行くのよ。見えなくなるような遠いところまでね」\n「どうして？」\n「ふふ、どうしてでしょうね。きっとどんなに賢い長老様にもわかりっこないことね」\n- ある母と子の会話",
+    "artistName": "Kudos Productions",
+    "name": "宇宙の法則",
+    "cardCode": "06BC044",
+    "keywords": [
+      "ファスト"
+    ],
+    "keywordRefs": [
+      "Fast"
+    ],
+    "spellSpeed": "ファスト",
+    "spellSpeedRef": "Fast",
+    "rarity": "レア",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スペル",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU001T3"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06BC026.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06BC026-full.png"
+      }
+    ],
+    "regions": [
+      "バンドルシティ"
+    ],
+    "regionRefs": [
+      "BandleCity"
+    ],
+    "attack": 2,
+    "cost": 1,
+    "health": 1,
+    "description": "召喚時、デッキの一番上のカードに<link=card.chime><style=AssociatedCard>チャイム</style></link>を1個設置する。",
+    "descriptionRaw": "召喚時、デッキの一番上のカードにチャイムを1個設置する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「…次の話はもっとすごいぞ。床を掃除してたらな、晩メシがテーブルの上にぶちまけられてるのに気づいたのさ。ふと目をやると、わしの鍋やらフライパンやらが、二本足でひょこひょこ家から逃げ出そうとしておった！わしは大急ぎで追いかけたよ。例の寺院でようやく追いついたんだが、やつらは探し物でもしているみたいに、棚を引っ掻き回しておってな…」\n- ガフじいさんの昔話 その2",
+    "artistName": "Caravan Studio",
+    "name": "鐘を鳴らす者 バアド",
+    "cardCode": "06BC026",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "コモン",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06BC030.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06BC030-full.png"
+      }
+    ],
+    "regions": [
+      "バンドルシティ"
+    ],
+    "regionRefs": [
+      "BandleCity"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "ユニット1体に1ダメージを与える。このラウンド中にあなたのトラップか加護が1個以上発動している場合、代わりに3ダメージを与える。",
+    "descriptionRaw": "ユニット1体に1ダメージを与える。このラウンド中にあなたのトラップか加護が1個以上発動している場合、代わりに3ダメージを与える。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「光りはじめたら爆発注意！」\n- バンドル偵察兵の掟、第463条",
+    "artistName": "Kudos Productions",
+    "name": "近接感知型キノコ",
+    "cardCode": "06BC030",
+    "keywords": [
+      "スロウ"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "スロウ",
+    "spellSpeedRef": "Slow",
+    "rarity": "コモン",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スペル",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU001T3"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06BC031.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06BC031-full.png"
+      }
+    ],
+    "regions": [
+      "バンドルシティ"
+    ],
+    "regionRefs": [
+      "BandleCity"
+    ],
+    "attack": 4,
+    "cost": 6,
+    "health": 6,
+    "description": "召喚時、デッキの一番上のカードに<link=card.chime><style=AssociatedCard>チャイム</style></link>を1個設置する。その後、デッキの加護を2倍にする。",
+    "descriptionRaw": "召喚時、デッキの一番上のカードにチャイムを1個設置する。その後、デッキの加護を2倍にする。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「あれにゃ胆が冷えたよ。体中から腕が生えてて、歯は大岩みたいにデカかった。あいつがバチで歯をこすると、なんとも不気味な旋律が聴こえるんだ。わしは命懸けで逃げ去ったよ。空に開いた無数の穴から、こんなのが何百体も出て来てたんからな！」\n- ガフじいさんの昔話 その4",
+    "artistName": "Caravan Studio",
+    "name": "門番マドゥーリ",
+    "cardCode": "06BC031",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "レア",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06IO005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06IO005-full.png"
+      }
+    ],
+    "regions": [
+      "アイオニア"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "体力が3以下のユニット1体を<link=keyword.Recall><style=Keyword>リコール</style></link>させる。",
+    "descriptionRaw": "体力が3以下のユニット1体をリコールさせる。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「芸術に焦りは禁物だ」\n- ジン",
+    "artistName": "Kudos Productions",
+    "name": "陰惨なる劇場",
+    "cardCode": "06IO005",
+    "keywords": [
+      "ファスト"
+    ],
+    "keywordRefs": [
+      "Fast"
+    ],
+    "spellSpeed": "ファスト",
+    "spellSpeedRef": "Fast",
+    "rarity": "コモン",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スペル",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "01IO020"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06IO012.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06IO012-full.png"
+      }
+    ],
+    "regions": [
+      "アイオニア"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 0,
+    "cost": 4,
+    "health": 0,
+    "description": "発動時、または次の<link=vocab.RoundStart><style=Vocab>ラウンド開始時</style></link>に<link=card.summon><style=AssociatedCard>仮面の司</style></link>を1体召喚する。カードを1枚引く。",
+    "descriptionRaw": "発動時、または次のラウンド開始時に仮面の司を1体召喚する。カードを1枚引く。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「旧き仮面が若き眼を開く」\n- 仮面の司",
+    "artistName": "Kudos Productions",
+    "name": "均衡の呼び声",
+    "cardCode": "06IO012",
+    "keywords": [
+      "スロウ"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "スロウ",
+    "spellSpeedRef": "Slow",
+    "rarity": "コモン",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スペル",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "02IO003T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06IO009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06IO009-full.png"
+      }
+    ],
+    "regions": [
+      "アイオニア"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 0,
+    "cost": 5,
+    "health": 0,
+    "description": "<link=card.summon><style=AssociatedCard>霊龍</style></link>2体がフリーアタックを開始する。フリーアタックはアタックトークンを必要としない。",
+    "descriptionRaw": "霊龍2体がフリーアタックを開始する。フリーアタックはアタックトークンを必要としない。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「望みをかたちに」\n- 龍使い",
+    "artistName": "Kudos Productions",
+    "name": "龍の奇襲",
+    "cardCode": "06IO009",
+    "keywords": [
+      "スロウ"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "スロウ",
+    "spellSpeedRef": "Slow",
+    "rarity": "コモン",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スペル",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "04IO010"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06IO033.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06IO033-full.png"
+      }
+    ],
+    "regions": [
+      "アイオニア"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 0,
+    "cost": 5,
+    "health": 0,
+    "description": "このゲームが終了するまで、あなたが<link=vocab.BladeDance><style=Vocab>刃の舞</style></link>を発動する時、追加の<link=card.summon><style=AssociatedCard>飛刃</style></link>を1体アタック状態で召喚する。\r\n<link=vocab.BladeDance><style=Vocab>刃の舞</style></link> 1。",
+    "descriptionRaw": "このゲームが終了するまで、あなたが刃の舞を発動する時、追加の飛刃を1体アタック状態で召喚する。\r\n刃の舞 1。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「先に舞って。私も続くから！」\n- 紅紗の舞手",
+    "artistName": "Kudos Productions",
+    "name": "飛刃の嵐",
+    "cardCode": "06IO033",
+    "keywords": [
+      "スロウ"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "スロウ",
+    "spellSpeedRef": "Slow",
+    "rarity": "エピック",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スペル",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06IO004T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06IO004.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06IO004-full.png"
+      }
+    ],
+    "regions": [
+      "アイオニア"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 3,
+    "cost": 3,
+    "health": 2,
+    "description": "<link=keyword.PlaySkillMark><sprite name=SkillMark><style=Keyword>プレイ</style></link>: 攻撃力がこのユニットより低いユニット1体を<link=keyword.Recall><style=Keyword>リコール</style></link>させる。",
+    "descriptionRaw": "プレイ: 攻撃力がこのユニットより低いユニット1体をリコールさせる。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「あの方はまさに傑出した匠、唯一無二の名工だ。その芸術に並ぶものはなく、その御業には一点の疵もない。お目にかかれるだけでも光栄だが、その作品を振るうことができたらどんなに良いだろうか！」\n- カシューリの見物人",
+    "artistName": "Valentin Gloaguen",
+    "name": "至高の匠",
+    "cardCode": "06IO004",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "レア",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "01IO004",
+      "03IO005",
+      "01IO010"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06IO036.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06IO036-full.png"
+      }
+    ],
+    "regions": [
+      "アイオニア"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "<link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>フリーティング</style></link>を持つ<link=card.create1><style=AssociatedCard>体力ポーション</style></link>、<link=card.create2><style=AssociatedCard>ホームカミング</style></link>、<link=card.create3><style=AssociatedCard>瞬身護法</style></link>のいずれかを手札に1枚生成する。",
+    "descriptionRaw": "フリーティングを持つ体力ポーション、ホームカミング、瞬身護法のいずれかを手札に1枚生成する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「相手を読む能力は必ず身につけねばならん。戦わん時もな。だが何より大切なのは、この遊びを楽しむことじゃ。まずは足湯を汲んできてくれ！」\n- 鼓舞する老師",
+    "artistName": "Kudos Productions",
+    "name": "アイオニア・テルストーン",
+    "cardCode": "06IO036",
+    "keywords": [
+      "バースト"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "バースト",
+    "spellSpeedRef": "Burst",
+    "rarity": "レア",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スペル",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "01IO020"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06IO012T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06IO012T1-full.png"
+      }
+    ],
+    "regions": [
+      "アイオニア"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 0,
+    "cost": 4,
+    "health": 0,
+    "description": "次の<link=vocab.RoundStart><style=Vocab>ラウンド開始時</style></link>に<link=card.summon><style=AssociatedCard>仮面の司</style></link>を1体召喚する。カードを1枚引く。 ",
+    "descriptionRaw": "次のラウンド開始時に仮面の司を1体召喚する。カードを1枚引く。 ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「旧き仮面が若き眼を開く」\n- 仮面の司",
+    "artistName": "Kudos Productions",
+    "name": "均衡の呼び声",
+    "cardCode": "06IO012T1",
+    "keywords": [
+      "スロウ"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "スロウ",
+    "spellSpeedRef": "Slow",
+    "rarity": "なし",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スペル",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "01IO020"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06IO012T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06IO012T2-full.png"
+      }
+    ],
+    "regions": [
+      "アイオニア"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 0,
+    "cost": 4,
+    "health": 0,
+    "description": "<link=card.summon><style=AssociatedCard>仮面の司</style></link>を1体召喚する。カードを1枚引く。",
+    "descriptionRaw": "仮面の司を1体召喚する。カードを1枚引く。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「旧き仮面が若き眼を開く」\n- 仮面の司",
+    "artistName": "Kudos Productions",
+    "name": "均衡の呼び声",
+    "cardCode": "06IO012T2",
+    "keywords": [
+      "スロウ"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "スロウ",
+    "spellSpeedRef": "Slow",
+    "rarity": "なし",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スペル",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06IO003T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06IO003.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06IO003-full.png"
+      }
+    ],
+    "regions": [
+      "アイオニア"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 4,
+    "cost": 2,
+    "health": 4,
+    "description": "<link=keyword.PlaySkillMark><sprite name=SkillMark><style=Keyword>プレイ</style></link>: 敵1体を<link=keyword.Stun><sprite name=Stunned><style=Keyword>スタン</style></link>させる。",
+    "descriptionRaw": "プレイ: 敵1体をスタンさせる。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「第四幕: 若き尼僧が登場。この物語は悲劇であり、彼女が裏切った人々の、蒼白い唇によって語られる。尼僧は犯した罪を贖うべく、重荷を担っている──その手にあるのは彼女が国土に迎え入れたノクサス人へのきらびやかな贈り物だ。遺された我々は考えずにいられない。彼女を打ち砕いたのは哀しみだろうか、それとも銃弾だろうかと」",
+    "artistName": "Envar Studio",
+    "name": "悔悟の舞台回し",
+    "cardCode": "06IO003",
+    "keywords": [
+      "エフェメラル"
+    ],
+    "keywordRefs": [
+      "Ephemeral"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "コモン",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06IO003"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06IO003T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06IO003T1-full.png"
+      }
+    ],
+    "regions": [
+      "アイオニア"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "敵1体を<link=keyword.Stun><sprite name=Stunned><style=Keyword>スタン</style></link>させる。",
+    "descriptionRaw": "敵1体をスタンさせる。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「演者たるもの、スポットライトを避けてはならない」\n- ジン",
+    "artistName": "Kudos Productions",
+    "name": "圧巻の舞台",
+    "cardCode": "06IO003T1",
+    "keywords": [
+      "スキル"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "なし",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スキル",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06IO004T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06IO004T1-full.png"
+      }
+    ],
+    "regions": [
+      "アイオニア"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "攻撃力がこのユニットより低いユニット1体を<link=keyword.Recall><style=Keyword>リコール</style></link>させる。",
+    "descriptionRaw": "攻撃力がこのユニットより低いユニット1体をリコールさせる。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「修練とは、完璧に至る道である」\n- 至高の匠",
+    "artistName": "Kudos Productions",
+    "name": "芸の極致",
+    "cardCode": "06IO004T1",
+    "keywords": [
+      "スキル"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "なし",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スキル",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06BW006T3",
+      "06BW006T1",
+      "06BW006T2"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06BW006.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06BW006-full.png"
+      }
+    ],
+    "regions": [
+      "ビルジウォーター"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 1,
+    "cost": 4,
+    "health": 6,
+    "description": "<link=vocab.Attack><style=Vocab>アタック</style></link>: <link=vocab.Spawn><style=Vocab>スポーン</style></link> 1を発動後、<link=vocab.Strongest><style=Vocab>最も強い</style></link><link=card.summon><style=AssociatedCard>触手</style></link>の攻撃力と同じ値だけ、このユニットの攻撃力をこのラウンド中上昇させる。",
+    "descriptionRaw": "アタック: スポーン 1を発動後、最も強い触手の攻撃力と同じ値だけ、このユニットの攻撃力をこのラウンド中上昇させる。",
+    "levelupDescription": "このユニットが場にいる状態で、<link=card.summon><style=AssociatedCard>触手</style></link>またはこのユニットが合計15以上のダメージを与えた時<style=Variable></style>。",
+    "levelupDescriptionRaw": "このユニットが場にいる状態で、触手またはこのユニットが合計15以上のダメージを与えた時。",
+    "flavorText": "「ナーガケイボロスの眼」は単なる呼び名に過ぎないが、イラオイはこれをひとつの試練として捉えている。容易く人を見限るその神が、常に傍らにいるものとして日々を送るのだ。",
+    "artistName": "MICHAEL IVAN",
+    "name": "イラオイ",
+    "cardCode": "06BW006",
+    "keywords": [
+      "オーバーパワー"
+    ],
+    "keywordRefs": [
+      "Overwhelm"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "チャンピオン",
+    "rarityRef": "Champion",
+    "subtypes": [],
+    "supertype": "チャンピオン",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06BW006T3",
+      "06BW006",
+      "06BW006T2"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06BW006T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06BW006T1-full.png"
+      }
+    ],
+    "regions": [
+      "ビルジウォーター"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 2,
+    "cost": 4,
+    "health": 7,
+    "description": "<link=vocab.Spawn><style=Vocab>スポーン</style></link>発動時、その数を1増加させる。\r\n<link=vocab.Attack><style=Vocab>アタック</style></link>: <link=vocab.Spawn><style=Vocab>スポーン</style></link> 1を発動後、<link=vocab.Strongest><style=Vocab>最も強い</style></link><link=card.summon><style=AssociatedCard>触手</style></link>の体力を全回復し、そのステータスと同じ値だけ、このユニットのステータスをこのラウンド中上昇させる。",
+    "descriptionRaw": "スポーン発動時、その数を1増加させる。\r\nアタック: スポーン 1を発動後、最も強い触手の体力を全回復し、そのステータスと同じ値だけ、このユニットのステータスをこのラウンド中上昇させる。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "人生の教訓: 立派な船のマストから敵に飛び掛かり、敵にとてつもない後悔の念を与えられる機会があるなら、必ず実行したほうがいい。あれほど爽快なものはないからだ。",
+    "artistName": "MICHAEL IVAN",
+    "name": "イラオイ",
+    "cardCode": "06BW006T1",
+    "keywords": [
+      "オーバーパワー"
+    ],
+    "keywordRefs": [
+      "Overwhelm"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "なし",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "チャンピオン",
+    "type": "ユニット",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06BW006T3",
+      "06BW006T1",
+      "06BW006"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06BW006T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06BW006T2-full.png"
+      }
+    ],
+    "regions": [
+      "ビルジウォーター"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 4,
+    "health": 0,
+    "description": "<link=vocab.Spawn><style=Vocab>スポーン</style></link> 3。その後、<link=vocab.Strongest><style=Vocab>最も強い</style></link><link=card.summon><style=AssociatedCard>触手</style></link>と敵1体が互いに<link=vocab.Strike><style=Vocab>ストライク</style></link>する。\r\nデッキに<link=card.level1><style=AssociatedCard>イラオイ</style></link>を1枚生成する。",
+    "descriptionRaw": "スポーン 3。その後、最も強い触手と敵1体が互いにストライクする。\r\nデッキにイラオイを1枚生成する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「人生は試練であり、苦痛は教師である。そして、何者もそれを拒むことはできない」\n- イラオイ",
+    "artistName": "Kudos Productions",
+    "name": "イラオイの「触手の鉄槌」",
+    "cardCode": "06BW006T2",
+    "keywords": [
+      "スロウ"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "スロウ",
+    "spellSpeedRef": "Slow",
+    "rarity": "なし",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "チャンピオン",
+    "type": "スペル",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06BW006T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06BW006T3-full.png"
+      }
+    ],
+    "regions": [
+      "ビルジウォーター"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 1,
+    "cost": 1,
+    "health": 1,
+    "description": "",
+    "descriptionRaw": "",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "深海に潜む存在の象徴として、これ以上のものはないだろう。“それ”が危害を加えようとしているのかどうかに関係なく、人は恐怖に震え上がる。自然は大いなる姿を見せるだけだが、人の心はそこに意図を見出すのだ。",
+    "artistName": "Michael Ivan",
+    "name": "触手",
+    "cardCode": "06BW006T3",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "なし",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06BW036.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06BW036-full.png"
+      }
+    ],
+    "regions": [
+      "ビルジウォーター"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 3,
+    "description": "このユニットは、あなたが敵のネクサスにダメージを与えたラウンド1回につき+1|+0を持つ。",
+    "descriptionRaw": "このユニットは、あなたが敵のネクサスにダメージを与えたラウンド1回につき+1|+0を持つ。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「ビルジウォーターで一番血生臭ぇ場所っつったら、まず波止場だ。あのネズミどもを見ろよ。血をすすって育つんだ。いつも腹を空かしてやがる。キイキイうるせえし気味がわりい」\n- ジャギドの解体屋",
+    "artistName": "Alessandro Poli",
+    "name": "ワーフラット",
+    "cardCode": "06BW036",
+    "keywords": [
+      "オーバーパワー"
+    ],
+    "keywordRefs": [
+      "Overwhelm"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "エピック",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06BW038.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06BW038-full.png"
+      }
+    ],
+    "regions": [
+      "ビルジウォーター"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 3,
+    "cost": 4,
+    "health": 4,
+    "description": "あなたが<link=keyword.Deep><sprite name=Deep><style=Keyword>ディープ</style></link>状態になっている場合、味方とネクサスの体力を3回復する。\r\n<style=Variable></style>",
+    "descriptionRaw": "あなたがディープ状態になっている場合、味方とネクサスの体力を3回復する。\r\n",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「なんなんだコイツは？！」\n「オ…オレンジだ！オレンジを狙ってる！」\n「バカ野郎！とっととカゴごとくれちまえ！」\n- 不運な船乗りたち",
+    "artistName": "Kudos Productions",
+    "name": "メガタスク",
+    "cardCode": "06BW038",
+    "keywords": [
+      "ディープ"
+    ],
+    "keywordRefs": [
+      "Deep"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "コモン",
+    "rarityRef": "Common",
+    "subtypes": [
+      "海獣"
+    ],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06BW006T3"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06BW030.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06BW030-full.png"
+      }
+    ],
+    "regions": [
+      "ビルジウォーター"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 5,
+    "health": 0,
+    "description": "<link=vocab.Spawn><style=Vocab>スポーン</style></link> 2。\r\nカードを2枚引く。",
+    "descriptionRaw": "スポーン 2。\r\nカードを2枚引く。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "ナーガケイボロスは多くの恵みを与えるだろう──その試練を耐え抜くことができたのなら。",
+    "artistName": "Kudos Productions",
+    "name": "ナーガケイボロスの眼",
+    "cardCode": "06BW030",
+    "keywords": [
+      "バースト"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "バースト",
+    "spellSpeedRef": "Burst",
+    "rarity": "コモン",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スペル",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06BW011T2",
+      "06BW006T3",
+      "06BW011T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06BW011.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06BW011-full.png"
+      }
+    ],
+    "regions": [
+      "ビルジウォーター"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 5,
+    "cost": 8,
+    "health": 8,
+    "description": "<link=vocab.RoundStart><style=Vocab>ラウンド開始時</style></link>: <link=vocab.Spawn><style=Vocab>スポーン</style></link> 2。その後、味方の<link=vocab.Strongest><style=Vocab>最も強い</style></link><link=card.tentacle><style=AssociatedCard>触手</style></link>の攻撃力が12以上である場合、<link=card.spell><style=AssociatedCard>ナーガケイボロスの激情</style></link>を手札に1枚生成する。",
+    "descriptionRaw": "ラウンド開始時: スポーン 2。その後、味方の最も強い触手の攻撃力が12以上である場合、ナーガケイボロスの激情を手札に1枚生成する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「母なる大蛇、大いなるクラーケン、髭の貴婦人。ナーガケイボロスは呼び名など意に介さぬ。迷える亡霊など、なおさら意に介さぬ」\n- イラオイ",
+    "artistName": "MICHAEL IVAN",
+    "name": "ナーガケイボロス",
+    "cardCode": "06BW011",
+    "keywords": [
+      "フィアサム"
+    ],
+    "keywordRefs": [
+      "Fearsome"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "エピック",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06BW011T2",
+      "06BW011",
+      "06BW006T3"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06BW011T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06BW011T1-full.png"
+      }
+    ],
+    "regions": [
+      "ビルジウォーター"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "<link=card.parentRef><style=AssociatedCard>ナーガケイボロス</style></link>が<link=card.unitRef><style=AssociatedCard>ナーガケイボロスの触手</style></link>4体とともにフリーアタックを開始する。フリーアタックはアタックトークンを必要としない。",
+    "descriptionRaw": "ナーガケイボロスがナーガケイボロスの触手4体とともにフリーアタックを開始する。フリーアタックはアタックトークンを必要としない。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "ブールの言い伝えによれば、大地はかつてひとつであり、ナーガケイボロスは船乗りに試練を与えるべくそれを砕き、多くの島々を生んだとされる。無論、これは作り話に過ぎないが、“それが可能である”ことについては誰にも疑う余地がない。",
+    "artistName": "Kudos Productions",
+    "name": "ナーガケイボロスの激情",
+    "cardCode": "06BW011T1",
+    "keywords": [
+      "フォーカス",
+      "フリーティング"
+    ],
+    "keywordRefs": [
+      "Focus",
+      "Fleeting"
+    ],
+    "spellSpeed": "バースト",
+    "spellSpeedRef": "Burst",
+    "rarity": "なし",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スペル",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06BW006T3",
+      "06BW011T1",
+      "06BW011"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06BW011T5.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06BW011T5-full.png"
+      }
+    ],
+    "regions": [
+      "ビルジウォーター"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 1,
+    "cost": 1,
+    "health": 1,
+    "description": "召喚時、このユニットのステータスを味方の<link=vocab.Strongest><style=Vocab>最も強い</style></link><link=card.tentacle><style=AssociatedCard>触手</style></link>と同じ値まで成長させ、そのキーワードを付与する。",
+    "descriptionRaw": "召喚時、このユニットのステータスを味方の最も強い触手と同じ値まで成長させ、そのキーワードを付与する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「触手を目にしただけでナーガケイボロスを拝んだと言うのは、日光を浴びただけで太陽を理解したと言うに等しい。ナーガケイボロスはただ巨大なのではない。それは終わりなき存在なのだ」\n- ブールの女司祭 ファラウェー",
+    "artistName": "Michael Ivan",
+    "name": "ナーガケイボロスの触手",
+    "cardCode": "06BW011T5",
+    "keywords": [
+      "エフェメラル"
+    ],
+    "keywordRefs": [
+      "Ephemeral"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "なし",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06BW006T3",
+      "06BW011T1",
+      "06BW011"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06BW011T4.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06BW011T4-full.png"
+      }
+    ],
+    "regions": [
+      "ビルジウォーター"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 1,
+    "cost": 1,
+    "health": 1,
+    "description": "召喚時、このユニットのステータスを味方の<link=vocab.Strongest><style=Vocab>最も強い</style></link><link=card.tentacle><style=AssociatedCard>触手</style></link>と同じ値まで成長させ、そのキーワードを付与する。",
+    "descriptionRaw": "召喚時、このユニットのステータスを味方の最も強い触手と同じ値まで成長させ、そのキーワードを付与する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「触手を目にしただけでナーガケイボロスを拝んだと言うのは、日光を浴びただけで太陽を理解したと言うに等しい。ナーガケイボロスはただ巨大なのではない。それは終わりなき存在なのだ」\n- ブールの女司祭 ファラウェー",
+    "artistName": "Michael Ivan",
+    "name": "ナーガケイボロスの触手",
+    "cardCode": "06BW011T4",
+    "keywords": [
+      "エフェメラル"
+    ],
+    "keywordRefs": [
+      "Ephemeral"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "なし",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06BW006T3",
+      "06BW011T1",
+      "06BW011"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06BW011T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06BW011T3-full.png"
+      }
+    ],
+    "regions": [
+      "ビルジウォーター"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 1,
+    "cost": 1,
+    "health": 1,
+    "description": "召喚時、このユニットのステータスを味方の<link=vocab.Strongest><style=Vocab>最も強い</style></link><link=card.tentacle><style=AssociatedCard>触手</style></link>と同じ値まで成長させ、そのキーワードを付与する。",
+    "descriptionRaw": "召喚時、このユニットのステータスを味方の最も強い触手と同じ値まで成長させ、そのキーワードを付与する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「触手を目にしただけでナーガケイボロスを拝んだと言うのは、日光を浴びただけで太陽を理解したと言うに等しい。ナーガケイボロスはただ巨大なのではない。それは終わりなき存在なのだ」\n- ブールの女司祭 ファラウェー",
+    "artistName": "Michael Ivan",
+    "name": "ナーガケイボロスの触手",
+    "cardCode": "06BW011T3",
+    "keywords": [
+      "エフェメラル"
+    ],
+    "keywordRefs": [
+      "Ephemeral"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "なし",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06BW006T3",
+      "06BW011T1",
+      "06BW011"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06BW011T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06BW011T2-full.png"
+      }
+    ],
+    "regions": [
+      "ビルジウォーター"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 1,
+    "cost": 1,
+    "health": 1,
+    "description": "召喚時、このユニットのステータスを味方の<link=vocab.Strongest><style=Vocab>最も強い</style></link><link=card.tentacle><style=AssociatedCard>触手</style></link>と同じ値まで成長させ、そのキーワードを付与する。",
+    "descriptionRaw": "召喚時、このユニットのステータスを味方の最も強い触手と同じ値まで成長させ、そのキーワードを付与する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「触手を目にしただけでナーガケイボロスを拝んだと言うのは、日光を浴びただけで太陽を理解したと言うに等しい。ナーガケイボロスはただ巨大なのではない。それは終わりなき存在なのだ」\n- ブールの女司祭 ファラウェー",
+    "artistName": "Michael Ivan",
+    "name": "ナーガケイボロスの触手",
+    "cardCode": "06BW011T2",
+    "keywords": [
+      "エフェメラル"
+    ],
+    "keywordRefs": [
+      "Ephemeral"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "なし",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06BW045.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06BW045-full.png"
+      }
+    ],
+    "regions": [
+      "ビルジウォーター"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 5,
+    "health": 0,
+    "description": "指定した対象に1ダメージを与え、その後<link=vocab.Rally><style=Vocab>奮起</style></link>する。",
+    "descriptionRaw": "指定した対象に1ダメージを与え、その後奮起する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "リッパーズベイを泳ぎ回るサメを追い払うのは至難の業だ。一度血の味を覚えたやつらは、二度とその味を忘れない。",
+    "artistName": "Kudos Productions",
+    "name": "血の匂い",
+    "cardCode": "06BW045",
+    "keywords": [
+      "スロウ",
+      "潜伏"
+    ],
+    "keywordRefs": [
+      "Slow",
+      "Lurker"
+    ],
+    "spellSpeed": "スロウ",
+    "spellSpeedRef": "Slow",
+    "rarity": "コモン",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スペル",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06BW006T3"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06BW028.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06BW028-full.png"
+      }
+    ],
+    "regions": [
+      "ビルジウォーター"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 4,
+    "health": 0,
+    "description": "<link=vocab.Spawn><style=Vocab>スポーン</style></link> 3。その後<link=vocab.Strongest><style=Vocab>最も強い</style></link><link=card.summon><style=AssociatedCard>触手</style></link>と敵1体が互いに<link=vocab.Strike><style=Vocab>ストライク</style></link>する。",
+    "descriptionRaw": "スポーン 3。その後最も強い触手と敵1体が互いにストライクする。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「人生は試練であり、苦痛は教師である。そして、何者もそれを拒むことはできない」\n- イラオイ",
+    "artistName": "Kudos Productions",
+    "name": "触手の鉄槌",
+    "cardCode": "06BW028",
+    "keywords": [
+      "スロウ"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "スロウ",
+    "spellSpeedRef": "Slow",
+    "rarity": "レア",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スペル",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06BW006T3"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06BW035.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06BW035-full.png"
+      }
+    ],
+    "regions": [
+      "ビルジウォーター"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 3,
+    "cost": 3,
+    "health": 3,
+    "description": "<link=vocab.Attack><style=Vocab>アタック</style></link>: <link=vocab.Spawn><style=Vocab>スポーン</style></link> 1を発動し、このラウンド中、味方の<link=vocab.Strongest><style=Vocab>最も強い</style></link><link=card.summon><style=AssociatedCard>触手</style></link>に<link=keyword.Overwhelm><sprite name=Overwhelm><style=Keyword>オーバーパワー</style></link>を付与する。",
+    "descriptionRaw": "アタック: スポーン 1を発動し、このラウンド中、味方の最も強い触手にオーバーパワーを付与する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "ナーガケイボロスを勧請したくば、儀式典礼では足りぬと知れ。かの神は、荒れ狂う大海原に立ち向かわんとする強き魂にのみ応える。並の人間には越え難き試練だ。",
+    "artistName": "Michael Ivan",
+    "name": "海原の声",
+    "cardCode": "06BW035",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "レア",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06BW009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06BW009-full.png"
+      }
+    ],
+    "regions": [
+      "ビルジウォーター"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 3,
+    "cost": 3,
+    "health": 2,
+    "description": "<link=vocab.Play><style=Vocab>プレイ</style></link>: コスト1の味方1体がフリーアタックを開始する。フリーアタックはアタックトークンを必要としない。",
+    "descriptionRaw": "プレイ: コスト1の味方1体がフリーアタックを開始する。フリーアタックはアタックトークンを必要としない。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「海の叡智を思い出せ！自ら動かねば藻屑となるだけだ！迷った時は俺の声を追いかけろ──敵は真っ直ぐに向かってくるぞ！」 ",
+    "artistName": "Envar Studio",
+    "name": "ブールの指揮官",
+    "cardCode": "06BW009",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "レア",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06BW006T3"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06BW015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06BW015-full.png"
+      }
+    ],
+    "regions": [
+      "ビルジウォーター"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "<link=vocab.Spawn><style=Vocab>スポーン</style></link> 2、または5マナを消費することで代わりに<link=vocab.Spawn><style=Vocab>スポーン</style></link> 4を発動する。",
+    "descriptionRaw": "スポーン 2、または5マナを消費することで代わりにスポーン 4を発動する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "ナーガケイボロスへの祈りは何かを願ったり、見返りを求めてするものではない。その恵みは人生そのものに似ている。努力し、もがき、奮闘するうちに、時として報われることがあるだけだ。",
+    "artistName": "Kudos Productions",
+    "name": "祈りと恩寵",
+    "cardCode": "06BW015",
+    "keywords": [
+      "スロウ"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "スロウ",
+    "spellSpeedRef": "Slow",
+    "rarity": "コモン",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スペル",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06BW006T3"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06BW007.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06BW007-full.png"
+      }
+    ],
+    "regions": [
+      "ビルジウォーター"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 5,
+    "description": "<link=vocab.RoundStart><style=Vocab>ラウンド開始時</style></link>: このユニットに2ダメージを与え、<link=vocab.Spawn><style=Vocab>スポーン</style></link> 1を発動する。",
+    "descriptionRaw": "ラウンド開始時: このユニットに2ダメージを与え、スポーン 1を発動する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "シャドウアイルから厄災が訪れる時、その偶像は光を放ち、水平線の彼方に報せを届ける。",
+    "artistName": "Polar Engine",
+    "name": "警戒の偶像",
+    "cardCode": "06BW007",
+    "keywords": [
+      "行動不可"
+    ],
+    "keywordRefs": [
+      "Immobile"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "コモン",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06BW006T3"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06BW016.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06BW016-full.png"
+      }
+    ],
+    "regions": [
+      "ビルジウォーター"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 4,
+    "cost": 5,
+    "health": 3,
+    "description": "召喚時、<link=vocab.Spawn><style=Vocab>スポーン</style></link> 3を発動する。",
+    "descriptionRaw": "召喚時、スポーン 3を発動する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "素朴な人生ほど甘美なものだ。顔にかかる潮水、耳をくすぐる鳥の歌、そして水平線にはっきりと見える敵たちの姿。",
+    "artistName": "Will Gist",
+    "name": "ブールの見張り番",
+    "cardCode": "06BW016",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "コモン",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "02BW012",
+      "02BW051",
+      "02BW025",
+      "02BW032T1",
+      "02BW046T2"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06BW043.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06BW043-full.png"
+      }
+    ],
+    "regions": [
+      "ビルジウォーター"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "<link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>フリーティング</style></link>を持つ<link=card.cardA><style=AssociatedCard>火薬を足せ！</style></link>、<link=card.cardB><style=AssociatedCard>トリックスター</style></link>、<link=card.cardC><style=AssociatedCard>フィッシング</style></link>のいずれかを手札に1枚生成する。",
+    "descriptionRaw": "フリーティングを持つ火薬を足せ！、トリックスター、フィッシングのいずれかを手札に1枚生成する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「ブラフを見破ってやろうだなんて考えないことだ。ビルジウォーターは嘘の達人だらけ…この街でテルストーンに勝ちたいなら、口先じゃなくて手元を見な」\n- ツイステッド・フェイト",
+    "artistName": "Kudos Productions",
+    "name": "ビルジウォーター・テルストーン",
+    "cardCode": "06BW043",
+    "keywords": [
+      "バースト"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "バースト",
+    "spellSpeedRef": "Burst",
+    "rarity": "レア",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スペル",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06BW015T4.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06BW015T4-full.png"
+      }
+    ],
+    "regions": [
+      "ビルジウォーター"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "<link=vocab.Spawn><style=Vocab>スポーン</style></link> 2。",
+    "descriptionRaw": "スポーン 2。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "ナーガケイボロスへの祈りは何かを願ったり、見返りを求めてするものではない。その恵みは人生そのものに似ている。努力し、もがき、奮闘するうちに、時として報われることがあるだけだ。",
+    "artistName": "Kudos Productions",
+    "name": "祈りと恩寵",
+    "cardCode": "06BW015T4",
+    "keywords": [
+      "スロウ"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "スロウ",
+    "spellSpeedRef": "Slow",
+    "rarity": "なし",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スペル",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06BW015T5.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06BW015T5-full.png"
+      }
+    ],
+    "regions": [
+      "ビルジウォーター"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 5,
+    "health": 0,
+    "description": "<link=vocab.Spawn><style=Vocab>スポーン</style></link> 4。",
+    "descriptionRaw": "スポーン 4。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "ナーガケイボロスへの祈りは何かを願ったり、見返りを求めてするものではない。その恵みは人生そのものに似ている。努力し、もがき、奮闘するうちに、時として報われることがあるだけだ。",
+    "artistName": "Kudos Productions",
+    "name": "祈りと恩寵",
+    "cardCode": "06BW015T5",
+    "keywords": [
+      "スロウ"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "スロウ",
+    "spellSpeedRef": "Slow",
+    "rarity": "なし",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スペル",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06NX024T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06NX024.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06NX024-full.png"
+      }
+    ],
+    "regions": [
+      "ノクサス"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 2,
+    "cost": 6,
+    "health": 4,
+    "description": "<link=keyword.PlaySkillMark><sprite name=SkillMark><style=Keyword>プレイ</style></link>: 敵1体に2ダメージを与える。\r\nあなたの<link=keyword.Fast><sprite name=Fast><style=Keyword>ファスト</style></link>スペル、<link=keyword.Slow><sprite name=Slow><style=Keyword>スロウ</style></link>スペル、および<link=keyword.Skill><sprite name=SkillMark><style=Keyword>スキル</style></link>は「このカードがダメージを負った敵または<link=keyword.Stun><sprite name=Stunned><style=Keyword>スタン</style></link>中の敵にダメージを与えた時、それをキルする」を持つ。",
+    "descriptionRaw": "プレイ: 敵1体に2ダメージを与える。\r\nあなたのファストスペル、スロウスペル、およびスキルは「このカードがダメージを負った敵またはスタン中の敵にダメージを与えた時、それをキルする」を持つ。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「第二幕: さしたる功績もない二枚舌の貴族が、くすねたカシューリのガントレットをちらつかせ、アイオニアの民を話術で引き込もうとしている。だが、その粗野な顔立ちは、裏の真意を隠し切れない。何も知らなかったと言い命乞いをするが、彼の野望は虚しく潰える」",
+    "artistName": "Kudos Productions ",
+    "name": "ブロードメイン卿",
+    "cardCode": "06NX024",
+    "keywords": [
+      "Missing Translation"
+    ],
+    "keywordRefs": [
+      "AuraVisualFakeKeyword"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "レア",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "01NX010"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06NX033.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06NX033-full.png"
+      }
+    ],
+    "regions": [
+      "ノクサス"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 4,
+    "health": 0,
+    "description": "敵2体を<link=keyword.Stun><sprite name=Stunned><style=Keyword>スタン</style></link>させる。または6マナを消費して<link=card.summon><style=AssociatedCard>レギオンの将軍</style></link>を1体召喚する。<style=Variable></style>",
+    "descriptionRaw": "敵2体をスタンさせる。または6マナを消費してレギオンの将軍を1体召喚する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "戦闘に先立って下すべき重大な決断は、任務の割り当てである。優秀な指揮官は知っている。勝利の鍵を握るのは…",
+    "artistName": "Kudos Productions",
+    "name": "戦略遂行",
+    "cardCode": "06NX033",
+    "keywords": [
+      "スロウ"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "スロウ",
+    "spellSpeedRef": "Slow",
+    "rarity": "レア",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スペル",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "01NX010"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06NX033T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06NX033T2-full.png"
+      }
+    ],
+    "regions": [
+      "ノクサス"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 6,
+    "health": 0,
+    "description": "<link=card.summon><style=AssociatedCard>レギオンの将軍</style></link>を1体召喚する。<style=Variable></style> ",
+    "descriptionRaw": "レギオンの将軍を1体召喚する。 ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "…巧みな攻撃だと。",
+    "artistName": "Kudos Productions",
+    "name": "戦略遂行",
+    "cardCode": "06NX033T2",
+    "keywords": [
+      "スロウ"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "スロウ",
+    "spellSpeedRef": "Slow",
+    "rarity": "コモン",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スペル",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06NX033T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06NX033T1-full.png"
+      }
+    ],
+    "regions": [
+      "ノクサス"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 4,
+    "health": 0,
+    "description": "敵2体を<link=keyword.Stun><sprite name=Stunned><style=Keyword>スタン</style></link>させる。",
+    "descriptionRaw": "敵2体をスタンさせる。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "…巧みな防御だと。",
+    "artistName": "Kudos Productions",
+    "name": "戦略遂行",
+    "cardCode": "06NX033T1",
+    "keywords": [
+      "スロウ"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "スロウ",
+    "spellSpeedRef": "Slow",
+    "rarity": "コモン",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スペル",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06NX012T6",
+      "06NX012T3",
+      "06NX012T7",
+      "06NX012T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06NX012.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06NX012-full.png"
+      }
+    ],
+    "regions": [
+      "ノクサス"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 2,
+    "description": "<link=keyword.AttackSkillMark><sprite name=SkillMark><style=Keyword>アタック</style></link>: このユニットが自身のブロッカーに2ダメージを与える。対象がすでに力尽きている、または場を離れている場合、代わりに敵のネクサスに2ダメージを与える。\r\n",
+    "descriptionRaw": "アタック: このユニットが自身のブロッカーに2ダメージを与える。対象がすでに力尽きている、または場を離れている場合、代わりに敵のネクサスに2ダメージを与える。\r\n",
+    "levelupDescription": "このユニットが場にいる状態で、あなたが合計6枚以上の<link=keyword.Fast><sprite name=Fast><style=Keyword>ファスト</style></link>スペル、<link=keyword.Slow><sprite name=Slow><style=Keyword>スロウ</style></link>スペルまたは<link=keyword.Skill><sprite name=SkillMark><style=Keyword>スキル</style></link>をプレイした時<style=Variable></style>。",
+    "levelupDescriptionRaw": "このユニットが場にいる状態で、あなたが合計6枚以上のファストスペル、スロウスペルまたはスキルをプレイした時。",
+    "flavorText": "十数年前、アモライン・キオサーは白光りする秘宝を持ってレイヴンブルーム学園を抜け出した。学園の捜索隊は帝国の各地を捜しまわったが、どの手掛かりをたどってもアモラインには行き着かなかった。年月が経ち、アイアンスパイク山脈の北部に怒りをたぎらせた迷子の少女がいるという報せが届いた。どうせ無駄足だろう、とフィン・レトリックはけだるそうに荷物をまとめて調査に向かったが、彼の予想は裏切られた。",
+    "artistName": "Polar Engine",
+    "name": "アニー",
+    "cardCode": "06NX012",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "チャンピオン",
+    "rarityRef": "Champion",
+    "subtypes": [],
+    "supertype": "チャンピオン",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06NX012T7",
+      "06NX012"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06NX012T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06NX012T3-full.png"
+      }
+    ],
+    "regions": [
+      "ノクサス"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "ユニットを1体指定する。このラウンド中、次にそのユニットがダメージを受けた時、それをキルする。\r\nデッキに<link=card.level1><style=AssociatedCard>アニー</style></link>を1枚生成する。",
+    "descriptionRaw": "ユニットを1体指定する。このラウンド中、次にそのユニットがダメージを受けた時、それをキルする。\r\nデッキにアニーを1枚生成する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "テルシ校長がノクサスの教条について長々と語るうちに、退屈に耐えかねた子供たちは段々と落ち着きがなくなっていった。周りの子供たちが動き出したい衝動をなんとかを抑える中、アニーはいち早く行動に移した。そして煙が立ち上り、次に炎が燃え上がった。",
+    "artistName": "Kudos Productions",
+    "name": "アニーの「ファイアボール」",
+    "cardCode": "06NX012T3",
+    "keywords": [
+      "ファスト"
+    ],
+    "keywordRefs": [
+      "Fast"
+    ],
+    "spellSpeed": "ファスト",
+    "spellSpeedRef": "Fast",
+    "rarity": "なし",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "チャンピオン",
+    "type": "スペル",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06NX012"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06NX012T6.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06NX012T6-full.png"
+      }
+    ],
+    "regions": [
+      "ノクサス"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "<link=card.parentRef><style=AssociatedCard>アニー</style></link>のブロッカーに2ダメージを与える。対象がすでに力尽きている、または場を離れている場合、代わりに敵のネクサスに2ダメージを与える。",
+    "descriptionRaw": "アニーのブロッカーに2ダメージを与える。対象がすでに力尽きている、または場を離れている場合、代わりに敵のネクサスに2ダメージを与える。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「一緒に遊ぼ？」\n- アニー",
+    "artistName": "Kudos Productions",
+    "name": "モルテンシールド",
+    "cardCode": "06NX012T6",
+    "keywords": [
+      "スキル"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "なし",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スキル",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06NX012T3",
+      "06NX012T1",
+      "06NX012T8",
+      "06NX012"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06NX012T7.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06NX012T7-full.png"
+      }
+    ],
+    "regions": [
+      "ノクサス"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 1,
+    "cost": 1,
+    "health": 3,
+    "description": "レベルアップ時、<link=card.create><style=AssociatedCard>ティバーズ</style></link>を手札に1枚生成する。\r\n<link=keyword.AttackSkillMark><sprite name=SkillMark><style=Keyword>アタック</style></link>: このユニットが自身のブロッカーに3ダメージを与えて<link=keyword.Stun><sprite name=Stunned><style=Keyword>スタン</style></link>させる。対象がすでに力尽きている、または場を離れている場合、代わりに敵のネクサスに3ダメージを与える。",
+    "descriptionRaw": "レベルアップ時、ティバーズを手札に1枚生成する。\r\nアタック: このユニットが自身のブロッカーに3ダメージを与えてスタンさせる。対象がすでに力尽きている、または場を離れている場合、代わりに敵のネクサスに3ダメージを与える。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「アモラインの娘を見つけた。間違いない。目も、笑い方もそっくりだ。2週間以内に連れて帰る。本人ともすでに話してある。どうか優しくしてやってくれ。あの子は善良な子供だ。内に闇も抱えているが…」\n- フィン・レトリックの手紙より抜粋",
+    "artistName": "Polar Engine",
+    "name": "アニー",
+    "cardCode": "06NX012T7",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "なし",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "チャンピオン",
+    "type": "ユニット",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06NX012T5.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06NX012T5-full.png"
+      }
+    ],
+    "regions": [
+      "ノクサス"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "敵1体を<link=keyword.Stun><sprite name=Stunned><style=Keyword>スタン</style></link>させる。その後、ダメージを負った敵ユニットおよび<link=keyword.Stun><sprite name=Stunned><style=Keyword>スタン</style></link>中の敵ユニットすべてに2ダメージを与える。",
+    "descriptionRaw": "敵1体をスタンさせる。その後、ダメージを負った敵ユニットおよびスタン中の敵ユニットすべてに2ダメージを与える。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「ティバーズ！」\n- アニー",
+    "artistName": "Kudos Productions",
+    "name": "業火の訪れ",
+    "cardCode": "06NX012T5",
+    "keywords": [
+      "スキル"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "なし",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スキル",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06NX012T5",
+      "06NX012T7"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06NX012T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06NX012T1-full.png"
+      }
+    ],
+    "regions": [
+      "ノクサス"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 5,
+    "cost": 6,
+    "health": 5,
+    "description": "<link=keyword.PlaySkillMark><sprite name=SkillMark><style=Keyword>プレイ</style></link>: 敵1体を<link=keyword.Stun><sprite name=Stunned><style=Keyword>スタン</style></link>させる。その後、ダメージを負った敵ユニットおよび<link=keyword.Stun><sprite name=Stunned><style=Keyword>スタン</style></link>中の敵ユニットすべてに2ダメージを与える。",
+    "descriptionRaw": "プレイ: 敵1体をスタンさせる。その後、ダメージを負った敵ユニットおよびスタン中の敵ユニットすべてに2ダメージを与える。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "悪魔ティバルクは数百年にわたって無数の精神を蝕んできた。ゆっくりと、しかし容赦なく犠牲者を炎へと導き、彼らの肉が焼け焦げるさまを愉しむために。だが、ティバルクは幼いアニーの内に何事にも屈しない強固な意志と、己にも匹敵する魔法の才を見出した。",
+    "artistName": "Polar Engine",
+    "name": "ティバーズ",
+    "cardCode": "06NX012T1",
+    "keywords": [
+      "フィアサム"
+    ],
+    "keywordRefs": [
+      "Fearsome"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "なし",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06NX012T7"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06NX012T8.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06NX012T8-full.png"
+      }
+    ],
+    "regions": [
+      "ノクサス"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "<link=card.parentRef><style=AssociatedCard>アニー</style></link>のブロッカーに3ダメージを与え、<link=keyword.Stun><sprite name=Stunned><style=Keyword>スタン</style></link>させる。対象がすでに力尽きている、または場を離れている場合、代わりに敵のネクサスに3ダメージを与える。",
+    "descriptionRaw": "アニーのブロッカーに3ダメージを与え、スタンさせる。対象がすでに力尽きている、または場を離れている場合、代わりに敵のネクサスに3ダメージを与える。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「きっと楽しいよ…」\n- アニー",
+    "artistName": "Kudos Productions",
+    "name": "モルテンシールド",
+    "cardCode": "06NX012T8",
+    "keywords": [
+      "スキル"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "なし",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スキル",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06NX029.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06NX029-full.png"
+      }
+    ],
+    "regions": [
+      "ノクサス"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "攻撃力が5以上の味方が力尽きる時、攻撃力が5以上のランダムなフォロワーを手札に1枚生成する。",
+    "descriptionRaw": "攻撃力が5以上の味方が力尽きる時、攻撃力が5以上のランダムなフォロワーを手札に1枚生成する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「今日はふと、ペンローズ・ヒルに開いた小さな診療所のことを思い出した。あそこで私は何年も、生理学の秘密を解明しようとしていた。そう、何年もの間だ！しかし、レディ・ノラディに仕え始めたこの数か月のうちに、以前の私は何も学んでいなかったのだと悟った。あの頃の私が如何に無知で、如何に幸いであったかを」\n- エシュランゲル医師の手記",
+    "artistName": "Envar Studio",
+    "name": "蒼白の処方室",
+    "cardCode": "06NX029",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "エピック",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ランドマーク",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06NX032.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06NX032-full.png"
+      }
+    ],
+    "regions": [
+      "ノクサス"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 4,
+    "cost": 2,
+    "health": 1,
+    "description": "味方がアタックする時、このユニットも共にアタックする。",
+    "descriptionRaw": "味方がアタックする時、このユニットも共にアタックする。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「可愛いでしょう？ドレイクハウンドは主人を喜ばせようと懸命で、とても従順なの。あの方たちも、もっといい子にしていればよかったのにね」\n- 黒薔薇の棘",
+    "artistName": "Michael Ivan",
+    "name": "従順なドレイクハウンド",
+    "cardCode": "06NX032",
+    "keywords": [
+      "行動不可",
+      "クイックアタック"
+    ],
+    "keywordRefs": [
+      "Immobile",
+      "QuickStrike"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "コモン",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06NX030.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06NX030-full.png"
+      }
+    ],
+    "regions": [
+      "ノクサス"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 5,
+    "cost": 5,
+    "health": 4,
+    "description": "このユニットは<link=vocab.Everywhere><style=Vocab>あらゆる場所</style></link>にいる味方のバフを得る。\r\n",
+    "descriptionRaw": "このユニットはあらゆる場所にいる味方のバフを得る。\r\n",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「第一幕: カシューリの秘宝を盗み、持ち場から脱走した元兵士。今はカヤンヴィの酒場に身を潜め、横柄な態度で浴びるように酒を飲んでいる。だが彼は知らない。盗んだ宝があらゆる出来事を本来の持ち主に報告していることを！彼の生命はワインのように垂れ流されるだろう。ノクサスの真紅がアイオニアの金の上に広がるのだ」",
+    "artistName": "Kudos Productions",
+    "name": "レギオンの脱走兵",
+    "cardCode": "06NX030",
+    "keywords": [
+      "オーバーパワー"
+    ],
+    "keywordRefs": [
+      "Overwhelm"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "レア",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06NX013T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06NX013.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06NX013-full.png"
+      }
+    ],
+    "regions": [
+      "ノクサス"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 1,
+    "cost": 2,
+    "health": 1,
+    "description": "<link=keyword.PlaySkillMark><sprite name=SkillMark><style=Keyword>プレイ</style></link>: 敵1体を<link=keyword.Stun><sprite name=Stunned><style=Keyword>スタン</style></link>させる。すでに<link=keyword.Stun><sprite name=Stunned><style=Keyword>スタン</style></link>中の場合、代わりに2ダメージを与える。",
+    "descriptionRaw": "プレイ: 敵1体をスタンさせる。すでにスタン中の場合、代わりに2ダメージを与える。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「生徒: シデル・キセラ\n教員: J・ウィロウ\n報告内容: 左前腕に蜘蛛による咬傷を受ける。シデルは誤解だと主張しているものの、薄ら笑いを浮かべていることから故意と判断。食堂での2週間の追加奉仕を指示」\n- レイヴンブルームの懲罰記録",
+    "artistName": "Polar Engine",
+    "name": "スペルスリンガー",
+    "cardCode": "06NX013",
+    "keywords": [
+      "フィアサム"
+    ],
+    "keywordRefs": [
+      "Fearsome"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "コモン",
+    "rarityRef": "Common",
+    "subtypes": [
+      "蜘蛛"
+    ],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06NX028T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06NX028.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06NX028-full.png"
+      }
+    ],
+    "regions": [
+      "ノクサス"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "<link=vocab.Countdown><style=Vocab>カウントダウン10</style></link>: <link=card.create><style=AssociatedCard>ティバルク</style></link>を手札に1枚生成する。\r\nこのカードのカウントは、あなたがこのゲーム中にプレイしている<link=keyword.Fast><sprite name=Fast><style=Keyword>ファスト</style></link>スペル、<link=keyword.Slow><sprite name=Slow><style=Keyword>スロウ</style></link>スペル、<link=keyword.Skill><sprite name=SkillMark><style=Keyword>スキル</style></link>1枚につき、1<link=vocab.Advance><style=Vocab>進行</style></link>する。<style=Variable></style>",
+    "descriptionRaw": "カウントダウン10: ティバルクを手札に1枚生成する。\r\nこのカードのカウントは、あなたがこのゲーム中にプレイしているファストスペル、スロウスペル、スキル1枚につき、1進行する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「…ローズガードの惨状についてはすでにお聞き及びでしょう。姉妹校の過ちから学んでくださるよう願っています。貴校にはぜひ、帝国に貢献できるような形で運営をしていただきたいのです」\n- 校舎跡で発見された燃え残りの手紙",
+    "artistName": "Will Gist",
+    "name": "レイヴンブルーム学園",
+    "cardCode": "06NX028",
+    "keywords": [
+      "ランドマーク",
+      "カウントダウン"
+    ],
+    "keywordRefs": [
+      "LandmarkVisualOnly",
+      "Countdown"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "レア",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ランドマーク",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06NX028"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06NX028T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06NX028T1-full.png"
+      }
+    ],
+    "regions": [
+      "ノクサス"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 6,
+    "cost": 6,
+    "health": 6,
+    "description": "召喚時、<link=vocab.Everywhere><style=Vocab>あらゆる場所</style></link>にいる味方に+1|+0を付与し、このゲームが終了するまで、あなたのスペルまたは<link=keyword.Skill><sprite name=SkillMark><style=Keyword>スキル</style></link>が与えるダメージはすべて1増加する。",
+    "descriptionRaw": "召喚時、あらゆる場所にいる味方に+1|+0を付与し、このゲームが終了するまで、あなたのスペルまたはスキルが与えるダメージはすべて1増加する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「…私の内で燃えている。闇の存在。私に語り掛ける。火だ、火だ。炎のなかに目が見える。瞬きもしない黒い目。見つめている。笑っている。誘っている。こちらへ来いと。皆と交われと。業火が映す姿。手を伸ばしている。帰ってこい。帰ってこい」\n- ノックマーチで発見されたボロボロの日記帳より",
+    "artistName": "Will Gist",
+    "name": "ティバルク",
+    "cardCode": "06NX028T1",
+    "keywords": [
+      "オーバーパワー"
+    ],
+    "keywordRefs": [
+      "Overwhelm"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "なし",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06NX014.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06NX014-full.png"
+      }
+    ],
+    "regions": [
+      "ノクサス"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "ユニットを1体指定する。このラウンド中、次にそのユニットがダメージを受けた時、それをキルする。",
+    "descriptionRaw": "ユニットを1体指定する。このラウンド中、次にそのユニットがダメージを受けた時、それをキルする。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "テルシ校長がノクサスの教条について長々と語るうちに、退屈に耐えかねた子供たちは段々と落ち着きがなくなっていった。周りの子供たちが動き出したい衝動をなんとかを抑える中、アニーはいち早く行動に移した。そして煙が立ち上り、次に炎が燃え上がった。",
+    "artistName": "Kudos Productions",
+    "name": "ファイアボール",
+    "cardCode": "06NX014",
+    "keywords": [
+      "ファスト"
+    ],
+    "keywordRefs": [
+      "Fast"
+    ],
+    "spellSpeed": "ファスト",
+    "spellSpeedRef": "Fast",
+    "rarity": "コモン",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スペル",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06NX009T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06NX009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06NX009-full.png"
+      }
+    ],
+    "regions": [
+      "ノクサス"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 2,
+    "cost": 4,
+    "health": 3,
+    "description": "<link=keyword.AttackSkillMark><sprite name=SkillMark><style=Keyword>アタック</style></link>: このユニットが自身のブロッカーに3ダメージを与える。対象がすでに力尽きている、または場を離れている場合、代わりに敵のネクサスに3ダメージを与える。",
+    "descriptionRaw": "アタック: このユニットが自身のブロッカーに3ダメージを与える。対象がすでに力尽きている、または場を離れている場合、代わりに敵のネクサスに3ダメージを与える。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「第三幕: 残忍な飼い主とそのペット。おぞましい使命を与えられてはいるが、グレイバック自身に罪はない。身に着けた装具によって無理やり従わされているのだ。飼い主は悲鳴ひとつ上げずペットの餌となる。ノクサス人は皆、破滅に際しても気高さを失わない彼女を見習うべきだろう」",
+    "artistName": "Michael Ivan",
+    "name": "囚われのグレイバック",
+    "cardCode": "06NX009",
+    "keywords": [
+      "オーバーパワー"
+    ],
+    "keywordRefs": [
+      "Overwhelm"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "コモン",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06NX009"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06NX009T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06NX009T1-full.png"
+      }
+    ],
+    "regions": [
+      "ノクサス"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "<link=card.parentRef><style=AssociatedCard>囚われのグレイバック</style></link>のブロッカーに3ダメージを与える。対象がすでに力尽きている、または場を離れている場合、代わりに敵のネクサスに3ダメージを与える。",
+    "descriptionRaw": "囚われのグレイバックのブロッカーに3ダメージを与える。対象がすでに力尽きている、または場を離れている場合、代わりに敵のネクサスに3ダメージを与える。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「覚えておくといい。征服者が生きながらえるのは、最初の反乱が起こるまでだ」\n- ジン",
+    "artistName": "Kudos Productions",
+    "name": "命令実行",
+    "cardCode": "06NX009T1",
+    "keywords": [
+      "スキル"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "なし",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スキル",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06NX015T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06NX015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06NX015-full.png"
+      }
+    ],
+    "regions": [
+      "ノクサス"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 3,
+    "cost": 3,
+    "health": 2,
+    "description": "各ラウンドで初めて<link=keyword.Fast><sprite name=Fast><style=Keyword>ファスト</style></link>スペル、<link=keyword.Slow><sprite name=Slow><style=Keyword>スロウ</style></link>スペルまたは<link=keyword.Skill><sprite name=SkillMark><style=Keyword>スキル</style></link>をプレイする時、このユニットは<link=card.skill><style=AssociatedCard>魔力の残火</style></link>をプレイする。",
+    "descriptionRaw": "各ラウンドで初めてファストスペル、スロウスペルまたはスキルをプレイする時、このユニットは魔力の残火をプレイする。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「ダーニと初めて会ったのは2年ほど前だ。愛想のいい子で、温かな家族に囲まれていた。だが、最後に彼の村に立ち寄った時、ダーニは広場にぽつんと座っていた。家族が帰ってくるのを待っているのだと彼は言った。可哀想に、何か月もあそこで待っていたのだろう。道中で私が何を目にしたか、彼に伝えることなどできなかった…」\n- フィン・レトリック",
+    "artistName": "Polar Engine",
+    "name": "マナソウルの学徒",
+    "cardCode": "06NX015",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "コモン",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "03NX014",
+      "01NX011",
+      "05NX014",
+      "01NX041"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06NX037.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06NX037-full.png"
+      }
+    ],
+    "regions": [
+      "ノクサス"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "<link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>フリーティング</style></link>を持つ<link=card.create1><style=AssociatedCard>磨かれた決意</style></link>、<link=card.create2><style=AssociatedCard>死の車輪</style></link>、<link=card.create3><style=AssociatedCard>戦死者の武器</style></link>のいずれかを手札に1枚生成する。",
+    "descriptionRaw": "フリーティングを持つ磨かれた決意、死の車輪、戦死者の武器のいずれかを手札に1枚生成する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「クララったら、トークンに血がついたままよ」\n- 真紅の貴族 オフィーリア・ノラディ",
+    "artistName": "Kudos Productions",
+    "name": "ノクサス・テルストーン",
+    "cardCode": "06NX037",
+    "keywords": [
+      "バースト"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "バースト",
+    "spellSpeedRef": "Burst",
+    "rarity": "レア",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スペル",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06NX015T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06NX015T1-full.png"
+      }
+    ],
+    "regions": [
+      "ノクサス"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "敵のネクサスに1ダメージを与える。",
+    "descriptionRaw": "敵のネクサスに1ダメージを与える。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「見える…魔法が見えるぞ！」\n- マナソウルの学徒",
+    "artistName": "Kudos Productions",
+    "name": "魔力の残火",
+    "cardCode": "06NX015T1",
+    "keywords": [
+      "スキル"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "なし",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スキル",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06NX008.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06NX008-full.png"
+      }
+    ],
+    "regions": [
+      "ノクサス"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 1,
+    "cost": 3,
+    "health": 3,
+    "description": "<link=keyword.Fast><sprite name=Fast><style=Keyword>ファスト</style></link>スペル、<link=keyword.Slow><sprite name=Slow><style=Keyword>スロウ</style></link>スペル、または<link=keyword.Skill><sprite name=SkillMark><style=Keyword>スキル</style></link>をプレイする時、このユニットに+1|+0を付与する。",
+    "descriptionRaw": "ファストスペル、スロウスペル、またはスキルをプレイする時、このユニットに+1|+0を付与する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「ここにいる子供たちの多くは、権威や権力に反抗したくなる年頃です。従って、一番の年長者が皆に慕われており、なおかつ我々の意向に従順であるというのは喜ばしいことと言えましょう。生徒が我々の教えを無視することがあれば、彼女を通して指導すればよいのです」\n- テルシ校長",
+    "artistName": "Polar Engine",
+    "name": "学園の監督生",
+    "cardCode": "06NX008",
+    "keywords": [
+      "オーバーパワー"
+    ],
+    "keywordRefs": [
+      "Overwhelm"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "エピック",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06NX013T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06NX013T1-full.png"
+      }
+    ],
+    "regions": [
+      "ノクサス"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "敵1体を<link=keyword.Stun><sprite name=Stunned><style=Keyword>スタン</style></link>させる。すでに<link=keyword.Stun><sprite name=Stunned><style=Keyword>スタン</style></link>中の場合、代わりに2ダメージを与える。",
+    "descriptionRaw": "敵1体をスタンさせる。すでにスタン中の場合、代わりに2ダメージを与える。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「さぁファング、出番だ…」\n- スペルスリンガー",
+    "artistName": "Kudos Productions",
+    "name": "腱の硬化",
+    "cardCode": "06NX013T1",
+    "keywords": [
+      "スキル"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "なし",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スキル",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06NX024"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06NX024T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06NX024T1-full.png"
+      }
+    ],
+    "regions": [
+      "ノクサス"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "敵1体に2ダメージを与える。",
+    "descriptionRaw": "敵1体に2ダメージを与える。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "如何に優れた道具も、未熟な職人が手にすればガラクタとなる。",
+    "artistName": "Kudos Productions",
+    "name": "カシューリのガントレット",
+    "cardCode": "06NX024T1",
+    "keywords": [
+      "スキル"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "なし",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スキル",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06DE045.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06DE045-full.png"
+      }
+    ],
+    "regions": [
+      "デマーシア"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "すべての味方に+1|+1を付与する。",
+    "descriptionRaw": "すべての味方に+1|+1を付与する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「もう隠れる必要なんてない！光の下で、一緒に輝きましょう！」\n- ラックス",
+    "artistName": "Kudos Productions",
+    "name": "鼓舞する光",
+    "cardCode": "06DE045",
+    "keywords": [
+      "スロウ"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "スロウ",
+    "spellSpeedRef": "Slow",
+    "rarity": "コモン",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スペル",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06DE035.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06DE035-full.png"
+      }
+    ],
+    "regions": [
+      "デマーシア"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "すべてのスペルのコストが2増加する。\r\n<link=vocab.Countdown><style=Vocab>カウントダウン 2</style></link><style=Variable></style>。",
+    "descriptionRaw": "すべてのスペルのコストが2増加する。\r\nカウントダウン 2。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "メイジ狩りの施設には至る所にペトリサイトの尖柱が建立されている。いかに強力なメイジでも、この場所で魔法を使うことは不可能であろう。",
+    "artistName": "Kudos Productions",
+    "name": "ペトリサイトの石柱",
+    "cardCode": "06DE035",
+    "keywords": [
+      "ランドマーク",
+      "カウントダウン"
+    ],
+    "keywordRefs": [
+      "LandmarkVisualOnly",
+      "Countdown"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "コモン",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ランドマーク",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "01DE032",
+      "01DE025",
+      "01DE035"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06DE042.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06DE042-full.png"
+      }
+    ],
+    "regions": [
+      "デマーシア"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "<link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>フリーティング</style></link>を持つ<link=card.create1><style=AssociatedCard>プリズムバリア</style></link>、<link=card.create2><style=AssociatedCard>収監</style></link>、<link=card.create3><style=AssociatedCard>デマーシアのために！</style></link>のいずれかを手札に1枚生成する。\r\n",
+    "descriptionRaw": "フリーティングを持つプリズムバリア、収監、デマーシアのために！のいずれかを手札に1枚生成する。\r\n",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「どうして“キングスギャンビット”なの？その身を危険に晒すのは、女王だって同じなのに！」\n- クラウドフィールドのシスリア",
+    "artistName": "Kudos Productions",
+    "name": "デマーシア・テルストーン",
+    "cardCode": "06DE042",
+    "keywords": [
+      "バースト"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "バースト",
+    "spellSpeedRef": "Burst",
+    "rarity": "レア",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スペル",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06DE036.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06DE036-full.png"
+      }
+    ],
+    "regions": [
+      "デマーシア"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 7,
+    "cost": 8,
+    "health": 7,
+    "description": "<link=vocab.Attack><style=Vocab>アタック</style></link>: ユニットを1枚引く。それが「ドラゴン」の場合、アタック状態で召喚する。",
+    "descriptionRaw": "アタック: ユニットを1枚引く。それが「ドラゴン」の場合、アタック状態で召喚する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「私の研究に基づくと、父竜はほとんどの時間、幼体から離れて狩りに勤しんでいるようだ。運悪く帰巣した父竜に出くわした時は…その場で餌にされるだろうがね」\n- 研究者アンデン・メイン",
+    "artistName": "Kudos Productions",
+    "name": "守護する父竜",
+    "cardCode": "06DE036",
+    "keywords": [
+      "フューリー"
+    ],
+    "keywordRefs": [
+      "Fury"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "エピック",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "ドラゴン"
+    ],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06MT036.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06MT036-full.png"
+      }
+    ],
+    "regions": [
+      "ターゴン"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 6,
+    "health": 0,
+    "description": "味方1体の体力を全回復し、その攻撃力を体力と同じ値に成長させる。",
+    "descriptionRaw": "味方1体の体力を全回復し、その攻撃力を体力と同じ値に成長させる。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「まずは自ら思いやりを示すこと。そうすれば、きっと応えてくれます」\n- ソラカ",
+    "artistName": "Kudos Productions",
+    "name": "天への問いかけ",
+    "cardCode": "06MT036",
+    "keywords": [
+      "バースト"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "バースト",
+    "spellSpeedRef": "Burst",
+    "rarity": "エピック",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スペル",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "03MT006"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06MT039.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06MT039-full.png"
+      }
+    ],
+    "regions": [
+      "ターゴン"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "<link=vocab.Countdown><style=Vocab>カウントダウン 3</style></link><style=Variable></style>: <link=card.summon><style=AssociatedCard>インヴィオラス・ヴォクス</style></link>を1体召喚する。",
+    "descriptionRaw": "カウントダウン 3: インヴィオラス・ヴォクスを1体召喚する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「天空の龍は星雲そのものから…もやのような宇宙の塵から、成獣の姿で生まれると伝えられている。無論、定命に過ぎぬ我らに真実を知る術はない。我らはただ、遥か遠きその光を仰ぎ見るのみである」\n- 龍の巫女",
+    "artistName": "Kudos Productions",
+    "name": "龍のねぐら",
+    "cardCode": "06MT039",
+    "keywords": [
+      "ランドマーク",
+      "カウントダウン"
+    ],
+    "keywordRefs": [
+      "LandmarkVisualOnly",
+      "Countdown"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "エピック",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ランドマーク",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06MT045.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06MT045-full.png"
+      }
+    ],
+    "regions": [
+      "ターゴン"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 6,
+    "health": 0,
+    "description": "低コスト、中コスト、高コストの「天空」カードを1枚ずつ<link=keyword.Invoke><style=Keyword>招来</style></link>する。",
+    "descriptionRaw": "低コスト、中コスト、高コストの「天空」カードを1枚ずつ招来する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「星たちが大いなる可能性を示している。何かが現れようとしているのね。どんな形になるのか、私には想像もつかないけど…ねぇ、クルンはどう思う？」\n- 月夜の語り部",
+    "artistName": "Kudos Productions",
+    "name": "天空の三座",
+    "cardCode": "06MT045",
+    "keywords": [
+      "バースト"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "バースト",
+    "spellSpeedRef": "Burst",
+    "rarity": "レア",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スペル",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "03MT008",
+      "03MT093",
+      "03MT036"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06MT043.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06MT043-full.png"
+      }
+    ],
+    "regions": [
+      "ターゴン"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "<link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>フリーティング</style></link>を持つ<link=card.spell1><style=AssociatedCard>星に願いを</style></link>、<link=card.spell2><style=AssociatedCard>パドルスター</style></link>、<link=card.spell3><style=AssociatedCard>ターゴンの祝福</style></link>のいずれかを手札に1枚生成する。",
+    "descriptionRaw": "フリーティングを持つ星に願いを、パドルスター、ターゴンの祝福のいずれかを手札に1枚生成する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「本当に不思議な感覚なんだよ、ショリン…裏返す前から、どの星座が描かれているのか手に取るようにわかるんだ」\n- 旅人ティヤーリ",
+    "artistName": "Kudos Productions",
+    "name": "ターゴン・テルストーン",
+    "cardCode": "06MT043",
+    "keywords": [
+      "バースト"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "バースト",
+    "spellSpeedRef": "Burst",
+    "rarity": "コモン",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スペル",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU001T3"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06MT029.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06MT029-full.png"
+      }
+    ],
+    "regions": [
+      "ターゴン"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 2,
+    "description": "召喚時、デッキの一番上のカードに<link=card.chime><style=AssociatedCard>チャイム</style></link>を1個設置する。\r\n<link=vocab.Support><style=Vocab>サポート</style></link>: このユニットがサポートする味方に+1|+1を付与する。",
+    "descriptionRaw": "召喚時、デッキの一番上のカードにチャイムを1個設置する。\r\nサポート: このユニットがサポートする味方に+1|+1を付与する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「…エスムスは庇護者によって生み出され、その誕生によって世界に音がもたらされた」\n「というのは嘘で、エスムスは古の歌い手の顔を纏い、天使の心と死者の声を持っていた。しかしある時、バードから美しく清らかな声を与えられた」\n「というのは嘘で、エスムスは…」\n- 詩人の遊び 『エスムスの起源』",
+    "artistName": "Caravan Studio",
+    "name": "世界の息吹 エスムス",
+    "cardCode": "06MT029",
+    "keywords": [
+      "イルーシブ"
+    ],
+    "keywordRefs": [
+      "Elusive"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "コモン",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06MT038.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06MT038-full.png"
+      }
+    ],
+    "regions": [
+      "ターゴン"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 6,
+    "cost": 7,
+    "health": 5,
+    "description": "<link=keyword.Nightfall><style=Keyword>ナイトフォール</style></link>: このラウンド中、他の味方すべてに+2|+1と<link=keyword.Overwhelm><sprite name=Overwhelm><style=Keyword>オーバーパワー</style></link>を付与する。",
+    "descriptionRaw": "ナイトフォール: このラウンド中、他の味方すべてに+2|+1とオーバーパワーを付与する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「母なる月よ 我らに力を与えたまえ\n闇が我らを覆いし時も\n其の光をもって打ち克たん」\n- ルナリの祈り",
+    "artistName": "Kudos Productions",
+    "name": "弯曲する光",
+    "cardCode": "06MT038",
+    "keywords": [
+      "オーバーパワー"
+    ],
+    "keywordRefs": [
+      "Overwhelm"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "コモン",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU001T3"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06MT047.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06MT047-full.png"
+      }
+    ],
+    "regions": [
+      "ターゴン"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "召喚時またはカウントダウン時、デッキに<link=card.chime><style=AssociatedCard>チャイム</style></link>をランダムに3個設置する。<link=vocab.Countdown><style=Vocab>カウントダウン 2</style></link><style=Variable></style>: カードを1枚引く。\r\n",
+    "descriptionRaw": "召喚時またはカウントダウン時、デッキにチャイムをランダムに3個設置する。カウントダウン 2: カードを1枚引く。\r\n",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「それから、あっちでもこっちでも、何千という数で歌い踊り始めたんだ。だが、その次の瞬間には目の前が光に包まれて、それきり全部消えちまった。寺院も丸ごと、石ひとつ残さずに消えちまったんだ。代わりに、わしの手の中には鐘がひとつ握られていたのさ」\n- ガフじいさんの昔話 その3",
+    "artistName": "Caravan Studio",
+    "name": "神秘の渦",
+    "cardCode": "06MT047",
+    "keywords": [
+      "カウントダウン",
+      "ランドマーク"
+    ],
+    "keywordRefs": [
+      "Countdown",
+      "LandmarkVisualOnly"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "レア",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ランドマーク",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06FR033.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06FR033-full.png"
+      }
+    ],
+    "regions": [
+      "フレヨルド"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 2,
+    "cost": 3,
+    "health": 1,
+    "description": "<link=keyword.Last Breath><sprite name=LastBreath><style=Keyword>ラストブレス</style></link>: 空のマナジェムを1個獲得する。",
+    "descriptionRaw": "ラストブレス: 空のマナジェムを1個獲得する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "生と死の円環も、フレヨルドでは様相が異なる。過酷な環境は、あらゆる無駄を削ぎ落とす。",
+    "artistName": "Kudos Productions",
+    "name": "ハンティングボア",
+    "cardCode": "06FR033",
+    "keywords": [
+      "ブロック不可",
+      "ラストブレス"
+    ],
+    "keywordRefs": [
+      "CantBlock",
+      "LastBreath"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "コモン",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06FR038.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06FR038-full.png"
+      }
+    ],
+    "regions": [
+      "フレヨルド"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 0,
+    "cost": 7,
+    "health": 0,
+    "description": "すべてのユニットに3ダメージを与える。\r\n<link=keyword.Enlightened><style=Keyword>エンライト</style></link>: ネクサスの体力を3回復する。",
+    "descriptionRaw": "すべてのユニットに3ダメージを与える。\r\nエンライト: ネクサスの体力を3回復する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "大いなる氷の不死鳥。その翼の影で彼女の追従者は歓喜し、その敵は身震いした。",
+    "artistName": "Kudos Productions",
+    "name": "氷の不死鳥の翼",
+    "cardCode": "06FR038",
+    "keywords": [
+      "スロウ"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "スロウ",
+    "spellSpeedRef": "Slow",
+    "rarity": "レア",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スペル",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06FR028.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06FR028-full.png"
+      }
+    ],
+    "regions": [
+      "フレヨルド"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 2,
+    "cost": 6,
+    "health": 2,
+    "description": "召喚時、デッキのユニットすべてにこのユニットのステータスを付与し、その後攻撃力が5以上のユニットを1枚引く。",
+    "descriptionRaw": "召喚時、デッキのユニットすべてにこのユニットのステータスを付与し、その後攻撃力が5以上のユニットを1枚引く。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "アヴァローサンの語り部となるのは、部族のなかでも特に経験豊富な年長者で、民を守護し、そして多くの物語を学んできた者たちだ。語り部たちは物語と歌を通じて、狩りと戦いの伝統を守っている。 ",
+    "artistName": "Envar Studio",
+    "name": "語り部 レヴナ",
+    "cardCode": "06FR028",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "エピック",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "04FR001"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06FR030.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06FR030-full.png"
+      }
+    ],
+    "regions": [
+      "フレヨルド"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 2,
+    "description": "<link=vocab.Play><style=Vocab>プレイ</style></link>: <link=card.summon><style=AssociatedCard>氷漬けの奴隷兵</style></link>を1枚召喚する、または味方の<link=card.summon><style=AssociatedCard>氷漬けの奴隷兵</style></link>すべてのカウントを1<link=vocab.Advance><style=Vocab>進行</style></link>させる。",
+    "descriptionRaw": "プレイ: 氷漬けの奴隷兵を1枚召喚する、または味方の氷漬けの奴隷兵すべてのカウントを1進行させる。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "頭上から聞こえた耳慣れぬ笛のような鳴き声は、ほとんど聞き取れぬほど小さかった。その音はしかし、渓谷の岸壁に届くやいなや斥候の骨身を震わせた。眼前に広がる氷に無数の亀裂がはしり、瞬く間に覆いつくしたのだ。",
+    "artistName": "Kudos Productions",
+    "name": "奴隷兵の先触れ",
+    "cardCode": "06FR030",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "コモン",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "04FR001"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06FR030T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06FR030T2-full.png"
+      }
+    ],
+    "regions": [
+      "フレヨルド"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 2,
+    "description": "<link=vocab.Play><style=Vocab>プレイ</style></link>: <link=card.summon><style=AssociatedCard>氷漬けの奴隷兵</style></link>を1枚召喚する。",
+    "descriptionRaw": "プレイ: 氷漬けの奴隷兵を1枚召喚する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "夜明けに氷は薄くなり\n冷たきしもべが目を覚ます。",
+    "artistName": "Kudos Productions",
+    "name": "奴隷兵の先触れ",
+    "cardCode": "06FR030T2",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "なし",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "04FR001"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06FR030T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06FR030T1-full.png"
+      }
+    ],
+    "regions": [
+      "フレヨルド"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 2,
+    "description": "<link=vocab.Play><style=Vocab>プレイ</style></link>: 味方の<link=card.summon><style=AssociatedCard>氷漬けの奴隷兵</style></link>すべてのカウントを1<link=vocab.Advance><style=Vocab>進行</style></link>させる。",
+    "descriptionRaw": "プレイ: 味方の氷漬けの奴隷兵すべてのカウントを1進行させる。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "夜明けに氷は薄くなり\n冷たきしもべが目を覚ます。",
+    "artistName": "Kudos Productions",
+    "name": "奴隷兵の先触れ",
+    "cardCode": "06FR030T1",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "なし",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06PZ032.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06PZ032-full.png"
+      }
+    ],
+    "regions": [
+      "ピルトーヴァー<nobr> & ゾウン</nobr>"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 0,
+    "cost": 7,
+    "health": 0,
+    "description": "コスト2のカード2枚のうち1枚を指定して手札に生成し、そのコストをこのラウンド中0にする。これをあと2回繰り返す(候補となるカードは毎回新しく選ばれる)。",
+    "descriptionRaw": "コスト2のカード2枚のうち1枚を指定して手札に生成し、そのコストをこのラウンド中0にする。これをあと2回繰り返す(候補となるカードは毎回新しく選ばれる)。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "ゾウン初のソングスピナーは驚くほど品質が高かった。欠陥をひとつ挙げるとすれば、誰も音量を操作できない点だ。",
+    "artistName": "Kudos Productions",
+    "name": "爆音ソングスピナー",
+    "cardCode": "06PZ032",
+    "keywords": [
+      "バースト"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "バースト",
+    "spellSpeedRef": "Burst",
+    "rarity": "エピック",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スペル",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "03PZ011",
+      "01PZ005",
+      "01PZ049"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06PZ043.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06PZ043-full.png"
+      }
+    ],
+    "regions": [
+      "ピルトーヴァー<nobr> & ゾウン</nobr>"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "<link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>フリーティング</style></link>を持つ<link=card.create1><style=AssociatedCard>アフターショック</style></link>、<link=card.create2><style=AssociatedCard>ヘクステック<nobr>トランスモギュレーター</nobr></style></link>、<link=card.create3><style=AssociatedCard>進歩の日！</style></link>のいずれかを手札に1枚生成する。",
+    "descriptionRaw": "フリーティングを持つアフターショック、ヘクステックトランスモギュレーター、進歩の日！のいずれかを手札に1枚生成する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「世界広しといえど、これほど精巧なセットは見つかりませんよ。うちの娘が丹精込めて細部まで仕上げたんです」\n- コリン・レヴェック ",
+    "artistName": "Kudos Productions",
+    "name": "ピルトーヴァー・テルストーン",
+    "cardCode": "06PZ043",
+    "keywords": [
+      "バースト"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "バースト",
+    "spellSpeedRef": "Burst",
+    "rarity": "レア",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スペル",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "01PZ030",
+      "01PZ044"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06PZ027.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06PZ027-full.png"
+      }
+    ],
+    "regions": [
+      "ピルトーヴァー<nobr> & ゾウン</nobr>"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "<link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>フリーティング</style></link>を持つ<link=card.create1><style=AssociatedCard>怪しい人物</style></link>または<link=card.create2><style=AssociatedCard>ケミパンクロッカー</style></link>を手札に1枚生成し、そのコストを1減少させる。",
+    "descriptionRaw": "フリーティングを持つ怪しい人物またはケミパンクロッカーを手札に1枚生成し、そのコストを1減少させる。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "ゾウンきっての人気イベントは招待制だ。バンドのメンバー以外がこのチケットを手に入れるには余程のコネを駆使するか、地面に落ちているものを見つけるしかない。",
+    "artistName": "Kudos Productions",
+    "name": "秘密の招待",
+    "cardCode": "06PZ027",
+    "keywords": [
+      "バースト"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "バースト",
+    "spellSpeedRef": "Burst",
+    "rarity": "コモン",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スペル",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06SH037.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06SH037-full.png"
+      }
+    ],
+    "regions": [
+      "シュリーマ"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 5,
+    "cost": 5,
+    "health": 4,
+    "description": "敵が<link=keyword.Challenger><sprite name=Challenger><style=Keyword>チャレンジャー</style></link>で指定される時、その敵にこのラウンド中-2|-0を付与する。",
+    "descriptionRaw": "敵がチャレンジャーで指定される時、その敵にこのラウンド中-2|-0を付与する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "正気は風に吹かれる砂山のように崩れ去った。そして代わりに蒔かれた怒りの種は、どんなオアシスでも癒せぬ憤激へと成長した。",
+    "artistName": "Will Gist",
+    "name": "枯れ爪のバッカイ",
+    "cardCode": "06SH037",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "コモン",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "04SH069",
+      "04SH004",
+      "04SH106"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06SH042.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06SH042-full.png"
+      }
+    ],
+    "regions": [
+      "シュリーマ"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "<link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>フリーティング</style></link>を持つ<link=card.create1><style=AssociatedCard>メッタ斬り</style></link>、<link=card.create2><style=AssociatedCard>審判の天秤</style></link>、<link=card.create3><style=AssociatedCard>スピリットファイア</style></link>のいずれかを手札に1枚生成する。",
+    "descriptionRaw": "フリーティングを持つメッタ斬り、審判の天秤、スピリットファイアのいずれかを手札に1枚生成する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「テルストーンで大事なのは勝敗じゃない。どれだけ格好つけてプレイできるかさ！」\n- アクシャン",
+    "artistName": "Kudos Productions",
+    "name": "シュリーマ・テルストーン",
+    "cardCode": "06SH042",
+    "keywords": [
+      "バースト"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "バースト",
+    "spellSpeedRef": "Burst",
+    "rarity": "レア",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スペル",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "04SH034T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06SH050.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06SH050-full.png"
+      }
+    ],
+    "regions": [
+      "シュリーマ"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 0,
+    "cost": 6,
+    "health": 0,
+    "description": "このラウンド中、すべての敵に<nobr>-2|-0</nobr>を付与する。<link=card.create><style=AssociatedCard>刹那の百年</style></link>を手札に1枚生成する。",
+    "descriptionRaw": "このラウンド中、すべての敵に-2|-0を付与する。刹那の百年を手札に1枚生成する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "時の砂はただ流れゆく。そこに意思も理由もなく、どこまでも非情で無関心である。しかし、すべての者がこの無慈悲な定めに囚われているわけではない…",
+    "artistName": "Kudos Productions",
+    "name": "時の砂",
+    "cardCode": "06SH050",
+    "keywords": [
+      "バースト"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "バースト",
+    "spellSpeedRef": "Burst",
+    "rarity": "レア",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スペル",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06SH036.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06SH036-full.png"
+      }
+    ],
+    "regions": [
+      "シュリーマ"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "チャンピオンを召喚する時、このカードを破壊してそのチャンピオンに+2|+1と<link=keyword.SpellShield><sprite name=SpellShield><style=Keyword>スペルシールド</style></link>を付与する。",
+    "descriptionRaw": "チャンピオンを召喚する時、このカードを破壊してそのチャンピオンに+2|+1とスペルシールドを付与する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "棺を出たナサスの意識ははっきりしており、怪我もすべて治っていた。彼はいくつか覚書を残すと、頭上高くに釣り下げられている棺の数々を覗き、その内部に眠る獣のような異形の存在の精神状態について考えた。この魔法がバッカイを狂気から目覚めさせることができるのかどうかは、時が経てばわかるだろう。他の超越者たちが禁忌にしようとしていた魔法だが、彼らはもう滅びてしまった。一方で、レネクトンとその狂気は消えていない。ナサスはさらにいくつか書きつけ、これが弟を救う手段になることを願った。",
+    "artistName": "Kudos Productions",
+    "name": "新生の間",
+    "cardCode": "06SH036",
+    "keywords": [
+      "ランドマーク"
+    ],
+    "keywordRefs": [
+      "LandmarkVisualOnly"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "エピック",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ランドマーク",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU001T9",
+      "06RU001T3",
+      "06RU001T8",
+      "06RU001T4"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06RU001.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06RU001-full.png"
+      }
+    ],
+    "regions": [
+      "ルーンテラ"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 2,
+    "cost": 4,
+    "health": 5,
+    "description": "<link=vocab.Origin><style=Vocab>オリジン</style></link>: <link=card.origin><style=AssociatedCard>流離いの庇護者</style></link>。\r\n<link=vocab.Attack><style=Vocab>アタック</style></link>: デッキに<link=card.chime><style=AssociatedCard>チャイム</style></link>をランダムに3個設置する。",
+    "descriptionRaw": "オリジン: 流離いの庇護者。\r\nアタック: デッキにチャイムをランダムに3個設置する。",
+    "levelupDescription": "あなたが場または手札の味方のステータスを合計20以上増加させた時<style=Variable></style>。",
+    "levelupDescriptionRaw": "あなたが場または手札の味方のステータスを合計20以上増加させた時。",
+    "flavorText": "「ああ、このガフじいさんは色々と奇妙な体験をしてきたもんさ！最初のは…あれは庇護者そのひとに違いない。まるで流れ星のように空を横切っておった。しばらくの間、世界がまるごと静止したかのようじゃった。わしと彼しか存在しないかのようにな…」\n- ガフじいさんの昔話 その1",
+    "artistName": "Caravan Studio",
+    "name": "バード",
+    "cardCode": "06RU001",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "チャンピオン",
+    "rarityRef": "Champion",
+    "subtypes": [],
+    "supertype": "チャンピオン",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU001T3",
+      "06RU001T4",
+      "06RU001"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06RU001T8.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06RU001T8-full.png"
+      }
+    ],
+    "regions": [
+      "ルーンテラ"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "フォロワーを1枚引き、デッキの上から3枚目までの加護の効果をすべて発動させる。\r\nデッキに<link=card.level1><style=AssociatedCard>バード</style></link>を1枚生成する。",
+    "descriptionRaw": "フォロワーを1枚引き、デッキの上から3枚目までの加護の効果をすべて発動させる。\r\nデッキにバードを1枚生成する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "各地に伝わる歌によれば、バードはルーンテラ中の街々にチャイムを隠し、その音色を聞いた人々はみな活力に溢れ、湧き出る歓びによって自然と身体が踊り始めたという。",
+    "artistName": "Kudos Productions",
+    "name": "バードの「旅人の呼び声」",
+    "cardCode": "06RU001T8",
+    "keywords": [
+      "バースト"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "バースト",
+    "spellSpeedRef": "Burst",
+    "rarity": "なし",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "チャンピオン",
+    "type": "スペル",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU001T3",
+      "06RU001T8",
+      "06RU001",
+      "06RU001T9"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06RU001T4.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06RU001T4-full.png"
+      }
+    ],
+    "regions": [
+      "ルーンテラ"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 3,
+    "cost": 4,
+    "health": 6,
+    "description": "<link=vocab.Attack><style=Vocab>アタック</style></link>: デッキに<link=card.chime><style=AssociatedCard>チャイム</style></link>をランダムに6個設置する。<link=card.chime><style=AssociatedCard>チャイム</style></link>を発動させる時、場にいるランダムな味方1体に+1|+1を付与する。",
+    "descriptionRaw": "アタック: デッキにチャイムをランダムに6個設置する。チャイムを発動させる時、場にいるランダムな味方1体に+1|+1を付与する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「角笛鳴らし皆に届けよ\n老いも若きも見届けよ\n王はぬかづき歌い称えん\n庇護者が生みし妙なる縁」\n- ルーンテラのバラード",
+    "artistName": "Caravan Studio",
+    "name": "バード",
+    "cardCode": "06RU001T4",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "なし",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "チャンピオン",
+    "type": "ユニット",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU001T3",
+      "06RU001"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06RU001T9.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06RU001T9-full.png"
+      }
+    ],
+    "regions": [
+      "ルーンテラ"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "デッキ構築の際、<link=card.chime><style=AssociatedCard>チャイム</style></link>を設置するカードはどれでも採用できる。\r\n<link=vocab.RoundStart><style=Vocab>ラウンド開始時</style></link>: ゲーム開始時にデッキに入っていた「バード」1枚につき<link=card.chime><style=AssociatedCard>チャイム</style></link>を1個デッキに設置する。",
+    "descriptionRaw": "デッキ構築の際、チャイムを設置するカードはどれでも採用できる。\r\nラウンド開始時: ゲーム開始時にデッキに入っていた「バード」1枚につきチャイムを1個デッキに設置する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "宇宙の彼方から来訪する神秘の旅人バードは調和の体現者であり、その耳は創造の調べと内なる不協和音を聴きつける。ミィプと呼ばれる奇妙な生物たちに囲まれる流離いの庇護者の不可思議な振る舞いは、歌や物語となってルーンテラの各地に伝えられている。",
+    "artistName": "Caravan Studio",
+    "name": "流離いの庇護者",
+    "cardCode": "06RU001T9",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "なし",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スキル",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06RU001T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06RU001T3-full.png"
+      }
+    ],
+    "regions": [
+      "ルーンテラ"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "手札のランダムな味方1枚に+1|+1を付与する。",
+    "descriptionRaw": "手札のランダムな味方1枚に+1|+1を付与する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "風のない静かな夜は、天を見上げて、チャイムが奏でるやさしい調べに耳を傾けよう。きっとすぐに気が付くはずだ。彼が見守っていることに。",
+    "artistName": "Kudos Productions",
+    "name": "チャイム",
+    "cardCode": "06RU001T3",
+    "keywords": [
+      "加護"
+    ],
+    "keywordRefs": [
+      "Boon"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "なし",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "トラップ",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU002T6",
+      "06RU002T5",
+      "06RU002T4",
+      "06RU002T2",
+      "06RU002T1",
+      "06RU002T13",
+      "06RU002T12"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06RU002.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06RU002-full.png"
+      }
+    ],
+    "regions": [
+      "ルーンテラ"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 4,
+    "cost": 4,
+    "health": 4,
+    "description": "<link=vocab.Origin><style=Vocab>オリジン</style></link>: <link=card.origin><style=AssociatedCard>孤高の芸術家</style></link>。<style=Variable></style>\r\n<link=keyword.AttackSkillMark><sprite name=SkillMark><style=Keyword>アタック</style></link>: <link=keyword.Stun><sprite name=Stunned><style=Keyword>スタン</style></link>中の敵すべてに2ダメージを与える。",
+    "descriptionRaw": "オリジン: 孤高の芸術家。\r\nアタック: スタン中の敵すべてに2ダメージを与える。",
+    "levelupDescription": "あなたが<link=keyword.Fast><sprite name=Fast><style=Keyword>ファスト</style></link>スペル、<link=keyword.Slow><sprite name=Slow><style=Keyword>スロウ</style></link>スペルまたは<link=keyword.Skill><sprite name=SkillMark><style=Keyword>スキル</style></link>を12枚以上プレイした時<style=Variable></style>。",
+    "levelupDescriptionRaw": "あなたがファストスペル、スロウスペルまたはスキルを12枚以上プレイした時。",
+    "flavorText": "「序章: カヤンヴィの街で幕が開ける。年老いた師が若き弟子を呼び出す。彼は非道な悪党どもを退治し、盗まれた秘宝を回収するよう命じられる。主役はこれに反応するが、まだ彼の出番ではないため、舞台袖で準備を続ける」",
+    "artistName": "Alessandro Poli",
+    "name": "ジン",
+    "cardCode": "06RU002",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "チャンピオン",
+    "rarityRef": "Champion",
+    "subtypes": [],
+    "supertype": "チャンピオン",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06RU002T6.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06RU002T6-full.png"
+      }
+    ],
+    "regions": [
+      "ルーンテラ"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "ユニット1体に4ダメージを与える。",
+    "descriptionRaw": "ユニット1体に4ダメージを与える。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「…それに応える」\n- ジン",
+    "artistName": "Kudos Productions",
+    "name": "跳弾",
+    "cardCode": "06RU002T6",
+    "keywords": [
+      "スロウ",
+      "フリーティング"
+    ],
+    "keywordRefs": [
+      "Slow",
+      "Fleeting"
+    ],
+    "spellSpeed": "スロウ",
+    "spellSpeedRef": "Slow",
+    "rarity": "なし",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スペル",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU002",
+      "06RU002T2",
+      "06RU002T6",
+      "06RU002T5",
+      "06RU002T4",
+      "06RU002T12"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06RU002T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06RU002T1-full.png"
+      }
+    ],
+    "regions": [
+      "ルーンテラ"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 4,
+    "cost": 4,
+    "health": 4,
+    "description": "<style=Variable></style>\r\n<link=keyword.AttackSkillMark><sprite name=SkillMark><style=Keyword>アタック</style></link>: <link=keyword.Stun><sprite name=Stunned><style=Keyword>スタン</style></link>中の敵すべてと敵のネクサスに4ダメージを与える。\r\n",
+    "descriptionRaw": "\r\nアタック: スタン中の敵すべてと敵のネクサスに4ダメージを与える。\r\n",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「そして幕は下ろされる」",
+    "artistName": "Alessandro Poli",
+    "name": "ジン",
+    "cardCode": "06RU002T1",
+    "keywords": [
+      "クイックアタック"
+    ],
+    "keywordRefs": [
+      "QuickStrike"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "なし",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "チャンピオン",
+    "type": "ユニット",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU002T4",
+      "06RU002"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06RU002T5.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06RU002T5-full.png"
+      }
+    ],
+    "regions": [
+      "ルーンテラ"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "ゲーム開始時に<link=card.level1><style=AssociatedCard>ジン</style></link>がデッキに入っている場合、<link=card.level1><style=AssociatedCard>ジン</style></link>を<link=vocab.Behold><style=Vocab>保持</style></link>している状態で<link=keyword.Fast><sprite name=Fast><style=Keyword>ファスト</style></link>スペル、<link=keyword.Slow><sprite name=Slow><style=Keyword>スロウ</style></link>スペル、または<link=keyword.Skill><sprite name=SkillMark><style=Keyword>スキル</style></link>を3回プレイするたびに<link=card.cast><style=AssociatedCard>女神の足跡</style></link>を1枚プレイする。\r\nデッキ構築の際、<link=keyword.Skill><sprite name=SkillMark><style=Keyword>スキル</style></link>を持つフォロワーはどれでも採用できる。\r\n",
+    "descriptionRaw": "ゲーム開始時にジンがデッキに入っている場合、ジンを保持している状態でファストスペル、スロウスペル、またはスキルを3回プレイするたびに女神の足跡を1枚プレイする。\r\nデッキ構築の際、スキルを持つフォロワーはどれでも採用できる。\r\n",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「銃は楽器、弾は歌だ」\n- ジン",
+    "artistName": "Alessandro Poli",
+    "name": "孤高の芸術家",
+    "cardCode": "06RU002T5",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "なし",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スキル",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06RU002T12.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06RU002T12-full.png"
+      }
+    ],
+    "regions": [
+      "ルーンテラ"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "<link=keyword.Stun><sprite name=Stunned><style=Keyword>スタン</style></link>中の敵すべてと敵のネクサスに<style=Variable>4</style>ダメージを与える。",
+    "descriptionRaw": "スタン中の敵すべてと敵のネクサスに4ダメージを与える。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「さぁ、終演といこうか」\n- ジン",
+    "artistName": "Kudos Productions",
+    "name": "終演 -フィナーレ-",
+    "cardCode": "06RU002T12",
+    "keywords": [
+      "スキル"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "なし",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スキル",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06RU002T13.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06RU002T13-full.png"
+      }
+    ],
+    "regions": [
+      "ルーンテラ"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "<link=keyword.Stun><sprite name=Stunned><style=Keyword>スタン</style></link>中の敵すべてに<style=Variable>2</style>ダメージを与える。",
+    "descriptionRaw": "スタン中の敵すべてに2ダメージを与える。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「暴力的な作品に心惹かれるのだ」\n- ジン",
+    "artistName": "Kudos Productions",
+    "name": "死者への狂奏曲",
+    "cardCode": "06RU002T13",
+    "keywords": [
+      "スキル"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "なし",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スキル",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU002"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06RU002T4.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06RU002T4-full.png"
+      }
+    ],
+    "regions": [
+      "ルーンテラ"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "敵のネクサスに1ダメージを与える。場に<link=card.jhin><style=AssociatedCard>ジン</style></link>がいる場合、<link=keyword.Weakest><style=Keyword>最も弱い</style></link>敵を<link=keyword.Stun><sprite name=Stunned><style=Keyword>スタン</style></link>させる。",
+    "descriptionRaw": "敵のネクサスに1ダメージを与える。場にジンがいる場合、最も弱い敵をスタンさせる。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「微笑むのだ、観客が見ている」\n- ジン",
+    "artistName": "Kudos Productions",
+    "name": "女神の足跡",
+    "cardCode": "06RU002T4",
+    "keywords": [
+      "スキル"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "なし",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スキル",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU002",
+      "06RU002T1",
+      "06RU002T6"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06RU002T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06RU002T2-full.png"
+      }
+    ],
+    "regions": [
+      "ルーンテラ"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 4,
+    "health": 0,
+    "description": "ユニット1体に1ダメージを与える。次の<link=vocab.RoundStart><style=Vocab>ラウンド開始時</style></link>に、<link=card.spell2><style=AssociatedCard>跳弾</style></link>を手札に1枚生成する。\r\nデッキに<link=card.level1><style=AssociatedCard>ジン</style></link>を1枚生成する。",
+    "descriptionRaw": "ユニット1体に1ダメージを与える。次のラウンド開始時に、跳弾を手札に1枚生成する。\r\nデッキにジンを1枚生成する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「拍手を受け…」\n- ジン",
+    "artistName": "Kudos Productions",
+    "name": "ジンの「爆ぜ狂う果実」",
+    "cardCode": "06RU002T2",
+    "keywords": [
+      "スロウ"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "スロウ",
+    "spellSpeedRef": "Slow",
+    "rarity": "なし",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "チャンピオン",
+    "type": "スペル",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU002T6"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06RU046.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06RU046-full.png"
+      }
+    ],
+    "regions": [
+      "ルーンテラ"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 4,
+    "health": 0,
+    "description": "ユニット1体に1ダメージを与える。次の<link=vocab.RoundStart><style=Vocab>ラウンド開始時</style></link>に、<link=card.spell2><style=AssociatedCard>跳弾</style></link>を手札に1枚生成する。",
+    "descriptionRaw": "ユニット1体に1ダメージを与える。次のラウンド開始時に、跳弾を手札に1枚生成する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「拍手を受け…」\n- ジン",
+    "artistName": "Kudos Productions",
+    "name": "爆ぜ狂う果実",
+    "cardCode": "06RU046",
+    "keywords": [
+      "スロウ"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "スロウ",
+    "spellSpeedRef": "Slow",
+    "rarity": "なし",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スペル",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU001T3"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06RU045.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06RU045-full.png"
+      }
+    ],
+    "regions": [
+      "ルーンテラ"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "フォロワーを1枚引き、デッキの上から3枚目までの加護の効果をすべて発動させる。",
+    "descriptionRaw": "フォロワーを1枚引き、デッキの上から3枚目までの加護の効果をすべて発動させる。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "各地に伝わる歌によれば、バードはルーンテラ中の街々にチャイムを隠し、その音色を聞いた人々はみな活力に溢れ、湧き出る歓びによって自然と身体が踊り始めたという。",
+    "artistName": "Kudos Productions",
+    "name": "旅人の呼び声",
+    "cardCode": "06RU045",
+    "keywords": [
+      "バースト"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "バースト",
+    "spellSpeedRef": "Burst",
+    "rarity": "なし",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スペル",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "01SI022",
+      "04SI002",
+      "03SI008"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06SI037.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06SI037-full.png"
+      }
+    ],
+    "regions": [
+      "シャドウアイル"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "<link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>フリーティング</style></link>を持つ<link=card.create1><style=AssociatedCard>シャドウアイルの刻印</style></link>、<link=card.create2><style=AssociatedCard>魂の旅路</style></link>、<link=card.create3><style=AssociatedCard>崩壊</style></link>のいずれかを手札に1枚生成する。",
+    "descriptionRaw": "フリーティングを持つシャドウアイルの刻印、魂の旅路、崩壊のいずれかを手札に1枚生成する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「よく磨かれ…装飾もある。トークン…ルールを学ぶ。面白いゲームだ。息をのむ…見事な職人技…色あせることがない」\n- 回収された日誌",
+    "artistName": "Kudos Productions",
+    "name": "シャドウアイル・テルストーン",
+    "cardCode": "06SI037",
+    "keywords": [
+      "バースト"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "バースト",
+    "spellSpeedRef": "Burst",
+    "rarity": "レア",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スペル",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06SI040.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06SI040-full.png"
+      }
+    ],
+    "regions": [
+      "シャドウアイル"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 0,
+    "cost": 4,
+    "health": 0,
+    "description": "力尽きた味方のフォロワーのうち<link=vocab.Strongest><style=Vocab>最も強い</style></link>1体の<link=keyword.Ephemeral><sprite name=Ephemeral><style=Keyword>エフェメラル</style></link>を持つコピーを蘇生させ、すべての敵にこのラウンド中-1|-0を付与する。",
+    "descriptionRaw": "力尽きた味方のフォロワーのうち最も強い1体のエフェメラルを持つコピーを蘇生させ、すべての敵にこのラウンド中-1|-0を付与する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "いくら退けようとも、亡霊は再びやってくる。",
+    "artistName": "Kudos Productions",
+    "name": "再来せし暗黒の刻",
+    "cardCode": "06SI040",
+    "keywords": [
+      "スロウ"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "スロウ",
+    "spellSpeedRef": "Slow",
+    "rarity": "エピック",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スペル",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06SI033.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06SI033-full.png"
+      }
+    ],
+    "regions": [
+      "シャドウアイル"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "<link=vocab.Countdown><style=Vocab>カウントダウン 2</style></link><style=Variable></style>: 力尽きた味方のうち<link=vocab.Strongest><style=Vocab>最も強い</style></link>1体を蘇生させる。",
+    "descriptionRaw": "カウントダウン 2: 力尽きた味方のうち最も強い1体を蘇生させる。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "盾にぶつかる剣の音が弔鐘のごとく鳴り響き、その音に誘い出されるように、亡霊たちが姿を現す。現世との繋がりを断ち切れず、死を経た今もなお、彼らは苦しみに囚われている。",
+    "artistName": "Kudos Productions",
+    "name": "呪われた墓所",
+    "cardCode": "06SI033",
+    "keywords": [
+      "ランドマーク",
+      "カウントダウン"
+    ],
+    "keywordRefs": [
+      "LandmarkVisualOnly",
+      "Countdown"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "エピック",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ランドマーク",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06SI043.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/ja_jp/img/cards/06SI043-full.png"
+      }
+    ],
+    "regions": [
+      "シャドウアイル"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "カードを3枚<link=vocab.Toss><style=Vocab>トス</style></link>する。\r\nユニット1体から体力を2<link=keyword.Drain><style=Keyword>吸収</style></link>する。",
+    "descriptionRaw": "カードを3枚トスする。\r\nユニット1体から体力を2吸収する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "どれだけこの地に死が満ちようと、草木は新たな在り様を見出すだろう。",
+    "artistName": "Kudos Productions",
+    "name": "下草",
+    "cardCode": "06SI043",
+    "keywords": [
+      "ファスト"
+    ],
+    "keywordRefs": [
+      "Fast"
+    ],
+    "spellSpeed": "ファスト",
+    "spellSpeedRef": "Fast",
+    "rarity": "コモン",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スペル",
+    "collectible": true,
+    "set": "Set6"
+  }
+]

@@ -436,13 +436,13 @@ export default {
     },
     versionTooltip() {
       if (this.isUpdatedVersion) {
-        return "Updated"
+        return this.$t("update.updated")
       } else if (this.updateDownloaded) {
-        return "Update on next start"
+        return this.$t("update.updateOnStart")
       } else if (this.updateProcess > 0) {
-        return `Downloading... ${this.updateProcess}%`
+        return this.$t("update.process", { percent: this.updateProcess })
       } else if (this.remoteVersion) {
-        return `Latest: ${this.remoteVersion}`
+        return this.$t("update.lastest", { version: this.remoteVersion })
       }
       return this.$t("str.loading")
     },

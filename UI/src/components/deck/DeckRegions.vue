@@ -12,13 +12,7 @@ import RegionIcon from "../image/IconRegion.vue"
 import DeckEncoder from "../../modules/runeterra/DeckEncoder"
 //https://painttist.github.io/lor-champ-icons/data/champion.js
 
-// import set1 from '../../../Resource/set1-en_us.json'
-// import set2 from '../../../Resource/set2-en_us.json'
-// import set3 from '../../../Resource/set3-en_us.json'
-// import set4 from '../../../Resource/set4-en_us.json'
-// import set5 from '../../../Resource/set5-en_us.json'
-
-import en_us_array from "../../../../Resource/en_us.json"
+import en_us_array from "../../data/en_us.json"
 
 const en_us = [].concat(...en_us_array).reduce((a, v) => ({ ...a, [v.cardCode]: v }), {})
 
@@ -35,6 +29,7 @@ const regionRefID = {
   Shurima: 7,
   Targon: 9,
   BandleCity: 10,
+  Runeterra: 12,
 }
 
 export default {
@@ -65,6 +60,12 @@ export default {
   computed: {
     getFactions() {
       var factionIDs = []
+      var champFactions = []
+
+      var factionCounts = []
+      for (var region in regionRefID) {
+        factionCounts[regionRefID[region]] = 0
+      }
 
       var cards = null
       if (!this.deck) return []
@@ -82,9 +83,36 @@ export default {
             // Only considers mono region cards
             var regionID = regionRefID[card.regionRefs[0]]
 
+            if (card.rarityRef == "Champion" && card.collectible) {
+              if (champFactions.indexOf(regionID) == -1 && regionID != regionRefID.Runeterra) {
+                champFactions.push(regionID)
+              }
+            }
+
+            factionCounts[regionID] += 1
+
             if (factionIDs.indexOf(regionID) == -1) {
               factionIDs.push(regionID)
             }
+          }
+        }
+      }
+
+      if (factionIDs.indexOf(regionRefID.Runeterra) != -1) {
+        // There is runeterra champions included
+        if (champFactions.length > 0) {
+          // Use the other champion's region
+          factionIDs = champFactions
+        } else {
+          // Use the region with most number of cards
+          var max = 0
+          for (var ref in regionRefID) {
+            var k = regionRefID[ref]
+            if (factionCounts[k] > max) {
+              max = factionCounts[k]
+              factionIDs = [k]
+            }
+            k += 1
           }
         }
       }

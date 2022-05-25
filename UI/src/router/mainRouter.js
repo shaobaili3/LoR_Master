@@ -11,6 +11,7 @@ import PanelTest from "../components/panels/PanelTest.vue"
 
 import PanelPolicyPrivacy from "../components/panels/PanelPolicyPrivacy.vue"
 import PanelPolicyTOS from "../components/panels/PanelPolicyTOS.vue"
+import PanelSeasonal from "../components/panels/PanelSeasonal.vue"
 
 export default [
   {
@@ -106,6 +107,24 @@ export default [
         {
           property: "og:description",
           content: "View matchup statistics. Discover hidden gems, best builds and meta trends!",
+        },
+      ],
+    },
+  },
+  {
+    name: "seasonal",
+    path: "/seasonal",
+    component: PanelSeasonal,
+    meta: {
+      title: "Seasonal | LoR Master App",
+      metaTags: [
+        {
+          name: "description",
+          content: "View seasonal statistics. Discover hidden gems, best builds and meta trends!",
+        },
+        {
+          property: "og:description",
+          content: "View seasonal statistics. Discover hidden gems, best builds and meta trends!",
         },
       ],
     },

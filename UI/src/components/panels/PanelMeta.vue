@@ -4,6 +4,9 @@
       <div class="flex h-full flex-col sm:px-0">
         <h1 class="title pb-4 pt-1 text-left text-3xl sm:pt-0">
           {{ $t("str.meta") }}
+          <a class="relative rounded-md bg-gold-300 px-2 py-1 text-base text-black" href="/seasonal"
+            >Seasonal<!-- <span class="rounded-lg bg-black px-1 py-0.5 text-xs text-white">New!</span> --></a
+          >
           <h2 class="hidden pl-4 text-base text-gray-300 sm:inline" v-if="!IS_ELECTRON">
             {{ $t("meta.subtitle") }}
           </h2>

@@ -38,7 +38,7 @@
         >
           {{ (winRate * 100).toFixed(1) }}%
           <span class="block text-sm sm:inline sm:text-sm">
-            | ± {{ (winRateBounds.gap * 50).toFixed(2) }}</span
+            | ± {{ (winRateBounds.gap * 50).toFixed(1) }}</span
           >
         </p>
       </div>
@@ -99,7 +99,7 @@
               :style="{
                 color: closestColor(winRateBounds.lower),
               }"
-              >{{ (winRateBounds.lower * 100).toFixed(2) }}%</span
+              >{{ (winRateBounds.lower * 100).toFixed(1) }}%</span
             >
             <span v-if="winRateBounds.lower != winRateBounds.upper">
               -
@@ -108,7 +108,7 @@
                 :style="{
                   color: closestColor(winRateBounds.upper),
                 }"
-                >{{ (winRateBounds.upper * 100).toFixed(2) }}%
+                >{{ (winRateBounds.upper * 100).toFixed(1) }}%
               </span></span
             >
           </div>

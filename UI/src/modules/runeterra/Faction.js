@@ -1,37 +1,37 @@
 class Faction {
-  constructor(code, id) {
+  constructor (code, id) {
     this.shortCode = code
     this.id = id
   }
 
-  static fromCode(code) {
-    const factionIdVersion = Faction.FACTIONS[code]
-
-    if (factionIdVersion === undefined) {
-      throw new TypeError("Invalid faction code. It is possible you need to upgrade the runeterra package.")
-    }
-
-    return new this(code, factionIdVersion[0])
-  }
-
-  static fromID(id) {
-    const [shortCode, factionId] = Object.entries(Faction.FACTIONS).find(([, [factionId]]) => factionId === id) || []
+  static fromCode (code) {
+    const [factionId] = Faction.FACTIONS[code] || []
 
     if (factionId === undefined) {
-      throw new TypeError("Invalid faction id. It is possible you need to upgrade the runeterra package.")
+      throw new TypeError('Invalid faction code. It is possible you need to upgrade the runeterra package.')
+    }
+
+    return new this(code, factionId)
+  }
+
+  static fromID (id) {
+    const [shortCode, [factionId]] = Object.entries(Faction.FACTIONS).find(([, [factionId]]) => factionId === id) || [undefined, []]
+
+    if (factionId === undefined) {
+      throw new TypeError('Invalid faction id. It is possible you need to upgrade the runeterra package.')
     }
 
     return new this(shortCode, factionId)
   }
 
-  static getVersion(code) {
-    const factionIdVersion = Faction.FACTIONS[code]
+  static getVersion (code) {
+    const [, version] = Faction.FACTIONS[code] || []
 
-    if (factionIdVersion === undefined) {
-      throw new TypeError("Invalid faction code. It is possible you need to upgrade the runeterra package.")
+    if (version === undefined) {
+      throw new TypeError('Invalid faction code. It is possible you need to upgrade the runeterra package.')
     }
 
-    return factionIdVersion[1]
+    return version
   }
 }
 
@@ -46,6 +46,7 @@ Faction.FACTIONS = {
   MT: [9, 2],
   SH: [7, 3],
   BC: [10, 4],
+  RU: [12, 5]
 }
 
 module.exports = Faction
