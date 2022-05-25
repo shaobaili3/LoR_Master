@@ -32,7 +32,7 @@ const getCardDisplayUrl = computed(() => {
     cardDisplayUrlBase +
     setString.toLowerCase() +
     "/" +
-    baseStore.locale +
+    (baseStore.locale == "zh_cn" ? "zh_tw" : baseStore.locale) +
     "/img/cards/" +
     props.code +
     ".png"
