@@ -1,7 +1,7 @@
 import { createApp } from "vue"
 import { createI18n } from "vue-i18n"
 
-import sets_en from "../../../Resource/en_us.json"
+import sets_en from "../data/en_us.json"
 import { createPinia, mapState, mapActions } from "pinia"
 
 import { useBaseStore } from "../store/StoreBase"
@@ -59,7 +59,7 @@ import mitt from "mitt"
 
 export default (App) => {
   locales.forEach((lo) => {
-    window[lo] = () => import("../../../Resource/" + lo + ".json")
+    window[lo] = () => import("../data/" + lo + ".json")
   })
 
   const i18n = createI18n({

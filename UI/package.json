@@ -1,6 +1,6 @@
 {
   "name": "lor-master-tracker",
-  "version": "0.12.5",
+  "version": "0.12.6",
   "private": true,
   "author": {
     "name": "LoR Master",
@@ -23,7 +23,8 @@
     "dev:file": "vue-cli-service build && electron app.js --file",
     "dev:file:skip-build": "electron app.js --file",
     "dev:hidden": "vue-cli-service build && electron app.js --hidden",
-    "get-icon": "node ./devtool/getNewChampIcon.js",
+    "get:json": "node ./devtool/downloadJson.js",
+    "get:icon": "node ./devtool/getNewChampIcon.js",
     "init": "chcp 65001",
     "package": "electron-packager ./ LoRMasterTracker --out ./app --app-version %npm_package_version% --overwrite --icon=image.ico",
     "serve:staging": "vue-cli-service serve --mode staging",

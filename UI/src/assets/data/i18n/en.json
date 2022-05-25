@@ -58,7 +58,8 @@
     "collapse": "Collapse",
     "lastUpdated": "Last Updated",
     "sort": "Sort",
-    "patch": "Current Patch"
+    "patch": "Current Patch",
+    "seasonal": "Seasonal Tournament"
   },
   "loading": {
     "readyToRock": "Ready to rock 🤘",
@@ -176,5 +177,11 @@
       "playRate": "Play Rate",
       "winRate": "Win Rate"
     }
+  },
+  "update": {
+    "updated": "Updated",
+    "updateOnStart": "Update on next start",
+    "process": "Downloading...{percent}%",
+    "lastest": "Latest: {version}"
   }
 }

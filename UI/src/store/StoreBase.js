@@ -1,6 +1,6 @@
 import { defineStore } from "pinia"
 
-import sets_en from "../../../Resource/en_us.json"
+import sets_en from "../data/en_us.json"
 
 const sets_en_combined = [].concat(...sets_en)
 const API_WEB_BASE =

@@ -1,0 +1,4731 @@
+[
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06BC036.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06BC036-full.png"
+      }
+    ],
+    "regions": [
+      "แบน<zwsp>เดิล<zwsp>ซิ<zwsp>ตี้"
+    ],
+    "regionRefs": [
+      "BandleCity"
+    ],
+    "attack": 2,
+    "cost": 3,
+    "health": 2,
+    "description": "เมื่อการ์ดใบนี้ถูกอัญเชิญ สร้างยอร์เดิลแบบสุ่มหนึ่งใบในมือ <link=vocab.Attack><style=Vocab>โจมตี</style></link>: มอบ +1|+0 ให้กับพันธมิตรยอร์เดิลทั้งหมด",
+    "descriptionRaw": "เมื่อการ์ดใบนี้ถูกอัญเชิญ สร้างยอร์เดิลแบบสุ่มหนึ่งใบในมือ โจมตี: มอบ +1|+0 ให้กับพันธมิตรยอร์เดิลทั้งหมด",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"ทุก ๆ คนรัก Paparo! ทุก ๆ หน้าร้อนเขาจะนำของจากทั่วทุกมุมโลกมาฝากพวกเรา และพวกมันมักจะอร่อย ไม่ก็แวววับ หรือไม่ก็น่าสับสนสุด ๆ เสมอ! และบางครั้งก็รวมมันทั้งหมดนั่นแหละ!\" - Ava Achiever",
+    "artistName": "Kudos Productions",
+    "name": "Paparo the Great",
+    "cardCode": "06BC036",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "อีปิค",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "ยอร์เดิล"
+    ],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "05BC141",
+      "05BC216",
+      "05BC191"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06BC040.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06BC040-full.png"
+      }
+    ],
+    "regions": [
+      "แบน<zwsp>เดิล<zwsp>ซิ<zwsp>ตี้"
+    ],
+    "regionRefs": [
+      "BandleCity"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "สร้าง <link=card.spell1><style=AssociatedCard>Keeper's Verdict</style></link>, <link=card.spell2><style=AssociatedCard>Yordle Contraption</style></link> หรือ <link=card.spell3><style=AssociatedCard>Heroic Refrain</style></link> <link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>ชั่วคราว</style></link>หนึ่งใบในมือ",
+    "descriptionRaw": "สร้าง Keeper's Verdict, Yordle Contraption หรือ Heroic Refrain ชั่วคราวหนึ่งใบในมือ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "ยอร์เดิลพร้อมเล่นเกมอยู่เสมอ... แต่ก็อย่าตกใจไปล่ะถ้าเกิดมีการเปลี่ยนกฎกันกลางคัน!",
+    "artistName": "Kudos Productions",
+    "name": "Bandle Tellstones",
+    "cardCode": "06BC040",
+    "keywords": [
+      "ฉับพลัน"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "ฉับพลัน",
+    "spellSpeedRef": "Burst",
+    "rarity": "คอมมอน",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "เวท",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU001T3"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06BC044.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06BC044-full.png"
+      }
+    ],
+    "regions": [
+      "แบน<zwsp>เดิล<zwsp>ซิ<zwsp>ตี้"
+    ],
+    "regionRefs": [
+      "BandleCity"
+    ],
+    "attack": 0,
+    "cost": 5,
+    "health": 0,
+    "description": "สร้างความเสียหาย 2 หน่วยแก่ศัตรูหนึ่งใบและ<link=keyword.Stun><sprite name=Stunned><style=Keyword>สตัน</style></link>ศัตรูอีกหนึ่งใบ ติด <link=card.chime><style=AssociatedCard>Chime</style></link> 3 ใบบนการ์ดในเด็คแบบสุ่ม",
+    "descriptionRaw": "สร้างความเสียหาย 2 หน่วยแก่ศัตรูหนึ่งใบและสตันศัตรูอีกหนึ่งใบ ติด Chime 3 ใบบนการ์ดในเด็คแบบสุ่ม",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"แม่จ๋า ผู้ดูแลเขาไปไหนแล่วล่ะ?\"\n\"เขาไปได้ทุกที่ลูกรัก ไกลแสนไกลตราบที่สายตามองเห็น\"\n\"ทำไมเป็นงั้นล่ะ?\"\n\"โถ ๆ เจ้าตัวน้อย อย่าไปคิดหาเหตุผลเลย แม้แต่ผู้อาวุโสเชาวน์ปัญญาที่สุดของเรายังไม่สามารถเข้าใจวิถีของผู้ดูแลได้เลย...\"\n- แม่และลูกคู่หนึ่ง",
+    "artistName": "Kudos Productions",
+    "name": "Cosmic Binding",
+    "cardCode": "06BC044",
+    "keywords": [
+      "เร็ว"
+    ],
+    "keywordRefs": [
+      "Fast"
+    ],
+    "spellSpeed": "เร็ว",
+    "spellSpeedRef": "Fast",
+    "rarity": "แรร์",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "เวท",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU001T3"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06BC026.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06BC026-full.png"
+      }
+    ],
+    "regions": [
+      "แบน<zwsp>เดิล<zwsp>ซิ<zwsp>ตี้"
+    ],
+    "regionRefs": [
+      "BandleCity"
+    ],
+    "attack": 2,
+    "cost": 1,
+    "health": 1,
+    "description": "เมื่อการ์ดใบนี้ถูกอัญเชิญ ติด <link=card.chime><style=AssociatedCard>Chime</style></link> หนึ่งใบบนการ์ดใบบนสุดในเด็คของคุณ",
+    "descriptionRaw": "เมื่อการ์ดใบนี้ถูกอัญเชิญ ติด Chime หนึ่งใบบนการ์ดใบบนสุดในเด็คของคุณ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"..ครั้งที่สองยิ่งหนักกว่า ตอนนั้นข้ากำลังกวาดพื้นอยู่ ทันใดนั้นข้าก็หันไปเห็นอาหารบนโต๊ะกระจัดกระจายเละเทะ และเห็นหม้อและกระทะของข้าวิ่งสองขาออกประตูไป! ข้ารีบตามไปและพบพวกมันอยู่ในวิหาร กำลังคุ้ยชั้นวางของเหมือนกับว่าหาอะไรบางอย่างอยู่” - เรื่องเล่าของตาแก่ Gaff ตอนที่ 2",
+    "artistName": "Caravan Studio",
+    "name": "Byrd, The Bellringer",
+    "cardCode": "06BC026",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "คอมมอน",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06BC030.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06BC030-full.png"
+      }
+    ],
+    "regions": [
+      "แบน<zwsp>เดิล<zwsp>ซิ<zwsp>ตี้"
+    ],
+    "regionRefs": [
+      "BandleCity"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "สร้างความเสียหาย 1 หน่วยแก่ยูนิตหนึ่งใบ หากหนึ่งในกับดักหรือพรของคุณได้ทำงานไปในรอบนี้ ให้สร้างความเสียหาย 3 หน่วยแทน",
+    "descriptionRaw": "สร้างความเสียหาย 1 หน่วยแก่ยูนิตหนึ่งใบ หากหนึ่งในกับดักหรือพรของคุณได้ทำงานไปในรอบนี้ ให้สร้างความเสียหาย 3 หน่วยแทน",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"หากมันเปล่งแสงขึ้นมา แปลว่ามันจะระเบิด!\" - กฏของหน่วยสอดแนมแบนเดิลข้อที่ 463",
+    "artistName": "Kudos Productions",
+    "name": "Proximity Puffcap",
+    "cardCode": "06BC030",
+    "keywords": [
+      "ช้า"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "ช้า",
+    "spellSpeedRef": "Slow",
+    "rarity": "คอมมอน",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "เวท",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU001T3"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06BC031.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06BC031-full.png"
+      }
+    ],
+    "regions": [
+      "แบน<zwsp>เดิล<zwsp>ซิ<zwsp>ตี้"
+    ],
+    "regionRefs": [
+      "BandleCity"
+    ],
+    "attack": 4,
+    "cost": 6,
+    "health": 6,
+    "description": "เมื่อการ์ดใบนี้ถูกอัญเชิญ ติด <link=card.chime><style=AssociatedCard>Chime</style></link> หนึ่งใบบนการ์ดใบบนสุดในเด็คของคุณ จากนั้นเพิ่มพรทั้งหมดในเด็คของคุณเป็น<br>สองเท่า",
+    "descriptionRaw": "เมื่อการ์ดใบนี้ถูกอัญเชิญ ติด Chime หนึ่งใบบนการ์ดใบบนสุดในเด็คของคุณ จากนั้นเพิ่มพรทั้งหมดในเด็คของคุณเป็นสองเท่า",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"เล่นซะข้ากลัวหัวหด ทั้งแขนที่งอกออกมาพวกนั้น ทั้งซี่ฟันใหญ่ดั่งหินย้อย โอ้ ๆ และตอนที่เจ้าสิ่งมีชีวิตนั้นเอาไม้ละเลงตีฟันของตัวมันเองก็ทำให้เกิดเป็นเสียงเพลงแสนน่าขนลุก ข้าวิ่งหนีตายแทบไม่คิดชีวิต แต่แล้วข้าก็พลันเห็น... บรรดาหลุมมิติบนท้องฟ้า! ต้องมีพวกมันเป็นร้อย ๆ แน่!\"\n- เรื่องเล่าของตาแก่ Gaff ตอนที่ 4",
+    "artistName": "Caravan Studio",
+    "name": "Maduli, The Gatekeeper",
+    "cardCode": "06BC031",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "แรร์",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06IO005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06IO005-full.png"
+      }
+    ],
+    "regions": [
+      "ไอ<zwsp>โอ<zwsp>เนีย"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "<link=keyword.Recall><style=Keyword>เรียกกลับ</style></link>ยูนิตหนึ่งใบที่มีพลังชีวิต 3 หน่วยหรือน้อยกว่า",
+    "descriptionRaw": "เรียกกลับยูนิตหนึ่งใบที่มีพลังชีวิต 3 หน่วยหรือน้อยกว่า",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"งานศิลปะต้องใช้เวลา\" - Jhin",
+    "artistName": "Kudos Productions",
+    "name": "Gruesome Theater",
+    "cardCode": "06IO005",
+    "keywords": [
+      "เร็ว"
+    ],
+    "keywordRefs": [
+      "Fast"
+    ],
+    "spellSpeed": "เร็ว",
+    "spellSpeedRef": "Fast",
+    "rarity": "คอมมอน",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "เวท",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "01IO020"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06IO012.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06IO012-full.png"
+      }
+    ],
+    "regions": [
+      "ไอ<zwsp>โอ<zwsp>เนีย"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 0,
+    "cost": 4,
+    "health": 0,
+    "description": "อัญเชิญ <link=card.summon><style=AssociatedCard>Keeper of Masks</style></link> หนึ่งใบตอนนี้หรือเมื่อ<link=vocab.RoundStart><style=Vocab>เริ่มรอบ</style></link>ถัดไป จั่วการ์ด 1 ใบ",
+    "descriptionRaw": "อัญเชิญ Keeper of Masks หนึ่งใบตอนนี้หรือเมื่อเริ่มรอบถัดไป จั่วการ์ด 1 ใบ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"หน้ากากเก่าแก่ช่วยให้ดวงตาอันใสซื่อมองเห็นความจริง\"\n- Keeper of Masks",
+    "artistName": "Kudos Productions",
+    "name": "Kinkou's Call",
+    "cardCode": "06IO012",
+    "keywords": [
+      "ช้า"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "ช้า",
+    "spellSpeedRef": "Slow",
+    "rarity": "คอมมอน",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "เวท",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "02IO003T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06IO009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06IO009-full.png"
+      }
+    ],
+    "regions": [
+      "ไอ<zwsp>โอ<zwsp>เนีย"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 0,
+    "cost": 5,
+    "health": 0,
+    "description": "เริ่มการโจมตีฟรีพร้อมกับ <link=card.summon><style=AssociatedCard>Dragonling</style></link> 2 ใบ",
+    "descriptionRaw": "เริ่มการโจมตีฟรีพร้อมกับ Dragonling 2 ใบ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"ความประสงค์ก่อเกิดเป็นรูปร่าง\"\n- ปรมาจารย์วิชามังกร",
+    "artistName": "Kudos Productions",
+    "name": "Dragon Ambush",
+    "cardCode": "06IO009",
+    "keywords": [
+      "ช้า"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "ช้า",
+    "spellSpeedRef": "Slow",
+    "rarity": "คอมมอน",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "เวท",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "04IO010"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06IO033.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06IO033-full.png"
+      }
+    ],
+    "regions": [
+      "ไอ<zwsp>โอ<zwsp>เนีย"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 0,
+    "cost": 5,
+    "health": 0,
+    "description": "จากนี้ไปจนจบเกม เมื่อคุณ<link=vocab.BladeDance><style=Vocab>ระบำดาบ</style></link> อัญเชิญ <link=card.summon><style=AssociatedCard>Blade</style></link> อีกหนึ่งใบออกมาโจมตีทันที\r\n<link=vocab.BladeDance><style=Vocab>ระบำดาบ</style></link> 1 ครั้ง",
+    "descriptionRaw": "จากนี้ไปจนจบเกม เมื่อคุณระบำดาบ อัญเชิญ Blade อีกหนึ่งใบออกมาโจมตีทันที\r\nระบำดาบ 1 ครั้ง",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"ร่ายรำระบำนำไป และข้าจะตามไปทันใด!\" - Ribbon Dancer",
+    "artistName": "Kudos Productions",
+    "name": "Storm of Blades",
+    "cardCode": "06IO033",
+    "keywords": [
+      "ช้า"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "ช้า",
+    "spellSpeedRef": "Slow",
+    "rarity": "อีปิค",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "เวท",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06IO004T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06IO004.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06IO004-full.png"
+      }
+    ],
+    "regions": [
+      "ไอ<zwsp>โอ<zwsp>เนีย"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 3,
+    "cost": 3,
+    "health": 2,
+    "description": "<link=keyword.PlaySkillMark><sprite name=SkillMark><style=Keyword>เล่น</style></link>: <link=keyword.Recall><style=Keyword>เรียกกลับ</style></link>ยูนิตหนึ่งใบที่มีพลังโจมตีน้อยกว่าการ์ดใบนี้",
+    "descriptionRaw": "เล่น: เรียกกลับยูนิตหนึ่งใบที่มีพลังโจมตีน้อยกว่าการ์ดใบนี้",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"ผู้สร้างมหัศจรรย์และช่างฝีมือในตำนาน The Maker! ศิลปะของนางนั้นหาที่เปรียบมิได้! การลงมือของนางนั้นไร้ที่ติ! ช่างเป็นเกียรติยิ่งนักที่ได้พบนาง ยังไม่นับรวมการได้ถือครองอุปกรณ์ที่นางสร้างขึ้นมาอีกด้วย\" - สักขีพยานชาว Kashuri",
+    "artistName": "Valentin Gloaguen",
+    "name": "The Maker",
+    "cardCode": "06IO004",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "แรร์",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "01IO004",
+      "03IO005",
+      "01IO010"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06IO036.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06IO036-full.png"
+      }
+    ],
+    "regions": [
+      "ไอ<zwsp>โอ<zwsp>เนีย"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "สร้าง <link=card.create1><style=AssociatedCard>Health Potion</style></link>, <link=card.create2><style=AssociatedCard>Homecoming</style></link> หรือ <link=card.create3><style=AssociatedCard>Stand United</style></link> <link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>ชั่วคราว</style></link> หนึ่งใบในมือ",
+    "descriptionRaw": "สร้าง Health Potion, Homecoming หรือ Stand United ชั่วคราว หนึ่งใบในมือ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"การเรียนรู้ที่จะอ่านคู่ต่อสู้ให้ออกนั้นเป็นทักษะสำคัญแม้ยามอยู่นอกสนามรบ แต่ก่อนอื่นใด จุดประสงค์ของเกมก็คือการสร้างความเพลิดเพลินนี่นะ เอาล่ะ ใครแพ้ต้องไปขัดรองเท้า!\" - Inspiring Mentor",
+    "artistName": "Kudos Productions",
+    "name": "Ionian Tellstones",
+    "cardCode": "06IO036",
+    "keywords": [
+      "ฉับพลัน"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "ฉับพลัน",
+    "spellSpeedRef": "Burst",
+    "rarity": "แรร์",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "เวท",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "01IO020"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06IO012T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06IO012T1-full.png"
+      }
+    ],
+    "regions": [
+      "ไอ<zwsp>โอ<zwsp>เนีย"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 0,
+    "cost": 4,
+    "health": 0,
+    "description": "อัญเชิญ <link=card.summon><style=AssociatedCard>Keeper of Masks</style></link> หนึ่งใบเมื่อ<link=vocab.RoundStart><style=Vocab>เริ่มรอบ</style></link>ถัดไป จั่วการ์ด 1 ใบ ",
+    "descriptionRaw": "อัญเชิญ Keeper of Masks หนึ่งใบเมื่อเริ่มรอบถัดไป จั่วการ์ด 1 ใบ ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"หน้ากากเก่าแก่ช่วยให้ดวงตาอันใสซื่อมองเห็นความจริง\"\n- Keeper of Masks",
+    "artistName": "Kudos Productions",
+    "name": "Kinkou's Call",
+    "cardCode": "06IO012T1",
+    "keywords": [
+      "ช้า"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "ช้า",
+    "spellSpeedRef": "Slow",
+    "rarity": "ไม่มี",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "เวท",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "01IO020"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06IO012T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06IO012T2-full.png"
+      }
+    ],
+    "regions": [
+      "ไอ<zwsp>โอ<zwsp>เนีย"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 0,
+    "cost": 4,
+    "health": 0,
+    "description": "อัญเชิญ <link=card.summon><style=AssociatedCard>Keeper of Masks</style></link> หนึ่งใบ จั่วการ์ด 1 ใบ",
+    "descriptionRaw": "อัญเชิญ Keeper of Masks หนึ่งใบ จั่วการ์ด 1 ใบ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"หน้ากากเก่าแก่ช่วยให้ดวงตาอันใสซื่อมองเห็นความจริง\"\n- Keeper of Masks",
+    "artistName": "Kudos Productions",
+    "name": "Kinkou's Call",
+    "cardCode": "06IO012T2",
+    "keywords": [
+      "ช้า"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "ช้า",
+    "spellSpeedRef": "Slow",
+    "rarity": "ไม่มี",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "เวท",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06IO003T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06IO003.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06IO003-full.png"
+      }
+    ],
+    "regions": [
+      "ไอ<zwsp>โอ<zwsp>เนีย"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 4,
+    "cost": 2,
+    "health": 4,
+    "description": "<link=keyword.PlaySkillMark><sprite name=SkillMark><style=Keyword>เล่น</style></link>: <link=keyword.Stun><sprite name=Stunned><style=Keyword>สตัน</style></link>ศัตรูหนึ่งใบ",
+    "descriptionRaw": "เล่น: สตันศัตรูหนึ่งใบ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"องก์ที่ 4: ขอต้อนรับนักบวชหญิงวัยเยาว์สู่เรื่องราวของเรา เรื่องราวของเธอนั้นเต็มไปด้วยโศกนาฏกรรม เรื่องราวที่ถูกบอกเล่าผ่านปากของเหล่าผู้ที่ถูกเธอทรยศ แสนสิ้นหวังที่จะทดแทนสิ่งที่เธอฝ่าฝืนไป เธอแบกภาระอันใหญ่หลวงขึ้นบ่าพร้อมกับของขวัญอันหรูหรา<br>จากชาวน็อกซัสที่เธออ้าแขนเปิดรับสู่ดินแดนบ้านเกิด ปล่อยให้เราจินตนาการต่อไปว่า: แท้จริงแล้วคือความเศร้าโศกหรือกระสุนปืนกันแน่ที่ทำให้หัวใจ<br>ของนางแตกเป็นเสี่ยง ๆ?\"",
+    "artistName": "Envar Studio",
+    "name": "The Stagehand",
+    "cardCode": "06IO003",
+    "keywords": [
+      "ไร้ตัวตน"
+    ],
+    "keywordRefs": [
+      "Ephemeral"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "คอมมอน",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06IO003"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06IO003T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06IO003T1-full.png"
+      }
+    ],
+    "regions": [
+      "ไอ<zwsp>โอ<zwsp>เนีย"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "<link=keyword.Stun><sprite name=Stunned><style=Keyword>สตัน</style></link>ศัตรูหนึ่งใบ",
+    "descriptionRaw": "สตันศัตรูหนึ่งใบ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"นักแสดงที่ดีต้องไม่อายที่จะก้าวเข้าสู่แสงไฟ\" - Jhin",
+    "artistName": "Kudos Productions",
+    "name": "Stunning Performance",
+    "cardCode": "06IO003T1",
+    "keywords": [
+      "สกิล"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ไม่มี",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ความสามารถ",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06IO004T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06IO004T1-full.png"
+      }
+    ],
+    "regions": [
+      "ไอ<zwsp>โอ<zwsp>เนีย"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "<link=keyword.Recall><style=Keyword>เรียกกลับ</style></link>ยูนิตหนึ่งใบที่มีพลังโจมตีน้อยกว่าการ์ดใบนี้",
+    "descriptionRaw": "เรียกกลับยูนิตหนึ่งใบที่มีพลังโจมตีน้อยกว่าการ์ดใบนี้",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"การฝึกฝนคือหนทาง และรออยู่ที่ปลายสุดของมันคือความสมบูรณ์แบบ\" - The Maker",
+    "artistName": "Kudos Productions",
+    "name": "Peerless Artistry",
+    "cardCode": "06IO004T1",
+    "keywords": [
+      "สกิล"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ไม่มี",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ความสามารถ",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06BW006T3",
+      "06BW006T1",
+      "06BW006T2"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06BW006.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06BW006-full.png"
+      }
+    ],
+    "regions": [
+      "บิลจ์<zwsp>วอ<zwsp>เตอร์"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 1,
+    "cost": 4,
+    "health": 6,
+    "description": "<link=vocab.Attack><style=Vocab>โจมตี</style></link>: <link=vocab.Spawn><style=Vocab>เรียกพลังเทพี</style></link> 1 ครั้ง จากนั้นนำค่าพลังโจมตีของ <link=card.summon><style=AssociatedCard>Tentacle</style></link> ที่<link=vocab.Strongest><style=Vocab>แข็งแกร่งที่สุด</style></link>ของคุณมาเพิ่มให้กับ<br>การ์ดใบนี้ในรอบนี้",
+    "descriptionRaw": "โจมตี: เรียกพลังเทพี 1 ครั้ง จากนั้นนำค่าพลังโจมตีของ Tentacle ที่แข็งแกร่งที่สุดของคุณมาเพิ่มให้กับการ์ดใบนี้ในรอบนี้",
+    "levelupDescription": "เมื่อการ์ดใบนี้สร้างความเสียหาย 15 หน่วยขึ้นไปหรือเห็น <link=card.summon><style=AssociatedCard>Tentacle</style></link> สร้างความเสียหาย 15 หน่วยขึ้นไป <style=Variable></style>",
+    "levelupDescriptionRaw": "เมื่อการ์ดใบนี้สร้างความเสียหาย 15 หน่วยขึ้นไปหรือเห็น Tentacle สร้างความเสียหาย 15 หน่วยขึ้นไป ",
+    "flavorText": "\"นัยน์ตาแห่ง Nagakabouros\" เป็นเพียงสมญาเท่านั้น แต่ Illaoi กลับถือว่านี่เป็นคำท้าทายในการใช้ชีวิต โดยเปรียบเทพีของเธอเป็นดั่งเพื่อนร่วมทางที่ทั้งแน่วแน่--และแสนขี้เบื่อ",
+    "artistName": "MICHAEL IVAN",
+    "name": "Illaoi",
+    "cardCode": "06BW006",
+    "keywords": [
+      "ทะลวง"
+    ],
+    "keywordRefs": [
+      "Overwhelm"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "แชมเปี้ยน",
+    "rarityRef": "Champion",
+    "subtypes": [],
+    "supertype": "แชมเปี้ยน",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06BW006T3",
+      "06BW006",
+      "06BW006T2"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06BW006T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06BW006T1-full.png"
+      }
+    ],
+    "regions": [
+      "บิลจ์<zwsp>วอ<zwsp>เตอร์"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 2,
+    "cost": 4,
+    "health": 7,
+    "description": "เมื่อคุณ<link=vocab.Spawn><style=Vocab>เรียกพลังเทพี</style></link> บวกเพิ่มค่าพลังของมันอีก 1 หน่วย\r\n<link=vocab.Attack><style=Vocab>โจมตี</style></link>: <link=vocab.Spawn><style=Vocab>เรียกพลังเทพี</style></link> 1 ครั้ง จากนั้นฮีล <link=card.summon><style=AssociatedCard>Tentacle</style></link> ที่<link=vocab.Strongest><style=Vocab>แข็งแกร่งที่สุด</style></link>ของคุณจนเต็มและนำค่า<br>พลังของมันมาเพิ่มให้การ์ดใบนี้ในรอบนี้",
+    "descriptionRaw": "เมื่อคุณเรียกพลังเทพี บวกเพิ่มค่าพลังของมันอีก 1 หน่วย\r\nโจมตี: เรียกพลังเทพี 1 ครั้ง จากนั้นฮีล Tentacle ที่แข็งแกร่งที่สุดของคุณจนเต็มและนำค่าพลังของมันมาเพิ่มให้การ์ดใบนี้ในรอบนี้",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "บทเรียนชีวิต: หากเจ้ามีโอกาสได้โหนเชือกจากเรือธงชั้นยอดเพื่อเข้าบดขยี้<br>ศัตรูดั่งสายฟ้าฟาดแล้วนั้น จงอย่าพลาดโอกาสนั้นไป มันช่วยเติมพลังได้สุด ๆ เลยล่ะ",
+    "artistName": "MICHAEL IVAN",
+    "name": "Illaoi",
+    "cardCode": "06BW006T1",
+    "keywords": [
+      "ทะลวง"
+    ],
+    "keywordRefs": [
+      "Overwhelm"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ไม่มี",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "แชมเปี้ยน",
+    "type": "ยูนิต",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06BW006T3",
+      "06BW006T1",
+      "06BW006"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06BW006T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06BW006T2-full.png"
+      }
+    ],
+    "regions": [
+      "บิลจ์<zwsp>วอ<zwsp>เตอร์"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 4,
+    "health": 0,
+    "description": "<link=vocab.Spawn><style=Vocab>เรียกพลังเทพี</style></link> 3 ครั้ง จากนั้น <link=card.summon><style=AssociatedCard>Tentacle</style></link> ที่<link=vocab.Strongest><style=Vocab>แข็งแกร่งที่สุดของคุณ</style></link>และศัตรูหนึ่งใบทำการ<link=vocab.Strike><style=Vocab>จู่โจม</style></link>กันและกัน\r\nสร้าง <link=card.level1><style=AssociatedCard>Illaoi</style></link> หนึ่งใบในเด็คของคุณ",
+    "descriptionRaw": "เรียกพลังเทพี 3 ครั้ง จากนั้น Tentacle ที่แข็งแกร่งที่สุดของคุณและศัตรูหนึ่งใบทำการจู่โจมกันและกัน\r\nสร้าง Illaoi หนึ่งใบในเด็คของคุณ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"ชีวิตคือบททดสอบ และหลายครั้งความเจ็บปวดก็กลายเป็นบทเรียนมากกว่าที่เรา<br>คาดไว้นัก\" - Illaoi",
+    "artistName": "Kudos Productions",
+    "name": "Illaoi's Tentacle Smash",
+    "cardCode": "06BW006T2",
+    "keywords": [
+      "ช้า"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "ช้า",
+    "spellSpeedRef": "Slow",
+    "rarity": "ไม่มี",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "แชมเปี้ยน",
+    "type": "เวท",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06BW006T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06BW006T3-full.png"
+      }
+    ],
+    "regions": [
+      "บิลจ์<zwsp>วอ<zwsp>เตอร์"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 1,
+    "cost": 1,
+    "health": 1,
+    "description": "",
+    "descriptionRaw": "",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "ไม่มีสัญลักษณ์ใดจะถ่ายทอดสิ่งที่รออยู่เบื้องล่างได้ดีไปกว่านี้ ไม่ว่ามันจะมีอันตรายหรือไม่ก็ตามก็คงไม่ส่งผลอะไรต่อมวล<br>ความกลัวและความตื่นตระหนกที่ก่อตัวขึ้นภายในใจของคุณไป<br>เรียบร้อยแล้ว ธรรมชาติสรรค์สร้างความสวยงาม ในขณะที่จิตใจของคุณเป็นฝ่ายปรุงแต่งมัน",
+    "artistName": "Michael Ivan",
+    "name": "Tentacle",
+    "cardCode": "06BW006T3",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ไม่มี",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06BW036.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06BW036-full.png"
+      }
+    ],
+    "regions": [
+      "บิลจ์<zwsp>วอ<zwsp>เตอร์"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 3,
+    "description": "การ์ดใบนี้ได้รับ +1|+0 ตามจำนวนรอบที่ต่างกันที่คุณได้สร้าง<br>ความเสียหายแก่เน็กซัสของศัตรู",
+    "descriptionRaw": "การ์ดใบนี้ได้รับ +1|+0 ตามจำนวนรอบที่ต่างกันที่คุณได้สร้างความเสียหายแก่เน็กซัสของศัตรู",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"ไม่มีที่ใดในบิลจ์วอเตอร์ที่จะคละคลุ้งไปด้วยเลือดมากกว่าที่อ่าวอีกแล้ว ลองดูหนูพวกนั้นสิ จมูกของพวกมันมุ่งหาแต่กลิ่นคาวเลือด กัดกินไปเท่าไหร่ก็ไม่เคยพอ เจ้าแสนสัตว์น่ารังเกียจเอ๊ย\" - Jagged Butcher",
+    "artistName": "Alessandro Poli",
+    "name": "Wharf Rat",
+    "cardCode": "06BW036",
+    "keywords": [
+      "ทะลวง"
+    ],
+    "keywordRefs": [
+      "Overwhelm"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "อีปิค",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06BW038.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06BW038-full.png"
+      }
+    ],
+    "regions": [
+      "บิลจ์<zwsp>วอ<zwsp>เตอร์"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 3,
+    "cost": 4,
+    "health": 4,
+    "description": "เมื่อคุณ<link=keyword.Deep><sprite name=Deep><style=Keyword>ดำดิ่ง</style></link> ฮีลพันธมิตรทั้งหมดและเน็กซัสของคุณ 3 หน่วย \r\n<style=Variable></style>",
+    "descriptionRaw": "เมื่อคุณดำดิ่ง ฮีลพันธมิตรทั้งหมดและเน็กซัสของคุณ 3 หน่วย \r\n",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"มันต้องการอะไร?!\"\n\"มัน... มันกำลังตามหาส้ม!\"\n\"ข้าแต่สตรีมีเครา โยน-โยนไปให้มันทั้งถังเลย!\" - กะลาสีผู้โชคร้าย",
+    "artistName": "Kudos Productions",
+    "name": "Megatusk",
+    "cardCode": "06BW038",
+    "keywords": [
+      "ดำดิ่ง"
+    ],
+    "keywordRefs": [
+      "Deep"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "คอมมอน",
+    "rarityRef": "Common",
+    "subtypes": [
+      "สัตว์ใต้ท้องทะเล"
+    ],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06BW006T3"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06BW030.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06BW030-full.png"
+      }
+    ],
+    "regions": [
+      "บิลจ์<zwsp>วอ<zwsp>เตอร์"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 5,
+    "health": 0,
+    "description": "<link=vocab.Spawn><style=Vocab>เรียกพลังเทพี</style></link> 2 ครั้ง\r\nจั่วการ์ด 2 ใบ",
+    "descriptionRaw": "เรียกพลังเทพี 2 ครั้ง\r\nจั่วการ์ด 2 ใบ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Nagakabouros คือเทพีแห่งความกรุณา--ถ้าหากรอดจากพิธีบูชาไปได้ล่ะก็นะ",
+    "artistName": "Kudos Productions",
+    "name": "Eye of Nagakabouros",
+    "cardCode": "06BW030",
+    "keywords": [
+      "ฉับพลัน"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "ฉับพลัน",
+    "spellSpeedRef": "Burst",
+    "rarity": "คอมมอน",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "เวท",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06BW011T2",
+      "06BW006T3",
+      "06BW011T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06BW011.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06BW011-full.png"
+      }
+    ],
+    "regions": [
+      "บิลจ์<zwsp>วอ<zwsp>เตอร์"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 5,
+    "cost": 8,
+    "health": 8,
+    "description": "<link=vocab.RoundStart><style=Vocab>เริ่มรอบ</style></link>: <link=vocab.Spawn><style=Vocab>เรียกพลังเทพี</style></link> 2 ครั้ง จากนั้นหาก <link=card.tentacle><style=AssociatedCard>Tentacle</style></link> ที่<link=vocab.Strongest><style=Vocab>แข็งแกร่งที่สุด</style></link>ของคุณ มีพลังโจมตี 12 หน่วยขึ้นไป สร้าง<link=card.spell><style=AssociatedCard>Nagakabouros' Tantrum</style></link> หนึ่งใบในมือ",
+    "descriptionRaw": "เริ่มรอบ: เรียกพลังเทพี 2 ครั้ง จากนั้นหาก Tentacle ที่แข็งแกร่งที่สุดของคุณ มีพลังโจมตี 12 หน่วยขึ้นไป สร้างNagakabouros' Tantrum หนึ่งใบในมือ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"เทพีอสรพิษ เทพคราเคน สตรีมีเครา Nagakabouros ไม่สนใจใยดีสมญาอะไรทั้งนั้น และยิ่งไม่ให้ค่าใดยิ่งกว่าต่อเหล่าคนตายที่ไม่ยอมสู่สุขติ\" - Illaoi",
+    "artistName": "MICHAEL IVAN",
+    "name": "Nagakabouros",
+    "cardCode": "06BW011",
+    "keywords": [
+      "น่าสะพรึง"
+    ],
+    "keywordRefs": [
+      "Fearsome"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "อีปิค",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06BW011T2",
+      "06BW011",
+      "06BW006T3"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06BW011T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06BW011T1-full.png"
+      }
+    ],
+    "regions": [
+      "บิลจ์<zwsp>วอ<zwsp>เตอร์"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "<link=card.parentRef><style=AssociatedCard>Nagakabouros</style></link> เริ่มโจมตีฟรีพร้อมกับ <link=card.unitRef><style=AssociatedCard>Nagakabouros' Tentacle</style></link> 4 ใบ",
+    "descriptionRaw": "Nagakabouros เริ่มโจมตีฟรีพร้อมกับ Nagakabouros' Tentacle 4 ใบ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "เป็นที่กล่าวขานกันมาอย่างยาวนานภายในชนเผ่า Buhru ว่าแต่ก่อนดินแดนแห่งนี้เคยเป็นผืนเดียวกัน แต่ Nagakabouros ได้ทลายแยกมันออกเพื่อสร้างความท้าทายแก่เหล่าต้นหน แน่นอนว่านี่เป็นแค่เรื่องเล่า Nagakabouros ไม่ได้แยกดินแดนแห่งนี้ออก แต่ก็ไม่มีใครคิดสงสัย เพราะอย่างไรถ้าเธอต้องการเธอก็มีพลังพอที่จะทำมันได้",
+    "artistName": "Kudos Productions",
+    "name": "Nagakabouros' Tantrum",
+    "cardCode": "06BW011T1",
+    "keywords": [
+      "โฟกัส",
+      "ชั่วคราว"
+    ],
+    "keywordRefs": [
+      "Focus",
+      "Fleeting"
+    ],
+    "spellSpeed": "ฉับพลัน",
+    "spellSpeedRef": "Burst",
+    "rarity": "ไม่มี",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "เวท",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06BW006T3",
+      "06BW011T1",
+      "06BW011"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06BW011T5.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06BW011T5-full.png"
+      }
+    ],
+    "regions": [
+      "บิลจ์<zwsp>วอ<zwsp>เตอร์"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 1,
+    "cost": 1,
+    "health": 1,
+    "description": "เมื่อการ์ดใบนี้ถูกอัญเชิญ เพิ่มค่าพลังและคีย์เวิร์ดของการ์ดใบนี้ให้<br>เหมือนกับ <link=card.tentacle><style=AssociatedCard>Tentacle</style></link> ที่ <link=vocab.Strongest><style=Vocab>แข็งแกร่งที่สุด</style></link>ของคุณ",
+    "descriptionRaw": "เมื่อการ์ดใบนี้ถูกอัญเชิญ เพิ่มค่าพลังและคีย์เวิร์ดของการ์ดใบนี้ให้เหมือนกับ Tentacle ที่ แข็งแกร่งที่สุดของคุณ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"การที่กล้ากล่าวว่าได้ประจักษ์พบเห็น Nagakabouros หลังจากที่ได้เห็นเพียงระยางของเธอก็เหมือนกับบอกว่าเจ้ารู้จักดวงอาทิตย์ดีหลังได้สัมผัสเพียงแสงอาทิตย์อย่างไรอย่างนั้น Nagakabouros นั้นยิ่งใหญ่กว่านั้นนัก Nagakabouros นั้นไร้ที่สิ้นสุด\" - Falaweh นักบวชหญิงชาว Buhru",
+    "artistName": "Michael Ivan",
+    "name": "Nagakabouros' Tentacle",
+    "cardCode": "06BW011T5",
+    "keywords": [
+      "ไร้ตัวตน"
+    ],
+    "keywordRefs": [
+      "Ephemeral"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ไม่มี",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06BW006T3",
+      "06BW011T1",
+      "06BW011"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06BW011T4.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06BW011T4-full.png"
+      }
+    ],
+    "regions": [
+      "บิลจ์<zwsp>วอ<zwsp>เตอร์"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 1,
+    "cost": 1,
+    "health": 1,
+    "description": "เมื่อการ์ดใบนี้ถูกอัญเชิญ เพิ่มค่าพลังและคีย์เวิร์ดของการ์ดใบนี้ให้<br>เหมือนกับ <link=card.tentacle><style=AssociatedCard>Tentacle</style></link> ที่ <link=vocab.Strongest><style=Vocab>แข็งแกร่งที่สุด</style></link>ของคุณ",
+    "descriptionRaw": "เมื่อการ์ดใบนี้ถูกอัญเชิญ เพิ่มค่าพลังและคีย์เวิร์ดของการ์ดใบนี้ให้เหมือนกับ Tentacle ที่ แข็งแกร่งที่สุดของคุณ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"การที่กล้ากล่าวว่าได้ประจักษ์พบเห็น Nagakabouros หลังจากที่ได้เห็นเพียงระยางของเธอก็เหมือนกับบอกว่าเจ้ารู้จักดวงอาทิตย์ดีหลังได้สัมผัสเพียงแสงอาทิตย์อย่างไรอย่างนั้น Nagakabouros นั้นยิ่งใหญ่กว่านั้นนัก Nagakabouros นั้นไร้ที่สิ้นสุด\" - Falaweh นักบวชหญิงชาว Buhru",
+    "artistName": "Michael Ivan",
+    "name": "Nagakabouros' Tentacle",
+    "cardCode": "06BW011T4",
+    "keywords": [
+      "ไร้ตัวตน"
+    ],
+    "keywordRefs": [
+      "Ephemeral"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ไม่มี",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06BW006T3",
+      "06BW011T1",
+      "06BW011"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06BW011T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06BW011T3-full.png"
+      }
+    ],
+    "regions": [
+      "บิลจ์<zwsp>วอ<zwsp>เตอร์"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 1,
+    "cost": 1,
+    "health": 1,
+    "description": "เมื่อการ์ดใบนี้ถูกอัญเชิญ เพิ่มค่าพลังและคีย์เวิร์ดของการ์ดใบนี้ให้<br>เหมือนกับ <link=card.tentacle><style=AssociatedCard>Tentacle</style></link> ที่ <link=vocab.Strongest><style=Vocab>แข็งแกร่งที่สุด</style></link>ของคุณ",
+    "descriptionRaw": "เมื่อการ์ดใบนี้ถูกอัญเชิญ เพิ่มค่าพลังและคีย์เวิร์ดของการ์ดใบนี้ให้เหมือนกับ Tentacle ที่ แข็งแกร่งที่สุดของคุณ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"การที่กล้ากล่าวว่าได้ประจักษ์พบเห็น Nagakabouros หลังจากที่ได้เห็นเพียงระยางของเธอก็เหมือนกับบอกว่าเจ้ารู้จักดวงอาทิตย์ดีหลังได้สัมผัสเพียงแสงอาทิตย์อย่างไรอย่างนั้น Nagakabouros นั้นยิ่งใหญ่กว่านั้นนัก Nagakabouros นั้นไร้ที่สิ้นสุด\" - Falaweh นักบวชหญิงชาว Buhru",
+    "artistName": "Michael Ivan",
+    "name": "Nagakabouros' Tentacle",
+    "cardCode": "06BW011T3",
+    "keywords": [
+      "ไร้ตัวตน"
+    ],
+    "keywordRefs": [
+      "Ephemeral"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ไม่มี",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06BW006T3",
+      "06BW011T1",
+      "06BW011"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06BW011T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06BW011T2-full.png"
+      }
+    ],
+    "regions": [
+      "บิลจ์<zwsp>วอ<zwsp>เตอร์"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 1,
+    "cost": 1,
+    "health": 1,
+    "description": "เมื่อการ์ดใบนี้ถูกอัญเชิญ เพิ่มค่าพลังและคีย์เวิร์ดของการ์ดใบนี้ให้<br>เหมือนกับ <link=card.tentacle><style=AssociatedCard>Tentacle</style></link> ที่ <link=vocab.Strongest><style=Vocab>แข็งแกร่งที่สุด</style></link>ของคุณ",
+    "descriptionRaw": "เมื่อการ์ดใบนี้ถูกอัญเชิญ เพิ่มค่าพลังและคีย์เวิร์ดของการ์ดใบนี้ให้เหมือนกับ Tentacle ที่ แข็งแกร่งที่สุดของคุณ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"การที่กล้ากล่าวว่าได้ประจักษ์พบเห็น Nagakabouros หลังจากที่ได้เห็นเพียงระยางของเธอก็เหมือนกับบอกว่าเจ้ารู้จักดวงอาทิตย์ดีหลังได้สัมผัสเพียงแสงอาทิตย์อย่างไรอย่างนั้น Nagakabouros นั้นยิ่งใหญ่กว่านั้นนัก Nagakabouros นั้นไร้ที่สิ้นสุด\" - Falaweh นักบวชหญิงชาว Buhru",
+    "artistName": "Michael Ivan",
+    "name": "Nagakabouros' Tentacle",
+    "cardCode": "06BW011T2",
+    "keywords": [
+      "ไร้ตัวตน"
+    ],
+    "keywordRefs": [
+      "Ephemeral"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ไม่มี",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06BW045.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06BW045-full.png"
+      }
+    ],
+    "regions": [
+      "บิลจ์<zwsp>วอ<zwsp>เตอร์"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 5,
+    "health": 0,
+    "description": "สร้างความเสียหาย 1 หน่วยแก่อะไรก็ได้ จากนั้น<link=vocab.Rally><style=Vocab>ปลุกระดม</style></link>",
+    "descriptionRaw": "สร้างความเสียหาย 1 หน่วยแก่อะไรก็ได้ จากนั้นปลุกระดม",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "ไม่มีสิ่งใดที่จะไล่เหล่าฉลามใน Ripper's Bay ออกไปได้หรอก เพราะเมื่อพวกมันได้ลิ้มลองรสชาติของเลือดแล้ว พวกมันก็จะยิ่งอยากได้อีก",
+    "artistName": "Kudos Productions",
+    "name": "Blood in the Water",
+    "cardCode": "06BW045",
+    "keywords": [
+      "ช้า",
+      "ดักซุ่ม"
+    ],
+    "keywordRefs": [
+      "Slow",
+      "Lurker"
+    ],
+    "spellSpeed": "ช้า",
+    "spellSpeedRef": "Slow",
+    "rarity": "คอมมอน",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "เวท",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06BW006T3"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06BW028.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06BW028-full.png"
+      }
+    ],
+    "regions": [
+      "บิลจ์<zwsp>วอ<zwsp>เตอร์"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 4,
+    "health": 0,
+    "description": "<link=vocab.Spawn><style=Vocab>เรียกพลังเทพี</style></link> 3 ครั้ง<br>จากนั้น <link=card.summon><style=AssociatedCard>Tentacle</style></link> ที่<link=vocab.Strongest><style=Vocab>แข็งแกร่งที่สุด</style></link>ของคุณ<br>และศัตรูหนึ่งใบทำการ<br><link=vocab.Strike><style=Vocab>จู่โจม</style></link>กันและกัน",
+    "descriptionRaw": "เรียกพลังเทพี 3 ครั้งจากนั้น Tentacle ที่แข็งแกร่งที่สุดของคุณและศัตรูหนึ่งใบทำการจู่โจมกันและกัน",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"ชีวิตคือบททดสอบ และหลายครั้งความเจ็บปวดก็กลายเป็นบทเรียนมากกว่าที่เรา<br>คาดไว้นัก\" - Illaoi",
+    "artistName": "Kudos Productions",
+    "name": "Tentacle Smash",
+    "cardCode": "06BW028",
+    "keywords": [
+      "ช้า"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "ช้า",
+    "spellSpeedRef": "Slow",
+    "rarity": "แรร์",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "เวท",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06BW006T3"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06BW035.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06BW035-full.png"
+      }
+    ],
+    "regions": [
+      "บิลจ์<zwsp>วอ<zwsp>เตอร์"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 3,
+    "cost": 3,
+    "health": 3,
+    "description": "<link=vocab.Attack><style=Vocab>โจมตี</style></link>: <link=vocab.Spawn><style=Vocab>เรียกพลังเทพี</style></link> 1 ครั้งและมอบ<link=keyword.Overwhelm><sprite name=Overwhelm><style=Keyword>ทะลวง</style></link>ให้กับ <link=card.summon><style=AssociatedCard>Tentacle</style></link> ที่<link=vocab.Strongest><style=Vocab>แข็งแกร่งที่สุด</style></link>ของคุณในรอบนี้",
+    "descriptionRaw": "โจมตี: เรียกพลังเทพี 1 ครั้งและมอบทะลวงให้กับ Tentacle ที่แข็งแกร่งที่สุดของคุณในรอบนี้",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "การอัญเชิญ Nagakabouros นั้นใช้พิธีกรรมน้อยนิดนัก เธอจะตอบรับเสียงเรียกของใครก็ตามที่มีจิตวิญญาณ<br>กล้าแกร่งทัดเทียมพอรับทุก ๆ การซัด ทุก ๆ การฟาดของ<br>ห้วงสมุทร สนามรบที่ยากจะมีใครต้านทาน",
+    "artistName": "Michael Ivan",
+    "name": "The Sea's Voice",
+    "cardCode": "06BW035",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "แรร์",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06BW009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06BW009-full.png"
+      }
+    ],
+    "regions": [
+      "บิลจ์<zwsp>วอ<zwsp>เตอร์"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 3,
+    "cost": 3,
+    "health": 2,
+    "description": "<link=vocab.Play><style=Vocab>เล่น</style></link>: พันธมิตรหนึ่งใบที่มีค่าร่าย 1 หน่วยเริ่มโจมตีฟรี",
+    "descriptionRaw": "เล่น: พันธมิตรหนึ่งใบที่มีค่าร่าย 1 หน่วยเริ่มโจมตีฟรี",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"จงหวนนึกถึงภูมิปัญญาแห่งห้วงสมุทร! หากเจ้าไม่ขยับเขยื้อน เจ้าได้เสร็จอีกฝ่ายแน่! จงตามเสียงของข้ามาหากเจ้าหลงทาง--เพราะดูเหมือนศัตรูของเจ้าจะรู้ทางของพวกมันเป็นอย่างดี\" ",
+    "artistName": "Envar Studio",
+    "name": "Buhru Leader",
+    "cardCode": "06BW009",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "แรร์",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06BW006T3"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06BW015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06BW015-full.png"
+      }
+    ],
+    "regions": [
+      "บิลจ์<zwsp>วอ<zwsp>เตอร์"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "<link=vocab.Spawn><style=Vocab>เรียกพลังเทพี</style></link> 2 ครั้ง หรือใช้ 5 มานาเพื่อ<link=vocab.Spawn><style=Vocab>เรียกพลังเทพี</style></link> 4 ครั้งแทน",
+    "descriptionRaw": "เรียกพลังเทพี 2 ครั้ง หรือใช้ 5 มานาเพื่อเรียกพลังเทพี 4 ครั้งแทน",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "การสวดมนต์ต่อ Nagakabouros นั้นไม่ใช่การอธิษฐาน และก็ไม่ใช่การวิงวอนขอและได้รับไป พรของท่านนั้นไม่มอบความง่ายดายแก่ชีวิต: การกระเสือกกระสน การดิ้นรน และการผลักดัน เมื่อเวลามาถึง สิ่งเหล่านี้จะตอบแทนรางวัลแก่ผู้ที่คู่ควร",
+    "artistName": "Kudos Productions",
+    "name": "Answered Prayer",
+    "cardCode": "06BW015",
+    "keywords": [
+      "ช้า"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "ช้า",
+    "spellSpeedRef": "Slow",
+    "rarity": "คอมมอน",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "เวท",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06BW006T3"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06BW007.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06BW007-full.png"
+      }
+    ],
+    "regions": [
+      "บิลจ์<zwsp>วอ<zwsp>เตอร์"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 5,
+    "description": "<link=vocab.RoundStart><style=Vocab>เริ่มรอบ</style></link>: สร้างความเสียหาย 2 หน่วยแก่การ์ดใบนี้และ<link=vocab.Spawn><style=Vocab>เรียกพลังเทพี</style></link> 1 ครั้ง",
+    "descriptionRaw": "เริ่มรอบ: สร้างความเสียหาย 2 หน่วยแก่การ์ดใบนี้และเรียกพลังเทพี 1 ครั้ง",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "เมื่อเหล่ามฤตยูทั้งหลายเยื้องกรายออกจากเกาะแห่งเงา รูปปั้นจะส่องแสงสว่างขึ้น--เป็นดั่งแสงเตือนภัย ณ เส้นขอบฟ้าไกล",
+    "artistName": "Polar Engine",
+    "name": "Watchful Idol",
+    "cardCode": "06BW007",
+    "keywords": [
+      "เคลื่อนไหวไม่ได้"
+    ],
+    "keywordRefs": [
+      "Immobile"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "คอมมอน",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06BW006T3"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06BW016.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06BW016-full.png"
+      }
+    ],
+    "regions": [
+      "บิลจ์<zwsp>วอ<zwsp>เตอร์"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 4,
+    "cost": 5,
+    "health": 3,
+    "description": "เมื่อการ์ดใบนี้ถูกอัญเชิญ <link=vocab.Spawn><style=Vocab>เรียกพลังเทพี</style></link> 3 ครั้ง",
+    "descriptionRaw": "เมื่อการ์ดใบนี้ถูกอัญเชิญ เรียกพลังเทพี 3 ครั้ง",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "ชีวิตที่แสนเรียบง่ายนั้นช่างแสนสุข ทั้งกลิ่นลมทะเลที่ลอยโชยมา ทั้งเสียงขับขานของเหล่านกที่ดังกังวาน... ทั้งภาพของศัตรูที่โหมพุ่งเข้ามาจากเส้นขอบฟ้าไกล",
+    "artistName": "Will Gist",
+    "name": "Buhru Lookout",
+    "cardCode": "06BW016",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "คอมมอน",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "02BW012",
+      "02BW051",
+      "02BW025",
+      "02BW032T1",
+      "02BW046T2"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06BW043.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06BW043-full.png"
+      }
+    ],
+    "regions": [
+      "บิลจ์<zwsp>วอ<zwsp>เตอร์"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "สร้าง <link=card.cardA><style=AssociatedCard>More Powder!</style></link>, <link=card.cardB><style=AssociatedCard>Playful Trickster</style></link> หรือ <link=card.cardC><style=AssociatedCard>Chum the Waters</style></link> <link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>ชั่วคราว</style></link>หนึ่งใบในมือ",
+    "descriptionRaw": "สร้าง More Powder!, Playful Trickster หรือ Chum the Waters ชั่วคราวหนึ่งใบในมือ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"อย่าพยายามจับไต๋การบลัฟของอีกฝ่ายในเกมวางหินนี้เลย บิลจ์วอเตอร์นั้นเต็มไปด้วยนักโกหกชั้นยอด หากต้องการชนะจริง ๆ แล้วล่ะก็ ดูมือของอีกฝ่ายไว้จะดีกว่า\" - Twisted Fate",
+    "artistName": "Kudos Productions",
+    "name": "Bilgewater Tellstones",
+    "cardCode": "06BW043",
+    "keywords": [
+      "ฉับพลัน"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "ฉับพลัน",
+    "spellSpeedRef": "Burst",
+    "rarity": "แรร์",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "เวท",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06BW015T4.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06BW015T4-full.png"
+      }
+    ],
+    "regions": [
+      "บิลจ์<zwsp>วอ<zwsp>เตอร์"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "<link=vocab.Spawn><style=Vocab>เรียกพลังเทพี</style></link> 2 ครั้ง",
+    "descriptionRaw": "เรียกพลังเทพี 2 ครั้ง",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "การสวดมนต์ต่อ Nagakabouros นั้นไม่ใช่การอธิษฐาน และก็ไม่ใช่การวิงวอนขอและได้รับไป พรของท่านนั้นไม่มอบความง่ายดายแก่ชีวิต: การกระเสือกกระสน การดิ้นรน และการผลักดัน เมื่อเวลามาถึง สิ่งเหล่านี้จะตอบแทนรางวัลแก่ผู้ที่คู่ควร",
+    "artistName": "Kudos Productions",
+    "name": "Answered Prayer",
+    "cardCode": "06BW015T4",
+    "keywords": [
+      "ช้า"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "ช้า",
+    "spellSpeedRef": "Slow",
+    "rarity": "ไม่มี",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "เวท",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06BW015T5.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06BW015T5-full.png"
+      }
+    ],
+    "regions": [
+      "บิลจ์<zwsp>วอ<zwsp>เตอร์"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 5,
+    "health": 0,
+    "description": "<link=vocab.Spawn><style=Vocab>เรียกพลังเทพี</style></link> 4 ครั้ง",
+    "descriptionRaw": "เรียกพลังเทพี 4 ครั้ง",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "การสวดมนต์ต่อ Nagakabouros นั้นไม่ใช่การอธิษฐาน และก็ไม่ใช่การวิงวอนขอและได้รับไป พรของท่านนั้นไม่มอบความง่ายดายแก่ชีวิต: การกระเสือกกระสน การดิ้นรน และการผลักดัน เมื่อเวลามาถึง สิ่งเหล่านี้จะตอบแทนรางวัลแก่ผู้ที่คู่ควร",
+    "artistName": "Kudos Productions",
+    "name": "Answered Prayer",
+    "cardCode": "06BW015T5",
+    "keywords": [
+      "ช้า"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "ช้า",
+    "spellSpeedRef": "Slow",
+    "rarity": "ไม่มี",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "เวท",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06NX024T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06NX024.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06NX024-full.png"
+      }
+    ],
+    "regions": [
+      "น็อก<zwsp>ซัส"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 2,
+    "cost": 6,
+    "health": 4,
+    "description": "<link=keyword.PlaySkillMark><sprite name=SkillMark><style=Keyword>เล่น</style></link>: สร้างความเสียหาย 2 หน่วยแก่ศัตรูหนึ่งใบ\r\nเวท <link=keyword.Fast><sprite name=Fast><style=Keyword>เร็ว</style></link> เวท<link=keyword.Slow><sprite name=Slow><style=Keyword>ช้า</style></link>และ<link=keyword.Skill><sprite name=SkillMark><style=Keyword>สกิล</style></link>ของคุณมีเอฟเฟกต์ \"เมื่อการ์ดใบนี้สร้างความเสียหายแก่ศัตรูที่ถูก<link=keyword.Stun><sprite name=Stunned><style=Keyword>สตัน</style></link>หรือได้รับความเสียหาย สังหารศัตรูใบนั้น\"",
+    "descriptionRaw": "เล่น: สร้างความเสียหาย 2 หน่วยแก่ศัตรูหนึ่งใบ\r\nเวท เร็ว เวทช้าและสกิลของคุณมีเอฟเฟกต์ \"เมื่อการ์ดใบนี้สร้างความเสียหายแก่ศัตรูที่ถูกสตันหรือได้รับความเสียหาย สังหารศัตรูใบนั้น\"",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"องก์ที่ 2: ท่านลอร์ดจอมหลอกลวงผู้ไร้ซึ่งชื่อเสียงเรียงนาม แต่ถุงมือ Kashuri ที่เขาขโมยมาก็สามารถสะกดสายตาของผู้ชมชาวไอโอเนียได้อยู่หมัด อย่างไรก็ดี หน้ากากของเขามันช่างเปราะบางและมองทะลุง่ายยิ่งนัก เขาอ้อนวอนขอชีวิต กล่าวว่าเขาทำไปโดยไม่ยั้งคิด ตอนนี้กำปั้นเหล็กที่เขาหวังจะยึดครองกลับไม่เหลือสิ่งใด<br>อีกต่อไป\"",
+    "artistName": "Kudos Productions ",
+    "name": "Lord Broadmane",
+    "cardCode": "06NX024",
+    "keywords": [
+      "Missing Translation"
+    ],
+    "keywordRefs": [
+      "AuraVisualFakeKeyword"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "แรร์",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "01NX010"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06NX033.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06NX033-full.png"
+      }
+    ],
+    "regions": [
+      "น็อก<zwsp>ซัส"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 4,
+    "health": 0,
+    "description": "<link=keyword.Stun><sprite name=Stunned><style=Keyword>สตัน</style></link>ศัตรู 2 ใบ หรือใช้ 6 มานาเพื่ออัญเชิญ <link=card.summon><style=AssociatedCard>Legion General</style></link> หนึ่งใบ <style=Variable></style>",
+    "descriptionRaw": "สตันศัตรู 2 ใบ หรือใช้ 6 มานาเพื่ออัญเชิญ Legion General หนึ่งใบ ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "การจัดวางรูปทัพคือหนึ่งในการตัดสินใจที่จะปูทางสู่ชัยชนะ<br>ได้ตั้งแต่ก่อนเริ่มการต่อสู้<br>ผู้บัญชาการที่ดีนั้นรู้ดีเสมอว่าหัวใจหลักสู่ชัยชนะ...",
+    "artistName": "Kudos Productions",
+    "name": "Strategic Execution",
+    "cardCode": "06NX033",
+    "keywords": [
+      "ช้า"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "ช้า",
+    "spellSpeedRef": "Slow",
+    "rarity": "แรร์",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "เวท",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "01NX010"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06NX033T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06NX033T2-full.png"
+      }
+    ],
+    "regions": [
+      "น็อก<zwsp>ซัส"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 6,
+    "health": 0,
+    "description": "อัญเชิญ <link=card.summon><style=AssociatedCard>Legion General</style></link> หนึ่งใบ ",
+    "descriptionRaw": "อัญเชิญ Legion General หนึ่งใบ ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "...คือการรุกชั้นยอด",
+    "artistName": "Kudos Productions",
+    "name": "Strategic Execution",
+    "cardCode": "06NX033T2",
+    "keywords": [
+      "ช้า"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "ช้า",
+    "spellSpeedRef": "Slow",
+    "rarity": "คอมมอน",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "เวท",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06NX033T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06NX033T1-full.png"
+      }
+    ],
+    "regions": [
+      "น็อก<zwsp>ซัส"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 4,
+    "health": 0,
+    "description": "<link=keyword.Stun><sprite name=Stunned><style=Keyword>สตัน</style></link>ศัตรู 2 ใบ",
+    "descriptionRaw": "สตันศัตรู 2 ใบ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "...คือการป้องกันชั้นยอด",
+    "artistName": "Kudos Productions",
+    "name": "Strategic Execution",
+    "cardCode": "06NX033T1",
+    "keywords": [
+      "ช้า"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "ช้า",
+    "spellSpeedRef": "Slow",
+    "rarity": "คอมมอน",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "เวท",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06NX012T6",
+      "06NX012T3",
+      "06NX012T7",
+      "06NX012T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06NX012.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06NX012-full.png"
+      }
+    ],
+    "regions": [
+      "น็อก<zwsp>ซัส"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 2,
+    "description": "<link=keyword.AttackSkillMark><sprite name=SkillMark><style=Keyword>โจมตี</style></link>: การ์ดใบนี้สร้างความเสียหาย 2 หน่วยแก่ผู้ที่บล็อกการ์ดใบนี้ หากการ์ดใบนั้นถูกสังหารหรือสูญสลายไป การ์ดใบนี้สร้างความเสียหาย 2 หน่วยแก่เน็กซัสของศัตรูแทน\r\n",
+    "descriptionRaw": "โจมตี: การ์ดใบนี้สร้างความเสียหาย 2 หน่วยแก่ผู้ที่บล็อกการ์ดใบนี้ หากการ์ดใบนั้นถูกสังหารหรือสูญสลายไป การ์ดใบนี้สร้างความเสียหาย 2 หน่วยแก่เน็กซัสของศัตรูแทน\r\n",
+    "levelupDescription": "การ์ดใบนี้เห็นคุณเล่นเวท<link=keyword.Fast><sprite name=Fast><style=Keyword>เร็ว</style></link> เวท<link=keyword.Slow><sprite name=Slow><style=Keyword>ช้า</style></link>หรือ<link=keyword.Skill><sprite name=SkillMark><style=Keyword>สกิล</style></link> 6 ใบขึ้นไป<style=Variable></style>",
+    "levelupDescriptionRaw": "การ์ดใบนี้เห็นคุณเล่นเวทเร็ว เวทช้าหรือสกิล 6 ใบขึ้นไป",
+    "flavorText": "เป็นเวลากว่าทศวรรษที่ผ่านมา Amoline Kiosar ได้หลบหนีออกจาก Ravenbloom Conservatory ไปพร้อมกับพลังแสนล้ำค่า กองสำรวจของ Ravenbloom ออกควานหาเธอทั่วทุกซอกทุกมุมของอาณาจักร แต่ก็ไม่มีข่าวลือใดที่จะสาวไปถึงตัวของ Amoline แต่หลังจากเวลาผ่านไปหลายปี เมื่อได้ยินข่าวเกี่ยวกับเด็กหญิงผู้ลุกโชนไปด้วยโทสะแค้น<br>ในหุบเขาไอรอนสไปค์ Fynn Retrick<br>จำต้องฝืนใจตระเตรียมยุทโธปกรณ์ให้พร้อมและออกสืบสวน<br>เรื่องราวนี้ เขาหวังว่าจะเป็นอีกครั้งที่คว้าน้ำเหลว แต่เขาคิดผิดไปถนัด",
+    "artistName": "Polar Engine",
+    "name": "Annie",
+    "cardCode": "06NX012",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "แชมเปี้ยน",
+    "rarityRef": "Champion",
+    "subtypes": [],
+    "supertype": "แชมเปี้ยน",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06NX012T7",
+      "06NX012"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06NX012T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06NX012T3-full.png"
+      }
+    ],
+    "regions": [
+      "น็อก<zwsp>ซัส"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "เลือกยูนิตหนึ่งใบ ครั้งต่อไปที่ยูนิตนั้นได้รับความเสียหายในรอบนี้ สังหารยูนิตนั้น\r\nสร้าง <link=card.level1><style=AssociatedCard>Annie</style></link> หนึ่งใบในเด็คของคุณ",
+    "descriptionRaw": "เลือกยูนิตหนึ่งใบ ครั้งต่อไปที่ยูนิตนั้นได้รับความเสียหายในรอบนี้ สังหารยูนิตนั้น\r\nสร้าง Annie หนึ่งใบในเด็คของคุณ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "อาจารย์ใหญ่ Telsi ทำการสาธยายยืดยาวเกี่ยวกับความเชื่อของชาวน็อกซัส ปล่อยให้เด็ก ๆ ตรงหน้าเธอเบื่อหน่ายไม่มีอะไรทำขั้นสุด ทว่า ในขณะที่นักเรียนส่วนใหญ่เลือกที่จะกักเก็บอารมณ์พวกนั้นเอาไว้ Annie กลับปล่อยมันออกมา เริ่มด้วยควัน จากนั้นก็ตามด้วยเปลวไฟ",
+    "artistName": "Kudos Productions",
+    "name": "Annie's Disintegrate",
+    "cardCode": "06NX012T3",
+    "keywords": [
+      "เร็ว"
+    ],
+    "keywordRefs": [
+      "Fast"
+    ],
+    "spellSpeed": "เร็ว",
+    "spellSpeedRef": "Fast",
+    "rarity": "ไม่มี",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "แชมเปี้ยน",
+    "type": "เวท",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06NX012"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06NX012T6.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06NX012T6-full.png"
+      }
+    ],
+    "regions": [
+      "น็อก<zwsp>ซัส"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "สร้างความเสียหาย 2 หน่วยแก่การ์ดที่บล็อก <link=card.parentRef><style=AssociatedCard>Annie</style></link> หากการ์ดใบนั้นถูกสังหารหรือสูญสลายไป สร้างความเสียหาย 2 แก่เน็กซัสของศัตรูแทน",
+    "descriptionRaw": "สร้างความเสียหาย 2 หน่วยแก่การ์ดที่บล็อก Annie หากการ์ดใบนั้นถูกสังหารหรือสูญสลายไป สร้างความเสียหาย 2 แก่เน็กซัสของศัตรูแทน",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"มาเล่นด้วยกันไหม?\" - Annie",
+    "artistName": "Kudos Productions",
+    "name": "Molten Shield",
+    "cardCode": "06NX012T6",
+    "keywords": [
+      "สกิล"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ไม่มี",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ความสามารถ",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06NX012T3",
+      "06NX012T1",
+      "06NX012T8",
+      "06NX012"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06NX012T7.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06NX012T7-full.png"
+      }
+    ],
+    "regions": [
+      "น็อก<zwsp>ซัส"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 1,
+    "cost": 1,
+    "health": 3,
+    "description": "เมื่อการ์ดใบนี้เลเวลอัป สร้าง <link=card.create><style=AssociatedCard>Tibbers</style></link> หนึ่งใบในมือ <link=keyword.AttackSkillMark><sprite name=SkillMark><style=Keyword>โจมตี</style></link>: การ์ดใบนี้สร้างความเสียหาย<br>3 หน่วยแก่ผู้ที่บล็อกการ์ดใบนี้และ<br><link=keyword.Stun><sprite name=Stunned><style=Keyword>สตัน</style></link>การ์ดนั้น<br>หากการ์ดใบนั้นถูกสังหารหรือสูญสลายไป การ์ดใบนี้สร้างความเสียหาย 3 หน่วย<br>แก่เน็กซัสของศัตรูแทน",
+    "descriptionRaw": "เมื่อการ์ดใบนี้เลเวลอัป สร้าง Tibbers หนึ่งใบในมือ โจมตี: การ์ดใบนี้สร้างความเสียหาย3 หน่วยแก่ผู้ที่บล็อกการ์ดใบนี้และสตันการ์ดนั้นหากการ์ดใบนั้นถูกสังหารหรือสูญสลายไป การ์ดใบนี้สร้างความเสียหาย 3 หน่วยแก่เน็กซัสของศัตรูแทน",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"ข้าเจอเธอแล้ว เธอคือ Amoline ไม่ผิดแน่ ทั้งดวงตาคู่นั้น เสียงหัวเราะแบบนั้น ข้าจะพาเธอกลับไปให้ได้ภายในสองสัปดาห์ หลังจากที่ข้าได้พูดคุยกับเธอ ข้าอยากขอให้เจ้าใจดีกับเธอหน่อยนะ ข้าเชื่อว่ายังมีสิ่งดีเหลืออยู่ในนั้น รวมถึงบางอย่างที่มืดมนด้วย\"\n- ส่วนหนึ่งจากจดหมายของ Fynn Retrick",
+    "artistName": "Polar Engine",
+    "name": "Annie",
+    "cardCode": "06NX012T7",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ไม่มี",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "แชมเปี้ยน",
+    "type": "ยูนิต",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06NX012T5.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06NX012T5-full.png"
+      }
+    ],
+    "regions": [
+      "น็อก<zwsp>ซัส"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "<link=keyword.Stun><sprite name=Stunned><style=Keyword>สตัน</style></link>ศัตรูหนึ่งใบ จากนั้นสร้างความเสียหาย 2 หน่วยแก่ศัตรูทั้งหมดที่ถูก<link=keyword.Stun><sprite name=Stunned><style=Keyword>สตัน</style></link>หรือได้รับความเสียหาย",
+    "descriptionRaw": "สตันศัตรูหนึ่งใบ จากนั้นสร้างความเสียหาย 2 หน่วยแก่ศัตรูทั้งหมดที่ถูกสตันหรือได้รับความเสียหาย",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"TIBBERS!\" - Annie",
+    "artistName": "Kudos Productions",
+    "name": "Pyroclastic Arrival",
+    "cardCode": "06NX012T5",
+    "keywords": [
+      "สกิล"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ไม่มี",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ความสามารถ",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06NX012T5",
+      "06NX012T7"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06NX012T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06NX012T1-full.png"
+      }
+    ],
+    "regions": [
+      "น็อก<zwsp>ซัส"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 5,
+    "cost": 6,
+    "health": 5,
+    "description": "<link=keyword.PlaySkillMark><sprite name=SkillMark><style=Keyword>เล่น</style></link>: <link=keyword.Stun><sprite name=Stunned><style=Keyword>สตัน</style></link>ศัตรูหนึ่งใบ จากนั้นสร้างความเสียหาย 2 หน่วย<br>แก่ศัตรูทั้งหมดที่ถูก<link=keyword.Stun><sprite name=Stunned><style=Keyword>สตัน</style></link>หรือได้รับ<br>ความเสียหาย",
+    "descriptionRaw": "เล่น: สตันศัตรูหนึ่งใบ จากนั้นสร้างความเสียหาย 2 หน่วยแก่ศัตรูทั้งหมดที่ถูกสตันหรือได้รับความเสียหาย",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "อย่างช้า ๆ แต่ไม่อาจหลีกพ้น เป็นเวลาหลายศตวรรษที่ปีศาจร้าย Tybaulk เข้าครอบงำจิตใจของเหยื่อเคราะห์ร้ายมานับไม่ถ้วน เขาค่อย ๆ นำทางพวกเขาเหล่านั้นสู่เปลวไฟและเฝ้ามองเปลวเพลิงกัดกิน<br>ร่างเนื้อของผู้เคราะห์ร้ายเหล่านั้นในที่สุด แต่ภายในเด็กน้อย<br>ชื่อ Annie Tybaulk กลับได้พบกับดวงวิญญาณที่ไม่ไหวติง รวมถึงพรสวรรค์ทางเวทมนตร์ที่ทัดเทียมได้แม้แต่ตัวเขาเอง",
+    "artistName": "Polar Engine",
+    "name": "Tibbers",
+    "cardCode": "06NX012T1",
+    "keywords": [
+      "น่าสะพรึง"
+    ],
+    "keywordRefs": [
+      "Fearsome"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ไม่มี",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06NX012T7"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06NX012T8.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06NX012T8-full.png"
+      }
+    ],
+    "regions": [
+      "น็อก<zwsp>ซัส"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "สร้างความเสียหาย 3 หน่วยและ<link=keyword.Stun><sprite name=Stunned><style=Keyword>สตัน</style></link>การ์ดที่บล็อก <link=card.parentRef><style=AssociatedCard>Annie</style></link> หากการ์ดใบนั้นถูกสังหารหรือสูญสลายไป สร้างความเสียหาย 3 หน่วยแก่เน็กซัสของศัตรูแทน",
+    "descriptionRaw": "สร้างความเสียหาย 3 หน่วยและสตันการ์ดที่บล็อก Annie หากการ์ดใบนั้นถูกสังหารหรือสูญสลายไป สร้างความเสียหาย 3 หน่วยแก่เน็กซัสของศัตรูแทน",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"มันจะต้องสนุกแน่...\" - Annie",
+    "artistName": "Kudos Productions",
+    "name": "Molten Shield",
+    "cardCode": "06NX012T8",
+    "keywords": [
+      "สกิล"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ไม่มี",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ความสามารถ",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06NX029.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06NX029-full.png"
+      }
+    ],
+    "regions": [
+      "น็อก<zwsp>ซัส"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "เมื่อพันธมิตรที่มีพลังโจมตี 5 หน่วยขึ้นไปถูกสังหาร สร้างผู้ติดตามที่มีพลังโจมตี 5 หน่วยขึ้นไปแบบสุ่มหนึ่งใบในมือ",
+    "descriptionRaw": "เมื่อพันธมิตรที่มีพลังโจมตี 5 หน่วยขึ้นไปถูกสังหาร สร้างผู้ติดตามที่มีพลังโจมตี 5 หน่วยขึ้นไปแบบสุ่มหนึ่งใบในมือ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"วันนี้ข้าย้อนนึกถึงวันคืนในสถานพยาบาลเล็ก ๆ ของข้าในหุบเขาเพนโรสและเวลาหลายปีที่ข้าได้ใช้ไปกับการ<br>ไขปริศนาของร่างกายมนุษย์ที่นั่น เวลานานนับหลายปี! แต่ตอนนี้หลังจากเข้ามาอยู่ในพำนักของนายหญิง Noradi แค่เพียงไม่กี่เดือน ข้าก็ได้ค้นพบว่าความรู้ที่ข้ามีนั้นมันก็แค่หางอึ่ง ข้านี่ช่างเขลาเสียจริง แต่ก็ยังดีที่มีโชคอยู่\"<br>- บันทึกของศาสตราจารย์ Esslanger",
+    "artistName": "Envar Studio",
+    "name": "The Gray Apothecary",
+    "cardCode": "06NX029",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "อีปิค",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "แลนด์มาร์ค",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06NX032.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06NX032-full.png"
+      }
+    ],
+    "regions": [
+      "น็อก<zwsp>ซัส"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 4,
+    "cost": 2,
+    "health": 1,
+    "description": "เมื่อพันธมิตรโจมตี การ์ดใบนี้จะออกไปโจมตีพร้อมพันธมิตร",
+    "descriptionRaw": "เมื่อพันธมิตรโจมตี การ์ดใบนี้จะออกไปโจมตีพร้อมพันธมิตร",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Drakehound นั้นน่าชื่นชมใช่ไหมล่ะ? ทั้งกระตือรือร้น ทั้งว่านอนสอนง่าย ถ้าศัตรูของข้ามีคุณสมบัติเช่นนี้เหมือนกันก็คงดีสินะ\" - Thorn of the Rose",
+    "artistName": "Michael Ivan",
+    "name": "Obedient Drakehound",
+    "cardCode": "06NX032",
+    "keywords": [
+      "เคลื่อนไหวไม่ได้",
+      "โจมตีก่อน"
+    ],
+    "keywordRefs": [
+      "Immobile",
+      "QuickStrike"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "คอมมอน",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06NX030.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06NX030-full.png"
+      }
+    ],
+    "regions": [
+      "น็อก<zwsp>ซัส"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 5,
+    "cost": 5,
+    "health": 4,
+    "description": "การ์ดใบนี้ได้รับบัฟทั้งหมดของพันธมิตร<br>ของคุณใน<link=vocab.Everywhere><style=Vocab>ทุกหนแห่ง</style></link>",
+    "descriptionRaw": "การ์ดใบนี้ได้รับบัฟทั้งหมดของพันธมิตรของคุณในทุกหนแห่ง",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"องก์ที่ 1: อดีตทหารผู้หนึ่งทอดทิ้งจุดประจำการของตนหลังจาก<br>เหตุการณ์การขโมยวัตถุโบราณของ Kashuri<br>เขาเลือกหลบซ่อนตัวอยู่ในบาร์นาม Qayanvi ชายผู้นี้ช่างหยิ่งยะโสหลงระเริงเมามายในสุรา แต่น่าเศร้านักที่เขาไม่รู้เลยว่าสมบัติที่เขาขโมยมานั้น<br>จะแพร่งพรายชื่อของผู้ที่ครอบครองมันให้กับเจ้าของ<br>ที่แท้จริงเสมอ! และชีวิตของเขาก็ไหลรินหมดสิ้น<br>ไปเฉกเช่นเดียวกับไวน์ในแก้ว สีแดงชาดของน็อกซัส<br>ตัดกับสีทองของไอโอเนียช่างสวยงามยิ่งนัก\"",
+    "artistName": "Kudos Productions",
+    "name": "Legion Deserter",
+    "cardCode": "06NX030",
+    "keywords": [
+      "ทะลวง"
+    ],
+    "keywordRefs": [
+      "Overwhelm"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "แรร์",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06NX013T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06NX013.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06NX013-full.png"
+      }
+    ],
+    "regions": [
+      "น็อก<zwsp>ซัส"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 1,
+    "cost": 2,
+    "health": 1,
+    "description": "<link=keyword.PlaySkillMark><sprite name=SkillMark><style=Keyword>เล่น</style></link>: <link=keyword.Stun><sprite name=Stunned><style=Keyword>สตัน</style></link>ศัตรูหนึ่งใบ หรือหากมันถูก<link=keyword.Stun><sprite name=Stunned><style=Keyword>สตัน</style></link>อยู่แล้ว สร้างความเสียหาย 2 หน่วยแก่มันแทน",
+    "descriptionRaw": "เล่น: สตันศัตรูหนึ่งใบ หรือหากมันถูกสตันอยู่แล้ว สร้างความเสียหาย 2 หน่วยแก่มันแทน",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"นักเรียน: Sydell Kythera\nอาจารย์: J. Willough\nรายงาน: ข้าถูกแมงมุมกัดเข้าที่แขนซ้าย Sydell บอกว่ามันเป็นเรื่องสุดวิสัย แต่รอยยิ้มของเขาช่างขัดแย้งกับคำกล่าวนั้นนัก เขาถูกลงโทษให้ทำความสะอาดบริเวณห้องโถงทานอาหารเพิ่มอีกสองสัปดาห์\"\n- บัตรลงโทษวินัยของ Ravenbloom",
+    "artistName": "Polar Engine",
+    "name": "Spell Slinger",
+    "cardCode": "06NX013",
+    "keywords": [
+      "น่าสะพรึง"
+    ],
+    "keywordRefs": [
+      "Fearsome"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "คอมมอน",
+    "rarityRef": "Common",
+    "subtypes": [
+      "แมงมุม"
+    ],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06NX028T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06NX028.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06NX028-full.png"
+      }
+    ],
+    "regions": [
+      "น็อก<zwsp>ซัส"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "<link=vocab.Countdown><style=Vocab>นับถอยหลัง 10</style></link>: สร้าง <link=card.create><style=AssociatedCard>Tybaulk</style></link> หนึ่งใบในมือ\r\nการ์ดใบนี้ทำการ <link=vocab.Advance><style=Vocab>เร่งเวลา</style></link> 1 รอบ<br>ตามจำนวนเวท<link=keyword.Fast><sprite name=Fast><style=Keyword>เร็ว</style></link> เวท<link=keyword.Slow><sprite name=Slow><style=Keyword>ช้า</style></link>หรือ<link=keyword.Skill><sprite name=SkillMark><style=Keyword>สกิล</style></link>ที่คุณได้เล่น<br>ไปในเกมนี้ <style=Variable></style>",
+    "descriptionRaw": "นับถอยหลัง 10: สร้าง Tybaulk หนึ่งใบในมือ\r\nการ์ดใบนี้ทำการ เร่งเวลา 1 รอบตามจำนวนเวทเร็ว เวทช้าหรือสกิลที่คุณได้เล่นไปในเกมนี้ ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"...ในตอนนี้ เชื่อได้เลยว่าข่าวความล้มเหลวของ Roseguard Academy คงแพร่มาถึงที่นี่แล้ว ข้าหวังว่าเจ้าจะได้เรียนรู้จากความล้มเหลวของโรงเรียนพี่น้อง<br>ของเจ้าในครั้งนี้นะ และข้าหวังอย่างยิ่งว่าเจ้าจะสามารถดูแลสถาบัน<br>ให้ส่งผลประโยชน์แก่จักรวรรดิได้มากที่สุด\"<br>- เศษจดหมายที่ถูกเผาใต้ซากสถาบัน",
+    "artistName": "Will Gist",
+    "name": "Ravenbloom Conservatory",
+    "cardCode": "06NX028",
+    "keywords": [
+      "แลนด์มาร์ค",
+      "นับถอยหลัง"
+    ],
+    "keywordRefs": [
+      "LandmarkVisualOnly",
+      "Countdown"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "แรร์",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "แลนด์มาร์ค",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06NX028"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06NX028T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06NX028T1-full.png"
+      }
+    ],
+    "regions": [
+      "น็อก<zwsp>ซัส"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 6,
+    "cost": 6,
+    "health": 6,
+    "description": "เมื่อการ์ดใบนี้ถูกอัญเชิญ มอบ +1|+0 ให้กับพันธมิตรของคุณ<link=vocab.Everywhere><style=Vocab>ทุกหนแห่ง</style></link> และจนกว่าจะจบเกม เวทและ<link=keyword.Skill><sprite name=SkillMark><style=Keyword>สกิล</style></link>ของคุณสร้างความ<br>เสียหายเพิ่มขึ้น 1 หน่วย",
+    "descriptionRaw": "เมื่อการ์ดใบนี้ถูกอัญเชิญ มอบ +1|+0 ให้กับพันธมิตรของคุณทุกหนแห่ง และจนกว่าจะจบเกม เวทและสกิลของคุณสร้างความเสียหายเพิ่มขึ้น 1 หน่วย",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"...ตัวตนแห่งความมืดเผาไหม้ในกายข้า มันคอยพร่ำกระซิบใส่หูข้าว่าจงมอดไหม้ ๆ ภายใต้เปลวเพลิง ข้าเห็นดวงตาของมัน ทั้งดำสนิทและเบิกโพลง มันจ้องมองมาที่ข้า ยิ้มให้ข้า เชื้อเชิญให้ข้าย่างกรายเข้าไป เชื้อเชิญให้ข้ากลายเป็นเหมือนคนอื่น ๆ เงาในเปลวไฟบรรลัยกัลป์เหล่านั้นเอื้อมมือออกมา เรียกร้องให้ข้ากลับสู่จุดกำเนิดร่วมกับพวกเขา\"\n- ส่วนที่เหลือของบันทึกเก่าแก่ของชาวน็อคเมิช",
+    "artistName": "Will Gist",
+    "name": "Tybaulk",
+    "cardCode": "06NX028T1",
+    "keywords": [
+      "ทะลวง"
+    ],
+    "keywordRefs": [
+      "Overwhelm"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ไม่มี",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06NX014.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06NX014-full.png"
+      }
+    ],
+    "regions": [
+      "น็อก<zwsp>ซัส"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "เลือกยูนิตหนึ่งใบ ครั้งถัดไปที่มันได้รับความเสียหายในรอบนี้ สังหารยูนิตนั้น",
+    "descriptionRaw": "เลือกยูนิตหนึ่งใบ ครั้งถัดไปที่มันได้รับความเสียหายในรอบนี้ สังหารยูนิตนั้น",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "อาจารย์ใหญ่ Telsi ทำการสาธยายยืดยาวเกี่ยวกับความเชื่อของชาวน็อกซัส ปล่อยให้เด็ก ๆ ตรงหน้าเธอเบื่อหน่ายไม่มีอะไรทำขั้นสุด ทว่า ในขณะที่นักเรียนส่วนใหญ่เลือกที่จะกักเก็บอารมณ์พวกนั้นเอาไว้ Annie กลับปล่อยมันออกมา เริ่มด้วยควัน จากนั้นก็ตามด้วยเปลวไฟ",
+    "artistName": "Kudos Productions",
+    "name": "Disintegrate",
+    "cardCode": "06NX014",
+    "keywords": [
+      "เร็ว"
+    ],
+    "keywordRefs": [
+      "Fast"
+    ],
+    "spellSpeed": "เร็ว",
+    "spellSpeedRef": "Fast",
+    "rarity": "คอมมอน",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "เวท",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06NX009T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06NX009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06NX009-full.png"
+      }
+    ],
+    "regions": [
+      "น็อก<zwsp>ซัส"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 2,
+    "cost": 4,
+    "health": 3,
+    "description": "<link=keyword.AttackSkillMark><sprite name=SkillMark><style=Keyword>โจมตี</style></link>: การ์ดใบนี้สร้างความเสียหาย 3 หน่วยแก่ผู้ที่บล็อกการ์ดใบนี้ หากการ์ดใบนั้นถูกสังหารหรือสูญสลายไป การ์ดใบนี้สร้างความเสียหาย 3 หน่วยแก่เน็กซัสของศัตรูแทน",
+    "descriptionRaw": "โจมตี: การ์ดใบนี้สร้างความเสียหาย 3 หน่วยแก่ผู้ที่บล็อกการ์ดใบนี้ หากการ์ดใบนั้นถูกสังหารหรือสูญสลายไป การ์ดใบนี้สร้างความเสียหาย 3 หน่วยแก่เน็กซัสของศัตรูแทน",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"องก์ที่ 3: ผู้ดูแลแสนโหดร้ายกับสัตว์เลี้ยงของเธอ เจ้า Greyback นั้นช่างไร้เดียงสานักต่างจากเป้าประสงค์ของตัวมัน วัตถุที่ถูกปักเข้าที่หัวของมันมีพลังในการเข้าบังคับควบคุม และแม้ต้องกลายเป็นอาหารแก่สัตว์เลี้ยงของเธอ ผู้ดูแลผู้นี้ก็ปฏิเสธที่จะกรีดร้องออกมา คงจะดียิ่งนักหากชาวน็อกซัสทุกคนมีเกียรติยามวายชนม์เช่นนี้\"",
+    "artistName": "Michael Ivan",
+    "name": "Captive Greyback",
+    "cardCode": "06NX009",
+    "keywords": [
+      "ทะลวง"
+    ],
+    "keywordRefs": [
+      "Overwhelm"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "คอมมอน",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06NX009"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06NX009T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06NX009T1-full.png"
+      }
+    ],
+    "regions": [
+      "น็อก<zwsp>ซัส"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "สร้างความเสียหาย 3 หน่วยแก่การ์ดที่บล็อก <link=card.parentRef><style=AssociatedCard>Captive Greyback</style></link> หากการ์ดใบนั้นถูกสังหารหรือสูญสลายไป สร้างความเสียหาย 3 หน่วยแก่เน็กซัสของศัตรูแทน",
+    "descriptionRaw": "สร้างความเสียหาย 3 หน่วยแก่การ์ดที่บล็อก Captive Greyback หากการ์ดใบนั้นถูกสังหารหรือสูญสลายไป สร้างความเสียหาย 3 หน่วยแก่เน็กซัสของศัตรูแทน",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"ขอให้นั่นกลายเป็นบทเรียน ผู้กดขี่นั้นมีชีวิตอยู่เพื่อรอการปฏิวัติครั้งแรกมาถึงก็เท่านั้น\"<br>- Jhin",
+    "artistName": "Kudos Productions",
+    "name": "Obeyed Order",
+    "cardCode": "06NX009T1",
+    "keywords": [
+      "สกิล"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ไม่มี",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ความสามารถ",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06NX015T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06NX015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06NX015-full.png"
+      }
+    ],
+    "regions": [
+      "น็อก<zwsp>ซัส"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 3,
+    "cost": 3,
+    "health": 2,
+    "description": "ในแต่ละรอบ ครั้งแรกที่คุณเล่นเวท<link=keyword.Fast><sprite name=Fast><style=Keyword>เร็ว</style></link> เวท<link=keyword.Slow><sprite name=Slow><style=Keyword>ช้า</style></link>หรือ <link=keyword.Skill><sprite name=SkillMark><style=Keyword>สกิล</style></link> การ์ดใบนี้ร่าย <link=card.skill><style=AssociatedCard>Magic Embers</style></link>",
+    "descriptionRaw": "ในแต่ละรอบ ครั้งแรกที่คุณเล่นเวทเร็ว เวทช้าหรือ สกิล การ์ดใบนี้ร่าย Magic Embers",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"ครั้งแรกที่ข้าพบ Daani คงเป็นเมื่อหลายปีก่อน เขาเป็นเด็กน่ารัก ครอบครัวของเขาก็ด้วย จากนั้นไม่นานในการเดินทางครั้งสุดท้ายของข้า ข้าแวะไปที่หมู่บ้านของเขาและเจอเขานั่งอยู่คนเดียวกลางลาน<br>กว้าง เขาบอกว่าเขากำลังรอครอบครัวของเขากลับมาบ้าน<br>เด็กน้อยน่าสงสารนั่นนั่งอยู่ตรงนั้น<br>มาเป็นเดือน ๆ ทว่าข้าเองก็ไม่กล้าปริปากออกไปว่าข้าได้เจออะไรมาบ้าง<br>ระหว่างทางข้างล่างนั่น ...\" - Fynn Retrick",
+    "artistName": "Polar Engine",
+    "name": "Manasoul Student",
+    "cardCode": "06NX015",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "คอมมอน",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "03NX014",
+      "01NX011",
+      "05NX014",
+      "01NX041"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06NX037.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06NX037-full.png"
+      }
+    ],
+    "regions": [
+      "น็อก<zwsp>ซัส"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "สร้าง <link=card.create1><style=AssociatedCard>Sharpened Resolve</style></link>, <link=card.create2><style=AssociatedCard>Whirling Death</style></link> หรือ <link=card.create3><style=AssociatedCard>Weapons of the Lost</style></link> <link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>ชั่วคราว</style></link> หนึ่งใบในมือ",
+    "descriptionRaw": "สร้าง Sharpened Resolve, Whirling Death หรือ Weapons of the Lost ชั่วคราว หนึ่งใบในมือ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Clara ที่รัก อย่าลืมล้างเลือดออกจากโทเคนให้หมดด้วยนะ\" - Ophelia Noradi, Crimson Aristocrat",
+    "artistName": "Kudos Productions",
+    "name": "Noxian Tellstones",
+    "cardCode": "06NX037",
+    "keywords": [
+      "ฉับพลัน"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "ฉับพลัน",
+    "spellSpeedRef": "Burst",
+    "rarity": "แรร์",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "เวท",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06NX015T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06NX015T1-full.png"
+      }
+    ],
+    "regions": [
+      "น็อก<zwsp>ซัส"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "สร้างความเสียหาย 1 หน่วยแก่เน็กซัสของศัตรู",
+    "descriptionRaw": "สร้างความเสียหาย 1 หน่วยแก่เน็กซัสของศัตรู",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"โว้วว... ข้ามองเห็นเวทมนตร์ด้วยล่ะ!\" - Manasoul Student",
+    "artistName": "Kudos Productions",
+    "name": "Magic Embers",
+    "cardCode": "06NX015T1",
+    "keywords": [
+      "สกิล"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ไม่มี",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ความสามารถ",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06NX008.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06NX008-full.png"
+      }
+    ],
+    "regions": [
+      "น็อก<zwsp>ซัส"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 1,
+    "cost": 3,
+    "health": 3,
+    "description": "เมื่อคุณเล่นเวท<link=keyword.Fast><sprite name=Fast><style=Keyword>เร็ว</style></link> เวท<link=keyword.Slow><sprite name=Slow><style=Keyword>ช้า</style></link>หรือ<link=keyword.Skill><sprite name=SkillMark><style=Keyword>สกิล</style></link> มอบ +1|+0 ให้กับการ์ดใบนี้",
+    "descriptionRaw": "เมื่อคุณเล่นเวทเร็ว เวทช้าหรือสกิล มอบ +1|+0 ให้กับการ์ดใบนี้",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"เด็ก ๆ หลายคนนั้นถึงช่วงวัยที่แนวโน้มทางธรรมชาติ<br>เริ่มส่งผลกระตุ้นให้พวกเขาต่อต้านขนบธรรมเนียมสามัญ<br>ช่างโชคดีที่นักเรียนคนโตสุดของเรานั้นทั้งเป็นที่รักของเด็ก ๆ<br>ที่เหลือ ทั้งยังสามารถกล่อมให้ทำตามแนวทางของเรา<br>ได้อย่างง่ายดาย ฉะนั้นหากนักเรียกคนอื่นเลือกที่จะเพิกเฉย<br>ต่อบทเรียนของเรา เราก็จะสอนพวกเขาผ่านเธอแทน\"<br>- อาจารย์ใหญ่ Telsi",
+    "artistName": "Polar Engine",
+    "name": "The Prefect",
+    "cardCode": "06NX008",
+    "keywords": [
+      "ทะลวง"
+    ],
+    "keywordRefs": [
+      "Overwhelm"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "อีปิค",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06NX013T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06NX013T1-full.png"
+      }
+    ],
+    "regions": [
+      "น็อก<zwsp>ซัส"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "<link=keyword.Stun><sprite name=Stunned><style=Keyword>สตัน</style></link>ศัตรูหนึ่งใบ หากมันถูก<link=keyword.Stun><sprite name=Stunned><style=Keyword>สตัน</style></link>อยู่แล้ว สร้างความเสียหาย 2 หน่วยแก่มันแทน",
+    "descriptionRaw": "สตันศัตรูหนึ่งใบ หากมันถูกสตันอยู่แล้ว สร้างความเสียหาย 2 หน่วยแก่มันแทน",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"ได้เวลาฝังเขี้ยว...\" - Spell Slinger",
+    "artistName": "Kudos Productions",
+    "name": "Stiffened Sinews",
+    "cardCode": "06NX013T1",
+    "keywords": [
+      "สกิล"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ไม่มี",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ความสามารถ",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06NX024"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06NX024T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06NX024T1-full.png"
+      }
+    ],
+    "regions": [
+      "น็อก<zwsp>ซัส"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "สร้างความเสียหาย 2 หน่วยแก่ศัตรูหนึ่งใบ",
+    "descriptionRaw": "สร้างความเสียหาย 2 หน่วยแก่ศัตรูหนึ่งใบ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "อุปกรณ์ชั้นยอดกลับต้องสูญเปล่าในน้ำมือของช่างฝีมือ<br>ไร้ศักยภาพ",
+    "artistName": "Kudos Productions",
+    "name": "Kashuri Gauntlet",
+    "cardCode": "06NX024T1",
+    "keywords": [
+      "สกิล"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ไม่มี",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ความสามารถ",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06DE045.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06DE045-full.png"
+      }
+    ],
+    "regions": [
+      "เด<zwsp>มา<zwsp>เซีย"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "มอบ +1|+1 ให้กับพันธมิตรทั้งหมด",
+    "descriptionRaw": "มอบ +1|+1 ให้กับพันธมิตรทั้งหมด",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"จะไม่มีการหลบซ่อนอีกต่อไป! จงก้าวออกไปสู่แสงสว่างและส่องสว่างไสวไปกับข้า!\" - Lux",
+    "artistName": "Kudos Productions",
+    "name": "Inspiring Light",
+    "cardCode": "06DE045",
+    "keywords": [
+      "ช้า"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "ช้า",
+    "spellSpeedRef": "Slow",
+    "rarity": "คอมมอน",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "เวท",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06DE035.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06DE035-full.png"
+      }
+    ],
+    "regions": [
+      "เด<zwsp>มา<zwsp>เซีย"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "เวททั้งหมดมีค่าร่ายเพิ่มขึ้น 2 หน่วย\r\n<link=vocab.Countdown><style=Vocab>นับถอยหลัง 2</style></link><style=Variable></style>",
+    "descriptionRaw": "เวททั้งหมดมีค่าร่ายเพิ่มขึ้น 2 หน่วย\r\nนับถอยหลัง 2",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "เหล่า Mageseeker วางแท่นหินเพทริไซต์ขนาดยักษ์ไว้รอบที่มั่นของพวกเขา เพื่อให้มั่นใจว่าแม้แต่จอมเวทที่แข็งแกร่งที่สุดก็จะไร้พลังไม่เหลือสิ่งใดเมื่อก้าวเข้ามา",
+    "artistName": "Kudos Productions",
+    "name": "Petricite Pillar",
+    "cardCode": "06DE035",
+    "keywords": [
+      "แลนด์มาร์ค",
+      "นับถอยหลัง"
+    ],
+    "keywordRefs": [
+      "LandmarkVisualOnly",
+      "Countdown"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "คอมมอน",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "แลนด์มาร์ค",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "01DE032",
+      "01DE025",
+      "01DE035"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06DE042.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06DE042-full.png"
+      }
+    ],
+    "regions": [
+      "เด<zwsp>มา<zwsp>เซีย"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "สร้าง <link=card.create1><style=AssociatedCard>Prismatic Barrier</style></link>, <link=card.create2><style=AssociatedCard>Detain</style></link> หรือ <link=card.create3><style=AssociatedCard>For Demacia!</style></link> <link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>ชั่วคราว</style></link>หนึ่งใบในมือ\r\n",
+    "descriptionRaw": "สร้าง Prismatic Barrier, Detain หรือ For Demacia! ชั่วคราวหนึ่งใบในมือ\r\n",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"ทำไมพวกเขาถึงเรียกมันว่า 'เกมเสี่ยงดวงพระราชา'? ราชินีก็เสี่ยงเป็นเหมือนกันนะ!\" - Cithria of Cloudfield",
+    "artistName": "Kudos Productions",
+    "name": "Demacian Tellstones",
+    "cardCode": "06DE042",
+    "keywords": [
+      "ฉับพลัน"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "ฉับพลัน",
+    "spellSpeedRef": "Burst",
+    "rarity": "แรร์",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "เวท",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06DE036.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06DE036-full.png"
+      }
+    ],
+    "regions": [
+      "เด<zwsp>มา<zwsp>เซีย"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 7,
+    "cost": 8,
+    "health": 7,
+    "description": "<link=vocab.Attack><style=Vocab>โจมตี</style></link>: จั่วยูนิต 1 ใบ หากยูนิตนั้นเป็นมังกร อัญเชิญมันออกมาโจมตีทันที",
+    "descriptionRaw": "โจมตี: จั่วยูนิต 1 ใบ หากยูนิตนั้นเป็นมังกร อัญเชิญมันออกมาโจมตีทันที",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"โชคดีไป งานวิจัยของข้าบ่งชี้ว่า Broodfather มักใช้เวลาของพวกมันไปกับการล่าเหยื่อในจุดห่างไกลจากลูก ๆ ของพวกมัน เพราะพูดกันตามตรง ถ้าเกิดตัวพ่อมันกลับมาแล้วล่ะก็ เราก็คงได้กลายเป็นอาหารมังกรกันหมดแน่! ฮ่า ๆๆๆ!\" - Anden Mayne, Egghead Researcher",
+    "artistName": "Kudos Productions",
+    "name": "Protective Broodfather",
+    "cardCode": "06DE036",
+    "keywords": [
+      "โทสะ"
+    ],
+    "keywordRefs": [
+      "Fury"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "อีปิค",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "มังกร"
+    ],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06MT036.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06MT036-full.png"
+      }
+    ],
+    "regions": [
+      "ทาร์<zwsp>กอน"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 6,
+    "health": 0,
+    "description": "ฮีลพันธมิตรหนึ่งใบจนเต็ม จากนั้นเพิ่มพลังโจมตีของมันให้เท่ากับพลังชีวิต",
+    "descriptionRaw": "ฮีลพันธมิตรหนึ่งใบจนเต็ม จากนั้นเพิ่มพลังโจมตีของมันให้เท่ากับพลังชีวิต",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"เราต้องแสดงความเมตตาต่อตัวเราเองเป็นอันดับแรก และที่เหลือก็จะตามมาเอง\" - Soraka",
+    "artistName": "Kudos Productions",
+    "name": "Consult the Heavens",
+    "cardCode": "06MT036",
+    "keywords": [
+      "ฉับพลัน"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "ฉับพลัน",
+    "spellSpeedRef": "Burst",
+    "rarity": "อีปิค",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "เวท",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "03MT006"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06MT039.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06MT039-full.png"
+      }
+    ],
+    "regions": [
+      "ทาร์<zwsp>กอน"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "<link=vocab.Countdown><style=Vocab>นับถอยหลัง 3</style></link><style=Variable></style>: อัญเชิญ <link=card.summon><style=AssociatedCard>Inviolus Vox</style></link> หนึ่งใบ",
+    "descriptionRaw": "นับถอยหลัง 3: อัญเชิญ Inviolus Vox หนึ่งใบ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"มีคำกล่าวไว้ว่ามังกรแห่งสรวงสวรรค์นั้นเกิดขึ้นมาจาก<br>กลุ่มเมฆอวกาศ ก่อร่างขึ้นมาจากฝุ่นผงแห่งจักรวาล แต่มนุษย์อย่างพวกเราจะไปรู้ความจริงได้อย่างไรล่ะ? เพราะบนท้องฟ้าไกลแสนไกล สิ่งที่เราเห็นก็มีเพียงแสงดาวของพวกเขาเท่านั้น\" - Herald of Dragons",
+    "artistName": "Kudos Productions",
+    "name": "Dragon Roost",
+    "cardCode": "06MT039",
+    "keywords": [
+      "แลนด์มาร์ค",
+      "นับถอยหลัง"
+    ],
+    "keywordRefs": [
+      "LandmarkVisualOnly",
+      "Countdown"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "อีปิค",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "แลนด์มาร์ค",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06MT045.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06MT045-full.png"
+      }
+    ],
+    "regions": [
+      "ทาร์<zwsp>กอน"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 6,
+    "health": 0,
+    "description": "<link=keyword.Invoke><style=Keyword>อ้อนวอน</style></link>การ์ดสรวงสวรรค์ที่มีค่าร่ายต่ำ กลางและสูงอย่างละใบ",
+    "descriptionRaw": "อ้อนวอนการ์ดสรวงสวรรค์ที่มีค่าร่ายต่ำ กลางและสูงอย่างละใบ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"เหล่าดวงดาว พวกเขากำลังทำนายเหตุการณ์อันยิ่งใหญ่ มีบางอย่างกำลังมา รูปร่างของมันจะเป็นเช่นไรนะ? ไม่ใช่เรื่องของข้าซะด้วยสิ! เจ้าคิดว่าอย่างไรล่ะ Kulun?\" - Moondreamer",
+    "artistName": "Kudos Productions",
+    "name": "Celestial Trifecta",
+    "cardCode": "06MT045",
+    "keywords": [
+      "ฉับพลัน"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "ฉับพลัน",
+    "spellSpeedRef": "Burst",
+    "rarity": "แรร์",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "เวท",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "03MT008",
+      "03MT093",
+      "03MT036"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06MT043.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06MT043-full.png"
+      }
+    ],
+    "regions": [
+      "ทาร์<zwsp>กอน"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "สร้าง <link=card.spell1><style=AssociatedCard>Wish</style></link>, <link=card.spell2><style=AssociatedCard>Paddle Star</style></link> หรือ <link=card.spell3><style=AssociatedCard>Blessing of Targon</style></link> <link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>ชั่วคราว</style></link>หนึ่งใบในมือ",
+    "descriptionRaw": "สร้าง Wish, Paddle Star หรือ Blessing of Targon ชั่วคราวหนึ่งใบในมือ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"มันช่างประหลาดนัก Shorin... แม้ว่าหินจะถูกพลิกปิดไว้เช่นนี้ ข้ากลับรับรู้ได้แน่นอนเลยว่ากลุ่มดาวใดถูกสลักอยู่บนหิน<br>เหล่านั้น\" - Tyari the Traveler",
+    "artistName": "Kudos Productions",
+    "name": "Targonian Tellstones",
+    "cardCode": "06MT043",
+    "keywords": [
+      "ฉับพลัน"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "ฉับพลัน",
+    "spellSpeedRef": "Burst",
+    "rarity": "คอมมอน",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "เวท",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU001T3"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06MT029.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06MT029-full.png"
+      }
+    ],
+    "regions": [
+      "ทาร์<zwsp>กอน"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 2,
+    "description": "เมื่อการ์ดใบนี้ถูกอัญเชิญ ติด <link=card.chime><style=AssociatedCard>Chime</style></link> หนึ่งใบบนการ์ดใบบนสุดในเด็คของคุณ\r\n<link=vocab.Support><style=Vocab>สนับสนุน</style></link>: มอบ +1|+1 ให้กับพันธมิตรที่การ์ดใบนี้สนับสนุน",
+    "descriptionRaw": "เมื่อการ์ดใบนี้ถูกอัญเชิญ ติด Chime หนึ่งใบบนการ์ดใบบนสุดในเด็คของคุณ\r\nสนับสนุน: มอบ +1|+1 ให้กับพันธมิตรที่การ์ดใบนี้สนับสนุน",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"...แต่ข้าเคยได้ยินมาว่า Esmus นั้นถูกสร้างโดยตัวผู้ดูแลเองเลย และเมื่อเธอจุติขึ้นมา เสียงต่าง ๆ ถึงเริ่มเกิดขึ้นบนโลกของเรา!\"\n\"โกหกทั้งเพ! เป็นที่รู้กันว่า Esmus นั้นคือตัวตนของนักร้องโบราณที่มีจิตใจดั่งเทพธิดา<br>แต่ถือครองเสียงร้องแห่งความตาย... จนกระทั่ง Bard ได้มอบเสียงร้องแห่งความสวยงามให้กับเธอ!\"\n\"โกหกทั้งเพ! Esmus นั้นน่ะ...\"\n- การจุติของ Esmus เกมยอดนิยมเกี่ยวกับ Bard",
+    "artistName": "Caravan Studio",
+    "name": "Esmus, Breath of the World",
+    "cardCode": "06MT029",
+    "keywords": [
+      "ว่องไว"
+    ],
+    "keywordRefs": [
+      "Elusive"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "คอมมอน",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06MT038.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06MT038-full.png"
+      }
+    ],
+    "regions": [
+      "ทาร์<zwsp>กอน"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 6,
+    "cost": 7,
+    "health": 5,
+    "description": "<link=keyword.Nightfall><style=Keyword>พลบค่ำ</style></link>: มอบ +2|+1 และ<link=keyword.Overwhelm><sprite name=Overwhelm><style=Keyword>ทะลวง</style></link>ให้กับพันธมิตรทั้งหมดในรอบนี้",
+    "descriptionRaw": "พลบค่ำ: มอบ +2|+1 และทะลวงให้กับพันธมิตรทั้งหมดในรอบนี้",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"มารดาแห่งจันทราเอ๋ย ขอพลังให้แก่ผองเราด้วยเถิด\nแม้ความมืดมิดจะรายล้อม\nแต่ด้วยแสงจันทราของท่าน เราจักฝ่าฟันมันไปได้\"\n- บทสวดของชาว Lunari",
+    "artistName": "Kudos Productions",
+    "name": "The Winding Light",
+    "cardCode": "06MT038",
+    "keywords": [
+      "ทะลวง"
+    ],
+    "keywordRefs": [
+      "Overwhelm"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "คอมมอน",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU001T3"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06MT047.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06MT047-full.png"
+      }
+    ],
+    "regions": [
+      "ทาร์<zwsp>กอน"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "เมื่อการ์ดใบนี้ถูกอัญเชิญหรือเมื่อ<br>การ์ดใบนี้นับถอยหลัง<br>ติด <link=card.chime><style=AssociatedCard>Chime</style></link> 3 ใบบนการ์ดในเด็ค<br>ของคุณแบบสุ่ม<br><link=vocab.Countdown><style=Vocab>นับถอยหลัง 2</style></link><style=Variable></style>: จั่วการ์ด 1 ใบ",
+    "descriptionRaw": "เมื่อการ์ดใบนี้ถูกอัญเชิญหรือเมื่อการ์ดใบนี้นับถอยหลังติด Chime 3 ใบบนการ์ดในเด็คของคุณแบบสุ่มนับถอยหลัง 2: จั่วการ์ด 1 ใบ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"จากนั้นข้าก็ได้เห็น--พวกมันเป็นพัน ๆ ตัว ต่างร้องและเต้นรำตามแบบของตัวเอง สิ่งที่ข้าจำได้หลังจากนั้นคือแสงสว่างวาบ เพียงพริบตาพวกมันก็หายไป แม้แต่วิหารที่พวกมันอยู่ก็หายวับไปไม่เหลือแม้ซาก และในมือของข้านั้นเอง แบบว่า... ตาแก่ Gaff ก็ได้ Chime ติดมือมา\" - เรื่องเล่าของตาแก่ Gaff ตอนที่ 3",
+    "artistName": "Caravan Studio",
+    "name": "Mystic Vortex",
+    "cardCode": "06MT047",
+    "keywords": [
+      "นับถอยหลัง",
+      "แลนด์มาร์ค"
+    ],
+    "keywordRefs": [
+      "Countdown",
+      "LandmarkVisualOnly"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "แรร์",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "แลนด์มาร์ค",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06FR033.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06FR033-full.png"
+      }
+    ],
+    "regions": [
+      "เฟรล<zwsp>ยอร์ด"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 2,
+    "cost": 3,
+    "health": 1,
+    "description": "<link=keyword.Last Breath><sprite name=LastBreath><style=Keyword>สิ้นลม</style></link>: ได้รับอัญมณีมานาว่างเปล่าหนึ่งเม็ด",
+    "descriptionRaw": "สิ้นลม: ได้รับอัญมณีมานาว่างเปล่าหนึ่งเม็ด",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "วัฏจักรแห่งชีวิตและความตาย ณ ดินแดนเฟรลยอร์ดนั้นต่างออกไป ภูมิประเทศแสนโหดร้ายนี้จะเป็นเครื่องยืนยันว่าจะไม่มีสิ่งใดสูญไปอย่างไร้ค่า",
+    "artistName": "Kudos Productions",
+    "name": "Hunting Boar",
+    "cardCode": "06FR033",
+    "keywords": [
+      "สั่งบล็อกไม่ได้",
+      "สิ้นลม"
+    ],
+    "keywordRefs": [
+      "CantBlock",
+      "LastBreath"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "คอมมอน",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06FR038.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06FR038-full.png"
+      }
+    ],
+    "regions": [
+      "เฟรล<zwsp>ยอร์ด"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 0,
+    "cost": 7,
+    "health": 0,
+    "description": "สร้างความเสียหาย 3 หน่วยแก่ยูนิตทั้งหมด\r\n<link=keyword.Enlightened><style=Keyword>รู้แจ้ง</style></link>: ฮีลเน็กซัสของคุณ 3 หน่วย",
+    "descriptionRaw": "สร้างความเสียหาย 3 หน่วยแก่ยูนิตทั้งหมด\r\nรู้แจ้ง: ฮีลเน็กซัสของคุณ 3 หน่วย",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "เมื่อเงาของนกน้ำแข็งอมตะพาดผ่านท้องฟ้า ผู้ติดตามของเธอก็พลันโห่ร้องดีใจ ในขณะที่ศัตรูของเธอจักต้องสั่นกลัว",
+    "artistName": "Kudos Productions",
+    "name": "Wings of the Cryophoenix",
+    "cardCode": "06FR038",
+    "keywords": [
+      "ช้า"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "ช้า",
+    "spellSpeedRef": "Slow",
+    "rarity": "แรร์",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "เวท",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06FR028.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06FR028-full.png"
+      }
+    ],
+    "regions": [
+      "เฟรล<zwsp>ยอร์ด"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 2,
+    "cost": 6,
+    "health": 2,
+    "description": "เมื่อการ์ดใบนี้ถูกอัญเชิญ มอบค่าพลังของการ์ดใบนี้ให้กับยูนิต<br>ทั้งหมดในเด็คของคุณ<br>จากนั้นจั่วยูนิตที่มีพลังโจมตี<br>5 หน่วยขึ้นไปหนึ่งใบ",
+    "descriptionRaw": "เมื่อการ์ดใบนี้ถูกอัญเชิญ มอบค่าพลังของการ์ดใบนี้ให้กับยูนิตทั้งหมดในเด็คของคุณจากนั้นจั่วยูนิตที่มีพลังโจมตี5 หน่วยขึ้นไปหนึ่งใบ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "นักส่งต่อเรื่องเล่าขานของ Avarosan มักเป็นผู้สร้างชีวิตชีวาแก่ทั้งคนเฒ่าคนแก่ในชนเผ่า เหล่าผู้พิทักษ์ และนักเล่าเรื่องมือดี พวกเขาคอยคงไว้ทั้งประเพณีแห่งการล่าและการต่อสู้ผ่านเรื่องราวและบทเพลงสืบไป ",
+    "artistName": "Envar Studio",
+    "name": "Revna, the Lorekeeper",
+    "cardCode": "06FR028",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "อีปิค",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "04FR001"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06FR030.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06FR030-full.png"
+      }
+    ],
+    "regions": [
+      "เฟรล<zwsp>ยอร์ด"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 2,
+    "description": "<link=vocab.Play><style=Vocab>เล่น</style></link>: อัญเชิญ <link=card.summon><style=AssociatedCard>Frozen Thrall</style></link> หนึ่งใบหรือ<link=vocab.Advance><style=Vocab>เร่งเวลา</style></link> <link=card.summon><style=AssociatedCard>Frozen Thrall</style></link> ทั้งหมดของคุณ 1 รอบ",
+    "descriptionRaw": "เล่น: อัญเชิญ Frozen Thrall หนึ่งใบหรือเร่งเวลา Frozen Thrall ทั้งหมดของคุณ 1 รอบ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "เสียงหวีดร้องประหลาดของสิ่งมีชีวิตเหนือหัวพวกเขานั้น<br>แผ่วเบาจนแทบไม่ได้ยิน<br>แต่เมื่อเสียงนั้นเริ่มสะท้อนไปมาภายในหุบเหวกำแพงหิน หน่วยสำรวจก็เริ่มรู้สึกสั่นเทาไปจนถึงกระดูกดำ ทันใดนั้นผิวน้ำแข็งเบื้องหน้าของพวกเขาก็เกิดรอยแตกกระจายอย่างรวดเร็วไปทั่วทิศ",
+    "artistName": "Kudos Productions",
+    "name": "Harbinger of Thralls",
+    "cardCode": "06FR030",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "คอมมอน",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "04FR001"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06FR030T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06FR030T2-full.png"
+      }
+    ],
+    "regions": [
+      "เฟรล<zwsp>ยอร์ด"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 2,
+    "description": "<link=vocab.Play><style=Vocab>เล่น</style></link>: อัญเชิญ <link=card.summon><style=AssociatedCard>Frozen Thrall</style></link> หนึ่งใบ",
+    "descriptionRaw": "เล่น: อัญเชิญ Frozen Thrall หนึ่งใบ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "น้ำแข็งค่อย ๆ บางลงเมื่อแสงตะวันสาดส่อง\nเมื่อน้ำแข็งเริ่มละลาย บริวารของเธอก็เริ่มลืมตาตื่นขึ้น",
+    "artistName": "Kudos Productions",
+    "name": "Harbinger of Thralls",
+    "cardCode": "06FR030T2",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ไม่มี",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "04FR001"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06FR030T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06FR030T1-full.png"
+      }
+    ],
+    "regions": [
+      "เฟรล<zwsp>ยอร์ด"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 2,
+    "description": "<link=vocab.Play><style=Vocab>เล่น</style></link>: <link=vocab.Advance><style=Vocab>เร่งเวลา</style></link> <link=card.summon><style=AssociatedCard>Frozen Thrall</style></link> ทั้งหมดของคุณ 1 รอบ",
+    "descriptionRaw": "เล่น: เร่งเวลา Frozen Thrall ทั้งหมดของคุณ 1 รอบ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "น้ำแข็งค่อย ๆ บางลงเมื่อแสงตะวันสาดส่อง\nเมื่อน้ำแข็งเริ่มละลาย บริวารของเธอก็เริ่มลืมตาตื่นขึ้น",
+    "artistName": "Kudos Productions",
+    "name": "Harbinger of Thralls",
+    "cardCode": "06FR030T1",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ไม่มี",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06PZ032.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06PZ032-full.png"
+      }
+    ],
+    "regions": [
+      "พิล<zwsp>โท<zwsp>เวอร์ <zwsp>& <zwsp>ซอน"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 0,
+    "cost": 7,
+    "health": 0,
+    "description": "เลือกหนึ่งในสองการ์ดค่าร่าย 2 หน่วยใบใหม่เพื่อสร้างในมือ ค่าร่ายของมันจะกลายเป็น 0 หน่วยในรอบนี้ ทำซ้ำอีกสองครั้ง",
+    "descriptionRaw": "เลือกหนึ่งในสองการ์ดค่าร่าย 2 หน่วยใบใหม่เพื่อสร้างในมือ ค่าร่ายของมันจะกลายเป็น 0 หน่วยในรอบนี้ ทำซ้ำอีกสองครั้ง",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "เครื่องเล่นเสียงเครื่องแรกของซอนนั้นใช้งานได้อย่างน่าตกใจ ข้อเสียเดียวของมันก็คือไม่มีใครรู้เลยว่าจะปรับระดับเสียง<br>ของมันได้ยังไง",
+    "artistName": "Kudos Productions",
+    "name": "Sputtering Songspinner",
+    "cardCode": "06PZ032",
+    "keywords": [
+      "ฉับพลัน"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "ฉับพลัน",
+    "spellSpeedRef": "Burst",
+    "rarity": "อีปิค",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "เวท",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "03PZ011",
+      "01PZ005",
+      "01PZ049"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06PZ043.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06PZ043-full.png"
+      }
+    ],
+    "regions": [
+      "พิล<zwsp>โท<zwsp>เวอร์ <zwsp>& <zwsp>ซอน"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "สร้าง <link=card.create1><style=AssociatedCard>Aftershock</style></link>, <link=card.create2><style=AssociatedCard>Hextech Transmogulator</style></link> หรือ <link=card.create3><style=AssociatedCard>Progress Day!</style></link> <link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>ชั่วคราว</style></link> หนึ่งใบในมือ",
+    "descriptionRaw": "สร้าง Aftershock, Hextech Transmogulator หรือ Progress Day! ชั่วคราว หนึ่งใบในมือ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"นายท่าน ท่านไม่มีทางหาโทเคนที่ล้ำยุคเช่นนี้ได้จากที่ไหนบนโลกอีกแล้ว ลูกสาวของข้าใส่ใจกับมันทุกรายละเอียด\" - Corin Reveck ",
+    "artistName": "Kudos Productions",
+    "name": "Piltovan Tellstones",
+    "cardCode": "06PZ043",
+    "keywords": [
+      "ฉับพลัน"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "ฉับพลัน",
+    "spellSpeedRef": "Burst",
+    "rarity": "แรร์",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "เวท",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "01PZ030",
+      "01PZ044"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06PZ027.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06PZ027-full.png"
+      }
+    ],
+    "regions": [
+      "พิล<zwsp>โท<zwsp>เวอร์ <zwsp>& <zwsp>ซอน"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "สร้าง <link=card.create1><style=AssociatedCard>Shady Character</style></link> หรือ <link=card.create2><style=AssociatedCard>Chempunk Shredder</style></link> ที่มี<link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>ชั่วคราว</style></link>หนึ่งใบในมือและลดค่าร่ายของมันลง 1 หน่วย",
+    "descriptionRaw": "สร้าง Shady Character หรือ Chempunk Shredder ที่มีชั่วคราวหนึ่งใบในมือและลดค่าร่ายของมันลง 1 หน่วย",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "แหล่งเที่ยวกลางคืนที่ดีที่สุดของซอนนั้นต้องมีบัตรเชิญ หากคุณไม่ได้เป็นส่วนหนึ่งของวงดนตรีแล้วล่ะก็ คุณก็ต้องขาใหญ่พอตัวถึงจะได้ที่นั่ง หรือไม่ก็ลองหาบัตรเชิญที่ตกอยู่บนพื้นดูสิ",
+    "artistName": "Kudos Productions",
+    "name": "Discreet Invitation",
+    "cardCode": "06PZ027",
+    "keywords": [
+      "ฉับพลัน"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "ฉับพลัน",
+    "spellSpeedRef": "Burst",
+    "rarity": "คอมมอน",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "เวท",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06SH037.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06SH037-full.png"
+      }
+    ],
+    "regions": [
+      "ชู<zwsp>ริ<zwsp>ม่า"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 5,
+    "cost": 5,
+    "health": 4,
+    "description": "เมื่อศัตรูถูก<link=keyword.Challenger><sprite name=Challenger><style=Keyword>ท้าชิง</style></link> มอบ -2|-0 ให้กับมันในรอบนี้",
+    "descriptionRaw": "เมื่อศัตรูถูกท้าชิง มอบ -2|-0 ให้กับมันในรอบนี้",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "สติสัมปชัญญะของพวกมันค่อย ๆ เลือนหายไปดั่งลมกัดเซาะเนินทราย--และแทนที่สติเหล่านั้น ก็คือเมล็ดพันธุ์แห่งความโกรธเกรี้ยวที่ค่อย ๆ เติบโตขึ้นเป็นต้นแห่งความบ้าคลั่งที่กระหายไม่เลือกหน้า",
+    "artistName": "Will Gist",
+    "name": "Baccai Witherclaw",
+    "cardCode": "06SH037",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "คอมมอน",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "04SH069",
+      "04SH004",
+      "04SH106"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06SH042.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06SH042-full.png"
+      }
+    ],
+    "regions": [
+      "ชู<zwsp>ริ<zwsp>ม่า"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "สร้าง <link=card.create1><style=AssociatedCard>Ruthless Predator</style></link>, <link=card.create2><style=AssociatedCard>Weight of Judgment</style></link> หรือ <link=card.create3><style=AssociatedCard>Spirit Fire</style></link> <link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>ชั่วคราว</style></link> หนึ่งใบในมือ",
+    "descriptionRaw": "สร้าง Ruthless Predator, Weight of Judgment หรือ Spirit Fire ชั่วคราว หนึ่งใบในมือ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"เกม Tellstone เขาไม่สนชัยชนะกันหรอก--มันเกี่ยวกับว่าตอนเล่นเจ้าดูเท่ขนาดไหนต่างหาก!\" - Akshan",
+    "artistName": "Kudos Productions",
+    "name": "Shuriman Tellstones",
+    "cardCode": "06SH042",
+    "keywords": [
+      "ฉับพลัน"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "ฉับพลัน",
+    "spellSpeedRef": "Burst",
+    "rarity": "แรร์",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "เวท",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "04SH034T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06SH050.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06SH050-full.png"
+      }
+    ],
+    "regions": [
+      "ชู<zwsp>ริ<zwsp>ม่า"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 0,
+    "cost": 6,
+    "health": 0,
+    "description": "มอบ -2|-0 แก่ศัตรูหนึ่งใบในรอบนี้ สร้าง <link=card.create><style=AssociatedCard>Instant Century</style></link> หนึ่งใบในมือ",
+    "descriptionRaw": "มอบ -2|-0 แก่ศัตรูหนึ่งใบในรอบนี้ สร้าง Instant Century หนึ่งใบในมือ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "ทรายแห่งกาลเวลาไหลไปโดยปราศจากแนวคิดคำนึงใด ๆ อาจจะดูเหมือนเป็นแบบแผนที่ไม่แยแสต่อสิ่งใด แต่ก็ไม่ใช่ทุกคนที่จะตกเป็นทาสของรูปแบบที่แข็งกระด้างนี้...",
+    "artistName": "Kudos Productions",
+    "name": "Sands of Time",
+    "cardCode": "06SH050",
+    "keywords": [
+      "ฉับพลัน"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "ฉับพลัน",
+    "spellSpeedRef": "Burst",
+    "rarity": "แรร์",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "เวท",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06SH036.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06SH036-full.png"
+      }
+    ],
+    "regions": [
+      "ชู<zwsp>ริ<zwsp>ม่า"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "เมื่อคุณอัญเชิญแชมเปี้ยน ทำลายการ์ดใบนี้เพื่อมอบ +2|+1 และ<link=keyword.SpellShield><sprite name=SpellShield><style=Keyword>โล่เวท</style></link>ให้กับแชมเปี้ยนใบนั้น",
+    "descriptionRaw": "เมื่อคุณอัญเชิญแชมเปี้ยน ทำลายการ์ดใบนี้เพื่อมอบ +2|+1 และโล่เวทให้กับแชมเปี้ยนใบนั้น",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Nasus ปรากฏตัวออกมาจาก Sarcophagus จิตใจของเขาผ่องใสและบาดแผลก็หายเป็นปลิดทิ้ง เขาลงมือจดถ้อยคำบางอย่างและมองย้อนขึ้นไปยังโลงศพที่ถูกแขวนไว้เบื้องบน พลางนึกถึงสภาวะจิตใจของกลุ่มก้อนความวิปริตโหดร้ายที่ถูกกักขังอยู่ภายใน เวลาเท่านั้นที่จะตอบได้ว่าเวทมนตร์นี้จะสามารถขจัดความ<br>บ้าคลั่งที่อยู่ภายในตัวของเหล่า Baccai ได้หรือไม่ เวทมนตร์ที่เหล่าตัวตนพลังเทพคนอื่น ๆ เคยคัดค้าน แต่ตอนนี้พวกเขาเหล่านั้นไม่อยู่อีกต่อไป แต่ Renekton และความบ้าคลั่งของเขายังคงอยู่ Nasus ลงมือจดบางอย่างเพิ่ม พลางหวังว่าในที่สุดเขาก็พบหนทาง<br>ที่จะช่วยน้องชายของเขาได้แล้ว",
+    "artistName": "Kudos Productions",
+    "name": "Chamber of Renewal",
+    "cardCode": "06SH036",
+    "keywords": [
+      "แลนด์มาร์ค"
+    ],
+    "keywordRefs": [
+      "LandmarkVisualOnly"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "อีปิค",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "แลนด์มาร์ค",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU001T9",
+      "06RU001T3",
+      "06RU001T8",
+      "06RU001T4"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06RU001.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06RU001-full.png"
+      }
+    ],
+    "regions": [
+      "รูนเทอร์รา"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 2,
+    "cost": 4,
+    "health": 5,
+    "description": "<link=vocab.Origin><style=Vocab>ต้นกำเนิด</style></link>: <link=card.origin><style=AssociatedCard>The Wandering Caretaker</style></link>\r\n<link=vocab.Attack><style=Vocab>โจมตี</style></link>: ติด <link=card.chime><style=AssociatedCard>Chime</style></link> 3 ใบในการ์ดในเด็คของคุณแบบสุ่ม",
+    "descriptionRaw": "ต้นกำเนิด: The Wandering Caretaker\r\nโจมตี: ติด Chime 3 ใบในการ์ดในเด็คของคุณแบบสุ่ม",
+    "levelupDescription": "คุณได้เพิ่มค่าพลังของพันธมิตร<br>ในสนามหรือในมือ<br><nobr>20 หน่วยขึ้นไป<style=Variable></style></nobr>",
+    "levelupDescriptionRaw": "คุณได้เพิ่มค่าพลังของพันธมิตรในสนามหรือในมือ20 หน่วยขึ้นไป",
+    "flavorText": "\"ว่าไง ตาแก่ Gaff คนนี้น่ะเห็นอะไรแปลก ๆ มาเยอะ! ครั้งแรกก็ตัวผู้ดูแลเองเลย ข้าเห็นจริง ๆ นะ อย่างกับดาวตกพุ่งผ่านท้องฟ้า ตอนนั้นรู้สึกเหมือนโลกหยุดหมุนไปเลยล่ะ อย่างกับว่ามีแต่ข้าและเขาที่อยู่ตรงนั้น…\" - เรื่องเล่าของตาแก่ Gaff ตอนที่ 1",
+    "artistName": "Caravan Studio",
+    "name": "Bard",
+    "cardCode": "06RU001",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "แชมเปี้ยน",
+    "rarityRef": "Champion",
+    "subtypes": [],
+    "supertype": "แชมเปี้ยน",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU001T3",
+      "06RU001T4",
+      "06RU001"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06RU001T8.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06RU001T8-full.png"
+      }
+    ],
+    "regions": [
+      "รูนเทอร์รา"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "จั่วผู้ติดตามหนึ่งใบ จากนั้นบังคับใช้เอฟเฟกต์ของพรทั้งหมดในการ์ด 3 ใบบนสุดของเด็คของคุณ\r\nสร้าง <link=card.level1><style=AssociatedCard>Bard</style></link> หนึ่งใบในเด็คของคุณ",
+    "descriptionRaw": "จั่วผู้ติดตามหนึ่งใบ จากนั้นบังคับใช้เอฟเฟกต์ของพรทั้งหมดในการ์ด 3 ใบบนสุดของเด็คของคุณ\r\nสร้าง Bard หนึ่งใบในเด็คของคุณ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "บทเพลงมากมายเล่าขานตำนานการฝากฝังซ่อน Chime ไว้ในเมืองต่าง ๆ ทั่วรูนเทอร์ราของ Bard ว่ากันว่า Chime เหล่านั้นได้ช่วยหล่อหลอมจิตวิญญาณและดลใจให้เกิดชุด<br>การเต้นรำแสนสนุกสนานมากมาย",
+    "artistName": "Kudos Productions",
+    "name": "Bard's Traveler's Call",
+    "cardCode": "06RU001T8",
+    "keywords": [
+      "ฉับพลัน"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "ฉับพลัน",
+    "spellSpeedRef": "Burst",
+    "rarity": "ไม่มี",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "แชมเปี้ยน",
+    "type": "เวท",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU001T3",
+      "06RU001T8",
+      "06RU001",
+      "06RU001T9"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06RU001T4.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06RU001T4-full.png"
+      }
+    ],
+    "regions": [
+      "รูนเทอร์รา"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 3,
+    "cost": 4,
+    "health": 6,
+    "description": "<link=vocab.Attack><style=Vocab>โจมตี</style></link>: ติด <link=card.chime><style=AssociatedCard>Chime</style></link> 6 ใบในการ์ดแบบสุ่มในเด็คของคุณ เมื่อ <link=card.chime><style=AssociatedCard>Chime</style></link> ของคุณทำงาน มอบ +1|+1 ให้กับพันธมิตรหนึ่งใบบนสนามแบบสุ่ม",
+    "descriptionRaw": "โจมตี: ติด Chime 6 ใบในการ์ดแบบสุ่มในเด็คของคุณ เมื่อ Chime ของคุณทำงาน มอบ +1|+1 ให้กับพันธมิตรหนึ่งใบบนสนามแบบสุ่ม",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"เสียงแตรดังขึ้นแก่เด็กและผู้ใหญ่\nโหมเสียงดังให้หมู่มวลประจักษ์ไกล \nเหล่าราชาพร้อมใจคุกเข่าเพื่อร้องสดุดี\nแด่ผู้ดูแลและวิถีน่าฉงนแสนเปรมปรี\" - บทเพลงแห่งรูนเทอร์รา",
+    "artistName": "Caravan Studio",
+    "name": "Bard",
+    "cardCode": "06RU001T4",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ไม่มี",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "แชมเปี้ยน",
+    "type": "ยูนิต",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU001T3",
+      "06RU001"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06RU001T9.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06RU001T9-full.png"
+      }
+    ],
+    "regions": [
+      "รูนเทอร์รา"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "คุณสามารถเพิ่มการ์ดใบใดก็ได้ที่มีเอฟเฟกต์ติด <link=card.chime><style=AssociatedCard>Chime</style></link> ใส่ในเด็คของคุณ \r\n<link=vocab.RoundStart><style=Vocab>เริ่มรอบ</style></link>: ติด <link=card.chime><style=AssociatedCard>Chime</style></link> หนึ่งใบในเด็คของคุณตามจำนวน Bard ที่อยู่ในเด็คของคุณตอนเริ่มเกม",
+    "descriptionRaw": "คุณสามารถเพิ่มการ์ดใบใดก็ได้ที่มีเอฟเฟกต์ติด Chime ใส่ในเด็คของคุณ \r\nเริ่มรอบ: ติด Chime หนึ่งใบในเด็คของคุณตามจำนวน Bard ที่อยู่ในเด็คของคุณตอนเริ่มเกม",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "นักเดินทางลึกลับจากจักรวาลอันไกลโพ้น Bard คือสิ่งมีชีวิตตัวแทนแห่งความกลมเกลียวและสมดุล ผู้ถูกยึดโยงด้วยบทเพลงบรรเลงแห่งการสร้างสรรค์และความ<br>ไม่ลงรอยภายใน<br>รอบกายเขารายล้อมไปด้วยขบวนสิ่งมีชีวิตรูปร่างประหลาดที่มีชื่อว่า Meep การกระทำแสนน่าฉงนของผู้ดูแลพเนจรผู้นี้ได้ถูกแต่งแต้มกลายเป็นบทเพลงและเรื่องเล่าขานมากมายทั่วรูนเทอร์รา",
+    "artistName": "Caravan Studio",
+    "name": "The Wandering Caretaker",
+    "cardCode": "06RU001T9",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ไม่มี",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ความสามารถ",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06RU001T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06RU001T3-full.png"
+      }
+    ],
+    "regions": [
+      "รูนเทอร์รา"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "มอบ +1|+1 ให้กับพันธมิตรในมือหนึ่งใบแบบสุ่ม",
+    "descriptionRaw": "มอบ +1|+1 ให้กับพันธมิตรในมือหนึ่งใบแบบสุ่ม",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "ภายใต้ค่ำคืนอันเงียบสงัด ลองมองขึ้นไปบนฟากฟ้าและเงี่ยหูฟังบทบรรเลงอันแผ่วเบา<br>ของเหล่า Chime และในตอนนั้นเองคุณก็จะได้รับรู้ว่าเขาผู้นั้นเฝ้ามองพวกเราอยู่",
+    "artistName": "Kudos Productions",
+    "name": "Chime",
+    "cardCode": "06RU001T3",
+    "keywords": [
+      "พร"
+    ],
+    "keywordRefs": [
+      "Boon"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ไม่มี",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "กับดัก",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU002T6",
+      "06RU002T5",
+      "06RU002T4",
+      "06RU002T2",
+      "06RU002T1",
+      "06RU002T13",
+      "06RU002T12"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06RU002.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06RU002-full.png"
+      }
+    ],
+    "regions": [
+      "รูนเทอร์รา"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 4,
+    "cost": 4,
+    "health": 4,
+    "description": "<link=vocab.Origin><style=Vocab>ต้นกำเนิด</style></link>: <link=card.origin><style=AssociatedCard>The Virtuoso</style></link> <style=Variable></style>\r\n<link=keyword.AttackSkillMark><sprite name=SkillMark><style=Keyword>โจมตี</style></link>: สร้างความเสียหาย 2 หน่วยแก่ศัตรูทั้งหมดที่ถูก<link=keyword.Stun><sprite name=Stunned><style=Keyword>สตัน</style></link>",
+    "descriptionRaw": "ต้นกำเนิด: The Virtuoso \r\nโจมตี: สร้างความเสียหาย 2 หน่วยแก่ศัตรูทั้งหมดที่ถูกสตัน",
+    "levelupDescription": "คุณเล่นเวท<link=keyword.Fast><sprite name=Fast><style=Keyword>เร็ว</style></link> เวท<link=keyword.Slow><sprite name=Slow><style=Keyword>ช้า</style></link>หรือ<link=keyword.Skill><sprite name=SkillMark><style=Keyword>สกิล</style></link> 12 ครั้งขึ้นไป<style=Variable></style>",
+    "levelupDescriptionRaw": "คุณเล่นเวทเร็ว เวทช้าหรือสกิล 12 ครั้งขึ้นไป",
+    "flavorText": "\"โหมโรง: เรื่องราวของเราเริ่มที่เมืองกายานวี ที่ซึ่งปรมาจารย์ชราได้เรียกลูกศิษย์วัยเยาว์ของเขามาเข้าพบ ลูกศิษย์คนนั้นได้รับมอบหมายให้กำจัดกลุ่มวายร้ายตัวฉกาจและกู้คืนโบราณวัตถุศักดิ์คืนมาให้ได้ นักแสดงของเรากระตือรือร้นยิ่งนัก แต่ยังไม่ถึงเวลา ตอนนี้เขาแค่ต้องรอ รอเวลาเฉิดฉายอยู่ที่ด้านข้าง\"",
+    "artistName": "Alessandro Poli",
+    "name": "Jhin",
+    "cardCode": "06RU002",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "แชมเปี้ยน",
+    "rarityRef": "Champion",
+    "subtypes": [],
+    "supertype": "แชมเปี้ยน",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06RU002T6.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06RU002T6-full.png"
+      }
+    ],
+    "regions": [
+      "รูนเทอร์รา"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "สร้างความเสียหาย 4 หน่วยแก่ยูนิตหนึ่งใบ",
+    "descriptionRaw": "สร้างความเสียหาย 4 หน่วยแก่ยูนิตหนึ่งใบ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"...จากนั้น ก็รอเสียงตอบรับจากผู้ชม\" - Jhin",
+    "artistName": "Kudos Productions",
+    "name": "Second Bounce",
+    "cardCode": "06RU002T6",
+    "keywords": [
+      "ช้า",
+      "ชั่วคราว"
+    ],
+    "keywordRefs": [
+      "Slow",
+      "Fleeting"
+    ],
+    "spellSpeed": "ช้า",
+    "spellSpeedRef": "Slow",
+    "rarity": "ไม่มี",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "เวท",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU002",
+      "06RU002T2",
+      "06RU002T6",
+      "06RU002T5",
+      "06RU002T4",
+      "06RU002T12"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06RU002T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06RU002T1-full.png"
+      }
+    ],
+    "regions": [
+      "รูนเทอร์รา"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 4,
+    "cost": 4,
+    "health": 4,
+    "description": "<style=Variable></style>\r\n<link=keyword.AttackSkillMark><sprite name=SkillMark><style=Keyword>โจมตี</style></link>: สร้างความเสียหาย 4 หน่วย<br>แก่ศัตรูทั้งหมดที่ถูก<link=keyword.Stun><sprite name=Stunned><style=Keyword>สตัน</style></link><br>และเน็กซัสของศัตรู",
+    "descriptionRaw": "\r\nโจมตี: สร้างความเสียหาย 4 หน่วยแก่ศัตรูทั้งหมดที่ถูกสตันและเน็กซัสของศัตรู",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"ขอต้อนรับสู่ฉากสุดท้าย\"",
+    "artistName": "Alessandro Poli",
+    "name": "Jhin",
+    "cardCode": "06RU002T1",
+    "keywords": [
+      "โจมตีก่อน"
+    ],
+    "keywordRefs": [
+      "QuickStrike"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ไม่มี",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "แชมเปี้ยน",
+    "type": "ยูนิต",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU002T4",
+      "06RU002"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06RU002T5.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06RU002T5-full.png"
+      }
+    ],
+    "regions": [
+      "รูนเทอร์รา"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "หากเริ่มเกมโดยที่มี <link=card.level1><style=AssociatedCard>Jhin</style></link> อยู่ในเด็ค ทำการร่าย <link=card.cast><style=AssociatedCard>Lotus Trap</style></link> ในทุกครั้งที่คุณเล่นเวท<link=keyword.Fast><sprite name=Fast><style=Keyword>เร็ว</style></link> เวท<link=keyword.Slow><sprite name=Slow><style=Keyword>ช้า</style></link>หรือ<link=keyword.Skill><sprite name=SkillMark><style=Keyword>สกิล</style></link>ครบ 3 ใบในขณะที่คุณ<link=vocab.Behold><style=Vocab>ประจักษ์</style></link> <link=card.level1><style=AssociatedCard>Jhin</style></link> \r\nคุณสามารถเพิ่มผู้ติดตามที่มี<link=keyword.Skill><sprite name=SkillMark><style=Keyword>สกิล</style></link>ใบใดก็ได้ใส่ในเด็คของคุณ\r\n",
+    "descriptionRaw": "หากเริ่มเกมโดยที่มี Jhin อยู่ในเด็ค ทำการร่าย Lotus Trap ในทุกครั้งที่คุณเล่นเวทเร็ว เวทช้าหรือสกิลครบ 3 ใบในขณะที่คุณประจักษ์ Jhin \r\nคุณสามารถเพิ่มผู้ติดตามที่มีสกิลใบใดก็ได้ใส่ในเด็คของคุณ\r\n",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"ปืนคือเครื่องดนตรีของข้า และลูกกระสุนคือท่วงทำนอง\" - Jhin",
+    "artistName": "Alessandro Poli",
+    "name": "The Virtuoso",
+    "cardCode": "06RU002T5",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ไม่มี",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ความสามารถ",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06RU002T12.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06RU002T12-full.png"
+      }
+    ],
+    "regions": [
+      "รูนเทอร์รา"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "สร้างความเสียหาย <style=Variable>4</style> หน่วย<br>แก่ศัตรูทั้งหมดที่ถูก<link=keyword.Stun><sprite name=Stunned><style=Keyword>สตัน</style></link><br>และเน็กซัสของศัตรู",
+    "descriptionRaw": "สร้างความเสียหาย 4 หน่วยแก่ศัตรูทั้งหมดที่ถูกสตันและเน็กซัสของศัตรู",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"เปิดม่านฉากสุดท้าย\" - Jhin",
+    "artistName": "Kudos Productions",
+    "name": "Curtain Call",
+    "cardCode": "06RU002T12",
+    "keywords": [
+      "สกิล"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ไม่มี",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ความสามารถ",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06RU002T13.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06RU002T13-full.png"
+      }
+    ],
+    "regions": [
+      "รูนเทอร์รา"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "สร้างความเสียหาย <style=Variable>2</style> หน่วยแก่ศัตรูทั้งหมดที่ถูก<link=keyword.Stun><sprite name=Stunned><style=Keyword>สตัน</style></link>",
+    "descriptionRaw": "สร้างความเสียหาย 2 หน่วยแก่ศัตรูทั้งหมดที่ถูกสตัน",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"ข้าชอบองค์ประกอบที่รุนแรงยิ่งนัก\" - Jhin",
+    "artistName": "Kudos Productions",
+    "name": "Deadly Flourish",
+    "cardCode": "06RU002T13",
+    "keywords": [
+      "สกิล"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ไม่มี",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ความสามารถ",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU002"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06RU002T4.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06RU002T4-full.png"
+      }
+    ],
+    "regions": [
+      "รูนเทอร์รา"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "สร้างความเสียหาย 1 หน่วยแก่เน็กซัสของศัตรู หาก <link=card.jhin><style=AssociatedCard>Jhin</style></link> อยู่บนสนาม ทำการ<link=keyword.Stun><sprite name=Stunned><style=Keyword>สตัน</style></link>ศัตรู<link=keyword.Weakest><style=Keyword>ที่อ่อนแอที่สุด</style></link>",
+    "descriptionRaw": "สร้างความเสียหาย 1 หน่วยแก่เน็กซัสของศัตรู หาก Jhin อยู่บนสนาม ทำการสตันศัตรูที่อ่อนแอที่สุด",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"ยิ้มสิ! ทุกคนกำลังดูอยู่นะ!\" - Jhin",
+    "artistName": "Kudos Productions",
+    "name": "Lotus Trap",
+    "cardCode": "06RU002T4",
+    "keywords": [
+      "สกิล"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ไม่มี",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ความสามารถ",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU002",
+      "06RU002T1",
+      "06RU002T6"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06RU002T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06RU002T2-full.png"
+      }
+    ],
+    "regions": [
+      "รูนเทอร์รา"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 4,
+    "health": 0,
+    "description": "สร้างความเสียหาย 1 หน่วยแก่ยูนิตหนึ่งใบ สร้าง <link=card.spell2><style=AssociatedCard>Second Bounce</style></link> หนึ่งใบบนมือเมื่อ<link=vocab.RoundStart><style=Vocab>เริ่มรอบ</style></link>ถัดไป\r\nสร้าง <link=card.level1><style=AssociatedCard>Jhin</style></link> หนึ่งใบในเด็คของคุณ",
+    "descriptionRaw": "สร้างความเสียหาย 1 หน่วยแก่ยูนิตหนึ่งใบ สร้าง Second Bounce หนึ่งใบบนมือเมื่อเริ่มรอบถัดไป\r\nสร้าง Jhin หนึ่งใบในเด็คของคุณ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"ก่อนอื่นก็เปิดม่าน...\" - Jhin",
+    "artistName": "Kudos Productions",
+    "name": "Jhin's Dancing Grenade",
+    "cardCode": "06RU002T2",
+    "keywords": [
+      "ช้า"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "ช้า",
+    "spellSpeedRef": "Slow",
+    "rarity": "ไม่มี",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "แชมเปี้ยน",
+    "type": "เวท",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU002T6"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06RU046.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06RU046-full.png"
+      }
+    ],
+    "regions": [
+      "รูนเทอร์รา"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 4,
+    "health": 0,
+    "description": "สร้างความเสียหาย 1 หน่วยแก่ยูนิตหนึ่งใบ สร้าง <link=card.spell2><style=AssociatedCard>Second Bounce</style></link> หนึ่งใบบนมือเมื่อ <link=vocab.RoundStart><style=Vocab>เริ่มรอบ</style></link>ถัดไป",
+    "descriptionRaw": "สร้างความเสียหาย 1 หน่วยแก่ยูนิตหนึ่งใบ สร้าง Second Bounce หนึ่งใบบนมือเมื่อ เริ่มรอบถัดไป",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"ก่อนอื่นก็เปิดม่าน...\" - Jhin",
+    "artistName": "Kudos Productions",
+    "name": "Dancing Grenade",
+    "cardCode": "06RU046",
+    "keywords": [
+      "ช้า"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "ช้า",
+    "spellSpeedRef": "Slow",
+    "rarity": "ไม่มี",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "เวท",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU001T3"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06RU045.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06RU045-full.png"
+      }
+    ],
+    "regions": [
+      "รูนเทอร์รา"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "จั่วผู้ติดตามหนึ่งใบ จากนั้นบังคับใช้เอฟเฟกต์ของพรทั้งหมดที่อยู่ในการ์ด 3 ใบบนสุดในเด็คของคุณ",
+    "descriptionRaw": "จั่วผู้ติดตามหนึ่งใบ จากนั้นบังคับใช้เอฟเฟกต์ของพรทั้งหมดที่อยู่ในการ์ด 3 ใบบนสุดในเด็คของคุณ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "บทเพลงมากมายเล่าขานตำนานการฝากฝังซ่อน Chime ไว้ในเมืองต่าง ๆ ทั่วรูนเทอร์ราของ Bard ว่ากันว่า Chime เหล่านั้นได้ช่วยหล่อหลอมจิตวิญญาณและดลใจ<br>ให้เกิดชุดการเต้นรำแสนสนุกสนานมากมาย",
+    "artistName": "Kudos Productions",
+    "name": "Traveler's Call",
+    "cardCode": "06RU045",
+    "keywords": [
+      "ฉับพลัน"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "ฉับพลัน",
+    "spellSpeedRef": "Burst",
+    "rarity": "ไม่มี",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "เวท",
+    "collectible": false,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "01SI022",
+      "04SI002",
+      "03SI008"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06SI037.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06SI037-full.png"
+      }
+    ],
+    "regions": [
+      "เกาะ<zwsp>แห่ง<zwsp>เงา"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "สร้าง <nobr><link=card.create1><style=AssociatedCard>Mark of the Isles</style></link></nobr>, <link=card.create2><style=AssociatedCard>Spirit Journey</style></link> หรือ <link=card.create3><style=AssociatedCard>Crumble</style></link> <link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>ชั่วคราว</style></link> หนึ่งใบในมือ",
+    "descriptionRaw": "สร้าง Mark of the Isles, Spirit Journey หรือ Crumble ชั่วคราว หนึ่งใบในมือ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"การตกแต่ง... แสนสวยงาม เรียนรู้กฏ... การใช้โทเคน เกมน่าสนใจ น่าอัศจรรย์... งานฝีมือไร้ที่เปรียบ... มิอาจลืมเลือน\" - บันทึกที่ถูกกู้มา",
+    "artistName": "Kudos Productions",
+    "name": "Shadow Isles Tellstones",
+    "cardCode": "06SI037",
+    "keywords": [
+      "ฉับพลัน"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "ฉับพลัน",
+    "spellSpeedRef": "Burst",
+    "rarity": "แรร์",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "เวท",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06SI040.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06SI040-full.png"
+      }
+    ],
+    "regions": [
+      "เกาะ<zwsp>แห่ง<zwsp>เงา"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 0,
+    "cost": 4,
+    "health": 0,
+    "description": "ฟื้นคืนชีพร่างเสมือน<link=keyword.Ephemeral><sprite name=Ephemeral><style=Keyword>ไร้ตัวตน</style></link><br>ของผู้ติดตามพันธมิตรที่<link=vocab.Strongest><style=Vocab>แข็งแกร่งที่สุด</style></link><br>ที่ตายไปของคุณ และมอบ -1|-0 แก่ศัตรู<br>ทั้งหมดในรอบนี้",
+    "descriptionRaw": "ฟื้นคืนชีพร่างเสมือนไร้ตัวตนของผู้ติดตามพันธมิตรที่แข็งแกร่งที่สุดที่ตายไปของคุณ และมอบ -1|-0 แก่ศัตรูทั้งหมดในรอบนี้",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "เจ้าอาจจะขับไล่ดวงวิญญาณได้ชั่วครู่หนึ่ง แต่ในไม่ช้า พวกมันก็จะกลับมา",
+    "artistName": "Kudos Productions",
+    "name": "Harrowing Return",
+    "cardCode": "06SI040",
+    "keywords": [
+      "ช้า"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "ช้า",
+    "spellSpeedRef": "Slow",
+    "rarity": "อีปิค",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "เวท",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06SI033.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06SI033-full.png"
+      }
+    ],
+    "regions": [
+      "เกาะ<zwsp>แห่ง<zwsp>เงา"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "<link=vocab.Countdown><style=Vocab>นับถอยหลัง 2</style></link><style=Variable></style>: ฟื้นคืนชีพพันธมิตรที่ <link=vocab.Strongest><style=Vocab>แข็งแกร่งที่สุด</style></link>ที่ตายไปของคุณ",
+    "descriptionRaw": "นับถอยหลัง 2: ฟื้นคืนชีพพันธมิตรที่ แข็งแกร่งที่สุดที่ตายไปของคุณ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "เสียงกระทบของดาบและโล่เปรียบได้กับเสียงระฆังมรณะ เสียงนั้นจะดึงดูดเหล่าวิญญาณที่ยังมีสายใยต่อโลกใบนี้ สายใยแห่งจิตวิญญาณที่แม้แต่ความตายก็ไม่อาจพรากมัน<br>ไปจากพวกเขาได้",
+    "artistName": "Kudos Productions",
+    "name": "Haunted Tomb",
+    "cardCode": "06SI033",
+    "keywords": [
+      "แลนด์มาร์ค",
+      "นับถอยหลัง"
+    ],
+    "keywordRefs": [
+      "LandmarkVisualOnly",
+      "Countdown"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "อีปิค",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "แลนด์มาร์ค",
+    "collectible": true,
+    "set": "Set6"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06SI043.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_8_0/set6/th_th/img/cards/06SI043-full.png"
+      }
+    ],
+    "regions": [
+      "เกาะ<zwsp>แห่ง<zwsp>เงา"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "<link=vocab.Toss><style=Vocab>หย่อนทิ้ง</style></link> 3 ใบ\r\n<link=keyword.Drain><style=Keyword>ดูดพลัง</style></link> 2 หน่วยจากยูนิตหนึ่งใบ",
+    "descriptionRaw": "หย่อนทิ้ง 3 ใบ\r\nดูดพลัง 2 หน่วยจากยูนิตหนึ่งใบ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "แม้แต่ในเกาะแห่งเงา เมล็ดพันธุ์เก่าแก่ก็ยังคงผลิบาน",
+    "artistName": "Kudos Productions",
+    "name": "Undergrowth",
+    "cardCode": "06SI043",
+    "keywords": [
+      "เร็ว"
+    ],
+    "keywordRefs": [
+      "Fast"
+    ],
+    "spellSpeed": "เร็ว",
+    "spellSpeedRef": "Fast",
+    "rarity": "คอมมอน",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "เวท",
+    "collectible": true,
+    "set": "Set6"
+  }
+]

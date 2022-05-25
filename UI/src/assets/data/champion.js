@@ -1,4 +1,4 @@
-import sets_en from "../../../../Resource/en_us.json"
+import sets_en from "../../data/en_us.json"
 
 var champs = []
 var champObj = {}

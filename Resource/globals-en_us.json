@@ -31,6 +31,11 @@
       "nameRef": "AttackStrike"
     },
     {
+      "description": "Summon a 1|1 Tentacle or, if you already have one, give it +1|+1 for each Spawn.",
+      "name": "Spawn",
+      "nameRef": "Spawn"
+    },
+    {
       "description": "Highest Power, with ties broken by highest Health then highest Cost.",
       "name": "Strongest",
       "nameRef": "Strongest"
@@ -79,6 +84,11 @@
       "description": "A unit is buffed when its Power or Health is increased or it gains a new keyword.",
       "name": "Buffed",
       "nameRef": "Buffed"
+    },
+    {
+      "description": "This champion counts as one of your deck's regions. During deckbuilding, you may add the specified cards to your deck regardless of region. Origins may also have an effect that begins at Start of Game.",
+      "name": "Origin",
+      "nameRef": "Origin"
     },
     {
       "description": "Get this effect when a unit attempts to deal damage using its Power, either at the end of battle or with spells. Units with 0 Power can't strike.",
@@ -233,7 +243,12 @@
       "nameRef": "Invoke"
     },
     {
-      "description": "Attaches to another card, trapping it. When the trapped card is drawn, perform the effect.",
+      "description": "Attaches to another card in a deck. When that card is drawn, activate the effect.",
+      "name": "Boon",
+      "nameRef": "Boon"
+    },
+    {
+      "description": "Attaches to another card in a deck. When that card is drawn, activate the effect.",
       "name": "Trap",
       "nameRef": "Autoplay"
     },
@@ -258,7 +273,7 @@
       "nameRef": "LevelUp"
     },
     {
-      "description": " Yordles!",
+      "description": "",
       "name": "Bandle City",
       "nameRef": "BandleCity"
     },
@@ -271,6 +286,11 @@
       "description": " ",
       "name": "Bilgewater",
       "nameRef": "Bilgewater"
+    },
+    {
+      "description": "",
+      "name": "Runeterra",
+      "nameRef": "Runeterra"
     },
     {
       "description": "Return a unit to hand and remove all effects applied to it.",
@@ -490,62 +510,80 @@
   ],
   "regions": [
     {
-      "abbreviation": "MT",
-      "iconAbsolutePath": "http://dd.b.pvp.net/3_6_0/core/en_us/img/regions/icon-targon.png",
-      "name": "Targon",
-      "nameRef": "Targon"
-    },
-    {
       "abbreviation": "NX",
-      "iconAbsolutePath": "http://dd.b.pvp.net/3_6_0/core/en_us/img/regions/icon-noxus.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/3_8_0/core/en_us/img/regions/icon-noxus.png",
       "name": "Noxus",
       "nameRef": "Noxus"
     },
     {
       "abbreviation": "DE",
-      "iconAbsolutePath": "http://dd.b.pvp.net/3_6_0/core/en_us/img/regions/icon-demacia.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/3_8_0/core/en_us/img/regions/icon-demacia.png",
       "name": "Demacia",
       "nameRef": "Demacia"
     },
     {
+      "abbreviation": "Jhin",
+      "iconAbsolutePath": "http://dd.b.pvp.net/3_8_0/core/en_us/img/regions/icon-jhin.png",
+      "name": "Jhin",
+      "nameRef": "Jhin"
+    },
+    {
+      "abbreviation": "Bard",
+      "iconAbsolutePath": "http://dd.b.pvp.net/3_8_0/core/en_us/img/regions/icon-bard.png",
+      "name": "Bard",
+      "nameRef": "Bard"
+    },
+    {
+      "abbreviation": "RU",
+      "iconAbsolutePath": "http://dd.b.pvp.net/3_8_0/core/en_us/img/regions/icon-runeterra.png",
+      "name": "Runeterra",
+      "nameRef": "Runeterra"
+    },
+    {
       "abbreviation": "FR",
-      "iconAbsolutePath": "http://dd.b.pvp.net/3_6_0/core/en_us/img/regions/icon-freljord.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/3_8_0/core/en_us/img/regions/icon-freljord.png",
       "name": "Freljord",
       "nameRef": "Freljord"
     },
     {
       "abbreviation": "SI",
-      "iconAbsolutePath": "http://dd.b.pvp.net/3_6_0/core/en_us/img/regions/icon-shadowisles.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/3_8_0/core/en_us/img/regions/icon-shadowisles.png",
       "name": "Shadow Isles",
       "nameRef": "ShadowIsles"
     },
     {
+      "abbreviation": "MT",
+      "iconAbsolutePath": "http://dd.b.pvp.net/3_8_0/core/en_us/img/regions/icon-targon.png",
+      "name": "Targon",
+      "nameRef": "Targon"
+    },
+    {
       "abbreviation": "IO",
-      "iconAbsolutePath": "http://dd.b.pvp.net/3_6_0/core/en_us/img/regions/icon-ionia.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/3_8_0/core/en_us/img/regions/icon-ionia.png",
       "name": "Ionia",
       "nameRef": "Ionia"
     },
     {
       "abbreviation": "SH",
-      "iconAbsolutePath": "http://dd.b.pvp.net/3_6_0/core/en_us/img/regions/icon-shurima.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/3_8_0/core/en_us/img/regions/icon-shurima.png",
       "name": "Shurima",
       "nameRef": "Shurima"
     },
     {
       "abbreviation": "BW",
-      "iconAbsolutePath": "http://dd.b.pvp.net/3_6_0/core/en_us/img/regions/icon-bilgewater.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/3_8_0/core/en_us/img/regions/icon-bilgewater.png",
       "name": "Bilgewater",
       "nameRef": "Bilgewater"
     },
     {
       "abbreviation": "PZ",
-      "iconAbsolutePath": "http://dd.b.pvp.net/3_6_0/core/en_us/img/regions/icon-piltoverzaun.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/3_8_0/core/en_us/img/regions/icon-piltoverzaun.png",
       "name": "Piltover & Zaun",
       "nameRef": "PiltoverZaun"
     },
     {
       "abbreviation": "BC",
-      "iconAbsolutePath": "http://dd.b.pvp.net/3_6_0/core/en_us/img/regions/icon-bandlecity.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/3_8_0/core/en_us/img/regions/icon-bandlecity.png",
       "name": "Bandle City",
       "nameRef": "BandleCity"
     }
@@ -588,32 +626,37 @@
   ],
   "sets": [
     {
-      "iconAbsolutePath": "http://dd.b.pvp.net/3_6_0/core/en_us/img/sets/set3.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/3_8_0/core/en_us/img/sets/set3_crispmip.png",
       "name": "Call of the Mountain",
       "nameRef": "Set3"
     },
     {
-      "iconAbsolutePath": "http://dd.b.pvp.net/3_6_0/core/en_us/img/sets/set5.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/3_8_0/core/en_us/img/sets/set5_crispmip.png",
       "name": "Beyond the Bandlewood",
       "nameRef": "Set5"
     },
     {
-      "iconAbsolutePath": "http://dd.b.pvp.net/3_6_0/core/en_us/img/sets/set1.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/3_8_0/core/en_us/img/sets/set1_crispmip.png",
       "name": "Foundations",
       "nameRef": "Set1"
     },
     {
-      "iconAbsolutePath": "http://dd.b.pvp.net/3_6_0/core/en_us/img/sets/set2.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/3_8_0/core/en_us/img/sets/set2_crispmip.png",
       "name": "Rising Tides",
       "nameRef": "Set2"
     },
     {
-      "iconAbsolutePath": "http://dd.b.pvp.net/3_6_0/core/en_us/img/sets/set4.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/3_8_0/core/en_us/img/sets/set4_crispmip.png",
       "name": "Empires of the Ascended",
       "nameRef": "Set4"
     },
     {
-      "iconAbsolutePath": "http://dd.b.pvp.net/3_6_0/core/en_us/img/sets/setevent.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/3_8_0/core/en_us/img/sets/set6ab_crispmip.png",
+      "name": "Worldwalker",
+      "nameRef": "Set6"
+    },
+    {
+      "iconAbsolutePath": "http://dd.b.pvp.net/3_8_0/core/en_us/img/sets/setevent_crispmip.png",
       "name": "Events",
       "nameRef": "SetEvent"
     }

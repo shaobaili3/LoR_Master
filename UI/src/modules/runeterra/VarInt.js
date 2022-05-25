@@ -1,5 +1,5 @@
 class VarInt {
-  static pop(bytes) {
+  static pop (bytes) {
     let result = 0
     let currentShift = 0
     let bytesPopped = 0
@@ -16,10 +16,10 @@ class VarInt {
       currentShift += 7
     }
 
-    throw new TypeError("Byte array did not contain valid varints.")
+    throw new TypeError('Byte array did not contain valid varints.')
   }
 
-  static get(value) {
+  static get (value) {
     const buff = new Array(10)
     buff.fill(0)
 
