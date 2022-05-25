@@ -11,7 +11,7 @@
 
     <div class="flex h-full flex-col">
       <!-- Loading -->
-      <div class="px-1 pt-2" v-if="isLoading">
+      <div class="flex w-full justify-center pt-2" v-if="isLoading">
         {{ $t("loading.readyToRock") }}
       </div>
 
