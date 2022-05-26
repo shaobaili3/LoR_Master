@@ -4,9 +4,9 @@
       <div class="flex h-full flex-col sm:px-0">
         <h1 class="title pb-4 pt-1 text-left text-3xl sm:pt-0">
           {{ $t("str.meta") }}
-          <a class="relative rounded-md bg-gold-300 px-2 py-1 text-base text-black" href="/seasonal"
-            >Seasonal<!-- <span class="rounded-lg bg-black px-1 py-0.5 text-xs text-white">New!</span> --></a
-          >
+          <!-- <a class="relative rounded-md bg-gold-300 px-2 py-1 text-base text-black" href="/seasonal"
+            >Seasonal</a
+          > -->
           <h2 class="hidden pl-4 text-base text-gray-300 sm:inline" v-if="!IS_ELECTRON">
             {{ $t("meta.subtitle") }}
           </h2>
@@ -117,7 +117,7 @@
           <span class="mr-2 hidden text-gray-300 sm:block">|</span>
 
           <span class="text-gray-300 transition-colors hover:text-white"
-            >{{ $t("matches.game", { num: store.totalMatches }) }} · {{ store.version }}</span
+            >{{ $t("matches.game", { num: store.totalMatches }) }} · {{ filteredVersion }}</span
           >
         </div>
 
@@ -333,6 +333,21 @@ const filteredMeta = computed(() => {
       .sort(sortFn)
 
   return store.metaGroups.concat().sort(sortFn)
+})
+
+const filteredVersion = computed(() => {
+  if (!store.version) return null
+
+  var re = /\d+/g
+
+  var nums = store.version.match(re)
+
+  return (
+    "v" +
+    nums.reduce((str, current) => {
+      return str + current + "."
+    }, "")
+  )
 })
 
 function metaGroupOnClick(id) {
