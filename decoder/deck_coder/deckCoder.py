@@ -2,7 +2,7 @@
 
 from base64 import b32decode, b32encode
 from io import BytesIO
-MAX_KNOWN_VERSION = 20
+MAX_KNOWN_VERSION = 50
 
 
 class Base32:
@@ -39,7 +39,8 @@ faction_code_to_id = {
     "BW": 6,
     "SH": 7,
     "BC": 10,
-    "MT": 9
+    "MT": 9,
+    "RU": 12
 }
 id_to_faction_code = {
     0: "DE",
@@ -51,7 +52,8 @@ id_to_faction_code = {
     6: "BW",
     7: "SH",
     10: "BC",
-    9: "MT"
+    9: "MT",
+    12: "RU"
 }
 
 
