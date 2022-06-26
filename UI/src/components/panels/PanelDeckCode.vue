@@ -88,6 +88,9 @@ export const regionRefID = {
   Shurima: 7,
   Targon: 9,
   BandleCity: 10,
+  Runeterra: 12,
+  Bard: 13,
+  Jhin: 14,
 }
 
 export const regionNames = {
@@ -101,6 +104,9 @@ export const regionNames = {
   7: "faction_Shurima_Name",
   9: "faction_MtTargon_Name",
   10: "faction_BandleCity_Name",
+  12: "faction_Runeterra_Name",
+  13: "faction_Bard_Name",
+  14: "faction_Jhin_Name",
 }
 
 export const factionNames = {
@@ -114,6 +120,9 @@ export const factionNames = {
   7: "Shurima",
   9: "Mt Targon",
   10: "Bandle City",
+  12: "Runeterra",
+  13: "Bard",
+  14: "Jhin",
 }
 </script>
 
@@ -172,23 +181,24 @@ const noInfo = computed(() => {
 
 function processDeck() {
   const baseStore = useBaseStore()
+  var deck
   try {
-    let deck = DeckEncoder.decode(props.code)
-    isValid.value = true
-    deckID.value = getDeckID(props.code)
-    console.log(deckID.value)
-    store.fetchArchetypeDetail(deckID.value)
-    let champNames = deck.reduce((names, card) => {
-      let info = baseStore.sets.find((info) => info.cardCode == card.code)
-      if (info.rarityRef === "Champion") {
-        names.push(info.name)
-      }
-      return names
-    }, [])
-    title.value = champNames.join(" ")
+    deck = DeckEncoder.decode(props.code)
   } catch (err) {
     console.log(err)
     error.value = err
   }
+  isValid.value = true
+  deckID.value = getDeckID(props.code)
+  console.log(deckID.value)
+  store.fetchArchetypeDetail(deckID.value)
+  let champNames = deck.reduce((names, card) => {
+    let info = baseStore.sets.find((info) => info.cardCode == card.code)
+    if (info.rarityRef === "Champion") {
+      names.push(info.name)
+    }
+    return names
+  }, [])
+  title.value = champNames.join(" ")
 }
 </script>

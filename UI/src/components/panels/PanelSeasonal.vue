@@ -130,7 +130,7 @@
 <script setup>
 import MetaGroup from "../meta/MetaGroup.vue"
 
-import { getDecodedDeck, getFactions, getChamps, getDeckID } from "./PanelMeta.vue"
+import { getDecodedDeck } from "./PanelMeta.vue"
 import { formatDistanceStrict, formatDuration } from "date-fns"
 
 import { useMetaStore, timeOptionsUrl, regionOptionsUrl } from "../../store/StoreMeta"

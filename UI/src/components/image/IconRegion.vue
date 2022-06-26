@@ -8,11 +8,6 @@
 
 <script>
 export default {
-  components: {},
-  data() {
-    return {}
-  },
-  mounted() {},
   props: {
     faction: Number,
     colored: {
@@ -33,7 +28,6 @@ export default {
       return require("../../assets/images/regions/" + this.faction + ".svg")
     },
   },
-  methods: {},
 }
 </script>
 

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="cardContainer group relative mt-1"
+    class="group relative mt-1 flex h-9 max-w-[320px] items-center justify-between rounded-md"
     :class="{
       empty: card.count == 0,
       spell: card.typeRef == 'Spell',
@@ -15,11 +15,23 @@
     @mouseenter="onMouseEnter"
     @mouseleave="onMouseLeave"
   >
-    <div v-if="!noCost" class="cardContent cardCost max-w-[30px]">
+    <div
+      v-if="!noCost"
+      class="cardName flex h-full w-7 items-center justify-center rounded-md"
+      :class="{
+        'bg-gold-500': card.typeRef == 'Champion',
+        'bg-[#4a6871] text-cyan-50': card.typeRef != 'Champion',
+      }"
+    >
       {{ card.cost }}
     </div>
-    <div class="cardContent cardName">{{ card.name }}</div>
-    <div v-if="card.count != null && card.count >= 0" class="cardContent cardCount">
+    <div class="cardName flex-1 overflow-hidden text-ellipsis whitespace-nowrap pl-2 text-left">
+      {{ card.name }}
+    </div>
+    <div
+      v-if="card.count != null && card.count >= 0"
+      class="cardName flex h-full w-7 items-center justify-center rounded-r-md bg-gray-400"
+    >
       x{{ card.count }}
     </div>
     <div
@@ -257,31 +269,27 @@ export default {
 }
 
 .cardName {
-  flex: 8 0;
-  justify-content: flex-start;
-  /* padding: 9px 2px 9px 6px; */
-  padding-left: 6px;
   text-shadow: rgb(0 0 0) 0px 1px 3px;
-  box-sizing: border-box;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
 }
 
 .cardCount {
   /* padding: 0px; */
   background: var(--col-light-grey);
+  /* -webkit-clip-path: polygon(10px 0, 100% 0, 100% 100%, 0 100%); */
+  /* clip-path: polygon(10px 0, 40px 0, 40px 100%, 0 100%); */
 }
 
-.champ .cardCost {
-  /* color: black; */
-  background: var(--col-mid-gold);
-}
+/* .cardCount::before {
+  content: "";
+  position: absolute;
 
-.champ .cardCount {
-  /* padding: 0px; */
-  background: var(--col-mid-gold);
-}
+  background-color: transparent;
+  right: 2.2rem;
+  height: 100%;
+  width: 25px;
+  border-radius: 0 0.5rem 1rem 0;
+  box-shadow: 1rem 0 0 0 var(--col-light-grey);
+} */
 
 :not(.spell) + .spell,
 :not(.unit) + .unit,
