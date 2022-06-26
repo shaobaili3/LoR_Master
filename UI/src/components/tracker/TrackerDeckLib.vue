@@ -1,7 +1,9 @@
 <template>
   <div>
-    <div class="px-1 pb-1 text-xs text-gray-200 2xs:text-sm">
-      <i class="fas fa-star pr-1"></i>{{ $t("decklib.title") }}
+    <div
+      class="sticky top-0 z-10 bg-gray-900 py-2 px-2 text-left text-xs text-gray-200 2xs:text-sm"
+    >
+      <i class="fas fa-star px-1"></i>{{ $t("decklib.title") }}
     </div>
     <div v-for="(deck, index) in decks" :key="deck.date" @click="expandDeck(index)">
       <!-- {{ deck }} -->

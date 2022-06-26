@@ -42,7 +42,7 @@
 
       <div class="mt-1 h-0 flex-1 overflow-y-auto" ref="scrollContainer">
         <!-- Opponent History -->
-        <div class="px-1 pt-1" v-if="this.currentTab == TABS.oppo && !isLoading">
+        <!-- <div class="px-1 pt-1" v-if="this.currentTab == TABS.oppo && !isLoading">
           <div class="pt-1.5 pb-2 text-center" v-if="matchInfos.length <= 0">
             {{ loadingOppoText }}
           </div>
@@ -66,7 +66,7 @@
               @open="onMatchOppoOpen(index)"
             ></match-oppo-info>
           </div>
-        </div>
+        </div> -->
 
         <!-- Deck Library (Also TABS.oppo) -->
         <div v-if="this.currentTab == TABS.oppo && !isLoading">
@@ -76,9 +76,9 @@
         <!-- Oppo Played -->
         <div v-if="this.currentTab == TABS.grave && !isLoading">
           <div
-            class="sticky top-0 z-10 bg-gray-900 py-1 px-2 text-left text-xs text-gray-200 2xs:text-sm"
+            class="sticky top-0 z-10 bg-gray-900 py-2 px-2 text-left text-xs text-gray-200 2xs:text-sm"
           >
-            <i class="fas fa-axe-battle"></i>
+            <i class="fas fa-axe-battle px-1"></i>
             {{ $t("tracker.tabs.oppoPlayed") }}
           </div>
           <deck-detail
@@ -92,9 +92,9 @@
         <!-- My Played -->
         <div v-if="this.currentTab == TABS.grave && !isLoading">
           <div
-            class="sticky top-0 z-10 bg-gray-900 py-1 px-2 text-left text-xs text-gray-200 2xs:text-sm"
+            class="sticky top-0 z-10 bg-gray-900 py-2 px-2 pt-4 text-left text-xs text-gray-200 2xs:text-sm"
           >
-            <i class="fas fa-sword"></i>
+            <i class="fas fa-sword px-1"></i>
             {{ $t("tracker.tabs.myPlayed") }}
           </div>
           <deck-detail
@@ -159,12 +159,12 @@
 </template>
 
 <script>
-import MatchOppoInfo from "../../components/match/MatchOppoInfo.vue"
 import axios from "axios"
 import BaseWindowControls from "../../components/base/BaseWindowControls.vue"
 import DeckDetail from "../../components/deck/DeckDetail.vue"
-import DeckRegions from "../../components/deck/DeckRegions.vue"
 import DeckEncoder from "../../modules/runeterra/DeckEncoder"
+import MatchOppoInfo from "../../components/match/MatchOppoInfo.vue"
+import DeckRegions from "../../components/deck/DeckRegions.vue"
 import Card from "../../modules/runeterra/Card"
 
 import { useStore, mapActions, mapState } from "pinia"
@@ -182,7 +182,6 @@ import TrackerLayer from "../../components/tracker/TrackerLayer.vue"
 import { useLeaderboardStore } from "../../store/StoreLeaderboard"
 import { useBaseStore } from "../../store/StoreBase"
 import TrackerDeckLib from "../../components/tracker/TrackerDeckLib.vue"
-import { nextTick } from "vue"
 
 const requestDataWaitTime = 100 // ms
 const requestServerWaitTime = 3000 //ms
@@ -213,7 +212,7 @@ var lastTrackTime, lastServerRequestTime, lastStatusRequestTime
 export default {
   components: {
     BaseWindowControls,
-    MatchOppoInfo,
+    // MatchOppoInfo,
     DeckDetail,
     TrackerDeckLib,
   },
@@ -548,7 +547,7 @@ export default {
           console.log("Track Info:", trackOppoName)
           this.oppoName = trackOppoName
 
-          this.requestOppoInfo()
+          // this.requestOppoInfo()
           this.makeWindowVisible()
         }
       } else {
