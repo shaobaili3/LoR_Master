@@ -1,6 +1,6 @@
 <template>
   <div
-    class="group relative mt-1 flex h-9 max-w-[320px] items-center justify-between rounded-md"
+    class="group relative mt-1 flex h-7 max-w-[320px] items-center justify-between rounded-md text-sm 2xs:h-9 2xs:text-base"
     :class="{
       empty: card.count == 0,
       spell: card.typeRef == 'Spell',
@@ -17,7 +17,7 @@
   >
     <div
       v-if="!noCost"
-      class="cardName flex h-full w-7 items-center justify-center rounded-md"
+      class="cardName flex h-full w-6 items-center justify-center rounded-md 2xs:w-7"
       :class="{
         'bg-gold-500': card.typeRef == 'Champion',
         'bg-[#4a6871] text-cyan-50': card.typeRef != 'Champion',
@@ -25,12 +25,14 @@
     >
       {{ card.cost }}
     </div>
-    <div class="cardName flex-1 overflow-hidden text-ellipsis whitespace-nowrap pl-2 text-left">
+    <div
+      class="cardName flex-1 overflow-hidden text-ellipsis whitespace-nowrap pl-1 text-left 2xs:pl-2"
+    >
       {{ card.name }}
     </div>
     <div
       v-if="card.count != null && card.count >= 0"
-      class="cardName flex h-full w-7 items-center justify-center rounded-r-md bg-gray-400"
+      class="cardName flex h-full w-6 items-center justify-center rounded-r-md bg-gray-400 2xs:w-7"
     >
       x{{ card.count }}
     </div>
