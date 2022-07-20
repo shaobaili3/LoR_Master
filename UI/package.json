@@ -69,7 +69,7 @@
     "babel-eslint": "^10.1.0",
     "chinese-conv": "^1.0.1",
     "electron": "^15.1.0",
-    "electron-builder": "^22.11.7",
+    "electron-builder": "^23.1.0",
     "electron-packager": "^15.2.0",
     "eslint-plugin-vue": "^9.2.0",
     "postcss": "^8.4.5",
@@ -81,8 +81,7 @@
     "tailwindcss": "^3.0.7"
   },
   "overrides": {
-    "terser": "5.14.2",
-    "got": "12.1.0"
+    "terser": "5.14.2"
   },
   "browserslist": [
     "> 1%",
