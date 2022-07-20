@@ -4,7 +4,7 @@ module.exports = {
   content: ["./src/components/**/*.vue", "./src/pages/**/*.vue", "./src/directives/**/*.js"],
   theme: {
     screens: {
-      "2xs": "191px",
+      "2xs": "190px",
       xs: "240px",
       ...defaultTheme.screens,
     },

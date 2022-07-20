@@ -1,0 +1,147 @@
+import { getDecodedDeck } from "./getDecodedDeck"
+import { useBaseStore } from "../store/StoreBase"
+import { regionNames, regionRefID } from "./constants"
+// import { championCards } from "../assets/data/champion"
+
+const getFactions = (code) => {
+  const baseStore = useBaseStore()
+  var cards = getDecodedDeck(code)
+  if (!cards) return null
+
+  const getChampFactions = () => {
+    var champFactions = []
+    for (var j in cards) {
+      // First loop to get missing regions
+      var card = baseStore.sets_en[cards[j].code]
+      if (
+        card &&
+        card.rarityRef == "Champion" &&
+        card.regions &&
+        card.regions.length == 1 &&
+        card.collectible
+      ) {
+        // Only considers mono region cards
+        var regionID = regionRefID[card.regionRefs[0]]
+
+        if (card.name == "Bard") {
+          regionID = regionRefID.Bard
+        } else if (card.name == "Jhin") {
+          regionID = regionRefID.Jhin
+        } else if (card.name == "Evelynn") {
+          regionID = regionRefID.Evelynn
+        }
+
+        if (champFactions.indexOf(regionID) == -1) {
+          champFactions.push(regionID)
+        }
+      }
+    }
+    return champFactions
+  }
+
+  var factionIDs = getChampFactions()
+
+  if (factionIDs.length == 2) {
+    // Got the 2 regions needed from champ
+    return factionIDs.sort((a, b) => a - b)
+  }
+
+  const getFollowerFactionsBard = () => {
+    for (var j in cards) {
+      // Second loop to get followerFactions
+      var card = baseStore.sets_en[cards[j].code]
+      if (
+        card &&
+        card.rarityRef != "Champion" &&
+        card.regions &&
+        card.regions.length == 1 &&
+        !card.description.includes("card.chime") &&
+        card.collectible
+      ) {
+        // Filters champion & card that plants chime
+        // Only considers mono region cards
+        var regionID = regionRefID[card.regionRefs[0]]
+        if (factionIDs.indexOf(regionID) == -1) {
+          factionIDs.push(regionID)
+        }
+      }
+    }
+  }
+
+  const getFollowerFactionsJhin = () => {
+    for (var j in cards) {
+      // Second loop to get follower Factions
+      var card = baseStore.sets_en[cards[j].code]
+      if (
+        card &&
+        card.rarityRef != "Champion" &&
+        card.regions &&
+        card.regions.length == 1 &&
+        !card.description.includes("keyword.AttackSkillMark") &&
+        !card.description.includes("keyword.PlaySkillMark") &&
+        !card.description.includes("card.skill") &&
+        card.collectible
+      ) {
+        // Filters champion & card that play a skill
+        // Only considers mono region cards
+        var regionID = regionRefID[card.regionRefs[0]]
+        if (factionIDs.indexOf(regionID) == -1) {
+          factionIDs.push(regionID)
+        }
+      }
+    }
+  }
+
+  const getFollowerFactionsEvelynn = () => {
+    for (var j in cards) {
+      // Second loop to get follower Factions
+      var card = baseStore.sets_en[cards[j].code]
+      if (
+        card &&
+        card.rarityRef != "Champion" &&
+        card.regions &&
+        card.regions.length == 1 &&
+        !card.description.toLowerCase().includes("summon a random husk") &&
+        card.collectible
+      ) {
+        // Filters champion & card that summons a random husk
+        // Only considers mono region cards
+        var regionID = regionRefID[card.regionRefs[0]]
+        if (factionIDs.indexOf(regionID) == -1) {
+          factionIDs.push(regionID)
+        }
+      }
+    }
+  }
+
+  if (factionIDs.includes(regionRefID.Bard)) {
+    getFollowerFactionsBard()
+  } else if (factionIDs.includes(regionRefID.Jhin)) {
+    getFollowerFactionsJhin()
+  } else if (factionIDs.includes(regionRefID.Evelynn)) {
+    getFollowerFactionsEvelynn()
+  } else {
+    for (var j in cards) {
+      // Second loop to get follower Factions
+      var card = baseStore.sets_en[cards[j].code]
+      if (
+        card &&
+        card.rarityRef != "Champion" &&
+        card.regions &&
+        card.regions.length == 1 &&
+        card.collectible
+      ) {
+        // Filters champion
+        // Only considers mono region cards
+        var regionID = regionRefID[card.regionRefs[0]]
+        if (factionIDs.indexOf(regionID) == -1) {
+          factionIDs.push(regionID)
+        }
+      }
+    }
+  }
+
+  return factionIDs.sort((a, b) => a - b)
+}
+
+export default getFactions

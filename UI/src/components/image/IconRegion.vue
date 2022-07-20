@@ -17,9 +17,10 @@ export default {
   },
   computed: {
     getRegionImgUrl() {
-      if (this.faction == 99) {
+      if (this.faction == 99 || this.faction >= 12) {
         return require("../../assets/images/regions/no-region2.png")
       }
+
       // Remote
       // const regionImageBaseUrl = 'https://painttist.github.io/lor-champ-icons/images/regions/';
       // return "url(" + regionImageBaseUrl + regionID + ".svg)";

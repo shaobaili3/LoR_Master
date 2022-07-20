@@ -7,7 +7,7 @@
       <div class="flex gap-2" v-if="getCard">
         <IconChampion
           v-if="getCard.supertype != '' || getCard.rarityRef == 'Champion'"
-          class="block h-6 w-6 rounded-full bg-cover"
+          class="block h-6 w-[1.5em] rounded-full bg-cover"
           :customClass="true"
           :code="getCard.cardCode"
         ></IconChampion>
@@ -41,7 +41,7 @@ import { defineProps, defineEmits, computed } from "vue"
 import CardPreview from "../deck/CardPreview.vue"
 import { useBaseStore } from "../../store/StoreBase"
 
-import { factionNames } from "../panels/PanelDeckCode.vue"
+import { factionNames } from "../../modules/constants.js"
 import RegionIcon from "../image/IconRegion.vue"
 import IconChampion from "../image/IconChampion.vue"
 import IconRegion from "../image/IconRegion.vue"

@@ -110,7 +110,7 @@ import MetaFilterTags, { TAG_TYPES } from "./MetaFilterTags.vue"
 import { useBaseStore } from "../../store/StoreBase"
 import CardPreview from "../deck/CardPreview.vue"
 
-import { factionNames } from "../panels/PanelDeckCode.vue"
+import { factionNames } from "../../modules/constants.js"
 import IconRegion from "../image/IconRegion.vue"
 
 const baseStore = useBaseStore()

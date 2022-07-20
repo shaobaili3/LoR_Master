@@ -635,7 +635,7 @@ function newDeckWindow() {
     deckWindow.loadURL(`file://${__dirname}/dist/deck.html`)
   }
 
-  deckWindow.setAlwaysOnTop(true, (level = "pop-up-menu"))
+  deckWindow.setAlwaysOnTop(true, "pop-up-menu")
   deckWindow.on("closed", () => {
     deckWindow = null
   })
@@ -705,7 +705,7 @@ function newInfoWindow() {
   infoWindow.loadURL(`file://${__dirname}/dist/info.html`)
   // console.log("Is development?", process.env.NODE_ENV === 'development')
 
-  infoWindow.setAlwaysOnTop(true, (level = "pop-up-menu"))
+  infoWindow.setAlwaysOnTop(true, "pop-up-menu")
   infoWindow.on("closed", () => {
     infoWindow = null
   })

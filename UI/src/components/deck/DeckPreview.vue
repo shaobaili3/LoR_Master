@@ -3,7 +3,7 @@
     class="flex cursor-pointer items-center justify-center rounded-md transition-colors"
     @click="showDeck"
   >
-    <deck-regions :deck="deck"></deck-regions>
+    <deck-regions v-if="deck" :deck="deck"></deck-regions>
     <deck-champs :deck="deck"></deck-champs>
   </div>
 </template>

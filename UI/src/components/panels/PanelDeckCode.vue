@@ -76,56 +76,6 @@
   </div>
 </template>
 
-<script>
-export const regionRefID = {
-  Demacia: 0,
-  Freljord: 1,
-  Ionia: 2,
-  Noxus: 3,
-  PiltoverZaun: 4,
-  ShadowIsles: 5,
-  Bilgewater: 6,
-  Shurima: 7,
-  Targon: 9,
-  BandleCity: 10,
-  Runeterra: 12,
-  Bard: 13,
-  Jhin: 14,
-}
-
-export const regionNames = {
-  0: "faction_Demacia_Name",
-  1: "faction_Freljord_Name",
-  2: "faction_Ionia_Name",
-  3: "faction_Noxus_Name",
-  4: "faction_Piltover_Name",
-  5: "faction_ShadowIsles_Name",
-  6: "faction_Bilgewater_Name",
-  7: "faction_Shurima_Name",
-  9: "faction_MtTargon_Name",
-  10: "faction_BandleCity_Name",
-  12: "faction_Runeterra_Name",
-  13: "faction_Bard_Name",
-  14: "faction_Jhin_Name",
-}
-
-export const factionNames = {
-  0: "Demacia",
-  1: "Freljord",
-  2: "Ionia",
-  3: "Noxus",
-  4: "Piltover",
-  5: "Shadow Isles",
-  6: "Bilgewater",
-  7: "Shurima",
-  9: "Mt Targon",
-  10: "Bandle City",
-  12: "Runeterra",
-  13: "Bard",
-  14: "Jhin",
-}
-</script>
-
 <script setup>
 import { ref, onMounted, defineProps, computed } from "vue"
 import DeckEncoder from "../../modules/runeterra/DeckEncoder"
