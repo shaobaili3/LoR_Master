@@ -1,5 +1,5 @@
 <template>
-  <div class="flex h-full max-w-[290px] flex-col pt-[35px] text-white 2xs:pt-[45px]">
+  <div class="flex h-full max-w-[290px] flex-col pt-[45px] text-white">
     <base-window-controls
       :canClose="false"
       :canShrink="true"

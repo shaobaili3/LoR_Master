@@ -1,9 +1,9 @@
 <template>
   <!-- Top Bar BG -->
-  <div class="fixed left-0 top-0 z-[2] h-[35px] w-full bg-gray-900 2xs:h-[45px]"></div>
+  <div class="fixed left-0 top-0 z-[2] h-[45px] w-full bg-gray-900"></div>
   <!-- Might need to add some margin for resize capabilities -->
   <div
-    class="can-drag fixed top-0 left-0 z-[100] mt-[2px] flex h-[33px] w-full items-center justify-end bg-gray-900 2xs:h-[43px]"
+    class="can-drag fixed top-0 left-0 z-[100] mt-[2px] flex h-[43px] w-full items-center justify-end bg-gray-900"
   >
     <!-- Back Button -->
     <div
