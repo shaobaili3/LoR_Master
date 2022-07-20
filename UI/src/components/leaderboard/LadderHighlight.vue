@@ -86,7 +86,7 @@
 
 <script setup>
 import DeckPreview from "../deck/DeckPreview.vue"
-import { ref, defineEmits, defineProps, computed } from "vue"
+import { ref, computed } from "vue"
 import { useLeaderboardStore } from "../../store/StoreLeaderboard"
 
 import { REGION_SHORTS } from "../panels/PanelLeaderboard.vue"

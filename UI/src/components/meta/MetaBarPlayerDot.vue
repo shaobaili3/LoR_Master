@@ -46,7 +46,6 @@
 </template>
 
 <script setup>
-import { defineProps } from "vue"
 import { winRateToColor } from "../../modules/utils/colorUtils"
 import { regionNameToShorts } from "../panels/PanelLeaderboard.vue"
 

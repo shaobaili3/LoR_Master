@@ -28,12 +28,12 @@
 </template>
 
 <script setup>
-import { defineProps, computed } from "vue"
+import { computed } from "vue"
 
 import { getLeaderboardFromPlayer } from "../match/PlayerMatches.vue"
 import { regionNameToShorts } from "../panels/PanelLeaderboard.vue"
 import { getRegionFaGlobeClass } from "./SearchBookmark.vue"
-import { format, formatDistanceStrict } from "date-fns"
+import { formatDistanceStrict } from "date-fns"
 import { dateFNSLocales } from "../../assets/data/messages"
 
 const props = defineProps({
@@ -53,9 +53,9 @@ const region = computed(() => {
   return regionNameToShorts(props.player.server)
 })
 
-const obscureTag = computed(() => {
-  return (
-    "# " + "• ".repeat(props.player.tag.length - 1) + props.player.tag[props.player.tag.length - 1]
-  )
-})
+// const obscureTag = computed(() => {
+//   return (
+//     "# " + "• ".repeat(props.player.tag.length - 1) + props.player.tag[props.player.tag.length - 1]
+//   )
+// })
 </script>

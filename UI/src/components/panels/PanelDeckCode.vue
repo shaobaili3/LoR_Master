@@ -77,7 +77,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, defineProps, computed } from "vue"
+import { ref, onMounted, computed } from "vue"
 import DeckEncoder from "../../modules/runeterra/DeckEncoder"
 import CardPreview from "../deck/CardPreview.vue"
 import DeckDetail from "../deck/DeckDetail.vue"

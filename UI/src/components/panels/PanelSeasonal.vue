@@ -128,9 +128,8 @@
 </template>
 
 <script setup>
+import { getDecodedDeck } from "../../modules/getDecodedDeck"
 import MetaGroup from "../meta/MetaGroup.vue"
-
-import { getDecodedDeck } from "./PanelMeta.vue"
 import { formatDistanceStrict, formatDuration } from "date-fns"
 
 import { useMetaStore, timeOptionsUrl, regionOptionsUrl } from "../../store/StoreMeta"

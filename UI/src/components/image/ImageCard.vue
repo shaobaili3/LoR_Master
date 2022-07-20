@@ -3,7 +3,7 @@
 </template>
 
 <script setup>
-import { computed, defineProps } from "vue"
+import { computed } from "vue"
 import { useBaseStore } from "../../store/StoreBase"
 
 const cardDisplayUrlBase = "https://dd.b.pvp.net/latest/"

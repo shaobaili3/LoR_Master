@@ -162,26 +162,12 @@
 </template>
 
 <script>
-import DeckEncoder from "../../modules/runeterra/DeckEncoder"
 import { useBaseStore } from "../../store/StoreBase"
 import { regionNames, regionRefID } from "../../modules/constants.js"
 import { championCards } from "../../assets/data/champion"
 
 import getFactions from "../../modules/getFactions"
-
-export const getDecodedDeck = (code) => {
-  var deck = null
-  if (code) {
-    try {
-      deck = DeckEncoder.decode(code)
-    } catch (error) {
-      console.log(error)
-      if (error.message) console.log(error.message)
-      return null
-    }
-  }
-  return deck
-}
+import { getDecodedDeck } from "../../modules/getDecodedDeck"
 
 export const getChamps = (code) => {
   const baseStore = useBaseStore()

@@ -1,7 +1,7 @@
 <template>
   <region-icon
     class=""
-    v-for="(faction, index) in getFactions(props.deck)"
+    v-for="(faction, index) in getFactionsFixed(props.deck)"
     :key="index"
     :faction="faction"
   ></region-icon>
@@ -9,10 +9,8 @@
 
 <script setup>
 import RegionIcon from "../image/IconRegion.vue"
-// import { getFactions } from "../panels/PanelMeta.vue"
 import getFactions from "../../modules/getFactions"
 
-// import { defineProps } from "vue"
 const props = defineProps({
   deck: {
     type: String,
@@ -27,6 +25,18 @@ const props = defineProps({
     default: true,
   },
 })
+
+const getFactionsFixed = (code) => {
+  var factions = getFactions(code)
+  if (props.fixedWidth) {
+    // Add filler champ icons
+    var fillerIcons = props.maxFactions - factions.length
+    for (let i = 0; i < fillerIcons; i++) {
+      factions.push(99)
+    }
+  }
+  return factions
+}
 
 // console.log(props)
 </script>

@@ -104,7 +104,7 @@ export const getTypeRefFromCard = (card) => {
 </script>
 
 <script setup>
-import { ref, defineEmits, computed, defineProps, toRefs, onMounted } from "vue"
+import { ref, computed, onMounted } from "vue"
 import MetaFilterTags, { TAG_TYPES } from "./MetaFilterTags.vue"
 
 import { useBaseStore } from "../../store/StoreBase"

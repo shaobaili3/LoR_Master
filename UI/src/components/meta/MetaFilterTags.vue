@@ -37,7 +37,7 @@ export default {}
 </script>
 
 <script setup>
-import { defineProps, defineEmits, computed } from "vue"
+import { defineEmits, computed } from "vue"
 import CardPreview from "../deck/CardPreview.vue"
 import { useBaseStore } from "../../store/StoreBase"
 

@@ -1,7 +1,6 @@
 import { getDecodedDeck } from "./getDecodedDeck"
 import { useBaseStore } from "../store/StoreBase"
-import { regionNames, regionRefID } from "./constants"
-// import { championCards } from "../assets/data/champion"
+import { regionRefID } from "./constants"
 
 const getFactions = (code) => {
   const baseStore = useBaseStore()

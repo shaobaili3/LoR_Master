@@ -33,7 +33,7 @@ export const getRegionFaGlobeClass = (regionShort) => {
 </script>
 
 <script setup>
-import { defineProps, computed } from "vue"
+import { computed } from "vue"
 import { getLeaderboardFromPlayer } from "../match/PlayerMatches.vue"
 
 import { router } from "../../pages/home/main"
