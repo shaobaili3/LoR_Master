@@ -21,17 +21,12 @@
       "nameRef": "SunDiscRestore"
     },
     {
-      "description": "Attacking with a support unit will buff the unit to its right.",
-      "name": "Support",
-      "nameRef": "Support"
-    },
-    {
       "description": "Effect when unit strikes with an attack",
       "name": "Attack Strike",
       "nameRef": "AttackStrike"
     },
     {
-      "description": "Summon a 1|1 Tentacle or, if you already have one, give it +1|+1 for each Spawn.",
+      "description": "For each Spawn:\nSummon a 1|1 Tentacle, or if you already have one, grant your strongest Tentacle +1|+1.",
       "name": "Spawn",
       "nameRef": "Spawn"
     },
@@ -156,11 +151,6 @@
       "nameRef": "Manifest"
     },
     {
-      "description": "A card triggers its plunder ability when played if you damaged the enemy Nexus this round.",
-      "name": "Plunder",
-      "nameRef": "Plunder"
-    },
-    {
       "description": "Pick a card from among 3 in your deck. Shuffle the deck and put that card on top.",
       "name": "Predict",
       "nameRef": "Predict"
@@ -208,7 +198,7 @@
       "nameRef": "Shurima"
     },
     {
-      "description": "Play me on an ally to give it my stats and keywords while I'm attached. When that ally leaves play, Recall me.",
+      "description": "Attach me to an ally to give it my stats and keywords while I'm attached. When that ally leaves play, Recall me.",
       "name": "Attach",
       "nameRef": "Attach"
     },
@@ -221,6 +211,11 @@
       "description": "Fleeting cards discard from hand when the round ends.",
       "name": "Fleeting",
       "nameRef": "Fleeting"
+    },
+    {
+      "description": "Missing Translation",
+      "name": "Missing Translation",
+      "nameRef": "ClobberNoEmptySlotRequirement"
     },
     {
       "description": "Draw a non-champion card from the bottom of the enemy deck.",
@@ -303,6 +298,11 @@
       "nameRef": "Weakest"
     },
     {
+      "description": "Attacking with a support unit will buff the unit to its right.",
+      "name": "Support",
+      "nameRef": "Support"
+    },
+    {
       "description": "Can be played outside of combat when no spells or skills are pending. Happens after your opponent has a chance to react.",
       "name": "Slow",
       "nameRef": "Slow"
@@ -364,6 +364,11 @@
     },
     {
       "description": "Missing Translation",
+      "name": "Blocks Elusive",
+      "nameRef": "BlocksElusive"
+    },
+    {
+      "description": "Missing Translation",
       "name": "Missing Translation",
       "nameRef": "SilenceIndividualKeyword"
     },
@@ -371,6 +376,11 @@
       "description": "A unit's spell-like effect that allows enemy reactions.",
       "name": "Skill",
       "nameRef": "Skill"
+    },
+    {
+      "description": "A card triggers its plunder ability when played if you damaged the enemy Nexus this round.",
+      "name": "Plunder",
+      "nameRef": "Plunder"
     },
     {
       "description": "While attacking, it strikes both before AND at the same time as its blocker.",
@@ -398,11 +408,6 @@
       "nameRef": "Fated"
     },
     {
-      "description": "Missing Translation",
-      "name": "Can block Elusives",
-      "nameRef": "BlockElusive"
-    },
-    {
       "description": "When I kill a unit, grant me +1|+1.",
       "name": "Fury",
       "nameRef": "Fury"
@@ -416,6 +421,16 @@
       "description": "Can't attack or block.",
       "name": "Immobile",
       "nameRef": "Immobile"
+    },
+    {
+      "description": "After I die, for the rest of the game when allies attack, hallow your first attacker giving it +1|+0 that round",
+      "name": "Hallowed",
+      "nameRef": "Hallowed"
+    },
+    {
+      "description": "I have +2|+2 once you've had Units with 6+ other unique positive keywords in play this game.",
+      "name": "Evolve",
+      "nameRef": "Evolve"
     },
     {
       "description": "Set a unit's Power to 0 this round. It can be changed after.",
@@ -511,79 +526,85 @@
   "regions": [
     {
       "abbreviation": "NX",
-      "iconAbsolutePath": "http://dd.b.pvp.net/3_8_0/core/en_us/img/regions/icon-noxus.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/3_12_0/core/en_us/img/regions/icon-noxus.png",
       "name": "Noxus",
       "nameRef": "Noxus"
     },
     {
       "abbreviation": "DE",
-      "iconAbsolutePath": "http://dd.b.pvp.net/3_8_0/core/en_us/img/regions/icon-demacia.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/3_12_0/core/en_us/img/regions/icon-demacia.png",
       "name": "Demacia",
       "nameRef": "Demacia"
     },
     {
       "abbreviation": "Jhin",
-      "iconAbsolutePath": "http://dd.b.pvp.net/3_8_0/core/en_us/img/regions/icon-jhin.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/3_12_0/core/en_us/img/regions/icon-jhin.png",
       "name": "Jhin",
       "nameRef": "Jhin"
     },
     {
+      "abbreviation": "Evelynn",
+      "iconAbsolutePath": "http://dd.b.pvp.net/3_12_0/core/en_us/img/regions/icon-evelynn.png",
+      "name": "Evelynn",
+      "nameRef": "Evelynn"
+    },
+    {
       "abbreviation": "Bard",
-      "iconAbsolutePath": "http://dd.b.pvp.net/3_8_0/core/en_us/img/regions/icon-bard.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/3_12_0/core/en_us/img/regions/icon-bard.png",
       "name": "Bard",
       "nameRef": "Bard"
     },
     {
       "abbreviation": "RU",
-      "iconAbsolutePath": "http://dd.b.pvp.net/3_8_0/core/en_us/img/regions/icon-runeterra.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/3_12_0/core/en_us/img/regions/icon-runeterra.png",
       "name": "Runeterra",
       "nameRef": "Runeterra"
     },
     {
       "abbreviation": "FR",
-      "iconAbsolutePath": "http://dd.b.pvp.net/3_8_0/core/en_us/img/regions/icon-freljord.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/3_12_0/core/en_us/img/regions/icon-freljord.png",
       "name": "Freljord",
       "nameRef": "Freljord"
     },
     {
       "abbreviation": "SI",
-      "iconAbsolutePath": "http://dd.b.pvp.net/3_8_0/core/en_us/img/regions/icon-shadowisles.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/3_12_0/core/en_us/img/regions/icon-shadowisles.png",
       "name": "Shadow Isles",
       "nameRef": "ShadowIsles"
     },
     {
       "abbreviation": "MT",
-      "iconAbsolutePath": "http://dd.b.pvp.net/3_8_0/core/en_us/img/regions/icon-targon.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/3_12_0/core/en_us/img/regions/icon-targon.png",
       "name": "Targon",
       "nameRef": "Targon"
     },
     {
       "abbreviation": "IO",
-      "iconAbsolutePath": "http://dd.b.pvp.net/3_8_0/core/en_us/img/regions/icon-ionia.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/3_12_0/core/en_us/img/regions/icon-ionia.png",
       "name": "Ionia",
       "nameRef": "Ionia"
     },
     {
       "abbreviation": "SH",
-      "iconAbsolutePath": "http://dd.b.pvp.net/3_8_0/core/en_us/img/regions/icon-shurima.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/3_12_0/core/en_us/img/regions/icon-shurima.png",
       "name": "Shurima",
       "nameRef": "Shurima"
     },
     {
       "abbreviation": "BW",
-      "iconAbsolutePath": "http://dd.b.pvp.net/3_8_0/core/en_us/img/regions/icon-bilgewater.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/3_12_0/core/en_us/img/regions/icon-bilgewater.png",
       "name": "Bilgewater",
       "nameRef": "Bilgewater"
     },
     {
       "abbreviation": "PZ",
-      "iconAbsolutePath": "http://dd.b.pvp.net/3_8_0/core/en_us/img/regions/icon-piltoverzaun.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/3_12_0/core/en_us/img/regions/icon-piltoverzaun.png",
       "name": "Piltover & Zaun",
       "nameRef": "PiltoverZaun"
     },
     {
       "abbreviation": "BC",
-      "iconAbsolutePath": "http://dd.b.pvp.net/3_8_0/core/en_us/img/regions/icon-bandlecity.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/3_12_0/core/en_us/img/regions/icon-bandlecity.png",
       "name": "Bandle City",
       "nameRef": "BandleCity"
     }
@@ -626,37 +647,37 @@
   ],
   "sets": [
     {
-      "iconAbsolutePath": "http://dd.b.pvp.net/3_8_0/core/en_us/img/sets/set3_crispmip.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/3_12_0/core/en_us/img/sets/set3_crispmip.png",
       "name": "Call of the Mountain",
       "nameRef": "Set3"
     },
     {
-      "iconAbsolutePath": "http://dd.b.pvp.net/3_8_0/core/en_us/img/sets/set5_crispmip.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/3_12_0/core/en_us/img/sets/set5_crispmip.png",
       "name": "Beyond the Bandlewood",
       "nameRef": "Set5"
     },
     {
-      "iconAbsolutePath": "http://dd.b.pvp.net/3_8_0/core/en_us/img/sets/set1_crispmip.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/3_12_0/core/en_us/img/sets/set1_crispmip.png",
       "name": "Foundations",
       "nameRef": "Set1"
     },
     {
-      "iconAbsolutePath": "http://dd.b.pvp.net/3_8_0/core/en_us/img/sets/set2_crispmip.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/3_12_0/core/en_us/img/sets/set2_crispmip.png",
       "name": "Rising Tides",
       "nameRef": "Set2"
     },
     {
-      "iconAbsolutePath": "http://dd.b.pvp.net/3_8_0/core/en_us/img/sets/set4_crispmip.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/3_12_0/core/en_us/img/sets/set4_crispmip.png",
       "name": "Empires of the Ascended",
       "nameRef": "Set4"
     },
     {
-      "iconAbsolutePath": "http://dd.b.pvp.net/3_8_0/core/en_us/img/sets/set6ab_crispmip.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/3_12_0/core/en_us/img/sets/set6ab_crispmip.png",
       "name": "Worldwalker",
       "nameRef": "Set6"
     },
     {
-      "iconAbsolutePath": "http://dd.b.pvp.net/3_8_0/core/en_us/img/sets/setevent_crispmip.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/3_12_0/core/en_us/img/sets/setevent_crispmip.png",
       "name": "Events",
       "nameRef": "SetEvent"
     }
