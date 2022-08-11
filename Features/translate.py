@@ -86,7 +86,7 @@ def detect():
     print(lorBinPath)
     #shutil.copy(lorChineseBinPath, lorBinPath)
     while True:
-        finalPath = lorBinPath + c.DefaultLanguage.lower().replace('-', '_') + '.bin'
+        finalPath = lorBinPath + c.DEFAULT_LANGUAGE.lower().replace('-', '_') + '.bin'
         if hash(finalPath) != hash(
                 lorChineseBinPath):  #一旦检查到游戏的汉化文件和我们替换的汉化文件不相等（因为被游戏客户端修正了）            
             print(finalPath)

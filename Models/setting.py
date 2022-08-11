@@ -16,6 +16,6 @@ class Setting():
         self.port = c.PORT_IP
         self.riotServer = 'americas'
         self.playerId = ''
-        self.language = c.DefaultLanguage
+        self.language = c.DEFAULT_LANGUAGE
         self.isLorRunning = False
         self.isLocalApiEnable = True

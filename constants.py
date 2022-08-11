@@ -1,8 +1,8 @@
 from pathlib import Path
 from appdirs import user_data_dir
 import os
-PORT_IP = '21337'
 
+PORT_IP = '21337'
 LOCAL_MATCH = '/positional-rectangles'
 LOCAL_DECK = '/static-decklist'
 LOCAL_RESULT = '/game-result'
@@ -16,12 +16,10 @@ MAX_NUM_INSPECT = 10
 MAX_NUM_TRACK = 10
 MAX_NUM_ALL = 20
 
-DefaultLanguage = 'en-US'
+DEFAULT_LANGUAGE = 'en-US'
 
 UNSUPPORTED_MODE = ['Expeditions', 'Mods_URF', 'Power2', 'Mods_Power_1', 'Power_4']
 UNSUPPORTED_TYPE = ['AI']
-# temp remove AI for debug
-# UNSUPPORTED_TYPE = []
 SUPPORTED_MODE = ['SeasonalTournamentLobby',
                   'LastCallQualifierGauntletLobby', 'Bo3ChallengeLobby', 'StandardGauntlet', 'Constructed']
 
