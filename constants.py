@@ -10,11 +10,8 @@ IP_KEY = 'http://127.0.0.1:'
 
 LEADERBOARD_KEY = '.api.riotgames.com/lor/ranked/v1/leaderboards/'
 VERSION_NUM = 'v0.12.13'
-SERVER_NUM = 'v2.0'
+SERVER_NUM = 'v3.0'
 DISPLAY_TITLE = 'LoR Master Tracker'
-MAX_NUM_INSPECT = 10
-MAX_NUM_TRACK = 10
-MAX_NUM_ALL = 20
 
 DEFAULT_LANGUAGE = 'en-US'
 
