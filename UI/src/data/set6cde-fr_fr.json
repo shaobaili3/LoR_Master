@@ -1,0 +1,4724 @@
+[
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU005T3",
+      "06RU005T6",
+      "06RU005T4",
+      "06RU005T8",
+      "06RU005T2",
+      "06RU005T11",
+      "06RU005T1",
+      "06RU005T10"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06RU005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06RU005-full.png"
+      }
+    ],
+    "regions": [
+      "Runeterra"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 2,
+    "cost": 5,
+    "health": 5,
+    "description": "<link=vocab.Origin><style=Vocab>Origine</style></link> : <link=card.origin><style=AssociatedCard>Faucheur de l'ombre</style></link>.\r\n<link=vocab.AutoEquip><style=Vocab>Équipement auto.</style></link> : <link=card.equipment><style=AssociatedCard>Faux des Darkin</style></link>.\r\nQuand je tue un ennemi, rendez-moi 2 PV.",
+    "descriptionRaw": "Origine : Faucheur de l'ombre.\r\nÉquipement auto. : Faux des Darkin.\r\nQuand je tue un ennemi, rendez-moi 2 PV.",
+    "levelupDescription": "J'ai <link=vocab.Strike><style=Vocab>frappé</style></link> deux fois<style=Variable></style>. Quand je passe au niveau supérieur, <link=keyword.Recall><style=Keyword>rappelez</style></link>-moi.",
+    "levelupDescriptionRaw": "J'ai frappé deux fois. Quand je passe au niveau supérieur, rappelez-moi.",
+    "flavorText": "Alors qu'un autre corps tombait au sol, Kayn laissa échapper un rire jubilatoire. Il savait que bientôt, il allait libérer la deuxième arme Darkin qui se trouvait sous ses pieds. En son sein, Rhaast bouillait d'impatience. Il savait que bientôt, Kayn connaîtrait enfin sa perte.",
+    "artistName": "Kudos Productions",
+    "name": "Kayn",
+    "cardCode": "06RU005",
+    "keywords": [
+      "Challenger"
+    ],
+    "keywordRefs": [
+      "Challenger"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Champion",
+    "rarityRef": "Champion",
+    "subtypes": [
+      "DARKIN"
+    ],
+    "supertype": "Champion",
+    "type": "Unité",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU005"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06RU005T6.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06RU005T6-full.png"
+      }
+    ],
+    "regions": [
+      "Runeterra"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "Vous pouvez ajouter n'importe quelle carte zélote dans votre deck lors de la construction de celui-ci. Quand vous avez invoqué au moins 3 zélotes, piochez 1 <link=card.level1><style=AssociatedCard>Kayn</style></link>.",
+    "descriptionRaw": "Vous pouvez ajouter n'importe quelle carte zélote dans votre deck lors de la construction de celui-ci. Quand vous avez invoqué au moins 3 zélotes, piochez 1 Kayn.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Il n'y a que deux issues possibles : soit Kayn soumet Rhaast à sa volonté, soit Rhaast le consume.",
+    "artistName": "Kudos Productions",
+    "name": "Faucheur de l'ombre",
+    "cardCode": "06RU005T6",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Aucune",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Compétence",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU005",
+      "06RU005T2",
+      "06RU005T1",
+      "06RU005T11",
+      "06RU005T10",
+      "06RU005"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06RU005T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06RU005T3-full.png"
+      }
+    ],
+    "regions": [
+      "Runeterra"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "<link=vocab.Attack><style=Vocab>Attaque</style></link> : octroyez +1|+0 à <link=card.selfRef><style=AssociatedCard>Faux des Darkin</style></link>.",
+    "descriptionRaw": "Attaque : octroyez +1|+0 à Faux des Darkin.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« L'heure de la moisson a sonné ! »\n- Rhaast",
+    "artistName": "Kudos Productions",
+    "name": "Faux des Darkin",
+    "cardCode": "06RU005T3",
+    "keywords": [
+      "Équipement"
+    ],
+    "keywordRefs": [
+      "Equipment"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Aucune",
+    "rarityRef": "None",
+    "subtypes": [
+      "DARKIN"
+    ],
+    "supertype": "",
+    "type": "Équipement",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU005T4",
+      "06RU005T1",
+      "06RU005T2"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06RU005T8.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06RU005T8-full.png"
+      }
+    ],
+    "regions": [
+      "Runeterra"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 3,
+    "cost": 0,
+    "health": 6,
+    "description": "<link=vocab.Play><style=Vocab>Immédiat</style></link> : transformez-moi et toutes mes copies en <link=card.Rhaast><style=AssociatedCard>Rhaast</style></link> ou en <link=card.TheShadowAssassin><style=AssociatedCard>L'Assassin de l'ombre</style></link>.",
+    "descriptionRaw": "Immédiat : transformez-moi et toutes mes copies en Rhaast ou en L'Assassin de l'ombre.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Un éclair de colère féroce et soudain envahit Kayn, et une douleur fulgurante assaillit son crâne, le faisant tomber à genoux. Le rire triomphant de Rhaast résonnait tout autour de lui, moqueur et sans pitié. Kayn avait toujours su que ce jour viendrait : celui où il finirait par vaincre ou par succomber face au Darkin...",
+    "artistName": "Kudos Productions",
+    "name": "Kayn",
+    "cardCode": "06RU005T8",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Champion",
+    "rarityRef": "Champion",
+    "subtypes": [
+      "DARKIN"
+    ],
+    "supertype": "Champion",
+    "type": "Unité",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU005T10",
+      "06RU005T4",
+      "06RU005"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06RU005T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06RU005T1-full.png"
+      }
+    ],
+    "regions": [
+      "Runeterra"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 3,
+    "cost": 5,
+    "health": 6,
+    "description": "<link=vocab.AutoEquip><style=Vocab>Équipement auto.</style></link> : <link=card.equipment><style=AssociatedCard>Faux des ombres</style></link>.",
+    "descriptionRaw": "Équipement auto. : Faux des ombres.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Un pouvoir énorme coulait dans ses veines. Libéré de l'influence du Darkin, il pouvait désormais commander toute la puissance des ombres. Kayn rit, se glissant dans les ténèbres avant d'émerger un instant plus tard pour trancher silencieusement la gorge du garde devant lui.",
+    "artistName": "Kudos Productions",
+    "name": "L'Assassin de l'ombre",
+    "cardCode": "06RU005T1",
+    "keywords": [
+      "Insaisissable",
+      "Challenger"
+    ],
+    "keywordRefs": [
+      "Elusive",
+      "Challenger"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Aucune",
+    "rarityRef": "None",
+    "subtypes": [
+      "DARKIN"
+    ],
+    "supertype": "Champion",
+    "type": "Unité",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU005T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06RU005T10.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06RU005T10-full.png"
+      }
+    ],
+    "regions": [
+      "Runeterra"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "<link=vocab.Attack><style=Vocab>Attaque</style></link> : octroyez +2|+0 à <link=card.selfRef><style=AssociatedCard>Faux des ombres</style></link>.",
+    "descriptionRaw": "Attaque : octroyez +2|+0 à Faux des ombres.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "La colère de Kayn se transforma en un effrayant brasier au milieu des hurlements furieux de Rhaast. Son emprise sur le guerrier de l'ombre se dissipa, et lorsque Kayn se redressa, il sut que toute la puissance du Darkin était à sa disposition.",
+    "artistName": "Kudos Productions",
+    "name": "Faux des ombres",
+    "cardCode": "06RU005T10",
+    "keywords": [
+      "Équipement"
+    ],
+    "keywordRefs": [
+      "Equipment"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Aucune",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Équipement",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU005T4",
+      "06RU005T11",
+      "06RU005"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06RU005T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06RU005T2-full.png"
+      }
+    ],
+    "regions": [
+      "Runeterra"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 3,
+    "cost": 5,
+    "health": 6,
+    "description": "<link=vocab.AutoEquip><style=Vocab>Équipement auto.</style></link> : <link=card.equipment><style=AssociatedCard>Faux corrompue</style></link>.\r\nQuand je tue un ennemi, soignez-moi complètement et rendez 2 PV à votre Nexus.",
+    "descriptionRaw": "Équipement auto. : Faux corrompue.\r\nQuand je tue un ennemi, soignez-moi complètement et rendez 2 PV à votre Nexus.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Rhaast poussa un hurlement de triomphe. Après des années d'attente, de désir... il était enfin libre. Il souleva les lames de Xolaani et les porta à sa langue, savourant le goût du sang frais. Il ferma les yeux de bonheur, et un sourire se dessina sur son visage pour la première fois depuis des millénaires. L'heure de la moisson avait sonné.",
+    "artistName": "Kudos Productions",
+    "name": "Rhaast",
+    "cardCode": "06RU005T2",
+    "keywords": [
+      "Challenger",
+      "Surpuissance"
+    ],
+    "keywordRefs": [
+      "Challenger",
+      "Overwhelm"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Aucune",
+    "rarityRef": "None",
+    "subtypes": [
+      "DARKIN"
+    ],
+    "supertype": "Champion",
+    "type": "Unité",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU005T2"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06RU005T11.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06RU005T11-full.png"
+      }
+    ],
+    "regions": [
+      "Runeterra"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "<link=vocab.Equip><style=Vocab>Équiper</style></link> : <link=vocab.Attack><style=Vocab>Attaque</style></link> : octroyez +1|+1 à <link=card.selfRef><style=AssociatedCard>Faux corrompue</style></link>.",
+    "descriptionRaw": "Équiper : Attaque : octroyez +1|+1 à Faux corrompue.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Alors que Kayn cédait son esprit au Darkin, sa colère s'apaisa et un vide insupportable fut laissé à sa place. Le jeune guerrier n'était plus. Seul restait Rhaast.",
+    "artistName": "Kudos Productions",
+    "name": "Faux corrompue",
+    "cardCode": "06RU005T11",
+    "keywords": [
+      "Équipement"
+    ],
+    "keywordRefs": [
+      "Equipment"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Aucune",
+    "rarityRef": "None",
+    "subtypes": [
+      "DARKIN"
+    ],
+    "supertype": "",
+    "type": "Équipement",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU005",
+      "06RU005T1",
+      "06RU005T2"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06RU005T4.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06RU005T4-full.png"
+      }
+    ],
+    "regions": [
+      "Runeterra"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 4,
+    "health": 0,
+    "description": "Conférez <link=keyword.Quick Strike><sprite name=QuickStrike><style=Keyword>Frappe rapide</style></link> à <link=card.level1><style=AssociatedCard>Kayn</style></link> pour ce round. Il déclare une attaque gratuite et <link=keyword.Challenger><sprite name=Challenger><style=Keyword>défie</style></link> un ennemi.\r\nCréez 1 <link=card.level1><style=AssociatedCard>Kayn</style></link> dans votre deck.",
+    "descriptionRaw": "Conférez Frappe rapide à Kayn pour ce round. Il déclare une attaque gratuite et défie un ennemi.\r\nCréez 1 Kayn dans votre deck.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« La fuite est impossible ! » - Kayn",
+    "artistName": "Kudos Productions",
+    "name": "Passe-muraille de Kayn",
+    "cardCode": "06RU005T4",
+    "keywords": [
+      "Lent"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "Lent",
+    "spellSpeedRef": "Slow",
+    "rarity": "Aucune",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "Champion",
+    "type": "Sort",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06BW023.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06BW023-full.png"
+      }
+    ],
+    "regions": [
+      "Bilgewater"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "<link=keyword.Plunder><style=Keyword>Pillage</style></link> : mon coût est réduit de 2.",
+    "descriptionRaw": "Pillage : mon coût est réduit de 2.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« Comme dit le proverbe, rien de tel qu'un bon coup de sabre pour mettre fin à un différend à Bilgewater. »\n« Mis à part un pistolet. »\n« Ferme-la, Baz. »\n- Baz et Gav, chasseurs de prime en herbe.",
+    "artistName": "Kudos Productions",
+    "name": "Sabre dentelé",
+    "cardCode": "06BW023",
+    "keywords": [
+      "Équipement",
+      "Pillage"
+    ],
+    "keywordRefs": [
+      "Equipment",
+      "Plunder"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "COMMUN",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Équipement",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06NX026.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06NX026-full.png"
+      }
+    ],
+    "regions": [
+      "Noxus"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "",
+    "descriptionRaw": "",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Vessid n'est pas l'arénaire le plus rapide de Bordent, mais lorsque ses marteaux atteignent leurs cibles, ces dernières sont rarement en état de riposter.",
+    "artistName": "Kudos Productions",
+    "name": "Grands marteaux",
+    "cardCode": "06NX026",
+    "keywords": [
+      "Équipement",
+      "Surpuissance"
+    ],
+    "keywordRefs": [
+      "Equipment",
+      "Overwhelm"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "COMMUN",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Équipement",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06SH031"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06SH032.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06SH032-full.png"
+      }
+    ],
+    "regions": [
+      "Shurima"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "<link=keyword.Countdown><style=Keyword>Décompte de 2</style></link><style=Variable></style> : créez 1 <link=card.create><style=AssociatedCard>Trésor des sables</style></link> dans votre main.",
+    "descriptionRaw": "Décompte de 2 : créez 1 Trésor des sables dans votre main.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« Pourquoi il faut toujours que tu touches à tout ? »\n« Quoi, tu penses que c'est piégé ? Tu t'imagines qu'un énorme rocher va apparaître de nulle... »\n« COURS !! »\n- Argus et Silvio, pilleurs de tombes",
+    "artistName": "Michal Ivan ",
+    "name": "Armurerie ensevelie",
+    "cardCode": "06SH032",
+    "keywords": [
+      "Site",
+      "Décompte"
+    ],
+    "keywordRefs": [
+      "LandmarkVisualOnly",
+      "Countdown"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "COMMUN",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Site",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06SH031.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06SH031-full.png"
+      }
+    ],
+    "regions": [
+      "Shurima"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "",
+    "descriptionRaw": "",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« Repose ça, Silvio ! »\n« Pourquoi ? C'est pas comme si le pauvre bougre allait venir le réclamer ! »\n« Il y a certaines choses qu'il vaut mieux ne pas toucher. »\n- Argus et Silvio, pilleurs de tombes ",
+    "artistName": "Kudos Productions",
+    "name": "Trésor des sables",
+    "cardCode": "06SH031",
+    "keywords": [
+      "Équipement"
+    ],
+    "keywordRefs": [
+      "Equipment"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Aucune",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Équipement",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06MT033.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06MT033-full.png"
+      }
+    ],
+    "regions": [
+      "Targon"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 4,
+    "health": 0,
+    "description": "Mon détenteur est un dragon.",
+    "descriptionRaw": "Mon détenteur est un dragon.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Beaucoup font appel à la puissance des dragons, bien qu'elle se manifeste différemment à travers Runeterra. Ceux qui invoquent le pouvoir d'un dragon céleste peuvent découvrir qu'ils possèdent une force intérieure aussi brillante et brûlante qu'une étoile.",
+    "artistName": "Kudos Productions",
+    "name": "Brassards draconiques",
+    "cardCode": "06MT033",
+    "keywords": [
+      "Équipement",
+      "Fureur"
+    ],
+    "keywordRefs": [
+      "Equipment",
+      "Fury"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "COMMUN",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Équipement",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06SH040.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06SH040-full.png"
+      }
+    ],
+    "regions": [
+      "Shurima"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 0,
+    "cost": 5,
+    "health": 0,
+    "description": "Quand vous avez <link=vocab.Equip><style=Vocab>équipé</style></link> un allié lors de cette partie, mon coût est réduit de 2. Ranimez le champion allié mort <link=vocab.Strongest><style=Vocab>le plus fort</style></link>.",
+    "descriptionRaw": "Quand vous avez équipé un allié lors de cette partie, mon coût est réduit de 2. Ranimez le champion allié mort le plus fort.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« Tu ne mourras jamais. Je ne le permettrai pas. »\n- Xolaani",
+    "artistName": "Kudos Productions",
+    "name": "Résurrection insensée",
+    "cardCode": "06SH040",
+    "keywords": [
+      "Lent"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "Lent",
+    "spellSpeedRef": "Slow",
+    "rarity": "ÉPIQUE",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "ZÉLOTE"
+    ],
+    "supertype": "",
+    "type": "Sort",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06SH005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06SH005-full.png"
+      }
+    ],
+    "regions": [
+      "Shurima"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 2,
+    "cost": 1,
+    "health": 1,
+    "description": "<link=vocab.Play><style=Vocab>Immédiat</style></link> : <link=vocab.Predict><style=Vocab>faites une Prédiction</style></link>. Si vous choisissez un Darkin ou un équipement, octroyez-moi +1|+1.",
+    "descriptionRaw": "Immédiat : faites une Prédiction. Si vous choisissez un Darkin ou un équipement, octroyez-moi +1|+1.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Dans sa main, il tenait une ceinture tressée, un cadeau de son ami Rhaast avant leur cérémonie de Transfiguration. Mais même s'il vénérait le pouvoir des Darkin, son cœur bestial nourrissait un profond ressentiment.",
+    "artistName": "Kudos Productions",
+    "name": "Baccai esseulé",
+    "cardCode": "06SH005",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "COMMUN",
+    "rarityRef": "Common",
+    "subtypes": [
+      "ZÉLOTE"
+    ],
+    "supertype": "",
+    "type": "Unité",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06DE010.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06DE010-full.png"
+      }
+    ],
+    "regions": [
+      "Demacia"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 4,
+    "cost": 4,
+    "health": 3,
+    "description": "Quand vous avez <link=vocab.Equip><style=Vocab>équipé</style></link> un allié lors de cette partie, octroyez-moi <link=keyword.Scout><sprite name=Scout><style=Keyword>Éclaireur</style></link>.",
+    "descriptionRaw": "Quand vous avez équipé un allié lors de cette partie, octroyez-moi Éclaireur.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Des années passées à réprimer ses pouvoirs magiques avaient fait naître en elle une haine de soi incommensurable qu'elle déversait avec violence sur ses victimes. Après qu'elle eut déserté l'ordre des chevaliers-éclaireurs, sa fureur ne fit que grandir sans pouvoir se décharger, jusqu'à ce qu'une voix l'appelle depuis les ténèbres. La voix lui parla d'un nouvel ordre dans lequel elle pourrait être aussi cruelle que possible, sans que personne ne puisse lui barrer la route.",
+    "artistName": "Kudos Productions",
+    "name": "Chevalier-éclaireuse transfuge",
+    "cardCode": "06DE010",
+    "keywords": [
+      "Robuste"
+    ],
+    "keywordRefs": [
+      "Tough"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "RARE",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "ZÉLOTE"
+    ],
+    "supertype": "",
+    "type": "Unité",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06DE040.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06DE040-full.png"
+      }
+    ],
+    "regions": [
+      "Demacia"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "Choisissez un adepte ou un équipement parmi les 4 premières cartes de votre deck. Piochez-le et replacez le reste dans votre deck.\r\n",
+    "descriptionRaw": "Choisissez un adepte ou un équipement parmi les 4 premières cartes de votre deck. Piochez-le et replacez le reste dans votre deck.\r\n",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Des chuchotements doux et séduisants font naître le désir. Telle une écharde, il suppure et se transforme en appétit. L'appétit fait place au péché, qui à son tour entraîne la mort. Et ainsi le cycle continue.",
+    "artistName": "Kudos Productions",
+    "name": "Perspective séduisante",
+    "cardCode": "06DE040",
+    "keywords": [
+      "Instantané"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Instantané",
+    "spellSpeedRef": "Burst",
+    "rarity": "COMMUN",
+    "rarityRef": "Common",
+    "subtypes": [
+      "ZÉLOTE"
+    ],
+    "supertype": "",
+    "type": "Sort",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06IO034.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06IO034-full.png"
+      }
+    ],
+    "regions": [
+      "Ionia"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "Conférez +1|+0 ou +0|+1 à un allié pour ce round. Si vous avez <link=vocab.Equip><style=Vocab>équipé</style></link> un allié lors de cette partie, lancez ma copie sur la même cible.",
+    "descriptionRaw": "Conférez +1|+0 ou +0|+1 à un allié pour ce round. Si vous avez équipé un allié lors de cette partie, lancez ma copie sur la même cible.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Des larmes de rage roulèrent sur le visage de Jun alors qu'elle observait les corps jonchés au sol. Elle avait failli. Envers ses camarades, envers son maître. Il ne lui restait plus qu'une chose à faire désormais...",
+    "artistName": "Kudos Productions",
+    "name": "Choix capital",
+    "cardCode": "06IO034",
+    "keywords": [
+      "Instantané"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Instantané",
+    "spellSpeedRef": "Burst",
+    "rarity": "RARE",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "ZÉLOTE"
+    ],
+    "supertype": "",
+    "type": "Sort",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06NX020T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06NX020.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06NX020-full.png"
+      }
+    ],
+    "regions": [
+      "Noxus"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "Quand je suis <link=vocab.Equip><style=Vocab>équipée</style></link>, infligez 1 pt(s) de dégâts à votre Nexus.\r\nVous pouvez dépenser 8 pts de mana pour me jouer en tant que <link=card.unit><style=AssociatedCard>Naganeka de Zuretta</style></link>.",
+    "descriptionRaw": "Quand je suis équipée, infligez 1 pt(s) de dégâts à votre Nexus.\r\nVous pouvez dépenser 8 pts de mana pour me jouer en tant que Naganeka de Zuretta.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Les steppes de l'est de Valoran étaient connues pour être stériles, inaptes à nourrir ou à abriter le peuple noxii. Mais au fil des siècles, un nouvel empire avide d'expansion fut fondé. Les terres en friche retrouvèrent leur fertilité grâce à de nouvelles techniques agricoles, et des armes que l'on croyait enterrées à jamais furent exhumées.",
+    "artistName": "Kudos Productions",
+    "name": "Baliste des Darkin",
+    "cardCode": "06NX020",
+    "keywords": [
+      "Équipement"
+    ],
+    "keywordRefs": [
+      "Equipment"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ÉPIQUE",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "DARKIN"
+    ],
+    "supertype": "",
+    "type": "Équipement",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06NX020T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06NX020T1-full.png"
+      }
+    ],
+    "regions": [
+      "Noxus"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 5,
+    "cost": 8,
+    "health": 13,
+    "description": "<link=vocab.RoundEnd><style=Vocab>Fin du round</style></link> : l'ennemi <link=vocab.Strongest><style=Vocab>le plus fort</style></link> et moi nous <link=vocab.Strike><style=Vocab>frappons</style></link> mutuellement.",
+    "descriptionRaw": "Fin du round : l'ennemi le plus fort et moi nous frappons mutuellement.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Des muscles antiques se contractèrent une nouvelle fois. La guerrière entendit l'appel de son général et sut où l'on avait besoin d'elle : au sud, dans les terres qu'elle avait autrefois connues sous le nom d'Icathia.",
+    "artistName": "Kudos Productions",
+    "name": "Naganeka de Zuretta",
+    "cardCode": "06NX020T1",
+    "keywords": [
+      "Surpuissance"
+    ],
+    "keywordRefs": [
+      "Overwhelm"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Aucune",
+    "rarityRef": "None",
+    "subtypes": [
+      "DARKIN"
+    ],
+    "supertype": "",
+    "type": "Unité",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06NX034.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06NX034-full.png"
+      }
+    ],
+    "regions": [
+      "Noxus"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 4,
+    "health": 0,
+    "description": "Un allié <link=vocab.Equip><style=Vocab>équipé</style></link> <link=vocab.Strike><style=Vocab>frappe</style></link> un ennemi.",
+    "descriptionRaw": "Un allié équipé frappe un ennemi.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« Les frères de sang sont enfin réunis. » - Transfuge noxien",
+    "artistName": "Kudos Productions",
+    "name": "Lame féroce",
+    "cardCode": "06NX034",
+    "keywords": [
+      "Rapide"
+    ],
+    "keywordRefs": [
+      "Fast"
+    ],
+    "spellSpeed": "Rapide",
+    "spellSpeedRef": "Fast",
+    "rarity": "RARE",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "ZÉLOTE"
+    ],
+    "supertype": "",
+    "type": "Sort",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "01IO013"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06IO025.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06IO025-full.png"
+      }
+    ],
+    "regions": [
+      "Ionia"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 3,
+    "cost": 3,
+    "health": 2,
+    "description": "Quand vous avez <link=vocab.Equip><style=Vocab>équipé</style></link> un allié lors de cette partie, créez 1 <link=card.summon><style=AssociatedCard>Sicaire des ombres</style></link> dans votre main.",
+    "descriptionRaw": "Quand vous avez équipé un allié lors de cette partie, créez 1 Sicaire des ombres dans votre main.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Il l'avait vue dans les ténèbres : une arme capable de trancher les ombres. C'est à ce moment-là qu'il entendit une voix l'appeler. Lointaine, mais puissante. Il suivit la voix qui le mena jusqu'à Kayn.",
+    "artistName": "Kudos Productions",
+    "name": "Fanatique Sombrelame",
+    "cardCode": "06IO025",
+    "keywords": [
+      "Frappe rapide"
+    ],
+    "keywordRefs": [
+      "QuickStrike"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "COMMUN",
+    "rarityRef": "Common",
+    "subtypes": [
+      "ZÉLOTE"
+    ],
+    "supertype": "",
+    "type": "Unité",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06IO030.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06IO030-full.png"
+      }
+    ],
+    "regions": [
+      "Ionia"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "Quand je suis invoqué, piochez un équipement.\r\nLa première fois qu'un allié non-équipé est <link=vocab.Equip><style=Vocab>équipé</style></link> à chaque round, remplissez 1 gemme et octroyez-lui +1|+0.",
+    "descriptionRaw": "Quand je suis invoqué, piochez un équipement.\r\nLa première fois qu'un allié non-équipé est équipé à chaque round, remplissez 1 gemme et octroyez-lui +1|+0.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« Chute-de-brume est une terre sacrée. Les épées y reposent depuis des siècles... Je suis persuadée que les poèmes inscrits sur certaines ont pour but d'inviter les esprits des défunts à bénir leurs lames. »\n- Disciple de Doran, parchemin écrit à la main",
+    "artistName": "Polar Engine",
+    "name": "Chute-de-brume",
+    "cardCode": "06IO030",
+    "keywords": [
+      "Site"
+    ],
+    "keywordRefs": [
+      "LandmarkVisualOnly"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "RARE",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Site",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06NX019.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06NX019-full.png"
+      }
+    ],
+    "regions": [
+      "Noxus"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 2,
+    "cost": 4,
+    "health": 4,
+    "description": " <link=vocab.Attack><style=Vocab>Attaque</style></link> : renforcez ma puissance jusqu'à celle de l'allié <link=vocab.Equip><style=Vocab>équipé</style></link> <link=vocab.Strongest><style=Vocab>le plus fort</style></link> pour ce round.",
+    "descriptionRaw": " Attaque : renforcez ma puissance jusqu'à celle de l'allié équipé le plus fort pour ce round.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« J'ai encore fait ce rêve. J'entends cette voix dans le noir. Dix ans... toute une décennie passée à être le chien obéissant de l'empire. Va là. Tue ça. Et pour quoi ? La gloire de Noxus ? La gloire est un joli mensonge, et je suis tombé dedans. Mais c'est fini. Kayn m'a montré une autre voie, et cette voie mène à la vengeance. »\n- Journal de Royce, le boucher",
+    "artistName": "Kudos Productions",
+    "name": "Transfuge noxien",
+    "cardCode": "06NX019",
+    "keywords": [
+      "Frappe rapide"
+    ],
+    "keywordRefs": [
+      "QuickStrike"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "COMMUN",
+    "rarityRef": "Common",
+    "subtypes": [
+      "ZÉLOTE"
+    ],
+    "supertype": "",
+    "type": "Unité",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06PZ033.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06PZ033-full.png"
+      }
+    ],
+    "regions": [
+      "Piltover & Zaun"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "Vos sorts et compétences infligent 1 pt de dégâts supplémentaire.",
+    "descriptionRaw": "Vos sorts et compétences infligent 1 pt de dégâts supplémentaire.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« Emplacement : secteur 3, sous-sol 19B\nObjet : arme à feu illégale\nNotes : confisqué pendant l'opération : lumière du Puisard. Arme hautement dangereuse. Manipuler avec grande prudence. »\n- Rapport d'un gendarme de Piltover",
+    "artistName": "Kudos Productions",
+    "name": "Mitralyseur v1.0",
+    "cardCode": "06PZ033",
+    "keywords": [
+      "Équipement"
+    ],
+    "keywordRefs": [
+      "Equipment"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "COMMUN",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Équipement",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06BW042.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06BW042-full.png"
+      }
+    ],
+    "regions": [
+      "Bilgewater"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 5,
+    "health": 0,
+    "description": "Infligez 2 pt(s) de dégâts à une unité. Piochez 1 carte au <link=vocab.RoundStart><style=Vocab>début du prochain round</style></link> pour chaque point de dégâts infligé et rendez-les <link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>fugaces</style></link>.",
+    "descriptionRaw": "Infligez 2 pt(s) de dégâts à une unité. Piochez 1 carte au début du prochain round pour chaque point de dégâts infligé et rendez-les fugaces.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« Pas de souci, Rex se charge de l'explosion et moi, je me charge du trésor. Je m'occupe de la part de Rex aussi, sinon, il va la mettre à l'intérieur du canon, autant vous dire que c'est un bazar garanti. » - Officier mesquin",
+    "artistName": "Kudos Productions",
+    "name": "Navire chargé",
+    "cardCode": "06BW042",
+    "keywords": [
+      "Rapide"
+    ],
+    "keywordRefs": [
+      "Fast"
+    ],
+    "spellSpeed": "Rapide",
+    "spellSpeedRef": "Fast",
+    "rarity": "ÉPIQUE",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Sort",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06PZ034.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06PZ034-full.png"
+      }
+    ],
+    "regions": [
+      "Piltover & Zaun"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 0,
+    "cost": 6,
+    "health": 0,
+    "description": "Infligez 5 pt(s) de dégâts à une unité. Si je la tue, <link=keyword.Obliterate><style=Keyword>oblitérez</style></link>-la.",
+    "descriptionRaw": "Infligez 5 pt(s) de dégâts à une unité. Si je la tue, oblitérez-la.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Pour certaines créatures, la mort n'est pas suffisante.",
+    "artistName": "Kudos Productions",
+    "name": "Hexblitérateur",
+    "cardCode": "06PZ034",
+    "keywords": [
+      "Rapide"
+    ],
+    "keywordRefs": [
+      "Fast"
+    ],
+    "spellSpeed": "Rapide",
+    "spellSpeedRef": "Fast",
+    "rarity": "RARE",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Sort",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06DE033.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06DE033-full.png"
+      }
+    ],
+    "regions": [
+      "Demacia"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "Détruisez l'équipement d'une unité et, si c'est un adepte, <link=vocab.Silence><style=Vocab>réduisez-le au silence</style></link>.",
+    "descriptionRaw": "Détruisez l'équipement d'une unité et, si c'est un adepte, réduisez-le au silence.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« Vous l'avez cherché. » - Seigneur Eldred, chef des traqueurs de mage",
+    "artistName": "Kudos Productions",
+    "name": "Répression",
+    "cardCode": "06DE033",
+    "keywords": [
+      "Lent"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "Lent",
+    "spellSpeedRef": "Slow",
+    "rarity": "RARE",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Sort",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06IO031.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06IO031-full.png"
+      }
+    ],
+    "regions": [
+      "Ionia"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 0,
+    "cost": 4,
+    "health": 0,
+    "description": "<link=vocab.Flow><style=Vocab>Cascade</style></link> : mon coût est réduit de 2.",
+    "descriptionRaw": "Cascade : mon coût est réduit de 2.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« Le corps et l'épée ! » - Maître Yi",
+    "artistName": "Kudos Productions",
+    "name": "Épée de l'âme",
+    "cardCode": "06IO031",
+    "keywords": [
+      "Équipement",
+      "Cascade"
+    ],
+    "keywordRefs": [
+      "Equipment",
+      "Flow"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "COMMUN",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Équipement",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06IO001T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06IO001.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06IO001-full.png"
+      }
+    ],
+    "regions": [
+      "Ionia"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 2,
+    "description": "Quand je suis invoquée, créez 1 <link=card.create><style=AssociatedCard>Préparation</style></link> dans votre main.",
+    "descriptionRaw": "Quand je suis invoquée, créez 1 Préparation dans votre main.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« J'ai appris tout ce qu'il y avait à savoir pour faire perdurer cet art sacré. Pour Doran et pour tous les maîtres qui l'ont précédé... J'espère qu'ils sauront guider mon marteau. »\n- Disciple de Doran, parchemin écrit à la main",
+    "artistName": "Polar Engine",
+    "name": "Disciple de Doran",
+    "cardCode": "06IO001",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "COMMUN",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unité",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06IO001T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06IO001T1-full.png"
+      }
+    ],
+    "regions": [
+      "Ionia"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "Réduisez de 1 le coût d'un sort de votre main.",
+    "descriptionRaw": "Réduisez de 1 le coût d'un sort de votre main.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« La préparation détermine les capacités d'un guerrier. »\n- Proverbe Wuju",
+    "artistName": "Kudos Productions",
+    "name": "Préparation",
+    "cardCode": "06IO001T1",
+    "keywords": [
+      "Focalisé"
+    ],
+    "keywordRefs": [
+      "Focus"
+    ],
+    "spellSpeed": "Instantané",
+    "spellSpeedRef": "Burst",
+    "rarity": "Aucune",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Sort",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06IO014T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06IO014.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06IO014-full.png"
+      }
+    ],
+    "regions": [
+      "Ionia"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 1,
+    "cost": 1,
+    "health": 1,
+    "description": "<link=vocab.NexusStrike><style=Vocab>Frappe du Nexus</style></link> : rappelez-moi et transformez-moi en <link=card.spell><style=AssociatedCard>Vent des Shimon</style></link>.",
+    "descriptionRaw": "Frappe du Nexus : rappelez-moi et transformez-moi en Vent des Shimon.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Ting arborait un grand sourire tandis que les attaquants s'engouffraient en nombre dans le temple. Il avait enfin une chance de prouver sa valeur ! Wukong comme Yi avaient fait fi de ses talents. Il laissa certains envahisseurs s'échapper pour aller prévenir leur « maître ». Il était prêt. Il était le Vent des Shimon. ",
+    "artistName": "Polar Engine",
+    "name": "Disciple vastaya",
+    "cardCode": "06IO014",
+    "keywords": [
+      "Insaisissable"
+    ],
+    "keywordRefs": [
+      "Elusive"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ÉPIQUE",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unité",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06IO014"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06IO014T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06IO014T1-full.png"
+      }
+    ],
+    "regions": [
+      "Ionia"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "Invoquez 1 <link=card.parentRef><style=AssociatedCard>Disciple vastaya</style></link> et piochez 1 carte.",
+    "descriptionRaw": "Invoquez 1 Disciple vastaya et piochez 1 carte.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« Zoum ! » - Ting, Vent des Shimon",
+    "artistName": "Kudos Productions",
+    "name": "Vent des Shimon",
+    "cardCode": "06IO014T1",
+    "keywords": [
+      "Instantané"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Instantané",
+    "spellSpeedRef": "Burst",
+    "rarity": "ÉPIQUE",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Sort",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06IO011.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06IO011-full.png"
+      }
+    ],
+    "regions": [
+      "Ionia"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 4,
+    "cost": 3,
+    "health": 3,
+    "description": "La première fois que je suis <link=vocab.Equip><style=Vocab>équipée</style></link>, conférez-moi <link=keyword.Barrier><sprite name=Barrier><style=Keyword>Barrière</style></link> et <link=keyword.Lifesteal><sprite name=Lifesteal><style=Keyword>Vol de vie</style></link> pour ce round.",
+    "descriptionRaw": "La première fois que je suis équipée, conférez-moi Barrière et Vol de vie pour ce round.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "À son signal, Jun déchaîna une série de coups aussi précis que ceux de son maître. Yi dévia l'attaque avec dextérité et s'inclina devant son élève, fier d'elle.",
+    "artistName": "Kudos Productions",
+    "name": "Jun, élève prodige",
+    "cardCode": "06IO011",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "RARE",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unité",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06IO013T1",
+      "06IO008T1",
+      "06IO008T2"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06IO008.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06IO008-full.png"
+      }
+    ],
+    "regions": [
+      "Ionia"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 2,
+    "cost": 3,
+    "health": 3,
+    "description": "<link=vocab.RoundStart><style=Vocab>Début du round</style></link> : réduisez de 1 le coût d'un sort dans votre main pour ce round et <link=vocab.Flow><style=Vocab>Cascade</style></link> : octroyez +2|+0 à tous les <link=card.selfRef><style=AssociatedCard>Maître Yi</style></link> alliés, <link=vocab.Everywhere><style=Vocab>où qu'ils soient</style></link>.",
+    "descriptionRaw": "Début du round : réduisez de 1 le coût d'un sort dans votre main pour ce round et Cascade : octroyez +2|+0 à tous les Maître Yi alliés, où qu'ils soient.",
+    "levelupDescription": "J'ai infligé au moins 12 pts de dégâts <style=Variable></style>. ",
+    "levelupDescriptionRaw": "J'ai infligé au moins 12 pts de dégâts . ",
+    "flavorText": "Maître Yi repensa à l'arme darkin. Depuis sa découverte, un terrible pressentiment l'avait troublé. Certains de ses étudiants avaient développé un réel intérêt, parfois inquiétant, pour les lames courbes. C'est pourquoi il les plaça sous bonne garde au plus profond du temple. Il parvint à chasser ces pensées et à reprendre sa méditation. Il n'y avait rien de plus important que de transmettre l'enseignement du Wuju, et Jun était très prometteuse.",
+    "artistName": "Kudos Productions",
+    "name": "Maître Yi",
+    "cardCode": "06IO008",
+    "keywords": [
+      "Frappe rapide",
+      "Cascade"
+    ],
+    "keywordRefs": [
+      "QuickStrike",
+      "Flow"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Champion",
+    "rarityRef": "Champion",
+    "subtypes": [],
+    "supertype": "Champion",
+    "type": "Unité",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06IO013T1",
+      "06IO008T2",
+      "06IO008"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06IO008T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06IO008T1-full.png"
+      }
+    ],
+    "regions": [
+      "Ionia"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 3,
+    "cost": 3,
+    "health": 4,
+    "description": "<link=vocab.Attack><style=Vocab>Attaque</style></link> : je <link=vocab.Strike><style=Vocab>frappe</style></link> immédiatement l'ennemi le plus faible.\r\n<link=vocab.RoundStart><style=Vocab>Début du round</style></link> : réduisez de 1 le coût d'un sort dans votre main pour ce round et <link=vocab.Flow><style=Vocab>Cascade</style></link> : octroyez +2|+0 à tous les <link=card.selfRef><style=AssociatedCard>Maître Yi</style></link> alliés, <link=vocab.Everywhere><style=Vocab>où qu'ils soient</style></link>.",
+    "descriptionRaw": "Attaque : je frappe immédiatement l'ennemi le plus faible.\r\nDébut du round : réduisez de 1 le coût d'un sort dans votre main pour ce round et Cascade : octroyez +2|+0 à tous les Maître Yi alliés, où qu'ils soient.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Du coin de l'œil, Yi vit l'éclair de l'acier, et il entendit le bruit reconnaissable entre mille d'un corps sans vie s'écrouler au sol. Était-ce elle ? Comment avait-il pu se tromper à ce point ? Ses élèves n'étaient ni entraînés ni prêts au combat. Mais il était un maître du Wuju, et ni la honte ni les ombres ne triompheraient. ",
+    "artistName": "Kudos Productions",
+    "name": "Maître Yi",
+    "cardCode": "06IO008T1",
+    "keywords": [
+      "Frappe rapide",
+      "Cascade"
+    ],
+    "keywordRefs": [
+      "QuickStrike",
+      "Flow"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Aucune",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "Champion",
+    "type": "Unité",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06IO013T1",
+      "06IO008T1",
+      "06IO008"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06IO008T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06IO008T2-full.png"
+      }
+    ],
+    "regions": [
+      "Ionia"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "Conférez +2|+0 à un allié pour ce round.\r\nCréez 1 <link=card.create><style=AssociatedCard>Méditation</style></link> dans votre main. Créez 1 <link=card.level1><style=AssociatedCard>Maître Yi</style></link> dans votre deck.",
+    "descriptionRaw": "Conférez +2|+0 à un allié pour ce round.\r\nCréez 1 Méditation dans votre main. Créez 1 Maître Yi dans votre deck.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« Vous êtes émoussé. »\n- Maître Yi",
+    "artistName": "Kudos Productions",
+    "name": "Style Wuju de Maître Yi",
+    "cardCode": "06IO008T2",
+    "keywords": [
+      "Instantané"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Instantané",
+    "spellSpeedRef": "Burst",
+    "rarity": "Aucune",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Sort",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06IO013T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06IO013.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06IO013-full.png"
+      }
+    ],
+    "regions": [
+      "Ionia"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "Conférez +2|+0 à un allié pour ce round.\r\nCréez 1 <link=card.create><style=AssociatedCard>Méditation</style></link> dans votre main.",
+    "descriptionRaw": "Conférez +2|+0 à un allié pour ce round.\r\nCréez 1 Méditation dans votre main.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« Vous êtes émoussé. »\n- Maître Yi",
+    "artistName": "Kudos Productions",
+    "name": "Style Wuju",
+    "cardCode": "06IO013",
+    "keywords": [
+      "Instantané"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Instantané",
+    "spellSpeedRef": "Burst",
+    "rarity": "RARE",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Sort",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06IO013T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06IO013T1-full.png"
+      }
+    ],
+    "regions": [
+      "Ionia"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "Conférez +0|+2 à un allié pour ce round.",
+    "descriptionRaw": "Conférez +0|+2 à un allié pour ce round.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« La forme plutôt que la force. » - Maître Yi",
+    "artistName": "Kudos Productions",
+    "name": "Méditation",
+    "cardCode": "06IO013T1",
+    "keywords": [
+      "Fugace",
+      "Instantané"
+    ],
+    "keywordRefs": [
+      "Fleeting",
+      "Burst"
+    ],
+    "spellSpeed": "Instantané",
+    "spellSpeedRef": "Burst",
+    "rarity": "Aucune",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Sort",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06BC033.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06BC033-full.png"
+      }
+    ],
+    "regions": [
+      "Bandle"
+    ],
+    "regionRefs": [
+      "BandleCity"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "Pour me jouer, défaussez 1 carte.",
+    "descriptionRaw": "Pour me jouer, défaussez 1 carte.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« Admirez ! Le gant de boxe provient des restes d'un navire coulé. Les ressorts, eux, viennent des profondeurs d'une ville nommée Zaun, et ce métal sort tout droit des forges de Demacia ! Il s'agit d'une véritable création universelle ! » - Paparo le Grand",
+    "artistName": "Kudos Productions",
+    "name": "Pulvérisateur de méchas",
+    "cardCode": "06BC033",
+    "keywords": [
+      "Équipement"
+    ],
+    "keywordRefs": [
+      "Equipment"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "COMMUN",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Équipement",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "01PZ002"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06PZ040.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06PZ040-full.png"
+      }
+    ],
+    "regions": [
+      "Piltover & Zaun"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 0,
+    "cost": 6,
+    "health": 0,
+    "description": "Quand je suis invoqué, invoquez 1 <link=card.summon><style=AssociatedCard>Tavernier de la ruelle</style></link>.\r\nLe coût de vos nouvelles cartes est réduit de 1.",
+    "descriptionRaw": "Quand je suis invoqué, invoquez 1 Tavernier de la ruelle.\r\nLe coût de vos nouvelles cartes est réduit de 1.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Une fois qu'il eut fini d'essuyer les derniers verres, le tavernier prit un moment pour contempler son établissement. Cet endroit, ce deuxième chez-soi pour nombre de gens, avait vu tant d'étrangers devenir amis, et portait encore les graffitis et les entailles de nombreuses nuits de folie. Le tavernier sourit. Ce n'était pas parfait, mais c'était chez lui.",
+    "artistName": "Kudos Productions",
+    "name": "Taverne de la ruelle",
+    "cardCode": "06PZ040",
+    "keywords": [
+      "Site",
+      "Missing Translation"
+    ],
+    "keywordRefs": [
+      "LandmarkVisualOnly",
+      "AuraVisualFakeKeyword"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ÉPIQUE",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Site",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06MT006T2"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06MT006.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06MT006-full.png"
+      }
+    ],
+    "regions": [
+      "Targon"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "<link=keyword.Support><style=Keyword>Support</style></link> : octroyez +1|+1 à l'allié que je soutiens.\r\nVous pouvez dépenser 8 pts de mana pour me jouer en tant que <link=card.unit><style=AssociatedCard>Horazi</style></link>.",
+    "descriptionRaw": "Support : octroyez +1|+1 à l'allié que je soutiens.\r\nVous pouvez dépenser 8 pts de mana pour me jouer en tant que Horazi.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Ceux responsables de l'emprisonnement des Darkin pensaient peut-être qu'enterrer Horazi, la légendaire guerrière, dans un orbe de métal stellaire permettrait d'atténuer sa furieuse volonté. Mais lorsque son général s'éveilla, Horazi fit de même, et elle se rendit compte que même les anciens protecteurs de Targon pouvaient être tentés par des promesses lointaines.",
+    "artistName": "Kudos Productions",
+    "name": "Magnétite des Darkin",
+    "cardCode": "06MT006",
+    "keywords": [
+      "Équipement",
+      "Support"
+    ],
+    "keywordRefs": [
+      "Equipment",
+      "Support"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ÉPIQUE",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "DARKIN"
+    ],
+    "supertype": "",
+    "type": "Équipement",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06MT006T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06MT006T2-full.png"
+      }
+    ],
+    "regions": [
+      "Targon"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 7,
+    "cost": 8,
+    "health": 7,
+    "description": "<link=keyword.Support><style=Keyword>Support</style></link> : renforcez les stats de l'allié que je soutiens jusqu'aux miennes. Conférez-lui mes mots-clés positifs pour ce round.",
+    "descriptionRaw": "Support : renforcez les stats de l'allié que je soutiens jusqu'aux miennes. Conférez-lui mes mots-clés positifs pour ce round.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Emprisonnée dans une matière céleste brûlante, Horazi était dotée d'une perspective supérieure. Elle entrevit les secrets du cosmos ainsi que la période de temps infinie qui existait avant et après son existence. Elle apprit tant de choses, mais rien n'amenuisa la haine qu'elle éprouvait pour Xolaani la lâche.",
+    "artistName": "Kudos Productions",
+    "name": "Horazi",
+    "cardCode": "06MT006T2",
+    "keywords": [
+      "Bouclier antisorts",
+      "Support"
+    ],
+    "keywordRefs": [
+      "SpellShield",
+      "Support"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Aucune",
+    "rarityRef": "None",
+    "subtypes": [
+      "DARKIN"
+    ],
+    "supertype": "",
+    "type": "Unité",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06MT037T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06MT037.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06MT037-full.png"
+      }
+    ],
+    "regions": [
+      "Targon"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "<link=keyword.Obliterate><style=Keyword>Oblitérez</style></link> un allié et créez 1 <link=card.create><style=AssociatedCard>Forme corrompue</style></link> avec ses stats.",
+    "descriptionRaw": "Oblitérez un allié et créez 1 Forme corrompue avec ses stats.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Les dieux-guerriers déchus piégés dans ces armes ne pouvaient être facilement vaincus. Ils furent donc contenus.",
+    "artistName": "Kudos Productions",
+    "name": "Scellé dans l'acier",
+    "cardCode": "06MT037",
+    "keywords": [
+      "Rapide"
+    ],
+    "keywordRefs": [
+      "Fast"
+    ],
+    "spellSpeed": "Rapide",
+    "spellSpeedRef": "Fast",
+    "rarity": "RARE",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Sort",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06MT037T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06MT037T1-full.png"
+      }
+    ],
+    "regions": [
+      "Targon"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "",
+    "descriptionRaw": "",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Piégés dans les armes qu'ils portaient, les Darkin changèrent lentement jusqu'à ne plus ressembler à leur forme originale.",
+    "artistName": "Kudos Productions",
+    "name": "Forme corrompue",
+    "cardCode": "06MT037T1",
+    "keywords": [
+      "Équipement"
+    ],
+    "keywordRefs": [
+      "Equipment"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Aucune",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Équipement",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06BC015"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06BC015T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06BC015T3-full.png"
+      }
+    ],
+    "regions": [
+      "Bandle"
+    ],
+    "regionRefs": [
+      "BandleCity"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "Invoquez un adepte aléatoire d'un coût de 2 ou 3. Si votre plateau est plein, créez-en une copie <link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>fugace</style></link> d'un coût de 0 dans votre main à la place.",
+    "descriptionRaw": "Invoquez un adepte aléatoire d'un coût de 2 ou 3. Si votre plateau est plein, créez-en une copie fugace d'un coût de 0 dans votre main à la place.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Encore un portail mystérieux... Où peut-il bien mener ?",
+    "artistName": "Kudos Productions",
+    "name": "Portail mystérieux",
+    "cardCode": "06BC015T3",
+    "keywords": [
+      "Bénédiction"
+    ],
+    "keywordRefs": [
+      "Boon"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Aucune",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Piège",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06BC015T3",
+      "06RU001T3"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06BC011.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06BC011-full.png"
+      }
+    ],
+    "regions": [
+      "Bandle"
+    ],
+    "regionRefs": [
+      "BandleCity"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "Placez 1 <link=card.portal><style=AssociatedCard>Portail mystérieux</style></link> sur des cartes aléatoires parmi les 4 premières cartes de votre deck et placez 3 <link=card.chime><style=AssociatedCard>carillons</style></link> sur des cartes aléatoires de votre deck.",
+    "descriptionRaw": "Placez 1 Portail mystérieux sur des cartes aléatoires parmi les 4 premières cartes de votre deck et placez 3 carillons sur des cartes aléatoires de votre deck.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Bard est à l'écoute lorsqu'il erre à sa guise entre les différents royaumes. Il a conscience qu'un grand conflit est sur le point d'éclater... un conflit qui a le potentiel de réduire toute chose au silence.",
+    "artistName": "Kudos Productions",
+    "name": "Route magique",
+    "cardCode": "06BC011",
+    "keywords": [
+      "Instantané"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Instantané",
+    "spellSpeedRef": "Burst",
+    "rarity": "COMMUN",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Sort",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06BC020.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06BC020-full.png"
+      }
+    ],
+    "regions": [
+      "Bandle"
+    ],
+    "regionRefs": [
+      "BandleCity"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "Conférez-moi +1|+0 pour chacun de vos pièges ou bénédictions qui s'est activé lors de ce round. ",
+    "descriptionRaw": "Conférez-moi +1|+0 pour chacun de vos pièges ou bénédictions qui s'est activé lors de ce round. ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "La magie de la sculpture sur papier peut se révéler assez imprévisible. Il s'agit autant du dessein exprimé lors de la création que du désir de la création même d'être créée.",
+    "artistName": "Kudos Productions",
+    "name": "Origami",
+    "cardCode": "06BC020",
+    "keywords": [
+      "Équipement"
+    ],
+    "keywordRefs": [
+      "Equipment"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "RARE",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Équipement",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06BC015T3"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06BC019.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06BC019-full.png"
+      }
+    ],
+    "regions": [
+      "Bandle"
+    ],
+    "regionRefs": [
+      "BandleCity"
+    ],
+    "attack": 3,
+    "cost": 3,
+    "health": 1,
+    "description": "Quand je suis invoquée, placez 1 <link=card.portal><style=AssociatedCard>Portail mystérieux</style></link> sur une carte aléatoire parmi les 4 premières cartes de votre deck.",
+    "descriptionRaw": "Quand je suis invoquée, placez 1 Portail mystérieux sur une carte aléatoire parmi les 4 premières cartes de votre deck.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Ashane était autrefois une préparatrice de thé de renom qui finit par se perdre dans les Confins du royaume. Alors qu'elle expérimentait de nouvelles saveurs, un malheureux mélange d'herbes la plongea dans un profond sommeil. Elle rêva de créatures étranges et de structures inconcevables se découpant sur un horizon infini. C'est seulement à son réveil qu'elle comprit que ce décor n'était en rien le fruit de son imagination.",
+    "artistName": "Caravan Studio",
+    "name": "La préparatrice de thé",
+    "cardCode": "06BC019",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "COMMUN",
+    "rarityRef": "Common",
+    "subtypes": [
+      "FÉE"
+    ],
+    "supertype": "",
+    "type": "Unité",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06BC015T3"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06BC021.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06BC021-full.png"
+      }
+    ],
+    "regions": [
+      "Bandle"
+    ],
+    "regionRefs": [
+      "BandleCity"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 2,
+    "description": "<link=keyword.Last Breath><sprite name=LastBreath><style=Keyword>Dernier souffle</style></link> : placez 1 <link=card.portal><style=AssociatedCard>Portail mystérieux</style></link> sur une carte aléatoire parmi les 4 premières cartes de votre deck.",
+    "descriptionRaw": "Dernier souffle : placez 1 Portail mystérieux sur une carte aléatoire parmi les 4 premières cartes de votre deck.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Il n'était né que la veille, mais Marv (comme Norra l'appelait affectueusement) était très fier d'être son assistant. Il tenait toutefois toujours à rappeler à qui se trompait qu'il était une « pile de bric-à-brac », et non pas une vulgaire « pile de déchets ».",
+    "artistName": "Caravan Studio",
+    "name": "Pile de bric-à-brac",
+    "cardCode": "06BC021",
+    "keywords": [
+      "Dernier souffle"
+    ],
+    "keywordRefs": [
+      "LastBreath"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "COMMUN",
+    "rarityRef": "Common",
+    "subtypes": [
+      "FÉE"
+    ],
+    "supertype": "",
+    "type": "Unité",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06BC015T3",
+      "06BC015T1",
+      "06BC015T2"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06BC015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06BC015-full.png"
+      }
+    ],
+    "regions": [
+      "Bandle"
+    ],
+    "regionRefs": [
+      "BandleCity"
+    ],
+    "attack": 1,
+    "cost": 2,
+    "health": 2,
+    "description": "<link=vocab.NexusStrike><style=Vocab>Frappe du Nexus</style></link> : placez 1 <link=card.portal><style=AssociatedCard>Portail mystérieux</style></link> sur une carte aléatoire parmi les 4 premières cartes de votre deck.",
+    "descriptionRaw": "Frappe du Nexus : placez 1 Portail mystérieux sur une carte aléatoire parmi les 4 premières cartes de votre deck.",
+    "levelupDescription": "Vous avez invoqué au moins 6 alliés créés.<style=Variable></style>",
+    "levelupDescriptionRaw": "Vous avez invoqué au moins 6 alliés créés.",
+    "flavorText": "Norra travailla avec ardeur pour pouvoir retrouver son foyer. Les portails n'étaient pas faciles à manipuler, et pour couronner le tout, elle n'avait même pas encore bu sa première tasse de thé de la journée. Toutefois, Norra adorait les casse-têtes ! Et tout particulièrement ceux où elle se retrouvait perdue entre l'espace et le temps. Elle s'acharna à la tâche, pensant tendrement à son chat. Comme elle devait être inquiète et affamée...",
+    "artistName": "Caravan Studio",
+    "name": "Norra",
+    "cardCode": "06BC015",
+    "keywords": [
+      "Insaisissable"
+    ],
+    "keywordRefs": [
+      "Elusive"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Champion",
+    "rarityRef": "Champion",
+    "subtypes": [
+      "YORDLE"
+    ],
+    "supertype": "Champion",
+    "type": "Unité",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06BC015T3",
+      "06BC015T1",
+      "06BC015"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06BC015T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06BC015T2-full.png"
+      }
+    ],
+    "regions": [
+      "Bandle"
+    ],
+    "regionRefs": [
+      "BandleCity"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 3,
+    "description": "Désormais, vos <link=card.portal><style=AssociatedCard>Portails mystérieux</style></link> invoquent à la place des adeptes aléatoires d'un coût de 4, 5, 6 ou 7.\r\n<link=vocab.NexusStrike><style=Vocab>Frappe du Nexus</style></link> : placez 1 <link=card.portal><style=AssociatedCard>Portail mystérieux</style></link> sur une carte aléatoire parmi les 4 premières cartes de votre deck.",
+    "descriptionRaw": "Désormais, vos Portails mystérieux invoquent à la place des adeptes aléatoires d'un coût de 4, 5, 6 ou 7.\r\nFrappe du Nexus : placez 1 Portail mystérieux sur une carte aléatoire parmi les 4 premières cartes de votre deck.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "En un sifflement et un claquement de doigts, les différentes pièces du totem prirent vie : un machin tournoyait par-ci, un truc clignotait par-là... La salle tremblait bruyamment lorsqu'un portail s'ouvrit haut dans les airs, laissant apparaître des oreilles de chat de l'autre côté. Norra cria de joie et en renversa son thé. Venait-elle d'enfin trouver comment retourner chez elle ?",
+    "artistName": "Caravan Studio",
+    "name": "Norra",
+    "cardCode": "06BC015T2",
+    "keywords": [
+      "Insaisissable"
+    ],
+    "keywordRefs": [
+      "Elusive"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Aucune",
+    "rarityRef": "None",
+    "subtypes": [
+      "YORDLE"
+    ],
+    "supertype": "Champion",
+    "type": "Unité",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06BC015T3",
+      "06BC015",
+      "06BC015T2"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06BC015T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06BC015T1-full.png"
+      }
+    ],
+    "regions": [
+      "Bandle"
+    ],
+    "regionRefs": [
+      "BandleCity"
+    ],
+    "attack": 0,
+    "cost": 5,
+    "health": 0,
+    "description": "Placez 2 <link=card.portal><style=AssociatedCard>Portails mystérieux</style></link> sur des cartes aléatoires parmi les 4 premières cartes de votre deck. Piochez 1 carte.\r\nCréez 1 <link=card.level1><style=AssociatedCard>Norra</style></link> dans votre deck.",
+    "descriptionRaw": "Placez 2 Portails mystérieux sur des cartes aléatoires parmi les 4 premières cartes de votre deck. Piochez 1 carte.\r\nCréez 1 Norra dans votre deck.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« Je devrais passer par le Bas-sentier plus souvent ! J'oublie tout le temps de baisser la tête... Quelle étourdie ! »\n- Norra",
+    "artistName": "Kudos Productions",
+    "name": "Afflux de portails de Norra",
+    "cardCode": "06BC015T1",
+    "keywords": [
+      "Instantané"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Instantané",
+    "spellSpeedRef": "Burst",
+    "rarity": "Aucune",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "Champion",
+    "type": "Sort",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06BC015T3"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06BC017.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06BC017-full.png"
+      }
+    ],
+    "regions": [
+      "Bandle"
+    ],
+    "regionRefs": [
+      "BandleCity"
+    ],
+    "attack": 0,
+    "cost": 5,
+    "health": 0,
+    "description": "Placez 2 <link=card.portal><style=AssociatedCard>Portails mystérieux</style></link> sur des cartes aléatoires parmi les 4 premières cartes de votre deck. Piochez 1 carte.",
+    "descriptionRaw": "Placez 2 Portails mystérieux sur des cartes aléatoires parmi les 4 premières cartes de votre deck. Piochez 1 carte.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« Je devrais passer par le Bas-sentier plus souvent ! J'oublie tout le temps de baisser la tête... Quelle étourdie ! »\n- Norra",
+    "artistName": "Kudos Productions",
+    "name": "Afflux de portails",
+    "cardCode": "06BC017",
+    "keywords": [
+      "Instantané"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Instantané",
+    "spellSpeedRef": "Burst",
+    "rarity": "RARE",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Sort",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06BC024.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06BC024-full.png"
+      }
+    ],
+    "regions": [
+      "Bandle"
+    ],
+    "regionRefs": [
+      "BandleCity"
+    ],
+    "attack": 4,
+    "cost": 6,
+    "health": 4,
+    "description": "La première fois que l'un de vos pièges ou l'une de vos bénédictions s'active à chaque round, conférez +1|+1 et <link=keyword.Impact><sprite name=Impact><style=Keyword>Impact</style></link> à tous les alliés pour ce round.",
+    "descriptionRaw": "La première fois que l'un de vos pièges ou l'une de vos bénédictions s'active à chaque round, conférez +1|+1 et Impact à tous les alliés pour ce round.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Gaspar fut le tout premier yordle à parvenir jusqu'aux Confins du royaume. Des années durant, il erra seul parmi les chemins tordus et les portails qui ne menaient nulle part. Il se jura que personne ne devrait connaître le même destin que le sien, et il fait depuis de son mieux pour aider les voyageurs perdus à retrouver leur chemin.",
+    "artistName": "Caravan Studio",
+    "name": "Gardien des Confins",
+    "cardCode": "06BC024",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "RARE",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "YORDLE"
+    ],
+    "supertype": "",
+    "type": "Unité",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06BC016.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06BC016-full.png"
+      }
+    ],
+    "regions": [
+      "Bandle"
+    ],
+    "regionRefs": [
+      "BandleCity"
+    ],
+    "attack": 4,
+    "cost": 5,
+    "health": 3,
+    "description": "Quand je suis invoquée, si l'un de vos pièges ou l'une de vos bénédictions s'est activé lors de ce round, piochez 1 carte.",
+    "descriptionRaw": "Quand je suis invoquée, si l'un de vos pièges ou l'une de vos bénédictions s'est activé lors de ce round, piochez 1 carte.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Estimant qu'il est de son devoir de posséder un immense savoir, il collectionne les ouvrages apportés par les divers voyageurs qui sont passés par les Confins du royaume. Malheureusement, tout ce savoir semble lui être monté à la tête.",
+    "artistName": "Caravan Studio",
+    "name": "Bibliothèque vivante",
+    "cardCode": "06BC016",
+    "keywords": [
+      "Insaisissable"
+    ],
+    "keywordRefs": [
+      "Elusive"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "COMMUN",
+    "rarityRef": "Common",
+    "subtypes": [
+      "FÉE"
+    ],
+    "supertype": "",
+    "type": "Unité",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06BC015T3",
+      "06RU001T3",
+      "05PZ008",
+      "01PZ022"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06BC032.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06BC032-full.png"
+      }
+    ],
+    "regions": [
+      "Bandle"
+    ],
+    "regionRefs": [
+      "BandleCity"
+    ],
+    "attack": 0,
+    "cost": 7,
+    "health": 0,
+    "description": "Pour chaque allié, placez 1 <link=card.portal><style=AssociatedCard>Portail mystérieux</style></link> et 3 <link=card.chime><style=AssociatedCard>carillons</style></link> parmi les 10 premières cartes de votre deck, et placez 1 <link=card.flashbomb><style=AssociatedCard>Piège aveuglant</style></link> et 3 <link=card.puffcap><style=AssociatedCard>Champignons vénéneux</style></link> sur des cartes aléatoires du deck ennemi.",
+    "descriptionRaw": "Pour chaque allié, placez 1 Portail mystérieux et 3 carillons parmi les 10 premières cartes de votre deck, et placez 1 Piège aveuglant et 3 Champignons vénéneux sur des cartes aléatoires du deck ennemi.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« Ô portail, mon beau portail... »\n- Norra",
+    "artistName": "Kudos Productions",
+    "name": "Collection éclectique",
+    "cardCode": "06BC032",
+    "keywords": [
+      "Instantané"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Instantané",
+    "spellSpeedRef": "Burst",
+    "rarity": "ÉPIQUE",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Sort",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06RU010.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06RU010-full.png"
+      }
+    ],
+    "regions": [
+      "Runeterra"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "",
+    "descriptionRaw": "",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Cette clé à molette est le seul objet que Pesh a apporté avec lui lorsqu'il a quitté Piltover pour Bilgewater. Elle n'est pas magique ou quoi que ce soit, bien que l'on puisse penser le contraire en le voyant l'utiliser.",
+    "artistName": "Kudos Productions",
+    "name": "Répar-tout 5000",
+    "cardCode": "06RU010",
+    "keywords": [
+      "Équipement",
+      "Frappe rapide"
+    ],
+    "keywordRefs": [
+      "Equipment",
+      "QuickStrike"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Aucune",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Équipement",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06RU012.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06RU012-full.png"
+      }
+    ],
+    "regions": [
+      "Runeterra"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "",
+    "descriptionRaw": "",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Les saveurs présentes dans cette marmite sont si bonnes que ça en devient douloureux.",
+    "artistName": "Kudos Productions",
+    "name": "Marmite agressive",
+    "cardCode": "06RU012",
+    "keywords": [
+      "Équipement",
+      "Impact"
+    ],
+    "keywordRefs": [
+      "Equipment",
+      "Impact"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Aucune",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Équipement",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06RU028.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06RU028-full.png"
+      }
+    ],
+    "regions": [
+      "Runeterra"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "",
+    "descriptionRaw": "",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Le gardien spectral de Fireth jaillit de son amulette à chaque fois qu'elle est en danger. Elle semble n'avoir aucun souvenir de ces événements, et nie agressivement l'existence de son gardien lorsque ses alliés tentent de lui expliquer ce qu'ils ont vu.",
+    "artistName": "Kudos Productions",
+    "name": "Amulette érodée",
+    "cardCode": "06RU028",
+    "keywords": [
+      "Équipement",
+      "Redoutable"
+    ],
+    "keywordRefs": [
+      "Equipment",
+      "Fearsome"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Aucune",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Équipement",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06RU029.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06RU029-full.png"
+      }
+    ],
+    "regions": [
+      "Runeterra"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "",
+    "descriptionRaw": "",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "La remise à l'eau est une excellente tactique, que vous soyez en train de pêcher ou de combattre.",
+    "artistName": "Kudos Productions",
+    "name": "Canne à beignes",
+    "cardCode": "06RU029",
+    "keywords": [
+      "Équipement",
+      "Surpuissance"
+    ],
+    "keywordRefs": [
+      "Equipment",
+      "Overwhelm"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Aucune",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Équipement",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06RU030.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06RU030-full.png"
+      }
+    ],
+    "regions": [
+      "Runeterra"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "",
+    "descriptionRaw": "",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Fireth raconte que sa mère a construit ce râteau pour elle. Où sa mère a bien pu trouver un artefact de l'ancien empire, et pourquoi elle l'a transformé en râteau, Fireth n'en a pas la moindre idée.",
+    "artistName": "Kudos Productions",
+    "name": "Râteau recyclé",
+    "cardCode": "06RU030",
+    "keywords": [
+      "Équipement",
+      "Éclaireur"
+    ],
+    "keywordRefs": [
+      "Equipment",
+      "Scout"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Aucune",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Équipement",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06RU031.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06RU031-full.png"
+      }
+    ],
+    "regions": [
+      "Runeterra"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "",
+    "descriptionRaw": "",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Chaska adopte une approche philosophique du travail de berger. Son troupeau est composé de tous ceux qui se trouvent à proximité.",
+    "artistName": "Kudos Productions",
+    "name": "Autorité du berger",
+    "cardCode": "06RU031",
+    "keywords": [
+      "Équipement",
+      "Blocage impossible"
+    ],
+    "keywordRefs": [
+      "Equipment",
+      "CantBlock"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Aucune",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Équipement",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06RU033.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06RU033-full.png"
+      }
+    ],
+    "regions": [
+      "Runeterra"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "<link=vocab.Attack><style=Vocab>Attaque</style></link> : remplissez 1 gemme.",
+    "descriptionRaw": "Attaque : remplissez 1 gemme.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Les moines d'Hirana envoient les élèves indisciplinés chez les pêcheurs pour une leçon de patience. Seule une poignée d'entre eux choisissent de retourner au monastère.",
+    "artistName": "Kudos Productions ",
+    "name": "Moulinet de combat",
+    "cardCode": "06RU033",
+    "keywords": [
+      "Équipement"
+    ],
+    "keywordRefs": [
+      "Equipment"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Aucune",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Équipement",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06RU034.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06RU034-full.png"
+      }
+    ],
+    "regions": [
+      "Runeterra"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "",
+    "descriptionRaw": "",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "NE PAS UTILISER de savon. Eau chaude ou magie uniquement.",
+    "artistName": "Kudos Productions",
+    "name": "Poêle agressive",
+    "cardCode": "06RU034",
+    "keywords": [
+      "Équipement",
+      "Robuste"
+    ],
+    "keywordRefs": [
+      "Equipment",
+      "Tough"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Aucune",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Équipement",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06SI003.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06SI003-full.png"
+      }
+    ],
+    "regions": [
+      "Îles obscures",
+      "Shurima"
+    ],
+    "regionRefs": [
+      "ShadowIsles",
+      "Shurima"
+    ],
+    "attack": 1,
+    "cost": 1,
+    "health": 1,
+    "description": "Quand je suis invoquée, j'<link=vocab.Improvise><style=Vocab>improvise</style></link>.",
+    "descriptionRaw": "Quand je suis invoquée, j'improvise.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Durant leurs premières semaines de voyage ensemble, Jax avait demandé le nom de Fireth au moins deux douzaines de fois, mais elle ne faisait que grogner : « Je suis la Faucheuse ! ». C'est alors que Breshi eut une idée originale : il venait de faire un gâteau, voyez-vous, et il avait besoin du nom du membre le plus fort du groupe pour le fêter comme il se doit.",
+    "artistName": "Envar Studio",
+    "name": "Fireth, Faucheuse des sables",
+    "cardCode": "06SI003",
+    "keywords": [
+      "Éphémère",
+      "Blocage impossible"
+    ],
+    "keywordRefs": [
+      "Ephemeral",
+      "CantBlock"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ÉPIQUE",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "EXPERT EN ARMES"
+    ],
+    "supertype": "",
+    "type": "Unité",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06NX023.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06NX023-full.png"
+      }
+    ],
+    "regions": [
+      "Noxus",
+      "Ionia"
+    ],
+    "regionRefs": [
+      "Noxus",
+      "Ionia"
+    ],
+    "attack": 1,
+    "cost": 2,
+    "health": 1,
+    "description": "Quand je suis invoquée, j'<link=vocab.Improvise><style=Vocab>improvise</style></link>.",
+    "descriptionRaw": "Quand je suis invoquée, j'improvise.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "La vie de Trisk fut bouleversée lorsque, au cours de ce qui devait être son dernier tournoi de pêche, elle réussit à repêcher un Jax dégoulinant. Il refuse de parler de l'incident, mais le monstre marin dont Trisk l'a sauvé grossit à chaque fois qu'elle raconte cette histoire.",
+    "artistName": "Envar Studio",
+    "name": "Pêcheuse hors pair",
+    "cardCode": "06NX023",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "COMMUN",
+    "rarityRef": "Common",
+    "subtypes": [
+      "EXPERT EN ARMES"
+    ],
+    "supertype": "",
+    "type": "Unité",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06SI031T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06BW027.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06BW027-full.png"
+      }
+    ],
+    "regions": [
+      "Bilgewater",
+      "Piltover & Zaun"
+    ],
+    "regionRefs": [
+      "Bilgewater",
+      "PiltoverZaun"
+    ],
+    "attack": 0,
+    "cost": 4,
+    "health": 0,
+    "description": "Pour me jouer, défaussez 1 carte. Piochez 2 cartes, et si vous avez défaussé un équipement, invoquez 1 <link=card.summon><style=AssociatedCard>Mirage d'Icathia</style></link>.",
+    "descriptionRaw": "Pour me jouer, défaussez 1 carte. Piochez 2 cartes, et si vous avez défaussé un équipement, invoquez 1 Mirage d'Icathia.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Le groupe de Jax est bien la preuve que l'union fait la force. Pourtant, Pesh continue de penser que, parfois, les individus s'en sortent mieux tout seuls.",
+    "artistName": "Kudos Productions",
+    "name": "L'individualité fait la force",
+    "cardCode": "06BW027",
+    "keywords": [
+      "Instantané"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Instantané",
+    "spellSpeedRef": "Burst",
+    "rarity": "RARE",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "EXPERT EN ARMES"
+    ],
+    "supertype": "",
+    "type": "Sort",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06SI031T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06SI031.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06SI031-full.png"
+      }
+    ],
+    "regions": [
+      "Îles obscures",
+      "Shurima"
+    ],
+    "regionRefs": [
+      "ShadowIsles",
+      "Shurima"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "Conférez « <link=keyword.Last Breath><sprite name=LastBreath><style=Keyword>Dernier souffle</style></link> : invoquez 1 <link=card.summon><style=AssociatedCard>Mirage d'Icathia</style></link> avec mon équipement. » à un allié pour ce round.",
+    "descriptionRaw": "Conférez « Dernier souffle : invoquez 1 Mirage d'Icathia avec mon équipement. » à un allié pour ce round.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Parfois, le mieux qu'on puisse faire pour un camarade tombé au combat, c'est de reprendre son arme et de poursuivre la lutte.",
+    "artistName": "Kudos Productions",
+    "name": "Lames des morts",
+    "cardCode": "06SI031",
+    "keywords": [
+      "Instantané"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Instantané",
+    "spellSpeedRef": "Burst",
+    "rarity": "RARE",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "EXPERT EN ARMES"
+    ],
+    "supertype": "",
+    "type": "Sort",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06SI031T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06SI031T1-full.png"
+      }
+    ],
+    "regions": [
+      "Shurima"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 3,
+    "cost": 2,
+    "health": 2,
+    "description": "",
+    "descriptionRaw": "",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Peut-être sont-ils un mirage. Peut-être qu'elle et les siens viennent d'un lointain village caché. Elle ne dit mot de ses origines, et Jax ne demande rien. Mais quand elle sort des sables et se tient à ses côtés, ils se battent dans une harmonie parfaite, silencieuse et impossible.",
+    "artistName": "Envar Studio",
+    "name": "Mirage d'Icathia",
+    "cardCode": "06SI031T1",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Aucune",
+    "rarityRef": "None",
+    "subtypes": [
+      "EXPERT EN ARMES"
+    ],
+    "supertype": "",
+    "type": "Unité",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06BW029.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06BW029-full.png"
+      }
+    ],
+    "regions": [
+      "Bilgewater",
+      "Piltover & Zaun"
+    ],
+    "regionRefs": [
+      "Bilgewater",
+      "PiltoverZaun"
+    ],
+    "attack": 2,
+    "cost": 3,
+    "health": 1,
+    "description": "Quand je suis invoqué, j'<link=vocab.Improvise><style=Vocab>improvise</style></link>.",
+    "descriptionRaw": "Quand je suis invoqué, j'improvise.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Pesh rencontra Jax lors d'une bagarre sur les quais, et c'est plus par un concours de circonstances que par envie qu'ils fuirent ensemble. Mais depuis, Pesh n'a de cesse de suivre Jax à la trace : avec lui, les choses ont la vilaine manie de se casser, et Pesh adore réparer tout ce qu'il trouve.",
+    "artistName": "Kudos Productions",
+    "name": "Naufragé de Piltover",
+    "cardCode": "06BW029",
+    "keywords": [
+      "Unisson"
+    ],
+    "keywordRefs": [
+      "Attune"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "COMMUN",
+    "rarityRef": "Common",
+    "subtypes": [
+      "EXPERT EN ARMES"
+    ],
+    "supertype": "",
+    "type": "Unité",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06MT004.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06MT004-full.png"
+      }
+    ],
+    "regions": [
+      "Targon",
+      "Bandle"
+    ],
+    "regionRefs": [
+      "Targon",
+      "BandleCity"
+    ],
+    "attack": 2,
+    "cost": 3,
+    "health": 2,
+    "description": "<link=vocab.Play><style=Vocab>Immédiat</style></link> : choisissez un allié, il <link=vocab.Improvise><style=Vocab>improvise</style></link>. Si vous n'en choisissez pas, j'<link=vocab.Improvise><style=Vocab>improvise</style></link>.",
+    "descriptionRaw": "Immédiat : choisissez un allié, il improvise. Si vous n'en choisissez pas, j'improvise.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Jax aida Chaska à sauver son troupeau des monstres déchaînés. Puis, Chaska sauva Jax des monstres déchaînés. Depuis, ils voyagent côte à côte.",
+    "artistName": "Caravan Studio",
+    "name": "Berger vagabond",
+    "cardCode": "06MT004",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "COMMUN",
+    "rarityRef": "Common",
+    "subtypes": [
+      "EXPERT EN ARMES"
+    ],
+    "supertype": "",
+    "type": "Unité",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06DE024.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06DE024-full.png"
+      }
+    ],
+    "regions": [
+      "Demacia",
+      "Freljord"
+    ],
+    "regionRefs": [
+      "Demacia",
+      "Freljord"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "Conférez +1|+1 à un allié pour ce round ou <link=vocab.Equip><style=Vocab>équipez</style></link>-le d'un équipement de votre main d'un coût de 2 ou moins.",
+    "descriptionRaw": "Conférez +1|+1 à un allié pour ce round ou équipez-le d'un équipement de votre main d'un coût de 2 ou moins.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Cette manœuvre fait bien plus mal si le groupe n'a pas encore mangé.",
+    "artistName": "Kudos Productions",
+    "name": "Attrape !",
+    "cardCode": "06DE024",
+    "keywords": [
+      "Instantané"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Instantané",
+    "spellSpeedRef": "Burst",
+    "rarity": "RARE",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "EXPERT EN ARMES"
+    ],
+    "supertype": "",
+    "type": "Sort",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU008T6",
+      "06RU008T5",
+      "06RU008T8",
+      "06RU008T7"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06RU008.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06RU008-full.png"
+      }
+    ],
+    "regions": [
+      "Runeterra"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 3,
+    "cost": 2,
+    "health": 2,
+    "description": "<link=vocab.Origin><style=Vocab>Origine</style></link> : <link=card.origin><style=AssociatedCard>Maître d'armes</style></link>.\r\n<link=vocab.AutoEquip><style=Vocab>Équipement auto.</style></link> : <link=card.equipment><style=AssociatedCard>La lumière d'Icathia</style></link>.",
+    "descriptionRaw": "Origine : Maître d'armes.\r\nÉquipement auto. : La lumière d'Icathia.",
+    "levelupDescription": "Les alliés équipés ont infligé au moins 15 pts de dégâts. <style=Variable></style>",
+    "levelupDescriptionRaw": "Les alliés équipés ont infligé au moins 15 pts de dégâts. ",
+    "flavorText": "Il y a des siècles de cela, Jax perdit sa patrie face au Néant. Il parcourt à présent le monde à la recherche de guerriers ayant la force d'esprit (et le culot, il faut bien le dire) nécessaire pour un jour affronter ce terrible adversaire.",
+    "artistName": "Envar Studio",
+    "name": "Jax",
+    "cardCode": "06RU008",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Champion",
+    "rarityRef": "Champion",
+    "subtypes": [
+      "EXPERT EN ARMES"
+    ],
+    "supertype": "Champion",
+    "type": "Unité",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU008"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06RU008T5.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06RU008T5-full.png"
+      }
+    ],
+    "regions": [
+      "Runeterra"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "Vous pouvez ajouter n'importe quelle carte Expert en armes dans votre deck lors de la construction de celui-ci.",
+    "descriptionRaw": "Vous pouvez ajouter n'importe quelle carte Expert en armes dans votre deck lors de la construction de celui-ci.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "",
+    "artistName": "Envar Studios",
+    "name": "Maître d'armes",
+    "cardCode": "06RU008T5",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Aucune",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Compétence",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU008",
+      "06RU008T6"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06RU008T6.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06RU008T6-full.png"
+      }
+    ],
+    "regions": [
+      "Runeterra"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "Si <link=card.level1><style=AssociatedCard>Jax</style></link> a évolué, <link=card.selfref><style=AssociatedCard>La lumière d'Icathia</style></link> a <link=keyword.Overwhelm><sprite name=Overwhelm><style=Keyword>Surpuissance</style></link>.",
+    "descriptionRaw": "Si Jax a évolué, La lumière d'Icathia a Surpuissance.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« C'est un bâton avec un bout contondant. Moi, j'appelle ça une arme. » - Jax",
+    "artistName": "Kudos Productions ",
+    "name": "La lumière d'Icathia",
+    "cardCode": "06RU008T6",
+    "keywords": [
+      "Équipement",
+      "Frappe rapide"
+    ],
+    "keywordRefs": [
+      "Equipment",
+      "QuickStrike"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Aucune",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Équipement",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU008T6",
+      "06RU008T8",
+      "06RU008"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06RU008T7.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06RU008T7-full.png"
+      }
+    ],
+    "regions": [
+      "Runeterra"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 4,
+    "cost": 2,
+    "health": 3,
+    "description": "<link=vocab.AutoEquip><style=Vocab>Équipement auto.</style></link> : <link=card.equipment><style=AssociatedCard>La lumière d'Icathia</style></link>.\r\n<link=vocab.Attack><style=Vocab>Attaque</style></link> : conférez-moi +1|+1 pour ce round pour chaque allié <link=vocab.Equip><style=Vocab>équipé</style></link>.",
+    "descriptionRaw": "Équipement auto. : La lumière d'Icathia.\r\nAttaque : conférez-moi +1|+1 pour ce round pour chaque allié équipé.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« Icathia est longtemps restée silencieuse. Mais tant que je suis encore debout, le rugissement de son peuple résonnera à jamais ! » - Jax",
+    "artistName": "Envar Studio",
+    "name": "Jax",
+    "cardCode": "06RU008T7",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Aucune",
+    "rarityRef": "None",
+    "subtypes": [
+      "EXPERT EN ARMES"
+    ],
+    "supertype": "Champion",
+    "type": "Unité",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU008"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06RU008T8.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06RU008T8-full.png"
+      }
+    ],
+    "regions": [
+      "Runeterra"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "Conférez <link=keyword.Barrier><sprite name=Barrier><style=Keyword>Barrière</style></link> à <link=card.level1><style=AssociatedCard>Jax</style></link> pour ce round et <link=vocab.Forge><style=Vocab>forgez</style></link>-le.\r\nPlacez 1 <link=card.level1><style=AssociatedCard>Jax</style></link> dans votre deck.",
+    "descriptionRaw": "Conférez Barrière à Jax pour ce round et forgez-le.\r\nPlacez 1 Jax dans votre deck.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« Faites place au champion ! » - Jax",
+    "artistName": "Kudos Productions",
+    "name": "Contre-attaque de Jax",
+    "cardCode": "06RU008T8",
+    "keywords": [
+      "Instantané"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Instantané",
+    "spellSpeedRef": "Burst",
+    "rarity": "Aucune",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "Champion",
+    "type": "Sort",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06BC047.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06BC047-full.png"
+      }
+    ],
+    "regions": [
+      "Targon",
+      "Bandle"
+    ],
+    "regionRefs": [
+      "Targon",
+      "BandleCity"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "Conférez à un allié <link=vocab.Equip><style=Vocab>équipé</style></link> les stats et les mots-clés de la carte qui lui est liée pour ce round et <link=vocab.Equip><style=Vocab>équipez</style></link> cette dernière sur un autre allié.",
+    "descriptionRaw": "Conférez à un allié équipé les stats et les mots-clés de la carte qui lui est liée pour ce round et équipez cette dernière sur un autre allié.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "On pourrait penser qu'un berger n'a pas sa place sur un champ de bataille, mais ses compétences s'avèrent être un véritable atout ! Il suffit de se dire que les combattants sont des moutons ayant besoin d'être rassemblés.",
+    "artistName": "Kudos Productions",
+    "name": "Partage",
+    "cardCode": "06BC047",
+    "keywords": [
+      "Instantané"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Instantané",
+    "spellSpeedRef": "Burst",
+    "rarity": "RARE",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "EXPERT EN ARMES"
+    ],
+    "supertype": "",
+    "type": "Sort",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06IO028.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06IO028-full.png"
+      }
+    ],
+    "regions": [
+      "Ionia",
+      "Noxus"
+    ],
+    "regionRefs": [
+      "Ionia",
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "Conférez <link=keyword.Challenger><sprite name=Challenger><style=Keyword>Challenger</style></link> à un allié pour ce round. S'il est <link=vocab.Equip><style=Vocab>équipé</style></link>, piochez 1 carte.",
+    "descriptionRaw": "Conférez Challenger à un allié pour ce round. S'il est équipé, piochez 1 carte.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Personne ne peut résister à l'appât idéal.",
+    "artistName": "Kudos Productions",
+    "name": "Appât fascinant",
+    "cardCode": "06IO028",
+    "keywords": [
+      "Instantané"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Instantané",
+    "spellSpeedRef": "Burst",
+    "rarity": "RARE",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "EXPERT EN ARMES"
+    ],
+    "supertype": "",
+    "type": "Sort",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06FR024.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06FR024-full.png"
+      }
+    ],
+    "regions": [
+      "Freljord"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 0,
+    "cost": 5,
+    "health": 0,
+    "description": "",
+    "descriptionRaw": "",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« Crac ! » - Tarkaz le Sans-tribu",
+    "artistName": "Kudos Productions",
+    "name": "Gourdin d'os",
+    "cardCode": "06FR024",
+    "keywords": [
+      "Équipement"
+    ],
+    "keywordRefs": [
+      "Equipment"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "COMMUN",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Équipement",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06FR032.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06FR032-full.png"
+      }
+    ],
+    "regions": [
+      "Freljord"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 0,
+    "cost": 5,
+    "health": 0,
+    "description": "Rendez 4 PV à votre Nexus et octroyez +1|+1 à tous les alliés et équipements de votre deck. Piochez-en un.",
+    "descriptionRaw": "Rendez 4 PV à votre Nexus et octroyez +1|+1 à tous les alliés et équipements de votre deck. Piochez-en un.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« Venez vous réchauffer auprès du feu. » - Protecteur des Feux de l'Âtre",
+    "artistName": "Kudos Productions",
+    "name": "Don des Feux de l'Âtre",
+    "cardCode": "06FR032",
+    "keywords": [
+      "Instantané"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Instantané",
+    "spellSpeedRef": "Burst",
+    "rarity": "ÉPIQUE",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Sort",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06SI006.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06SI006-full.png"
+      }
+    ],
+    "regions": [
+      "Îles obscures"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 2,
+    "description": "Quand vous avez <link=vocab.Equip><style=Vocab>équipé</style></link> un allié lors de cette partie, octroyez-moi <link=keyword.Lifesteal><sprite name=Lifesteal><style=Keyword>Vol de vie</style></link>.",
+    "descriptionRaw": "Quand vous avez équipé un allié lors de cette partie, octroyez-moi Vol de vie.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« La boîte n'offre pas librement ses secrets, Shieda Kayn. Ils ont un prix plus que sinistre. Mais si tu as le courage de plonger ton regard dans l'ombre des ombres, tu découvriras des choses aussi merveilleuses qu'épouvantables. » - Ysdra, Gardienne de la boîte",
+    "artistName": "Kudos Productions",
+    "name": "Gardienne de la boîte",
+    "cardCode": "06SI006",
+    "keywords": [
+      "Redoutable"
+    ],
+    "keywordRefs": [
+      "Fearsome"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "COMMUN",
+    "rarityRef": "Common",
+    "subtypes": [
+      "ZÉLOTE"
+    ],
+    "supertype": "",
+    "type": "Unité",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06SI007T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06SI007.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06SI007-full.png"
+      }
+    ],
+    "regions": [
+      "Îles obscures"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "Pour me jouer, tuez un allié.\r\nVous pouvez dépenser 10 pts de mana pour me jouer en tant que <link=card.unit><style=AssociatedCard>Taarosh</style></link>.",
+    "descriptionRaw": "Pour me jouer, tuez un allié.\r\nVous pouvez dépenser 10 pts de mana pour me jouer en tant que Taarosh.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Luttant contre les parois de sa cellule, Taarosh entendit l'appel de son général. Il y répondrait, d'une manière ou d'une autre.",
+    "artistName": "Kudos Productions ",
+    "name": "Hallebarde des Darkin",
+    "cardCode": "06SI007",
+    "keywords": [
+      "Équipement"
+    ],
+    "keywordRefs": [
+      "Equipment"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ÉPIQUE",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "DARKIN"
+    ],
+    "supertype": "",
+    "type": "Équipement",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06SI007"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06SI007T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06SI007T1-full.png"
+      }
+    ],
+    "regions": [
+      "Îles obscures"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 10,
+    "cost": 10,
+    "health": 10,
+    "description": "La première fois que j'attaque à chaque round, remplissez vos emplacements d'attaquants par des copies ranimées et <link=keyword.Ephemeral><sprite name=Ephemeral><style=Keyword>éphémères</style></link> des adeptes <link=vocab.Strongest><style=Vocab>les plus forts</style></link> que vous avez <link=vocab.Slay><style=Vocab>vaincus</style></link> lors de cette partie.",
+    "descriptionRaw": "La première fois que j'attaque à chaque round, remplissez vos emplacements d'attaquants par des copies ranimées et éphémères des adeptes les plus forts que vous avez vaincus lors de cette partie.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "La légende raconte que Taarosh était sur le point de détruire Xolaani lorsque les Targoniens attaquèrent les Darkin. Au fil des siècles, il sentit la terre autour de lui devenir corrompue, souillée par la pourriture et la puanteur perpétuelle de la mort. Il ne rêvait que d'une chose : plonger Xolaani dans cette même souffrance une fois qu'il serait à nouveau libre.",
+    "artistName": "Kudos Productions",
+    "name": "Taarosh",
+    "cardCode": "06SI007T1",
+    "keywords": [
+      "Redoutable"
+    ],
+    "keywordRefs": [
+      "Fearsome"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Aucune",
+    "rarityRef": "None",
+    "subtypes": [
+      "DARKIN"
+    ],
+    "supertype": "",
+    "type": "Unité",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06SI029.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06SI029-full.png"
+      }
+    ],
+    "regions": [
+      "Îles obscures"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "Si un allié est mort lors de ce round, mon coût est réduit de 2.",
+    "descriptionRaw": "Si un allié est mort lors de ce round, mon coût est réduit de 2.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« Il ne peut y avoir aucune justice... Uniquement la vengeance. » - Kalista",
+    "artistName": "Kudos Productions",
+    "name": "Lance maléfique",
+    "cardCode": "06SI029",
+    "keywords": [
+      "Équipement",
+      "Redoutable"
+    ],
+    "keywordRefs": [
+      "Equipment",
+      "Fearsome"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "COMMUN",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Équipement",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06SI032.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06SI032-full.png"
+      }
+    ],
+    "regions": [
+      "Îles obscures"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "Tuez une unité dotée d'une puissance de 2 ou moins ou détruisez l'équipement d'une unité.",
+    "descriptionRaw": "Tuez une unité dotée d'une puissance de 2 ou moins ou détruisez l'équipement d'une unité.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Il existe de nombreuses façons de mourir sur les Îles obscures. Priez pour que la vôtre soit rapide.",
+    "artistName": "",
+    "name": "Repos éternel",
+    "cardCode": "06SI032",
+    "keywords": [
+      "Lent"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "Lent",
+    "spellSpeedRef": "Slow",
+    "rarity": "RARE",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Sort",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06DE006.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06DE006-full.png"
+      }
+    ],
+    "regions": [
+      "Demacia",
+      "Freljord"
+    ],
+    "regionRefs": [
+      "Demacia",
+      "Freljord"
+    ],
+    "attack": 2,
+    "cost": 4,
+    "health": 2,
+    "description": "Quand je suis invoqué, j'<link=vocab.Improvise><style=Vocab>improvise</style></link> et <link=vocab.Forge><style=Vocab>forgez</style></link>-moi.",
+    "descriptionRaw": "Quand je suis invoqué, j'improvise et forgez-moi.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Après avoir servi dans l'armée de Demacia, Breshi pensait prendre sa retraite et finir ses jours dans une petite taverne paisible. Jax détruisit cette perspective lors d'une bagarre dans ladite taverne suite à son avis tranché sur les œufs durs. C'est ainsi que Breshi se trouva un nouvel objectif : enseigner le bon goût à Jax.",
+    "artistName": "Envar Studio",
+    "name": "Cuistot de combat",
+    "cardCode": "06DE006",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "COMMUN",
+    "rarityRef": "Common",
+    "subtypes": [
+      "EXPERT EN ARMES"
+    ],
+    "supertype": "",
+    "type": "Unité",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06FR004.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06FR004-full.png"
+      }
+    ],
+    "regions": [
+      "Freljord"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 1,
+    "cost": 1,
+    "health": 1,
+    "description": "La première fois que vous <link=vocab.Equip><style=Vocab>équipez</style></link> un allié, <link=vocab.Forge><style=Vocab>forgez</style></link>-le.",
+    "descriptionRaw": "La première fois que vous équipez un allié, forgez-le.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Il y a fort longtemps, Ornn fabriqua la forge ambulante, mais ce n'est que récemment qu'il décida de retourner la chercher. Il n'aurait jamais pensé qu'elle partirait en quête d'un nouveau propriétaire de son propre chef.",
+    "artistName": "Kudos Productions",
+    "name": "Apprentie forgeronne",
+    "cardCode": "06FR004",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "COMMUN",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unité",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06FR008.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06FR008-full.png"
+      }
+    ],
+    "regions": [
+      "Freljord"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 5,
+    "cost": 5,
+    "health": 5,
+    "description": "<link=vocab.Play><style=Vocab>Immédiat</style></link> : <link=vocab.Forge><style=Vocab>forgez</style></link> un allié, rendez-lui 3 PV et rendez 3 PV à votre Nexus.",
+    "descriptionRaw": "Immédiat : forgez un allié, rendez-lui 3 PV et rendez 3 PV à votre Nexus.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Les Feux de l'Âtre s'étaient tous éteints lorsque Ornn décida de se retirer du monde. Leurs noms furent oubliés, génération après génération. Toutefois, les récits sur Ornn ont récemment refait surface. On raconte même que certains individus ont repris les traditions des Feux de l'Âtre.",
+    "artistName": "Michal Ivan",
+    "name": "Protecteur des Feux de l'Âtre",
+    "cardCode": "06FR008",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "COMMUN",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unité",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06FR009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06FR009-full.png"
+      }
+    ],
+    "regions": [
+      "Freljord"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 3,
+    "cost": 3,
+    "health": 3,
+    "description": "<link=vocab.Play><style=Vocab>Immédiat</style></link> : <link=vocab.Forge><style=Vocab>forgez</style></link> un allié.",
+    "descriptionRaw": "Immédiat : forgez un allié.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Quand Fiske s'était mis en tête de prendre un apprenti, il avait imaginé quelqu'un de dévoué, consciencieux, robuste et compétent. Kindra n'avait aucune de ces qualités. Elle était douée pour rêvasser. Elle préférait jouer que travailler. Elle passait son temps avec sa satanée tortue. Mais mine de rien... elle apprenait. C'était l'essentiel.",
+    "artistName": "Kudos Productions",
+    "name": "Forgeron hors pair",
+    "cardCode": "06FR009",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "COMMUN",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unité",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06FR012T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06FR012.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06FR012-full.png"
+      }
+    ],
+    "regions": [
+      "Freljord"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 1,
+    "cost": 2,
+    "health": 4,
+    "description": "Quand je suis invoquée, créez 1 <link=card.create><style=AssociatedCard>Temps et dévouement</style></link> dans votre main.",
+    "descriptionRaw": "Quand je suis invoquée, créez 1 Temps et dévouement dans votre main.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« Ma mère m'a raconté l'histoire d'Ornn, tout comme sa mère l'avait fait avec elle, et la sienne avant elle... Aujourd'hui, c'est à mon tour de vous la raconter. Écoutez-moi bien. Ne m'interrompez pas. Il y a fort longtemps, de l'autre côté d'une mer agitée et brûlante... »",
+    "artistName": "Envar Studio",
+    "name": "Artisane favorite",
+    "cardCode": "06FR012",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "COMMUN",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unité",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06FR012T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06FR012T1-full.png"
+      }
+    ],
+    "regions": [
+      "Freljord"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "<link=vocab.Forge><style=Vocab>Forgez</style></link> un allié.",
+    "descriptionRaw": "Forgez un allié.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« Prouve-moi simplement que tu as mérité de l'avoir. » - Ornn",
+    "artistName": "Kudos Productions",
+    "name": "Temps et dévouement",
+    "cardCode": "06FR012T1",
+    "keywords": [
+      "Focalisé"
+    ],
+    "keywordRefs": [
+      "Focus"
+    ],
+    "spellSpeed": "Instantané",
+    "spellSpeedRef": "Burst",
+    "rarity": "Aucune",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Sort",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06DE032.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06DE032-full.png"
+      }
+    ],
+    "regions": [
+      "Demacia"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "",
+    "descriptionRaw": "",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "L'épée et le bouclier classiques des compagnons d'armes de Demacia.",
+    "artistName": "Kudos Productions",
+    "name": "Acier de Demacia",
+    "cardCode": "06DE032",
+    "keywords": [
+      "Équipement"
+    ],
+    "keywordRefs": [
+      "Equipment"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "COMMUN",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Équipement",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06FR011T2",
+      "06FR011T1",
+      "06FR011T4"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06FR011.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06FR011-full.png"
+      }
+    ],
+    "regions": [
+      "Freljord"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 4,
+    "cost": 7,
+    "health": 4,
+    "description": "<link=vocab.Play><style=Vocab>Immédiat</style></link> : <link=vocab.Equip><style=Vocab>équipez</style></link>-moi une copie exacte de l'équipement d'un allié ou de l'équipement <link=vocab.Strongest><style=Vocab>le plus fort</style></link> dans votre main.\r\n<link=vocab.Attack><style=Vocab>Attaque</style></link> : <link=vocab.Forge><style=Vocab>forgez</style></link>-moi deux fois.",
+    "descriptionRaw": "Immédiat : équipez-moi une copie exacte de l'équipement d'un allié ou de l'équipement le plus fort dans votre main.\r\nAttaque : forgez-moi deux fois.",
+    "levelupDescription": "Un allié a frappé et infligé au moins 10 pts de dégâts<style=Variable></style>. ",
+    "levelupDescriptionRaw": "Un allié a frappé et infligé au moins 10 pts de dégâts. ",
+    "flavorText": "Si une personne demandait à Ornn pourquoi il était aussi impatient, il répondrait qu'au contraire, il a bien de la patience. Une patience à toute épreuve qui expliquait la qualité de son ouvrage. Il n'avait tout bonnement aucune patience envers les autres. Mais puisque personne ne lui a jamais posé la question, il ne l'a jamais dit.",
+    "artistName": "Kudos Productions",
+    "name": "Ornn",
+    "cardCode": "06FR011",
+    "keywords": [
+      "Robuste"
+    ],
+    "keywordRefs": [
+      "Tough"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Champion",
+    "rarityRef": "Champion",
+    "subtypes": [],
+    "supertype": "Champion",
+    "type": "Unité",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06FR011",
+      "06FR011T2",
+      "06FR011T4"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06FR011T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06FR011T1-full.png"
+      }
+    ],
+    "regions": [
+      "Freljord"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 5,
+    "cost": 7,
+    "health": 5,
+    "description": "<link=vocab.Play><style=Vocab>Immédiat</style></link> : <link=vocab.Equip><style=Vocab>équipez</style></link>-moi une copie exacte de l'équipement d'un allié ou de l'équipement <link=vocab.Strongest><style=Vocab>le plus fort</style></link> dans votre main.\r\n<link=vocab.Attack><style=Vocab>Attaque</style></link> : <link=vocab.Forge><style=Vocab>forgez</style></link>-moi deux fois, puis invoquez 1 <link=card.summon><style=AssociatedCard>Esprit du bélier</style></link> en attaque avec mes stats.",
+    "descriptionRaw": "Immédiat : équipez-moi une copie exacte de l'équipement d'un allié ou de l'équipement le plus fort dans votre main.\r\nAttaque : forgez-moi deux fois, puis invoquez 1 Esprit du bélier en attaque avec mes stats.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "La légende dit que les élus d'Ornn seront en mesure de trouver leur dieu lorsque le monde aura vraiment besoin de lui. N'est-ce pas là le propre des dieux grincheux et marginaux ? On ne les trouve jamais là où on les attend.  ",
+    "artistName": "Will Gist",
+    "name": "Ornn",
+    "cardCode": "06FR011T1",
+    "keywords": [
+      "Robuste"
+    ],
+    "keywordRefs": [
+      "Tough"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Aucune",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "Champion",
+    "type": "Unité",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06FR011T4.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06FR011T4-full.png"
+      }
+    ],
+    "regions": [
+      "Freljord"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 1,
+    "cost": 4,
+    "health": 1,
+    "description": "",
+    "descriptionRaw": "",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« Après le passage du feu, tout ce qui reste est soit forgé, soit fondu. Mieux vaut être de l'acier et prendre forme plutôt que d'être réduit en cendres ! » - Ornn",
+    "artistName": "Kudos Productions",
+    "name": "Esprit du bélier",
+    "cardCode": "06FR011T4",
+    "keywords": [
+      "Éphémère",
+      "Surpuissance"
+    ],
+    "keywordRefs": [
+      "Ephemeral",
+      "Overwhelm"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Aucune",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unité",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06FR011",
+      "06FR011T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06FR011T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06FR011T2-full.png"
+      }
+    ],
+    "regions": [
+      "Freljord"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 0,
+    "cost": 5,
+    "health": 0,
+    "description": "<link=vocab.Forge><style=Vocab>Forgez</style></link> un allié et infligez 1 pt(s) de dégâts à toutes les unités, puis recommencez.\r\nCréez 1 <link=card.level1><style=AssociatedCard>Ornn</style></link> dans votre deck.",
+    "descriptionRaw": "Forgez un allié et infligez 1 pt(s) de dégâts à toutes les unités, puis recommencez.\r\nCréez 1 Ornn dans votre deck.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« Une volonté de fer, ça se forge dans les flammes ! » - Ornn",
+    "artistName": "Kudos Productions",
+    "name": "Fournaise d'Ornn",
+    "cardCode": "06FR011T2",
+    "keywords": [
+      "Lent"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "Lent",
+    "spellSpeedRef": "Slow",
+    "rarity": "Aucune",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "Champion",
+    "type": "Sort",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06FR022.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06FR022-full.png"
+      }
+    ],
+    "regions": [
+      "Freljord"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 0,
+    "cost": 5,
+    "health": 0,
+    "description": "<link=vocab.Forge><style=Vocab>Forgez</style></link> un allié et infligez 1 pt(s) de dégâts à toutes les unités, puis recommencez.",
+    "descriptionRaw": "Forgez un allié et infligez 1 pt(s) de dégâts à toutes les unités, puis recommencez.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« Une volonté de fer, ça se forge dans les flammes ! » - Ornn",
+    "artistName": "Kudos Productions",
+    "name": "Fournaise",
+    "cardCode": "06FR022",
+    "keywords": [
+      "Lent"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "Lent",
+    "spellSpeedRef": "Slow",
+    "rarity": "RARE",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Sort",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06FR012T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06FR005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06FR005-full.png"
+      }
+    ],
+    "regions": [
+      "Freljord"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "Quand je suis invoquée ou <link=vocab.RoundStart><style=Vocab>Début du round</style></link> : créez 1 <link=card.create><style=AssociatedCard>Temps et dévouement</style></link> <link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>fugace</style></link> dans votre main.",
+    "descriptionRaw": "Quand je suis invoquée ou Début du round : créez 1 Temps et dévouement fugace dans votre main.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Dans la forge de l'Âtre-foyer, il avait tout ce qu'il désirait : la solitude et le silence, uniquement interrompu par l'écoulement de la rivière en fusion et le bruit de Marteau sur son enclume...",
+    "artistName": "Envar Studio",
+    "name": "Forge d'Ornn",
+    "cardCode": "06FR005",
+    "keywords": [
+      "Site"
+    ],
+    "keywordRefs": [
+      "LandmarkVisualOnly"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "RARE",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Site",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06FR023.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06FR023-full.png"
+      }
+    ],
+    "regions": [
+      "Freljord"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 8,
+    "cost": 8,
+    "health": 8,
+    "description": "La première fois que je suis <link=vocab.Equip><style=Vocab>équipé</style></link>, créez ma copie dans votre main. Octroyez-lui les stats de l'équipement.",
+    "descriptionRaw": "La première fois que je suis équipé, créez ma copie dans votre main. Octroyez-lui les stats de l'équipement.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Bien qu'il ne veuille pas l'admettre, Ornn était plutôt satisfait de ses colosses. Ils remplissaient parfaitement le rôle qui leur avait été assigné, et, cerise sur le gâteau, ils ne parlaient pas.",
+    "artistName": "Envar Studio",
+    "name": "Colosse forgé",
+    "cardCode": "06FR023",
+    "keywords": [
+      "Surpuissance"
+    ],
+    "keywordRefs": [
+      "Overwhelm"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ÉPIQUE",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unité",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06BW034.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06BW034-full.png"
+      }
+    ],
+    "regions": [
+      "Bilgewater"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "Détruisez l'équipement d'une unité et infligez-lui 2 pt(s) de dégâts.",
+    "descriptionRaw": "Détruisez l'équipement d'une unité et infligez-lui 2 pt(s) de dégâts.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« MAIS ÇA VA PAS DE BALANCER UNE ANCRE DANS UNE BAGARRE DE BAR ?! QU'EST-CE QUI TOURNE PAS ROND CHEZ VOUS ?!! » - Tavernier de Bilgewater",
+    "artistName": "Kudos Productions",
+    "name": "Métal lourd",
+    "cardCode": "06BW034",
+    "keywords": [
+      "Lent"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "Lent",
+    "spellSpeedRef": "Slow",
+    "rarity": "RARE",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Sort",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06SI036.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06SI036-full.png"
+      }
+    ],
+    "regions": [
+      "Îles obscures"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 0,
+    "cost": 11,
+    "health": 0,
+    "description": "Tuez toutes les unités à l'exception des Darkin alliés et des unités <link=vocab.Equip><style=Vocab>équipées</style></link> alliées.",
+    "descriptionRaw": "Tuez toutes les unités à l'exception des Darkin alliés et des unités équipées alliées.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Lorsqu'elle s'empara des armes, son humanité disparut, laissant à sa place une essence haineuse qui remplit le réceptacle vide qui était autrefois l'élève Jun. Elle se répandit dans son corps, son cœur et son esprit, réveillant peu à peu le Darkin endormi.",
+    "artistName": "Kudos Productions",
+    "name": "Dévastation absolue",
+    "cardCode": "06SI036",
+    "keywords": [
+      "Lent"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "Lent",
+    "spellSpeedRef": "Slow",
+    "rarity": "RARE",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "ZÉLOTE"
+    ],
+    "supertype": "",
+    "type": "Sort",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06SH004T2",
+      "06SH004T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06SH004.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06SH004-full.png"
+      }
+    ],
+    "regions": [
+      "Shurima"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "<link=keyword.Last Breath><sprite name=LastBreath><style=Keyword>Dernier souffle</style></link> : si mon détenteur n'est pas un <link=card.summon><style=AssociatedCard>Serviteur des Darkin</style></link>, invoquez 1 <link=card.summon><style=AssociatedCard>Serviteur des Darkin</style></link>.\r\nVous pouvez dépenser 6 pts de mana pour me jouer en tant que <link=card.unit><style=AssociatedCard>Xolaani</style></link>.",
+    "descriptionRaw": "Dernier souffle : si mon détenteur n'est pas un Serviteur des Darkin, invoquez 1 Serviteur des Darkin.\r\nVous pouvez dépenser 6 pts de mana pour me jouer en tant que Xolaani.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Alors que le combat faisait rage, Jun, désespérée et gravement blessée, entendit la voix qui murmurait dans ses pensées. « Tu ne mourras jamais », disait-elle, douce comme une pluie d'été. « Je ne le permettrai pas. »",
+    "artistName": "Kudos Productions",
+    "name": "Saigneurs des Darkin",
+    "cardCode": "06SH004",
+    "keywords": [
+      "Équipement"
+    ],
+    "keywordRefs": [
+      "Equipment"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ÉPIQUE",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "DARKIN"
+    ],
+    "supertype": "",
+    "type": "Équipement",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06SH004T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06SH004T1-full.png"
+      }
+    ],
+    "regions": [
+      "Shurima"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 1,
+    "cost": 1,
+    "health": 1,
+    "description": "La première fois que je suis <link=vocab.Equip><style=Vocab>équipé</style></link>, octroyez-moi +2|+2.",
+    "descriptionRaw": "La première fois que je suis équipé, octroyez-moi +2|+2.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Longtemps ces fidèles ont-ils entretenu les temples de leur dame. Longtemps ont-ils balayé le sable et expulsé tous ceux qui cherchaient à profaner ces lieux. Longtemps ont-ils prié pour son retour, sa bonté et son contrôle.",
+    "artistName": "Kudos Productions",
+    "name": "Serviteur des Darkin",
+    "cardCode": "06SH004T1",
+    "keywords": [
+      "Blocage impossible"
+    ],
+    "keywordRefs": [
+      "CantBlock"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Aucune",
+    "rarityRef": "None",
+    "subtypes": [
+      "ZÉLOTE"
+    ],
+    "supertype": "",
+    "type": "Unité",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06SH004"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06SH004T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/fr_fr/img/cards/06SH004T2-full.png"
+      }
+    ],
+    "regions": [
+      "Shurima"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 7,
+    "cost": 6,
+    "health": 7,
+    "description": "Pour me jouer, tuez un allié.\r\n<link=keyword.Last Breath><sprite name=LastBreath><style=Keyword>Dernier souffle</style></link> : créez 1 <link=card.create><style=AssociatedCard>Saigneurs des Darkin</style></link> dans votre main.",
+    "descriptionRaw": "Pour me jouer, tuez un allié.\r\nDernier souffle : créez 1 Saigneurs des Darkin dans votre main.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Les Transfigurés de Shurima furent condamnés au moment où ils prirent les armes contre le Néant. C'était un ennemi qui ne pouvait être vaincu, et bien que les dieux-guerriers soient presque immortels, leurs esprits, eux, n'étaient pas aussi résistants. La folie les consuma tous. Xolaani, autrefois une guérisseuse talentueuse et aimée de tous, commença à utiliser ses pouvoirs hémomantiques pour contrôler ses frères et sœurs, et très vite, la haine entre elle et Aatrox donna naissance à une guerre civile.",
+    "artistName": "Kudos Productions",
+    "name": "Xolaani",
+    "cardCode": "06SH004T2",
+    "keywords": [
+      "Surpuissance",
+      "Dernier souffle"
+    ],
+    "keywordRefs": [
+      "Overwhelm",
+      "LastBreath"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Aucune",
+    "rarityRef": "None",
+    "subtypes": [
+      "DARKIN"
+    ],
+    "supertype": "",
+    "type": "Unité",
+    "collectible": false,
+    "set": "Set6cde"
+  }
+]

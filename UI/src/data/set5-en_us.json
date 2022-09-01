@@ -578,6 +578,50 @@
   },
   {
     "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/en_us/img/cards/05BC106.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/en_us/img/cards/05BC106-full.png"
+      }
+    ],
+    "regions": [
+      "Bandle City",
+      "Bilgewater"
+    ],
+    "regionRefs": [
+      "BandleCity",
+      "Bilgewater"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 3,
+    "description": "",
+    "descriptionRaw": "",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Though quite small, the grumbleslug has a large appetite and possesses what I can only describe as a 'real attitude problem.'\" \n- Conchologist Ecological Entry, Day 17",
+    "artistName": "Kudos Productions",
+    "name": "Grumbleslug",
+    "cardCode": "05BC106",
+    "keywords": [
+      "Attune"
+    ],
+    "keywordRefs": [
+      "Attune"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "COMMON",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unit",
+    "collectible": true,
+    "set": "Set5"
+  },
+  {
+    "associatedCards": [],
     "associatedCardRefs": [
       "05BC166",
       "05BC161T2",
@@ -1936,48 +1980,6 @@
   },
   {
     "associatedCards": [],
-    "associatedCardRefs": [
-      "05BC181"
-    ],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/en_us/img/cards/05BC056.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/en_us/img/cards/05BC056-full.png"
-      }
-    ],
-    "regions": [
-      "Bandle City"
-    ],
-    "regionRefs": [
-      "BandleCity"
-    ],
-    "attack": 2,
-    "cost": 2,
-    "health": 2,
-    "description": "When I'm summoned, create a <link=card.create><style=AssociatedCard>Cloud Stance</style></link> in hand.",
-    "descriptionRaw": "When I'm summoned, create a Cloud Stance in hand.",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "\"It is from control of breath that our school's technique is derived. Just as it is from wind that a tempest is born.\"",
-    "artistName": "Kudos Productions",
-    "name": "Gust Monk",
-    "cardCode": "05BC056",
-    "keywords": [],
-    "keywordRefs": [],
-    "spellSpeed": "",
-    "spellSpeedRef": "",
-    "rarity": "RARE",
-    "rarityRef": "Rare",
-    "subtypes": [
-      "YORDLE"
-    ],
-    "supertype": "",
-    "type": "Unit",
-    "collectible": true,
-    "set": "Set5"
-  },
-  {
-    "associatedCards": [],
     "associatedCardRefs": [],
     "assets": [
       {
@@ -3169,6 +3171,52 @@
   },
   {
     "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/en_us/img/cards/05BC221.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/en_us/img/cards/05BC221-full.png"
+      }
+    ],
+    "regions": [
+      "Bandle City",
+      "Ionia"
+    ],
+    "regionRefs": [
+      "BandleCity",
+      "Ionia"
+    ],
+    "attack": 2,
+    "cost": 3,
+    "health": 2,
+    "description": "When I'm summoned or <link=vocab.RoundStart><style=Vocab>Round Start</style></link>: Give me Power this round equal to the number of other allied Fae in play or <link=keyword.Attach><sprite name=Attach><style=Keyword>Attached</style></link>.",
+    "descriptionRaw": "When I'm summoned or Round Start: Give me Power this round equal to the number of other allied Fae in play or Attached.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "The little pinheads are rather cute, and by themselves, have mushroom to grow.",
+    "artistName": "Caravan Studio",
+    "name": "Mushroom Ring",
+    "cardCode": "05BC221",
+    "keywords": [
+      "Quick Attack"
+    ],
+    "keywordRefs": [
+      "QuickStrike"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "RARE",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "FAE"
+    ],
+    "supertype": "",
+    "type": "Unit",
+    "collectible": true,
+    "set": "Set5"
+  },
+  {
+    "associatedCards": [],
     "associatedCardRefs": [
       "05BC041T3",
       "05BC041T1"
@@ -3605,48 +3653,6 @@
     "subtypes": [],
     "supertype": "",
     "type": "Landmark",
-    "collectible": true,
-    "set": "Set5"
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [
-      "05BC127T1"
-    ],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/en_us/img/cards/05BC127.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/en_us/img/cards/05BC127-full.png"
-      }
-    ],
-    "regions": [
-      "Bandle City"
-    ],
-    "regionRefs": [
-      "BandleCity"
-    ],
-    "attack": 1,
-    "cost": 5,
-    "health": 3,
-    "description": "When I'm summoned, summon a <link=card.summon><style=AssociatedCard>Stormcloud</style></link>.",
-    "descriptionRaw": "When I'm summoned, summon a Stormcloud.",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "Weaving a Stormcloud took time. Time Rissu didn't have. Her hands worked furiously as the Aberration closed in. A bit of cloud here, some lightning there. Then... CRACK! BOOM! She had done it, but would it be enough?",
-    "artistName": "Kudos Productions",
-    "name": "Rissu, The Silent Storm",
-    "cardCode": "05BC127",
-    "keywords": [],
-    "keywordRefs": [],
-    "spellSpeed": "",
-    "spellSpeedRef": "",
-    "rarity": "EPIC",
-    "rarityRef": "Epic",
-    "subtypes": [
-      "YORDLE"
-    ],
-    "supertype": "",
-    "type": "Unit",
     "collectible": true,
     "set": "Set5"
   },
@@ -4421,48 +4427,6 @@
   },
   {
     "associatedCards": [],
-    "associatedCardRefs": [],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/en_us/img/cards/05BC112.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/en_us/img/cards/05BC112-full.png"
-      }
-    ],
-    "regions": [
-      "Bandle City",
-      "Ionia"
-    ],
-    "regionRefs": [
-      "BandleCity",
-      "Ionia"
-    ],
-    "attack": 2,
-    "cost": 2,
-    "health": 2,
-    "description": "<link=vocab.Play><style=Vocab>Play</style></link>: Give me <link=keyword.Barrier><sprite name=Barrier><style=Keyword>Barrier</style></link> this round or grant me <link=keyword.Impact><sprite name=Impact><style=Keyword>Impact</style></link>.",
-    "descriptionRaw": "Play: Give me Barrier this round or grant me Impact.",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "The Blastcone Seedlings are shy creatures, and while they will retreat first and foremost, if threatened...",
-    "artistName": "Caravan Studio",
-    "name": "Blastcone Seedling",
-    "cardCode": "05BC112",
-    "keywords": [],
-    "keywordRefs": [],
-    "spellSpeed": "",
-    "spellSpeedRef": "",
-    "rarity": "COMMON",
-    "rarityRef": "Common",
-    "subtypes": [
-      "FAE"
-    ],
-    "supertype": "",
-    "type": "Unit",
-    "collectible": true,
-    "set": "Set5"
-  },
-  {
-    "associatedCards": [],
     "associatedCardRefs": [
       "05BC041T3",
       "05BC041"
@@ -4684,6 +4648,48 @@
     "supertype": "",
     "type": "Unit",
     "collectible": false,
+    "set": "Set5"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "05BC181"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/en_us/img/cards/05BC056.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/en_us/img/cards/05BC056-full.png"
+      }
+    ],
+    "regions": [
+      "Bandle City"
+    ],
+    "regionRefs": [
+      "BandleCity"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 2,
+    "description": "When I'm summoned, create a <link=card.create><style=AssociatedCard>Cloud Stance</style></link> in hand.",
+    "descriptionRaw": "When I'm summoned, create a Cloud Stance in hand.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"It is from control of breath that our school's technique is derived. Just as it is from wind that a tempest is born.\"",
+    "artistName": "Kudos Productions",
+    "name": "Gust Monk",
+    "cardCode": "05BC056",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "RARE",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "YORDLE"
+    ],
+    "supertype": "",
+    "type": "Unit",
+    "collectible": true,
     "set": "Set5"
   },
   {
@@ -5771,50 +5777,6 @@
   },
   {
     "associatedCards": [],
-    "associatedCardRefs": [],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/en_us/img/cards/05BC106.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/en_us/img/cards/05BC106-full.png"
-      }
-    ],
-    "regions": [
-      "Bandle City",
-      "Bilgewater"
-    ],
-    "regionRefs": [
-      "BandleCity",
-      "Bilgewater"
-    ],
-    "attack": 2,
-    "cost": 2,
-    "health": 3,
-    "description": "",
-    "descriptionRaw": "",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "\"Though quite small, the grumbleslug has a large appetite and possesses what I can only describe as a 'real attitude problem.'\" \n- Conchologist Ecological Entry, Day 17",
-    "artistName": "Kudos Productions",
-    "name": "Grumbleslug",
-    "cardCode": "05BC106",
-    "keywords": [
-      "Attune"
-    ],
-    "keywordRefs": [
-      "Attune"
-    ],
-    "spellSpeed": "",
-    "spellSpeedRef": "",
-    "rarity": "COMMON",
-    "rarityRef": "Common",
-    "subtypes": [],
-    "supertype": "",
-    "type": "Unit",
-    "collectible": true,
-    "set": "Set5"
-  },
-  {
-    "associatedCards": [],
     "associatedCardRefs": [
       "05BC167T1"
     ],
@@ -5854,52 +5816,6 @@
     "subtypes": [],
     "supertype": "",
     "type": "Spell",
-    "collectible": true,
-    "set": "Set5"
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/en_us/img/cards/05BC221.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/en_us/img/cards/05BC221-full.png"
-      }
-    ],
-    "regions": [
-      "Bandle City",
-      "Ionia"
-    ],
-    "regionRefs": [
-      "BandleCity",
-      "Ionia"
-    ],
-    "attack": 2,
-    "cost": 3,
-    "health": 2,
-    "description": "When I'm summoned or <link=vocab.RoundStart><style=Vocab>Round Start</style></link>: Give me Power this round equal to the number of other allied Fae in play or <link=keyword.Attach><sprite name=Attach><style=Keyword>Attached</style></link>.",
-    "descriptionRaw": "When I'm summoned or Round Start: Give me Power this round equal to the number of other allied Fae in play or Attached.",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "The little pinheads are rather cute, and by themselves, have mushroom to grow.",
-    "artistName": "Caravan Studio",
-    "name": "Mushroom Ring",
-    "cardCode": "05BC221",
-    "keywords": [
-      "Quick Attack"
-    ],
-    "keywordRefs": [
-      "QuickStrike"
-    ],
-    "spellSpeed": "",
-    "spellSpeedRef": "",
-    "rarity": "RARE",
-    "rarityRef": "Rare",
-    "subtypes": [
-      "FAE"
-    ],
-    "supertype": "",
-    "type": "Unit",
     "collectible": true,
     "set": "Set5"
   },
@@ -6622,6 +6538,48 @@
     "rarityRef": "Rare",
     "subtypes": [
       "YORDLE"
+    ],
+    "supertype": "",
+    "type": "Unit",
+    "collectible": true,
+    "set": "Set5"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/en_us/img/cards/05BC112.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/en_us/img/cards/05BC112-full.png"
+      }
+    ],
+    "regions": [
+      "Bandle City",
+      "Ionia"
+    ],
+    "regionRefs": [
+      "BandleCity",
+      "Ionia"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 2,
+    "description": "<link=vocab.Play><style=Vocab>Play</style></link>: Give me <link=keyword.Barrier><sprite name=Barrier><style=Keyword>Barrier</style></link> this round or grant me <link=keyword.Impact><sprite name=Impact><style=Keyword>Impact</style></link>.",
+    "descriptionRaw": "Play: Give me Barrier this round or grant me Impact.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "The Blastcone Seedlings are shy creatures, and while they will retreat first and foremost, if threatened...",
+    "artistName": "Caravan Studio",
+    "name": "Blastcone Seedling",
+    "cardCode": "05BC112",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "COMMON",
+    "rarityRef": "Common",
+    "subtypes": [
+      "FAE"
     ],
     "supertype": "",
     "type": "Unit",
@@ -7726,6 +7684,48 @@
     "subtypes": [],
     "supertype": "",
     "type": "Spell",
+    "collectible": true,
+    "set": "Set5"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "05BC127T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/en_us/img/cards/05BC127.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/en_us/img/cards/05BC127-full.png"
+      }
+    ],
+    "regions": [
+      "Bandle City"
+    ],
+    "regionRefs": [
+      "BandleCity"
+    ],
+    "attack": 1,
+    "cost": 5,
+    "health": 3,
+    "description": "When I'm summoned, summon a <link=card.summon><style=AssociatedCard>Stormcloud</style></link>.",
+    "descriptionRaw": "When I'm summoned, summon a Stormcloud.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Weaving a Stormcloud took time. Time Rissu didn't have. Her hands worked furiously as the Aberration closed in. A bit of cloud here, some lightning there. Then... CRACK! BOOM! She had done it, but would it be enough?",
+    "artistName": "Kudos Productions",
+    "name": "Rissu, The Silent Storm",
+    "cardCode": "05BC127",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "EPIC",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "YORDLE"
+    ],
+    "supertype": "",
+    "type": "Unit",
     "collectible": true,
     "set": "Set5"
   },
@@ -12869,6 +12869,44 @@
   },
   {
     "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/en_us/img/cards/05PZ024.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/en_us/img/cards/05PZ024-full.png"
+      }
+    ],
+    "regions": [
+      "Piltover & Zaun"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 1,
+    "description": "<link=vocab.Play><style=Vocab>Play</style></link>: <link=vocab.Manifest><style=Vocab>Manifest</style></link> a 6+ cost spell from your regions.",
+    "descriptionRaw": "Play: Manifest a 6+ cost spell from your regions.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"About the only good part of Ferros financing my work was getting to team up with Reggie. Not only is the man one of the most competent people I've ever worked with, he's a heck of a guy, too.\"\n- Excerpt from Jayce's journal",
+    "artistName": "Kudos Productions",
+    "name": "Ferros Financier",
+    "cardCode": "05PZ024",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "COMMON",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unit",
+    "collectible": true,
+    "set": "Set5"
+  },
+  {
+    "associatedCards": [],
     "associatedCardRefs": [
       "05PZ008"
     ],
@@ -12950,44 +12988,6 @@
     "subtypes": [],
     "supertype": "",
     "type": "Spell",
-    "collectible": true,
-    "set": "Set5"
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/en_us/img/cards/05PZ024.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/en_us/img/cards/05PZ024-full.png"
-      }
-    ],
-    "regions": [
-      "Piltover & Zaun"
-    ],
-    "regionRefs": [
-      "PiltoverZaun"
-    ],
-    "attack": 2,
-    "cost": 2,
-    "health": 1,
-    "description": "<link=vocab.Play><style=Vocab>Play</style></link>: <link=vocab.Manifest><style=Vocab>Manifest</style></link> a 6+ cost spell from your regions.",
-    "descriptionRaw": "Play: Manifest a 6+ cost spell from your regions.",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "\"About the only good part of Ferros financing my work was getting to team up with Reggie. Not only is the man one of the most competent people I've ever worked with, he's a heck of a guy, too.\"\n- Excerpt from Jayce's journal",
-    "artistName": "Kudos Productions",
-    "name": "Ferros Financier",
-    "cardCode": "05PZ024",
-    "keywords": [],
-    "keywordRefs": [],
-    "spellSpeed": "",
-    "spellSpeedRef": "",
-    "rarity": "COMMON",
-    "rarityRef": "Common",
-    "subtypes": [],
-    "supertype": "",
-    "type": "Unit",
     "collectible": true,
     "set": "Set5"
   },

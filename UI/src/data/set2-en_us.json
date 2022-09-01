@@ -7090,8 +7090,8 @@
     "attack": 1,
     "cost": 2,
     "health": 3,
-    "description": "<link=vocab.RoundStart><style=Vocab>Round Start</style></link>: Summon a <link=card.summon><style=AssociatedCard>Dragonling</style></link> if you played 2+ spells last round<style=Variable></style>.",
-    "descriptionRaw": "Round Start: Summon a Dragonling if you played 2+ spells last round.",
+    "description": "<link=vocab.RoundStart><style=Vocab>Round Start</style></link>: <link=vocab.Flow><style=Vocab>Flow</style></link>: Summon a <link=card.summon><style=AssociatedCard>Dragonling</style></link><style=Variable></style>.",
+    "descriptionRaw": "Round Start: Flow: Summon a Dragonling.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "\"A student must think with clarity, for the Dragon draws the sun across our skies, and reveals the world around us.\"\n- Teachings of the Dragon",
@@ -7099,10 +7099,12 @@
     "name": "Eye of the Dragon",
     "cardCode": "02IO003",
     "keywords": [
-      "Attune"
+      "Attune",
+      "Flow"
     ],
     "keywordRefs": [
-      "Attune"
+      "Attune",
+      "Flow"
     ],
     "spellSpeed": "",
     "spellSpeedRef": "",
@@ -7390,8 +7392,8 @@
     "attack": 0,
     "cost": 5,
     "health": 0,
-    "description": "Costs 2 less if you played 2+ spells last round.\r\nDraw 2 other spells.\r\n",
-    "descriptionRaw": "Costs 2 less if you played 2+ spells last round.\r\nDraw 2 other spells.\r\n",
+    "description": "<link=vocab.Flow><style=Vocab>Flow</style></link>: Costs 2 less.\r\nDraw 2 other spells.\r\n",
+    "descriptionRaw": "Flow: Costs 2 less.\r\nDraw 2 other spells.\r\n",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "Meditation is a journey with no destination--a path that can only be followed by getting lost along the way.",
@@ -7399,10 +7401,12 @@
     "name": "Deep Meditation",
     "cardCode": "02IO009",
     "keywords": [
-      "Burst"
+      "Burst",
+      "Flow"
     ],
     "keywordRefs": [
-      "Burst"
+      "Burst",
+      "Flow"
     ],
     "spellSpeed": "Burst",
     "spellSpeedRef": "Burst",

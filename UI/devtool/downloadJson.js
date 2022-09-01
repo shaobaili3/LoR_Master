@@ -5,7 +5,7 @@ const fs = require("fs")
 
 const axios = require("axios").default
 
-const setNum = 6
+const setCodes = [1, 2, 3, 4, 5, 6, "6cde"]
 
 const setLocales = [
   "de_de",
@@ -30,24 +30,29 @@ const promisify = require("util").promisify
 const finished = promisify(stream.finished)
 
 async function downloadFile(fileUrl, outputLocationPath) {
-  const writer = fs.createWriteStream(outputLocationPath)
   return axios({
     method: "get",
     url: fileUrl,
     responseType: "stream",
-  }).then((response) => {
-    response.data.pipe(writer)
-    return finished(writer) //this is a Promise
   })
+    .then((response) => {
+      const writer = fs.createWriteStream(outputLocationPath)
+      response.data.pipe(writer)
+      return finished(writer) //this is a Promise
+    })
+    .catch((err) => {
+      console.log("Error downloading", fileUrl)
+    })
 }
 
 var promises = []
 var files = []
 
-for (let i = 1; i <= setNum; i++) {
+for (let i = 0; i < setCodes.length; i++) {
   for (let j = 0; j < setLocales.length; j++) {
-    const api = `http://dd.b.pvp.net/latest/set${i}/${setLocales[j]}/data/set${i}-${setLocales[j]}.json`
-    const path = `./src/data/set${i}-${setLocales[j]}.json`
+    let setCode = setCodes[i]
+    const api = `http://dd.b.pvp.net/latest/set${setCode}/${setLocales[j]}/data/set${setCode}-${setLocales[j]}.json`
+    const path = `./src/data/set${setCode}-${setLocales[j]}.json`
 
     if (files[j] == null) {
       files[j] = []
@@ -55,7 +60,7 @@ for (let i = 1; i <= setNum; i++) {
 
     files[j].push(path)
 
-    console.log(`Download Started for set${i}, locale: ${setLocales[j]}`)
+    console.log(`Download Started for set${setCode}, locale: ${setLocales[j]}`)
     promises.push(downloadFile(api, path))
   }
 

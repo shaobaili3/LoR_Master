@@ -578,6 +578,50 @@
   },
   {
     "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/ko_kr/img/cards/05BC106.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/ko_kr/img/cards/05BC106-full.png"
+      }
+    ],
+    "regions": [
+      "밴들 시티",
+      "빌지워터"
+    ],
+    "regionRefs": [
+      "BandleCity",
+      "Bilgewater"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 3,
+    "description": "",
+    "descriptionRaw": "",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"크기는 상당히 작지만, 툴툴민달팽이는 식욕이 왕성하며 '심각한 태도 문제'라고밖에 말할 수 없는 특징을 가졌다.\"\n- 패류학자 생태 일지, 17일 차",
+    "artistName": "Kudos Productions",
+    "name": "툴툴민달팽이",
+    "cardCode": "05BC106",
+    "keywords": [
+      "조율"
+    ],
+    "keywordRefs": [
+      "Attune"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "일반급",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set5"
+  },
+  {
+    "associatedCards": [],
     "associatedCardRefs": [
       "05BC166",
       "05BC161T2",
@@ -1936,48 +1980,6 @@
   },
   {
     "associatedCards": [],
-    "associatedCardRefs": [
-      "05BC181"
-    ],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/ko_kr/img/cards/05BC056.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/ko_kr/img/cards/05BC056-full.png"
-      }
-    ],
-    "regions": [
-      "밴들 시티"
-    ],
-    "regionRefs": [
-      "BandleCity"
-    ],
-    "attack": 2,
-    "cost": 2,
-    "health": 2,
-    "description": "소환 시 손에 <link=card.create><style=AssociatedCard>구름 태세</style></link> 1장을 생성합니다.",
-    "descriptionRaw": "소환 시 손에 구름 태세 1장을 생성합니다.",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "\"우리 문파의 기술은 호흡 조절에서 시작되지.<br>폭풍이 바람에서 태어나는 것처럼.\"",
-    "artistName": "Kudos Productions",
-    "name": "돌풍 수도사",
-    "cardCode": "05BC056",
-    "keywords": [],
-    "keywordRefs": [],
-    "spellSpeed": "",
-    "spellSpeedRef": "",
-    "rarity": "희귀급",
-    "rarityRef": "Rare",
-    "subtypes": [
-      "요들"
-    ],
-    "supertype": "",
-    "type": "유닛",
-    "collectible": true,
-    "set": "Set5"
-  },
-  {
-    "associatedCards": [],
     "associatedCardRefs": [],
     "assets": [
       {
@@ -3169,6 +3171,52 @@
   },
   {
     "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/ko_kr/img/cards/05BC221.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/ko_kr/img/cards/05BC221-full.png"
+      }
+    ],
+    "regions": [
+      "밴들 시티",
+      "아이오니아"
+    ],
+    "regionRefs": [
+      "BandleCity",
+      "Ionia"
+    ],
+    "attack": 2,
+    "cost": 3,
+    "health": 2,
+    "description": "소환 또는 <link=vocab.RoundStart><style=Vocab>라운드 시작</style></link>: 전장에 있거나 <link=keyword.Attach><sprite name=Attach><style=Keyword>밀착</style></link>한 다른 아군 요정의 수만큼 <nobr>이 라운드에</nobr> 공격력을 <nobr>일시 획득합니다.</nobr>",
+    "descriptionRaw": "소환 또는 라운드 시작: 전장에 있거나 밀착한 다른 아군 요정의 수만큼 이 라운드에 공격력을 일시 획득합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "아기 버섯은 꽤 귀엽습니다.<br>자신의 힘으로 버섯이 자라나게 하죠.",
+    "artistName": "Caravan Studio",
+    "name": "버섯 고리",
+    "cardCode": "05BC221",
+    "keywords": [
+      "선제공격"
+    ],
+    "keywordRefs": [
+      "QuickStrike"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "희귀급",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "요정"
+    ],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set5"
+  },
+  {
+    "associatedCards": [],
     "associatedCardRefs": [
       "05BC041T3",
       "05BC041T1"
@@ -3605,48 +3653,6 @@
     "subtypes": [],
     "supertype": "",
     "type": "명소",
-    "collectible": true,
-    "set": "Set5"
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [
-      "05BC127T1"
-    ],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/ko_kr/img/cards/05BC127.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/ko_kr/img/cards/05BC127-full.png"
-      }
-    ],
-    "regions": [
-      "밴들 시티"
-    ],
-    "regionRefs": [
-      "BandleCity"
-    ],
-    "attack": 1,
-    "cost": 5,
-    "health": 3,
-    "description": "소환 시 <link=card.summon><style=AssociatedCard>폭풍구름</style></link> 하나를 소환합니다.",
-    "descriptionRaw": "소환 시 폭풍구름 하나를 소환합니다.",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "폭풍구름을 엮는 데는 시간이 필요했습니다.<br>리수는 시간이 부족했죠.<br>돌연변이가 다가오자 리수의 손이 바삐 움직였습니다.<br>여기에 구름 조금, 저기에 번개 조금, 그리고... 파직! 쾅!<br>만들긴 했지만, 이걸로 충분할까요?",
-    "artistName": "Kudos Productions",
-    "name": "고요한 폭풍 리수",
-    "cardCode": "05BC127",
-    "keywords": [],
-    "keywordRefs": [],
-    "spellSpeed": "",
-    "spellSpeedRef": "",
-    "rarity": "서사급",
-    "rarityRef": "Epic",
-    "subtypes": [
-      "요들"
-    ],
-    "supertype": "",
-    "type": "유닛",
     "collectible": true,
     "set": "Set5"
   },
@@ -4421,48 +4427,6 @@
   },
   {
     "associatedCards": [],
-    "associatedCardRefs": [],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/ko_kr/img/cards/05BC112.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/ko_kr/img/cards/05BC112-full.png"
-      }
-    ],
-    "regions": [
-      "밴들 시티",
-      "아이오니아"
-    ],
-    "regionRefs": [
-      "BandleCity",
-      "Ionia"
-    ],
-    "attack": 2,
-    "cost": 2,
-    "health": 2,
-    "description": "<link=vocab.Play><style=Vocab>사용</style></link>: <link=keyword.Impact><sprite name=Impact><style=Keyword>여파</style></link> 효과를 얻거나, 이 라운드에 <link=keyword.Barrier><sprite name=Barrier><style=Keyword>보호막</style></link>을 일시 획득합니다.",
-    "descriptionRaw": "사용: 여파 효과를 얻거나, 이 라운드에 보호막을 일시 획득합니다.",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "솔방울탄 묘목들은 겁이 많습니다.<br>위협을 느끼면 대부분은 곧장 도망칠 테지만...",
-    "artistName": "Caravan Studio",
-    "name": "솔방울탄 묘목",
-    "cardCode": "05BC112",
-    "keywords": [],
-    "keywordRefs": [],
-    "spellSpeed": "",
-    "spellSpeedRef": "",
-    "rarity": "일반급",
-    "rarityRef": "Common",
-    "subtypes": [
-      "요정"
-    ],
-    "supertype": "",
-    "type": "유닛",
-    "collectible": true,
-    "set": "Set5"
-  },
-  {
-    "associatedCards": [],
     "associatedCardRefs": [
       "05BC041T3",
       "05BC041"
@@ -4684,6 +4648,48 @@
     "supertype": "",
     "type": "유닛",
     "collectible": false,
+    "set": "Set5"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "05BC181"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/ko_kr/img/cards/05BC056.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/ko_kr/img/cards/05BC056-full.png"
+      }
+    ],
+    "regions": [
+      "밴들 시티"
+    ],
+    "regionRefs": [
+      "BandleCity"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 2,
+    "description": "소환 시 손에 <link=card.create><style=AssociatedCard>구름 태세</style></link> 1장을 생성합니다.",
+    "descriptionRaw": "소환 시 손에 구름 태세 1장을 생성합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"우리 문파의 기술은 호흡 조절에서 시작되지.<br>폭풍이 바람에서 태어나는 것처럼.\"",
+    "artistName": "Kudos Productions",
+    "name": "돌풍 수도사",
+    "cardCode": "05BC056",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "희귀급",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "요들"
+    ],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
     "set": "Set5"
   },
   {
@@ -5771,50 +5777,6 @@
   },
   {
     "associatedCards": [],
-    "associatedCardRefs": [],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/ko_kr/img/cards/05BC106.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/ko_kr/img/cards/05BC106-full.png"
-      }
-    ],
-    "regions": [
-      "밴들 시티",
-      "빌지워터"
-    ],
-    "regionRefs": [
-      "BandleCity",
-      "Bilgewater"
-    ],
-    "attack": 2,
-    "cost": 2,
-    "health": 3,
-    "description": "",
-    "descriptionRaw": "",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "\"크기는 상당히 작지만, 툴툴민달팽이는 식욕이 왕성하며 '심각한 태도 문제'라고밖에 말할 수 없는 특징을 가졌다.\"\n- 패류학자 생태 일지, 17일 차",
-    "artistName": "Kudos Productions",
-    "name": "툴툴민달팽이",
-    "cardCode": "05BC106",
-    "keywords": [
-      "조율"
-    ],
-    "keywordRefs": [
-      "Attune"
-    ],
-    "spellSpeed": "",
-    "spellSpeedRef": "",
-    "rarity": "일반급",
-    "rarityRef": "Common",
-    "subtypes": [],
-    "supertype": "",
-    "type": "유닛",
-    "collectible": true,
-    "set": "Set5"
-  },
-  {
-    "associatedCards": [],
     "associatedCardRefs": [
       "05BC167T1"
     ],
@@ -5854,52 +5816,6 @@
     "subtypes": [],
     "supertype": "",
     "type": "주문",
-    "collectible": true,
-    "set": "Set5"
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/ko_kr/img/cards/05BC221.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/ko_kr/img/cards/05BC221-full.png"
-      }
-    ],
-    "regions": [
-      "밴들 시티",
-      "아이오니아"
-    ],
-    "regionRefs": [
-      "BandleCity",
-      "Ionia"
-    ],
-    "attack": 2,
-    "cost": 3,
-    "health": 2,
-    "description": "소환 또는 <link=vocab.RoundStart><style=Vocab>라운드 시작</style></link>: 전장에 있거나 <link=keyword.Attach><sprite name=Attach><style=Keyword>밀착</style></link>한 다른 아군 요정의 수만큼 <nobr>이 라운드에</nobr> 공격력을 <nobr>일시 획득합니다.</nobr>",
-    "descriptionRaw": "소환 또는 라운드 시작: 전장에 있거나 밀착한 다른 아군 요정의 수만큼 이 라운드에 공격력을 일시 획득합니다.",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "아기 버섯은 꽤 귀엽습니다.<br>자신의 힘으로 버섯이 자라나게 하죠.",
-    "artistName": "Caravan Studio",
-    "name": "버섯 고리",
-    "cardCode": "05BC221",
-    "keywords": [
-      "선제공격"
-    ],
-    "keywordRefs": [
-      "QuickStrike"
-    ],
-    "spellSpeed": "",
-    "spellSpeedRef": "",
-    "rarity": "희귀급",
-    "rarityRef": "Rare",
-    "subtypes": [
-      "요정"
-    ],
-    "supertype": "",
-    "type": "유닛",
     "collectible": true,
     "set": "Set5"
   },
@@ -6622,6 +6538,48 @@
     "rarityRef": "Rare",
     "subtypes": [
       "요들"
+    ],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set5"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/ko_kr/img/cards/05BC112.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/ko_kr/img/cards/05BC112-full.png"
+      }
+    ],
+    "regions": [
+      "밴들 시티",
+      "아이오니아"
+    ],
+    "regionRefs": [
+      "BandleCity",
+      "Ionia"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 2,
+    "description": "<link=vocab.Play><style=Vocab>사용</style></link>: <link=keyword.Impact><sprite name=Impact><style=Keyword>여파</style></link> 효과를 얻거나, 이 라운드에 <link=keyword.Barrier><sprite name=Barrier><style=Keyword>보호막</style></link>을 일시 획득합니다.",
+    "descriptionRaw": "사용: 여파 효과를 얻거나, 이 라운드에 보호막을 일시 획득합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "솔방울탄 묘목들은 겁이 많습니다.<br>위협을 느끼면 대부분은 곧장 도망칠 테지만...",
+    "artistName": "Caravan Studio",
+    "name": "솔방울탄 묘목",
+    "cardCode": "05BC112",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "일반급",
+    "rarityRef": "Common",
+    "subtypes": [
+      "요정"
     ],
     "supertype": "",
     "type": "유닛",
@@ -7726,6 +7684,48 @@
     "subtypes": [],
     "supertype": "",
     "type": "주문",
+    "collectible": true,
+    "set": "Set5"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "05BC127T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/ko_kr/img/cards/05BC127.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/ko_kr/img/cards/05BC127-full.png"
+      }
+    ],
+    "regions": [
+      "밴들 시티"
+    ],
+    "regionRefs": [
+      "BandleCity"
+    ],
+    "attack": 1,
+    "cost": 5,
+    "health": 3,
+    "description": "소환 시 <link=card.summon><style=AssociatedCard>폭풍구름</style></link> 하나를 소환합니다.",
+    "descriptionRaw": "소환 시 폭풍구름 하나를 소환합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "폭풍구름을 엮는 데는 시간이 필요했습니다.<br>리수는 시간이 부족했죠.<br>돌연변이가 다가오자 리수의 손이 바삐 움직였습니다.<br>여기에 구름 조금, 저기에 번개 조금, 그리고... 파직! 쾅!<br>만들긴 했지만, 이걸로 충분할까요?",
+    "artistName": "Kudos Productions",
+    "name": "고요한 폭풍 리수",
+    "cardCode": "05BC127",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "서사급",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "요들"
+    ],
+    "supertype": "",
+    "type": "유닛",
     "collectible": true,
     "set": "Set5"
   },
@@ -12869,6 +12869,44 @@
   },
   {
     "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/ko_kr/img/cards/05PZ024.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/ko_kr/img/cards/05PZ024-full.png"
+      }
+    ],
+    "regions": [
+      "필트오버 & 자운"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 1,
+    "description": "<link=vocab.Play><style=Vocab>사용</style></link>: 내 덱과 지역이 같고 비용이 6 이상인 주문 하나를 <link=vocab.Manifest><style=Vocab>시현</style></link>합니다.",
+    "descriptionRaw": "사용: 내 덱과 지역이 같고 비용이 6 이상인 주문 하나를 시현합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"페로스 쪽에서 내 연구를 지원해주는 데 있어 유일한 이점은<br>레지와 함께하게 된 것이었다.<br>같이 작업해 본 사람 중 가장 유능할 뿐만 아니라<br>대단한 사람이다.\"\n- 제이스의 일기장에서 발췌",
+    "artistName": "Kudos Productions",
+    "name": "페로스 재무관",
+    "cardCode": "05PZ024",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "일반급",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set5"
+  },
+  {
+    "associatedCards": [],
     "associatedCardRefs": [
       "05PZ008"
     ],
@@ -12950,44 +12988,6 @@
     "subtypes": [],
     "supertype": "",
     "type": "주문",
-    "collectible": true,
-    "set": "Set5"
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/ko_kr/img/cards/05PZ024.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/ko_kr/img/cards/05PZ024-full.png"
-      }
-    ],
-    "regions": [
-      "필트오버 & 자운"
-    ],
-    "regionRefs": [
-      "PiltoverZaun"
-    ],
-    "attack": 2,
-    "cost": 2,
-    "health": 1,
-    "description": "<link=vocab.Play><style=Vocab>사용</style></link>: 내 덱과 지역이 같고 비용이 6 이상인 주문 하나를 <link=vocab.Manifest><style=Vocab>시현</style></link>합니다.",
-    "descriptionRaw": "사용: 내 덱과 지역이 같고 비용이 6 이상인 주문 하나를 시현합니다.",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "\"페로스 쪽에서 내 연구를 지원해주는 데 있어 유일한 이점은<br>레지와 함께하게 된 것이었다.<br>같이 작업해 본 사람 중 가장 유능할 뿐만 아니라<br>대단한 사람이다.\"\n- 제이스의 일기장에서 발췌",
-    "artistName": "Kudos Productions",
-    "name": "페로스 재무관",
-    "cardCode": "05PZ024",
-    "keywords": [],
-    "keywordRefs": [],
-    "spellSpeed": "",
-    "spellSpeedRef": "",
-    "rarity": "일반급",
-    "rarityRef": "Common",
-    "subtypes": [],
-    "supertype": "",
-    "type": "유닛",
     "collectible": true,
     "set": "Set5"
   },

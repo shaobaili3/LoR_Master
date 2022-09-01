@@ -7090,8 +7090,8 @@
     "attack": 1,
     "cost": 2,
     "health": 3,
-    "description": "<link=vocab.RoundStart><style=Vocab>Rundenbeginn</style></link>: Beschwöre 1 <link=card.summon><style=AssociatedCard>Drachling</style></link>, wenn du in der letzten Runde 2+ Zauber ausgespielt hast<style=Variable></style>.",
-    "descriptionRaw": "Rundenbeginn: Beschwöre 1 Drachling, wenn du in der letzten Runde 2+ Zauber ausgespielt hast.",
+    "description": "<link=vocab.RoundStart><style=Vocab>Rundenbeginn</style></link>: <link=vocab.Flow><style=Vocab>Fluss</style></link>: Beschwöre 1 <link=card.summon><style=AssociatedCard>Drachling</style></link><style=Variable></style>.",
+    "descriptionRaw": "Rundenbeginn: Fluss: Beschwöre 1 Drachling.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "„Ein Schüler muss mit Klarheit denken, denn der Drache zieht die Sonne über unseren Himmel und enthüllt die Welt, die uns umgibt.“<br>– Lehren des Drachen",
@@ -7099,10 +7099,12 @@
     "name": "Auge des Drachen",
     "cardCode": "02IO003",
     "keywords": [
-      "Einstimmen"
+      "Einstimmen",
+      "Fluss"
     ],
     "keywordRefs": [
-      "Attune"
+      "Attune",
+      "Flow"
     ],
     "spellSpeed": "",
     "spellSpeedRef": "",
@@ -7390,8 +7392,8 @@
     "attack": 0,
     "cost": 5,
     "health": 0,
-    "description": "Kostet 2 weniger, wenn du in der letzten Runde 2+ Zauber ausgespielt hast.\r\nZiehe 2 andere Zauber.\r\n",
-    "descriptionRaw": "Kostet 2 weniger, wenn du in der letzten Runde 2+ Zauber ausgespielt hast.\r\nZiehe 2 andere Zauber.\r\n",
+    "description": "<link=vocab.Flow><style=Vocab>Fluss</style></link>: Kostet 2 weniger.\r\nZiehe 2 andere Zauber.\r\n",
+    "descriptionRaw": "Fluss: Kostet 2 weniger.\r\nZiehe 2 andere Zauber.\r\n",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "Meditation ist eine Reise ohne Ziel – ein Weg, dem nur gefolgt werden kann, wenn man unterwegs von ihm abkommt.",
@@ -7399,10 +7401,12 @@
     "name": "Tiefenmeditation",
     "cardCode": "02IO009",
     "keywords": [
-      "Sofort"
+      "Sofort",
+      "Fluss"
     ],
     "keywordRefs": [
-      "Burst"
+      "Burst",
+      "Flow"
     ],
     "spellSpeed": "Sofort",
     "spellSpeedRef": "Burst",

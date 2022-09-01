@@ -7090,8 +7090,8 @@
     "attack": 1,
     "cost": 2,
     "health": 3,
-    "description": "<link=vocab.RoundStart><style=Vocab>라운드 시작</style></link>: 이전 라운드에 주문을<br>2번 이상 사용했으면 <link=card.summon><style=AssociatedCard>새끼 용</style></link> 하나를 소환합니다. <style=Variable></style>",
-    "descriptionRaw": "라운드 시작: 이전 라운드에 주문을2번 이상 사용했으면 새끼 용 하나를 소환합니다. ",
+    "description": "<link=vocab.RoundStart><style=Vocab>라운드 시작</style></link>: <link=vocab.Flow><style=Vocab>흐름</style></link>: <link=card.summon><style=AssociatedCard>새끼 용</style></link> 하나를 소환합니다. <style=Variable></style>",
+    "descriptionRaw": "라운드 시작: 흐름: 새끼 용 하나를 소환합니다. ",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "\"수도생은 분명하게 생각해야 한다.<br>용은 하늘에 태양을 띄우고 세상을 밝히기 때문이니라.\"\n- 용의 가르침",
@@ -7099,10 +7099,12 @@
     "name": "용의 눈",
     "cardCode": "02IO003",
     "keywords": [
-      "조율"
+      "조율",
+      "흐름"
     ],
     "keywordRefs": [
-      "Attune"
+      "Attune",
+      "Flow"
     ],
     "spellSpeed": "",
     "spellSpeedRef": "",
@@ -7390,8 +7392,8 @@
     "attack": 0,
     "cost": 5,
     "health": 0,
-    "description": "이전 라운드에 주문을 2번 이상 사용했으면 비용이 2 감소합니다.\r\n다른 주문 카드 2장을 뽑습니다.\r\n",
-    "descriptionRaw": "이전 라운드에 주문을 2번 이상 사용했으면 비용이 2 감소합니다.\r\n다른 주문 카드 2장을 뽑습니다.\r\n",
+    "description": "<link=vocab.Flow><style=Vocab>흐름</style></link>: 비용이 2 감소합니다.\r\n다른 주문 카드 2장을 뽑습니다.\r\n",
+    "descriptionRaw": "흐름: 비용이 2 감소합니다.\r\n다른 주문 카드 2장을 뽑습니다.\r\n",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "명상은 목적지 없는 여정입니다.<br>길을 잃어야만 따라갈 수 있는 길이죠.",
@@ -7399,10 +7401,12 @@
     "name": "깊은 명상",
     "cardCode": "02IO009",
     "keywords": [
-      "즉발"
+      "즉발",
+      "흐름"
     ],
     "keywordRefs": [
-      "Burst"
+      "Burst",
+      "Flow"
     ],
     "spellSpeed": "즉발",
     "spellSpeedRef": "Burst",

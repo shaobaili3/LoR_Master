@@ -7090,8 +7090,8 @@
     "attack": 1,
     "cost": 2,
     "health": 3,
-    "description": "<link=vocab.RoundStart><style=Vocab>Начало раунда</style></link>: если в прошлом раунде вы разыграли 2+ заклинаний, призовите карту <link=card.summon><style=AssociatedCard>Дракончик</style></link>.<style=Variable></style>",
-    "descriptionRaw": "Начало раунда: если в прошлом раунде вы разыграли 2+ заклинаний, призовите карту Дракончик.",
+    "description": "<link=vocab.RoundStart><style=Vocab>Начало раунда</style></link>: <link=vocab.Flow><style=Vocab>Прилив</style></link>: призовите карту <link=card.summon><style=AssociatedCard>Дракончик</style></link><style=Variable></style>.",
+    "descriptionRaw": "Начало раунда: Прилив: призовите карту Дракончик.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "\"Ученику должна быть присуща ясность мысли, ибо Дракон влечет солнце по небу, позволяя видеть окружающий мир\".\n– Из учений Дракона",
@@ -7099,10 +7099,12 @@
     "name": "Око Дракона",
     "cardCode": "02IO003",
     "keywords": [
-      "Эзотерика"
+      "Эзотерика",
+      "Прилив"
     ],
     "keywordRefs": [
-      "Attune"
+      "Attune",
+      "Flow"
     ],
     "spellSpeed": "",
     "spellSpeedRef": "",
@@ -7390,8 +7392,8 @@
     "attack": 0,
     "cost": 5,
     "health": 0,
-    "description": "Если вы разыграли 2+ заклинаний в прошлом раунде, стоимость снижается на 2.\r\nВытяните 2 других заклинания.\r\n",
-    "descriptionRaw": "Если вы разыграли 2+ заклинаний в прошлом раунде, стоимость снижается на 2.\r\nВытяните 2 других заклинания.\r\n",
+    "description": "<link=vocab.Flow><style=Vocab>Прилив</style></link>: стоимость снижается на 2.\r\nВытяните 2 других заклинания.\r\n",
+    "descriptionRaw": "Прилив: стоимость снижается на 2.\r\nВытяните 2 других заклинания.\r\n",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "Медитация – это путешествие без конечной цели. Это путь, который можно пройти, лишь сойдя с него.",
@@ -7399,10 +7401,12 @@
     "name": "Глубокая медитация",
     "cardCode": "02IO009",
     "keywords": [
-      "Взрывное"
+      "Взрывное",
+      "Прилив"
     ],
     "keywordRefs": [
-      "Burst"
+      "Burst",
+      "Flow"
     ],
     "spellSpeed": "Взрывное",
     "spellSpeedRef": "Burst",

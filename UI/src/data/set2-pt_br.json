@@ -7090,8 +7090,8 @@
     "attack": 1,
     "cost": 2,
     "health": 3,
-    "description": "<link=vocab.RoundStart><style=Vocab>Início de Rodada</style></link>: Invoque 1 <link=card.summon><style=AssociatedCard>Dragonito</style></link> se você tiver jogado 2+ feitiços na última rodada<style=Variable></style>.",
-    "descriptionRaw": "Início de Rodada: Invoque 1 Dragonito se você tiver jogado 2+ feitiços na última rodada.",
+    "description": "<link=vocab.RoundStart><style=Vocab>Início de Rodada</style></link>: <link=vocab.Flow><style=Vocab>Fluxo</style></link>: Invoque 1 <link=card.summon><style=AssociatedCard>Dragonito</style></link><style=Variable></style>.",
+    "descriptionRaw": "Início de Rodada: Fluxo: Invoque 1 Dragonito.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "\"Discípulos devem pensar com clareza, pois o Dragão atrai o sol que há no céu e revela o mundo que nos cerca.\"\n– Ensinamentos do Dragão.",
@@ -7099,10 +7099,12 @@
     "name": "Olho do Dragão",
     "cardCode": "02IO003",
     "keywords": [
-      "Sintonia"
+      "Sintonia",
+      "Fluxo"
     ],
     "keywordRefs": [
-      "Attune"
+      "Attune",
+      "Flow"
     ],
     "spellSpeed": "",
     "spellSpeedRef": "",
@@ -7390,8 +7392,8 @@
     "attack": 0,
     "cost": 5,
     "health": 0,
-    "description": "Custa 2 a menos se você tiver jogado 2+ feitiços na última rodada.\r\nCompre mais outros 2 feitiços.\r\n",
-    "descriptionRaw": "Custa 2 a menos se você tiver jogado 2+ feitiços na última rodada.\r\nCompre mais outros 2 feitiços.\r\n",
+    "description": "<link=vocab.Flow><style=Vocab>Fluxo</style></link>: Custa 2 a menos.\r\nCompre mais outros 2 feitiços.\r\n",
+    "descriptionRaw": "Fluxo: Custa 2 a menos.\r\nCompre mais outros 2 feitiços.\r\n",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "A meditação é uma jornada sem destino. Uma rota que só pode ser percorrida ao se perder pelo caminho.",
@@ -7399,10 +7401,12 @@
     "name": "Meditação Profunda",
     "cardCode": "02IO009",
     "keywords": [
-      "Súbito"
+      "Súbito",
+      "Fluxo"
     ],
     "keywordRefs": [
-      "Burst"
+      "Burst",
+      "Flow"
     ],
     "spellSpeed": "Súbito",
     "spellSpeedRef": "Burst",

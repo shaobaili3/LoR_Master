@@ -7090,8 +7090,8 @@
     "attack": 1,
     "cost": 2,
     "health": 3,
-    "description": "<link=vocab.RoundStart><style=Vocab>เริ่มรอบ</style></link>: อัญเชิญ <link=card.summon><style=AssociatedCard>Dragonling</style></link> หนึ่งใบหากคุณได้เล่นเวท 2 ครั้งขึ้นไปในรอบที่แล้ว<style=Variable></style>",
-    "descriptionRaw": "เริ่มรอบ: อัญเชิญ Dragonling หนึ่งใบหากคุณได้เล่นเวท 2 ครั้งขึ้นไปในรอบที่แล้ว",
+    "description": "<link=vocab.RoundStart><style=Vocab>เริ่มรอบ</style></link>: <link=vocab.Flow><style=Vocab>ไหลเวียน</style></link>: อัญเชิญ <link=card.summon><style=AssociatedCard>Dragonling</style></link> หนึ่งใบ<style=Variable></style>",
+    "descriptionRaw": "เริ่มรอบ: ไหลเวียน: อัญเชิญ Dragonling หนึ่งใบ",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "\"ผู้ที่ตั้งใจศึกษาจะต้องคำนึงอย่างรอบคอบ <zwsp>มังกรลากดวงตะวันข้ามผ่านฟากฟ้า <zwsp>เปิดเผยโลกกว้างรอบตัวให้เราเห็น\"\n<zwsp>- Teachings of the Dragon",
@@ -7099,10 +7099,12 @@
     "name": "Eye of the Dragon",
     "cardCode": "02IO003",
     "keywords": [
-      "ชำนาญเวท"
+      "ชำนาญเวท",
+      "ไหลเวียน"
     ],
     "keywordRefs": [
-      "Attune"
+      "Attune",
+      "Flow"
     ],
     "spellSpeed": "",
     "spellSpeedRef": "",
@@ -7390,8 +7392,8 @@
     "attack": 0,
     "cost": 5,
     "health": 0,
-    "description": "ค่าร่ายลดลง 2 หน่วย หากคุณได้เล่นเวท 2 ครั้งขึ้นไปในรอบที่แล้ว\r\nจั่วเวทใบอื่น 2 ใบ",
-    "descriptionRaw": "ค่าร่ายลดลง 2 หน่วย หากคุณได้เล่นเวท 2 ครั้งขึ้นไปในรอบที่แล้ว\r\nจั่วเวทใบอื่น 2 ใบ",
+    "description": "<link=vocab.Flow><style=Vocab>ไหลเวียน</style></link>: ค่าร่ายลดลง 2 หน่วย\r\nจั่วเวทใบอื่น 2 ใบ\r\n",
+    "descriptionRaw": "ไหลเวียน: ค่าร่ายลดลง 2 หน่วย\r\nจั่วเวทใบอื่น 2 ใบ\r\n",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "การเข้าฌานทำสมาธิคือการเดินทางที่ไม่มีจุดหมาย <zwsp>คือเส้นทางที่สามารถติดตามไปได้<zwsp>โดยการหลงระหว่างทางเท่านั้น\n",
@@ -7399,10 +7401,12 @@
     "name": "Deep Meditation",
     "cardCode": "02IO009",
     "keywords": [
-      "ฉับพลัน"
+      "ฉับพลัน",
+      "ไหลเวียน"
     ],
     "keywordRefs": [
-      "Burst"
+      "Burst",
+      "Flow"
     ],
     "spellSpeed": "ฉับพลัน",
     "spellSpeedRef": "Burst",

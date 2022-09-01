@@ -7090,8 +7090,8 @@
     "attack": 1,
     "cost": 2,
     "health": 3,
-    "description": "<link=vocab.RoundStart><style=Vocab>Tur Başı</style></link>: Önceki tur 2+ büyü oynadıysan bir <link=card.summon><style=AssociatedCard>Ejder Yavrusu</style></link> çağırırsın<style=Variable></style>.",
-    "descriptionRaw": "Tur Başı: Önceki tur 2+ büyü oynadıysan bir Ejder Yavrusu çağırırsın.",
+    "description": "<link=vocab.RoundStart><style=Vocab>Tur Başı</style></link>: <link=vocab.Flow><style=Vocab>Akış</style></link>: Bir <link=card.summon><style=AssociatedCard>Ejder Yavrusu</style></link> çağırırsın<style=Variable></style>.",
+    "descriptionRaw": "Tur Başı: Akış: Bir Ejder Yavrusu çağırırsın.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "''Öğrencinin zihni berrak olmalıdır çünkü Ejder, güneşi göğümüzde baştan başa çekerek bizlere dünyayı gösterir.''\n- Ejder Öğretileri",
@@ -7099,10 +7099,12 @@
     "name": "Ejderin Gözü",
     "cardCode": "02IO003",
     "keywords": [
-      "Uyumlanma"
+      "Uyumlanma",
+      "Akış"
     ],
     "keywordRefs": [
-      "Attune"
+      "Attune",
+      "Flow"
     ],
     "spellSpeed": "",
     "spellSpeedRef": "",
@@ -7390,8 +7392,8 @@
     "attack": 0,
     "cost": 5,
     "health": 0,
-    "description": "Önceki tur 2+ büyü oynadıysan bedeli 2 azalır.\r\n2 büyü daha çekersin.\r\n",
-    "descriptionRaw": "Önceki tur 2+ büyü oynadıysan bedeli 2 azalır.\r\n2 büyü daha çekersin.\r\n",
+    "description": "<link=vocab.Flow><style=Vocab>Akış</style></link>: Bedeli 2 azalır.\r\n2 büyü daha çekersin.\r\n",
+    "descriptionRaw": "Akış: Bedeli 2 azalır.\r\n2 büyü daha çekersin.\r\n",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "Meditasyon bitişi olmayan bir yolculuk, sadece kaybolarak takip edilebilen bir yoldur.",
@@ -7399,10 +7401,12 @@
     "name": "Derin Meditasyon",
     "cardCode": "02IO009",
     "keywords": [
-      "Anlık"
+      "Anlık",
+      "Akış"
     ],
     "keywordRefs": [
-      "Burst"
+      "Burst",
+      "Flow"
     ],
     "spellSpeed": "Anlık",
     "spellSpeedRef": "Burst",

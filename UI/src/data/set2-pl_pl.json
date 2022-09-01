@@ -7090,8 +7090,8 @@
     "attack": 1,
     "cost": 2,
     "health": 3,
-    "description": "<link=vocab.RoundStart><style=Vocab>Początek rundy</style></link>: Przywołaj kartę <link=card.summon><style=AssociatedCard>Smoczątko</style></link>, jeśli udało ci się zagrać 2+ zaklęcia w ostatniej rundzie<style=Variable></style>.",
-    "descriptionRaw": "Początek rundy: Przywołaj kartę Smoczątko, jeśli udało ci się zagrać 2+ zaklęcia w ostatniej rundzie.",
+    "description": "<link=vocab.RoundStart><style=Vocab>Początek rundy</style></link>: <link=vocab.Flow><style=Vocab>Przypływ</style></link>: Przywołaj kartę <link=card.summon><style=AssociatedCard>Smoczątko</style></link><style=Variable></style>.",
+    "descriptionRaw": "Początek rundy: Przypływ: Przywołaj kartę Smoczątko.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "„Uczeń musi mieć jasność umysłu. Smok roztacza bowiem promienie słońca na nieboskłonie i odkrywa przed nami prawdy o świecie”.\n— Nauki Smoka",
@@ -7099,10 +7099,12 @@
     "name": "Oko Smoka",
     "cardCode": "02IO003",
     "keywords": [
-      "Dostrojenie"
+      "Dostrojenie",
+      "Przypływ"
     ],
     "keywordRefs": [
-      "Attune"
+      "Attune",
+      "Flow"
     ],
     "spellSpeed": "",
     "spellSpeedRef": "",
@@ -7390,8 +7392,8 @@
     "attack": 0,
     "cost": 5,
     "health": 0,
-    "description": "Kosztuje o 2 mniej, jeśli udało ci się zagrać 2+ zaklęcia w ostatniej rundzie.\r\nDobierz 2 inne zaklęcia.\r\n",
-    "descriptionRaw": "Kosztuje o 2 mniej, jeśli udało ci się zagrać 2+ zaklęcia w ostatniej rundzie.\r\nDobierz 2 inne zaklęcia.\r\n",
+    "description": "<link=vocab.Flow><style=Vocab>Przypływ</style></link>: Kosztuje o 2 mniej.\r\nDobierz 2 inne zaklęcia.\r\n",
+    "descriptionRaw": "Przypływ: Kosztuje o 2 mniej.\r\nDobierz 2 inne zaklęcia.\r\n",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "Medytacja to podróż bez celu. Ścieżka, którą można podążać tylko wtedy, gdy straci się jej koniec z oczu.",
@@ -7399,10 +7401,12 @@
     "name": "Głęboka Medytacja",
     "cardCode": "02IO009",
     "keywords": [
-      "Błyskawiczne"
+      "Błyskawiczne",
+      "Przypływ"
     ],
     "keywordRefs": [
-      "Burst"
+      "Burst",
+      "Flow"
     ],
     "spellSpeed": "Błyskawiczne",
     "spellSpeedRef": "Burst",

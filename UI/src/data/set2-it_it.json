@@ -7090,8 +7090,8 @@
     "attack": 1,
     "cost": 2,
     "health": 3,
-    "description": "<link=vocab.RoundStart><style=Vocab>Inizio del turno</style></link>: Se hai giocato 2+ incantesimi nello scorso turno<style=Variable></style>, evoca 1 <link=card.summon><style=AssociatedCard>Cucciolo di drago</style></link>.",
-    "descriptionRaw": "Inizio del turno: Se hai giocato 2+ incantesimi nello scorso turno, evoca 1 Cucciolo di drago.",
+    "description": "<link=vocab.RoundStart><style=Vocab>Inizio del turno</style></link>: <link=vocab.Flow><style=Vocab>Flusso</style></link>: Evoca 1 <link=card.summon><style=AssociatedCard>Cucciolo di drago</style></link><style=Variable></style>.",
+    "descriptionRaw": "Inizio del turno: Flusso: Evoca 1 Cucciolo di drago.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "\"Uno studente deve pensare in modo lucido, poiché il Drago trascina il sole nei nostri cieli, rivelando il mondo intorno a noi.\"\n- Insegnamenti del Drago",
@@ -7099,10 +7099,12 @@
     "name": "Occhio del drago",
     "cardCode": "02IO003",
     "keywords": [
-      "Armonia"
+      "Armonia",
+      "Flusso"
     ],
     "keywordRefs": [
-      "Attune"
+      "Attune",
+      "Flow"
     ],
     "spellSpeed": "",
     "spellSpeedRef": "",
@@ -7390,8 +7392,8 @@
     "attack": 0,
     "cost": 5,
     "health": 0,
-    "description": "Costa 2 in meno se hai giocato 2+ incantesimi nello scorso turno.\r\nPesca altri 2 incantesimi.\r\n",
-    "descriptionRaw": "Costa 2 in meno se hai giocato 2+ incantesimi nello scorso turno.\r\nPesca altri 2 incantesimi.\r\n",
+    "description": "<link=vocab.Flow><style=Vocab>Flusso</style></link>: Costa 2 in meno.\r\nPesca altri 2 incantesimi.\r\n",
+    "descriptionRaw": "Flusso: Costa 2 in meno.\r\nPesca altri 2 incantesimi.\r\n",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "La meditazione è un lungo viaggio senza destinazione, che si può seguire solamente perdendosi lungo la via.",
@@ -7399,10 +7401,12 @@
     "name": "Meditazione profonda",
     "cardCode": "02IO009",
     "keywords": [
-      "Raffica"
+      "Raffica",
+      "Flusso"
     ],
     "keywordRefs": [
-      "Burst"
+      "Burst",
+      "Flow"
     ],
     "spellSpeed": "Raffica",
     "spellSpeedRef": "Burst",

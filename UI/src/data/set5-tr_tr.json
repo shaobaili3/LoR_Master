@@ -578,6 +578,50 @@
   },
   {
     "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/tr_tr/img/cards/05BC106.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/tr_tr/img/cards/05BC106-full.png"
+      }
+    ],
+    "regions": [
+      "Bandle Şehri",
+      "Bilgewater"
+    ],
+    "regionRefs": [
+      "BandleCity",
+      "Bilgewater"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 3,
+    "description": "",
+    "descriptionRaw": "",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''Boyutları hayli küçük olsa da hödüksüböcekler büyük bir iştaha ve ancak 'ciddi davranış problemi' şeklinde tasvir edebileceğim bir tutuma sahiptir.''\n- Kabukolog Ekoloji Günlüğü, 17. Gün",
+    "artistName": "Kudos Productions",
+    "name": "Hödüksüböcek",
+    "cardCode": "05BC106",
+    "keywords": [
+      "Uyumlanma"
+    ],
+    "keywordRefs": [
+      "Attune"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "YAYGIN",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Birim",
+    "collectible": true,
+    "set": "Set5"
+  },
+  {
+    "associatedCards": [],
     "associatedCardRefs": [
       "05BC166",
       "05BC161T2",
@@ -1936,48 +1980,6 @@
   },
   {
     "associatedCards": [],
-    "associatedCardRefs": [
-      "05BC181"
-    ],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/tr_tr/img/cards/05BC056.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/tr_tr/img/cards/05BC056-full.png"
-      }
-    ],
-    "regions": [
-      "Bandle Şehri"
-    ],
-    "regionRefs": [
-      "BandleCity"
-    ],
-    "attack": 2,
-    "cost": 2,
-    "health": 2,
-    "description": "Çağrıldığımda, elinde bir <link=card.create><style=AssociatedCard>Bulut Duruşu</style></link> oluşur.",
-    "descriptionRaw": "Çağrıldığımda, elinde bir Bulut Duruşu oluşur.",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "''Öğretilerimizdeki teknik nefes kontrolünden gelir. Tıpkı rüzgârdan doğan fırtına gibi.''",
-    "artistName": "Kudos Productions",
-    "name": "Rüzgâr Keşişi",
-    "cardCode": "05BC056",
-    "keywords": [],
-    "keywordRefs": [],
-    "spellSpeed": "",
-    "spellSpeedRef": "",
-    "rarity": "ENDER",
-    "rarityRef": "Rare",
-    "subtypes": [
-      "YORDLE"
-    ],
-    "supertype": "",
-    "type": "Birim",
-    "collectible": true,
-    "set": "Set5"
-  },
-  {
-    "associatedCards": [],
     "associatedCardRefs": [],
     "assets": [
       {
@@ -3169,6 +3171,52 @@
   },
   {
     "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/tr_tr/img/cards/05BC221.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/tr_tr/img/cards/05BC221-full.png"
+      }
+    ],
+    "regions": [
+      "Bandle Şehri",
+      "Ionia"
+    ],
+    "regionRefs": [
+      "BandleCity",
+      "Ionia"
+    ],
+    "attack": 2,
+    "cost": 3,
+    "health": 2,
+    "description": "Çağrıldığımda ya da <link=vocab.RoundStart><style=Vocab>Tur Başı</style></link>: Bu turda oyundaki ya da <link=keyword.Attach><sprite name=Attach><style=Keyword>Yapışık</style></link> haldeki dost Perilerin sayısına denk Güç değeri kazanırım.",
+    "descriptionRaw": "Çağrıldığımda ya da Tur Başı: Bu turda oyundaki ya da Yapışık haldeki dost Perilerin sayısına denk Güç değeri kazanırım.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Bu minnoşlar aşırı sevimli, ayrıca kafalarının üstünde mantar yetiştiriyorlar.",
+    "artistName": "Caravan Studio",
+    "name": "Mantar Kafa",
+    "cardCode": "05BC221",
+    "keywords": [
+      "İlk Saldırı"
+    ],
+    "keywordRefs": [
+      "QuickStrike"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ENDER",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "PERİ"
+    ],
+    "supertype": "",
+    "type": "Birim",
+    "collectible": true,
+    "set": "Set5"
+  },
+  {
+    "associatedCards": [],
     "associatedCardRefs": [
       "05BC041T3",
       "05BC041T1"
@@ -3605,48 +3653,6 @@
     "subtypes": [],
     "supertype": "",
     "type": "Yer",
-    "collectible": true,
-    "set": "Set5"
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [
-      "05BC127T1"
-    ],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/tr_tr/img/cards/05BC127.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/tr_tr/img/cards/05BC127-full.png"
-      }
-    ],
-    "regions": [
-      "Bandle Şehri"
-    ],
-    "regionRefs": [
-      "BandleCity"
-    ],
-    "attack": 1,
-    "cost": 5,
-    "health": 3,
-    "description": "Çağrıldığımda bir <link=card.summon><style=AssociatedCard>Fırtınabulutu</style></link> çağırırsın.",
-    "descriptionRaw": "Çağrıldığımda bir Fırtınabulutu çağırırsın.",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "Bir Fırtınabulutu'nu hayata geçirmek zaman isteyen bir işti ve Rissu'nun böyle bir vakti yoktu. Sapma mesafeyi kapatırken elleri dur durak bilmeden çalışıyordu. Biraz bulut, bir parça yıldırım... İşte. ÇAT! BAM! Başarmıştı ama yeterli olacak mıydı?",
-    "artistName": "Kudos Productions",
-    "name": "Sessiz Fırtına Rissu",
-    "cardCode": "05BC127",
-    "keywords": [],
-    "keywordRefs": [],
-    "spellSpeed": "",
-    "spellSpeedRef": "",
-    "rarity": "DESTANSI",
-    "rarityRef": "Epic",
-    "subtypes": [
-      "YORDLE"
-    ],
-    "supertype": "",
-    "type": "Birim",
     "collectible": true,
     "set": "Set5"
   },
@@ -4421,48 +4427,6 @@
   },
   {
     "associatedCards": [],
-    "associatedCardRefs": [],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/tr_tr/img/cards/05BC112.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/tr_tr/img/cards/05BC112-full.png"
-      }
-    ],
-    "regions": [
-      "Bandle Şehri",
-      "Ionia"
-    ],
-    "regionRefs": [
-      "BandleCity",
-      "Ionia"
-    ],
-    "attack": 2,
-    "cost": 2,
-    "health": 2,
-    "description": "<link=vocab.Play><style=Vocab>Oyna</style></link>: Bu tur bana <link=keyword.Barrier><sprite name=Barrier><style=Keyword>Bariyer</style></link> verir ya da <link=keyword.Impact><sprite name=Impact><style=Keyword>Ağır Darbe</style></link> kazandırırsın.",
-    "descriptionRaw": "Oyna: Bu tur bana Bariyer verir ya da Ağır Darbe kazandırırsın.",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "Saçartohum Fideleri utangaç varlıklardır. İlk başta geri çekilseler de tehdit edildikleri an...",
-    "artistName": "Caravan Studio",
-    "name": "Saçartohum Fidesi",
-    "cardCode": "05BC112",
-    "keywords": [],
-    "keywordRefs": [],
-    "spellSpeed": "",
-    "spellSpeedRef": "",
-    "rarity": "YAYGIN",
-    "rarityRef": "Common",
-    "subtypes": [
-      "PERİ"
-    ],
-    "supertype": "",
-    "type": "Birim",
-    "collectible": true,
-    "set": "Set5"
-  },
-  {
-    "associatedCards": [],
     "associatedCardRefs": [
       "05BC041T3",
       "05BC041"
@@ -4684,6 +4648,48 @@
     "supertype": "",
     "type": "Birim",
     "collectible": false,
+    "set": "Set5"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "05BC181"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/tr_tr/img/cards/05BC056.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/tr_tr/img/cards/05BC056-full.png"
+      }
+    ],
+    "regions": [
+      "Bandle Şehri"
+    ],
+    "regionRefs": [
+      "BandleCity"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 2,
+    "description": "Çağrıldığımda, elinde bir <link=card.create><style=AssociatedCard>Bulut Duruşu</style></link> oluşur.",
+    "descriptionRaw": "Çağrıldığımda, elinde bir Bulut Duruşu oluşur.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''Öğretilerimizdeki teknik nefes kontrolünden gelir. Tıpkı rüzgârdan doğan fırtına gibi.''",
+    "artistName": "Kudos Productions",
+    "name": "Rüzgâr Keşişi",
+    "cardCode": "05BC056",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ENDER",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "YORDLE"
+    ],
+    "supertype": "",
+    "type": "Birim",
+    "collectible": true,
     "set": "Set5"
   },
   {
@@ -5771,50 +5777,6 @@
   },
   {
     "associatedCards": [],
-    "associatedCardRefs": [],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/tr_tr/img/cards/05BC106.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/tr_tr/img/cards/05BC106-full.png"
-      }
-    ],
-    "regions": [
-      "Bandle Şehri",
-      "Bilgewater"
-    ],
-    "regionRefs": [
-      "BandleCity",
-      "Bilgewater"
-    ],
-    "attack": 2,
-    "cost": 2,
-    "health": 3,
-    "description": "",
-    "descriptionRaw": "",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "''Boyutları hayli küçük olsa da hödüksüböcekler büyük bir iştaha ve ancak 'ciddi davranış problemi' şeklinde tasvir edebileceğim bir tutuma sahiptir.''\n- Kabukolog Ekoloji Günlüğü, 17. Gün",
-    "artistName": "Kudos Productions",
-    "name": "Hödüksüböcek",
-    "cardCode": "05BC106",
-    "keywords": [
-      "Uyumlanma"
-    ],
-    "keywordRefs": [
-      "Attune"
-    ],
-    "spellSpeed": "",
-    "spellSpeedRef": "",
-    "rarity": "YAYGIN",
-    "rarityRef": "Common",
-    "subtypes": [],
-    "supertype": "",
-    "type": "Birim",
-    "collectible": true,
-    "set": "Set5"
-  },
-  {
-    "associatedCards": [],
     "associatedCardRefs": [
       "05BC167T1"
     ],
@@ -5854,52 +5816,6 @@
     "subtypes": [],
     "supertype": "",
     "type": "Büyü",
-    "collectible": true,
-    "set": "Set5"
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/tr_tr/img/cards/05BC221.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/tr_tr/img/cards/05BC221-full.png"
-      }
-    ],
-    "regions": [
-      "Bandle Şehri",
-      "Ionia"
-    ],
-    "regionRefs": [
-      "BandleCity",
-      "Ionia"
-    ],
-    "attack": 2,
-    "cost": 3,
-    "health": 2,
-    "description": "Çağrıldığımda ya da <link=vocab.RoundStart><style=Vocab>Tur Başı</style></link>: Bu turda oyundaki ya da <link=keyword.Attach><sprite name=Attach><style=Keyword>Yapışık</style></link> haldeki dost Perilerin sayısına denk Güç değeri kazanırım.",
-    "descriptionRaw": "Çağrıldığımda ya da Tur Başı: Bu turda oyundaki ya da Yapışık haldeki dost Perilerin sayısına denk Güç değeri kazanırım.",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "Bu minnoşlar aşırı sevimli, ayrıca kafalarının üstünde mantar yetiştiriyorlar.",
-    "artistName": "Caravan Studio",
-    "name": "Mantar Kafa",
-    "cardCode": "05BC221",
-    "keywords": [
-      "İlk Saldırı"
-    ],
-    "keywordRefs": [
-      "QuickStrike"
-    ],
-    "spellSpeed": "",
-    "spellSpeedRef": "",
-    "rarity": "ENDER",
-    "rarityRef": "Rare",
-    "subtypes": [
-      "PERİ"
-    ],
-    "supertype": "",
-    "type": "Birim",
     "collectible": true,
     "set": "Set5"
   },
@@ -6622,6 +6538,48 @@
     "rarityRef": "Rare",
     "subtypes": [
       "YORDLE"
+    ],
+    "supertype": "",
+    "type": "Birim",
+    "collectible": true,
+    "set": "Set5"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/tr_tr/img/cards/05BC112.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/tr_tr/img/cards/05BC112-full.png"
+      }
+    ],
+    "regions": [
+      "Bandle Şehri",
+      "Ionia"
+    ],
+    "regionRefs": [
+      "BandleCity",
+      "Ionia"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 2,
+    "description": "<link=vocab.Play><style=Vocab>Oyna</style></link>: Bu tur bana <link=keyword.Barrier><sprite name=Barrier><style=Keyword>Bariyer</style></link> verir ya da <link=keyword.Impact><sprite name=Impact><style=Keyword>Ağır Darbe</style></link> kazandırırsın.",
+    "descriptionRaw": "Oyna: Bu tur bana Bariyer verir ya da Ağır Darbe kazandırırsın.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Saçartohum Fideleri utangaç varlıklardır. İlk başta geri çekilseler de tehdit edildikleri an...",
+    "artistName": "Caravan Studio",
+    "name": "Saçartohum Fidesi",
+    "cardCode": "05BC112",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "YAYGIN",
+    "rarityRef": "Common",
+    "subtypes": [
+      "PERİ"
     ],
     "supertype": "",
     "type": "Birim",
@@ -7726,6 +7684,48 @@
     "subtypes": [],
     "supertype": "",
     "type": "Büyü",
+    "collectible": true,
+    "set": "Set5"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "05BC127T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/tr_tr/img/cards/05BC127.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/tr_tr/img/cards/05BC127-full.png"
+      }
+    ],
+    "regions": [
+      "Bandle Şehri"
+    ],
+    "regionRefs": [
+      "BandleCity"
+    ],
+    "attack": 1,
+    "cost": 5,
+    "health": 3,
+    "description": "Çağrıldığımda bir <link=card.summon><style=AssociatedCard>Fırtınabulutu</style></link> çağırırsın.",
+    "descriptionRaw": "Çağrıldığımda bir Fırtınabulutu çağırırsın.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Bir Fırtınabulutu'nu hayata geçirmek zaman isteyen bir işti ve Rissu'nun böyle bir vakti yoktu. Sapma mesafeyi kapatırken elleri dur durak bilmeden çalışıyordu. Biraz bulut, bir parça yıldırım... İşte. ÇAT! BAM! Başarmıştı ama yeterli olacak mıydı?",
+    "artistName": "Kudos Productions",
+    "name": "Sessiz Fırtına Rissu",
+    "cardCode": "05BC127",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "DESTANSI",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "YORDLE"
+    ],
+    "supertype": "",
+    "type": "Birim",
     "collectible": true,
     "set": "Set5"
   },
@@ -12869,6 +12869,44 @@
   },
   {
     "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/tr_tr/img/cards/05PZ024.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/tr_tr/img/cards/05PZ024-full.png"
+      }
+    ],
+    "regions": [
+      "Piltover ve Zaun"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 1,
+    "description": "<link=vocab.Play><style=Vocab>Oyna</style></link>: Bölgelerine ait 6+ manalık bir büyü <link=vocab.Manifest><style=Vocab>Cisimlendirirsin</style></link>.",
+    "descriptionRaw": "Oyna: Bölgelerine ait 6+ manalık bir büyü Cisimlendirirsin.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''Ferrosların çalışmalarımı finanse etmesinin tek iyi tarafı Reggie ile birlikte çalışabilmek. Adam hem tanıdığım en becerikli kişilerden biri hem de harika bir insan.''\n- Jayce'in günlüğünden alıntı",
+    "artistName": "Kudos Productions",
+    "name": "Ferros Finansçısı",
+    "cardCode": "05PZ024",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "YAYGIN",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Birim",
+    "collectible": true,
+    "set": "Set5"
+  },
+  {
+    "associatedCards": [],
     "associatedCardRefs": [
       "05PZ008"
     ],
@@ -12950,44 +12988,6 @@
     "subtypes": [],
     "supertype": "",
     "type": "Büyü",
-    "collectible": true,
-    "set": "Set5"
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/tr_tr/img/cards/05PZ024.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set5/tr_tr/img/cards/05PZ024-full.png"
-      }
-    ],
-    "regions": [
-      "Piltover ve Zaun"
-    ],
-    "regionRefs": [
-      "PiltoverZaun"
-    ],
-    "attack": 2,
-    "cost": 2,
-    "health": 1,
-    "description": "<link=vocab.Play><style=Vocab>Oyna</style></link>: Bölgelerine ait 6+ manalık bir büyü <link=vocab.Manifest><style=Vocab>Cisimlendirirsin</style></link>.",
-    "descriptionRaw": "Oyna: Bölgelerine ait 6+ manalık bir büyü Cisimlendirirsin.",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "''Ferrosların çalışmalarımı finanse etmesinin tek iyi tarafı Reggie ile birlikte çalışabilmek. Adam hem tanıdığım en becerikli kişilerden biri hem de harika bir insan.''\n- Jayce'in günlüğünden alıntı",
-    "artistName": "Kudos Productions",
-    "name": "Ferros Finansçısı",
-    "cardCode": "05PZ024",
-    "keywords": [],
-    "keywordRefs": [],
-    "spellSpeed": "",
-    "spellSpeedRef": "",
-    "rarity": "YAYGIN",
-    "rarityRef": "Common",
-    "subtypes": [],
-    "supertype": "",
-    "type": "Birim",
     "collectible": true,
     "set": "Set5"
   },

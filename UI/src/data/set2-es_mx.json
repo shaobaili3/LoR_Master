@@ -7090,8 +7090,8 @@
     "attack": 1,
     "cost": 2,
     "health": 3,
-    "description": "<link=vocab.RoundStart><style=Vocab>Inicio de la ronda</style></link>: Invoco 1 <link=card.summon><style=AssociatedCard>Cachorro de Dragón</style></link> si jugaste 2+ hechizos en la última ronda<style=Variable></style>.",
-    "descriptionRaw": "Inicio de la ronda: Invoco 1 Cachorro de Dragón si jugaste 2+ hechizos en la última ronda.",
+    "description": "<link=vocab.RoundStart><style=Vocab>Inicio de la ronda</style></link>: <link=vocab.Flow><style=Vocab>Flujo</style></link>: Invoco 1 <link=card.summon><style=AssociatedCard>Cachorro de Dragón</style></link><style=Variable></style>.",
+    "descriptionRaw": "Inicio de la ronda: Flujo: Invoco 1 Cachorro de Dragón.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "''El estudiante debe pensar con claridad, pues el Dragón ayuda al sol a recorrer los cielos para revelar el mundo a nuestro alrededor''.\n—Enseñanzas del Dragón",
@@ -7099,10 +7099,12 @@
     "name": "Ojo del Dragón",
     "cardCode": "02IO003",
     "keywords": [
-      "Adáptate"
+      "Adáptate",
+      "Flujo"
     ],
     "keywordRefs": [
-      "Attune"
+      "Attune",
+      "Flow"
     ],
     "spellSpeed": "",
     "spellSpeedRef": "",
@@ -7390,8 +7392,8 @@
     "attack": 0,
     "cost": 5,
     "health": 0,
-    "description": "Cuesto 2 menos si jugaste 2+ hechizos en la última ronda.\r\nRoba otros 2 hechizos.\r\n",
-    "descriptionRaw": "Cuesto 2 menos si jugaste 2+ hechizos en la última ronda.\r\nRoba otros 2 hechizos.\r\n",
+    "description": "<link=vocab.Flow><style=Vocab>Flujo</style></link>: Cuesto 2 menos.\r\nRoba otros 2 hechizos.\r\n",
+    "descriptionRaw": "Flujo: Cuesto 2 menos.\r\nRoba otros 2 hechizos.\r\n",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "La meditación es un viaje sin destino; una senda que solo se puede seguir si te pierdes en el camino.",
@@ -7399,10 +7401,12 @@
     "name": "Meditación Profunda",
     "cardCode": "02IO009",
     "keywords": [
-      "Ráfaga"
+      "Ráfaga",
+      "Flujo"
     ],
     "keywordRefs": [
-      "Burst"
+      "Burst",
+      "Flow"
     ],
     "spellSpeed": "Ráfaga",
     "spellSpeedRef": "Burst",

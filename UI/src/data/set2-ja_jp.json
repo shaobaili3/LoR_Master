@@ -7090,8 +7090,8 @@
     "attack": 1,
     "cost": 2,
     "health": 3,
-    "description": "<link=vocab.RoundStart><style=Vocab>ラウンド開始時</style></link>: 前のラウンドにスペルを2枚以上プレイしていた場合、<link=card.summon><style=AssociatedCard>霊龍</style></link>を1体召喚する。<style=Variable></style>",
-    "descriptionRaw": "ラウンド開始時: 前のラウンドにスペルを2枚以上プレイしていた場合、霊龍を1体召喚する。",
+    "description": "<link=vocab.RoundStart><style=Vocab>ラウンド開始時</style></link>: <link=vocab.Flow><style=Vocab>フロウ</style></link>: <link=card.summon><style=AssociatedCard>霊龍</style></link>を1体召喚する<style=Variable></style>。",
+    "descriptionRaw": "ラウンド開始時: フロウ: 霊龍を1体召喚する。",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "「修行者たるもの明晰なる思考を心がけるべし。龍は天空に太陽を運び、世界の姿を明らかにした」\r\n- 龍の教え",
@@ -7099,10 +7099,12 @@
     "name": "龍の賢眼",
     "cardCode": "02IO003",
     "keywords": [
-      "アテューン"
+      "アテューン",
+      "フロウ"
     ],
     "keywordRefs": [
-      "Attune"
+      "Attune",
+      "Flow"
     ],
     "spellSpeed": "",
     "spellSpeedRef": "",
@@ -7390,8 +7392,8 @@
     "attack": 0,
     "cost": 5,
     "health": 0,
-    "description": "前のラウンドにスペルを2枚以上プレイしていた場合、コストが2減少する。\r\nこのカード以外のスペルを2枚引く。\r\n",
-    "descriptionRaw": "前のラウンドにスペルを2枚以上プレイしていた場合、コストが2減少する。\r\nこのカード以外のスペルを2枚引く。\r\n",
+    "description": "<link=vocab.Flow><style=Vocab>フロウ</style></link>: コストが2減少する。\r\n他のスペルを2枚引く。\r\n",
+    "descriptionRaw": "フロウ: コストが2減少する。\r\n他のスペルを2枚引く。\r\n",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "瞑想とは目的地のない旅。道をたどりたくば、道に迷わねばならぬのだ。",
@@ -7399,10 +7401,12 @@
     "name": "深き瞑想",
     "cardCode": "02IO009",
     "keywords": [
-      "バースト"
+      "バースト",
+      "フロウ"
     ],
     "keywordRefs": [
-      "Burst"
+      "Burst",
+      "Flow"
     ],
     "spellSpeed": "バースト",
     "spellSpeedRef": "Burst",

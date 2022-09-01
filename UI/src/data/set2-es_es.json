@@ -7090,8 +7090,8 @@
     "attack": 1,
     "cost": 2,
     "health": 3,
-    "description": "<link=vocab.RoundStart><style=Vocab>Comienzo de ronda</style></link>: Invoca 1 <link=card.summon><style=AssociatedCard>Cría de dragón</style></link> si has lanzado 2 hechizos o más en la última ronda<style=Variable></style>.",
-    "descriptionRaw": "Comienzo de ronda: Invoca 1 Cría de dragón si has lanzado 2 hechizos o más en la última ronda.",
+    "description": "<link=vocab.RoundStart><style=Vocab>Comienzo de ronda</style></link>: <link=vocab.Flow><style=Vocab>Fluir</style></link>: Invoca 1 <link=card.summon><style=AssociatedCard>Cría de dragón</style></link><style=Variable></style>.",
+    "descriptionRaw": "Comienzo de ronda: Fluir: Invoca 1 Cría de dragón.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "\"El alumno debe pensar con claridad, pues es la fuerza del dragón la que arrastra al sol por el firmamento y nos revela el mundo que nos rodea\".\n- Enseñanzas del dragón",
@@ -7099,10 +7099,12 @@
     "name": "Ojo del dragón",
     "cardCode": "02IO003",
     "keywords": [
-      "Armonía"
+      "Armonía",
+      "Fluir"
     ],
     "keywordRefs": [
-      "Attune"
+      "Attune",
+      "Flow"
     ],
     "spellSpeed": "",
     "spellSpeedRef": "",
@@ -7390,8 +7392,8 @@
     "attack": 0,
     "cost": 5,
     "health": 0,
-    "description": "Cuesta 2 menos si has lanzado 2 hechizos o más en la última ronda.\r\nRoba 2 hechizos más.\r\n",
-    "descriptionRaw": "Cuesta 2 menos si has lanzado 2 hechizos o más en la última ronda.\r\nRoba 2 hechizos más.\r\n",
+    "description": "<link=vocab.Flow><style=Vocab>Fluir</style></link>: Cuesta 2 menos.\r\nRoba otros 2 hechizos.\r\n",
+    "descriptionRaw": "Fluir: Cuesta 2 menos.\r\nRoba otros 2 hechizos.\r\n",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "La meditación es una travesía sin destino; un camino que solo puede encontrarse cuando uno se da por perdido.",
@@ -7399,10 +7401,12 @@
     "name": "Meditación profunda",
     "cardCode": "02IO009",
     "keywords": [
-      "Ráfaga"
+      "Ráfaga",
+      "Fluir"
     ],
     "keywordRefs": [
-      "Burst"
+      "Burst",
+      "Flow"
     ],
     "spellSpeed": "Ráfaga",
     "spellSpeedRef": "Burst",

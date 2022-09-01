@@ -7090,8 +7090,8 @@
     "attack": 1,
     "cost": 2,
     "health": 3,
-    "description": "<link=vocab.RoundStart><style=Vocab>Début du round</style></link> : si vous avez lancé au moins 2 sorts au round précédent, invoquez 1 <link=card.summon><style=AssociatedCard>Dragonneau</style></link><style=Variable></style>.",
-    "descriptionRaw": "Début du round : si vous avez lancé au moins 2 sorts au round précédent, invoquez 1 Dragonneau.",
+    "description": "<link=vocab.RoundStart><style=Vocab>Début du round</style></link> : <link=vocab.Flow><style=Vocab>Cascade</style></link> : invoquez 1 <link=card.summon><style=AssociatedCard>Dragonneau</style></link><style=Variable></style>.",
+    "descriptionRaw": "Début du round : Cascade : invoquez 1 Dragonneau.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "«<nbsp>L'élève doit penser avec clarté, car le dragon tire le soleil à travers le ciel et nous révèle le monde qui nous entoure.<nbsp>»\n-<nbsp>Enseignements du dragon",
@@ -7099,10 +7099,12 @@
     "name": "Œil du dragon",
     "cardCode": "02IO003",
     "keywords": [
-      "Unisson"
+      "Unisson",
+      "Cascade"
     ],
     "keywordRefs": [
-      "Attune"
+      "Attune",
+      "Flow"
     ],
     "spellSpeed": "",
     "spellSpeedRef": "",
@@ -7390,8 +7392,8 @@
     "attack": 0,
     "cost": 5,
     "health": 0,
-    "description": "Coûte 2 de moins si vous avez lancé 2 sorts ou plus lors du round précédent.\r\nPiochez 2 autres sorts.\r\n",
-    "descriptionRaw": "Coûte 2 de moins si vous avez lancé 2 sorts ou plus lors du round précédent.\r\nPiochez 2 autres sorts.\r\n",
+    "description": "<link=vocab.Flow><style=Vocab>Cascade</style></link> : coûte 2 de moins.\r\nPiochez 2 autres sorts.\r\n",
+    "descriptionRaw": "Cascade : coûte 2 de moins.\r\nPiochez 2 autres sorts.\r\n",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "La méditation est un voyage sans destination. C'est un chemin qu'on ne peut suivre qu'en se perdant.",
@@ -7399,10 +7401,12 @@
     "name": "Méditation profonde",
     "cardCode": "02IO009",
     "keywords": [
-      "Instantané"
+      "Instantané",
+      "Cascade"
     ],
     "keywordRefs": [
-      "Burst"
+      "Burst",
+      "Flow"
     ],
     "spellSpeed": "Instantané",
     "spellSpeedRef": "Burst",
