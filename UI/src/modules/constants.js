@@ -32,6 +32,8 @@ export const regionNames = {
   13: "faction_Bard_Name",
   14: "faction_Jhin_Name",
   15: "faction_Evelynn_Name",
+  16: "faction_Jax_Name",
+  17: "faction_Kayn_Name",
 }
 
 export const factionNames = {
@@ -49,4 +51,6 @@ export const factionNames = {
   13: "Bard",
   14: "Jhin",
   15: "Evelynn",
+  16: "Jax",
+  17: "Kayn",
 }
