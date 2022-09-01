@@ -5,7 +5,7 @@ const fs = require("fs")
 
 const axios = require("axios").default
 
-export const setCodes = ["1", "2", "3", "4", "5", "6", "6cde"]
+const setCodes = ["1", "2", "3", "4", "5", "6", "6cde"]
 
 const setLocales = [
   "de_de",

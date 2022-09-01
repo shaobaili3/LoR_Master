@@ -28,6 +28,10 @@ const getFactions = (code) => {
           regionID = regionRefID.Jhin
         } else if (card.name == "Evelynn") {
           regionID = regionRefID.Evelynn
+        } else if (card.name == "Jax") {
+          regionID = regionRefID.Jax
+        } else if (card.name == "Kayn") {
+          regionID = regionRefID.Kayn
         }
 
         if (champFactions.indexOf(regionID) == -1) {
@@ -113,12 +117,60 @@ const getFactions = (code) => {
     }
   }
 
+  const getFollowerFactionsJax = () => {
+    for (var j in cards) {
+      // Second loop to get followerFactions
+      var card = baseStore.sets_en[cards[j].code]
+      if (
+        card &&
+        card.rarityRef != "Champion" &&
+        card.regions &&
+        card.regions.length == 1 &&
+        !card.subtypes.includes("WEAPONMASTER") &&
+        card.collectible
+      ) {
+        // Filters champion & card that plants chime
+        // Only considers mono region cards
+        var regionID = regionRefID[card.regionRefs[0]]
+        if (factionIDs.indexOf(regionID) == -1) {
+          factionIDs.push(regionID)
+        }
+      }
+    }
+  }
+
+  const getFollowerFactionsKayn = () => {
+    for (var j in cards) {
+      // Second loop to get followerFactions
+      var card = baseStore.sets_en[cards[j].code]
+      if (
+        card &&
+        card.rarityRef != "Champion" &&
+        card.regions &&
+        card.regions.length == 1 &&
+        !card.subtypes.includes("CULTIST") &&
+        card.collectible
+      ) {
+        // Filters champion & card that plants chime
+        // Only considers mono region cards
+        var regionID = regionRefID[card.regionRefs[0]]
+        if (factionIDs.indexOf(regionID) == -1) {
+          factionIDs.push(regionID)
+        }
+      }
+    }
+  }
+
   if (factionIDs.includes(regionRefID.Bard)) {
     getFollowerFactionsBard()
   } else if (factionIDs.includes(regionRefID.Jhin)) {
     getFollowerFactionsJhin()
   } else if (factionIDs.includes(regionRefID.Evelynn)) {
     getFollowerFactionsEvelynn()
+  } else if (factionIDs.includes(regionRefID.Jax)) {
+    getFollowerFactionsJax()
+  } else if (factionIDs.includes(regionRefID.Kayn)) {
+    getFollowerFactionsKayn()
   } else {
     for (var j in cards) {
       // Second loop to get follower Factions

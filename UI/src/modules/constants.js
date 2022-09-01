@@ -13,6 +13,8 @@ export const regionRefID = {
   Bard: 13,
   Jhin: 14,
   Evelynn: 15,
+  Jax: 16,
+  Kayn: 17,
 }
 
 export const regionNames = {
