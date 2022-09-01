@@ -2,6 +2,8 @@ const sets_en = require("../src/data/en_us.json")
 const fs = require("fs")
 const http = require("https")
 
+const setCodes = ["1", "2", "3", "4", "5", "6", "6cde"]
+
 var champs = []
 
 sets_en.forEach((set) => {
@@ -16,15 +18,15 @@ champs.forEach((champ) => {
   try {
     var code = champ.cardCode
     var name = champ.name
-    var set = champ.set[3]
+    var setCode = champ.set.slice(3)
+    var set = setCodes.findIndex((val) => val == setCode)
 
     var location = "./src/assets/images/cards/cropped/" + code + "-cropped.png"
-    if (fs.existsSync(location)) {
-    } else {
+    if (!fs.existsSync(location)) {
       console.log("Missing " + name + " " + code)
 
       champ.associatedCardRefs.forEach((ref) => {
-        var champLevel = sets_en[set - 1].find((card) => {
+        var champLevel = sets_en[set].find((card) => {
           // Find all none champ spell alternative images
           return card.cardCode == ref && card.type == "Unit" && card.supertype == "Champion"
         })
@@ -40,7 +42,8 @@ champs.forEach((champ) => {
 
 function downloadImage(name, code, set) {
   // Download image and save to ./missingImage with name {code}.png
-  const API_LINK = `https://dd.b.pvp.net/latest/set${set}/en_us/img/cards/${code}-full.png`
+  let setCode = setCodes[set]
+  const API_LINK = `https://dd.b.pvp.net/latest/set${setCode}/en_us/img/cards/${code}-full.png`
   const path = `./devtool/missingImage/${code}.png`
 
   console.log(`Download Started for image of ${name}, ${API_LINK}`)
