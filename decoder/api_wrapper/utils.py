@@ -13,6 +13,8 @@ def read_json_file(json_file):
 
 def get_card_set_online(set_num: int, region="en_us"):
     url = f'http://dd.b.pvp.net/latest/set{set_num}/{region}/data/set{set_num}-{region}.json'
+    if set_num > 5:
+        url = f'http://dd.b.pvp.net/latest/set{set_num}cde/{region}/data/set{set_num}cde-{region}.json'
     print('Loading: ', url) 
     r = session.get(url)
     r.encoding = 'utf8'
