@@ -352,6 +352,11 @@ export default {
         this.$i18n.locale = newLocale
         console.log("Changing locale to", newLocale)
       })
+
+      window.ipcRenderer.on("to-change-card-locale", (event, newLocale) => {
+        console.log("Changing card locale to", newLocale)
+        this.changeLocale(newLocale)
+      })
     },
     hideWindow() {
       if (window.hideWindow) {
@@ -438,13 +443,13 @@ export default {
         if (regionID >= 0) {
           this.fetchLeaderboard(regionID)
         }
-        if (data.language) {
-          var newLocale = data.language.replace("-", "_").toLowerCase()
-          if (this.locale != newLocale) {
-            console.log("Switch Locale", this.locale, newLocale)
-            this.changeLocale(newLocale)
-          }
-        }
+        // if (data.language) {
+        //   var newLocale = data.language.replace("-", "_").toLowerCase()
+        //   if (this.locale != newLocale) {
+        //     console.log("Switch Locale", this.locale, newLocale)
+        //     this.changeLocale(newLocale)
+        //   }
+        // }
 
         return
       }
@@ -463,13 +468,13 @@ export default {
               var regionID = REGION_NAMES.indexOf(this.server)
               this.fetchLeaderboard(regionID)
             }
-            if (data.language) {
-              var newLocale = data.language.replace("-", "_").toLowerCase()
-              if (this.locale != newLocale) {
-                console.log("Switch Locale", this.locale, newLocale)
-                this.changeLocale(newLocale)
-              }
-            }
+            // if (data.language) {
+            //   var newLocale = data.language.replace("-", "_").toLowerCase()
+            //   if (this.locale != newLocale) {
+            //     console.log("Switch Locale", this.locale, newLocale)
+            //     this.changeLocale(newLocale)
+            //   }
+            // }
           } else {
             console.log("/status parse data error")
           }

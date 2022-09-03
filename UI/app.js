@@ -872,6 +872,20 @@ ipcMain.on("changed-locale", (event, newLocale) => {
   })
 })
 
+ipcMain.on("changed-card-locale", (event, newLocale) => {
+  console.log("Changing Card Locale to", newLocale, ", from", event.sender.id)
+  store.set("card-locale", newLocale)
+
+  BrowserWindow.getAllWindows().forEach((bw) => {
+    if (bw && bw.webContents.id != event.sender.id) {
+      console.log("-- sending to", bw.webContents.id)
+      bw.webContents.send("to-change-card-locale", newLocale)
+    } else {
+      console.log("-- not sending to", bw.webContents.id)
+    }
+  })
+})
+
 function getEnvLocale(env) {
   env = env || process.env
 

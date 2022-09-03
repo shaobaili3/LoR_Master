@@ -27,14 +27,14 @@ export const useStatusStore = defineStore("status", {
 
       this.backendRunning = true
 
-      if (data.language) {
-        // Card language
-        var newLocale = data.language.replace("-", "_").toLowerCase()
-        if (baseStore.locale != newLocale) {
-          console.log("Switch Card Locale", this.locale, newLocale)
-          baseStore.changeLocale(newLocale)
-        }
-      }
+      // if (data.language) {
+      //   // Card language
+      //   var newLocale = data.language.replace("-", "_").toLowerCase()
+      //   if (baseStore.locale != newLocale) {
+      //     console.log("Switch Card Locale", this.locale, newLocale)
+      //     baseStore.changeLocale(newLocale)
+      //   }
+      // }
 
       this.lorRunning = data.lorRunning
       if (!data.lorRunning) {

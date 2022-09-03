@@ -24,7 +24,7 @@
               :input="changeMainUILocale"
             ></locale-changer>
           </div>
-          <div class="settings-list-item" v-if="!IS_ELECTRON">
+          <div class="settings-list-item">
             <locale-changer
               :title="$t('settings.options.cardLanguage')"
               :swapNames="cardLocaleNames"
@@ -99,6 +99,9 @@ export default {
     changeCardLocale(newLocale) {
       console.log("Change Card Locale to:", newLocale)
       this.changeLocale(newLocale)
+      if (window.ipcRenderer) {
+        window.ipcRenderer.send("changed-card-locale", newLocale)
+      }
       if (!this.IS_ELECTRON) {
         window.localStorage.setItem("lmt-settings-card-locale", newLocale)
       }
