@@ -11,7 +11,7 @@ print('data_dir: ', data_dir)
 # print(Path(".").absolute())
 # print(Path("./data/data/set1-en_us.json").exists())
 
-MAX_SET_NUM = 6
+MAX_SET_NUM = 7
 
 for num in range(MAX_SET_NUM):
     if len(list(data_dir.glob(f"set{num + 1}*.json"))) == 0:
