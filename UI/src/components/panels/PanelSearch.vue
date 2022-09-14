@@ -17,9 +17,20 @@
           <i class="fas fa-bookmark px-1"></i>
         </i18n-t>
         <div v-if="bookmarks && bookmarks.length > 0">
-          <div v-for="(bookmark, index) in bookmarks" :key="bookmark.name + bookmark.id">
+          <draggable
+            v-model="bookmarks"
+            group="people"
+            @start="bookmarkDragStart"
+            @end="bookmarkDragEnd"
+            item-key="id"
+          >
+            <template #item="{ element, index }">
+              <search-bookmark :bookmark="element" :index="index"></search-bookmark>
+            </template>
+          </draggable>
+          <!-- <div v-for="(bookmark, index) in bookmarks" :key="bookmark.name + bookmark.id">
             <search-bookmark :bookmark="bookmark" :index="index"></search-bookmark>
-          </div>
+          </div> -->
         </div>
       </div>
       <!-- Filters -->
@@ -255,10 +266,12 @@ import DeckPreview from "../deck/DeckPreview.vue"
 
 import { winRateToColor } from "../../modules/utils/colorUtils"
 
-import { mapState, mapActions } from "pinia"
+import { mapState, mapActions, mapWritableState } from "pinia"
 import { useBookmarkStore } from "../../store/StoreBookmark"
 import SearchBookmark from "../search/SearchBookmark.vue"
 import SearchAutoCompleteItem from "../search/SearchAutoCompleteItem.vue"
+
+import draggable from "vuedraggable"
 
 import { getDeckID } from "./PanelMeta.vue"
 import { filterBadges, getBadgeTranslateKey } from "../match/MatchHistory.vue"
@@ -358,6 +371,7 @@ export default {
     DeckPreview,
     SearchBookmark,
     SearchAutoCompleteItem,
+    draggable,
   },
   props: {
     player: String,
@@ -396,10 +410,12 @@ export default {
 
       filterDeckID: null,
       filterBadge: null,
+
+      drag: false,
     }
   },
   computed: {
-    ...mapState(useBookmarkStore, ["bookmarks"]),
+    ...mapWritableState(useBookmarkStore, ["bookmarks"]),
     showAutoCompleteBar() {
       return (
         (this.autoCompleteLoading ||
@@ -568,7 +584,16 @@ export default {
     this.initStore()
   },
   methods: {
-    ...mapActions(useBookmarkStore, ["initStore"]),
+    ...mapActions(useBookmarkStore, ["initStore", "updateStore"]),
+
+    bookmarkDragStart() {
+      this.drag = true
+    },
+
+    bookmarkDragEnd() {
+      this.drag = true
+      this.updateStore()
+    },
 
     getBadgeTranslateKey,
     winRateToColor,
