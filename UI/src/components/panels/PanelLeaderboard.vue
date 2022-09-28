@@ -184,6 +184,9 @@ export const REGION_ID = {
 export const REGION_SHORTS = ["AM", "EU", "APAC"]
 export const REGION_NAMES = ["americas", "europe", "apac"]
 
+/**
+ * Converts "amaricas" -> "AM", etc
+ **/
 export const regionNameToShorts = (name) => {
   if (name == "sea" || name == "asia") {
     return "APAC"

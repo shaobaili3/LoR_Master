@@ -276,21 +276,37 @@ import draggable from "vuedraggable"
 import { getDeckID } from "./PanelMeta.vue"
 import { filterBadges, getBadgeTranslateKey } from "../match/MatchHistory.vue"
 
-export const processSearchRequestRawData = (data, playerName) => {
+export const processSearchRequestRawData = (raw) => {
   // playerServer is region shorts
 
   var matches = []
+  if (!raw) return matches
+
+  let data = raw.matches
+
   if (!data) return matches
 
+  let puuid = raw.player._id
+
   // Processing for normal Data
-  for (var key in data) {
-    var match = data[key]
+  for (var match of data) {
+    // var match = data[key]
     var info = match.info
     var playersInfo = match.player_info
 
-    if (!match || !playersInfo || !playersInfo[0] || !playersInfo[0].name) continue // Skip if null history
+    if (
+      !match ||
+      !playersInfo ||
+      !playersInfo[0] ||
+      !playersInfo[0].name ||
+      !info.players ||
+      !info.players[0] ||
+      !info.players[0].puuid
+    )
+      continue // Skip if null history
 
-    var isFirstPlayer = playersInfo[0].name.toLowerCase() == playerName.toLowerCase()
+    // var isFirstPlayer = playersInfo[0].name.toLowerCase() == playerName.toLowerCase()
+    var isFirstPlayer = info.players[0].puuid == puuid
     var player, playerGame, opponent, opponentGame
 
     var details = null
@@ -359,10 +375,12 @@ export const processSearchRequestRawData = (data, playerName) => {
   return matches
 }
 
+/** Returns "americas", etc */
 export const extraRegionData = (data) => {
-  if (data && data[0] && data[0].server) {
-    return data[0].server
+  if (data && data.player && data.player.server) {
+    return data.player.server
   }
+  return null
 }
 
 export default {
@@ -841,11 +859,13 @@ export default {
       // Second request to makesure that the data is updated
       this.isUpdating = true
       this.isUpdated = false
+      this.isError = false
 
-      var newRequest = `${this.API_WEB}/search/${REGION_NAMES[REGION_ID[this.selectedRegion]]}/${
+      var newRequest = `${this.API_WEB}/match/${REGION_NAMES[REGION_ID[this.selectedRegion]]}/${
         this.playerName
       }/${this.playerTag}`
 
+      // To record this activity
       this.sendUserEvent({
         category: "Main Window Requests",
         action: "Update Search",
@@ -874,7 +894,9 @@ export default {
             value: Date.now() - requestUpdateHistoryStartTime,
           })
 
-          this.matches = processSearchRequestRawData(response.data, this.playerName)
+          this.matches = processSearchRequestRawData(response.data)
+          this.selectedRegion = regionNameToShorts(extraRegionData(response.data))
+          this.playerRegion = REGION_SHORTS[REGION_ID[this.selectedRegion]]
         })
         .catch((e) => {
           if (axios.isCancel(e)) {
@@ -886,7 +908,7 @@ export default {
               if (e.response.data && e.response.data.status) console.log(e.response.data.status)
 
               if (e.response.status == 500) {
-                this.errorHistory(4) // Internal sercive error
+                this.errorHistory(4) // Internal server error
               } else {
                 var data = e.response.data
                 var errorCode = data.status && data.status.error
@@ -911,10 +933,10 @@ export default {
     },
     requestHistoryData() {
       var newRequest = this.selectedRegion
-        ? `${this.API_WEB}/search/${REGION_NAMES[REGION_ID[this.selectedRegion]]}/${
+        ? `${this.API_WEB}/match/${REGION_NAMES[REGION_ID[this.selectedRegion]]}/${
             this.playerName
           }/${this.playerTag}`
-        : `${this.API_WEB}/search/${this.playerName}/${this.playerTag}`
+        : `${this.API_WEB}/match/${this.playerName}/${this.playerTag}`
 
       if (prevHistoryRequest == newRequest && this.isLoading) {
         // Don't refresh if the request is the same and ongoing
@@ -960,7 +982,7 @@ export default {
             value: Date.now() - requestHistoryStartTime,
           })
 
-          this.matches = processSearchRequestRawData(response.data, this.playerName)
+          this.matches = processSearchRequestRawData(response.data)
 
           this.selectedRegion = regionNameToShorts(extraRegionData(response.data))
           this.playerRegion = REGION_SHORTS[REGION_ID[this.selectedRegion]]
@@ -976,7 +998,7 @@ export default {
             if (e.response) {
               if (e.response.data && e.response.data.status) console.log(e.response.data.status)
               if (e.response.status == 500) {
-                this.errorHistory(4) // Internal sercive error
+                this.errorHistory(4) // Internal server error
               } else {
                 var data = e.response.data
                 this.errorHistory((data.status && data.status.error) || 3) // give a 3 so that there is a fallback

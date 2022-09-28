@@ -71,7 +71,7 @@ const testData = {
   ],
 }
 
-const testURL = ref(baseStore.API_WEB + "/search/americas/Kevor24/NA1")
+const testURL = ref(baseStore.API_WEB + "/match/americas/Kevor24/NA1")
 
 const {
   loading: testLoading,
