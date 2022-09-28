@@ -1,6 +1,6 @@
 <template>
   <div class="flex h-full justify-center">
-    <div class="w-0 max-w-xl flex-1">
+    <div class="w-0 max-w-xl flex-1 lg:max-w-4xl">
       <div class="decklib flex h-full flex-col px-2 sm:px-0">
         <modal-warning ref="warningModal"></modal-warning>
         <div class="title pb-4 text-left text-3xl">
@@ -16,9 +16,10 @@
               v-model="codeText"
               :placeholder="$t('decklib.placeholder')"
             />
-            <div class="icon inside left">
+            <!-- <div class="icon inside left">
               <span><i class="fas fa-paste"></i></span>
-            </div>
+            </div> -->
+            <i class="fas fa-paste pointer-events-none absolute left-5 top-4 text-gray-200"></i>
           </div>
           <div class="error-message">
             {{ error }}
@@ -30,7 +31,7 @@
             <i class="fas fa-star px-1"></i>
           </i18n-t>
         </div>
-        <div class="flex h-0 flex-1 overflow-y-auto">
+        <div class="flex h-0 flex-1 overflow-y-auto px-2">
           <!-- Decks -->
           <div class="decks-container h-fit gap-4">
             <div

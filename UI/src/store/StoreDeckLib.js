@@ -36,6 +36,12 @@ export const useDeckLibStore = defineStore(storeid, {
         this.loaded = true
       }
     },
+    setErrorFading(error) {
+      this.error = error
+      setTimeout(() => {
+        this.error = null
+      }, 2000)
+    },
     updateStore() {
       if (window.ipcRenderer) {
         window.ipcRenderer.send("save-store", "deck-lib", JSON.stringify(this.decks, null, "\t"))
@@ -45,6 +51,14 @@ export const useDeckLibStore = defineStore(storeid, {
     },
     processPaste(deckCode) {
       console.log("Process Paste")
+
+      console.log(this.decks)
+      console.log(this.decks.findIndex((item) => item.code == deckCode))
+
+      if (this.decks.findIndex((item) => item.code == deckCode) != -1) {
+        this.setErrorFading("Exact Deck Already Exists")
+        return
+      }
 
       try {
         let deck = DeckEncoder.decode(deckCode)
@@ -70,10 +84,7 @@ export const useDeckLibStore = defineStore(storeid, {
         this.updateStore()
       } catch (error) {
         // console.log(error)
-        this.error = error
-        setTimeout(() => {
-          this.error = null
-        }, 2000)
+        this.setErrorFading(error)
       }
     },
     async deckLibPaste(deckCode) {
