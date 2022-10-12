@@ -15,6 +15,7 @@ export const regionRefID = {
   Evelynn: 15,
   Jax: 16,
   Kayn: 17,
+  Varus: 18,
 }
 
 export const regionNames = {
@@ -34,6 +35,7 @@ export const regionNames = {
   15: "faction_Evelynn_Name",
   16: "faction_Jax_Name",
   17: "faction_Kayn_Name",
+  18: "faction_Varus_Name",
 }
 
 export const factionNames = {
@@ -53,4 +55,5 @@ export const factionNames = {
   15: "Evelynn",
   16: "Jax",
   17: "Kayn",
+  18: "Varus"
 }

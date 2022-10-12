@@ -1,6 +1,6 @@
 import { getDecodedDeck } from "./getDecodedDeck"
 import { useBaseStore } from "../store/StoreBase"
-import { regionRefID } from "./constants"
+import { factionNames, regionRefID } from "./constants"
 
 const getFactions = (code) => {
   const baseStore = useBaseStore()
@@ -16,10 +16,9 @@ const getFactions = (code) => {
         card &&
         card.rarityRef == "Champion" &&
         card.regions &&
-        card.regions.length == 1 &&
+        card.regions.length == 1 && // Only considers mono region cards
         card.collectible
       ) {
-        // Only considers mono region cards
         var regionID = regionRefID[card.regionRefs[0]]
 
         if (card.name == "Bard") {
@@ -32,6 +31,8 @@ const getFactions = (code) => {
           regionID = regionRefID.Jax
         } else if (card.name == "Kayn") {
           regionID = regionRefID.Kayn
+        } else if (card.name == "Varus") {
+          regionID = regionRefID.Varus
         }
 
         if (champFactions.indexOf(regionID) == -1) {
@@ -148,7 +149,7 @@ const getFactions = (code) => {
         card.rarityRef != "Champion" &&
         card.regions &&
         card.regions.length == 1 &&
-        !card.subtypes.includes("CULTIST") &&
+        !card.subtypes.includes("CULTIST") && // Filter out all cultist cards
         card.collectible
       ) {
         // Filters champion & card that plants chime
@@ -170,6 +171,8 @@ const getFactions = (code) => {
   } else if (factionIDs.includes(regionRefID.Jax)) {
     getFollowerFactionsJax()
   } else if (factionIDs.includes(regionRefID.Kayn)) {
+    getFollowerFactionsKayn()
+  } else if (factionIDs.includes(regionRefID.Varus)) {
     getFollowerFactionsKayn()
   } else {
     for (var j in cards) {
