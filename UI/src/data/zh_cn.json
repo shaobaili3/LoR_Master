@@ -78584,5 +78584,4729 @@
       "collectible": true,
       "set": "Set6cde"
     }
+  ],
+  [
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [
+        "06RU005T3",
+        "06RU005T6",
+        "06RU005T4",
+        "06RU005T8",
+        "06RU005T2",
+        "06RU005T11",
+        "06RU005T1",
+        "06RU005T10"
+      ],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06RU005.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06RU005-full.png"
+        }
+      ],
+      "regions": [
+        "符文大地"
+      ],
+      "regionRefs": [
+        "Runeterra"
+      ],
+      "attack": 2,
+      "cost": 5,
+      "health": 5,
+      "description": "<link=vocab.Origin><style=Vocab>起源</style></link>：<link=card.origin><style=AssociatedCard>暗魂收割者</style></link>。\r\n<link=vocab.AutoEquip><style=Vocab>自动装备</style></link>：<link=card.equipment><style=AssociatedCard>冥血罪镰</style></link>。\r\n此牌击杀敌军单位时，<br>治疗此牌2点生命值。",
+      "descriptionRaw": "起源：暗魂收割者。\r\n自动装备：冥血罪镰。\r\n此牌击杀敌军单位时，治疗此牌2点生命值。",
+      "levelupDescription": "此牌<link=vocab.Strike><style=Vocab>打击</style></link>2次<style=Variable></style>。此牌升级时<br>会被<link=keyword.Recall><style=Keyword>召回</style></link>。",
+      "levelupDescriptionRaw": "此牌打击2次。此牌升级时会被召回。",
+      "flavorText": "当另一具尸体倒下时，慨影乐得大笑，他知道自己很快就会解放第二把冥血武器。在其体内，勒哈斯特已经迫不及待，他知道慨影的末日终于到来了。",
+      "artistName": "Kudos Productions",
+      "name": "慨影",
+      "cardCode": "06RU005",
+      "keywords": [
+        "挑战者"
+      ],
+      "keywordRefs": [
+        "Challenger"
+      ],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "英雄",
+      "rarityRef": "Champion",
+      "subtypes": [
+        "冥血族"
+      ],
+      "supertype": "英雄",
+      "type": "单位",
+      "collectible": true,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [
+        "06RU005"
+      ],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06RU005T6.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06RU005T6-full.png"
+        }
+      ],
+      "regions": [
+        "符文大地"
+      ],
+      "regionRefs": [
+        "Runeterra"
+      ],
+      "attack": 0,
+      "cost": 0,
+      "health": 0,
+      "description": "构筑牌组时，可将任何邪教徒卡牌加入牌组。我方召唤3个以上<br>邪教徒单位后，抽出1张<link=card.level1><style=AssociatedCard>慨影</style></link>。",
+      "descriptionRaw": "构筑牌组时，可将任何邪教徒卡牌加入牌组。我方召唤3个以上邪教徒单位后，抽出1张慨影。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "可能的结果只有两种：慨影不是让勒哈斯特臣服，就是被其吞噬。",
+      "artistName": "Kudos Productions",
+      "name": "暗魂收割者",
+      "cardCode": "06RU005T6",
+      "keywords": [],
+      "keywordRefs": [],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "无",
+      "rarityRef": "None",
+      "subtypes": [],
+      "supertype": "",
+      "type": "技能",
+      "collectible": false,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [
+        "06RU005",
+        "06RU005T2",
+        "06RU005T1",
+        "06RU005T11",
+        "06RU005T10",
+        "06RU005"
+      ],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06RU005T3.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06RU005T3-full.png"
+        }
+      ],
+      "regions": [
+        "符文大地"
+      ],
+      "regionRefs": [
+        "Runeterra"
+      ],
+      "attack": 0,
+      "cost": 2,
+      "health": 0,
+      "description": "<link=vocab.Attack><style=Vocab>攻击</style></link>：赋予<link=card.selfRef><style=AssociatedCard>冥血罪镰</style></link>+1|+0。",
+      "descriptionRaw": "攻击：赋予冥血罪镰+1|+0。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "「收割时刻到了。」\n——勒哈斯特",
+      "artistName": "Kudos Productions",
+      "name": "冥血罪镰",
+      "cardCode": "06RU005T3",
+      "keywords": [
+        "装备"
+      ],
+      "keywordRefs": [
+        "Equipment"
+      ],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "无",
+      "rarityRef": "None",
+      "subtypes": [
+        "冥血族"
+      ],
+      "supertype": "",
+      "type": "装备",
+      "collectible": false,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [
+        "06RU005T4",
+        "06RU005T1",
+        "06RU005T2"
+      ],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06RU005T8.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06RU005T8-full.png"
+        }
+      ],
+      "regions": [
+        "符文大地"
+      ],
+      "regionRefs": [
+        "Runeterra"
+      ],
+      "attack": 3,
+      "cost": 0,
+      "health": 6,
+      "description": "<link=vocab.Play><style=Vocab>出牌</style></link>：将此牌及所有相同卡牌幻化为<link=card.Rhaast><style=AssociatedCard>勒哈斯特</style></link>或<link=card.TheShadowAssassin><style=AssociatedCard>诡影刺客</style></link>。",
+      "descriptionRaw": "出牌：将此牌及所有相同卡牌幻化为勒哈斯特或诡影刺客。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "一阵猛烈的愤怒向慨影袭来，可怕的灼热疼痛从他的眼后掠过，让他跪倒在地。勒哈斯特得意洋洋的笑声在他周围回荡，无情地嘲讽着他。他早就知道这一天会到来，今天他如果不战胜冥血族，心智就会被夺走……",
+      "artistName": "Kudos Productions",
+      "name": "慨影",
+      "cardCode": "06RU005T8",
+      "keywords": [],
+      "keywordRefs": [],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "英雄",
+      "rarityRef": "Champion",
+      "subtypes": [
+        "冥血族"
+      ],
+      "supertype": "英雄",
+      "type": "单位",
+      "collectible": false,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [
+        "06RU005T10",
+        "06RU005T4",
+        "06RU005"
+      ],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06RU005T1.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06RU005T1-full.png"
+        }
+      ],
+      "regions": [
+        "符文大地"
+      ],
+      "regionRefs": [
+        "Runeterra"
+      ],
+      "attack": 3,
+      "cost": 5,
+      "health": 6,
+      "description": "<link=vocab.AutoEquip><style=Vocab>自动装备</style></link>：<link=card.equipment><style=AssociatedCard>暗影镰刀</style></link>。",
+      "descriptionRaw": "自动装备：暗影镰刀。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "强大的力量在他的血管中流窜。摆脱了冥血族的影响后，所有的暗影力量都由他来掌控。慨影大笑，遁入黑暗，片刻后现踪，默默地割断了面前守卫的喉咙。",
+      "artistName": "Kudos Productions",
+      "name": "诡影刺客",
+      "cardCode": "06RU005T1",
+      "keywords": [
+        "隐密",
+        "挑战者"
+      ],
+      "keywordRefs": [
+        "Elusive",
+        "Challenger"
+      ],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "无",
+      "rarityRef": "None",
+      "subtypes": [
+        "冥血族"
+      ],
+      "supertype": "英雄",
+      "type": "单位",
+      "collectible": false,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [
+        "06RU005T1"
+      ],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06RU005T10.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06RU005T10-full.png"
+        }
+      ],
+      "regions": [
+        "符文大地"
+      ],
+      "regionRefs": [
+        "Runeterra"
+      ],
+      "attack": 0,
+      "cost": 2,
+      "health": 0,
+      "description": "<link=vocab.Attack><style=Vocab>攻击</style></link>：赋予<link=card.selfRef><style=AssociatedCard>暗影镰刀</style></link>+2|+0。",
+      "descriptionRaw": "攻击：赋予暗影镰刀+2|+0。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "在勒哈斯特愤怒的尖叫声中，慨影的怒气燃起了骇人的熊熊烈火，冥血族对暗影战士的控制也随之燃烧殆尽。而当慨影起身时，他知道冥血族的所有力量都掌握在自己手中。",
+      "artistName": "Kudos Productions",
+      "name": "暗影镰刀",
+      "cardCode": "06RU005T10",
+      "keywords": [
+        "装备"
+      ],
+      "keywordRefs": [
+        "Equipment"
+      ],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "无",
+      "rarityRef": "None",
+      "subtypes": [],
+      "supertype": "",
+      "type": "装备",
+      "collectible": false,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [
+        "06RU005T4",
+        "06RU005T11",
+        "06RU005"
+      ],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06RU005T2.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06RU005T2-full.png"
+        }
+      ],
+      "regions": [
+        "符文大地"
+      ],
+      "regionRefs": [
+        "Runeterra"
+      ],
+      "attack": 3,
+      "cost": 5,
+      "health": 6,
+      "description": "<link=vocab.AutoEquip><style=Vocab>自动装备</style></link>：<link=card.equipment><style=AssociatedCard>堕落镰刀</style></link>。\r\n此牌击杀敌军单位时，治愈此牌<br>并治疗我方主堡2点生命值。",
+      "descriptionRaw": "自动装备：堕落镰刀。\r\n此牌击杀敌军单位时，治愈此牌并治疗我方主堡2点生命值。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "勒哈斯特发出胜利的嚎叫。经过多年的等待与向往，现在……他终于自由了。他举起修兰妮的双刃，放到舌尖，品尝着鲜血的味道。他幸福地阖上双眼，千年以来第一次露出笑容。开始收割了。",
+      "artistName": "Kudos Productions",
+      "name": "勒哈斯特",
+      "cardCode": "06RU005T2",
+      "keywords": [
+        "挑战者",
+        "蛮力"
+      ],
+      "keywordRefs": [
+        "Challenger",
+        "Overwhelm"
+      ],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "无",
+      "rarityRef": "None",
+      "subtypes": [
+        "冥血族"
+      ],
+      "supertype": "英雄",
+      "type": "单位",
+      "collectible": false,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [
+        "06RU005T2"
+      ],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06RU005T11.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06RU005T11-full.png"
+        }
+      ],
+      "regions": [
+        "符文大地"
+      ],
+      "regionRefs": [
+        "Runeterra"
+      ],
+      "attack": 0,
+      "cost": 2,
+      "health": 0,
+      "description": "<link=vocab.Equip><style=Vocab>装备</style></link>：<link=vocab.Attack><style=Vocab>攻击</style></link>：赋予<link=card.selfRef><style=AssociatedCard>堕落镰刀</style></link>+1|+1。",
+      "descriptionRaw": "装备：攻击：赋予堕落镰刀+1|+1。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "当慨影将他的灵魂交给冥血族时，他的怒火平息了下来，取而代之的是难以忍受的空虚。年轻的战士已不复存在，只剩下勒哈斯特。",
+      "artistName": "Kudos Productions",
+      "name": "堕落镰刀",
+      "cardCode": "06RU005T11",
+      "keywords": [
+        "装备"
+      ],
+      "keywordRefs": [
+        "Equipment"
+      ],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "无",
+      "rarityRef": "None",
+      "subtypes": [
+        "冥血族"
+      ],
+      "supertype": "",
+      "type": "装备",
+      "collectible": false,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [
+        "06RU005",
+        "06RU005T1",
+        "06RU005T2"
+      ],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06RU005T4.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06RU005T4-full.png"
+        }
+      ],
+      "regions": [
+        "符文大地"
+      ],
+      "regionRefs": [
+        "Runeterra"
+      ],
+      "attack": 0,
+      "cost": 4,
+      "health": 0,
+      "description": "本回合给予<link=card.level1><style=AssociatedCard>慨影</style></link><link=keyword.Quick Strike><sprite name=QuickStrike><style=Keyword>快速攻击</style></link>，使其发动额外攻击并<link=keyword.Challenger><sprite name=Challenger><style=Keyword>挑战</style></link>1个敌军单位。\r\n在我方牌组生成1张<link=card.level1><style=AssociatedCard>慨影</style></link>。",
+      "descriptionRaw": "本回合给予慨影快速攻击，使其发动额外攻击并挑战1个敌军单位。\r\n在我方牌组生成1张慨影。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "「无处可逃。」——慨影",
+      "artistName": "Kudos Productions",
+      "name": "慨影 暗影步伐",
+      "cardCode": "06RU005T4",
+      "keywords": [
+        "慢速"
+      ],
+      "keywordRefs": [
+        "Slow"
+      ],
+      "spellSpeed": "慢速",
+      "spellSpeedRef": "Slow",
+      "rarity": "无",
+      "rarityRef": "None",
+      "subtypes": [],
+      "supertype": "英雄",
+      "type": "法术",
+      "collectible": false,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06BW023.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06BW023-full.png"
+        }
+      ],
+      "regions": [
+        "比尔吉沃特"
+      ],
+      "regionRefs": [
+        "Bilgewater"
+      ],
+      "attack": 0,
+      "cost": 3,
+      "health": 0,
+      "description": "<link=keyword.Plunder><style=Keyword>洗劫</style></link>：此牌魔耗值-2。",
+      "descriptionRaw": "洗劫：此牌魔耗值-2。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "「俗话说，在比尔吉沃特，没有什么能比一把弯刀更快解决纷争。」\n「也许除了手枪吧。」\n「闭嘴，巴兹。」\n——未成气候的赏金猎人巴兹和盖夫",
+      "artistName": "Kudos Productions",
+      "name": "锯齿弯刀",
+      "cardCode": "06BW023",
+      "keywords": [
+        "装备",
+        "洗劫"
+      ],
+      "keywordRefs": [
+        "Equipment",
+        "Plunder"
+      ],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "普通",
+      "rarityRef": "Common",
+      "subtypes": [],
+      "supertype": "",
+      "type": "装备",
+      "collectible": true,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06NX026.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06NX026-full.png"
+        }
+      ],
+      "regions": [
+        "诺克萨斯"
+      ],
+      "regionRefs": [
+        "Noxus"
+      ],
+      "attack": 0,
+      "cost": 2,
+      "health": 0,
+      "description": "",
+      "descriptionRaw": "",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "维锡德不是博登特速度最快的角斗士，但当他的大锤命中目标时，对手通常会直接被打成肉酱。",
+      "artistName": "Kudos Productions",
+      "name": "大锤",
+      "cardCode": "06NX026",
+      "keywords": [
+        "装备",
+        "蛮力"
+      ],
+      "keywordRefs": [
+        "Equipment",
+        "Overwhelm"
+      ],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "普通",
+      "rarityRef": "Common",
+      "subtypes": [],
+      "supertype": "",
+      "type": "装备",
+      "collectible": true,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [
+        "06SH031"
+      ],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06SH032.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06SH032-full.png"
+        }
+      ],
+      "regions": [
+        "苏瑞玛"
+      ],
+      "regionRefs": [
+        "Shurima"
+      ],
+      "attack": 0,
+      "cost": 1,
+      "health": 0,
+      "description": "<link=keyword.Countdown><style=Keyword>倒数2</style></link><style=Variable></style>：在手牌生成1张<link=card.create><style=AssociatedCard>沙漠祕宝</style></link>。",
+      "descriptionRaw": "倒数2：在手牌生成1张沙漠祕宝。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "「你为什么一定要走到哪摸到哪？」\n「蛤，你觉得这是什么鬼陷阱吗？你觉得等等就会有颗大石头滚出──」\n「快跑啊！」\n——盗墓者雅各斯与薛维尔",
+      "artistName": "Michal Ivan ",
+      "name": "万人冢陷阱",
+      "cardCode": "06SH032",
+      "keywords": [
+        "地标",
+        "倒数"
+      ],
+      "keywordRefs": [
+        "LandmarkVisualOnly",
+        "Countdown"
+      ],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "普通",
+      "rarityRef": "Common",
+      "subtypes": [],
+      "supertype": "",
+      "type": "地标",
+      "collectible": true,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06SH031.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06SH031-full.png"
+        }
+      ],
+      "regions": [
+        "苏瑞玛"
+      ],
+      "regionRefs": [
+        "Shurima"
+      ],
+      "attack": 0,
+      "cost": 3,
+      "health": 0,
+      "description": "",
+      "descriptionRaw": "",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "「快放下，薛维尔！」\n「为什么？那可怜的家伙也用不着了啊！」\n「有些东西就是不应该被挖出来。」\n——盗墓者雅各斯与薛维尔 ",
+      "artistName": "Kudos Productions",
+      "name": "沙漠祕宝",
+      "cardCode": "06SH031",
+      "keywords": [
+        "装备"
+      ],
+      "keywordRefs": [
+        "Equipment"
+      ],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "无",
+      "rarityRef": "None",
+      "subtypes": [],
+      "supertype": "",
+      "type": "装备",
+      "collectible": false,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06MT033.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06MT033-full.png"
+        }
+      ],
+      "regions": [
+        "巨石峰"
+      ],
+      "regionRefs": [
+        "Targon"
+      ],
+      "attack": 0,
+      "cost": 4,
+      "health": 0,
+      "description": "此牌的装备者视为龙族。",
+      "descriptionRaw": "此牌的装备者视为龙族。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "许多人会呼唤龙族的力量，不过这在符文大地各处会以不同的形式表现。那些祈求天界龙族之力的人，可能会发现他们的内在拥有一股力量，如同星星一样明亮炽热。",
+      "artistName": "Kudos Productions",
+      "name": "龙族臂铠",
+      "cardCode": "06MT033",
+      "keywords": [
+        "装备",
+        "血怒"
+      ],
+      "keywordRefs": [
+        "Equipment",
+        "Fury"
+      ],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "普通",
+      "rarityRef": "Common",
+      "subtypes": [],
+      "supertype": "",
+      "type": "装备",
+      "collectible": true,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06SH040.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06SH040-full.png"
+        }
+      ],
+      "regions": [
+        "苏瑞玛"
+      ],
+      "regionRefs": [
+        "Shurima"
+      ],
+      "attack": 0,
+      "cost": 5,
+      "health": 0,
+      "description": "本牌局我方<link=vocab.Equip><style=Vocab>装备</style></link>友军单位后，<br>此牌魔耗值-2。复苏<link=vocab.Strongest><style=Vocab>最强</style></link>的<br>已阵亡我方英雄。",
+      "descriptionRaw": "本牌局我方装备友军单位后，此牌魔耗值-2。复苏最强的已阵亡我方英雄。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "「你永远不会死，因为我永远不会让你死。」\n——修兰妮",
+      "artistName": "Kudos Productions",
+      "name": "强行复苏",
+      "cardCode": "06SH040",
+      "keywords": [
+        "慢速"
+      ],
+      "keywordRefs": [
+        "Slow"
+      ],
+      "spellSpeed": "慢速",
+      "spellSpeedRef": "Slow",
+      "rarity": "史诗",
+      "rarityRef": "Epic",
+      "subtypes": [
+        "邪教徒"
+      ],
+      "supertype": "",
+      "type": "法术",
+      "collectible": true,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06SH005.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06SH005-full.png"
+        }
+      ],
+      "regions": [
+        "苏瑞玛"
+      ],
+      "regionRefs": [
+        "Shurima"
+      ],
+      "attack": 2,
+      "cost": 1,
+      "health": 1,
+      "description": "<link=vocab.Play><style=Vocab>出牌</style></link>：<link=vocab.Predict><style=Vocab>预言</style></link>。若我方挑选的卡牌为<br>冥血族或装备，则赋予此牌+1|+1。",
+      "descriptionRaw": "出牌：预言。若我方挑选的卡牌为冥血族或装备，则赋予此牌+1|+1。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "他手里紧握着一条编织腰带，这是好友勒哈斯特在他们的飞升仪式前送他的礼物。即使他崇敬着冥血族的力量，但他野兽般的内心仍隐藏着一股怨恨。",
+      "artistName": "Kudos Productions",
+      "name": "见弃巴凯",
+      "cardCode": "06SH005",
+      "keywords": [],
+      "keywordRefs": [],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "普通",
+      "rarityRef": "Common",
+      "subtypes": [
+        "邪教徒"
+      ],
+      "supertype": "",
+      "type": "单位",
+      "collectible": true,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06DE010.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06DE010-full.png"
+        }
+      ],
+      "regions": [
+        "蒂玛西亚"
+      ],
+      "regionRefs": [
+        "Demacia"
+      ],
+      "attack": 4,
+      "cost": 4,
+      "health": 3,
+      "description": "本牌局我方<link=vocab.Equip><style=Vocab>装备</style></link>友军单位后，<br>赋予此牌<link=keyword.Scout><sprite name=Scout><style=Keyword>先遣</style></link>。",
+      "descriptionRaw": "本牌局我方装备友军单位后，赋予此牌先遣。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "因为长年抑制自己的魔法能力，她心中滋生了一种深沉的自我仇恨，她恶意地将这股仇恨发泄在受害者身上。从游骑兵叛逃后，她失去了发泄怒火的对象，直到黑暗中传来了一个声音。那声音谈到了一种新的秩序，使她可以不受拘束地进行她的暴行。",
+      "artistName": "Kudos Productions",
+      "name": "叛逃游骑兵",
+      "cardCode": "06DE010",
+      "keywords": [
+        "坚忍"
+      ],
+      "keywordRefs": [
+        "Tough"
+      ],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "稀有",
+      "rarityRef": "Rare",
+      "subtypes": [
+        "邪教徒"
+      ],
+      "supertype": "",
+      "type": "单位",
+      "collectible": true,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06DE040.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06DE040-full.png"
+        }
+      ],
+      "regions": [
+        "蒂玛西亚"
+      ],
+      "regionRefs": [
+        "Demacia"
+      ],
+      "attack": 0,
+      "cost": 1,
+      "health": 0,
+      "description": "从我方牌组最上方4张牌中挑选<br>1个侍从单位或装备。抽出该牌<br>并将其余卡牌放回我方牌组。\r\n",
+      "descriptionRaw": "从我方牌组最上方4张牌中挑选1个侍从单位或装备。抽出该牌并将其余卡牌放回我方牌组。\r\n",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "轻柔、诱人的耳语在内心深处种下渴望的种子。就像一根刺，让骨肉溃烂并成长为饥饿。饥饿使人犯罪，犯罪又回过头带来死亡，如此不断轮回。",
+      "artistName": "Kudos Productions",
+      "name": "诱人前景",
+      "cardCode": "06DE040",
+      "keywords": [
+        "疾速"
+      ],
+      "keywordRefs": [
+        "Burst"
+      ],
+      "spellSpeed": "疾速",
+      "spellSpeedRef": "Burst",
+      "rarity": "普通",
+      "rarityRef": "Common",
+      "subtypes": [
+        "邪教徒"
+      ],
+      "supertype": "",
+      "type": "法术",
+      "collectible": true,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06IO034.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06IO034-full.png"
+        }
+      ],
+      "regions": [
+        "爱欧尼亚"
+      ],
+      "regionRefs": [
+        "Ionia"
+      ],
+      "attack": 0,
+      "cost": 1,
+      "health": 0,
+      "description": "本回合给予1个友军单位+1|+0或+0|+1。若本牌局我方<link=vocab.Equip><style=Vocab>已装备</style></link>友军单位，则对相同目标打出此牌的复制牌。",
+      "descriptionRaw": "本回合给予1个友军单位+1|+0或+0|+1。若本牌局我方已装备友军单位，则对相同目标打出此牌的复制牌。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "看着地上四处横倒的尸体，润儿的脸上流下愤怒的泪水。她辜负了他们，辜负了师父。而现在，她只剩一条路可走……",
+      "artistName": "Kudos Productions",
+      "name": "重大抉择",
+      "cardCode": "06IO034",
+      "keywords": [
+        "疾速"
+      ],
+      "keywordRefs": [
+        "Burst"
+      ],
+      "spellSpeed": "疾速",
+      "spellSpeedRef": "Burst",
+      "rarity": "稀有",
+      "rarityRef": "Rare",
+      "subtypes": [
+        "邪教徒"
+      ],
+      "supertype": "",
+      "type": "法术",
+      "collectible": true,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [
+        "06NX020T1"
+      ],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06NX020.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06NX020-full.png"
+        }
+      ],
+      "regions": [
+        "诺克萨斯"
+      ],
+      "regionRefs": [
+        "Noxus"
+      ],
+      "attack": 0,
+      "cost": 1,
+      "health": 0,
+      "description": "<link=vocab.Equip><style=Vocab>装备</style></link>此牌时，对我方主堡造成1点伤害。\r\n可消耗8点魔力改为打出<br><link=card.unit><style=AssociatedCard>祖瑞塔的娜内卡</style></link>。",
+      "descriptionRaw": "装备此牌时，对我方主堡造成1点伤害。\r\n可消耗8点魔力改为打出祖瑞塔的娜内卡。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "众所周知，瓦罗然东部的干草原非常贫瘠，不适合诺克希人图个温饱或居住。但是随着几个世纪过去，一个渴望扩张的新帝国诞生了。本来没种谷物的土地在新的耕作技术帮助下变得肥沃，而过去安然地掩埋起来的武器也因此再次出土。",
+      "artistName": "Kudos Productions",
+      "name": "冥血弩炮",
+      "cardCode": "06NX020",
+      "keywords": [
+        "装备"
+      ],
+      "keywordRefs": [
+        "Equipment"
+      ],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "史诗",
+      "rarityRef": "Epic",
+      "subtypes": [
+        "冥血族"
+      ],
+      "supertype": "",
+      "type": "装备",
+      "collectible": true,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06NX020T1.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06NX020T1-full.png"
+        }
+      ],
+      "regions": [
+        "诺克萨斯"
+      ],
+      "regionRefs": [
+        "Noxus"
+      ],
+      "attack": 5,
+      "cost": 8,
+      "health": 13,
+      "description": "<link=vocab.RoundEnd><style=Vocab>回合结束</style></link>：使<link=vocab.Strongest><style=Vocab>最强</style></link>敌军单位与此牌<br>互相<link=vocab.Strike><style=Vocab>打击</style></link>。",
+      "descriptionRaw": "回合结束：使最强敌军单位与此牌互相打击。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "古老的肌肉再次动了起来。战士听到了将军的呼唤，知道她必须赶赴何处——是南方，亦即那片她曾称之为伊卡西亚的土地。",
+      "artistName": "Kudos Productions",
+      "name": "祖瑞塔的娜内卡",
+      "cardCode": "06NX020T1",
+      "keywords": [
+        "蛮力"
+      ],
+      "keywordRefs": [
+        "Overwhelm"
+      ],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "无",
+      "rarityRef": "None",
+      "subtypes": [
+        "冥血族"
+      ],
+      "supertype": "",
+      "type": "单位",
+      "collectible": false,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06NX034.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06NX034-full.png"
+        }
+      ],
+      "regions": [
+        "诺克萨斯"
+      ],
+      "regionRefs": [
+        "Noxus"
+      ],
+      "attack": 0,
+      "cost": 4,
+      "health": 0,
+      "description": "使1个<link=vocab.Equip><style=Vocab>已装备</style></link>的友军单位<br><link=vocab.Strike><style=Vocab>打击</style></link>1个敌军单位。",
+      "descriptionRaw": "使1个已装备的友军单位打击1个敌军单位。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "「血盟兄弟，再次结成！」——诺克萨斯叛逃者",
+      "artistName": "Kudos Productions",
+      "name": "飙悍战士",
+      "cardCode": "06NX034",
+      "keywords": [
+        "快速"
+      ],
+      "keywordRefs": [
+        "Fast"
+      ],
+      "spellSpeed": "快速",
+      "spellSpeedRef": "Fast",
+      "rarity": "稀有",
+      "rarityRef": "Rare",
+      "subtypes": [
+        "邪教徒"
+      ],
+      "supertype": "",
+      "type": "法术",
+      "collectible": true,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [
+        "01IO013"
+      ],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06IO025.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06IO025-full.png"
+        }
+      ],
+      "regions": [
+        "爱欧尼亚"
+      ],
+      "regionRefs": [
+        "Ionia"
+      ],
+      "attack": 3,
+      "cost": 3,
+      "health": 2,
+      "description": "本牌局我方<link=vocab.Equip><style=Vocab>装备</style></link>友军单位后，<br>在手牌生成1张<link=card.summon><style=AssociatedCard>暗影之魔</style></link>。",
+      "descriptionRaw": "本牌局我方装备友军单位后，在手牌生成1张暗影之魔。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "在一片黑暗中，他看见了，一个可以划破阴影的武器。就在这时，他听到了有声音在呼唤他，遥远但十分有力。他循着声音找到了慨影，是那武器诉说的真理引导着他。",
+      "artistName": "Kudos Productions",
+      "name": "暗影之刃狂热者",
+      "cardCode": "06IO025",
+      "keywords": [
+        "快速攻击"
+      ],
+      "keywordRefs": [
+        "QuickStrike"
+      ],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "普通",
+      "rarityRef": "Common",
+      "subtypes": [
+        "邪教徒"
+      ],
+      "supertype": "",
+      "type": "单位",
+      "collectible": true,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06IO030.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06IO030-full.png"
+        }
+      ],
+      "regions": [
+        "爱欧尼亚"
+      ],
+      "regionRefs": [
+        "Ionia"
+      ],
+      "attack": 0,
+      "cost": 3,
+      "health": 0,
+      "description": "召唤此牌时，抽1张装备牌。\r\n每回合首次解除友军单位的<br><link=vocab.Equip><style=Vocab>装备</style></link>时，恢复1点法术魔力，<br>并赋予其+1|+0。",
+      "descriptionRaw": "召唤此牌时，抽1张装备牌。\r\n每回合首次解除友军单位的装备时，恢复1点法术魔力，并赋予其+1|+0。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "「幻雾剑地是神圣之地，这里的剑已经放了几个世纪……我相信，只要剑柄上刻着诗句，就会引导持剑者的迷途灵魂，在剑上灌注他们的祝福。」\n——多兰弟子的手写卷轴",
+      "artistName": "Polar Engine",
+      "name": "幻雾剑地",
+      "cardCode": "06IO030",
+      "keywords": [
+        "地标"
+      ],
+      "keywordRefs": [
+        "LandmarkVisualOnly"
+      ],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "稀有",
+      "rarityRef": "Rare",
+      "subtypes": [],
+      "supertype": "",
+      "type": "地标",
+      "collectible": true,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06NX019.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06NX019-full.png"
+        }
+      ],
+      "regions": [
+        "诺克萨斯"
+      ],
+      "regionRefs": [
+        "Noxus"
+      ],
+      "attack": 2,
+      "cost": 4,
+      "health": 4,
+      "description": " <link=vocab.Attack><style=Vocab>攻击</style></link>：本回合此牌的力量值提升至<br>等同于有<link=vocab.Equip><style=Vocab>装备</style></link>的<link=vocab.Strongest><style=Vocab>最强</style></link>友军单位。",
+      "descriptionRaw": " 攻击：本回合此牌的力量值提升至等同于有装备的最强友军单位。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "「又开始做梦了，在黑暗中听见了那个声音。十年……做为帝国的狗奴才度过了天杀的十年。被命令去到不知道哪里，杀死不知道是谁还是什么东西。这一切到底是为了什么？诺克萨斯的荣耀？荣耀是个美丽的谎言，而我上当了。但我不会再受骗了。慨影为我展示了一条不同的道路——复仇之路。」\n——罗伊斯，屠夫的日记",
+      "artistName": "Kudos Productions",
+      "name": "诺克萨斯逃兵",
+      "cardCode": "06NX019",
+      "keywords": [
+        "快速攻击"
+      ],
+      "keywordRefs": [
+        "QuickStrike"
+      ],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "普通",
+      "rarityRef": "Common",
+      "subtypes": [
+        "邪教徒"
+      ],
+      "supertype": "",
+      "type": "单位",
+      "collectible": true,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06PZ033.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06PZ033-full.png"
+        }
+      ],
+      "regions": [
+        "皮尔托福&佐恩"
+      ],
+      "regionRefs": [
+        "PiltoverZaun"
+      ],
+      "attack": 0,
+      "cost": 3,
+      "health": 0,
+      "description": "使我方法术与技能额外<br>造成1点伤害。",
+      "descriptionRaw": "使我方法术与技能额外造成1点伤害。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "「地点：第3区，19B地下道路\n物品：非法枪枝\n备注：于‘污水坑之光’行动期间没收。武器非常危险，处理时务必小心。」\n——皮尔托福警备队现场报告",
+      "artistName": "Kudos Productions",
+      "name": "三管顽皮枪v1.0",
+      "cardCode": "06PZ033",
+      "keywords": [
+        "装备"
+      ],
+      "keywordRefs": [
+        "Equipment"
+      ],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "普通",
+      "rarityRef": "Common",
+      "subtypes": [],
+      "supertype": "",
+      "type": "装备",
+      "collectible": true,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06BW042.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06BW042-full.png"
+        }
+      ],
+      "regions": [
+        "比尔吉沃特"
+      ],
+      "regionRefs": [
+        "Bilgewater"
+      ],
+      "attack": 0,
+      "cost": 5,
+      "health": 0,
+      "description": "对1个单位造成2点伤害。每造成1点伤害，便于下次<link=vocab.RoundStart><style=Vocab>回合开始</style></link>时<br>抽1张牌，并给予其<link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>飞逝</style></link>。",
+      "descriptionRaw": "对1个单位造成2点伤害。每造成1点伤害，便于下次回合开始时抽1张牌，并给予其飞逝。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "「狂鲨炮会负责轰炸，别担心。然后我会负责宝藏，我也会拿走狂鲨炮的那一份，不然他又会想办法塞进炮管，那下场都很糟糕。」——肖狗水手",
+      "artistName": "Kudos Productions",
+      "name": "火药满载",
+      "cardCode": "06BW042",
+      "keywords": [
+        "快速"
+      ],
+      "keywordRefs": [
+        "Fast"
+      ],
+      "spellSpeed": "快速",
+      "spellSpeedRef": "Fast",
+      "rarity": "史诗",
+      "rarityRef": "Epic",
+      "subtypes": [],
+      "supertype": "",
+      "type": "法术",
+      "collectible": true,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06PZ034.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06PZ034-full.png"
+        }
+      ],
+      "regions": [
+        "皮尔托福&佐恩"
+      ],
+      "regionRefs": [
+        "PiltoverZaun"
+      ],
+      "attack": 0,
+      "cost": 6,
+      "health": 0,
+      "description": "对1个单位造成5点伤害。若此牌<br>击杀该单位，则<link=keyword.Obliterate><style=Keyword>泯灭</style></link>之。",
+      "descriptionRaw": "对1个单位造成5点伤害。若此牌击杀该单位，则泯灭之。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "对某些生物来说，光是死还不够。",
+      "artistName": "Kudos Productions",
+      "name": "海克斯泯灭者",
+      "cardCode": "06PZ034",
+      "keywords": [
+        "快速"
+      ],
+      "keywordRefs": [
+        "Fast"
+      ],
+      "spellSpeed": "快速",
+      "spellSpeedRef": "Fast",
+      "rarity": "稀有",
+      "rarityRef": "Rare",
+      "subtypes": [],
+      "supertype": "",
+      "type": "法术",
+      "collectible": true,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06DE033.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06DE033-full.png"
+        }
+      ],
+      "regions": [
+        "蒂玛西亚"
+      ],
+      "regionRefs": [
+        "Demacia"
+      ],
+      "attack": 0,
+      "cost": 1,
+      "health": 0,
+      "description": "摧毁1个单位的装备；<br>若该单位为侍从，则亦<link=vocab.Silence><style=Vocab>沉默</style></link>之。",
+      "descriptionRaw": "摧毁1个单位的装备；若该单位为侍从，则亦沉默之。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "「这是你自找的。」——猎魔首领埃德雷德领主",
+      "artistName": "Kudos Productions",
+      "name": "沉默与抑制",
+      "cardCode": "06DE033",
+      "keywords": [
+        "慢速"
+      ],
+      "keywordRefs": [
+        "Slow"
+      ],
+      "spellSpeed": "慢速",
+      "spellSpeedRef": "Slow",
+      "rarity": "稀有",
+      "rarityRef": "Rare",
+      "subtypes": [],
+      "supertype": "",
+      "type": "法术",
+      "collectible": true,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06IO031.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06IO031-full.png"
+        }
+      ],
+      "regions": [
+        "爱欧尼亚"
+      ],
+      "regionRefs": [
+        "Ionia"
+      ],
+      "attack": 0,
+      "cost": 4,
+      "health": 0,
+      "description": "<link=vocab.Flow><style=Vocab>川流</style></link>：此牌魔耗值-2。",
+      "descriptionRaw": "川流：此牌魔耗值-2。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "「人剑合一。」——易大师",
+      "artistName": "Kudos Productions",
+      "name": "灵魂之剑",
+      "cardCode": "06IO031",
+      "keywords": [
+        "装备",
+        "川流"
+      ],
+      "keywordRefs": [
+        "Equipment",
+        "Flow"
+      ],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "普通",
+      "rarityRef": "Common",
+      "subtypes": [],
+      "supertype": "",
+      "type": "装备",
+      "collectible": true,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [
+        "06IO001T1"
+      ],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06IO001.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06IO001-full.png"
+        }
+      ],
+      "regions": [
+        "爱欧尼亚"
+      ],
+      "regionRefs": [
+        "Ionia"
+      ],
+      "attack": 2,
+      "cost": 2,
+      "health": 2,
+      "description": "召唤此牌时，在手牌生成<br>1张<link=card.create><style=AssociatedCard>有备无患</style></link>。",
+      "descriptionRaw": "召唤此牌时，在手牌生成1张有备无患。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "「我已经学会了足够的知识，让我能继续延续这个神圣技艺。至于多兰、他的师父，以及更之前的师父……希望他们的精神能够引导我的锤子。」\n——多兰弟子的手写卷轴",
+      "artistName": "Polar Engine",
+      "name": "多兰弟子",
+      "cardCode": "06IO001",
+      "keywords": [],
+      "keywordRefs": [],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "普通",
+      "rarityRef": "Common",
+      "subtypes": [],
+      "supertype": "",
+      "type": "单位",
+      "collectible": true,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06IO001T1.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06IO001T1-full.png"
+        }
+      ],
+      "regions": [
+        "爱欧尼亚"
+      ],
+      "regionRefs": [
+        "Ionia"
+      ],
+      "attack": 0,
+      "cost": 1,
+      "health": 0,
+      "description": "使手牌中1张法术牌的魔耗值-1。",
+      "descriptionRaw": "使手牌中1张法术牌的魔耗值-1。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "「战士准备了多少，就有多少能耐。」\n——无极之道金句",
+      "artistName": "Kudos Productions",
+      "name": "有备无患",
+      "cardCode": "06IO001T1",
+      "keywords": [
+        "专注"
+      ],
+      "keywordRefs": [
+        "Focus"
+      ],
+      "spellSpeed": "疾速",
+      "spellSpeedRef": "Burst",
+      "rarity": "无",
+      "rarityRef": "None",
+      "subtypes": [],
+      "supertype": "",
+      "type": "法术",
+      "collectible": false,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [
+        "06IO014T1"
+      ],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06IO014.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06IO014-full.png"
+        }
+      ],
+      "regions": [
+        "爱欧尼亚"
+      ],
+      "regionRefs": [
+        "Ionia"
+      ],
+      "attack": 1,
+      "cost": 1,
+      "health": 1,
+      "description": "<link=vocab.NexusStrike><style=Vocab>打击主堡</style></link>：召回此牌<br>并幻化为<link=card.spell><style=AssociatedCard>什蒙之风</style></link>。",
+      "descriptionRaw": "打击主堡：召回此牌并幻化为什蒙之风。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "当敌人涌入神殿时，汀咧嘴一笑，终于有机会证明自己了！先是悟空，后是易……他们都对他的天赋不屑一顾。就让其他人争先恐后去找他们的「师傅」好了！汀已经准备好了，他就是什蒙之风。 ",
+      "artistName": "Polar Engine",
+      "name": "梵斯塔雅弟子",
+      "cardCode": "06IO014",
+      "keywords": [
+        "隐密"
+      ],
+      "keywordRefs": [
+        "Elusive"
+      ],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "史诗",
+      "rarityRef": "Epic",
+      "subtypes": [],
+      "supertype": "",
+      "type": "单位",
+      "collectible": true,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [
+        "06IO014"
+      ],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06IO014T1.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06IO014T1-full.png"
+        }
+      ],
+      "regions": [
+        "爱欧尼亚"
+      ],
+      "regionRefs": [
+        "Ionia"
+      ],
+      "attack": 0,
+      "cost": 2,
+      "health": 0,
+      "description": "召唤1个<link=card.parentRef><style=AssociatedCard>梵斯塔雅弟子</style></link>，<br>然后抽1张牌。",
+      "descriptionRaw": "召唤1个梵斯塔雅弟子，然后抽1张牌。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "「呼咻！」——什蒙之风 汀",
+      "artistName": "Kudos Productions",
+      "name": "什蒙之风",
+      "cardCode": "06IO014T1",
+      "keywords": [
+        "疾速"
+      ],
+      "keywordRefs": [
+        "Burst"
+      ],
+      "spellSpeed": "疾速",
+      "spellSpeedRef": "Burst",
+      "rarity": "史诗",
+      "rarityRef": "Epic",
+      "subtypes": [],
+      "supertype": "",
+      "type": "法术",
+      "collectible": false,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06IO011.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06IO011-full.png"
+        }
+      ],
+      "regions": [
+        "爱欧尼亚"
+      ],
+      "regionRefs": [
+        "Ionia"
+      ],
+      "attack": 4,
+      "cost": 3,
+      "health": 3,
+      "description": "此牌首次<link=vocab.Equip><style=Vocab>装备</style></link>时，本回合给予此牌<link=keyword.Barrier><sprite name=Barrier><style=Keyword>光盾</style></link>与<link=keyword.Lifesteal><sprite name=Lifesteal><style=Keyword>吸血</style></link>。",
+      "descriptionRaw": "此牌首次装备时，本回合给予此牌光盾与吸血。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "易大师一给出指示，润儿马上发动一连串的攻击，精准而无瑕，一如易大师自己的高超身手。在矫捷地闪避过一波攻势后，易大师向润儿鞠了个躬，行礼致意，脸上挂着骄傲的微笑。",
+      "artistName": "Kudos Productions",
+      "name": "奇才 润儿",
+      "cardCode": "06IO011",
+      "keywords": [],
+      "keywordRefs": [],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "稀有",
+      "rarityRef": "Rare",
+      "subtypes": [],
+      "supertype": "",
+      "type": "单位",
+      "collectible": true,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [
+        "06IO013T1",
+        "06IO008T1",
+        "06IO008T2"
+      ],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06IO008.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06IO008-full.png"
+        }
+      ],
+      "regions": [
+        "爱欧尼亚"
+      ],
+      "regionRefs": [
+        "Ionia"
+      ],
+      "attack": 2,
+      "cost": 3,
+      "health": 3,
+      "description": "<link=vocab.RoundStart><style=Vocab>回合开始</style></link>：本回合使手牌中1张法术牌的魔耗值-1，接着<link=vocab.Flow><style=Vocab>川流</style></link>：赋予我方<br><link=vocab.Everywhere><style=Vocab>各处</style></link><link=card.selfRef><style=AssociatedCard>易大师</style></link>+2|+0。",
+      "descriptionRaw": "回合开始：本回合使手牌中1张法术牌的魔耗值-1，接着川流：赋予我方各处易大师+2|+0。",
+      "levelupDescription": "此牌造成12点以上伤害<style=Variable></style>。 ",
+      "levelupDescriptionRaw": "此牌造成12点以上伤害。 ",
+      "flavorText": "易大师一分神，心思又回到了冥血兵器上。自从这武器出现后，易大师就一直有种不祥的预感。他有些学生对其有浓厚的兴趣——或许有点太浓厚了——因此他把弯刀放在神殿深处看守着。他努力把这些念头消除，回到清净的心继续冥想。传承无极之道的教诲是最重要的，而润儿的潜力无穷，可望继承衣钵。",
+      "artistName": "Kudos Productions",
+      "name": "易大师",
+      "cardCode": "06IO008",
+      "keywords": [
+        "快速攻击",
+        "川流"
+      ],
+      "keywordRefs": [
+        "QuickStrike",
+        "Flow"
+      ],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "英雄",
+      "rarityRef": "Champion",
+      "subtypes": [],
+      "supertype": "英雄",
+      "type": "单位",
+      "collectible": true,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [
+        "06IO013T1",
+        "06IO008T2",
+        "06IO008"
+      ],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06IO008T1.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06IO008T1-full.png"
+        }
+      ],
+      "regions": [
+        "爱欧尼亚"
+      ],
+      "regionRefs": [
+        "Ionia"
+      ],
+      "attack": 3,
+      "cost": 3,
+      "health": 4,
+      "description": "<link=vocab.Attack><style=Vocab>攻击</style></link>：此牌立刻打击最弱敌军单位。\r\n<link=vocab.RoundStart><style=Vocab>回合开始</style></link>：本回合使手牌中1张法术牌魔耗值-1，接着<link=vocab.Flow><style=Vocab>川流</style></link>：赋予我方<br><link=vocab.Everywhere><style=Vocab>各处</style></link><link=card.selfRef><style=AssociatedCard>易大师</style></link>+2|+0。",
+      "descriptionRaw": "攻击：此牌立刻打击最弱敌军单位。\r\n回合开始：本回合使手牌中1张法术牌魔耗值-1，接着川流：赋予我方各处易大师+2|+0。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "易大师的眼角余光看到了刀光剑影，并听到了尸体骤然坠地的声音。会不会是她？他怎么能如此辜负自己的学生？他们训练不足，也尚未做好准备。但他是无极剑道的大师，无论是羞愧还是阴影都别想让他臣服。 ",
+      "artistName": "Kudos Productions",
+      "name": "易大师",
+      "cardCode": "06IO008T1",
+      "keywords": [
+        "快速攻击",
+        "川流"
+      ],
+      "keywordRefs": [
+        "QuickStrike",
+        "Flow"
+      ],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "无",
+      "rarityRef": "None",
+      "subtypes": [],
+      "supertype": "英雄",
+      "type": "单位",
+      "collectible": false,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [
+        "06IO013T1",
+        "06IO008T1",
+        "06IO008"
+      ],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06IO008T2.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06IO008T2-full.png"
+        }
+      ],
+      "regions": [
+        "爱欧尼亚"
+      ],
+      "regionRefs": [
+        "Ionia"
+      ],
+      "attack": 0,
+      "cost": 1,
+      "health": 0,
+      "description": "本回合给予1个友军单位+2|+0。\r\n在手牌生成<link=card.create><style=AssociatedCard>冥想</style></link>。在我方牌组<br>生成1张<link=card.level1><style=AssociatedCard>易大师</style></link>。",
+      "descriptionRaw": "本回合给予1个友军单位+2|+0。\r\n在手牌生成冥想。在我方牌组生成1张易大师。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "「无数斩击的序曲。」\n——易大师",
+      "artistName": "Kudos Productions",
+      "name": "易大师 无极剑道",
+      "cardCode": "06IO008T2",
+      "keywords": [
+        "疾速"
+      ],
+      "keywordRefs": [
+        "Burst"
+      ],
+      "spellSpeed": "疾速",
+      "spellSpeedRef": "Burst",
+      "rarity": "无",
+      "rarityRef": "None",
+      "subtypes": [],
+      "supertype": "",
+      "type": "法术",
+      "collectible": false,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [
+        "06IO013T1"
+      ],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06IO013.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06IO013-full.png"
+        }
+      ],
+      "regions": [
+        "爱欧尼亚"
+      ],
+      "regionRefs": [
+        "Ionia"
+      ],
+      "attack": 0,
+      "cost": 1,
+      "health": 0,
+      "description": "本回合给予1个友军单位+2|+0。\r\n在手牌生成1张<link=card.create><style=AssociatedCard>冥想</style></link>。",
+      "descriptionRaw": "本回合给予1个友军单位+2|+0。\r\n在手牌生成1张冥想。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "「无数斩击的序曲。」\n——易大师",
+      "artistName": "Kudos Productions",
+      "name": "无极剑道",
+      "cardCode": "06IO013",
+      "keywords": [
+        "疾速"
+      ],
+      "keywordRefs": [
+        "Burst"
+      ],
+      "spellSpeed": "疾速",
+      "spellSpeedRef": "Burst",
+      "rarity": "稀有",
+      "rarityRef": "Rare",
+      "subtypes": [],
+      "supertype": "",
+      "type": "法术",
+      "collectible": true,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06IO013T1.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06IO013T1-full.png"
+        }
+      ],
+      "regions": [
+        "爱欧尼亚"
+      ],
+      "regionRefs": [
+        "Ionia"
+      ],
+      "attack": 0,
+      "cost": 2,
+      "health": 0,
+      "description": "本回合给予1个友军单位+0|+2。",
+      "descriptionRaw": "本回合给予1个友军单位+0|+2。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "「形先于力。」——易大师",
+      "artistName": "Kudos Productions",
+      "name": "冥想",
+      "cardCode": "06IO013T1",
+      "keywords": [
+        "飞逝",
+        "疾速"
+      ],
+      "keywordRefs": [
+        "Fleeting",
+        "Burst"
+      ],
+      "spellSpeed": "疾速",
+      "spellSpeedRef": "Burst",
+      "rarity": "无",
+      "rarityRef": "None",
+      "subtypes": [],
+      "supertype": "",
+      "type": "法术",
+      "collectible": false,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06BC033.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06BC033-full.png"
+        }
+      ],
+      "regions": [
+        "班德尔城"
+      ],
+      "regionRefs": [
+        "BandleCity"
+      ],
+      "attack": 0,
+      "cost": 3,
+      "health": 0,
+      "description": "弃置1张牌即可出此牌。",
+      "descriptionRaw": "弃置1张牌即可出此牌。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "「看哪！我从沉船的残骸里，打捞出了这个拳击手套；从那叫做佐恩的城市深处，找到了弹簧；还有从蒂玛西亚的锻造场中，我找到了金属！这真可谓是世界的造物！」——巨贾帕帕罗",
+      "artistName": "Kudos Productions",
+      "name": "拳击机甲",
+      "cardCode": "06BC033",
+      "keywords": [
+        "装备"
+      ],
+      "keywordRefs": [
+        "Equipment"
+      ],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "普通",
+      "rarityRef": "Common",
+      "subtypes": [],
+      "supertype": "",
+      "type": "装备",
+      "collectible": true,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [
+        "01PZ002"
+      ],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06PZ040.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06PZ040-full.png"
+        }
+      ],
+      "regions": [
+        "皮尔托福&佐恩"
+      ],
+      "regionRefs": [
+        "PiltoverZaun"
+      ],
+      "attack": 0,
+      "cost": 6,
+      "health": 0,
+      "description": "召唤此牌时，召唤<br>1位<link=card.summon><style=AssociatedCard>陋巷酒吧老板</style></link>。\r\n我方新卡牌魔耗值-1。",
+      "descriptionRaw": "召唤此牌时，召唤1位陋巷酒吧老板。\r\n我方新卡牌魔耗值-1。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "擦干最后的酒杯后，酒吧老板停下来看了看他的店。这个地方，这个家外之家，见证过许多陌生人成为朋友，到处留着许多暴乱斗殴夜留下的涂鸦和凹痕。老板自顾自地笑了。这里并不完美，但这是属于他的地方。",
+      "artistName": "Kudos Productions",
+      "name": "陋巷酒吧",
+      "cardCode": "06PZ040",
+      "keywords": [
+        "地标",
+        "Missing Translation"
+      ],
+      "keywordRefs": [
+        "LandmarkVisualOnly",
+        "AuraVisualFakeKeyword"
+      ],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "史诗",
+      "rarityRef": "Epic",
+      "subtypes": [],
+      "supertype": "",
+      "type": "地标",
+      "collectible": true,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [
+        "06MT006T2"
+      ],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06MT006.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06MT006-full.png"
+        }
+      ],
+      "regions": [
+        "巨石峰"
+      ],
+      "regionRefs": [
+        "Targon"
+      ],
+      "attack": 0,
+      "cost": 2,
+      "health": 0,
+      "description": "<link=keyword.Support><style=Keyword>支援</style></link>：赋予受此牌支援的<br>友军单位+1|+1。\r\n可消耗8点魔力改为打出<link=card.unit><style=AssociatedCard>霍菈姿</style></link>。",
+      "descriptionRaw": "支援：赋予受此牌支援的友军单位+1|+1。\r\n可消耗8点魔力改为打出霍菈姿。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "那些囚禁冥血族的人或许认为，将传说战士霍菈姿困在星辰金属球中就足以让她的暴躁之性逐渐衰褪。但随着她的将军开始蠢蠢欲动，霍拉兹也脱离蛰伏的状态；她发现即使是巨石峰的古代守护者，也会受到来自远方耳语所说的承诺诱惑。",
+      "artistName": "Kudos Productions",
+      "name": "冥血磁石",
+      "cardCode": "06MT006",
+      "keywords": [
+        "装备",
+        "支援"
+      ],
+      "keywordRefs": [
+        "Equipment",
+        "Support"
+      ],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "史诗",
+      "rarityRef": "Epic",
+      "subtypes": [
+        "冥血族"
+      ],
+      "supertype": "",
+      "type": "装备",
+      "collectible": true,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06MT006T2.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06MT006T2-full.png"
+        }
+      ],
+      "regions": [
+        "巨石峰"
+      ],
+      "regionRefs": [
+        "Targon"
+      ],
+      "attack": 7,
+      "cost": 8,
+      "health": 7,
+      "description": "<link=keyword.Support><style=Keyword>支援</style></link>：本回合使受此牌支援的<br>友军单位能力值提升至等同此牌，<br>并给予此牌的增益特性。",
+      "descriptionRaw": "支援：本回合使受此牌支援的友军单位能力值提升至等同此牌，并给予此牌的增益特性。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "霍菈姿在囚禁她的燃烧天界物质中获得了更广阔的视野。她窥见了宇宙的奥祕，以及在她存在之前和之后无限流逝的时间。她学到了很多东西，但她对那般懦弱的修兰妮仍然怀恨在心。",
+      "artistName": "Kudos Productions",
+      "name": "霍菈姿",
+      "cardCode": "06MT006T2",
+      "keywords": [
+        "法盾",
+        "支援"
+      ],
+      "keywordRefs": [
+        "SpellShield",
+        "Support"
+      ],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "无",
+      "rarityRef": "None",
+      "subtypes": [
+        "冥血族"
+      ],
+      "supertype": "",
+      "type": "单位",
+      "collectible": false,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [
+        "06MT037T1"
+      ],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06MT037.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06MT037-full.png"
+        }
+      ],
+      "regions": [
+        "巨石峰"
+      ],
+      "regionRefs": [
+        "Targon"
+      ],
+      "attack": 0,
+      "cost": 2,
+      "health": 0,
+      "description": "<link=keyword.Obliterate><style=Keyword>泯灭</style></link>1个友军单位，然后生成<br>1张能力值相同的<link=card.create><style=AssociatedCard>堕落之形</style></link>。",
+      "descriptionRaw": "泯灭1个友军单位，然后生成1张能力值相同的堕落之形。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "埋葬在这些武器中的堕落神斗士无法轻易被击败，因此只能封印。",
+      "artistName": "Kudos Productions",
+      "name": "武器之封",
+      "cardCode": "06MT037",
+      "keywords": [
+        "快速"
+      ],
+      "keywordRefs": [
+        "Fast"
+      ],
+      "spellSpeed": "快速",
+      "spellSpeedRef": "Fast",
+      "rarity": "稀有",
+      "rarityRef": "Rare",
+      "subtypes": [],
+      "supertype": "",
+      "type": "法术",
+      "collectible": true,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06MT037T1.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06MT037T1-full.png"
+        }
+      ],
+      "regions": [
+        "巨石峰"
+      ],
+      "regionRefs": [
+        "Targon"
+      ],
+      "attack": 0,
+      "cost": 3,
+      "health": 0,
+      "description": "",
+      "descriptionRaw": "",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "当冥血族被埋葬在自己所携的武器中时，他们渐渐起了变化，直到再也无法辨别原本的样貌。",
+      "artistName": "Kudos Productions",
+      "name": "堕落之形",
+      "cardCode": "06MT037T1",
+      "keywords": [
+        "装备"
+      ],
+      "keywordRefs": [
+        "Equipment"
+      ],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "无",
+      "rarityRef": "None",
+      "subtypes": [],
+      "supertype": "",
+      "type": "装备",
+      "collectible": false,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [
+        "06BC015"
+      ],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06BC015T3.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06BC015T3-full.png"
+        }
+      ],
+      "regions": [
+        "班德尔城"
+      ],
+      "regionRefs": [
+        "BandleCity"
+      ],
+      "attack": 0,
+      "cost": 0,
+      "health": 0,
+      "description": "随机召唤1个魔耗值为2或3的侍从单位。若我方盘面已满，则改为在手牌生成1个魔耗值为0的<link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>飞逝</style></link>复制牌。",
+      "descriptionRaw": "随机召唤1个魔耗值为2或3的侍从单位。若我方盘面已满，则改为在手牌生成1个魔耗值为0的飞逝复制牌。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "又是另一个神祕的传送门……这一次会通往哪里呢？",
+      "artistName": "Kudos Productions",
+      "name": "神祕传送门",
+      "cardCode": "06BC015T3",
+      "keywords": [
+        "祝福"
+      ],
+      "keywordRefs": [
+        "Boon"
+      ],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "无",
+      "rarityRef": "None",
+      "subtypes": [],
+      "supertype": "",
+      "type": "陷阱",
+      "collectible": false,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [
+        "06BC015T3",
+        "06RU001T3"
+      ],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06BC011.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06BC011-full.png"
+        }
+      ],
+      "regions": [
+        "班德尔城"
+      ],
+      "regionRefs": [
+        "BandleCity"
+      ],
+      "attack": 0,
+      "cost": 2,
+      "health": 0,
+      "description": "将1张<link=card.portal><style=AssociatedCard>神祕传送门</style></link>随机植入我方<br>牌组最上方4张牌中，并将<br>3张<link=card.chime><style=AssociatedCard>编钟</style></link>随机植入我方牌组。",
+      "descriptionRaw": "将1张神祕传送门随机植入我方牌组最上方4张牌中，并将3张编钟随机植入我方牌组。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "巴德随心所欲漫游各界，一边留心聆听，因为他知道有剧烈的冲突即将发生，而且那将会是一场终结创生之歌的浩劫。",
+      "artistName": "Kudos Productions",
+      "name": "奇幻旅程",
+      "cardCode": "06BC011",
+      "keywords": [
+        "疾速"
+      ],
+      "keywordRefs": [
+        "Burst"
+      ],
+      "spellSpeed": "疾速",
+      "spellSpeedRef": "Burst",
+      "rarity": "普通",
+      "rarityRef": "Common",
+      "subtypes": [],
+      "supertype": "",
+      "type": "法术",
+      "collectible": true,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06BC020.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06BC020-full.png"
+        }
+      ],
+      "regions": [
+        "班德尔城"
+      ],
+      "regionRefs": [
+        "BandleCity"
+      ],
+      "attack": 0,
+      "cost": 1,
+      "health": 0,
+      "description": "本回合我方每发动一个陷阱或<br>祝福，便给予此牌+1|+0。 ",
+      "descriptionRaw": "本回合我方每发动一个陷阱或祝福，便给予此牌+1|+0。 ",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "折纸工艺的魔法有时实在是难以预料。创造新事物时灌注的想法，与创造物想被创造的渴望一样重要。",
+      "artistName": "Kudos Productions",
+      "name": "摺纸回旋刀",
+      "cardCode": "06BC020",
+      "keywords": [
+        "装备"
+      ],
+      "keywordRefs": [
+        "Equipment"
+      ],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "稀有",
+      "rarityRef": "Rare",
+      "subtypes": [],
+      "supertype": "",
+      "type": "装备",
+      "collectible": true,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [
+        "06BC015T3"
+      ],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06BC019.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06BC019-full.png"
+        }
+      ],
+      "regions": [
+        "班德尔城"
+      ],
+      "regionRefs": [
+        "BandleCity"
+      ],
+      "attack": 3,
+      "cost": 3,
+      "health": 1,
+      "description": "召唤此牌时，将1张<link=card.portal><style=AssociatedCard>神祕传送门</style></link>随机<br>植入我方牌组最上方4张牌中。",
+      "descriptionRaw": "召唤此牌时，将1张神祕传送门随机植入我方牌组最上方4张牌中。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "雅珊迷失在世界尽头之前，曾经是一位着名的茶艺师。在尝试新口味时，两种茶叶的意外组合让她陷入了沉睡。她做着奇怪的梦，当中有奇怪的生物和不可能存于世上的建物，在无尽的地平线上映出剪影。但醒来后，她发现这根本不是梦。",
+      "artistName": "Caravan Studio",
+      "name": "茶艺蝶",
+      "cardCode": "06BC019",
+      "keywords": [],
+      "keywordRefs": [],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "普通",
+      "rarityRef": "Common",
+      "subtypes": [
+        "妖精"
+      ],
+      "supertype": "",
+      "type": "单位",
+      "collectible": true,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [
+        "06BC015T3"
+      ],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06BC021.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06BC021-full.png"
+        }
+      ],
+      "regions": [
+        "班德尔城"
+      ],
+      "regionRefs": [
+        "BandleCity"
+      ],
+      "attack": 2,
+      "cost": 2,
+      "health": 2,
+      "description": "<link=keyword.Last Breath><sprite name=LastBreath><style=Keyword>遗愿</style></link>：将1张<link=card.portal><style=AssociatedCard>神祕传送门</style></link>随机植入我方牌组最上方4张牌中。",
+      "descriptionRaw": "遗愿：将1张神祕传送门随机植入我方牌组最上方4张牌中。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "虽然前一天才刚刚诞生于世上，然而他很自豪自己是诺拉的助手。而诺拉对他亲切的昵称是马福。他极度坚持别人要称自己为「杂物」而不是「废物」，因为后者带有负面的意涵。",
+      "artistName": "Caravan Studio",
+      "name": "杂物怪",
+      "cardCode": "06BC021",
+      "keywords": [
+        "遗愿"
+      ],
+      "keywordRefs": [
+        "LastBreath"
+      ],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "普通",
+      "rarityRef": "Common",
+      "subtypes": [
+        "妖精"
+      ],
+      "supertype": "",
+      "type": "单位",
+      "collectible": true,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [
+        "06BC015T3",
+        "06BC015T1",
+        "06BC015T2"
+      ],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06BC015.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06BC015-full.png"
+        }
+      ],
+      "regions": [
+        "班德尔城"
+      ],
+      "regionRefs": [
+        "BandleCity"
+      ],
+      "attack": 1,
+      "cost": 2,
+      "health": 2,
+      "description": "<link=vocab.NexusStrike><style=Vocab>打击主堡</style></link>：将1张<link=card.portal><style=AssociatedCard>神祕传送门</style></link>随机植入我方牌组最上方4张牌中。",
+      "descriptionRaw": "打击主堡：将1张神祕传送门随机植入我方牌组最上方4张牌中。",
+      "levelupDescription": "我方召唤6个以上生成的<br>友军单位。<style=Variable></style>",
+      "levelupDescriptionRaw": "我方召唤6个以上生成的友军单位。",
+      "flavorText": "诺拉工作的速度很快，心系着家乡。传送门工艺是出了名的棘手工作，她甚至还没喝到今天的第一杯茶。但是诺拉就是喜欢这种难题，尤其是会让她绝望地迷失在时空空隙中的那种。她的工作速度又加快了，心心念念着她的猫，怕它会担心并期待着主人回来喂晚餐。",
+      "artistName": "Caravan Studio",
+      "name": "诺拉",
+      "cardCode": "06BC015",
+      "keywords": [
+        "隐密"
+      ],
+      "keywordRefs": [
+        "Elusive"
+      ],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "英雄",
+      "rarityRef": "Champion",
+      "subtypes": [
+        "约德尔人"
+      ],
+      "supertype": "英雄",
+      "type": "单位",
+      "collectible": true,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [
+        "06BC015T3",
+        "06BC015T1",
+        "06BC015"
+      ],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06BC015T2.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06BC015T2-full.png"
+        }
+      ],
+      "regions": [
+        "班德尔城"
+      ],
+      "regionRefs": [
+        "BandleCity"
+      ],
+      "attack": 2,
+      "cost": 2,
+      "health": 3,
+      "description": "我方<link=card.portal><style=AssociatedCard>神祕传送门</style></link>现在会改为召唤<br>魔耗值为4、5、6或7的侍从单位。\r\n<link=vocab.NexusStrike><style=Vocab>打击主堡</style></link>：将1张<link=card.portal><style=AssociatedCard>神祕传送门</style></link>随机植入我方牌组最上方4张牌中。",
+      "descriptionRaw": "我方神祕传送门现在会改为召唤魔耗值为4、5、6或7的侍从单位。\r\n打击主堡：将1张神祕传送门随机植入我方牌组最上方4张牌中。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "先是一阵飕飕声，随后啪搭的一声，那图腾的各个部位都彷佛有了生命，这边有小东西转了起来，那头有小玩意儿开始一闪一闪。随着房间的震动以及发出嘎嘎的声响，一个传送门出现在高处，模糊的猫耳朵轮廓出现在其中。诺拉尖叫着，高兴地把茶给打翻了。她终于找到回家的路了吗？",
+      "artistName": "Caravan Studio",
+      "name": "诺拉",
+      "cardCode": "06BC015T2",
+      "keywords": [
+        "隐密"
+      ],
+      "keywordRefs": [
+        "Elusive"
+      ],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "无",
+      "rarityRef": "None",
+      "subtypes": [
+        "约德尔人"
+      ],
+      "supertype": "英雄",
+      "type": "单位",
+      "collectible": false,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [
+        "06BC015T3",
+        "06BC015",
+        "06BC015T2"
+      ],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06BC015T1.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06BC015T1-full.png"
+        }
+      ],
+      "regions": [
+        "班德尔城"
+      ],
+      "regionRefs": [
+        "BandleCity"
+      ],
+      "attack": 0,
+      "cost": 5,
+      "health": 0,
+      "description": "将2张<link=card.portal><style=AssociatedCard>神祕传送门</style></link>随机植入我方<br>牌组最上方4张牌中。抽1张牌。\r\n在我方牌组生成1张<link=card.level1><style=AssociatedCard>诺拉</style></link>。",
+      "descriptionRaw": "将2张神祕传送门随机植入我方牌组最上方4张牌中。抽1张牌。\r\n在我方牌组生成1张诺拉。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "「我应该多走走不起眼的道路！我真蠢，总是忘了整理我的思绪……」\n——诺拉",
+      "artistName": "Kudos Productions",
+      "name": "诺拉 传送门嘉年华",
+      "cardCode": "06BC015T1",
+      "keywords": [
+        "疾速"
+      ],
+      "keywordRefs": [
+        "Burst"
+      ],
+      "spellSpeed": "疾速",
+      "spellSpeedRef": "Burst",
+      "rarity": "无",
+      "rarityRef": "None",
+      "subtypes": [],
+      "supertype": "英雄",
+      "type": "法术",
+      "collectible": false,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [
+        "06BC015T3"
+      ],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06BC017.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06BC017-full.png"
+        }
+      ],
+      "regions": [
+        "班德尔城"
+      ],
+      "regionRefs": [
+        "BandleCity"
+      ],
+      "attack": 0,
+      "cost": 5,
+      "health": 0,
+      "description": "将2张<link=card.portal><style=AssociatedCard>神祕传送门</style></link>随机植入我方<br>牌组最上方4张牌中。抽1张牌。",
+      "descriptionRaw": "将2张神祕传送门随机植入我方牌组最上方4张牌中。抽1张牌。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "「我应该多走走不起眼的道路！我真蠢，总是忘了整理我的思绪……」\n——诺拉",
+      "artistName": "Kudos Productions",
+      "name": "传送门嘉年华",
+      "cardCode": "06BC017",
+      "keywords": [
+        "疾速"
+      ],
+      "keywordRefs": [
+        "Burst"
+      ],
+      "spellSpeed": "疾速",
+      "spellSpeedRef": "Burst",
+      "rarity": "稀有",
+      "rarityRef": "Rare",
+      "subtypes": [],
+      "supertype": "",
+      "type": "法术",
+      "collectible": true,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06BC024.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06BC024-full.png"
+        }
+      ],
+      "regions": [
+        "班德尔城"
+      ],
+      "regionRefs": [
+        "BandleCity"
+      ],
+      "attack": 4,
+      "cost": 6,
+      "health": 4,
+      "description": "每回合我方首次发动陷阱或祝福时，本回合给予所有友军单位<br>+1|+1与<link=keyword.Impact><sprite name=Impact><style=Keyword>冲击</style></link>。",
+      "descriptionRaw": "每回合我方首次发动陷阱或祝福时，本回合给予所有友军单位+1|+1与冲击。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "贾士博是第一个到达世界尽头的约德尔人。多年来，他独自徘徊在曲折的道路和无数传送门之间，而这些通道似乎让你哪都去不了。他认为没人应该走他走过的冤枉路，于是现在贾士博总是帮助迷途旅人找到回家的路。",
+      "artistName": "Caravan Studio",
+      "name": "尽头守望者",
+      "cardCode": "06BC024",
+      "keywords": [],
+      "keywordRefs": [],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "稀有",
+      "rarityRef": "Rare",
+      "subtypes": [
+        "约德尔人"
+      ],
+      "supertype": "",
+      "type": "单位",
+      "collectible": true,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06BC016.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06BC016-full.png"
+        }
+      ],
+      "regions": [
+        "班德尔城"
+      ],
+      "regionRefs": [
+        "BandleCity"
+      ],
+      "attack": 4,
+      "cost": 5,
+      "health": 3,
+      "description": "召唤此牌时，若本回合我方发动了<br>陷阱或祝福，则抽1张牌。",
+      "descriptionRaw": "召唤此牌时，若本回合我方发动了陷阱或祝福，则抽1张牌。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "他认为拥有丰富的知识是自己的职责，因此从行经世界尽头的旅者手中收集到各种典籍。不幸的是，他似乎被这些知识冲昏头了。",
+      "artistName": "Caravan Studio",
+      "name": "卷轴天使",
+      "cardCode": "06BC016",
+      "keywords": [
+        "隐密"
+      ],
+      "keywordRefs": [
+        "Elusive"
+      ],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "普通",
+      "rarityRef": "Common",
+      "subtypes": [
+        "妖精"
+      ],
+      "supertype": "",
+      "type": "单位",
+      "collectible": true,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [
+        "06BC015T3",
+        "06RU001T3",
+        "05PZ008",
+        "01PZ022"
+      ],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06BC032.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06BC032-full.png"
+        }
+      ],
+      "regions": [
+        "班德尔城"
+      ],
+      "regionRefs": [
+        "BandleCity"
+      ],
+      "attack": 0,
+      "cost": 7,
+      "health": 0,
+      "description": "我方场上每有1个友军单位，便将1张<br><link=card.portal><style=AssociatedCard>神祕传送门</style></link>和3张<link=card.chime><style=AssociatedCard>编钟</style></link>植入我方牌组<br>最上方10张牌中，并将1张<link=card.flashbomb><style=AssociatedCard>闪光炸弹陷阱</style></link><br>和3张<link=card.puffcap><style=AssociatedCard>剧毒膨菇</style></link>随机植入敌方牌组。",
+      "descriptionRaw": "我方场上每有1个友军单位，便将1张神祕传送门和3张编钟植入我方牌组最上方10张牌中，并将1张闪光炸弹陷阱和3张剧毒膨菇随机植入敌方牌组。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "「传送门，到处都是传送门！」\n——诺拉",
+      "artistName": "Kudos Productions",
+      "name": "五花八门",
+      "cardCode": "06BC032",
+      "keywords": [
+        "疾速"
+      ],
+      "keywordRefs": [
+        "Burst"
+      ],
+      "spellSpeed": "疾速",
+      "spellSpeedRef": "Burst",
+      "rarity": "史诗",
+      "rarityRef": "Epic",
+      "subtypes": [],
+      "supertype": "",
+      "type": "法术",
+      "collectible": true,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06RU010.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06RU010-full.png"
+        }
+      ],
+      "regions": [
+        "符文大地"
+      ],
+      "regionRefs": [
+        "Runeterra"
+      ],
+      "attack": 0,
+      "cost": 2,
+      "health": 0,
+      "description": "",
+      "descriptionRaw": "",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "这把扳手是佩许从皮尔托福搬到比尔吉沃特时唯一随身携带的物品。虽然这不是什么魔法工具，不过当你看到他实际使用时，可能会惊叹不已。",
+      "artistName": "Kudos Productions",
+      "name": "修到好5000",
+      "cardCode": "06RU010",
+      "keywords": [
+        "装备",
+        "快速攻击"
+      ],
+      "keywordRefs": [
+        "Equipment",
+        "QuickStrike"
+      ],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "无",
+      "rarityRef": "None",
+      "subtypes": [],
+      "supertype": "",
+      "type": "装备",
+      "collectible": false,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06RU012.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06RU012-full.png"
+        }
+      ],
+      "regions": [
+        "符文大地"
+      ],
+      "regionRefs": [
+        "Runeterra"
+      ],
+      "attack": 0,
+      "cost": 2,
+      "health": 0,
+      "description": "",
+      "descriptionRaw": "",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "这锅中的美味让人胃痛。",
+      "artistName": "Kudos Productions",
+      "name": "痛痛锅",
+      "cardCode": "06RU012",
+      "keywords": [
+        "装备",
+        "冲击"
+      ],
+      "keywordRefs": [
+        "Equipment",
+        "Impact"
+      ],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "无",
+      "rarityRef": "None",
+      "subtypes": [],
+      "supertype": "",
+      "type": "装备",
+      "collectible": false,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06RU028.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06RU028-full.png"
+        }
+      ],
+      "regions": [
+        "符文大地"
+      ],
+      "regionRefs": [
+        "Runeterra"
+      ],
+      "attack": 0,
+      "cost": 2,
+      "health": 0,
+      "description": "",
+      "descriptionRaw": "",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "每当菲芮斯陷入危险，她的守护灵就会从护身符中蹦出来。但她似乎对这些事情没有任何印象，在她的同伴试图解释时，也极力否认其存在。",
+      "artistName": "Kudos Productions",
+      "name": "狼灵护符",
+      "cardCode": "06RU028",
+      "keywords": [
+        "装备",
+        "威吓"
+      ],
+      "keywordRefs": [
+        "Equipment",
+        "Fearsome"
+      ],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "无",
+      "rarityRef": "None",
+      "subtypes": [],
+      "supertype": "",
+      "type": "装备",
+      "collectible": false,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06RU029.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06RU029-full.png"
+        }
+      ],
+      "regions": [
+        "符文大地"
+      ],
+      "regionRefs": [
+        "Runeterra"
+      ],
+      "attack": 0,
+      "cost": 2,
+      "health": 0,
+      "description": "",
+      "descriptionRaw": "",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "无论是要打鱼还是打架，「捉完就放」都是一种绝佳的策略。",
+      "artistName": "Kudos Productions",
+      "name": "流星鱼锤",
+      "cardCode": "06RU029",
+      "keywords": [
+        "装备",
+        "蛮力"
+      ],
+      "keywordRefs": [
+        "Equipment",
+        "Overwhelm"
+      ],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "无",
+      "rarityRef": "None",
+      "subtypes": [],
+      "supertype": "",
+      "type": "装备",
+      "collectible": false,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06RU030.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06RU030-full.png"
+        }
+      ],
+      "regions": [
+        "符文大地"
+      ],
+      "regionRefs": [
+        "Runeterra"
+      ],
+      "attack": 0,
+      "cost": 2,
+      "health": 0,
+      "description": "",
+      "descriptionRaw": "",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "菲芮斯说她母亲为她做了这支耙子。究竟她母亲是在哪里找到远古帝国的神器，又为什么把它装在耙子上，菲芮斯也无从断言。",
+      "artistName": "Kudos Productions",
+      "name": "改造黄金耙",
+      "cardCode": "06RU030",
+      "keywords": [
+        "装备",
+        "先遣"
+      ],
+      "keywordRefs": [
+        "Equipment",
+        "Scout"
+      ],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "无",
+      "rarityRef": "None",
+      "subtypes": [],
+      "supertype": "",
+      "type": "装备",
+      "collectible": false,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06RU031.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06RU031-full.png"
+        }
+      ],
+      "regions": [
+        "符文大地"
+      ],
+      "regionRefs": [
+        "Runeterra"
+      ],
+      "attack": 0,
+      "cost": 2,
+      "health": 0,
+      "description": "",
+      "descriptionRaw": "",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "洽斯卡采用哲学式牧羊法——碰巧在附近的就是羊群。",
+      "artistName": "Kudos Productions",
+      "name": "牧人权杖",
+      "cardCode": "06RU031",
+      "keywords": [
+        "装备",
+        "无法进行格挡"
+      ],
+      "keywordRefs": [
+        "Equipment",
+        "CantBlock"
+      ],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "无",
+      "rarityRef": "None",
+      "subtypes": [],
+      "supertype": "",
+      "type": "装备",
+      "collectible": false,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06RU033.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06RU033-full.png"
+        }
+      ],
+      "regions": [
+        "符文大地"
+      ],
+      "regionRefs": [
+        "Runeterra"
+      ],
+      "attack": 0,
+      "cost": 2,
+      "health": 0,
+      "description": "<link=vocab.Attack><style=Vocab>攻击</style></link>：恢复1点法术魔力。",
+      "descriptionRaw": "攻击：恢复1点法术魔力。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "希安那的僧侣把不守规矩的学生送到渔民那里练习培养耐心，但仅有少数人选择返回修道院。",
+      "artistName": "Kudos Productions ",
+      "name": "战斗卷线器",
+      "cardCode": "06RU033",
+      "keywords": [
+        "装备"
+      ],
+      "keywordRefs": [
+        "Equipment"
+      ],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "无",
+      "rarityRef": "None",
+      "subtypes": [],
+      "supertype": "",
+      "type": "装备",
+      "collectible": false,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06RU034.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06RU034-full.png"
+        }
+      ],
+      "regions": [
+        "符文大地"
+      ],
+      "regionRefs": [
+        "Runeterra"
+      ],
+      "attack": 0,
+      "cost": 2,
+      "health": 0,
+      "description": "",
+      "descriptionRaw": "",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "仅能使用温水或魔法清洁，请勿以肥皂清洗。",
+      "artistName": "Kudos Productions",
+      "name": "痛痛平底锅",
+      "cardCode": "06RU034",
+      "keywords": [
+        "装备",
+        "坚忍"
+      ],
+      "keywordRefs": [
+        "Equipment",
+        "Tough"
+      ],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "无",
+      "rarityRef": "None",
+      "subtypes": [],
+      "supertype": "",
+      "type": "装备",
+      "collectible": false,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06SI003.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06SI003-full.png"
+        }
+      ],
+      "regions": [
+        "暗影岛",
+        "苏瑞玛"
+      ],
+      "regionRefs": [
+        "ShadowIsles",
+        "Shurima"
+      ],
+      "attack": 1,
+      "cost": 1,
+      "health": 1,
+      "description": "召唤此牌时，此牌进行<link=vocab.Improvise><style=Vocab>应变</style></link>。",
+      "descriptionRaw": "召唤此牌时，此牌进行应变。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "在一起旅行的前几周，贾克斯问了菲芮斯的名字不下二十次，但她只会吼道：「我是死神！」。布雷希想到了解决办法：他刚刚烤好了一个蛋糕，需要写上小队最强成员的名字才能好好庆祝。",
+      "artistName": "Envar Studio",
+      "name": "沙漠死神 菲芮斯",
+      "cardCode": "06SI003",
+      "keywords": [
+        "闪灵",
+        "无法进行格挡"
+      ],
+      "keywordRefs": [
+        "Ephemeral",
+        "CantBlock"
+      ],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "史诗",
+      "rarityRef": "Epic",
+      "subtypes": [
+        "武器大师"
+      ],
+      "supertype": "",
+      "type": "单位",
+      "collectible": true,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06NX023.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06NX023-full.png"
+        }
+      ],
+      "regions": [
+        "诺克萨斯",
+        "爱欧尼亚"
+      ],
+      "regionRefs": [
+        "Noxus",
+        "Ionia"
+      ],
+      "attack": 1,
+      "cost": 2,
+      "health": 1,
+      "description": "召唤此牌时，进行<link=vocab.Improvise><style=Vocab>应变</style></link>。",
+      "descriptionRaw": "召唤此牌时，进行应变。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "崔丝克的人生在她最后一次参加钓鱼大赛时发生了巨大的变化，她居然钓到了差点淹死的贾克斯。他不愿谈论发生了什么事，但崔丝克每次炫耀这件事时，差点吃掉贾克斯的海怪都会被她描述得越来越大只。",
+      "artistName": "Envar Studio",
+      "name": "爱欧尼亚钓鱼大师",
+      "cardCode": "06NX023",
+      "keywords": [],
+      "keywordRefs": [],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "普通",
+      "rarityRef": "Common",
+      "subtypes": [
+        "武器大师"
+      ],
+      "supertype": "",
+      "type": "单位",
+      "collectible": true,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [
+        "06SI031T1"
+      ],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06BW027.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06BW027-full.png"
+        }
+      ],
+      "regions": [
+        "比尔吉沃特",
+        "皮尔托福&佐恩"
+      ],
+      "regionRefs": [
+        "Bilgewater",
+        "PiltoverZaun"
+      ],
+      "attack": 0,
+      "cost": 4,
+      "health": 0,
+      "description": "弃置1张牌即可出此牌。抽2张牌，且若弃置的是装备，则召唤1个<nobr><link=card.summon><style=AssociatedCard>伊卡西亚幻影</style></link>。</nobr>",
+      "descriptionRaw": "弃置1张牌即可出此牌。抽2张牌，且若弃置的是装备，则召唤1个伊卡西亚幻影。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "贾克斯的夥伴证明了团结可以发挥更强大的力量。尽管如此，佩许坚持不同的理念：有时，不用结合在一起也可以发挥得很好。",
+      "artistName": "Kudos Productions",
+      "name": "结合力量大",
+      "cardCode": "06BW027",
+      "keywords": [
+        "疾速"
+      ],
+      "keywordRefs": [
+        "Burst"
+      ],
+      "spellSpeed": "疾速",
+      "spellSpeedRef": "Burst",
+      "rarity": "稀有",
+      "rarityRef": "Rare",
+      "subtypes": [
+        "武器大师"
+      ],
+      "supertype": "",
+      "type": "法术",
+      "collectible": true,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [
+        "06SI031T1"
+      ],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06SI031.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06SI031-full.png"
+        }
+      ],
+      "regions": [
+        "暗影岛",
+        "苏瑞玛"
+      ],
+      "regionRefs": [
+        "ShadowIsles",
+        "Shurima"
+      ],
+      "attack": 0,
+      "cost": 1,
+      "health": 0,
+      "description": "本回合给予1个友军单位：<br>「<link=keyword.Last Breath><sprite name=LastBreath><style=Keyword>遗愿</style></link>：召唤1个拥有此牌<br>装备的<link=card.summon><style=AssociatedCard>伊卡西亚幻影</style></link>」。",
+      "descriptionRaw": "本回合给予1个友军单位：「遗愿：召唤1个拥有此牌装备的伊卡西亚幻影」。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "有时，面对倒下的同伴，最好的悼念方式就是拾起他们的武器继续战斗。",
+      "artistName": "Kudos Productions",
+      "name": "亡者之刃",
+      "cardCode": "06SI031",
+      "keywords": [
+        "疾速"
+      ],
+      "keywordRefs": [
+        "Burst"
+      ],
+      "spellSpeed": "疾速",
+      "spellSpeedRef": "Burst",
+      "rarity": "稀有",
+      "rarityRef": "Rare",
+      "subtypes": [
+        "武器大师"
+      ],
+      "supertype": "",
+      "type": "法术",
+      "collectible": true,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06SI031T1.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06SI031T1-full.png"
+        }
+      ],
+      "regions": [
+        "苏瑞玛"
+      ],
+      "regionRefs": [
+        "Shurima"
+      ],
+      "attack": 3,
+      "cost": 2,
+      "health": 2,
+      "description": "",
+      "descriptionRaw": "",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "说不定他们只是幻影。说不定她和她的同伴来自一个偏僻隐密的小村庄。她对于自己的出身闭口不提，贾克斯也从未过问。不过当她从滚滚黄沙中现身，与贾克斯一同作战，他们是悄无声息且合作无间的完美搭档。",
+      "artistName": "Envar Studio",
+      "name": "伊卡西亚幻影",
+      "cardCode": "06SI031T1",
+      "keywords": [],
+      "keywordRefs": [],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "无",
+      "rarityRef": "None",
+      "subtypes": [
+        "武器大师"
+      ],
+      "supertype": "",
+      "type": "单位",
+      "collectible": false,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06BW029.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06BW029-full.png"
+        }
+      ],
+      "regions": [
+        "比尔吉沃特",
+        "皮尔托福&佐恩"
+      ],
+      "regionRefs": [
+        "Bilgewater",
+        "PiltoverZaun"
+      ],
+      "attack": 2,
+      "cost": 3,
+      "health": 1,
+      "description": "召唤此牌时，此牌进行<link=vocab.Improvise><style=Vocab>应变</style></link>。",
+      "descriptionRaw": "召唤此牌时，此牌进行应变。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "佩许在码头斗殴中遇到了贾克斯，他们一起及时逃脱比较像是情势所逼，而不是建立在夥伴关系上。不过从那时开始，佩许就一直在为贾克斯开船，因为贾克斯周围的东西总是会坏掉；对于佩许来说，如果有什么比优质回收废料更吸引人的，那就是等着人来修理的损坏物品。",
+      "artistName": "Kudos Productions",
+      "name": "皮尔托福放逐者",
+      "cardCode": "06BW029",
+      "keywords": [
+        "调节"
+      ],
+      "keywordRefs": [
+        "Attune"
+      ],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "普通",
+      "rarityRef": "Common",
+      "subtypes": [
+        "武器大师"
+      ],
+      "supertype": "",
+      "type": "单位",
+      "collectible": true,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06MT004.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06MT004-full.png"
+        }
+      ],
+      "regions": [
+        "巨石峰",
+        "班德尔城"
+      ],
+      "regionRefs": [
+        "Targon",
+        "BandleCity"
+      ],
+      "attack": 2,
+      "cost": 3,
+      "health": 2,
+      "description": "<link=vocab.Play><style=Vocab>出牌</style></link>：挑选1个友军单位，<br>使其进行<link=vocab.Improvise><style=Vocab>打造</style></link>。若未挑选，<br>则改为此牌进行<link=vocab.Improvise><style=Vocab>应变</style></link>。",
+      "descriptionRaw": "出牌：挑选1个友军单位，使其进行打造。若未挑选，则改为此牌进行应变。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "贾克斯从发狂妖精的手中救出洽斯卡的牧群；然后换洽斯卡从发狂妖精的手中救出贾克斯。只要他们两个都没有乱跑，就会一起旅行。",
+      "artistName": "Caravan Studio",
+      "name": "流浪牧人",
+      "cardCode": "06MT004",
+      "keywords": [],
+      "keywordRefs": [],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "普通",
+      "rarityRef": "Common",
+      "subtypes": [
+        "武器大师"
+      ],
+      "supertype": "",
+      "type": "单位",
+      "collectible": true,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06DE024.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06DE024-full.png"
+        }
+      ],
+      "regions": [
+        "蒂玛西亚",
+        "弗雷尔卓德"
+      ],
+      "regionRefs": [
+        "Demacia",
+        "Freljord"
+      ],
+      "attack": 0,
+      "cost": 1,
+      "health": 0,
+      "description": "本回合给予1个友军单位+1|+1，<br>或为其<link=vocab.Equip><style=Vocab>装备</style></link>手牌中1个魔耗值<br>为2以下的装备。",
+      "descriptionRaw": "本回合给予1个友军单位+1|+1，或为其装备手牌中1个魔耗值为2以下的装备。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "如果大家还没吃饭，这招打下去会更痛。",
+      "artistName": "Kudos Productions",
+      "name": "接招！",
+      "cardCode": "06DE024",
+      "keywords": [
+        "疾速"
+      ],
+      "keywordRefs": [
+        "Burst"
+      ],
+      "spellSpeed": "疾速",
+      "spellSpeedRef": "Burst",
+      "rarity": "稀有",
+      "rarityRef": "Rare",
+      "subtypes": [
+        "武器大师"
+      ],
+      "supertype": "",
+      "type": "法术",
+      "collectible": true,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [
+        "06RU008T6",
+        "06RU008T5",
+        "06RU008T8",
+        "06RU008T7"
+      ],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06RU008.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06RU008-full.png"
+        }
+      ],
+      "regions": [
+        "符文大地"
+      ],
+      "regionRefs": [
+        "Runeterra"
+      ],
+      "attack": 3,
+      "cost": 2,
+      "health": 2,
+      "description": "<link=vocab.Origin><style=Vocab>起源</style></link>：<link=card.origin><style=AssociatedCard>武器达人</style></link>。\r\n<link=vocab.AutoEquip><style=Vocab>自动装备</style></link>：<link=card.equipment><style=AssociatedCard>伊卡西亚之光</style></link>。",
+      "descriptionRaw": "起源：武器达人。\r\n自动装备：伊卡西亚之光。",
+      "levelupDescription": "已装备的友军单位打击<br>造成15点以上伤害。<style=Variable></style>",
+      "levelupDescriptionRaw": "已装备的友军单位打击造成15点以上伤害。",
+      "flavorText": "几个世纪前，贾克斯的家乡被虚空摧毁了。现在他行走大江南北，寻找具备坚强意志和过人胆识的战士，以便将来某一天能挺身对抗虚空这个可怕的敌人。",
+      "artistName": "Envar Studio",
+      "name": "贾克斯",
+      "cardCode": "06RU008",
+      "keywords": [],
+      "keywordRefs": [],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "英雄",
+      "rarityRef": "Champion",
+      "subtypes": [
+        "武器大师"
+      ],
+      "supertype": "英雄",
+      "type": "单位",
+      "collectible": true,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [
+        "06RU008"
+      ],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06RU008T5.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06RU008T5-full.png"
+        }
+      ],
+      "regions": [
+        "符文大地"
+      ],
+      "regionRefs": [
+        "Runeterra"
+      ],
+      "attack": 0,
+      "cost": 0,
+      "health": 0,
+      "description": "构筑牌组时，可将任何<br>武器大师卡牌加入牌组。",
+      "descriptionRaw": "构筑牌组时，可将任何武器大师卡牌加入牌组。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "",
+      "artistName": "Envar Studios",
+      "name": "武器达人",
+      "cardCode": "06RU008T5",
+      "keywords": [],
+      "keywordRefs": [],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "无",
+      "rarityRef": "None",
+      "subtypes": [],
+      "supertype": "",
+      "type": "技能",
+      "collectible": false,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [
+        "06RU008",
+        "06RU008T6"
+      ],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06RU008T6.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06RU008T6-full.png"
+        }
+      ],
+      "regions": [
+        "符文大地"
+      ],
+      "regionRefs": [
+        "Runeterra"
+      ],
+      "attack": 0,
+      "cost": 1,
+      "health": 0,
+      "description": "若<link=card.level1><style=AssociatedCard>贾克斯</style></link>已升级，则<link=card.selfref><style=AssociatedCard>伊卡西亚之光</style></link>拥有<link=keyword.Overwhelm><sprite name=Overwhelm><style=Keyword>蛮力</style></link>。",
+      "descriptionRaw": "若贾克斯已升级，则伊卡西亚之光拥有蛮力。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "「这就是根前端有重物的棍子，对我来说够当武器了。」——贾克斯",
+      "artistName": "Kudos Productions ",
+      "name": "伊卡西亚之光",
+      "cardCode": "06RU008T6",
+      "keywords": [
+        "装备",
+        "快速攻击"
+      ],
+      "keywordRefs": [
+        "Equipment",
+        "QuickStrike"
+      ],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "无",
+      "rarityRef": "None",
+      "subtypes": [],
+      "supertype": "",
+      "type": "装备",
+      "collectible": false,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [
+        "06RU008T6",
+        "06RU008T8",
+        "06RU008"
+      ],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06RU008T7.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06RU008T7-full.png"
+        }
+      ],
+      "regions": [
+        "符文大地"
+      ],
+      "regionRefs": [
+        "Runeterra"
+      ],
+      "attack": 4,
+      "cost": 2,
+      "health": 3,
+      "description": "<link=vocab.AutoEquip><style=Vocab>自动装备</style></link><link=card.equipment><style=AssociatedCard>伊卡西亚之光</style></link>。\r\n<link=vocab.Attack><style=Vocab>攻击</style></link>：本回合每有1个<link=vocab.Equip><style=Vocab>已装备</style></link>的<br>友军单位，便给予此牌+1|+1。",
+      "descriptionRaw": "自动装备伊卡西亚之光。\r\n攻击：本回合每有1个已装备的友军单位，便给予此牌+1|+1。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "「伊卡西亚已经沉寂了很长一段时间，但只要我还立足于世，人们的怒号就会回荡在世间，永不停歇！」<br>——贾克斯",
+      "artistName": "Envar Studio",
+      "name": "贾克斯",
+      "cardCode": "06RU008T7",
+      "keywords": [],
+      "keywordRefs": [],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "无",
+      "rarityRef": "None",
+      "subtypes": [
+        "武器大师"
+      ],
+      "supertype": "英雄",
+      "type": "单位",
+      "collectible": false,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [
+        "06RU008"
+      ],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06RU008T8.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06RU008T8-full.png"
+        }
+      ],
+      "regions": [
+        "符文大地"
+      ],
+      "regionRefs": [
+        "Runeterra"
+      ],
+      "attack": 0,
+      "cost": 3,
+      "health": 0,
+      "description": "本回合给予<link=card.level1><style=AssociatedCard>贾克斯</style></link><br><link=keyword.Barrier><sprite name=Barrier><style=Keyword>光盾</style></link>并<link=vocab.Forge><style=Vocab>铸炼</style></link>之。\r\n将1张<link=card.level1><style=AssociatedCard>贾克斯</style></link>洗入我方牌组。",
+      "descriptionRaw": "本回合给予贾克斯光盾并铸炼之。\r\n将1张贾克斯洗入我方牌组。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "「这就对了，眼睛看着冠军！」——贾克斯",
+      "artistName": "Kudos Productions",
+      "name": "贾克斯 反击风暴",
+      "cardCode": "06RU008T8",
+      "keywords": [
+        "疾速"
+      ],
+      "keywordRefs": [
+        "Burst"
+      ],
+      "spellSpeed": "疾速",
+      "spellSpeedRef": "Burst",
+      "rarity": "无",
+      "rarityRef": "None",
+      "subtypes": [],
+      "supertype": "英雄",
+      "type": "法术",
+      "collectible": false,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06BC047.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06BC047-full.png"
+        }
+      ],
+      "regions": [
+        "巨石峰",
+        "班德尔城"
+      ],
+      "regionRefs": [
+        "Targon",
+        "BandleCity"
+      ],
+      "attack": 0,
+      "cost": 2,
+      "health": 0,
+      "description": "本回合给予<link=vocab.Equip><style=Vocab>已装备</style></link>的友军单位其<br>道具的能力值与特性，并将该道具<br><link=vocab.Equip><style=Vocab>装备</style></link>至另一个友军单位身上。",
+      "descriptionRaw": "本回合给予已装备的友军单位其道具的能力值与特性，并将该道具装备至另一个友军单位身上。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "你可能会认为牧羊人在战场上无用武之地，但他们的才能却意外实用；只要将所有战斗人员视为放牧的绵羊就行了。",
+      "artistName": "Kudos Productions",
+      "name": "有福同享",
+      "cardCode": "06BC047",
+      "keywords": [
+        "疾速"
+      ],
+      "keywordRefs": [
+        "Burst"
+      ],
+      "spellSpeed": "疾速",
+      "spellSpeedRef": "Burst",
+      "rarity": "稀有",
+      "rarityRef": "Rare",
+      "subtypes": [
+        "武器大师"
+      ],
+      "supertype": "",
+      "type": "法术",
+      "collectible": true,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06IO028.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06IO028-full.png"
+        }
+      ],
+      "regions": [
+        "爱欧尼亚",
+        "诺克萨斯"
+      ],
+      "regionRefs": [
+        "Ionia",
+        "Noxus"
+      ],
+      "attack": 0,
+      "cost": 2,
+      "health": 0,
+      "description": "本回合给予1个友军单位<br><link=keyword.Challenger><sprite name=Challenger><style=Keyword>挑战者</style></link>；若该单位<link=vocab.Equip><style=Vocab>已装备</style></link>，<br>则另抽1张牌。",
+      "descriptionRaw": "本回合给予1个友军单位挑战者；若该单位已装备，则另抽1张牌。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "只要有正确的饵，就能抓到任何猎物。",
+      "artistName": "Kudos Productions",
+      "name": "迷人诱饵",
+      "cardCode": "06IO028",
+      "keywords": [
+        "疾速"
+      ],
+      "keywordRefs": [
+        "Burst"
+      ],
+      "spellSpeed": "疾速",
+      "spellSpeedRef": "Burst",
+      "rarity": "稀有",
+      "rarityRef": "Rare",
+      "subtypes": [
+        "武器大师"
+      ],
+      "supertype": "",
+      "type": "法术",
+      "collectible": true,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06FR024.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06FR024-full.png"
+        }
+      ],
+      "regions": [
+        "弗雷尔卓德"
+      ],
+      "regionRefs": [
+        "Freljord"
+      ],
+      "attack": 0,
+      "cost": 5,
+      "health": 0,
+      "description": "",
+      "descriptionRaw": "",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "「喀嘣脆！」——独行狂战塔卡兹",
+      "artistName": "Kudos Productions",
+      "name": "骨制棒槌",
+      "cardCode": "06FR024",
+      "keywords": [
+        "装备"
+      ],
+      "keywordRefs": [
+        "Equipment"
+      ],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "普通",
+      "rarityRef": "Common",
+      "subtypes": [],
+      "supertype": "",
+      "type": "装备",
+      "collectible": true,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06FR032.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06FR032-full.png"
+        }
+      ],
+      "regions": [
+        "弗雷尔卓德"
+      ],
+      "regionRefs": [
+        "Freljord"
+      ],
+      "attack": 0,
+      "cost": 5,
+      "health": 0,
+      "description": "治疗我方主堡4点生命值，并赋予我方牌组所有单位与装备+1|+1，再抽出其中1张牌。",
+      "descriptionRaw": "治疗我方主堡4点生命值，并赋予我方牌组所有单位与装备+1|+1，再抽出其中1张牌。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "「来吧，在火堆边暖暖身子。」——炉血族修补匠",
+      "artistName": "Kudos Productions",
+      "name": "炉血族的赠礼",
+      "cardCode": "06FR032",
+      "keywords": [
+        "疾速"
+      ],
+      "keywordRefs": [
+        "Burst"
+      ],
+      "spellSpeed": "疾速",
+      "spellSpeedRef": "Burst",
+      "rarity": "史诗",
+      "rarityRef": "Epic",
+      "subtypes": [],
+      "supertype": "",
+      "type": "法术",
+      "collectible": true,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06SI006.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06SI006-full.png"
+        }
+      ],
+      "regions": [
+        "暗影岛"
+      ],
+      "regionRefs": [
+        "ShadowIsles"
+      ],
+      "attack": 2,
+      "cost": 2,
+      "health": 2,
+      "description": "本牌局我方<link=vocab.Equip><style=Vocab>装备</style></link>友军单位后，<br>赋予此牌<link=keyword.Lifesteal><sprite name=Lifesteal><style=Keyword>吸血</style></link>。",
+      "descriptionRaw": "本牌局我方装备友军单位后，赋予此牌吸血。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "「魔盒不会轻易透露其中的祕密，席达．慨影，想知道就要付出沉痛的代价。但如果你有勇气凝视阴影中更深处的黑暗，你会发现里面藏着美妙而可怕的东西。」<br>——魔盒看守者 伊斯德拉",
+      "artistName": "Kudos Productions",
+      "name": "魔盒看守者",
+      "cardCode": "06SI006",
+      "keywords": [
+        "威吓"
+      ],
+      "keywordRefs": [
+        "Fearsome"
+      ],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "普通",
+      "rarityRef": "Common",
+      "subtypes": [
+        "邪教徒"
+      ],
+      "supertype": "",
+      "type": "单位",
+      "collectible": true,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [
+        "06SI007T1"
+      ],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06SI007.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06SI007-full.png"
+        }
+      ],
+      "regions": [
+        "暗影岛"
+      ],
+      "regionRefs": [
+        "ShadowIsles"
+      ],
+      "attack": 0,
+      "cost": 1,
+      "health": 0,
+      "description": "击杀1个友军单位即可出此牌。\r\n可消耗10点魔力改为打出<link=card.unit><style=AssociatedCard>塔鲁锡</style></link>。",
+      "descriptionRaw": "击杀1个友军单位即可出此牌。\r\n可消耗10点魔力改为打出塔鲁锡。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "塔鲁锡奋力想挣脱牢笼，却在这时听到了将军的呼唤。不论用什么方法，他都会设法回应。",
+      "artistName": "Kudos Productions ",
+      "name": "冥血戟",
+      "cardCode": "06SI007",
+      "keywords": [
+        "装备"
+      ],
+      "keywordRefs": [
+        "Equipment"
+      ],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "史诗",
+      "rarityRef": "Epic",
+      "subtypes": [
+        "冥血族"
+      ],
+      "supertype": "",
+      "type": "装备",
+      "collectible": true,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [
+        "06SI007"
+      ],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06SI007T1.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06SI007T1-full.png"
+        }
+      ],
+      "regions": [
+        "暗影岛"
+      ],
+      "regionRefs": [
+        "ShadowIsles"
+      ],
+      "attack": 10,
+      "cost": 10,
+      "health": 10,
+      "description": "每回合此牌首次攻击时，复苏本牌局我方<link=vocab.Slay><style=Vocab>屠杀</style></link>的<link=vocab.Strongest><style=Vocab>最强</style></link>侍从单位<br>（最多5个），填满所有攻击单位<br>位置并赋予其<link=keyword.Ephemeral><sprite name=Ephemeral><style=Keyword>闪灵</style></link>。",
+      "descriptionRaw": "每回合此牌首次攻击时，复苏本牌局我方屠杀的最强侍从单位（最多5个），填满所有攻击单位位置并赋予其闪灵。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "传说中，塔鲁锡即将打败修兰妮时，冥血族就被巨石峰人袭击了。几个世纪过去了，他感觉到周围的土地开始腐化，被腐败和挥之不去的死亡恶臭所污染。他梦想着一旦获得自由，就要让修兰妮落得同样的下场。",
+      "artistName": "Kudos Productions",
+      "name": "塔鲁锡",
+      "cardCode": "06SI007T1",
+      "keywords": [
+        "威吓"
+      ],
+      "keywordRefs": [
+        "Fearsome"
+      ],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "无",
+      "rarityRef": "None",
+      "subtypes": [
+        "冥血族"
+      ],
+      "supertype": "",
+      "type": "单位",
+      "collectible": false,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06SI029.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06SI029-full.png"
+        }
+      ],
+      "regions": [
+        "暗影岛"
+      ],
+      "regionRefs": [
+        "ShadowIsles"
+      ],
+      "attack": 0,
+      "cost": 3,
+      "health": 0,
+      "description": "若本回合有友军单位阵亡，<br>则此牌魔耗值-2。",
+      "descriptionRaw": "若本回合有友军单位阵亡，则此牌魔耗值-2。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "「正义并不存在……只有复仇才是真理。」——克黎思妲",
+      "artistName": "Kudos Productions",
+      "name": "煞星之矛",
+      "cardCode": "06SI029",
+      "keywords": [
+        "装备",
+        "威吓"
+      ],
+      "keywordRefs": [
+        "Equipment",
+        "Fearsome"
+      ],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "普通",
+      "rarityRef": "Common",
+      "subtypes": [],
+      "supertype": "",
+      "type": "装备",
+      "collectible": true,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06SI032.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06SI032-full.png"
+        }
+      ],
+      "regions": [
+        "暗影岛"
+      ],
+      "regionRefs": [
+        "ShadowIsles"
+      ],
+      "attack": 0,
+      "cost": 1,
+      "health": 0,
+      "description": "击杀1个力量值为2以下的单位<br>或摧毁1个单位的装备。",
+      "descriptionRaw": "击杀1个力量值为2以下的单位或摧毁1个单位的装备。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "在暗影岛上，不论死亡以何种形式袭来，但愿能在刹那间结束。",
+      "artistName": "",
+      "name": "永眠",
+      "cardCode": "06SI032",
+      "keywords": [
+        "慢速"
+      ],
+      "keywordRefs": [
+        "Slow"
+      ],
+      "spellSpeed": "慢速",
+      "spellSpeedRef": "Slow",
+      "rarity": "稀有",
+      "rarityRef": "Rare",
+      "subtypes": [],
+      "supertype": "",
+      "type": "法术",
+      "collectible": true,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06DE006.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06DE006-full.png"
+        }
+      ],
+      "regions": [
+        "蒂玛西亚",
+        "弗雷尔卓德"
+      ],
+      "regionRefs": [
+        "Demacia",
+        "Freljord"
+      ],
+      "attack": 2,
+      "cost": 4,
+      "health": 2,
+      "description": "召唤此牌时，此牌进行<br><link=vocab.Improvise><style=Vocab>应变</style></link>并<link=vocab.Forge><style=Vocab>铸炼</style></link>自身。",
+      "descriptionRaw": "召唤此牌时，此牌进行应变并铸炼自身。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "从蒂玛西亚部队退役之后，布雷希还以为自己会结束军旅生涯，在安静的村庄小酒馆当厨师。他的退休生活全因贾克斯的酒馆斗殴和对全熟蛋的偏见给毁了。从那以后，布雷希拥抱了他的新生活：教导贾克斯一些品味。",
+      "artistName": "Envar Studio",
+      "name": "战斗厨师",
+      "cardCode": "06DE006",
+      "keywords": [],
+      "keywordRefs": [],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "普通",
+      "rarityRef": "Common",
+      "subtypes": [
+        "武器大师"
+      ],
+      "supertype": "",
+      "type": "单位",
+      "collectible": true,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06FR004.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06FR004-full.png"
+        }
+      ],
+      "regions": [
+        "弗雷尔卓德"
+      ],
+      "regionRefs": [
+        "Freljord"
+      ],
+      "attack": 1,
+      "cost": 1,
+      "health": 1,
+      "description": "首次<link=vocab.Equip><style=Vocab>装备</style></link>友军单位时，<link=vocab.Forge><style=Vocab>铸炼</style></link>该单位。",
+      "descriptionRaw": "首次装备友军单位时，铸炼该单位。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "鄂尔在很多年前就创造出活火炉，直到最近才开始想找回它。但鄂尔从没想过它会为了寻找新主人而浪迹天涯。",
+      "artistName": "Kudos Productions",
+      "name": "武器工匠学徒",
+      "cardCode": "06FR004",
+      "keywords": [],
+      "keywordRefs": [],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "普通",
+      "rarityRef": "Common",
+      "subtypes": [],
+      "supertype": "",
+      "type": "单位",
+      "collectible": true,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06FR008.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06FR008-full.png"
+        }
+      ],
+      "regions": [
+        "弗雷尔卓德"
+      ],
+      "regionRefs": [
+        "Freljord"
+      ],
+      "attack": 5,
+      "cost": 5,
+      "health": 5,
+      "description": "<link=vocab.Play><style=Vocab>出牌</style></link>：<link=vocab.Forge><style=Vocab>铸炼</style></link>1个友军单位，并治疗<br>该单位与我方主堡3点生命值。",
+      "descriptionRaw": "出牌：铸炼1个友军单位，并治疗该单位与我方主堡3点生命值。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "当鄂尔决定要离开这个世界时，所有的炉血族就此消失。几个世代过去了，他们的名字被全然遗忘。然而最近，鄂尔的传说重新传了开来，有传言说有些人已经开始回归炉血族之道。",
+      "artistName": "Michal Ivan",
+      "name": "炉血族修补匠",
+      "cardCode": "06FR008",
+      "keywords": [],
+      "keywordRefs": [],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "普通",
+      "rarityRef": "Common",
+      "subtypes": [],
+      "supertype": "",
+      "type": "单位",
+      "collectible": true,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06FR009.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06FR009-full.png"
+        }
+      ],
+      "regions": [
+        "弗雷尔卓德"
+      ],
+      "regionRefs": [
+        "Freljord"
+      ],
+      "attack": 3,
+      "cost": 3,
+      "health": 3,
+      "description": "<link=vocab.Play><style=Vocab>出牌</style></link>：<link=vocab.Forge><style=Vocab>铸炼</style></link>1个友军单位。",
+      "descriptionRaw": "出牌：铸炼1个友军单位。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "最初，菲斯克对学徒的想像是，一个敬业、认真对待自己的技艺、强壮、有能力的人。金卓拉完全不符合上述条件。她经常做白日梦，勤于玩乐倦于工作，总是在逗弄她那只傻乎乎的小乌龟。不过……她的确有在学习，这才是最重要的。",
+      "artistName": "Kudos Productions",
+      "name": "武器工匠大师",
+      "cardCode": "06FR009",
+      "keywords": [],
+      "keywordRefs": [],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "普通",
+      "rarityRef": "Common",
+      "subtypes": [],
+      "supertype": "",
+      "type": "单位",
+      "collectible": true,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [
+        "06FR012T1"
+      ],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06FR012.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06FR012-full.png"
+        }
+      ],
+      "regions": [
+        "弗雷尔卓德"
+      ],
+      "regionRefs": [
+        "Freljord"
+      ],
+      "attack": 1,
+      "cost": 2,
+      "health": 4,
+      "description": "召唤此牌时，在手牌生成<br>1张<link=card.create><style=AssociatedCard>时间与奉献</style></link>。",
+      "descriptionRaw": "召唤此牌时，在手牌生成1张时间与奉献。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "「我母亲告诉过我鄂尔的故事，就像她母亲告诉她的一样，还有她母亲之前的世代……现在我也会告诉你。仔细听，不要打断。很久以前，在一片广阔、炎热、翻腾的大海……」",
+      "artistName": "Envar Studio",
+      "name": "王牌工匠",
+      "cardCode": "06FR012",
+      "keywords": [],
+      "keywordRefs": [],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "普通",
+      "rarityRef": "Common",
+      "subtypes": [],
+      "supertype": "",
+      "type": "单位",
+      "collectible": true,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06FR012T1.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06FR012T1-full.png"
+        }
+      ],
+      "regions": [
+        "弗雷尔卓德"
+      ],
+      "regionRefs": [
+        "Freljord"
+      ],
+      "attack": 0,
+      "cost": 1,
+      "health": 0,
+      "description": "<link=vocab.Forge><style=Vocab>铸炼</style></link>1个友军单位。",
+      "descriptionRaw": "铸炼1个友军单位。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "「你或许值得我投入，别让我觉得我做错了。」——鄂尔",
+      "artistName": "Kudos Productions",
+      "name": "时间与奉献",
+      "cardCode": "06FR012T1",
+      "keywords": [
+        "专注"
+      ],
+      "keywordRefs": [
+        "Focus"
+      ],
+      "spellSpeed": "疾速",
+      "spellSpeedRef": "Burst",
+      "rarity": "无",
+      "rarityRef": "None",
+      "subtypes": [],
+      "supertype": "",
+      "type": "法术",
+      "collectible": false,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06DE032.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06DE032-full.png"
+        }
+      ],
+      "regions": [
+        "蒂玛西亚"
+      ],
+      "regionRefs": [
+        "Demacia"
+      ],
+      "attack": 0,
+      "cost": 1,
+      "health": 0,
+      "description": "",
+      "descriptionRaw": "",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "蒂玛西亚军队弟兄首选的标准剑与盾。",
+      "artistName": "Kudos Productions",
+      "name": "蒂玛西亚之钢",
+      "cardCode": "06DE032",
+      "keywords": [
+        "装备"
+      ],
+      "keywordRefs": [
+        "Equipment"
+      ],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "普通",
+      "rarityRef": "Common",
+      "subtypes": [],
+      "supertype": "",
+      "type": "装备",
+      "collectible": true,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [
+        "06FR011T2",
+        "06FR011T1",
+        "06FR011T4"
+      ],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06FR011.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06FR011-full.png"
+        }
+      ],
+      "regions": [
+        "弗雷尔卓德"
+      ],
+      "regionRefs": [
+        "Freljord"
+      ],
+      "attack": 4,
+      "cost": 7,
+      "health": 4,
+      "description": "<link=vocab.Play><style=Vocab>出牌</style></link>：此牌<link=vocab.Equip><style=Vocab>装备</style></link>1个友军单位的复制<br>装备牌，或是手牌中的<link=vocab.Strongest><style=Vocab>最强</style></link>装备。\r\n<link=vocab.Attack><style=Vocab>攻击</style></link>：<link=vocab.Forge><style=Vocab>铸炼</style></link>此牌2次。",
+      "descriptionRaw": "出牌：此牌装备1个友军单位的复制装备牌，或是手牌中的最强装备。\r\n攻击：铸炼此牌2次。",
+      "levelupDescription": "友军单位单次打击造成<br>10点以上伤害<style=Variable></style>。 ",
+      "levelupDescriptionRaw": "友军单位单次打击造成10点以上伤害。 ",
+      "flavorText": "如果有人问鄂尔为什么他没有耐心，他只会回答自己是有耐心的。事实上，他惊人地有耐心，这就是为什么他的工艺无人能及。他只是对人没有耐心。但是没人问到这点，所以他也从没说明过。",
+      "artistName": "Kudos Productions",
+      "name": "鄂尔",
+      "cardCode": "06FR011",
+      "keywords": [
+        "坚忍"
+      ],
+      "keywordRefs": [
+        "Tough"
+      ],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "英雄",
+      "rarityRef": "Champion",
+      "subtypes": [],
+      "supertype": "英雄",
+      "type": "单位",
+      "collectible": true,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [
+        "06FR011",
+        "06FR011T2",
+        "06FR011T4"
+      ],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06FR011T1.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06FR011T1-full.png"
+        }
+      ],
+      "regions": [
+        "弗雷尔卓德"
+      ],
+      "regionRefs": [
+        "Freljord"
+      ],
+      "attack": 5,
+      "cost": 7,
+      "health": 5,
+      "description": "<link=vocab.Play><style=Vocab>出牌</style></link>：此牌<link=vocab.Equip><style=Vocab>装备</style></link>1个友军单位的复制<br>装备牌，或是手牌中的<link=vocab.Strongest><style=Vocab>最强</style></link>装备。\r\n<link=vocab.Attack><style=Vocab>攻击</style></link>：<link=vocab.Forge><style=Vocab>铸炼</style></link>此牌2次，然后召唤1个与此牌能力值相同的攻击中<link=card.summon><style=AssociatedCard>铸火灵羊</style></link>。",
+      "descriptionRaw": "出牌：此牌装备1个友军单位的复制装备牌，或是手牌中的最强装备。\r\n攻击：铸炼此牌2次，然后召唤1个与此牌能力值相同的攻击中铸火灵羊。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "有些人相信，当世界真正需要他时，鄂尔所选之人终将能够找到他们的神。这不正是那种脾性孤僻又古怪的神明吗？只在你寻寻觅觅，找到最后一处时才愿意现身？ ",
+      "artistName": "Will Gist",
+      "name": "鄂尔",
+      "cardCode": "06FR011T1",
+      "keywords": [
+        "坚忍"
+      ],
+      "keywordRefs": [
+        "Tough"
+      ],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "无",
+      "rarityRef": "None",
+      "subtypes": [],
+      "supertype": "英雄",
+      "type": "单位",
+      "collectible": false,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06FR011T4.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06FR011T4-full.png"
+        }
+      ],
+      "regions": [
+        "弗雷尔卓德"
+      ],
+      "regionRefs": [
+        "Freljord"
+      ],
+      "attack": 1,
+      "cost": 4,
+      "health": 1,
+      "description": "",
+      "descriptionRaw": "",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "「在烈火烧制之后留下来的，不是锻造好的成品，就是熔化的废料。最好是当那个成型的钢铁，别当那被燃烧殆尽的东西！」——鄂尔",
+      "artistName": "Kudos Productions",
+      "name": "铸火灵羊",
+      "cardCode": "06FR011T4",
+      "keywords": [
+        "闪灵",
+        "蛮力"
+      ],
+      "keywordRefs": [
+        "Ephemeral",
+        "Overwhelm"
+      ],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "无",
+      "rarityRef": "None",
+      "subtypes": [],
+      "supertype": "",
+      "type": "单位",
+      "collectible": false,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [
+        "06FR011",
+        "06FR011T1"
+      ],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06FR011T2.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06FR011T2-full.png"
+        }
+      ],
+      "regions": [
+        "弗雷尔卓德"
+      ],
+      "regionRefs": [
+        "Freljord"
+      ],
+      "attack": 0,
+      "cost": 5,
+      "health": 0,
+      "description": "<link=vocab.Forge><style=Vocab>铸炼</style></link>1个友军单位并对所有单位<br>造成1点伤害，然后再重复1次。\r\n在牌组生成1张<link=card.level1><style=AssociatedCard>鄂尔</style></link>。",
+      "descriptionRaw": "铸炼1个友军单位并对所有单位造成1点伤害，然后再重复1次。\r\n在牌组生成1张鄂尔。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "「钢铁般的意志必定经过锻炼！」——鄂尔",
+      "artistName": "Kudos Productions",
+      "name": "鄂尔 炽焰吹息",
+      "cardCode": "06FR011T2",
+      "keywords": [
+        "慢速"
+      ],
+      "keywordRefs": [
+        "Slow"
+      ],
+      "spellSpeed": "慢速",
+      "spellSpeedRef": "Slow",
+      "rarity": "无",
+      "rarityRef": "None",
+      "subtypes": [],
+      "supertype": "英雄",
+      "type": "法术",
+      "collectible": false,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06FR022.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06FR022-full.png"
+        }
+      ],
+      "regions": [
+        "弗雷尔卓德"
+      ],
+      "regionRefs": [
+        "Freljord"
+      ],
+      "attack": 0,
+      "cost": 5,
+      "health": 0,
+      "description": "<link=vocab.Forge><style=Vocab>铸炼</style></link>1个友军单位并对所有单位<br>造成1点伤害，然后再重复1次。",
+      "descriptionRaw": "铸炼1个友军单位并对所有单位造成1点伤害，然后再重复1次。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "「钢铁般的意志必定经过锻炼！」——鄂尔",
+      "artistName": "Kudos Productions",
+      "name": "炽焰吹息",
+      "cardCode": "06FR022",
+      "keywords": [
+        "慢速"
+      ],
+      "keywordRefs": [
+        "Slow"
+      ],
+      "spellSpeed": "慢速",
+      "spellSpeedRef": "Slow",
+      "rarity": "稀有",
+      "rarityRef": "Rare",
+      "subtypes": [],
+      "supertype": "",
+      "type": "法术",
+      "collectible": true,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [
+        "06FR012T1"
+      ],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06FR005.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06FR005-full.png"
+        }
+      ],
+      "regions": [
+        "弗雷尔卓德"
+      ],
+      "regionRefs": [
+        "Freljord"
+      ],
+      "attack": 0,
+      "cost": 3,
+      "health": 0,
+      "description": "召唤此牌时和<link=vocab.RoundStart><style=Vocab>回合开始</style></link>：在手牌<br>生成1张<link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>飞逝</style></link><link=card.create><style=AssociatedCard>时间与奉献</style></link>。",
+      "descriptionRaw": "召唤此牌时和回合开始：在手牌生成1张飞逝时间与奉献。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "独自一人在炉心之家的锻造场里，这里只有熔化的金属在下方缓慢流动的声音，还有铁锤在铁砧上打出的叮叮声响……他很享受这种感觉。",
+      "artistName": "Envar Studio",
+      "name": "鄂尔的锻造场",
+      "cardCode": "06FR005",
+      "keywords": [
+        "地标"
+      ],
+      "keywordRefs": [
+        "LandmarkVisualOnly"
+      ],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "稀有",
+      "rarityRef": "Rare",
+      "subtypes": [],
+      "supertype": "",
+      "type": "地标",
+      "collectible": true,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06FR023.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06FR023-full.png"
+        }
+      ],
+      "regions": [
+        "弗雷尔卓德"
+      ],
+      "regionRefs": [
+        "Freljord"
+      ],
+      "attack": 8,
+      "cost": 8,
+      "health": 8,
+      "description": "此牌首次<link=vocab.Equip><style=Vocab>装备</style></link>时，在手牌生成1张此牌的复制牌。赋予该牌装备的能力值。",
+      "descriptionRaw": "此牌首次装备时，在手牌生成1张此牌的复制牌。赋予该牌装备的能力值。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "虽然他不想承认，但鄂尔对这尊巨像还是很满意的。它不仅确切达成了鄂尔交付的任务，而且最棒的是，它从不说话。",
+      "artistName": "Envar Studio",
+      "name": "锻造巨像",
+      "cardCode": "06FR023",
+      "keywords": [
+        "蛮力"
+      ],
+      "keywordRefs": [
+        "Overwhelm"
+      ],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "史诗",
+      "rarityRef": "Epic",
+      "subtypes": [],
+      "supertype": "",
+      "type": "单位",
+      "collectible": true,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06BW034.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06BW034-full.png"
+        }
+      ],
+      "regions": [
+        "比尔吉沃特"
+      ],
+      "regionRefs": [
+        "Bilgewater"
+      ],
+      "attack": 0,
+      "cost": 2,
+      "health": 0,
+      "description": "摧毁1个单位的装备，并对其<br>造成2点伤害。",
+      "descriptionRaw": "摧毁1个单位的装备，并对其造成2点伤害。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "「有谁会在酒吧斗殴中丢船锚啊？！你们是有什么问题啊？！！」——比尔吉沃特酒保",
+      "artistName": "Kudos Productions",
+      "name": "重金属",
+      "cardCode": "06BW034",
+      "keywords": [
+        "慢速"
+      ],
+      "keywordRefs": [
+        "Slow"
+      ],
+      "spellSpeed": "慢速",
+      "spellSpeedRef": "Slow",
+      "rarity": "稀有",
+      "rarityRef": "Rare",
+      "subtypes": [],
+      "supertype": "",
+      "type": "法术",
+      "collectible": true,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06SI036.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06SI036-full.png"
+        }
+      ],
+      "regions": [
+        "暗影岛"
+      ],
+      "regionRefs": [
+        "ShadowIsles"
+      ],
+      "attack": 0,
+      "cost": 11,
+      "health": 0,
+      "description": "击杀所有单位，我方冥血族和<br><link=vocab.Equip><style=Vocab>已装备</style></link>的友军单位除外。",
+      "descriptionRaw": "击杀所有单位，我方冥血族和已装备的友军单位除外。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "当她拿起武器时，人性随之消逝，取而代之的是满腔的憎恨，曾经是大师学徒的润儿徒剩一具空壳。仇恨扩及全身、环绕四周，再向外扩散，打搅了沉睡的冥血族。",
+      "artistName": "Kudos Productions",
+      "name": "全然毁灭",
+      "cardCode": "06SI036",
+      "keywords": [
+        "慢速"
+      ],
+      "keywordRefs": [
+        "Slow"
+      ],
+      "spellSpeed": "慢速",
+      "spellSpeedRef": "Slow",
+      "rarity": "稀有",
+      "rarityRef": "Rare",
+      "subtypes": [
+        "邪教徒"
+      ],
+      "supertype": "",
+      "type": "法术",
+      "collectible": true,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [
+        "06SH004T2",
+        "06SH004T1"
+      ],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06SH004.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06SH004-full.png"
+        }
+      ],
+      "regions": [
+        "苏瑞玛"
+      ],
+      "regionRefs": [
+        "Shurima"
+      ],
+      "attack": 0,
+      "cost": 1,
+      "health": 0,
+      "description": "<link=keyword.Last Breath><sprite name=LastBreath><style=Keyword>遗愿</style></link>：若此牌的装备者并非<br><link=card.summon><style=AssociatedCard>冥血奴仆</style></link>，则召唤1个<link=card.summon><style=AssociatedCard>冥血奴仆</style></link>。\r\n可消耗6点魔力改为打出<link=card.unit><style=AssociatedCard>修兰妮</style></link>。",
+      "descriptionRaw": "遗愿：若此牌的装备者并非冥血奴仆，则召唤1个冥血奴仆。\r\n可消耗6点魔力改为打出修兰妮。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "随着战斗持续进行，绝望又身受重伤的润儿将意识转向了她脑海中的低语。「你永远不会死。」那声音如夏雨般轻柔地说着。「因为我永远不会让你死。」",
+      "artistName": "Kudos Productions",
+      "name": "冥血骨锯",
+      "cardCode": "06SH004",
+      "keywords": [
+        "装备"
+      ],
+      "keywordRefs": [
+        "Equipment"
+      ],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "史诗",
+      "rarityRef": "Epic",
+      "subtypes": [
+        "冥血族"
+      ],
+      "supertype": "",
+      "type": "装备",
+      "collectible": true,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06SH004T1.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06SH004T1-full.png"
+        }
+      ],
+      "regions": [
+        "苏瑞玛"
+      ],
+      "regionRefs": [
+        "Shurima"
+      ],
+      "attack": 1,
+      "cost": 1,
+      "health": 1,
+      "description": "此牌首次<link=vocab.Equip><style=Vocab>装备</style></link>时，赋予此牌+2|+2。",
+      "descriptionRaw": "此牌首次装备时，赋予此牌+2|+2。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "长久以来，这些少数的忠诚者照料着女主人的神庙。他们把沙尘扫了出去，也驱逐那些想前来亵渎的人。长久以来，他们祈祷着她的归来、她的仁慈、她的掌控。",
+      "artistName": "Kudos Productions",
+      "name": "冥血奴仆",
+      "cardCode": "06SH004T1",
+      "keywords": [
+        "无法进行格挡"
+      ],
+      "keywordRefs": [
+        "CantBlock"
+      ],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "无",
+      "rarityRef": "None",
+      "subtypes": [
+        "邪教徒"
+      ],
+      "supertype": "",
+      "type": "单位",
+      "collectible": false,
+      "set": "Set6cde"
+    },
+    {
+      "associatedCards": [],
+      "associatedCardRefs": [
+        "06SH004"
+      ],
+      "assets": [
+        {
+          "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06SH004T2.png",
+          "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/zh_tw/img/cards/06SH004T2-full.png"
+        }
+      ],
+      "regions": [
+        "苏瑞玛"
+      ],
+      "regionRefs": [
+        "Shurima"
+      ],
+      "attack": 7,
+      "cost": 6,
+      "health": 7,
+      "description": "击杀1个友军单位即可出此牌。\r\n<link=keyword.Last Breath><sprite name=LastBreath><style=Keyword>遗愿</style></link>：在手牌生成1张<link=card.create><style=AssociatedCard>冥血骨锯</style></link>。",
+      "descriptionRaw": "击杀1个友军单位即可出此牌。\r\n遗愿：在手牌生成1张冥血骨锯。",
+      "levelupDescription": "",
+      "levelupDescriptionRaw": "",
+      "flavorText": "自苏瑞玛的飞升者挺身对抗虚空的那一刻起，他们就注定走向毁灭了。虚空是一个永远无法战胜的敌人，虽然神斗士几乎是不死之身，但他们的心智却不如身体来得坚韧。疯狂吞噬了他们。修兰妮曾经是受人爱戴且天赋异禀的治疗师，却开始使用血魔法的力量来控制她的同胞。很快地，她和厄萨斯之间的仇恨就演变为内战。",
+      "artistName": "Kudos Productions",
+      "name": "修兰妮",
+      "cardCode": "06SH004T2",
+      "keywords": [
+        "蛮力",
+        "遗愿"
+      ],
+      "keywordRefs": [
+        "Overwhelm",
+        "LastBreath"
+      ],
+      "spellSpeed": "",
+      "spellSpeedRef": "",
+      "rarity": "无",
+      "rarityRef": "None",
+      "subtypes": [
+        "冥血族"
+      ],
+      "supertype": "",
+      "type": "单位",
+      "collectible": false,
+      "set": "Set6cde"
+    }
   ]
 ]

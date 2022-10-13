@@ -1,6 +1,6 @@
 import { getDecodedDeck } from "./getDecodedDeck"
 import { useBaseStore } from "../store/StoreBase"
-import { factionNames, regionRefID } from "./constants"
+import { regionRefID } from "./constants"
 
 const getFactions = (code) => {
   const baseStore = useBaseStore()

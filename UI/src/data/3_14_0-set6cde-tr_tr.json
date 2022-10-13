@@ -1,0 +1,4724 @@
+[
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU005T3",
+      "06RU005T6",
+      "06RU005T4",
+      "06RU005T8",
+      "06RU005T2",
+      "06RU005T11",
+      "06RU005T1",
+      "06RU005T10"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06RU005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06RU005-full.png"
+      }
+    ],
+    "regions": [
+      "Runeterra"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 2,
+    "cost": 5,
+    "health": 5,
+    "description": "<link=vocab.Origin><style=Vocab>Köken</style></link>: <link=card.origin><style=AssociatedCard>Gölge Cellat</style></link>.\r\n<link=vocab.AutoEquip><style=Vocab>Otomatik Kuşan</style></link>: <link=card.equipment><style=AssociatedCard>Darkin Tırpan</style></link>.\r\nBir düşmanı öldürdüğümde beni 2 iyileştirirsin.",
+    "descriptionRaw": "Köken: Gölge Cellat.\r\nOtomatik Kuşan: Darkin Tırpan.\r\nBir düşmanı öldürdüğümde beni 2 iyileştirirsin.",
+    "levelupDescription": "İki <link=vocab.Strike><style=Vocab>Vuruş</style></link> yaptığımda<style=Variable></style>. Seviye atladığımda beni <link=keyword.Recall><style=Keyword>Geri Gönderirsin</style></link>.",
+    "levelupDescriptionRaw": "İki Vuruş yaptığımda. Seviye atladığımda beni Geri Gönderirsin.",
+    "flavorText": "Biri daha can verirken Kayn neşe dolu bir kahkaha patlattı. Yakında diğer darkin silahını da gün yüzüne çıkaracağını biliyordu. İçindeki Rhaast'sa gittikçe sabırsızlanıyordu, Kayn'in sonunun çok yakın olduğunun farkındaydı.",
+    "artistName": "Kudos Productions",
+    "name": "Kayn",
+    "cardCode": "06RU005",
+    "keywords": [
+      "Rakipçeker"
+    ],
+    "keywordRefs": [
+      "Challenger"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Şampiyon",
+    "rarityRef": "Champion",
+    "subtypes": [
+      "DARKİN"
+    ],
+    "supertype": "Şampiyon",
+    "type": "Birim",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU005"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06RU005T6.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06RU005T6-full.png"
+      }
+    ],
+    "regions": [
+      "Runeterra"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "Deste kurarken Tarikatçı herhangi bir kartı destene koyabilirsin. 3+ Tarikatçı birim çağırdığında, bir <link=card.level1><style=AssociatedCard>Kayn</style></link> çekersin.",
+    "descriptionRaw": "Deste kurarken Tarikatçı herhangi bir kartı destene koyabilirsin. 3+ Tarikatçı birim çağırdığında, bir Kayn çekersin.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "İki ihtimal var: Kayn ya iradesini Rhaast'a teslim edecek ya da tükenecek.",
+    "artistName": "Kudos Productions",
+    "name": "Gölge Cellat",
+    "cardCode": "06RU005T6",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Yok",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Yetenek",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU005",
+      "06RU005T2",
+      "06RU005T1",
+      "06RU005T11",
+      "06RU005T10",
+      "06RU005"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06RU005T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06RU005T3-full.png"
+      }
+    ],
+    "regions": [
+      "Runeterra"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "<link=vocab.Attack><style=Vocab>Saldır</style></link>: <link=card.selfRef><style=AssociatedCard>Darkin Tırpan</style></link>, +1|+0 kazanır.",
+    "descriptionRaw": "Saldır: Darkin Tırpan, +1|+0 kazanır.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''Hasat vakti!''\n- Rhaast",
+    "artistName": "Kudos Productions",
+    "name": "Darkin Tırpan",
+    "cardCode": "06RU005T3",
+    "keywords": [
+      "Ekipman"
+    ],
+    "keywordRefs": [
+      "Equipment"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Yok",
+    "rarityRef": "None",
+    "subtypes": [
+      "DARKİN"
+    ],
+    "supertype": "",
+    "type": "Ekipman",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU005T4",
+      "06RU005T1",
+      "06RU005T2"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06RU005T8.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06RU005T8-full.png"
+      }
+    ],
+    "regions": [
+      "Runeterra"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 3,
+    "cost": 0,
+    "health": 6,
+    "description": "<link=vocab.Play><style=Vocab>Oyna</style></link>: Beni ve tüm kopyalarımı <link=card.Rhaast><style=AssociatedCard>Rhaast</style></link> ya da <link=card.TheShadowAssassin><style=AssociatedCard>Gölge Suikastçı</style></link> kartına dönüştürürsün.",
+    "descriptionRaw": "Oyna: Beni ve tüm kopyalarımı Rhaast ya da Gölge Suikastçı kartına dönüştürürsün.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Kayn aniden vahşi bir öfkeyle dolup taşmaya başladı. Gözlerinin arkasındaki korkunç, keskin acı yüzünden dizlerinin üstüne kapaklandı. Duyduğu tek şey Rhaast'ın alaycı ve merhametsiz zafer kahkahalarıydı. Er ya da geç, bugünün geleceğini biliyordu. Ya galip gelecek ya da kendini Darkin'e tamamen teslim edecekti.",
+    "artistName": "Kudos Productions",
+    "name": "Kayn",
+    "cardCode": "06RU005T8",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Şampiyon",
+    "rarityRef": "Champion",
+    "subtypes": [
+      "DARKİN"
+    ],
+    "supertype": "Şampiyon",
+    "type": "Birim",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU005T10",
+      "06RU005T4",
+      "06RU005"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06RU005T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06RU005T1-full.png"
+      }
+    ],
+    "regions": [
+      "Runeterra"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 3,
+    "cost": 5,
+    "health": 6,
+    "description": "<link=vocab.AutoEquip><style=Vocab>Otomatik Kuşan</style></link>: <link=card.equipment><style=AssociatedCard>Gölge Tırpan</style></link>.",
+    "descriptionRaw": "Otomatik Kuşan: Gölge Tırpan.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Damarlarından muazzam bir güç akıyordu. Darkin'in etkisinden kurtulmuştu, gölgelerin tüm gücü artık onun emrindeydi. Kayn güldü, karanlığa karıştı ve sadece bir anlığına belirerek önünde duran muhafızın boğazını sessizce kesti.",
+    "artistName": "Kudos Productions",
+    "name": "Gölge Suikastçı",
+    "cardCode": "06RU005T1",
+    "keywords": [
+      "Sıyrılgan",
+      "Rakipçeker"
+    ],
+    "keywordRefs": [
+      "Elusive",
+      "Challenger"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Yok",
+    "rarityRef": "None",
+    "subtypes": [
+      "DARKİN"
+    ],
+    "supertype": "Şampiyon",
+    "type": "Birim",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU005T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06RU005T10.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06RU005T10-full.png"
+      }
+    ],
+    "regions": [
+      "Runeterra"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "<link=vocab.Attack><style=Vocab>Saldır</style></link>: <link=card.selfRef><style=AssociatedCard>Gölge Tırpan</style></link>, +2|+0 kazanır.",
+    "descriptionRaw": "Saldır: Gölge Tırpan, +2|+0 kazanır.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Kayn'in öfkesi, Rhaast'ın şiddetli çığlıkları arasında buram buram yanan bir aleve dönüştü. Darkin'in gölge savaşçı üzerindeki etkisi yanıp kül olmuştu. Kayn ayağa kalktı, artık Darkin'in tüm gücü onun emrindeydi.",
+    "artistName": "Kudos Productions",
+    "name": "Gölge Tırpan",
+    "cardCode": "06RU005T10",
+    "keywords": [
+      "Ekipman"
+    ],
+    "keywordRefs": [
+      "Equipment"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Yok",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Ekipman",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU005T4",
+      "06RU005T11",
+      "06RU005"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06RU005T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06RU005T2-full.png"
+      }
+    ],
+    "regions": [
+      "Runeterra"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 3,
+    "cost": 5,
+    "health": 6,
+    "description": "<link=vocab.AutoEquip><style=Vocab>Otomatik Kuşan</style></link>: <link=card.equipment><style=AssociatedCard>Yozlaşmış Tırpan</style></link>.\r\nBir düşmanı öldürdüğümde, beni tamamen iyileştirirsin ve Nexus'un 2 iyileşir.",
+    "descriptionRaw": "Otomatik Kuşan: Yozlaşmış Tırpan.\r\nBir düşmanı öldürdüğümde, beni tamamen iyileştirirsin ve Nexus'un 2 iyileşir.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Rhaast, zaferini ilan edercesine uludu. Yıllarca beklediği, arzuladığı an gelmişti. Nihayet özgürdü. Xolaani'nin kılıçlarını kaldırarak diline değdirdi, taze kanın tadını doyasıya çıkardı. Neşe içinde gözlerini kapadı, binlerce yıldır ilk kez yüzü gülüyordu. Hasat başlamıştı.",
+    "artistName": "Kudos Productions",
+    "name": "Rhaast",
+    "cardCode": "06RU005T2",
+    "keywords": [
+      "Rakipçeker",
+      "Aban"
+    ],
+    "keywordRefs": [
+      "Challenger",
+      "Overwhelm"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Yok",
+    "rarityRef": "None",
+    "subtypes": [
+      "DARKİN"
+    ],
+    "supertype": "Şampiyon",
+    "type": "Birim",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU005T2"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06RU005T11.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06RU005T11-full.png"
+      }
+    ],
+    "regions": [
+      "Runeterra"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "<link=vocab.Equip><style=Vocab>Kuşan</style></link>: <link=vocab.Attack><style=Vocab>Saldır</style></link>: <link=card.selfRef><style=AssociatedCard>Yozlaşmış Tırpan</style></link>, +1|+1 kazanır.",
+    "descriptionRaw": "Kuşan: Saldır: Yozlaşmış Tırpan, +1|+1 kazanır.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Kayn, ruhunu Darkin'e teslim ederken yatışan öfkesinin yerini dayanılmaz bir boşluk aldı. Genç savaşçı artık yoktu. Kalan tek şey Rhaast'tı.",
+    "artistName": "Kudos Productions",
+    "name": "Yozlaşmış Tırpan",
+    "cardCode": "06RU005T11",
+    "keywords": [
+      "Ekipman"
+    ],
+    "keywordRefs": [
+      "Equipment"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Yok",
+    "rarityRef": "None",
+    "subtypes": [
+      "DARKİN"
+    ],
+    "supertype": "",
+    "type": "Ekipman",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU005",
+      "06RU005T1",
+      "06RU005T2"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06RU005T4.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06RU005T4-full.png"
+      }
+    ],
+    "regions": [
+      "Runeterra"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 4,
+    "health": 0,
+    "description": "<link=card.level1><style=AssociatedCard>Kayn</style></link> kartına bu tur <link=keyword.Quick Strike><sprite name=QuickStrike><style=Keyword>İlk Saldırı</style></link> verirsin, bu kart bir rakibi <link=keyword.Challenger><sprite name=Challenger><style=Keyword>Çekerek</style></link> bir fazladan saldırı başlatır.\r\nDestende bir <link=card.level1><style=AssociatedCard>Kayn</style></link> oluşur.",
+    "descriptionRaw": "Kayn kartına bu tur İlk Saldırı verirsin, bu kart bir rakibi Çekerek bir fazladan saldırı başlatır.\r\nDestende bir Kayn oluşur.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''Kaçış yok.''<br>- Kayn",
+    "artistName": "Kudos Productions",
+    "name": "Kayn Gölge Yolu",
+    "cardCode": "06RU005T4",
+    "keywords": [
+      "Yavaş"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "Yavaş",
+    "spellSpeedRef": "Slow",
+    "rarity": "Yok",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "Şampiyon",
+    "type": "Büyü",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06BW023.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06BW023-full.png"
+      }
+    ],
+    "regions": [
+      "Bilgewater"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "<link=keyword.Plunder><style=Keyword>Yağma</style></link>: Bedelim 2 azalır.",
+    "descriptionRaw": "Yağma: Bedelim 2 azalır.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''Ee, ne demişler? Bilgewater'da hırgürü bitirmenin en hızlı yolu pala çekmektir.''\n''Silah çekmek daha iyi olmaz mı?''\n''Kes sesini, Baz.''\n- Baz ve Gav, acemi ödül avcıları",
+    "artistName": "Kudos Productions",
+    "name": "Dişli Pala",
+    "cardCode": "06BW023",
+    "keywords": [
+      "Ekipman",
+      "Yağma"
+    ],
+    "keywordRefs": [
+      "Equipment",
+      "Plunder"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "YAYGIN",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Ekipman",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06NX026.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06NX026-full.png"
+      }
+    ],
+    "regions": [
+      "Noxus"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "",
+    "descriptionRaw": "",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Vessid, Bordent'in en hızlı hesapçısı olmaktan uzak ama koca çekici hedefi bulduğunda, rakibinden geriye pek bir şey kalmıyor.",
+    "artistName": "Kudos Productions",
+    "name": "Koca Çekiç",
+    "cardCode": "06NX026",
+    "keywords": [
+      "Ekipman",
+      "Aban"
+    ],
+    "keywordRefs": [
+      "Equipment",
+      "Overwhelm"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "YAYGIN",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Ekipman",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06SH031"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06SH032.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06SH032-full.png"
+      }
+    ],
+    "regions": [
+      "Shurima"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "<link=keyword.Countdown><style=Keyword>Geri Sayım - 2</style></link><style=Variable></style>: Elinde bir <link=card.create><style=AssociatedCard>Kumların Hazinesi</style></link> oluşur.",
+    "descriptionRaw": "Geri Sayım - 2: Elinde bir Kumların Hazinesi oluşur.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''Ne diye her şeye dokunuyorsun?''\n''Neden? Bubi tuzağı olduğunu mu düşünüyorsun? Sence tepemizden pat diye kaya mı...''\n''İMDAAAAT!''\n- Mezar soyguncuları Argus ve Silvio",
+    "artistName": "Michal Ivan ",
+    "name": "Gömülü Cephane",
+    "cardCode": "06SH032",
+    "keywords": [
+      "Yer",
+      "Geri Sayım"
+    ],
+    "keywordRefs": [
+      "LandmarkVisualOnly",
+      "Countdown"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "YAYGIN",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Yer",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06SH031.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06SH031-full.png"
+      }
+    ],
+    "regions": [
+      "Shurima"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "",
+    "descriptionRaw": "",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''Bırak şunları, Silvio!''\n''Nedenmiş? Zavallı sahipleri gelip alacak değil ya!''\n''Çünkü bazı şeylerin gömülü kalması gerekir.''\n- Mezar soyguncuları Argus ve Silvio ",
+    "artistName": "Kudos Productions",
+    "name": "Kumların Hazinesi",
+    "cardCode": "06SH031",
+    "keywords": [
+      "Ekipman"
+    ],
+    "keywordRefs": [
+      "Equipment"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Yok",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Ekipman",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06MT033.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06MT033-full.png"
+      }
+    ],
+    "regions": [
+      "Targon"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 4,
+    "health": 0,
+    "description": "Taşıyıcım bir Ejder'dir.",
+    "descriptionRaw": "Taşıyıcım bir Ejder'dir.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Runeterra'da pek çok kişi farklı yöntemlerle olsa da ejderlerin gücüne başvurur. Bir semavi ejdere güç bahşetmesi için yakaranlar, asıl gücün kendi içlerinde, yıldızlardan daha da parlak ve sıcak bir biçimde harlandığını idrak ederler.",
+    "artistName": "Kudos Productions",
+    "name": "Ejder Kolçağı",
+    "cardCode": "06MT033",
+    "keywords": [
+      "Ekipman",
+      "Hiddet"
+    ],
+    "keywordRefs": [
+      "Equipment",
+      "Fury"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "YAYGIN",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Ekipman",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06SH040.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06SH040-full.png"
+      }
+    ],
+    "regions": [
+      "Shurima"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 0,
+    "cost": 5,
+    "health": 0,
+    "description": "Bu oyunda bir dost birimi <link=vocab.Equip><style=Vocab>Kuşattığında</style></link>, bedelim 2 azalır. Ölmüş olan <link=vocab.Strongest><style=Vocab>En Güçlü</style></link> dost şampiyon dirilir.",
+    "descriptionRaw": "Bu oyunda bir dost birimi Kuşattığında, bedelim 2 azalır. Ölmüş olan En Güçlü dost şampiyon dirilir.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''Ölmeyeceksin. Ölmene asla izin vermem.''\n- Xolaani",
+    "artistName": "Kudos Productions",
+    "name": "Pervasız Diriliş",
+    "cardCode": "06SH040",
+    "keywords": [
+      "Yavaş"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "Yavaş",
+    "spellSpeedRef": "Slow",
+    "rarity": "DESTANSI",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "TARİKATÇI"
+    ],
+    "supertype": "",
+    "type": "Büyü",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06SH005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06SH005-full.png"
+      }
+    ],
+    "regions": [
+      "Shurima"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 2,
+    "cost": 1,
+    "health": 1,
+    "description": "<link=vocab.Play><style=Vocab>Oyna</style></link>: <link=vocab.Predict><style=Vocab>Öngörüde</style></link> bulunursun. Seçimin bir Darkin ya da ekipmansa,  +1|+1 kazanırım.",
+    "descriptionRaw": "Oyna: Öngörüde bulunursun. Seçimin bir Darkin ya da ekipmansa,  +1|+1 kazanırım.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Elinde, arkadaşı Rhaast'ın Yükseliş töreninden önce hediye ettiği örgülü kemeri tutuyordu. Darkin'in gücüne her ne kadar saygı duysa da sert kalbindeki kırgınlık geçmiyordu.",
+    "artistName": "Kudos Productions",
+    "name": "Terk Edilmiş Baccai",
+    "cardCode": "06SH005",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "YAYGIN",
+    "rarityRef": "Common",
+    "subtypes": [
+      "TARİKATÇI"
+    ],
+    "supertype": "",
+    "type": "Birim",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06DE010.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06DE010-full.png"
+      }
+    ],
+    "regions": [
+      "Demacia"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 4,
+    "cost": 4,
+    "health": 3,
+    "description": "Bu oyunda bir dost birimi <link=vocab.Equip><style=Vocab>Kuşattığında</style></link>, bana <link=keyword.Scout><sprite name=Scout><style=Keyword>Öncü</style></link> kazandırırsın.",
+    "descriptionRaw": "Bu oyunda bir dost birimi Kuşattığında, bana Öncü kazandırırsın.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Yıllarca büyü yeteneklerini baskılaması, kendine duyduğu nefreti körüklemişti. Bu nefreti acımasızca kurbanlarının üstüne salıyordu. Kolcu şövalyelerden kaçtıktan sonra, içindeki öfkeyi nereye yönelteceğini bilemiyordu, ta ki karanlıktan gelen o sesi duyana kadar. Ses, yeni bir düzenden bahsediyordu, özgürce zulmedebileceği bir düzenden.",
+    "artistName": "Kudos Productions",
+    "name": "Kolcu Şövalye Kaçkını",
+    "cardCode": "06DE010",
+    "keywords": [
+      "Dayanıklı"
+    ],
+    "keywordRefs": [
+      "Tough"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ENDER",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "TARİKATÇI"
+    ],
+    "supertype": "",
+    "type": "Birim",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06DE040.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06DE040-full.png"
+      }
+    ],
+    "regions": [
+      "Demacia"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "Destenin en üstündeki 4 kart arasından bir takipçi ya da ekipman seçersin. Seçtiğin kartı çekersin, kalanları destene koyarsın.\r\n",
+    "descriptionRaw": "Destenin en üstündeki 4 kart arasından bir takipçi ya da ekipman seçersin. Seçtiğin kartı çekersin, kalanları destene koyarsın.\r\n",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Hafif, kışkırtıcı fısıltılar kalbin derinliklerine arzular ekiyor. Arzular tıpkı bir yara gibi gittikçe iltihaplanıyor, büyüdükçe büyüyor, acıkıyor. Açlık beraberinde günahı, günahsa ölümü getiriyor. Ve döngü böylece devam ediyor.",
+    "artistName": "Kudos Productions",
+    "name": "Cazip İhtimal",
+    "cardCode": "06DE040",
+    "keywords": [
+      "Anlık"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Anlık",
+    "spellSpeedRef": "Burst",
+    "rarity": "YAYGIN",
+    "rarityRef": "Common",
+    "subtypes": [
+      "TARİKATÇI"
+    ],
+    "supertype": "",
+    "type": "Büyü",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06IO034.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06IO034-full.png"
+      }
+    ],
+    "regions": [
+      "Ionia"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "Bir dost birime bu tur +1|+0 ya da +0|+1 verirsin. Bu oyunda bir dost birimi <link=vocab.Equip><style=Vocab>Kuşattıysan</style></link>, benim bir kopyamı aynı hedefe oynarsın.",
+    "descriptionRaw": "Bir dost birime bu tur +1|+0 ya da +0|+1 verirsin. Bu oyunda bir dost birimi Kuşattıysan, benim bir kopyamı aynı hedefe oynarsın.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Jun, yerde yatan cansız bedenler arasında gezinirken yanaklarından öfke dolu gözyaşları boşanıyordu. Onları yüzüstü bırakmıştı. Ustasını yüzüstü bırakmıştı. Artık geriye tek bir seçenek kalmıştı...",
+    "artistName": "Kudos Productions",
+    "name": "Kritik Seçim",
+    "cardCode": "06IO034",
+    "keywords": [
+      "Anlık"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Anlık",
+    "spellSpeedRef": "Burst",
+    "rarity": "ENDER",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "TARİKATÇI"
+    ],
+    "supertype": "",
+    "type": "Büyü",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06NX020T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06NX020.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06NX020-full.png"
+      }
+    ],
+    "regions": [
+      "Noxus"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "<link=vocab.Equip><style=Vocab>Kuşandığımda</style></link>, kendi Nexus'una 1 hasar verirsin. \r\n8 mana harcayarak beni <link=card.unit><style=AssociatedCard>Zuretta'lı Naganeka</style></link> olarak oynayabilirsin.",
+    "descriptionRaw": "Kuşandığımda, kendi Nexus'una 1 hasar verirsin. \r\n8 mana harcayarak beni Zuretta'lı Naganeka olarak oynayabilirsin.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Doğu Valoran'ın çorak bozkırları, Noxii halkını beslemek ve barındırmak için uygun değildi. Ancak aradan geçen asırlarda büyümeye aç, yeni bir imparatorluk kurulmuştu. Boş araziler yeni tarım tekniklerinin kullanılmasıyla bereketlenirken, vakti zamanında güvende kalması için buralara gömülen silahlar bir kez daha gün yüzü görmüş oldu.",
+    "artistName": "Kudos Productions",
+    "name": "Darkin Balistası",
+    "cardCode": "06NX020",
+    "keywords": [
+      "Ekipman"
+    ],
+    "keywordRefs": [
+      "Equipment"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "DESTANSI",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "DARKİN"
+    ],
+    "supertype": "",
+    "type": "Ekipman",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06NX020T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06NX020T1-full.png"
+      }
+    ],
+    "regions": [
+      "Noxus"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 5,
+    "cost": 8,
+    "health": 13,
+    "description": "<link=vocab.RoundEnd><style=Vocab>Tur Sonu</style></link>: <link=vocab.Strongest><style=Vocab>En Güçlü</style></link> düşman ve ben birbirimize <link=vocab.Strike><style=Vocab>vururuz</style></link>.",
+    "descriptionRaw": "Tur Sonu: En Güçlü düşman ve ben birbirimize vururuz.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Kadim kasları bir kez daha gerindi. Savaşçı, generalin çağrısını duymuştu. Tam olarak nereye gitmesi gerektiğini biliyordu. Güneye, bir zamanlar Icathia olarak bildiği diyara.",
+    "artistName": "Kudos Productions",
+    "name": "Zuretta'lı Naganeka",
+    "cardCode": "06NX020T1",
+    "keywords": [
+      "Aban"
+    ],
+    "keywordRefs": [
+      "Overwhelm"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Yok",
+    "rarityRef": "None",
+    "subtypes": [
+      "DARKİN"
+    ],
+    "supertype": "",
+    "type": "Birim",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06NX034.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06NX034-full.png"
+      }
+    ],
+    "regions": [
+      "Noxus"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 4,
+    "health": 0,
+    "description": "<link=vocab.Equip><style=Vocab>Kuşanmış</style></link> bir dost birim bir düşmana <link=vocab.Strike><style=Vocab>vurur</style></link>.",
+    "descriptionRaw": "Kuşanmış bir dost birim bir düşmana vurur.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''Kan kardeşim, yine beraberiz!''<br>- Noxus Kaçkını",
+    "artistName": "Kudos Productions",
+    "name": "Gözü Dönmüş Savaşçı",
+    "cardCode": "06NX034",
+    "keywords": [
+      "Hızlı"
+    ],
+    "keywordRefs": [
+      "Fast"
+    ],
+    "spellSpeed": "Hızlı",
+    "spellSpeedRef": "Fast",
+    "rarity": "ENDER",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "TARİKATÇI"
+    ],
+    "supertype": "",
+    "type": "Büyü",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "01IO013"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06IO025.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06IO025-full.png"
+      }
+    ],
+    "regions": [
+      "Ionia"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 3,
+    "cost": 3,
+    "health": 2,
+    "description": "Bu oyunda bir dost birimi <link=vocab.Equip><style=Vocab>Kuşattığında</style></link>, elinde bir <link=card.summon><style=AssociatedCard>Gölge Canavar</style></link> oluşur.",
+    "descriptionRaw": "Bu oyunda bir dost birimi Kuşattığında, elinde bir Gölge Canavar oluşur.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Karanlıkta onu gördü. Gölgeleri delip geçecek bir silah. İşte tam o anda, onu çağıran sesi duydu. Uzaktan geliyordu ancak kudretliydi. Kayn'e ulaşıncaya dek sesin peşine takıldı, sözlerinin gerçekliği ona rehberlik etti.",
+    "artistName": "Kudos Productions",
+    "name": "Gölgekılıç Tutkunu",
+    "cardCode": "06IO025",
+    "keywords": [
+      "İlk Saldırı"
+    ],
+    "keywordRefs": [
+      "QuickStrike"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "YAYGIN",
+    "rarityRef": "Common",
+    "subtypes": [
+      "TARİKATÇI"
+    ],
+    "supertype": "",
+    "type": "Birim",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06IO030.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06IO030-full.png"
+      }
+    ],
+    "regions": [
+      "Ionia"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "Çağrıldığımda bir ekipman çekersin.\r\nHer tur ekipmanı olmayan bir dost birim ilk kez <link=vocab.Equip><style=Vocab>Kuşandığında</style></link>, 1 büyü manası doldurursun ve ona +1|+0 kazandırırsın.",
+    "descriptionRaw": "Çağrıldığımda bir ekipman çekersin.\r\nHer tur ekipmanı olmayan bir dost birim ilk kez Kuşandığında, 1 büyü manası doldurursun ve ona +1|+0 kazandırırsın.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''Puslubayır kutsal bir mekândır. Bu kılıçlar asırlardır burada duruyor... Ve ben, kabzasında bir şiirle buraya bırakılan tüm kılıçların, kayıp savaşçıların ruhunu çağıracağına ve bu ruhların kılıca lütuflarını bahşedeceğine inanıyorum.''\n- Doran'ın Öğrencisi, el yazması parşömenden",
+    "artistName": "Polar Engine",
+    "name": "Puslubayır",
+    "cardCode": "06IO030",
+    "keywords": [
+      "Yer"
+    ],
+    "keywordRefs": [
+      "LandmarkVisualOnly"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ENDER",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Yer",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06NX019.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06NX019-full.png"
+      }
+    ],
+    "regions": [
+      "Noxus"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 2,
+    "cost": 4,
+    "health": 4,
+    "description": " <link=vocab.Attack><style=Vocab>Saldır</style></link>: Güç değerim bu tur <link=vocab.Strongest><style=Vocab>En Güçlü</style></link> <link=vocab.Equip><style=Vocab>Kuşanmış</style></link> dost birime denk olur.",
+    "descriptionRaw": " Saldır: Güç değerim bu tur En Güçlü Kuşanmış dost birime denk olur.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''Yine rüyalar görmeye başladım, karanlıkta yine o sesi duyuyorum. On yıl oldu... İmparatorluğun sadık köpeği olarak harcadığım koskoca on yıl. Şuraya git. Şunu öldür. Peki ne için? Noxus'un zaferi için mi? Zafer dediğin yalandan ibaret, benim de inandığım bir yalan. Ama artık buraya kadar. Kayn bana başka bir yol öğretti, intikamdan geçen bir yol.''\n- Kasap Royce'un günlüğünden",
+    "artistName": "Kudos Productions",
+    "name": "Noxus Kaçkını",
+    "cardCode": "06NX019",
+    "keywords": [
+      "İlk Saldırı"
+    ],
+    "keywordRefs": [
+      "QuickStrike"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "YAYGIN",
+    "rarityRef": "Common",
+    "subtypes": [
+      "TARİKATÇI"
+    ],
+    "supertype": "",
+    "type": "Birim",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06PZ033.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06PZ033-full.png"
+      }
+    ],
+    "regions": [
+      "Piltover ve Zaun"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "Büyülerin ve yeteneklerin fazladan 1 hasar verir.",
+    "descriptionRaw": "Büyülerin ve yeteneklerin fazladan 1 hasar verir.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''Konum: 3. Sektör, 19B Yolu\nTür: Yasadışı Ateşli Silah\nNotlar: Aydınkuyu Operasyonu'nda el konuldu. Tehlikeli bir silah. Taşınırken çok dikkatli olunmalı.''\n- Bir Piltover Muhafızının saha raporundan",
+    "artistName": "Kudos Productions",
+    "name": "Delmelendirici Sürüm 1.0",
+    "cardCode": "06PZ033",
+    "keywords": [
+      "Ekipman"
+    ],
+    "keywordRefs": [
+      "Equipment"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "YAYGIN",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Ekipman",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06BW042.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06BW042-full.png"
+      }
+    ],
+    "regions": [
+      "Bilgewater"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 5,
+    "health": 0,
+    "description": "Bir birime 2 hasar verirsin. Sonraki <link=vocab.RoundStart><style=Vocab>Tur Başında</style></link> verilen her hasar için 1 kart çekersin ve bu kartlara <link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>Geçici</style></link> verirsin.",
+    "descriptionRaw": "Bir birime 2 hasar verirsin. Sonraki Tur Başında verilen her hasar için 1 kart çekersin ve bu kartlara Geçici verirsin.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''Merak etme, patlamayı Rex halledecek. Ben de hazineyle ilgileneceğim. Rex'in payıyla da ben ilgilenirim, yine topa koyup havaya uçurmaya kalkmasın. Ortalık batmasın diye söylüyorum canım.''<br>- Gemi Astsubayı",
+    "artistName": "Kudos Productions",
+    "name": "Dolu Gemi",
+    "cardCode": "06BW042",
+    "keywords": [
+      "Hızlı"
+    ],
+    "keywordRefs": [
+      "Fast"
+    ],
+    "spellSpeed": "Hızlı",
+    "spellSpeedRef": "Fast",
+    "rarity": "DESTANSI",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Büyü",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06PZ034.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06PZ034-full.png"
+      }
+    ],
+    "regions": [
+      "Piltover ve Zaun"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 0,
+    "cost": 6,
+    "health": 0,
+    "description": "Bir birime 5 hasar verirsin. Öldürürsem <link=keyword.Obliterate><style=Keyword>Kökünü Kazırsın</style></link>.",
+    "descriptionRaw": "Bir birime 5 hasar verirsin. Öldürürsem Kökünü Kazırsın.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Bazı yaratıkları öldürmek yetmez.",
+    "artistName": "Kudos Productions",
+    "name": "Hextech Yok Edici",
+    "cardCode": "06PZ034",
+    "keywords": [
+      "Hızlı"
+    ],
+    "keywordRefs": [
+      "Fast"
+    ],
+    "spellSpeed": "Hızlı",
+    "spellSpeedRef": "Fast",
+    "rarity": "ENDER",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Büyü",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06DE033.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06DE033-full.png"
+      }
+    ],
+    "regions": [
+      "Demacia"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "Bir birimin ekipmanını yok edersin ve bu birim bir takipçiyse, onu <link=vocab.Silence><style=Vocab>Susturursun</style></link>.",
+    "descriptionRaw": "Bir birimin ekipmanını yok edersin ve bu birim bir takipçiyse, onu Susturursun.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''Kendin kaşındın.''<br>- Sihir Avcısı Lideri Lord Eldred",
+    "artistName": "Kudos Productions",
+    "name": "Sustur ve Bastır",
+    "cardCode": "06DE033",
+    "keywords": [
+      "Yavaş"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "Yavaş",
+    "spellSpeedRef": "Slow",
+    "rarity": "ENDER",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Büyü",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06IO031.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06IO031-full.png"
+      }
+    ],
+    "regions": [
+      "Ionia"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 0,
+    "cost": 4,
+    "health": 0,
+    "description": "<link=vocab.Flow><style=Vocab>Akış</style></link>: Bedelim 2 azalır.",
+    "descriptionRaw": "Akış: Bedelim 2 azalır.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''Kılıç ve beden.''<br>- Master Yi",
+    "artistName": "Kudos Productions",
+    "name": "Ruh Kılıcı",
+    "cardCode": "06IO031",
+    "keywords": [
+      "Ekipman",
+      "Akış"
+    ],
+    "keywordRefs": [
+      "Equipment",
+      "Flow"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "YAYGIN",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Ekipman",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06IO001T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06IO001.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06IO001-full.png"
+      }
+    ],
+    "regions": [
+      "Ionia"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 2,
+    "description": "Çağrıldığımda, elinde bir <link=card.create><style=AssociatedCard>Hazırlık</style></link> oluşur.",
+    "descriptionRaw": "Çağrıldığımda, elinde bir Hazırlık oluşur.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''Bu kutsal sanatı devam ettirmek için öğrenmem gereken her şeyi öğrendim. Tıpkı Doran gibi. Tıpkı onun ustası ve onun ustası gibi... Ruhları çekicime rehberlik etsin.''<br>- Doran'ın Öğrencisi, el yazması parşömenden",
+    "artistName": "Polar Engine",
+    "name": "Doran'ın Öğrencisi",
+    "cardCode": "06IO001",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "YAYGIN",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Birim",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06IO001T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06IO001T1-full.png"
+      }
+    ],
+    "regions": [
+      "Ionia"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "Elindeki bir büyünün bedeli 1 azalır.",
+    "descriptionRaw": "Elindeki bir büyünün bedeli 1 azalır.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''Bir savaşçı, ancak hazır olduğu kadar ehildir.''\n- Wuju nasihati",
+    "artistName": "Kudos Productions",
+    "name": "Hazırlık",
+    "cardCode": "06IO001T1",
+    "keywords": [
+      "Odaklama"
+    ],
+    "keywordRefs": [
+      "Focus"
+    ],
+    "spellSpeed": "Anlık",
+    "spellSpeedRef": "Burst",
+    "rarity": "Yok",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Büyü",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06IO014T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06IO014.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06IO014-full.png"
+      }
+    ],
+    "regions": [
+      "Ionia"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 1,
+    "cost": 1,
+    "health": 1,
+    "description": "<link=vocab.NexusStrike><style=Vocab>Nexus Vuruşu</style></link>: Beni Geri Gönderirsin ve <link=card.spell><style=AssociatedCard>Shimon Rüzgârı</style></link> kartına dönüştürürsün.",
+    "descriptionRaw": "Nexus Vuruşu: Beni Geri Gönderirsin ve Shimon Rüzgârı kartına dönüştürürsün.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Düşmanlar tapınağa doğru akın akın ilerlerken Ting sırıtıyordu. Kendini gösterme fırsatı ayağına gelmişti! Önce Wukong, sonra Yi... İkisi de yeteneklerini göz ardı etmişti. Diğerleri ''ustalarını'' bulmak için koşuşup dururken o hazırdı. O, Shimon Rüzgârı'ydı. ",
+    "artistName": "Polar Engine",
+    "name": "Vastaya Öğrenci",
+    "cardCode": "06IO014",
+    "keywords": [
+      "Sıyrılgan"
+    ],
+    "keywordRefs": [
+      "Elusive"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "DESTANSI",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Birim",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06IO014"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06IO014T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06IO014T1-full.png"
+      }
+    ],
+    "regions": [
+      "Ionia"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "Bir <link=card.parentRef><style=AssociatedCard>Vastaya Öğrenci</style></link> çağırırsın ve 1 kart çekersin.",
+    "descriptionRaw": "Bir Vastaya Öğrenci çağırırsın ve 1 kart çekersin.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''Fiyuu!''<br>- Shimon Rüzgârı Ting",
+    "artistName": "Kudos Productions",
+    "name": "Shimon Rüzgârı",
+    "cardCode": "06IO014T1",
+    "keywords": [
+      "Anlık"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Anlık",
+    "spellSpeedRef": "Burst",
+    "rarity": "DESTANSI",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Büyü",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06IO011.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06IO011-full.png"
+      }
+    ],
+    "regions": [
+      "Ionia"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 4,
+    "cost": 3,
+    "health": 3,
+    "description": "İlk kez <link=vocab.Equip><style=Vocab>Kuşandığımda</style></link>, bana bu tur <link=keyword.Barrier><sprite name=Barrier><style=Keyword>Bariyer</style></link> ve <link=keyword.Lifesteal><sprite name=Lifesteal><style=Keyword>Can Çalma</style></link> verirsin.",
+    "descriptionRaw": "İlk kez Kuşandığımda, bana bu tur Bariyer ve Can Çalma verirsin.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Yi'nin işaretiyle Jun ardı ardına, ancak Yi'nin başarabileceği kadar isabetli ataklar yapmaya başladı. Yi ataklardan ustaca kurtulmayı başardı tabii, ardından kızın önünde gururlu bir gülümsemeyle eğildi.",
+    "artistName": "Kudos Productions",
+    "name": "Mucize Jun",
+    "cardCode": "06IO011",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ENDER",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Birim",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06IO013T1",
+      "06IO008T1",
+      "06IO008T2"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06IO008.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06IO008-full.png"
+      }
+    ],
+    "regions": [
+      "Ionia"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 2,
+    "cost": 3,
+    "health": 3,
+    "description": "<link=vocab.RoundStart><style=Vocab>Tur Başı</style></link>: Elindeki bir büyünün bedeli bu tur 1 azalır ve<br><link=vocab.Flow><style=Vocab>Akış</style></link>: <link=vocab.Everywhere><style=Vocab>Her Yerdeki</style></link> tüm dost <link=card.selfRef><style=AssociatedCard>Master Yi</style></link> kartlarına +2|+0 kazandırırsın.",
+    "descriptionRaw": "Tur Başı: Elindeki bir büyünün bedeli bu tur 1 azalır veAkış: Her Yerdeki tüm dost Master Yi kartlarına +2|+0 kazandırırsın.",
+    "levelupDescription": "12+ hasar verdiğimde<style=Variable></style>. ",
+    "levelupDescriptionRaw": "12+ hasar verdiğimde. ",
+    "flavorText": "Master Yi'nin aklı o darkin silahındaydı. Keşfedildiğinden beri içinde kötü bir şeyler olacağına dair bir his vardı. Öğrencilerinden bazıları silahla yakından ilgileniyordu, biraz fazla yakından. O da kıvrık kılıçları tapınağın derinliklerinde koruma altına aldı. Biraz çabalayarak bu düşünceleri zihninden atmayı başardı ve meditasyonuna devam etti. Wuju öğretilerini aktarmaktan önemli hiçbir şey yoktu ve Jun büyük umut vaat ediyordu.",
+    "artistName": "Kudos Productions",
+    "name": "Master Yi",
+    "cardCode": "06IO008",
+    "keywords": [
+      "İlk Saldırı",
+      "Akış"
+    ],
+    "keywordRefs": [
+      "QuickStrike",
+      "Flow"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Şampiyon",
+    "rarityRef": "Champion",
+    "subtypes": [],
+    "supertype": "Şampiyon",
+    "type": "Birim",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06IO013T1",
+      "06IO008T2",
+      "06IO008"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06IO008T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06IO008T1-full.png"
+      }
+    ],
+    "regions": [
+      "Ionia"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 3,
+    "cost": 3,
+    "health": 4,
+    "description": "<link=vocab.Attack><style=Vocab>Saldır</style></link>: En Güçsüz düşmana hemen vururum. \r\n<link=vocab.RoundStart><style=Vocab>Tur Başı</style></link>: Elindeki bir büyünün bedeli bu tur 1 azalır ve <link=vocab.Flow><style=Vocab>Akış</style></link>: <link=vocab.Everywhere><style=Vocab>Her Yerdeki</style></link> tüm dost <link=card.selfRef><style=AssociatedCard>Master Yi</style></link> kartlarına +2|+0 kazandırırsın.",
+    "descriptionRaw": "Saldır: En Güçsüz düşmana hemen vururum. \r\nTur Başı: Elindeki bir büyünün bedeli bu tur 1 azalır ve Akış: Her Yerdeki tüm dost Master Yi kartlarına +2|+0 kazandırırsın.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Yi, gözünün ucuyla çeliğin ışıltısını gördü ve cansız bir bedenin küt diye yere düştüğünü duydu. Bu, o olabilir miydi? Yi, öğrencilerini nasıl böyle yüzüstü bırakabildiğini düşündü. Eğitimleri tamamlanmamıştı, henüz hazır değillerdi. Ama o bir Wuju ustasıydı. Günün kazananının utanç ya da karanlık olmasına izin veremezdi. ",
+    "artistName": "Kudos Productions",
+    "name": "Master Yi",
+    "cardCode": "06IO008T1",
+    "keywords": [
+      "İlk Saldırı",
+      "Akış"
+    ],
+    "keywordRefs": [
+      "QuickStrike",
+      "Flow"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Yok",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "Şampiyon",
+    "type": "Birim",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06IO013T1",
+      "06IO008T1",
+      "06IO008"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06IO008T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06IO008T2-full.png"
+      }
+    ],
+    "regions": [
+      "Ionia"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "Bir dost birime bu tur +2|+0 verirsin.\r\nElinde bir <link=card.create><style=AssociatedCard>Meditasyon</style></link> oluşur. Destende bir <link=card.level1><style=AssociatedCard>Master Yi</style></link> oluşur.",
+    "descriptionRaw": "Bir dost birime bu tur +2|+0 verirsin.\r\nElinde bir Meditasyon oluşur. Destende bir Master Yi oluşur.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''Pek çok kesikten biri.''\n- Master Yi",
+    "artistName": "Kudos Productions",
+    "name": "Master Yi Wuju Stili",
+    "cardCode": "06IO008T2",
+    "keywords": [
+      "Anlık"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Anlık",
+    "spellSpeedRef": "Burst",
+    "rarity": "Yok",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Büyü",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06IO013T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06IO013.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06IO013-full.png"
+      }
+    ],
+    "regions": [
+      "Ionia"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "Bir dost birime bu tur +2|+0 verirsin.\r\nElinde bir <link=card.create><style=AssociatedCard>Meditasyon</style></link> oluşur.",
+    "descriptionRaw": "Bir dost birime bu tur +2|+0 verirsin.\r\nElinde bir Meditasyon oluşur.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''Pek çok kesikten biri.''\n- Master Yi",
+    "artistName": "Kudos Productions",
+    "name": "Wuju Stili",
+    "cardCode": "06IO013",
+    "keywords": [
+      "Anlık"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Anlık",
+    "spellSpeedRef": "Burst",
+    "rarity": "ENDER",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Büyü",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06IO013T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06IO013T1-full.png"
+      }
+    ],
+    "regions": [
+      "Ionia"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "Bir dost birime bu tur +0|+2 verirsin.",
+    "descriptionRaw": "Bir dost birime bu tur +0|+2 verirsin.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''Gücünü doğru yönlendir.''<br>- Master Yi",
+    "artistName": "Kudos Productions",
+    "name": "Meditasyon",
+    "cardCode": "06IO013T1",
+    "keywords": [
+      "Geçici",
+      "Anlık"
+    ],
+    "keywordRefs": [
+      "Fleeting",
+      "Burst"
+    ],
+    "spellSpeed": "Anlık",
+    "spellSpeedRef": "Burst",
+    "rarity": "Yok",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Büyü",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06BC033.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06BC033-full.png"
+      }
+    ],
+    "regions": [
+      "Bandle Şehri"
+    ],
+    "regionRefs": [
+      "BandleCity"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "Oynamak için 1 kart atarsın.",
+    "descriptionRaw": "Oynamak için 1 kart atarsın.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''İşte! Bu boks eldivenini batmış bir geminin kalıntıları arasından çekip aldım. Yayları, Zaun dedikleri şehrin derinliklerinde buldum ve gerekli metali Demacia ocaklarından elde ettim! Bu, dünyanın bize sunduğu nimetlerin bir ürünü!''<br>- Muhteşem Paparo",
+    "artistName": "Kudos Productions",
+    "name": "Meka Ezici",
+    "cardCode": "06BC033",
+    "keywords": [
+      "Ekipman"
+    ],
+    "keywordRefs": [
+      "Equipment"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "YAYGIN",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Ekipman",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "01PZ002"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06PZ040.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06PZ040-full.png"
+      }
+    ],
+    "regions": [
+      "Piltover ve Zaun"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 0,
+    "cost": 6,
+    "health": 0,
+    "description": "Çağrıldığımda bir <link=card.summon><style=AssociatedCard>Leş Barın Sahibi</style></link> çağırırsın.\r\nYeni kartlarının bedeli 1 azalır.",
+    "descriptionRaw": "Çağrıldığımda bir Leş Barın Sahibi çağırırsın.\r\nYeni kartlarının bedeli 1 azalır.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Barın sahibi, son bardağı da kuruladıktan sonra mekânına şöyle bir göz gezdirdi. İşte tam burası, evi evi güzel evi, sayısız yabancıyla dost oluşuna tanıklık etmişti. Duvarları, çılgın gecelerin anısına çizimler ve çentiklerle doluydu. Kendi kendine gülümsedi. Mükemmel bir yer olmasa da eviydi işte.",
+    "artistName": "Kudos Productions",
+    "name": "Leş Bar",
+    "cardCode": "06PZ040",
+    "keywords": [
+      "Yer",
+      "Missing Translation"
+    ],
+    "keywordRefs": [
+      "LandmarkVisualOnly",
+      "AuraVisualFakeKeyword"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "DESTANSI",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Yer",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06MT006T2"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06MT006.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06MT006-full.png"
+      }
+    ],
+    "regions": [
+      "Targon"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "<link=keyword.Support><style=Keyword>Destekle</style></link>: Desteklediğim dost birim +1|+1 kazanır.\r\n8 mana harcayarak beni <link=card.unit><style=AssociatedCard>Horazi</style></link> olarak oynayabilirsin.",
+    "descriptionRaw": "Destekle: Desteklediğim dost birim +1|+1 kazanır.\r\n8 mana harcayarak beni Horazi olarak oynayabilirsin.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Belki de Darkin'i tutsak edenler, efsanevi savaşçı Horazi'yi yıldız metalinden bir kürenin içine hapsetmenin, onun hiddetli iradesini kırmakta yeterli olacağını düşünmüşlerdi. Ama generali harekete geçtiğinde, Horazi de aynı şeyi yaptı. Targon'un kadim koruyucularının bile uzaklardan fısıldanan vaatlerle cezbedilebileceğinin farkına varmıştı.",
+    "artistName": "Kudos Productions",
+    "name": "Darkin Mıknatısı",
+    "cardCode": "06MT006",
+    "keywords": [
+      "Ekipman",
+      "Destekle"
+    ],
+    "keywordRefs": [
+      "Equipment",
+      "Support"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "DESTANSI",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "DARKİN"
+    ],
+    "supertype": "",
+    "type": "Ekipman",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06MT006T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06MT006T2-full.png"
+      }
+    ],
+    "regions": [
+      "Targon"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 7,
+    "cost": 8,
+    "health": 7,
+    "description": "<link=keyword.Support><style=Keyword>Destekle</style></link>: Desteklediğim dost birimin nitelikleri benimkine denk olur. Bu tur ona faydalı tesirlerimi verirsin.",
+    "descriptionRaw": "Destekle: Desteklediğim dost birimin nitelikleri benimkine denk olur. Bu tur ona faydalı tesirlerimi verirsin.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Kendisini esir tutan semavi madde cayır cayır yanarken Horazi'nin ufku genişlemişti. Kâinatın sırları bir an için gözlerinin önüne serilmiş, varoluşundan önce ve sonra gelen sonsuz zamanın gizemlerini görmüştü. Öğrendiği onca şeye rağmen ödlek Xolaani'ye duyduğu nefrette gıdım azalma olmamıştı.",
+    "artistName": "Kudos Productions",
+    "name": "Horazi",
+    "cardCode": "06MT006T2",
+    "keywords": [
+      "Büyü Kalkanı",
+      "Destekle"
+    ],
+    "keywordRefs": [
+      "SpellShield",
+      "Support"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Yok",
+    "rarityRef": "None",
+    "subtypes": [
+      "DARKİN"
+    ],
+    "supertype": "",
+    "type": "Birim",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06MT037T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06MT037.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06MT037-full.png"
+      }
+    ],
+    "regions": [
+      "Targon"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "Bir dost birimin <link=keyword.Obliterate><style=Keyword>Kökünü Kazırsın</style></link> ve o birimin niteliklerine sahip bir <link=card.create><style=AssociatedCard>Yozlaşmış Suret</style></link> oluşturursun.",
+    "descriptionRaw": "Bir dost birimin Kökünü Kazırsın ve o birimin niteliklerine sahip bir Yozlaşmış Suret oluşturursun.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Bu silahlara gömülü düşmüş ilah savaşçıları ortadan kaldırmak imkânsıza yakındı. Bu yüzden bunun yerine silahlara hapsedildiler.",
+    "artistName": "Kudos Productions",
+    "name": "Çelik Mühür",
+    "cardCode": "06MT037",
+    "keywords": [
+      "Hızlı"
+    ],
+    "keywordRefs": [
+      "Fast"
+    ],
+    "spellSpeed": "Hızlı",
+    "spellSpeedRef": "Fast",
+    "rarity": "ENDER",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Büyü",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06MT037T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06MT037T1-full.png"
+      }
+    ],
+    "regions": [
+      "Targon"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "",
+    "descriptionRaw": "",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Darkinler taşıdıkları silahlara gömülürken görünüşleri yavaşça değişmeye başladı, ta ki eski hallerinden eser kalmayıncaya dek.",
+    "artistName": "Kudos Productions",
+    "name": "Yozlaşmış Suret",
+    "cardCode": "06MT037T1",
+    "keywords": [
+      "Ekipman"
+    ],
+    "keywordRefs": [
+      "Equipment"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Yok",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Ekipman",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06BC015"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06BC015T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06BC015T3-full.png"
+      }
+    ],
+    "regions": [
+      "Bandle Şehri"
+    ],
+    "regionRefs": [
+      "BandleCity"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "Bedeli 2 ya da 3 olan rasgele bir takipçi çağırırsın. Tahtan doluysa, bunun yerine elinde bedeli 0 olan <link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>Geçici</style></link> bir kopyası oluşur.",
+    "descriptionRaw": "Bedeli 2 ya da 3 olan rasgele bir takipçi çağırırsın. Tahtan doluysa, bunun yerine elinde bedeli 0 olan Geçici bir kopyası oluşur.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Bir gizemli geçit daha... Acaba bu nereye çıkıyor?",
+    "artistName": "Kudos Productions",
+    "name": "Gizemli Geçit",
+    "cardCode": "06BC015T3",
+    "keywords": [
+      "Lütuf"
+    ],
+    "keywordRefs": [
+      "Boon"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Yok",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Tuzak",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06BC015T3",
+      "06RU001T3"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06BC011.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06BC011-full.png"
+      }
+    ],
+    "regions": [
+      "Bandle Şehri"
+    ],
+    "regionRefs": [
+      "BandleCity"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "Destenin en üstündeki 4 kart arasına rasgele 1 tane <link=card.portal><style=AssociatedCard>Gizemli Geçit</style></link> koyarsın ve destendeki rasgele kartlara 3 tane <link=card.chime><style=AssociatedCard>Tını</style></link> koyarsın.",
+    "descriptionRaw": "Destenin en üstündeki 4 kart arasına rasgele 1 tane Gizemli Geçit koyarsın ve destendeki rasgele kartlara 3 tane Tını koyarsın.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Farklı farklı âlemlerde diyar diyar gezinen Bard, büyük bir çatışmanın yaklaştığını hissediyor. Yaşamın bütün şarkılarını susturabilecek bir çatışma.",
+    "artistName": "Kudos Productions",
+    "name": "Sihirli Yolculuk",
+    "cardCode": "06BC011",
+    "keywords": [
+      "Anlık"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Anlık",
+    "spellSpeedRef": "Burst",
+    "rarity": "YAYGIN",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Büyü",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06BC020.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06BC020-full.png"
+      }
+    ],
+    "regions": [
+      "Bandle Şehri"
+    ],
+    "regionRefs": [
+      "BandleCity"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "Bu tur etkinleşen her tuzağın ya da lütfun için bana +1|+0 verirsin. ",
+    "descriptionRaw": "Bu tur etkinleşen her tuzağın ya da lütfun için bana +1|+0 verirsin. ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Sihirli kâğıt katlama sanatı ortaya bazen olağanüstü sonuçlar çıkarabilir. Bu sanatta, yeni bir esere imza atma niyeti kadar, eserin şekillendirilme arzusu da önemlidir.",
+    "artistName": "Kudos Productions",
+    "name": "Origami Dilimleyici",
+    "cardCode": "06BC020",
+    "keywords": [
+      "Ekipman"
+    ],
+    "keywordRefs": [
+      "Equipment"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ENDER",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Ekipman",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06BC015T3"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06BC019.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06BC019-full.png"
+      }
+    ],
+    "regions": [
+      "Bandle Şehri"
+    ],
+    "regionRefs": [
+      "BandleCity"
+    ],
+    "attack": 3,
+    "cost": 3,
+    "health": 1,
+    "description": "Çağrıldığımda, destenin en üstündeki 4 kart arasına rasgele 1 tane <link=card.portal><style=AssociatedCard>Gizemli Geçit</style></link> koyarsın.",
+    "descriptionRaw": "Çağrıldığımda, destenin en üstündeki 4 kart arasına rasgele 1 tane Gizemli Geçit koyarsın.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Ashane, Âlemin Ucu'nda kaybolmadan önce herkesçe tanınan bir çaycıydı. Bir gün yeni tatlar bulmaya çalışırken karışmaması gereken iki yaprağın bir araya gelmesi, onun derin bir uykuya dalmasına sebep oldu. Tuhaf varlıklarla ve acayip yapılarla dolu, sanki sonsuz bir ufka doğru uzanıyormuş gibi görünen diyarlarla ilgili acayip rüyalar gördü. Ancak uyandığında, bunların rüya olmadığını fark etti.",
+    "artistName": "Caravan Studio",
+    "name": "Çaycı",
+    "cardCode": "06BC019",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "YAYGIN",
+    "rarityRef": "Common",
+    "subtypes": [
+      "PERİ"
+    ],
+    "supertype": "",
+    "type": "Birim",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06BC015T3"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06BC021.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06BC021-full.png"
+      }
+    ],
+    "regions": [
+      "Bandle Şehri"
+    ],
+    "regionRefs": [
+      "BandleCity"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 2,
+    "description": "<link=keyword.Last Breath><sprite name=LastBreath><style=Keyword>Son Nefes</style></link>: Destenin en üstündeki 4 kart arasına rasgele 1 tane <link=card.portal><style=AssociatedCard>Gizemli Geçit</style></link> koyarsın.",
+    "descriptionRaw": "Son Nefes: Destenin en üstündeki 4 kart arasına rasgele 1 tane Gizemli Geçit koyarsın.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Doğalı henüz bir gün olmuştu ama Norra'nın şefkatle Muhteşem adını verdiği varlık, ona büyük bir şevkle asistanlık ediyordu. Ancak kendisinden ''çöp'' değil de ''hurda'' olarak bahsedilmesi konusunda ısrarcıydı. Öbür türlüsü hakaret sayılırdı çünkü.",
+    "artistName": "Caravan Studio",
+    "name": "Toplama Hurda",
+    "cardCode": "06BC021",
+    "keywords": [
+      "Son Nefes"
+    ],
+    "keywordRefs": [
+      "LastBreath"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "YAYGIN",
+    "rarityRef": "Common",
+    "subtypes": [
+      "PERİ"
+    ],
+    "supertype": "",
+    "type": "Birim",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06BC015T3",
+      "06BC015T1",
+      "06BC015T2"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06BC015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06BC015-full.png"
+      }
+    ],
+    "regions": [
+      "Bandle Şehri"
+    ],
+    "regionRefs": [
+      "BandleCity"
+    ],
+    "attack": 1,
+    "cost": 2,
+    "health": 2,
+    "description": "<link=vocab.NexusStrike><style=Vocab>Nexus Vuruşu</style></link>: Destenin en üstündeki 4 kart arasına rasgele 1 tane <link=card.portal><style=AssociatedCard>Gizemli Geçit</style></link> koyarsın.",
+    "descriptionRaw": "Nexus Vuruşu: Destenin en üstündeki 4 kart arasına rasgele 1 tane Gizemli Geçit koyarsın.",
+    "levelupDescription": "6+ oluşturulmuş dost birim çağırdığında<style=Variable></style>.",
+    "levelupDescriptionRaw": "6+ oluşturulmuş dost birim çağırdığında.",
+    "flavorText": "Norra, evini bir an olsun aklından çıkarmadan hızla çalışıyordu. Geçit işi ziyadesiyle çetrefilli bir işti ve o daha günün ilk çayını bile içmemişti. Ama Norra zorlu bulmacaları severdi, özellikle de bulmacanın cevabı zamanın ve mekânın arasında sıkışmış bu cep evrenlerden kurtulmasını sağlayacaksa. Canından çok sevdiği kedisini düşünerek daha hızlı çalışmaya koyuldu. Acaba kedisi korkuyor muydu? Akşam yemeğinde ne yiyecekti?",
+    "artistName": "Caravan Studio",
+    "name": "Norra",
+    "cardCode": "06BC015",
+    "keywords": [
+      "Sıyrılgan"
+    ],
+    "keywordRefs": [
+      "Elusive"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Şampiyon",
+    "rarityRef": "Champion",
+    "subtypes": [
+      "YORDLE"
+    ],
+    "supertype": "Şampiyon",
+    "type": "Birim",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06BC015T3",
+      "06BC015T1",
+      "06BC015"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06BC015T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06BC015T2-full.png"
+      }
+    ],
+    "regions": [
+      "Bandle Şehri"
+    ],
+    "regionRefs": [
+      "BandleCity"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 3,
+    "description": "<link=card.portal><style=AssociatedCard>Gizemli Geçit</style></link> kartın, bedeli 4, 5, 6 ya da 7 olan takipçiler çağırmaya başlar.\r\n<link=vocab.NexusStrike><style=Vocab>Nexus Vuruşu</style></link>: Destenin en üstündeki 4 kart arasına rasgele 1 tane <link=card.portal><style=AssociatedCard>Gizemli Geçit</style></link> koyarsın.",
+    "descriptionRaw": "Gizemli Geçit kartın, bedeli 4, 5, 6 ya da 7 olan takipçiler çağırmaya başlar.\r\nNexus Vuruşu: Destenin en üstündeki 4 kart arasına rasgele 1 tane Gizemli Geçit koyarsın.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Önce bir vızıltı, ardından bir çatırtı koptu. Totemin zamazingoları can bulup havaya savruldu. Bir ıvır dönmeye, bir zıvır parıldamaya başladı. Odanın içi gümbürtü ve patırtıyla dolarken tepede bir geçit belirdi. İçindeyse belli belirsiz bir kedi silueti görünüyordu. Norra cıyakladı, heyecandan çayını döktü. Eve dönüş yolunu bulmayı nihayet başarmış mıydı?",
+    "artistName": "Caravan Studio",
+    "name": "Norra",
+    "cardCode": "06BC015T2",
+    "keywords": [
+      "Sıyrılgan"
+    ],
+    "keywordRefs": [
+      "Elusive"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Yok",
+    "rarityRef": "None",
+    "subtypes": [
+      "YORDLE"
+    ],
+    "supertype": "Şampiyon",
+    "type": "Birim",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06BC015T3",
+      "06BC015",
+      "06BC015T2"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06BC015T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06BC015T1-full.png"
+      }
+    ],
+    "regions": [
+      "Bandle Şehri"
+    ],
+    "regionRefs": [
+      "BandleCity"
+    ],
+    "attack": 0,
+    "cost": 5,
+    "health": 0,
+    "description": "Destenin en üstündeki 4 kart arasına rasgele 2 tane <link=card.portal><style=AssociatedCard>Gizemli Geçit</style></link> koyarsın. 1 kart çekersin.\r\nDestende bir <link=card.level1><style=AssociatedCard>Norra</style></link> oluşur.",
+    "descriptionRaw": "Destenin en üstündeki 4 kart arasına rasgele 2 tane Gizemli Geçit koyarsın. 1 kart çekersin.\r\nDestende bir Norra oluşur.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''Alçak Yollar'ı daha sık kullanmaya başlamam gerek. Ama her seferinde dalgınlıktan kafamı çarpıyorum.''\n- Norra",
+    "artistName": "Kudos Productions",
+    "name": "Norra'nın Geçit Cümbüşü",
+    "cardCode": "06BC015T1",
+    "keywords": [
+      "Anlık"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Anlık",
+    "spellSpeedRef": "Burst",
+    "rarity": "Yok",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "Şampiyon",
+    "type": "Büyü",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06BC015T3"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06BC017.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06BC017-full.png"
+      }
+    ],
+    "regions": [
+      "Bandle Şehri"
+    ],
+    "regionRefs": [
+      "BandleCity"
+    ],
+    "attack": 0,
+    "cost": 5,
+    "health": 0,
+    "description": "Destenin en üstündeki 4 kart arasına rasgele 2 tane <link=card.portal><style=AssociatedCard>Gizemli Geçit</style></link> koyarsın. 1 kart çekersin.",
+    "descriptionRaw": "Destenin en üstündeki 4 kart arasına rasgele 2 tane Gizemli Geçit koyarsın. 1 kart çekersin.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''Alçak Yollar'ı daha sık kullanmaya başlamam gerek. Ama her seferinde dalgınlıktan kafamı çarpıyorum.''\n- Norra",
+    "artistName": "Kudos Productions",
+    "name": "Geçit Cümbüşü",
+    "cardCode": "06BC017",
+    "keywords": [
+      "Anlık"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Anlık",
+    "spellSpeedRef": "Burst",
+    "rarity": "ENDER",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Büyü",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06BC024.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06BC024-full.png"
+      }
+    ],
+    "regions": [
+      "Bandle Şehri"
+    ],
+    "regionRefs": [
+      "BandleCity"
+    ],
+    "attack": 4,
+    "cost": 6,
+    "health": 4,
+    "description": "Her tur, bir tuzağın ya da lütfun ilk kez etkinleştiğinde, tüm dost birimler bu tur +1|+1 ve <link=keyword.Impact><sprite name=Impact><style=Keyword>Ağır Darbe</style></link> alır.",
+    "descriptionRaw": "Her tur, bir tuzağın ya da lütfun ilk kez etkinleştiğinde, tüm dost birimler bu tur +1|+1 ve Ağır Darbe alır.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Gaspar, Âlemin Ucu'na ulaşan ilk yordle'dı. Uzun yıllar boyunca, hiçbir yere çıkmayan dolambaçlı yollarda ve geçitlerde bir başına gezindi durdu. Sonraları, aynı şeylerin kimsenin başına gelmesini istemediğini fark etti. Bu yüzden artık evine dönmeye çalışan diğer kayıp gezginlere yardım ediyor.",
+    "artistName": "Caravan Studio",
+    "name": "Âlemin Bakıcısı",
+    "cardCode": "06BC024",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ENDER",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "YORDLE"
+    ],
+    "supertype": "",
+    "type": "Birim",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06BC016.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06BC016-full.png"
+      }
+    ],
+    "regions": [
+      "Bandle Şehri"
+    ],
+    "regionRefs": [
+      "BandleCity"
+    ],
+    "attack": 4,
+    "cost": 5,
+    "health": 3,
+    "description": "Çağrıldığımda, bu tur bir tuzağın ya da lütfun etkinleştiyse 1 kart çekersin.",
+    "descriptionRaw": "Çağrıldığımda, bu tur bir tuzağın ya da lütfun etkinleştiyse 1 kart çekersin.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Sonsuz bilgiye sahip olmak görevi olduğundan olsa gerek, Âlemin Ucu'ndan geçen seyyahlardan koca koca kitaplar topluyor. Ne yazık ki edindiği her yeni bilgi kibrine kibir katıyor.",
+    "artistName": "Caravan Studio",
+    "name": "Yaşayan Kütüphane",
+    "cardCode": "06BC016",
+    "keywords": [
+      "Sıyrılgan"
+    ],
+    "keywordRefs": [
+      "Elusive"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "YAYGIN",
+    "rarityRef": "Common",
+    "subtypes": [
+      "PERİ"
+    ],
+    "supertype": "",
+    "type": "Birim",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06BC015T3",
+      "06RU001T3",
+      "05PZ008",
+      "01PZ022"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06BC032.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06BC032-full.png"
+      }
+    ],
+    "regions": [
+      "Bandle Şehri"
+    ],
+    "regionRefs": [
+      "BandleCity"
+    ],
+    "attack": 0,
+    "cost": 7,
+    "health": 0,
+    "description": "Her dost birim için, kendi destenin en üstündeki 10 kart arasına 1 tane <link=card.portal><style=AssociatedCard>Gizemli Geçit</style></link> ve 3 tane <link=card.chime><style=AssociatedCard>Tını</style></link> ve rakibin destesindeki rasgele kartlara 1 tane <link=card.flashbomb><style=AssociatedCard>Kör Edici Bomba Tuzağı</style></link> ve 3 tane <link=card.puffcap><style=AssociatedCard>Zehirli Pofkep Mantarı</style></link> koyarsın.",
+    "descriptionRaw": "Her dost birim için, kendi destenin en üstündeki 10 kart arasına 1 tane Gizemli Geçit ve 3 tane Tını ve rakibin destesindeki rasgele kartlara 1 tane Kör Edici Bomba Tuzağı ve 3 tane Zehirli Pofkep Mantarı koyarsın.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''Yer gök boyut geçidi.''\n- Norra",
+    "artistName": "Kudos Productions",
+    "name": "Derleme Koleksiyon",
+    "cardCode": "06BC032",
+    "keywords": [
+      "Anlık"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Anlık",
+    "spellSpeedRef": "Burst",
+    "rarity": "DESTANSI",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Büyü",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06RU010.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06RU010-full.png"
+      }
+    ],
+    "regions": [
+      "Runeterra"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "",
+    "descriptionRaw": "",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Pesh, Piltover'dan Bilgewater'a giderken yanına aldığı tek şey bu anahtardı. Öyle sihirli bir şey falan değil canım. Gerçi Pesh'i aleti kullanırken gören herkes anahtarda bir keramet olduğunu düşünüyor.",
+    "artistName": "Kudos Productions",
+    "name": "On-Ar 5000",
+    "cardCode": "06RU010",
+    "keywords": [
+      "Ekipman",
+      "İlk Saldırı"
+    ],
+    "keywordRefs": [
+      "Equipment",
+      "QuickStrike"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Yok",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Ekipman",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06RU012.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06RU012-full.png"
+      }
+    ],
+    "regions": [
+      "Runeterra"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "",
+    "descriptionRaw": "",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Güzel ama biraz acı.",
+    "artistName": "Kudos Productions",
+    "name": "Acıtan Kazan",
+    "cardCode": "06RU012",
+    "keywords": [
+      "Ekipman",
+      "Ağır Darbe"
+    ],
+    "keywordRefs": [
+      "Equipment",
+      "Impact"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Yok",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Ekipman",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06RU028.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06RU028-full.png"
+      }
+    ],
+    "regions": [
+      "Runeterra"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "",
+    "descriptionRaw": "",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Fireth'in başı her derde girdiğinde, ölümsüz koruyucusu kolyeden fırlıyor. Ama sonrasında olan bitene dair hiçbir şey hatırlamıyor ve dostları durumu açıklamaya çalıştığında gerçeği katiyen reddediyor.",
+    "artistName": "Kudos Productions",
+    "name": "Kumlu Kolye",
+    "cardCode": "06RU028",
+    "keywords": [
+      "Ekipman",
+      "Korkunç"
+    ],
+    "keywordRefs": [
+      "Equipment",
+      "Fearsome"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Yok",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Ekipman",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06RU029.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06RU029-full.png"
+      }
+    ],
+    "regions": [
+      "Runeterra"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "",
+    "descriptionRaw": "",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Tutup bırakmak balık tutarken de dövüşürken de işe yarayan bir taktik.",
+    "artistName": "Kudos Productions",
+    "name": "Yakalamalık Balık",
+    "cardCode": "06RU029",
+    "keywords": [
+      "Ekipman",
+      "Aban"
+    ],
+    "keywordRefs": [
+      "Equipment",
+      "Overwhelm"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Yok",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Ekipman",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06RU030.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06RU030-full.png"
+      }
+    ],
+    "regions": [
+      "Runeterra"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "",
+    "descriptionRaw": "",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Fireth bu tırmığı annesinin kendisi için yaptığını söylüyor. Ama annesinin kadim imparatorluğa ait bir yadigârı nereden bulduğuna ya da onu neden bir tırmığa yapıştırdığına dair hiçbir fikri yok.",
+    "artistName": "Kudos Productions",
+    "name": "Geliştirilmiş Tırmık",
+    "cardCode": "06RU030",
+    "keywords": [
+      "Ekipman",
+      "Öncü"
+    ],
+    "keywordRefs": [
+      "Equipment",
+      "Scout"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Yok",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Ekipman",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06RU031.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06RU031-full.png"
+      }
+    ],
+    "regions": [
+      "Runeterra"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "",
+    "descriptionRaw": "",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Chaska çobanlığa felsefi bir bakış açısıyla yaklaşıyor. Yakınında kim varsa onu sürüsü belliyor.",
+    "artistName": "Kudos Productions",
+    "name": "Çobanın Yetkisi",
+    "cardCode": "06RU031",
+    "keywords": [
+      "Ekipman",
+      "Karşılayamaz"
+    ],
+    "keywordRefs": [
+      "Equipment",
+      "CantBlock"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Yok",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Ekipman",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06RU033.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06RU033-full.png"
+      }
+    ],
+    "regions": [
+      "Runeterra"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "<link=vocab.Attack><style=Vocab>Saldır</style></link>: 1 büyü manası doldurursun.",
+    "descriptionRaw": "Saldır: 1 büyü manası doldurursun.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Hirana keşişleri, haşarı öğrencilerini sabretmenin ne demek olduğunu öğrenmeleri için balıkçıların yanına gönderir. Bu öğrencilerin çok az bir kısmı manastıra geri dönmeyi tercih eder.",
+    "artistName": "Kudos Productions ",
+    "name": "Savaş Makarası",
+    "cardCode": "06RU033",
+    "keywords": [
+      "Ekipman"
+    ],
+    "keywordRefs": [
+      "Equipment"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Yok",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Ekipman",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06RU034.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06RU034-full.png"
+      }
+    ],
+    "regions": [
+      "Runeterra"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "",
+    "descriptionRaw": "",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "SAKIN deterjanla yıkamayın. Sadece ılık suyla veya sihirle yıkanır.",
+    "artistName": "Kudos Productions",
+    "name": "Acıtan Tava",
+    "cardCode": "06RU034",
+    "keywords": [
+      "Ekipman",
+      "Dayanıklı"
+    ],
+    "keywordRefs": [
+      "Equipment",
+      "Tough"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Yok",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Ekipman",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06SI003.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06SI003-full.png"
+      }
+    ],
+    "regions": [
+      "Gölge Adalar",
+      "Shurima"
+    ],
+    "regionRefs": [
+      "ShadowIsles",
+      "Shurima"
+    ],
+    "attack": 1,
+    "cost": 1,
+    "health": 1,
+    "description": "Çağrıldığımda, <link=vocab.Improvise><style=Vocab>Doğaçlama</style></link> yaparım.",
+    "descriptionRaw": "Çağrıldığımda, Doğaçlama yaparım.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Jax, yolculuklarının ilk haftalarında Fireth'e defalarca adını sormuştu. Fireth'se her seferinde terslenerek, ''Benim adım Cellat!'' diye yanıtlamıştı. Breshi bu soruna ilginç bir çözüm buldu: Bir pasta yapmak. Doğru düzgün kutlama yapmak için grubun en güçlü mensubunun adını bilmek şarttı tabii!",
+    "artistName": "Envar Studio",
+    "name": "Çölün Celladı Fireth",
+    "cardCode": "06SI003",
+    "keywords": [
+      "Hayali",
+      "Karşılayamaz"
+    ],
+    "keywordRefs": [
+      "Ephemeral",
+      "CantBlock"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "DESTANSI",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "SİLAH ÜSTADI"
+    ],
+    "supertype": "",
+    "type": "Birim",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06NX023.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06NX023-full.png"
+      }
+    ],
+    "regions": [
+      "Noxus",
+      "Ionia"
+    ],
+    "regionRefs": [
+      "Noxus",
+      "Ionia"
+    ],
+    "attack": 1,
+    "cost": 2,
+    "health": 1,
+    "description": "Çağrıldığımda, <link=vocab.Improvise><style=Vocab>Doğaçlama</style></link> yaparım.",
+    "descriptionRaw": "Çağrıldığımda, Doğaçlama yaparım.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Trisk'in hayatı, katıldığı son balıkçılık yarışmasında altüst oldu. Bir şekilde, balık yerine boğulmak üzere olan Jax'i tutmuştu. Jax bu olay hakkında konuşmayı pek sevmiyor ama Trisk'in kendisini elinden kurtardığı deniz canavarı, Trisk hikâyeyi her anlattığında daha da büyüyor.",
+    "artistName": "Envar Studio",
+    "name": "Ionia'lı Oltacı",
+    "cardCode": "06NX023",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "YAYGIN",
+    "rarityRef": "Common",
+    "subtypes": [
+      "SİLAH ÜSTADI"
+    ],
+    "supertype": "",
+    "type": "Birim",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06SI031T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06BW027.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06BW027-full.png"
+      }
+    ],
+    "regions": [
+      "Bilgewater",
+      "Piltover ve Zaun"
+    ],
+    "regionRefs": [
+      "Bilgewater",
+      "PiltoverZaun"
+    ],
+    "attack": 0,
+    "cost": 4,
+    "health": 0,
+    "description": "Oynamak için 1 kart atarsın. 2 kart çekersin ve bir ekipmanı attıysan, bir <link=card.summon><style=AssociatedCard>Icathia Serabı</style></link> çağırırsın.",
+    "descriptionRaw": "Oynamak için 1 kart atarsın. 2 kart çekersin ve bir ekipmanı attıysan, bir Icathia Serabı çağırırsın.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Jax'in ekibi, bütünün parçalarının toplamından çok daha fazlası olabileceğini kanıtlar nitelikte. Pesh'inse farklı bir felsefesi var: Bazen, parçalar da kendi başına gayet süper olabilir.",
+    "artistName": "Kudos Productions",
+    "name": "Bütünün Parçaları",
+    "cardCode": "06BW027",
+    "keywords": [
+      "Anlık"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Anlık",
+    "spellSpeedRef": "Burst",
+    "rarity": "ENDER",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "SİLAH ÜSTADI"
+    ],
+    "supertype": "",
+    "type": "Büyü",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06SI031T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06SI031.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06SI031-full.png"
+      }
+    ],
+    "regions": [
+      "Gölge Adalar",
+      "Shurima"
+    ],
+    "regionRefs": [
+      "ShadowIsles",
+      "Shurima"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "Bir dost birime bu tur ''<link=keyword.Last Breath><sprite name=LastBreath><style=Keyword>Son Nefes</style></link>: Benim ekipmanıma sahip bir <link=card.summon><style=AssociatedCard>Icathia Serabı</style></link> çağırırsın'' verirsin.",
+    "descriptionRaw": "Bir dost birime bu tur ''Son Nefes: Benim ekipmanıma sahip bir Icathia Serabı çağırırsın'' verirsin.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Bazen, can veren dostlarımız için yapabileceğimiz en iyi şey yere düşen silahlarını alıp savaşmaya devam etmektir.",
+    "artistName": "Kudos Productions",
+    "name": "Düşenlerin Kılıçları",
+    "cardCode": "06SI031",
+    "keywords": [
+      "Anlık"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Anlık",
+    "spellSpeedRef": "Burst",
+    "rarity": "ENDER",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "SİLAH ÜSTADI"
+    ],
+    "supertype": "",
+    "type": "Büyü",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06SI031T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06SI031T1-full.png"
+      }
+    ],
+    "regions": [
+      "Shurima"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 3,
+    "cost": 2,
+    "health": 2,
+    "description": "",
+    "descriptionRaw": "",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Belki gerçekten de seraplardır. Belki uzaktaki saklı bir köyden geliyordur. Nereli olduğuna dair hiçbir şey söylemiyor, Jax de sormuyor zaten. Ama kumların arasından yükselip Jax'in yanında durduğunda, birlikte müthiş, kusursuz, olağanüstü bir uyum içinde savaşıyorlar.",
+    "artistName": "Envar Studio",
+    "name": "Icathia Serabı",
+    "cardCode": "06SI031T1",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Yok",
+    "rarityRef": "None",
+    "subtypes": [
+      "SİLAH ÜSTADI"
+    ],
+    "supertype": "",
+    "type": "Birim",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06BW029.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06BW029-full.png"
+      }
+    ],
+    "regions": [
+      "Bilgewater",
+      "Piltover ve Zaun"
+    ],
+    "regionRefs": [
+      "Bilgewater",
+      "PiltoverZaun"
+    ],
+    "attack": 2,
+    "cost": 3,
+    "health": 1,
+    "description": "Çağrıldığımda, <link=vocab.Improvise><style=Vocab>Doğaçlama</style></link> yaparım.",
+    "descriptionRaw": "Çağrıldığımda, Doğaçlama yaparım.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Pesh, Jax'le bir liman kavgası sırasında tanıştı. İkisi için tam zamanında kaçmak, bir araya gelmekten çok daha kolaydı. Ancak Pesh o günden beri Jax'i gemisiyle taşıyor çünkü Jax'in bulunduğu ortamda çok fazla şey kırılıyor. Ve Pesh'in kaliteli hurdadan daha çok sevdiği tek şey kırılan eşyaları tamir etmek.",
+    "artistName": "Kudos Productions",
+    "name": "Piltover'lı Avare",
+    "cardCode": "06BW029",
+    "keywords": [
+      "Uyumlanma"
+    ],
+    "keywordRefs": [
+      "Attune"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "YAYGIN",
+    "rarityRef": "Common",
+    "subtypes": [
+      "SİLAH ÜSTADI"
+    ],
+    "supertype": "",
+    "type": "Birim",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06MT004.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06MT004-full.png"
+      }
+    ],
+    "regions": [
+      "Targon",
+      "Bandle Şehri"
+    ],
+    "regionRefs": [
+      "Targon",
+      "BandleCity"
+    ],
+    "attack": 2,
+    "cost": 3,
+    "health": 2,
+    "description": "<link=vocab.Play><style=Vocab>Oyna</style></link>: Bir dost birim seçersin, bu birim <link=vocab.Improvise><style=Vocab>Doğaçlama</style></link> yapar. Birim seçmezsen ben <link=vocab.Improvise><style=Vocab>Doğaçlama</style></link> yaparım.",
+    "descriptionRaw": "Oyna: Bir dost birim seçersin, bu birim Doğaçlama yapar. Birim seçmezsen ben Doğaçlama yaparım.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Jax, Chaska'nın sürüsünü saldırgan bir patlıcanavardan kurtarmasına yardım etti. Sonra Chaska, Jax'i saldırgan patlıcanavardan kurtardı. Artık beraber seyahat ediyorlar, tabii biri ortalıktan kaybolmadıkça.",
+    "artistName": "Caravan Studio",
+    "name": "Gezgin Çoban",
+    "cardCode": "06MT004",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "YAYGIN",
+    "rarityRef": "Common",
+    "subtypes": [
+      "SİLAH ÜSTADI"
+    ],
+    "supertype": "",
+    "type": "Birim",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06DE024.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06DE024-full.png"
+      }
+    ],
+    "regions": [
+      "Demacia",
+      "Freljord"
+    ],
+    "regionRefs": [
+      "Demacia",
+      "Freljord"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "Bir dost birime bu tur +1|+1 verirsin ya da onu bedeli 2 ya da daha az olan, elindeki bir ekipmanla <link=vocab.Equip><style=Vocab>Kuşatırsın</style></link>.",
+    "descriptionRaw": "Bir dost birime bu tur +1|+1 verirsin ya da onu bedeli 2 ya da daha az olan, elindeki bir ekipmanla Kuşatırsın.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Henüz kimse yemek yemediyse bu hareket daha da çok can acıtıyor.",
+    "artistName": "Kudos Productions",
+    "name": "Tut!",
+    "cardCode": "06DE024",
+    "keywords": [
+      "Anlık"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Anlık",
+    "spellSpeedRef": "Burst",
+    "rarity": "ENDER",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "SİLAH ÜSTADI"
+    ],
+    "supertype": "",
+    "type": "Büyü",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU008T6",
+      "06RU008T5",
+      "06RU008T8",
+      "06RU008T7"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06RU008.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06RU008-full.png"
+      }
+    ],
+    "regions": [
+      "Runeterra"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 3,
+    "cost": 2,
+    "health": 2,
+    "description": "<link=vocab.Origin><style=Vocab>Köken</style></link>: <link=card.origin><style=AssociatedCard>Silah Ustası</style></link>.\r\n<link=vocab.AutoEquip><style=Vocab>Otomatik Kuşan</style></link>: <link=card.equipment><style=AssociatedCard>Icathia'nın Işığı</style></link>.",
+    "descriptionRaw": "Köken: Silah Ustası.\r\nOtomatik Kuşan: Icathia'nın Işığı.",
+    "levelupDescription": "Kuşanmış dost birimler 15+ hasarlık Vuruş yaptığında<style=Variable></style>.",
+    "levelupDescriptionRaw": "Kuşanmış dost birimler 15+ hasarlık Vuruş yaptığında.",
+    "flavorText": "Asırlar önce, Jax'in memleketi Hiçlik'e yenik düşmüştü. Jax şimdi, bir gün o korkunç düşmanın karşısına çıkıp onu alt edebilmek için dünyayı gezerek irade gücüne ve cesarete sahip savaşçılar arıyor.",
+    "artistName": "Envar Studio",
+    "name": "Jax",
+    "cardCode": "06RU008",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Şampiyon",
+    "rarityRef": "Champion",
+    "subtypes": [
+      "SİLAH ÜSTADI"
+    ],
+    "supertype": "Şampiyon",
+    "type": "Birim",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU008"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06RU008T5.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06RU008T5-full.png"
+      }
+    ],
+    "regions": [
+      "Runeterra"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "Deste kurarken Silah Üstadı herhangi bir kartı destene koyabilirsin.",
+    "descriptionRaw": "Deste kurarken Silah Üstadı herhangi bir kartı destene koyabilirsin.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "",
+    "artistName": "Envar Studios",
+    "name": "Silah Ustası",
+    "cardCode": "06RU008T5",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Yok",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Yetenek",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU008",
+      "06RU008T6"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06RU008T6.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06RU008T6-full.png"
+      }
+    ],
+    "regions": [
+      "Runeterra"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "<link=card.level1><style=AssociatedCard>Jax</style></link> seviye atladıysa, <link=card.selfref><style=AssociatedCard>Icathia'nın Işığı</style></link> <link=keyword.Overwhelm><sprite name=Overwhelm><style=Keyword>Aban</style></link> alır.",
+    "descriptionRaw": "Jax seviye atladıysa, Icathia'nın Işığı Aban alır.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''Ucunda ağırlık olan bir sopa işte. Bana yeter de artar bile.''<br>- Jax",
+    "artistName": "Kudos Productions ",
+    "name": "Icathia'nın Işığı",
+    "cardCode": "06RU008T6",
+    "keywords": [
+      "Ekipman",
+      "İlk Saldırı"
+    ],
+    "keywordRefs": [
+      "Equipment",
+      "QuickStrike"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Yok",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Ekipman",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU008T6",
+      "06RU008T8",
+      "06RU008"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06RU008T7.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06RU008T7-full.png"
+      }
+    ],
+    "regions": [
+      "Runeterra"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 4,
+    "cost": 2,
+    "health": 3,
+    "description": "<link=vocab.AutoEquip><style=Vocab>Otomatik Kuşan</style></link>: <link=card.equipment><style=AssociatedCard>Icathia'nın Işığı</style></link>.\r\n<link=vocab.Attack><style=Vocab>Saldır</style></link>: <link=vocab.Equip><style=Vocab>Kuşanmış</style></link> her dost birim için bu tur bana +1|+1 verirsin.",
+    "descriptionRaw": "Otomatik Kuşan: Icathia'nın Işığı.\r\nSaldır: Kuşanmış her dost birim için bu tur bana +1|+1 verirsin.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''Icathia öyle uzun zamandır sessiz ki... Ama ben yaşadıkça, halkının kükremesi sonsuza dek yankılanacak!''<br>- Jax",
+    "artistName": "Envar Studio",
+    "name": "Jax",
+    "cardCode": "06RU008T7",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Yok",
+    "rarityRef": "None",
+    "subtypes": [
+      "SİLAH ÜSTADI"
+    ],
+    "supertype": "Şampiyon",
+    "type": "Birim",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU008"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06RU008T8.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06RU008T8-full.png"
+      }
+    ],
+    "regions": [
+      "Runeterra"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "<link=card.level1><style=AssociatedCard>Jax</style></link> kartına bu tur <link=keyword.Barrier><sprite name=Barrier><style=Keyword>Bariyer</style></link> verirsin ve onu <link=vocab.Forge><style=Vocab>İşlersin</style></link>.\r\nDestene bir <link=card.level1><style=AssociatedCard>Jax</style></link> karışır.",
+    "descriptionRaw": "Jax kartına bu tur Bariyer verirsin ve onu İşlersin.\r\nDestene bir Jax karışır.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''Gözler aynen şampiyonda!''<br>- Jax",
+    "artistName": "Kudos Productions",
+    "name": "Jax Karşı Saldırı",
+    "cardCode": "06RU008T8",
+    "keywords": [
+      "Anlık"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Anlık",
+    "spellSpeedRef": "Burst",
+    "rarity": "Yok",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "Şampiyon",
+    "type": "Büyü",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06BC047.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06BC047-full.png"
+      }
+    ],
+    "regions": [
+      "Targon",
+      "Bandle Şehri"
+    ],
+    "regionRefs": [
+      "Targon",
+      "BandleCity"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "<link=vocab.Equip><style=Vocab>Kuşanmış</style></link> bir dost birime bu tur ekipmanının niteliklerini ve tesirlerini verirsin ve ekipmanı başka bir dost birime <link=vocab.Equip><style=Vocab>Kuşatırsın</style></link>.",
+    "descriptionRaw": "Kuşanmış bir dost birime bu tur ekipmanının niteliklerini ve tesirlerini verirsin ve ekipmanı başka bir dost birime Kuşatırsın.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Bir çobanın savaş alanında hiçbir yerinin olmadığını düşünebilirsiniz ancak yeri geldiğinde becerileri büyük fayda sağlayabilir. Nihayetinde tüm savaşçılar, güdülmeye muhtaç koyunlara benzer.",
+    "artistName": "Kudos Productions",
+    "name": "Paylaştıkça Çoğalır",
+    "cardCode": "06BC047",
+    "keywords": [
+      "Anlık"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Anlık",
+    "spellSpeedRef": "Burst",
+    "rarity": "ENDER",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "SİLAH ÜSTADI"
+    ],
+    "supertype": "",
+    "type": "Büyü",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06IO028.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06IO028-full.png"
+      }
+    ],
+    "regions": [
+      "Ionia",
+      "Noxus"
+    ],
+    "regionRefs": [
+      "Ionia",
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "Bir dost birime bu tur <link=keyword.Challenger><sprite name=Challenger><style=Keyword>Rakipçeker</style></link> verirsin. Bu birim <link=vocab.Equip><style=Vocab>Kuşanmışsa</style></link> 1 kart çekersin.",
+    "descriptionRaw": "Bir dost birime bu tur Rakipçeker verirsin. Bu birim Kuşanmışsa 1 kart çekersin.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Yemek güzel olduğunda herkes ''açım'' der.",
+    "artistName": "Kudos Productions",
+    "name": "Mest Edici Yem",
+    "cardCode": "06IO028",
+    "keywords": [
+      "Anlık"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Anlık",
+    "spellSpeedRef": "Burst",
+    "rarity": "ENDER",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "SİLAH ÜSTADI"
+    ],
+    "supertype": "",
+    "type": "Büyü",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06FR024.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06FR024-full.png"
+      }
+    ],
+    "regions": [
+      "Freljord"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 0,
+    "cost": 5,
+    "health": 0,
+    "description": "",
+    "descriptionRaw": "",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''Çat!''<br>- Kabilesiz Tarkaz",
+    "artistName": "Kudos Productions",
+    "name": "Kemik Sopa",
+    "cardCode": "06FR024",
+    "keywords": [
+      "Ekipman"
+    ],
+    "keywordRefs": [
+      "Equipment"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "YAYGIN",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Ekipman",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06FR032.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06FR032-full.png"
+      }
+    ],
+    "regions": [
+      "Freljord"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 0,
+    "cost": 5,
+    "health": 0,
+    "description": "Nexus'unu 4 iyileştirirsin ve destendeki tüm dost birimlere ve ekipmanlara +1|+1 kazandırırsın. Bunlardan bir tanesini çekersin.",
+    "descriptionRaw": "Nexus'unu 4 iyileştirirsin ve destendeki tüm dost birimlere ve ekipmanlara +1|+1 kazandırırsın. Bunlardan bir tanesini çekersin.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''Gel, ateşin başında biraz ısın.''<br>- Ocakkanlı Tamirci",
+    "artistName": "Kudos Productions",
+    "name": "Ocakkanlılar'ın Hediyesi",
+    "cardCode": "06FR032",
+    "keywords": [
+      "Anlık"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Anlık",
+    "spellSpeedRef": "Burst",
+    "rarity": "DESTANSI",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Büyü",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06SI006.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06SI006-full.png"
+      }
+    ],
+    "regions": [
+      "Gölge Adalar"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 2,
+    "description": "Bu oyunda bir dost birimi <link=vocab.Equip><style=Vocab>Kuşattığında</style></link>, bana <link=keyword.Lifesteal><sprite name=Lifesteal><style=Keyword>Can Çalma</style></link> kazandırırsın.",
+    "descriptionRaw": "Bu oyunda bir dost birimi Kuşattığında, bana Can Çalma kazandırırsın.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''Kutu sırlarını karşılıksız paylaşmaz, Shieda Kayn. Ona layık bir bedel ödemeden olmaz. Ancak gölgelerin gölgesine bakmaya cesaretin varsa içinde nasıl harika, nasıl dehşetli şeylerin yattığını görebilirsin.''<br>- Kutunun Muhafızı Ysdra",
+    "artistName": "Kudos Productions",
+    "name": "Kutunun Muhafızı",
+    "cardCode": "06SI006",
+    "keywords": [
+      "Korkunç"
+    ],
+    "keywordRefs": [
+      "Fearsome"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "YAYGIN",
+    "rarityRef": "Common",
+    "subtypes": [
+      "TARİKATÇI"
+    ],
+    "supertype": "",
+    "type": "Birim",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06SI007T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06SI007.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06SI007-full.png"
+      }
+    ],
+    "regions": [
+      "Gölge Adalar"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "Beni oynamak için bir dost birimi öldürürsün.\r\n10 mana harcayarak beni <link=card.unit><style=AssociatedCard>Taarosh</style></link> olarak oynayabilirsin.",
+    "descriptionRaw": "Beni oynamak için bir dost birimi öldürürsün.\r\n10 mana harcayarak beni Taarosh olarak oynayabilirsin.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Hücresinden kurtulmak için çırpınan Taarosh, generalinin çağrısını duydu. Şu ya da bu şekilde, bu çağrıya yanıt verecekti.",
+    "artistName": "Kudos Productions ",
+    "name": "Darkin Kargısı",
+    "cardCode": "06SI007",
+    "keywords": [
+      "Ekipman"
+    ],
+    "keywordRefs": [
+      "Equipment"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "DESTANSI",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "DARKİN"
+    ],
+    "supertype": "",
+    "type": "Ekipman",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06SI007"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06SI007T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06SI007T1-full.png"
+      }
+    ],
+    "regions": [
+      "Gölge Adalar"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 10,
+    "cost": 10,
+    "health": 10,
+    "description": "Her tur ilk saldırdığımda, saldırı hattın bu oyunda <link=vocab.Slay><style=Vocab>katlettiğin</style></link> <link=vocab.Strongest><style=Vocab>En Güçlü</style></link> takipçilerin dirilen <link=keyword.Ephemeral><sprite name=Ephemeral><style=Keyword>Hayali</style></link> kopyalarıyla dolar.",
+    "descriptionRaw": "Her tur ilk saldırdığımda, saldırı hattın bu oyunda katlettiğin En Güçlü takipçilerin dirilen Hayali kopyalarıyla dolar.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Efsaneye göre Targon'lular darkinlere saldırdığında Taarosh, Xolaani'yi neredeyse yok ediyordu. Asırlar sonra, Taarosh etrafındaki toprağın yozlaştığını, üstüne çürüme ve ölüm kokusu sindiğini fark etti. Özgürlüğünü elde ettikten sonra Xolaani'nin de aynı acıları çekmesini öyle istiyordu ki...",
+    "artistName": "Kudos Productions",
+    "name": "Taarosh",
+    "cardCode": "06SI007T1",
+    "keywords": [
+      "Korkunç"
+    ],
+    "keywordRefs": [
+      "Fearsome"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Yok",
+    "rarityRef": "None",
+    "subtypes": [
+      "DARKİN"
+    ],
+    "supertype": "",
+    "type": "Birim",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06SI029.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06SI029-full.png"
+      }
+    ],
+    "regions": [
+      "Gölge Adalar"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "Bu tur bir dost birim öldüyse bedelim 2 azalır.",
+    "descriptionRaw": "Bu tur bir dost birim öldüyse bedelim 2 azalır.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''Adalet diye bir şey yok, sadece intikam var.''<br>- Kalista",
+    "artistName": "Kudos Productions",
+    "name": "Kem Mızrak",
+    "cardCode": "06SI029",
+    "keywords": [
+      "Ekipman",
+      "Korkunç"
+    ],
+    "keywordRefs": [
+      "Equipment",
+      "Fearsome"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "YAYGIN",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Ekipman",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06SI032.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06SI032-full.png"
+      }
+    ],
+    "regions": [
+      "Gölge Adalar"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "Güç değeri 2 ya da daha az olan bir birimi öldürürsün ya da bir birimin ekipmanını yok edersin.",
+    "descriptionRaw": "Güç değeri 2 ya da daha az olan bir birimi öldürürsün ya da bir birimin ekipmanını yok edersin.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Gölge Adalar'da ölüm kendini nasıl gösterirse göstersin, hızlı olsun yeter.",
+    "artistName": "",
+    "name": "Kaçınılmaz Son",
+    "cardCode": "06SI032",
+    "keywords": [
+      "Yavaş"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "Yavaş",
+    "spellSpeedRef": "Slow",
+    "rarity": "ENDER",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Büyü",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06DE006.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06DE006-full.png"
+      }
+    ],
+    "regions": [
+      "Demacia",
+      "Freljord"
+    ],
+    "regionRefs": [
+      "Demacia",
+      "Freljord"
+    ],
+    "attack": 2,
+    "cost": 4,
+    "health": 2,
+    "description": "Çağrıldığımda, <link=vocab.Improvise><style=Vocab>Doğaçlama</style></link> yaparım ve beni <link=vocab.Forge><style=Vocab>İşlersin</style></link>.",
+    "descriptionRaw": "Çağrıldığımda, Doğaçlama yaparım ve beni İşlersin.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Demacia ordusunda geçirdiği günlerin ardından, Breshi emekli olup uzak bir kasabanın sakin bir hanında aşçılık yapacağını düşünüyordu. Ama Jax, haşlanmış yumurtalar hakkında belirttiği berbat fikriyle bir bar kavgası çıkararak Breshi'nin emekliliğini mahvetti. O günden beri, Breshi'nin hayatta yeni bir amacı var: Jax'in damak zevkini geliştirmek.",
+    "artistName": "Envar Studio",
+    "name": "Savaşçı Aşçı",
+    "cardCode": "06DE006",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "YAYGIN",
+    "rarityRef": "Common",
+    "subtypes": [
+      "SİLAH ÜSTADI"
+    ],
+    "supertype": "",
+    "type": "Birim",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06FR004.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06FR004-full.png"
+      }
+    ],
+    "regions": [
+      "Freljord"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 1,
+    "cost": 1,
+    "health": 1,
+    "description": "Bir dost birimi ilk defa <link=vocab.Equip><style=Vocab>Kuşattığında</style></link>, onu <link=vocab.Forge><style=Vocab>İşlersin</style></link>.",
+    "descriptionRaw": "Bir dost birimi ilk defa Kuşattığında, onu İşlersin.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Ornn, Yaşayan Ocak'ı yıllar yıllar önce üretti ama onu aramaya henüz yeni başladı. Ocağın yeni sahibini bulmak için kendi başına dolaşmaya çıkacağı aklının ucundan bile geçmemişti.",
+    "artistName": "Kudos Productions",
+    "name": "Silah Uzmanının Çırağı",
+    "cardCode": "06FR004",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "YAYGIN",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Birim",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06FR008.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06FR008-full.png"
+      }
+    ],
+    "regions": [
+      "Freljord"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 5,
+    "cost": 5,
+    "health": 5,
+    "description": "<link=vocab.Play><style=Vocab>Oyna</style></link>: Bir dost birimi <link=vocab.Forge><style=Vocab>İşlersin</style></link> ve onu ve Nexus'unu 3 iyileştirirsin.",
+    "descriptionRaw": "Oyna: Bir dost birimi İşlersin ve onu ve Nexus'unu 3 iyileştirirsin.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Ornn dünyayı terk ettiğinde, Ocakkanlılar'ın hepsi teker teker ortadan kaybolmuştu. Aradan geçen uzun yıllardan sonra, geride isimlerini hatırlayan kimse kalmamıştı. Fakat son zamanlarda, Ornn'un hikâyelerinin yeniden su üstüne çıkmasıyla Ocakkanlılar'ın da geri dönmeye başlandığı söyleniyor.",
+    "artistName": "Michal Ivan",
+    "name": "Ocakkanlı Tamirci",
+    "cardCode": "06FR008",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "YAYGIN",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Birim",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06FR009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06FR009-full.png"
+      }
+    ],
+    "regions": [
+      "Freljord"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 3,
+    "cost": 3,
+    "health": 3,
+    "description": "<link=vocab.Play><style=Vocab>Oyna</style></link>: Bir dost birimi <link=vocab.Forge><style=Vocab>İşlersin</style></link>.",
+    "descriptionRaw": "Oyna: Bir dost birimi İşlersin.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Fiske yanına bir çırak almaya karar verdiğinde azimli, zanaatını ciddiye alan, güçlü ve becerikli birini hayal etmişti. Kindra bu sıfatların hiçbirini taşımıyordu. Gün içinde hayallere dalıp dalıp gidiyordu. Çalışmak değil oyun oynamak istiyordu. Sürekli o küçük kaplumbağasıyla ilgileniyordu. Ama... öğreniyordu. Önemli olan da buydu.",
+    "artistName": "Kudos Productions",
+    "name": "Hünerli Silah Uzmanı",
+    "cardCode": "06FR009",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "YAYGIN",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Birim",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06FR012T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06FR012.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06FR012-full.png"
+      }
+    ],
+    "regions": [
+      "Freljord"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 1,
+    "cost": 2,
+    "health": 4,
+    "description": "Çağrıldığımda, elinde bir <link=card.create><style=AssociatedCard>Zaman ve Azim</style></link> oluşur.",
+    "descriptionRaw": "Çağrıldığımda, elinde bir Zaman ve Azim oluşur.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''Annem bana Ornn'u anlatırdı, onun annesinin ona anlattığı gibi. Ve onun annesinin ona... Şimdi de ben size. Dikkatle dinleyin. Lafımı kesmeyin. Yıllar önce, kocaman, sıcak, hırçın bir denizde...''",
+    "artistName": "Envar Studio",
+    "name": "Gözde Zanaatkâr",
+    "cardCode": "06FR012",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "YAYGIN",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Birim",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06FR012T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06FR012T1-full.png"
+      }
+    ],
+    "regions": [
+      "Freljord"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "Bir dost birimi <link=vocab.Forge><style=Vocab>İşlersin</style></link>.",
+    "descriptionRaw": "Bir dost birimi İşlersin.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''Bunun için çok ter döktüm. Umarım hakkını verirsin.''<br>- Ornn",
+    "artistName": "Kudos Productions",
+    "name": "Zaman ve Azim",
+    "cardCode": "06FR012T1",
+    "keywords": [
+      "Odaklama"
+    ],
+    "keywordRefs": [
+      "Focus"
+    ],
+    "spellSpeed": "Anlık",
+    "spellSpeedRef": "Burst",
+    "rarity": "Yok",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Büyü",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06DE032.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06DE032-full.png"
+      }
+    ],
+    "regions": [
+      "Demacia"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "",
+    "descriptionRaw": "",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Demacia'nın miğferli savaşçılarının kullandığı standart kılıç ve kalkan.",
+    "artistName": "Kudos Productions",
+    "name": "Demacia Çeliği",
+    "cardCode": "06DE032",
+    "keywords": [
+      "Ekipman"
+    ],
+    "keywordRefs": [
+      "Equipment"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "YAYGIN",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Ekipman",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06FR011T2",
+      "06FR011T1",
+      "06FR011T4"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06FR011.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06FR011-full.png"
+      }
+    ],
+    "regions": [
+      "Freljord"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 4,
+    "cost": 7,
+    "health": 4,
+    "description": "<link=vocab.Play><style=Vocab>Oyna</style></link>: Beni bir dost birimin ekipmanının ya da elindeki <link=vocab.Strongest><style=Vocab>En Güçlü</style></link> ekipmanın birebir kopyasıyla <link=vocab.Equip><style=Vocab>Kuşatırsın</style></link>.\r\n<link=vocab.Attack><style=Vocab>Saldır</style></link>: Beni iki kez <link=vocab.Forge><style=Vocab>İşlersin</style></link>.",
+    "descriptionRaw": "Oyna: Beni bir dost birimin ekipmanının ya da elindeki En Güçlü ekipmanın birebir kopyasıyla Kuşatırsın.\r\nSaldır: Beni iki kez İşlersin.",
+    "levelupDescription": "Bir dost birim 10+ hasarlık Vuruş yaptığında<style=Variable></style>. ",
+    "levelupDescriptionRaw": "Bir dost birim 10+ hasarlık Vuruş yaptığında. ",
+    "flavorText": "Ornn'a neden bu kadar sabırsız olduğu sorulduğunda, cevap olarak sadece sabırlı olduğunu söylerdi. Hem de ne sabır... Zaten tam da bu sayede eşi benzeri olmayan eserlere imza atıyordu. Aslında sadece İNSANLARA karşı sabırsızdı. Ancak bunu kimse sormadığı için o da söylemedi.",
+    "artistName": "Kudos Productions",
+    "name": "Ornn",
+    "cardCode": "06FR011",
+    "keywords": [
+      "Dayanıklı"
+    ],
+    "keywordRefs": [
+      "Tough"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Şampiyon",
+    "rarityRef": "Champion",
+    "subtypes": [],
+    "supertype": "Şampiyon",
+    "type": "Birim",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06FR011",
+      "06FR011T2",
+      "06FR011T4"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06FR011T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06FR011T1-full.png"
+      }
+    ],
+    "regions": [
+      "Freljord"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 5,
+    "cost": 7,
+    "health": 5,
+    "description": "<link=vocab.Play><style=Vocab>Oyna</style></link>: Beni bir dost birimin ekipmanının ya da elindeki <link=vocab.Strongest><style=Vocab>En Güçlü</style></link> ekipmanın birebir kopyasıyla <link=vocab.Equip><style=Vocab>Kuşatırsın</style></link>.\r\n<link=vocab.Attack><style=Vocab>Saldır</style></link>: Beni iki kez <link=vocab.Forge><style=Vocab>İşlersin</style></link>, ardından benim niteliklerime sahip saldıran bir <link=card.summon><style=AssociatedCard>Koç Ruhu</style></link> çağırırsın.",
+    "descriptionRaw": "Oyna: Beni bir dost birimin ekipmanının ya da elindeki En Güçlü ekipmanın birebir kopyasıyla Kuşatırsın.\r\nSaldır: Beni iki kez İşlersin, ardından benim niteliklerime sahip saldıran bir Koç Ruhu çağırırsın.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Pek çok kişi, dünya ona gerçekten ihtiyaç duyduğunda, Ornn'un takipçilerinden birinin nihayet ilahlarını bulabileceğine inanıyor. Kendini geri çekmiş, inatçı ilahların yaptığı şey bu değil midir zaten? Göz önünde saklanmak. ",
+    "artistName": "Will Gist",
+    "name": "Ornn",
+    "cardCode": "06FR011T1",
+    "keywords": [
+      "Dayanıklı"
+    ],
+    "keywordRefs": [
+      "Tough"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Yok",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "Şampiyon",
+    "type": "Birim",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06FR011T4.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06FR011T4-full.png"
+      }
+    ],
+    "regions": [
+      "Freljord"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 1,
+    "cost": 4,
+    "health": 1,
+    "description": "",
+    "descriptionRaw": "",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''Ateşten geriye kalan ya işlenir yahut eritilir. Çelik gibi şekil almak... yanıp kül olmaktan yeğdir!''<br>- Ornn",
+    "artistName": "Kudos Productions",
+    "name": "Koç Ruhu",
+    "cardCode": "06FR011T4",
+    "keywords": [
+      "Hayali",
+      "Aban"
+    ],
+    "keywordRefs": [
+      "Ephemeral",
+      "Overwhelm"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Yok",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Birim",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06FR011",
+      "06FR011T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06FR011T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06FR011T2-full.png"
+      }
+    ],
+    "regions": [
+      "Freljord"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 0,
+    "cost": 5,
+    "health": 0,
+    "description": "Bir dost birimi <link=vocab.Forge><style=Vocab>İşlersin</style></link> ve tüm birimlere 1 hasar verirsin. Sonra bunu tekrar yaparsın.\r\nDestende bir <link=card.level1><style=AssociatedCard>Ornn</style></link> oluşur.",
+    "descriptionRaw": "Bir dost birimi İşlersin ve tüm birimlere 1 hasar verirsin. Sonra bunu tekrar yaparsın.\r\nDestende bir Ornn oluşur.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''İrade tavında dövülür.''<br>- Ornn",
+    "artistName": "Kudos Productions",
+    "name": "Ornn Harlı Ateş",
+    "cardCode": "06FR011T2",
+    "keywords": [
+      "Yavaş"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "Yavaş",
+    "spellSpeedRef": "Slow",
+    "rarity": "Yok",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "Şampiyon",
+    "type": "Büyü",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06FR022.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06FR022-full.png"
+      }
+    ],
+    "regions": [
+      "Freljord"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 0,
+    "cost": 5,
+    "health": 0,
+    "description": "Bir dost birimi <link=vocab.Forge><style=Vocab>İşlersin</style></link> ve tüm birimlere 1 hasar verirsin. Sonra bunu tekrar yaparsın.",
+    "descriptionRaw": "Bir dost birimi İşlersin ve tüm birimlere 1 hasar verirsin. Sonra bunu tekrar yaparsın.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''İrade tavında dövülür.''<br>- Ornn",
+    "artistName": "Kudos Productions",
+    "name": "Harlı Ateş",
+    "cardCode": "06FR022",
+    "keywords": [
+      "Yavaş"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "Yavaş",
+    "spellSpeedRef": "Slow",
+    "rarity": "ENDER",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Büyü",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06FR012T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06FR005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06FR005-full.png"
+      }
+    ],
+    "regions": [
+      "Freljord"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "Çağrıldığımda ya da <link=vocab.RoundStart><style=Vocab>Tur Başı</style></link>: Elinde <link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>Geçici</style></link> bir <link=card.create><style=AssociatedCard>Zaman ve Azim</style></link> oluşur.",
+    "descriptionRaw": "Çağrıldığımda ya da Tur Başı: Elinde Geçici bir Zaman ve Azim oluşur.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Ocak-Yuva'nın demirhanesinde tek başına, sadece aşağıda yavaş yavaş akan erimiş nehrin ve örse vuran çekicin sesi eşliğinde durmak... çok hoşuna gitmişti.",
+    "artistName": "Envar Studio",
+    "name": "Ornn'un Ocağı",
+    "cardCode": "06FR005",
+    "keywords": [
+      "Yer"
+    ],
+    "keywordRefs": [
+      "LandmarkVisualOnly"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ENDER",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Yer",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06FR023.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06FR023-full.png"
+      }
+    ],
+    "regions": [
+      "Freljord"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 8,
+    "cost": 8,
+    "health": 8,
+    "description": "İlk kez <link=vocab.Equip><style=Vocab>Kuşandığımda</style></link>, elinde bir kopyam oluşur. Ona ekipmanın niteliklerini kazandırırsın.",
+    "descriptionRaw": "İlk kez Kuşandığımda, elinde bir kopyam oluşur. Ona ekipmanın niteliklerini kazandırırsın.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Ornn itiraf etmek istemese de devlerden epey memnundu. Devler, kendilerine verilen görevi layığıyla yerine getiriyordu. Ve en güzeli, hiç konuşmuyordu.",
+    "artistName": "Envar Studio",
+    "name": "Dövülmüş Dev",
+    "cardCode": "06FR023",
+    "keywords": [
+      "Aban"
+    ],
+    "keywordRefs": [
+      "Overwhelm"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "DESTANSI",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Birim",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06BW034.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06BW034-full.png"
+      }
+    ],
+    "regions": [
+      "Bilgewater"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "Bir birimin ekipmanını yok edersin ve ona 2 hasar verirsin.",
+    "descriptionRaw": "Bir birimin ekipmanını yok edersin ve ona 2 hasar verirsin.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''BAR KAVGASINDA ÇAPA FIRLATMAK DA NE DEMEK? SİZ MANYAK MISINIZ?''<br>- Bilgewater'lı Barmen",
+    "artistName": "Kudos Productions",
+    "name": "Ağır Metal",
+    "cardCode": "06BW034",
+    "keywords": [
+      "Yavaş"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "Yavaş",
+    "spellSpeedRef": "Slow",
+    "rarity": "ENDER",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Büyü",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06SI036.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06SI036-full.png"
+      }
+    ],
+    "regions": [
+      "Gölge Adalar"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 0,
+    "cost": 11,
+    "health": 0,
+    "description": "Dost Darkinler ve <link=vocab.Equip><style=Vocab>Kuşanmış</style></link> dost birimler dışındaki tüm birimleri öldürürsün.",
+    "descriptionRaw": "Dost Darkinler ve Kuşanmış dost birimler dışındaki tüm birimleri öldürürsün.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Silahları ele geçirdiğinde insanlığını kaybetmişti. Bir zamanlar sadece bir öğrenci olan Jun'un bomboş bedeni, nefret kaynaklı bir özle dolup taşmaya başladı. Öz, her zerresinden, dört bir yanından geçip dünyaya doğru akıyor, uykudaki darkinleri hareketlendiriyordu.",
+    "artistName": "Kudos Productions",
+    "name": "Mutlak Yıkım",
+    "cardCode": "06SI036",
+    "keywords": [
+      "Yavaş"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "Yavaş",
+    "spellSpeedRef": "Slow",
+    "rarity": "ENDER",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "TARİKATÇI"
+    ],
+    "supertype": "",
+    "type": "Büyü",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06SH004T2",
+      "06SH004T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06SH004.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06SH004-full.png"
+      }
+    ],
+    "regions": [
+      "Shurima"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "<link=keyword.Last Breath><sprite name=LastBreath><style=Keyword>Son Nefes</style></link>: Taşıyıcım bir <link=card.summon><style=AssociatedCard>Darkin Köle</style></link> değilse, bir <link=card.summon><style=AssociatedCard>Darkin Köle</style></link> çağırırsın.\r\n6 mana harcayarak beni <link=card.unit><style=AssociatedCard>Xolaani</style></link> olarak oynayabilirsin.",
+    "descriptionRaw": "Son Nefes: Taşıyıcım bir Darkin Köle değilse, bir Darkin Köle çağırırsın.\r\n6 mana harcayarak beni Xolaani olarak oynayabilirsin.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Savaş gittikçe şiddetlenirken, çaresiz ve ağır yaralı haldeki Jun kafasının içinde fısıldayan seslere kulak verdi. Yaz yağmuru kadar yumuşak bu ses, ''Ölmeyeceksin,'' diyordu. ''Ölmene asla izin vermem.''",
+    "artistName": "Kudos Productions",
+    "name": "Darkin Kandöken",
+    "cardCode": "06SH004",
+    "keywords": [
+      "Ekipman"
+    ],
+    "keywordRefs": [
+      "Equipment"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "DESTANSI",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "DARKİN"
+    ],
+    "supertype": "",
+    "type": "Ekipman",
+    "collectible": true,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06SH004T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06SH004T1-full.png"
+      }
+    ],
+    "regions": [
+      "Shurima"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 1,
+    "cost": 1,
+    "health": 1,
+    "description": "İlk kez <link=vocab.Equip><style=Vocab>Kuşandığımda</style></link>, bana +2|+2 kazandırırsın.",
+    "descriptionRaw": "İlk kez Kuşandığımda, bana +2|+2 kazandırırsın.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Sadakatini koruyan az sayıda kişi, yıllar boyunca hanımlarının tapınağıyla ilgilendi. Kumları süpürdü ve ona saygısızlık edenleri kovdu. Onun dönüşü için dua etti. Onun merhameti, hâkimiyeti için.",
+    "artistName": "Kudos Productions",
+    "name": "Darkin Köle",
+    "cardCode": "06SH004T1",
+    "keywords": [
+      "Karşılayamaz"
+    ],
+    "keywordRefs": [
+      "CantBlock"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Yok",
+    "rarityRef": "None",
+    "subtypes": [
+      "TARİKATÇI"
+    ],
+    "supertype": "",
+    "type": "Birim",
+    "collectible": false,
+    "set": "Set6cde"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06SH004"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06SH004T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/3_14_0/set6cde/tr_tr/img/cards/06SH004T2-full.png"
+      }
+    ],
+    "regions": [
+      "Shurima"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 7,
+    "cost": 6,
+    "health": 7,
+    "description": "Beni oynamak için bir dost birimi öldürürsün.\r\n<link=keyword.Last Breath><sprite name=LastBreath><style=Keyword>Son Nefes</style></link>: Elinde bir <link=card.create><style=AssociatedCard>Darkin Kandöken</style></link> oluşur.",
+    "descriptionRaw": "Beni oynamak için bir dost birimi öldürürsün.\r\nSon Nefes: Elinde bir Darkin Kandöken oluşur.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Hiçlik'e karşı savaşmaya karar verdikleri anda Shurima'nın Yükselmişlerinin sonu gelmişti. Hiçlik, hakkından gelmesi imkânsız bir düşmandı. İlah savaşçılar her ne kadar ölümsüz olsalar da zihinleri yeterince dirençli değildi. Hepsi teker teker aklını yitirdi. Bir zamanların herkesçe sevilen, hünerli şifacısı Xolaani, kanı kontrol etme güçlerini tarikat üyelerine boyun eğdirme amacıyla kullanmaya başladı. Çok geçmeden, o ve Aatrox arasındaki nefret halkı bir iç savaşa sürükledi.",
+    "artistName": "Kudos Productions",
+    "name": "Xolaani",
+    "cardCode": "06SH004T2",
+    "keywords": [
+      "Aban",
+      "Son Nefes"
+    ],
+    "keywordRefs": [
+      "Overwhelm",
+      "LastBreath"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Yok",
+    "rarityRef": "None",
+    "subtypes": [
+      "DARKİN"
+    ],
+    "supertype": "",
+    "type": "Birim",
+    "collectible": false,
+    "set": "Set6cde"
+  }
+]
