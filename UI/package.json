@@ -25,6 +25,7 @@
     "dev:hidden": "vue-cli-service build && electron app.js --hidden",
     "get:json": "node ./devtool/downloadJson.js",
     "get:icon": "node ./devtool/getNewChampIcon.js",
+    "test": "node ./src/modules/test.js",
     "init": "chcp 65001",
     "package": "electron-packager ./ LoRMasterTracker --out ./app --app-version %npm_package_version% --overwrite --icon=image.ico",
     "serve:staging": "vue-cli-service serve --mode staging",

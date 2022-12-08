@@ -33,6 +33,10 @@ const getFactions = (code) => {
           regionID = regionRefID.Kayn
         } else if (card.name == "Varus") {
           regionID = regionRefID.Varus
+        } else if (card.name == "Aatrox") {
+          regionID = regionRefID.Aatrox
+        } else if (card.name == "Ryze") {
+          regionID = regionRefID.Ryze
         }
 
         if (champFactions.indexOf(regionID) == -1) {
@@ -152,8 +156,53 @@ const getFactions = (code) => {
         !card.subtypes.includes("CULTIST") && // Filter out all cultist cards
         card.collectible
       ) {
-        // Filters champion & card that plants chime
+        // Filters champion & card that is cultist
         // Only considers mono region cards
+        var regionID = regionRefID[card.regionRefs[0]]
+        if (factionIDs.indexOf(regionID) == -1) {
+          factionIDs.push(regionID)
+        }
+      }
+    }
+  }
+
+  const getFollowerFactionsAatrox = () => {
+    for (var j in cards) {
+      // Second loop to get followerFactions
+      var card = baseStore.sets_en[cards[j].code]
+      if (
+        card &&
+        card.rarityRef != "Champion" &&
+        card.regions &&
+        card.regions.length == 1 &&
+        !card.subtypes.includes("DARKIN") && // Filter out all cultist cards
+        card.collectible
+      ) {
+        // Filters champion & card that is darkin
+        // Only considers mono region cards
+        var regionID = regionRefID[card.regionRefs[0]]
+        if (factionIDs.indexOf(regionID) == -1) {
+          factionIDs.push(regionID)
+        }
+      }
+    }
+  }
+
+  const getFollowerFactionsRyze = () => {
+    for (var j in cards) {
+      // Second loop to get followerFactions
+      var card = baseStore.sets_en[cards[j].code]
+      if (
+        card &&
+        card.rarityRef != "Champion" &&
+        card.regions &&
+        card.regions.length == 1 &&
+        card.spellSpeedRef != "Burst" && // Filter out all burst and focus speed cards
+        card.collectible
+      ) {
+        // Filters champion & all burst and focus speed cards
+        // Only considers mono region cards
+        
         var regionID = regionRefID[card.regionRefs[0]]
         if (factionIDs.indexOf(regionID) == -1) {
           factionIDs.push(regionID)
@@ -174,6 +223,10 @@ const getFactions = (code) => {
     getFollowerFactionsKayn()
   } else if (factionIDs.includes(regionRefID.Varus)) {
     getFollowerFactionsKayn()
+  } else if (factionIDs.includes(regionRefID.Aatrox)) {
+    getFollowerFactionsAatrox()
+  } else if (factionIDs.includes(regionRefID.Ryze)) {
+    getFollowerFactionsRyze()
   } else {
     for (var j in cards) {
       // Second loop to get follower Factions
