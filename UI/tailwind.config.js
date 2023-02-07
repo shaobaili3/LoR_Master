@@ -52,6 +52,19 @@ module.exports = {
         glow: "0 0 12px 0px",
         "glow-sm": "0 0 4px 0px",
       },
+      animation: {
+        in: '1s visibilityTransition'
+      },
+      keyframes: {
+        visibilityTransition: {
+          "99%": {
+            visibility: "hidden",
+          },
+          "100%": {
+            visibility: "visible",
+          },
+        },
+      },
     },
   },
   plugins: [require("@tailwindcss/typography")],

@@ -14,9 +14,9 @@
       :to="{ name: 'profile' }"
       class="left-nav-btn"
       v-if="IS_ELECTRON || IS_DEV"
-      :class="{ selected: $route.name == 'profile', disabled: !lorRunning }"
+      :class="{ selected: $route.name == 'profile', disabled: !lorRunning && !playerInfo }"
       @click="setCurrentPage(PANELS.my)"
-      :disabled="!lorRunning"
+      :disabled="!lorRunning && !playerInfo"
     >
       <span><i class="fas fa-user-circle"></i></span>
     </router-link>
@@ -306,6 +306,7 @@ import DeckDetail from "../../components/deck/DeckDetail.vue"
 import { useBaseStore } from "../../store/StoreBase"
 import { useDeckLibStore } from "../../store/StoreDeckLib"
 import { useStatusStore } from "../../store/StoreStatus"
+import { usePlayerInfoStore } from "../../store/StorePlayerInfo"
 import { mapState, mapActions, mapWritableState } from "pinia"
 
 import "../../assets/scss/responsive.scss"
@@ -422,6 +423,7 @@ export default {
       "lorRunning",
       "backendRunning",
     ]),
+    ...mapState(usePlayerInfoStore, ["playerInfo"]),
     isUpdatedVersion() {
       return this.version == this.remoteVersion
     },
