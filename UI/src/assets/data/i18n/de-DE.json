@@ -1,0 +1,192 @@
+{
+   "lang": "Deutsch",
+   "appName": "LoR Master Tracker",
+   "str": {
+      "settings": "Einstellungen",
+      "meta": "Meta Umgebung",
+      "loading": "Lädt...",
+      "updating": "Updated...",
+      "languages": "Sprache der Benutzeroberfläche",
+      "invalidDeck": "Ungültiger Deckcode",
+      "copy": "Kopieren",
+      "copied": "Kopiert!",
+      "rounds": "Runden",
+      "clipboard": "Zwischenablage",
+      "tracker": "Tracker",
+      "requestConfirm": "Bist du dir sicher?",
+      "yes": "Ja",
+      "no": "Nein",
+      "error": {
+         "unkown": "Irgendetwas lief schief",
+         "playerNotFound": "Spieler nicht gefunden",
+         "playerNoHistory": "Kein Spielverlauf gefunden",
+         "localApiError": "Bitte aktiviere die Funktion \"Endpunkte von Drittanbietern ermöglichen\" in den Spieleinstellungen",
+         "internalServiceError": "Interner Serverfehler",
+         "backend": "Fehler des Trackerservices"
+      },
+      "regions": {
+         "americas": "Amerika",
+         "europe": "Europa",
+         "asia": "Asien",
+         "sea": "SEA",
+         "apac": "Asien-Pazifik"
+      },
+      "times": {
+         "sec": "vor {t} Sek.",
+         "min": "vor {t} Min.",
+         "hour": "vor {t} Stunde",
+         "hours": "vor {t} Stunden",
+         "day": "vor {t} Tag",
+         "days": "vor {t} Tagen"
+      },
+      "labSecrets": "LAB SECRETS!",
+      "delete": "Löschen",
+      "detail": "Detail",
+      "noDetail": "Keine Details gefunden",
+      "back": "Zurück",
+      "archetypes": "Archetypen",
+      "leaderboard": "Bestenliste",
+      "nothing": "Hier gibt es nichts zu sehen",
+      "server": "Server",
+      "retry": "Erneut versuchen",
+      "support": "Support",
+      "filter": "Filter",
+      "gameType": "Spielmodus",
+      "history": "Spielverlauf",
+      "clickToAdd": "Klicke {0}, um items hinzuzufügen",
+      "expand": "Erweitern",
+      "collapse": "Verkleinern",
+      "lastUpdated": "Zuletzt geupdated",
+      "sort": "Sortieren",
+      "patch": "Aktueller Patch",
+      "seasonal": "Saisonales Turnier",
+      "enterInfo": "Bitte gib deine Info ein",
+      "name": "Name",
+      "tag": "Tag",
+      "username": "Benutzername",
+      "welcome": "Willkommen!"
+   },
+   "loading": {
+      "readyToRock": "Bereit zum Rocken 🤘",
+      "history": "Lade Spielverlauf...",
+      "nohistory": "Spielverlauf nicht verfügbar"
+   },
+   "tracker": {
+      "tabs": {
+         "oppoPlayed": "Gegner gespielt",
+         "myPlayed": "Meine gespielt"
+      },
+      "cardsInHand": "Karten auf der Hand: {num}"
+   },
+   "leaderboard": {
+      "rank": "Rang",
+      "name": "Name",
+      "points": "Punkte",
+      "lastRank": "Ranglistenspiel",
+      "recent": "Kürzliche Decks",
+      "lastX": "Letzte {num} Spiele",
+      "desc": "Am besten, um Top-Spieler zu finden und um die Meister-Meta zu verstehen!",
+      "lastRankTip": "Nur Ranglistenspiele",
+      "ladderHighlight": "Ranglisten Highlight"
+   },
+   "matches": {
+      "usage": "{num}% Verwendung",
+      "winRate": "{num}% Sieg",
+      "game": "{num} Spiel",
+      "games": "{num} Spiele",
+      "badges": {
+         "Ranked": "Rangliste",
+         "Bo3Challenge": "Bo3 Challenge",
+         "StandardGauntlet": "Gauntlet",
+         "Normal": "Normal",
+         "LastCallQualifierGauntlet": "Last Chance Gauntlet",
+         "SeasonalTournament": "Saisonal",
+         "AI": "KI"
+      },
+      "lastNumHour": "Letzte {num} std",
+      "build": "{num}% Build",
+      "meta": "{num}% Meta",
+      "winStreak": "{num} Spiele Siegesträhne!",
+      "recommendedCurrent": "Empfohlen (momentan):",
+      "recommended": "Empfohlen:",
+      "current": "Momentan:"
+   },
+   "dash": {
+      "winRate": "Sieg",
+      "winloss": "{win}S {loss}N"
+   },
+   "search": {
+      "leaderboard": {
+         "base": "Suche",
+         "numPlayer": "Suche {num} Meister-Spieler"
+      },
+      "player": {
+         "placeholder": "Suche alle Spieler, z.B.: Storm#5961"
+      },
+      "prompt": "⬆ Gib einen Namen und einen Tag zum Suchen ein",
+      "bookmarks": "Lesezeichen",
+      "noBookmarks": "Klicke {0} neben dem Spieler zum hinzufügen",
+      "noSuggestion": "Keine Vorschläge, versuche einen #TAG für Ergebnisse hinzuzufügen"
+   },
+   "tooltips": {
+      "lorlogin": "Bitte melde dich mit LoR an",
+      "incompleteDeck": "Unvollständiges Deck"
+   },
+   "contact": {
+      "messageBox": {
+         "placeholder": "Irgendwelche Vorschläge?",
+         "messageSent": "Nachricht gesendet",
+         "confirm": "Bestätigen?",
+         "send": "Senden",
+         "messageSending": "Sende..."
+      },
+      "contactUs": "Kontaktiere uns",
+      "broughtWithLove": "Mit ❤️ für euch von",
+      "leaveContact": "Eine Kontaktoption da lassen (Discord, E-Mail etc), damit wir uns zurückmelden können?"
+   },
+   "settings": {
+      "options": {
+         "autoLaunch": "Beim Starten automatisch öffnen:",
+         "cardLanguage": "Sprache der Kartentexte",
+         "resetTrackerBounds": "Trackerposition und -Größe zurücksetzen"
+      },
+      "enabled": "Aktiviert",
+      "enable": "Aktivieren",
+      "disabled": "Deaktiviert",
+      "disable": "Deaktivieren",
+      "reset": "Zurücksetzen"
+   },
+   "decklib": {
+      "title": "Deck-Bibliothek",
+      "placeholder": "Füge deinen Deckcode hier ein",
+      "save": "Speichern",
+      "saved": "Gespeichert!",
+      "saveTo": "Deck in die Bibliothek speichern.",
+      "noDecks": "Klicke {0}, um das Deck zu speichern"
+   },
+   "deckCode": {
+      "archetypeStats": "Archetype Stats",
+      "archetypeMatchups": "Archetype Matchups",
+      "mulliganGuide": "Mulligan Guide",
+      "keep": "Behalten",
+      "mulligan": "Mulligan",
+      "goodMatchup": "Gute Matchups",
+      "badMatchup": "Schlechte Matchups"
+   },
+   "filter": {
+      "placeHolder": "Filtere Karten, Champions, Regionen..."
+   },
+   "meta": {
+      "subtitle": "Matchup-Statistiken. Entdecke verstecke Juwelen, die besten Builds und Meta-Trends!",
+      "sort": {
+         "playRate": "Spielrate",
+         "winRate": "Siegesrate"
+      }
+   },
+   "update": {
+      "updated": "Geupdated",
+      "updateOnStart": "Update beim nächsten Start",
+      "process": "Lade herunter...{percent}%",
+      "lastest": "Aktuell: {version}"
+   }
+}
