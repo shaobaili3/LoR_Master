@@ -3,17 +3,26 @@
   "appName": "LoR Master Tracker",
   "str": {
     "settings": "Configurações",
+    "meta": "Meta",
     "loading": "Carregando...",
-    "languages": "Idioma da interface principal",
+    "updating": "Atualizando...",
+    "languages": "Idioma da interface de usuário",
     "invalidDeck": "Código de deck inválido",
     "copy": "Copiar",
     "copied": "Copiado!",
     "rounds": "rodadas",
+    "clipboard": "Área de transferência",
+    "tracker": "Tracker",
+    "requestConfirm": "Tem certeza?",
+    "yes": "Sim",
+    "no": "Não",
     "error": {
       "unkown": "Algo deu errado",
       "playerNotFound": "Jogador não encontrado",
       "playerNoHistory": "Nenhum histórico encontrado",
-      "localApiError": "Por favor, habilite a opção ferramentas de terceiros no cliente do jogo"
+      "localApiError": "Por favor, habilite a opção ferramentas de terceiros no cliente do jogo",
+      "internalServiceError": "Erro interno do servidor",
+      "backend": "Erro de serviço do tracker"
     },
     "regions": {
       "americas": "Américas",
@@ -30,16 +39,37 @@
       "day": "{t} dia atrás",
       "days": "{t} dias atrás"
     },
-    "yes": "sim",
-    "delete": "Excluir",
-    "requestConfirm": "Tem certeza?",
-    "no": "Não",
-    "clipboard": "Prancheta"
+    "labSecrets": "SEGREDOS DO LABORATÓRIO!",
+    "delete": "Deletar",
+    "detail": "Detalhes",
+    "noDetail": "Nenhum detalhe encontrado",
+    "back": "Voltar",
+    "archetypes": "Arquétipos",
+    "leaderboard": "Tabela de classificação",
+    "nothing": "Nada para ver aqui",
+    "server": "Servidor",
+    "retry": "Tentar novamente",
+    "support": "Suporte",
+    "filter": "Filtros",
+    "gameType": "Tipos de jogo",
+    "history": "Histórico",
+    "clickToAdd": "Clique em {0} para adicionar itens",
+    "expand": "Expandir",
+    "collapse": "Recolher",
+    "lastUpdated": "Última atualização",
+    "sort": "Organizar por",
+    "patch": "Patch atual",
+    "seasonal": "Torneio sazonal",
+    "enterInfo": "Por favor, insira suas informações",
+    "name": "Nome",
+    "tag": "Tag",
+    "username": "Nome de usuário",
+    "welcome": "Boas vindas!"
   },
   "loading": {
     "readyToRock": "Pronto para arrasar 🤘",
     "history": "Carregando histórico...",
-    "nohistory": "Histórico indisponível"
+    "nohistory": "Sem histórico disponível"
   },
   "tracker": {
     "tabs": {
@@ -51,10 +81,17 @@
   "leaderboard": {
     "rank": "Posição",
     "name": "Nome",
-    "points": "Pontos"
+    "points": "Pontos",
+    "lastRank": "Última partida ranqueada",
+    "recent": "Decks recentes",
+    "lastX": "Últimos {num} jogos",
+    "desc": "Perfeito para descobrir quem são os melhores jogadores e entender o meta do elo mestre!",
+    "lastRankTip": "Apenas partidas ranqueadas",
+    "ladderHighlight": "Destaques nas ranqueadas"
   },
   "matches": {
     "usage": "{num}% de uso",
+    "winRate": "{num}% de vitórias",
     "game": "{num} jogo",
     "games": "{num} jogos",
     "badges": {
@@ -63,10 +100,16 @@
       "StandardGauntlet": "Contenda",
       "Normal": "Normal",
       "LastCallQualifierGauntlet": "Contenda final",
-      "SeasonalTournament": "Torneio sazonal",
+      "SeasonalTournament": "Sazonal",
       "AI": "IA"
     },
-    "winRate": "{num}% de vitória"
+    "lastNumHour": "Última(s) {num} hora(s)",
+    "build": "{num}% build",
+    "meta": "{num}% meta",
+    "winStreak": "Sequência de vitórias de {num} jogos!",
+    "recommendedCurrent": "Recomendado (atual):",
+    "recommended": "Recomendado:",
+    "current": "Atual:"
   },
   "dash": {
     "winRate": "de vitória",
@@ -75,12 +118,15 @@
   "search": {
     "leaderboard": {
       "base": "Procurar",
-      "numPlayer": "Procure entre {num} jogadores"
+      "numPlayer": "Procure entre {num} jogadores do elo mestre"
     },
     "player": {
-      "placeholder": "Pesquisar todos os jogadores. Exemplo: Storm#5961"
+      "placeholder": "Procure entre todos os jogadores. Exemplo: Storm#5961"
     },
-    "prompt": "⬆ Enter name and tag to search"
+    "prompt": "⬆ Escreva o nome e tag para procurar",
+    "bookmarks": "Favoritos",
+    "noBookmarks": "Clique em {0} ao lado do nome do jogador para salvá-lo nos favoritos",
+    "noSuggestion": "Nenhuma sugestão encontrada, tente adicionar a #tag para uma pesquisa mais precisa"
   },
   "tooltips": {
     "lorlogin": "Por favor, faça login no LoR",
@@ -91,22 +137,56 @@
       "placeholder": "Sugestões?",
       "messageSent": "Mensagem enviada",
       "confirm": "Confirmar?",
-      "send": "Enviar"
+      "send": "Enviar",
+      "messageSending": "Enviando..."
     },
     "contactUs": "Fale conosco!",
-    "broughtWithLove": "Feito para você com ❤️ por"
+    "broughtWithLove": "Feito para você com ❤️ por",
+    "leaveContact": "Quer deixar algum contato (Discord, email, etc) para acompanhar sua sugestão com a gente?"
   },
   "settings": {
     "options": {
-      "autoLaunch": "Abrir automaticante ao iniciar o sistema:"
+      "autoLaunch": "Abrir automaticante ao iniciar o sistema:",
+      "cardLanguage": "Idioma do texto das cartas",
+      "resetTrackerBounds": "Redefinir a posição e tamanho do tracker"
     },
-    "enabled": "Ativado",
-    "enable": "Ativar",
-    "disabled": "Desativado",
-    "disable": "Desativar"
+    "enabled": "Habilitado",
+    "enable": "Habilitar",
+    "disabled": "Desabilitado",
+    "disable": "Desabilitar",
+    "reset": "Redefinir"
   },
   "decklib": {
     "title": "Coleção de decks",
-    "placeholder": "Cole o código do seu deck aqui"
+    "placeholder": "Cole o código do seu deck aqui",
+    "save": "Salvar",
+    "saved": "Salvo!",
+    "saveTo": "Salvar na coleção de decks",
+    "noDecks": "Clique em {0} para salvar decks"
+  },
+  "deckCode": {
+    "archetypeStats": "Estatísticas do arquétipo",
+    "archetypeMatchups": "Confrontos desse arquétipo",
+    "mulliganGuide": "Guia para mão inicial (mulligan)",
+    "keep": "Manter",
+    "mulligan": "Substituir",
+    "goodMatchup": "Tem vantagem nesses confrontos",
+    "badMatchup": "Tem desvantagem nesses confrontos"
+  },
+  "filter": {
+    "placeHolder": "Filtre por cartas, campeões, regiões..."
+  },
+  "meta": {
+    "subtitle": "Veja estatísticas de confrontos. Descubra preciosidades, construções melhores para seu deck e tendências do meta!",
+    "sort": {
+      "playRate": "Taxa de jogo",
+      "winRate": "Taxa de vitória"
+    }
+  },
+  "update": {
+    "updated": "Atualizado",
+    "updateOnStart": "Atualizar na próxima inicialização",
+    "process": "Baixando...{percent}%",
+    "lastest": "Mais recente: {version}"
   }
 }
