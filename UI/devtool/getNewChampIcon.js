@@ -2,7 +2,7 @@ const sets_en = require("../src/data/en_us.json")
 const fs = require("fs")
 const http = require("https")
 
-const setCodes = ["1", "2", "3", "4", "5", "6", "6cde"]
+const setCodes = ["1", "2", "3", "4", "5", "6", "6cde", "7"];
 
 var champs = []
 

@@ -284,7 +284,7 @@ export const processSearchRequestRawData = (raw) => {
 
   let data = raw.matches
 
-  if (!data) return matches
+  if (!data || data.length <= 0) return matches
 
   let puuid = raw.player._id
 
@@ -981,6 +981,8 @@ export default {
             label: "URL: " + newRequest,
             value: Date.now() - requestHistoryStartTime,
           })
+
+          // console.log(response.data)
 
           this.matches = processSearchRequestRawData(response.data)
 

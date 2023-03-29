@@ -5,9 +5,11 @@ const fs = require("fs")
 
 const axios = require("axios").default
 
-const setCodes = ["1", "2", "3", "4", "5", "6", "6cde"]
+const setCodes = ["1", "2", "3", "4", "5", "6", "6cde", "7"];
 
-const specialAdditions = [{version: "3_14_0", set: "6cde"}]
+const specialAdditions = [
+  // {version: "3_14_0", set: "6cde"}
+]
 
 const setLocales = [
   "de_de",
@@ -33,10 +35,10 @@ const finished = promisify(stream.finished)
 
 async function downloadFile(fileUrl, outputLocationPath) {
   return axios({
-    method: "get",
-    url: fileUrl,
-    responseType: "stream",
-  })
+      method: "get",
+      url: fileUrl,
+      responseType: "stream",
+    })
     .then((response) => {
       const writer = fs.createWriteStream(outputLocationPath)
       response.data.pipe(writer)
@@ -79,18 +81,19 @@ for (let i = 0; i < setCodes.length; i++) {
   // })
 }
 
-for (var item of specialAdditions) {
-  for (let j = 0; j < setLocales.length; j++) {
-    let version = item.version
-    let setCode = item.set
-    const api = `http://dd.b.pvp.net/${version}/set${setCode}/${setLocales[j]}/data/set${setCode}-${setLocales[j]}.json`
-    const path = `./src/data/${version}-set${setCode}-${setLocales[j]}.json`
-    
-    files[j].push(path)
-    console.log(`Download Started for version: ${version}, set${setCode}, locale: ${setLocales[j]}, api: ${api}`)
-    promises.push(downloadFile(api, path))
+if (specialAdditions.length > 0)
+  for (var item of specialAdditions) {
+    for (let j = 0; j < setLocales.length; j++) {
+      let version = item.version
+      let setCode = item.set
+      const api = `http://dd.b.pvp.net/${version}/set${setCode}/${setLocales[j]}/data/set${setCode}-${setLocales[j]}.json`
+      const path = `./src/data/${version}-set${setCode}-${setLocales[j]}.json`
+
+      files[j].push(path)
+      console.log(`Download Started for version: ${version}, set${setCode}, locale: ${setLocales[j]}, api: ${api}`)
+      promises.push(downloadFile(api, path))
+    }
   }
-}
 
 function allProgress(proms, progress_cb) {
   let d = 0
