@@ -66,6 +66,11 @@
       "nameRef": "RoundEnd"
     },
     {
+      "description": "Completely removed from the game. Doesn't cause Last Breath and can't be revived.",
+      "name": "Obliterate",
+      "nameRef": "Obliterate"
+    },
+    {
       "description": "This is how much damage the unit can withstand. If it reaches zero, the unit dies.",
       "name": "Health",
       "nameRef": "Health"
@@ -109,6 +114,11 @@
       "description": "Effect when unit Strikes the enemy Nexus.",
       "name": "Nexus Strike",
       "nameRef": "NexusStrike"
+    },
+    {
+      "description": "A unit has its Empowered bonus while its Power is at least the listed number.",
+      "name": "Empowered",
+      "nameRef": "Empowered"
     },
     {
       "description": "Activates if allies have struck for 5+ damage at least 4 times this game.",
@@ -174,6 +184,11 @@
       "description": "Create in hand 1 of 3 randomly selected cards.",
       "name": "Manifest",
       "nameRef": "Manifest"
+    },
+    {
+      "description": "Transform allies Equipped with Darkin Equipment into their Darkin unit forms. If they are Champions, they Level Up.",
+      "name": "Assimilate",
+      "nameRef": "Assimilate"
     },
     {
       "description": "Pick a card from among 3 in your deck. Shuffle the deck and put that card on top.",
@@ -293,7 +308,7 @@
       "nameRef": "Demacia"
     },
     {
-      "description": "A champion levels up once this condition is met, even in hand or deck.",
+      "description": "A champion in play levels up everywhere once this condition is met. Some champions must be in play to see their condition progress.",
       "name": "Level Up",
       "nameRef": "LevelUp"
     },
@@ -336,11 +351,6 @@
       "description": "Can be played outside of combat when no spells or skills are pending. Happens after your opponent has a chance to react.",
       "name": "Slow",
       "nameRef": "Slow"
-    },
-    {
-      "description": "Completely removed from the game. Doesn't cause Last Breath and can't be revived.",
-      "name": "Obliterate",
-      "nameRef": "Obliterate"
     },
     {
       "description": "These abilities trigger when you resolve a spell.",
@@ -538,6 +548,11 @@
       "nameRef": "Formidable"
     },
     {
+      "description": "Can only be blocked by enemies with 3 or more Health.",
+      "name": "Brash",
+      "nameRef": "Brash"
+    },
+    {
       "description": "Can choose which enemy unit blocks.",
       "name": "Challenger",
       "nameRef": "Challenger"
@@ -561,97 +576,115 @@
   "regions": [
     {
       "abbreviation": "NX",
-      "iconAbsolutePath": "http://dd.b.pvp.net/3_17_0/core/en_us/img/regions/icon-noxus.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/4_3_0/core/en_us/img/regions/icon-noxus.png",
       "name": "Noxus",
       "nameRef": "Noxus"
     },
     {
-      "abbreviation": "DE",
-      "iconAbsolutePath": "http://dd.b.pvp.net/3_17_0/core/en_us/img/regions/icon-demacia.png",
-      "name": "Demacia",
-      "nameRef": "Demacia"
+      "abbreviation": "RYZE",
+      "iconAbsolutePath": "http://dd.b.pvp.net/4_3_0/core/en_us/img/regions/icon-ryze.png",
+      "name": "Ryze",
+      "nameRef": "Ryze"
     },
     {
       "abbreviation": "Jhin",
-      "iconAbsolutePath": "http://dd.b.pvp.net/3_17_0/core/en_us/img/regions/icon-jhin.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/4_3_0/core/en_us/img/regions/icon-jhin.png",
       "name": "Jhin",
       "nameRef": "Jhin"
     },
     {
+      "abbreviation": "Varus",
+      "iconAbsolutePath": "http://dd.b.pvp.net/4_3_0/core/en_us/img/regions/icon-varus.png",
+      "name": "Varus",
+      "nameRef": "Varus"
+    },
+    {
+      "abbreviation": "Aatrox",
+      "iconAbsolutePath": "http://dd.b.pvp.net/4_3_0/core/en_us/img/regions/icon-aatrox.png",
+      "name": "Aatrox",
+      "nameRef": "Aatrox"
+    },
+    {
       "abbreviation": "Jax",
-      "iconAbsolutePath": "http://dd.b.pvp.net/3_17_0/core/en_us/img/regions/icon-jax.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/4_3_0/core/en_us/img/regions/icon-jax.png",
       "name": "Jax",
       "nameRef": "Jax"
     },
     {
       "abbreviation": "Kayn",
-      "iconAbsolutePath": "http://dd.b.pvp.net/3_17_0/core/en_us/img/regions/icon-kayn.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/4_3_0/core/en_us/img/regions/icon-kayn.png",
       "name": "Kayn",
       "nameRef": "Kayn"
     },
     {
       "abbreviation": "Evelynn",
-      "iconAbsolutePath": "http://dd.b.pvp.net/3_17_0/core/en_us/img/regions/icon-evelynn.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/4_3_0/core/en_us/img/regions/icon-evelynn.png",
       "name": "Evelynn",
       "nameRef": "Evelynn"
     },
     {
       "abbreviation": "Bard",
-      "iconAbsolutePath": "http://dd.b.pvp.net/3_17_0/core/en_us/img/regions/icon-bard.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/4_3_0/core/en_us/img/regions/icon-bard.png",
       "name": "Bard",
       "nameRef": "Bard"
     },
     {
+      "abbreviation": "DE",
+      "iconAbsolutePath": "http://dd.b.pvp.net/4_3_0/core/en_us/img/regions/icon-demacia.png",
+      "name": "Demacia",
+      "nameRef": "Demacia"
+    },
+    {
       "abbreviation": "RU",
-      "iconAbsolutePath": "http://dd.b.pvp.net/3_17_0/core/en_us/img/regions/icon-runeterra.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/4_3_0/core/en_us/img/regions/icon-runeterra.png",
       "name": "Runeterra",
       "nameRef": "Runeterra"
     },
     {
       "abbreviation": "FR",
-      "iconAbsolutePath": "http://dd.b.pvp.net/3_17_0/core/en_us/img/regions/icon-freljord.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/4_3_0/core/en_us/img/regions/icon-freljord.png",
       "name": "Freljord",
       "nameRef": "Freljord"
     },
     {
       "abbreviation": "SI",
-      "iconAbsolutePath": "http://dd.b.pvp.net/3_17_0/core/en_us/img/regions/icon-shadowisles.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/4_3_0/core/en_us/img/regions/icon-shadowisles.png",
       "name": "Shadow Isles",
       "nameRef": "ShadowIsles"
     },
     {
       "abbreviation": "MT",
-      "iconAbsolutePath": "http://dd.b.pvp.net/3_17_0/core/en_us/img/regions/icon-targon.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/4_3_0/core/en_us/img/regions/icon-targon.png",
       "name": "Targon",
       "nameRef": "Targon"
     },
     {
       "abbreviation": "IO",
-      "iconAbsolutePath": "http://dd.b.pvp.net/3_17_0/core/en_us/img/regions/icon-ionia.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/4_3_0/core/en_us/img/regions/icon-ionia.png",
       "name": "Ionia",
       "nameRef": "Ionia"
     },
     {
       "abbreviation": "SH",
-      "iconAbsolutePath": "http://dd.b.pvp.net/3_17_0/core/en_us/img/regions/icon-shurima.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/4_3_0/core/en_us/img/regions/icon-shurima.png",
       "name": "Shurima",
       "nameRef": "Shurima"
     },
     {
       "abbreviation": "BW",
-      "iconAbsolutePath": "http://dd.b.pvp.net/3_17_0/core/en_us/img/regions/icon-bilgewater.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/4_3_0/core/en_us/img/regions/icon-bilgewater.png",
       "name": "Bilgewater",
       "nameRef": "Bilgewater"
     },
     {
       "abbreviation": "PZ",
-      "iconAbsolutePath": "http://dd.b.pvp.net/3_17_0/core/en_us/img/regions/icon-piltoverzaun.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/4_3_0/core/en_us/img/regions/icon-piltoverzaun.png",
       "name": "Piltover & Zaun",
       "nameRef": "PiltoverZaun"
     },
     {
       "abbreviation": "BC",
-      "iconAbsolutePath": "http://dd.b.pvp.net/3_17_0/core/en_us/img/regions/icon-bandlecity.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/4_3_0/core/en_us/img/regions/icon-bandlecity.png",
       "name": "Bandle City",
       "nameRef": "BandleCity"
     }
@@ -694,44 +727,76 @@
   ],
   "sets": [
     {
-      "iconAbsolutePath": "http://dd.b.pvp.net/3_17_0/core/en_us/img/sets/set3_crispmip.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/4_3_0/core/en_us/img/sets/set3_crispmip.png",
       "name": "Call of the Mountain",
       "nameRef": "Set3"
     },
     {
-      "iconAbsolutePath": "http://dd.b.pvp.net/3_17_0/core/en_us/img/sets/set5_crispmip.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/4_3_0/core/en_us/img/sets/set5_crispmip.png",
       "name": "Beyond the Bandlewood",
       "nameRef": "Set5"
     },
     {
-      "iconAbsolutePath": "http://dd.b.pvp.net/3_17_0/core/en_us/img/sets/set1_crispmip.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/4_3_0/core/en_us/img/sets/set1_crispmip.png",
       "name": "Foundations",
       "nameRef": "Set1"
     },
     {
-      "iconAbsolutePath": "http://dd.b.pvp.net/3_17_0/core/en_us/img/sets/set2_crispmip.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/4_3_0/core/en_us/img/sets/set2_crispmip.png",
       "name": "Rising Tides",
       "nameRef": "Set2"
     },
     {
-      "iconAbsolutePath": "http://dd.b.pvp.net/3_17_0/core/en_us/img/sets/set6ab_crispmip.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/4_3_0/core/en_us/img/sets/set6ab_crispmip.png",
       "name": "Worldwalker",
       "nameRef": "Set6"
     },
     {
-      "iconAbsolutePath": "http://dd.b.pvp.net/3_17_0/core/en_us/img/sets/set4_crispmip.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/4_3_0/core/en_us/img/sets/set4_crispmip.png",
       "name": "Empires of the Ascended",
       "nameRef": "Set4"
     },
     {
-      "iconAbsolutePath": "http://dd.b.pvp.net/3_17_0/core/en_us/img/sets/setevent_crispmip.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/4_3_0/core/en_us/img/sets/set7_crispmip.png",
+      "name": "Glory in Navori",
+      "nameRef": "Set7"
+    },
+    {
+      "iconAbsolutePath": "http://dd.b.pvp.net/4_3_0/core/en_us/img/sets/setevent_crispmip.png",
       "name": "Events",
       "nameRef": "SetEvent"
     },
     {
-      "iconAbsolutePath": "http://dd.b.pvp.net/3_17_0/core/en_us/img/sets/set6cde_crispmip.png",
+      "iconAbsolutePath": "http://dd.b.pvp.net/4_3_0/core/en_us/img/sets/set6cde_crispmip.png",
       "name": "The Darkin Saga",
       "nameRef": "Set6cde"
+    }
+  ],
+  "formats": [
+    {
+      "iconAbsolutePath": "http://dd.b.pvp.net/4_3_0/core/en_us/img/formats/queue_select_standard_toggle_active.png",
+      "name": "Standard",
+      "nameRef": "client_Formats_Standard_name"
+    },
+    {
+      "iconAbsolutePath": null,
+      "name": "Singleton",
+      "nameRef": "client_Deckbuilder_RulesFilters_Singleton"
+    },
+    {
+      "iconAbsolutePath": "http://dd.b.pvp.net/4_3_0/core/en_us/img/formats/queue_select_eternal_toggle_active.png",
+      "name": "Eternal",
+      "nameRef": "client_Formats_Eternal_name"
+    },
+    {
+      "iconAbsolutePath": null,
+      "name": "Commons Only",
+      "nameRef": "client_Formats_CommonsOnly_name"
+    },
+    {
+      "iconAbsolutePath": null,
+      "name": "Even Cost Cards",
+      "nameRef": "client_Formats_EvenCostCards_name"
     }
   ]
 }
