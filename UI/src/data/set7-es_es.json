@@ -4,8 +4,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07PZ009.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07PZ009-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07PZ009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07PZ009-full.png"
       }
     ],
     "regions": [
@@ -56,8 +56,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07PZ017.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07PZ017-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07PZ017.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07PZ017-full.png"
       }
     ],
     "regions": [
@@ -69,8 +69,8 @@
     "attack": 1,
     "cost": 2,
     "health": 3,
-    "description": "Cuando juegas un hechizo, coloca 1 <link=card.trap><style=AssociatedCard>Trampa con bomba destello</style></link> de forma aleatoria entre las 8 cartas de arriba del mazo enemigo.",
-    "descriptionRaw": "Cuando juegas un hechizo, coloca 1 Trampa con bomba destello de forma aleatoria entre las 8 cartas de arriba del mazo enemigo.",
+    "description": "Cuando juegas un hechizo, coloca 1 <link=card.trap><style=AssociatedCard>Trampa con bomba destello</style></link> entre las 8 cartas de más arriba del mazo enemigo.",
+    "descriptionRaw": "Cuando juegas un hechizo, coloca 1 Trampa con bomba destello entre las 8 cartas de más arriba del mazo enemigo.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "''¿Y sabes por qué estas peques son mejores que las setas? ¡Porque tú decides cuándo explotan! ¡Eso sí que es útil!''.",
@@ -106,8 +106,58 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07NX009.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07NX009-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07PZ005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07PZ005-full.png"
+      }
+    ],
+    "regions": [
+      "Piltover y Zaun"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 0,
+    "cost": 4,
+    "health": 0,
+    "description": "Inflige 1 de daño a un enemigo y al nexo enemigo. Descarta hasta 2 cartas para aumentar el daño en 1 por cada carta que hayas descartado.",
+    "descriptionRaw": "Inflige 1 de daño a un enemigo y al nexo enemigo. Descarta hasta 2 cartas para aumentar el daño en 1 por cada carta que hayas descartado.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Vale, vale. Creo que esto solo funcionará una vez, pero hazme caso, ¡va a ser la caña!\". - Jinx",
+    "artistName": "Kudos Productions",
+    "name": "Culatazo",
+    "cardCode": "07PZ005",
+    "keywords": [
+      "Veloz"
+    ],
+    "keywordRefs": [
+      "Fast"
+    ],
+    "spellSpeed": "Veloz",
+    "spellSpeedRef": "Fast",
+    "rarity": "RARA",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Hechizo",
+    "collectible": true,
+    "set": "Set7",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07NX009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07NX009-full.png"
       }
     ],
     "regions": [
@@ -156,8 +206,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07NX008.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07NX008-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07NX008.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07NX008-full.png"
       }
     ],
     "regions": [
@@ -210,8 +260,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07NX014.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07NX014-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07NX014.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07NX014-full.png"
       }
     ],
     "regions": [
@@ -266,8 +316,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07NX007.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07NX007-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07NX007.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07NX007-full.png"
       }
     ],
     "regions": [
@@ -281,8 +331,8 @@
     "health": 2,
     "description": "Cuando se me invoca o al <link=vocab.Strike><style=Vocab>golpear</style></link>: Crea 1 <link=card.create><style=AssociatedCard>Clase</style></link> en la mano si no tienes.",
     "descriptionRaw": "Cuando se me invoca o al golpear: Crea 1 Clase en la mano si no tienes.",
-    "levelupDescription": "Te he visto jugar 6 o más cartas. Se reinicia cuando comienzas una ronda con la ficha de ataque.<style=Variable></style>",
-    "levelupDescriptionRaw": "Te he visto jugar 6 o más cartas. Se reinicia cuando comienzas una ronda con la ficha de ataque.",
+    "levelupDescription": "Te he visto jugar 6 cartas. Se reinicia cuando comienzas una ronda con la ficha de ataque.<style=Variable></style>",
+    "levelupDescriptionRaw": "Te he visto jugar 6 cartas. Se reinicia cuando comienzas una ronda con la ficha de ataque.",
     "flavorText": "''Siempre ando detrás de algún canalla con deudas sin saldar. Huir de esas deudas hace que te ganes enemigos... que luego me llaman a mí''.",
     "artistName": "Kudos Productions",
     "name": "Samira",
@@ -320,8 +370,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07NX007T8.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07NX007T8-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07NX007T8.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07NX007T8-full.png"
       }
     ],
     "regions": [
@@ -333,8 +383,8 @@
     "attack": 0,
     "cost": 1,
     "health": 0,
-    "description": "Inflige 1 de daño al nexo enemigo o concede <link=keyword.Challenger><sprite name=Challenger><style=Keyword>Contendiente</style></link> a un aliado esta ronda.\r\n",
-    "descriptionRaw": "Inflige 1 de daño al nexo enemigo o concede Contendiente a un aliado esta ronda.\r\n",
+    "description": "Inflige 1 de daño al nexo enemigo o concede <link=keyword.Challenger><sprite name=Challenger><style=Keyword>Contendiente</style></link> a una <link=card.samira><style=AssociatedCard>Samira</style></link> aliada esta ronda.\r\n",
+    "descriptionRaw": "Inflige 1 de daño al nexo enemigo o concede Contendiente a una Samira aliada esta ronda.\r\n",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "''Acero para el que se acerque, plomo para el que huya''.<br>- Samira",
@@ -373,8 +423,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07NX007T6.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07NX007T6-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07NX007T6.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07NX007T6-full.png"
       }
     ],
     "regions": [
@@ -426,8 +476,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07NX007T5.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07NX007T5-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07NX007T5.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07NX007T5-full.png"
       }
     ],
     "regions": [
@@ -439,8 +489,8 @@
     "attack": 0,
     "cost": 1,
     "health": 0,
-    "description": "Concede <link=keyword.Challenger><sprite name=Challenger><style=Keyword>Contendiente</style></link> a un aliado esta ronda.",
-    "descriptionRaw": "Concede Contendiente a un aliado esta ronda.",
+    "description": "Concede <link=keyword.Challenger><sprite name=Challenger><style=Keyword>Contendiente</style></link> a una <link=card.samira><style=AssociatedCard>Samira</style></link> aliada esta ronda.",
+    "descriptionRaw": "Concede Contendiente a una Samira aliada esta ronda.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "''Acero para el que se acerque, plomo para el que huya''.<br>- Samira",
@@ -478,8 +528,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07NX007T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07NX007T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07NX007T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07NX007T2-full.png"
       }
     ],
     "regions": [
@@ -491,8 +541,8 @@
     "attack": 0,
     "cost": 1,
     "health": 0,
-    "description": "Concede a un aliado +2|+0 esta ronda.\r\n<link=keyword.Plunder><style=Keyword>Asalto</style></link>: Le concede +2|+2 en su lugar.\r\nCrea 1 <link=card.level1><style=AssociatedCard>Samira</style></link> en tu mazo.",
-    "descriptionRaw": "Concede a un aliado +2|+0 esta ronda.\r\nAsalto: Le concede +2|+2 en su lugar.\r\nCrea 1 Samira en tu mazo.",
+    "description": "Concede a un aliado +2|+0 esta ronda.\r\n<link=keyword.Plunder><style=Keyword>Asalto</style></link>: Le concede +2|+1 en su lugar.\r\nCrea 1 <link=card.level1><style=AssociatedCard>Samira</style></link> en tu mazo.",
+    "descriptionRaw": "Concede a un aliado +2|+0 esta ronda.\r\nAsalto: Le concede +2|+1 en su lugar.\r\nCrea 1 Samira en tu mazo.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": " ''Indari ha movido unos cuantos hilos para colarnos sin que nadie se entere... Ya montaré el numerito más tarde''. - Samira",
@@ -534,8 +584,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07NX007T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07NX007T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07NX007T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07NX007T1-full.png"
       }
     ],
     "regions": [
@@ -547,8 +597,8 @@
     "attack": 3,
     "cost": 2,
     "health": 3,
-    "description": "Cuando se me invoca o al <link=vocab.Strike><style=Vocab>golpear</style></link>: Crea 1 <link=card.create><style=AssociatedCard>Clase</style></link> de coste 0 en la mano.\r\nCuando juegas 6 o más cartas, <link=vocab.Rally><style=Vocab>prepara el ataque</style></link>. <style=Variable></style>",
-    "descriptionRaw": "Cuando se me invoca o al golpear: Crea 1 Clase de coste 0 en la mano.\r\nCuando juegas 6 o más cartas, prepara el ataque. ",
+    "description": "Cuando se me invoca o al <link=vocab.Strike><style=Vocab>golpear</style></link>: Crea 1 <link=card.create><style=AssociatedCard>Clase</style></link> de coste 0 en la mano.\r\nCuando juegas 6 cartas, <link=vocab.Rally><style=Vocab>prepara el ataque</style></link>. Se reinicia cuando comienzas una ronda con la ficha de ataque. <style=Variable></style>",
+    "descriptionRaw": "Cuando se me invoca o al golpear: Crea 1 Clase de coste 0 en la mano.\r\nCuando juegas 6 cartas, prepara el ataque. Se reinicia cuando comienzas una ronda con la ficha de ataque. ",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "''Ya sabía yo que no iba a ser tan fácil cobrar la deuda. Indari se refiere a estas situaciones como 'complicaciones'. Para mí son mero entretenimiento''.",
@@ -584,8 +634,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07NX006.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07NX006-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07NX006.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07NX006-full.png"
       }
     ],
     "regions": [
@@ -638,8 +688,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07NX015.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07NX015-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07NX015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07NX015-full.png"
       }
     ],
     "regions": [
@@ -690,8 +740,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07NX003.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07NX003-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07NX003.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07NX003-full.png"
       }
     ],
     "regions": [
@@ -703,8 +753,8 @@
     "attack": 0,
     "cost": 1,
     "health": 0,
-    "description": "Concede a un aliado +2|+0 esta ronda.\r\n<link=keyword.Plunder><style=Keyword>Asalto</style></link>: Le concede +2|+2 en su lugar.",
-    "descriptionRaw": "Concede a un aliado +2|+0 esta ronda.\r\nAsalto: Le concede +2|+2 en su lugar.",
+    "description": "Concede a un aliado +2|+0 esta ronda.\r\n<link=keyword.Plunder><style=Keyword>Asalto</style></link>: Le concede +2|+1 en su lugar.",
+    "descriptionRaw": "Concede a un aliado +2|+0 esta ronda.\r\nAsalto: Le concede +2|+1 en su lugar.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": " ''Indari ha movido unos cuantos hilos para colarnos sin que nadie se entere... Ya montaré el numerito más tarde''. - Samira",
@@ -744,8 +794,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07NX004.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07NX004-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07NX004.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07NX004-full.png"
       }
     ],
     "regions": [
@@ -794,8 +844,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07NX001.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07NX001-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07NX001.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07NX001-full.png"
       }
     ],
     "regions": [
@@ -811,7 +861,7 @@
     "descriptionRaw": "Jugar: Inflige 1 de daño al nexo enemigo o activa el efecto Asalto de un aliado.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "''Cuando estás en el negocio de las armas, tienes que investigar mucho. Crear un concepto, probar, reconstruir o modificar: todo ello requiere información. ¡Necesitas muchas pruebas de campo y unos cuantos cráteres para crear un buen prototipo!''. - Lani",
+    "flavorText": "''Cuando estás en el negocio de las armas, tienes que investigar mucho. Crear un concepto, probar, reconstruir o modificar: todo ello requiere información. ¡Necesitas muchas pruebas de campo y unos cuantos cráteres para crear un buen prototipo!''.<br>- Lani",
     "artistName": "Kudos Productions",
     "name": "Demoledora intrépida",
     "cardCode": "07NX001",
@@ -840,8 +890,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07NX001T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07NX001T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07NX001T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07NX001T1-full.png"
       }
     ],
     "regions": [
@@ -857,7 +907,7 @@
     "descriptionRaw": "Jugar: Activa el efecto Asalto de un aliado.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "''Cuando estás en el negocio de las armas, tienes que investigar mucho. Crear un concepto, probar, reconstruir o modificar: todo ello requiere información. ¡Necesitas muchas pruebas de campo y unos cuantos cráteres para crear un buen prototipo!''. - Lani ",
+    "flavorText": "''Cuando estás en el negocio de las armas, tienes que investigar mucho. Crear un concepto, probar, reconstruir o modificar: todo ello requiere información. ¡Necesitas muchas pruebas de campo y unos cuantos cráteres para crear un buen prototipo!''.<br>- Lani ",
     "artistName": "Kudos Productions",
     "name": "Demoledora intrépida",
     "cardCode": "07NX001T1",
@@ -886,8 +936,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07NX001T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07NX001T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07NX001T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07NX001T2-full.png"
       }
     ],
     "regions": [
@@ -903,7 +953,7 @@
     "descriptionRaw": "Jugar: Inflige 1 de daño al nexo enemigo.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "''Cuando estás en el negocio de las armas, tienes que investigar mucho. Crear un concepto, probar, reconstruir o modificar: todo ello requiere información. ¡Necesitas muchas pruebas de campo y unos cuantos cráteres para crear un buen prototipo!''. - Lani",
+    "flavorText": "''Cuando estás en el negocio de las armas, tienes que investigar mucho. Crear un concepto, probar, reconstruir o modificar: todo ello requiere información. ¡Necesitas muchas pruebas de campo y unos cuantos cráteres para crear un buen prototipo!''.<br>- Lani",
     "artistName": "Kudos Productions",
     "name": "Demoledora intrépida",
     "cardCode": "07NX001T2",
@@ -929,13 +979,65 @@
   },
   {
     "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07NX005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07NX005-full.png"
+      }
+    ],
+    "regions": [
+      "Noxus"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 5,
+    "cost": 6,
+    "health": 5,
+    "description": "Cuando se me invoca, <link=vocab.Improvise><style=Vocab>improviso</style></link>.\r\n<link=keyword.Plunder><style=Keyword>Asalto</style></link>: <link=vocab.Forge><style=Vocab>Forja</style></link> al resto de aliados.",
+    "descriptionRaw": "Cuando se me invoca, improviso.\r\nAsalto: Forja al resto de aliados.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''He trabajado con muchos agentes, unos más fáciles que otros... Y luego está Samira. He aceptado que no voy a poder frenarla. En su lugar, me dedico a orquestar el caos, dirigirlo... y, de vez en cuando, unirme a él''.",
+    "artistName": "Kudos Productions",
+    "name": "Capitana Indari",
+    "cardCode": "07NX005",
+    "keywords": [
+      "Asalto"
+    ],
+    "keywordRefs": [
+      "Plunder"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "RARA",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "MAESTRO DE ARMAS"
+    ],
+    "supertype": "",
+    "type": "Unidad",
+    "collectible": true,
+    "set": "Set7",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
     "associatedCardRefs": [
       "07IO011T5"
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07IO020.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07IO020-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07IO020.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07IO020-full.png"
       }
     ],
     "regions": [
@@ -984,8 +1086,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07IO014.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07IO014-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07IO014.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07IO014-full.png"
       }
     ],
     "regions": [
@@ -1036,8 +1138,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07IO023.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07IO023-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07IO023.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07IO023-full.png"
       }
     ],
     "regions": [
@@ -1091,8 +1193,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07IO011.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07IO011-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07IO011.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07IO011-full.png"
       }
     ],
     "regions": [
@@ -1147,8 +1249,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07IO011T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07IO011T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07IO011T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07IO011T1-full.png"
       }
     ],
     "regions": [
@@ -1160,8 +1262,8 @@
     "attack": 5,
     "cost": 5,
     "health": 6,
-    "description": "Mientras ataco, no puedo sufrir daño ni morir.\r\nCada ronda, cuando hayas gastado 12 o más de maná, crea 1 <link=card.create><style=AssociatedCard>El gran espectáculo</style></link> en la mano. <style=Variable></style>",
-    "descriptionRaw": "Mientras ataco, no puedo sufrir daño ni morir.\r\nCada ronda, cuando hayas gastado 12 o más de maná, crea 1 El gran espectáculo en la mano. ",
+    "description": "Mientras ataco, no puedo sufrir daño ni morir.\r\nCada ronda, crea 1 <link=card.create><style=AssociatedCard>El gran espectáculo</style></link> en la mano cuando hayas gastado 12 o más de maná esa ronda. <style=Variable></style>",
+    "descriptionRaw": "Mientras ataco, no puedo sufrir daño ni morir.\r\nCada ronda, crea 1 El gran espectáculo en la mano cuando hayas gastado 12 o más de maná esa ronda. ",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "''El problema de ser el jefe es que te vuelves un blando. Se te empiezan a curar los callos y, antes de que te des cuenta, te has convertido en lo que juraste no ser jamás. Por eso agradezco todo este caos. ¡Por fin alguien despierta mi bestia interior!''.",
@@ -1197,8 +1299,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07IO011T5.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07IO011T5-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07IO011T5.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07IO011T5-full.png"
       }
     ],
     "regions": [
@@ -1249,8 +1351,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07IO011T4.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07IO011T4-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07IO011T4.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07IO011T4-full.png"
       }
     ],
     "regions": [
@@ -1305,8 +1407,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07IO011T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07IO011T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07IO011T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07IO011T2-full.png"
       }
     ],
     "regions": [
@@ -1352,13 +1454,67 @@
   },
   {
     "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07IO046.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07IO046-full.png"
+      }
+    ],
+    "regions": [
+      "Jonia"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 5,
+    "cost": 5,
+    "health": 4,
+    "description": "Las demás aves aliadas tienen +1|+0 y <link=keyword.Quick Strike><sprite name=QuickStrike><style=Keyword>Ataque rápido</style></link>.",
+    "descriptionRaw": "Las demás aves aliadas tienen +1|+0 y Ataque rápido.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''He comprobado, una vez tras otra, que las criaturas más bellas de esta selva son también los depredadores más mortales''. - Anura",
+    "artistName": "Michal Ivan",
+    "name": "Alabrillo real",
+    "cardCode": "07IO046",
+    "keywords": [
+      "Ataque rápido",
+      "Missing Translation"
+    ],
+    "keywordRefs": [
+      "QuickStrike",
+      "AuraVisualFakeKeyword"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "RARA",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "AVE"
+    ],
+    "supertype": "",
+    "type": "Unidad",
+    "collectible": true,
+    "set": "Set7",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
     "associatedCardRefs": [
       "07IO011T5"
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07IO009.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07IO009-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07IO009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07IO009-full.png"
       }
     ],
     "regions": [
@@ -1409,8 +1565,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07IO019.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07IO019-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07IO019.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07IO019-full.png"
       }
     ],
     "regions": [
@@ -1459,8 +1615,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07IO017.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07IO017-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07IO017.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07IO017-full.png"
       }
     ],
     "regions": [
@@ -1511,8 +1667,56 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07IO023T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07IO023T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07IO047.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07IO047-full.png"
+      }
+    ],
+    "regions": [
+      "Jonia"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 4,
+    "cost": 7,
+    "health": 7,
+    "description": "Cada ronda, la primera vez que invocas a otro adepto, invoca una copia idéntica del mismo. Si tu tablero está lleno, me otorga sus estadísticas y palabras clave en su lugar.",
+    "descriptionRaw": "Cada ronda, la primera vez que invocas a otro adepto, invoca una copia idéntica del mismo. Si tu tablero está lleno, me otorga sus estadísticas y palabras clave en su lugar.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''¿Crees que estas flores podrían valer algo? Llámame loco, pero... creo que están bailando''. - Cazador furtivo piltovano",
+    "artistName": "Kudos Productions",
+    "name": "Cobra embaucadora",
+    "cardCode": "07IO047",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ÉPICA",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "REPTIL"
+    ],
+    "supertype": "",
+    "type": "Unidad",
+    "collectible": true,
+    "set": "Set7",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07IO023T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07IO023T1-full.png"
       }
     ],
     "regions": [
@@ -1563,8 +1767,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07IO013.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07IO013-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07IO013.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07IO013-full.png"
       }
     ],
     "regions": [
@@ -1613,8 +1817,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07IO020T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07IO020T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07IO020T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07IO020T1-full.png"
       }
     ],
     "regions": [
@@ -1665,8 +1869,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07IO020T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07IO020T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07IO020T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07IO020T2-full.png"
       }
     ],
     "regions": [
@@ -1715,8 +1919,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07IO012.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07IO012-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07IO012.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07IO012-full.png"
       }
     ],
     "regions": [
@@ -1763,8 +1967,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07IO007.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07IO007-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07IO007.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07IO007-full.png"
       }
     ],
     "regions": [
@@ -1815,8 +2019,158 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07BW018.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07BW018-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07SH023.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07SH023-full.png"
+      }
+    ],
+    "regions": [
+      "Shurima"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 0,
+    "cost": 7,
+    "health": 7,
+    "description": "Tengo +1|+0 por cada aliado con <link=keyword.Ephemeral><sprite name=Ephemeral><style=Keyword>Endeble</style></link> que hayas invocado en esta partida. <style=Variable></style>",
+    "descriptionRaw": "Tengo +1|+0 por cada aliado con Endeble que hayas invocado en esta partida. ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''Quizás pienses que no eres más que un grano de arena ante este adversario, pero sé que estás ahí. Siento tu presencia en las dunas. ¡Préstame tu fuerza y derrotemos juntos a nuestros enemigos!''.",
+    "artistName": "Kudos Productions",
+    "name": "General de las arenas caídas",
+    "cardCode": "07SH023",
+    "keywords": [
+      "Abrumar"
+    ],
+    "keywordRefs": [
+      "Overwhelm"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "RARA",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unidad",
+    "collectible": true,
+    "set": "Set7",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07SH018.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07SH018-full.png"
+      }
+    ],
+    "regions": [
+      "Shurima"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 2,
+    "cost": 3,
+    "health": 4,
+    "description": "Cuando se me invoca, crea en la parte inferior de tu mazo 2 campeones aleatorios de nivel 2 que no estén en tu mano, tu mazo o en juego.",
+    "descriptionRaw": "Cuando se me invoca, crea en la parte inferior de tu mazo 2 campeones aleatorios de nivel 2 que no estén en tu mano, tu mazo o en juego.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "No sabe bien qué vio ni cómo o cuándo llegará el desastre, pero sabe con total certeza que no están preparados. Y puede que nunca lo estén.",
+    "artistName": "Envar Studio",
+    "name": "Guardián del secreto",
+    "cardCode": "07SH018",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ÉPICA",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unidad",
+    "collectible": true,
+    "set": "Set7",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "07SH008"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07SH008.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07SH008-full.png"
+      }
+    ],
+    "regions": [
+      "Shurima"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 0,
+    "cost": 6,
+    "health": 0,
+    "description": "Comienza un ataque gratis con una copia exacta y <link=keyword.Ephemeral><sprite name=Ephemeral><style=Keyword>Endeble</style></link> de cada gato aliado.",
+    "descriptionRaw": "Comienza un ataque gratis con una copia exacta y Endeble de cada gato aliado.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Una cazadora solitaria es algo temible, pero una manada lo es aún más.",
+    "artistName": "Kudos Productions",
+    "name": "Ataque en manada",
+    "cardCode": "07SH008",
+    "keywords": [
+      "Lento"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "Lento",
+    "spellSpeedRef": "Slow",
+    "rarity": "COMÚN",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Hechizo",
+    "collectible": true,
+    "set": "Set7",
+    "formats": [
+      "Solo comunes",
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07BW018.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07BW018-full.png"
       }
     ],
     "regions": [
@@ -1863,8 +2217,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07BW021.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07BW021-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07BW021.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07BW021-full.png"
       }
     ],
     "regions": [
@@ -1921,8 +2275,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07BW002.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07BW002-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07BW002.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07BW002-full.png"
       }
     ],
     "regions": [
@@ -1959,13 +2313,11 @@
     "set": "Set7",
     "formats": [
       "Eterno",
-      "Estándar",
-      "Solo comunes"
+      "Estándar"
     ],
     "formatRefs": [
       "client_Formats_Eternal_name",
-      "client_Formats_Standard_name",
-      "client_Formats_CommonsOnly_name"
+      "client_Formats_Standard_name"
     ]
   },
   {
@@ -1977,8 +2329,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07BW002T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07BW002T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07BW002T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07BW002T2-full.png"
       }
     ],
     "regions": [
@@ -2033,8 +2385,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07BW002T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07BW002T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07BW002T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07BW002T1-full.png"
       }
     ],
     "regions": [
@@ -2086,8 +2438,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07BW040.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07BW040-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07BW040.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07BW040-full.png"
       }
     ],
     "regions": [
@@ -2133,13 +2485,59 @@
   },
   {
     "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07BW001.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07BW001-full.png"
+      }
+    ],
+    "regions": [
+      "Aguas Estancadas"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 4,
+    "cost": 4,
+    "health": 4,
+    "description": "Cuando recuperas maná, crea 1 adepto aleatorio <link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>Fugaz</style></link> en la mano con el máximo coste que te puedas permitir.",
+    "descriptionRaw": "Cuando recuperas maná, crea 1 adepto aleatorio Fugaz en la mano con el máximo coste que te puedas permitir.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''Si quieres sangre, habla con Jack. Si quieres saber dónde, cuándo, quién y por cuánto, habla conmigo''.",
+    "artistName": "Envar Studio",
+    "name": "Promotor traicionero",
+    "cardCode": "07BW001",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "RARA",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unidad",
+    "collectible": true,
+    "set": "Set7",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
     "associatedCardRefs": [
       "07BW040T2"
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07BW040T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07BW040T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07BW040T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07BW040T1-full.png"
       }
     ],
     "regions": [
@@ -2188,8 +2586,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07BW040T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07BW040T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07BW040T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07BW040T2-full.png"
       }
     ],
     "regions": [
@@ -2240,8 +2638,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07BW003.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07BW003-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07BW003.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07BW003-full.png"
       }
     ],
     "regions": [
@@ -2294,8 +2692,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07BW014.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07BW014-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07BW014.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07BW014-full.png"
       }
     ],
     "regions": [
@@ -2346,8 +2744,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07BW013.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07BW013-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07BW013.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07BW013-full.png"
       }
     ],
     "regions": [
@@ -2400,8 +2798,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07BW006.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07BW006-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07BW006.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07BW006-full.png"
       }
     ],
     "regions": [
@@ -2450,8 +2848,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07BW026.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07BW026-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07BW026.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07BW026-full.png"
       }
     ],
     "regions": [
@@ -2502,8 +2900,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07BW027.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07BW027-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07BW027.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07BW027-full.png"
       }
     ],
     "regions": [
@@ -2554,8 +2952,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07BW008.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07BW008-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07BW008.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07BW008-full.png"
       }
     ],
     "regions": [
@@ -2608,8 +3006,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07BW041.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07BW041-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07BW041.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07BW041-full.png"
       }
     ],
     "regions": [
@@ -2662,8 +3060,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07BW004.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07BW004-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07BW004.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07BW004-full.png"
       }
     ],
     "regions": [
@@ -2714,8 +3112,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07BW025.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07BW025-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07BW025.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07BW025-full.png"
       }
     ],
     "regions": [
@@ -2726,7 +3124,7 @@
     ],
     "attack": 1,
     "cost": 4,
-    "health": 5,
+    "health": 4,
     "description": "Cuando activas <link=keyword.Plunder><style=Keyword>Asalto</style></link>, roba 1 y le concede <link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>Fugaz</style></link>.",
     "descriptionRaw": "Cuando activas Asalto, roba 1 y le concede Fugaz.",
     "levelupDescription": "",
@@ -2766,8 +3164,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07FR008.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07FR008-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07FR008.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07FR008-full.png"
       }
     ],
     "regions": [
@@ -2793,7 +3191,9 @@
     "spellSpeedRef": "",
     "rarity": "COMÚN",
     "rarityRef": "Common",
-    "subtypes": [],
+    "subtypes": [
+      "PERRO"
+    ],
     "supertype": "",
     "type": "Unidad",
     "collectible": true,
@@ -2811,13 +3211,61 @@
   },
   {
     "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07FR009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07FR009-full.png"
+      }
+    ],
+    "regions": [
+      "Freljord"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 2,
+    "cost": 3,
+    "health": 2,
+    "description": "Cuando se me invoca, <link=vocab.Improvise><style=Vocab>improviso</style></link>.\r\nCada ronda, la primera vez que <link=vocab.Forge><style=Vocab>forjes</style></link> o <link=vocab.Equip><style=Vocab>equipes</style></link> a un aliado, cura 1 de vida a tu nexo.",
+    "descriptionRaw": "Cuando se me invoca, improviso.\r\nCada ronda, la primera vez que forjes o equipes a un aliado, cura 1 de vida a tu nexo.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''Esta bolita de pelo no me ayuda a trabajar más rápido, pero siempre me saca una sonrisa. Con eso me basta''. - Herrera innovadora",
+    "artistName": "Envar Studio",
+    "name": "Herrera innovadora",
+    "cardCode": "07FR009",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "RARA",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "MAESTRO DE ARMAS"
+    ],
+    "supertype": "",
+    "type": "Unidad",
+    "collectible": true,
+    "set": "Set7",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
     "associatedCardRefs": [
       "07FR008T1"
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07FR008T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07FR008T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07FR008T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07FR008T2-full.png"
       }
     ],
     "regions": [
@@ -2843,7 +3291,9 @@
     "spellSpeedRef": "",
     "rarity": "Ninguna",
     "rarityRef": "None",
-    "subtypes": [],
+    "subtypes": [
+      "PERRO"
+    ],
     "supertype": "",
     "type": "Unidad",
     "collectible": false,
@@ -2864,8 +3314,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07FR008T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07FR008T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07FR008T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07FR008T1-full.png"
       }
     ],
     "regions": [
@@ -2895,7 +3345,9 @@
     "spellSpeedRef": "",
     "rarity": "Ninguna",
     "rarityRef": "None",
-    "subtypes": [],
+    "subtypes": [
+      "PERRO"
+    ],
     "supertype": "",
     "type": "Unidad",
     "collectible": false,
@@ -2914,8 +3366,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07FR005.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07FR005-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07FR005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07FR005-full.png"
       }
     ],
     "regions": [
@@ -2960,8 +3412,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07SI002.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07SI002-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07SI002.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07SI002-full.png"
       }
     ],
     "regions": [
@@ -2973,8 +3425,8 @@
     "attack": 0,
     "cost": 2,
     "health": 0,
-    "description": "Asesina a un adepto con 3 o menos de poder o gasta 4 de maná para matar a un campeón con 3 o menos de poder.\r\n",
-    "descriptionRaw": "Asesina a un adepto con 3 o menos de poder o gasta 4 de maná para matar a un campeón con 3 o menos de poder.\r\n",
+    "description": "Asesina a un adepto con 3 o menos de poder o gasta 3 de maná para matar a un campeón con 3 o menos de poder.\r\n",
+    "descriptionRaw": "Asesina a un adepto con 3 o menos de poder o gasta 3 de maná para matar a un campeón con 3 o menos de poder.\r\n",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "Es apenas un susurro en el viento, silencioso pero profundo, que cambia una vida por otra.",
@@ -3010,8 +3462,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07SI002T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07SI002T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07SI002T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07SI002T2-full.png"
       }
     ],
     "regions": [
@@ -3021,7 +3473,7 @@
       "ShadowIsles"
     ],
     "attack": 0,
-    "cost": 4,
+    "cost": 3,
     "health": 0,
     "description": "Asesina a un campeón con 3 o menos de poder.",
     "descriptionRaw": "Asesina a un campeón con 3 o menos de poder.",
@@ -3060,8 +3512,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07SI002T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07SI002T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07SI002T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07SI002T1-full.png"
       }
     ],
     "regions": [
@@ -3110,8 +3562,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07SI001.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07SI001-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07SI001.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07SI001-full.png"
       }
     ],
     "regions": [
@@ -3160,8 +3612,206 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07BC005.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07BC005-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07SI007.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07SI007-full.png"
+      }
+    ],
+    "regions": [
+      "Islas de la Sombra"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 1,
+    "cost": 4,
+    "health": 5,
+    "description": "La primera vez que otro aliado muere en cada ronda, roba 1.",
+    "descriptionRaw": "La primera vez que otro aliado muere en cada ronda, roba 1.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"¡Acabo de enseñarle un truco nuevo! ¿Quieres verlo?\".<br>- Bromista espectral",
+    "artistName": "Bubble Cat",
+    "name": "Compañero sepulcral",
+    "cardCode": "07SI007",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "COMÚN",
+    "rarityRef": "Common",
+    "subtypes": [
+      "PERRO"
+    ],
+    "supertype": "",
+    "type": "Unidad",
+    "collectible": true,
+    "set": "Set7",
+    "formats": [
+      "Eterno",
+      "Estándar",
+      "Solo comunes"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name",
+      "client_Formats_CommonsOnly_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07MT003.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07MT003-full.png"
+      }
+    ],
+    "regions": [
+      "Targon"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 1,
+    "cost": 2,
+    "health": 4,
+    "description": "<link=vocab.RoundStart><style=Vocab>Comienzo de ronda</style></link>: Me curo 1 de vida y curo 1 a tu nexo.",
+    "descriptionRaw": "Comienzo de ronda: Me curo 1 de vida y curo 1 a tu nexo.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Surcan el cielo como la estela de una aurora y su brillo calma los corazones, alivia las heridas y arregla aquello que se ha quebrado.",
+    "artistName": "Bubble Cat",
+    "name": "Potrillo cósmico",
+    "cardCode": "07MT003",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "RARA",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unidad",
+    "collectible": true,
+    "set": "Set7",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07MT001.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07MT001-full.png"
+      }
+    ],
+    "regions": [
+      "Targon"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "Inflige 4 de daño a un enemigo que haya atacado esta ronda o que esté <link=keyword.Stun><sprite name=Stunned><style=Keyword>aturdido</style></link>.",
+    "descriptionRaw": "Inflige 4 de daño a un enemigo que haya atacado esta ronda o que esté aturdido.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Las estrellas observan nuestros actos, sean buenos o malos. Los justos serán bendecidos y los malvados serán juzgados.",
+    "artistName": "Kudos Productions",
+    "name": "Astro ineludible",
+    "cardCode": "07MT001",
+    "keywords": [
+      "Lento"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "Lento",
+    "spellSpeedRef": "Slow",
+    "rarity": "COMÚN",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Hechizo",
+    "collectible": true,
+    "set": "Set7",
+    "formats": [
+      "Eterno",
+      "Estándar",
+      "Solo comunes"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name",
+      "client_Formats_CommonsOnly_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07MT007.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07MT007-full.png"
+      }
+    ],
+    "regions": [
+      "Targon"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 1,
+    "cost": 2,
+    "health": 2,
+    "description": "<link=keyword.Last Breath><sprite name=LastBreath><style=Keyword>Último aliento</style></link>: Crea en la mano copias de los 3 primeros hechizos que has usado en mí. <style=Variable></style>",
+    "descriptionRaw": "Último aliento: Crea en la mano copias de los 3 primeros hechizos que has usado en mí. ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''Camphor ha arrebatado mucho a demasiada gente. Cuando llegue tu hora, asegúrate de morir bajo tus propios términos. No le des la satisfacción''. - Pantheon",
+    "artistName": "Envar Studio",
+    "name": "Letrado expiatorio",
+    "cardCode": "07MT007",
+    "keywords": [
+      "Último aliento"
+    ],
+    "keywordRefs": [
+      "LastBreath"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ÉPICA",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unidad",
+    "collectible": true,
+    "set": "Set7",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07BC005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07BC005-full.png"
       }
     ],
     "regions": [
@@ -3218,8 +3868,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07BC009.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07BC009-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07BC009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07BC009-full.png"
       }
     ],
     "regions": [
@@ -3270,8 +3920,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07BC009T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07BC009T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07BC009T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07BC009T1-full.png"
       }
     ],
     "regions": [
@@ -3320,36 +3970,40 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07MT003.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07MT003-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07BC015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07BC015-full.png"
       }
     ],
     "regions": [
-      "Targon"
+      "Ciudad de Bandle"
     ],
     "regionRefs": [
-      "Targon"
+      "BandleCity"
     ],
-    "attack": 1,
+    "attack": 0,
     "cost": 2,
-    "health": 4,
-    "description": "<link=vocab.RoundStart><style=Vocab>Comienzo de ronda</style></link>: Me curo 1 de vida y curo 1 a tu nexo.",
-    "descriptionRaw": "Comienzo de ronda: Me curo 1 de vida y curo 1 a tu nexo.",
+    "health": 0,
+    "description": "Elige un adepto, crea una copia de él de coste 1 en la mano y sus estadísticas pasan a ser 1|1.",
+    "descriptionRaw": "Elige un adepto, crea una copia de él de coste 1 en la mano y sus estadísticas pasan a ser 1|1.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "Surcan el cielo como la estela de una aurora y su brillo calma los corazones, alivia las heridas y arregla aquello que se ha quebrado.",
-    "artistName": "Bubble Cat",
-    "name": "Potrillo cósmico",
-    "cardCode": "07MT003",
-    "keywords": [],
-    "keywordRefs": [],
-    "spellSpeed": "",
-    "spellSpeedRef": "",
+    "flavorText": "\"Vaya... ¡Parece que más pequeño no siempre significa más adorable!\". - Lulu",
+    "artistName": "Kudos Productions",
+    "name": "Condensar",
+    "cardCode": "07BC015",
+    "keywords": [
+      "Ráfaga"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Ráfaga",
+    "spellSpeedRef": "Burst",
     "rarity": "RARA",
     "rarityRef": "Rare",
     "subtypes": [],
     "supertype": "",
-    "type": "Unidad",
+    "type": "Hechizo",
     "collectible": true,
     "set": "Set7",
     "formats": [
@@ -3366,60 +4020,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07MT001.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07MT001-full.png"
-      }
-    ],
-    "regions": [
-      "Targon"
-    ],
-    "regionRefs": [
-      "Targon"
-    ],
-    "attack": 0,
-    "cost": 2,
-    "health": 0,
-    "description": "Inflige 4 de daño a un enemigo que haya atacado esta ronda o que esté <link=keyword.Stun><sprite name=Stunned><style=Keyword>aturdido</style></link>.",
-    "descriptionRaw": "Inflige 4 de daño a un enemigo que haya atacado esta ronda o que esté aturdido.",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "Las estrellas observan nuestros actos, sean buenos o malos. Los justos serán bendecidos y los malvados serán juzgados.",
-    "artistName": "Kudos Productions",
-    "name": "Astro ineludible",
-    "cardCode": "07MT001",
-    "keywords": [
-      "Lento"
-    ],
-    "keywordRefs": [
-      "Slow"
-    ],
-    "spellSpeed": "Lento",
-    "spellSpeedRef": "Slow",
-    "rarity": "COMÚN",
-    "rarityRef": "Common",
-    "subtypes": [],
-    "supertype": "",
-    "type": "Hechizo",
-    "collectible": true,
-    "set": "Set7",
-    "formats": [
-      "Eterno",
-      "Estándar",
-      "Solo comunes"
-    ],
-    "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name",
-      "client_Formats_CommonsOnly_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07DE002.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07DE002-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07DE002.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07DE002-full.png"
       }
     ],
     "regions": [
@@ -3468,8 +4070,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07DE005.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07DE005-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07DE005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07DE005-full.png"
       }
     ],
     "regions": [
@@ -3520,8 +4122,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07DE002T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07DE002T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07DE002T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07DE002T1-full.png"
       }
     ],
     "regions": [
@@ -3570,8 +4172,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07DE002T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07DE002T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07DE002T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07DE002T2-full.png"
       }
     ],
     "regions": [
@@ -3620,32 +4222,32 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07SH023.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07SH023-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07DE008.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/es_es/img/cards/07DE008-full.png"
       }
     ],
     "regions": [
-      "Shurima"
+      "Demacia"
     ],
     "regionRefs": [
-      "Shurima"
+      "Demacia"
     ],
     "attack": 0,
-    "cost": 7,
-    "health": 7,
-    "description": "Tengo +1|+0 por cada aliado con <link=keyword.Ephemeral><sprite name=Ephemeral><style=Keyword>Endeble</style></link> que hayas invocado en esta partida. <style=Variable></style>",
-    "descriptionRaw": "Tengo +1|+0 por cada aliado con Endeble que hayas invocado en esta partida. ",
+    "cost": 4,
+    "health": 0,
+    "description": "Cuando se me invoca, roba una unidad.\r\nCuando se invoca a un aliado, aumenta sus estadísticas hasta igualar su coste.",
+    "descriptionRaw": "Cuando se me invoca, roba una unidad.\r\nCuando se invoca a un aliado, aumenta sus estadísticas hasta igualar su coste.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "''Quizás pienses que no eres más que un grano de arena ante este adversario, pero sé que estás ahí. Siento tu presencia en las dunas. ¡Préstame tu fuerza y derrotemos juntos a nuestros enemigos!''.",
+    "flavorText": "La primera vez que vio el altar, Cithria se quedó sin palabras. No podía sino admirar la majestuosidad de aquellos venerados héroes. ¿Llegaría el día en que estuviera entre ellos?",
     "artistName": "Kudos Productions",
-    "name": "General de las arenas caídas",
-    "cardCode": "07SH023",
+    "name": "Altar de la unidad",
+    "cardCode": "07DE008",
     "keywords": [
-      "Abrumar"
+      "Hito"
     ],
     "keywordRefs": [
-      "Overwhelm"
+      "LandmarkVisualOnly"
     ],
     "spellSpeed": "",
     "spellSpeedRef": "",
@@ -3653,53 +4255,7 @@
     "rarityRef": "Rare",
     "subtypes": [],
     "supertype": "",
-    "type": "Unidad",
-    "collectible": true,
-    "set": "Set7",
-    "formats": [
-      "Eterno",
-      "Estándar"
-    ],
-    "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07SH018.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/es_es/img/cards/07SH018-full.png"
-      }
-    ],
-    "regions": [
-      "Shurima"
-    ],
-    "regionRefs": [
-      "Shurima"
-    ],
-    "attack": 2,
-    "cost": 3,
-    "health": 4,
-    "description": "Cuando se me invoca, crea en la parte inferior de tu mazo 2 campeones aleatorios de nivel 2 que no estén en tu mano, tu mazo o en juego.",
-    "descriptionRaw": "Cuando se me invoca, crea en la parte inferior de tu mazo 2 campeones aleatorios de nivel 2 que no estén en tu mano, tu mazo o en juego.",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "No sabe bien qué vio ni cómo o cuándo llegará el desastre, pero sabe con total certeza que no están preparados. Y puede que nunca lo estén.",
-    "artistName": "Envar Studio",
-    "name": "Guardián del secreto",
-    "cardCode": "07SH018",
-    "keywords": [],
-    "keywordRefs": [],
-    "spellSpeed": "",
-    "spellSpeedRef": "",
-    "rarity": "ÉPICA",
-    "rarityRef": "Epic",
-    "subtypes": [],
-    "supertype": "",
-    "type": "Unidad",
+    "type": "Hito",
     "collectible": true,
     "set": "Set7",
     "formats": [

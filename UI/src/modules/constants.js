@@ -17,7 +17,9 @@ export const regionRefID = {
   Kayn: 17,
   Varus: 18,
   Aatrox: 19,
-  Ryze: 20
+  Ryze: 20,
+  Neeko: 21,
+  PoroKing: 22
 }
 
 export const regionNames = {
@@ -39,7 +41,9 @@ export const regionNames = {
   17: "faction_Kayn_Name",
   18: "faction_Varus_Name",
   19: "faction_Aatrox_Name",
-  20: "faction_Ryze_Name"
+  20: "faction_Ryze_Name",
+  21: "faction_Neeko_Name",
+  22: "faction_PoroKing_Name"
 }
 
 export const factionNames = {
@@ -61,5 +65,7 @@ export const factionNames = {
   17: "Kayn",
   18: "Varus",
   19: "Aatrox",
-  20: "Ryze"
+  20: "Ryze",
+  21: "Neeko",
+  22: "Poro King"
 }

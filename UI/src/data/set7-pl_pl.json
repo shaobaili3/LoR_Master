@@ -4,8 +4,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07PZ009.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07PZ009-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07PZ009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07PZ009-full.png"
       }
     ],
     "regions": [
@@ -56,8 +56,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07PZ017.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07PZ017-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07PZ017.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07PZ017-full.png"
       }
     ],
     "regions": [
@@ -69,8 +69,8 @@
     "attack": 1,
     "cost": 2,
     "health": 3,
-    "description": "Kiedy zagrasz zaklęcie, losowo umieść 1 kartę <link=card.trap><style=AssociatedCard>Pułapka z Bombą Błyskową</style></link> wśród pierwszych 8 kart z wierzchu talii przeciwnika.",
-    "descriptionRaw": "Kiedy zagrasz zaklęcie, losowo umieść 1 kartę Pułapka z Bombą Błyskową wśród pierwszych 8 kart z wierzchu talii przeciwnika.",
+    "description": "Kiedy zagrasz zaklęcie, umieść 1 kartę <link=card.trap><style=AssociatedCard>Pułapka z Bombą Błyskową</style></link> wśród pierwszych 8 kart z wierzchu talii przeciwnika.",
+    "descriptionRaw": "Kiedy zagrasz zaklęcie, umieść 1 kartę Pułapka z Bombą Błyskową wśród pierwszych 8 kart z wierzchu talii przeciwnika.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "„…a wiesz, dlaczego te maleństwa są lepsze od grzybów? Bo to ty decydujesz, kiedy wybuchną! TO dopiero wartość dodana, prawda?”",
@@ -106,8 +106,58 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07NX009.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07NX009-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07PZ005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07PZ005-full.png"
+      }
+    ],
+    "regions": [
+      "Piltover i Zaun"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 0,
+    "cost": 4,
+    "health": 0,
+    "description": "Zadaj 1 pkt. obrażeń wrogowi i wrogiemu Nexusowi. Odrzuć do 2 kart, aby zwiększyć obrażenia o 1 pkt. za każdą odrzuconą kartę.",
+    "descriptionRaw": "Zadaj 1 pkt. obrażeń wrogowi i wrogiemu Nexusowi. Odrzuć do 2 kart, aby zwiększyć obrażenia o 1 pkt. za każdą odrzuconą kartę.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": " „No dobra, dobra, może i zadziała tylko raz, ale uwierz mi, będzie bombowo!” – Jinx",
+    "artistName": "Kudos Productions",
+    "name": "Odrzut",
+    "cardCode": "07PZ005",
+    "keywords": [
+      "Szybkie"
+    ],
+    "keywordRefs": [
+      "Fast"
+    ],
+    "spellSpeed": "Szybkie",
+    "spellSpeedRef": "Fast",
+    "rarity": "RZADKIE",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Zaklęcie",
+    "collectible": true,
+    "set": "Set7",
+    "formats": [
+      "Wieczność",
+      "Standardowy"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07NX009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07NX009-full.png"
       }
     ],
     "regions": [
@@ -156,8 +206,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07NX008.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07NX008-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07NX008.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07NX008-full.png"
       }
     ],
     "regions": [
@@ -210,8 +260,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07NX014.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07NX014-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07NX014.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07NX014-full.png"
       }
     ],
     "regions": [
@@ -266,8 +316,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07NX007.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07NX007-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07NX007.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07NX007-full.png"
       }
     ],
     "regions": [
@@ -281,8 +331,8 @@
     "health": 2,
     "description": "Gdy mnie przywołasz lub <link=vocab.Strike><style=Vocab>Uderzę</style></link>: Stwórz w ręce kartę <link=card.create><style=AssociatedCard>Smykałka</style></link>, jeśli jej nie posiadasz.",
     "descriptionRaw": "Gdy mnie przywołasz lub Uderzę: Stwórz w ręce kartę Smykałka, jeśli jej nie posiadasz.",
-    "levelupDescription": "Widziałam, jak zagrywasz 6+ kart. Licznik resetuje się, gdy zaczynasz rundę z Tokenem ataku.<style=Variable></style>",
-    "levelupDescriptionRaw": "Widziałam, jak zagrywasz 6+ kart. Licznik resetuje się, gdy zaczynasz rundę z Tokenem ataku.",
+    "levelupDescription": "Widziałam, jak zagrywasz 6 kart. Licznik resetuje się, gdy zaczynasz rundę z Tokenem ataku.<style=Variable></style>",
+    "levelupDescriptionRaw": "Widziałam, jak zagrywasz 6 kart. Licznik resetuje się, gdy zaczynasz rundę z Tokenem ataku.",
     "flavorText": "„Zawsze ścigam jakiś cel, który narobił sobie długów bez szansy na spłatę. A uciekaniem od tych długów robisz sobie najgorszych wrogów – takich, którzy wzywają mnie”.",
     "artistName": "Kudos Productions",
     "name": "Samira",
@@ -320,8 +370,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07NX007T8.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07NX007T8-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07NX007T8.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07NX007T8-full.png"
       }
     ],
     "regions": [
@@ -333,8 +383,8 @@
     "attack": 0,
     "cost": 1,
     "health": 0,
-    "description": "Zadaj 1 pkt. obrażeń wrogiemu Nexusowi lub daj sojusznikowi <link=keyword.Challenger><sprite name=Challenger><style=Keyword>Wyzwanie</style></link> w tej rundzie.\r\n",
-    "descriptionRaw": "Zadaj 1 pkt. obrażeń wrogiemu Nexusowi lub daj sojusznikowi Wyzwanie w tej rundzie.\r\n",
+    "description": "Zadaj 1 pkt. obrażeń wrogiemu Nexusowi lub daj sojusznikowi <link=card.samira><style=AssociatedCard>Samira</style></link> <link=keyword.Challenger><sprite name=Challenger><style=Keyword>Wyzwanie</style></link> w tej rundzie.\r\n",
+    "descriptionRaw": "Zadaj 1 pkt. obrażeń wrogiemu Nexusowi lub daj sojusznikowi Samira Wyzwanie w tej rundzie.\r\n",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "„Podejdź za blisko, a zasmakujesz stali. Oddal się za daleko, a nafaszeruję cię ołowiem”. – Samira",
@@ -373,8 +423,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07NX007T6.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07NX007T6-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07NX007T6.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07NX007T6-full.png"
       }
     ],
     "regions": [
@@ -426,8 +476,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07NX007T5.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07NX007T5-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07NX007T5.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07NX007T5-full.png"
       }
     ],
     "regions": [
@@ -439,8 +489,8 @@
     "attack": 0,
     "cost": 1,
     "health": 0,
-    "description": "Daj sojusznikowi <link=keyword.Challenger><sprite name=Challenger><style=Keyword>Wyzwanie</style></link> w tej rundzie.",
-    "descriptionRaw": "Daj sojusznikowi Wyzwanie w tej rundzie.",
+    "description": "Daj sojusznikowi <link=card.samira><style=AssociatedCard>Samira</style></link> <link=keyword.Challenger><sprite name=Challenger><style=Keyword>Wyzwanie</style></link> w tej rundzie.",
+    "descriptionRaw": "Daj sojusznikowi Samira Wyzwanie w tej rundzie.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "„Podejdź za blisko, a zasmakujesz stali. Oddal się za daleko, a nafaszeruję cię ołowiem”. – Samira",
@@ -478,8 +528,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07NX007T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07NX007T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07NX007T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07NX007T2-full.png"
       }
     ],
     "regions": [
@@ -491,8 +541,8 @@
     "attack": 0,
     "cost": 1,
     "health": 0,
-    "description": "Daj sojusznikowi +2|+0 w tej rundzie.\r\n<link=keyword.Plunder><style=Keyword>Grabież</style></link>: Zamiast tego daj sojusznikowi +2|+2.\r\nStwórz w swojej talii kartę <link=card.level1><style=AssociatedCard>Samira</style></link>.",
-    "descriptionRaw": "Daj sojusznikowi +2|+0 w tej rundzie.\r\nGrabież: Zamiast tego daj sojusznikowi +2|+2.\r\nStwórz w swojej talii kartę Samira.",
+    "description": "Daj sojusznikowi +2|+0 w tej rundzie.\r\n<link=keyword.Plunder><style=Keyword>Grabież</style></link>: Zamiast tego daj sojusznikowi +2|+1.\r\nStwórz w swojej talii kartę <link=card.level1><style=AssociatedCard>Samira</style></link>.",
+    "descriptionRaw": "Daj sojusznikowi +2|+0 w tej rundzie.\r\nGrabież: Zamiast tego daj sojusznikowi +2|+1.\r\nStwórz w swojej talii kartę Samira.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": " „Indari pociągnęła za parę sznurków, żeby nas tu wcisnąć bez zbędnego szumu. Ja mam nadzieję, że będę miała czas, żeby go narobić przy wyjściu”. – Samira",
@@ -534,8 +584,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07NX007T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07NX007T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07NX007T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07NX007T1-full.png"
       }
     ],
     "regions": [
@@ -547,8 +597,8 @@
     "attack": 3,
     "cost": 2,
     "health": 3,
-    "description": "Gdy mnie przywołasz lub <link=vocab.Strike><style=Vocab>Uderzę</style></link>: Stwórz w ręce kartę <link=card.create><style=AssociatedCard>Smykałka</style></link> o koszcie 0.\r\nGdy uda ci się zagrać 6+ kart, <link=vocab.Rally><style=Vocab>Zjednocz Siły</style></link>. <style=Variable></style>",
-    "descriptionRaw": "Gdy mnie przywołasz lub Uderzę: Stwórz w ręce kartę Smykałka o koszcie 0.\r\nGdy uda ci się zagrać 6+ kart, Zjednocz Siły. ",
+    "description": "Gdy mnie przywołasz lub <link=vocab.Strike><style=Vocab>Uderzę</style></link>: Stwórz w ręce kartę <link=card.create><style=AssociatedCard>Smykałka</style></link> o koszcie 0.\r\nGdy udało ci się zagrać 6 kart, <link=vocab.Rally><style=Vocab>Zjednocz Siły</style></link>. Licznik resetuje się, gdy zaczynasz rundę z Tokenem ataku. <style=Variable></style>",
+    "descriptionRaw": "Gdy mnie przywołasz lub Uderzę: Stwórz w ręce kartę Smykałka o koszcie 0.\r\nGdy udało ci się zagrać 6 kart, Zjednocz Siły. Licznik resetuje się, gdy zaczynasz rundę z Tokenem ataku. ",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "„Miałam przeczucie, że chodzi o więcej niż tylko jednego małego dłużnika. Indari użyłaby słowa »komplikacje«. Ja to nazywam »smaczkiem«”.",
@@ -584,8 +634,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07NX006.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07NX006-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07NX006.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07NX006-full.png"
       }
     ],
     "regions": [
@@ -638,8 +688,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07NX015.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07NX015-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07NX015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07NX015-full.png"
       }
     ],
     "regions": [
@@ -690,8 +740,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07NX003.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07NX003-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07NX003.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07NX003-full.png"
       }
     ],
     "regions": [
@@ -703,8 +753,8 @@
     "attack": 0,
     "cost": 1,
     "health": 0,
-    "description": "Daj sojusznikowi +2|+0 w tej rundzie.\r\n<link=keyword.Plunder><style=Keyword>Grabież</style></link>: Zamiast tego daj sojusznikowi +2|+2.",
-    "descriptionRaw": "Daj sojusznikowi +2|+0 w tej rundzie.\r\nGrabież: Zamiast tego daj sojusznikowi +2|+2.",
+    "description": "Daj sojusznikowi +2|+0 w tej rundzie.\r\n<link=keyword.Plunder><style=Keyword>Grabież</style></link>: Zamiast tego daj sojusznikowi +2|+1.",
+    "descriptionRaw": "Daj sojusznikowi +2|+0 w tej rundzie.\r\nGrabież: Zamiast tego daj sojusznikowi +2|+1.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": " „Indari pociągnęła za parę sznurków, żeby nas tu wcisnąć bez zbędnego szumu. Ja mam nadzieję, że będę miała czas, żeby go narobić przy wyjściu”. – Samira",
@@ -744,8 +794,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07NX004.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07NX004-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07NX004.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07NX004-full.png"
       }
     ],
     "regions": [
@@ -794,8 +844,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07NX001.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07NX001-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07NX001.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07NX001-full.png"
       }
     ],
     "regions": [
@@ -840,8 +890,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07NX001T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07NX001T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07NX001T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07NX001T1-full.png"
       }
     ],
     "regions": [
@@ -886,8 +936,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07NX001T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07NX001T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07NX001T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07NX001T2-full.png"
       }
     ],
     "regions": [
@@ -929,13 +979,65 @@
   },
   {
     "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07NX005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07NX005-full.png"
+      }
+    ],
+    "regions": [
+      "Noxus"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 5,
+    "cost": 6,
+    "health": 5,
+    "description": "Gdy mnie przywołasz, <link=vocab.Improvise><style=Vocab>Improwizuję</style></link>.\r\n<link=keyword.Plunder><style=Keyword>Grabież</style></link>: <link=vocab.Forge><style=Vocab>Wykuj</style></link> innych sojuszników.",
+    "descriptionRaw": "Gdy mnie przywołasz, Improwizuję.\r\nGrabież: Wykuj innych sojuszników.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "„Pracowałam już z wieloma agentami. Z niektórymi było łatwo, inni byli wyzwaniem… ale Samira to co innego. Pogodziłam się z faktem, że nad nią nie zapanuję. Mogę tylko ukierunkować ten chaos, wymierzyć go… i czasami dołączyć tu czy tam”.",
+    "artistName": "Kudos Productions",
+    "name": "Kapitan Indari",
+    "cardCode": "07NX005",
+    "keywords": [
+      "Grabież"
+    ],
+    "keywordRefs": [
+      "Plunder"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "RZADKIE",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "WIRTUOZ BRONI"
+    ],
+    "supertype": "",
+    "type": "Jednostka",
+    "collectible": true,
+    "set": "Set7",
+    "formats": [
+      "Wieczność",
+      "Standardowy"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
     "associatedCardRefs": [
       "07IO011T5"
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07IO020.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07IO020-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07IO020.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07IO020-full.png"
       }
     ],
     "regions": [
@@ -984,8 +1086,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07IO014.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07IO014-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07IO014.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07IO014-full.png"
       }
     ],
     "regions": [
@@ -1036,8 +1138,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07IO023.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07IO023-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07IO023.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07IO023-full.png"
       }
     ],
     "regions": [
@@ -1091,8 +1193,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07IO011.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07IO011-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07IO011.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07IO011-full.png"
       }
     ],
     "regions": [
@@ -1147,8 +1249,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07IO011T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07IO011T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07IO011T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07IO011T1-full.png"
       }
     ],
     "regions": [
@@ -1197,8 +1299,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07IO011T5.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07IO011T5-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07IO011T5.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07IO011T5-full.png"
       }
     ],
     "regions": [
@@ -1249,8 +1351,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07IO011T4.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07IO011T4-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07IO011T4.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07IO011T4-full.png"
       }
     ],
     "regions": [
@@ -1305,8 +1407,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07IO011T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07IO011T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07IO011T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07IO011T2-full.png"
       }
     ],
     "regions": [
@@ -1352,13 +1454,67 @@
   },
   {
     "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07IO046.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07IO046-full.png"
+      }
+    ],
+    "regions": [
+      "Ionia"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 5,
+    "cost": 5,
+    "health": 4,
+    "description": "Inne sojusznicze Ptaki mają +1|+0 i <link=keyword.Quick Strike><sprite name=QuickStrike><style=Keyword>Szybki Atak</style></link>.",
+    "descriptionRaw": "Inne sojusznicze Ptaki mają +1|+0 i Szybki Atak.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "„W tych dżunglach nieustannie przekonuję się, że najpiękniejsze osobniki są najbardziej śmiercionośnymi drapieżnikami”. – Anura",
+    "artistName": "Michal Ivan",
+    "name": "Królewski Połyskoskrzydły",
+    "cardCode": "07IO046",
+    "keywords": [
+      "Szybki Atak",
+      "Missing Translation"
+    ],
+    "keywordRefs": [
+      "QuickStrike",
+      "AuraVisualFakeKeyword"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "RZADKIE",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "PTAK"
+    ],
+    "supertype": "",
+    "type": "Jednostka",
+    "collectible": true,
+    "set": "Set7",
+    "formats": [
+      "Wieczność",
+      "Standardowy"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
     "associatedCardRefs": [
       "07IO011T5"
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07IO009.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07IO009-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07IO009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07IO009-full.png"
       }
     ],
     "regions": [
@@ -1409,8 +1565,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07IO019.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07IO019-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07IO019.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07IO019-full.png"
       }
     ],
     "regions": [
@@ -1459,8 +1615,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07IO017.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07IO017-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07IO017.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07IO017-full.png"
       }
     ],
     "regions": [
@@ -1511,8 +1667,56 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07IO023T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07IO023T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07IO047.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07IO047-full.png"
+      }
+    ],
+    "regions": [
+      "Ionia"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 4,
+    "cost": 7,
+    "health": 7,
+    "description": "Gdy w danej rundzie po raz pierwszy przywołasz innego stronnika, przywołaj jego dokładną kopię. Jeśli twoja plansza jest pełna, zamiast tego przyznaj mi jego statystyki i słowa klucze.",
+    "descriptionRaw": "Gdy w danej rundzie po raz pierwszy przywołasz innego stronnika, przywołaj jego dokładną kopię. Jeśli twoja plansza jest pełna, zamiast tego przyznaj mi jego statystyki i słowa klucze.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "„Myślisz, że te kwiaty są coś warte? I nie bierz mnie za szaleńca, ale czy one nie wyglądają, jakby… tańczyły?”<br>– Kłusownik z Piltover",
+    "artistName": "Kudos Productions",
+    "name": "Zwodnicza Kobra",
+    "cardCode": "07IO047",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "EPICKIE",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "GAD"
+    ],
+    "supertype": "",
+    "type": "Jednostka",
+    "collectible": true,
+    "set": "Set7",
+    "formats": [
+      "Wieczność",
+      "Standardowy"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07IO023T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07IO023T1-full.png"
       }
     ],
     "regions": [
@@ -1563,8 +1767,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07IO013.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07IO013-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07IO013.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07IO013-full.png"
       }
     ],
     "regions": [
@@ -1613,8 +1817,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07IO020T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07IO020T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07IO020T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07IO020T1-full.png"
       }
     ],
     "regions": [
@@ -1665,8 +1869,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07IO020T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07IO020T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07IO020T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07IO020T2-full.png"
       }
     ],
     "regions": [
@@ -1715,8 +1919,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07IO012.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07IO012-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07IO012.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07IO012-full.png"
       }
     ],
     "regions": [
@@ -1763,8 +1967,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07IO007.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07IO007-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07IO007.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07IO007-full.png"
       }
     ],
     "regions": [
@@ -1815,8 +2019,158 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07BW018.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07BW018-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07SH023.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07SH023-full.png"
+      }
+    ],
+    "regions": [
+      "Shurima"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 0,
+    "cost": 7,
+    "health": 7,
+    "description": "Mam +1|+0 za każdego <link=keyword.Ephemeral><sprite name=Ephemeral><style=Keyword>Efemerycznego</style></link> sojusznika, którego udało ci się przywołać w tej grze. <style=Variable></style>",
+    "descriptionRaw": "Mam +1|+0 za każdego Efemerycznego sojusznika, którego udało ci się przywołać w tej grze. ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "„Choć dla tego przeciwnika możecie nie być niczym więcej, jak tylko ziarnami piasku, ja was widzę. Czuję waszą obecność w wydmach. Użyczcie mi swej siły, a wspólnie powalimy naszych wrogów!”",
+    "artistName": "Kudos Productions",
+    "name": "Generał Upadłych Piasków",
+    "cardCode": "07SH023",
+    "keywords": [
+      "Zmiażdżenie"
+    ],
+    "keywordRefs": [
+      "Overwhelm"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "RZADKIE",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Jednostka",
+    "collectible": true,
+    "set": "Set7",
+    "formats": [
+      "Wieczność",
+      "Standardowy"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07SH018.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07SH018-full.png"
+      }
+    ],
+    "regions": [
+      "Shurima"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 2,
+    "cost": 3,
+    "health": 4,
+    "description": "Gdy mnie przywołasz, stwórz na spodzie swojej talii dwóch losowych bohaterów 2. poziomu. Żaden z nich nie może znajdować się w twojej ręce, talii ani wśród zagrywanych przez ciebie kart.",
+    "descriptionRaw": "Gdy mnie przywołasz, stwórz na spodzie swojej talii dwóch losowych bohaterów 2. poziomu. Żaden z nich nie może znajdować się w twojej ręce, talii ani wśród zagrywanych przez ciebie kart.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Nie wiedział do końca, co takiego ujrzał, jaką postać może przyjąć kataklizm ani kiedy ma on nastąpić… ale zna ten świat i jego mieszkańców. Nie są gotowi. Mogą nigdy nie być gotowi.",
+    "artistName": "Envar Studio",
+    "name": "Stróż Tajemnic",
+    "cardCode": "07SH018",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "EPICKIE",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Jednostka",
+    "collectible": true,
+    "set": "Set7",
+    "formats": [
+      "Wieczność",
+      "Standardowy"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "07SH008"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07SH008.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07SH008-full.png"
+      }
+    ],
+    "regions": [
+      "Shurima"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 0,
+    "cost": 6,
+    "health": 0,
+    "description": "Rozpocznij Darmowy Atak dokładną <link=keyword.Ephemeral><sprite name=Ephemeral><style=Keyword>Ulotną</style></link> kopią każdego sojuszniczego Kota.",
+    "descriptionRaw": "Rozpocznij Darmowy Atak dokładną Ulotną kopią każdego sojuszniczego Kota.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Samotna łowczyni jest wystarczająco groźna – ale całe stado jest naprawdę niebezpieczne.",
+    "artistName": "Kudos Productions",
+    "name": "Atak Stada",
+    "cardCode": "07SH008",
+    "keywords": [
+      "Powolne"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "Powolne",
+    "spellSpeedRef": "Slow",
+    "rarity": "ZWYKŁE",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Zaklęcie",
+    "collectible": true,
+    "set": "Set7",
+    "formats": [
+      "Tylko zwykłe",
+      "Wieczność",
+      "Standardowy"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07BW018.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07BW018-full.png"
       }
     ],
     "regions": [
@@ -1863,8 +2217,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07BW021.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07BW021-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07BW021.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07BW021-full.png"
       }
     ],
     "regions": [
@@ -1921,8 +2275,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07BW002.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07BW002-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07BW002.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07BW002-full.png"
       }
     ],
     "regions": [
@@ -1959,13 +2313,11 @@
     "set": "Set7",
     "formats": [
       "Wieczność",
-      "Standardowy",
-      "Tylko zwykłe"
+      "Standardowy"
     ],
     "formatRefs": [
       "client_Formats_Eternal_name",
-      "client_Formats_Standard_name",
-      "client_Formats_CommonsOnly_name"
+      "client_Formats_Standard_name"
     ]
   },
   {
@@ -1977,8 +2329,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07BW002T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07BW002T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07BW002T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07BW002T2-full.png"
       }
     ],
     "regions": [
@@ -2033,8 +2385,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07BW002T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07BW002T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07BW002T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07BW002T1-full.png"
       }
     ],
     "regions": [
@@ -2086,8 +2438,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07BW040.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07BW040-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07BW040.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07BW040-full.png"
       }
     ],
     "regions": [
@@ -2133,13 +2485,59 @@
   },
   {
     "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07BW001.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07BW001-full.png"
+      }
+    ],
+    "regions": [
+      "Bilgewater"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 4,
+    "cost": 4,
+    "health": 4,
+    "description": "Gdy odzyskujesz manę, stwórz w ręce losowego <link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>Ulotnego</style></link> stronnika o koszcie dokładnie równym twojej manie.",
+    "descriptionRaw": "Gdy odzyskujesz manę, stwórz w ręce losowego Ulotnego stronnika o koszcie dokładnie równym twojej manie.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "„Chcesz, żeby polał się szkarłat – chcesz Jacka? Chcesz wiedzieć, gdzie, kiedy, co i za ile? Wtedy przychodzisz do mnie”.",
+    "artistName": "Envar Studio",
+    "name": "Perfidny Organizator",
+    "cardCode": "07BW001",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "RZADKIE",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Jednostka",
+    "collectible": true,
+    "set": "Set7",
+    "formats": [
+      "Wieczność",
+      "Standardowy"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
     "associatedCardRefs": [
       "07BW040T2"
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07BW040T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07BW040T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07BW040T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07BW040T1-full.png"
       }
     ],
     "regions": [
@@ -2188,8 +2586,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07BW040T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07BW040T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07BW040T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07BW040T2-full.png"
       }
     ],
     "regions": [
@@ -2240,8 +2638,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07BW003.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07BW003-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07BW003.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07BW003-full.png"
       }
     ],
     "regions": [
@@ -2294,8 +2692,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07BW014.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07BW014-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07BW014.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07BW014-full.png"
       }
     ],
     "regions": [
@@ -2346,8 +2744,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07BW013.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07BW013-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07BW013.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07BW013-full.png"
       }
     ],
     "regions": [
@@ -2400,8 +2798,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07BW006.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07BW006-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07BW006.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07BW006-full.png"
       }
     ],
     "regions": [
@@ -2450,8 +2848,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07BW026.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07BW026-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07BW026.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07BW026-full.png"
       }
     ],
     "regions": [
@@ -2502,8 +2900,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07BW027.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07BW027-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07BW027.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07BW027-full.png"
       }
     ],
     "regions": [
@@ -2554,8 +2952,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07BW008.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07BW008-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07BW008.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07BW008-full.png"
       }
     ],
     "regions": [
@@ -2608,8 +3006,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07BW041.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07BW041-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07BW041.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07BW041-full.png"
       }
     ],
     "regions": [
@@ -2662,8 +3060,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07BW004.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07BW004-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07BW004.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07BW004-full.png"
       }
     ],
     "regions": [
@@ -2714,8 +3112,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07BW025.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07BW025-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07BW025.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07BW025-full.png"
       }
     ],
     "regions": [
@@ -2726,7 +3124,7 @@
     ],
     "attack": 1,
     "cost": 4,
-    "health": 5,
+    "health": 4,
     "description": "Gdy aktywujesz <link=keyword.Plunder><style=Keyword>Grabież</style></link>, dobierz 1 kartę i daj jej <link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>Ulotność</style></link>.",
     "descriptionRaw": "Gdy aktywujesz Grabież, dobierz 1 kartę i daj jej Ulotność.",
     "levelupDescription": "",
@@ -2766,8 +3164,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07FR008.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07FR008-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07FR008.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07FR008-full.png"
       }
     ],
     "regions": [
@@ -2793,7 +3191,9 @@
     "spellSpeedRef": "",
     "rarity": "ZWYKŁE",
     "rarityRef": "Common",
-    "subtypes": [],
+    "subtypes": [
+      "PIES"
+    ],
     "supertype": "",
     "type": "Jednostka",
     "collectible": true,
@@ -2811,13 +3211,61 @@
   },
   {
     "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07FR009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07FR009-full.png"
+      }
+    ],
+    "regions": [
+      "Freljord"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 2,
+    "cost": 3,
+    "health": 2,
+    "description": "Gdy mnie przywołasz, <link=vocab.Improvise><style=Vocab>Improwizuję</style></link>.\r\nGdy w danej rundzie po raz pierwszy <link=vocab.Forge><style=Vocab>Wykujesz</style></link> lub dasz sojusznikowi <link=vocab.Equip><style=Vocab>Wyposażenie</style></link>, ulecz swój Nexus o 1.",
+    "descriptionRaw": "Gdy mnie przywołasz, Improwizuję.\r\nGdy w danej rundzie po raz pierwszy Wykujesz lub dasz sojusznikowi Wyposażenie, ulecz swój Nexus o 1.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "„Ta puchata kulka może i nie pomaga mi pracować szybciej, ale z całą pewnością daje mi powód do uśmiechu. To wystarczająca pomoc”. – Nowatorska Kowalka",
+    "artistName": "Envar Studio",
+    "name": "Nowatorska Kowalka",
+    "cardCode": "07FR009",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "RZADKIE",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "WIRTUOZ BRONI"
+    ],
+    "supertype": "",
+    "type": "Jednostka",
+    "collectible": true,
+    "set": "Set7",
+    "formats": [
+      "Wieczność",
+      "Standardowy"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
     "associatedCardRefs": [
       "07FR008T1"
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07FR008T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07FR008T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07FR008T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07FR008T2-full.png"
       }
     ],
     "regions": [
@@ -2843,7 +3291,9 @@
     "spellSpeedRef": "",
     "rarity": "Brak",
     "rarityRef": "None",
-    "subtypes": [],
+    "subtypes": [
+      "PIES"
+    ],
     "supertype": "",
     "type": "Jednostka",
     "collectible": false,
@@ -2864,8 +3314,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07FR008T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07FR008T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07FR008T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07FR008T1-full.png"
       }
     ],
     "regions": [
@@ -2895,7 +3345,9 @@
     "spellSpeedRef": "",
     "rarity": "Brak",
     "rarityRef": "None",
-    "subtypes": [],
+    "subtypes": [
+      "PIES"
+    ],
     "supertype": "",
     "type": "Jednostka",
     "collectible": false,
@@ -2914,8 +3366,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07FR005.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07FR005-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07FR005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07FR005-full.png"
       }
     ],
     "regions": [
@@ -2960,8 +3412,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07SI002.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07SI002-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07SI002.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07SI002-full.png"
       }
     ],
     "regions": [
@@ -2973,8 +3425,8 @@
     "attack": 0,
     "cost": 2,
     "health": 0,
-    "description": "Zabij stronnika o Sile 3 lub mniejszej lub wydaj 4 pkt. many, aby zabić bohatera o Sile 3 lub mniejszej.",
-    "descriptionRaw": "Zabij stronnika o Sile 3 lub mniejszej lub wydaj 4 pkt. many, aby zabić bohatera o Sile 3 lub mniejszej.",
+    "description": "Zabij stronnika o Sile 3 lub mniejszej lub wydaj 3 pkt. many, aby zabić bohatera o Sile 3 lub mniejszej.\r\n",
+    "descriptionRaw": "Zabij stronnika o Sile 3 lub mniejszej lub wydaj 3 pkt. many, aby zabić bohatera o Sile 3 lub mniejszej.\r\n",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "To zaledwie szept na wietrze; nieznacznie słyszalna, lecz dogłębnie odczuwalna wymiana jednego życia na drugie.",
@@ -3010,8 +3462,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07SI002T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07SI002T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07SI002T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07SI002T2-full.png"
       }
     ],
     "regions": [
@@ -3021,7 +3473,7 @@
       "ShadowIsles"
     ],
     "attack": 0,
-    "cost": 4,
+    "cost": 3,
     "health": 0,
     "description": "Zabij bohatera o Sile 3 lub mniejszej.",
     "descriptionRaw": "Zabij bohatera o Sile 3 lub mniejszej.",
@@ -3060,8 +3512,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07SI002T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07SI002T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07SI002T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07SI002T1-full.png"
       }
     ],
     "regions": [
@@ -3110,8 +3562,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07SI001.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07SI001-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07SI001.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07SI001-full.png"
       }
     ],
     "regions": [
@@ -3160,8 +3612,206 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07BC005.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07BC005-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07SI007.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07SI007-full.png"
+      }
+    ],
+    "regions": [
+      "Wyspy Cienia"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 1,
+    "cost": 4,
+    "health": 5,
+    "description": "Gdy w danej rundzie po raz pierwszy zginie sojusznik, dobierz 1 kartę.",
+    "descriptionRaw": "Gdy w danej rundzie po raz pierwszy zginie sojusznik, dobierz 1 kartę.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "„Właśnie nauczyłam go nowej sztuczki! Chcesz zobaczyć?”<br>– Widmowa Figlarka",
+    "artistName": "Bubble Cat",
+    "name": "Grobowy Towarzysz",
+    "cardCode": "07SI007",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ZWYKŁE",
+    "rarityRef": "Common",
+    "subtypes": [
+      "PIES"
+    ],
+    "supertype": "",
+    "type": "Jednostka",
+    "collectible": true,
+    "set": "Set7",
+    "formats": [
+      "Wieczność",
+      "Standardowy",
+      "Tylko zwykłe"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name",
+      "client_Formats_CommonsOnly_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07MT003.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07MT003-full.png"
+      }
+    ],
+    "regions": [
+      "Targon"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 1,
+    "cost": 2,
+    "health": 4,
+    "description": "<link=vocab.RoundStart><style=Vocab>Początek rundy</style></link>: Ulecz mnie i swój Nexus o 1 pkt.",
+    "descriptionRaw": "Początek rundy: Ulecz mnie i swój Nexus o 1 pkt.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Niczym łza jutrzenki przemierza po niebiosach, a jego promieniste spojrzenie przynosi spokój, kojąc rany i naprawiając, co zniszczone.",
+    "artistName": "Bubble Cat",
+    "name": "Dziecię Kosmosu",
+    "cardCode": "07MT003",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "RZADKIE",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Jednostka",
+    "collectible": true,
+    "set": "Set7",
+    "formats": [
+      "Wieczność",
+      "Standardowy"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07MT001.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07MT001-full.png"
+      }
+    ],
+    "regions": [
+      "Targon"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "Zadaj 4 pkt. obrażeń wrogowi, który zaatakował w tej rundzie lub jest <link=keyword.Stun><sprite name=Stunned><style=Keyword>Ogłuszony</style></link>.",
+    "descriptionRaw": "Zadaj 4 pkt. obrażeń wrogowi, który zaatakował w tej rundzie lub jest Ogłuszony.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Gwiazdy spoglądają z góry na nasze czyny, dobre i złe. Sprawiedliwi są wynoszeni, zaś niegodziwców poddaje się osądowi.",
+    "artistName": "Kudos Productions",
+    "name": "Spadająca Gwiazda",
+    "cardCode": "07MT001",
+    "keywords": [
+      "Powolne"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "Powolne",
+    "spellSpeedRef": "Slow",
+    "rarity": "ZWYKŁE",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Zaklęcie",
+    "collectible": true,
+    "set": "Set7",
+    "formats": [
+      "Wieczność",
+      "Standardowy",
+      "Tylko zwykłe"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name",
+      "client_Formats_CommonsOnly_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07MT007.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07MT007-full.png"
+      }
+    ],
+    "regions": [
+      "Targon"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 1,
+    "cost": 2,
+    "health": 2,
+    "description": "<link=keyword.Last Breath><sprite name=LastBreath><style=Keyword>Ostatnie Tchnienie</style></link>: Stwórz w ręce kopie 3 pierwszych zaklęć, które udało ci się na mnie zagrać. <style=Variable></style>",
+    "descriptionRaw": "Ostatnie Tchnienie: Stwórz w ręce kopie 3 pierwszych zaklęć, które udało ci się na mnie zagrać. ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "„Camphor zabrała zbyt wiele od zbyt wielu. Gdy nadejdzie twoja pora, aby umrzeć, pamiętaj, żeby umrzeć na własnych warunkach. Nie dawaj jej satysfakcji”. – Pantheon",
+    "artistName": "Envar Studio",
+    "name": "Ofiarny Uczony",
+    "cardCode": "07MT007",
+    "keywords": [
+      "Ostatnie Tchnienie"
+    ],
+    "keywordRefs": [
+      "LastBreath"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "EPICKIE",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Jednostka",
+    "collectible": true,
+    "set": "Set7",
+    "formats": [
+      "Wieczność",
+      "Standardowy"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07BC005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07BC005-full.png"
       }
     ],
     "regions": [
@@ -3218,8 +3868,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07BC009.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07BC009-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07BC009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07BC009-full.png"
       }
     ],
     "regions": [
@@ -3270,8 +3920,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07BC009T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07BC009T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07BC009T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07BC009T1-full.png"
       }
     ],
     "regions": [
@@ -3320,36 +3970,40 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07MT003.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07MT003-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07BC015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07BC015-full.png"
       }
     ],
     "regions": [
-      "Targon"
+      "Bandle City"
     ],
     "regionRefs": [
-      "Targon"
+      "BandleCity"
     ],
-    "attack": 1,
+    "attack": 0,
     "cost": 2,
-    "health": 4,
-    "description": "<link=vocab.RoundStart><style=Vocab>Początek rundy</style></link>: Ulecz mnie i swój Nexus o 1 pkt.",
-    "descriptionRaw": "Początek rundy: Ulecz mnie i swój Nexus o 1 pkt.",
+    "health": 0,
+    "description": "Wybierz stronnika. Stwórz w ręce jego kopię o koszcie 1 i ustaw jego statystyki na 1|1.",
+    "descriptionRaw": "Wybierz stronnika. Stwórz w ręce jego kopię o koszcie 1 i ustaw jego statystyki na 1|1.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "Niczym łza jutrzenki przemierza po niebiosach, a jego promieniste spojrzenie przynosi spokój, kojąc rany i naprawiając, co zniszczone.",
-    "artistName": "Bubble Cat",
-    "name": "Dziecię Kosmosu",
-    "cardCode": "07MT003",
-    "keywords": [],
-    "keywordRefs": [],
-    "spellSpeed": "",
-    "spellSpeedRef": "",
+    "flavorText": "„Hmm… Mniejsze chyba jednak nie zawsze oznacza słodsze!” – Lulu",
+    "artistName": "Kudos Productions",
+    "name": "Kondensacja",
+    "cardCode": "07BC015",
+    "keywords": [
+      "Błyskawiczne"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Błyskawiczne",
+    "spellSpeedRef": "Burst",
     "rarity": "RZADKIE",
     "rarityRef": "Rare",
     "subtypes": [],
     "supertype": "",
-    "type": "Jednostka",
+    "type": "Zaklęcie",
     "collectible": true,
     "set": "Set7",
     "formats": [
@@ -3366,60 +4020,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07MT001.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07MT001-full.png"
-      }
-    ],
-    "regions": [
-      "Targon"
-    ],
-    "regionRefs": [
-      "Targon"
-    ],
-    "attack": 0,
-    "cost": 2,
-    "health": 0,
-    "description": "Zadaj 4 pkt. obrażeń wrogowi, który zaatakował w tej rundzie lub jest <link=keyword.Stun><sprite name=Stunned><style=Keyword>Ogłuszony</style></link>.",
-    "descriptionRaw": "Zadaj 4 pkt. obrażeń wrogowi, który zaatakował w tej rundzie lub jest Ogłuszony.",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "Gwiazdy spoglądają z góry na nasze czyny, dobre i złe. Sprawiedliwi są wynoszeni, zaś niegodziwców poddaje się osądowi.",
-    "artistName": "Kudos Productions",
-    "name": "Spadająca Gwiazda",
-    "cardCode": "07MT001",
-    "keywords": [
-      "Powolne"
-    ],
-    "keywordRefs": [
-      "Slow"
-    ],
-    "spellSpeed": "Powolne",
-    "spellSpeedRef": "Slow",
-    "rarity": "ZWYKŁE",
-    "rarityRef": "Common",
-    "subtypes": [],
-    "supertype": "",
-    "type": "Zaklęcie",
-    "collectible": true,
-    "set": "Set7",
-    "formats": [
-      "Wieczność",
-      "Standardowy",
-      "Tylko zwykłe"
-    ],
-    "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name",
-      "client_Formats_CommonsOnly_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07DE002.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07DE002-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07DE002.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07DE002-full.png"
       }
     ],
     "regions": [
@@ -3468,8 +4070,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07DE005.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07DE005-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07DE005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07DE005-full.png"
       }
     ],
     "regions": [
@@ -3520,8 +4122,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07DE002T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07DE002T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07DE002T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07DE002T1-full.png"
       }
     ],
     "regions": [
@@ -3570,8 +4172,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07DE002T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07DE002T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07DE002T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07DE002T2-full.png"
       }
     ],
     "regions": [
@@ -3620,32 +4222,32 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07SH023.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07SH023-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07DE008.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/pl_pl/img/cards/07DE008-full.png"
       }
     ],
     "regions": [
-      "Shurima"
+      "Demacia"
     ],
     "regionRefs": [
-      "Shurima"
+      "Demacia"
     ],
     "attack": 0,
-    "cost": 7,
-    "health": 7,
-    "description": "Mam +1|+0 za każdego <link=keyword.Ephemeral><sprite name=Ephemeral><style=Keyword>Efemerycznego</style></link> sojusznika, którego udało ci się przywołać w tej grze. <style=Variable></style>",
-    "descriptionRaw": "Mam +1|+0 za każdego Efemerycznego sojusznika, którego udało ci się przywołać w tej grze. ",
+    "cost": 4,
+    "health": 0,
+    "description": "Gdy mnie przywołasz, dobierz jednostkę.\r\nGdy przywołasz sojusznika, podnieś jego statystyki tak, aby były równe jego kosztowi.",
+    "descriptionRaw": "Gdy mnie przywołasz, dobierz jednostkę.\r\nGdy przywołasz sojusznika, podnieś jego statystyki tak, aby były równe jego kosztowi.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "„Choć dla tego przeciwnika możecie nie być niczym więcej, jak tylko ziarnami piasku, ja was widzę. Czuję waszą obecność w wydmach. Użyczcie mi swej siły, a wspólnie powalimy naszych wrogów!”",
+    "flavorText": "Gdy Cithria po raz pierwszy ujrzała Ołtarz, nie była w stanie wykrztusić z siebie słowa. Przez chwilę stała jedynie w miejscu, pełna zachwytu dla majestatu uhonorowanych tu bohaterów. Czy wystarczy jej śmiałości, aby pewnego dnia stanąć u ich boku?",
     "artistName": "Kudos Productions",
-    "name": "Generał Upadłych Piasków",
-    "cardCode": "07SH023",
+    "name": "Ołtarz Jedności",
+    "cardCode": "07DE008",
     "keywords": [
-      "Zmiażdżenie"
+      "Lokacja"
     ],
     "keywordRefs": [
-      "Overwhelm"
+      "LandmarkVisualOnly"
     ],
     "spellSpeed": "",
     "spellSpeedRef": "",
@@ -3653,53 +4255,7 @@
     "rarityRef": "Rare",
     "subtypes": [],
     "supertype": "",
-    "type": "Jednostka",
-    "collectible": true,
-    "set": "Set7",
-    "formats": [
-      "Wieczność",
-      "Standardowy"
-    ],
-    "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07SH018.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/pl_pl/img/cards/07SH018-full.png"
-      }
-    ],
-    "regions": [
-      "Shurima"
-    ],
-    "regionRefs": [
-      "Shurima"
-    ],
-    "attack": 2,
-    "cost": 3,
-    "health": 4,
-    "description": "Gdy mnie przywołasz, stwórz na spodzie swojej talii dwóch losowych bohaterów 2. poziomu. Żaden z nich nie może znajdować się w twojej ręce, talii ani wśród zagrywanych przez ciebie kart.",
-    "descriptionRaw": "Gdy mnie przywołasz, stwórz na spodzie swojej talii dwóch losowych bohaterów 2. poziomu. Żaden z nich nie może znajdować się w twojej ręce, talii ani wśród zagrywanych przez ciebie kart.",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "Nie wiedział do końca, co takiego ujrzał, jaką postać może przyjąć kataklizm ani kiedy ma on nastąpić… ale zna ten świat i jego mieszkańców. Nie są gotowi. Mogą nigdy nie być gotowi.",
-    "artistName": "Envar Studio",
-    "name": "Stróż Tajemnic",
-    "cardCode": "07SH018",
-    "keywords": [],
-    "keywordRefs": [],
-    "spellSpeed": "",
-    "spellSpeedRef": "",
-    "rarity": "EPICKIE",
-    "rarityRef": "Epic",
-    "subtypes": [],
-    "supertype": "",
-    "type": "Jednostka",
+    "type": "Lokacja",
     "collectible": true,
     "set": "Set7",
     "formats": [

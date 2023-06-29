@@ -37,6 +37,10 @@ const getFactions = (code) => {
           regionID = regionRefID.Aatrox
         } else if (card.name == "Ryze") {
           regionID = regionRefID.Ryze
+        } else if (card.name == "Neeko") {
+          regionID = regionRefID.Neeko
+        } else if (card.name == "The Poro King") {
+          regionID = regionRefID.PoroKing
         }
 
         if (champFactions.indexOf(regionID) == -1) {
@@ -202,7 +206,46 @@ const getFactions = (code) => {
       ) {
         // Filters champion & all burst and focus speed cards
         // Only considers mono region cards
-        
+
+        var regionID = regionRefID[card.regionRefs[0]]
+        if (factionIDs.indexOf(regionID) == -1) {
+          factionIDs.push(regionID)
+        }
+      }
+    }
+  }
+
+  const getFollowerFactionsPoroKing = () => {
+    for (var j in cards) {
+      // Second loop to get followerFactions
+      var card = baseStore.sets_en[cards[j].code]
+      if (
+        card &&
+        card.rarityRef != "Champion" &&
+        card.regions &&
+        card.regions.length == 1 &&
+        !(card.subtypes.includes("PORO") || card.name.includes("Poro") || card.descriptionRaw.includes("Poro ")) && // Filter out all cards with Poro on the card
+        card.collectible
+      ) {
+        var regionID = regionRefID[card.regionRefs[0]]
+        if (factionIDs.indexOf(regionID) == -1) {
+          factionIDs.push(regionID)
+        }
+      }
+    }
+  }
+
+  const getFollowerFactionsNeeko = () => {
+    for (var j in cards) {
+      var card = baseStore.sets_en[cards[j].code]
+      if (
+        card &&
+        card.rarityRef != "Champion" &&
+        card.regions &&
+        card.regions.length == 1 &&
+        !(card.subtypes.includes("BIRD") || card.subtypes.includes("CAT") || card.subtypes.includes("DOG") || card.subtypes.includes("ELNUK") || card.subtypes.includes("FAE") || card.subtypes.includes("REPTILE") || card.subtypes.includes("SPIDER")) && // Filter out all cards with animals as subtypes
+        card.collectible
+      ) {
         var regionID = regionRefID[card.regionRefs[0]]
         if (factionIDs.indexOf(regionID) == -1) {
           factionIDs.push(regionID)
@@ -227,7 +270,12 @@ const getFactions = (code) => {
     getFollowerFactionsAatrox()
   } else if (factionIDs.includes(regionRefID.Ryze)) {
     getFollowerFactionsRyze()
-  } else {
+  } else if (factionIDs.includes(regionRefID.PoroKing)) {
+    getFollowerFactionsPoroKing()
+  } else if (factionIDs.includes(regionRefID.Neeko)) {
+    getFollowerFactionsNeeko()
+  }
+  else {
     for (var j in cards) {
       // Second loop to get follower Factions
       var card = baseStore.sets_en[cards[j].code]

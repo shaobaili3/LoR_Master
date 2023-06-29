@@ -1,0 +1,3788 @@
+[
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07PZ019.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07PZ019-full.png"
+      }
+    ],
+    "regions": [
+      "Пилтовер и Заун"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 4,
+    "description": "У меня +1|+0 за каждого союзника стоимостью 1, призванного вами в этом матче. ",
+    "descriptionRaw": "У меня +1|+0 за каждого союзника стоимостью 1, призванного вами в этом матче. ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Мне пришлось пририсовать конику МНОГО ног, господин Ящер, потому что до замка нужно доскакать СКОРЕНЬКО. Эм... Гм... И получился он чуточку... сикось-накось. И чуточку зеленовый\". – Ингвар Младшая",
+    "artistName": "Caravan Studio",
+    "name": "Химтековый доставкомобиль",
+    "cardCode": "07PZ019",
+    "keywords": [
+      "Быстрая атака"
+    ],
+    "keywordRefs": [
+      "QuickStrike"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "РЕДКОЕ",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07PZ021.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07PZ021-full.png"
+      }
+    ],
+    "regions": [
+      "Пилтовер и Заун"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 2,
+    "cost": 3,
+    "health": 2,
+    "description": "Стоимость союзников, имеющих подтип, отличный от прочих союзников на поле боя, снижается на 1.",
+    "descriptionRaw": "Стоимость союзников, имеющих подтип, отличный от прочих союзников на поле боя, снижается на 1.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Я не обижу тебя, дружочек! В джунглях я ради науки, а не ради разрушения!\"",
+    "artistName": "Envar Studio",
+    "name": "Анура и Жабыч",
+    "cardCode": "07PZ021",
+    "keywords": [
+      "Missing Translation"
+    ],
+    "keywordRefs": [
+      "AuraVisualFakeKeyword"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ЭПИЧЕСКОЕ",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "РЕПТИЛИЯ"
+    ],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "01PZ022"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07PZ013.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07PZ013-full.png"
+      }
+    ],
+    "regions": [
+      "Пилтовер и Заун"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "Если ваш нексус должен получить урон от любой карты кроме карты <link=card.cardref><style=AssociatedCard>Ядовитый гриб</style></link>, вместо этого ваш оппонент прикрепляет 4 <link=card.cardref><style=AssociatedCard>Ядовитых гриба</style></link> в вашей колоде за каждую единицу урона.",
+    "descriptionRaw": "Если ваш нексус должен получить урон от любой карты кроме карты Ядовитый гриб, вместо этого ваш оппонент прикрепляет 4 Ядовитых гриба в вашей колоде за каждую единицу урона.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Глубоко под улицами Зауна ты то, что ты ешь.",
+    "artistName": "Envar Studio",
+    "name": "Монумент в Сточных ямах",
+    "cardCode": "07PZ013",
+    "keywords": [
+      "Место силы"
+    ],
+    "keywordRefs": [
+      "LandmarkVisualOnly"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ЭПИЧЕСКОЕ",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Место силы",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "07PZ015T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07PZ015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07PZ015-full.png"
+      }
+    ],
+    "regions": [
+      "Пилтовер и Заун"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "Чтобы сыграть эту карту, потратьте всю ману. Призовите карту <link=card.summon><style=AssociatedCard>Бешеный утилятор</style></link> и увеличьте ее характеристики до того же значения.",
+    "descriptionRaw": "Чтобы сыграть эту карту, потратьте всю ману. Призовите карту Бешеный утилятор и увеличьте ее характеристики до того же значения.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Наипервейшая обязанность ученого – контролировать переменные. В нашей области изучения последствия непредвиденных случаев... Ох, без содрогания и думать об этом не могу!\" – Профессор Хеймердингер",
+    "artistName": "Kudos Productions",
+    "name": "Эпическое хлам-устройство",
+    "cardCode": "07PZ015",
+    "keywords": [
+      "Медленное"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "Медленное",
+    "spellSpeedRef": "Slow",
+    "rarity": "ОБЫЧНОЕ",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Заклинание",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07PZ015T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07PZ015T1-full.png"
+      }
+    ],
+    "regions": [
+      "Пилтовер и Заун"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 1,
+    "cost": 1,
+    "health": 1,
+    "description": "",
+    "descriptionRaw": "",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Так, давайте поглядим... Возможно, если добавить... Ох ты ж! Кто-нибудь догоните это устройство!\" – Профессор Хеймердингер",
+    "artistName": "Caravan Studio",
+    "name": "Бешеный утилятор",
+    "cardCode": "07PZ015T1",
+    "keywords": [
+      "Вспыльчивость"
+    ],
+    "keywordRefs": [
+      "Brash"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Нет",
+    "rarityRef": "None",
+    "subtypes": [
+      "ТЕХНИКА"
+    ],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": false,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07NX028.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07NX028-full.png"
+      }
+    ],
+    "regions": [
+      "Ноксус"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 1,
+    "cost": 5,
+    "health": 5,
+    "description": "<link=vocab.NexusStrike><style=Vocab>Удар по нексусу</style></link>: нанесите вражескому нексусу урон, равный половине его здоровья (значение округляется вверх).",
+    "descriptionRaw": "Удар по нексусу: нанесите вражескому нексусу урон, равный половине его здоровья (значение округляется вверх).",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Ноксус – империя, созданная прежде всего для захвата земель. Дерево, камень, сталь – ничто не остановит напор ноксианского тарана.",
+    "artistName": "Envar Studio",
+    "name": "Капитан Келрикс",
+    "cardCode": "07NX028",
+    "keywords": [
+      "Пробивание"
+    ],
+    "keywordRefs": [
+      "Overwhelm"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ЭПИЧЕСКОЕ",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07NX032.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07NX032-full.png"
+      }
+    ],
+    "regions": [
+      "Ноксус"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 1,
+    "cost": 2,
+    "health": 0,
+    "description": "Когда мой носитель разыгрывает <link=keyword.Skill><sprite name=SkillMark><style=Keyword>способность</style></link>, скопируйте ее. ",
+    "descriptionRaw": "Когда мой носитель разыгрывает способность, скопируйте ее. ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Школа Рейвенблум была специально отремонтирована для хранения текстов, многие из которых в итоге сгорели в ревущем пламени, разожженном одним особо проблемным учеником...",
+    "artistName": "Polar Engine",
+    "name": "Фолиант Рейвенблум",
+    "cardCode": "07NX032",
+    "keywords": [
+      "Снаряжение"
+    ],
+    "keywordRefs": [
+      "Equipment"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "РЕДКОЕ",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Снаряжение",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07NX033.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07NX033-full.png"
+      }
+    ],
+    "regions": [
+      "Ноксус"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 3,
+    "cost": 4,
+    "health": 2,
+    "description": "Призвав меня, даруйте мне +1|+1 за каждый отдельный подтип, имеющийся у союзников. <style=Variable></style>",
+    "descriptionRaw": "Призвав меня, даруйте мне +1|+1 за каждый отдельный подтип, имеющийся у союзников. ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Осторожней, тупицы! Ноксианцы купят бойцовых зверей только в идеальном состоянии. За каждую царапинку буду вычитать из вашего жалованья!\"<br>– Торговец крупной дичью",
+    "artistName": "Envar Studio",
+    "name": "Костешкурый троехвост",
+    "cardCode": "07NX033",
+    "keywords": [
+      "Пробивание"
+    ],
+    "keywordRefs": [
+      "Overwhelm"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ОБЫЧНОЕ",
+    "rarityRef": "Common",
+    "subtypes": [
+      "КОШКА"
+    ],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "07RU015T1",
+      "07RU015T4",
+      "07RU015T3",
+      "01FR016",
+      "07RU015T6",
+      "07RU015T5",
+      "07RU015T7",
+      "07RU015T2"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07RU015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07RU015-full.png"
+      }
+    ],
+    "regions": [
+      "Рунтерра"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 4,
+    "cost": 5,
+    "health": 4,
+    "description": "<link=vocab.Origin><style=Vocab>Исток</style></link>: <link=card.origin><style=AssociatedCard>Указ Короля Поро</style></link>.\r\nВпервые призвав поро в каждом раунде, создайте в руке <link=card.baseSnax><style=AssociatedCard>Поро-снэк</style></link>.",
+    "descriptionRaw": "Исток: Указ Короля Поро.\r\nВпервые призвав поро в каждом раунде, создайте в руке Поро-снэк.",
+    "levelupDescription": "Вы призвали 6+ других новых поро.<style=Variable></style>",
+    "levelupDescriptionRaw": "Вы призвали 6+ других новых поро.",
+    "flavorText": "Ингвар способна сходу распознать потенциал. Если не обращать внимания на импровизированный образ, то ясно, что этот милый питомец легко мог бы править сикстиллионом триллионов поро. При должной силе воображения, конечно. ",
+    "artistName": "Envar Studio",
+    "name": "Король поро",
+    "cardCode": "07RU015",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Чемпион",
+    "rarityRef": "Champion",
+    "subtypes": [
+      "ПОРО"
+    ],
+    "supertype": "Чемпион",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "07RU015",
+      "07RU015T4"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07RU015T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07RU015T3-full.png"
+      }
+    ],
+    "regions": [
+      "Рунтерра"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "Вытяните 2 разных сторонников-поро и даруйте им +1|+1.\r\nСоздайте в вашей колоде карту <link=card.level1><style=AssociatedCard>Король поро</style></link>.",
+    "descriptionRaw": "Вытяните 2 разных сторонников-поро и даруйте им +1|+1.\r\nСоздайте в вашей колоде карту Король поро.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Пусть они невелики, но свое они берут числом. Круглым, пушистым, несметным числом.",
+    "artistName": "Kudos Productions",
+    "name": "Созыв Совета Короля поро",
+    "cardCode": "07RU015T3",
+    "keywords": [
+      "Взрывное"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Взрывное",
+    "spellSpeedRef": "Burst",
+    "rarity": "Нет",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "Чемпион",
+    "type": "Заклинание",
+    "collectible": false,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "07RU015"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07RU015T6.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07RU015T6-full.png"
+      }
+    ],
+    "regions": [
+      "Рунтерра"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "Даруйте союзным поро <link=vocab.Everywhere><style=Vocab>везде</style></link> +1|+1. Дайте 2 союзным поро <link=keyword.Challenger><sprite name=Challenger><style=Keyword>Выбор противника</style></link> до конца раунда.",
+    "descriptionRaw": "Даруйте союзным поро везде +1|+1. Дайте 2 союзным поро Выбор противника до конца раунда.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Это тонизирующее утреннее угощение придется по вкусу любому поро: подается оно с пылу с жару и изобилует ярким поджаристым вкусом. ",
+    "artistName": "Kudos Productions",
+    "name": "Эспрессо-снек",
+    "cardCode": "07RU015T6",
+    "keywords": [
+      "Взрывное"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Взрывное",
+    "spellSpeedRef": "Burst",
+    "rarity": "Нет",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Заклинание",
+    "collectible": false,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "07RU015"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07RU015T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07RU015T2-full.png"
+      }
+    ],
+    "regions": [
+      "Рунтерра"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "Даруйте союзным поро <link=vocab.Everywhere><style=Vocab>везде</style></link> +1|+1. Дайте союзным поро <link=keyword.Impact><sprite name=Impact><style=Keyword>Таран</style></link> до конца раунда.",
+    "descriptionRaw": "Даруйте союзным поро везде +1|+1. Дайте союзным поро Таран до конца раунда.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Горячая сосиска, слоеное тесто, трижды прокипяченный острый соус... Согласно Шкале Супер-Острой Еды, разработанной Ингвар, это угощение тянет на твердую десятку – и это одно из ее любимейших блюд.",
+    "artistName": "Kudos Productions",
+    "name": "Перченый снэк",
+    "cardCode": "07RU015T2",
+    "keywords": [
+      "Взрывное"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Взрывное",
+    "spellSpeedRef": "Burst",
+    "rarity": "Нет",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Заклинание",
+    "collectible": false,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "07RU015"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07RU015T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07RU015T1-full.png"
+      }
+    ],
+    "regions": [
+      "Рунтерра"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "В колоду можно добавлять любые карты со словом \"Поро\", кроме чемпионов.",
+    "descriptionRaw": "В колоду можно добавлять любые карты со словом \"Поро\", кроме чемпионов.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Ето укас Его Наивысочисва Короля Поро про зощиту всех нородов...\" – Ингвар Младшая",
+    "artistName": "Envar Studio",
+    "name": "Указ Короля Поро",
+    "cardCode": "07RU015T1",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Нет",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Способность",
+    "collectible": false,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "07RU015"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07RU015T7.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07RU015T7-full.png"
+      }
+    ],
+    "regions": [
+      "Рунтерра"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "Даруйте союзным поро <link=vocab.Everywhere><style=Vocab>везде</style></link> +1|+1. Даруйте союзным чемпионам <link=vocab.Everywhere><style=Vocab>везде</style></link> +1|+1 и случайный навык.",
+    "descriptionRaw": "Даруйте союзным поро везде +1|+1. Даруйте союзным чемпионам везде +1|+1 и случайный навык.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"На вкус и цвет все снеки разные, ежели оч-ч-ч-чень здоровски поразмыслить\". – Ингвар Младшая ",
+    "artistName": "Kudos Productions",
+    "name": "Разноцветный снек",
+    "cardCode": "07RU015T7",
+    "keywords": [
+      "Взрывное"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Взрывное",
+    "spellSpeedRef": "Burst",
+    "rarity": "Нет",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Заклинание",
+    "collectible": false,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "07RU015",
+      "07RU015T3",
+      "07RU015T6",
+      "07RU015T5",
+      "07RU015T7",
+      "07RU015T2"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07RU015T4.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07RU015T4-full.png"
+      }
+    ],
+    "regions": [
+      "Рунтерра"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 5,
+    "cost": 5,
+    "health": 5,
+    "description": "Впервые призвав поро в каждом раунде, создайте в руке случайный Особый снек.",
+    "descriptionRaw": "Впервые призвав поро в каждом раунде, создайте в руке случайный Особый снек.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"МА-А-А-АМ, посмотри-ка! Господин Высочество Король поро ожива-а-а-а-ает! Гляди, вон он! Ничего я сейчас не выдумываю, честно-пречестно!\" – Ингвар Младшая",
+    "artistName": "Envar Studio",
+    "name": "Король поро",
+    "cardCode": "07RU015T4",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Нет",
+    "rarityRef": "None",
+    "subtypes": [
+      "ПОРО"
+    ],
+    "supertype": "Чемпион",
+    "type": "Боец",
+    "collectible": false,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "07RU015"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07RU015T5.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07RU015T5-full.png"
+      }
+    ],
+    "regions": [
+      "Рунтерра"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "Даруйте союзным поро <link=vocab.Everywhere><style=Vocab>везде</style></link> +1|+1. <link=keyword.Frostbite><sprite name=Frostbite><style=Keyword>Заморозьте</style></link> врага с 3 и менее ед. здоровья.",
+    "descriptionRaw": "Даруйте союзным поро везде +1|+1. Заморозьте врага с 3 и менее ед. здоровья.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Эта выпечка украшена глазурью ручной работы со всеми вкусами Фрельйорда: рассыпчатым снегом, слежавшимся снегом и – вы угадали – падающим снегом!",
+    "artistName": "Kudos Productions",
+    "name": "Глазированный снек",
+    "cardCode": "07RU015T5",
+    "keywords": [
+      "Взрывное"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Взрывное",
+    "spellSpeedRef": "Burst",
+    "rarity": "Нет",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Заклинание",
+    "collectible": false,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "07RU012T4",
+      "07RU012T2",
+      "07RU012T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07RU012.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07RU012-full.png"
+      }
+    ],
+    "regions": [
+      "Рунтерра"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 2,
+    "description": "<link=vocab.Origin><style=Vocab>Исток</style></link>: <link=card.origin><style=AssociatedCard>Разнообразные лесные друзья!</style></link>\r\n<link=vocab.Play><style=Vocab>Разыгрывая карту</style></link>: вы можете <link=vocab.Disguise><style=Vocab>замаскировать</style></link> меня как 1 из 3 сторонников стоимостью 2 из моего <link=vocab.Origin><style=Vocab>Истока</style></link>.",
+    "descriptionRaw": "Исток: Разнообразные лесные друзья!\r\nРазыгрывая карту: вы можете замаскировать меня как 1 из 3 сторонников стоимостью 2 из моего Истока.",
+    "levelupDescription": "<link=vocab.Attack><style=Vocab>Атака</style></link>: вы отправили в атаку союзников, имеющих 6+ разных подтипов.<style=Variable></style>",
+    "levelupDescriptionRaw": "Атака: вы отправили в атаку союзников, имеющих 6+ разных подтипов.",
+    "flavorText": "Нико способна принять множество обличий, но веление сердца неизменно: ее всегда тянет обратно в лес, к семье.",
+    "artistName": "Envar Studio",
+    "name": "Нико",
+    "cardCode": "07RU012",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Чемпион",
+    "rarityRef": "Champion",
+    "subtypes": [
+      "ПЕРЕВЕРТЫШ"
+    ],
+    "supertype": "Чемпион",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "07RU012T4",
+      "07RU012T1",
+      "07RU012"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07RU012T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07RU012T2-full.png"
+      }
+    ],
+    "regions": [
+      "Рунтерра"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 3,
+    "cost": 2,
+    "health": 3,
+    "description": "<link=vocab.Attack><style=Vocab>Атака</style></link>: даруйте +1|+1 союзникам с подтипом <link=vocab.Everywhere><style=Vocab>везде</style></link>.",
+    "descriptionRaw": "Атака: даруйте +1|+1 союзникам с подтипом везде.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Очертания и цвета, цвета и очертания... Нико может быть ими всеми!\"",
+    "artistName": "Envar Studio",
+    "name": "Нико",
+    "cardCode": "07RU012T2",
+    "keywords": [
+      "Изворотливость"
+    ],
+    "keywordRefs": [
+      "Elusive"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Нет",
+    "rarityRef": "None",
+    "subtypes": [
+      "ПЕРЕВЕРТЫШ"
+    ],
+    "supertype": "Чемпион",
+    "type": "Боец",
+    "collectible": false,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "07RU012"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07RU012T4.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07RU012T4-full.png"
+      }
+    ],
+    "regions": [
+      "Рунтерра"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "В колоду можно добавлять любые карты сторонников, если они Птицы, Кошки, Собаки, Элнуки, Фаэ, Рептилии или Пауки.",
+    "descriptionRaw": "В колоду можно добавлять любые карты сторонников, если они Птицы, Кошки, Собаки, Элнуки, Фаэ, Рептилии или Пауки.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Нико поведет нас на защиту джунглей! То есть... Нико поведет нас к Нидали – а там мы уже все вместе защитим джунгли!\" – Нико",
+    "artistName": "Envar Studio",
+    "name": "Разнообразные лесные друзья!",
+    "cardCode": "07RU012T4",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Нет",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Способность",
+    "collectible": false,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "07RU012T2",
+      "07RU012"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07RU012T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07RU012T1-full.png"
+      }
+    ],
+    "regions": [
+      "Рунтерра"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "Создайте точную <link=keyword.Ephemeral><sprite name=Ephemeral><style=Keyword>эфемерную</style></link> копию союзника, затем поменяйте их местами.\r\nСоздайте в вашей колоде карту <link=card.level1><style=AssociatedCard>Нико</style></link>.",
+    "descriptionRaw": "Создайте точную эфемерную копию союзника, затем поменяйте их местами.\r\nСоздайте в вашей колоде карту Нико.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Нико там, и Нико здесь – Нико может быть хоть где!\"<br>– Нико",
+    "artistName": "Kudos Productions",
+    "name": "Разделение формы Нико",
+    "cardCode": "07RU012T1",
+    "keywords": [
+      "Быстрое"
+    ],
+    "keywordRefs": [
+      "Fast"
+    ],
+    "spellSpeed": "Быстрое",
+    "spellSpeedRef": "Fast",
+    "rarity": "Нет",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "Чемпион",
+    "type": "Заклинание",
+    "collectible": false,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07RU017.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07RU017-full.png"
+      }
+    ],
+    "regions": [
+      "Рунтерра"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "Создайте точную <link=keyword.Ephemeral><sprite name=Ephemeral><style=Keyword>эфемерную</style></link> копию союзника, затем поменяйте их местами.",
+    "descriptionRaw": "Создайте точную эфемерную копию союзника, затем поменяйте их местами.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Нико там, и Нико здесь – Нико может быть хоть где!\"<br>– Нико",
+    "artistName": "Kudos Productions",
+    "name": "Разделение формы",
+    "cardCode": "07RU017",
+    "keywords": [
+      "Быстрое"
+    ],
+    "keywordRefs": [
+      "Fast"
+    ],
+    "spellSpeed": "Быстрое",
+    "spellSpeedRef": "Fast",
+    "rarity": "Нет",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Заклинание",
+    "collectible": false,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07RU016.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07RU016-full.png"
+      }
+    ],
+    "regions": [
+      "Рунтерра"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "Вытяните 2 разных сторонников-поро и даруйте им +1|+1.",
+    "descriptionRaw": "Вытяните 2 разных сторонников-поро и даруйте им +1|+1.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Пусть они невелики, но свое они берут числом – круглым, пушистым, несметным числом.  ",
+    "artistName": "Kudos Productions",
+    "name": "Созыв Совета",
+    "cardCode": "07RU016",
+    "keywords": [
+      "Взрывное"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Взрывное",
+    "spellSpeedRef": "Burst",
+    "rarity": "Нет",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Заклинание",
+    "collectible": false,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07IO041.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07IO041-full.png"
+      }
+    ],
+    "regions": [
+      "Иония"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 0,
+    "cost": 5,
+    "health": 0,
+    "description": "Восстановите 3 ед. здоровья своему нексусу и вытяните 2 карты заклинаний.",
+    "descriptionRaw": "Восстановите 3 ед. здоровья своему нексусу и вытяните 2 карты заклинаний.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Только ветер путнику союзник\". – Ясуо",
+    "artistName": "Kudos Productions",
+    "name": "Целительный ветер",
+    "cardCode": "07IO041",
+    "keywords": [
+      "Взрывное"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Взрывное",
+    "spellSpeedRef": "Burst",
+    "rarity": "ОБЫЧНОЕ",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Заклинание",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "07IO043T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07IO043.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07IO043-full.png"
+      }
+    ],
+    "regions": [
+      "Иония"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 4,
+    "cost": 4,
+    "health": 3,
+    "description": "<link=vocab.Play><style=Vocab>Разыгрывая карту</style></link>: выберите 1 из 3 <link=keyword.Fast><sprite name=Fast><style=Keyword>быстрых</style></link> или <link=keyword.Slow><sprite name=Slow><style=Keyword>медленных</style></link> заклинаний в руке или колоде оппонента. Создайте для него карту <link=card.cardref><style=AssociatedCard>Гадательные палочки</style></link>.",
+    "descriptionRaw": "Разыгрывая карту: выберите 1 из 3 быстрых или медленных заклинаний в руке или колоде оппонента. Создайте для него карту Гадательные палочки.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Око, что не связано материальным миром, видит все. Пусть оракул кажется слепым – но те, кто принимают его за легкую мишень, получают мгновенный и беспощадный отпор.",
+    "artistName": "Kudos Productions",
+    "name": "Всевидящий оракул",
+    "cardCode": "07IO043",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "РЕДКОЕ",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07IO043T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07IO043T1-full.png"
+      }
+    ],
+    "regions": [
+      "Иония"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "<style=Variable>Остановите действие выбранного заклинания.</style>",
+    "descriptionRaw": "Остановите действие выбранного заклинания.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Посмотри, как падают палочки. Только заглянув за пределы видимого для глаз, ты постигнешь судьбу\".<br>– Всевидящий оракул",
+    "artistName": "Kudos Productions",
+    "name": "Гадательные палочки",
+    "cardCode": "07IO043T1",
+    "keywords": [
+      "Быстрое"
+    ],
+    "keywordRefs": [
+      "Fast"
+    ],
+    "spellSpeed": "Быстрое",
+    "spellSpeedRef": "Fast",
+    "rarity": "Нет",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Заклинание",
+    "collectible": false,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "07SH038T1",
+      "07SH013T6",
+      "07SH038T2"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH038.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH038-full.png"
+      }
+    ],
+    "regions": [
+      "Шурима"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 2,
+    "cost": 3,
+    "health": 2,
+    "description": "<link=vocab.Ambush><style=Vocab>Засада 1</style></link>.\r\n<link=vocab.NexusStrike><style=Vocab>Удар по нексусу</style></link>: призовите карту <link=card.summon><style=AssociatedCard>Пакаа-защитница</style></link>.",
+    "descriptionRaw": "Засада 1.\r\nУдар по нексусу: призовите карту Пакаа-защитница.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Милая внешность – часть облика, а вот свирепость – уже инстинкт. Со временем, обучившись всему, даже самые маленькие пакити становятся сильными и дикими.",
+    "artistName": "Bubble Cat",
+    "name": "Пакаа-детеныш",
+    "cardCode": "07SH038",
+    "keywords": [
+      "Устрашение"
+    ],
+    "keywordRefs": [
+      "Fearsome"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ОБЫЧНОЕ",
+    "rarityRef": "Common",
+    "subtypes": [
+      "КОШКА"
+    ],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "07SH038",
+      "07SH013T6"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH038T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH038T2-full.png"
+      }
+    ],
+    "regions": [
+      "Шурима"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "Превратите карту <link=card.shadow><style=AssociatedCard>Тень в кустах</style></link> в карту <link=card.parent><style=AssociatedCard>Пакаа-детеныш</style></link>.",
+    "descriptionRaw": "Превратите карту Тень в кустах в карту Пакаа-детеныш.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Они заплатят.",
+    "artistName": "Kudos Productions",
+    "name": "Засада Пакаа-детеныша",
+    "cardCode": "07SH038T2",
+    "keywords": [
+      "Взрывное"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Взрывное",
+    "spellSpeedRef": "Burst",
+    "rarity": "Нет",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Заклинание",
+    "collectible": false,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "07SH038"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH038T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH038T1-full.png"
+      }
+    ],
+    "regions": [
+      "Шурима"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 3,
+    "cost": 2,
+    "health": 1,
+    "description": "",
+    "descriptionRaw": "",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Пакити по своей природе любознательны и в незнакомую ситуацию склонны бросаться очертя голову. Поскольку в джунглях прибавилось опасностей, кошки, охраняющие стаю, еще внимательнее присматривают за детенышами – даже если для постороннего глаза это незаметно.",
+    "artistName": "Bubble Cat",
+    "name": "Пакаа-защитница",
+    "cardCode": "07SH038T1",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Нет",
+    "rarityRef": "None",
+    "subtypes": [
+      "КОШКА"
+    ],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": false,
+    "set": "Set7b"
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH041.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH041-full.png"
+      }
+    ],
+    "regions": [
+      "Шурима"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "<link=vocab.Manifest><style=Vocab>Воплотите</style></link> карту с <link=vocab.Ambush><style=Vocab>Засадой</style></link>.",
+    "descriptionRaw": "Воплотите карту с Засадой.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Разведка в джунглях – наименее приятное занятие. Всего по одной причине: многовато неожиданностей.",
+    "artistName": "Kudos Productions",
+    "name": "Рекогносцировка",
+    "cardCode": "07SH041",
+    "keywords": [
+      "Взрывное"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Взрывное",
+    "spellSpeedRef": "Burst",
+    "rarity": "РЕДКОЕ",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Заклинание",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "07SH013T6"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH004.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH004-full.png"
+      }
+    ],
+    "regions": [
+      "Шурима"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "Дайте союзнику +2|+0 до конца раунда. Если это карта <link=card.shadow><style=AssociatedCard>Тень в кустах</style></link>, вместо этого дайте ему +2|+2.",
+    "descriptionRaw": "Дайте союзнику +2|+0 до конца раунда. Если это карта Тень в кустах, вместо этого дайте ему +2|+2.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Ступайте мягко, пакити. Разите метко\". – Нидали",
+    "artistName": "Kudos Productions",
+    "name": "Крадущийся зверь",
+    "cardCode": "07SH004",
+    "keywords": [
+      "Взрывное"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Взрывное",
+    "spellSpeedRef": "Burst",
+    "rarity": "ОБЫЧНОЕ",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Заклинание",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "07SH013T4",
+      "07SH013T2",
+      "07SH013T3",
+      "07SH013T6",
+      "07SH013T7"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH013.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH013-full.png"
+      }
+    ],
+    "regions": [
+      "Шурима"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 5,
+    "cost": 4,
+    "health": 3,
+    "description": "<link=vocab.Ambush><style=Vocab>Засада 2</style></link>",
+    "descriptionRaw": "Засада 2",
+    "levelupDescription": "На моих глазах вы призвали или превратили 4 других союзников.<style=Variable></style>",
+    "levelupDescriptionRaw": "На моих глазах вы призвали или превратили 4 других союзников.",
+    "flavorText": "\"Я всегда буду защищать тебя, ящерка. Браконьеры нам за все заплатят. Если мы будем вместе\". – Нидали",
+    "artistName": "Envar Studio",
+    "name": "Нидали",
+    "cardCode": "07SH013",
+    "keywords": [
+      "Быстрая атака"
+    ],
+    "keywordRefs": [
+      "QuickStrike"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Чемпион",
+    "rarityRef": "Champion",
+    "subtypes": [
+      "КОШКА"
+    ],
+    "supertype": "Чемпион",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "07SH013",
+      "07SH013T4",
+      "07SH013T6"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH013T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH013T3-full.png"
+      }
+    ],
+    "regions": [
+      "Шурима"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "Дайте союзнику +2|+0 до конца раунда. Если это карта <link=card.shadow><style=AssociatedCard>Тень в кустах</style></link>, вместо этого дайте ему +2|+2.\r\nСоздайте в вашей колоде карту <link=card.level1><style=AssociatedCard>Нидали</style></link>.",
+    "descriptionRaw": "Дайте союзнику +2|+0 до конца раунда. Если это карта Тень в кустах, вместо этого дайте ему +2|+2.\r\nСоздайте в вашей колоде карту Нидали.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Ступайте мягко, пакити. Разите метко\". – Нидали",
+    "artistName": "Kudos Productions",
+    "name": "Крадущийся зверь Нидали",
+    "cardCode": "07SH013T3",
+    "keywords": [
+      "Взрывное"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Взрывное",
+    "spellSpeedRef": "Burst",
+    "rarity": "Нет",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "Чемпион",
+    "type": "Заклинание",
+    "collectible": false,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "07SH013",
+      "07SH013T3",
+      "07SH013T2",
+      "07SH013T6",
+      "07SH013T5"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH013T4.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH013T4-full.png"
+      }
+    ],
+    "regions": [
+      "Шурима"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 6,
+    "cost": 4,
+    "health": 4,
+    "description": "<link=vocab.Ambush><style=Vocab>Засада 2</style></link>.\r\n<link=vocab.NexusStrike><style=Vocab>Удар по нексусу</style></link>: превратите меня обратно в карту <link=card.level1><style=AssociatedCard>Нидали</style></link> и создайте в руке карту <link=card.javelin><style=AssociatedCard>Бросок копья</style></link>.\r\n",
+    "descriptionRaw": "Засада 2.\r\nУдар по нексусу: превратите меня обратно в карту Нидали и создайте в руке карту Бросок копья.\r\n",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Люди дали ей оскорбительную кличку Кашдажи. Однако она главная в джунглях – и им не под силу скрыть тот факт, что они ее боятся\". – Выдержки из дневника Ануры, День 32",
+    "artistName": "Envar Studio",
+    "name": "Мать стаи Нидали",
+    "cardCode": "07SH013T4",
+    "keywords": [
+      "Пробивание",
+      "Быстрая атака"
+    ],
+    "keywordRefs": [
+      "Overwhelm",
+      "QuickStrike"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Чемпион",
+    "rarityRef": "Champion",
+    "subtypes": [
+      "КОШКА"
+    ],
+    "supertype": "Чемпион",
+    "type": "Боец",
+    "collectible": false,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "07SH013",
+      "07SH013T6"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH013T7.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH013T7-full.png"
+      }
+    ],
+    "regions": [
+      "Шурима"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "Превратите карту <link=card.shadow><style=AssociatedCard>Тень в кустах</style></link> в карту <link=card.parent><style=AssociatedCard>Нидали</style></link>.",
+    "descriptionRaw": "Превратите карту Тень в кустах в карту Нидали.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Они заплатят.",
+    "artistName": "Kudos Productions",
+    "name": "Засада Нидали",
+    "cardCode": "07SH013T7",
+    "keywords": [
+      "Взрывное"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Взрывное",
+    "spellSpeedRef": "Burst",
+    "rarity": "Нет",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Заклинание",
+    "collectible": false,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "07SH013T4",
+      "07SH013T6"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH013T5.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH013T5-full.png"
+      }
+    ],
+    "regions": [
+      "Шурима"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "Превратите карту <link=card.shadow><style=AssociatedCard>Тень в кустах</style></link> в карту <link=card.parent><style=AssociatedCard>Мать стаи Нидали</style></link>.",
+    "descriptionRaw": "Превратите карту Тень в кустах в карту Мать стаи Нидали.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Они заплатят.",
+    "artistName": "Kudos Productions",
+    "name": "Засада Матери стаи Нидали",
+    "cardCode": "07SH013T5",
+    "keywords": [
+      "Взрывное"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Взрывное",
+    "spellSpeedRef": "Burst",
+    "rarity": "Нет",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Заклинание",
+    "collectible": false,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "07SH039",
+      "07SH038",
+      "07SH013",
+      "07SH009",
+      "07SH003",
+      "07SH044",
+      "07SH043"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH013T6.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH013T6-full.png"
+      }
+    ],
+    "regions": [
+      "Шурима"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 2,
+    "description": "Что же там может скрываться?",
+    "descriptionRaw": "Что же там может скрываться?",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Никогда не знаешь, что может прятаться в подлеске.\n",
+    "artistName": "Kudos Productions",
+    "name": "Тень в кустах",
+    "cardCode": "07SH013T6",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Нет",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": false,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "07SH013",
+      "07SH013T2"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH013T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH013T2-full.png"
+      }
+    ],
+    "regions": [
+      "Шурима"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "Нанесите врагу  4 ед. урона. Если врагов нет, когда меня разыгрывают, вместо этого я выбираю целью вражеский нексус.",
+    "descriptionRaw": "Нанесите врагу  4 ед. урона. Если врагов нет, когда меня разыгрывают, вместо этого я выбираю целью вражеский нексус.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"У тебя был шанс\". – Нидали",
+    "artistName": "Kudos Productions",
+    "name": "Бросок копья",
+    "cardCode": "07SH013T2",
+    "keywords": [
+      "Медленное",
+      "Мимолетность"
+    ],
+    "keywordRefs": [
+      "Slow",
+      "Fleeting"
+    ],
+    "spellSpeed": "Медленное",
+    "spellSpeedRef": "Slow",
+    "rarity": "ОБЫЧНОЕ",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Заклинание",
+    "collectible": false,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "07SH009T1",
+      "07SH013T6",
+      "07SH009T2"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH009-full.png"
+      }
+    ],
+    "regions": [
+      "Шурима"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 3,
+    "cost": 3,
+    "health": 3,
+    "description": "<link=vocab.Ambush><style=Vocab>Засада 3</style></link>.\r\nПревратив меня из карты <link=card.ambush><style=AssociatedCard>Засада Мстительного вастайи</style></link>, остановите все вражеские <link=keyword.Skill><sprite name=SkillMark><style=Keyword>способности</style></link>, а также <link=keyword.Fast><sprite name=Fast><style=Keyword>быстрые</style></link> и <link=keyword.Slow><sprite name=Slow><style=Keyword>медленные</style></link> заклинания.",
+    "descriptionRaw": "Засада 3.\r\nПревратив меня из карты Засада Мстительного вастайи, остановите все вражеские способности, а также быстрые и медленные заклинания.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Не бойтесь, малыши. Я защищу вас – и тем уплачу свой долг Нидали\".",
+    "artistName": "Kudos Productions",
+    "name": "Мстительный вастайи",
+    "cardCode": "07SH009",
+    "keywords": [
+      "Щит от магии"
+    ],
+    "keywordRefs": [
+      "SpellShield"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ОБЫЧНОЕ",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH009T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH009T1-full.png"
+      }
+    ],
+    "regions": [
+      "Шурима"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "Остановите все вражеские <link=keyword.Skill><sprite name=SkillMark><style=Keyword>способности</style></link>, а также <link=keyword.Fast><sprite name=Fast><style=Keyword>быстрые</style></link> и <link=keyword.Slow><sprite name=Slow><style=Keyword>медленные</style></link> заклинания.",
+    "descriptionRaw": "Остановите все вражеские способности, а также быстрые и медленные заклинания.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"В прошлый раз твои подлые уловки стали для меня неожиданностью. Больше такого не случится\".<br>– Куулькан",
+    "artistName": "Kudos Productions",
+    "name": "Довольно!",
+    "cardCode": "07SH009T1",
+    "keywords": [
+      "Способность"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Нет",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Способность",
+    "collectible": false,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "07SH009",
+      "07SH013T6"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH009T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH009T2-full.png"
+      }
+    ],
+    "regions": [
+      "Шурима"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "Превратите карту <link=card.shadow><style=AssociatedCard>Тень в кустах</style></link> в карту <link=card.parent><style=AssociatedCard>Мстительный вастайи</style></link>.",
+    "descriptionRaw": "Превратите карту Тень в кустах в карту Мстительный вастайи.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Они заплатят.",
+    "artistName": "Kudos Productions",
+    "name": "Засада Мстительного вастайи",
+    "cardCode": "07SH009T2",
+    "keywords": [
+      "Взрывное"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Взрывное",
+    "spellSpeedRef": "Burst",
+    "rarity": "Нет",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Заклинание",
+    "collectible": false,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "07SH013T6",
+      "07SH039T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH039.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH039-full.png"
+      }
+    ],
+    "regions": [
+      "Шурима"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 3,
+    "cost": 2,
+    "health": 1,
+    "description": "<link=vocab.Ambush><style=Vocab>Засада 0</style></link>.\r\nПризвав или превратив меня, даруйте <link=keyword.Weakest><style=Keyword>слабейшему</style></link> врагу <link=keyword.Vulnerable><sprite name=Vulnerable><style=Keyword>Уязвимость</style></link>.",
+    "descriptionRaw": "Засада 0.\r\nПризвав или превратив меня, даруйте слабейшему врагу Уязвимость.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Здешние красоты даже новичка превратят в профессионала, карабкающегося по деревьям и прыгающего по валунам. Попасть сюда стоило целое состояние, но я уверен, что смогу отбить долги благодаря паре-тройке шкур местных редких зверьков...\"",
+    "artistName": "Kudos Productions",
+    "name": "Штурмовик-внедорожник",
+    "cardCode": "07SH039",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "РЕДКОЕ",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "07SH013T6",
+      "07SH044T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH044.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH044-full.png"
+      }
+    ],
+    "regions": [
+      "Шурима"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 4,
+    "cost": 3,
+    "health": 2,
+    "description": "<link=vocab.Ambush><style=Vocab>Засада 4</style></link>\r\nПревратив меня, призовите карту <link=card.selfRef><style=AssociatedCard>Сияющий морок</style></link>.",
+    "descriptionRaw": "Засада 4\r\nПревратив меня, призовите карту Сияющий морок.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Как бы мне хотелось самой это увидеть! Большинство путешественников считают, что Сияющий морок – это миф, но один молодой человек клянется, что все наоборот. Он утверждает, что это птица ярчайшей расцветки с размахом крыльев, примерно равным росту взрослого человека. Однажды вечером он поведал мне, что посмотрев в глаза птицы, ты понимаешь, что добыча здесь – это ты\". – Выдержки из дневника Ануры, День 21",
+    "artistName": "Envar Studio",
+    "name": "Сияющий морок",
+    "cardCode": "07SH044",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "РЕДКОЕ",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "ПТИЦА"
+    ],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "07SH003T2",
+      "07SH013T6",
+      "07SH003T3"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH003.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH003-full.png"
+      }
+    ],
+    "regions": [
+      "Шурима"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 2,
+    "description": "<link=vocab.Ambush><style=Vocab>Засада 3</style></link>.\r\nПревратив меня из карты <link=card.ambush><style=AssociatedCard>Засада Браконьера-дирижаблиста</style></link>, в следующий раз, когда я блокирую или когда меня блокируют в этом раунде, <link=vocab.Ambush><style=Vocab>плените</style></link> моего врага, если его сила 6 или менее.",
+    "descriptionRaw": "Засада 3.\r\nПревратив меня из карты Засада Браконьера-дирижаблиста, в следующий раз, когда я блокирую или когда меня блокируют в этом раунде, плените моего врага, если его сила 6 или менее.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Ха! Теперь попробуйте достать меня, глупые звери. Высшему виду и земное притяжение нипочем!\"",
+    "artistName": "Kudos Productions",
+    "name": "Браконьер-дирижаблист",
+    "cardCode": "07SH003",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ЭПИЧЕСКОЕ",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH003T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH003T2-full.png"
+      }
+    ],
+    "regions": [
+      "Шурима"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": " <link=keyword.Capture><sprite name=Capture><style=Keyword>Плените</style></link> моего врага, если его сила 6 или менее.",
+    "descriptionRaw": " Плените моего врага, если его сила 6 или менее.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Положительно заблистательная находка! Ровейн уверенно вознаградит меня за это\". – Браконьер-дирижаблист",
+    "artistName": "Kudos Productions",
+    "name": "Схрон товара",
+    "cardCode": "07SH003T2",
+    "keywords": [
+      "Способность"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Нет",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Способность",
+    "collectible": false,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "07SH003",
+      "07SH013T6"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH003T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH003T3-full.png"
+      }
+    ],
+    "regions": [
+      "Шурима"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "Превратите карту <link=card.shadow><style=AssociatedCard>Тень в кустах</style></link> в карту <link=card.parent><style=AssociatedCard>Браконьер-дирижаблист</style></link>.",
+    "descriptionRaw": "Превратите карту Тень в кустах в карту Браконьер-дирижаблист.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Они заплатят.",
+    "artistName": "Kudos Productions",
+    "name": "Засада Браконьера-дирижаблиста",
+    "cardCode": "07SH003T3",
+    "keywords": [
+      "Взрывное"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Взрывное",
+    "spellSpeedRef": "Burst",
+    "rarity": "Нет",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Заклинание",
+    "collectible": false,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH011.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH011-full.png"
+      }
+    ],
+    "regions": [
+      "Шурима"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "Призвав меня или впервые превратив союзника в каждом раунде, дайте <link=keyword.Weakest><style=Keyword>слабейшему</style></link> врагу <link=keyword.Vulnerable><sprite name=Vulnerable><style=Keyword>Уязвимость</style></link> до конца раунда.",
+    "descriptionRaw": "Призвав меня или впервые превратив союзника в каждом раунде, дайте слабейшему врагу Уязвимость до конца раунда.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"В воздухе кровь\". – Нидали",
+    "artistName": "Kudos Productions",
+    "name": "Ловушка в зарослях",
+    "cardCode": "07SH011",
+    "keywords": [
+      "Место силы"
+    ],
+    "keywordRefs": [
+      "LandmarkVisualOnly"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ОБЫЧНОЕ",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Место силы",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "07SH039",
+      "07SH013T6"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH039T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH039T1-full.png"
+      }
+    ],
+    "regions": [
+      "Шурима"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "Превратите карту <link=card.shadow><style=AssociatedCard>Тень в кустах</style></link> в карту <link=card.parent><style=AssociatedCard>Штурмовик-внедорожник</style></link>.",
+    "descriptionRaw": "Превратите карту Тень в кустах в карту Штурмовик-внедорожник.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Они заплатят.",
+    "artistName": "Kudos Productions",
+    "name": "Засада Штурмовика-внедорожника",
+    "cardCode": "07SH039T1",
+    "keywords": [
+      "Взрывное"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Взрывное",
+    "spellSpeedRef": "Burst",
+    "rarity": "Нет",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Заклинание",
+    "collectible": false,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "07SH013T6",
+      "07SH043T2"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH043.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH043-full.png"
+      }
+    ],
+    "regions": [
+      "Шурима"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 6,
+    "cost": 6,
+    "health": 5,
+    "description": "<link=vocab.Ambush><style=Vocab>Засада 5</style></link>",
+    "descriptionRaw": "Засада 5",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Некоторые утверждают, что хоботачи, старейшие обитатели этих мест, хранят в себе память и душу самих джунглей. Обычно это смирные существа, но в случае любой опасности они не раздумывая защитят свой дом. ",
+    "artistName": "Kudos Productions",
+    "name": "Огромный хоботач",
+    "cardCode": "07SH043",
+    "keywords": [
+      "Пробивание"
+    ],
+    "keywordRefs": [
+      "Overwhelm"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ЭПИЧЕСКОЕ",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "07SH043",
+      "07SH013T6"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH043T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH043T2-full.png"
+      }
+    ],
+    "regions": [
+      "Шурима"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 0,
+    "cost": 5,
+    "health": 0,
+    "description": "Превратите карту <link=card.shadow><style=AssociatedCard>Тень в кустах</style></link> в карту <link=card.parent><style=AssociatedCard>Огромный хоботач</style></link>.",
+    "descriptionRaw": "Превратите карту Тень в кустах в карту Огромный хоботач.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Они заплатят.",
+    "artistName": "Kudos Productions",
+    "name": "Засада Огромного хоботача",
+    "cardCode": "07SH043T2",
+    "keywords": [
+      "Взрывное"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Взрывное",
+    "spellSpeedRef": "Burst",
+    "rarity": "Нет",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Заклинание",
+    "collectible": false,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH040.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH040-full.png"
+      }
+    ],
+    "regions": [
+      "Шурима"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 1,
+    "cost": 1,
+    "health": 2,
+    "description": "Если вы в этом матче превратили союзника, даруйте мне +1|+1.",
+    "descriptionRaw": "Если вы в этом матче превратили союзника, даруйте мне +1|+1.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Небольшие всеядные млекопитающие, покрытые щетиноподобными иголками, которыми они могут активно отстреливаться в случае опасности. Хвост колючий и подвижный; возможно, используется как орудие самозащиты. Если верить бывалым путешественникам, эти существа славятся своей неуживчивостью и не даются в руки...\" – Выдержки из дневника Ануры, День 3",
+    "artistName": "Caravan Studio",
+    "name": "Иглоносец",
+    "cardCode": "07SH040",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "РЕДКОЕ",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "07SH044",
+      "07SH013T6"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH044T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH044T1-full.png"
+      }
+    ],
+    "regions": [
+      "Шурима"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 0,
+    "cost": 4,
+    "health": 0,
+    "description": "Превратите карту <link=card.shadow><style=AssociatedCard>Тень в кустах</style></link> в карту <link=card.parent><style=AssociatedCard>Сияющий морок</style></link>.",
+    "descriptionRaw": "Превратите карту Тень в кустах в карту Сияющий морок.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Они заплатят.",
+    "artistName": "Kudos Productions",
+    "name": "Засада Сияющего морока",
+    "cardCode": "07SH044T1",
+    "keywords": [
+      "Взрывное"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Взрывное",
+    "spellSpeedRef": "Burst",
+    "rarity": "Нет",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Заклинание",
+    "collectible": false,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "07SH013T6"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH005-full.png"
+      }
+    ],
+    "regions": [
+      "Шурима"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 5,
+    "cost": 7,
+    "health": 6,
+    "description": "<link=vocab.Play><style=Vocab>Разыгрывая карту</style></link>: <link=vocab.Manifest><style=Vocab>воплотите</style></link> карту с <link=vocab.Ambush><style=Vocab>Засадой</style></link>.\r\nПревратив союзника, удвойте его силу и здоровье.",
+    "descriptionRaw": "Разыгрывая карту: воплотите карту с Засадой.\r\nПревратив союзника, удвойте его силу и здоровье.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"КТО-КТО у вас все отобрал?! Ученая с рептильной образиной? И чего вы тогда тут стоите, шуты гороховые? Ну-ка бегом возвращайте мои денежки!\"",
+    "artistName": "Michal Ivan",
+    "name": "Торговец крупной дичью",
+    "cardCode": "07SH005",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "РЕДКОЕ",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07BW035.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07BW035-full.png"
+      }
+    ],
+    "regions": [
+      "Билджвотер"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 6,
+    "health": 0,
+    "description": "Карты у вас в руке становятся <link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>мимолетными</style></link>.\r\nСыграв карту, вытяните 1 карту.",
+    "descriptionRaw": "Карты у вас в руке становятся мимолетными.\r\nСыграв карту, вытяните 1 карту.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Полагаю, ты помнишь, что у тебя в руке, и бережешь это. Иначе готовься потерять все подчистую\". – Твистед Фэйт",
+    "artistName": "Envar Studio",
+    "name": "Плутовское логово",
+    "cardCode": "07BW035",
+    "keywords": [
+      "Место силы"
+    ],
+    "keywordRefs": [
+      "LandmarkVisualOnly"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ЭПИЧЕСКОЕ",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Место силы",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07BW042.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07BW042-full.png"
+      }
+    ],
+    "regions": [
+      "Билджвотер"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 1,
+    "cost": 2,
+    "health": 3,
+    "description": "<link=vocab.Play><style=Vocab>Разыгрывая карту</style></link>: <link=vocab.Manifest><style=Vocab>воплотите</style></link> сторонника, чей подтип отличен от подтипов союзников на поле боя.",
+    "descriptionRaw": "Разыгрывая карту: воплотите сторонника, чей подтип отличен от подтипов союзников на поле боя.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Знаете, зачем нам нужен этот растрепанный заморыш? При нем у нас никаких проблем с крысами!\" – Матрос с \"Кошмара\"",
+    "artistName": "Caravan Studio",
+    "name": "Палубный охотник",
+    "cardCode": "07BW042",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ОБЫЧНОЕ",
+    "rarityRef": "Common",
+    "subtypes": [
+      "КОШКА"
+    ],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07BW039.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07BW039-full.png"
+      }
+    ],
+    "regions": [
+      "Билджвотер"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 2,
+    "description": "В каждом раунде, впервые призывая союзника стоимостью 1, восполните 1 ед. маны заклинаний.",
+    "descriptionRaw": "В каждом раунде, впервые призывая союзника стоимостью 1, восполните 1 ед. маны заклинаний.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Господин Ящер, что вы тут делаете? Вам тоже нравятся поро?!\" – Ингвар младшая",
+    "artistName": "Caravan Studio",
+    "name": "Гринзо, Принц-дракон",
+    "cardCode": "07BW039",
+    "keywords": [
+      "Эзотерика"
+    ],
+    "keywordRefs": [
+      "Attune"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "РЕДКОЕ",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "ДРАКОН"
+    ],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07BW033.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07BW033-full.png"
+      }
+    ],
+    "regions": [
+      "Билджвотер"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 4,
+    "health": 0,
+    "description": "Призовите случайную оболочку.\r\nДаруйте +1|+1 союзникам стоимостью 1 <link=vocab.Everywhere><style=Vocab>везде</style></link>. ",
+    "descriptionRaw": "Призовите случайную оболочку.\r\nДаруйте +1|+1 союзникам стоимостью 1 везде. ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Когда на море опускается тишайшая ночь, некоторые билджвотерские моряки затыкают уши ватой. Им прекрасно известно, что музыка, льющаяся из-под воды, не сулит ничего кроме могилы на дне.",
+    "artistName": "Kudos Productions",
+    "name": "Песнь сирен",
+    "cardCode": "07BW033",
+    "keywords": [
+      "Медленное"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "Медленное",
+    "spellSpeedRef": "Slow",
+    "rarity": "ОБЫЧНОЕ",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Заклинание",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07FR011.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07FR011-full.png"
+      }
+    ],
+    "regions": [
+      "Фрельйорд"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "Призывая союзника, увеличьте его здоровье до значения его силы.",
+    "descriptionRaw": "Призывая союзника, увеличьте его здоровье до значения его силы.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Хотя назначение этого храма давно кануло во тьму веков, его каменный страж все еще бдит, не сломавшись под гнетом множества лавин. Покрывшись изморозью, он словно пронизан каким-то необычным и притягательным светом.",
+    "artistName": "Envar Studio",
+    "name": "Храм Истинного льда",
+    "cardCode": "07FR011",
+    "keywords": [
+      "Место силы"
+    ],
+    "keywordRefs": [
+      "LandmarkVisualOnly"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ЭПИЧЕСКОЕ",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Место силы",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07FR010.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07FR010-full.png"
+      }
+    ],
+    "regions": [
+      "Фрельйорд"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 7,
+    "cost": 7,
+    "health": 7,
+    "description": "<link=keyword.Plunder><style=Keyword>Разграбление</style></link>: увеличьте характеристики союзника до моих значений.",
+    "descriptionRaw": "Разграбление: увеличьте характеристики союзника до моих значений.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Хотя снежный когтехват охотится в основном на мелких млекопитающих, у этого фрельйордского зверя хватит остроты когтей, чтобы кого угодно превратить в еду.",
+    "artistName": "Envar Studio",
+    "name": "Снежный когтехват",
+    "cardCode": "07FR010",
+    "keywords": [
+      "Пробивание",
+      "Разграбление"
+    ],
+    "keywordRefs": [
+      "Overwhelm",
+      "Plunder"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ОБЫЧНОЕ",
+    "rarityRef": "Common",
+    "subtypes": [
+      "ПТИЦА"
+    ],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07FR015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07FR015-full.png"
+      }
+    ],
+    "regions": [
+      "Фрельйорд"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 1,
+    "description": "<link=vocab.Play><style=Vocab>Разыгрывая карту</style></link>: выберите союзника. Даруйте +1|+1 ему и всем остальным союзникам, имеющим тот же подтип, или <link=vocab.Manifest><style=Vocab>воплотите</style></link> сторонника, имеющего тот же подтип, что у союзника.",
+    "descriptionRaw": "Разыгрывая карту: выберите союзника. Даруйте +1|+1 ему и всем остальным союзникам, имеющим тот же подтип, или воплотите сторонника, имеющего тот же подтип, что у союзника.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Ингвар – самоназначенная смотрительница поро и исследовательница Фрельйорда. Она уверена, что приключения ждут неподалеку – и скоро отыщутся. ",
+    "artistName": "Caravan Studio",
+    "name": "Ингвар Младшая",
+    "cardCode": "07FR015",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ЭПИЧЕСКОЕ",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07FR015T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07FR015T1-full.png"
+      }
+    ],
+    "regions": [
+      "Фрельйорд"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 1,
+    "description": "<link=vocab.Play><style=Vocab>Разыгрывая карту</style></link>: даруйте +1|+1 союзнику и всем остальным союзникам, имеющим тот же подтип.",
+    "descriptionRaw": "Разыгрывая карту: даруйте +1|+1 союзнику и всем остальным союзникам, имеющим тот же подтип.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Ингвар – самоназначенная смотрительница поро и исследовательница Фрельйорда. Она уверена, что приключения ждут неподалеку – и скоро отыщутся. ",
+    "artistName": "Caravan Studio",
+    "name": "Ингвар Младшая",
+    "cardCode": "07FR015T1",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Нет",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": false,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07FR015T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07FR015T2-full.png"
+      }
+    ],
+    "regions": [
+      "Фрельйорд"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 1,
+    "description": "<link=vocab.Play><style=Vocab>Разыгрывая карту</style></link>: <link=vocab.Manifest><style=Vocab>воплотите</style></link> сторонника, имеющего тот же подтип, что у союзника.",
+    "descriptionRaw": "Разыгрывая карту: воплотите сторонника, имеющего тот же подтип, что у союзника.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Ингвар – самоназначенная смотрительница поро и исследовательница Фрельйорда. Она уверена, что приключения ждут неподалеку – и скоро отыщутся. ",
+    "artistName": "Caravan Studio",
+    "name": "Ингвар Младшая",
+    "cardCode": "07FR015T2",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Нет",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": false,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07FR016.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07FR016-full.png"
+      }
+    ],
+    "regions": [
+      "Фрельйорд"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 5,
+    "cost": 5,
+    "health": 5,
+    "description": "Призвав меня, даруйте 3 верхним бойцам в вашей колоде +1|+1. Если подтип союзника отличен от моего, вытяните 1 из этих бойцов.",
+    "descriptionRaw": "Призвав меня, даруйте 3 верхним бойцам в вашей колоде +1|+1. Если подтип союзника отличен от моего, вытяните 1 из этих бойцов.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Внутри костистого тела скрыто огромное сердце. Эти надежные скакуны неоценимы при расчистке обледеневших горных дорог.",
+    "artistName": "Envar Studio",
+    "name": "Ледниковый ящер",
+    "cardCode": "07FR016",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "РЕДКОЕ",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "РЕПТИЛИЯ"
+    ],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "07SI010T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SI010.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SI010-full.png"
+      }
+    ],
+    "regions": [
+      "Сумрачные острова"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 5,
+    "cost": 8,
+    "health": 8,
+    "description": "Призвав меня, призовите 2 <link=card.summon><style=AssociatedCard>Некротических выводка</style></link>.<br>Когда погибнет другой союзник, <link=keyword.Drain><style=Keyword>истощите</style></link> вражеский нексус на<br>1 ед. здоровья.",
+    "descriptionRaw": "Призвав меня, призовите 2 Некротических выводка.Когда погибнет другой союзник, истощите вражеский нексус на1 ед. здоровья.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Эти пауки обитают лишь в самых темных пределах Сумрачных островов, вырабатывая смертельный трупный яд, от которого коченеет кожа и тут же загнивает плоть.",
+    "artistName": "Michal Ivan",
+    "name": "Некротический мизгирь",
+    "cardCode": "07SI010",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ЭПИЧЕСКОЕ",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "ПАУК"
+    ],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SI010T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SI010T1-full.png"
+      }
+    ],
+    "regions": [
+      "Сумрачные острова"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 2,
+    "description": "",
+    "descriptionRaw": "",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Где один, там всегда и несколько... И трупный яд подействует быстро.",
+    "artistName": "Michal Ivan",
+    "name": "Некротический выводок",
+    "cardCode": "07SI010T1",
+    "keywords": [
+      "Устрашение"
+    ],
+    "keywordRefs": [
+      "Fearsome"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Нет",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": false,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SI012.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SI012-full.png"
+      }
+    ],
+    "regions": [
+      "Сумрачные острова"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 3,
+    "cost": 2,
+    "health": 1,
+    "description": "<link=vocab.Play><style=Vocab>Разыгрывая карту</style></link>: если подтип союзника отличен от моего, дайте врагу <nobr>-2|-0</nobr> до конца раунда.",
+    "descriptionRaw": "Разыгрывая карту: если подтип союзника отличен от моего, дайте врагу -2|-0 до конца раунда.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Клокастые сетеплеты мастерят свои сети с великим прилежанием. Они обожают выводки своих детенышей... но становятся весьма злобными, когда им кто-то угрожает.",
+    "artistName": "Caravan Studio",
+    "name": "Клокастый сетеплет",
+    "cardCode": "07SI012",
+    "keywords": [
+      "Устрашение"
+    ],
+    "keywordRefs": [
+      "Fearsome"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ОБЫЧНОЕ",
+    "rarityRef": "Common",
+    "subtypes": [
+      "ПАУК"
+    ],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SI004.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SI004-full.png"
+      }
+    ],
+    "regions": [
+      "Сумрачные острова"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "<link=vocab.Attack><style=Vocab>Атака</style></link>: когда другой союзник получает усиление <link=keyword.Hallowed><sprite name=Hallowed><style=Keyword>Благих</style></link>, его получает и мой носитель.",
+    "descriptionRaw": "Атака: когда другой союзник получает усиление Благих, его получает и мой носитель.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Имея хорошие ножницы и качественные нитки, можно починить почти все что угодно!\" – Гвен",
+    "artistName": "Polar Engine",
+    "name": "Пресвятые ножницы",
+    "cardCode": "07SI004",
+    "keywords": [
+      "Снаряжение"
+    ],
+    "keywordRefs": [
+      "Equipment"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "РЕДКОЕ",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Снаряжение",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07MT009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07MT009-full.png"
+      }
+    ],
+    "regions": [
+      "Таргон"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 12,
+    "health": 0,
+    "description": "Просмотрите 9 верхних карт своей колоды, вытяните каждого дракона и снизьте их стоимость до 0 до конца раунда. Остальные карты замешайте в колоду.",
+    "descriptionRaw": "Просмотрите 9 верхних карт своей колоды, вытяните каждого дракона и снизьте их стоимость до 0 до конца раунда. Остальные карты замешайте в колоду.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Знать одного дракона значит владеть собой. Знать многих драконов значит владеть миром\". – Оттрани, Чтящие драконов",
+    "artistName": "Polar Engine",
+    "name": "Эра драконов",
+    "cardCode": "07MT009",
+    "keywords": [
+      "Медленное"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "Медленное",
+    "spellSpeedRef": "Slow",
+    "rarity": "РЕДКОЕ",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Заклинание",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07MT006.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07MT006-full.png"
+      }
+    ],
+    "regions": [
+      "Таргон"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 2,
+    "cost": 3,
+    "health": 2,
+    "description": "<link=vocab.Play><style=Vocab>Разыгрывая карту</style></link>: <link=keyword.Recall><style=Keyword>верните</style></link> союзника и даруйте ему мои характеристики.",
+    "descriptionRaw": "Разыгрывая карту: верните союзника и даруйте ему мои характеристики.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Мало есть примет столь же красноречивых, как встреча солнца и луны\". – Диана",
+    "artistName": "Envar Studio",
+    "name": "Злополучные влюбленные",
+    "cardCode": "07MT006",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ОБЫЧНОЕ",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07BC016.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07BC016-full.png"
+      }
+    ],
+    "regions": [
+      "Бандл Сити"
+    ],
+    "regionRefs": [
+      "BandleCity"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "Сбросив меня, <link=vocab.Equip><style=Vocab>снарядите</style></link> мной случайного союзника без снаряжения.",
+    "descriptionRaw": "Сбросив меня, снарядите мной случайного союзника без снаряжения.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Врать не буду – иногда я теряю свои инструменты. Впрочем, вот эта штука всегда окажется под рукой, когда в ней есть надобность!\" – Пожарный инспектор",
+    "artistName": "Kudos Productions",
+    "name": "Неразменный гайковерт",
+    "cardCode": "07BC016",
+    "keywords": [
+      "Таран",
+      "Снаряжение"
+    ],
+    "keywordRefs": [
+      "Impact",
+      "Equipment"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ОБЫЧНОЕ",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Снаряжение",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06BC015T3"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07BC018.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07BC018-full.png"
+      }
+    ],
+    "regions": [
+      "Бандл Сити"
+    ],
+    "regionRefs": [
+      "BandleCity"
+    ],
+    "attack": 3,
+    "cost": 4,
+    "health": 4,
+    "description": "Призвав меня, прикрепите <link=card.portal><style=AssociatedCard>Таинственный портал</style></link> к 1 из 4 верхних карт в своей колоде.\r\nПризвав созданного союзника, даруйте ему <link=keyword.Impact><sprite name=Impact><style=Keyword>Таран</style></link>.",
+    "descriptionRaw": "Призвав меня, прикрепите Таинственный портал к 1 из 4 верхних карт в своей колоде.\r\nПризвав созданного союзника, даруйте ему Таран.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "В начале любого исследования не обойдется без сюрпризов. К счастью, этот благоприятен. ",
+    "artistName": "Kudos Productions",
+    "name": "Порталовед",
+    "cardCode": "07BC018",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ЭПИЧЕСКОЕ",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "ЙОРДЛ"
+    ],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07BC011.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07BC011-full.png"
+      }
+    ],
+    "regions": [
+      "Бандл Сити"
+    ],
+    "regionRefs": [
+      "BandleCity"
+    ],
+    "attack": 6,
+    "cost": 7,
+    "health": 6,
+    "description": "Призвав меня, даруйте остальным союзникам, у которых есть подтипы, +1|+1 и <link=keyword.Impact><sprite name=Impact><style=Keyword>Таран</style></link>.",
+    "descriptionRaw": "Призвав меня, даруйте остальным союзникам, у которых есть подтипы, +1|+1 и Таран.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Безобидны они только с виду – к несчастью этой бригады пилтоверских браконьеров.",
+    "artistName": "Envar Studio",
+    "name": "Свирепые пушистики",
+    "cardCode": "07BC011",
+    "keywords": [
+      "Таран"
+    ],
+    "keywordRefs": [
+      "Impact"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ОБЫЧНОЕ",
+    "rarityRef": "Common",
+    "subtypes": [
+      "ПТИЦА"
+    ],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07DE014.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07DE014-full.png"
+      }
+    ],
+    "regions": [
+      "Демасия"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 3,
+    "cost": 5,
+    "health": 3,
+    "description": "<link=vocab.Play><style=Vocab>Разыгрывая карту</style></link>: выберите бойца из 5 верхних карт вашей колоды стоимостью до 3. Призовите его и уберите остальные карты в вашу колоду. ",
+    "descriptionRaw": "Разыгрывая карту: выберите бойца из 5 верхних карт вашей колоды стоимостью до 3. Призовите его и уберите остальные карты в вашу колоду. ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "На демасийского сержанта возложена немалая ответственность. Впоследствии его рекруты займут многие важные должности – а объединит их долг и любовь к Демасии.",
+    "artistName": "Kudos Productions",
+    "name": "Дотошный сержант",
+    "cardCode": "07DE014",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ЭПИЧЕСКОЕ",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "ЭЛИТА"
+    ],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07DE015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07DE015-full.png"
+      }
+    ],
+    "regions": [
+      "Демасия"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 5,
+    "cost": 6,
+    "health": 5,
+    "description": "<link=vocab.Play><style=Vocab>Разыгрывая карту</style></link>: если подтип союзника отличен от моего, <link=vocab.Manifest><style=Vocab>воплотите</style></link> демасийское заклинание.",
+    "descriptionRaw": "Разыгрывая карту: если подтип союзника отличен от моего, воплотите демасийское заклинание.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Запись номер один подтверждает первое за пятьдесят лет появление львиноястреба. Прекрасный синий хохолок, умные глаза. На теле есть броня, однако кости достаточно тонкие, чтобы лазать по деревьям, а возможно, даже планировать в воздухе. Строение крыльев очень походит на демасийского среброкрыла. Предстоит выполнить новые замеры\". – Выдержки из дневника Ануры, День 12",
+    "artistName": "Kudos Productions",
+    "name": "Хохлатый львиноястреб",
+    "cardCode": "07DE015",
+    "keywords": [
+      "Стойкость"
+    ],
+    "keywordRefs": [
+      "Tough"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "РЕДКОЕ",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "ПТИЦА"
+    ],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07DE011.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07DE011-full.png"
+      }
+    ],
+    "regions": [
+      "Демасия"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 3,
+    "cost": 3,
+    "health": 3,
+    "description": "Заклинания стоимостью ниже 3 вместо этого имеют стоимость 3.",
+    "descriptionRaw": "Заклинания стоимостью ниже 3 вместо этого имеют стоимость 3.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Молчать! Ты заявляешь, что это не более чем игра, но нет – это прикрытие для коварного мистического действа. Я намереваюсь разоблачить тебя как обманщика и чародея, подлый ты старикан, даже если для этого мне придется спалить дотла все это строение!\"",
+    "artistName": "Kudos Productions",
+    "name": "Охотник на магов – новичок",
+    "cardCode": "07DE011",
+    "keywords": [
+      "Missing Translation"
+    ],
+    "keywordRefs": [
+      "AuraVisualFakeKeyword"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ОБЫЧНОЕ",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  }
+]

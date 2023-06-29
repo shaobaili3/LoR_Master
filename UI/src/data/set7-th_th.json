@@ -4,8 +4,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07PZ009.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07PZ009-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07PZ009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07PZ009-full.png"
       }
     ],
     "regions": [
@@ -56,8 +56,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07PZ017.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07PZ017-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07PZ017.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07PZ017-full.png"
       }
     ],
     "regions": [
@@ -69,8 +69,8 @@
     "attack": 1,
     "cost": 2,
     "health": 3,
-    "description": "เมื่อคุณเล่นเวท ติด <link=card.trap><style=AssociatedCard>Flashbomb Trap</style></link><br>1 ใบแบบสุ่มไว้บนการ์ด 8 ใบ<br>บนสุดในเด็คของศัตรู",
-    "descriptionRaw": "เมื่อคุณเล่นเวท ติด Flashbomb Trap1 ใบแบบสุ่มไว้บนการ์ด 8 ใบบนสุดในเด็คของศัตรู",
+    "description": "เมื่อคุณเล่นเวท ติด <link=card.trap><style=AssociatedCard>Flashbomb Trap</style></link> 1 ใบไว้บนการ์ด 8 ใบบนสุดในเด็คของศัตรู",
+    "descriptionRaw": "เมื่อคุณเล่นเวท ติด Flashbomb Trap 1 ใบไว้บนการ์ด 8 ใบบนสุดในเด็คของศัตรู",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "\"...แล้วรู้มั้ยว่าทำไมมันถึงดีกว่าเห็ด? เพราะว่าเจ้าตัดสินใจเลือกเวลาที่มันจะระเบิดได้ยังไงล่ะ! ถ้าไม่เรียกว่าคุ้มแล้วจะให้เรียกว่าอะไร?\"",
@@ -106,8 +106,58 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07NX009.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07NX009-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07PZ005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07PZ005-full.png"
+      }
+    ],
+    "regions": [
+      "พิล<zwsp>โท<zwsp>เวอร์ <zwsp>& <zwsp>ซอน"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 0,
+    "cost": 4,
+    "health": 0,
+    "description": "สร้างความเสียหาย 1 หน่วยแก่ศัตรูหนึ่งใบและเน็กซัสของศัตรู ทิ้งการ์ดมากสุด 2 ใบเพื่อเพิ่มความเสียหาย 1 หน่วยต่อจำนวนการ์ดที่ทิ้งไป",
+    "descriptionRaw": "สร้างความเสียหาย 1 หน่วยแก่ศัตรูหนึ่งใบและเน็กซัสของศัตรู ทิ้งการ์ดมากสุด 2 ใบเพื่อเพิ่มความเสียหาย 1 หน่วยต่อจำนวนการ์ดที่ทิ้งไป",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": " “โอเค ๆ มันอาจจะเวิร์คแค่ครั้งเดียว แต่เชื่อข้าสิ มันต้องระเบิดระเบ้อแน่!” - Jinx",
+    "artistName": "Kudos Productions",
+    "name": "Blowback",
+    "cardCode": "07PZ005",
+    "keywords": [
+      "เร็ว"
+    ],
+    "keywordRefs": [
+      "Fast"
+    ],
+    "spellSpeed": "เร็ว",
+    "spellSpeedRef": "Fast",
+    "rarity": "แรร์",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "เวท",
+    "collectible": true,
+    "set": "Set7",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07NX009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07NX009-full.png"
       }
     ],
     "regions": [
@@ -156,8 +206,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07NX008.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07NX008-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07NX008.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07NX008-full.png"
       }
     ],
     "regions": [
@@ -210,8 +260,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07NX014.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07NX014-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07NX014.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07NX014-full.png"
       }
     ],
     "regions": [
@@ -266,8 +316,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07NX007.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07NX007-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07NX007.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07NX007-full.png"
       }
     ],
     "regions": [
@@ -281,8 +331,8 @@
     "health": 2,
     "description": "เมื่อการ์ดใบนี้ถูกอัญเชิญหรือ<link=vocab.Strike><style=Vocab>จู่โจม</style></link>: สร้าง <link=card.create><style=AssociatedCard>Flair</style></link> หนึ่งใบในมือ หากยังไม่มี",
     "descriptionRaw": "เมื่อการ์ดใบนี้ถูกอัญเชิญหรือจู่โจม: สร้าง Flair หนึ่งใบในมือ หากยังไม่มี",
-    "levelupDescription": "การ์ดใบนี้เห็นคุณเล่น การ์ด 6 ใบขึ้นไป รีเซ็ตเมื่อคุณเริ่มรอบโดยมีโทเคนโจมตี<style=Variable></style>",
-    "levelupDescriptionRaw": "การ์ดใบนี้เห็นคุณเล่น การ์ด 6 ใบขึ้นไป รีเซ็ตเมื่อคุณเริ่มรอบโดยมีโทเคนโจมตี",
+    "levelupDescription": "การ์ดใบนี้เห็นคุณเล่นการ์ด 6 ใบ รีเซ็ตเมื่อคุณเริ่มรอบโดยมีโทเคนโจมตี<style=Variable></style>",
+    "levelupDescriptionRaw": "การ์ดใบนี้เห็นคุณเล่นการ์ด 6 ใบ รีเซ็ตเมื่อคุณเริ่มรอบโดยมีโทเคนโจมตี",
     "flavorText": "“ข้าคอยไล่ตามเป้าหมายที่ก่อหนี้ที่ไม่มีทางจ่ายคืนได้ และเมื่อเจ้าคิดหนี นอกจากหนี้แล้วเจ้าก็ยังก่อศัตรู<br>ที่ไม่ควรก่อ ศัตรูที่ว่าจ้างข้า”",
     "artistName": "Kudos Productions",
     "name": "Samira",
@@ -320,8 +370,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07NX007T8.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07NX007T8-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07NX007T8.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07NX007T8-full.png"
       }
     ],
     "regions": [
@@ -333,8 +383,8 @@
     "attack": 0,
     "cost": 1,
     "health": 0,
-    "description": "สร้างความเสียหาย 1 หน่วย<br>แก่เน็กซัสของศัตรู หรือมอบ<link=keyword.Challenger><sprite name=Challenger><style=Keyword>ผู้ท้าชิง</style></link><br>แก่พันธมิตรหนึ่งใบในรอบนี้",
-    "descriptionRaw": "สร้างความเสียหาย 1 หน่วยแก่เน็กซัสของศัตรู หรือมอบผู้ท้าชิงแก่พันธมิตรหนึ่งใบในรอบนี้",
+    "description": "สร้างความเสียหาย 1 หน่วย<br>แก่เน็กซัสของศัตรู<br>หรือมอบ<link=card.samira><style=AssociatedCard>Samira</style></link><link=keyword.Challenger><sprite name=Challenger><style=Keyword>ผู้ท้าชิง</style></link><br>แก่ <link=card.samira><style=AssociatedCard>Samira</style></link> พันธมิตรในรอบนี้",
+    "descriptionRaw": "สร้างความเสียหาย 1 หน่วยแก่เน็กซัสของศัตรูหรือมอบSamiraผู้ท้าชิงแก่ Samira พันธมิตรในรอบนี้",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "“เข้ามาใกล้ก็โดนดาบ ถ้าคิดจะหนีก็จะได้ลูกตะกั่ว” -Samira",
@@ -373,8 +423,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07NX007T6.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07NX007T6-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07NX007T6.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07NX007T6-full.png"
       }
     ],
     "regions": [
@@ -426,8 +476,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07NX007T5.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07NX007T5-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07NX007T5.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07NX007T5-full.png"
       }
     ],
     "regions": [
@@ -439,8 +489,8 @@
     "attack": 0,
     "cost": 1,
     "health": 0,
-    "description": "มอบ<link=keyword.Challenger><sprite name=Challenger><style=Keyword>ผู้ท้าชิง</style></link>แก่พันธมิตรหนึ่งใบในรอบนี้",
-    "descriptionRaw": "มอบผู้ท้าชิงแก่พันธมิตรหนึ่งใบในรอบนี้",
+    "description": "มอบ<link=card.samira><style=AssociatedCard>Samira</style></link><link=keyword.Challenger><sprite name=Challenger><style=Keyword>ผู้ท้าชิง</style></link>แก่<br>พันธมิตรหนึ่งใบในรอบนี้",
+    "descriptionRaw": "มอบSamiraผู้ท้าชิงแก่พันธมิตรหนึ่งใบในรอบนี้",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "“เข้ามาใกล้ก็โดนดาบ ถ้าคิดจะหนีก็จะได้ลูกตะกั่ว” -Samira",
@@ -478,8 +528,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07NX007T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07NX007T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07NX007T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07NX007T2-full.png"
       }
     ],
     "regions": [
@@ -491,8 +541,8 @@
     "attack": 0,
     "cost": 1,
     "health": 0,
-    "description": "มอบ +2|+0 แก่พันธมิตรหนึ่งใบในรอบนี้\r\n<link=keyword.Plunder><style=Keyword>ปล้น</style></link>: มอบ +2|+2 แทน\r\nสร้าง <link=card.level1><style=AssociatedCard>Samira</style></link> หนึ่งใบในเด็คของคุณ",
-    "descriptionRaw": "มอบ +2|+0 แก่พันธมิตรหนึ่งใบในรอบนี้\r\nปล้น: มอบ +2|+2 แทน\r\nสร้าง Samira หนึ่งใบในเด็คของคุณ",
+    "description": "มอบ +2|+0 ให้กับพันธมิตรหนึ่งใบในรอบนี้\r\n<link=keyword.Plunder><style=Keyword>ปล้น</style></link>: มอบ +2|+1 แทน\r\nสร้าง <link=card.level1><style=AssociatedCard>Samira</style></link> หนึ่งใบในเด็คของคุณ",
+    "descriptionRaw": "มอบ +2|+0 ให้กับพันธมิตรหนึ่งใบในรอบนี้\r\nปล้น: มอบ +2|+1 แทน\r\nสร้าง Samira หนึ่งใบในเด็คของคุณ",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "“Indari ช่วยเตรียมการให้เราเข้ามาได้แบบไร้ปัญหา หวังว่าจะมีเวลาพอให้ข้าได้ก่อเรื่องสักนิดตอนขากลับนะ”<br>- Samira",
@@ -534,8 +584,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07NX007T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07NX007T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07NX007T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07NX007T1-full.png"
       }
     ],
     "regions": [
@@ -547,8 +597,8 @@
     "attack": 3,
     "cost": 2,
     "health": 3,
-    "description": "เมื่อการ์ดใบนี้ถูกอัญเชิญหรือ<link=vocab.Strike><style=Vocab>จู่โจม</style></link>: สร้าง <link=card.create><style=AssociatedCard>Flair</style></link> ค่าร่าย 0 หน่วยหนึ่งใบในมือ\r\nเมื่อคุณเล่นการ์ด 6 ใบขึ้นไป ทำการ<link=vocab.Rally><style=Vocab>ปลุกระดม</style></link> <style=Variable></style>",
-    "descriptionRaw": "เมื่อการ์ดใบนี้ถูกอัญเชิญหรือจู่โจม: สร้าง Flair ค่าร่าย 0 หน่วยหนึ่งใบในมือ\r\nเมื่อคุณเล่นการ์ด 6 ใบขึ้นไป ทำการปลุกระดม ",
+    "description": "เมื่อการ์ดใบนี้ถูกอัญเชิญหรือ<link=vocab.Strike><style=Vocab>จู่โจม</style></link>: สร้าง <link=card.create><style=AssociatedCard>Flair</style></link> ค่าร่าย 0 หน่วยหนึ่งใบในมือ\r\nเมื่อคุณเล่นการ์ด 6 ใบ ทำการ<link=vocab.Rally><style=Vocab>ปลุกระดม</style></link> รีเซ็ตเมื่อคุณเริ่มรอบโดยมีโทเคนโจมตี<style=Variable></style>",
+    "descriptionRaw": "เมื่อการ์ดใบนี้ถูกอัญเชิญหรือจู่โจม: สร้าง Flair ค่าร่าย 0 หน่วยหนึ่งใบในมือ\r\nเมื่อคุณเล่นการ์ด 6 ใบ ทำการปลุกระดม รีเซ็ตเมื่อคุณเริ่มรอบโดยมีโทเคนโจมตี",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "“ว่าแล้วเชียวว่าไม่ใช่แค่คนหนีหนี้ธรรมดา Indari ชอบเรียกงานแบบนี้ว่า ‘งานหยาบ’ แต่ข้าเรียกมันว่าสีสัน”",
@@ -584,8 +634,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07NX006.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07NX006-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07NX006.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07NX006-full.png"
       }
     ],
     "regions": [
@@ -638,8 +688,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07NX015.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07NX015-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07NX015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07NX015-full.png"
       }
     ],
     "regions": [
@@ -690,8 +740,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07NX003.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07NX003-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07NX003.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07NX003-full.png"
       }
     ],
     "regions": [
@@ -703,8 +753,8 @@
     "attack": 0,
     "cost": 1,
     "health": 0,
-    "description": "มอบ +2|+0 แก่พันธมิตรหนึ่งใบในรอบนี้\r\n<link=keyword.Plunder><style=Keyword>ปล้น</style></link>: มอบ +2|+2 แทน",
-    "descriptionRaw": "มอบ +2|+0 แก่พันธมิตรหนึ่งใบในรอบนี้\r\nปล้น: มอบ +2|+2 แทน",
+    "description": "มอบ +2|+0 ให้กับพันธมิตรหนึ่งใบในรอบนี้\r\n<link=keyword.Plunder><style=Keyword>ปล้น</style></link>: มอบ +2|+1 แทน",
+    "descriptionRaw": "มอบ +2|+0 ให้กับพันธมิตรหนึ่งใบในรอบนี้\r\nปล้น: มอบ +2|+1 แทน",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "“Indari ช่วยเตรียมการให้เราเข้ามาได้แบบไร้ปัญหา หวังว่าจะมีเวลาพอให้ข้าได้ก่อเรื่องสักนิดตอนขากลับนะ”<br>- Samira",
@@ -744,8 +794,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07NX004.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07NX004-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07NX004.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07NX004-full.png"
       }
     ],
     "regions": [
@@ -794,8 +844,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07NX001.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07NX001-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07NX001.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07NX001-full.png"
       }
     ],
     "regions": [
@@ -840,8 +890,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07NX001T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07NX001T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07NX001T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07NX001T1-full.png"
       }
     ],
     "regions": [
@@ -886,8 +936,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07NX001T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07NX001T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07NX001T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07NX001T2-full.png"
       }
     ],
     "regions": [
@@ -929,13 +979,65 @@
   },
   {
     "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07NX005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07NX005-full.png"
+      }
+    ],
+    "regions": [
+      "น็อก<zwsp>ซัส"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 5,
+    "cost": 6,
+    "health": 5,
+    "description": "เมื่อการ์ดใบนี้ถูกอัญเชิญ ทำการ<link=vocab.Improvise><style=Vocab>สร้างด่วน</style></link>\r\n<link=keyword.Plunder><style=Keyword>ปล้น</style></link>: <link=vocab.Forge><style=Vocab>เสริมแกร่ง</style></link> พันธมิตรใบอื่นทั้งหมด",
+    "descriptionRaw": "เมื่อการ์ดใบนี้ถูกอัญเชิญ ทำการสร้างด่วน\r\nปล้น: เสริมแกร่ง พันธมิตรใบอื่นทั้งหมด",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "“ก่อนหน้านี้ข้าเคยทำงานกับหน่วยปฏิบัติการมาก็หลายคน บางคนทำงานด้วยง่าย บางคนก็ท้าทาย... จนข้าได้มาพบกับ Samira ข้ายอมรับความจริงแล้วว่าข้าไม่สามารถคุมนางได้ เพราะงั้นข้าจึงหันไปคุมความวุ่นวายแทน เล็งเป้าเป็นอย่างดี และบางครั้งก็เข้าไปร่วมด้วยเป็นครั้งคราว”",
+    "artistName": "Kudos Productions",
+    "name": "Captain Indari",
+    "cardCode": "07NX005",
+    "keywords": [
+      "ปล้น"
+    ],
+    "keywordRefs": [
+      "Plunder"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "แรร์",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "ปรมาจารย์อาวุธ"
+    ],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set7",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
     "associatedCardRefs": [
       "07IO011T5"
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07IO020.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07IO020-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07IO020.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07IO020-full.png"
       }
     ],
     "regions": [
@@ -984,8 +1086,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07IO014.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07IO014-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07IO014.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07IO014-full.png"
       }
     ],
     "regions": [
@@ -1036,8 +1138,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07IO023.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07IO023-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07IO023.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07IO023-full.png"
       }
     ],
     "regions": [
@@ -1091,8 +1193,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07IO011.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07IO011-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07IO011.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07IO011-full.png"
       }
     ],
     "regions": [
@@ -1147,8 +1249,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07IO011T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07IO011T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07IO011T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07IO011T1-full.png"
       }
     ],
     "regions": [
@@ -1160,8 +1262,8 @@
     "attack": 5,
     "cost": 5,
     "health": 6,
-    "description": "ในขณะที่การ์ดใบนี้โจมตี การ์ดใบนี้ไม่สามารถได้รับความเสียหาย<br>หรือตายได้\r\nในแต่ละรอบ สร้าง <link=card.create><style=AssociatedCard>Show Stopper</style></link> หนึ่งใบในมือเมื่อคุณได้ใช้มานา<br>12 หน่วยขึ้นไป <style=Variable></style>",
-    "descriptionRaw": "ในขณะที่การ์ดใบนี้โจมตี การ์ดใบนี้ไม่สามารถได้รับความเสียหายหรือตายได้\r\nในแต่ละรอบ สร้าง Show Stopper หนึ่งใบในมือเมื่อคุณได้ใช้มานา12 หน่วยขึ้นไป ",
+    "description": "ในขณะที่การ์ดใบนี้โจมตี การ์ดใบนี้ไม่สามารถได้รับความเสียหาย<zwsp>หรือตายได้\r\nในแต่ละรอบ สร้าง <link=card.create><style=AssociatedCard>Show Stopper</style></link> หนึ่งใบในมือเมื่อคุณได้ใช้มานา 12 หน่วยขึ้นไปในรอบนั้น <style=Variable></style>",
+    "descriptionRaw": "ในขณะที่การ์ดใบนี้โจมตี การ์ดใบนี้ไม่สามารถได้รับความเสียหายหรือตายได้\r\nในแต่ละรอบ สร้าง Show Stopper หนึ่งใบในมือเมื่อคุณได้ใช้มานา 12 หน่วยขึ้นไปในรอบนั้น ",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "“ปัญหาของการเป็นลูกพี่ก็คือหลาย ๆ ครั้งแกจะใจอ่อนลง ความไม่สนใจไยดีที่เคยมีจะค่อย ๆ หายไป และไม่นานแกก็จะกลายเป็นสิ่งที่แกสาบานไว้ว่าจะไม่มีทางเป็น ดังนั้นต้องขอบคุณความโกลาหลนี้ เพราะในที่สุดก็มีคนมาช่วยดึงสัตว์ร้ายในกายข้าเสียที!”",
@@ -1197,8 +1299,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07IO011T5.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07IO011T5-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07IO011T5.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07IO011T5-full.png"
       }
     ],
     "regions": [
@@ -1210,8 +1312,8 @@
     "attack": 0,
     "cost": 1,
     "health": 0,
-    "description": "<link=card.selfRef><style=AssociatedCard>Coin</style></link> สแตค\r\nเติมมานา <style=Variable>1</style> หน่วย",
-    "descriptionRaw": "Coin สแตค\r\nเติมมานา 1 หน่วย",
+    "description": "<link=card.selfRef><style=AssociatedCard>Coin</style></link> ซ้อนทับกันได้ เติมมานา <style=Variable>1</style> หน่วย",
+    "descriptionRaw": "Coin ซ้อนทับกันได้ เติมมานา 1 หน่วย",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "\"ทำไงได้? ก็คนมันใจป๋า\" - Sett",
@@ -1249,8 +1351,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07IO011T4.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07IO011T4-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07IO011T4.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07IO011T4-full.png"
       }
     ],
     "regions": [
@@ -1305,8 +1407,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07IO011T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07IO011T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07IO011T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07IO011T2-full.png"
       }
     ],
     "regions": [
@@ -1352,13 +1454,67 @@
   },
   {
     "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07IO046.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07IO046-full.png"
+      }
+    ],
+    "regions": [
+      "ไอ<zwsp>โอ<zwsp>เนีย"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 5,
+    "cost": 5,
+    "health": 4,
+    "description": "พันธมิตรนกใบอื่นได้รับ +1|+0 และ<link=keyword.Quick Strike><sprite name=QuickStrike><style=Keyword>โจมตีก่อน</style></link>",
+    "descriptionRaw": "พันธมิตรนกใบอื่นได้รับ +1|+0 และโจมตีก่อน",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"ในป่าแห่งนี้ ข้ามักจะพบว่าสิ่งมีชีวิตที่งดงามที่สุดก็มักจะเป็นนักล่า<br>ที่อันตรายที่สุดเช่นกัน\" - Anura",
+    "artistName": "Michal Ivan",
+    "name": "Royal Shimmerwing",
+    "cardCode": "07IO046",
+    "keywords": [
+      "โจมตีก่อน",
+      "Missing Translation"
+    ],
+    "keywordRefs": [
+      "QuickStrike",
+      "AuraVisualFakeKeyword"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "แรร์",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "นก"
+    ],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set7",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
     "associatedCardRefs": [
       "07IO011T5"
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07IO009.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07IO009-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07IO009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07IO009-full.png"
       }
     ],
     "regions": [
@@ -1409,8 +1565,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07IO019.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07IO019-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07IO019.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07IO019-full.png"
       }
     ],
     "regions": [
@@ -1459,8 +1615,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07IO017.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07IO017-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07IO017.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07IO017-full.png"
       }
     ],
     "regions": [
@@ -1511,8 +1667,56 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07IO023T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07IO023T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07IO047.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07IO047-full.png"
+      }
+    ],
+    "regions": [
+      "ไอ<zwsp>โอ<zwsp>เนีย"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 4,
+    "cost": 7,
+    "health": 7,
+    "description": "ในแต่ละรอบ ครั้งแรกที่คุณอัญเชิญผู้ติดตามใบอื่น อัญเชิญการ์ดเสมือนทุกประการของมัน<br>หนึ่งใบ หากสนามของคุณเต็ม ให้มอบค่าพลังและคีย์เวิร์ดของมันให้กับ<br>การ์ดใบนี้แทน",
+    "descriptionRaw": "ในแต่ละรอบ ครั้งแรกที่คุณอัญเชิญผู้ติดตามใบอื่น อัญเชิญการ์ดเสมือนทุกประการของมันหนึ่งใบ หากสนามของคุณเต็ม ให้มอบค่าพลังและคีย์เวิร์ดของมันให้กับการ์ดใบนี้แทน",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"ดอกไม้พวกนี้มีค่าอะไรหรือเปล่านะ? และอย่าหาว่าข้าบ้าเลยนะ แต่ไม่รู้สึกหรอว่าพวกมันกำลัง... เต้นอยู่?\" - Piltovan Poacher",
+    "artistName": "Kudos Productions",
+    "name": "Beguiling Cobra",
+    "cardCode": "07IO047",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "อีปิค",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "สัตว์เลื้อยคลาน"
+    ],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set7",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07IO023T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07IO023T1-full.png"
       }
     ],
     "regions": [
@@ -1563,8 +1767,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07IO013.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07IO013-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07IO013.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07IO013-full.png"
       }
     ],
     "regions": [
@@ -1613,8 +1817,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07IO020T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07IO020T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07IO020T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07IO020T1-full.png"
       }
     ],
     "regions": [
@@ -1665,8 +1869,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07IO020T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07IO020T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07IO020T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07IO020T2-full.png"
       }
     ],
     "regions": [
@@ -1715,8 +1919,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07IO012.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07IO012-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07IO012.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07IO012-full.png"
       }
     ],
     "regions": [
@@ -1732,7 +1936,7 @@
     "descriptionRaw": "เมื่อการ์ดใบนี้ถูกอัญเชิญ สร้าง Bout Security ชั่วคราวหนึ่งใบในมือ และมอบ +1|+1 ให้ Bout Security ใบอื่นๆ\r\nเสริมพลัง 5: โจมตีก่อน",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "“ถ้ามีใครคิดว่าเจ้าโง่เง่า ก็ปล่อยให้มันคิดแบบนั้นไป ให้พวกสวะมันย่ามใจทำเรื่องชั่ว ๆ ของมัน ชีวิตคนเราไม่มีอะไรหอมหวานไปกว่าการได้เห็นสีหน้าของ<br>คนที่เพิ่งรู้ตัวว่ากำลังประเมินเจ้าต่ำเกินไปอีกแล้ว”<br>- Sett",
+    "flavorText": "“ถ้ามีใครคิดว่าเจ้าโง่เง่า ก็ปล่อยให้มันคิดแบบนั้นไป ให้พวกสวะมันย่ามใจทำเรื่องชั่ว ๆ ของมัน ชีวิตคนเราไม่มีอะไรหอมหวานไปกว่าการได้เห็นสีหน้าของคนที่<br>เพิ่งรู้ตัวว่ากำลังประเมินเจ้าต่ำเกินไปอีกแล้ว” - Sett",
     "artistName": "Kudos Productions",
     "name": "Bout Security",
     "cardCode": "07IO012",
@@ -1763,8 +1967,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07IO007.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07IO007-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07IO007.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07IO007-full.png"
       }
     ],
     "regions": [
@@ -1815,8 +2019,158 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07BW018.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07BW018-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07SH023.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07SH023-full.png"
+      }
+    ],
+    "regions": [
+      "ชู<zwsp>ริ<zwsp>ม่า"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 0,
+    "cost": 7,
+    "health": 7,
+    "description": "การ์ดใบนี้มี +1|+0 ตามจำนวนพันธมิตร<link=keyword.Ephemeral><sprite name=Ephemeral><style=Keyword>ไร้ตัวตน</style></link>ที่คุณเคยอัญเชิญในเกมนี้ <style=Variable></style>",
+    "descriptionRaw": "การ์ดใบนี้มี +1|+0 ตามจำนวนพันธมิตรไร้ตัวตนที่คุณเคยอัญเชิญในเกมนี้ ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "“ถึงแม้ว่าเจ้าจะเป็นเพียงแค่เม็ดทรายเมื่อเทียบกับข้าศึก ข้าก็มองเห็นเจ้า ข้าสัมผัสได้ถึงตัวตนของเจ้าในผืนทราย จงมอบพลังให้ข้า และเราจะโค่นล้มศัตรูของเราไปด้วยกัน!”",
+    "artistName": "Kudos Productions",
+    "name": "Fallen Sands General",
+    "cardCode": "07SH023",
+    "keywords": [
+      "ทะลวง"
+    ],
+    "keywordRefs": [
+      "Overwhelm"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "แรร์",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set7",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07SH018.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07SH018-full.png"
+      }
+    ],
+    "regions": [
+      "ชู<zwsp>ริ<zwsp>ม่า"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 2,
+    "cost": 3,
+    "health": 4,
+    "description": "เมื่อการ์ดใบนี้ถูกอัญเชิญ สร้างแชมเปี้ยนเลเวล 2 ที่ไม่ได้อยู่ในมือ เด็ค หรือสนามของคุณแบบสุ่มสองใบไว้<br>ใบล่างสุดในเด็คของคุณ",
+    "descriptionRaw": "เมื่อการ์ดใบนี้ถูกอัญเชิญ สร้างแชมเปี้ยนเลเวล 2 ที่ไม่ได้อยู่ในมือ เด็ค หรือสนามของคุณแบบสุ่มสองใบไว้ใบล่างสุดในเด็คของคุณ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "เขาไม่รู้แน่ชัดว่าเขาเห็นอะไร หายนะจะปรากฏในรูปลักษณ์ใด หรือจะเกิดหายนะดังกล่าวเมื่อใด แต่เขารู้จักโลกนี้และผู้ที่อาศัยอยู่เป็นอย่างดี และเขารู้ว่าไม่มีใครพร้อมรับมือกับมัน ไม่มีวัน",
+    "artistName": "Envar Studio",
+    "name": "Secret Keeper",
+    "cardCode": "07SH018",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "อีปิค",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set7",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "07SH008"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07SH008.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07SH008-full.png"
+      }
+    ],
+    "regions": [
+      "ชู<zwsp>ริ<zwsp>ม่า"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 0,
+    "cost": 6,
+    "health": 0,
+    "description": "เริ่มการโจมตีฟรี ด้วยการ์ดเสมือนทุกประการ<br>แบบ<link=keyword.Ephemeral><sprite name=Ephemeral><style=Keyword>ไร้ตัวตน</style></link>ของพันธมิตรแมว<br>แต่ละใบ",
+    "descriptionRaw": "เริ่มการโจมตีฟรี ด้วยการ์ดเสมือนทุกประการแบบไร้ตัวตนของพันธมิตรแมวแต่ละใบ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "นักล่าเพียงคนเดียวก็น่าสะพรึงมากพอแล้ว แต่หากมาเป็นฝูงก็คงดุร้ายเกินคณา",
+    "artistName": "Kudos Productions",
+    "name": "Pack Attack",
+    "cardCode": "07SH008",
+    "keywords": [
+      "ช้า"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "ช้า",
+    "spellSpeedRef": "Slow",
+    "rarity": "คอมมอน",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "เวท",
+    "collectible": true,
+    "set": "Set7",
+    "formats": [
+      "ระดับคอมมอนเท่านั้น",
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07BW018.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07BW018-full.png"
       }
     ],
     "regions": [
@@ -1863,8 +2217,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07BW021.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07BW021-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07BW021.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07BW021-full.png"
       }
     ],
     "regions": [
@@ -1921,8 +2275,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07BW002.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07BW002-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07BW002.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07BW002-full.png"
       }
     ],
     "regions": [
@@ -1959,13 +2313,11 @@
     "set": "Set7",
     "formats": [
       "Eternal",
-      "Standard",
-      "ระดับคอมมอนเท่านั้น"
+      "Standard"
     ],
     "formatRefs": [
       "client_Formats_Eternal_name",
-      "client_Formats_Standard_name",
-      "client_Formats_CommonsOnly_name"
+      "client_Formats_Standard_name"
     ]
   },
   {
@@ -1977,8 +2329,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07BW002T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07BW002T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07BW002T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07BW002T2-full.png"
       }
     ],
     "regions": [
@@ -2033,8 +2385,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07BW002T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07BW002T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07BW002T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07BW002T1-full.png"
       }
     ],
     "regions": [
@@ -2086,8 +2438,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07BW040.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07BW040-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07BW040.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07BW040-full.png"
       }
     ],
     "regions": [
@@ -2133,13 +2485,59 @@
   },
   {
     "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07BW001.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07BW001-full.png"
+      }
+    ],
+    "regions": [
+      "บิลจ์<zwsp>วอ<zwsp>เตอร์"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 4,
+    "cost": 4,
+    "health": 4,
+    "description": "เมื่อคุณเติมมานา สร้างผู้ติดตามที่มี<link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>ชั่วคราว</style></link>หนึ่งใบแบบสุ่มในมือที่คุณสามารถเล่นได้พอดี",
+    "descriptionRaw": "เมื่อคุณเติมมานา สร้างผู้ติดตามที่มีชั่วคราวหนึ่งใบแบบสุ่มในมือที่คุณสามารถเล่นได้พอดี",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "“หากเจ้าอยากได้เลือด เจ้าก็ควรไปหา Jack แต่ถ้าเจ้าอยากรู้สถานที่ เวลา รายชื่อ และราคา? มาคุยกับข้านี่”",
+    "artistName": "Envar Studio",
+    "name": "Perfidious Promoter",
+    "cardCode": "07BW001",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "แรร์",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set7",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
     "associatedCardRefs": [
       "07BW040T2"
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07BW040T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07BW040T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07BW040T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07BW040T1-full.png"
       }
     ],
     "regions": [
@@ -2188,8 +2586,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07BW040T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07BW040T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07BW040T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07BW040T2-full.png"
       }
     ],
     "regions": [
@@ -2240,8 +2638,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07BW003.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07BW003-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07BW003.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07BW003-full.png"
       }
     ],
     "regions": [
@@ -2294,8 +2692,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07BW014.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07BW014-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07BW014.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07BW014-full.png"
       }
     ],
     "regions": [
@@ -2346,8 +2744,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07BW013.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07BW013-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07BW013.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07BW013-full.png"
       }
     ],
     "regions": [
@@ -2400,8 +2798,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07BW006.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07BW006-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07BW006.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07BW006-full.png"
       }
     ],
     "regions": [
@@ -2450,8 +2848,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07BW026.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07BW026-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07BW026.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07BW026-full.png"
       }
     ],
     "regions": [
@@ -2502,8 +2900,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07BW027.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07BW027-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07BW027.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07BW027-full.png"
       }
     ],
     "regions": [
@@ -2554,8 +2952,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07BW008.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07BW008-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07BW008.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07BW008-full.png"
       }
     ],
     "regions": [
@@ -2608,8 +3006,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07BW041.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07BW041-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07BW041.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07BW041-full.png"
       }
     ],
     "regions": [
@@ -2662,8 +3060,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07BW004.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07BW004-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07BW004.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07BW004-full.png"
       }
     ],
     "regions": [
@@ -2714,8 +3112,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07BW025.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07BW025-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07BW025.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07BW025-full.png"
       }
     ],
     "regions": [
@@ -2726,7 +3124,7 @@
     ],
     "attack": 1,
     "cost": 4,
-    "health": 5,
+    "health": 4,
     "description": "เมื่อคุณเปิดใช้งานเอฟเฟกต์<link=keyword.Plunder><style=Keyword>ปล้น</style></link> จั่วการ์ด 1 ใบและมอบ<link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>ชั่วคราว</style></link>ให้กับมัน",
     "descriptionRaw": "เมื่อคุณเปิดใช้งานเอฟเฟกต์ปล้น จั่วการ์ด 1 ใบและมอบชั่วคราวให้กับมัน",
     "levelupDescription": "",
@@ -2766,8 +3164,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07FR008.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07FR008-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07FR008.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07FR008-full.png"
       }
     ],
     "regions": [
@@ -2793,7 +3191,9 @@
     "spellSpeedRef": "",
     "rarity": "คอมมอน",
     "rarityRef": "Common",
-    "subtypes": [],
+    "subtypes": [
+      "สุนัข"
+    ],
     "supertype": "",
     "type": "ยูนิต",
     "collectible": true,
@@ -2811,13 +3211,61 @@
   },
   {
     "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07FR009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07FR009-full.png"
+      }
+    ],
+    "regions": [
+      "เฟรล<zwsp>ยอร์ด"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 2,
+    "cost": 3,
+    "health": 2,
+    "description": "เมื่อการ์ดใบนี้ถูกอัญเชิญ ทำการ<link=vocab.Improvise><style=Vocab>สร้างด่วน</style></link>\r\nในแต่ละรอบ ครั้งแรกที่คุณ<link=vocab.Forge><style=Vocab>เสริมแกร่ง</style></link>หรือ<link=vocab.Equip><style=Vocab>ติดตั้ง</style></link>ให้กับ<br>พันธมิตร ฮีลเน็กซัสของคุณ 1 หน่วย",
+    "descriptionRaw": "เมื่อการ์ดใบนี้ถูกอัญเชิญ ทำการสร้างด่วน\r\nในแต่ละรอบ ครั้งแรกที่คุณเสริมแกร่งหรือติดตั้งให้กับพันธมิตร ฮีลเน็กซัสของคุณ 1 หน่วย",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"เจ้าขนปุยตัวจิ๋วนี่อาจจะไม่ได้ช่วยให้ข้าทำงานเร็วขึ้น แต่อย่างน้อยเขาก็ทำให้ข้ายิ้มได้ ซึ่งแค่นั้นก็เพียงพอแล้ว\" - Innovative Blacksmith",
+    "artistName": "Envar Studio",
+    "name": "Innovative Blacksmith",
+    "cardCode": "07FR009",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "แรร์",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "ปรมาจารย์อาวุธ"
+    ],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set7",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
     "associatedCardRefs": [
       "07FR008T1"
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07FR008T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07FR008T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07FR008T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07FR008T2-full.png"
       }
     ],
     "regions": [
@@ -2843,7 +3291,9 @@
     "spellSpeedRef": "",
     "rarity": "ไม่มี",
     "rarityRef": "None",
-    "subtypes": [],
+    "subtypes": [
+      "สุนัข"
+    ],
     "supertype": "",
     "type": "ยูนิต",
     "collectible": false,
@@ -2864,8 +3314,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07FR008T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07FR008T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07FR008T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07FR008T1-full.png"
       }
     ],
     "regions": [
@@ -2895,7 +3345,9 @@
     "spellSpeedRef": "",
     "rarity": "ไม่มี",
     "rarityRef": "None",
-    "subtypes": [],
+    "subtypes": [
+      "สุนัข"
+    ],
     "supertype": "",
     "type": "ยูนิต",
     "collectible": false,
@@ -2914,8 +3366,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07FR005.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07FR005-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07FR005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07FR005-full.png"
       }
     ],
     "regions": [
@@ -2960,8 +3412,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07SI002.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07SI002-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07SI002.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07SI002-full.png"
       }
     ],
     "regions": [
@@ -2973,8 +3425,8 @@
     "attack": 0,
     "cost": 2,
     "health": 0,
-    "description": "สังหารผู้ติดตามหนึ่งใบที่มีพลังโจมตี<br>3 หน่วยหรือน้อยกว่า หรือใช้มานา<br>5 หน่วยเพื่อสังหารแชมเปี้ยนหนึ่งใบ<br>ที่มีพลังโจมตี 3 หน่วยหรือน้อยกว่า",
-    "descriptionRaw": "สังหารผู้ติดตามหนึ่งใบที่มีพลังโจมตี3 หน่วยหรือน้อยกว่า หรือใช้มานา5 หน่วยเพื่อสังหารแชมเปี้ยนหนึ่งใบที่มีพลังโจมตี 3 หน่วยหรือน้อยกว่า",
+    "description": "สังหารผู้ติดตามหนึ่งใบที่มีพลังโจมตี 3 หน่วยหรือน้อยกว่า หรือใช้มานา 3 หน่วยเพื่อสังหารแชมเปี้ยนหนึ่งใบที่มีพลังโจมตี 3 หน่วยหรือน้อยกว่า\r\n",
+    "descriptionRaw": "สังหารผู้ติดตามหนึ่งใบที่มีพลังโจมตี 3 หน่วยหรือน้อยกว่า หรือใช้มานา 3 หน่วยเพื่อสังหารแชมเปี้ยนหนึ่งใบที่มีพลังโจมตี 3 หน่วยหรือน้อยกว่า\r\n",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "มันเป็นเพียงเสียงกระซิบที่ลอยตามลม แม้จะแทบไม่ได้ยินด้วยหู แต่รับรู้ได้ลึกซึ้งถึงจิตวิญญาณ ในขณะที่มันพรากชีวิตหนึ่งเพื่ออีกชีวิตหนึ่ง",
@@ -3010,8 +3462,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07SI002T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07SI002T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07SI002T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07SI002T2-full.png"
       }
     ],
     "regions": [
@@ -3021,7 +3473,7 @@
       "ShadowIsles"
     ],
     "attack": 0,
-    "cost": 4,
+    "cost": 3,
     "health": 0,
     "description": "สังหารแชมเปี้ยนหนึ่งใบที่มีพลังโจมตี<br>3 หน่วยหรือน้อยกว่า",
     "descriptionRaw": "สังหารแชมเปี้ยนหนึ่งใบที่มีพลังโจมตี3 หน่วยหรือน้อยกว่า",
@@ -3060,8 +3512,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07SI002T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07SI002T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07SI002T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07SI002T1-full.png"
       }
     ],
     "regions": [
@@ -3073,8 +3525,8 @@
     "attack": 0,
     "cost": 2,
     "health": 0,
-    "description": "สังหารผู้ติดตามหนึ่งใบที่มีพัลงโจมตี<br>3 หน่วยหรือน้อยกว่า",
-    "descriptionRaw": "สังหารผู้ติดตามหนึ่งใบที่มีพัลงโจมตี3 หน่วยหรือน้อยกว่า",
+    "description": "สังหารผู้ติดตามหนึ่งใบที่มีพลังโจมตี<br>3 หน่วยหรือน้อยกว่า",
+    "descriptionRaw": "สังหารผู้ติดตามหนึ่งใบที่มีพลังโจมตี3 หน่วยหรือน้อยกว่า",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "มันเป็นเพียงเสียงกระซิบที่ลอยตามลม แม้จะแทบไม่ได้ยินด้วยหู แต่รับรู้ได้ลึกซึ้งถึงจิตวิญญาณ ในขณะที่มันพรากชีวิตหนึ่งเพื่ออีกชีวิตหนึ่ง",
@@ -3110,8 +3562,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07SI001.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07SI001-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07SI001.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07SI001-full.png"
       }
     ],
     "regions": [
@@ -3160,8 +3612,206 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07BC005.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07BC005-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07SI007.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07SI007-full.png"
+      }
+    ],
+    "regions": [
+      "เกาะ<zwsp>แห่ง<zwsp>เงา"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 1,
+    "cost": 4,
+    "health": 5,
+    "description": "ในแต่ละรอบ ครั้งแรกที่พันธมิตรถูกสังหาร จั่วการ์ด 1 ใบ",
+    "descriptionRaw": "ในแต่ละรอบ ครั้งแรกที่พันธมิตรถูกสังหาร จั่วการ์ด 1 ใบ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"ข้าเพิ่งสอนกลใหม่ให้กับเขา! อยากเห็นไหมล่ะ?\" - Phantom Prankster",
+    "artistName": "Bubble Cat",
+    "name": "Grave Companion",
+    "cardCode": "07SI007",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "คอมมอน",
+    "rarityRef": "Common",
+    "subtypes": [
+      "สุนัข"
+    ],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set7",
+    "formats": [
+      "Eternal",
+      "Standard",
+      "ระดับคอมมอนเท่านั้น"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name",
+      "client_Formats_CommonsOnly_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07MT003.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07MT003-full.png"
+      }
+    ],
+    "regions": [
+      "ทาร์<zwsp>กอน"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 1,
+    "cost": 2,
+    "health": 4,
+    "description": "<link=vocab.RoundStart><style=Vocab>เริ่มรอบ</style></link>: ฮีลการ์ดใบนี้และเน็กซัสของคุณ<br>1 หน่วย",
+    "descriptionRaw": "เริ่มรอบ: ฮีลการ์ดใบนี้และเน็กซัสของคุณ1 หน่วย",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "ดั่งหยาดน้ำตาของแสงเหนือที่ทอดแสงแสดงเขตแห่ง<br>สรวงสวรรค์ สายตาที่เจิดจ้านำพามาซึ่งความสงบ<br>ทุเลาความเจ็บปวด และซ่อมแซมสิ่งที่พังทลาย",
+    "artistName": "Bubble Cat",
+    "name": "Cosmic Youngling",
+    "cardCode": "07MT003",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "แรร์",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set7",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07MT001.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07MT001-full.png"
+      }
+    ],
+    "regions": [
+      "ทาร์<zwsp>กอน"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "สร้างความเสียหาย 4 หน่วย<br>แก่ศัตรูหนึ่งใบที่ได้โจมตีไปในรอบนี้<br>หรือที่<link=keyword.Stun><sprite name=Stunned><style=Keyword>ถูกสตัน</style></link>",
+    "descriptionRaw": "สร้างความเสียหาย 4 หน่วยแก่ศัตรูหนึ่งใบที่ได้โจมตีไปในรอบนี้หรือที่ถูกสตัน",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "ดวงดาวเฝ้ามองการกระทำของเรา ไม่ว่าจะดีหรือร้าย ผู้ที่ประพฤติดีจะได้โผบิน และผู้ประพฤติร้ายจะได้รับโทษทัณฑ์",
+    "artistName": "Kudos Productions",
+    "name": "Falling Star",
+    "cardCode": "07MT001",
+    "keywords": [
+      "ช้า"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "ช้า",
+    "spellSpeedRef": "Slow",
+    "rarity": "คอมมอน",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "เวท",
+    "collectible": true,
+    "set": "Set7",
+    "formats": [
+      "Eternal",
+      "Standard",
+      "ระดับคอมมอนเท่านั้น"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name",
+      "client_Formats_CommonsOnly_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07MT007.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07MT007-full.png"
+      }
+    ],
+    "regions": [
+      "ทาร์<zwsp>กอน"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 1,
+    "cost": 2,
+    "health": 2,
+    "description": "<link=keyword.Last Breath><sprite name=LastBreath><style=Keyword>สิ้นลม</style></link>: สร้างการ์ดเสมือนในมือของเวท 3 ใบแรกที่คุณเล่นใส่การ์ดใบนี้<style=Variable></style>",
+    "descriptionRaw": "สิ้นลม: สร้างการ์ดเสมือนในมือของเวท 3 ใบแรกที่คุณเล่นใส่การ์ดใบนี้",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Camphor พรากหลายสิ่งจากผู้คนมากมายมามากเกินพอ เมื่อเวลาของเจ้ามาถึง จงทำให้มั่นใจว่าเจ้าจะได้จากไปในแบบของตน จงอย่าริมอบความพึงพอใจให้แก่นาง\" - Pantheon",
+    "artistName": "Envar Studio",
+    "name": "Sacrificial Scholar",
+    "cardCode": "07MT007",
+    "keywords": [
+      "สิ้นลม"
+    ],
+    "keywordRefs": [
+      "LastBreath"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "อีปิค",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set7",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07BC005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07BC005-full.png"
       }
     ],
     "regions": [
@@ -3218,8 +3868,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07BC009.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07BC009-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07BC009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07BC009-full.png"
       }
     ],
     "regions": [
@@ -3270,8 +3920,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07BC009T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07BC009T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07BC009T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07BC009T1-full.png"
       }
     ],
     "regions": [
@@ -3320,36 +3970,40 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07MT003.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07MT003-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07BC015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07BC015-full.png"
       }
     ],
     "regions": [
-      "ทาร์<zwsp>กอน"
+      "แบน<zwsp>เดิล<zwsp>ซิ<zwsp>ตี้"
     ],
     "regionRefs": [
-      "Targon"
+      "BandleCity"
     ],
-    "attack": 1,
+    "attack": 0,
     "cost": 2,
-    "health": 4,
-    "description": "<link=vocab.RoundStart><style=Vocab>เริ่มรอบ</style></link>: ฮีลการ์ดใบนี้และเน็กซัสของคุณ<br>1 หน่วย",
-    "descriptionRaw": "เริ่มรอบ: ฮีลการ์ดใบนี้และเน็กซัสของคุณ1 หน่วย",
+    "health": 0,
+    "description": "เลือกผู้ติดตามหนึ่งใบ สร้างการ์ดเสมือนของมันที่มีค่าร่าย 1 หน่วยหนึ่งใบในมือและตั้งค่าพลังของมันเป็น 1|1",
+    "descriptionRaw": "เลือกผู้ติดตามหนึ่งใบ สร้างการ์ดเสมือนของมันที่มีค่าร่าย 1 หน่วยหนึ่งใบในมือและตั้งค่าพลังของมันเป็น 1|1",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "ดั่งหยาดน้ำตาของแสงเหนือที่ทอดแสงแสดงเขตแห่ง<br>สรวงสวรรค์ สายตาที่เจิดจ้านำพามาซึ่งความสงบ<br>ทุเลาความเจ็บปวด และซ่อมแซมสิ่งที่พังทลาย",
-    "artistName": "Bubble Cat",
-    "name": "Cosmic Youngling",
-    "cardCode": "07MT003",
-    "keywords": [],
-    "keywordRefs": [],
-    "spellSpeed": "",
-    "spellSpeedRef": "",
+    "flavorText": "\"หืมม... ดูเหมือนตัวเล็กลงก็ไม่ได้หมายความว่าจะน่ารักขึ้นเสมอไปนะ!\" - Lulu",
+    "artistName": "Kudos Productions",
+    "name": "Condense",
+    "cardCode": "07BC015",
+    "keywords": [
+      "ฉับพลัน"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "ฉับพลัน",
+    "spellSpeedRef": "Burst",
     "rarity": "แรร์",
     "rarityRef": "Rare",
     "subtypes": [],
     "supertype": "",
-    "type": "ยูนิต",
+    "type": "เวท",
     "collectible": true,
     "set": "Set7",
     "formats": [
@@ -3366,60 +4020,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07MT001.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07MT001-full.png"
-      }
-    ],
-    "regions": [
-      "ทาร์<zwsp>กอน"
-    ],
-    "regionRefs": [
-      "Targon"
-    ],
-    "attack": 0,
-    "cost": 2,
-    "health": 0,
-    "description": "สร้างความเสียหาย 4 หน่วย<br>แก่ศัตรูหนึ่งใบที่ได้โจมตีไปในรอบนี้<br>หรือที่<link=keyword.Stun><sprite name=Stunned><style=Keyword>ถูกสตัน</style></link>",
-    "descriptionRaw": "สร้างความเสียหาย 4 หน่วยแก่ศัตรูหนึ่งใบที่ได้โจมตีไปในรอบนี้หรือที่ถูกสตัน",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "ดวงดาวเฝ้ามองการกระทำของเรา ไม่ว่าจะดีหรือร้าย ผู้ที่ประพฤติดีจะได้โผบิน และผู้ประพฤติร้ายจะได้รับโทษทัณฑ์",
-    "artistName": "Kudos Productions",
-    "name": "Falling Star",
-    "cardCode": "07MT001",
-    "keywords": [
-      "ช้า"
-    ],
-    "keywordRefs": [
-      "Slow"
-    ],
-    "spellSpeed": "ช้า",
-    "spellSpeedRef": "Slow",
-    "rarity": "คอมมอน",
-    "rarityRef": "Common",
-    "subtypes": [],
-    "supertype": "",
-    "type": "เวท",
-    "collectible": true,
-    "set": "Set7",
-    "formats": [
-      "Eternal",
-      "Standard",
-      "ระดับคอมมอนเท่านั้น"
-    ],
-    "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name",
-      "client_Formats_CommonsOnly_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07DE002.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07DE002-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07DE002.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07DE002-full.png"
       }
     ],
     "regions": [
@@ -3468,8 +4070,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07DE005.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07DE005-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07DE005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07DE005-full.png"
       }
     ],
     "regions": [
@@ -3520,8 +4122,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07DE002T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07DE002T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07DE002T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07DE002T1-full.png"
       }
     ],
     "regions": [
@@ -3570,8 +4172,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07DE002T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07DE002T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07DE002T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07DE002T2-full.png"
       }
     ],
     "regions": [
@@ -3620,32 +4222,32 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07SH023.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07SH023-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07DE008.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/th_th/img/cards/07DE008-full.png"
       }
     ],
     "regions": [
-      "ชู<zwsp>ริ<zwsp>ม่า"
+      "เด<zwsp>มา<zwsp>เซีย"
     ],
     "regionRefs": [
-      "Shurima"
+      "Demacia"
     ],
     "attack": 0,
-    "cost": 7,
-    "health": 7,
-    "description": "การ์ดใบนี้มี +1|+0 ตามจำนวนพันธมิตร<link=keyword.Ephemeral><sprite name=Ephemeral><style=Keyword>ไร้ตัวตน</style></link>ที่คุณเคยอัญเชิญในเกมนี้ <style=Variable></style>",
-    "descriptionRaw": "การ์ดใบนี้มี +1|+0 ตามจำนวนพันธมิตรไร้ตัวตนที่คุณเคยอัญเชิญในเกมนี้ ",
+    "cost": 4,
+    "health": 0,
+    "description": "เมื่อการ์ดใบนี้ถูกอัญเชิญ จั่วยูนิตหนึ่งใบ\r\nเมื่อคุณอัญเชิญพันธมิตร เพิ่มค่าพลังของพันธมิตรนั้นให้เท่ากับค่าร่ายของมัน",
+    "descriptionRaw": "เมื่อการ์ดใบนี้ถูกอัญเชิญ จั่วยูนิตหนึ่งใบ\r\nเมื่อคุณอัญเชิญพันธมิตร เพิ่มค่าพลังของพันธมิตรนั้นให้เท่ากับค่าร่ายของมัน",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "“ถึงแม้ว่าเจ้าจะเป็นเพียงแค่เม็ดทรายเมื่อเทียบกับข้าศึก ข้าก็มองเห็นเจ้า ข้าสัมผัสได้ถึงตัวตนของเจ้าในผืนทราย จงมอบพลังให้ข้า และเราจะโค่นล้มศัตรูของเราไปด้วยกัน!”",
+    "flavorText": "ครั้งแรกที่เธอได้เห็นแท่นพิธี Cithria ก็แทบอ้าปากค้างพูดอะไรไม่ออก เป็นเวลาสักพักที่เธอได้แต่ยืนทึ่งอยู่เบื้องหน้าความสง่างามของเหล่าวีรชนผู้มีเกียรติ เธอจะกล้าหาญพอที่จะไปยืนเคียงข้างพวกเขาได้หรือเปล่านะ?",
     "artistName": "Kudos Productions",
-    "name": "Fallen Sands General",
-    "cardCode": "07SH023",
+    "name": "Altar to Unity",
+    "cardCode": "07DE008",
     "keywords": [
-      "ทะลวง"
+      "แลนด์มาร์ค"
     ],
     "keywordRefs": [
-      "Overwhelm"
+      "LandmarkVisualOnly"
     ],
     "spellSpeed": "",
     "spellSpeedRef": "",
@@ -3653,53 +4255,7 @@
     "rarityRef": "Rare",
     "subtypes": [],
     "supertype": "",
-    "type": "ยูนิต",
-    "collectible": true,
-    "set": "Set7",
-    "formats": [
-      "Eternal",
-      "Standard"
-    ],
-    "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07SH018.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_3_0/set7/th_th/img/cards/07SH018-full.png"
-      }
-    ],
-    "regions": [
-      "ชู<zwsp>ริ<zwsp>ม่า"
-    ],
-    "regionRefs": [
-      "Shurima"
-    ],
-    "attack": 2,
-    "cost": 3,
-    "health": 4,
-    "description": "เมื่อการ์ดใบนี้ถูกอัญเชิญ สร้างแชมเปี้ยนเลเวล 2 ที่ไม่ได้อยู่ในมือ เด็ค หรือสนามของคุณแบบสุ่มสองใบไว้ใบล่าสุดของเด็คของคุณ",
-    "descriptionRaw": "เมื่อการ์ดใบนี้ถูกอัญเชิญ สร้างแชมเปี้ยนเลเวล 2 ที่ไม่ได้อยู่ในมือ เด็ค หรือสนามของคุณแบบสุ่มสองใบไว้ใบล่าสุดของเด็คของคุณ",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "เขาไม่รู้แน่ชัดว่าเขาเห็นอะไร หายนะจะปรากฏในรูปลักษณ์ใด หรือจะเกิดหายนะดังกล่าวเมื่อใด แต่เขารู้จักโลกนี้และผู้ที่อาศัยอยู่เป็นอย่างดี และเขารู้ว่าไม่มีใครพร้อมรับมือกับมัน ไม่มีวัน",
-    "artistName": "Envar Studio",
-    "name": "Secret Keeper",
-    "cardCode": "07SH018",
-    "keywords": [],
-    "keywordRefs": [],
-    "spellSpeed": "",
-    "spellSpeedRef": "",
-    "rarity": "อีปิค",
-    "rarityRef": "Epic",
-    "subtypes": [],
-    "supertype": "",
-    "type": "ยูนิต",
+    "type": "แลนด์มาร์ค",
     "collectible": true,
     "set": "Set7",
     "formats": [
