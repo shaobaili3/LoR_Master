@@ -15,6 +15,8 @@ def get_card_set_online(set_num: int, region="en_us"):
     url = f'http://dd.b.pvp.net/latest/set{set_num}/{region}/data/set{set_num}-{region}.json'
     if set_num == 8:
         url = f'http://dd.b.pvp.net/latest/set6cde/{region}/data/set6cde-{region}.json'
+    if set_num == 9:
+        url = f'http://dd.b.pvp.net/latest/set7b/{region}/data/set7b-{region}.json'
     print('Loading: ', url) 
     r = session.get(url)
     r.encoding = 'utf8'
