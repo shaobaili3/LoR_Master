@@ -44,10 +44,14 @@ jobs:
     
     - run: npm ci
       working-directory: ./UI
+      env:
+        NODE_OPTIONS: "--max_old_space_size=4096"
 
     - run: npm run build --if-present
       working-directory: ./UI 
-    
+      env:
+        NODE_OPTIONS: "--max_old_space_size=4096"
+
     - name: "Set up LMTServer"
       run: cmd.exe /c makefile.bat
 
