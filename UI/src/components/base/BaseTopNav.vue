@@ -6,7 +6,7 @@
           <i class="fab fa-discord" aria-label="Discord"></i>
         </div>
       </a>
-      <a class="hover:no-underline" target="_blank" href="https://github.com/shaobaili3/LoR_Master">
+      <a class="hover:no-underline" target="_blank" href="#">
         <div class="flex h-9 items-center justify-center px-2">
           <i class="fab fa-github" aria-label="Github"></i>
         </div>
