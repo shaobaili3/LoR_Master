@@ -317,7 +317,7 @@ function initTray() {
       },
     },
   ])
-  tray.setToolTip("LoR Master Tracker")
+  tray.setToolTip("MaRu Tracker")
   tray.on("click", () => {
     // tray.popUpContextMenu()
     // console.log("Tray Clicked")
@@ -751,7 +751,7 @@ function newAlert() {}
 // })
 
 // setInterval(() => {
-//   newAlert("LoR Master Tracker Hidden", "Click on icon to show, Right click for more")
+//   newAlert("MaRu Tracker Hidden", "Click on icon to show, Right click for more")
 // }, 1000 * 5)
 
 // -----------------------------------------------
@@ -760,7 +760,7 @@ function newAlert() {}
 
 var AutoLaunch = require("auto-launch")
 var autoLauncher = new AutoLaunch({
-  name: "LoR Master Tracker",
+  name: "MaRu Tracker",
   isHidden: true,
 })
 
@@ -936,12 +936,12 @@ function processClipboard() {
 // async function checkTracker() {
 //   isCheckingTracker = true
 
-//   // Check Python Process with window name containing LoR Master Tracker
+//   // Check Python Process with window name containing MaRu Tracker
 //   var pythonList = await tasklist({
 //     filter: ["IMAGENAME eq python.exe"],
 //     verbose: true,
 //   })
-//   pythonList = pythonList.filter((ps) => ps.windowTitle.indexOf("LoR Master Tracker") != -1)
+//   pythonList = pythonList.filter((ps) => ps.windowTitle.indexOf("MaRu Tracker") != -1)
 
 //   // Check LoRMasterTracker.exe process
 //   var trackerList = await tasklist({

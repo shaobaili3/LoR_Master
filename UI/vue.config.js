@@ -10,7 +10,7 @@ module.exports = {
       filename: "index.html",
       // when using title option,
       // template title tag needs to be <title><%= htmlWebpackPlugin.options.title %></title>
-      title: "LoR Master Tracker App",
+      title: "MaRu Tracker App",
       // chunks to include on this page, by default includes
       // extracted common chunks and vendor chunks.
       // chunks: ['chunk-vendors', 'chunk-common', 'index']
@@ -19,20 +19,20 @@ module.exports = {
       entry: "src/pages/info/main.js",
       template: "public/index.html",
       filename: "info.html",
-      title: "LoR Master Tracker Info",
+      title: "MaRu Tracker Info",
     },
     deck: {
       entry: "src/pages/deck/main.js",
       template: "public/index.html",
       filename: "deck.html",
-      title: "LoR Master Tracker Deck",
+      title: "MaRu Tracker Deck",
     },
   },
   // chainWebpack: config => {
   //   config
   //       .plugin('html')
   //       .tap(args => {
-  //           args[0].title = "LoR Master Tracker UI";
+  //           args[0].title = "MaRu Tracker UI";
   //           return args;
   //       })
   // }

@@ -163,7 +163,7 @@
       </button>
       <div class="w-full h-full">
         <p class="py-5 text-lg">
-          Have you tried our <a class="text-xl cursor-pointer text-gold-400" href="https://lormaster.com" target="_blank"><br />LoR Master Tracker</a> yet?
+          Have you tried our <a class="text-xl cursor-pointer text-gold-400" href="https://lormaster.com" target="_blank"><br />MaRu Tracker</a> yet?
         </p>
         <a class="text-xl cursor-pointer text-gold-400" href="https://lormaster.com" target="_blank"><img src="../../assets/images/promo/tracker.png" alt="" srcset="" /></a>
       </div>

@@ -1,4 +1,4 @@
-# Legends of Runeterra Deck Tracker - LoR Master Tracker
+# Legends of Runeterra Deck Tracker - MaRu Tracker
 
 <p align="center">
 <img src="Preview/logo2.jpg"width="480" height="270"/>
@@ -12,7 +12,7 @@
 
 </p>
 
-[LoR Master Tracker](https://app.lormaster.com/) is a open source deck tracker for League of Runeterra.
+[MaRu Tracker](https://app.lormaster.com/) is a open source deck tracker for League of Runeterra.
 符文之地魔盒是一款开源LoR记牌器
 
 - [Download](https://lormaster.com/)
@@ -34,7 +34,7 @@
 
 ## Development
 
-LoR Master Tracker's user interface is built by [Electron](https://www.electronjs.org/) and [Vuejs](https://github.com/vuejs/vue), and backend service is written by [Python 3](https://www.python.org). 
+MaRu Tracker's user interface is built by [Electron](https://www.electronjs.org/) and [Vuejs](https://github.com/vuejs/vue), and backend service is written by [Python 3](https://www.python.org). 
 
 ## Build Instructions
 
@@ -78,7 +78,7 @@ The installer is automatically generated and released by CDCI on [Github Action]
 
 ## FAQ
 
-**Q.** Is using LoR Master Tracker considered cheating?  
+**Q.** Is using MaRu Tracker considered cheating?  
 **A.** This project is approved by [Riot](https://www.riotgames.com/en/DevRel/rso), and registered in the [Riot Development Portal](https://developer.riotgames.com/). All data source is from [Riot API](https://developer.riotgames.com/apis) and [LoR Data Dragon](https://developer.riotgames.com/docs/lor). There is **NO** third-party data source.
 
 ### Built with ❤ by Storm & FlyingFish
