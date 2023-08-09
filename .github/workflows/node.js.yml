@@ -54,11 +54,9 @@ jobs:
 
     - name: "Set up LMTServer"
       run: cmd.exe /c makefile.bat
-      env:
-        GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
     - run:  npm run build-pub
       working-directory: ./UI
       env:
-        GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        GH_TOKEN: ${{ secrets.GH_TOKENNNN }}
 
