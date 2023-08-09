@@ -55,10 +55,9 @@ jobs:
     - name: "Set up LMTServer"
       run: cmd.exe /c makefile.bat
 
-    - run:
-        export GH_TOKEN=${{ secrets.GH_TOKEN }}
+    - run: |
+        set GH_TOKEN=${{ secrets.GH_TOKEN }}
         npm run build-pub
       working-directory: ./UI
       env:
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
-
