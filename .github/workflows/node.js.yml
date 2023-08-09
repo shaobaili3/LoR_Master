@@ -55,12 +55,8 @@ jobs:
     - name: "Set up LMTServer"
       run: cmd.exe /c makefile.bat
 
-    - name: Set up environment and run npm build-pub
-      shell: pwsh
-      run: |
-        $env:GH_TOKEN = $env:GH_TOKEN  # Set the GH_TOKEN environment variable
-        npm run build-pub
+    - run: npm run build-pub
       working-directory: ./UI
       env:
-        GH_TOKEN: ${{ secrets.GH_TOKEN }}  # Set the GH_TOKEN secret 
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
        
