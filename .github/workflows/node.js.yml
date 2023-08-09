@@ -3,7 +3,7 @@
 
 name: Publish LMT
   env:
-    GH_TOKEN: ${{ secrets.GH_TOKEN }}
+    GH_TOKEN: ${{ secrets.GH_TOKEN }} 
 
 on:
   push:
