@@ -59,4 +59,14 @@ jobs:
       working-directory: ./UI
       env:
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
-       
+    
+    - name: Download Artifacts
+      uses: actions/download-artifact@v2
+      with:
+        name: published-artifacts
+        path: ./published-artifacts
+
+    - name: Copy Artifacts Locally
+      run: |
+        mkdir -p ./local-artifacts
+        cp -r ./published-artifacts/* ./local-artifacts/
