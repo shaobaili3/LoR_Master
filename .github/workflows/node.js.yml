@@ -2,6 +2,8 @@
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
 name: Publish LMT
+  env:
+    GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
 on:
   push:
@@ -54,6 +56,8 @@ jobs:
 
     - name: "Set up LMTServer"
       run: cmd.exe /c makefile.bat
+      env:
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
     - run:  npm run build-pub
       working-directory: ./UI
