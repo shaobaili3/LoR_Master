@@ -58,6 +58,5 @@ jobs:
     - run:  npm run build-pub
       working-directory: ./UI
       env:
-        GH_TOKEN: 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
-        Authorization: Bearer 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
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
