@@ -5,7 +5,7 @@ const fs = require("fs")
 
 const axios = require("axios").default
 
-const setCodes = ["1", "2", "3", "4", "5", "6", "6cde", "7", "7b"];
+const setCodes = ["1", "2", "3", "4", "5", "6", "6cde", "7", "7b", "8"];
 
 const specialAdditions = [
   // {version: "3_14_0", set: "6cde"}

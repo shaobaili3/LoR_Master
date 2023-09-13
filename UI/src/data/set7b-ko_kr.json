@@ -4,8 +4,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07PZ019.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07PZ019-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07PZ019.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07PZ019-full.png"
       }
     ],
     "regions": [
@@ -54,8 +54,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07PZ021.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07PZ021-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07PZ021.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07PZ021-full.png"
       }
     ],
     "regions": [
@@ -103,13 +103,11 @@
   },
   {
     "associatedCards": [],
-    "associatedCardRefs": [
-      "01PZ022"
-    ],
+    "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07PZ013.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07PZ013-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07PZ022.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07PZ022-full.png"
       }
     ],
     "regions": [
@@ -119,10 +117,64 @@
       "PiltoverZaun"
     ],
     "attack": 0,
-    "cost": 3,
+    "cost": 2,
     "health": 0,
-    "description": "아군 넥서스가 <link=card.cardref><style=AssociatedCard>독버섯</style></link> 이외의 피해를 받을 경우, 대신 받는 피해 1당 <link=card.cardref><style=AssociatedCard>독버섯</style></link> 넷을 내 덱에 설치합니다.",
-    "descriptionRaw": "아군 넥서스가 독버섯 이외의 피해를 받을 경우, 대신 받는 피해 1당 독버섯 넷을 내 덱에 설치합니다.",
+    "description": "적 유닛과 적 넥서스에 피해를 1씩 입히거나 적 유닛 둘에게 피해를 1씩 입힙니다.",
+    "descriptionRaw": "적 유닛과 적 넥서스에 피해를 1씩 입히거나 적 유닛 둘에게 피해를 1씩 입힙니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "대부분의 필트오버인들은 바람의 형태에 크게 신경쓰지 않지만, 많은 자운인들에게는 우연히 불어오는 산들바람마저 <nobr>구원의 향기를</nobr> 싣고 있습니다.",
+    "artistName": "Polar Engine",
+    "name": "신성한 기류",
+    "cardCode": "07PZ022",
+    "keywords": [
+      "집중"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "집중",
+    "spellSpeedRef": "Slow",
+    "rarity": "일반급",
+    "rarityRef": "Common",
+    "subtypes": [
+      "원소"
+    ],
+    "supertype": "",
+    "type": "주문",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "01PZ022"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07PZ013.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07PZ013-full.png"
+      }
+    ],
+    "regions": [
+      "필트오버 & 자운"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 0,
+    "cost": 4,
+    "health": 0,
+    "description": "아군 넥서스가 <link=card.cardref><style=AssociatedCard>독버섯</style></link> 이외의 피해를 받을 경우, 대신 받는 피해 1당 <link=card.cardref><style=AssociatedCard>독버섯</style></link> 다섯을 내 덱에 설치합니다.",
+    "descriptionRaw": "아군 넥서스가 독버섯 이외의 피해를 받을 경우, 대신 받는 피해 1당 독버섯 다섯을 내 덱에 설치합니다.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "자운의 거리 아래 깊은 지하에서는 내가 먹는 것이 곧 나입니다.",
@@ -160,8 +212,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07PZ015.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07PZ015-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07PZ015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07PZ015-full.png"
       }
     ],
     "regions": [
@@ -210,8 +262,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07PZ015T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07PZ015T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07PZ015T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07PZ015T1-full.png"
       }
     ],
     "regions": [
@@ -262,8 +314,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07NX028.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07NX028-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07NX028.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07NX028-full.png"
       }
     ],
     "regions": [
@@ -312,8 +364,60 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07NX032.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07NX032-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07NX034.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07NX034-full.png"
+      }
+    ],
+    "regions": [
+      "녹서스"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "모든 아군의 비용이 1 감소합니다. 아군을 사용하면 해당 아군에게 피해를 2 입힙니다.",
+    "descriptionRaw": "모든 아군의 비용이 1 감소합니다. 아군을 사용하면 해당 아군에게 피해를 2 입힙니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"어서 와 앉게, 벗들이여. 귀한 손님들과 넘치는 음료가 있지. 저녁 만찬으로 무엇을 준비했는지 보여줄 생각을 하니 벌써부터 심장이 뛰는군.\"<br>- 블라디미르",
+    "artistName": "Envar Studio",
+    "name": "진홍회 연회장",
+    "cardCode": "07NX034",
+    "keywords": [
+      "명소",
+      "Missing Translation"
+    ],
+    "keywordRefs": [
+      "LandmarkVisualOnly",
+      "AuraVisualFakeKeyword"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "서사급",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "명소",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07NX032.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07NX032-full.png"
       }
     ],
     "regions": [
@@ -362,8 +466,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07NX033.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07NX033-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07NX033.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07NX033-full.png"
       }
     ],
     "regions": [
@@ -423,8 +527,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07RU015.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07RU015-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07RU015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07RU015-full.png"
       }
     ],
     "regions": [
@@ -438,8 +542,8 @@
     "health": 4,
     "description": "<link=vocab.Origin><style=Vocab>근원</style></link>: <link=card.origin><style=AssociatedCard>포로 왕의 칙령</style></link>.\r\n라운드마다 처음으로 다른 포로를 소환하면 손에 <link=card.baseSnax><style=AssociatedCard>포로 간식</style></link> 1장을 생성합니다.",
     "descriptionRaw": "근원: 포로 왕의 칙령.\r\n라운드마다 처음으로 다른 포로를 소환하면 손에 포로 간식 1장을 생성합니다.",
-    "levelupDescription": "다른 신규 포로를 여섯 이상 소환해야 합니다. <style=Variable></style>",
-    "levelupDescriptionRaw": "다른 신규 포로를 여섯 이상 소환해야 합니다. ",
+    "levelupDescription": "다른 신규 포로를 여섯 이상 소환해야 합니다. 레벨 업하면 손에 무작위 특별 간식 1장을 생성합니다. <style=Variable></style>",
+    "levelupDescriptionRaw": "다른 신규 포로를 여섯 이상 소환해야 합니다. 레벨 업하면 손에 무작위 특별 간식 1장을 생성합니다. ",
     "flavorText": "잉바르에게는 잠재력을 알아보는 재주가 있습니다. 외형은 집에서 만든 것 같아 보이더라도, 이 사랑스러운 친구는 수억 수천의 포로를 이끌 자질을 갖췄습니다. 충분한 상상력만 곁들인다면 말이죠. ",
     "artistName": "Envar Studio",
     "name": "포로 왕",
@@ -474,8 +578,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07RU015T3.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07RU015T3-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07RU015T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07RU015T3-full.png"
       }
     ],
     "regions": [
@@ -526,8 +630,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07RU015T6.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07RU015T6-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07RU015T6.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07RU015T6-full.png"
       }
     ],
     "regions": [
@@ -578,8 +682,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07RU015T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07RU015T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07RU015T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07RU015T2-full.png"
       }
     ],
     "regions": [
@@ -630,8 +734,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07RU015T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07RU015T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07RU015T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07RU015T1-full.png"
       }
     ],
     "regions": [
@@ -678,8 +782,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07RU015T7.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07RU015T7-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07RU015T7.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07RU015T7-full.png"
       }
     ],
     "regions": [
@@ -735,8 +839,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07RU015T4.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07RU015T4-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07RU015T4.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07RU015T4-full.png"
       }
     ],
     "regions": [
@@ -785,8 +889,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07RU015T5.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07RU015T5-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07RU015T5.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07RU015T5-full.png"
       }
     ],
     "regions": [
@@ -798,8 +902,8 @@
     "attack": 0,
     "cost": 2,
     "health": 0,
-    "description": "모든 아군 포로에게 <link=vocab.Everywhere><style=Vocab>어디에 있든</style></link> +1|+1을 부여합니다. 체력이 3 이하인 적 하나를 <link=keyword.Frostbite><sprite name=Frostbite><style=Keyword>동상</style></link>에 걸리게 합니다.",
-    "descriptionRaw": "모든 아군 포로에게 어디에 있든 +1|+1을 부여합니다. 체력이 3 이하인 적 하나를 동상에 걸리게 합니다.",
+    "description": "모든 아군 포로에게 <link=vocab.Everywhere><style=Vocab>어디에 있든</style></link> +1|+1을 부여합니다. 적 하나를 <link=keyword.Frostbite><sprite name=Frostbite><style=Keyword>동상</style></link>에 걸리게 합니다.",
+    "descriptionRaw": "모든 아군 포로에게 어디에 있든 +1|+1을 부여합니다. 적 하나를 동상에 걸리게 합니다.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "이 페이스트리에는 프렐요드의 모든 풍미를 담은 수제 설탕옷이 입혀져 있습니다. 가루 눈, 다진 눈, 그리고 예상하셨겠지만 하늘에서 내리는 눈이죠!",
@@ -839,8 +943,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07RU012.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07RU012-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07RU012.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07RU012-full.png"
       }
     ],
     "regions": [
@@ -891,8 +995,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07RU012T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07RU012T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07RU012T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07RU012T2-full.png"
       }
     ],
     "regions": [
@@ -904,8 +1008,8 @@
     "attack": 3,
     "cost": 2,
     "health": 3,
-    "description": "<link=vocab.Attack><style=Vocab>공격</style></link>: 아무 종족에 속하는 아군들에게 <link=vocab.Everywhere><style=Vocab>어디에 있든</style></link> +1|+1을 부여합니다.",
-    "descriptionRaw": "공격: 아무 종족에 속하는 아군들에게 어디에 있든 +1|+1을 부여합니다.",
+    "description": "레벨 업 또는 <link=vocab.Attack><style=Vocab>공격</style></link>: 아무 종족에 속하는 아군들에게 <link=vocab.Everywhere><style=Vocab>어디에 있든</style></link> +1|+1을 부여합니다.",
+    "descriptionRaw": "레벨 업 또는 공격: 아무 종족에 속하는 아군들에게 어디에 있든 +1|+1을 부여합니다.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "\"모양과 색깔, 색깔과 모양. 니코는 뭐든 될 수 있어!\"",
@@ -945,8 +1049,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07RU012T4.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07RU012T4-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07RU012T4.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07RU012T4-full.png"
       }
     ],
     "regions": [
@@ -994,8 +1098,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07RU012T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07RU012T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07RU012T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07RU012T1-full.png"
       }
     ],
     "regions": [
@@ -1007,8 +1111,8 @@
     "attack": 0,
     "cost": 3,
     "health": 0,
-    "description": "아군 하나와 똑같은 복사본을 <link=keyword.Ephemeral><sprite name=Ephemeral><style=Keyword>하루살이</style></link> 상태로 생성하고 서로 위치를 바꿉니다.\r\n내 덱에 <link=card.level1><style=AssociatedCard>니코</style></link> 1장을 생성합니다.",
-    "descriptionRaw": "아군 하나와 똑같은 복사본을 하루살이 상태로 생성하고 서로 위치를 바꿉니다.\r\n내 덱에 니코 1장을 생성합니다.",
+    "description": "아군 하나와 똑같은 복사본을 <link=keyword.Ephemeral><sprite name=Ephemeral><style=Keyword>하루살이</style></link> 상태로 소환하고 서로 위치를 바꿉니다.\r\n내 덱에 <link=card.level1><style=AssociatedCard>니코</style></link> 1장을 생성합니다.",
+    "descriptionRaw": "아군 하나와 똑같은 복사본을 하루살이 상태로 소환하고 서로 위치를 바꿉니다.\r\n내 덱에 니코 1장을 생성합니다.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "\"여기도 니코, 저기도 니코. 니코는 어디에나 있을 수 있어!\"\n- 니코",
@@ -1044,8 +1148,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07RU017.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07RU017-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07RU017.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07RU017-full.png"
       }
     ],
     "regions": [
@@ -1094,8 +1198,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07RU016.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07RU016-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07RU016.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07RU016-full.png"
       }
     ],
     "regions": [
@@ -1141,11 +1245,265 @@
   },
   {
     "associatedCards": [],
+    "associatedCardRefs": [
+      "06BW006T3"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07BW043.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07BW043-full.png"
+      }
+    ],
+    "regions": [
+      "빌지워터"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "유닛 하나에게 피해를 1 입힙니다. 입힌 피해당 <link=vocab.Spawn><style=Vocab>촉수 소환</style></link>을 1회 합니다.",
+    "descriptionRaw": "유닛 하나에게 피해를 1 입힙니다. 입힌 피해당 촉수 소환을 1회 합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "가장 높은 경지의 배움에 이른 자만이 의지대로 원소를 <nobr>조종할 수</nobr> 있습니다.",
+    "artistName": "Kudos Productions",
+    "name": "파도를 향한 기원",
+    "cardCode": "07BW043",
+    "keywords": [
+      "신속"
+    ],
+    "keywordRefs": [
+      "Fast"
+    ],
+    "spellSpeed": "신속",
+    "spellSpeedRef": "Fast",
+    "rarity": "희귀급",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "원소"
+    ],
+    "supertype": "",
+    "type": "주문",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07IO041.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07IO041-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07BW035.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07BW035-full.png"
+      }
+    ],
+    "regions": [
+      "빌지워터"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 6,
+    "health": 0,
+    "description": "손에 든 모든 카드가 <link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>일회용</style></link> 상태로 됩니다.\r\n카드를 사용하면 카드 1장을 뽑습니다.",
+    "descriptionRaw": "손에 든 모든 카드가 일회용 상태로 됩니다.\r\n카드를 사용하면 카드 1장을 뽑습니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"손에 든 패를 잘 이해하고 절대 놓치지 마.<br>그렇지 않으면 모든 걸 잃게 될 테니까.\"\n- 트위스티드 페이트",
+    "artistName": "Envar Studio",
+    "name": "사기꾼 소굴",
+    "cardCode": "07BW035",
+    "keywords": [
+      "명소"
+    ],
+    "keywordRefs": [
+      "LandmarkVisualOnly"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "서사급",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "명소",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07BW042.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07BW042-full.png"
+      }
+    ],
+    "regions": [
+      "빌지워터"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 1,
+    "cost": 2,
+    "health": 3,
+    "description": "<link=vocab.Play><style=Vocab>사용</style></link>: 전장에 있는 아군들과 종족이 다른 추종자 하나를 <link=vocab.Manifest><style=Vocab>시현</style></link>합니다.",
+    "descriptionRaw": "사용: 전장에 있는 아군들과 종족이 다른 추종자 하나를 시현합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"이 조그맣고 지저분한 녀석을 내버려두는 이유가 있지. 덕분에 몇 년간 부두 쥐 문제를 겪은 적이 없으니까!\"\n- 드레드웨이 갑판원",
+    "artistName": "Caravan Studio",
+    "name": "갑판 사냥꾼",
+    "cardCode": "07BW042",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "일반급",
+    "rarityRef": "Common",
+    "subtypes": [
+      "고양이"
+    ],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07BW039.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07BW039-full.png"
+      }
+    ],
+    "regions": [
+      "빌지워터"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 2,
+    "description": "라운드마다 처음으로 비용이 1인 아군을 소환하면 주문 마나를 1 회복합니다.",
+    "descriptionRaw": "라운드마다 처음으로 비용이 1인 아군을 소환하면 주문 마나를 1 회복합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"도마뱀 씨, 여기서 뭘 하시는 거죠?<br>당신도 포로를 좋아하는 군요!?\"\n- 꼬마 잉바르",
+    "artistName": "Caravan Studio",
+    "name": "용 왕자 그린조",
+    "cardCode": "07BW039",
+    "keywords": [
+      "조율"
+    ],
+    "keywordRefs": [
+      "Attune"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "희귀급",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "용"
+    ],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07BW033.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07BW033-full.png"
+      }
+    ],
+    "regions": [
+      "빌지워터"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 6,
+    "health": 0,
+    "description": "무작위 껍데기 하나를 소환합니다.\r\n비용이 1인 모든 아군에게 <link=vocab.Everywhere><style=Vocab>어디에 있든</style></link> +1|+1을 부여합니다. ",
+    "descriptionRaw": "무작위 껍데기 하나를 소환합니다.\r\n비용이 1인 모든 아군에게 어디에 있든 +1|+1을 부여합니다. ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "바다 위 가장 고요한 밤, 빌지워터 선원들은 솜으로 귀를 막습니다. 파도 아래에서 들려오는 노랫소리가 바닷속 무덤으로 자신들을 이끌리라는 사실을 잘 알기 때문입니다.",
+    "artistName": "Kudos Productions",
+    "name": "세이렌의 노래",
+    "cardCode": "07BW033",
+    "keywords": [
+      "집중"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "집중",
+    "spellSpeedRef": "Slow",
+    "rarity": "일반급",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "주문",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07IO041.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07IO041-full.png"
       }
     ],
     "regions": [
@@ -1175,7 +1533,9 @@
     "spellSpeedRef": "Burst",
     "rarity": "일반급",
     "rarityRef": "Common",
-    "subtypes": [],
+    "subtypes": [
+      "원소"
+    ],
     "supertype": "",
     "type": "주문",
     "collectible": true,
@@ -1196,8 +1556,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07IO043.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07IO043-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07IO043.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07IO043-full.png"
       }
     ],
     "regions": [
@@ -1242,8 +1602,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07IO043T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07IO043T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07IO043T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07IO043T1-full.png"
       }
     ],
     "regions": [
@@ -1289,6 +1649,56 @@
   },
   {
     "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07IO049.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07IO049-full.png"
+      }
+    ],
+    "regions": [
+      "아이오니아"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 1,
+    "cost": 2,
+    "health": 1,
+    "description": "<link=vocab.NexusStrike><style=Vocab>넥서스 타격</style></link>: 무작위 껍데기 하나를 소환합니다.",
+    "descriptionRaw": "넥서스 타격: 무작위 껍데기 하나를 소환합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"쉿, 거의 다 왔어. 내 친구를 만나고 싶댔지? 분명 그녀도 널 마음에 들어 할 거야.\"",
+    "artistName": "Kudos Productions",
+    "name": "에이리스",
+    "cardCode": "07IO049",
+    "keywords": [
+      "포착 불가"
+    ],
+    "keywordRefs": [
+      "Elusive"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "희귀급",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
     "associatedCardRefs": [
       "07SH038T1",
       "07SH013T6",
@@ -1296,8 +1706,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07SH038.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07SH038-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07SH038.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07SH038-full.png"
       }
     ],
     "regions": [
@@ -1351,8 +1761,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07SH038T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07SH038T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07SH038T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07SH038T2-full.png"
       }
     ],
     "regions": [
@@ -1364,8 +1774,8 @@
     "attack": 0,
     "cost": 1,
     "health": 0,
-    "description": "<link=card.shadow><style=AssociatedCard>수풀 속 그림자</style></link>를 <link=card.parent><style=AssociatedCard>새끼 파카아</style></link>로 변신시킵니다.",
-    "descriptionRaw": "수풀 속 그림자를 새끼 파카아로 변신시킵니다.",
+    "description": "<link=card.shadow><style=AssociatedCard>수풀 속 그림자</style></link>를 <link=card.parent><style=AssociatedCard>새끼 파카아</style></link>로 변신시킵니다. \r\n<link=card.shadow><style=AssociatedCard>수풀 속 그림자</style></link>가 전장에서 사라지면 <link=vocab.Obliterate><style=Vocab>소멸</style></link>됩니다.",
+    "descriptionRaw": "수풀 속 그림자를 새끼 파카아로 변신시킵니다. \r\n수풀 속 그림자가 전장에서 사라지면 소멸됩니다.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "저들이 죗값을 치르게 하세요.",
@@ -1403,8 +1813,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07SH038T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07SH038T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07SH038T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07SH038T1-full.png"
       }
     ],
     "regions": [
@@ -1443,8 +1853,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07SH041.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07SH041-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07SH041.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07SH041-full.png"
       }
     ],
     "regions": [
@@ -1495,8 +1905,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07SH004.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07SH004-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07SH004.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07SH004-full.png"
       }
     ],
     "regions": [
@@ -1551,8 +1961,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07SH013.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07SH013-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07SH013.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07SH013-full.png"
       }
     ],
     "regions": [
@@ -1607,8 +2017,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07SH013T3.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07SH013T3-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07SH013T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07SH013T3-full.png"
       }
     ],
     "regions": [
@@ -1663,8 +2073,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07SH013T4.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07SH013T4-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07SH013T4.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07SH013T4-full.png"
       }
     ],
     "regions": [
@@ -1720,8 +2130,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07SH013T7.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07SH013T7-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07SH013T7.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07SH013T7-full.png"
       }
     ],
     "regions": [
@@ -1733,8 +2143,8 @@
     "attack": 0,
     "cost": 2,
     "health": 0,
-    "description": "<link=card.shadow><style=AssociatedCard>수풀 속 그림자</style></link>를 <link=card.parent><style=AssociatedCard>니달리</style></link>로 변신시킵니다.",
-    "descriptionRaw": "수풀 속 그림자를 니달리로 변신시킵니다.",
+    "description": "<link=card.shadow><style=AssociatedCard>수풀 속 그림자</style></link>를 <link=card.parent><style=AssociatedCard>니달리</style></link>로 변신시킵니다. \r\n<link=card.shadow><style=AssociatedCard>수풀 속 그림자</style></link>가 전장에서 사라지면 <link=vocab.Obliterate><style=Vocab>소멸</style></link>됩니다.",
+    "descriptionRaw": "수풀 속 그림자를 니달리로 변신시킵니다. \r\n수풀 속 그림자가 전장에서 사라지면 소멸됩니다.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "저들이 죗값을 치르게 하세요.",
@@ -1773,8 +2183,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07SH013T5.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07SH013T5-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07SH013T5.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07SH013T5-full.png"
       }
     ],
     "regions": [
@@ -1786,8 +2196,8 @@
     "attack": 0,
     "cost": 2,
     "health": 0,
-    "description": "<link=card.shadow><style=AssociatedCard>수풀 속 그림자</style></link>를 <link=card.parent><style=AssociatedCard>무리어미 니달리</style></link>로 변신시킵니다.",
-    "descriptionRaw": "수풀 속 그림자를 무리어미 니달리로 변신시킵니다.",
+    "description": "<link=card.shadow><style=AssociatedCard>수풀 속 그림자</style></link>를 <link=card.parent><style=AssociatedCard>무리어미 니달리</style></link>로 변신시킵니다. \r\n<link=card.shadow><style=AssociatedCard>수풀 속 그림자</style></link>가 전장에서 사라지면 <link=vocab.Obliterate><style=Vocab>소멸</style></link>됩니다.",
+    "descriptionRaw": "수풀 속 그림자를 무리어미 니달리로 변신시킵니다. \r\n수풀 속 그림자가 전장에서 사라지면 소멸됩니다.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "저들이 죗값을 치르게 하세요.",
@@ -1831,8 +2241,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07SH013T6.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07SH013T6-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07SH013T6.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07SH013T6-full.png"
       }
     ],
     "regions": [
@@ -1880,8 +2290,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07SH013T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07SH013T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07SH013T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07SH013T2-full.png"
       }
     ],
     "regions": [
@@ -1936,8 +2346,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07SH009.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07SH009-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07SH009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07SH009-full.png"
       }
     ],
     "regions": [
@@ -1986,8 +2396,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07SH009T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07SH009T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07SH009T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07SH009T1-full.png"
       }
     ],
     "regions": [
@@ -2039,8 +2449,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07SH009T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07SH009T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07SH009T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07SH009T2-full.png"
       }
     ],
     "regions": [
@@ -2052,8 +2462,8 @@
     "attack": 0,
     "cost": 3,
     "health": 0,
-    "description": "<link=card.shadow><style=AssociatedCard>수풀 속 그림자</style></link>를 <link=card.parent><style=AssociatedCard>복수하는 바스타야</style></link>로 변신시킵니다.",
-    "descriptionRaw": "수풀 속 그림자를 복수하는 바스타야로 변신시킵니다.",
+    "description": "<link=card.shadow><style=AssociatedCard>수풀 속 그림자</style></link>를 <link=card.parent><style=AssociatedCard>복수하는 바스타야</style></link>로 변신시킵니다. \r\n<link=card.shadow><style=AssociatedCard>수풀 속 그림자</style></link>가 전장에서 사라지면 <link=vocab.Obliterate><style=Vocab>소멸</style></link>됩니다.",
+    "descriptionRaw": "수풀 속 그림자를 복수하는 바스타야로 변신시킵니다. \r\n수풀 속 그림자가 전장에서 사라지면 소멸됩니다.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "저들이 죗값을 치르게 하세요.",
@@ -2092,8 +2502,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07SH039.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07SH039-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07SH039.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07SH039-full.png"
       }
     ],
     "regions": [
@@ -2141,8 +2551,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07SH044.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07SH044-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07SH044.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07SH044-full.png"
       }
     ],
     "regions": [
@@ -2193,8 +2603,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07SH003.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07SH003-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07SH003.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07SH003-full.png"
       }
     ],
     "regions": [
@@ -2205,7 +2615,7 @@
     ],
     "attack": 2,
     "cost": 2,
-    "health": 2,
+    "health": 3,
     "description": "<link=vocab.Ambush><style=Vocab>매복 3</style></link>\r\n<link=card.ambush><style=AssociatedCard>배낭형 비행정 밀렵꾼의 매복</style></link>의 효과로 변신 시 이 라운드에 다음으로 방어당하거나 방어할 경우, 이 유닛과<br>전투 중인 공격력이 6 이하인 적을 <link=keyword.Capture><sprite name=Capture><style=Keyword>구속</style></link>합니다.",
     "descriptionRaw": "매복 3\r\n배낭형 비행정 밀렵꾼의 매복의 효과로 변신 시 이 라운드에 다음으로 방어당하거나 방어할 경우, 이 유닛과전투 중인 공격력이 6 이하인 적을 구속합니다.",
     "levelupDescription": "",
@@ -2239,8 +2649,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07SH003T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07SH003T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07SH003T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07SH003T2-full.png"
       }
     ],
     "regions": [
@@ -2292,8 +2702,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07SH003T3.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07SH003T3-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07SH003T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07SH003T3-full.png"
       }
     ],
     "regions": [
@@ -2305,8 +2715,8 @@
     "attack": 0,
     "cost": 3,
     "health": 0,
-    "description": "<link=card.shadow><style=AssociatedCard>수풀 속 그림자</style></link>를 <link=card.parent><style=AssociatedCard>배낭형 비행정 밀렵꾼</style></link>으로 변신시킵니다.",
-    "descriptionRaw": "수풀 속 그림자를 배낭형 비행정 밀렵꾼으로 변신시킵니다.",
+    "description": "<link=card.shadow><style=AssociatedCard>수풀 속 그림자</style></link>를 <link=card.parent><style=AssociatedCard>배낭형 비행정 밀렵꾼</style></link>으로 변신시킵니다. \r\n<link=card.shadow><style=AssociatedCard>수풀 속 그림자</style></link>가 전장에서 사라지면 <link=vocab.Obliterate><style=Vocab>소멸</style></link>됩니다.",
+    "descriptionRaw": "수풀 속 그림자를 배낭형 비행정 밀렵꾼으로 변신시킵니다. \r\n수풀 속 그림자가 전장에서 사라지면 소멸됩니다.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "저들이 죗값을 치르게 하세요.",
@@ -2342,8 +2752,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07SH011.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07SH011-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07SH011.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07SH011-full.png"
       }
     ],
     "regions": [
@@ -2389,14 +2799,68 @@
   },
   {
     "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07SH046.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07SH046-full.png"
+      }
+    ],
+    "regions": [
+      "슈리마"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "추종자를 사용하면 이 라운드에 해당 추종자와 똑같은 복사본으로 변신합니다. 이 카드에 부여된 이로운 효과는 유지됩니다. ",
+    "descriptionRaw": "추종자를 사용하면 이 라운드에 해당 추종자와 똑같은 복사본으로 변신합니다. 이 카드에 부여된 이로운 효과는 유지됩니다. ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"자, 이게 바로 이번 관광에서 가장 아름답고 인기 있는 장소입니다. 정말 많은 분들이 저와 함께하는 관광을 좋아하셔서 커다랗고 튼튼한 칩을 만들어 주셨죠. 앞으로도 영원히 관광 일정의 일부가 될 거랍니다. 어서 가서 \"안녕, 커다란 칩!\"이라고 인사합시다. 커다란 칩은 모두를 사랑한답니다. 그리고 이 관광 일정에 함께하는 분들은 특별히 더 사랑하고요.\"<br>- 칩과 떠나는 모험 6부",
+    "artistName": "Caravan Studio",
+    "name": "모방의 계곡",
+    "cardCode": "07SH046",
+    "keywords": [
+      "명소"
+    ],
+    "keywordRefs": [
+      "LandmarkVisualOnly"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "일반급",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "명소",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "일반급 대전",
+      "영원",
+      "짝수 비용 카드",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
     "associatedCardRefs": [
       "07SH039",
       "07SH013T6"
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07SH039T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07SH039T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07SH039T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07SH039T1-full.png"
       }
     ],
     "regions": [
@@ -2408,8 +2872,8 @@
     "attack": 0,
     "cost": 0,
     "health": 0,
-    "description": "<link=card.shadow><style=AssociatedCard>수풀 속 그림자</style></link>를 <link=card.parent><style=AssociatedCard>전지형 돌격대원</style></link>으로 변신시킵니다.",
-    "descriptionRaw": "수풀 속 그림자를 전지형 돌격대원으로 변신시킵니다.",
+    "description": "<link=card.shadow><style=AssociatedCard>수풀 속 그림자</style></link>를 <link=card.parent><style=AssociatedCard>전지형 돌격대원</style></link>으로 변신시킵니다. \r\n<link=card.shadow><style=AssociatedCard>수풀 속 그림자</style></link>가 전장에서 사라지면 <link=vocab.Obliterate><style=Vocab>소멸</style></link>됩니다.",
+    "descriptionRaw": "수풀 속 그림자를 전지형 돌격대원으로 변신시킵니다. \r\n수풀 속 그림자가 전장에서 사라지면 소멸됩니다.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "저들이 죗값을 치르게 하세요.",
@@ -2448,8 +2912,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07SH043.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07SH043-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07SH043.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07SH043-full.png"
       }
     ],
     "regions": [
@@ -2501,8 +2965,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07SH043T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07SH043T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07SH043T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07SH043T2-full.png"
       }
     ],
     "regions": [
@@ -2514,8 +2978,8 @@
     "attack": 0,
     "cost": 5,
     "health": 0,
-    "description": "<link=card.shadow><style=AssociatedCard>수풀 속 그림자</style></link>를 <link=card.parent><style=AssociatedCard>거대한 쌍코끼리</style></link>로 변신시킵니다.",
-    "descriptionRaw": "수풀 속 그림자를 거대한 쌍코끼리로 변신시킵니다.",
+    "description": "<link=card.shadow><style=AssociatedCard>수풀 속 그림자</style></link>를 <link=card.parent><style=AssociatedCard>거대한 쌍코끼리</style></link>로 변신시킵니다. \r\n<link=card.shadow><style=AssociatedCard>수풀 속 그림자</style></link>가 전장에서 사라지면 <link=vocab.Obliterate><style=Vocab>소멸</style></link>됩니다.",
+    "descriptionRaw": "수풀 속 그림자를 거대한 쌍코끼리로 변신시킵니다. \r\n수풀 속 그림자가 전장에서 사라지면 소멸됩니다.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "저들이 죗값을 치르게 하세요.",
@@ -2551,8 +3015,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07SH040.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07SH040-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07SH040.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07SH040-full.png"
       }
     ],
     "regions": [
@@ -2564,8 +3028,8 @@
     "attack": 1,
     "cost": 1,
     "health": 2,
-    "description": "이 게임에서 아군이 변신했으면 이 유닛이 +1|+1을 얻습니다.",
-    "descriptionRaw": "이 게임에서 아군이 변신했으면 이 유닛이 +1|+1을 얻습니다.",
+    "description": "처음으로 아군이 변신하면 +2|+1을 얻습니다.",
+    "descriptionRaw": "처음으로 아군이 변신하면 +2|+1을 얻습니다.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "\"덤불 같은 가시로 덮인 작은 잡식성 포유류. 괴롭힘을 당하면 빠른 속도로 가시를 발사한다. 재빠르게 움직이는 미늘형 꼬리는 방어 수단일 가능성이 높다. 경험 많은 탐험가들의 말에 따르면, 이 생물들은 성질이 고약하고 다루기 어려운 것으로 악명이 높다고 한다.\"\n- 아누라의 현장 일지, 3일 차에서 발췌",
@@ -2600,8 +3064,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07SH044T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07SH044T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07SH044T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07SH044T1-full.png"
       }
     ],
     "regions": [
@@ -2613,8 +3077,8 @@
     "attack": 0,
     "cost": 4,
     "health": 0,
-    "description": "<link=card.shadow><style=AssociatedCard>수풀 속 그림자</style></link>를 <link=card.parent><style=AssociatedCard>오로라 할루나티스</style></link>로 변신시킵니다.",
-    "descriptionRaw": "수풀 속 그림자를 오로라 할루나티스로 변신시킵니다.",
+    "description": "<link=card.shadow><style=AssociatedCard>수풀 속 그림자</style></link>를 <link=card.parent><style=AssociatedCard>오로라 할루나티스</style></link>로 변신시킵니다. \r\n<link=card.shadow><style=AssociatedCard>수풀 속 그림자</style></link>가 전장에서 사라지면 <link=vocab.Obliterate><style=Vocab>소멸</style></link>됩니다.",
+    "descriptionRaw": "수풀 속 그림자를 오로라 할루나티스로 변신시킵니다. \r\n수풀 속 그림자가 전장에서 사라지면 소멸됩니다.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "저들이 죗값을 치르게 하세요.",
@@ -2652,8 +3116,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07SH005.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07SH005-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07SH005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07SH005-full.png"
       }
     ],
     "regions": [
@@ -2698,208 +3162,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07BW035.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07BW035-full.png"
-      }
-    ],
-    "regions": [
-      "빌지워터"
-    ],
-    "regionRefs": [
-      "Bilgewater"
-    ],
-    "attack": 0,
-    "cost": 6,
-    "health": 0,
-    "description": "손에 든 모든 카드가 <link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>일회용</style></link> 상태로 됩니다.\r\n카드를 사용하면 카드 1장을 뽑습니다.",
-    "descriptionRaw": "손에 든 모든 카드가 일회용 상태로 됩니다.\r\n카드를 사용하면 카드 1장을 뽑습니다.",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "\"손에 든 패를 잘 이해하고 절대 놓치지 마.<br>그렇지 않으면 모든 걸 잃게 될 테니까.\"\n- 트위스티드 페이트",
-    "artistName": "Envar Studio",
-    "name": "사기꾼 소굴",
-    "cardCode": "07BW035",
-    "keywords": [
-      "명소"
-    ],
-    "keywordRefs": [
-      "LandmarkVisualOnly"
-    ],
-    "spellSpeed": "",
-    "spellSpeedRef": "",
-    "rarity": "서사급",
-    "rarityRef": "Epic",
-    "subtypes": [],
-    "supertype": "",
-    "type": "명소",
-    "collectible": true,
-    "set": "Set7b",
-    "formats": [
-      "영원",
-      "정규"
-    ],
-    "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07BW042.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07BW042-full.png"
-      }
-    ],
-    "regions": [
-      "빌지워터"
-    ],
-    "regionRefs": [
-      "Bilgewater"
-    ],
-    "attack": 1,
-    "cost": 2,
-    "health": 3,
-    "description": "<link=vocab.Play><style=Vocab>사용</style></link>: 전장에 있는 아군들과 종족이 다른 추종자 하나를 <link=vocab.Manifest><style=Vocab>시현</style></link>합니다.",
-    "descriptionRaw": "사용: 전장에 있는 아군들과 종족이 다른 추종자 하나를 시현합니다.",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "\"이 조그맣고 지저분한 녀석을 내버려두는 이유가 있지. 덕분에 몇 년간 부두 쥐 문제를 겪은 적이 없으니까!\"\n- 드레드웨이 갑판원",
-    "artistName": "Caravan Studio",
-    "name": "갑판 사냥꾼",
-    "cardCode": "07BW042",
-    "keywords": [],
-    "keywordRefs": [],
-    "spellSpeed": "",
-    "spellSpeedRef": "",
-    "rarity": "일반급",
-    "rarityRef": "Common",
-    "subtypes": [
-      "고양이"
-    ],
-    "supertype": "",
-    "type": "유닛",
-    "collectible": true,
-    "set": "Set7b",
-    "formats": [
-      "영원",
-      "정규"
-    ],
-    "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07BW039.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07BW039-full.png"
-      }
-    ],
-    "regions": [
-      "빌지워터"
-    ],
-    "regionRefs": [
-      "Bilgewater"
-    ],
-    "attack": 2,
-    "cost": 2,
-    "health": 2,
-    "description": "라운드마다 처음으로 비용이 1인 아군을 소환하면 주문 마나를 1 회복합니다.",
-    "descriptionRaw": "라운드마다 처음으로 비용이 1인 아군을 소환하면 주문 마나를 1 회복합니다.",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "\"도마뱀 씨, 여기서 뭘 하시는 거죠?<br>당신도 포로를 좋아하는 군요!?\"\n- 꼬마 잉바르",
-    "artistName": "Caravan Studio",
-    "name": "용 왕자 그린조",
-    "cardCode": "07BW039",
-    "keywords": [
-      "조율"
-    ],
-    "keywordRefs": [
-      "Attune"
-    ],
-    "spellSpeed": "",
-    "spellSpeedRef": "",
-    "rarity": "희귀급",
-    "rarityRef": "Rare",
-    "subtypes": [
-      "용"
-    ],
-    "supertype": "",
-    "type": "유닛",
-    "collectible": true,
-    "set": "Set7b",
-    "formats": [
-      "영원",
-      "정규"
-    ],
-    "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07BW033.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07BW033-full.png"
-      }
-    ],
-    "regions": [
-      "빌지워터"
-    ],
-    "regionRefs": [
-      "Bilgewater"
-    ],
-    "attack": 0,
-    "cost": 4,
-    "health": 0,
-    "description": "무작위 껍데기 하나를 소환합니다.\r\n비용이 1인 모든 아군에게 <link=vocab.Everywhere><style=Vocab>어디에 있든</style></link> +1|+1을 부여합니다. ",
-    "descriptionRaw": "무작위 껍데기 하나를 소환합니다.\r\n비용이 1인 모든 아군에게 어디에 있든 +1|+1을 부여합니다. ",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "바다 위 가장 고요한 밤, 빌지워터 선원들은 솜으로 귀를 막습니다. 파도 아래에서 들려오는 노랫소리가 바닷속 무덤으로 자신들을 이끌리라는 사실을 잘 알기 때문입니다.",
-    "artistName": "Kudos Productions",
-    "name": "세이렌의 노래",
-    "cardCode": "07BW033",
-    "keywords": [
-      "집중"
-    ],
-    "keywordRefs": [
-      "Slow"
-    ],
-    "spellSpeed": "집중",
-    "spellSpeedRef": "Slow",
-    "rarity": "일반급",
-    "rarityRef": "Common",
-    "subtypes": [],
-    "supertype": "",
-    "type": "주문",
-    "collectible": true,
-    "set": "Set7b",
-    "formats": [
-      "영원",
-      "정규"
-    ],
-    "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07FR011.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07FR011-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07FR011.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07FR011-full.png"
       }
     ],
     "regions": [
@@ -2948,8 +3212,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07FR010.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07FR010-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07FR010.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07FR010-full.png"
       }
     ],
     "regions": [
@@ -3002,8 +3266,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07FR015.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07FR015-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07FR015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07FR015-full.png"
       }
     ],
     "regions": [
@@ -3048,8 +3312,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07FR015T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07FR015T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07FR015T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07FR015T1-full.png"
       }
     ],
     "regions": [
@@ -3094,8 +3358,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07FR015T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07FR015T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07FR015T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07FR015T2-full.png"
       }
     ],
     "regions": [
@@ -3137,11 +3401,117 @@
   },
   {
     "associatedCards": [],
+    "associatedCardRefs": [
+      "07FR017T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07FR017.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07FR017-full.png"
+      }
+    ],
+    "regions": [
+      "프렐요드"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 3,
+    "cost": 5,
+    "health": 2,
+    "description": "<link=keyword.Elemental Skill><sprite name=ElementalSkill><style=Keyword>사용</style></link>: 다른 모든 유닛에게 피해를 2 입힙니다.",
+    "descriptionRaw": "사용: 다른 모든 유닛에게 피해를 2 입힙니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "수정 폭풍괴조의 무차별적이고 즉각적인 잔혹성은 전투의 형세를 한순간에 바꿔버립니다. 많은 이들에게 이 새는 대지의 뼈대 자체를 뒤흔들 거대하고 혹독한 폭풍의 전조로 여겨지죠.",
+    "artistName": "Bubble Cat",
+    "name": "수정 폭풍괴조",
+    "cardCode": "07FR017",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "희귀급",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "새"
+    ],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07FR016.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07FR016-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07FR017T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07FR017T1-full.png"
+      }
+    ],
+    "regions": [
+      "프렐요드"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "다른 모든 유닛에게 피해를 2 입힙니다.",
+    "descriptionRaw": "다른 모든 유닛에게 피해를 2 입힙니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"폭풍괴조의 비명으로부터 살아남는 방법이 궁금하다고? 하아. 그 새가 우는 소리를 듣게 된다면 말이지, 할 수 있는 거라곤 기도뿐이야.\"\n- 아바로사 선봉장",
+    "artistName": "Polar Engine",
+    "name": "꿰뚫는 번개",
+    "cardCode": "07FR017T1",
+    "keywords": [
+      "원소 스킬"
+    ],
+    "keywordRefs": [
+      "ElementalSkill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "없음",
+    "rarityRef": "None",
+    "subtypes": [
+      "원소"
+    ],
+    "supertype": "",
+    "type": "스킬",
+    "collectible": false,
+    "set": "Set7b",
+    "formats": [
+      "일반급 대전",
+      "영원",
+      "짝수 비용 카드",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07FR016.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07FR016-full.png"
       }
     ],
     "regions": [
@@ -3152,7 +3522,7 @@
     ],
     "attack": 5,
     "cost": 5,
-    "health": 5,
+    "health": 4,
     "description": "소환 시 내 덱의 맨 위에 있는 유닛 셋에게 +1|+1을 부여합니다. 이 유닛과 종족이 다른 아군이 있으면 그중 하나를 뽑습니다.",
     "descriptionRaw": "소환 시 내 덱의 맨 위에 있는 유닛 셋에게 +1|+1을 부여합니다. 이 유닛과 종족이 다른 아군이 있으면 그중 하나를 뽑습니다.",
     "levelupDescription": "",
@@ -3161,8 +3531,12 @@
     "artistName": "Envar Studio",
     "name": "빙하 사우리언",
     "cardCode": "07FR016",
-    "keywords": [],
-    "keywordRefs": [],
+    "keywords": [
+      "압도"
+    ],
+    "keywordRefs": [
+      "Overwhelm"
+    ],
     "spellSpeed": "",
     "spellSpeedRef": "",
     "rarity": "희귀급",
@@ -3190,8 +3564,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07SI010.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07SI010-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07SI010.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07SI010-full.png"
       }
     ],
     "regions": [
@@ -3238,8 +3612,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07SI010T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07SI010T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07SI010T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07SI010T1-full.png"
       }
     ],
     "regions": [
@@ -3269,7 +3643,9 @@
     "spellSpeedRef": "",
     "rarity": "없음",
     "rarityRef": "None",
-    "subtypes": [],
+    "subtypes": [
+      "거미"
+    ],
     "supertype": "",
     "type": "유닛",
     "collectible": false,
@@ -3288,8 +3664,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07SI012.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07SI012-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07SI012.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07SI012-full.png"
       }
     ],
     "regions": [
@@ -3340,8 +3716,58 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07SI004.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07SI004-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07SI013.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07SI013-full.png"
+      }
+    ],
+    "regions": [
+      "그림자 군도"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 1,
+    "cost": 1,
+    "health": 1,
+    "description": "<link=keyword.Last Breath><sprite name=LastBreath><style=Keyword>최후의 숨결</style></link>: 내 덱에서 <link=vocab.Strongest><style=Vocab>최강</style></link>인 아군 <link=card.selfref><style=AssociatedCard>확산하는 어둠망령</style></link>과 똑같은 복사본 하나를 덱에 생성하고, 덱에 있는 <link=card.selfref><style=AssociatedCard>확산하는 어둠망령</style></link>의 능력치를 두 배로 늘립니다.",
+    "descriptionRaw": "최후의 숨결: 내 덱에서 최강인 아군 확산하는 어둠망령과 똑같은 복사본 하나를 덱에 생성하고, 덱에 있는 확산하는 어둠망령의 능력치를 두 배로 늘립니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"이 안개로부터 많은 걸 배웠지. 그중 가장 중요한 건 바로 도망쳐야 할 때를 분간하는 법이야.\"<br>- 이쉬탈 감시자",
+    "artistName": "Xavier Leroux",
+    "name": "확산하는 어둠망령",
+    "cardCode": "07SI013",
+    "keywords": [
+      "최후의 숨결"
+    ],
+    "keywordRefs": [
+      "LastBreath"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "희귀급",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07SI004.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07SI004-full.png"
       }
     ],
     "regions": [
@@ -3390,8 +3816,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07MT009.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07MT009-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07MT009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07MT009-full.png"
       }
     ],
     "regions": [
@@ -3440,8 +3866,166 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07MT006.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07MT006-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07MT013.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07MT013-full.png"
+      }
+    ],
+    "regions": [
+      "타곤"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "비용이 7 이상인 천상 카드 1장을 <link=keyword.Invoke><style=Keyword>기원</style></link>하거나 8마나를 사용하여 추가로 내 천상 카드의 비용을 <link=vocab.Everywhere><style=Vocab>어디에 있든</style></link> 절반으로 줄입니다. 감소한 비용은 반올림되어 적용됩니다.",
+    "descriptionRaw": "비용이 7 이상인 천상 카드 1장을 기원하거나 8마나를 사용하여 추가로 내 천상 카드의 비용을 어디에 있든 절반으로 줄입니다. 감소한 비용은 반올림되어 적용됩니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "중재자는 하늘의 축복이 내리는 모습을 영원토록 지켜봅니다.",
+    "artistName": "Polar Engine",
+    "name": "우주의 부름",
+    "cardCode": "07MT013",
+    "keywords": [
+      "즉발"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "즉발",
+    "spellSpeedRef": "Burst",
+    "rarity": "일반급",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "주문",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07MT013T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07MT013T1-full.png"
+      }
+    ],
+    "regions": [
+      "타곤"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 8,
+    "health": 0,
+    "description": "비용이 7 이상인 천상 카드 1장을 <link=keyword.Invoke><style=Keyword>기원</style></link>하고 <nobr>내 천상 카드의</nobr> 비용을 <link=vocab.Everywhere><style=Vocab>어디에 있든</style></link> <nobr>절반으로 줄입니다.</nobr> 감소한 비용은 반올림되어 적용됩니다.",
+    "descriptionRaw": "비용이 7 이상인 천상 카드 1장을 기원하고 내 천상 카드의 비용을 어디에 있든 절반으로 줄입니다. 감소한 비용은 반올림되어 적용됩니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "중재자는 하늘의 축복이 내리는 모습을 영원토록 지켜봅니다.",
+    "artistName": "Polar Engine",
+    "name": "우주의 부름",
+    "cardCode": "07MT013T1",
+    "keywords": [
+      "즉발"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "즉발",
+    "spellSpeedRef": "Burst",
+    "rarity": "일반급",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "주문",
+    "collectible": false,
+    "set": "Set7b",
+    "formats": [
+      "일반급 대전",
+      "영원",
+      "짝수 비용 카드",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07MT013T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07MT013T2-full.png"
+      }
+    ],
+    "regions": [
+      "타곤"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "비용이 7 이상인 천상 카드 1장을 <link=keyword.Invoke><style=Keyword>기원</style></link>합니다.",
+    "descriptionRaw": "비용이 7 이상인 천상 카드 1장을 기원합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "중재자는 하늘의 축복이 내리는 모습을 영원토록 지켜봅니다.",
+    "artistName": "Polar Engine",
+    "name": "우주의 부름",
+    "cardCode": "07MT013T2",
+    "keywords": [
+      "즉발"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "즉발",
+    "spellSpeedRef": "Burst",
+    "rarity": "일반급",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "주문",
+    "collectible": false,
+    "set": "Set7b",
+    "formats": [
+      "일반급 대전",
+      "영원",
+      "짝수 비용 카드",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07MT006.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07MT006-full.png"
       }
     ],
     "regions": [
@@ -3486,8 +4070,54 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07BC016.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07BC016-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07BC020.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07BC020-full.png"
+      }
+    ],
+    "regions": [
+      "밴들 시티"
+    ],
+    "regionRefs": [
+      "BandleCity"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 3,
+    "description": "내 함정이나 은혜가 하나 이상 활성화되면, 해당 플레이어의 덱에 똑같은 함정이나 은혜 2개를 설치합니다.",
+    "descriptionRaw": "내 함정이나 은혜가 하나 이상 활성화되면, 해당 플레이어의 덱에 똑같은 함정이나 은혜 2개를 설치합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "재활용품 씨가 얼마나 오랜 기간 수집해왔는지, 어디에서 태어났는지에 대해서는 아무도 모르지만, 위협적으로 보이지는 않습니다. 지나간 자리에 남겨진 잡동사니에 걸려 넘어질 수도 있지만, 신경 쓰지 마세요.",
+    "artistName": "Caravan Studio",
+    "name": "재활용품 씨",
+    "cardCode": "07BC020",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "희귀급",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07BC016.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07BC016-full.png"
       }
     ],
     "regions": [
@@ -3508,11 +4138,9 @@
     "name": "귀환형 렌치",
     "cardCode": "07BC016",
     "keywords": [
-      "여파",
       "장비"
     ],
     "keywordRefs": [
-      "Impact",
       "Equipment"
     ],
     "spellSpeed": "",
@@ -3540,8 +4168,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07BC018.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07BC018-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07BC018.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07BC018-full.png"
       }
     ],
     "regions": [
@@ -3568,7 +4196,7 @@
     "rarity": "서사급",
     "rarityRef": "Epic",
     "subtypes": [
-      "요들"
+      "요정"
     ],
     "supertype": "",
     "type": "유닛",
@@ -3588,8 +4216,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07BC011.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07BC011-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07BC011.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07BC011-full.png"
       }
     ],
     "regions": [
@@ -3640,8 +4268,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07DE014.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07DE014-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07DE014.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07DE014-full.png"
       }
     ],
     "regions": [
@@ -3688,8 +4316,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07DE015.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07DE015-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07DE015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07DE015-full.png"
       }
     ],
     "regions": [
@@ -3698,9 +4326,9 @@
     "regionRefs": [
       "Demacia"
     ],
-    "attack": 5,
+    "attack": 6,
     "cost": 6,
-    "health": 5,
+    "health": 6,
     "description": "<link=vocab.Play><style=Vocab>사용</style></link>: 이 유닛과 종족이 다른 아군이 있으면, 데마시아 주문 하나를 <link=vocab.Manifest><style=Vocab>시현</style></link>합니다.",
     "descriptionRaw": "사용: 이 유닛과 종족이 다른 아군이 있으면, 데마시아 주문 하나를 시현합니다.",
     "levelupDescription": "",
@@ -3740,8 +4368,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07DE011.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ko_kr/img/cards/07DE011-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07DE011.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07DE011-full.png"
       }
     ],
     "regions": [
@@ -3771,6 +4399,56 @@
     "spellSpeedRef": "",
     "rarity": "일반급",
     "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07DE016.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ko_kr/img/cards/07DE016-full.png"
+      }
+    ],
+    "regions": [
+      "데마시아"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 0,
+    "cost": 4,
+    "health": 4,
+    "description": "<link=vocab.Attack><style=Vocab>공격</style></link>: 모든 아군 <link=keyword.Formidable><sprite name=Formidable><style=Keyword>위엄</style></link> 유닛에게 <nobr><link=vocab.Everywhere><style=Vocab>어디에 있든</style></link></nobr> +0|+1을 부여합니다.",
+    "descriptionRaw": "공격: 모든 아군 위엄 유닛에게 어디에 있든 +0|+1을 부여합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "듀란드 가문의 오랜 동반자인 베일런은 섬세하고 신중하지만, 그의 거대한 크기 때문에 오해를 받기도 합니다. 조수로서 일을 시작했지만 타고난 기술자로서 작업에 특별한 영감을 불어넣는 베일런을 듀란드 가문에서는 자랑스러운 친구로 여깁니다.",
+    "artistName": "Envar Studio",
+    "name": "자애로운 베일런",
+    "cardCode": "07DE016",
+    "keywords": [
+      "위엄"
+    ],
+    "keywordRefs": [
+      "Formidable"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "서사급",
+    "rarityRef": "Epic",
     "subtypes": [],
     "supertype": "",
     "type": "유닛",

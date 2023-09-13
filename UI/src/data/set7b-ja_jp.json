@@ -4,8 +4,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07PZ019.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07PZ019-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07PZ019.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07PZ019-full.png"
       }
     ],
     "regions": [
@@ -54,8 +54,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07PZ021.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07PZ021-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07PZ021.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07PZ021-full.png"
       }
     ],
     "regions": [
@@ -103,13 +103,11 @@
   },
   {
     "associatedCards": [],
-    "associatedCardRefs": [
-      "01PZ022"
-    ],
+    "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07PZ013.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07PZ013-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07PZ022.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07PZ022-full.png"
       }
     ],
     "regions": [
@@ -119,10 +117,64 @@
       "PiltoverZaun"
     ],
     "attack": 0,
-    "cost": 3,
+    "cost": 2,
     "health": 0,
-    "description": "あなたのネクサスが<link=card.cardref><style=AssociatedCard>毒キノコ</style></link>以外からダメージを受ける場合、そのダメージの代わりに、相手が1ダメージにつき4個の<link=card.cardref><style=AssociatedCard>毒キノコ</style></link>をあなたのデッキに設置する。",
-    "descriptionRaw": "あなたのネクサスが毒キノコ以外からダメージを受ける場合、そのダメージの代わりに、相手が1ダメージにつき4個の毒キノコをあなたのデッキに設置する。",
+    "description": "敵1体または敵のネクサスに1ダメージを与え、別の対象に1ダメージを与える。",
+    "descriptionRaw": "敵1体または敵のネクサスに1ダメージを与え、別の対象に1ダメージを与える。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "ピルトーヴァーに住む者たちは、風の様子など特に気にすることはない。しかしゾウンの人々は、不意に頬を撫でるそよ風の中に救いを見出すことができる。",
+    "artistName": "Polar Engine",
+    "name": "聖なる風",
+    "cardCode": "07PZ022",
+    "keywords": [
+      "スロウ"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "スロウ",
+    "spellSpeedRef": "Slow",
+    "rarity": "コモン",
+    "rarityRef": "Common",
+    "subtypes": [
+      "エレメンタル"
+    ],
+    "supertype": "",
+    "type": "スペル",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "01PZ022"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07PZ013.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07PZ013-full.png"
+      }
+    ],
+    "regions": [
+      "ピルトーヴァー<nobr> & ゾウン</nobr>"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 0,
+    "cost": 4,
+    "health": 0,
+    "description": "あなたのネクサスが<link=card.cardref><style=AssociatedCard>毒キノコ</style></link>以外からダメージを受ける場合、そのダメージの代わりに、相手が1ダメージにつき5個の<link=card.cardref><style=AssociatedCard>毒キノコ</style></link>をあなたのデッキに設置する。",
+    "descriptionRaw": "あなたのネクサスが毒キノコ以外からダメージを受ける場合、そのダメージの代わりに、相手が1ダメージにつき5個の毒キノコをあなたのデッキに設置する。",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "地下都市ゾウンのさらに下では、文字通り「食が体をつくる」のだ。",
@@ -160,8 +212,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07PZ015.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07PZ015-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07PZ015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07PZ015-full.png"
       }
     ],
     "regions": [
@@ -210,8 +262,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07PZ015T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07PZ015T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07PZ015T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07PZ015T1-full.png"
       }
     ],
     "regions": [
@@ -262,8 +314,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07NX028.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07NX028-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07NX028.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07NX028-full.png"
       }
     ],
     "regions": [
@@ -312,8 +364,60 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07NX032.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07NX032-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07NX034.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07NX034-full.png"
+      }
+    ],
+    "regions": [
+      "ノクサス"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "味方のコストは1減少する。味方をプレイする時、それに2ダメージを与える。",
+    "descriptionRaw": "味方のコストは1減少する。味方をプレイする時、それに2ダメージを与える。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「さぁ、はやく席に着きたまえ。他の者は皆揃っている。杯の用意も万端だ。これからどんな料理が出てくるのか…実に楽しみだな」<br>- ブラッドミア",
+    "artistName": "Envar Studio",
+    "name": "真紅のバンケットホール",
+    "cardCode": "07NX034",
+    "keywords": [
+      "ランドマーク",
+      "Missing Translation"
+    ],
+    "keywordRefs": [
+      "LandmarkVisualOnly",
+      "AuraVisualFakeKeyword"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "エピック",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ランドマーク",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07NX032.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07NX032-full.png"
       }
     ],
     "regions": [
@@ -362,8 +466,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07NX033.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07NX033-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07NX033.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07NX033-full.png"
       }
     ],
     "regions": [
@@ -423,8 +527,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07RU015.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07RU015-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07RU015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07RU015-full.png"
       }
     ],
     "regions": [
@@ -436,10 +540,10 @@
     "attack": 4,
     "cost": 5,
     "health": 4,
-    "description": "<link=vocab.Origin><style=Vocab>オリジン</style></link>: <link=card.origin><style=AssociatedCard>ポロキングの勅令</style></link>。\r\n各ラウンドで初めて他の「ポロ」を召喚する時、ランダムな<link=card.baseSnax><style=AssociatedCard>ポロのおやつ</style></link>を手札に1枚生成する。",
-    "descriptionRaw": "オリジン: ポロキングの勅令。\r\n各ラウンドで初めて他の「ポロ」を召喚する時、ランダムなポロのおやつを手札に1枚生成する。",
-    "levelupDescription": "他の新しい「ポロ」を6体以上召喚した時<style=Variable></style>。",
-    "levelupDescriptionRaw": "他の新しい「ポロ」を6体以上召喚した時。",
+    "description": "<link=vocab.Origin><style=Vocab>オリジン</style></link>: <link=card.origin><style=AssociatedCard>ポロキングの勅令</style></link>。\r\n各ラウンドで初めて他の「ポロ」を召喚する時、<link=card.baseSnax><style=AssociatedCard>ポロのおやつ</style></link>を手札に1枚生成する。",
+    "descriptionRaw": "オリジン: ポロキングの勅令。\r\n各ラウンドで初めて他の「ポロ」を召喚する時、ポロのおやつを手札に1枚生成する。",
+    "levelupDescription": "他の新しい「ポロ」を6体以上召喚した時<style=Variable></style>。レベルアップ時、ランダムな「特製おやつ」を手札に1枚生成する。",
+    "levelupDescriptionRaw": "他の新しい「ポロ」を6体以上召喚した時。レベルアップ時、ランダムな「特製おやつ」を手札に1枚生成する。",
     "flavorText": "イングヴァルは一目でその大いなる力を感じ取った。見た目は素朴で可愛らしいが、このふわふわには“ひゃくおくまん”のポロを統べるだけの器量がある…きっと。 ",
     "artistName": "Envar Studio",
     "name": "ポロキング",
@@ -474,8 +578,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07RU015T3.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07RU015T3-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07RU015T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07RU015T3-full.png"
       }
     ],
     "regions": [
@@ -526,8 +630,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07RU015T6.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07RU015T6-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07RU015T6.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07RU015T6-full.png"
       }
     ],
     "regions": [
@@ -578,8 +682,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07RU015T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07RU015T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07RU015T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07RU015T2-full.png"
       }
     ],
     "regions": [
@@ -630,8 +734,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07RU015T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07RU015T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07RU015T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07RU015T1-full.png"
       }
     ],
     "regions": [
@@ -678,8 +782,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07RU015T7.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07RU015T7-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07RU015T7.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07RU015T7-full.png"
       }
     ],
     "regions": [
@@ -735,8 +839,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07RU015T4.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07RU015T4-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07RU015T4.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07RU015T4-full.png"
       }
     ],
     "regions": [
@@ -785,8 +889,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07RU015T5.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07RU015T5-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07RU015T5.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07RU015T5-full.png"
       }
     ],
     "regions": [
@@ -798,8 +902,8 @@
     "attack": 0,
     "cost": 2,
     "health": 0,
-    "description": "<link=vocab.Everywhere><style=Vocab>あらゆる場所</style></link>にいる味方の<nobr>「ポロ」</nobr>に+1|+1を付与する。体力が3以下の敵1体を<link=keyword.Frostbite><sprite name=Frostbite><style=Keyword>凍結</style></link>させる。",
-    "descriptionRaw": "あらゆる場所にいる味方の「ポロ」に+1|+1を付与する。体力が3以下の敵1体を凍結させる。",
+    "description": "<link=vocab.Everywhere><style=Vocab>あらゆる場所</style></link>にいる味方の<nobr>「ポロ」</nobr>に+1|+1を付与する。敵1体を<link=keyword.Frostbite><sprite name=Frostbite><style=Keyword>凍結</style></link>させる。",
+    "descriptionRaw": "あらゆる場所にいる味方の「ポロ」に+1|+1を付与する。敵1体を凍結させる。",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "このおやつの特徴は、フレヨルドのあらゆるフレーバーを閉じ込めた手作りのアイシング。粉雪フレーバーに根雪フレーバー、それから舞い落ちる牡丹雪フレーバーも！",
@@ -839,8 +943,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07RU012.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07RU012-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07RU012.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07RU012-full.png"
       }
     ],
     "regions": [
@@ -891,8 +995,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07RU012T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07RU012T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07RU012T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07RU012T2-full.png"
       }
     ],
     "regions": [
@@ -904,8 +1008,8 @@
     "attack": 3,
     "cost": 2,
     "health": 3,
-    "description": "<link=vocab.Attack><style=Vocab>アタック</style></link>: <link=vocab.Everywhere><style=Vocab>あらゆる場所</style></link>にいるサブタイプを持つ味方に+1|+1を付与する。",
-    "descriptionRaw": "アタック: あらゆる場所にいるサブタイプを持つ味方に+1|+1を付与する。",
+    "description": "レベルアップ時、または<link=vocab.Attack><style=Vocab>アタック</style></link>: <link=vocab.Everywhere><style=Vocab>あらゆる場所</style></link>にいるサブタイプを持つ味方に+1|+1を付与する。",
+    "descriptionRaw": "レベルアップ時、またはアタック: あらゆる場所にいるサブタイプを持つ味方に+1|+1を付与する。",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "「形と色と、色と形…ニーコはぜんぶになれる！」",
@@ -945,8 +1049,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07RU012T4.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07RU012T4-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07RU012T4.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07RU012T4-full.png"
       }
     ],
     "regions": [
@@ -994,8 +1098,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07RU012T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07RU012T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07RU012T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07RU012T1-full.png"
       }
     ],
     "regions": [
@@ -1007,8 +1111,8 @@
     "attack": 0,
     "cost": 3,
     "health": 0,
-    "description": "味方1体とまったく同じコピーを<link=keyword.Ephemeral><sprite name=Ephemeral><style=Keyword>エフェメラル</style></link>を持った状態で生成し、その後その2体を入れ替える。\r\n<link=card.level1><style=AssociatedCard>ニーコ</style></link>をデッキに1枚生成する。",
-    "descriptionRaw": "味方1体とまったく同じコピーをエフェメラルを持った状態で生成し、その後その2体を入れ替える。\r\nニーコをデッキに1枚生成する。",
+    "description": "味方1体とまったく同じコピーを<link=keyword.Ephemeral><sprite name=Ephemeral><style=Keyword>エフェメラル</style></link>を持った状態で召喚し、その後その2体を入れ替える。\r\n<link=card.level1><style=AssociatedCard>ニーコ</style></link>をデッキに1枚生成する。",
+    "descriptionRaw": "味方1体とまったく同じコピーをエフェメラルを持った状態で召喚し、その後その2体を入れ替える。\r\nニーコをデッキに1枚生成する。",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "「これもニーコ、あれもニーコ…どれもニーコ！」",
@@ -1044,8 +1148,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07RU017.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07RU017-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07RU017.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07RU017-full.png"
       }
     ],
     "regions": [
@@ -1057,8 +1161,8 @@
     "attack": 0,
     "cost": 3,
     "health": 0,
-    "description": "味方1体とまったく同じコピーを<link=keyword.Ephemeral><sprite name=Ephemeral><style=Keyword>エフェメラル</style></link>を持った状態で生成し、その後その2体を入れ替える。",
-    "descriptionRaw": "味方1体とまったく同じコピーをエフェメラルを持った状態で生成し、その後その2体を入れ替える。",
+    "description": "味方1体とまったく同じコピーを<link=keyword.Ephemeral><sprite name=Ephemeral><style=Keyword>エフェメラル</style></link>を持った状態で召喚し、その後その2体を入れ替える。",
+    "descriptionRaw": "味方1体とまったく同じコピーをエフェメラルを持った状態で召喚し、その後その2体を入れ替える。",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "「これもニーコ、あれもニーコ…どこれもニーコ！」<br>- ニーコ",
@@ -1094,8 +1198,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07RU016.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07RU016-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07RU016.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07RU016-full.png"
       }
     ],
     "regions": [
@@ -1111,7 +1215,7 @@
     "descriptionRaw": "異なる「ポロ」のフォロワーを2体引き、それらに+1|+1を付与する。",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "体は小さくとも、数は力だ。ポロたちは丸っこくてふわふわで、そして恐ろしいほど数が多い。  ",
+    "flavorText": "体は小さくとも、数は力だ。ポロたちは丸っこくてふわふわで、そして恐ろしいほど数が多い。",
     "artistName": "Kudos Productions",
     "name": "召集令",
     "cardCode": "07RU016",
@@ -1141,11 +1245,265 @@
   },
   {
     "associatedCards": [],
+    "associatedCardRefs": [
+      "06BW006T3"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07BW043.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07BW043-full.png"
+      }
+    ],
+    "regions": [
+      "ビルジ<nobr>ウォーター</nobr>"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "ユニット1体に1ダメージを与える。与えたダメージ1につき、<link=vocab.Spawn><style=Vocab>スポーン</style></link> 1を発動する。",
+    "descriptionRaw": "ユニット1体に1ダメージを与える。与えたダメージ1につき、スポーン 1を発動する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "自然の力を曲げることができるのは、無上の学びを得た者のみ。",
+    "artistName": "Kudos Productions",
+    "name": "潮騒の祈祷",
+    "cardCode": "07BW043",
+    "keywords": [
+      "ファスト"
+    ],
+    "keywordRefs": [
+      "Fast"
+    ],
+    "spellSpeed": "ファスト",
+    "spellSpeedRef": "Fast",
+    "rarity": "レア",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "エレメンタル"
+    ],
+    "supertype": "",
+    "type": "スペル",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07IO041.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07IO041-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07BW035.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07BW035-full.png"
+      }
+    ],
+    "regions": [
+      "ビルジ<nobr>ウォーター</nobr>"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 6,
+    "health": 0,
+    "description": "あなたの手札にあるカードは<link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>フリーティング</style></link>を持つ。\r\nカードをプレイする時、カードを1枚引く。",
+    "descriptionRaw": "あなたの手札にあるカードはフリーティングを持つ。\r\nカードをプレイする時、カードを1枚引く。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「手札はしっかり頭に入れて、うかつに見せないようにしな。スッカラカンになりたくなけりゃな」<br>- ツイステッド・フェイト",
+    "artistName": "Envar Studio",
+    "name": "イカサマ師の巣窟",
+    "cardCode": "07BW035",
+    "keywords": [
+      "ランドマーク"
+    ],
+    "keywordRefs": [
+      "LandmarkVisualOnly"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "エピック",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ランドマーク",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07BW042.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07BW042-full.png"
+      }
+    ],
+    "regions": [
+      "ビルジ<nobr>ウォーター</nobr>"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 1,
+    "cost": 2,
+    "health": 3,
+    "description": "<link=vocab.Play><style=Vocab>プレイ</style></link>: 場にいる味方と異なるサブタイプを持つフォロワーを1枚<link=vocab.Manifest><style=Vocab>選定</style></link>する。",
+    "descriptionRaw": "プレイ: 場にいる味方と異なるサブタイプを持つフォロワーを1枚選定する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「このしょぼくれたチビにもお役目があんだよ。こいつのおかげで、もう何年もワーフラットにゃ悩まされてねえ！」<br>- ドレッドウェイの甲板員",
+    "artistName": "Caravan Studio",
+    "name": "デッキハンター",
+    "cardCode": "07BW042",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "コモン",
+    "rarityRef": "Common",
+    "subtypes": [
+      "猫"
+    ],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07BW039.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07BW039-full.png"
+      }
+    ],
+    "regions": [
+      "ビルジ<nobr>ウォーター</nobr>"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 2,
+    "description": "各ラウンドで初めてコスト1の味方を召喚する時、スペルマナを1回復する。",
+    "descriptionRaw": "各ラウンドで初めてコスト1の味方を召喚する時、スペルマナを1回復する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「ここでなにしてるの？トカゲさんもポロが好きなの！？」<br>- 幼きイングヴァル",
+    "artistName": "Caravan Studio",
+    "name": "龍太子 グリンゾ",
+    "cardCode": "07BW039",
+    "keywords": [
+      "アテューン"
+    ],
+    "keywordRefs": [
+      "Attune"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "レア",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "ドラゴン"
+    ],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07BW033.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07BW033-full.png"
+      }
+    ],
+    "regions": [
+      "ビルジ<nobr>ウォーター</nobr>"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 6,
+    "health": 0,
+    "description": "ランダムな「亡骸」を1体召喚する。\r\n<link=vocab.Everywhere><style=Vocab>あらゆる場所</style></link>にいるコスト1の味方に+1|+1を付与する。 ",
+    "descriptionRaw": "ランダムな「亡骸」を1体召喚する。\r\nあらゆる場所にいるコスト1の味方に+1|+1を付与する。 ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "海上がやけに静かな夜、ビルジウォーターの船乗りは耳に綿を詰める。波の底から響く歌声を聞いてしまえば、海が己の墓場となることをよく知っているからだ。",
+    "artistName": "Kudos Productions",
+    "name": "セイレーンの歌声",
+    "cardCode": "07BW033",
+    "keywords": [
+      "スロウ"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "スロウ",
+    "spellSpeedRef": "Slow",
+    "rarity": "コモン",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スペル",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07IO041.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07IO041-full.png"
       }
     ],
     "regions": [
@@ -1175,7 +1533,9 @@
     "spellSpeedRef": "Burst",
     "rarity": "コモン",
     "rarityRef": "Common",
-    "subtypes": [],
+    "subtypes": [
+      "エレメンタル"
+    ],
     "supertype": "",
     "type": "スペル",
     "collectible": true,
@@ -1196,8 +1556,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07IO043.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07IO043-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07IO043.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07IO043-full.png"
       }
     ],
     "regions": [
@@ -1242,8 +1602,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07IO043T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07IO043T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07IO043T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07IO043T1-full.png"
       }
     ],
     "regions": [
@@ -1289,6 +1649,56 @@
   },
   {
     "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07IO049.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07IO049-full.png"
+      }
+    ],
+    "regions": [
+      "アイオニア"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 1,
+    "cost": 2,
+    "health": 1,
+    "description": "<link=vocab.NexusStrike><style=Vocab>ネクサスストライク</style></link>: ランダムな<nobr>「亡骸」</nobr>を1体召喚する。",
+    "descriptionRaw": "ネクサスストライク: ランダムな「亡骸」を1体召喚する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「しーっ…ほら、もう少しだから。私の友達に会いたいんでしょう？大丈夫、きっとあの子もあなたのことを気に入るわ」",
+    "artistName": "Kudos Productions",
+    "name": "アイリス",
+    "cardCode": "07IO049",
+    "keywords": [
+      "イルーシブ"
+    ],
+    "keywordRefs": [
+      "Elusive"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "レア",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
     "associatedCardRefs": [
       "07SH038T1",
       "07SH013T6",
@@ -1296,8 +1706,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07SH038.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07SH038-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07SH038.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07SH038-full.png"
       }
     ],
     "regions": [
@@ -1351,8 +1761,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07SH038T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07SH038T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07SH038T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07SH038T2-full.png"
       }
     ],
     "regions": [
@@ -1364,8 +1774,8 @@
     "attack": 0,
     "cost": 1,
     "health": 0,
-    "description": "<link=card.shadow><style=AssociatedCard>茂みの影</style></link>を<link=card.parent><style=AssociatedCard>パッカーの幼獣</style></link>に変化させる。",
-    "descriptionRaw": "茂みの影をパッカーの幼獣に変化させる。",
+    "description": "味方の<link=card.shadow><style=AssociatedCard>茂みの影</style></link>を<link=card.parent><style=AssociatedCard>パッカーの幼獣</style></link>に変化させる。\r\n<link=card.shadow><style=AssociatedCard>茂みの影</style></link>が場を離れる時、このカードをゲームから<link=vocab.Obliterate><style=Vocab>除外</style></link>する。",
+    "descriptionRaw": "味方の茂みの影をパッカーの幼獣に変化させる。\r\n茂みの影が場を離れる時、このカードをゲームから除外する。",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "報いを受けるがいい。",
@@ -1403,8 +1813,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07SH038T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07SH038T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07SH038T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07SH038T1-full.png"
       }
     ],
     "regions": [
@@ -1443,8 +1853,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07SH041.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07SH041-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07SH041.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07SH041-full.png"
       }
     ],
     "regions": [
@@ -1495,8 +1905,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07SH004.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07SH004-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07SH004.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07SH004-full.png"
       }
     ],
     "regions": [
@@ -1551,8 +1961,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07SH013.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07SH013-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07SH013.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07SH013-full.png"
       }
     ],
     "regions": [
@@ -1607,8 +2017,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07SH013T3.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07SH013T3-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07SH013T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07SH013T3-full.png"
       }
     ],
     "regions": [
@@ -1663,8 +2073,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07SH013T4.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07SH013T4-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07SH013T4.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07SH013T4-full.png"
       }
     ],
     "regions": [
@@ -1720,8 +2130,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07SH013T7.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07SH013T7-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07SH013T7.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07SH013T7-full.png"
       }
     ],
     "regions": [
@@ -1733,8 +2143,8 @@
     "attack": 0,
     "cost": 2,
     "health": 0,
-    "description": "<link=card.shadow><style=AssociatedCard>茂みの影</style></link>を<link=card.parent><style=AssociatedCard>ニダリー</style></link>に変化させる。",
-    "descriptionRaw": "茂みの影をニダリーに変化させる。",
+    "description": "味方の<link=card.shadow><style=AssociatedCard>茂みの影</style></link>を<link=card.parent><style=AssociatedCard>ニダリー</style></link>に変化させる。\r\n<link=card.shadow><style=AssociatedCard>茂みの影</style></link>が場を離れる時、このカードをゲームから<link=vocab.Obliterate><style=Vocab>除外</style></link>する。",
+    "descriptionRaw": "味方の茂みの影をニダリーに変化させる。\r\n茂みの影が場を離れる時、このカードをゲームから除外する。",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "報いを受けるがいい。",
@@ -1773,8 +2183,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07SH013T5.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07SH013T5-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07SH013T5.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07SH013T5-full.png"
       }
     ],
     "regions": [
@@ -1786,8 +2196,8 @@
     "attack": 0,
     "cost": 2,
     "health": 0,
-    "description": "<link=card.shadow><style=AssociatedCard>茂みの影</style></link>を<link=card.parent><style=AssociatedCard>群れの長 ニダリー</style></link>に変化させる。",
-    "descriptionRaw": "茂みの影を群れの長 ニダリーに変化させる。",
+    "description": "味方の<link=card.shadow><style=AssociatedCard>茂みの影</style></link>を<link=card.parent><style=AssociatedCard>群れの長 ニダリー</style></link>に変化させる。\r\n<link=card.shadow><style=AssociatedCard>茂みの影</style></link>が場を離れる時、このカードをゲームから<link=vocab.Obliterate><style=Vocab>除外</style></link>する。",
+    "descriptionRaw": "味方の茂みの影を群れの長 ニダリーに変化させる。\r\n茂みの影が場を離れる時、このカードをゲームから除外する。",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "報いを受けるがいい。",
@@ -1831,8 +2241,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07SH013T6.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07SH013T6-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07SH013T6.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07SH013T6-full.png"
       }
     ],
     "regions": [
@@ -1880,8 +2290,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07SH013T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07SH013T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07SH013T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07SH013T2-full.png"
       }
     ],
     "regions": [
@@ -1936,8 +2346,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07SH009.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07SH009-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07SH009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07SH009-full.png"
       }
     ],
     "regions": [
@@ -1986,8 +2396,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07SH009T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07SH009T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07SH009T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07SH009T1-full.png"
       }
     ],
     "regions": [
@@ -2039,8 +2449,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07SH009T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07SH009T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07SH009T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07SH009T2-full.png"
       }
     ],
     "regions": [
@@ -2052,8 +2462,8 @@
     "attack": 0,
     "cost": 3,
     "health": 0,
-    "description": "<link=card.shadow><style=AssociatedCard>茂みの影</style></link>を<link=card.parent><style=AssociatedCard>報復するヴァスタヤ</style></link>に変化させる。",
-    "descriptionRaw": "茂みの影を報復するヴァスタヤに変化させる。",
+    "description": "味方の<link=card.shadow><style=AssociatedCard>茂みの影</style></link>を<link=card.parent><style=AssociatedCard>報復するヴァスタヤ</style></link>に変化させる。\r\n<link=card.shadow><style=AssociatedCard>茂みの影</style></link>が場を離れる時、このカードをゲームから<link=vocab.Obliterate><style=Vocab>除外</style></link>する。",
+    "descriptionRaw": "味方の茂みの影を報復するヴァスタヤに変化させる。\r\n茂みの影が場を離れる時、このカードをゲームから除外する。",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "報いを受けるがいい。",
@@ -2092,8 +2502,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07SH039.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07SH039-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07SH039.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07SH039-full.png"
       }
     ],
     "regions": [
@@ -2141,8 +2551,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07SH044.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07SH044-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07SH044.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07SH044-full.png"
       }
     ],
     "regions": [
@@ -2193,8 +2603,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07SH003.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07SH003-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07SH003.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07SH003-full.png"
       }
     ],
     "regions": [
@@ -2205,7 +2615,7 @@
     ],
     "attack": 2,
     "cost": 2,
-    "health": 2,
+    "health": 3,
     "description": "<link=vocab.Ambush><style=Vocab>アンブッシュ 3</style></link>。\r\nこのユニットが<link=card.ambush><style=AssociatedCard>アンブッシュ (飛行風船の密猟者)</style></link>で変化したラウンド中、次にブロックするかブロックされる時、相手ユニットの攻撃力が6以下であればその敵を<link=keyword.Capture><sprite name=Capture><style=Keyword>拘束</style></link>する。",
     "descriptionRaw": "アンブッシュ 3。\r\nこのユニットがアンブッシュ (飛行風船の密猟者)で変化したラウンド中、次にブロックするかブロックされる時、相手ユニットの攻撃力が6以下であればその敵を拘束する。",
     "levelupDescription": "",
@@ -2239,8 +2649,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07SH003T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07SH003T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07SH003T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07SH003T2-full.png"
       }
     ],
     "regions": [
@@ -2292,8 +2702,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07SH003T3.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07SH003T3-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07SH003T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07SH003T3-full.png"
       }
     ],
     "regions": [
@@ -2305,8 +2715,8 @@
     "attack": 0,
     "cost": 3,
     "health": 0,
-    "description": "<link=card.shadow><style=AssociatedCard>茂みの影</style></link>を<link=card.parent><style=AssociatedCard>飛行風船の密猟者</style></link>に変化させる。",
-    "descriptionRaw": "茂みの影を飛行風船の密猟者に変化させる。",
+    "description": "味方の<link=card.shadow><style=AssociatedCard>茂みの影</style></link>を<link=card.parent><style=AssociatedCard>飛行風船の密猟者</style></link>に変化させる。\r\n<link=card.shadow><style=AssociatedCard>茂みの影</style></link>が場を離れる時、このカードをゲームから<link=vocab.Obliterate><style=Vocab>除外</style></link>する。",
+    "descriptionRaw": "味方の茂みの影を飛行風船の密猟者に変化させる。\r\n茂みの影が場を離れる時、このカードをゲームから除外する。",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "報いを受けるがいい。",
@@ -2342,8 +2752,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07SH011.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07SH011-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07SH011.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07SH011-full.png"
       }
     ],
     "regions": [
@@ -2389,14 +2799,68 @@
   },
   {
     "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07SH046.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07SH046-full.png"
+      }
+    ],
+    "regions": [
+      "シュリーマ"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "フォロワーをプレイする時、このカードをそのフォロワーとまったく同じコピーに変化させる。 ",
+    "descriptionRaw": "フォロワーをプレイする時、このカードをそのフォロワーとまったく同じコピーに変化させる。 ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「サア、次ハトビッキリステキナ場所ヲ紹介スルネェ！ボクノイチバンオ気ニ入リノ場所ダヨ。ボクガ案内シタ人タチガ、トッテモオッキクテ、トッテモ強ソウナチップヲ作ッテクレタンダ！コレカラズット、イチバンの名所ニナルト思ウ！ソレジャア、皆デアイサツシヨウ！セーノ、『オッキナチップ、コンニチハー！！』。オッキナチップハネェ、ドンナヒトノコトモ大好キナンダケド、チップノターゴン紹介ニ参加シテクレタヒトノコトハ、モットモーーーット大好キナンダヨ！」<br>- チップと大冒険 パート6",
+    "artistName": "Caravan Studio",
+    "name": "ソックリサンの谷",
+    "cardCode": "07SH046",
+    "keywords": [
+      "ランドマーク"
+    ],
+    "keywordRefs": [
+      "LandmarkVisualOnly"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "コモン",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ランドマーク",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "コモンオンリー",
+      "エターナル",
+      "イーブンコスト",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
     "associatedCardRefs": [
       "07SH039",
       "07SH013T6"
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07SH039T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07SH039T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07SH039T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07SH039T1-full.png"
       }
     ],
     "regions": [
@@ -2408,8 +2872,8 @@
     "attack": 0,
     "cost": 0,
     "health": 0,
-    "description": "<link=card.shadow><style=AssociatedCard>茂みの影</style></link>を<link=card.parent><style=AssociatedCard>四腕駆動の密猟者</style></link>に変化させる。",
-    "descriptionRaw": "茂みの影を四腕駆動の密猟者に変化させる。",
+    "description": "味方の<link=card.shadow><style=AssociatedCard>茂みの影</style></link>を<link=card.parent><style=AssociatedCard>四腕駆動の密猟者</style></link>に変化させる。\r\n<link=card.shadow><style=AssociatedCard>茂みの影</style></link>が場を離れる時、このカードをゲームから<link=vocab.Obliterate><style=Vocab>除外</style></link>する。",
+    "descriptionRaw": "味方の茂みの影を四腕駆動の密猟者に変化させる。\r\n茂みの影が場を離れる時、このカードをゲームから除外する。",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "報いを受けるがいい。",
@@ -2448,8 +2912,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07SH043.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07SH043-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07SH043.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07SH043-full.png"
       }
     ],
     "regions": [
@@ -2501,8 +2965,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07SH043T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07SH043T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07SH043T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07SH043T2-full.png"
       }
     ],
     "regions": [
@@ -2514,8 +2978,8 @@
     "attack": 0,
     "cost": 5,
     "health": 0,
-    "description": "<link=card.shadow><style=AssociatedCard>茂みの影</style></link>を<link=card.parent><style=AssociatedCard>そびえ立つパイロファント</style></link>に変化させる。",
-    "descriptionRaw": "茂みの影をそびえ立つパイロファントに変化させる。",
+    "description": "味方の<link=card.shadow><style=AssociatedCard>茂みの影</style></link>を<link=card.parent><style=AssociatedCard>そびえ立つパイロファント</style></link>に変化させる。\r\n<link=card.shadow><style=AssociatedCard>茂みの影</style></link>が場を離れる時、このカードをゲームから<link=vocab.Obliterate><style=Vocab>除外</style></link>する。",
+    "descriptionRaw": "味方の茂みの影をそびえ立つパイロファントに変化させる。\r\n茂みの影が場を離れる時、このカードをゲームから除外する。",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "報いを受けるがいい。",
@@ -2551,8 +3015,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07SH040.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07SH040-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07SH040.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07SH040-full.png"
       }
     ],
     "regions": [
@@ -2564,8 +3028,8 @@
     "attack": 1,
     "cost": 1,
     "health": 2,
-    "description": "このゲーム中に1体以上の味方が変化している場合、このユニットに+1|+1を付与する。",
-    "descriptionRaw": "このゲーム中に1体以上の味方が変化している場合、このユニットに+1|+1を付与する。",
+    "description": "初めて味方が変化する時、このユニットに+2|+1を付与する。",
+    "descriptionRaw": "初めて味方が変化する時、このユニットに+2|+1を付与する。",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "「雑食性の小型哺乳類。全身が堅い針毛に覆われており、危険を察知するとその針毛を勢いよく飛ばす。尻尾は素早く動き、先端には鋭い棘がついている。おそらく身を守る武器として使うのだろう。経験豊富な探検家によると、この動物は非常に気難しく、手懐けることは困難とのこと…」<br>- アヌーラの調査日誌 第3日",
@@ -2600,8 +3064,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07SH044T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07SH044T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07SH044T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07SH044T1-full.png"
       }
     ],
     "regions": [
@@ -2613,8 +3077,8 @@
     "attack": 0,
     "cost": 4,
     "health": 0,
-    "description": "<link=card.shadow><style=AssociatedCard>茂みの影</style></link>を<link=card.parent><style=AssociatedCard>幻惑フクロウ</style></link>に変化させる。",
-    "descriptionRaw": "茂みの影を幻惑フクロウに変化させる。",
+    "description": "味方の<link=card.shadow><style=AssociatedCard>茂みの影</style></link>を<link=card.parent><style=AssociatedCard>幻惑フクロウ</style></link>に変化させる。\r\n<link=card.shadow><style=AssociatedCard>茂みの影</style></link>が場を離れる時、このカードをゲームから<link=vocab.Obliterate><style=Vocab>除外</style></link>する。",
+    "descriptionRaw": "味方の茂みの影を幻惑フクロウに変化させる。\r\n茂みの影が場を離れる時、このカードをゲームから除外する。",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "報いを受けるがいい。",
@@ -2652,8 +3116,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07SH005.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07SH005-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07SH005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07SH005-full.png"
       }
     ],
     "regions": [
@@ -2698,208 +3162,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07BW035.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07BW035-full.png"
-      }
-    ],
-    "regions": [
-      "ビルジ<nobr>ウォーター</nobr>"
-    ],
-    "regionRefs": [
-      "Bilgewater"
-    ],
-    "attack": 0,
-    "cost": 6,
-    "health": 0,
-    "description": "あなたの手札にあるカードは<link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>フリーティング</style></link>を持つ。\r\nカードをプレイする時、カードを1枚引く。",
-    "descriptionRaw": "あなたの手札にあるカードはフリーティングを持つ。\r\nカードをプレイする時、カードを1枚引く。",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "「手札はしっかり頭に入れて、うかつに見せないようにしな。スッカラカンになりたくなけりゃな」<br>- ツイステッド・フェイト",
-    "artistName": "Envar Studio",
-    "name": "イカサマ師の巣窟",
-    "cardCode": "07BW035",
-    "keywords": [
-      "ランドマーク"
-    ],
-    "keywordRefs": [
-      "LandmarkVisualOnly"
-    ],
-    "spellSpeed": "",
-    "spellSpeedRef": "",
-    "rarity": "エピック",
-    "rarityRef": "Epic",
-    "subtypes": [],
-    "supertype": "",
-    "type": "ランドマーク",
-    "collectible": true,
-    "set": "Set7b",
-    "formats": [
-      "エターナル",
-      "スタンダード"
-    ],
-    "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07BW042.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07BW042-full.png"
-      }
-    ],
-    "regions": [
-      "ビルジ<nobr>ウォーター</nobr>"
-    ],
-    "regionRefs": [
-      "Bilgewater"
-    ],
-    "attack": 1,
-    "cost": 2,
-    "health": 3,
-    "description": "<link=vocab.Play><style=Vocab>プレイ</style></link>: 場にいる味方と異なるサブタイプを持つフォロワーを1枚<link=vocab.Manifest><style=Vocab>選定</style></link>する。",
-    "descriptionRaw": "プレイ: 場にいる味方と異なるサブタイプを持つフォロワーを1枚選定する。",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "「このしょぼくれたチビにもお役目があんだよ。こいつのおかげで、もう何年もワーフラットにゃ悩まされてねえ！」<br>- ドレッドウェイの甲板員",
-    "artistName": "Caravan Studio",
-    "name": "デッキハンター",
-    "cardCode": "07BW042",
-    "keywords": [],
-    "keywordRefs": [],
-    "spellSpeed": "",
-    "spellSpeedRef": "",
-    "rarity": "コモン",
-    "rarityRef": "Common",
-    "subtypes": [
-      "猫"
-    ],
-    "supertype": "",
-    "type": "ユニット",
-    "collectible": true,
-    "set": "Set7b",
-    "formats": [
-      "エターナル",
-      "スタンダード"
-    ],
-    "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07BW039.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07BW039-full.png"
-      }
-    ],
-    "regions": [
-      "ビルジ<nobr>ウォーター</nobr>"
-    ],
-    "regionRefs": [
-      "Bilgewater"
-    ],
-    "attack": 2,
-    "cost": 2,
-    "health": 2,
-    "description": "各ラウンドで初めてコスト1の味方を召喚する時、スペルマナを1回復する。",
-    "descriptionRaw": "各ラウンドで初めてコスト1の味方を召喚する時、スペルマナを1回復する。",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "「ここでなにしてるの？トカゲさんもポロが好きなの！？」<br>- 幼きイングヴァル",
-    "artistName": "Caravan Studio",
-    "name": "龍太子 グリンゾ",
-    "cardCode": "07BW039",
-    "keywords": [
-      "アテューン"
-    ],
-    "keywordRefs": [
-      "Attune"
-    ],
-    "spellSpeed": "",
-    "spellSpeedRef": "",
-    "rarity": "レア",
-    "rarityRef": "Rare",
-    "subtypes": [
-      "ドラゴン"
-    ],
-    "supertype": "",
-    "type": "ユニット",
-    "collectible": true,
-    "set": "Set7b",
-    "formats": [
-      "エターナル",
-      "スタンダード"
-    ],
-    "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07BW033.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07BW033-full.png"
-      }
-    ],
-    "regions": [
-      "ビルジ<nobr>ウォーター</nobr>"
-    ],
-    "regionRefs": [
-      "Bilgewater"
-    ],
-    "attack": 0,
-    "cost": 4,
-    "health": 0,
-    "description": "ランダムな「亡骸」を1体召喚する。\r\n<link=vocab.Everywhere><style=Vocab>あらゆる場所</style></link>にいるコスト1の味方に+1|+1を付与する。 ",
-    "descriptionRaw": "ランダムな「亡骸」を1体召喚する。\r\nあらゆる場所にいるコスト1の味方に+1|+1を付与する。 ",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "海上がやけに静かな夜、ビルジウォーターの船乗りは耳に綿を詰める。波の底から響く歌声を聞いてしまえば、海が己の墓場となることをよく知っているからだ。",
-    "artistName": "Kudos Productions",
-    "name": "セイレーンの歌声",
-    "cardCode": "07BW033",
-    "keywords": [
-      "スロウ"
-    ],
-    "keywordRefs": [
-      "Slow"
-    ],
-    "spellSpeed": "スロウ",
-    "spellSpeedRef": "Slow",
-    "rarity": "コモン",
-    "rarityRef": "Common",
-    "subtypes": [],
-    "supertype": "",
-    "type": "スペル",
-    "collectible": true,
-    "set": "Set7b",
-    "formats": [
-      "エターナル",
-      "スタンダード"
-    ],
-    "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07FR011.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07FR011-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07FR011.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07FR011-full.png"
       }
     ],
     "regions": [
@@ -2948,8 +3212,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07FR010.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07FR010-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07FR010.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07FR010-full.png"
       }
     ],
     "regions": [
@@ -3002,8 +3266,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07FR015.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07FR015-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07FR015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07FR015-full.png"
       }
     ],
     "regions": [
@@ -3048,8 +3312,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07FR015T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07FR015T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07FR015T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07FR015T1-full.png"
       }
     ],
     "regions": [
@@ -3094,8 +3358,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07FR015T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07FR015T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07FR015T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07FR015T2-full.png"
       }
     ],
     "regions": [
@@ -3137,11 +3401,117 @@
   },
   {
     "associatedCards": [],
+    "associatedCardRefs": [
+      "07FR017T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07FR017.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07FR017-full.png"
+      }
+    ],
+    "regions": [
+      "フレヨルド"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 3,
+    "cost": 5,
+    "health": 2,
+    "description": "<link=keyword.Elemental Skill><sprite name=ElementalSkill><style=Keyword>プレイ</style></link>: 他のユニットすべてに2ダメージを与える。",
+    "descriptionRaw": "プレイ: 他のユニットすべてに2ダメージを与える。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "その者は輝く石を身にまとい、嵐を招いて周囲に暴虐を振りまいた。それは突然の出来事で、瞬きの間にあらゆる物が破壊され、今いた場所は戦地となった。人々はその鳥を、大いなる災禍と嵐の前触れであると語る。それは骨々の形を打ち直し、大地を作り直すのだと。",
+    "artistName": "Bubble Cat",
+    "name": "氷石のストームラプター",
+    "cardCode": "07FR017",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "レア",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "鳥"
+    ],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07FR016.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07FR016-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07FR017T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07FR017T1-full.png"
+      }
+    ],
+    "regions": [
+      "フレヨルド"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "他のユニットすべてに2ダメージを与える。",
+    "descriptionRaw": "他のユニットすべてに2ダメージを与える。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「“嵐を呼ぶ者”から無事に逃れる方法だって？やれやれ、お前は何もわかってないな。鳴き声が聞こえた時点で、俺たちにできるのは祈ることだけだ」-アヴァローサンの遠征隊員",
+    "artistName": "Polar Engine",
+    "name": "貫く稲妻",
+    "cardCode": "07FR017T1",
+    "keywords": [
+      "エレメンタルスキル"
+    ],
+    "keywordRefs": [
+      "ElementalSkill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "なし",
+    "rarityRef": "None",
+    "subtypes": [
+      "エレメンタル"
+    ],
+    "supertype": "",
+    "type": "スキル",
+    "collectible": false,
+    "set": "Set7b",
+    "formats": [
+      "コモンオンリー",
+      "エターナル",
+      "イーブンコスト",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07FR016.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07FR016-full.png"
       }
     ],
     "regions": [
@@ -3152,7 +3522,7 @@
     ],
     "attack": 5,
     "cost": 5,
-    "health": 5,
+    "health": 4,
     "description": "召喚時、デッキの上から3体のユニットに+1|+1を付与する。その中にこのユニットと異なるサブタイプを持つ味方がいた場合、そのうちの1体を引く。",
     "descriptionRaw": "召喚時、デッキの上から3体のユニットに+1|+1を付与する。その中にこのユニットと異なるサブタイプを持つ味方がいた場合、そのうちの1体を引く。",
     "levelupDescription": "",
@@ -3161,8 +3531,12 @@
     "artistName": "Envar Studio",
     "name": "ヒョウザントカゲ",
     "cardCode": "07FR016",
-    "keywords": [],
-    "keywordRefs": [],
+    "keywords": [
+      "オーバーパワー"
+    ],
+    "keywordRefs": [
+      "Overwhelm"
+    ],
     "spellSpeed": "",
     "spellSpeedRef": "",
     "rarity": "レア",
@@ -3190,8 +3564,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07SI010.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07SI010-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07SI010.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07SI010-full.png"
       }
     ],
     "regions": [
@@ -3238,8 +3612,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07SI010T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07SI010T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07SI010T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07SI010T1-full.png"
       }
     ],
     "regions": [
@@ -3269,7 +3643,9 @@
     "spellSpeedRef": "",
     "rarity": "なし",
     "rarityRef": "None",
-    "subtypes": [],
+    "subtypes": [
+      "蜘蛛"
+    ],
     "supertype": "",
     "type": "ユニット",
     "collectible": false,
@@ -3288,8 +3664,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07SI012.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07SI012-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07SI012.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07SI012-full.png"
       }
     ],
     "regions": [
@@ -3340,8 +3716,58 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07SI004.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07SI004-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07SI013.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07SI013-full.png"
+      }
+    ],
+    "regions": [
+      "シャドウ<nobr>アイル</nobr>"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 1,
+    "cost": 1,
+    "health": 1,
+    "description": "<link=keyword.Last Breath><sprite name=LastBreath><style=Keyword>ラストブレス</style></link>: デッキ内で<link=vocab.Strongest><style=Vocab>最も強い</style></link><link=card.selfref><style=AssociatedCard>膨れ上がる亡霊</style></link>とまったく同じコピーを、デッキに1枚生成する。その後、デッキ内の<link=card.selfref><style=AssociatedCard>膨れ上がる亡霊</style></link>のステータスを2倍にする。",
+    "descriptionRaw": "ラストブレス: デッキ内で最も強い膨れ上がる亡霊とまったく同じコピーを、デッキに1枚生成する。その後、デッキ内の膨れ上がる亡霊のステータスを2倍にする。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「この霧との戦いからは色々なことを学べたが…最もためになった教えは、逃げるべき時を見誤るなということだ」<br>- イシュタルの番人",
+    "artistName": "Xavier Leroux",
+    "name": "膨れ上がる亡霊",
+    "cardCode": "07SI013",
+    "keywords": [
+      "ラストブレス"
+    ],
+    "keywordRefs": [
+      "LastBreath"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "レア",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07SI004.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07SI004-full.png"
       }
     ],
     "regions": [
@@ -3390,8 +3816,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07MT009.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07MT009-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07MT009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07MT009-full.png"
       }
     ],
     "regions": [
@@ -3440,8 +3866,166 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07MT006.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07MT006-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07MT013.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07MT013-full.png"
+      }
+    ],
+    "regions": [
+      "ターゴン"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "コスト7以上の「天空」カードを1枚<link=keyword.Invoke><style=Keyword>招来</style></link>する。または8マナを消費することで、追加で<link=vocab.Everywhere><style=Vocab>あらゆる場所</style></link>にある味方の「天空」カードのコストを半分にする。奇数の場合は端数を切り上げる。",
+    "descriptionRaw": "コスト7以上の「天空」カードを1枚招来する。または8マナを消費することで、追加であらゆる場所にある味方の「天空」カードのコストを半分にする。奇数の場合は端数を切り上げる。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "頂に立つ裁定者に、天より祝福が舞い降りる。",
+    "artistName": "Polar Engine",
+    "name": "星々の呼び声",
+    "cardCode": "07MT013",
+    "keywords": [
+      "バースト"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "バースト",
+    "spellSpeedRef": "Burst",
+    "rarity": "コモン",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スペル",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07MT013T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07MT013T1-full.png"
+      }
+    ],
+    "regions": [
+      "ターゴン"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 8,
+    "health": 0,
+    "description": "コスト7以上の「天空」カードを1枚<link=keyword.Invoke><style=Keyword>招来</style></link>し、<link=vocab.Everywhere><style=Vocab>あらゆる場所</style></link>にある味方の<nobr>「天空」</nobr>カードのコストを半分にする。奇数の場合は端数を切り上げる。",
+    "descriptionRaw": "コスト7以上の「天空」カードを1枚招来し、あらゆる場所にある味方の「天空」カードのコストを半分にする。奇数の場合は端数を切り上げる。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "頂に立つ裁定者に、天より祝福が舞い降りる。",
+    "artistName": "Polar Engine",
+    "name": "星々の呼び声",
+    "cardCode": "07MT013T1",
+    "keywords": [
+      "バースト"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "バースト",
+    "spellSpeedRef": "Burst",
+    "rarity": "コモン",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スペル",
+    "collectible": false,
+    "set": "Set7b",
+    "formats": [
+      "コモンオンリー",
+      "エターナル",
+      "イーブンコスト",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07MT013T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07MT013T2-full.png"
+      }
+    ],
+    "regions": [
+      "ターゴン"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "コスト7以上の「天空」カードを1枚<link=keyword.Invoke><style=Keyword>招来</style></link>する。",
+    "descriptionRaw": "コスト7以上の「天空」カードを1枚招来する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "頂に立つ裁定者に、天より祝福が舞い降りる。",
+    "artistName": "Polar Engine",
+    "name": "星々の呼び声",
+    "cardCode": "07MT013T2",
+    "keywords": [
+      "バースト"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "バースト",
+    "spellSpeedRef": "Burst",
+    "rarity": "コモン",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スペル",
+    "collectible": false,
+    "set": "Set7b",
+    "formats": [
+      "コモンオンリー",
+      "エターナル",
+      "イーブンコスト",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07MT006.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07MT006-full.png"
       }
     ],
     "regions": [
@@ -3486,8 +4070,54 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07BC016.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07BC016-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07BC020.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07BC020-full.png"
+      }
+    ],
+    "regions": [
+      "バンドル<nobr>シティ</nobr>"
+    ],
+    "regionRefs": [
+      "BandleCity"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 3,
+    "description": "あなたの設置したトラップまたは加護が1個以上発動した時、そのプレイヤーのデッキにそれを追加で2個設置する。",
+    "descriptionRaw": "あなたの設置したトラップまたは加護が1個以上発動した時、そのプレイヤーのデッキにそれを追加で2個設置する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "ミスター・アルメリアがいつからガラクタを集め始めたのか、そしてどこからやって来たのか、それを知る者は誰一人いない。とはいえ、特段周囲に危害を加えることもないだろう。至る所に結びつけられたガラクタの数々に目をつぶりさえすれば…",
+    "artistName": "Caravan Studio",
+    "name": "ミスター・アルメリア",
+    "cardCode": "07BC020",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "レア",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07BC016.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07BC016-full.png"
       }
     ],
     "regions": [
@@ -3508,11 +4138,9 @@
     "name": "ホーミングレンチ",
     "cardCode": "07BC016",
     "keywords": [
-      "インパクト",
       "武具"
     ],
     "keywordRefs": [
-      "Impact",
       "Equipment"
     ],
     "spellSpeed": "",
@@ -3540,8 +4168,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07BC018.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07BC018-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07BC018.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07BC018-full.png"
       }
     ],
     "regions": [
@@ -3568,7 +4196,7 @@
     "rarity": "エピック",
     "rarityRef": "Epic",
     "subtypes": [
-      "ヨードル"
+      "妖精"
     ],
     "supertype": "",
     "type": "ユニット",
@@ -3588,8 +4216,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07BC011.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07BC011-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07BC011.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07BC011-full.png"
       }
     ],
     "regions": [
@@ -3640,8 +4268,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07DE014.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07DE014-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07DE014.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07DE014-full.png"
       }
     ],
     "regions": [
@@ -3688,8 +4316,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07DE015.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07DE015-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07DE015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07DE015-full.png"
       }
     ],
     "regions": [
@@ -3698,9 +4326,9 @@
     "regionRefs": [
       "Demacia"
     ],
-    "attack": 5,
+    "attack": 6,
     "cost": 6,
-    "health": 5,
+    "health": 6,
     "description": "<link=vocab.Play><style=Vocab>プレイ</style></link>: 味方がこのユニットと異なるサブタイプを持っている場合、デマーシアのスペルを1枚<link=vocab.Manifest><style=Vocab>選定</style></link>する。",
     "descriptionRaw": "プレイ: 味方がこのユニットと異なるサブタイプを持っている場合、デマーシアのスペルを1枚選定する。",
     "levelupDescription": "",
@@ -3740,8 +4368,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07DE011.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ja_jp/img/cards/07DE011-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07DE011.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07DE011-full.png"
       }
     ],
     "regions": [
@@ -3771,6 +4399,56 @@
     "spellSpeedRef": "",
     "rarity": "コモン",
     "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07DE016.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ja_jp/img/cards/07DE016-full.png"
+      }
+    ],
+    "regions": [
+      "デマーシア"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 0,
+    "cost": 4,
+    "health": 4,
+    "description": "<link=vocab.Attack><style=Vocab>アタック</style></link>: <link=vocab.Everywhere><style=Vocab>あらゆる場所</style></link>にいる<link=keyword.Formidable><sprite name=Formidable><style=Keyword>フォーミダブル</style></link>を持つ味方に+0|+1を付与する。",
+    "descriptionRaw": "アタック: あらゆる場所にいるフォーミダブルを持つ味方に+0|+1を付与する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "バーレンはデュランド家に長く使える従者で、その大きな体躯とは裏腹に繊細で精確な仕事を得意とする。当初は単なる補佐役に過ぎなかったが、類稀なる資質と呑み込みの速さでめきめきと腕を上げていった。今やデュランド家の者にとって、バーレンは皆に誇れる友人である。",
+    "artistName": "Envar Studio",
+    "name": "善良なるバーレン",
+    "cardCode": "07DE016",
+    "keywords": [
+      "フォーミダブル"
+    ],
+    "keywordRefs": [
+      "Formidable"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "エピック",
+    "rarityRef": "Epic",
     "subtypes": [],
     "supertype": "",
     "type": "ユニット",

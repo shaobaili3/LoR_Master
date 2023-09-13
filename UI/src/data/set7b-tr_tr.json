@@ -4,8 +4,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07PZ019.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07PZ019-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07PZ019.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07PZ019-full.png"
       }
     ],
     "regions": [
@@ -54,8 +54,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07PZ021.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07PZ021-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07PZ021.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07PZ021-full.png"
       }
     ],
     "regions": [
@@ -103,13 +103,11 @@
   },
   {
     "associatedCards": [],
-    "associatedCardRefs": [
-      "01PZ022"
-    ],
+    "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07PZ013.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07PZ013-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07PZ022.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07PZ022-full.png"
       }
     ],
     "regions": [
@@ -119,10 +117,64 @@
       "PiltoverZaun"
     ],
     "attack": 0,
-    "cost": 3,
+    "cost": 2,
     "health": 0,
-    "description": "Nexus'un <link=card.cardref><style=AssociatedCard>Zehirli Pofkep Mantarı</style></link> harici hasar alacağı zaman, bunun yerine rakibin her hasar için destene 4 <link=card.cardref><style=AssociatedCard>Zehirli Pofkep Mantarı</style></link> koyar.",
-    "descriptionRaw": "Nexus'un Zehirli Pofkep Mantarı harici hasar alacağı zaman, bunun yerine rakibin her hasar için destene 4 Zehirli Pofkep Mantarı koyar.",
+    "description": "Bir düşman birime ya da rakibin Nexus'una 1 hasar ve bir diğerine 1 hasar verirsin.",
+    "descriptionRaw": "Bir düşman birime ya da rakibin Nexus'una 1 hasar ve bir diğerine 1 hasar verirsin.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Piltover'lıların çoğunluğu rüzgârın nasıl estiğiyle hiç mi hiç ilgilenmez. Fakat pek çok Zaun'luya göre en ufak esinti bile beraberinde kurtuluşu taşıyor olabilir.",
+    "artistName": "Polar Engine",
+    "name": "İlahi Cereyan",
+    "cardCode": "07PZ022",
+    "keywords": [
+      "Yavaş"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "Yavaş",
+    "spellSpeedRef": "Slow",
+    "rarity": "YAYGIN",
+    "rarityRef": "Common",
+    "subtypes": [
+      "ELEMENTAL"
+    ],
+    "supertype": "",
+    "type": "Büyü",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Ebedi",
+      "Standart"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "01PZ022"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07PZ013.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07PZ013-full.png"
+      }
+    ],
+    "regions": [
+      "Piltover ve Zaun"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 0,
+    "cost": 4,
+    "health": 0,
+    "description": "Nexus'un <link=card.cardref><style=AssociatedCard>Zehirli Pofkep Mantarı</style></link> harici hasar alacağı zaman, bunun yerine rakibin her hasar için destene 5 <link=card.cardref><style=AssociatedCard>Zehirli Pofkep Mantarı</style></link> koyar.",
+    "descriptionRaw": "Nexus'un Zehirli Pofkep Mantarı harici hasar alacağı zaman, bunun yerine rakibin her hasar için destene 5 Zehirli Pofkep Mantarı koyar.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "Zaun sokaklarının ücra köşelerinde ne yersen osun.",
@@ -160,8 +212,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07PZ015.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07PZ015-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07PZ015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07PZ015-full.png"
       }
     ],
     "regions": [
@@ -210,8 +262,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07PZ015T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07PZ015T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07PZ015T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07PZ015T1-full.png"
       }
     ],
     "regions": [
@@ -262,8 +314,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07NX028.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07NX028-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07NX028.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07NX028-full.png"
       }
     ],
     "regions": [
@@ -312,8 +364,60 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07NX032.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07NX032-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07NX034.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07NX034-full.png"
+      }
+    ],
+    "regions": [
+      "Noxus"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "Dost birimlerin bedeli 1 azalır. Bir dost birim oynadığında ona 2 hasar verirsin.",
+    "descriptionRaw": "Dost birimlerin bedeli 1 azalır. Bir dost birim oynadığında ona 2 hasar verirsin.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''Buyurun dostlarım, geçin oturun! Dost meclisimizde içki bahane, muhabbet şahane! Akşam yemeğinde ne olduğunu göstermeyi iple çekiyorum.''<br>- Vladimir",
+    "artistName": "Envar Studio",
+    "name": "Kızıl Ziyafet Salonu",
+    "cardCode": "07NX034",
+    "keywords": [
+      "Yer",
+      "Missing Translation"
+    ],
+    "keywordRefs": [
+      "LandmarkVisualOnly",
+      "AuraVisualFakeKeyword"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "DESTANSI",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Yer",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Ebedi",
+      "Standart"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07NX032.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07NX032-full.png"
       }
     ],
     "regions": [
@@ -362,8 +466,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07NX033.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07NX033-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07NX033.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07NX033-full.png"
       }
     ],
     "regions": [
@@ -423,8 +527,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07RU015.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07RU015-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07RU015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07RU015-full.png"
       }
     ],
     "regions": [
@@ -438,8 +542,8 @@
     "health": 4,
     "description": "<link=vocab.Origin><style=Vocab>Köken</style></link>: <link=card.origin><style=AssociatedCard>Poro Kralı'nın Fermanı</style></link>.\r\nHer tur ilk defa başka bir Poro çağırdığında, elinde bir <link=card.baseSnax><style=AssociatedCard>Poro Kurabiyesi</style></link> oluşur.",
     "descriptionRaw": "Köken: Poro Kralı'nın Fermanı.\r\nHer tur ilk defa başka bir Poro çağırdığında, elinde bir Poro Kurabiyesi oluşur.",
-    "levelupDescription": "6+ başka yeni Poro çağırdığında<style=Variable></style>.",
-    "levelupDescriptionRaw": "6+ başka yeni Poro çağırdığında.",
+    "levelupDescription": "6+ başka yeni Poro çağırdığında. Seviye atladığımda elinde rasgele bir Ham Yapmalık Kurabiye oluşur<style=Variable></style>.",
+    "levelupDescriptionRaw": "6+ başka yeni Poro çağırdığında. Seviye atladığımda elinde rasgele bir Ham Yapmalık Kurabiye oluşur.",
     "flavorText": "Ingvar potansiyeli gözünden tanır. Dış görünüşünün sadeliği bir yana, bu sevgili yoldaş milyorlarca poroya liderlik edebilir. Tabii hayal gücü yeterince zenginse. ",
     "artistName": "Envar Studio",
     "name": "Poro Kralı",
@@ -474,8 +578,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07RU015T3.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07RU015T3-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07RU015T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07RU015T3-full.png"
       }
     ],
     "regions": [
@@ -526,8 +630,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07RU015T6.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07RU015T6-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07RU015T6.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07RU015T6-full.png"
       }
     ],
     "regions": [
@@ -578,8 +682,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07RU015T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07RU015T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07RU015T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07RU015T2-full.png"
       }
     ],
     "regions": [
@@ -630,8 +734,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07RU015T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07RU015T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07RU015T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07RU015T1-full.png"
       }
     ],
     "regions": [
@@ -678,8 +782,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07RU015T7.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07RU015T7-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07RU015T7.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07RU015T7-full.png"
       }
     ],
     "regions": [
@@ -735,8 +839,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07RU015T4.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07RU015T4-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07RU015T4.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07RU015T4-full.png"
       }
     ],
     "regions": [
@@ -785,8 +889,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07RU015T5.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07RU015T5-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07RU015T5.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07RU015T5-full.png"
       }
     ],
     "regions": [
@@ -798,8 +902,8 @@
     "attack": 0,
     "cost": 2,
     "health": 0,
-    "description": "<link=vocab.Everywhere><style=Vocab>Her yerdeki</style></link> dost Porolara +1|+1 kazandırırsın. Can değeri 3 ya da daha az olan bir düşmana <link=keyword.Frostbite><sprite name=Frostbite><style=Keyword>Buz Tutturursun</style></link>.",
-    "descriptionRaw": "Her yerdeki dost Porolara +1|+1 kazandırırsın. Can değeri 3 ya da daha az olan bir düşmana Buz Tutturursun.",
+    "description": "<link=vocab.Everywhere><style=Vocab>Her yerdeki</style></link> dost Porolara +1|+1 kazandırırsın. Bir düşmana <link=keyword.Frostbite><sprite name=Frostbite><style=Keyword>Buz Tutturursun</style></link>.",
+    "descriptionRaw": "Her yerdeki dost Porolara +1|+1 kazandırırsın. Bir düşmana Buz Tutturursun.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "Bu kurabiye Freljord'un tüm aromalarını taşımasıyla dillere destan, damaklara şölen olmuştur. Bu aromalar neler mi? Kar buzu, kar tozu ve olmazsa olmaz kartopu!",
@@ -839,8 +943,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07RU012.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07RU012-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07RU012.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07RU012-full.png"
       }
     ],
     "regions": [
@@ -891,8 +995,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07RU012T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07RU012T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07RU012T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07RU012T2-full.png"
       }
     ],
     "regions": [
@@ -904,8 +1008,8 @@
     "attack": 3,
     "cost": 2,
     "health": 3,
-    "description": "<link=vocab.Attack><style=Vocab>Saldır</style></link>: Alt tipi olan <link=vocab.Everywhere><style=Vocab>her yerdeki</style></link> dost birimlere +1|+1 kazandırırsın.",
-    "descriptionRaw": "Saldır: Alt tipi olan her yerdeki dost birimlere +1|+1 kazandırırsın.",
+    "description": "Seviye atladığımda veya <link=vocab.Attack><style=Vocab>Saldır</style></link>: Alt tipi olan <link=vocab.Everywhere><style=Vocab>her yerdeki</style></link> dost birimlere +1|+1 kazandırırsın.",
+    "descriptionRaw": "Seviye atladığımda veya Saldır: Alt tipi olan her yerdeki dost birimlere +1|+1 kazandırırsın.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "''Renkli şekiller ve şekilli renkler, Neeko her birisine dönüşebiler!''",
@@ -945,8 +1049,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07RU012T4.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07RU012T4-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07RU012T4.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07RU012T4-full.png"
       }
     ],
     "regions": [
@@ -994,8 +1098,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07RU012T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07RU012T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07RU012T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07RU012T1-full.png"
       }
     ],
     "regions": [
@@ -1007,8 +1111,8 @@
     "attack": 0,
     "cost": 3,
     "health": 0,
-    "description": "Bir dost birimin birebir <link=keyword.Ephemeral><sprite name=Ephemeral><style=Keyword>Hayali</style></link> bir kopyasını oluşturursun, ardından ikisinin yerini değiştirirsin.\r\nDestende bir <link=card.level1><style=AssociatedCard>Neeko</style></link> oluşur.",
-    "descriptionRaw": "Bir dost birimin birebir Hayali bir kopyasını oluşturursun, ardından ikisinin yerini değiştirirsin.\r\nDestende bir Neeko oluşur.",
+    "description": "Bir dost birimin birebir <link=keyword.Ephemeral><sprite name=Ephemeral><style=Keyword>Hayali</style></link> bir kopyasını çağırırsın, ardından ikisinin yerini değiştirirsin.\r\nDestende bir <link=card.level1><style=AssociatedCard>Neeko</style></link> oluşur.",
+    "descriptionRaw": "Bir dost birimin birebir Hayali bir kopyasını çağırırsın, ardından ikisinin yerini değiştirirsin.\r\nDestende bir Neeko oluşur.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "''Neeko orda, Neeko burda, Neeko her yerde!''<br>- Neeko",
@@ -1044,8 +1148,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07RU017.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07RU017-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07RU017.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07RU017-full.png"
       }
     ],
     "regions": [
@@ -1057,8 +1161,8 @@
     "attack": 0,
     "cost": 3,
     "health": 0,
-    "description": "Bir dost birimin birebir <link=keyword.Ephemeral><sprite name=Ephemeral><style=Keyword>Hayali</style></link> bir kopyasını oluşturursun, ardından ikisinin yerini değiştirirsin.",
-    "descriptionRaw": "Bir dost birimin birebir Hayali bir kopyasını oluşturursun, ardından ikisinin yerini değiştirirsin.",
+    "description": "Bir dost birimin birebir <link=keyword.Ephemeral><sprite name=Ephemeral><style=Keyword>Hayali</style></link> bir kopyasını çağırırsın, ardından ikisinin yerini değiştirirsin.",
+    "descriptionRaw": "Bir dost birimin birebir Hayali bir kopyasını çağırırsın, ardından ikisinin yerini değiştirirsin.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "''Neeko orda, Neeko burda, Neeko her yerde!''<br>- Neeko",
@@ -1094,8 +1198,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07RU016.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07RU016-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07RU016.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07RU016-full.png"
       }
     ],
     "regions": [
@@ -1141,11 +1245,265 @@
   },
   {
     "associatedCards": [],
+    "associatedCardRefs": [
+      "06BW006T3"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07BW043.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07BW043-full.png"
+      }
+    ],
+    "regions": [
+      "Bilgewater"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "Bir birime 1 hasar verirsin. Verilen her hasar için 1 <link=vocab.Spawn><style=Vocab>Dokunaç Çıkarırsın</style></link>.",
+    "descriptionRaw": "Bir birime 1 hasar verirsin. Verilen her hasar için 1 Dokunaç Çıkarırsın.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Yalnızca bilge kimseler elementlere hükmedebilir.",
+    "artistName": "Kudos Productions",
+    "name": "Dalgaların İmdadı",
+    "cardCode": "07BW043",
+    "keywords": [
+      "Hızlı"
+    ],
+    "keywordRefs": [
+      "Fast"
+    ],
+    "spellSpeed": "Hızlı",
+    "spellSpeedRef": "Fast",
+    "rarity": "ENDER",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "ELEMENTAL"
+    ],
+    "supertype": "",
+    "type": "Büyü",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Ebedi",
+      "Standart"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07IO041.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07IO041-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07BW035.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07BW035-full.png"
+      }
+    ],
+    "regions": [
+      "Bilgewater"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 6,
+    "health": 0,
+    "description": "Elindeki kartlar <link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>Geçici</style></link> alır.\r\nBir kart oynadığında, 1 kart çekersin.",
+    "descriptionRaw": "Elindeki kartlar Geçici alır.\r\nBir kart oynadığında, 1 kart çekersin.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''Ya elindeki kartları adın gibi bilip sımsıkı tutacaksın ya da her şeyi kaybetmeyi göze alacaksın.''<br>- Twisted Fate",
+    "artistName": "Envar Studio",
+    "name": "Üçkâğıtçının Mekânı",
+    "cardCode": "07BW035",
+    "keywords": [
+      "Yer"
+    ],
+    "keywordRefs": [
+      "LandmarkVisualOnly"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "DESTANSI",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Yer",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Ebedi",
+      "Standart"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07BW042.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07BW042-full.png"
+      }
+    ],
+    "regions": [
+      "Bilgewater"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 1,
+    "cost": 2,
+    "health": 3,
+    "description": "<link=vocab.Play><style=Vocab>Oyna</style></link>: Oyundaki dost birimlerden farklı bir alt tipe sahip bir takipçi <link=vocab.Manifest><style=Vocab>Cisimlendirirsin</style></link>.",
+    "descriptionRaw": "Oyna: Oyundaki dost birimlerden farklı bir alt tipe sahip bir takipçi Cisimlendirirsin.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''Bu pasaklı ufaklığın ortalıkta dolanmasına neden izin veriyoruz sanıyorsun? Onun sayesinde yıllardır tek bir rıhtım sıçanı bile görmedik!''<br>- Dehşet Yolu tayfası",
+    "artistName": "Caravan Studio",
+    "name": "Güvertenin Avcısı",
+    "cardCode": "07BW042",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "YAYGIN",
+    "rarityRef": "Common",
+    "subtypes": [
+      "KEDİ"
+    ],
+    "supertype": "",
+    "type": "Birim",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Ebedi",
+      "Standart"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07BW039.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07BW039-full.png"
+      }
+    ],
+    "regions": [
+      "Bilgewater"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 2,
+    "description": "Her tur ilk defa bedeli 1 olan bir dost birim çağırdığında, 1 büyü manası doldurursun.",
+    "descriptionRaw": "Her tur ilk defa bedeli 1 olan bir dost birim çağırdığında, 1 büyü manası doldurursun.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''Keytenkele abicik, buyada napıyoyşun? Yoksa sen de mi porocukları çok seviyosun?!''<br>- Küçük Ingvar",
+    "artistName": "Caravan Studio",
+    "name": "Ejder Prens Grinzo",
+    "cardCode": "07BW039",
+    "keywords": [
+      "Uyumlanma"
+    ],
+    "keywordRefs": [
+      "Attune"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ENDER",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "EJDER"
+    ],
+    "supertype": "",
+    "type": "Birim",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Ebedi",
+      "Standart"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07BW033.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07BW033-full.png"
+      }
+    ],
+    "regions": [
+      "Bilgewater"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 6,
+    "health": 0,
+    "description": "Rasgele bir Kabuk çağırırsın.\r\n<link=vocab.Everywhere><style=Vocab>Her yerdeki</style></link> bedeli 1 olan dost birimlere +1|+1 kazandırırsın. ",
+    "descriptionRaw": "Rasgele bir Kabuk çağırırsın.\r\nHer yerdeki bedeli 1 olan dost birimlere +1|+1 kazandırırsın. ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Bilgewater'daki bazı denizciler denizdeki en suskun gecelerde kulaklarına pamuk tıkarlar çünkü dalgaların altında tınlayan müziğin onlara sırılsıklam bir mezardan başka bir şey vaat etmediğini çok iyi bilirler.",
+    "artistName": "Kudos Productions",
+    "name": "Sirenlerin Şarkısı",
+    "cardCode": "07BW033",
+    "keywords": [
+      "Yavaş"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "Yavaş",
+    "spellSpeedRef": "Slow",
+    "rarity": "YAYGIN",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Büyü",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Ebedi",
+      "Standart"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07IO041.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07IO041-full.png"
       }
     ],
     "regions": [
@@ -1175,7 +1533,9 @@
     "spellSpeedRef": "Burst",
     "rarity": "YAYGIN",
     "rarityRef": "Common",
-    "subtypes": [],
+    "subtypes": [
+      "ELEMENTAL"
+    ],
     "supertype": "",
     "type": "Büyü",
     "collectible": true,
@@ -1196,8 +1556,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07IO043.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07IO043-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07IO043.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07IO043-full.png"
       }
     ],
     "regions": [
@@ -1242,8 +1602,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07IO043T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07IO043T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07IO043T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07IO043T1-full.png"
       }
     ],
     "regions": [
@@ -1289,6 +1649,56 @@
   },
   {
     "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07IO049.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07IO049-full.png"
+      }
+    ],
+    "regions": [
+      "Ionia"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 1,
+    "cost": 2,
+    "health": 1,
+    "description": "<link=vocab.NexusStrike><style=Vocab>Nexus Vuruşu</style></link>: Rasgele bir Kabuk çağırırsın.",
+    "descriptionRaw": "Nexus Vuruşu: Rasgele bir Kabuk çağırırsın.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''Sessiz ol bakalım, çok az kaldı. Arkadaşımla tanışmak istediğini söylememiş miydin? İnan bana seni çok sevecek.''",
+    "artistName": "Kudos Productions",
+    "name": "Airis",
+    "cardCode": "07IO049",
+    "keywords": [
+      "Sıyrılgan"
+    ],
+    "keywordRefs": [
+      "Elusive"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ENDER",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Birim",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Ebedi",
+      "Standart"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
     "associatedCardRefs": [
       "07SH038T1",
       "07SH013T6",
@@ -1296,8 +1706,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07SH038.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07SH038-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07SH038.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07SH038-full.png"
       }
     ],
     "regions": [
@@ -1351,8 +1761,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07SH038T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07SH038T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07SH038T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07SH038T2-full.png"
       }
     ],
     "regions": [
@@ -1364,8 +1774,8 @@
     "attack": 0,
     "cost": 1,
     "health": 0,
-    "description": "<link=card.shadow><style=AssociatedCard>Çalıdaki Gölge</style></link>, <link=card.parent><style=AssociatedCard>Yavru Pakaa</style></link> kartına dönüşür.",
-    "descriptionRaw": "Çalıdaki Gölge, Yavru Pakaa kartına dönüşür.",
+    "description": "Bana ait <link=card.shadow><style=AssociatedCard>Çalıdaki Gölge</style></link> kartını <link=card.parent><style=AssociatedCard>Yavru Pakaa</style></link> kartına dönüştürürsün. \r\n<link=card.shadow><style=AssociatedCard>Çalıdaki Gölge</style></link> oyundan ayrılırsa <link=vocab.Obliterate><style=Vocab>Kökümü Kazırsın</style></link>.",
+    "descriptionRaw": "Bana ait Çalıdaki Gölge kartını Yavru Pakaa kartına dönüştürürsün. \r\nÇalıdaki Gölge oyundan ayrılırsa Kökümü Kazırsın.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "Bedelini ödeyecekler.",
@@ -1403,8 +1813,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07SH038T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07SH038T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07SH038T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07SH038T1-full.png"
       }
     ],
     "regions": [
@@ -1443,8 +1853,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07SH041.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07SH041-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07SH041.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07SH041-full.png"
       }
     ],
     "regions": [
@@ -1495,8 +1905,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07SH004.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07SH004-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07SH004.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07SH004-full.png"
       }
     ],
     "regions": [
@@ -1551,8 +1961,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07SH013.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07SH013-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07SH013.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07SH013-full.png"
       }
     ],
     "regions": [
@@ -1607,8 +2017,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07SH013T3.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07SH013T3-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07SH013T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07SH013T3-full.png"
       }
     ],
     "regions": [
@@ -1663,8 +2073,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07SH013T4.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07SH013T4-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07SH013T4.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07SH013T4-full.png"
       }
     ],
     "regions": [
@@ -1720,8 +2130,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07SH013T7.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07SH013T7-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07SH013T7.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07SH013T7-full.png"
       }
     ],
     "regions": [
@@ -1733,8 +2143,8 @@
     "attack": 0,
     "cost": 2,
     "health": 0,
-    "description": "<link=card.shadow><style=AssociatedCard>Çalıdaki Gölge</style></link>, <link=card.parent><style=AssociatedCard>Nidalee</style></link> kartına dönüşür.",
-    "descriptionRaw": "Çalıdaki Gölge, Nidalee kartına dönüşür.",
+    "description": "Bana ait <link=card.shadow><style=AssociatedCard>Çalıdaki Gölge</style></link> kartını <link=card.parent><style=AssociatedCard>Nidalee</style></link> kartına dönüştürürsün. \r\n<link=card.shadow><style=AssociatedCard>Çalıdaki Gölge</style></link> oyundan ayrılırsa <link=vocab.Obliterate><style=Vocab>Kökümü Kazırsın</style></link>.",
+    "descriptionRaw": "Bana ait Çalıdaki Gölge kartını Nidalee kartına dönüştürürsün. \r\nÇalıdaki Gölge oyundan ayrılırsa Kökümü Kazırsın.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "Bedelini ödeyecekler.",
@@ -1773,8 +2183,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07SH013T5.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07SH013T5-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07SH013T5.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07SH013T5-full.png"
       }
     ],
     "regions": [
@@ -1786,8 +2196,8 @@
     "attack": 0,
     "cost": 2,
     "health": 0,
-    "description": "<link=card.shadow><style=AssociatedCard>Çalıdaki Gölge</style></link>, <link=card.parent><style=AssociatedCard>Sürüanası Nidalee</style></link> kartına dönüşür.",
-    "descriptionRaw": "Çalıdaki Gölge, Sürüanası Nidalee kartına dönüşür.",
+    "description": "Bana ait <link=card.shadow><style=AssociatedCard>Çalıdaki Gölge</style></link> kartını <link=card.parent><style=AssociatedCard>Sürüanası Nidalee</style></link> kartına dönüştürürsün. \r\n<link=card.shadow><style=AssociatedCard>Çalıdaki Gölge</style></link> oyundan ayrılırsa <link=vocab.Obliterate><style=Vocab>Kökümü Kazırsın</style></link>.",
+    "descriptionRaw": "Bana ait Çalıdaki Gölge kartını Sürüanası Nidalee kartına dönüştürürsün. \r\nÇalıdaki Gölge oyundan ayrılırsa Kökümü Kazırsın.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "Bedelini ödeyecekler.",
@@ -1831,8 +2241,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07SH013T6.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07SH013T6-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07SH013T6.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07SH013T6-full.png"
       }
     ],
     "regions": [
@@ -1880,8 +2290,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07SH013T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07SH013T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07SH013T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07SH013T2-full.png"
       }
     ],
     "regions": [
@@ -1936,8 +2346,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07SH009.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07SH009-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07SH009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07SH009-full.png"
       }
     ],
     "regions": [
@@ -1986,8 +2396,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07SH009T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07SH009T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07SH009T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07SH009T1-full.png"
       }
     ],
     "regions": [
@@ -2039,8 +2449,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07SH009T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07SH009T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07SH009T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07SH009T2-full.png"
       }
     ],
     "regions": [
@@ -2052,8 +2462,8 @@
     "attack": 0,
     "cost": 3,
     "health": 0,
-    "description": "<link=card.shadow><style=AssociatedCard>Çalıdaki Gölge</style></link>, <link=card.parent><style=AssociatedCard>İntikamcı Vastaya</style></link> kartına dönüşür.",
-    "descriptionRaw": "Çalıdaki Gölge, İntikamcı Vastaya kartına dönüşür.",
+    "description": "Bana ait <link=card.shadow><style=AssociatedCard>Çalıdaki Gölge</style></link> kartını <link=card.parent><style=AssociatedCard>İntikamcı Vastaya</style></link> kartına dönüştürürsün. \r\n<link=card.shadow><style=AssociatedCard>Çalıdaki Gölge</style></link> oyundan ayrılırsa <link=vocab.Obliterate><style=Vocab>Kökümü Kazırsın</style></link>.",
+    "descriptionRaw": "Bana ait Çalıdaki Gölge kartını İntikamcı Vastaya kartına dönüştürürsün. \r\nÇalıdaki Gölge oyundan ayrılırsa Kökümü Kazırsın.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "Bedelini ödeyecekler.",
@@ -2092,8 +2502,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07SH039.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07SH039-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07SH039.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07SH039-full.png"
       }
     ],
     "regions": [
@@ -2141,8 +2551,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07SH044.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07SH044-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07SH044.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07SH044-full.png"
       }
     ],
     "regions": [
@@ -2193,8 +2603,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07SH003.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07SH003-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07SH003.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07SH003-full.png"
       }
     ],
     "regions": [
@@ -2205,7 +2615,7 @@
     ],
     "attack": 2,
     "cost": 2,
-    "health": 2,
+    "health": 3,
     "description": "<link=vocab.Ambush><style=Vocab>Sota - 3</style></link>\r\n<link=card.ambush><style=AssociatedCard>Sotaya Yatmış Balonlu Avcı</style></link> ile dönüştüğümde, bu tur karşıladığım ya da karşılandığım bir sonraki sefer, düşmanımın Güç değeri 6 ya da daha azsa onu <link=keyword.Capture><sprite name=Capture><style=Keyword>Zapt Ederim</style></link>.",
     "descriptionRaw": "Sota - 3\r\nSotaya Yatmış Balonlu Avcı ile dönüştüğümde, bu tur karşıladığım ya da karşılandığım bir sonraki sefer, düşmanımın Güç değeri 6 ya da daha azsa onu Zapt Ederim.",
     "levelupDescription": "",
@@ -2239,8 +2649,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07SH003T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07SH003T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07SH003T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07SH003T2-full.png"
       }
     ],
     "regions": [
@@ -2292,8 +2702,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07SH003T3.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07SH003T3-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07SH003T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07SH003T3-full.png"
       }
     ],
     "regions": [
@@ -2305,8 +2715,8 @@
     "attack": 0,
     "cost": 3,
     "health": 0,
-    "description": "<link=card.shadow><style=AssociatedCard>Çalıdaki Gölge</style></link>, <link=card.parent><style=AssociatedCard>Balonlu Avcı</style></link> kartına dönüşür.",
-    "descriptionRaw": "Çalıdaki Gölge, Balonlu Avcı kartına dönüşür.",
+    "description": "Bana ait <link=card.shadow><style=AssociatedCard>Çalıdaki Gölge</style></link> kartını <link=card.parent><style=AssociatedCard>Balonlu Avcı</style></link> kartına dönüştürürsün. \r\n<link=card.shadow><style=AssociatedCard>Çalıdaki Gölge</style></link> oyundan ayrılırsa <link=vocab.Obliterate><style=Vocab>Kökümü Kazırsın</style></link>.",
+    "descriptionRaw": "Bana ait Çalıdaki Gölge kartını Balonlu Avcı kartına dönüştürürsün. \r\nÇalıdaki Gölge oyundan ayrılırsa Kökümü Kazırsın.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "Bedelini ödeyecekler.",
@@ -2342,8 +2752,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07SH011.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07SH011-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07SH011.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07SH011-full.png"
       }
     ],
     "regions": [
@@ -2389,14 +2799,68 @@
   },
   {
     "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07SH046.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07SH046-full.png"
+      }
+    ],
+    "regions": [
+      "Shurima"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "Bir takipçi oynadığında bu tur onun birebir kopyasına dönüşürüm. Kazandığım güçlendirmeleri korurum. ",
+    "descriptionRaw": "Bir takipçi oynadığında bu tur onun birebir kopyasına dönüşürüm. Kazandığım güçlendirmeleri korurum. ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''İiiiişteee tuyumuzun EEEEEEEN AŞIYI GÜZEL yeyine geldiiiik. Şimci heeeeerkeşler benim tuyumu o kaday çok beyenince BÜSBÜYÜK bi Taşkın yaptılay. Ondan sorna da büsbüyük Taşkın sonsuza kaday tuyumuzun eeeeen güzel durmakı oldu. Hadiyin, gidip Taşkın'a 'MEREBA BÜSBÜYÜK TAŞKIN!' diyelim Dev Taşkın HEEEERKEŞLERİ şok seviyo. Ama en en en en çok bu tuyla gezmeye gelenleyi seviyo.''<br>- Taşkın'la Maceralar - 6",
+    "artistName": "Caravan Studio",
+    "name": "Taklit Vadisi",
+    "cardCode": "07SH046",
+    "keywords": [
+      "Yer"
+    ],
+    "keywordRefs": [
+      "LandmarkVisualOnly"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "YAYGIN",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Yer",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Sadece Yaygın",
+      "Ebedi",
+      "Çift Bedelli Kartlar",
+      "Standart"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
     "associatedCardRefs": [
       "07SH039",
       "07SH013T6"
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07SH039T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07SH039T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07SH039T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07SH039T1-full.png"
       }
     ],
     "regions": [
@@ -2408,8 +2872,8 @@
     "attack": 0,
     "cost": 0,
     "health": 0,
-    "description": "<link=card.shadow><style=AssociatedCard>Çalıdaki Gölge</style></link>, <link=card.parent><style=AssociatedCard>Arazi Azmanı</style></link> kartına dönüşür.",
-    "descriptionRaw": "Çalıdaki Gölge, Arazi Azmanı kartına dönüşür.",
+    "description": "Bana ait <link=card.shadow><style=AssociatedCard>Çalıdaki Gölge</style></link> kartını <link=card.parent><style=AssociatedCard>Arazi Azmanı</style></link> kartına dönüştürürsün. \r\n<link=card.shadow><style=AssociatedCard>Çalıdaki Gölge</style></link> oyundan ayrılırsa <link=vocab.Obliterate><style=Vocab>Kökümü Kazırsın</style></link>.",
+    "descriptionRaw": "Bana ait Çalıdaki Gölge kartını Arazi Azmanı kartına dönüştürürsün. \r\nÇalıdaki Gölge oyundan ayrılırsa Kökümü Kazırsın.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "Bedelini ödeyecekler.",
@@ -2448,8 +2912,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07SH043.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07SH043-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07SH043.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07SH043-full.png"
       }
     ],
     "regions": [
@@ -2501,8 +2965,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07SH043T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07SH043T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07SH043T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07SH043T2-full.png"
       }
     ],
     "regions": [
@@ -2514,8 +2978,8 @@
     "attack": 0,
     "cost": 5,
     "health": 0,
-    "description": "<link=card.shadow><style=AssociatedCard>Çalıdaki Gölge</style></link>, <link=card.parent><style=AssociatedCard>Devasa Ebafil</style></link> kartına dönüşür.",
-    "descriptionRaw": "Çalıdaki Gölge, Devasa Ebafil kartına dönüşür.",
+    "description": "Bana ait <link=card.shadow><style=AssociatedCard>Çalıdaki Gölge</style></link> kartını <link=card.parent><style=AssociatedCard>Devasa Ebafil</style></link> kartına dönüştürürsün. \r\n<link=card.shadow><style=AssociatedCard>Çalıdaki Gölge</style></link> oyundan ayrılırsa <link=vocab.Obliterate><style=Vocab>Kökümü Kazırsın</style></link>.",
+    "descriptionRaw": "Bana ait Çalıdaki Gölge kartını Devasa Ebafil kartına dönüştürürsün. \r\nÇalıdaki Gölge oyundan ayrılırsa Kökümü Kazırsın.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "Bedelini ödeyecekler.",
@@ -2551,8 +3015,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07SH040.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07SH040-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07SH040.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07SH040-full.png"
       }
     ],
     "regions": [
@@ -2564,8 +3028,8 @@
     "attack": 1,
     "cost": 1,
     "health": 2,
-    "description": "Bu oyunda bir dost birim dönüştüğünde, bana +1|+1 kazandırırsın.",
-    "descriptionRaw": "Bu oyunda bir dost birim dönüştüğünde, bana +1|+1 kazandırırsın.",
+    "description": "Bir dost birim ilk defa dönüştüğünde +2|+1 kazanırım.",
+    "descriptionRaw": "Bir dost birim ilk defa dönüştüğünde +2|+1 kazanırım.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "''Üstü sert kılları andıran dikenlerle kaplı, küçük ve hepçil memeliler. Rahatsız edildiklerinde bu dikenleri jet hızında fırlatabiliyorlar. Muhtemelen savunma aracı olarak kullanılabilen kuyrukları da dikenli ve kıvrak. Deneyimli kâşiflere göre bu yaratıklar, huysuz ve geçimsiz tabiatlarıyla ünlü...''<br>- Anura'nın seyir defteri, 3. gün",
@@ -2600,8 +3064,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07SH044T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07SH044T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07SH044T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07SH044T1-full.png"
       }
     ],
     "regions": [
@@ -2613,8 +3077,8 @@
     "attack": 0,
     "cost": 4,
     "health": 0,
-    "description": "<link=card.shadow><style=AssociatedCard>Çalıdaki Gölge</style></link>, <link=card.parent><style=AssociatedCard>Aurora Hallunatis</style></link> kartına dönüşür.",
-    "descriptionRaw": "Çalıdaki Gölge, Aurora Hallunatis kartına dönüşür.",
+    "description": "Bana ait <link=card.shadow><style=AssociatedCard>Çalıdaki Gölge</style></link> kartını <link=card.parent><style=AssociatedCard>Aurora Hallunatis</style></link> kartına dönüştürürsün. \r\n<link=card.shadow><style=AssociatedCard>Çalıdaki Gölge</style></link> oyundan ayrılırsa <link=vocab.Obliterate><style=Vocab>Kökümü Kazırsın</style></link>.",
+    "descriptionRaw": "Bana ait Çalıdaki Gölge kartını Aurora Hallunatis kartına dönüştürürsün. \r\nÇalıdaki Gölge oyundan ayrılırsa Kökümü Kazırsın.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "Bedelini ödeyecekler.",
@@ -2652,8 +3116,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07SH005.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07SH005-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07SH005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07SH005-full.png"
       }
     ],
     "regions": [
@@ -2698,208 +3162,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07BW035.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07BW035-full.png"
-      }
-    ],
-    "regions": [
-      "Bilgewater"
-    ],
-    "regionRefs": [
-      "Bilgewater"
-    ],
-    "attack": 0,
-    "cost": 6,
-    "health": 0,
-    "description": "Elindeki kartlar <link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>Geçici</style></link> alır.\r\nBir kart oynadığında, 1 kart çekersin.",
-    "descriptionRaw": "Elindeki kartlar Geçici alır.\r\nBir kart oynadığında, 1 kart çekersin.",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "''Ya elindeki kartları adın gibi bilip sımsıkı tutacaksın ya da her şeyi kaybetmeyi göze alacaksın.''<br>- Twisted Fate",
-    "artistName": "Envar Studio",
-    "name": "Üçkâğıtçının Mekânı",
-    "cardCode": "07BW035",
-    "keywords": [
-      "Yer"
-    ],
-    "keywordRefs": [
-      "LandmarkVisualOnly"
-    ],
-    "spellSpeed": "",
-    "spellSpeedRef": "",
-    "rarity": "DESTANSI",
-    "rarityRef": "Epic",
-    "subtypes": [],
-    "supertype": "",
-    "type": "Yer",
-    "collectible": true,
-    "set": "Set7b",
-    "formats": [
-      "Ebedi",
-      "Standart"
-    ],
-    "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07BW042.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07BW042-full.png"
-      }
-    ],
-    "regions": [
-      "Bilgewater"
-    ],
-    "regionRefs": [
-      "Bilgewater"
-    ],
-    "attack": 1,
-    "cost": 2,
-    "health": 3,
-    "description": "<link=vocab.Play><style=Vocab>Oyna</style></link>: Oyundaki dost birimlerden farklı bir alt tipe sahip bir takipçi <link=vocab.Manifest><style=Vocab>Cisimlendirirsin</style></link>.",
-    "descriptionRaw": "Oyna: Oyundaki dost birimlerden farklı bir alt tipe sahip bir takipçi Cisimlendirirsin.",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "''Bu pasaklı ufaklığın ortalıkta dolanmasına neden izin veriyoruz sanıyorsun? Onun sayesinde yıllardır tek bir rıhtım sıçanı bile görmedik!''<br>- Dehşet Yolu tayfası",
-    "artistName": "Caravan Studio",
-    "name": "Güvertenin Avcısı",
-    "cardCode": "07BW042",
-    "keywords": [],
-    "keywordRefs": [],
-    "spellSpeed": "",
-    "spellSpeedRef": "",
-    "rarity": "YAYGIN",
-    "rarityRef": "Common",
-    "subtypes": [
-      "KEDİ"
-    ],
-    "supertype": "",
-    "type": "Birim",
-    "collectible": true,
-    "set": "Set7b",
-    "formats": [
-      "Ebedi",
-      "Standart"
-    ],
-    "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07BW039.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07BW039-full.png"
-      }
-    ],
-    "regions": [
-      "Bilgewater"
-    ],
-    "regionRefs": [
-      "Bilgewater"
-    ],
-    "attack": 2,
-    "cost": 2,
-    "health": 2,
-    "description": "Her tur ilk defa bedeli 1 olan bir dost birim çağırdığında, 1 büyü manası doldurursun.",
-    "descriptionRaw": "Her tur ilk defa bedeli 1 olan bir dost birim çağırdığında, 1 büyü manası doldurursun.",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "''Keytenkele abicik, buyada napıyoyşun? Yoksa sen de mi porocukları çok seviyosun?!''<br>- Küçük Ingvar",
-    "artistName": "Caravan Studio",
-    "name": "Ejder Prens Grinzo",
-    "cardCode": "07BW039",
-    "keywords": [
-      "Uyumlanma"
-    ],
-    "keywordRefs": [
-      "Attune"
-    ],
-    "spellSpeed": "",
-    "spellSpeedRef": "",
-    "rarity": "ENDER",
-    "rarityRef": "Rare",
-    "subtypes": [
-      "EJDER"
-    ],
-    "supertype": "",
-    "type": "Birim",
-    "collectible": true,
-    "set": "Set7b",
-    "formats": [
-      "Ebedi",
-      "Standart"
-    ],
-    "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07BW033.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07BW033-full.png"
-      }
-    ],
-    "regions": [
-      "Bilgewater"
-    ],
-    "regionRefs": [
-      "Bilgewater"
-    ],
-    "attack": 0,
-    "cost": 4,
-    "health": 0,
-    "description": "Rasgele bir Kabuk çağırırsın.\r\n<link=vocab.Everywhere><style=Vocab>Her yerdeki</style></link> bedeli 1 olan dost birimlere +1|+1 kazandırırsın. ",
-    "descriptionRaw": "Rasgele bir Kabuk çağırırsın.\r\nHer yerdeki bedeli 1 olan dost birimlere +1|+1 kazandırırsın. ",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "Bilgewater'daki bazı denizciler denizdeki en suskun gecelerde kulaklarına pamuk tıkarlar çünkü dalgaların altında tınlayan müziğin onlara sırılsıklam bir mezardan başka bir şey vaat etmediğini çok iyi bilirler.",
-    "artistName": "Kudos Productions",
-    "name": "Sirenlerin Şarkısı",
-    "cardCode": "07BW033",
-    "keywords": [
-      "Yavaş"
-    ],
-    "keywordRefs": [
-      "Slow"
-    ],
-    "spellSpeed": "Yavaş",
-    "spellSpeedRef": "Slow",
-    "rarity": "YAYGIN",
-    "rarityRef": "Common",
-    "subtypes": [],
-    "supertype": "",
-    "type": "Büyü",
-    "collectible": true,
-    "set": "Set7b",
-    "formats": [
-      "Ebedi",
-      "Standart"
-    ],
-    "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07FR011.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07FR011-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07FR011.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07FR011-full.png"
       }
     ],
     "regions": [
@@ -2948,8 +3212,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07FR010.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07FR010-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07FR010.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07FR010-full.png"
       }
     ],
     "regions": [
@@ -3002,8 +3266,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07FR015.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07FR015-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07FR015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07FR015-full.png"
       }
     ],
     "regions": [
@@ -3048,8 +3312,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07FR015T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07FR015T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07FR015T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07FR015T1-full.png"
       }
     ],
     "regions": [
@@ -3094,8 +3358,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07FR015T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07FR015T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07FR015T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07FR015T2-full.png"
       }
     ],
     "regions": [
@@ -3137,11 +3401,117 @@
   },
   {
     "associatedCards": [],
+    "associatedCardRefs": [
+      "07FR017T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07FR017.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07FR017-full.png"
+      }
+    ],
+    "regions": [
+      "Freljord"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 3,
+    "cost": 5,
+    "health": 2,
+    "description": "<link=keyword.Elemental Skill><sprite name=ElementalSkill><style=Keyword>Oyna</style></link>: TÜM diğer birimlere 2 hasar verirsin.",
+    "descriptionRaw": "Oyna: TÜM diğer birimlere 2 hasar verirsin.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Kristal fırtınagaganın ansızın çöken gazabı ayrım gözetmez ve sadece birkaç saniye içinde savaşın tüm gidişatını değiştirebilir. Bu kuş pek çok kişiye göre büyük ve dehşet verici, hatta dünyayı bile yerinden oynatabilecek bir fırtınanın ilk alametidir.",
+    "artistName": "Bubble Cat",
+    "name": "Kristal Fırtınagaga",
+    "cardCode": "07FR017",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ENDER",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "KUŞ"
+    ],
+    "supertype": "",
+    "type": "Birim",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Ebedi",
+      "Standart"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07FR016.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07FR016-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07FR017T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07FR017T1-full.png"
+      }
+    ],
+    "regions": [
+      "Freljord"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "TÜM diğer birimlere 2 hasar verirsin.",
+    "descriptionRaw": "TÜM diğer birimlere 2 hasar verirsin.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''Fırtınagaganın çığlığından nasıl kurtulabileceğini biliyor musun? Hah. O kuşun çağrısını duydun mu elden dua etmek dışında hiçbir şey gelmez.''<br>- Avarosa Binicisi",
+    "artistName": "Polar Engine",
+    "name": "Hunhar Yıldırım",
+    "cardCode": "07FR017T1",
+    "keywords": [
+      "Elemental Yetenek"
+    ],
+    "keywordRefs": [
+      "ElementalSkill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Yok",
+    "rarityRef": "None",
+    "subtypes": [
+      "ELEMENTAL"
+    ],
+    "supertype": "",
+    "type": "Yetenek",
+    "collectible": false,
+    "set": "Set7b",
+    "formats": [
+      "Sadece Yaygın",
+      "Ebedi",
+      "Çift Bedelli Kartlar",
+      "Standart"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07FR016.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07FR016-full.png"
       }
     ],
     "regions": [
@@ -3152,7 +3522,7 @@
     ],
     "attack": 5,
     "cost": 5,
-    "health": 5,
+    "health": 4,
     "description": "Çağrıldığımda destenin en üstündeki 3 birime +1|+1 kazandırırsın. Bir dost birimin benimkinden farklı bir alt tipe sahipse, o birimlerden 1 tanesini çekersin.",
     "descriptionRaw": "Çağrıldığımda destenin en üstündeki 3 birime +1|+1 kazandırırsın. Bir dost birimin benimkinden farklı bir alt tipe sahipse, o birimlerden 1 tanesini çekersin.",
     "levelupDescription": "",
@@ -3161,8 +3531,12 @@
     "artistName": "Envar Studio",
     "name": "Buzul Binek",
     "cardCode": "07FR016",
-    "keywords": [],
-    "keywordRefs": [],
+    "keywords": [
+      "Aban"
+    ],
+    "keywordRefs": [
+      "Overwhelm"
+    ],
     "spellSpeed": "",
     "spellSpeedRef": "",
     "rarity": "ENDER",
@@ -3190,8 +3564,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07SI010.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07SI010-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07SI010.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07SI010-full.png"
       }
     ],
     "regions": [
@@ -3238,8 +3612,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07SI010T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07SI010T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07SI010T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07SI010T1-full.png"
       }
     ],
     "regions": [
@@ -3269,7 +3643,9 @@
     "spellSpeedRef": "",
     "rarity": "Yok",
     "rarityRef": "None",
-    "subtypes": [],
+    "subtypes": [
+      "ÖRÜMCEK"
+    ],
     "supertype": "",
     "type": "Birim",
     "collectible": false,
@@ -3288,8 +3664,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07SI012.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07SI012-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07SI012.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07SI012-full.png"
       }
     ],
     "regions": [
@@ -3340,8 +3716,58 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07SI004.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07SI004-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07SI013.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07SI013-full.png"
+      }
+    ],
+    "regions": [
+      "Gölge Adalar"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 1,
+    "cost": 1,
+    "health": 1,
+    "description": "<link=keyword.Last Breath><sprite name=LastBreath><style=Keyword>Son Nefes</style></link>: Destende, destendeki <link=vocab.Strongest><style=Vocab>En Güçlü</style></link> <link=card.selfref><style=AssociatedCard>Türeyen Karaifrit</style></link> kartının birebir kopyası oluşur, ardından destendeki <link=card.selfref><style=AssociatedCard>Türeyen Karaifrit</style></link> kartlarının nitelikleri ikiye katlanır.",
+    "descriptionRaw": "Son Nefes: Destende, destendeki En Güçlü Türeyen Karaifrit kartının birebir kopyası oluşur, ardından destendeki Türeyen Karaifrit kartlarının nitelikleri ikiye katlanır.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''Sis'ten çok şey öğrendim. En önemlisi de ne zaman kaçmam gerektiğini...''<br>- Ixtal'lı Işık Muhafızı",
+    "artistName": "Xavier Leroux",
+    "name": "Türeyen Karaifrit",
+    "cardCode": "07SI013",
+    "keywords": [
+      "Son Nefes"
+    ],
+    "keywordRefs": [
+      "LastBreath"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ENDER",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Birim",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Ebedi",
+      "Standart"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07SI004.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07SI004-full.png"
       }
     ],
     "regions": [
@@ -3390,8 +3816,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07MT009.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07MT009-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07MT009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07MT009-full.png"
       }
     ],
     "regions": [
@@ -3440,8 +3866,166 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07MT006.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07MT006-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07MT013.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07MT013-full.png"
+      }
+    ],
+    "regions": [
+      "Targon"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "Bedeli 7 ya da daha fazla olan bir Semavi karta <link=keyword.Invoke><style=Keyword>Yakarırsın</style></link> ya da 8 mana harcayarak bunun yanında <link=vocab.Everywhere><style=Vocab>her yerdeki</style></link> Semavi kartlarının bedelini yarıya indirirsin. Sayı üste yuvarlanır.",
+    "descriptionRaw": "Bedeli 7 ya da daha fazla olan bir Semavi karta Yakarırsın ya da 8 mana harcayarak bunun yanında her yerdeki Semavi kartlarının bedelini yarıya indirirsin. Sayı üste yuvarlanır.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Gökler yeryüzünü kutsarken Yargıç ebedi bir nöbet bekler.",
+    "artistName": "Polar Engine",
+    "name": "Kozmik Çağrı",
+    "cardCode": "07MT013",
+    "keywords": [
+      "Anlık"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Anlık",
+    "spellSpeedRef": "Burst",
+    "rarity": "YAYGIN",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Büyü",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Ebedi",
+      "Standart"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07MT013T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07MT013T1-full.png"
+      }
+    ],
+    "regions": [
+      "Targon"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 8,
+    "health": 0,
+    "description": "Bedeli 7 ya da daha fazla olan bir Semavi karta <link=keyword.Invoke><style=Keyword>Yakarırsın</style></link> ve <link=vocab.Everywhere><style=Vocab>her yerdeki</style></link> Semavi kartlarının bedeli yarıya iner. Sayı üste yuvarlanır.",
+    "descriptionRaw": "Bedeli 7 ya da daha fazla olan bir Semavi karta Yakarırsın ve her yerdeki Semavi kartlarının bedeli yarıya iner. Sayı üste yuvarlanır.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Gökler yeryüzünü kutsarken Yargıç ebedi bir nöbet bekler.",
+    "artistName": "Polar Engine",
+    "name": "Kozmik Çağrı",
+    "cardCode": "07MT013T1",
+    "keywords": [
+      "Anlık"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Anlık",
+    "spellSpeedRef": "Burst",
+    "rarity": "YAYGIN",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Büyü",
+    "collectible": false,
+    "set": "Set7b",
+    "formats": [
+      "Sadece Yaygın",
+      "Ebedi",
+      "Çift Bedelli Kartlar",
+      "Standart"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07MT013T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07MT013T2-full.png"
+      }
+    ],
+    "regions": [
+      "Targon"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "Bedeli 7 ya da daha fazla olan bir Semavi karta <link=keyword.Invoke><style=Keyword>Yakarırsın</style></link>.",
+    "descriptionRaw": "Bedeli 7 ya da daha fazla olan bir Semavi karta Yakarırsın.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Gökler yeryüzünü kutsarken Yargıç ebedi bir nöbet bekler.",
+    "artistName": "Polar Engine",
+    "name": "Kozmik Çağrı",
+    "cardCode": "07MT013T2",
+    "keywords": [
+      "Anlık"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Anlık",
+    "spellSpeedRef": "Burst",
+    "rarity": "YAYGIN",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Büyü",
+    "collectible": false,
+    "set": "Set7b",
+    "formats": [
+      "Sadece Yaygın",
+      "Ebedi",
+      "Çift Bedelli Kartlar",
+      "Standart"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07MT006.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07MT006-full.png"
       }
     ],
     "regions": [
@@ -3486,8 +4070,54 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07BC016.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07BC016-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07BC020.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07BC020-full.png"
+      }
+    ],
+    "regions": [
+      "Bandle Şehri"
+    ],
+    "regionRefs": [
+      "BandleCity"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 3,
+    "description": "Bir ya da daha fazla tuzağın veya lütfun etkinleştiğinde, ilgili oyuncunun destesine etkinleşen tuzak veya lütuftan 2 tane koyarsın.",
+    "descriptionRaw": "Bir ya da daha fazla tuzağın veya lütfun etkinleştiğinde, ilgili oyuncunun destesine etkinleşen tuzak veya lütuftan 2 tane koyarsın.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Kirli Çıkı'nın ne kadar zamandır eşya biriktirdiğini ya da nereden geldiğini tam olarak bilen yok. Pek de munis birine benziyor. Arkasında bıraktığı, yürürken insanın ayağına dolanan ıvır zıvırı saymazsanız tabii.",
+    "artistName": "Caravan Studio",
+    "name": "Kirli Çıkı",
+    "cardCode": "07BC020",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ENDER",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Birim",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Ebedi",
+      "Standart"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07BC016.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07BC016-full.png"
       }
     ],
     "regions": [
@@ -3508,11 +4138,9 @@
     "name": "Hep Sadık Anahtar",
     "cardCode": "07BC016",
     "keywords": [
-      "Ağır Darbe",
       "Ekipman"
     ],
     "keywordRefs": [
-      "Impact",
       "Equipment"
     ],
     "spellSpeed": "",
@@ -3540,8 +4168,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07BC018.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07BC018-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07BC018.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07BC018-full.png"
       }
     ],
     "regions": [
@@ -3568,7 +4196,7 @@
     "rarity": "DESTANSI",
     "rarityRef": "Epic",
     "subtypes": [
-      "YORDLE"
+      "PERİ"
     ],
     "supertype": "",
     "type": "Birim",
@@ -3588,8 +4216,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07BC011.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07BC011-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07BC011.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07BC011-full.png"
       }
     ],
     "regions": [
@@ -3640,8 +4268,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07DE014.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07DE014-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07DE014.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07DE014-full.png"
       }
     ],
     "regions": [
@@ -3688,8 +4316,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07DE015.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07DE015-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07DE015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07DE015-full.png"
       }
     ],
     "regions": [
@@ -3698,9 +4326,9 @@
     "regionRefs": [
       "Demacia"
     ],
-    "attack": 5,
+    "attack": 6,
     "cost": 6,
-    "health": 5,
+    "health": 6,
     "description": "<link=vocab.Play><style=Vocab>Oyna</style></link>: Bir dost birimin benimkinden farklı bir alt tipi varsa, bir Demacia büyüsü <link=vocab.Manifest><style=Vocab>Cisimlendirirsin</style></link>.",
     "descriptionRaw": "Oyna: Bir dost birimin benimkinden farklı bir alt tipi varsa, bir Demacia büyüsü Cisimlendirirsin.",
     "levelupDescription": "",
@@ -3740,8 +4368,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07DE011.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/tr_tr/img/cards/07DE011-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07DE011.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07DE011-full.png"
       }
     ],
     "regions": [
@@ -3771,6 +4399,56 @@
     "spellSpeedRef": "",
     "rarity": "YAYGIN",
     "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Birim",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Ebedi",
+      "Standart"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07DE016.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/tr_tr/img/cards/07DE016-full.png"
+      }
+    ],
+    "regions": [
+      "Demacia"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 0,
+    "cost": 4,
+    "health": 4,
+    "description": "<link=vocab.Attack><style=Vocab>Saldır</style></link>: <link=vocab.Everywhere><style=Vocab>Her yerdeki</style></link> dost <link=keyword.Formidable><sprite name=Formidable><style=Keyword>Çetin Ceviz</style></link> birimlere +0|+1 kazandırırsın.",
+    "descriptionRaw": "Saldır: Her yerdeki dost Çetin Ceviz birimlere +0|+1 kazandırırsın.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Uzunca bir zamandır Durand ailesine yoldaşlık eden Balen'in koca cüssesiyle çelişen ince işler çıkarmakta üstüne yok. İşe çırak olarak başlamış olmasına rağmen Balen zanaatındaki üstün yeteneğiyle eşsiz eserler üretiyor ve Durand'lar onu dostları olarak görmekten gurur duyuyor.",
+    "artistName": "Envar Studio",
+    "name": "Özverili Balen",
+    "cardCode": "07DE016",
+    "keywords": [
+      "Çetin Ceviz"
+    ],
+    "keywordRefs": [
+      "Formidable"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "DESTANSI",
+    "rarityRef": "Epic",
     "subtypes": [],
     "supertype": "",
     "type": "Birim",

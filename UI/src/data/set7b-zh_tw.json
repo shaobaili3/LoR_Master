@@ -4,8 +4,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07PZ019.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07PZ019-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07PZ019.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07PZ019-full.png"
       }
     ],
     "regions": [
@@ -54,8 +54,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07PZ021.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07PZ021-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07PZ021.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07PZ021-full.png"
       }
     ],
     "regions": [
@@ -103,13 +103,11 @@
   },
   {
     "associatedCards": [],
-    "associatedCardRefs": [
-      "01PZ022"
-    ],
+    "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07PZ013.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07PZ013-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07PZ022.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07PZ022-full.png"
       }
     ],
     "regions": [
@@ -119,10 +117,64 @@
       "PiltoverZaun"
     ],
     "attack": 0,
-    "cost": 3,
+    "cost": 2,
     "health": 0,
-    "description": "若我方主堡將受到<link=card.cardref><style=AssociatedCard>劇毒膨菇</style></link>以外的傷害，則改為每有1點傷害，對手便在我方牌組植入4張<link=card.cardref><style=AssociatedCard>劇毒膨菇</style></link>。",
-    "descriptionRaw": "若我方主堡將受到劇毒膨菇以外的傷害，則改為每有1點傷害，對手便在我方牌組植入4張劇毒膨菇。",
+    "description": "從敵軍單位與敵方主堡中挑選<br>2個目標，各造成1點傷害。",
+    "descriptionRaw": "從敵軍單位與敵方主堡中挑選2個目標，各造成1點傷害。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "皮爾托福人大多對風的流向毫不在意。但對許多佐恩人來說，任何一縷清新微風都是救贖。",
+    "artistName": "Polar Engine",
+    "name": "聖潔清風",
+    "cardCode": "07PZ022",
+    "keywords": [
+      "慢速"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "慢速",
+    "spellSpeedRef": "Slow",
+    "rarity": "普通",
+    "rarityRef": "Common",
+    "subtypes": [
+      "元素"
+    ],
+    "supertype": "",
+    "type": "法術",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "01PZ022"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07PZ013.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07PZ013-full.png"
+      }
+    ],
+    "regions": [
+      "皮爾托福&佐恩"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 0,
+    "cost": 4,
+    "health": 0,
+    "description": "若我方主堡將受到<link=card.cardref><style=AssociatedCard>劇毒膨菇</style></link>以外的傷害，則改為每有1點傷害，對手便在我方牌組植入5張<link=card.cardref><style=AssociatedCard>劇毒膨菇</style></link>。",
+    "descriptionRaw": "若我方主堡將受到劇毒膨菇以外的傷害，則改為每有1點傷害，對手便在我方牌組植入5張劇毒膨菇。",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "在佐恩街頭的地底深處，人如其食。",
@@ -160,8 +212,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07PZ015.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07PZ015-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07PZ015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07PZ015-full.png"
       }
     ],
     "regions": [
@@ -210,8 +262,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07PZ015T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07PZ015T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07PZ015T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07PZ015T1-full.png"
       }
     ],
     "regions": [
@@ -262,8 +314,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07NX028.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07NX028-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07NX028.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07NX028-full.png"
       }
     ],
     "regions": [
@@ -312,8 +364,60 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07NX032.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07NX032-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07NX034.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07NX034-full.png"
+      }
+    ],
+    "regions": [
+      "諾克薩斯"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "友軍單位魔耗值-1。召喚友軍單位時，對其造成2點傷害。",
+    "descriptionRaw": "友軍單位魔耗值-1。召喚友軍單位時，對其造成2點傷害。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「來吧，朋友們，請坐！這裡有喝不完的美酒，還有好友相伴，而我等不及要向各位上主菜了。」——弗拉迪米爾",
+    "artistName": "Envar Studio",
+    "name": "血色宴會廳",
+    "cardCode": "07NX034",
+    "keywords": [
+      "地標",
+      "Missing Translation"
+    ],
+    "keywordRefs": [
+      "LandmarkVisualOnly",
+      "AuraVisualFakeKeyword"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "史詩",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "地標",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07NX032.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07NX032-full.png"
       }
     ],
     "regions": [
@@ -362,8 +466,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07NX033.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07NX033-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07NX033.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07NX033-full.png"
       }
     ],
     "regions": [
@@ -423,8 +527,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07RU015.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07RU015-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07RU015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07RU015-full.png"
       }
     ],
     "regions": [
@@ -438,8 +542,8 @@
     "health": 4,
     "description": "<link=vocab.Origin><style=Vocab>起源</style></link>：<link=card.origin><style=AssociatedCard>普羅王諭令</style></link>。\r\n每回合我方首次召喚其他普羅單位時，在手牌生成1張<link=card.baseSnax><style=AssociatedCard>普羅點心</style></link>。",
     "descriptionRaw": "起源：普羅王諭令。\r\n每回合我方首次召喚其他普羅單位時，在手牌生成1張普羅點心。",
-    "levelupDescription": "我方召喚6個以上的其他新普羅。<style=Variable></style>",
-    "levelupDescriptionRaw": "我方召喚6個以上的其他新普羅。",
+    "levelupDescription": "我方召喚6個以上的其他新普羅。此牌升級時，在手牌隨機生成<br>1張特別點心。<style=Variable></style>",
+    "levelupDescriptionRaw": "我方召喚6個以上的其他新普羅。此牌升級時，在手牌隨機生成1張特別點心。",
     "flavorText": "英格娃一眼就能看出一樣東西有沒有潛力。先不論手工製的外觀，只要想像力夠豐富，她心愛的小夥伴輕鬆就能成為成千上萬隻普羅的統治者。 ",
     "artistName": "Envar Studio",
     "name": "普羅王",
@@ -474,8 +578,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07RU015T3.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07RU015T3-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07RU015T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07RU015T3-full.png"
       }
     ],
     "regions": [
@@ -526,8 +630,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07RU015T6.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07RU015T6-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07RU015T6.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07RU015T6-full.png"
       }
     ],
     "regions": [
@@ -578,8 +682,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07RU015T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07RU015T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07RU015T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07RU015T2-full.png"
       }
     ],
     "regions": [
@@ -630,8 +734,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07RU015T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07RU015T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07RU015T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07RU015T1-full.png"
       }
     ],
     "regions": [
@@ -678,8 +782,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07RU015T7.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07RU015T7-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07RU015T7.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07RU015T7-full.png"
       }
     ],
     "regions": [
@@ -735,8 +839,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07RU015T4.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07RU015T4-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07RU015T4.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07RU015T4-full.png"
       }
     ],
     "regions": [
@@ -785,8 +889,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07RU015T5.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07RU015T5-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07RU015T5.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07RU015T5-full.png"
       }
     ],
     "regions": [
@@ -798,8 +902,8 @@
     "attack": 0,
     "cost": 2,
     "health": 0,
-    "description": "賦予<link=vocab.Everywhere><style=Vocab>各處</style></link>普羅友軍單位+1|+1。<link=keyword.Frostbite><sprite name=Frostbite><style=Keyword>凍傷</style></link>1個生命值為3<br>以下的敵軍單位。",
-    "descriptionRaw": "賦予各處普羅友軍單位+1|+1。凍傷1個生命值為3以下的敵軍單位。",
+    "description": "賦予<link=vocab.Everywhere><style=Vocab>各處</style></link>普羅友軍單位+1|+1。<link=keyword.Frostbite><sprite name=Frostbite><style=Keyword>凍傷</style></link>1個敵軍單位。",
+    "descriptionRaw": "賦予各處普羅友軍單位+1|+1。凍傷1個敵軍單位。",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "這道點心最大的賣點就是純手工的弗雷爾卓德風味糖霜：細雪、積雪，還有——沒錯——降雪的味道！",
@@ -839,8 +943,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07RU012.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07RU012-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07RU012.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07RU012-full.png"
       }
     ],
     "regions": [
@@ -891,8 +995,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07RU012T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07RU012T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07RU012T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07RU012T2-full.png"
       }
     ],
     "regions": [
@@ -904,8 +1008,8 @@
     "attack": 3,
     "cost": 2,
     "health": 3,
-    "description": "<link=vocab.Attack><style=Vocab>攻擊</style></link>：賦予<link=vocab.Everywhere><style=Vocab>各處</style></link>擁有卡牌次類<br>的友軍單位+1|+1。",
-    "descriptionRaw": "攻擊：賦予各處擁有卡牌次類的友軍單位+1|+1。",
+    "description": "此牌升級時及<link=vocab.Attack><style=Vocab>攻擊</style></link>：賦予<link=vocab.Everywhere><style=Vocab>各處</style></link>擁有<br>卡牌次類的友軍單位+1|+1。",
+    "descriptionRaw": "此牌升級時及攻擊：賦予各處擁有卡牌次類的友軍單位+1|+1。",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "「不管是什麼形狀，什麼顏色——妮可想變就變！」",
@@ -945,8 +1049,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07RU012T4.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07RU012T4-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07RU012T4.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07RU012T4-full.png"
       }
     ],
     "regions": [
@@ -994,8 +1098,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07RU012T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07RU012T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07RU012T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07RU012T1-full.png"
       }
     ],
     "regions": [
@@ -1007,8 +1111,8 @@
     "attack": 0,
     "cost": 3,
     "health": 0,
-    "description": "生成1個友軍單位的<link=keyword.Ephemeral><sprite name=Ephemeral><style=Keyword>閃靈</style></link><br>複製單位並調換之。\r\n在我方牌組生成1張<link=card.level1><style=AssociatedCard>妮可</style></link>。",
-    "descriptionRaw": "生成1個友軍單位的閃靈複製單位並調換之。\r\n在我方牌組生成1張妮可。",
+    "description": "召喚1個友軍單位的<link=keyword.Ephemeral><sprite name=Ephemeral><style=Keyword>閃靈</style></link><br>複製單位並調換之。\r\n在我方牌組生成1張<link=card.level1><style=AssociatedCard>妮可</style></link>。",
+    "descriptionRaw": "召喚1個友軍單位的閃靈複製單位並調換之。\r\n在我方牌組生成1張妮可。",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "「妮可在這裡，妮可在那裡——妮可想在哪裡就在哪裡！」——妮可",
@@ -1044,8 +1148,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07RU017.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07RU017-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07RU017.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07RU017-full.png"
       }
     ],
     "regions": [
@@ -1057,8 +1161,8 @@
     "attack": 0,
     "cost": 3,
     "health": 0,
-    "description": "生成1個友軍單位的<link=keyword.Ephemeral><sprite name=Ephemeral><style=Keyword>閃靈</style></link><br>複製單位並調換之。",
-    "descriptionRaw": "生成1個友軍單位的閃靈複製單位並調換之。",
+    "description": "召喚1個友軍單位的<link=keyword.Ephemeral><sprite name=Ephemeral><style=Keyword>閃靈</style></link><br>複製單位並調換之。",
+    "descriptionRaw": "召喚1個友軍單位的閃靈複製單位並調換之。",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "「妮可在這裡，妮可在那裡——妮可想在哪裡就在哪裡！」——妮可",
@@ -1094,8 +1198,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07RU016.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07RU016-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07RU016.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07RU016-full.png"
       }
     ],
     "regions": [
@@ -1141,11 +1245,265 @@
   },
   {
     "associatedCards": [],
+    "associatedCardRefs": [
+      "06BW006T3"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07BW043.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07BW043-full.png"
+      }
+    ],
+    "regions": [
+      "比爾吉沃特"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "對1個單位造成1點傷害。<br>每造成1點傷害，<link=vocab.Spawn><style=Vocab>海祭</style></link>1。",
+    "descriptionRaw": "對1個單位造成1點傷害。每造成1點傷害，海祭1。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "唯有見識最廣的人，能夠命令元素遵從自己的意志。",
+    "artistName": "Kudos Productions",
+    "name": "潮汐祈喚",
+    "cardCode": "07BW043",
+    "keywords": [
+      "快速"
+    ],
+    "keywordRefs": [
+      "Fast"
+    ],
+    "spellSpeed": "快速",
+    "spellSpeedRef": "Fast",
+    "rarity": "稀有",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "元素"
+    ],
+    "supertype": "",
+    "type": "法術",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07IO041.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07IO041-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07BW035.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07BW035-full.png"
+      }
+    ],
+    "regions": [
+      "比爾吉沃特"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 6,
+    "health": 0,
+    "description": "我方手牌中的卡牌擁有<link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>飛逝</style></link>。\r\n我方打出卡牌時，抽1張牌。",
+    "descriptionRaw": "我方手牌中的卡牌擁有飛逝。\r\n我方打出卡牌時，抽1張牌。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「你要不知道自己手上有什麼牌然後緊緊抓好，不然就準備輸光一切。」——逆命",
+    "artistName": "Envar Studio",
+    "name": "騙徒老巢",
+    "cardCode": "07BW035",
+    "keywords": [
+      "地標"
+    ],
+    "keywordRefs": [
+      "LandmarkVisualOnly"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "史詩",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "地標",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07BW042.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07BW042-full.png"
+      }
+    ],
+    "regions": [
+      "比爾吉沃特"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 1,
+    "cost": 2,
+    "health": 3,
+    "description": "<link=vocab.Play><style=Vocab>出牌</style></link>：<link=vocab.Manifest><style=Vocab>顯化</style></link>1張與場上友軍單位<br>卡牌次類不同的侍從單位。",
+    "descriptionRaw": "出牌：顯化1張與場上友軍單位卡牌次類不同的侍從單位。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「我們會養這髒兮兮的小傢伙不是沒有原因的：我們已經好幾年沒有鯊鼠的問題了！」——恐懼號水手",
+    "artistName": "Caravan Studio",
+    "name": "鯊鼠獵手",
+    "cardCode": "07BW042",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "普通",
+    "rarityRef": "Common",
+    "subtypes": [
+      "貓族"
+    ],
+    "supertype": "",
+    "type": "單位",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07BW039.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07BW039-full.png"
+      }
+    ],
+    "regions": [
+      "比爾吉沃特"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 2,
+    "description": "每回合我方首次召喚魔耗值為1<br>的單位時，恢復1點法術魔力。",
+    "descriptionRaw": "每回合我方首次召喚魔耗值為1的單位時，恢復1點法術魔力。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「蜥蜴先生，你怎麼會在這裡？你也喜歡普羅嗎！？」——少女英格娃",
+    "artistName": "Caravan Studio",
+    "name": "龍王子古林澤",
+    "cardCode": "07BW039",
+    "keywords": [
+      "調節"
+    ],
+    "keywordRefs": [
+      "Attune"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "稀有",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "龍族"
+    ],
+    "supertype": "",
+    "type": "單位",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07BW033.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07BW033-full.png"
+      }
+    ],
+    "regions": [
+      "比爾吉沃特"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 6,
+    "health": 0,
+    "description": "隨機召喚1個空殼。\r\n賦予<link=vocab.Everywhere><style=Vocab>各處</style></link>魔耗值為1<br>的友軍單位+1|+1。 ",
+    "descriptionRaw": "隨機召喚1個空殼。\r\n賦予各處魔耗值為1的友軍單位+1|+1。 ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "有些比爾吉沃特水手出海時，會在最寧靜的夜晚中戴上耳塞，因為他們知道從海面下傳出的音樂只會讓他們屍沉大海。",
+    "artistName": "Kudos Productions",
+    "name": "海妖之歌",
+    "cardCode": "07BW033",
+    "keywords": [
+      "慢速"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "慢速",
+    "spellSpeedRef": "Slow",
+    "rarity": "普通",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "法術",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07IO041.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07IO041-full.png"
       }
     ],
     "regions": [
@@ -1175,7 +1533,9 @@
     "spellSpeedRef": "Burst",
     "rarity": "普通",
     "rarityRef": "Common",
-    "subtypes": [],
+    "subtypes": [
+      "元素"
+    ],
     "supertype": "",
     "type": "法術",
     "collectible": true,
@@ -1196,8 +1556,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07IO043.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07IO043-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07IO043.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07IO043-full.png"
       }
     ],
     "regions": [
@@ -1242,8 +1602,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07IO043T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07IO043T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07IO043T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07IO043T1-full.png"
       }
     ],
     "regions": [
@@ -1289,6 +1649,56 @@
   },
   {
     "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07IO049.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07IO049-full.png"
+      }
+    ],
+    "regions": [
+      "愛歐尼亞"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 1,
+    "cost": 2,
+    "health": 1,
+    "description": "<link=vocab.NexusStrike><style=Vocab>打擊主堡</style></link>：隨機召喚1個空殼。",
+    "descriptionRaw": "打擊主堡：隨機召喚1個空殼。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「噓，我們就快到了。是你說要見我的朋友的，對吧？相信我，她絕對會愛死你的。」",
+    "artistName": "Kudos Productions",
+    "name": "愛麗絲",
+    "cardCode": "07IO049",
+    "keywords": [
+      "隱密"
+    ],
+    "keywordRefs": [
+      "Elusive"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "稀有",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "單位",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
     "associatedCardRefs": [
       "07SH038T1",
       "07SH013T6",
@@ -1296,8 +1706,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07SH038.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07SH038-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07SH038.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07SH038-full.png"
       }
     ],
     "regions": [
@@ -1351,8 +1761,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07SH038T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07SH038T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07SH038T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07SH038T2-full.png"
       }
     ],
     "regions": [
@@ -1364,8 +1774,8 @@
     "attack": 0,
     "cost": 1,
     "health": 0,
-    "description": "將<link=card.shadow><style=AssociatedCard>樹叢暗影</style></link>幻化為<link=card.parent><style=AssociatedCard>帕卡幼豹</style></link>。",
-    "descriptionRaw": "將樹叢暗影幻化為帕卡幼豹。",
+    "description": "將此牌的<link=card.shadow><style=AssociatedCard>樹叢暗影</style></link>幻化為<link=card.parent><style=AssociatedCard>帕卡幼豹</style></link>。 \r\n若此牌的<link=card.shadow><style=AssociatedCard>樹叢暗影</style></link>離場，<br>則<link=vocab.Obliterate><style=Vocab>泯滅</style></link>此牌。",
+    "descriptionRaw": "將此牌的樹叢暗影幻化為帕卡幼豹。 \r\n若此牌的樹叢暗影離場，則泯滅此牌。",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "讓他們付出代價。",
@@ -1403,8 +1813,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07SH038T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07SH038T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07SH038T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07SH038T1-full.png"
       }
     ],
     "regions": [
@@ -1443,8 +1853,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07SH041.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07SH041-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07SH041.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07SH041-full.png"
       }
     ],
     "regions": [
@@ -1495,8 +1905,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07SH004.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07SH004-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07SH004.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07SH004-full.png"
       }
     ],
     "regions": [
@@ -1551,8 +1961,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07SH013.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07SH013-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07SH013.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07SH013-full.png"
       }
     ],
     "regions": [
@@ -1607,8 +2017,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07SH013T3.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07SH013T3-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07SH013T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07SH013T3-full.png"
       }
     ],
     "regions": [
@@ -1663,8 +2073,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07SH013T4.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07SH013T4-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07SH013T4.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07SH013T4-full.png"
       }
     ],
     "regions": [
@@ -1720,8 +2130,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07SH013T7.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07SH013T7-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07SH013T7.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07SH013T7-full.png"
       }
     ],
     "regions": [
@@ -1733,8 +2143,8 @@
     "attack": 0,
     "cost": 2,
     "health": 0,
-    "description": "將<link=card.shadow><style=AssociatedCard>樹叢暗影</style></link>幻化為<link=card.parent><style=AssociatedCard>奈德麗</style></link>。",
-    "descriptionRaw": "將樹叢暗影幻化為奈德麗。",
+    "description": "將此牌的<link=card.shadow><style=AssociatedCard>樹叢暗影</style></link>幻化為<link=card.parent><style=AssociatedCard>奈德麗</style></link>。 \r\n若此牌的<link=card.shadow><style=AssociatedCard>樹叢暗影</style></link>離場，<br>則<link=vocab.Obliterate><style=Vocab>泯滅</style></link>此牌。",
+    "descriptionRaw": "將此牌的樹叢暗影幻化為奈德麗。 \r\n若此牌的樹叢暗影離場，則泯滅此牌。",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "讓他們付出代價。",
@@ -1773,8 +2183,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07SH013T5.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07SH013T5-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07SH013T5.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07SH013T5-full.png"
       }
     ],
     "regions": [
@@ -1786,8 +2196,8 @@
     "attack": 0,
     "cost": 2,
     "health": 0,
-    "description": "將<link=card.shadow><style=AssociatedCard>樹叢暗影</style></link>幻化為<br><link=card.parent><style=AssociatedCard>獸群之母 奈德麗</style></link>。",
-    "descriptionRaw": "將樹叢暗影幻化為獸群之母 奈德麗。",
+    "description": "將此牌的<link=card.shadow><style=AssociatedCard>樹叢暗影</style></link>幻化為<nobr><link=card.parent><style=AssociatedCard>獸群之母 奈德麗</style></link>。</nobr> \r\n若此牌的<link=card.shadow><style=AssociatedCard>樹叢暗影</style></link>離場，則<link=vocab.Obliterate><style=Vocab>泯滅</style></link>此牌。",
+    "descriptionRaw": "將此牌的樹叢暗影幻化為獸群之母 奈德麗。 \r\n若此牌的樹叢暗影離場，則泯滅此牌。",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "讓他們付出代價。",
@@ -1831,8 +2241,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07SH013T6.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07SH013T6-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07SH013T6.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07SH013T6-full.png"
       }
     ],
     "regions": [
@@ -1880,8 +2290,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07SH013T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07SH013T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07SH013T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07SH013T2-full.png"
       }
     ],
     "regions": [
@@ -1936,8 +2346,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07SH009.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07SH009-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07SH009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07SH009-full.png"
       }
     ],
     "regions": [
@@ -1949,8 +2359,8 @@
     "attack": 3,
     "cost": 3,
     "health": 3,
-    "description": "<link=vocab.Ambush><style=Vocab>埋伏3</style></link>\r\n此牌從<link=card.ambush><style=AssociatedCard>梵斯塔雅復仇者埋伏</style></link>狀態幻化時，抵銷敵方所有<link=keyword.Fast><sprite name=Fast><style=Keyword>快速</style></link>法術、<link=keyword.Slow><sprite name=Slow><style=Keyword>慢速</style></link>法術與<link=keyword.Skill><sprite name=SkillMark><style=Keyword>技能</style></link>。",
-    "descriptionRaw": "埋伏3\r\n此牌從梵斯塔雅復仇者埋伏狀態幻化時，抵銷敵方所有快速法術、慢速法術與技能。",
+    "description": "<link=vocab.Ambush><style=Vocab>埋伏3</style></link>\r\n此牌從<link=card.ambush><style=AssociatedCard>梵斯塔雅復仇者 埋伏</style></link>狀態幻化時，抵銷敵方所有<link=keyword.Fast><sprite name=Fast><style=Keyword>快速</style></link>法術、<link=keyword.Slow><sprite name=Slow><style=Keyword>慢速</style></link>法術與<link=keyword.Skill><sprite name=SkillMark><style=Keyword>技能</style></link>。",
+    "descriptionRaw": "埋伏3\r\n此牌從梵斯塔雅復仇者 埋伏狀態幻化時，抵銷敵方所有快速法術、慢速法術與技能。",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "「別害怕，小傢伙們，我會保護你們，然後回報奈德麗的恩情。」",
@@ -1986,8 +2396,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07SH009T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07SH009T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07SH009T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07SH009T1-full.png"
       }
     ],
     "regions": [
@@ -2039,8 +2449,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07SH009T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07SH009T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07SH009T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07SH009T2-full.png"
       }
     ],
     "regions": [
@@ -2052,13 +2462,13 @@
     "attack": 0,
     "cost": 3,
     "health": 0,
-    "description": "將<link=card.shadow><style=AssociatedCard>樹叢暗影</style></link>幻化為<br><link=card.parent><style=AssociatedCard>梵斯塔雅復仇者</style></link>。",
-    "descriptionRaw": "將樹叢暗影幻化為梵斯塔雅復仇者。",
+    "description": "將此牌的<link=card.shadow><style=AssociatedCard>樹叢暗影</style></link>幻化為<nobr><link=card.parent><style=AssociatedCard>梵斯塔雅復仇者</style></link>。</nobr> \r\n若此牌的<link=card.shadow><style=AssociatedCard>樹叢暗影</style></link>離場，則<link=vocab.Obliterate><style=Vocab>泯滅</style></link>此牌。",
+    "descriptionRaw": "將此牌的樹叢暗影幻化為梵斯塔雅復仇者。 \r\n若此牌的樹叢暗影離場，則泯滅此牌。",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "讓他們付出代價。",
     "artistName": "Kudos Productions",
-    "name": "梵斯塔雅復仇者埋伏",
+    "name": "梵斯塔雅復仇者 埋伏",
     "cardCode": "07SH009T2",
     "keywords": [
       "疾速"
@@ -2092,8 +2502,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07SH039.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07SH039-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07SH039.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07SH039-full.png"
       }
     ],
     "regions": [
@@ -2141,8 +2551,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07SH044.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07SH044-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07SH044.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07SH044-full.png"
       }
     ],
     "regions": [
@@ -2193,8 +2603,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07SH003.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07SH003-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07SH003.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07SH003-full.png"
       }
     ],
     "regions": [
@@ -2205,9 +2615,9 @@
     ],
     "attack": 2,
     "cost": 2,
-    "health": 2,
-    "description": "<link=vocab.Ambush><style=Vocab>埋伏3</style></link>\r\n此牌從<link=card.ambush><style=AssociatedCard>飛行盜獵者埋伏</style></link>狀態幻化時，本回合此牌下一次格擋或被格擋時，若該敵軍單位力量值為6以下，<br>則<link=keyword.Capture><sprite name=Capture><style=Keyword>俘虜</style></link>之。",
-    "descriptionRaw": "埋伏3\r\n此牌從飛行盜獵者埋伏狀態幻化時，本回合此牌下一次格擋或被格擋時，若該敵軍單位力量值為6以下，則俘虜之。",
+    "health": 3,
+    "description": "<link=vocab.Ambush><style=Vocab>埋伏3</style></link>\r\n此牌從<link=card.ambush><style=AssociatedCard>飛行盜獵者 埋伏</style></link>狀態幻化時，本回合此牌下一次格擋或被格擋時，若該敵軍單位力量值為6以下，<br>則<link=keyword.Capture><sprite name=Capture><style=Keyword>俘虜</style></link>之。",
+    "descriptionRaw": "埋伏3\r\n此牌從飛行盜獵者 埋伏狀態幻化時，本回合此牌下一次格擋或被格擋時，若該敵軍單位力量值為6以下，則俘虜之。",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "「哈！來抓我啊，愚蠢的野獸。就連重力都拿高等物種沒辦法！」",
@@ -2239,8 +2649,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07SH003T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07SH003T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07SH003T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07SH003T2-full.png"
       }
     ],
     "regions": [
@@ -2292,8 +2702,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07SH003T3.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07SH003T3-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07SH003T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07SH003T3-full.png"
       }
     ],
     "regions": [
@@ -2305,13 +2715,13 @@
     "attack": 0,
     "cost": 3,
     "health": 0,
-    "description": "將<link=card.shadow><style=AssociatedCard>樹叢暗影</style></link>幻化為<link=card.parent><style=AssociatedCard>飛行盜獵者</style></link>。",
-    "descriptionRaw": "將樹叢暗影幻化為飛行盜獵者。",
+    "description": "將此牌的<link=card.shadow><style=AssociatedCard>樹叢暗影</style></link>幻化為<link=card.parent><style=AssociatedCard>飛行盜獵者</style></link>。 \r\n若此牌的<link=card.shadow><style=AssociatedCard>樹叢暗影</style></link>離場，則<link=vocab.Obliterate><style=Vocab>泯滅</style></link>此牌。",
+    "descriptionRaw": "將此牌的樹叢暗影幻化為飛行盜獵者。 \r\n若此牌的樹叢暗影離場，則泯滅此牌。",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "讓他們付出代價。",
     "artistName": "Kudos Productions",
-    "name": "飛行盜獵者埋伏",
+    "name": "飛行盜獵者 埋伏",
     "cardCode": "07SH003T3",
     "keywords": [
       "疾速"
@@ -2342,8 +2752,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07SH011.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07SH011-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07SH011.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07SH011-full.png"
       }
     ],
     "regions": [
@@ -2389,14 +2799,68 @@
   },
   {
     "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07SH046.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07SH046-full.png"
+      }
+    ],
+    "regions": [
+      "蘇瑞瑪"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "打出侍從單位時，本回合將此牌<br>幻化為與之相同的複製單位，<br>並保留此牌獲得的增益效果。 ",
+    "descriptionRaw": "打出侍從單位時，本回合將此牌幻化為與之相同的複製單位，並保留此牌獲得的增益效果。 ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「這裡就係旅途中最漂——釀的人氣景點啦。好多人喜翻偶的導覽，就蓋了一個又大又壯的偶，從此變成景點辣。我們去打個招呼吧，『嗨大石奇！』大石奇很愛大家喔，尤——其係現在跟偶們一起踏上旅途的各位。」——《石奇大冒險》第六部",
+    "artistName": "Caravan Studio",
+    "name": "仿谷",
+    "cardCode": "07SH046",
+    "keywords": [
+      "地標"
+    ],
+    "keywordRefs": [
+      "LandmarkVisualOnly"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "普通",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "地標",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "普通牌限定",
+      "永恆",
+      "魔耗值為偶數的卡牌",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
     "associatedCardRefs": [
       "07SH039",
       "07SH013T6"
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07SH039T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07SH039T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07SH039T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07SH039T1-full.png"
       }
     ],
     "regions": [
@@ -2408,8 +2872,8 @@
     "attack": 0,
     "cost": 0,
     "health": 0,
-    "description": "將<link=card.shadow><style=AssociatedCard>樹叢暗影</style></link>幻化為<link=card.parent><style=AssociatedCard>全地形士兵</style></link>。",
-    "descriptionRaw": "將樹叢暗影幻化為全地形士兵。",
+    "description": "將此牌的<link=card.shadow><style=AssociatedCard>樹叢暗影</style></link>幻化為<link=card.parent><style=AssociatedCard>全地形士兵</style></link>。 \r\n若此牌的<link=card.shadow><style=AssociatedCard>樹叢暗影</style></link>離場，則<link=vocab.Obliterate><style=Vocab>泯滅</style></link>此牌。",
+    "descriptionRaw": "將此牌的樹叢暗影幻化為全地形士兵。 \r\n若此牌的樹叢暗影離場，則泯滅此牌。",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "讓他們付出代價。",
@@ -2448,8 +2912,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07SH043.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07SH043-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07SH043.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07SH043-full.png"
       }
     ],
     "regions": [
@@ -2501,8 +2965,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07SH043T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07SH043T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07SH043T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07SH043T2-full.png"
       }
     ],
     "regions": [
@@ -2514,8 +2978,8 @@
     "attack": 0,
     "cost": 5,
     "health": 0,
-    "description": "將<link=card.shadow><style=AssociatedCard>樹叢暗影</style></link>幻化為<link=card.parent><style=AssociatedCard>叢林巨象</style></link>。",
-    "descriptionRaw": "將樹叢暗影幻化為叢林巨象。",
+    "description": "將此牌的<link=card.shadow><style=AssociatedCard>樹叢暗影</style></link>幻化為<link=card.parent><style=AssociatedCard>叢林巨象</style></link>。 \r\n若此牌的<link=card.shadow><style=AssociatedCard>樹叢暗影</style></link>離場，<br>則<link=vocab.Obliterate><style=Vocab>泯滅</style></link>此牌。",
+    "descriptionRaw": "將此牌的樹叢暗影幻化為叢林巨象。 \r\n若此牌的樹叢暗影離場，則泯滅此牌。",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "讓他們付出代價。",
@@ -2551,8 +3015,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07SH040.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07SH040-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07SH040.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07SH040-full.png"
       }
     ],
     "regions": [
@@ -2564,8 +3028,8 @@
     "attack": 1,
     "cost": 1,
     "health": 2,
-    "description": "本牌局友軍單位幻化後，<br>賦予此牌+1|+1。",
-    "descriptionRaw": "本牌局友軍單位幻化後，賦予此牌+1|+1。",
+    "description": "友軍單位首次幻化時，<br>賦予此牌+2|+1。",
+    "descriptionRaw": "友軍單位首次幻化時，賦予此牌+2|+1。",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "「小型的雜食性哺乳類動物，身上有著像是剛毛的刺，受到驚擾時可以高速射出。牠們的尾巴帶刺而且靈敏，看起來應該是用來防禦的武器。根據老練探險家的記錄，這些動物以暴躁易怒聞名，非常難搞……」——摘自安努拉的調查日誌，第三日",
@@ -2600,8 +3064,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07SH044T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07SH044T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07SH044T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07SH044T1-full.png"
       }
     ],
     "regions": [
@@ -2613,8 +3077,8 @@
     "attack": 0,
     "cost": 4,
     "health": 0,
-    "description": "將<link=card.shadow><style=AssociatedCard>樹叢暗影</style></link>幻化為<link=card.parent><style=AssociatedCard>極光迷幻鳥</style></link>。",
-    "descriptionRaw": "將樹叢暗影幻化為極光迷幻鳥。",
+    "description": "將此牌的<link=card.shadow><style=AssociatedCard>樹叢暗影</style></link>幻化為<link=card.parent><style=AssociatedCard>極光迷幻鳥</style></link>。 \r\n若此牌的<link=card.shadow><style=AssociatedCard>樹叢暗影</style></link>離場，則<link=vocab.Obliterate><style=Vocab>泯滅</style></link>此牌。",
+    "descriptionRaw": "將此牌的樹叢暗影幻化為極光迷幻鳥。 \r\n若此牌的樹叢暗影離場，則泯滅此牌。",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "讓他們付出代價。",
@@ -2652,8 +3116,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07SH005.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07SH005-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07SH005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07SH005-full.png"
       }
     ],
     "regions": [
@@ -2698,208 +3162,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07BW035.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07BW035-full.png"
-      }
-    ],
-    "regions": [
-      "比爾吉沃特"
-    ],
-    "regionRefs": [
-      "Bilgewater"
-    ],
-    "attack": 0,
-    "cost": 6,
-    "health": 0,
-    "description": "我方手牌中的卡牌擁有<link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>飛逝</style></link>。\r\n我方打出卡牌時，抽1張牌。",
-    "descriptionRaw": "我方手牌中的卡牌擁有飛逝。\r\n我方打出卡牌時，抽1張牌。",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "「你要不知道自己手上有什麼牌然後緊緊抓好，不然就準備輸光一切。」——逆命",
-    "artistName": "Envar Studio",
-    "name": "騙徒老巢",
-    "cardCode": "07BW035",
-    "keywords": [
-      "地標"
-    ],
-    "keywordRefs": [
-      "LandmarkVisualOnly"
-    ],
-    "spellSpeed": "",
-    "spellSpeedRef": "",
-    "rarity": "史詩",
-    "rarityRef": "Epic",
-    "subtypes": [],
-    "supertype": "",
-    "type": "地標",
-    "collectible": true,
-    "set": "Set7b",
-    "formats": [
-      "永恆",
-      "標準"
-    ],
-    "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07BW042.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07BW042-full.png"
-      }
-    ],
-    "regions": [
-      "比爾吉沃特"
-    ],
-    "regionRefs": [
-      "Bilgewater"
-    ],
-    "attack": 1,
-    "cost": 2,
-    "health": 3,
-    "description": "<link=vocab.Play><style=Vocab>出牌</style></link>：<link=vocab.Manifest><style=Vocab>顯化</style></link>1張與場上友軍單位<br>卡牌次類不同的侍從單位。",
-    "descriptionRaw": "出牌：顯化1張與場上友軍單位卡牌次類不同的侍從單位。",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "「我們會養這髒兮兮的小傢伙不是沒有原因的：我們已經好幾年沒有鯊鼠的問題了！」——恐懼號水手",
-    "artistName": "Caravan Studio",
-    "name": "鯊鼠獵手",
-    "cardCode": "07BW042",
-    "keywords": [],
-    "keywordRefs": [],
-    "spellSpeed": "",
-    "spellSpeedRef": "",
-    "rarity": "普通",
-    "rarityRef": "Common",
-    "subtypes": [
-      "貓族"
-    ],
-    "supertype": "",
-    "type": "單位",
-    "collectible": true,
-    "set": "Set7b",
-    "formats": [
-      "永恆",
-      "標準"
-    ],
-    "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07BW039.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07BW039-full.png"
-      }
-    ],
-    "regions": [
-      "比爾吉沃特"
-    ],
-    "regionRefs": [
-      "Bilgewater"
-    ],
-    "attack": 2,
-    "cost": 2,
-    "health": 2,
-    "description": "每回合我方首次召喚魔耗值為1<br>的單位時，恢復1點法術魔力。",
-    "descriptionRaw": "每回合我方首次召喚魔耗值為1的單位時，恢復1點法術魔力。",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "「蜥蜴先生，你怎麼會在這裡？你也喜歡普羅嗎！？」——少女英格娃",
-    "artistName": "Caravan Studio",
-    "name": "龍王子古林澤",
-    "cardCode": "07BW039",
-    "keywords": [
-      "調節"
-    ],
-    "keywordRefs": [
-      "Attune"
-    ],
-    "spellSpeed": "",
-    "spellSpeedRef": "",
-    "rarity": "稀有",
-    "rarityRef": "Rare",
-    "subtypes": [
-      "龍族"
-    ],
-    "supertype": "",
-    "type": "單位",
-    "collectible": true,
-    "set": "Set7b",
-    "formats": [
-      "永恆",
-      "標準"
-    ],
-    "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07BW033.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07BW033-full.png"
-      }
-    ],
-    "regions": [
-      "比爾吉沃特"
-    ],
-    "regionRefs": [
-      "Bilgewater"
-    ],
-    "attack": 0,
-    "cost": 4,
-    "health": 0,
-    "description": "隨機召喚1個空殼。\r\n賦予<link=vocab.Everywhere><style=Vocab>各處</style></link>魔耗值為1<br>的友軍單位+1|+1。 ",
-    "descriptionRaw": "隨機召喚1個空殼。\r\n賦予各處魔耗值為1的友軍單位+1|+1。 ",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "有些比爾吉沃特水手出海時，會在最寧靜的夜晚中戴上耳塞，因為他們知道從海面下傳出的音樂只會讓他們屍沉大海。",
-    "artistName": "Kudos Productions",
-    "name": "海妖之歌",
-    "cardCode": "07BW033",
-    "keywords": [
-      "慢速"
-    ],
-    "keywordRefs": [
-      "Slow"
-    ],
-    "spellSpeed": "慢速",
-    "spellSpeedRef": "Slow",
-    "rarity": "普通",
-    "rarityRef": "Common",
-    "subtypes": [],
-    "supertype": "",
-    "type": "法術",
-    "collectible": true,
-    "set": "Set7b",
-    "formats": [
-      "永恆",
-      "標準"
-    ],
-    "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07FR011.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07FR011-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07FR011.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07FR011-full.png"
       }
     ],
     "regions": [
@@ -2948,8 +3212,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07FR010.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07FR010-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07FR010.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07FR010-full.png"
       }
     ],
     "regions": [
@@ -3002,8 +3266,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07FR015.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07FR015-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07FR015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07FR015-full.png"
       }
     ],
     "regions": [
@@ -3048,8 +3312,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07FR015T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07FR015T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07FR015T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07FR015T1-full.png"
       }
     ],
     "regions": [
@@ -3094,8 +3358,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07FR015T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07FR015T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07FR015T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07FR015T2-full.png"
       }
     ],
     "regions": [
@@ -3137,11 +3401,117 @@
   },
   {
     "associatedCards": [],
+    "associatedCardRefs": [
+      "07FR017T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07FR017.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07FR017-full.png"
+      }
+    ],
+    "regions": [
+      "弗雷爾卓德"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 3,
+    "cost": 5,
+    "health": 2,
+    "description": "<link=keyword.Elemental Skill><sprite name=ElementalSkill><style=Keyword>出牌</style></link>：對所有其他單位造成<br>2點傷害。",
+    "descriptionRaw": "出牌：對所有其他單位造成2點傷害。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "水晶風暴鷹擁有極強的破壞能力，其無差別的攻擊能夠在彈指之間扭轉戰局的走向。許多人認為這隻鳥預示著巨大滅世風暴的來臨——而大地的根基也注定要永久改變。",
+    "artistName": "Bubble Cat",
+    "name": "水晶風暴鷹",
+    "cardCode": "07FR017",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "稀有",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "鳥族"
+    ],
+    "supertype": "",
+    "type": "單位",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07FR016.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07FR016-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07FR017T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07FR017T1-full.png"
+      }
+    ],
+    "regions": [
+      "弗雷爾卓德"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "對所有其他單位<br>造成2點傷害。",
+    "descriptionRaw": "對所有其他單位造成2點傷害。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「你想知道該如何在風暴鷹的尖嘯下保住小命？哈，等你聽見鳥鳴聲後，能做的就只有向上天祈禱了。」<br>——艾伐洛森先遣隊",
+    "artistName": "Polar Engine",
+    "name": "五雷轟頂",
+    "cardCode": "07FR017T1",
+    "keywords": [
+      "元素技能"
+    ],
+    "keywordRefs": [
+      "ElementalSkill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "無",
+    "rarityRef": "None",
+    "subtypes": [
+      "元素"
+    ],
+    "supertype": "",
+    "type": "技能",
+    "collectible": false,
+    "set": "Set7b",
+    "formats": [
+      "普通牌限定",
+      "永恆",
+      "魔耗值為偶數的卡牌",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07FR016.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07FR016-full.png"
       }
     ],
     "regions": [
@@ -3152,7 +3522,7 @@
     ],
     "attack": 5,
     "cost": 5,
-    "health": 5,
+    "health": 4,
     "description": "召喚此牌時，賦予我方牌組最上方3個單位+1|+1。若有友軍單位卡牌次類<br>與此牌不同，則抽出其中1張。",
     "descriptionRaw": "召喚此牌時，賦予我方牌組最上方3個單位+1|+1。若有友軍單位卡牌次類與此牌不同，則抽出其中1張。",
     "levelupDescription": "",
@@ -3161,8 +3531,12 @@
     "artistName": "Envar Studio",
     "name": "冰河巨蜥怪",
     "cardCode": "07FR016",
-    "keywords": [],
-    "keywordRefs": [],
+    "keywords": [
+      "蠻力"
+    ],
+    "keywordRefs": [
+      "Overwhelm"
+    ],
     "spellSpeed": "",
     "spellSpeedRef": "",
     "rarity": "稀有",
@@ -3190,8 +3564,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07SI010.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07SI010-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07SI010.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07SI010-full.png"
       }
     ],
     "regions": [
@@ -3238,8 +3612,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07SI010T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07SI010T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07SI010T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07SI010T1-full.png"
       }
     ],
     "regions": [
@@ -3269,7 +3643,9 @@
     "spellSpeedRef": "",
     "rarity": "無",
     "rarityRef": "None",
-    "subtypes": [],
+    "subtypes": [
+      "蜘蛛"
+    ],
     "supertype": "",
     "type": "單位",
     "collectible": false,
@@ -3288,8 +3664,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07SI012.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07SI012-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07SI012.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07SI012-full.png"
       }
     ],
     "regions": [
@@ -3340,8 +3716,58 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07SI004.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07SI004-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07SI013.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07SI013-full.png"
+      }
+    ],
+    "regions": [
+      "闇影島"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 1,
+    "cost": 1,
+    "health": 1,
+    "description": "<link=keyword.Last Breath><sprite name=LastBreath><style=Keyword>遺願</style></link>：在牌組中生成我方牌組內<br><link=vocab.Strongest><style=Vocab>最強</style></link><link=card.selfref><style=AssociatedCard>蔓延闇靈</style></link>的複製牌，並使牌組中<link=card.selfref><style=AssociatedCard>蔓延闇靈</style></link>的能力值加倍。",
+    "descriptionRaw": "遺願：在牌組中生成我方牌組內最強蔓延闇靈的複製牌，並使牌組中蔓延闇靈的能力值加倍。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「黯霧給了我許多寶貴的教訓，其中最重要的就是知道逃跑的時機。」——伊克斯塔爾哨兵",
+    "artistName": "Xavier Leroux",
+    "name": "蔓延闇靈",
+    "cardCode": "07SI013",
+    "keywords": [
+      "遺願"
+    ],
+    "keywordRefs": [
+      "LastBreath"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "稀有",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "單位",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07SI004.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07SI004-full.png"
       }
     ],
     "regions": [
@@ -3390,8 +3816,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07MT009.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07MT009-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07MT009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07MT009-full.png"
       }
     ],
     "regions": [
@@ -3440,8 +3866,166 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07MT006.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07MT006-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07MT013.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07MT013-full.png"
+      }
+    ],
+    "regions": [
+      "巨石峰"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "<link=keyword.Invoke><style=Keyword>祈望</style></link>1張魔耗值為7以上的天界牌，或是支付8點魔力，同時使我方<link=vocab.Everywhere><style=Vocab>各處</style></link>的<br>天界牌魔耗值減半，無條件進位。",
+    "descriptionRaw": "祈望1張魔耗值為7以上的天界牌，或是支付8點魔力，同時使我方各處的天界牌魔耗值減半，無條件進位。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "仲裁者的亙古職責，便是守望天界的祝福降臨。",
+    "artistName": "Polar Engine",
+    "name": "星河呼喚",
+    "cardCode": "07MT013",
+    "keywords": [
+      "疾速"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "疾速",
+    "spellSpeedRef": "Burst",
+    "rarity": "普通",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "法術",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07MT013T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07MT013T1-full.png"
+      }
+    ],
+    "regions": [
+      "巨石峰"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 8,
+    "health": 0,
+    "description": "<link=keyword.Invoke><style=Keyword>祈望</style></link>1張魔耗值為7以上的天界牌，並使我方<link=vocab.Everywhere><style=Vocab>各處</style></link>的<br>天界牌魔耗值減半，無條件進位。",
+    "descriptionRaw": "祈望1張魔耗值為7以上的天界牌，並使我方各處的天界牌魔耗值減半，無條件進位。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "仲裁者的亙古職責，便是守望天界的祝福降臨。",
+    "artistName": "Polar Engine",
+    "name": "星河呼喚",
+    "cardCode": "07MT013T1",
+    "keywords": [
+      "疾速"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "疾速",
+    "spellSpeedRef": "Burst",
+    "rarity": "普通",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "法術",
+    "collectible": false,
+    "set": "Set7b",
+    "formats": [
+      "普通牌限定",
+      "永恆",
+      "魔耗值為偶數的卡牌",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07MT013T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07MT013T2-full.png"
+      }
+    ],
+    "regions": [
+      "巨石峰"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "<link=keyword.Invoke><style=Keyword>祈望</style></link>1張魔耗值為7以上的天界牌。",
+    "descriptionRaw": "祈望1張魔耗值為7以上的天界牌。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "仲裁者的亙古職責，便是守望天界的祝福降臨。",
+    "artistName": "Polar Engine",
+    "name": "星河呼喚",
+    "cardCode": "07MT013T2",
+    "keywords": [
+      "疾速"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "疾速",
+    "spellSpeedRef": "Burst",
+    "rarity": "普通",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "法術",
+    "collectible": false,
+    "set": "Set7b",
+    "formats": [
+      "普通牌限定",
+      "永恆",
+      "魔耗值為偶數的卡牌",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07MT006.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07MT006-full.png"
       }
     ],
     "regions": [
@@ -3486,8 +4070,54 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07BC016.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07BC016-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07BC020.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07BC020-full.png"
+      }
+    ],
+    "regions": [
+      "班德爾城"
+    ],
+    "regionRefs": [
+      "BandleCity"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 3,
+    "description": "每當我方發動陷阱或祝福時，將2張該陷阱牌植入敵方牌組，或在我方牌組生成2張該祝福牌。",
+    "descriptionRaw": "每當我方發動陷阱或祝福時，將2張該陷阱牌植入敵方牌組，或在我方牌組生成2張該祝福牌。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "沒人知道勤儉先生的出身來歷，或是究竟收集了多久的東西。他外表看似友善，只是要小心別被他身後遺落的物品絆倒了。",
+    "artistName": "Caravan Studio",
+    "name": "勤儉先生",
+    "cardCode": "07BC020",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "稀有",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "單位",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07BC016.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07BC016-full.png"
       }
     ],
     "regions": [
@@ -3508,11 +4138,9 @@
     "name": "返回扳手",
     "cardCode": "07BC016",
     "keywords": [
-      "衝擊",
       "裝備"
     ],
     "keywordRefs": [
-      "Impact",
       "Equipment"
     ],
     "spellSpeed": "",
@@ -3540,8 +4168,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07BC018.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07BC018-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07BC018.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07BC018-full.png"
       }
     ],
     "regions": [
@@ -3568,7 +4196,7 @@
     "rarity": "史詩",
     "rarityRef": "Epic",
     "subtypes": [
-      "約德爾人"
+      "妖精"
     ],
     "supertype": "",
     "type": "單位",
@@ -3588,8 +4216,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07BC011.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07BC011-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07BC011.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07BC011-full.png"
       }
     ],
     "regions": [
@@ -3640,8 +4268,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07DE014.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07DE014-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07DE014.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07DE014-full.png"
       }
     ],
     "regions": [
@@ -3688,8 +4316,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07DE015.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07DE015-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07DE015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07DE015-full.png"
       }
     ],
     "regions": [
@@ -3698,9 +4326,9 @@
     "regionRefs": [
       "Demacia"
     ],
-    "attack": 5,
+    "attack": 6,
     "cost": 6,
-    "health": 5,
+    "health": 6,
     "description": "<link=vocab.Play><style=Vocab>出牌</style></link>：若有友軍單位卡牌次類與此牌不同，則<link=vocab.Manifest><style=Vocab>顯化</style></link>1張蒂瑪西亞法術牌。",
     "descriptionRaw": "出牌：若有友軍單位卡牌次類與此牌不同，則顯化1張蒂瑪西亞法術牌。",
     "levelupDescription": "",
@@ -3740,8 +4368,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07DE011.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/zh_tw/img/cards/07DE011-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07DE011.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07DE011-full.png"
       }
     ],
     "regions": [
@@ -3771,6 +4399,56 @@
     "spellSpeedRef": "",
     "rarity": "普通",
     "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "單位",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07DE016.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/zh_tw/img/cards/07DE016-full.png"
+      }
+    ],
+    "regions": [
+      "蒂瑪西亞"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 0,
+    "cost": 4,
+    "health": 4,
+    "description": "<link=vocab.Attack><style=Vocab>攻擊</style></link>：賦予<link=vocab.Everywhere><style=Vocab>各處</style></link><br><link=keyword.Formidable><sprite name=Formidable><style=Keyword>重壓</style></link>友軍單位+0|+1。",
+    "descriptionRaw": "攻擊：賦予各處重壓友軍單位+0|+1。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "貝倫是杜蘭德家族長年以來的好夥伴，在他巨大的身形之下，卻有著一雙出人意料的溫柔巧手。雖然貝倫起初的設計只是作為助手，卻在工藝方面有著過人的天賦，並且具有許多獨到的巧思——也因此受到杜蘭德家族的賞識。",
+    "artistName": "Envar Studio",
+    "name": "仁慈之像貝倫",
+    "cardCode": "07DE016",
+    "keywords": [
+      "重壓"
+    ],
+    "keywordRefs": [
+      "Formidable"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "史詩",
+    "rarityRef": "Epic",
     "subtypes": [],
     "supertype": "",
     "type": "單位",

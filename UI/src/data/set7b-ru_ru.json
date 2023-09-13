@@ -4,8 +4,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07PZ019.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07PZ019-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07PZ019.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07PZ019-full.png"
       }
     ],
     "regions": [
@@ -54,8 +54,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07PZ021.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07PZ021-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07PZ021.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07PZ021-full.png"
       }
     ],
     "regions": [
@@ -103,13 +103,11 @@
   },
   {
     "associatedCards": [],
-    "associatedCardRefs": [
-      "01PZ022"
-    ],
+    "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07PZ013.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07PZ013-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07PZ022.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07PZ022-full.png"
       }
     ],
     "regions": [
@@ -119,10 +117,64 @@
       "PiltoverZaun"
     ],
     "attack": 0,
-    "cost": 3,
+    "cost": 2,
     "health": 0,
-    "description": "Если ваш нексус должен получить урон от любой карты кроме карты <link=card.cardref><style=AssociatedCard>Ядовитый гриб</style></link>, вместо этого ваш оппонент прикрепляет 4 <link=card.cardref><style=AssociatedCard>Ядовитых гриба</style></link> в вашей колоде за каждую единицу урона.",
-    "descriptionRaw": "Если ваш нексус должен получить урон от любой карты кроме карты Ядовитый гриб, вместо этого ваш оппонент прикрепляет 4 Ядовитых гриба в вашей колоде за каждую единицу урона.",
+    "description": "Нанесите 1 ед. урона вражескому бойцу или нексусу и 1 ед. урона другому бойцу.",
+    "descriptionRaw": "Нанесите 1 ед. урона вражескому бойцу или нексусу и 1 ед. урона другому бойцу.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Большинству пилтоверцев нет дела до того, в какую сторону дует ветер. Однако для многих заунцев даже случайный бриз имеет привкус блаженства.",
+    "artistName": "Polar Engine",
+    "name": "Божественный ветерок",
+    "cardCode": "07PZ022",
+    "keywords": [
+      "Медленное"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "Медленное",
+    "spellSpeedRef": "Slow",
+    "rarity": "ОБЫЧНОЕ",
+    "rarityRef": "Common",
+    "subtypes": [
+      "СТИХИЯ"
+    ],
+    "supertype": "",
+    "type": "Заклинание",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "01PZ022"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07PZ013.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07PZ013-full.png"
+      }
+    ],
+    "regions": [
+      "Пилтовер и Заун"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 0,
+    "cost": 4,
+    "health": 0,
+    "description": "Если ваш нексус должен получить урон от любой карты кроме карты <link=card.cardref><style=AssociatedCard>Ядовитый гриб</style></link>, вместо этого ваш оппонент прикрепляет 5 <link=card.cardref><style=AssociatedCard>Ядовитых грибов</style></link> в вашей колоде за каждую единицу урона.",
+    "descriptionRaw": "Если ваш нексус должен получить урон от любой карты кроме карты Ядовитый гриб, вместо этого ваш оппонент прикрепляет 5 Ядовитых грибов в вашей колоде за каждую единицу урона.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "Глубоко под улицами Зауна ты то, что ты ешь.",
@@ -160,8 +212,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07PZ015.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07PZ015-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07PZ015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07PZ015-full.png"
       }
     ],
     "regions": [
@@ -210,8 +262,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07PZ015T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07PZ015T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07PZ015T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07PZ015T1-full.png"
       }
     ],
     "regions": [
@@ -262,8 +314,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07NX028.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07NX028-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07NX028.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07NX028-full.png"
       }
     ],
     "regions": [
@@ -312,8 +364,60 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07NX032.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07NX032-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07NX034.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07NX034-full.png"
+      }
+    ],
+    "regions": [
+      "Ноксус"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "Стоимость союзников снижается на 1. Призывая союзника, нанесите ему 2 ед. урона.",
+    "descriptionRaw": "Стоимость союзников снижается на 1. Призывая союзника, нанесите ему 2 ед. урона.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Проходите, друзья мои, рассаживайтесь! Общество нынче приятное, а напитки текут рекой. Жду не дождусь, когда вы узнаете, что у нас приготовлено на ужин\".<br>– Владимир",
+    "artistName": "Envar Studio",
+    "name": "Алый пиршественный зал",
+    "cardCode": "07NX034",
+    "keywords": [
+      "Место силы",
+      "Missing Translation"
+    ],
+    "keywordRefs": [
+      "LandmarkVisualOnly",
+      "AuraVisualFakeKeyword"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ЭПИЧЕСКОЕ",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Место силы",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07NX032.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07NX032-full.png"
       }
     ],
     "regions": [
@@ -362,8 +466,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07NX033.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07NX033-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07NX033.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07NX033-full.png"
       }
     ],
     "regions": [
@@ -423,8 +527,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07RU015.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07RU015-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07RU015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07RU015-full.png"
       }
     ],
     "regions": [
@@ -438,8 +542,8 @@
     "health": 4,
     "description": "<link=vocab.Origin><style=Vocab>Исток</style></link>: <link=card.origin><style=AssociatedCard>Указ Короля Поро</style></link>.\r\nВпервые призвав поро в каждом раунде, создайте в руке <link=card.baseSnax><style=AssociatedCard>Поро-снэк</style></link>.",
     "descriptionRaw": "Исток: Указ Короля Поро.\r\nВпервые призвав поро в каждом раунде, создайте в руке Поро-снэк.",
-    "levelupDescription": "Вы призвали 6+ других новых поро.<style=Variable></style>",
-    "levelupDescriptionRaw": "Вы призвали 6+ других новых поро.",
+    "levelupDescription": "Вы призвали 6+ других новых поро. Когда мой уровень повышается, создайте в руке случайный Особый снэк.<style=Variable></style>",
+    "levelupDescriptionRaw": "Вы призвали 6+ других новых поро. Когда мой уровень повышается, создайте в руке случайный Особый снэк.",
     "flavorText": "Ингвар способна сходу распознать потенциал. Если не обращать внимания на импровизированный образ, то ясно, что этот милый питомец легко мог бы править сикстиллионом триллионов поро. При должной силе воображения, конечно. ",
     "artistName": "Envar Studio",
     "name": "Король поро",
@@ -474,8 +578,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07RU015T3.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07RU015T3-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07RU015T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07RU015T3-full.png"
       }
     ],
     "regions": [
@@ -526,8 +630,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07RU015T6.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07RU015T6-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07RU015T6.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07RU015T6-full.png"
       }
     ],
     "regions": [
@@ -578,8 +682,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07RU015T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07RU015T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07RU015T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07RU015T2-full.png"
       }
     ],
     "regions": [
@@ -630,8 +734,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07RU015T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07RU015T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07RU015T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07RU015T1-full.png"
       }
     ],
     "regions": [
@@ -678,8 +782,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07RU015T7.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07RU015T7-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07RU015T7.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07RU015T7-full.png"
       }
     ],
     "regions": [
@@ -735,8 +839,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07RU015T4.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07RU015T4-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07RU015T4.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07RU015T4-full.png"
       }
     ],
     "regions": [
@@ -785,8 +889,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07RU015T5.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07RU015T5-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07RU015T5.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07RU015T5-full.png"
       }
     ],
     "regions": [
@@ -798,8 +902,8 @@
     "attack": 0,
     "cost": 2,
     "health": 0,
-    "description": "Даруйте союзным поро <link=vocab.Everywhere><style=Vocab>везде</style></link> +1|+1. <link=keyword.Frostbite><sprite name=Frostbite><style=Keyword>Заморозьте</style></link> врага с 3 и менее ед. здоровья.",
-    "descriptionRaw": "Даруйте союзным поро везде +1|+1. Заморозьте врага с 3 и менее ед. здоровья.",
+    "description": "Даруйте союзникам-поро <link=vocab.Everywhere><style=Vocab>везде</style></link> +1|+1. <link=keyword.Frostbite><sprite name=Frostbite><style=Keyword>Заморозьте</style></link> врага.",
+    "descriptionRaw": "Даруйте союзникам-поро везде +1|+1. Заморозьте врага.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "Эта выпечка украшена глазурью ручной работы со всеми вкусами Фрельйорда: рассыпчатым снегом, слежавшимся снегом и – вы угадали – падающим снегом!",
@@ -839,8 +943,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07RU012.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07RU012-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07RU012.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07RU012-full.png"
       }
     ],
     "regions": [
@@ -891,8 +995,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07RU012T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07RU012T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07RU012T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07RU012T2-full.png"
       }
     ],
     "regions": [
@@ -904,8 +1008,8 @@
     "attack": 3,
     "cost": 2,
     "health": 3,
-    "description": "<link=vocab.Attack><style=Vocab>Атака</style></link>: даруйте +1|+1 союзникам с подтипом <link=vocab.Everywhere><style=Vocab>везде</style></link>.",
-    "descriptionRaw": "Атака: даруйте +1|+1 союзникам с подтипом везде.",
+    "description": "Когда я повышаю свой уровень или при <link=vocab.Attack><style=Vocab>Атаке</style></link>: даруйте  союзникам с любым подтипом <link=vocab.Everywhere><style=Vocab>везде</style></link> +1|+1.",
+    "descriptionRaw": "Когда я повышаю свой уровень или при Атаке: даруйте  союзникам с любым подтипом везде +1|+1.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "\"Очертания и цвета, цвета и очертания... Нико может быть ими всеми!\"",
@@ -945,8 +1049,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07RU012T4.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07RU012T4-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07RU012T4.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07RU012T4-full.png"
       }
     ],
     "regions": [
@@ -994,8 +1098,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07RU012T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07RU012T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07RU012T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07RU012T1-full.png"
       }
     ],
     "regions": [
@@ -1007,8 +1111,8 @@
     "attack": 0,
     "cost": 3,
     "health": 0,
-    "description": "Создайте точную <link=keyword.Ephemeral><sprite name=Ephemeral><style=Keyword>эфемерную</style></link> копию союзника, затем поменяйте их местами.\r\nСоздайте в вашей колоде карту <link=card.level1><style=AssociatedCard>Нико</style></link>.",
-    "descriptionRaw": "Создайте точную эфемерную копию союзника, затем поменяйте их местами.\r\nСоздайте в вашей колоде карту Нико.",
+    "description": "Призовите точную <link=keyword.Ephemeral><sprite name=Ephemeral><style=Keyword>эфемерную</style></link> копию союзника, затем поменяйте их местами.\r\nСоздайте в своей колоде карту <link=card.level1><style=AssociatedCard>Нико</style></link>.",
+    "descriptionRaw": "Призовите точную эфемерную копию союзника, затем поменяйте их местами.\r\nСоздайте в своей колоде карту Нико.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "\"Нико там, и Нико здесь – Нико может быть хоть где!\"<br>– Нико",
@@ -1044,8 +1148,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07RU017.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07RU017-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07RU017.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07RU017-full.png"
       }
     ],
     "regions": [
@@ -1057,8 +1161,8 @@
     "attack": 0,
     "cost": 3,
     "health": 0,
-    "description": "Создайте точную <link=keyword.Ephemeral><sprite name=Ephemeral><style=Keyword>эфемерную</style></link> копию союзника, затем поменяйте их местами.",
-    "descriptionRaw": "Создайте точную эфемерную копию союзника, затем поменяйте их местами.",
+    "description": "Призовите точную <link=keyword.Ephemeral><sprite name=Ephemeral><style=Keyword>эфемерную</style></link> копию союзника, затем поменяйте их местами.",
+    "descriptionRaw": "Призовите точную эфемерную копию союзника, затем поменяйте их местами.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "\"Нико там, и Нико здесь – Нико может быть хоть где!\"<br>– Нико",
@@ -1094,8 +1198,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07RU016.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07RU016-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07RU016.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07RU016-full.png"
       }
     ],
     "regions": [
@@ -1141,11 +1245,265 @@
   },
   {
     "associatedCards": [],
+    "associatedCardRefs": [
+      "06BW006T3"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07BW043.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07BW043-full.png"
+      }
+    ],
+    "regions": [
+      "Билджвотер"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "Нанесите бойцу 1 ед. урона. Используйте <link=vocab.Spawn><style=Vocab>Порождение</style></link> x1 за каждую единицу нанесенного урона.",
+    "descriptionRaw": "Нанесите бойцу 1 ед. урона. Используйте Порождение x1 за каждую единицу нанесенного урона.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Подчинять стихии своей воле могут лишь самые сведущие.",
+    "artistName": "Kudos Productions",
+    "name": "Приливные чары",
+    "cardCode": "07BW043",
+    "keywords": [
+      "Быстрое"
+    ],
+    "keywordRefs": [
+      "Fast"
+    ],
+    "spellSpeed": "Быстрое",
+    "spellSpeedRef": "Fast",
+    "rarity": "РЕДКОЕ",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "СТИХИЯ"
+    ],
+    "supertype": "",
+    "type": "Заклинание",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07IO041.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07IO041-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07BW035.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07BW035-full.png"
+      }
+    ],
+    "regions": [
+      "Билджвотер"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 6,
+    "health": 0,
+    "description": "Карты у вас в руке становятся <link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>мимолетными</style></link>.\r\nСыграв карту, вытяните 1 карту.",
+    "descriptionRaw": "Карты у вас в руке становятся мимолетными.\r\nСыграв карту, вытяните 1 карту.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Полагаю, ты помнишь, что у тебя в руке, и бережешь это. Иначе готовься потерять все подчистую\". – Твистед Фэйт",
+    "artistName": "Envar Studio",
+    "name": "Плутовское логово",
+    "cardCode": "07BW035",
+    "keywords": [
+      "Место силы"
+    ],
+    "keywordRefs": [
+      "LandmarkVisualOnly"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ЭПИЧЕСКОЕ",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Место силы",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07BW042.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07BW042-full.png"
+      }
+    ],
+    "regions": [
+      "Билджвотер"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 1,
+    "cost": 2,
+    "health": 3,
+    "description": "<link=vocab.Play><style=Vocab>Разыгрывая карту</style></link>: <link=vocab.Manifest><style=Vocab>воплотите</style></link> сторонника, чей подтип отличен от подтипов союзников на поле боя.",
+    "descriptionRaw": "Разыгрывая карту: воплотите сторонника, чей подтип отличен от подтипов союзников на поле боя.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Знаете, зачем нам нужен этот растрепанный заморыш? При нем у нас никаких проблем с крысами!\" – Матрос с \"Кошмара\"",
+    "artistName": "Caravan Studio",
+    "name": "Палубный охотник",
+    "cardCode": "07BW042",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ОБЫЧНОЕ",
+    "rarityRef": "Common",
+    "subtypes": [
+      "КОШКА"
+    ],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07BW039.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07BW039-full.png"
+      }
+    ],
+    "regions": [
+      "Билджвотер"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 2,
+    "description": "В каждом раунде, впервые призывая союзника стоимостью 1, восполните 1 ед. маны заклинаний.",
+    "descriptionRaw": "В каждом раунде, впервые призывая союзника стоимостью 1, восполните 1 ед. маны заклинаний.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Господин Ящер, что вы тут делаете? Вам тоже нравятся поро?!\" – Ингвар младшая",
+    "artistName": "Caravan Studio",
+    "name": "Гринзо, Принц-дракон",
+    "cardCode": "07BW039",
+    "keywords": [
+      "Эзотерика"
+    ],
+    "keywordRefs": [
+      "Attune"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "РЕДКОЕ",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "ДРАКОН"
+    ],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07BW033.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07BW033-full.png"
+      }
+    ],
+    "regions": [
+      "Билджвотер"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 6,
+    "health": 0,
+    "description": "Призовите случайную оболочку.\r\nДаруйте +1|+1 союзникам стоимостью 1 <link=vocab.Everywhere><style=Vocab>везде</style></link>. ",
+    "descriptionRaw": "Призовите случайную оболочку.\r\nДаруйте +1|+1 союзникам стоимостью 1 везде. ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Когда на море опускается тишайшая ночь, некоторые билджвотерские моряки затыкают уши ватой. Им прекрасно известно, что музыка, льющаяся из-под воды, не сулит ничего кроме могилы на дне.",
+    "artistName": "Kudos Productions",
+    "name": "Песнь сирен",
+    "cardCode": "07BW033",
+    "keywords": [
+      "Медленное"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "Медленное",
+    "spellSpeedRef": "Slow",
+    "rarity": "ОБЫЧНОЕ",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Заклинание",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07IO041.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07IO041-full.png"
       }
     ],
     "regions": [
@@ -1175,7 +1533,9 @@
     "spellSpeedRef": "Burst",
     "rarity": "ОБЫЧНОЕ",
     "rarityRef": "Common",
-    "subtypes": [],
+    "subtypes": [
+      "СТИХИЯ"
+    ],
     "supertype": "",
     "type": "Заклинание",
     "collectible": true,
@@ -1196,8 +1556,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07IO043.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07IO043-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07IO043.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07IO043-full.png"
       }
     ],
     "regions": [
@@ -1242,8 +1602,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07IO043T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07IO043T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07IO043T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07IO043T1-full.png"
       }
     ],
     "regions": [
@@ -1289,6 +1649,56 @@
   },
   {
     "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07IO049.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07IO049-full.png"
+      }
+    ],
+    "regions": [
+      "Иония"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 1,
+    "cost": 2,
+    "health": 1,
+    "description": "<link=vocab.NexusStrike><style=Vocab>Удар по нексусу</style></link>: призовите случайную Оболочку.",
+    "descriptionRaw": "Удар по нексусу: призовите случайную Оболочку.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Тс-с-с, мы почти на месте. Говоришь, что хочешь познакомиться с моей подругой, так ведь? Поверь мне – ты ей наверянка понравишься\".",
+    "artistName": "Kudos Productions",
+    "name": "Эйрис",
+    "cardCode": "07IO049",
+    "keywords": [
+      "Изворотливость"
+    ],
+    "keywordRefs": [
+      "Elusive"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "РЕДКОЕ",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
     "associatedCardRefs": [
       "07SH038T1",
       "07SH013T6",
@@ -1296,8 +1706,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH038.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH038-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07SH038.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07SH038-full.png"
       }
     ],
     "regions": [
@@ -1309,8 +1719,8 @@
     "attack": 2,
     "cost": 3,
     "health": 2,
-    "description": "<link=vocab.Ambush><style=Vocab>Засада 1</style></link>.\r\n<link=vocab.NexusStrike><style=Vocab>Удар по нексусу</style></link>: призовите карту <link=card.summon><style=AssociatedCard>Пакаа-защитница</style></link>.",
-    "descriptionRaw": "Засада 1.\r\nУдар по нексусу: призовите карту Пакаа-защитница.",
+    "description": "<link=vocab.Ambush><style=Vocab>Засада 1</style></link>\r\n<link=vocab.NexusStrike><style=Vocab>Удар по нексусу</style></link>: призовите карту <link=card.summon><style=AssociatedCard>Пакаа-защитница</style></link>.",
+    "descriptionRaw": "Засада 1\r\nУдар по нексусу: призовите карту Пакаа-защитница.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "Милая внешность – часть облика, а вот свирепость – уже инстинкт. Со временем, обучившись всему, даже самые маленькие пакити становятся сильными и дикими.",
@@ -1351,8 +1761,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH038T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH038T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07SH038T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07SH038T2-full.png"
       }
     ],
     "regions": [
@@ -1364,8 +1774,8 @@
     "attack": 0,
     "cost": 1,
     "health": 0,
-    "description": "Превратите карту <link=card.shadow><style=AssociatedCard>Тень в кустах</style></link> в карту <link=card.parent><style=AssociatedCard>Пакаа-детеныш</style></link>.",
-    "descriptionRaw": "Превратите карту Тень в кустах в карту Пакаа-детеныш.",
+    "description": "Превратите мою <link=card.shadow><style=AssociatedCard>Тень в кустах</style></link> в карту <link=card.parent><style=AssociatedCard>Пакаа-детеныш</style></link>. \r\nЕсли моя <link=card.shadow><style=AssociatedCard>Тень в кустах</style></link> покидает поле боя, <link=vocab.Obliterate><style=Vocab>уничтожьте</style></link> меня.",
+    "descriptionRaw": "Превратите мою Тень в кустах в карту Пакаа-детеныш. \r\nЕсли моя Тень в кустах покидает поле боя, уничтожьте меня.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "Они заплатят.",
@@ -1403,8 +1813,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH038T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH038T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07SH038T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07SH038T1-full.png"
       }
     ],
     "regions": [
@@ -1443,8 +1853,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH041.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH041-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07SH041.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07SH041-full.png"
       }
     ],
     "regions": [
@@ -1495,8 +1905,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH004.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH004-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07SH004.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07SH004-full.png"
       }
     ],
     "regions": [
@@ -1551,8 +1961,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH013.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH013-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07SH013.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07SH013-full.png"
       }
     ],
     "regions": [
@@ -1607,8 +2017,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH013T3.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH013T3-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07SH013T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07SH013T3-full.png"
       }
     ],
     "regions": [
@@ -1663,8 +2073,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH013T4.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH013T4-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07SH013T4.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07SH013T4-full.png"
       }
     ],
     "regions": [
@@ -1720,8 +2130,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH013T7.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH013T7-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07SH013T7.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07SH013T7-full.png"
       }
     ],
     "regions": [
@@ -1733,8 +2143,8 @@
     "attack": 0,
     "cost": 2,
     "health": 0,
-    "description": "Превратите карту <link=card.shadow><style=AssociatedCard>Тень в кустах</style></link> в карту <link=card.parent><style=AssociatedCard>Нидали</style></link>.",
-    "descriptionRaw": "Превратите карту Тень в кустах в карту Нидали.",
+    "description": "Превратите мою <link=card.shadow><style=AssociatedCard>Тень в кустах</style></link> в карту <link=card.parent><style=AssociatedCard>Нидали</style></link>. \r\nЕсли моя <link=card.shadow><style=AssociatedCard>Тень в кустах</style></link> покидает поле боя, <link=vocab.Obliterate><style=Vocab>уничтожьте</style></link> меня.",
+    "descriptionRaw": "Превратите мою Тень в кустах в карту Нидали. \r\nЕсли моя Тень в кустах покидает поле боя, уничтожьте меня.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "Они заплатят.",
@@ -1773,8 +2183,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH013T5.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH013T5-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07SH013T5.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07SH013T5-full.png"
       }
     ],
     "regions": [
@@ -1786,8 +2196,8 @@
     "attack": 0,
     "cost": 2,
     "health": 0,
-    "description": "Превратите карту <link=card.shadow><style=AssociatedCard>Тень в кустах</style></link> в карту <link=card.parent><style=AssociatedCard>Мать стаи Нидали</style></link>.",
-    "descriptionRaw": "Превратите карту Тень в кустах в карту Мать стаи Нидали.",
+    "description": "Превратите мою <link=card.shadow><style=AssociatedCard>Тень в кустах</style></link> в карту <link=card.parent><style=AssociatedCard>Мать стаи Нидали</style></link>. \r\nЕсли моя <link=card.shadow><style=AssociatedCard>Тень в кустах</style></link> покидает поле боя, <link=vocab.Obliterate><style=Vocab>уничтожьте</style></link> меня.",
+    "descriptionRaw": "Превратите мою Тень в кустах в карту Мать стаи Нидали. \r\nЕсли моя Тень в кустах покидает поле боя, уничтожьте меня.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "Они заплатят.",
@@ -1831,8 +2241,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH013T6.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH013T6-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07SH013T6.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07SH013T6-full.png"
       }
     ],
     "regions": [
@@ -1880,8 +2290,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH013T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH013T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07SH013T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07SH013T2-full.png"
       }
     ],
     "regions": [
@@ -1936,8 +2346,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH009.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH009-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07SH009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07SH009-full.png"
       }
     ],
     "regions": [
@@ -1949,8 +2359,8 @@
     "attack": 3,
     "cost": 3,
     "health": 3,
-    "description": "<link=vocab.Ambush><style=Vocab>Засада 3</style></link>.\r\nПревратив меня из карты <link=card.ambush><style=AssociatedCard>Засада Мстительного вастайи</style></link>, остановите все вражеские <link=keyword.Skill><sprite name=SkillMark><style=Keyword>способности</style></link>, а также <link=keyword.Fast><sprite name=Fast><style=Keyword>быстрые</style></link> и <link=keyword.Slow><sprite name=Slow><style=Keyword>медленные</style></link> заклинания.",
-    "descriptionRaw": "Засада 3.\r\nПревратив меня из карты Засада Мстительного вастайи, остановите все вражеские способности, а также быстрые и медленные заклинания.",
+    "description": "<link=vocab.Ambush><style=Vocab>Засада 3</style></link>\r\nПревратив меня из карты <link=card.ambush><style=AssociatedCard>Засада Мстительного вастайи</style></link>, остановите все вражеские <link=keyword.Skill><sprite name=SkillMark><style=Keyword>способности</style></link>, а также <link=keyword.Fast><sprite name=Fast><style=Keyword>быстрые</style></link> и <link=keyword.Slow><sprite name=Slow><style=Keyword>медленные</style></link> заклинания.",
+    "descriptionRaw": "Засада 3\r\nПревратив меня из карты Засада Мстительного вастайи, остановите все вражеские способности, а также быстрые и медленные заклинания.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "\"Не бойтесь, малыши. Я защищу вас – и тем уплачу свой долг Нидали\".",
@@ -1986,8 +2396,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH009T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH009T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07SH009T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07SH009T1-full.png"
       }
     ],
     "regions": [
@@ -2039,8 +2449,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH009T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH009T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07SH009T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07SH009T2-full.png"
       }
     ],
     "regions": [
@@ -2052,8 +2462,8 @@
     "attack": 0,
     "cost": 3,
     "health": 0,
-    "description": "Превратите карту <link=card.shadow><style=AssociatedCard>Тень в кустах</style></link> в карту <link=card.parent><style=AssociatedCard>Мстительный вастайи</style></link>.",
-    "descriptionRaw": "Превратите карту Тень в кустах в карту Мстительный вастайи.",
+    "description": "Превратите мою <link=card.shadow><style=AssociatedCard>Тень в кустах</style></link> в карту <link=card.parent><style=AssociatedCard>Мстительный вастайи</style></link>. \r\nЕсли моя <link=card.shadow><style=AssociatedCard>Тень в кустах</style></link> покидает поле боя, <link=vocab.Obliterate><style=Vocab>уничтожьте</style></link> меня.",
+    "descriptionRaw": "Превратите мою Тень в кустах в карту Мстительный вастайи. \r\nЕсли моя Тень в кустах покидает поле боя, уничтожьте меня.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "Они заплатят.",
@@ -2092,8 +2502,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH039.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH039-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07SH039.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07SH039-full.png"
       }
     ],
     "regions": [
@@ -2105,8 +2515,8 @@
     "attack": 3,
     "cost": 2,
     "health": 1,
-    "description": "<link=vocab.Ambush><style=Vocab>Засада 0</style></link>.\r\nПризвав или превратив меня, даруйте <link=keyword.Weakest><style=Keyword>слабейшему</style></link> врагу <link=keyword.Vulnerable><sprite name=Vulnerable><style=Keyword>Уязвимость</style></link>.",
-    "descriptionRaw": "Засада 0.\r\nПризвав или превратив меня, даруйте слабейшему врагу Уязвимость.",
+    "description": "<link=vocab.Ambush><style=Vocab>Засада 0</style></link>\r\nПризвав или превратив меня, даруйте <link=keyword.Weakest><style=Keyword>слабейшему</style></link> врагу <link=keyword.Vulnerable><sprite name=Vulnerable><style=Keyword>Уязвимость</style></link>.",
+    "descriptionRaw": "Засада 0\r\nПризвав или превратив меня, даруйте слабейшему врагу Уязвимость.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "\"Здешние красоты даже новичка превратят в профессионала, карабкающегося по деревьям и прыгающего по валунам. Попасть сюда стоило целое состояние, но я уверен, что смогу отбить долги благодаря паре-тройке шкур местных редких зверьков...\"",
@@ -2141,8 +2551,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH044.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH044-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07SH044.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07SH044-full.png"
       }
     ],
     "regions": [
@@ -2193,8 +2603,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH003.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH003-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07SH003.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07SH003-full.png"
       }
     ],
     "regions": [
@@ -2205,9 +2615,9 @@
     ],
     "attack": 2,
     "cost": 2,
-    "health": 2,
-    "description": "<link=vocab.Ambush><style=Vocab>Засада 3</style></link>.\r\nПревратив меня из карты <link=card.ambush><style=AssociatedCard>Засада Браконьера-дирижаблиста</style></link>, в следующий раз, когда я блокирую или когда меня блокируют в этом раунде, <link=vocab.Ambush><style=Vocab>плените</style></link> моего врага, если его сила 6 или менее.",
-    "descriptionRaw": "Засада 3.\r\nПревратив меня из карты Засада Браконьера-дирижаблиста, в следующий раз, когда я блокирую или когда меня блокируют в этом раунде, плените моего врага, если его сила 6 или менее.",
+    "health": 3,
+    "description": "<link=vocab.Ambush><style=Vocab>Засада 3</style></link>\r\nПревратив меня из карты <link=card.ambush><style=AssociatedCard>Засада Браконьера-дирижаблиста</style></link>, в следующий раз, когда я блокирую или когда меня блокируют в этом раунде, <link=vocab.Ambush><style=Vocab>плените</style></link> моего врага, если его сила 6 или менее.",
+    "descriptionRaw": "Засада 3\r\nПревратив меня из карты Засада Браконьера-дирижаблиста, в следующий раз, когда я блокирую или когда меня блокируют в этом раунде, плените моего врага, если его сила 6 или менее.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "\"Ха! Теперь попробуйте достать меня, глупые звери. Высшему виду и земное притяжение нипочем!\"",
@@ -2239,8 +2649,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH003T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH003T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07SH003T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07SH003T2-full.png"
       }
     ],
     "regions": [
@@ -2292,8 +2702,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH003T3.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH003T3-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07SH003T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07SH003T3-full.png"
       }
     ],
     "regions": [
@@ -2305,8 +2715,8 @@
     "attack": 0,
     "cost": 3,
     "health": 0,
-    "description": "Превратите карту <link=card.shadow><style=AssociatedCard>Тень в кустах</style></link> в карту <link=card.parent><style=AssociatedCard>Браконьер-дирижаблист</style></link>.",
-    "descriptionRaw": "Превратите карту Тень в кустах в карту Браконьер-дирижаблист.",
+    "description": "Превратите мою <link=card.shadow><style=AssociatedCard>Тень в кустах</style></link> в карту <link=card.parent><style=AssociatedCard>Браконьер-дирижаблист</style></link>. \r\nЕсли моя <link=card.shadow><style=AssociatedCard>Тень в кустах</style></link> покидает поле боя, <link=vocab.Obliterate><style=Vocab>уничтожьте</style></link> меня.",
+    "descriptionRaw": "Превратите мою Тень в кустах в карту Браконьер-дирижаблист. \r\nЕсли моя Тень в кустах покидает поле боя, уничтожьте меня.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "Они заплатят.",
@@ -2342,8 +2752,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH011.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH011-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07SH011.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07SH011-full.png"
       }
     ],
     "regions": [
@@ -2389,14 +2799,68 @@
   },
   {
     "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07SH046.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07SH046-full.png"
+      }
+    ],
+    "regions": [
+      "Шурима"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "Разыгрывая сторонника, превратите меня в его точную копию до конца раунда. Я сохраняю дарованные мне усиления. ",
+    "descriptionRaw": "Разыгрывая сторонника, превратите меня в его точную копию до конца раунда. Я сохраняю дарованные мне усиления. ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"А тут у нас САМЫЙ П'Е-К'А-А-А-АС-НЫЙ и всеми йюбимый пункт на ма'ш'уте нашей экску'сии. Очень многим йюдям так пон'авийись мои экску'сии, что они пост'оийи ОГ'О-О-О-О-О-ОМНОГО К'УТЕЦКОГО СКОЛА, кото'ый навечно будет важным пунктом экску'сии. Давайте поздо'оваемся – все вместе скажем: П'ИВЕ-Е-Е-ЕТ, ОГ'ОМНЫЙ СКОЛ! Ог'омный Скол йюбит ВСЕХ-П'ЕВСЕХ, а о-со-би-сто – всех тех йюдей, кото'ые п'ошйи всю экску'сию до конца\". – \"Путешествия со Сколом\", часть VI",
+    "artistName": "Caravan Studio",
+    "name": "Долина Имитации",
+    "cardCode": "07SH046",
+    "keywords": [
+      "Место силы"
+    ],
+    "keywordRefs": [
+      "LandmarkVisualOnly"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ОБЫЧНОЕ",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Место силы",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Только обычные",
+      "Вечный",
+      "Карты четной стоимости",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
     "associatedCardRefs": [
       "07SH039",
       "07SH013T6"
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH039T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH039T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07SH039T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07SH039T1-full.png"
       }
     ],
     "regions": [
@@ -2408,8 +2872,8 @@
     "attack": 0,
     "cost": 0,
     "health": 0,
-    "description": "Превратите карту <link=card.shadow><style=AssociatedCard>Тень в кустах</style></link> в карту <link=card.parent><style=AssociatedCard>Штурмовик-внедорожник</style></link>.",
-    "descriptionRaw": "Превратите карту Тень в кустах в карту Штурмовик-внедорожник.",
+    "description": "Превратите мою <link=card.shadow><style=AssociatedCard>Тень в кустах</style></link> в карту <link=card.parent><style=AssociatedCard>Штурмовик-внедорожник</style></link>. \r\nЕсли моя <link=card.shadow><style=AssociatedCard>Тень в кустах</style></link> покидает поле боя, <link=vocab.Obliterate><style=Vocab>уничтожьте</style></link> меня.",
+    "descriptionRaw": "Превратите мою Тень в кустах в карту Штурмовик-внедорожник. \r\nЕсли моя Тень в кустах покидает поле боя, уничтожьте меня.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "Они заплатят.",
@@ -2448,8 +2912,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH043.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH043-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07SH043.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07SH043-full.png"
       }
     ],
     "regions": [
@@ -2501,8 +2965,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH043T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH043T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07SH043T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07SH043T2-full.png"
       }
     ],
     "regions": [
@@ -2514,8 +2978,8 @@
     "attack": 0,
     "cost": 5,
     "health": 0,
-    "description": "Превратите карту <link=card.shadow><style=AssociatedCard>Тень в кустах</style></link> в карту <link=card.parent><style=AssociatedCard>Огромный хоботач</style></link>.",
-    "descriptionRaw": "Превратите карту Тень в кустах в карту Огромный хоботач.",
+    "description": "Превратите мою <link=card.shadow><style=AssociatedCard>Тень в кустах</style></link> в карту <link=card.parent><style=AssociatedCard>Огромный хоботач</style></link>. \r\nЕсли моя <link=card.shadow><style=AssociatedCard>Тень в кустах</style></link> покидает поле боя, <link=vocab.Obliterate><style=Vocab>уничтожьте</style></link> меня.",
+    "descriptionRaw": "Превратите мою Тень в кустах в карту Огромный хоботач. \r\nЕсли моя Тень в кустах покидает поле боя, уничтожьте меня.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "Они заплатят.",
@@ -2551,8 +3015,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH040.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH040-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07SH040.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07SH040-full.png"
       }
     ],
     "regions": [
@@ -2564,8 +3028,8 @@
     "attack": 1,
     "cost": 1,
     "health": 2,
-    "description": "Если вы в этом матче превратили союзника, даруйте мне +1|+1.",
-    "descriptionRaw": "Если вы в этом матче превратили союзника, даруйте мне +1|+1.",
+    "description": "После превращения первого союзника даруйте мне +2|+1.",
+    "descriptionRaw": "После превращения первого союзника даруйте мне +2|+1.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "\"Небольшие всеядные млекопитающие, покрытые щетиноподобными иголками, которыми они могут активно отстреливаться в случае опасности. Хвост колючий и подвижный; возможно, используется как орудие самозащиты. Если верить бывалым путешественникам, эти существа славятся своей неуживчивостью и не даются в руки...\" – Выдержки из дневника Ануры, День 3",
@@ -2600,8 +3064,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH044T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH044T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07SH044T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07SH044T1-full.png"
       }
     ],
     "regions": [
@@ -2613,8 +3077,8 @@
     "attack": 0,
     "cost": 4,
     "health": 0,
-    "description": "Превратите карту <link=card.shadow><style=AssociatedCard>Тень в кустах</style></link> в карту <link=card.parent><style=AssociatedCard>Сияющий морок</style></link>.",
-    "descriptionRaw": "Превратите карту Тень в кустах в карту Сияющий морок.",
+    "description": "Превратите мою <link=card.shadow><style=AssociatedCard>Тень в кустах</style></link> в карту <link=card.parent><style=AssociatedCard>Сияющий морок</style></link>. \r\nЕсли моя <link=card.shadow><style=AssociatedCard>Тень в кустах</style></link> покидает поле боя, <link=vocab.Obliterate><style=Vocab>уничтожьте</style></link> меня.",
+    "descriptionRaw": "Превратите мою Тень в кустах в карту Сияющий морок. \r\nЕсли моя Тень в кустах покидает поле боя, уничтожьте меня.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "Они заплатят.",
@@ -2652,8 +3116,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH005.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SH005-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07SH005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07SH005-full.png"
       }
     ],
     "regions": [
@@ -2698,208 +3162,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07BW035.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07BW035-full.png"
-      }
-    ],
-    "regions": [
-      "Билджвотер"
-    ],
-    "regionRefs": [
-      "Bilgewater"
-    ],
-    "attack": 0,
-    "cost": 6,
-    "health": 0,
-    "description": "Карты у вас в руке становятся <link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>мимолетными</style></link>.\r\nСыграв карту, вытяните 1 карту.",
-    "descriptionRaw": "Карты у вас в руке становятся мимолетными.\r\nСыграв карту, вытяните 1 карту.",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "\"Полагаю, ты помнишь, что у тебя в руке, и бережешь это. Иначе готовься потерять все подчистую\". – Твистед Фэйт",
-    "artistName": "Envar Studio",
-    "name": "Плутовское логово",
-    "cardCode": "07BW035",
-    "keywords": [
-      "Место силы"
-    ],
-    "keywordRefs": [
-      "LandmarkVisualOnly"
-    ],
-    "spellSpeed": "",
-    "spellSpeedRef": "",
-    "rarity": "ЭПИЧЕСКОЕ",
-    "rarityRef": "Epic",
-    "subtypes": [],
-    "supertype": "",
-    "type": "Место силы",
-    "collectible": true,
-    "set": "Set7b",
-    "formats": [
-      "Вечный",
-      "Стандартный"
-    ],
-    "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07BW042.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07BW042-full.png"
-      }
-    ],
-    "regions": [
-      "Билджвотер"
-    ],
-    "regionRefs": [
-      "Bilgewater"
-    ],
-    "attack": 1,
-    "cost": 2,
-    "health": 3,
-    "description": "<link=vocab.Play><style=Vocab>Разыгрывая карту</style></link>: <link=vocab.Manifest><style=Vocab>воплотите</style></link> сторонника, чей подтип отличен от подтипов союзников на поле боя.",
-    "descriptionRaw": "Разыгрывая карту: воплотите сторонника, чей подтип отличен от подтипов союзников на поле боя.",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "\"Знаете, зачем нам нужен этот растрепанный заморыш? При нем у нас никаких проблем с крысами!\" – Матрос с \"Кошмара\"",
-    "artistName": "Caravan Studio",
-    "name": "Палубный охотник",
-    "cardCode": "07BW042",
-    "keywords": [],
-    "keywordRefs": [],
-    "spellSpeed": "",
-    "spellSpeedRef": "",
-    "rarity": "ОБЫЧНОЕ",
-    "rarityRef": "Common",
-    "subtypes": [
-      "КОШКА"
-    ],
-    "supertype": "",
-    "type": "Боец",
-    "collectible": true,
-    "set": "Set7b",
-    "formats": [
-      "Вечный",
-      "Стандартный"
-    ],
-    "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07BW039.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07BW039-full.png"
-      }
-    ],
-    "regions": [
-      "Билджвотер"
-    ],
-    "regionRefs": [
-      "Bilgewater"
-    ],
-    "attack": 2,
-    "cost": 2,
-    "health": 2,
-    "description": "В каждом раунде, впервые призывая союзника стоимостью 1, восполните 1 ед. маны заклинаний.",
-    "descriptionRaw": "В каждом раунде, впервые призывая союзника стоимостью 1, восполните 1 ед. маны заклинаний.",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "\"Господин Ящер, что вы тут делаете? Вам тоже нравятся поро?!\" – Ингвар младшая",
-    "artistName": "Caravan Studio",
-    "name": "Гринзо, Принц-дракон",
-    "cardCode": "07BW039",
-    "keywords": [
-      "Эзотерика"
-    ],
-    "keywordRefs": [
-      "Attune"
-    ],
-    "spellSpeed": "",
-    "spellSpeedRef": "",
-    "rarity": "РЕДКОЕ",
-    "rarityRef": "Rare",
-    "subtypes": [
-      "ДРАКОН"
-    ],
-    "supertype": "",
-    "type": "Боец",
-    "collectible": true,
-    "set": "Set7b",
-    "formats": [
-      "Вечный",
-      "Стандартный"
-    ],
-    "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07BW033.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07BW033-full.png"
-      }
-    ],
-    "regions": [
-      "Билджвотер"
-    ],
-    "regionRefs": [
-      "Bilgewater"
-    ],
-    "attack": 0,
-    "cost": 4,
-    "health": 0,
-    "description": "Призовите случайную оболочку.\r\nДаруйте +1|+1 союзникам стоимостью 1 <link=vocab.Everywhere><style=Vocab>везде</style></link>. ",
-    "descriptionRaw": "Призовите случайную оболочку.\r\nДаруйте +1|+1 союзникам стоимостью 1 везде. ",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "Когда на море опускается тишайшая ночь, некоторые билджвотерские моряки затыкают уши ватой. Им прекрасно известно, что музыка, льющаяся из-под воды, не сулит ничего кроме могилы на дне.",
-    "artistName": "Kudos Productions",
-    "name": "Песнь сирен",
-    "cardCode": "07BW033",
-    "keywords": [
-      "Медленное"
-    ],
-    "keywordRefs": [
-      "Slow"
-    ],
-    "spellSpeed": "Медленное",
-    "spellSpeedRef": "Slow",
-    "rarity": "ОБЫЧНОЕ",
-    "rarityRef": "Common",
-    "subtypes": [],
-    "supertype": "",
-    "type": "Заклинание",
-    "collectible": true,
-    "set": "Set7b",
-    "formats": [
-      "Вечный",
-      "Стандартный"
-    ],
-    "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07FR011.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07FR011-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07FR011.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07FR011-full.png"
       }
     ],
     "regions": [
@@ -2948,8 +3212,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07FR010.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07FR010-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07FR010.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07FR010-full.png"
       }
     ],
     "regions": [
@@ -3002,8 +3266,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07FR015.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07FR015-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07FR015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07FR015-full.png"
       }
     ],
     "regions": [
@@ -3048,8 +3312,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07FR015T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07FR015T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07FR015T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07FR015T1-full.png"
       }
     ],
     "regions": [
@@ -3094,8 +3358,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07FR015T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07FR015T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07FR015T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07FR015T2-full.png"
       }
     ],
     "regions": [
@@ -3137,11 +3401,117 @@
   },
   {
     "associatedCards": [],
+    "associatedCardRefs": [
+      "07FR017T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07FR017.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07FR017-full.png"
+      }
+    ],
+    "regions": [
+      "Фрельйорд"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 3,
+    "cost": 5,
+    "health": 2,
+    "description": "<link=keyword.Elemental Skill><sprite name=ElementalSkill><style=Keyword>Разыгрывая карту</style></link>: нанесите<br>2 ед. урона ВСЕМ остальным бойцам.",
+    "descriptionRaw": "Разыгрывая карту: нанесите2 ед. урона ВСЕМ остальным бойцам.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Ярость кристаллического буреклюва неразборчива и молниеносна. Она способна перевернуть ход битвы за считанные мгновения. Многие считают эту птицу первым предзнаменованием сильной и страшной бури – одной из тех, что могут встряхнуть нутро земли.",
+    "artistName": "Bubble Cat",
+    "name": "Кристаллический буреклюв",
+    "cardCode": "07FR017",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "РЕДКОЕ",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "ПТИЦА"
+    ],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07FR016.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07FR016-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07FR017T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07FR017T1-full.png"
+      }
+    ],
+    "regions": [
+      "Фрельйорд"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "Нанесите 2 ед. урона ВСЕМ остальным бойцам.",
+    "descriptionRaw": "Нанесите 2 ед. урона ВСЕМ остальным бойцам.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Хочешь знать, как пережить вопль буреклюва? Ха! Когда услышишь голос этой птички, остается только молиться\". – Всадник племени аваросан",
+    "artistName": "Polar Engine",
+    "name": "Пронзающая молния",
+    "cardCode": "07FR017T1",
+    "keywords": [
+      "Стихийная способность"
+    ],
+    "keywordRefs": [
+      "ElementalSkill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Нет",
+    "rarityRef": "None",
+    "subtypes": [
+      "СТИХИЯ"
+    ],
+    "supertype": "",
+    "type": "Способность",
+    "collectible": false,
+    "set": "Set7b",
+    "formats": [
+      "Только обычные",
+      "Вечный",
+      "Карты четной стоимости",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07FR016.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07FR016-full.png"
       }
     ],
     "regions": [
@@ -3152,7 +3522,7 @@
     ],
     "attack": 5,
     "cost": 5,
-    "health": 5,
+    "health": 4,
     "description": "Призвав меня, даруйте 3 верхним бойцам в вашей колоде +1|+1. Если подтип союзника отличен от моего, вытяните 1 из этих бойцов.",
     "descriptionRaw": "Призвав меня, даруйте 3 верхним бойцам в вашей колоде +1|+1. Если подтип союзника отличен от моего, вытяните 1 из этих бойцов.",
     "levelupDescription": "",
@@ -3161,8 +3531,12 @@
     "artistName": "Envar Studio",
     "name": "Ледниковый ящер",
     "cardCode": "07FR016",
-    "keywords": [],
-    "keywordRefs": [],
+    "keywords": [
+      "Пробивание"
+    ],
+    "keywordRefs": [
+      "Overwhelm"
+    ],
     "spellSpeed": "",
     "spellSpeedRef": "",
     "rarity": "РЕДКОЕ",
@@ -3190,8 +3564,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SI010.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SI010-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07SI010.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07SI010-full.png"
       }
     ],
     "regions": [
@@ -3238,8 +3612,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SI010T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SI010T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07SI010T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07SI010T1-full.png"
       }
     ],
     "regions": [
@@ -3269,7 +3643,9 @@
     "spellSpeedRef": "",
     "rarity": "Нет",
     "rarityRef": "None",
-    "subtypes": [],
+    "subtypes": [
+      "ПАУК"
+    ],
     "supertype": "",
     "type": "Боец",
     "collectible": false,
@@ -3288,8 +3664,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SI012.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SI012-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07SI012.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07SI012-full.png"
       }
     ],
     "regions": [
@@ -3340,8 +3716,58 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SI004.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07SI004-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07SI013.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07SI013-full.png"
+      }
+    ],
+    "regions": [
+      "Сумрачные острова"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 1,
+    "cost": 1,
+    "health": 1,
+    "description": "<link=keyword.Last Breath><sprite name=LastBreath><style=Keyword>Предсмертный вздох</style></link>: создайте в колоде точную копию <link=vocab.Strongest><style=Vocab>сильнейшей</style></link> из ваших карт <link=card.selfref><style=AssociatedCard>Разрастающийся призрак тьмы</style></link> в колоде, после чего удвойте характеристики <link=card.selfref><style=AssociatedCard>Разрастающихся призраков тьмы</style></link> в колоде.",
+    "descriptionRaw": "Предсмертный вздох: создайте в колоде точную копию сильнейшей из ваших карт Разрастающийся призрак тьмы в колоде, после чего удвойте характеристики Разрастающихся призраков тьмы в колоде.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Этот туман меня многому научил. Самый важный его урок – это то, что теперь я знаю, когда нужно убегать\".<br>– Страж Ишталя",
+    "artistName": "Xavier Leroux",
+    "name": "Разрастающийся призрак тьмы",
+    "cardCode": "07SI013",
+    "keywords": [
+      "Предсмертный вздох"
+    ],
+    "keywordRefs": [
+      "LastBreath"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "РЕДКОЕ",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07SI004.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07SI004-full.png"
       }
     ],
     "regions": [
@@ -3390,8 +3816,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07MT009.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07MT009-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07MT009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07MT009-full.png"
       }
     ],
     "regions": [
@@ -3440,8 +3866,166 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07MT006.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07MT006-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07MT013.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07MT013-full.png"
+      }
+    ],
+    "regions": [
+      "Таргон"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "<link=keyword.Invoke><style=Keyword>Позовите</style></link> творение небес стоимостью 7 или более либо выплатите 8 ед. маны, чтобы также наполовину снизить стоимость ваших творений небес <link=vocab.Everywhere><style=Vocab>везде</style></link> (с округлением в большую сторону).",
+    "descriptionRaw": "Позовите творение небес стоимостью 7 или более либо выплатите 8 ед. маны, чтобы также наполовину снизить стоимость ваших творений небес везде (с округлением в большую сторону).",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Судия вовеки пребывает в созерцании, наблюдая за тем, как нисходит благословение небес.",
+    "artistName": "Polar Engine",
+    "name": "Космический зов",
+    "cardCode": "07MT013",
+    "keywords": [
+      "Взрывное"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Взрывное",
+    "spellSpeedRef": "Burst",
+    "rarity": "ОБЫЧНОЕ",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Заклинание",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07MT013T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07MT013T1-full.png"
+      }
+    ],
+    "regions": [
+      "Таргон"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 8,
+    "health": 0,
+    "description": "<link=keyword.Invoke><style=Keyword>Позовите</style></link> творение небес стоимостью 7 или более и наполовину снизьте стоимость ваших творений небес <link=vocab.Everywhere><style=Vocab>везде</style></link> (с округлением в большую сторону).",
+    "descriptionRaw": "Позовите творение небес стоимостью 7 или более и наполовину снизьте стоимость ваших творений небес везде (с округлением в большую сторону).",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Судия вовеки пребывает в созерцании, наблюдая за тем, как нисходит благословение небес.",
+    "artistName": "Polar Engine",
+    "name": "Космический зов",
+    "cardCode": "07MT013T1",
+    "keywords": [
+      "Взрывное"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Взрывное",
+    "spellSpeedRef": "Burst",
+    "rarity": "ОБЫЧНОЕ",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Заклинание",
+    "collectible": false,
+    "set": "Set7b",
+    "formats": [
+      "Только обычные",
+      "Вечный",
+      "Карты четной стоимости",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07MT013T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07MT013T2-full.png"
+      }
+    ],
+    "regions": [
+      "Таргон"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "<link=keyword.Invoke><style=Keyword>Позовите</style></link> творение небес стоимостью 7 или более.",
+    "descriptionRaw": "Позовите творение небес стоимостью 7 или более.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Судия вовеки пребывает в созерцании, наблюдая за тем, как нисходит благословение небес.",
+    "artistName": "Polar Engine",
+    "name": "Космический зов",
+    "cardCode": "07MT013T2",
+    "keywords": [
+      "Взрывное"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Взрывное",
+    "spellSpeedRef": "Burst",
+    "rarity": "ОБЫЧНОЕ",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Заклинание",
+    "collectible": false,
+    "set": "Set7b",
+    "formats": [
+      "Только обычные",
+      "Вечный",
+      "Карты четной стоимости",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07MT006.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07MT006-full.png"
       }
     ],
     "regions": [
@@ -3486,8 +4070,54 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07BC016.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07BC016-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07BC020.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07BC020-full.png"
+      }
+    ],
+    "regions": [
+      "Бандл Сити"
+    ],
+    "regionRefs": [
+      "BandleCity"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 3,
+    "description": "Когда активируется одна или несколько ваших ловушек или поощрений, прикрепите 2 из них в колоде того же игрока.",
+    "descriptionRaw": "Когда активируется одна или несколько ваших ловушек или поощрений, прикрепите 2 из них в колоде того же игрока.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Никто не знает, как давно Господин Скопидом собирает свою коллекцию. Никто не знает, откуда он вообще взялся. Выглядит он довольно дружелюбно – если не обращать внимания на небезопасную тропинку из непредсказуемых штуковин, которую он оставляет за собой.",
+    "artistName": "Caravan Studio",
+    "name": "Господин Скопидом",
+    "cardCode": "07BC020",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "РЕДКОЕ",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07BC016.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07BC016-full.png"
       }
     ],
     "regions": [
@@ -3508,11 +4138,9 @@
     "name": "Неразменный гайковерт",
     "cardCode": "07BC016",
     "keywords": [
-      "Таран",
       "Снаряжение"
     ],
     "keywordRefs": [
-      "Impact",
       "Equipment"
     ],
     "spellSpeed": "",
@@ -3540,8 +4168,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07BC018.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07BC018-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07BC018.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07BC018-full.png"
       }
     ],
     "regions": [
@@ -3568,7 +4196,7 @@
     "rarity": "ЭПИЧЕСКОЕ",
     "rarityRef": "Epic",
     "subtypes": [
-      "ЙОРДЛ"
+      "ФАЭ"
     ],
     "supertype": "",
     "type": "Боец",
@@ -3588,8 +4216,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07BC011.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07BC011-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07BC011.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07BC011-full.png"
       }
     ],
     "regions": [
@@ -3640,8 +4268,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07DE014.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07DE014-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07DE014.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07DE014-full.png"
       }
     ],
     "regions": [
@@ -3688,8 +4316,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07DE015.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07DE015-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07DE015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07DE015-full.png"
       }
     ],
     "regions": [
@@ -3698,9 +4326,9 @@
     "regionRefs": [
       "Demacia"
     ],
-    "attack": 5,
+    "attack": 6,
     "cost": 6,
-    "health": 5,
+    "health": 6,
     "description": "<link=vocab.Play><style=Vocab>Разыгрывая карту</style></link>: если подтип союзника отличен от моего, <link=vocab.Manifest><style=Vocab>воплотите</style></link> демасийское заклинание.",
     "descriptionRaw": "Разыгрывая карту: если подтип союзника отличен от моего, воплотите демасийское заклинание.",
     "levelupDescription": "",
@@ -3740,8 +4368,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07DE011.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7b/ru_ru/img/cards/07DE011-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07DE011.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07DE011-full.png"
       }
     ],
     "regions": [
@@ -3771,6 +4399,56 @@
     "spellSpeedRef": "",
     "rarity": "ОБЫЧНОЕ",
     "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set7b",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07DE016.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set7b/ru_ru/img/cards/07DE016-full.png"
+      }
+    ],
+    "regions": [
+      "Демасия"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 0,
+    "cost": 4,
+    "health": 4,
+    "description": "<link=vocab.Attack><style=Vocab>Атака</style></link>: даруйте +0|+1 <link=keyword.Formidable><sprite name=Formidable><style=Keyword>громадным</style></link> союзникам <link=vocab.Everywhere><style=Vocab>везде</style></link>.",
+    "descriptionRaw": "Атака: даруйте +0|+1 громадным союзникам везде.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Глядя на то, как огромен Бален, давний товарищ семейства Дюран, трудно поверить в то, что он еще и аккуратнейший мастер. Хотя начинал Бален помощником, он достиг высот в своем ремесле. Творит он с редкостным вдохновением, так что Дюраны гордятся дружбой с ним.",
+    "artistName": "Envar Studio",
+    "name": "Бален Великодушный",
+    "cardCode": "07DE016",
+    "keywords": [
+      "Громадный"
+    ],
+    "keywordRefs": [
+      "Formidable"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ЭПИЧЕСКОЕ",
+    "rarityRef": "Epic",
     "subtypes": [],
     "supertype": "",
     "type": "Боец",

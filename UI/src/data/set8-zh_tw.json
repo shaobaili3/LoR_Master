@@ -1,0 +1,3197 @@
+[
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08BW008T1",
+      "08BW008T5",
+      "08BW008T3"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08BW008.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08BW008-full.png"
+      }
+    ],
+    "regions": [
+      "比爾吉沃特"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 3,
+    "description": "<link=vocab.Attack><style=Vocab>攻擊</style></link>：在我方牌組最上方6張牌中<br>生成1張<link=card.create><style=AssociatedCard>湍流淩步</style></link>。",
+    "descriptionRaw": "攻擊：在我方牌組最上方6張牌中生成1張湍流淩步。",
+    "levelupDescription": "我方抽出16張以上卡牌。<style=Variable></style>",
+    "levelupDescriptionRaw": "我方抽出16張以上卡牌。",
+    "flavorText": "淣菈與她狩獵怪物同夥的新目標：弗力貝爾，就居住在極北的弗雷爾卓德。這個生物威脅要摧毀曾經崇拜他的這片土地。對淣菈來說，能夠和自詡為神的怪物大打出手、測試自身實力，可說是一生難求的好機會。更別提一路上還能打敗許多小型怪物，為自己的豐功偉業更添上一筆。 ",
+    "artistName": "Envar Studio",
+    "name": "淣菈",
+    "cardCode": "08BW008",
+    "keywords": [
+      "硬派"
+    ],
+    "keywordRefs": [
+      "Brash"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "英雄",
+    "rarityRef": "Champion",
+    "subtypes": [],
+    "supertype": "英雄",
+    "type": "單位",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08BW008T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08BW008T3-full.png"
+      }
+    ],
+    "regions": [
+      "比爾吉沃特"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "抽2張牌，並賦予其<link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>飛逝</style></link>。",
+    "descriptionRaw": "抽2張牌，並賦予其飛逝。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「奔放的喜悅！」——淣菈",
+    "artistName": "Polar Engine",
+    "name": "湍流淩步",
+    "cardCode": "08BW008T3",
+    "keywords": [
+      "疾速"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "疾速",
+    "spellSpeedRef": "Burst",
+    "rarity": "無",
+    "rarityRef": "None",
+    "subtypes": [
+      "元素"
+    ],
+    "supertype": "",
+    "type": "法術",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08BW008",
+      "08BW008T5",
+      "08BW008T3"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08BW008T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08BW008T1-full.png"
+      }
+    ],
+    "regions": [
+      "比爾吉沃特"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 3,
+    "cost": 2,
+    "health": 4,
+    "description": "<link=vocab.Attack><style=Vocab>攻擊</style></link>：在我方牌組最上方6張牌生成1張<link=card.create><style=AssociatedCard>湍流淩步</style></link>，並對所有敵軍單位及<br>敵方主堡造成2點傷害。受此傷害後，<br>目標的生命值不會低於1。",
+    "descriptionRaw": "攻擊：在我方牌組最上方6張牌生成1張湍流淩步，並對所有敵軍單位及敵方主堡造成2點傷害。受此傷害後，目標的生命值不會低於1。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「怪物！我是來自七層地獄的淣菈！記好我的名字，它將永遠名垂青史。」",
+    "artistName": "Envar Studio",
+    "name": "淣菈",
+    "cardCode": "08BW008T1",
+    "keywords": [
+      "硬派"
+    ],
+    "keywordRefs": [
+      "Brash"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "英雄",
+    "rarityRef": "Champion",
+    "subtypes": [],
+    "supertype": "英雄",
+    "type": "單位",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08BW008",
+      "08BW008T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08BW008T5.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08BW008T5-full.png"
+      }
+    ],
+    "regions": [
+      "比爾吉沃特"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "對1個單位造成2點傷害。受此傷害後，目標的生命值不會低於1。\r\n在我方牌組生成1張<link=card.level1><style=AssociatedCard>淣菈</style></link>。",
+    "descriptionRaw": "對1個單位造成2點傷害。受此傷害後，目標的生命值不會低於1。\r\n在我方牌組生成1張淣菈。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「我的刀刃將賜予你歡笑！」——淣菈",
+    "artistName": "Polar Engine",
+    "name": "淣菈 百變之刃",
+    "cardCode": "08BW008T5",
+    "keywords": [
+      "疾速"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "疾速",
+    "spellSpeedRef": "Burst",
+    "rarity": "無",
+    "rarityRef": "None",
+    "subtypes": [
+      "元素"
+    ],
+    "supertype": "英雄",
+    "type": "法術",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08BW032.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08BW032-full.png"
+      }
+    ],
+    "regions": [
+      "比爾吉沃特"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "本回合給予所有友軍單位+1|+0，並治療負傷友軍單位2點生命值。",
+    "descriptionRaw": "本回合給予所有友軍單位+1|+0，並治療負傷友軍單位2點生命值。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「歡樂滿溢，永無止境！」——淣菈",
+    "artistName": "Polar Engine",
+    "name": "樂無止境",
+    "cardCode": "08BW032",
+    "keywords": [
+      "疾速"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "疾速",
+    "spellSpeedRef": "Burst",
+    "rarity": "普通",
+    "rarityRef": "Common",
+    "subtypes": [
+      "元素"
+    ],
+    "supertype": "",
+    "type": "法術",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08BW008"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08BW015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08BW015-full.png"
+      }
+    ],
+    "regions": [
+      "比爾吉沃特"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 3,
+    "cost": 6,
+    "health": 5,
+    "description": "召喚此牌時，抽1張<link=card.champ1><style=AssociatedCard>淣菈</style></link>。\r\n我方每回合第三次出牌時，賦予其他友軍單位本回合+2|+0與<link=keyword.Brash><sprite name=Brash><style=Keyword>硬派</style></link>。<style=Variable></style>\r\n此牌將要獲得<link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>飛逝</style></link>時，<br>改為讓此牌現出原形。",
+    "descriptionRaw": "召喚此牌時，抽1張淣菈。\r\n我方每回合第三次出牌時，賦予其他友軍單位本回合+2|+0與硬派。\r\n此牌將要獲得飛逝時，改為讓此牌現出原形。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「聽說那艘奇形怪狀的艦艇，是比爾吉沃特速度最快的船，還十分靈巧。船長也是個奇人，但看來對自己的能力頗有自信。或許我們能從她身上學到一兩招。」<br>——比爾吉沃特酒保",
+    "artistName": "Kudos Productions",
+    "name": "舞潮號",
+    "cardCode": "08BW015",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "史詩",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "單位",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08BW002.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08BW002-full.png"
+      }
+    ],
+    "regions": [
+      "比爾吉沃特"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "對1個單位造成2點傷害。受此傷害後，目標的生命值不會低於1。",
+    "descriptionRaw": "對1個單位造成2點傷害。受此傷害後，目標的生命值不會低於1。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「無論位在何處，只要自稱為神的怪物都終將倒下。」——淣菈",
+    "artistName": "Polar Engine",
+    "name": "百變之刃",
+    "cardCode": "08BW002",
+    "keywords": [
+      "疾速"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "疾速",
+    "spellSpeedRef": "Burst",
+    "rarity": "普通",
+    "rarityRef": "Common",
+    "subtypes": [
+      "元素"
+    ],
+    "supertype": "",
+    "type": "法術",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08BW025.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08BW025-full.png"
+      }
+    ],
+    "regions": [
+      "比爾吉沃特"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 2,
+    "cost": 1,
+    "health": 1,
+    "description": "在本牌局中，我方在同一回合中<br>抽了3張以上卡牌後，賦予此牌<br>+1|+1與<link=keyword.Brash><sprite name=Brash><style=Keyword>硬派</style></link>。",
+    "descriptionRaw": "在本牌局中，我方在同一回合中抽了3張以上卡牌後，賦予此牌+1|+1與硬派。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「喂，兄弟，有什麼好大驚小怪的？放輕鬆！海水裡沒有什麼我們應付不來的東西！」——挑戰聖者",
+    "artistName": "Bubble Cat",
+    "name": "瞭望大師",
+    "cardCode": "08BW025",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "普通",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "單位",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08BW026.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08BW026-full.png"
+      }
+    ],
+    "regions": [
+      "比爾吉沃特"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 2,
+    "cost": 4,
+    "health": 1,
+    "description": "召喚此牌時，<link=vocab.Updraft><style=Vocab>吹升</style></link>手牌，每<link=vocab.Updraft><style=Vocab>吹升</style></link>1張<br>手牌便賦予此牌+1|+1，並抽2張牌。",
+    "descriptionRaw": "召喚此牌時，吹升手牌，每吹升1張手牌便賦予此牌+1|+1，並抽2張牌。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「天啊，你到底有沒有出力？不會真的要我放水吧？我跟你說，我超討厭放水的！」",
+    "artistName": "Kudos Productions",
+    "name": "挑戰狂",
+    "cardCode": "08BW026",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "稀有",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "單位",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08BW028T1",
+      "08BW028T2",
+      "08BW028T3",
+      "08BW028T4"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08BW028.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08BW028-full.png"
+      }
+    ],
+    "regions": [
+      "比爾吉沃特",
+      "皮爾托福&佐恩"
+    ],
+    "regionRefs": [
+      "Bilgewater",
+      "PiltoverZaun"
+    ],
+    "attack": 1,
+    "cost": 3,
+    "health": 4,
+    "description": "<link=vocab.Play><style=Vocab>出牌</style></link>：挑選1張冒險者法術，<br>在手牌中生成。",
+    "descriptionRaw": "出牌：挑選1張冒險者法術，在手牌中生成。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「怪異的生物。非常藍，雙眼挺大的，大得讓人有點不舒服。準備帶回去進一步研究。」——冒險者公會實地考察紀錄，遙遠邊陲部，駐地：皮爾托福",
+    "artistName": "Caravan Studio",
+    "name": "八腳探險家",
+    "cardCode": "08BW028",
+    "keywords": [
+      "隱密"
+    ],
+    "keywordRefs": [
+      "Elusive"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "稀有",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "單位",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08BW028T4.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08BW028T4-full.png"
+      }
+    ],
+    "regions": [
+      "巨石峰"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "治療1個友軍單位或我方主堡<br>2點生命值。",
+    "descriptionRaw": "治療1個友軍單位或我方主堡2點生命值。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「給我來點，呃……你們那個巧克力口味的東西。走路兩天內能找到最好吃的巧克力口味的東西。噢對了，麻煩請做熱一點，謝謝。」——拓荒學者",
+    "artistName": "Polar Engine",
+    "name": "冒險者可可 ",
+    "cardCode": "08BW028T4",
+    "keywords": [
+      "專注"
+    ],
+    "keywordRefs": [
+      "Focus"
+    ],
+    "spellSpeed": "疾速",
+    "spellSpeedRef": "Burst",
+    "rarity": "無",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "法術",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "普通牌限定",
+      "永恆",
+      "魔耗值為偶數的卡牌",
+      "單卡",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Deckbuilder_RulesFilters_Singleton",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08BW028T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08BW028T3-full.png"
+      }
+    ],
+    "regions": [
+      "蘇瑞瑪"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "本回合使1個敵軍單位的增益特性無效化，並於下次<link=vocab.RoundStart><style=Vocab>回合開始</style></link><br>重複此效果。",
+    "descriptionRaw": "本回合使1個敵軍單位的增益特性無效化，並於下次回合開始重複此效果。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「本來小裂縫，後來變超大，現在變超乾。」<br>——八腳探險家",
+    "artistName": "Polar Engine",
+    "name": "冒險者的疏忽",
+    "cardCode": "08BW028T3",
+    "keywords": [
+      "專注"
+    ],
+    "keywordRefs": [
+      "Focus"
+    ],
+    "spellSpeed": "疾速",
+    "spellSpeedRef": "Burst",
+    "rarity": "無",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "法術",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08BW028T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08BW028T1-full.png"
+      }
+    ],
+    "regions": [
+      "闇影島"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "摧毀1個單位的裝備。",
+    "descriptionRaw": "摧毀1個單位的裝備。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「我想我越來越喜歡這座島嶼了。」——幽魂調查員",
+    "artistName": "Polar Engine",
+    "name": "冒險者故障",
+    "cardCode": "08BW028T1",
+    "keywords": [
+      "慢速"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "慢速",
+    "spellSpeedRef": "Slow",
+    "rarity": "無",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "法術",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "普通牌限定",
+      "永恆",
+      "魔耗值為偶數的卡牌",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08BW028T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08BW028T2-full.png"
+      }
+    ],
+    "regions": [
+      "諾克薩斯"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "摧毀1個地標。",
+    "descriptionRaw": "摧毀1個地標。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「文物受了一點損傷也不要緊，這樣看起來會更有真實感。」——武裝挖掘者",
+    "artistName": "Polar Engine",
+    "name": "冒險者探勘",
+    "cardCode": "08BW028T2",
+    "keywords": [
+      "慢速"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "慢速",
+    "spellSpeedRef": "Slow",
+    "rarity": "無",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "法術",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "普通牌限定",
+      "永恆",
+      "魔耗值為偶數的卡牌",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08BW009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08BW009-full.png"
+      }
+    ],
+    "regions": [
+      "比爾吉沃特"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 5,
+    "cost": 7,
+    "health": 5,
+    "description": "<link=vocab.Play><style=Vocab>出牌</style></link>：<link=vocab.Manifest><style=Vocab>顯化</style></link>2張本牌局中已打出的不同元素法術，並使其本回合魔耗值為0。",
+    "descriptionRaw": "出牌：顯化2張本牌局中已打出的不同元素法術，並使其本回合魔耗值為0。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「心智是一條長河。隨著時間過去，它會隨著付諸的努力而刻劃出山脈的面貌。而心智正如流水，只要加以催生動力，就能逐漸變得寬廣，最終抵達未知的彼岸。」",
+    "artistName": "Kudos Productions",
+    "name": "年長舵手",
+    "cardCode": "08BW009",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "稀有",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "單位",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08BW010.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08BW010-full.png"
+      }
+    ],
+    "regions": [
+      "比爾吉沃特"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 5,
+    "health": 0,
+    "description": "我方所有元素法術與<link=keyword.Elemental Skill><sprite name=ElementalSkill><style=Keyword>技能</style></link><br>額外造成1點傷害，此效果<br>持續到牌局結束。",
+    "descriptionRaw": "我方所有元素法術與技能額外造成1點傷害，此效果持續到牌局結束。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「在智者的手中，流水能形塑一切事物。」——智慧聖者",
+    "artistName": "Polar Engine",
+    "name": "洪水",
+    "cardCode": "08BW010",
+    "keywords": [
+      "慢速"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "慢速",
+    "spellSpeedRef": "Slow",
+    "rarity": "史詩",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "元素"
+    ],
+    "supertype": "",
+    "type": "法術",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08BW008T3"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08BW023.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08BW023-full.png"
+      }
+    ],
+    "regions": [
+      "比爾吉沃特"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 2,
+    "cost": 3,
+    "health": 2,
+    "description": "召喚此牌時，在我方牌組最上方<br>6張牌中生成1張<link=card.create><style=AssociatedCard>湍流淩步</style></link>。",
+    "descriptionRaw": "召喚此牌時，在我方牌組最上方6張牌中生成1張湍流淩步。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「朋友們，看過來！瞧這世界和我們一起舞動！浪濤在船身下起舞，海風挑動著船帆，鳥兒隨著微風飛揚。快加入我們崇高的志業，放聲歡笑吧！」",
+    "artistName": "Envar Studio",
+    "name": "熱血者維克拉許",
+    "cardCode": "08BW023",
+    "keywords": [
+      "調節",
+      "隱密"
+    ],
+    "keywordRefs": [
+      "Attune",
+      "Elusive"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "史詩",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "單位",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08PZ026T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08PZ007.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08PZ007-full.png"
+      }
+    ],
+    "regions": [
+      "皮爾托福&佐恩"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 0,
+    "cost": 5,
+    "health": 0,
+    "description": "召喚1隻<link=card.summon><style=AssociatedCard>颶歌燕</style></link>，本牌局我方每打出1張<br>其他元素法術與<link=keyword.Elemental Skill><sprite name=ElementalSkill><style=Keyword>技能</style></link>便賦予其+1|+1。<style=Variable></style>\r\n抽1張牌。",
+    "descriptionRaw": "召喚1隻颶歌燕，本牌局我方每打出1張其他元素法術與技能便賦予其+1|+1。\r\n抽1張牌。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "當颶歌燕群出現，就代表暴風即將來臨。",
+    "artistName": "Polar Engine",
+    "name": "颶歌燕群",
+    "cardCode": "08PZ007",
+    "keywords": [
+      "慢速"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "慢速",
+    "spellSpeedRef": "Slow",
+    "rarity": "稀有",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "元素"
+    ],
+    "supertype": "",
+    "type": "法術",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08PZ005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08PZ005-full.png"
+      }
+    ],
+    "regions": [
+      "皮爾托福&佐恩"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 0,
+    "cost": 4,
+    "health": 0,
+    "description": "本回合給予1個友軍單位+2|+0。\r\n抽2張牌。",
+    "descriptionRaw": "本回合給予1個友軍單位+2|+0。\r\n抽2張牌。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「不必驚慌！風暴雖然在你們四周呼嘯，但不會傷害你們。」——珍娜",
+    "artistName": "Polar Engine",
+    "name": "風暴之眼",
+    "cardCode": "08PZ005",
+    "keywords": [
+      "疾速"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "疾速",
+    "spellSpeedRef": "Burst",
+    "rarity": "普通",
+    "rarityRef": "Common",
+    "subtypes": [
+      "元素"
+    ],
+    "supertype": "",
+    "type": "法術",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08PZ019.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08PZ019-full.png"
+      }
+    ],
+    "regions": [
+      "皮爾托福&佐恩"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 0,
+    "cost": 5,
+    "health": 0,
+    "description": "若本回合我方抽了3張牌以上，<br>則此牌魔耗值-2。\r\n對1個單位造成3點傷害，<br>並對敵方主堡造成2點傷害。",
+    "descriptionRaw": "若本回合我方抽了3張牌以上，則此牌魔耗值-2。\r\n對1個單位造成3點傷害，並對敵方主堡造成2點傷害。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「風暴之力由我掌控。」——珍娜",
+    "artistName": "Polar Engine",
+    "name": "神聖旋風",
+    "cardCode": "08PZ019",
+    "keywords": [
+      "快速"
+    ],
+    "keywordRefs": [
+      "Fast"
+    ],
+    "spellSpeed": "快速",
+    "spellSpeedRef": "Fast",
+    "rarity": "稀有",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "元素"
+    ],
+    "supertype": "",
+    "type": "法術",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08PZ001T3",
+      "08PZ001T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08PZ001.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08PZ001-full.png"
+      }
+    ],
+    "regions": [
+      "皮爾托福&佐恩"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 2,
+    "cost": 4,
+    "health": 4,
+    "description": "<link=vocab.Play><style=Vocab>出牌</style></link>：<link=vocab.Updraft><style=Vocab>吹升</style></link>2張手牌，並於<br>下次<link=vocab.RoundStart><style=Vocab>回合開始</style></link>抽2張牌。\r\n每回合，我方抽的前3張牌，<br>本回合魔耗值-1。<style=Variable></style>",
+    "descriptionRaw": "出牌：吹升2張手牌，並於下次回合開始抽2張牌。\r\n每回合，我方抽的前3張牌，本回合魔耗值-1。",
+    "levelupDescription": "此牌在場上時，我方打出<br>6張魔耗值降低的卡牌。<style=Variable></style>",
+    "levelupDescriptionRaw": "此牌在場上時，我方打出6張魔耗值降低的卡牌。",
+    "flavorText": "「如果要找到珍娜，那佐恩肯定是最有可能的地方，畢竟是她救了那些皮爾托福棄而不顧的可憐人。對啊，如果要尋求答案的話，來這裡準沒錯。」——乘風水手",
+    "artistName": "Envar Studio",
+    "name": "珍娜",
+    "cardCode": "08PZ001",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "英雄",
+    "rarityRef": "Champion",
+    "subtypes": [],
+    "supertype": "英雄",
+    "type": "單位",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08PZ001",
+      "08PZ001T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08PZ001T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08PZ001T3-full.png"
+      }
+    ],
+    "regions": [
+      "皮爾托福&佐恩"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 3,
+    "cost": 4,
+    "health": 5,
+    "description": "<link=vocab.RoundStart><style=Vocab>回合開始</style></link>：抽1張牌。\r\n我方抽牌時，本回合使其魔耗值-1。",
+    "descriptionRaw": "回合開始：抽1張牌。\r\n我方抽牌時，本回合使其魔耗值-1。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「不要靠近！膽敢踏入我的守護範圍，風暴會讓你們窒息，撕裂你們的身軀！」",
+    "artistName": "Envar Studio",
+    "name": "珍娜",
+    "cardCode": "08PZ001T3",
+    "keywords": [
+      "隱密"
+    ],
+    "keywordRefs": [
+      "Elusive"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "英雄",
+    "rarityRef": "Champion",
+    "subtypes": [],
+    "supertype": "英雄",
+    "type": "單位",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08PZ001T3",
+      "08PZ001"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08PZ001T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08PZ001T1-full.png"
+      }
+    ],
+    "regions": [
+      "皮爾托福&佐恩"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 0,
+    "cost": 4,
+    "health": 0,
+    "description": "本回合給予1個友軍單位+2|+0。\r\n抽2張牌。\r\n在我方牌組生成1張<link=card.level1><style=AssociatedCard>珍娜</style></link>。",
+    "descriptionRaw": "本回合給予1個友軍單位+2|+0。\r\n抽2張牌。\r\n在我方牌組生成1張珍娜。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「不必驚慌！風暴雖然在你們四周呼嘯，但不會傷害你們。」——珍娜",
+    "artistName": "Polar Engine",
+    "name": "珍娜 風暴之眼",
+    "cardCode": "08PZ001T1",
+    "keywords": [
+      "疾速"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "疾速",
+    "spellSpeedRef": "Burst",
+    "rarity": "無",
+    "rarityRef": "None",
+    "subtypes": [
+      "元素"
+    ],
+    "supertype": "英雄",
+    "type": "法術",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08PZ026T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08PZ026.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08PZ026-full.png"
+      }
+    ],
+    "regions": [
+      "皮爾托福&佐恩"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "召喚1隻<link=card.summon><style=AssociatedCard>颶歌燕</style></link>。",
+    "descriptionRaw": "召喚1隻颶歌燕。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「所有的風之子女，回應我的呼喚吧。」——珍娜",
+    "artistName": "Polar Engine",
+    "name": "颶歌呼喚",
+    "cardCode": "08PZ026",
+    "keywords": [
+      "慢速"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "慢速",
+    "spellSpeedRef": "Slow",
+    "rarity": "普通",
+    "rarityRef": "Common",
+    "subtypes": [
+      "元素"
+    ],
+    "supertype": "",
+    "type": "法術",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08PZ006.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08PZ006-full.png"
+      }
+    ],
+    "regions": [
+      "皮爾托福&佐恩"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 4,
+    "cost": 6,
+    "health": 4,
+    "description": "我方打出元素法術或<link=keyword.Elemental Skill><sprite name=ElementalSkill><style=Keyword>技能</style></link>時，<br>對相同目標再複製一次。",
+    "descriptionRaw": "我方打出元素法術或技能時，對相同目標再複製一次。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「來吧，婭希拉！如果連艾許勒蘇都知道你的名字，那你真的很老了。但不管年輕衰老、醜陋美麗，對怪物來說，最高的榮耀就是在海上死在我的劍刃之下。」——淣菈",
+    "artistName": "Envar Studio",
+    "name": "深淵海妖婭希拉",
+    "cardCode": "08PZ006",
+    "keywords": [
+      "Missing Translation"
+    ],
+    "keywordRefs": [
+      "AuraVisualFakeKeyword"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "史詩",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "單位",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08PZ018.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08PZ018-full.png"
+      }
+    ],
+    "regions": [
+      "皮爾托福&佐恩"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 3,
+    "cost": 2,
+    "health": 1,
+    "description": "若本回合我方抽了3張牌以上，<br>則此牌魔耗值-2。",
+    "descriptionRaw": "若本回合我方抽了3張牌以上，則此牌魔耗值-2。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「對，我想要的一切都到手了，但都是搶來的，而搶奪會讓人失去一切。我跟隨著風，現在來到了這裡，希望她會將我推上更好的人生道路。」",
+    "artistName": "Kudos Productions",
+    "name": "乘風水手",
+    "cardCode": "08PZ018",
+    "keywords": [
+      "快速攻擊"
+    ],
+    "keywordRefs": [
+      "QuickStrike"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "普通",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "單位",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08PZ008.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08PZ008-full.png"
+      }
+    ],
+    "regions": [
+      "皮爾托福&佐恩"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 3,
+    "description": "<link=vocab.Play><style=Vocab>出牌</style></link>：<link=vocab.Updraft><style=Vocab>吹升</style></link>1張牌以抽1張牌或恢復<br>我方所有法術魔力。",
+    "descriptionRaw": "出牌：吹升1張牌以抽1張牌或恢復我方所有法術魔力。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "馬爾雅姆相信她小時候曾被珍娜所救，所以從家鄉的蘇瑞瑪散播風暴女神的福音，一路到佐恩。她現在是佐恩神廟的廟長，全心全意地將珍娜的善意傳給年輕與受欺壓之人。",
+    "artistName": "Envar Studio",
+    "name": "神廟守望者馬爾雅姆",
+    "cardCode": "08PZ008",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "史詩",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "單位",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08PZ026T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08PZ026T1-full.png"
+      }
+    ],
+    "regions": [
+      "皮爾托福&佐恩"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 2,
+    "cost": 1,
+    "health": 1,
+    "description": "",
+    "descriptionRaw": "",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「颶歌燕是多變的生物，大多數時候牠們看起來像是完全由水組成的！不過，最好不要惹牠們，這是我學到的慘痛教訓……」——英勇水手",
+    "artistName": "Bubble Cat",
+    "name": "颶歌燕",
+    "cardCode": "08PZ026T1",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "無",
+    "rarityRef": "None",
+    "subtypes": [
+      "鳥族"
+    ],
+    "supertype": "",
+    "type": "單位",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08PZ009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08PZ009-full.png"
+      }
+    ],
+    "regions": [
+      "皮爾托福&佐恩"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 0,
+    "cost": 5,
+    "health": 0,
+    "description": "<link=vocab.RoundEnd><style=Vocab>回合結束</style></link>：<link=vocab.Updraft><style=Vocab>吹升</style></link>我方手牌。 \r\n<link=vocab.RoundStart><style=Vocab>回合開始</style></link>：抽出該張數+1的牌。",
+    "descriptionRaw": "回合結束：吹升我方手牌。 \r\n回合開始：抽出該張數+1的牌。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "將佐恩與皮爾托福分開的崩坍之災造成了巨大的傷亡，珍娜的神廟雖然被巨浪摧毀，但她拯救了當中的信徒。",
+    "artistName": "Envar Studio",
+    "name": "海底神廟",
+    "cardCode": "08PZ009",
+    "keywords": [
+      "地標"
+    ],
+    "keywordRefs": [
+      "LandmarkVisualOnly"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "史詩",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "地標",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08PZ002.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08PZ002-full.png"
+      }
+    ],
+    "regions": [
+      "皮爾托福&佐恩"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "對1個單位造成2點傷害。\r\n除此牌外，本回合我方每打出1張牌，便提升此牌1點傷害，最多3次。<style=Variable></style>",
+    "descriptionRaw": "對1個單位造成2點傷害。\r\n除此牌外，本回合我方每打出1張牌，便提升此牌1點傷害，最多3次。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「我的怒火隨著颶風呼嘯！」——珍娜",
+    "artistName": "Polar Engine",
+    "name": "颶風呼嘯",
+    "cardCode": "08PZ002",
+    "keywords": [
+      "慢速"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "慢速",
+    "spellSpeedRef": "Slow",
+    "rarity": "稀有",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "元素"
+    ],
+    "supertype": "",
+    "type": "法術",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08PZ008T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08PZ008T3-full.png"
+      }
+    ],
+    "regions": [
+      "皮爾托福&佐恩"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 3,
+    "description": "<link=vocab.Play><style=Vocab>出牌</style></link>：<link=vocab.Updraft><style=Vocab>吹升</style></link>1張牌以恢復<br>我方所有法術魔力。",
+    "descriptionRaw": "出牌：吹升1張牌以恢復我方所有法術魔力。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "馬爾雅姆相信她小時候曾被珍娜所救，所以從家鄉的蘇瑞瑪散播風暴女神的福音，一路到佐恩。她現在是佐恩神廟的廟長，全心全意地將珍娜的善意傳給年輕與受欺壓之人。",
+    "artistName": "Envar Studio",
+    "name": "神廟守望者馬爾雅姆",
+    "cardCode": "08PZ008T3",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "無",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "單位",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08PZ008T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08PZ008T2-full.png"
+      }
+    ],
+    "regions": [
+      "皮爾托福&佐恩"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 3,
+    "description": "<link=vocab.Play><style=Vocab>出牌</style></link>：<link=vocab.Updraft><style=Vocab>吹升</style></link>1張牌以抽1張牌。",
+    "descriptionRaw": "出牌：吹升1張牌以抽1張牌。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "馬爾雅姆相信她小時候曾被珍娜所救，所以從家鄉的蘇瑞瑪散播風暴女神的福音，一路到佐恩。她現在是佐恩神廟的廟長，全心全意地將珍娜的善意傳給年輕與受欺壓之人。",
+    "artistName": "Envar Studio",
+    "name": "神廟守望者馬爾雅姆",
+    "cardCode": "08PZ008T2",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "無",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "單位",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08PZ020.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08PZ020-full.png"
+      }
+    ],
+    "regions": [
+      "皮爾托福&佐恩"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 3,
+    "cost": 5,
+    "health": 2,
+    "description": "若本回合我方抽了3張牌以上，<br>則此牌魔耗值-2。\r\n召喚此牌時，於下次<br><link=vocab.RoundStart><style=Vocab>回合開始</style></link>抽2張牌。",
+    "descriptionRaw": "若本回合我方抽了3張牌以上，則此牌魔耗值-2。\r\n召喚此牌時，於下次回合開始抽2張牌。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「我親愛的西風啊，從雲端上下來，在我的肩上歇息一會，好嗎？」——珍娜",
+    "artistName": "Envar Studio",
+    "name": "遊雲聖獸",
+    "cardCode": "08PZ020",
+    "keywords": [
+      "快速攻擊"
+    ],
+    "keywordRefs": [
+      "QuickStrike"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "稀有",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "單位",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08FR002T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08FR012.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08FR012-full.png"
+      }
+    ],
+    "regions": [
+      "弗雷爾卓德"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "抽1張牌。\r\n召喚1個<link=card.summon><style=AssociatedCard>風暴之紋</style></link>。",
+    "descriptionRaw": "抽1張牌。\r\n召喚1個風暴之紋。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「以法赫爾之名，我們獻上此祭品……」<br>——法赫爾的先知",
+    "artistName": "Polar Engine",
+    "name": "轟雷召喚",
+    "cardCode": "08FR012",
+    "keywords": [
+      "慢速"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "慢速",
+    "spellSpeedRef": "Slow",
+    "rarity": "普通",
+    "rarityRef": "Common",
+    "subtypes": [
+      "元素"
+    ],
+    "supertype": "",
+    "type": "法術",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08FR019.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08FR019-full.png"
+      }
+    ],
+    "regions": [
+      "弗雷爾卓德"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "本回合給予1個友軍單位+1|+3。",
+    "descriptionRaw": "本回合給予1個友軍單位+1|+3。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "烏雲籠罩，雷電纏繞，巨熊之神在風暴的中心屹立不搖。",
+    "artistName": "Polar Engine",
+    "name": "蒼穹裂隙",
+    "cardCode": "08FR019",
+    "keywords": [
+      "疾速"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "疾速",
+    "spellSpeedRef": "Burst",
+    "rarity": "普通",
+    "rarityRef": "Common",
+    "subtypes": [
+      "元素"
+    ],
+    "supertype": "",
+    "type": "法術",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08FR001T3",
+      "08FR001T1",
+      "08FR001T2"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08FR001.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08FR001-full.png"
+      }
+    ],
+    "regions": [
+      "弗雷爾卓德"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 10,
+    "cost": 9,
+    "health": 10,
+    "description": "<link=keyword.Elemental Skill><sprite name=ElementalSkill><style=Keyword>出牌</style></link>：打出3次<link=card.skill><style=AssociatedCard>無情風暴</style></link>，每次<br>皆以不同的隨機敵軍單位為目標，<br>若無則以敵方主堡為目標。",
+    "descriptionRaw": "出牌：打出3次無情風暴，每次皆以不同的隨機敵軍單位為目標，若無則以敵方主堡為目標。",
+    "levelupDescription": "<link=vocab.RoundEnd><style=Vocab>回合結束</style></link>：我方造成50點<br>以上傷害。<style=Variable></style>",
+    "levelupDescriptionRaw": "回合結束：我方造成50點以上傷害。",
+    "flavorText": "「凡人啊，臣服於我，我就考慮饒你一命！你的力量微不足道，但說不定夠格為我所用。跪下，不然就準備從地表上消失！」",
+    "artistName": "Envar Studio",
+    "name": "弗力貝爾",
+    "cardCode": "08FR001",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "英雄",
+    "rarityRef": "Champion",
+    "subtypes": [],
+    "supertype": "英雄",
+    "type": "單位",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08FR001T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08FR001T3-full.png"
+      }
+    ],
+    "regions": [
+      "弗雷爾卓德"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "對1個單位造成4點傷害。若該單位已陣亡或離開場上，則改為<br>對敵方主堡造成2點傷害。",
+    "descriptionRaw": "對1個單位造成4點傷害。若該單位已陣亡或離開場上，則改為對敵方主堡造成2點傷害。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「我用此雙利爪劃出了這個世界！」——弗力貝爾",
+    "artistName": "Polar Engine",
+    "name": "無情風暴",
+    "cardCode": "08FR001T3",
+    "keywords": [
+      "元素技能"
+    ],
+    "keywordRefs": [
+      "ElementalSkill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "無",
+    "rarityRef": "None",
+    "subtypes": [
+      "元素"
+    ],
+    "supertype": "",
+    "type": "技能",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08FR001",
+      "08FR001T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08FR001T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08FR001T2-full.png"
+      }
+    ],
+    "regions": [
+      "弗雷爾卓德"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 0,
+    "cost": 8,
+    "health": 0,
+    "description": "對所有單位造成4點傷害，<br><link=vocab.Titanic><style=Vocab>泰坦</style></link>友軍單位除外。\r\n在我方牌組生成1張<link=card.level1><style=AssociatedCard>弗力貝爾</style></link>。",
+    "descriptionRaw": "對所有單位造成4點傷害，泰坦友軍單位除外。\r\n在我方牌組生成1張弗力貝爾。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「血洗凍原吧！」——弗力貝爾",
+    "artistName": "Polar Engine",
+    "name": "弗力貝爾 風暴使者",
+    "cardCode": "08FR001T2",
+    "keywords": [
+      "慢速"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "慢速",
+    "spellSpeedRef": "Slow",
+    "rarity": "無",
+    "rarityRef": "None",
+    "subtypes": [
+      "元素"
+    ],
+    "supertype": "英雄",
+    "type": "法術",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08FR001",
+      "08FR001T2",
+      "08FR001T3"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08FR001T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08FR001T1-full.png"
+      }
+    ],
+    "regions": [
+      "弗雷爾卓德"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 11,
+    "cost": 9,
+    "health": 11,
+    "description": "<link=keyword.Elemental Skill><sprite name=ElementalSkill><style=Keyword>出牌</style></link>與<link=vocab.Attack><style=Vocab>攻擊</style></link>：打出3次<link=card.skill><style=AssociatedCard>無情風暴</style></link>，每次皆以不同的隨機敵軍單位為<br>目標，若無則以敵方主堡為目標。\r\n使所有其他友軍單位擁有<link=keyword.Overwhelm><sprite name=Overwhelm><style=Keyword>蠻力</style></link>。",
+    "descriptionRaw": "出牌與攻擊：打出3次無情風暴，每次皆以不同的隨機敵軍單位為目標，若無則以敵方主堡為目標。\r\n使所有其他友軍單位擁有蠻力。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「你膽敢挑戰我？何等侮辱！來自遠方，微不足道的小姑娘啊，我是凍原之心！我即是風暴，我會讓你死無人憶！」",
+    "artistName": "Envar Studio",
+    "name": "弗力貝爾",
+    "cardCode": "08FR001T1",
+    "keywords": [
+      "蠻力",
+      "Missing Translation"
+    ],
+    "keywordRefs": [
+      "Overwhelm",
+      "AuraVisualFakeKeyword"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "英雄",
+    "rarityRef": "Champion",
+    "subtypes": [],
+    "supertype": "英雄",
+    "type": "單位",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08FR018.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08FR018-full.png"
+      }
+    ],
+    "regions": [
+      "弗雷爾卓德"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 0,
+    "cost": 16,
+    "health": 0,
+    "description": "隨機召喚2個<link=vocab.Titanic><style=Vocab>泰坦</style></link>侍從單位。\r\n本牌局我方每打出1張元素法術或<br><link=keyword.Elemental Skill><sprite name=ElementalSkill><style=Keyword>技能</style></link>，此牌魔耗值便-1<nobr> (最多-10)。",
+    "descriptionRaw": "隨機召喚2個泰坦侍從單位。\r\n本牌局我方每打出1張元素法術或技能，此牌魔耗值便-1 (最多-10)。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「我用祂的身體雕刻出群山，用祂喉中之火劃出萬千峽灣。」——弗力貝爾",
+    "artistName": "Polar Engine",
+    "name": "巨獸之戰",
+    "cardCode": "08FR018",
+    "keywords": [
+      "慢速"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "慢速",
+    "spellSpeedRef": "Slow",
+    "rarity": "史詩",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "元素"
+    ],
+    "supertype": "",
+    "type": "法術",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08FR011.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08FR011-full.png"
+      }
+    ],
+    "regions": [
+      "弗雷爾卓德"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 3,
+    "cost": 4,
+    "health": 2,
+    "description": "我方打出元素法術或<br><link=keyword.Elemental Skill><sprite name=ElementalSkill><style=Keyword>技能</style></link>時，<link=vocab.Forge><style=Vocab>鑄煉</style></link>此牌。",
+    "descriptionRaw": "我方打出元素法術或技能時，鑄煉此牌。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「鍛爐之主承諾要做出改變，卻打造出不動之鍊，只有懦弱之徒才會崇拜懦弱之神。只有法赫爾的神威能帶我們回到光榮的過往！」",
+    "artistName": "Envar Studio",
+    "name": "羊角喚焰者",
+    "cardCode": "08FR011",
+    "keywords": [
+      "堅忍"
+    ],
+    "keywordRefs": [
+      "Tough"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "稀有",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "單位",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08FR008.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08FR008-full.png"
+      }
+    ],
+    "regions": [
+      "弗雷爾卓德"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 0,
+    "cost": 8,
+    "health": 0,
+    "description": "對所有單位造成4點傷害，<br><link=vocab.Titanic><style=Vocab>泰坦</style></link>友軍單位除外。",
+    "descriptionRaw": "對所有單位造成4點傷害，泰坦友軍單位除外。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「血洗凍原吧！」——弗力貝爾",
+    "artistName": "Polar Engine",
+    "name": "風暴使者",
+    "cardCode": "08FR008",
+    "keywords": [
+      "慢速"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "慢速",
+    "spellSpeedRef": "Slow",
+    "rarity": "稀有",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "元素"
+    ],
+    "supertype": "",
+    "type": "法術",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08FR002T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08FR015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08FR015-full.png"
+      }
+    ],
+    "regions": [
+      "弗雷爾卓德"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 8,
+    "cost": 7,
+    "health": 6,
+    "description": "<link=vocab.Play><style=Vocab>出牌</style></link>：召喚3個<link=card.summon><style=AssociatedCard>風暴之紋</style></link>。",
+    "descriptionRaw": "出牌：召喚3個風暴之紋。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "雖然崇拜祂的人為數不多，所有弗雷爾卓德人都知道弗力貝爾與隆德的世紀大戰。很久以前，在北方凍土人煙未至時，這場撼天震地的大戰創造出了這片凍原的山脊與河流。",
+    "artistName": "Envar Studio",
+    "name": "岩漿蟒蛇隆德",
+    "cardCode": "08FR015",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "史詩",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "單位",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08FR002T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08FR002.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08FR002-full.png"
+      }
+    ],
+    "regions": [
+      "弗雷爾卓德"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 2,
+    "cost": 3,
+    "health": 3,
+    "description": "召喚此牌時，召喚1個<link=card.summon><style=AssociatedCard>風暴之紋</style></link>。",
+    "descriptionRaw": "召喚此牌時，召喚1個風暴之紋。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「我能見他人所不可見：風暴將會摧毀高山，大地將會崩壞，古老的弗雷爾卓德將會在鮮血中重獲新生——只待時辰來到。」",
+    "artistName": "Envar Studio",
+    "name": "法赫爾的先知",
+    "cardCode": "08FR002",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "普通",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "單位",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08FR002T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08FR002T1-full.png"
+      }
+    ],
+    "regions": [
+      "弗雷爾卓德"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "風暴之紋可累加。\r\n<link=vocab.Titanic><style=Vocab>泰坦</style></link>友軍單位魔耗值-<style=Variable>1</style>。我方打出<link=vocab.Titanic><style=Vocab>泰坦</style></link>友軍單位時，摧毀此牌。",
+    "descriptionRaw": "風暴之紋可累加。\r\n泰坦友軍單位魔耗值-1。我方打出泰坦友軍單位時，摧毀此牌。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "在險峻的山道上，有一枚紋章懸浮在空中，烙印在夜空之上。為了達到此地，無數生命遭到了犧牲。而這個紋章的出現，即代表弗力貝爾認可了你，而且渴求更多殺戮……",
+    "artistName": "Envar Studio",
+    "name": "風暴之紋",
+    "cardCode": "08FR002T1",
+    "keywords": [
+      "地標",
+      "Missing Translation"
+    ],
+    "keywordRefs": [
+      "LandmarkVisualOnly",
+      "AuraVisualFakeKeyword"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "無",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "地標",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08FR002T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08FR003.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08FR003-full.png"
+      }
+    ],
+    "regions": [
+      "弗雷爾卓德"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 5,
+    "cost": 6,
+    "health": 3,
+    "description": "我方打出法術或<link=keyword.Skill><sprite name=SkillMark><style=Keyword>技能</style></link>時，<br>召喚1個<link=card.summon><style=AssociatedCard>風暴之紋</style></link>。",
+    "descriptionRaw": "我方打出法術或技能時，召喚1個風暴之紋。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "有時候，弗力貝爾的信眾會在狂熱之中發狂，彷彿像是弗力貝爾上身，法赫爾的意志無人能擋——就連曾經的同胞也不例外。",
+    "artistName": "Alessandro Poli",
+    "name": "巨熊族狂戰士",
+    "cardCode": "08FR003",
+    "keywords": [
+      "灌輸"
+    ],
+    "keywordRefs": [
+      "Imbue"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "稀有",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "單位",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08BW028T1",
+      "08BW028T2",
+      "08BW028T3",
+      "08BW028T4"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08DE006.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08DE006-full.png"
+      }
+    ],
+    "regions": [
+      "蒂瑪西亞",
+      "弗雷爾卓德"
+    ],
+    "regionRefs": [
+      "Demacia",
+      "Freljord"
+    ],
+    "attack": 2,
+    "cost": 3,
+    "health": 3,
+    "description": "<link=vocab.Play><style=Vocab>出牌</style></link>：挑選1張冒險者法術，<br>在手牌中生成。",
+    "descriptionRaw": "出牌：挑選1張冒險者法術，在手牌中生成。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「這裡好冷，我好冷，這裡一天到晚都好冷。有些地方就不是給人住的，下次拜託派我去溫暖的地方。」——冒險者公會實地考察紀錄，遙遠邊陲部，駐地：弗雷爾卓德",
+    "artistName": "Envar Studio",
+    "name": "拓荒學者",
+    "cardCode": "08DE006",
+    "keywords": [
+      "挑戰者"
+    ],
+    "keywordRefs": [
+      "Challenger"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "稀有",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "單位",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08DE010.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08DE010-full.png"
+      }
+    ],
+    "regions": [
+      "蒂瑪西亞"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "給予1個友軍單位+0|+2。\r\n使該友軍單位與1個敵軍單位<br>互相<link=vocab.Strike><style=Vocab>打擊</style></link>。",
+    "descriptionRaw": "給予1個友軍單位+0|+2。\r\n使該友軍單位與1個敵軍單位互相打擊。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「預備擊劍，朋友！你那麼勇敢，肯定不會拒絕紳士間的決鬥吧？」——羅倫特家族騎士",
+    "artistName": "Kudos Productions",
+    "name": "紳士決鬥",
+    "cardCode": "08DE010",
+    "keywords": [
+      "快速"
+    ],
+    "keywordRefs": [
+      "Fast"
+    ],
+    "spellSpeed": "快速",
+    "spellSpeedRef": "Fast",
+    "rarity": "普通",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "法術",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08NX011.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08NX011-full.png"
+      }
+    ],
+    "regions": [
+      "諾克薩斯"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "對敵方主堡造成1點傷害，<br>且每打出另1張<link=card.selfref><style=AssociatedCard>野火</style></link>，傷害便+1。<br>在我方牌組生成1張<link=card.selfref><style=AssociatedCard>野火</style></link>。",
+    "descriptionRaw": "對敵方主堡造成1點傷害，且每打出另1張野火，傷害便+1。在我方牌組生成1張野火。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「化為塵埃、塵埃……」——安妮",
+    "artistName": "Kudos Productions",
+    "name": "野火",
+    "cardCode": "08NX011",
+    "keywords": [
+      "慢速"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "慢速",
+    "spellSpeedRef": "Slow",
+    "rarity": "普通",
+    "rarityRef": "Common",
+    "subtypes": [
+      "元素"
+    ],
+    "supertype": "",
+    "type": "法術",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08NX014.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08NX014-full.png"
+      }
+    ],
+    "regions": [
+      "諾克薩斯"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 5,
+    "cost": 5,
+    "health": 5,
+    "description": "我方<link=vocab.Attack><style=Vocab>攻擊</style></link>與<link=keyword.Support><style=Keyword>支援</style></link>效果額外發動一次。",
+    "descriptionRaw": "我方攻擊與支援效果額外發動一次。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "泰爾希校長的自律課程充滿了難搞的作業、體罰和留校察看。這是雷文布魯學院的必修課，不修的話沒人可以入學。",
+    "artistName": "Envar Studio",
+    "name": "泰爾希校長",
+    "cardCode": "08NX014",
+    "keywords": [
+      "Missing Translation"
+    ],
+    "keywordRefs": [
+      "AuraVisualFakeKeyword"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "史詩",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "單位",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08BW028T1",
+      "08BW028T2",
+      "08BW028T3",
+      "08BW028T4"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08NX012.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08NX012-full.png"
+      }
+    ],
+    "regions": [
+      "諾克薩斯",
+      "蘇瑞瑪"
+    ],
+    "regionRefs": [
+      "Noxus",
+      "Shurima"
+    ],
+    "attack": 3,
+    "cost": 2,
+    "health": 1,
+    "description": "<link=vocab.Play><style=Vocab>出牌</style></link>：挑選1張冒險者法術，<br>在手牌中生成。",
+    "descriptionRaw": "出牌：挑選1張冒險者法術，在手牌中生成。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「我以為沙漠會比較好挖，但我錯了！只要時間夠久，沙地也會硬得跟石頭一樣。再次請求提供資金更換裝備。」——冒險者公會實地考察紀錄，遙遠邊陲部，駐地：蘇瑞瑪",
+    "artistName": "Kudos Productions",
+    "name": "武裝挖掘者",
+    "cardCode": "08NX012",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "稀有",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "單位",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU001T3"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08SI021.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08SI021-full.png"
+      }
+    ],
+    "regions": [
+      "闇影島"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 3,
+    "description": "每有1個其他友軍單位陣亡或<nobr><link=keyword.Last Breath><sprite name=LastBreath><style=Keyword>遺願</style></link>：</nobr>將4張<link=card.chime><style=AssociatedCard>編鐘</style></link>植入我方牌組。",
+    "descriptionRaw": "每有1個其他友軍單位陣亡或遺願：將4張編鐘植入我方牌組。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "別在意那詭異的聲響，只是編鐘史萊姆在亂晃而已。他很喜歡客人來訪，但客人都不喜歡他。",
+    "artistName": "Bubble Cat",
+    "name": "編鐘孤魂",
+    "cardCode": "08SI021",
+    "keywords": [
+      "遺願"
+    ],
+    "keywordRefs": [
+      "LastBreath"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "普通",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "單位",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08SI030.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08SI030-full.png"
+      }
+    ],
+    "regions": [
+      "闇影島"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "從敵方牌組底部<link=vocab.Obliterate><style=Vocab>泯滅</style></link>6張牌。",
+    "descriptionRaw": "從敵方牌組底部泯滅6張牌。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "對符文大地一些深海海怪來說，青囊魚漁船只不過是小點心罷了。",
+    "artistName": "Polar Engine",
+    "name": "海底墳場",
+    "cardCode": "08SI030",
+    "keywords": [
+      "慢速"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "慢速",
+    "spellSpeedRef": "Slow",
+    "rarity": "史詩",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "法術",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "普通牌限定",
+      "永恆",
+      "魔耗值為偶數的卡牌",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08BW028T1",
+      "08BW028T2",
+      "08BW028T3",
+      "08BW028T4"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08SI018.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08SI018-full.png"
+      }
+    ],
+    "regions": [
+      "闇影島",
+      "巨石峰"
+    ],
+    "regionRefs": [
+      "ShadowIsles",
+      "Targon"
+    ],
+    "attack": 2,
+    "cost": 3,
+    "health": 2,
+    "description": "<link=vocab.Play><style=Vocab>出牌</style></link>：挑選1張冒險者法術，<br>在手牌中生成。",
+    "descriptionRaw": "出牌：挑選1張冒險者法術，在手牌中生成。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「這裡神祕莫測，伸手幾乎不見五指，處處都是敵人，但奇妙的是，有時也有朋友。」——冒險者公會實地考察紀錄，遙遠邊陲部，駐地：闇影島",
+    "artistName": "Envar Studio",
+    "name": "冥魂勘測員",
+    "cardCode": "08SI018",
+    "keywords": [
+      "吸血"
+    ],
+    "keywordRefs": [
+      "Lifesteal"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "稀有",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "單位",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU001T3",
+      "01PZ022"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08BC005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08BC005-full.png"
+      }
+    ],
+    "regions": [
+      "班德爾城"
+    ],
+    "regionRefs": [
+      "BandleCity"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "本牌局我方每打出1張<link=card.selfref><style=AssociatedCard>爆滿的背包</style></link>，<br>便將4張<link=card.boon><style=AssociatedCard>編鐘</style></link>植入我方牌組，<br>並將4張<link=card.trap><style=AssociatedCard>劇毒膨菇</style></link>植入敵方牌組。<br>在我方牌組生成1張<link=card.selfref><style=AssociatedCard>爆滿的背包</style></link>。",
+    "descriptionRaw": "本牌局我方每打出1張爆滿的背包，便將4張編鐘植入我方牌組，並將4張劇毒膨菇植入敵方牌組。在我方牌組生成1張爆滿的背包。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「第207條守則：優秀的斥候身上只會帶著必需品！」——優等生艾娃",
+    "artistName": "Polar Engine",
+    "name": "爆滿的背包",
+    "cardCode": "08BC005",
+    "keywords": [
+      "疾速"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "疾速",
+    "spellSpeedRef": "Burst",
+    "rarity": "稀有",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "法術",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08BC002.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08BC002-full.png"
+      }
+    ],
+    "regions": [
+      "班德爾城"
+    ],
+    "regionRefs": [
+      "BandleCity"
+    ],
+    "attack": 1,
+    "cost": 2,
+    "health": 2,
+    "description": "<link=vocab.Play><style=Vocab>出牌</style></link>：從敵方手牌的非英雄牌中<br>2選1。此牌<link=keyword.Capture><sprite name=Capture><style=Keyword>俘虜</style></link>之。",
+    "descriptionRaw": "出牌：從敵方手牌的非英雄牌中2選1。此牌俘虜之。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「沒錯，我英俊瀟灑、頭腦靈活、酷到不行。老頭子，你看不出來嗎？我是這片珊瑚礁的王，而你侵犯到我王國的領土了！」<br>「等、等一下！給我回來！那是研究要用的樣本！」——貝殼學家",
+    "artistName": "Caravan Studio",
+    "name": "「珊瑚礁之王」奇普",
+    "cardCode": "08BC002",
+    "keywords": [
+      "隱密"
+    ],
+    "keywordRefs": [
+      "Elusive"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "史詩",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "單位",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08BW028T1",
+      "08BW028T2",
+      "08BW028T3",
+      "08BW028T4"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08BC006.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08BC006-full.png"
+      }
+    ],
+    "regions": [
+      "班德爾城",
+      "愛歐尼亞"
+    ],
+    "regionRefs": [
+      "BandleCity",
+      "Ionia"
+    ],
+    "attack": 1,
+    "cost": 2,
+    "health": 1,
+    "description": "<link=vocab.Play><style=Vocab>出牌</style></link>：挑選1張冒險者法術，<br>在手牌中生成。",
+    "descriptionRaw": "出牌：挑選1張冒險者法術，在手牌中生成。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「我好擔心邦奇！最近他感覺神經變得越來越緊繃，就連短距離的傳送門也會嚇到他！不知道是怎麼回事。」——冒險者公會實地考察紀錄，遙遠邊陲分區，駐地：班德爾城",
+    "artistName": "Caravan Studio",
+    "name": "傳送門先驅",
+    "cardCode": "08BC006",
+    "keywords": [
+      "調節"
+    ],
+    "keywordRefs": [
+      "Attune"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "稀有",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "單位",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08SH004.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08SH004-full.png"
+      }
+    ],
+    "regions": [
+      "蘇瑞瑪"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 4,
+    "cost": 4,
+    "health": 4,
+    "description": "<link=keyword.Daybreak><style=Keyword>破曉</style></link>或我方發動其他<link=keyword.Daybreak><style=Keyword>破曉</style></link>效果時：<br>賦予<link=keyword.Weakest><style=Keyword>最弱</style></link>敵軍單位<link=keyword.Vulnerable><sprite name=Vulnerable><style=Keyword>弱勢</style></link>。",
+    "descriptionRaw": "破曉或我方發動其他破曉效果時：賦予最弱敵軍單位弱勢。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "蘇瑞瑪大軍準備好證明沙漠的強大。一聲令下，他們就會毫無猶豫地向前行軍。",
+    "artistName": "Kudos Productions",
+    "name": "沙丘將軍",
+    "cardCode": "08SH004",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "稀有",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "菁英"
+    ],
+    "supertype": "",
+    "type": "單位",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08SH005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08SH005-full.png"
+      }
+    ],
+    "regions": [
+      "蘇瑞瑪"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 2,
+    "description": "<link=keyword.Daybreak><style=Keyword>破曉</style></link>：抽1張<link=card.me><style=AssociatedCard>烈日巨環守軍</style></link>。",
+    "descriptionRaw": "破曉：抽1張烈日巨環守軍。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「沙漠永垂不朽，汝等為其守護者，是活歷史，同時也是光輝之道的行者。我們只服從於烈日巨環，不屈於任何人之下，以此讓全世界臣服在蘇瑞瑪的榮耀之下。」<br>——阿祈爾",
+    "artistName": "Kudos Productions",
+    "name": "烈日巨環守軍",
+    "cardCode": "08SH005",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "普通",
+    "rarityRef": "Common",
+    "subtypes": [
+      "菁英"
+    ],
+    "supertype": "",
+    "type": "單位",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08IO010.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08IO010-full.png"
+      }
+    ],
+    "regions": [
+      "愛歐尼亞"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 0,
+    "cost": 4,
+    "health": 0,
+    "description": "<link=keyword.Recall><style=Keyword>召回</style></link>1個敵軍單位來使對手本回合下一個打出的單位魔耗值+2。",
+    "descriptionRaw": "召回1個敵軍單位來使對手本回合下一個打出的單位魔耗值+2。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「傷害吾等者將永眠於海底。」——人魚術士",
+    "artistName": "Polar Engine",
+    "name": "傾覆",
+    "cardCode": "08IO010",
+    "keywords": [
+      "慢速"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "慢速",
+    "spellSpeedRef": "Slow",
+    "rarity": "普通",
+    "rarityRef": "Common",
+    "subtypes": [
+      "元素"
+    ],
+    "supertype": "",
+    "type": "法術",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08MT027.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08MT027-full.png"
+      }
+    ],
+    "regions": [
+      "巨石峰"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 5,
+    "cost": 8,
+    "health": 8,
+    "description": "<link=vocab.Play><style=Vocab>出牌</style></link>：發動其他友軍單位的<br><link=keyword.Daybreak><style=Keyword>破曉</style></link>與<link=keyword.Nightfall><style=Keyword>夜臨</style></link>效果。\r\n<link=keyword.Daybreak><style=Keyword>破曉</style></link>：賦予此牌<link=keyword.Overwhelm><sprite name=Overwhelm><style=Keyword>蠻力</style></link>。\r\n<link=keyword.Nightfall><style=Keyword>夜臨</style></link>：賦予此牌<link=keyword.SpellShield><sprite name=SpellShield><style=Keyword>法盾</style></link>。",
+    "descriptionRaw": "出牌：發動其他友軍單位的破曉與夜臨效果。\r\n破曉：賦予此牌蠻力。\r\n夜臨：賦予此牌法盾。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「烈火之環燃燒在上，在即將到來的黑暗之中，一切不分你我。」——月環教陰晴講者",
+    "artistName": "Kudos Productions",
+    "name": "星蝕神梟",
+    "cardCode": "08MT027",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "史詩",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "鳥族"
+    ],
+    "supertype": "",
+    "type": "單位",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08MT025.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/zh_tw/img/cards/08MT025-full.png"
+      }
+    ],
+    "regions": [
+      "巨石峰"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 7,
+    "health": 0,
+    "description": "若我方<link=vocab.Behold><style=Vocab>掌控</style></link><link=vocab.Titanic><style=Vocab>泰坦</style></link>單位，<br>則此牌魔耗值-3。\r\n對1個單位造成7點傷害。",
+    "descriptionRaw": "若我方掌控泰坦單位，則此牌魔耗值-3。\r\n對1個單位造成7點傷害。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「唉呦，噢不，不用擔心辣個，只係石頭晃了一下而已，小意外啦，絕對不係老爹真的不係啦！」沒什摸豪看滴！」——石奇",
+    "artistName": "Polar Engine",
+    "name": "地震碎片",
+    "cardCode": "08MT025",
+    "keywords": [
+      "慢速"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "慢速",
+    "spellSpeedRef": "Slow",
+    "rarity": "普通",
+    "rarityRef": "Common",
+    "subtypes": [
+      "元素"
+    ],
+    "supertype": "",
+    "type": "法術",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "永恆",
+      "標準"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  }
+]

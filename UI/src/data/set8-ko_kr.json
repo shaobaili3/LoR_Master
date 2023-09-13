@@ -1,0 +1,3197 @@
+[
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08BW008T1",
+      "08BW008T5",
+      "08BW008T3"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BW008.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BW008-full.png"
+      }
+    ],
+    "regions": [
+      "빌지워터"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 3,
+    "description": "<link=vocab.Attack><style=Vocab>공격</style></link>: 내 덱의 맨 위에 있는 카드 6장 중에 <link=card.create><style=AssociatedCard>급류</style></link> 1장을 생성합니다.",
+    "descriptionRaw": "공격: 내 덱의 맨 위에 있는 카드 6장 중에 급류 1장을 생성합니다.",
+    "levelupDescription": "카드를 16장 이상 뽑아야 합니다. <style=Variable></style>",
+    "levelupDescriptionRaw": "카드를 16장 이상 뽑아야 합니다. ",
+    "flavorText": "북쪽 땅에서 새로운 도전자가 닐라와 괴물 사냥꾼들을 기다립니다. 한때 그를 숭배하던 프렐요드를 파괴하려고 위협하는 볼리베어라는 녀석입니다. 신으로 불리던 괴물을 상대로 자신의 실력을 시험하는 일은 닐라에게 있어 일생일대의 기회입니다. 그 길 위에서 자신의 위업 목록에 더해질 작은 괴물들은 말할 것도 없죠. ",
+    "artistName": "Envar Studio",
+    "name": "닐라",
+    "cardCode": "08BW008",
+    "keywords": [
+      "패기"
+    ],
+    "keywordRefs": [
+      "Brash"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "챔피언",
+    "rarityRef": "Champion",
+    "subtypes": [],
+    "supertype": "챔피언",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BW008T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BW008T3-full.png"
+      }
+    ],
+    "regions": [
+      "빌지워터"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "카드 2장을 뽑고 <link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>일회용</style></link> 상태를 부여합니다.",
+    "descriptionRaw": "카드 2장을 뽑고 일회용 상태를 부여합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"자유분방한 환희!\"\n- 닐라",
+    "artistName": "Polar Engine",
+    "name": "급류",
+    "cardCode": "08BW008T3",
+    "keywords": [
+      "즉발"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "즉발",
+    "spellSpeedRef": "Burst",
+    "rarity": "없음",
+    "rarityRef": "None",
+    "subtypes": [
+      "원소"
+    ],
+    "supertype": "",
+    "type": "주문",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08BW008",
+      "08BW008T5",
+      "08BW008T3"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BW008T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BW008T1-full.png"
+      }
+    ],
+    "regions": [
+      "빌지워터"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 3,
+    "cost": 2,
+    "health": 4,
+    "description": "<link=vocab.Attack><style=Vocab>공격</style></link>: 내 덱의 맨 위에 있는 카드 6장 중에 <link=card.create><style=AssociatedCard>급류</style></link> 1장을 생성하고 모든 적 유닛과 적 넥서스에 피해를 2 입힙니다. 이 피해로는 대상의 체력이 1 아래로 떨어지지 않습니다.",
+    "descriptionRaw": "공격: 내 덱의 맨 위에 있는 카드 6장 중에 급류 1장을 생성하고 모든 적 유닛과 적 넥서스에 피해를 2 입힙니다. 이 피해로는 대상의 체력이 1 아래로 떨어지지 않습니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"이 괴물아! 내가 바로 제7층의 수호자 닐라다! <nobr>역사로 기억되는 건</nobr> 네가 아닌 내 이름이 될 거다.\"",
+    "artistName": "Envar Studio",
+    "name": "닐라",
+    "cardCode": "08BW008T1",
+    "keywords": [
+      "패기"
+    ],
+    "keywordRefs": [
+      "Brash"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "챔피언",
+    "rarityRef": "Champion",
+    "subtypes": [],
+    "supertype": "챔피언",
+    "type": "유닛",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08BW008",
+      "08BW008T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BW008T5.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BW008T5-full.png"
+      }
+    ],
+    "regions": [
+      "빌지워터"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "유닛 하나에게 피해를 2 입힙니다. 이 피해로는 해당 유닛의 체력이 1 아래로 <nobr>떨어지지 않습니다.</nobr>\r\n내 덱에 <link=card.level1><style=AssociatedCard>닐라</style></link> 1장을 생성합니다.",
+    "descriptionRaw": "유닛 하나에게 피해를 2 입힙니다. 이 피해로는 해당 유닛의 체력이 1 아래로 떨어지지 않습니다.\r\n내 덱에 닐라 1장을 생성합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"내 검을 받고, 기뻐하라!\"\n- 닐라",
+    "artistName": "Polar Engine",
+    "name": "닐라의 무형의 검",
+    "cardCode": "08BW008T5",
+    "keywords": [
+      "즉발"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "즉발",
+    "spellSpeedRef": "Burst",
+    "rarity": "없음",
+    "rarityRef": "None",
+    "subtypes": [
+      "원소"
+    ],
+    "supertype": "챔피언",
+    "type": "주문",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BW032.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BW032-full.png"
+      }
+    ],
+    "regions": [
+      "빌지워터"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "이 라운드에 모든 아군에게 +1|+0을 일시 부여하고 피해를 입은 모든 아군의 체력을 2씩 회복시킵니다.",
+    "descriptionRaw": "이 라운드에 모든 아군에게 +1|+0을 일시 부여하고 피해를 입은 모든 아군의 체력을 2씩 회복시킵니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"영원토록 흘러 넘치는 기쁨!\"\n- 닐라",
+    "artistName": "Polar Engine",
+    "name": "영원한 기쁨",
+    "cardCode": "08BW032",
+    "keywords": [
+      "즉발"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "즉발",
+    "spellSpeedRef": "Burst",
+    "rarity": "일반급",
+    "rarityRef": "Common",
+    "subtypes": [
+      "원소"
+    ],
+    "supertype": "",
+    "type": "주문",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08BW008"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BW015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BW015-full.png"
+      }
+    ],
+    "regions": [
+      "빌지워터"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 3,
+    "cost": 6,
+    "health": 5,
+    "description": "소환 시 <link=card.champ1><style=AssociatedCard>닐라</style></link> 1장을 뽑습니다.\r\n라운드마다 세 번째로 카드를 사용하면 이 라운드에 다른 모든 아군에게 +2|+0 및 <link=keyword.Brash><sprite name=Brash><style=Keyword>패기</style></link> 효과를 일시 부여합니다. <style=Variable></style>\r\n이 카드에 <link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>일회용</style></link> 상태가 부여될 때 대신 이 카드를 공개합니다.",
+    "descriptionRaw": "소환 시 닐라 1장을 뽑습니다.\r\n라운드마다 세 번째로 카드를 사용하면 이 라운드에 다른 모든 아군에게 +2|+0 및 패기 효과를 일시 부여합니다. \r\n이 카드에 일회용 상태가 부여될 때 대신 이 카드를 공개합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"저 이상하게 생긴 배가 빌지워터에서 목격된 가장 빠르고 민첩한 배라고 하더군. 특이한 선장을 두었다고 하던데, <nobr>절대로 단순한</nobr> 얼뜨기는 아닌 것 같아. 우리에게 무언가 가르침을 <nobr>줄 지도</nobr> 모르겠어.\"\n- 빌지워터 바텐더",
+    "artistName": "Kudos Productions",
+    "name": "파도무희",
+    "cardCode": "08BW015",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "서사급",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BW002.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BW002-full.png"
+      }
+    ],
+    "regions": [
+      "빌지워터"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "유닛 하나에게 피해를 2 입힙니다. <nobr>이 피해로는</nobr> 해당 유닛의 체력이 1 아래로 떨어지지 않습니다.",
+    "descriptionRaw": "유닛 하나에게 피해를 2 입힙니다. 이 피해로는 해당 유닛의 체력이 1 아래로 떨어지지 않습니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"스스로 신이라 일컫는 괴물은 한참을 추락하기 마련이지. <nobr>어느 지역이든</nobr> 마찬가지야.\"\n- 닐라",
+    "artistName": "Polar Engine",
+    "name": "무형의 검",
+    "cardCode": "08BW002",
+    "keywords": [
+      "즉발"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "즉발",
+    "spellSpeedRef": "Burst",
+    "rarity": "일반급",
+    "rarityRef": "Common",
+    "subtypes": [
+      "원소"
+    ],
+    "supertype": "",
+    "type": "주문",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BW025.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BW025-full.png"
+      }
+    ],
+    "regions": [
+      "빌지워터"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 2,
+    "cost": 1,
+    "health": 1,
+    "description": "이 게임에서 한 라운드에 카드를 3장 이상 뽑았으면 +1|+1 및 <link=keyword.Brash><sprite name=Brash><style=Keyword>패기</style></link> 효과를 얻습니다.",
+    "descriptionRaw": "이 게임에서 한 라운드에 카드를 3장 이상 뽑았으면 +1|+1 및 패기 효과를 얻습니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"어이 친구, 뭘 그리 유난을 떠는 거야? 진정해! 물속에 우리가 감당하지 못할 건 없다고!\"\n- 도전의 수행자",
+    "artistName": "Bubble Cat",
+    "name": "망보기 달인",
+    "cardCode": "08BW025",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "일반급",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BW026.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BW026-full.png"
+      }
+    ],
+    "regions": [
+      "빌지워터"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 2,
+    "cost": 4,
+    "health": 1,
+    "description": "소환 시 손에 든 카드를 모두 <link=vocab.Updraft><style=Vocab>상승</style></link>시키고 <link=vocab.Updraft><style=Vocab>상승</style></link>시킨 카드 1장당 +1|+1을 얻습니다. 카드 2장을 뽑습니다.",
+    "descriptionRaw": "소환 시 손에 든 카드를 모두 상승시키고 상승시킨 카드 1장당 +1|+1을 얻습니다. 카드 2장을 뽑습니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"뭐야, 제대로 하고 있는 거 맞아? 내가 살살 해 줘야 할 것 같잖아. 그건 죽어도 싫다고!\"",
+    "artistName": "Kudos Productions",
+    "name": "도전의 수행자",
+    "cardCode": "08BW026",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "희귀급",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08BW028T1",
+      "08BW028T2",
+      "08BW028T3",
+      "08BW028T4"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BW028.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BW028-full.png"
+      }
+    ],
+    "regions": [
+      "빌지워터",
+      "필트오버 & 자운"
+    ],
+    "regionRefs": [
+      "Bilgewater",
+      "PiltoverZaun"
+    ],
+    "attack": 1,
+    "cost": 3,
+    "health": 4,
+    "description": "<link=vocab.Play><style=Vocab>사용</style></link>: 탐험가 주문 1장을 선택하고 손에 생성합니다.",
+    "descriptionRaw": "사용: 탐험가 주문 1장을 선택하고 손에 생성합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"특이한 표본이다. 새파랗고 눈이 매우 크다. 위화감이 들 정도로 크다. 추가 연구를 위해 확보한다.\"\n- 탐험가 길드의 장거리 탐사부 탐험 일지, 필트오버 편에서 발췌",
+    "artistName": "Caravan Studio",
+    "name": "문어 모험가",
+    "cardCode": "08BW028",
+    "keywords": [
+      "포착 불가"
+    ],
+    "keywordRefs": [
+      "Elusive"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "희귀급",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BW028T4.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BW028T4-full.png"
+      }
+    ],
+    "regions": [
+      "타곤"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "아군 하나 또는 아군 넥서스의 체력을 2 회복시킵니다.",
+    "descriptionRaw": "아군 하나 또는 아군 넥서스의 체력을 2 회복시킵니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"그것 좀 주세요... 저번에 만들어 준 초콜릿 들어간 음료 말입니다. 이틀 내내 이동하는 동안 가장 맛있었던 초콜릿 음료였어요. 아, 그리고 아주 뜨겁게 부탁합니다.\"\n- 학술적 선구자",
+    "artistName": "Polar Engine",
+    "name": "탐험가의 음료 ",
+    "cardCode": "08BW028T4",
+    "keywords": [
+      "몰입"
+    ],
+    "keywordRefs": [
+      "Focus"
+    ],
+    "spellSpeed": "즉발",
+    "spellSpeedRef": "Burst",
+    "rarity": "없음",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "주문",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "일반급 대전",
+      "영원",
+      "짝수 비용 카드",
+      "싱글톤",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Deckbuilder_RulesFilters_Singleton",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BW028T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BW028T3-full.png"
+      }
+    ],
+    "regions": [
+      "슈리마"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "이 라운드에 적 하나의 이로운 키워드를 무력화하고 다음 <link=vocab.RoundStart><style=Vocab>라운드 시작</style></link> 시 다시 한 번 무력화합니다.",
+    "descriptionRaw": "이 라운드에 적 하나의 이로운 키워드를 무력화하고 다음 라운드 시작 시 다시 한 번 무력화합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"작게 금이 갔었다. 그 틈이 벌어졌고, 이제는 온통 말라버렸다.\"\n- 문어 모험가",
+    "artistName": "Polar Engine",
+    "name": "탐험가의 실수",
+    "cardCode": "08BW028T3",
+    "keywords": [
+      "몰입"
+    ],
+    "keywordRefs": [
+      "Focus"
+    ],
+    "spellSpeed": "즉발",
+    "spellSpeedRef": "Burst",
+    "rarity": "없음",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "주문",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BW028T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BW028T1-full.png"
+      }
+    ],
+    "regions": [
+      "그림자 군도"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "유닛 하나의 장비를 파괴합니다.",
+    "descriptionRaw": "유닛 하나의 장비를 파괴합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"군도가 내 존재를 호의적으로 받아들이게 된 것 같군.\"\n- 유령 측량사",
+    "artistName": "Polar Engine",
+    "name": "탐험가의 오작동",
+    "cardCode": "08BW028T1",
+    "keywords": [
+      "집중"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "집중",
+    "spellSpeedRef": "Slow",
+    "rarity": "없음",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "주문",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "일반급 대전",
+      "영원",
+      "짝수 비용 카드",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BW028T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BW028T2-full.png"
+      }
+    ],
+    "regions": [
+      "녹서스"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "명소 하나를 파괴합니다.",
+    "descriptionRaw": "명소 하나를 파괴합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"유물이 조금 부서진다고 문제될 건 없어. 진짜라는 신빙성이 늘어날 뿐이니까.\"\n- 무장한 유물 추적자",
+    "artistName": "Polar Engine",
+    "name": "탐험가의 발굴",
+    "cardCode": "08BW028T2",
+    "keywords": [
+      "집중"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "집중",
+    "spellSpeedRef": "Slow",
+    "rarity": "없음",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "주문",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "일반급 대전",
+      "영원",
+      "짝수 비용 카드",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BW009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BW009-full.png"
+      }
+    ],
+    "regions": [
+      "빌지워터"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 5,
+    "cost": 7,
+    "health": 5,
+    "description": "<link=vocab.Play><style=Vocab>사용</style></link>: 이 게임에서 사용한 서로 다른 원소 주문 2장을 <link=vocab.Manifest><style=Vocab>시현</style></link>합니다. 이 라운드에 해당 주문들의 비용이 0이 됩니다.",
+    "descriptionRaw": "사용: 이 게임에서 사용한 서로 다른 원소 주문 2장을 시현합니다. 이 라운드에 해당 주문들의 비용이 0이 됩니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"마음은 강물과도 같다네. 그치지 않는 흐름은 시간이 지남에 따라 산의 형태마저 바꾸어 놓지. 또한 마음이 그런 것처럼, 강물도 관성에 따라 더욱 커지며 새로운 바닷가에 이르기도 한다네.\"",
+    "artistName": "Kudos Productions",
+    "name": "나이 든 조타수",
+    "cardCode": "08BW009",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "희귀급",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BW010.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BW010-full.png"
+      }
+    ],
+    "regions": [
+      "빌지워터"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 5,
+    "health": 0,
+    "description": "게임 종료까지 나의 모든 원소 주문과 <link=keyword.Elemental Skill><sprite name=ElementalSkill><style=Keyword>스킬</style></link>이 추가로 피해를 1 입힙니다.",
+    "descriptionRaw": "게임 종료까지 나의 모든 원소 주문과 스킬이 추가로 피해를 1 입힙니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"지혜로운 자의 손에서, 물은 모든 것에 형태를 부여합니다.\"\n- 지혜의 수행자",
+    "artistName": "Polar Engine",
+    "name": "침수",
+    "cardCode": "08BW010",
+    "keywords": [
+      "집중"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "집중",
+    "spellSpeedRef": "Slow",
+    "rarity": "서사급",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "원소"
+    ],
+    "supertype": "",
+    "type": "주문",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08BW008T3"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BW023.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BW023-full.png"
+      }
+    ],
+    "regions": [
+      "빌지워터"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 2,
+    "cost": 3,
+    "health": 2,
+    "description": "소환 시 내 덱의 맨 위에 있는 카드 6장 중에 <link=card.create><style=AssociatedCard>급류</style></link> 1장을 생성합니다.",
+    "descriptionRaw": "소환 시 내 덱의 맨 위에 있는 카드 6장 중에 급류 1장을 생성합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"이것 좀 보게, 친구들. 온 세상이 우리를 따라 움직인다네! 선체 아래에서는 파도가 춤추고, 돛에서는 순풍이, 살랑이는 바람을 타고 새들이 모두 함께 춤을 추고 있지 않나. 나와 함께 가장 중요한 부름에 응답하고, 기뻐하게나!\"",
+    "artistName": "Envar Studio",
+    "name": "활기 넘치는 비크라쉬",
+    "cardCode": "08BW023",
+    "keywords": [
+      "조율",
+      "포착 불가"
+    ],
+    "keywordRefs": [
+      "Attune",
+      "Elusive"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "서사급",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08PZ026T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08PZ007.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08PZ007-full.png"
+      }
+    ],
+    "regions": [
+      "필트오버 & 자운"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 0,
+    "cost": 5,
+    "health": 0,
+    "description": "<link=card.summon><style=AssociatedCard>돌풍노래 제비</style></link> 하나를 소환하고, 이 게임에서 내가 사용한 다른 원소 주문과 <link=keyword.Elemental Skill><sprite name=ElementalSkill><style=Keyword>스킬</style></link>의 수만큼 +1|+1을 부여합니다. <style=Variable></style>\r\n카드 1장을 뽑습니다.",
+    "descriptionRaw": "돌풍노래 제비 하나를 소환하고, 이 게임에서 내가 사용한 다른 원소 주문과 스킬의 수만큼 +1|+1을 부여합니다. \r\n카드 1장을 뽑습니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "돌풍노래 제비들이 떼로 모여든다면, 반드시 가까이에 폭풍이 있습니다.",
+    "artistName": "Polar Engine",
+    "name": "돌풍노래 새떼",
+    "cardCode": "08PZ007",
+    "keywords": [
+      "집중"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "집중",
+    "spellSpeedRef": "Slow",
+    "rarity": "희귀급",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "원소"
+    ],
+    "supertype": "",
+    "type": "주문",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08PZ005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08PZ005-full.png"
+      }
+    ],
+    "regions": [
+      "필트오버 & 자운"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 0,
+    "cost": 4,
+    "health": 0,
+    "description": "이 라운드에 아군 하나에게 +2|+0을 일시 부여합니다.\r\n카드 2장을 뽑습니다.",
+    "descriptionRaw": "이 라운드에 아군 하나에게 +2|+0을 일시 부여합니다.\r\n카드 2장을 뽑습니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"염려 마세요! 폭풍이 주위로 휘몰아치겠지만, 여러분을 해치지 않을 거예요.\"\n- 잔나",
+    "artistName": "Polar Engine",
+    "name": "폭풍의 눈",
+    "cardCode": "08PZ005",
+    "keywords": [
+      "즉발"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "즉발",
+    "spellSpeedRef": "Burst",
+    "rarity": "일반급",
+    "rarityRef": "Common",
+    "subtypes": [
+      "원소"
+    ],
+    "supertype": "",
+    "type": "주문",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08PZ019.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08PZ019-full.png"
+      }
+    ],
+    "regions": [
+      "필트오버 & 자운"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 0,
+    "cost": 5,
+    "health": 0,
+    "description": "이 라운드에 카드를 3장 이상 뽑았으면 비용이 2 감소합니다.\r\n유닛 하나에게 피해를 3 입히고 적 넥서스에 피해를 2 입힙니다.",
+    "descriptionRaw": "이 라운드에 카드를 3장 이상 뽑았으면 비용이 2 감소합니다.\r\n유닛 하나에게 피해를 3 입히고 적 넥서스에 피해를 2 입힙니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"폭풍은 제 명을 따릅니다.\"\n- 잔나",
+    "artistName": "Polar Engine",
+    "name": "신성한 회오리바람",
+    "cardCode": "08PZ019",
+    "keywords": [
+      "신속"
+    ],
+    "keywordRefs": [
+      "Fast"
+    ],
+    "spellSpeed": "신속",
+    "spellSpeedRef": "Fast",
+    "rarity": "희귀급",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "원소"
+    ],
+    "supertype": "",
+    "type": "주문",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08PZ001T3",
+      "08PZ001T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08PZ001.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08PZ001-full.png"
+      }
+    ],
+    "regions": [
+      "필트오버 & 자운"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 2,
+    "cost": 4,
+    "health": 4,
+    "description": "<link=vocab.Play><style=Vocab>사용</style></link>: 카드 2장을 <link=vocab.Updraft><style=Vocab>상승</style></link>시키고 다음 <nobr><link=vocab.RoundStart><style=Vocab>라운드 시작</style></link></nobr> 시 카드 2장을 뽑습니다.\r\n라운드마다 처음으로 뽑는 카드 3장의 비용이 이 라운드에 1 감소합니다. <style=Variable></style>",
+    "descriptionRaw": "사용: 카드 2장을 상승시키고 다음 라운드 시작 시 카드 2장을 뽑습니다.\r\n라운드마다 처음으로 뽑는 카드 3장의 비용이 이 라운드에 1 감소합니다. ",
+    "levelupDescription": "비용이 감소된 카드를 6장 사용해야 합니다. <style=Variable></style>",
+    "levelupDescriptionRaw": "비용이 감소된 카드를 6장 사용해야 합니다. ",
+    "flavorText": "\"다른 곳보다는 자운이 잔나에게 있어 가장 친밀하다고 할 수 있지. 결국에는 필트오버가 죽도록 내버려둔 이들을 구한 게 바로 그녀니까 말야. 그래, 해답이란 게 있다면 분명 난 이곳에서 찾게 되겠지.\"\n- 바람을 따르는 뱃사람",
+    "artistName": "Envar Studio",
+    "name": "잔나",
+    "cardCode": "08PZ001",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "챔피언",
+    "rarityRef": "Champion",
+    "subtypes": [],
+    "supertype": "챔피언",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08PZ001",
+      "08PZ001T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08PZ001T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08PZ001T3-full.png"
+      }
+    ],
+    "regions": [
+      "필트오버 & 자운"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 3,
+    "cost": 4,
+    "health": 5,
+    "description": "<link=vocab.RoundStart><style=Vocab>라운드 시작</style></link>: 카드 1장을 뽑습니다.\r\n카드 1장을 뽑으면 이 라운드에 해당 카드의 비용이 1 감소합니다.",
+    "descriptionRaw": "라운드 시작: 카드 1장을 뽑습니다.\r\n카드 1장을 뽑으면 이 라운드에 해당 카드의 비용이 1 감소합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"거기까지입니다! 제가 보호하는 곳을 침범한다면 당신의 폐에서 숨이 거두어지고 몸이 바람에 찢겨나가는 모습을 직접 목도하게 해드리겠어요.\"",
+    "artistName": "Envar Studio",
+    "name": "잔나",
+    "cardCode": "08PZ001T3",
+    "keywords": [
+      "포착 불가"
+    ],
+    "keywordRefs": [
+      "Elusive"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "챔피언",
+    "rarityRef": "Champion",
+    "subtypes": [],
+    "supertype": "챔피언",
+    "type": "유닛",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08PZ001T3",
+      "08PZ001"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08PZ001T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08PZ001T1-full.png"
+      }
+    ],
+    "regions": [
+      "필트오버 & 자운"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 0,
+    "cost": 4,
+    "health": 0,
+    "description": "이 라운드에 아군 하나에게 +2|+0을 <nobr>일시 부여합니다.</nobr>\r\n카드 2장을 뽑습니다.\r\n손에 <link=card.level1><style=AssociatedCard>잔나</style></link> 1장을 생성합니다.",
+    "descriptionRaw": "이 라운드에 아군 하나에게 +2|+0을 일시 부여합니다.\r\n카드 2장을 뽑습니다.\r\n손에 잔나 1장을 생성합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"염려 마세요! 폭풍이 주위로 휘몰아치겠지만, 여러분을 해치지 않을 거예요.\"\n- 잔나",
+    "artistName": "Polar Engine",
+    "name": "잔나의 폭풍의 눈",
+    "cardCode": "08PZ001T1",
+    "keywords": [
+      "즉발"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "즉발",
+    "spellSpeedRef": "Burst",
+    "rarity": "없음",
+    "rarityRef": "None",
+    "subtypes": [
+      "원소"
+    ],
+    "supertype": "챔피언",
+    "type": "주문",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08PZ026T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08PZ026.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08PZ026-full.png"
+      }
+    ],
+    "regions": [
+      "필트오버 & 자운"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "<link=card.summon><style=AssociatedCard>돌풍노래 제비</style></link> 하나를 소환합니다.",
+    "descriptionRaw": "돌풍노래 제비 하나를 소환합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"바람의 아이들이여, 내 부름에 응답하라.\"\n- 잔나",
+    "artistName": "Polar Engine",
+    "name": "돌풍노래의 부름",
+    "cardCode": "08PZ026",
+    "keywords": [
+      "집중"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "집중",
+    "spellSpeedRef": "Slow",
+    "rarity": "일반급",
+    "rarityRef": "Common",
+    "subtypes": [
+      "원소"
+    ],
+    "supertype": "",
+    "type": "주문",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08PZ006.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08PZ006-full.png"
+      }
+    ],
+    "regions": [
+      "필트오버 & 자운"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 4,
+    "cost": 6,
+    "health": 4,
+    "description": "원소 주문이나 <link=keyword.Elemental Skill><sprite name=ElementalSkill><style=Keyword>스킬</style></link>을 사용하면 <nobr>같은 주문을</nobr> 한 번 더 사용합니다.",
+    "descriptionRaw": "원소 주문이나 스킬을 사용하면 같은 주문을 한 번 더 사용합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"덤벼라, 이아실라! 아쉴레쉬가 네 이름을 아는 걸 보니, <nobr>오래도 살았구나.</nobr> 하지만 나이가 많든 적든, 곱든 추하든, <nobr>그 어떤</nobr> 괴물에게도 넓은 바다 위에서 내 검에 쓰러지는 것보다 <nobr>큰 명예는</nobr> 없다.\"\n- 닐라",
+    "artistName": "Envar Studio",
+    "name": "심해의 선수상 이아실라",
+    "cardCode": "08PZ006",
+    "keywords": [
+      "Missing Translation"
+    ],
+    "keywordRefs": [
+      "AuraVisualFakeKeyword"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "서사급",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08PZ018.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08PZ018-full.png"
+      }
+    ],
+    "regions": [
+      "필트오버 & 자운"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 3,
+    "cost": 2,
+    "health": 1,
+    "description": "이 라운드에 카드를 3장 이상 뽑았으면 비용이 2 감소합니다.",
+    "descriptionRaw": "이 라운드에 카드를 3장 이상 뽑았으면 비용이 2 감소합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"그래, 원하는 걸 손에 넣은 적도 있었지. 하지만 손에 넣으려면 빼앗아야만 했어. 빼앗으면 빼앗을수록 공허함만 가득해졌지. 내가 맨 처음으로 따라야겠다고 깨달았던 건 바람이었어. 그렇게 여기까지 왔고, 이제 그녀가 나를 더 나은 길로 인도하길.\"",
+    "artistName": "Kudos Productions",
+    "name": "바람을 따르는 뱃사람",
+    "cardCode": "08PZ018",
+    "keywords": [
+      "선제공격"
+    ],
+    "keywordRefs": [
+      "QuickStrike"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "일반급",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08PZ008.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08PZ008-full.png"
+      }
+    ],
+    "regions": [
+      "필트오버 & 자운"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 3,
+    "description": "<link=vocab.Play><style=Vocab>사용</style></link>: 카드 1장을 <link=vocab.Updraft><style=Vocab>상승</style></link>시키고 카드 1장을 뽑거나 주문 마나를 회복합니다.",
+    "descriptionRaw": "사용: 카드 1장을 상승시키고 카드 1장을 뽑거나 주문 마나를 회복합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "어릴 적, 바람의 정령에게 구조되었다고 굳게 믿는 메리엄은 고향인 슈리마에서 자운에 이르기까지 잔나의 교리를 전해왔습니다. 이제 그녀는 자운 사원의 수장으로서 어린 세대와 탄압받는 이들에게 잔나의 은혜를 전파합니다.",
+    "artistName": "Envar Studio",
+    "name": "사원을 돌보는 자 메리엄",
+    "cardCode": "08PZ008",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "서사급",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08PZ026T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08PZ026T1-full.png"
+      }
+    ],
+    "regions": [
+      "필트오버 & 자운"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 2,
+    "cost": 1,
+    "health": 1,
+    "description": "",
+    "descriptionRaw": "",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"이 돌풍노래 제비들은 변덕이 심한 생물이야. 평상시에는 평화롭기 그지없다고! 하지만 이 녀석들을 화나게 해선 <nobr>안 된다는</nobr> 사실을 깨닫기까지 아주 비싼 대가를 치렀어.\"\n- 용감한 항해사",
+    "artistName": "Bubble Cat",
+    "name": "돌풍노래 제비",
+    "cardCode": "08PZ026T1",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "없음",
+    "rarityRef": "None",
+    "subtypes": [
+      "새"
+    ],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08PZ009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08PZ009-full.png"
+      }
+    ],
+    "regions": [
+      "필트오버 & 자운"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 0,
+    "cost": 5,
+    "health": 0,
+    "description": "<link=vocab.RoundEnd><style=Vocab>라운드 종료</style></link>: 손에 든 카드를 모두 <link=vocab.Updraft><style=Vocab>상승</style></link>시킵니다. \r\n<link=vocab.RoundStart><style=Vocab>라운드 시작</style></link>: 동일한 수만큼 카드를 뽑고 추가로 카드 1장을 뽑습니다.",
+    "descriptionRaw": "라운드 종료: 손에 든 카드를 모두 상승시킵니다. \r\n라운드 시작: 동일한 수만큼 카드를 뽑고 추가로 카드 1장을 뽑습니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "훗날 자운과 필트오버의 경계를 가르게 되는 재앙적 붕괴로 많은 것이 소실되었습니다. 잔나는 비록 파도 속에 사원을 잃었지만, 그 안에서 숭배하던 사람들은 구할 수 있었습니다.",
+    "artistName": "Envar Studio",
+    "name": "가라앉은 사원",
+    "cardCode": "08PZ009",
+    "keywords": [
+      "명소"
+    ],
+    "keywordRefs": [
+      "LandmarkVisualOnly"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "서사급",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "명소",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08PZ002.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08PZ002-full.png"
+      }
+    ],
+    "regions": [
+      "필트오버 & 자운"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "유닛 하나에게 피해를 2 입힙니다.\r\n이 라운드에 사용한 다른 카드 1장당 이 카드의 피해가 1씩 증가하며 최대 3회 적용됩니다. <style=Variable></style>",
+    "descriptionRaw": "유닛 하나에게 피해를 2 입힙니다.\r\n이 라운드에 사용한 다른 카드 1장당 이 카드의 피해가 1씩 증가하며 최대 3회 적용됩니다. ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"울부짖는 바람에 분노를!\"\n- 잔나",
+    "artistName": "Polar Engine",
+    "name": "울부짖는 돌풍",
+    "cardCode": "08PZ002",
+    "keywords": [
+      "집중"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "집중",
+    "spellSpeedRef": "Slow",
+    "rarity": "희귀급",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "원소"
+    ],
+    "supertype": "",
+    "type": "주문",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08PZ008T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08PZ008T3-full.png"
+      }
+    ],
+    "regions": [
+      "필트오버 & 자운"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 3,
+    "description": "<link=vocab.Play><style=Vocab>사용</style></link>: 카드 1장을 <link=vocab.Updraft><style=Vocab>상승</style></link>시키고 주문 마나를 회복합니다.",
+    "descriptionRaw": "사용: 카드 1장을 상승시키고 주문 마나를 회복합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "어릴 적, 바람의 정령에게 구조되었다고 굳게 믿는 메리엄은 고향인 슈리마에서 자운에 이르기까지 잔나의 교리를 전해왔습니다. 이제 그녀는 자운 사원의 수장으로서 어린 세대와 탄압받는 이들에게 잔나의 은혜를 전파합니다.",
+    "artistName": "Envar Studio",
+    "name": "사원을 돌보는 자 메리엄",
+    "cardCode": "08PZ008T3",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "없음",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08PZ008T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08PZ008T2-full.png"
+      }
+    ],
+    "regions": [
+      "필트오버 & 자운"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 3,
+    "description": "<link=vocab.Play><style=Vocab>사용</style></link>: 카드 1장을 <link=vocab.Updraft><style=Vocab>상승</style></link>시키고 카드 1장을 뽑습니다.",
+    "descriptionRaw": "사용: 카드 1장을 상승시키고 카드 1장을 뽑습니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "어릴 적, 바람의 정령에게 구조되었다고 굳게 믿는 메리엄은 고향인 슈리마에서 자운에 이르기까지 잔나의 교리를 전해왔습니다. 이제 그녀는 자운 사원의 수장으로서 어린 세대와 탄압받는 이들에게 잔나의 은혜를 전파합니다.",
+    "artistName": "Envar Studio",
+    "name": "사원을 돌보는 자 메리엄",
+    "cardCode": "08PZ008T2",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "없음",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08PZ020.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08PZ020-full.png"
+      }
+    ],
+    "regions": [
+      "필트오버 & 자운"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 3,
+    "cost": 5,
+    "health": 2,
+    "description": "이 라운드에 카드를 3장 이상 뽑았으면 비용이 2 감소합니다.\r\n소환 후 다음 <link=vocab.RoundStart><style=Vocab>라운드 시작</style></link> 시 카드 2장을 뽑습니다.",
+    "descriptionRaw": "이 라운드에 카드를 3장 이상 뽑았으면 비용이 2 감소합니다.\r\n소환 후 다음 라운드 시작 시 카드 2장을 뽑습니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"소중한 나의 서풍아, 그만 구름에서 내려와 내 어깨 위에서 날개를 쉬어가지 않겠니?\"\n- 잔나",
+    "artistName": "Envar Studio",
+    "name": "고귀한 구름감개",
+    "cardCode": "08PZ020",
+    "keywords": [
+      "선제공격"
+    ],
+    "keywordRefs": [
+      "QuickStrike"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "희귀급",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08FR002T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08FR012.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08FR012-full.png"
+      }
+    ],
+    "regions": [
+      "프렐요드"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "카드 1장을 뽑습니다.\r\n<link=card.summon><style=AssociatedCard>폭풍의 인장</style></link> 하나를 소환합니다.",
+    "descriptionRaw": "카드 1장을 뽑습니다.\r\n폭풍의 인장 하나를 소환합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"발히르의 이름으로 이 제물을 바칩니다...\"\n- 발히르의 예언자",
+    "artistName": "Polar Engine",
+    "name": "천둥의 기원",
+    "cardCode": "08FR012",
+    "keywords": [
+      "집중"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "집중",
+    "spellSpeedRef": "Slow",
+    "rarity": "일반급",
+    "rarityRef": "Common",
+    "subtypes": [
+      "원소"
+    ],
+    "supertype": "",
+    "type": "주문",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08FR019.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08FR019-full.png"
+      }
+    ],
+    "regions": [
+      "프렐요드"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "이 라운드에 아군 하나에게 +1|+3을 일시 부여합니다.",
+    "descriptionRaw": "이 라운드에 아군 하나에게 +1|+3을 일시 부여합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "구름에 가려진 채로 번개를 휘감은 곰의 신은 닿을 수 없는 폭풍의 심장부에 서 있습니다.",
+    "artistName": "Polar Engine",
+    "name": "천공 분열",
+    "cardCode": "08FR019",
+    "keywords": [
+      "즉발"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "즉발",
+    "spellSpeedRef": "Burst",
+    "rarity": "일반급",
+    "rarityRef": "Common",
+    "subtypes": [
+      "원소"
+    ],
+    "supertype": "",
+    "type": "주문",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08FR001T3",
+      "08FR001T1",
+      "08FR001T2"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08FR001.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08FR001-full.png"
+      }
+    ],
+    "regions": [
+      "프렐요드"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 10,
+    "cost": 9,
+    "health": 10,
+    "description": "<link=keyword.Elemental Skill><sprite name=ElementalSkill><style=Keyword>사용</style></link>: 서로 다른 무작위 적 유닛을 대상으로 <link=card.skill><style=AssociatedCard>무자비한 폭풍</style></link>을 3번 사용합니다. 적 유닛이 없으면 적 넥서스를 대상으로 합니다.",
+    "descriptionRaw": "사용: 서로 다른 무작위 적 유닛을 대상으로 무자비한 폭풍을 3번 사용합니다. 적 유닛이 없으면 적 넥서스를 대상으로 합니다.",
+    "levelupDescription": "<link=vocab.RoundEnd><style=Vocab>라운드 종료</style></link>: 내가 피해를 50 이상 입혀야 합니다. <style=Variable></style>",
+    "levelupDescriptionRaw": "라운드 종료: 내가 피해를 50 이상 입혀야 합니다. ",
+    "flavorText": "\"나에게 무릎 꿇어라 필멸자여, 살려줄지도 모르니. <nobr>너의 힘은 약하지만</nobr> 나를 섬길 자격은 갖추었는지도 모르지. 무릎을 꿇지 않으면 너를 이 땅에서 쓸어버리겠다!\"",
+    "artistName": "Envar Studio",
+    "name": "볼리베어",
+    "cardCode": "08FR001",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "챔피언",
+    "rarityRef": "Champion",
+    "subtypes": [],
+    "supertype": "챔피언",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08FR001T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08FR001T3-full.png"
+      }
+    ],
+    "regions": [
+      "프렐요드"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "유닛 하나에게 피해를 4 입힙니다. 해당 유닛이 사망하거나 사라지면 대신 적 넥서스에 피해를 2 입힙니다.",
+    "descriptionRaw": "유닛 하나에게 피해를 4 입힙니다. 해당 유닛이 사망하거나 사라지면 대신 적 넥서스에 피해를 2 입힙니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"내 발톱으로 세상 자체를 조각한다!\"\n- 볼리베어",
+    "artistName": "Polar Engine",
+    "name": "무자비한 폭풍",
+    "cardCode": "08FR001T3",
+    "keywords": [
+      "원소 스킬"
+    ],
+    "keywordRefs": [
+      "ElementalSkill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "없음",
+    "rarityRef": "None",
+    "subtypes": [
+      "원소"
+    ],
+    "supertype": "",
+    "type": "스킬",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08FR001",
+      "08FR001T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08FR001T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08FR001T2-full.png"
+      }
+    ],
+    "regions": [
+      "프렐요드"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 0,
+    "cost": 8,
+    "health": 0,
+    "description": "<link=vocab.Titanic><style=Vocab>거대</style></link> 아군을 제외한 모든 유닛에게 피해를 4 입힙니다.\r\n내 덱에 <link=card.level1><style=AssociatedCard>볼리베어</style></link> 1장을 생성합니다.",
+    "descriptionRaw": "거대 아군을 제외한 모든 유닛에게 피해를 4 입힙니다.\r\n내 덱에 볼리베어 1장을 생성합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"이 극지를 피로 물들여주마!\"\n- 볼리베어",
+    "artistName": "Polar Engine",
+    "name": "볼리베어의 폭풍을 부르는 자",
+    "cardCode": "08FR001T2",
+    "keywords": [
+      "집중"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "집중",
+    "spellSpeedRef": "Slow",
+    "rarity": "없음",
+    "rarityRef": "None",
+    "subtypes": [
+      "원소"
+    ],
+    "supertype": "챔피언",
+    "type": "주문",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08FR001",
+      "08FR001T2",
+      "08FR001T3"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08FR001T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08FR001T1-full.png"
+      }
+    ],
+    "regions": [
+      "프렐요드"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 11,
+    "cost": 9,
+    "health": 11,
+    "description": "<link=keyword.Elemental Skill><sprite name=ElementalSkill><style=Keyword>사용</style></link> 또는 <link=vocab.Attack><style=Vocab>공격</style></link>: 서로 다른 무작위 적 유닛을 대상으로 <link=card.skill><style=AssociatedCard>무자비한 폭풍</style></link>을 3번 사용합니다. 적 유닛이 없으면 적 넥서스를 대상으로 합니다.\r\n다른 아군들이 <link=keyword.Overwhelm><sprite name=Overwhelm><style=Keyword>압도</style></link> 효과를 가집니다.",
+    "descriptionRaw": "사용 또는 공격: 서로 다른 무작위 적 유닛을 대상으로 무자비한 폭풍을 3번 사용합니다. 적 유닛이 없으면 적 넥서스를 대상으로 합니다.\r\n다른 아군들이 압도 효과를 가집니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"감히 나에게 도전하다니, 모욕적이군. 먼 땅에서 온 보잘것없는 소녀 주제에. 내가 바로 극지의 심장이다. 폭풍 그 자체지. 너에게는 하찮은 죽음을 보장해주마!\"",
+    "artistName": "Envar Studio",
+    "name": "볼리베어",
+    "cardCode": "08FR001T1",
+    "keywords": [
+      "압도",
+      "Missing Translation"
+    ],
+    "keywordRefs": [
+      "Overwhelm",
+      "AuraVisualFakeKeyword"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "챔피언",
+    "rarityRef": "Champion",
+    "subtypes": [],
+    "supertype": "챔피언",
+    "type": "유닛",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08FR018.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08FR018-full.png"
+      }
+    ],
+    "regions": [
+      "프렐요드"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 0,
+    "cost": 16,
+    "health": 0,
+    "description": "무작위 <link=vocab.Titanic><style=Vocab>거대</style></link> 추종자 둘을 소환합니다.\r\n이 게임에서 사용한 원소 주문이나 <link=keyword.Elemental Skill><sprite name=ElementalSkill><style=Keyword>스킬</style></link> 하나당 비용이 1 감소합니다. <nobr>(최대 10)",
+    "descriptionRaw": "무작위 거대 추종자 둘을 소환합니다.\r\n이 게임에서 사용한 원소 주문이나 스킬 하나당 비용이 1 감소합니다. (최대 10)",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"그 몸으로는 산을 조각했고, 그 입이 내뿜는 불로는 <nobr>수천의 협만을</nobr> 깎아냈지.\"\n- 볼리베어",
+    "artistName": "Polar Engine",
+    "name": "거인의 격돌",
+    "cardCode": "08FR018",
+    "keywords": [
+      "집중"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "집중",
+    "spellSpeedRef": "Slow",
+    "rarity": "서사급",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "원소"
+    ],
+    "supertype": "",
+    "type": "주문",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08FR011.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08FR011-full.png"
+      }
+    ],
+    "regions": [
+      "프렐요드"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 3,
+    "cost": 4,
+    "health": 2,
+    "description": "원소 주문이나 <link=keyword.Elemental Skill><sprite name=ElementalSkill><style=Keyword>스킬</style></link>을 사용하면 <nobr>이 유닛을</nobr> <link=vocab.Forge><style=Vocab>단련</style></link>합니다.",
+    "descriptionRaw": "원소 주문이나 스킬을 사용하면 이 유닛을 단련합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"대장장이신은 변화를 약속했지만 그 결과는 무책임의 연속일 뿐이었다. 약한 신을 숭배하는 이들은 스스로도 약할 뿐이야. 오직 발히르의 무력을 통해서만 우리는 과거의 영광을 <nobr>되찾을 수</nobr> 있다!\"",
+    "artistName": "Envar Studio",
+    "name": "불꽃 소환사 카프린",
+    "cardCode": "08FR011",
+    "keywords": [
+      "강인함"
+    ],
+    "keywordRefs": [
+      "Tough"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "희귀급",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08FR008.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08FR008-full.png"
+      }
+    ],
+    "regions": [
+      "프렐요드"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 0,
+    "cost": 8,
+    "health": 0,
+    "description": "<link=vocab.Titanic><style=Vocab>거대</style></link> 아군을 제외한 모든 유닛에게 피해를 4 입힙니다.",
+    "descriptionRaw": "거대 아군을 제외한 모든 유닛에게 피해를 4 입힙니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"이 극지를 피로 물들여주마!\"\n- 볼리베어",
+    "artistName": "Polar Engine",
+    "name": "폭풍을 부르는 자",
+    "cardCode": "08FR008",
+    "keywords": [
+      "집중"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "집중",
+    "spellSpeedRef": "Slow",
+    "rarity": "희귀급",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "원소"
+    ],
+    "supertype": "",
+    "type": "주문",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08FR002T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08FR015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08FR015-full.png"
+      }
+    ],
+    "regions": [
+      "프렐요드"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 8,
+    "cost": 7,
+    "health": 6,
+    "description": "<link=vocab.Play><style=Vocab>사용</style></link>: <link=card.summon><style=AssociatedCard>폭풍의 인장</style></link> 셋을 소환합니다.",
+    "descriptionRaw": "사용: 폭풍의 인장 셋을 소환합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "여전히 소수의 숭배자가 남아 있긴 하지만, 모든 프렐요드인은 볼리베어와 론드의 대결투 이야기를 알고 있습니다. 얼어붙은 북쪽 땅에 필멸자들이 도래하기 오래 전, 대지를 산산조각낸 <nobr>이 싸움으로</nobr> 극지의 산과 강이 형성되었죠.",
+    "artistName": "Envar Studio",
+    "name": "마그마 뱀 론드",
+    "cardCode": "08FR015",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "서사급",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08FR002T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08FR002.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08FR002-full.png"
+      }
+    ],
+    "regions": [
+      "프렐요드"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 2,
+    "cost": 3,
+    "health": 3,
+    "description": "소환 시 <link=card.summon><style=AssociatedCard>폭풍의 인장</style></link> 하나를 소환합니다.",
+    "descriptionRaw": "소환 시 폭풍의 인장 하나를 소환합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"다른 이들에게는 보이지 않는 것들이 저에게는 보입니다. 산을 조각낼 폭풍, 그리고 대지의 뼈대가 파괴되는 순간. 지금까지의 프렐요드가 피로써 다시 태어나는 것은 시간 문제일 뿐입니다.\"",
+    "artistName": "Envar Studio",
+    "name": "발히르의 예언자",
+    "cardCode": "08FR002",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "일반급",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08FR002T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08FR002T1-full.png"
+      }
+    ],
+    "regions": [
+      "프렐요드"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "폭풍의 인장은 중첩됩니다.\r\n<link=vocab.Titanic><style=Vocab>거대</style></link> 아군들의 비용이 <style=Variable>1</style> 감소합니다. <link=vocab.Titanic><style=Vocab>거대</style></link> 아군을 소환하면 파괴됩니다.",
+    "descriptionRaw": "폭풍의 인장은 중첩됩니다.\r\n거대 아군들의 비용이 1 감소합니다. 거대 아군을 소환하면 파괴됩니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "험준한 산길 위로 매달린 인장 하나가 밤의 어둠을 뚫고 타오릅니다. 여기까지 도달하기 위해 많은 양의 피가 바쳐졌습니다. 볼리베어는 이 신호를 통해 인정의 의미와 더 많은 제물에 대한 요구를 함께 전달합니다.",
+    "artistName": "Envar Studio",
+    "name": "폭풍의 인장",
+    "cardCode": "08FR002T1",
+    "keywords": [
+      "명소",
+      "Missing Translation"
+    ],
+    "keywordRefs": [
+      "LandmarkVisualOnly",
+      "AuraVisualFakeKeyword"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "없음",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "명소",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08FR002T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08FR003.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08FR003-full.png"
+      }
+    ],
+    "regions": [
+      "프렐요드"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 5,
+    "cost": 6,
+    "health": 3,
+    "description": "주문이나 <link=keyword.Skill><sprite name=SkillMark><style=Keyword>스킬</style></link>을 사용하면 <link=card.summon><style=AssociatedCard>폭풍의 인장</style></link> 하나를 소환합니다.",
+    "descriptionRaw": "주문이나 스킬을 사용하면 폭풍의 인장 하나를 소환합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "간혹 볼리베어의 추종자들은 광적인 신앙 때문에 자기 자신을 완전히 잃어버린 채 곰 신의 형상을 체현하기 시작합니다. 누구도 발히르의 의지를 가로막을 수는 없습니다. <nobr>이 어사인들이</nobr> 한때 동포라고 불렀던 이들조차도.",
+    "artistName": "Alessandro Poli",
+    "name": "광전사 어사인",
+    "cardCode": "08FR003",
+    "keywords": [
+      "주문 부여"
+    ],
+    "keywordRefs": [
+      "Imbue"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "희귀급",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08BW028T1",
+      "08BW028T2",
+      "08BW028T3",
+      "08BW028T4"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08DE006.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08DE006-full.png"
+      }
+    ],
+    "regions": [
+      "데마시아",
+      "프렐요드"
+    ],
+    "regionRefs": [
+      "Demacia",
+      "Freljord"
+    ],
+    "attack": 2,
+    "cost": 3,
+    "health": 3,
+    "description": "<link=vocab.Play><style=Vocab>사용</style></link>: 탐험가 주문 1장을 선택하고 손에 생성합니다.",
+    "descriptionRaw": "사용: 탐험가 주문 1장을 선택하고 손에 생성합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"날씨가 춥다. 나도 춥다. 모든 것이 차갑다, 늘 변함없이. 사람이 살아선 안 될 장소도 있는 거야. 일정이 끝나면 제발 나를 따뜻한 곳으로 보내 줘.\"\n- 탐험가 길드의 장거리 탐사부 탐험 일지, 프렐요드 편에서 발췌",
+    "artistName": "Envar Studio",
+    "name": "학술적 선구자",
+    "cardCode": "08DE006",
+    "keywords": [
+      "도전자"
+    ],
+    "keywordRefs": [
+      "Challenger"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "희귀급",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08DE010.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08DE010-full.png"
+      }
+    ],
+    "regions": [
+      "데마시아"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "아군 하나에게 +0|+2를 일시 부여합니다.\r\n해당 아군과 적 하나가 서로를 <link=vocab.Strike><style=Vocab>타격</style></link>합니다.",
+    "descriptionRaw": "아군 하나에게 +0|+2를 일시 부여합니다.\r\n해당 아군과 적 하나가 서로를 타격합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"준비 태세를 취하게, 친구여! 신사의 결투를 거부할 정도로 겁쟁이는 아니겠지?\"\n- 로렌트가 기사",
+    "artistName": "Kudos Productions",
+    "name": "신사의 결투",
+    "cardCode": "08DE010",
+    "keywords": [
+      "신속"
+    ],
+    "keywordRefs": [
+      "Fast"
+    ],
+    "spellSpeed": "신속",
+    "spellSpeedRef": "Fast",
+    "rarity": "일반급",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "주문",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08NX011.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08NX011-full.png"
+      }
+    ],
+    "regions": [
+      "녹서스"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "적 넥서스에 피해를 1 입힙니다. 사용한 <link=card.selfref><style=AssociatedCard>들불</style></link> 하나당 입히는 피해가 1 증가합니다. 내 덱에 <link=card.selfref><style=AssociatedCard>들불</style></link> 1장을 생성합니다.",
+    "descriptionRaw": "적 넥서스에 피해를 1 입힙니다. 사용한 들불 하나당 입히는 피해가 1 증가합니다. 내 덱에 들불 1장을 생성합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"퍼얼펄 재가 내리네!\"\n- 애니",
+    "artistName": "Kudos Productions",
+    "name": "들불",
+    "cardCode": "08NX011",
+    "keywords": [
+      "집중"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "집중",
+    "spellSpeedRef": "Slow",
+    "rarity": "일반급",
+    "rarityRef": "Common",
+    "subtypes": [
+      "원소"
+    ],
+    "supertype": "",
+    "type": "주문",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08NX014.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08NX014-full.png"
+      }
+    ],
+    "regions": [
+      "녹서스"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 5,
+    "cost": 5,
+    "health": 5,
+    "description": "아군의 <link=vocab.Attack><style=Vocab>공격</style></link> 및 <link=keyword.Support><style=Keyword>지원</style></link> 효과가 한 번 더 발동합니다.",
+    "descriptionRaw": "아군의 공격 및 지원 효과가 한 번 더 발동합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "텔시 교장의 개별 규율 수업은 고된 과제와 손목 회초리 그리고 방과 후 징계로 빈틈없이 짜여 있습니다. 레이븐블룸 예술학교의 학생이라면 필수로 이 수업을 들어야 합니다. 그렇지 않다면 아무도 들으려고 하지 않을 테니까요.",
+    "artistName": "Envar Studio",
+    "name": "텔시 교장",
+    "cardCode": "08NX014",
+    "keywords": [
+      "Missing Translation"
+    ],
+    "keywordRefs": [
+      "AuraVisualFakeKeyword"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "서사급",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08BW028T1",
+      "08BW028T2",
+      "08BW028T3",
+      "08BW028T4"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08NX012.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08NX012-full.png"
+      }
+    ],
+    "regions": [
+      "녹서스",
+      "슈리마"
+    ],
+    "regionRefs": [
+      "Noxus",
+      "Shurima"
+    ],
+    "attack": 3,
+    "cost": 2,
+    "health": 1,
+    "description": "<link=vocab.Play><style=Vocab>사용</style></link>: 탐험가 주문 1장을 선택하고 손에 생성합니다.",
+    "descriptionRaw": "사용: 탐험가 주문 1장을 선택하고 손에 생성합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"사막에서 땅을 파는 게 더 쉽다고 생각할지도 모르지. 그런데 파다 보면 어느새 모래는 끝이 나고 암석이 나오기 마련이야. 교체 장비에 필요한 예산을 다시 요청한다.\"\n- 탐험가 길드의 장거리 탐사부 탐험 일지, 슈리마 편에서 발췌",
+    "artistName": "Kudos Productions",
+    "name": "무장한 유물 추적자",
+    "cardCode": "08NX012",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "희귀급",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU001T3"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08SI021.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08SI021-full.png"
+      }
+    ],
+    "regions": [
+      "그림자 군도"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 3,
+    "description": "다른 아군 사망 또는 <nobr><link=keyword.Last Breath><sprite name=LastBreath><style=Keyword>최후의 숨결</style></link>:</nobr> <nobr>내 덱에</nobr> <link=card.chime><style=AssociatedCard>고대의 종</style></link> 넷을 설치합니다.",
+    "descriptionRaw": "다른 아군 사망 또는 최후의 숨결: 내 덱에 고대의 종 넷을 설치합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "불길한 방울 소리는 신경쓰지 않아도 됩니다. 늙은 방울슬라임이 지나가는 소리일 뿐이니까요. 새로 도착한 자들을 만나는 걸 무척 좋아한답니다. 다만, 다른 이들이 별로 좋아하지 않을 뿐이죠.",
+    "artistName": "Bubble Cat",
+    "name": "외로운 방울슬라임",
+    "cardCode": "08SI021",
+    "keywords": [
+      "최후의 숨결"
+    ],
+    "keywordRefs": [
+      "LastBreath"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "일반급",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08SI030.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08SI030-full.png"
+      }
+    ],
+    "regions": [
+      "그림자 군도"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "적 덱의 맨 아래에 있는 카드 6장을 <link=vocab.Obliterate><style=Vocab>소멸</style></link>시킵니다.",
+    "descriptionRaw": "적 덱의 맨 아래에 있는 카드 6장을 소멸시킵니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "룬테라에서 가장 깊은 심해에 사는 일부 바다 괴물에게 자울치잡이 배는 가벼운 간식입니다.",
+    "artistName": "Polar Engine",
+    "name": "수중 무덤",
+    "cardCode": "08SI030",
+    "keywords": [
+      "집중"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "집중",
+    "spellSpeedRef": "Slow",
+    "rarity": "서사급",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "주문",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "일반급 대전",
+      "영원",
+      "짝수 비용 카드",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08BW028T1",
+      "08BW028T2",
+      "08BW028T3",
+      "08BW028T4"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08SI018.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08SI018-full.png"
+      }
+    ],
+    "regions": [
+      "그림자 군도",
+      "타곤"
+    ],
+    "regionRefs": [
+      "ShadowIsles",
+      "Targon"
+    ],
+    "attack": 2,
+    "cost": 3,
+    "health": 2,
+    "description": "<link=vocab.Play><style=Vocab>사용</style></link>: 탐험가 주문 1장을 선택하고 손에 생성합니다.",
+    "descriptionRaw": "사용: 탐험가 주문 1장을 선택하고 손에 생성합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"지형 측량 불가. 한 치 앞도 보이지 않는다. 길목을 돌 때마다 적과 마주치지만, 희한하게도 예상치 못한 아군을 만나기도 한다.\"\n- 탐험가 길드의 장거리 탐사부 탐험 일지, 그림자 군도 편에서 발췌",
+    "artistName": "Envar Studio",
+    "name": "유령 측량사",
+    "cardCode": "08SI018",
+    "keywords": [
+      "체력 흡수"
+    ],
+    "keywordRefs": [
+      "Lifesteal"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "희귀급",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU001T3",
+      "01PZ022"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BC005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BC005-full.png"
+      }
+    ],
+    "regions": [
+      "밴들 시티"
+    ],
+    "regionRefs": [
+      "BandleCity"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "이 게임에서 사용한 <link=card.selfref><style=AssociatedCard>터질 듯한 배낭</style></link> 하나당 <nobr>내 덱에</nobr> <link=card.boon><style=AssociatedCard>고대의 종</style></link> 넷을 설치하고 적 덱에 <nobr><link=card.trap><style=AssociatedCard>독버섯</style></link> 넷을</nobr> 설치합니다. 내 덱에 <link=card.selfref><style=AssociatedCard>터질 듯한 배낭</style></link> <nobr>1장을 생성합니다.</nobr>",
+    "descriptionRaw": "이 게임에서 사용한 터질 듯한 배낭 하나당 내 덱에 고대의 종 넷을 설치하고 적 덱에 독버섯 넷을 설치합니다. 내 덱에 터질 듯한 배낭 1장을 생성합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"규칙 제207조: 정찰대원은 필요 이상의 짐을 소지하지 않는다!\"\n- 열정 대원 에이바",
+    "artistName": "Polar Engine",
+    "name": "터질 듯한 배낭",
+    "cardCode": "08BC005",
+    "keywords": [
+      "즉발"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "즉발",
+    "spellSpeedRef": "Burst",
+    "rarity": "희귀급",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "주문",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BC002.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BC002-full.png"
+      }
+    ],
+    "regions": [
+      "밴들 시티"
+    ],
+    "regionRefs": [
+      "BandleCity"
+    ],
+    "attack": 1,
+    "cost": 2,
+    "health": 2,
+    "description": "<link=vocab.Play><style=Vocab>사용</style></link>: 적 손에서 챔피언이 아닌 카드 2장 중 1장을 선택하고 해당 카드를 <link=keyword.Capture><sprite name=Capture><style=Keyword>구속</style></link>합니다.",
+    "descriptionRaw": "사용: 적 손에서 챔피언이 아닌 카드 2장 중 1장을 선택하고 해당 카드를 구속합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"그래, 난 잘생긴 데다가 재빠르고 흔들림 없이 침착하지. 몰랐나, 나이 든 양반? 내가 바로 암초의 왕이다. 당신은 <nobr>허락 없이</nobr> 내 왕국에 들어왔고 말이야!\"<br>\"기... 기다려! 당장 이리 돌아오지 못해! 연구에 반드시 필요한 표본이라고!\"\n- 패류학자",
+    "artistName": "Caravan Studio",
+    "name": "암초의 왕 스킵",
+    "cardCode": "08BC002",
+    "keywords": [
+      "포착 불가"
+    ],
+    "keywordRefs": [
+      "Elusive"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "서사급",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08BW028T1",
+      "08BW028T2",
+      "08BW028T3",
+      "08BW028T4"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BC006.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BC006-full.png"
+      }
+    ],
+    "regions": [
+      "밴들 시티",
+      "아이오니아"
+    ],
+    "regionRefs": [
+      "BandleCity",
+      "Ionia"
+    ],
+    "attack": 1,
+    "cost": 2,
+    "health": 1,
+    "description": "<link=vocab.Play><style=Vocab>사용</style></link>: 탐험가 주문 1장을 선택하고 손에 생성합니다.",
+    "descriptionRaw": "사용: 탐험가 주문 1장을 선택하고 손에 생성합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"번치스는 괜찮은 걸까? 최근에는 점점 더 불안해하는 것 같아. 잠깐 차원문을 통과하는 일에도 걱정 잔뜩이라니까! 뭐 때문에 그러는지 모르겠어.\"\n- 탐험가 길드의 장거리 탐사부 탐험 일지, 밴들 시티 편에서 발췌",
+    "artistName": "Caravan Studio",
+    "name": "차원문 개척자",
+    "cardCode": "08BC006",
+    "keywords": [
+      "조율"
+    ],
+    "keywordRefs": [
+      "Attune"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "희귀급",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08SH004.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08SH004-full.png"
+      }
+    ],
+    "regions": [
+      "슈리마"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 4,
+    "cost": 4,
+    "health": 4,
+    "description": "<link=keyword.Daybreak><style=Keyword>해오름</style></link> 또는 다른 카드의 <link=keyword.Daybreak><style=Keyword>해오름</style></link> 효과 발동: <link=keyword.Weakest><style=Keyword>최약</style></link>인 적에게 <link=keyword.Vulnerable><sprite name=Vulnerable><style=Keyword>약점 노출</style></link> 상태를 부여합니다.",
+    "descriptionRaw": "해오름 또는 다른 카드의 해오름 효과 발동: 최약인 적에게 약점 노출 상태를 부여합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "슈리마의 장대한 군대는 언제나 사막의 힘을 증명할 준비가 되어 있습니다. 명령이 주어지면 이들은 주저 없이 전진합니다.",
+    "artistName": "Kudos Productions",
+    "name": "모래 언덕의 장군",
+    "cardCode": "08SH004",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "희귀급",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "정예"
+    ],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08SH005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08SH005-full.png"
+      }
+    ],
+    "regions": [
+      "슈리마"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 2,
+    "description": "<link=keyword.Daybreak><style=Keyword>해오름</style></link>: <link=card.me><style=AssociatedCard>태양 원판 수호병</style></link> 1장을 뽑습니다.",
+    "descriptionRaw": "해오름: 태양 원판 수호병 1장을 뽑습니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"우리는 변치 않는 사막의 수호자이며, 살아 있는 역사이자, 광명의 길을 걷는 자들이다. 오로지 태양 원판 앞에 무릎을 꿇을지니, 이는 슈리마의 영광 앞에 세상이 무릎 꿇게 하기 위함이다.\"\n- 아지르",
+    "artistName": "Kudos Productions",
+    "name": "태양 원판 수호병",
+    "cardCode": "08SH005",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "일반급",
+    "rarityRef": "Common",
+    "subtypes": [
+      "정예"
+    ],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08IO010.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08IO010-full.png"
+      }
+    ],
+    "regions": [
+      "아이오니아"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 0,
+    "cost": 4,
+    "health": 0,
+    "description": "적 하나를 <link=keyword.Recall><style=Keyword>귀환</style></link>시키고 이 라운드에 상대방이 다음으로 사용하는 유닛의 비용을 2 증가시킵니다.",
+    "descriptionRaw": "적 하나를 귀환시키고 이 라운드에 상대방이 다음으로 사용하는 유닛의 비용을 2 증가시킵니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"우리에게 위협을 가하는 이들은 바다 밑바닥에서 편히 쉬게 될 것입니다.\"\n- 강을 만드는 자",
+    "artistName": "Polar Engine",
+    "name": "전복",
+    "cardCode": "08IO010",
+    "keywords": [
+      "집중"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "집중",
+    "spellSpeedRef": "Slow",
+    "rarity": "일반급",
+    "rarityRef": "Common",
+    "subtypes": [
+      "원소"
+    ],
+    "supertype": "",
+    "type": "주문",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08MT027.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08MT027-full.png"
+      }
+    ],
+    "regions": [
+      "타곤"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 5,
+    "cost": 8,
+    "health": 8,
+    "description": "<link=vocab.Play><style=Vocab>사용</style></link>: 다른 모든 아군의 <link=keyword.Daybreak><style=Keyword>해오름</style></link> 및 <link=keyword.Nightfall><style=Keyword>어스름</style></link> 효과를 발동시킵니다.\r\n<link=keyword.Daybreak><style=Keyword>해오름</style></link>: <link=keyword.Overwhelm><sprite name=Overwhelm><style=Keyword>압도</style></link> 효과를 얻습니다.\r\n<link=keyword.Nightfall><style=Keyword>어스름</style></link>: <link=keyword.SpellShield><sprite name=SpellShield><style=Keyword>주문 방어막</style></link>을 얻습니다.",
+    "descriptionRaw": "사용: 다른 모든 아군의 해오름 및 어스름 효과를 발동시킵니다.\r\n해오름: 압도 효과를 얻습니다.\r\n어스름: 주문 방어막을 얻습니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"저 높이 불의 고리가 타오릅니다. 예견된 어둠 속에서 우리는 모두 평등합니다.\"\n- 루나리 소멸의 연설가",
+    "artistName": "Kudos Productions",
+    "name": "천체 교차의 전령",
+    "cardCode": "08MT027",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "서사급",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "새"
+    ],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08MT025.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08MT025-full.png"
+      }
+    ],
+    "regions": [
+      "타곤"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 7,
+    "health": 0,
+    "description": "<link=vocab.Titanic><style=Vocab>거대</style></link> 유닛이 <link=vocab.Behold><style=Vocab>등장</style></link>한 상태면 비용이 3 감소합니다.\r\n유닛 하나에게 피해를 7 입힙니다.",
+    "descriptionRaw": "거대 유닛이 등장한 상태면 비용이 3 감소합니다.\r\n유닛 하나에게 피해를 7 입힙니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"우왓, 이런... 저건 신경쓰지 마세요. 바위에 잔물결이 이는 것뿐이니까요. 작은 사고인 거죠. 아빠가 아니라... 아닙니다! 다들 이동하시죠!\"\n- 칩",
+    "artistName": "Polar Engine",
+    "name": "지진의 파편",
+    "cardCode": "08MT025",
+    "keywords": [
+      "집중"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "집중",
+    "spellSpeedRef": "Slow",
+    "rarity": "일반급",
+    "rarityRef": "Common",
+    "subtypes": [
+      "원소"
+    ],
+    "supertype": "",
+    "type": "주문",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  }
+]

@@ -1,0 +1,3197 @@
+[
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08BW008T1",
+      "08BW008T5",
+      "08BW008T3"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08BW008.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08BW008-full.png"
+      }
+    ],
+    "regions": [
+      "Bilgewater"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 3,
+    "description": "<link=vocab.Attack><style=Vocab>Attacca</style></link>: Crea 1 <link=card.create><style=AssociatedCard>Scia</style></link> nelle prime 6 carte del tuo mazzo.",
+    "descriptionRaw": "Attacca: Crea 1 Scia nelle prime 6 carte del tuo mazzo.",
+    "levelupDescription": "Hai pescato 16+ carte. <style=Variable></style>",
+    "levelupDescriptionRaw": "Hai pescato 16+ carte. ",
+    "flavorText": "A nord, una nuova sfida attende Nilah e il suo gruppo di cacciatori di mostri: una creatura chiamata Volibear, che minaccia di distruggere il Freljord che un tempo lo venerava. Nilah non vede l'ora di mettersi alla prova contro un mostro che tutti considerano un dio. Senza contare le creature inferiori che potrà eliminare nel frattempo. ",
+    "artistName": "Envar Studio",
+    "name": "Nilah",
+    "cardCode": "08BW008",
+    "keywords": [
+      "Insolente"
+    ],
+    "keywordRefs": [
+      "Brash"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Campione",
+    "rarityRef": "Champion",
+    "subtypes": [],
+    "supertype": "Campione",
+    "type": "Unità",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08BW008T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08BW008T3-full.png"
+      }
+    ],
+    "regions": [
+      "Bilgewater"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "Pesca 2 carte e conferisci loro <link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>Fugace</style></link>.",
+    "descriptionRaw": "Pesca 2 carte e conferisci loro Fugace.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Giubilo totale!\" - Nilah",
+    "artistName": "Polar Engine",
+    "name": "Scia",
+    "cardCode": "08BW008T3",
+    "keywords": [
+      "Raffica"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Raffica",
+    "spellSpeedRef": "Burst",
+    "rarity": "Nessuno",
+    "rarityRef": "None",
+    "subtypes": [
+      "ELEMENTALE"
+    ],
+    "supertype": "",
+    "type": "Incantesimo",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08BW008",
+      "08BW008T5",
+      "08BW008T3"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08BW008T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08BW008T1-full.png"
+      }
+    ],
+    "regions": [
+      "Bilgewater"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 3,
+    "cost": 2,
+    "health": 4,
+    "description": "<link=vocab.Attack><style=Vocab>Attacca</style></link>: Crea 1 <link=card.create><style=AssociatedCard>Scia</style></link> nelle prime 6 carte del tuo mazzo e infliggi 2 a tutti nemici e al Nexus nemico. Non possono scendere sotto 1 di Salute per questi danni.",
+    "descriptionRaw": "Attacca: Crea 1 Scia nelle prime 6 carte del tuo mazzo e infliggi 2 a tutti nemici e al Nexus nemico. Non possono scendere sotto 1 di Salute per questi danni.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Mostro! Sono Nilah del Settimo Strato! Sarà il mio nome a essere ricordato nella storia, non il tuo.\"",
+    "artistName": "Envar Studio",
+    "name": "Nilah",
+    "cardCode": "08BW008T1",
+    "keywords": [
+      "Insolente"
+    ],
+    "keywordRefs": [
+      "Brash"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Campione",
+    "rarityRef": "Champion",
+    "subtypes": [],
+    "supertype": "Campione",
+    "type": "Unità",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08BW008",
+      "08BW008T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08BW008T5.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08BW008T5-full.png"
+      }
+    ],
+    "regions": [
+      "Bilgewater"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "Infliggi 2 a un'unità. Non può scendere sotto 1 di Salute per questi danni.\r\nCrea 1 <link=card.level1><style=AssociatedCard>Nilah</style></link> nel tuo mazzo.",
+    "descriptionRaw": "Infliggi 2 a un'unità. Non può scendere sotto 1 di Salute per questi danni.\r\nCrea 1 Nilah nel tuo mazzo.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Godi della mia spada!\" - Nilah",
+    "artistName": "Polar Engine",
+    "name": "Lama informe di Nilah",
+    "cardCode": "08BW008T5",
+    "keywords": [
+      "Raffica"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Raffica",
+    "spellSpeedRef": "Burst",
+    "rarity": "Nessuno",
+    "rarityRef": "None",
+    "subtypes": [
+      "ELEMENTALE"
+    ],
+    "supertype": "Campione",
+    "type": "Incantesimo",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08BW032.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08BW032-full.png"
+      }
+    ],
+    "regions": [
+      "Bilgewater"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "Fornisci +1|+0 agli alleati per questo turno e cura gli alleati danneggiati di 2.",
+    "descriptionRaw": "Fornisci +1|+0 agli alleati per questo turno e cura gli alleati danneggiati di 2.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Gioia, straripante e senza fine!\" - Nilah",
+    "artistName": "Polar Engine",
+    "name": "La gioia travolgente",
+    "cardCode": "08BW032",
+    "keywords": [
+      "Raffica"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Raffica",
+    "spellSpeedRef": "Burst",
+    "rarity": "COMUNE",
+    "rarityRef": "Common",
+    "subtypes": [
+      "ELEMENTALE"
+    ],
+    "supertype": "",
+    "type": "Incantesimo",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08BW008"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08BW015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08BW015-full.png"
+      }
+    ],
+    "regions": [
+      "Bilgewater"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 3,
+    "cost": 6,
+    "health": 5,
+    "description": "Quando vengo evocato, pesca 1 <link=card.champ1><style=AssociatedCard>Nilah</style></link>.\r\nOgni turno, quando giochi la tua terza carta conferisci agli altri alleati +2|+0 e <link=keyword.Brash><sprite name=Brash><style=Keyword>Insolente</style></link> per questo turno. <style=Variable></style>\r\nQuando dovresti ottenere <link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>Fugace</style></link>, rivelami invece.",
+    "descriptionRaw": "Quando vengo evocato, pesca 1 Nilah.\r\nOgni turno, quando giochi la tua terza carta conferisci agli altri alleati +2|+0 e Insolente per questo turno. \r\nQuando dovresti ottenere Fugace, rivelami invece.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Dicono che quella strana nave sia la più veloce di Bilgewater. Anche la più agile. Ha un capitano stravagante, ma mi pare che sappia il fatto suo. Magari potrebbe insegnarci un paio di cose.\" - Locandiere di Bilgewater",
+    "artistName": "Kudos Productions",
+    "name": "La danzatrice delle maree",
+    "cardCode": "08BW015",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "EPICO",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unità",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08BW002.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08BW002-full.png"
+      }
+    ],
+    "regions": [
+      "Bilgewater"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "Infliggi 2 a un'unità. Non può scendere sotto 1 di Salute per questi danni.",
+    "descriptionRaw": "Infliggi 2 a un'unità. Non può scendere sotto 1 di Salute per questi danni.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"I mostri che si definiscono dei cadranno, ovunque si trovino.\" - Nilah",
+    "artistName": "Polar Engine",
+    "name": "Lama informe",
+    "cardCode": "08BW002",
+    "keywords": [
+      "Raffica"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Raffica",
+    "spellSpeedRef": "Burst",
+    "rarity": "COMUNE",
+    "rarityRef": "Common",
+    "subtypes": [
+      "ELEMENTALE"
+    ],
+    "supertype": "",
+    "type": "Incantesimo",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08BW025.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08BW025-full.png"
+      }
+    ],
+    "regions": [
+      "Bilgewater"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 2,
+    "cost": 1,
+    "health": 1,
+    "description": "Quando hai pescato 3+ carte in un turno in questa partita, conferiscimi +1|+1 e <link=keyword.Brash><sprite name=Brash><style=Keyword>Insolente</style></link>.",
+    "descriptionRaw": "Quando hai pescato 3+ carte in un turno in questa partita, conferiscimi +1|+1 e Insolente.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Ehi amico, che succede? Rilassati! Non c'è nulla nell'acqua che non possiamo affrontare!\" - Devoto della sfida",
+    "artistName": "Bubble Cat",
+    "name": "Vedetta maestra",
+    "cardCode": "08BW025",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "COMUNE",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unità",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08BW026.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08BW026-full.png"
+      }
+    ],
+    "regions": [
+      "Bilgewater"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 2,
+    "cost": 4,
+    "health": 1,
+    "description": "Quando vengo evocato, <link=vocab.Updraft><style=Vocab>ricircola</style></link> la tua mano per conferirmi +1|+1 per ogni carta <link=vocab.Updraft><style=Vocab>ricircolata</style></link> e pescane 2.",
+    "descriptionRaw": "Quando vengo evocato, ricircola la tua mano per conferirmi +1|+1 per ogni carta ricircolata e pescane 2.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Ma dai, stai facendo sul serio? Mi sembra di dovermi trattenere e non lo sopporto proprio!\"",
+    "artistName": "Kudos Productions",
+    "name": "Devoto della sfida",
+    "cardCode": "08BW026",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "RARA",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unità",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08BW028T1",
+      "08BW028T2",
+      "08BW028T3",
+      "08BW028T4"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08BW028.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08BW028-full.png"
+      }
+    ],
+    "regions": [
+      "Bilgewater",
+      "Piltover e Zaun"
+    ],
+    "regionRefs": [
+      "Bilgewater",
+      "PiltoverZaun"
+    ],
+    "attack": 1,
+    "cost": 3,
+    "health": 4,
+    "description": "<link=vocab.Play><style=Vocab>Gioca</style></link>: Scegli un incantesimo Esploratore da creare nella tua mano.",
+    "descriptionRaw": "Gioca: Scegli un incantesimo Esploratore da creare nella tua mano.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Esemplare strano. Molto blu. Occhi molto grandi. Inquietantemente grandi. Lo acquisisco per ulteriori studi.\" - Dal diario della spedizione della Gilda degli esploratori, divisione terre lontane, posizione: Piltover",
+    "artistName": "Caravan Studio",
+    "name": "Octoavventuriero",
+    "cardCode": "08BW028",
+    "keywords": [
+      "Elusione"
+    ],
+    "keywordRefs": [
+      "Elusive"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "RARA",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unità",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08BW028T4.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08BW028T4-full.png"
+      }
+    ],
+    "regions": [
+      "Targon"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "Cura un alleato o il tuo Nexus di 2.",
+    "descriptionRaw": "Cura un alleato o il tuo Nexus di 2.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Dammi un po' di, uhm... quella roba cioccolatosa che fai. È in assoluto la migliore della zona. Ah, la vorrei caldissima, per favore.\" - Pioniere istruito",
+    "artistName": "Polar Engine",
+    "name": "Rifocillamento dell'esploratore ",
+    "cardCode": "08BW028T4",
+    "keywords": [
+      "Concentrazione"
+    ],
+    "keywordRefs": [
+      "Focus"
+    ],
+    "spellSpeed": "Raffica",
+    "spellSpeedRef": "Burst",
+    "rarity": "Nessuno",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Incantesimo",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Solo comuni",
+      "Eternal",
+      "Carte con costo pari",
+      "Singolarità",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Deckbuilder_RulesFilters_Singleton",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08BW028T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08BW028T3-full.png"
+      }
+    ],
+    "regions": [
+      "Shurima"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "Disabilita le parole chiave positive di un nemico per questo turno e di nuovo al prossimo <link=vocab.RoundStart><style=Vocab>Inizio del turno</style></link>.",
+    "descriptionRaw": "Disabilita le parole chiave positive di un nemico per questo turno e di nuovo al prossimo Inizio del turno.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Era una piccola crepa. È diventata grande. E ora non c'è più acqua.\" - Octoavventuriero",
+    "artistName": "Polar Engine",
+    "name": "Abbaglio dell'esploratore",
+    "cardCode": "08BW028T3",
+    "keywords": [
+      "Concentrazione"
+    ],
+    "keywordRefs": [
+      "Focus"
+    ],
+    "spellSpeed": "Raffica",
+    "spellSpeedRef": "Burst",
+    "rarity": "Nessuno",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Incantesimo",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08BW028T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08BW028T1-full.png"
+      }
+    ],
+    "regions": [
+      "Isole Ombra"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "Distruggi l'equipaggiamento di un'unità.",
+    "descriptionRaw": "Distruggi l'equipaggiamento di un'unità.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Sembra che le Isole si siano abituate alla mia presenza.\" - Ispettore spettrale",
+    "artistName": "Polar Engine",
+    "name": "Malfunzionamento dell'esploratore",
+    "cardCode": "08BW028T1",
+    "keywords": [
+      "Lento"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "Lento",
+    "spellSpeedRef": "Slow",
+    "rarity": "Nessuno",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Incantesimo",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Solo comuni",
+      "Eternal",
+      "Carte con costo pari",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08BW028T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08BW028T2-full.png"
+      }
+    ],
+    "regions": [
+      "Noxus"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "Distruggi un Monumento.",
+    "descriptionRaw": "Distruggi un Monumento.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Un po' di usura sui manufatti non è un problema. Li fa sembrare più autentici.\" - Acquisitore armato",
+    "artistName": "Polar Engine",
+    "name": "Scavo dell'esploratore",
+    "cardCode": "08BW028T2",
+    "keywords": [
+      "Lento"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "Lento",
+    "spellSpeedRef": "Slow",
+    "rarity": "Nessuno",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Incantesimo",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Solo comuni",
+      "Eternal",
+      "Carte con costo pari",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08BW009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08BW009-full.png"
+      }
+    ],
+    "regions": [
+      "Bilgewater"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 5,
+    "cost": 7,
+    "health": 5,
+    "description": "<link=vocab.Play><style=Vocab>Gioca</style></link>: <link=vocab.Manifest><style=Vocab>Manifesta</style></link> due diversi incantesimi Elementali che hai giocato in questa partita. Costano 0 per questo turno.",
+    "descriptionRaw": "Gioca: Manifesta due diversi incantesimi Elementali che hai giocato in questa partita. Costano 0 per questo turno.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"La mente è un fiume. Il suo scorrere, nel tempo, può scavare le montagne. E come la mente, seguendo il flusso, può crescere ancora di più e raggiungere nuovi confini.\"",
+    "artistName": "Kudos Productions",
+    "name": "Timoniere rugoso",
+    "cardCode": "08BW009",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "RARA",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unità",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08BW010.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08BW010-full.png"
+      }
+    ],
+    "regions": [
+      "Bilgewater"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 5,
+    "health": 0,
+    "description": "Per il resto della partita, tutti i tuoi incantesimi e <link=keyword.Elemental Skill><sprite name=ElementalSkill><style=Keyword>abilità</style></link> Elementali infliggono 1 danno in più.",
+    "descriptionRaw": "Per il resto della partita, tutti i tuoi incantesimi e abilità Elementali infliggono 1 danno in più.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Nelle mani del saggio, l'acqua plasma ogni cosa.\" - Devoto della sapienza",
+    "artistName": "Polar Engine",
+    "name": "Diluvio",
+    "cardCode": "08BW010",
+    "keywords": [
+      "Lento"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "Lento",
+    "spellSpeedRef": "Slow",
+    "rarity": "EPICO",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "ELEMENTALE"
+    ],
+    "supertype": "",
+    "type": "Incantesimo",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08BW008T3"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08BW023.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08BW023-full.png"
+      }
+    ],
+    "regions": [
+      "Bilgewater"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 2,
+    "cost": 3,
+    "health": 2,
+    "description": "Quando vengo evocato, crea 1 <link=card.create><style=AssociatedCard>Scia</style></link> nelle prime 6 carte del tuo mazzo.",
+    "descriptionRaw": "Quando vengo evocato, crea 1 Scia nelle prime 6 carte del tuo mazzo.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Amici, il mondo si muove con noi! Le onde danzano sotto la chiglia, il vento gonfia le vele, gli uccelli si fanno trasportare dalla brezza. Unitevi a me nella vostra più grande impresa, e gioite!\"",
+    "artistName": "Envar Studio",
+    "name": "Vikrash l'esuberante",
+    "cardCode": "08BW023",
+    "keywords": [
+      "Armonia",
+      "Elusione"
+    ],
+    "keywordRefs": [
+      "Attune",
+      "Elusive"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "EPICO",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unità",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08PZ026T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08PZ007.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08PZ007-full.png"
+      }
+    ],
+    "regions": [
+      "Piltover e Zaun"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 0,
+    "cost": 5,
+    "health": 0,
+    "description": "Evoca 1 <link=card.summon><style=AssociatedCard>Rondine della burrasca</style></link> e conferiscigli +1|+1 per ogni altro incantesimo Elementale e <link=keyword.Elemental Skill><sprite name=ElementalSkill><style=Keyword>abilità</style></link> che hai giocato in questa partita. <style=Variable></style>\r\nPesca 1 carta.",
+    "descriptionRaw": "Evoca 1 Rondine della burrasca e conferiscigli +1|+1 per ogni altro incantesimo Elementale e abilità che hai giocato in questa partita. \r\nPesca 1 carta.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Quando si raduna uno stormo di rondini della burrasca, di sicuro sta arrivando una tempesta.",
+    "artistName": "Polar Engine",
+    "name": "Stormo della burrasca",
+    "cardCode": "08PZ007",
+    "keywords": [
+      "Lento"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "Lento",
+    "spellSpeedRef": "Slow",
+    "rarity": "RARA",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "ELEMENTALE"
+    ],
+    "supertype": "",
+    "type": "Incantesimo",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08PZ005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08PZ005-full.png"
+      }
+    ],
+    "regions": [
+      "Piltover e Zaun"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 0,
+    "cost": 4,
+    "health": 0,
+    "description": "Fornisci +2|+0 a un alleato per questo turno.\r\nPesca 2 carte.",
+    "descriptionRaw": "Fornisci +2|+0 a un alleato per questo turno.\r\nPesca 2 carte.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Non temere! La tempesta infuria intorno a te, ma non ti farà del male.\" - Janna",
+    "artistName": "Polar Engine",
+    "name": "Occhio del ciclone",
+    "cardCode": "08PZ005",
+    "keywords": [
+      "Raffica"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Raffica",
+    "spellSpeedRef": "Burst",
+    "rarity": "COMUNE",
+    "rarityRef": "Common",
+    "subtypes": [
+      "ELEMENTALE"
+    ],
+    "supertype": "",
+    "type": "Incantesimo",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08PZ019.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08PZ019-full.png"
+      }
+    ],
+    "regions": [
+      "Piltover e Zaun"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 0,
+    "cost": 5,
+    "health": 0,
+    "description": "Se hai pescato 3+ carte in questo turno, costo 2 in meno.\r\nInfliggi 3 a un'unità e 2 al Nexus nemico.",
+    "descriptionRaw": "Se hai pescato 3+ carte in questo turno, costo 2 in meno.\r\nInfliggi 3 a un'unità e 2 al Nexus nemico.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"La tempesta è al mio comando.\" - Janna",
+    "artistName": "Polar Engine",
+    "name": "Tornado divino",
+    "cardCode": "08PZ019",
+    "keywords": [
+      "Veloce"
+    ],
+    "keywordRefs": [
+      "Fast"
+    ],
+    "spellSpeed": "Veloce",
+    "spellSpeedRef": "Fast",
+    "rarity": "RARA",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "ELEMENTALE"
+    ],
+    "supertype": "",
+    "type": "Incantesimo",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08PZ001T3",
+      "08PZ001T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08PZ001.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08PZ001-full.png"
+      }
+    ],
+    "regions": [
+      "Piltover e Zaun"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 2,
+    "cost": 4,
+    "health": 4,
+    "description": "<link=vocab.Play><style=Vocab>Gioca</style></link>: <link=vocab.Updraft><style=Vocab>Ricircola</style></link> 2 carte per pescarne 2 al prossimo <link=vocab.RoundStart><style=Vocab>Inizio del turno</style></link>.\r\nOgni turno, le prime 3 volte che peschi una carta, riduci di 1 il suo costo per questo turno. <style=Variable></style>",
+    "descriptionRaw": "Gioca: Ricircola 2 carte per pescarne 2 al prossimo Inizio del turno.\r\nOgni turno, le prime 3 volte che peschi una carta, riduci di 1 il suo costo per questo turno. ",
+    "levelupDescription": "Ti ho visto giocare 6 carte a costo ridotto.<style=Variable></style>",
+    "levelupDescriptionRaw": "Ti ho visto giocare 6 carte a costo ridotto.",
+    "flavorText": "\"A Zaun si venera Janna più che in qualunque altro posto. Dopotutto è lei che ha salvato le povere anime che Piltover aveva lasciato a morire. Già... se ci sono delle risposte, le troverò qui.\" - Marinaio del vento",
+    "artistName": "Envar Studio",
+    "name": "Janna",
+    "cardCode": "08PZ001",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Campione",
+    "rarityRef": "Champion",
+    "subtypes": [],
+    "supertype": "Campione",
+    "type": "Unità",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08PZ001",
+      "08PZ001T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08PZ001T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08PZ001T3-full.png"
+      }
+    ],
+    "regions": [
+      "Piltover e Zaun"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 3,
+    "cost": 4,
+    "health": 5,
+    "description": "<link=vocab.RoundStart><style=Vocab>Inizio del turno</style></link>: Pesca 1 carta.\r\nQuando peschi una carta, riduci di 1 il suo costo per questo turno.",
+    "descriptionRaw": "Inizio del turno: Pesca 1 carta.\r\nQuando peschi una carta, riduci di 1 il suo costo per questo turno.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Non un altro passo! Se infrangerai la mia protezione, non avrai più respiro e la tua stessa essenza sarà spazzata via dal vento!\"",
+    "artistName": "Envar Studio",
+    "name": "Janna",
+    "cardCode": "08PZ001T3",
+    "keywords": [
+      "Elusione"
+    ],
+    "keywordRefs": [
+      "Elusive"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Campione",
+    "rarityRef": "Champion",
+    "subtypes": [],
+    "supertype": "Campione",
+    "type": "Unità",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08PZ001T3",
+      "08PZ001"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08PZ001T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08PZ001T1-full.png"
+      }
+    ],
+    "regions": [
+      "Piltover e Zaun"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 0,
+    "cost": 4,
+    "health": 0,
+    "description": "Fornisci +2|+0 a un alleato per questo turno.\r\nPesca 2 carte.\r\nCrea 1 <link=card.level1><style=AssociatedCard>Janna</style></link> nel tuo mazzo.",
+    "descriptionRaw": "Fornisci +2|+0 a un alleato per questo turno.\r\nPesca 2 carte.\r\nCrea 1 Janna nel tuo mazzo.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Non temere! La tempesta infuria intorno a te, ma non ti farà del male.\" - Janna",
+    "artistName": "Polar Engine",
+    "name": "Occhio del ciclone di Janna",
+    "cardCode": "08PZ001T1",
+    "keywords": [
+      "Raffica"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Raffica",
+    "spellSpeedRef": "Burst",
+    "rarity": "Nessuno",
+    "rarityRef": "None",
+    "subtypes": [
+      "ELEMENTALE"
+    ],
+    "supertype": "Campione",
+    "type": "Incantesimo",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08PZ026T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08PZ026.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08PZ026-full.png"
+      }
+    ],
+    "regions": [
+      "Piltover e Zaun"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "Evoca 1 <link=card.summon><style=AssociatedCard>Rondine della burrasca</style></link>.",
+    "descriptionRaw": "Evoca 1 Rondine della burrasca.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Tutti i figli del vento rispondono al mio richiamo.\" - Janna",
+    "artistName": "Polar Engine",
+    "name": "Richiamo della burrasca",
+    "cardCode": "08PZ026",
+    "keywords": [
+      "Lento"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "Lento",
+    "spellSpeedRef": "Slow",
+    "rarity": "COMUNE",
+    "rarityRef": "Common",
+    "subtypes": [
+      "ELEMENTALE"
+    ],
+    "supertype": "",
+    "type": "Incantesimo",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08PZ006.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08PZ006-full.png"
+      }
+    ],
+    "regions": [
+      "Piltover e Zaun"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 4,
+    "cost": 6,
+    "health": 4,
+    "description": "Quando giochi un incantesimo Elementale o un'<link=keyword.Elemental Skill><sprite name=ElementalSkill><style=Keyword>abilità</style></link>, giocalo di nuovo sugli stessi bersagli.",
+    "descriptionRaw": "Quando giochi un incantesimo Elementale o un'abilità, giocalo di nuovo sugli stessi bersagli.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Avanti, Iascylla! Sei davvero vecchia, se Ashlesh conosce il tuo nome! Ma vecchia o giovane, bella o brutta, non importa. Per un mostro non c'è onore più grande che cadere in mare aperto, sotto la mia lama.\" - Nilah",
+    "artistName": "Envar Studio",
+    "name": "Iascylla, Polena degli abissi",
+    "cardCode": "08PZ006",
+    "keywords": [
+      "Missing Translation"
+    ],
+    "keywordRefs": [
+      "AuraVisualFakeKeyword"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "EPICO",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unità",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08PZ018.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08PZ018-full.png"
+      }
+    ],
+    "regions": [
+      "Piltover e Zaun"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 3,
+    "cost": 2,
+    "health": 1,
+    "description": "Se hai pescato 3+ carte in questo turno, costo 2 in meno.",
+    "descriptionRaw": "Se hai pescato 3+ carte in questo turno, costo 2 in meno.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Sì, avevo quello che volevo. Ma l'ho ottenuto prendendo, e prendere lascia un uomo vuoto. La prima cosa che ho trovato da seguire è stata il vento, quindi ora sono qui, sperando che lei mi conduca su una strada migliore.\"",
+    "artistName": "Kudos Productions",
+    "name": "Marinaio del vento",
+    "cardCode": "08PZ018",
+    "keywords": [
+      "Attacco rapido"
+    ],
+    "keywordRefs": [
+      "QuickStrike"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "COMUNE",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unità",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08PZ008.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08PZ008-full.png"
+      }
+    ],
+    "regions": [
+      "Piltover e Zaun"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 3,
+    "description": "<link=vocab.Play><style=Vocab>Gioca</style></link>: <link=vocab.Updraft><style=Vocab>Ricircola</style></link> 1 carta per pescarne 1 o ripristinare il tuo mana incantesimo.",
+    "descriptionRaw": "Gioca: Ricircola 1 carta per pescarne 1 o ripristinare il tuo mana incantesimo.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Convinta di essere stata salvata da piccola dallo spirito del vento, Maryam ha predicato le virtù di Janna dalla sua patria di Shurima fino a Zaun. Ora che è la matriarca del tempio di Zaun, si dedica a portare la buona novella di Janna ai giovani e agli oppressi.",
+    "artistName": "Envar Studio",
+    "name": "Maryam, la custode del tempio",
+    "cardCode": "08PZ008",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "EPICO",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unità",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08PZ026T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08PZ026T1-full.png"
+      }
+    ],
+    "regions": [
+      "Piltover e Zaun"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 2,
+    "cost": 1,
+    "health": 1,
+    "description": "",
+    "descriptionRaw": "",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Queste rondini della burrasca sono creature volubili. A volte sembrano fatte interamente di acqua! Comunque, ho imparato a mie spese che è meglio non farle arrabbiare...\" - Avventuriera Intrepida",
+    "artistName": "Bubble Cat",
+    "name": "Rondine della burrasca",
+    "cardCode": "08PZ026T1",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Nessuno",
+    "rarityRef": "None",
+    "subtypes": [
+      "VOLATILE"
+    ],
+    "supertype": "",
+    "type": "Unità",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08PZ009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08PZ009-full.png"
+      }
+    ],
+    "regions": [
+      "Piltover e Zaun"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 0,
+    "cost": 5,
+    "health": 0,
+    "description": "<link=vocab.RoundEnd><style=Vocab>Fine del turno</style></link>: <link=vocab.Updraft><style=Vocab>Ricircola</style></link> la tua mano. \r\n<link=vocab.RoundStart><style=Vocab>Inizio del turno</style></link>: Pesca altrettante carte più 1.",
+    "descriptionRaw": "Fine del turno: Ricircola la tua mano. \r\nInizio del turno: Pesca altrettante carte più 1.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Molto è andato perduto nel disastroso crollo che ha separato Zaun da Piltover. Janna ha perso il suo tempio tra le onde, ma ha salvato le persone che pregavano al suo interno.",
+    "artistName": "Envar Studio",
+    "name": "Tempio sommerso",
+    "cardCode": "08PZ009",
+    "keywords": [
+      "Monumento"
+    ],
+    "keywordRefs": [
+      "LandmarkVisualOnly"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "EPICO",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Monumento",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08PZ002.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08PZ002-full.png"
+      }
+    ],
+    "regions": [
+      "Piltover e Zaun"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "Infliggi 2 a un'unità.\r\nAumenta i miei danni di 1 per ogni altra carta che hai giocato in questo turno, fino a 3 volte. <style=Variable></style>",
+    "descriptionRaw": "Infliggi 2 a un'unità.\r\nAumenta i miei danni di 1 per ogni altra carta che hai giocato in questo turno, fino a 3 volte. ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Venti ululanti gridano la mia furia!\" - Janna",
+    "artistName": "Polar Engine",
+    "name": "Tempesta ululante",
+    "cardCode": "08PZ002",
+    "keywords": [
+      "Lento"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "Lento",
+    "spellSpeedRef": "Slow",
+    "rarity": "RARA",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "ELEMENTALE"
+    ],
+    "supertype": "",
+    "type": "Incantesimo",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08PZ008T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08PZ008T3-full.png"
+      }
+    ],
+    "regions": [
+      "Piltover e Zaun"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 3,
+    "description": "<link=vocab.Play><style=Vocab>Gioca</style></link>: <link=vocab.Updraft><style=Vocab>Ricircola</style></link> 1 carta per ripristinare il tuo mana incantesimo.",
+    "descriptionRaw": "Gioca: Ricircola 1 carta per ripristinare il tuo mana incantesimo.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Convinta di essere stata salvata da piccola dallo spirito del vento, Maryam ha predicato le virtù di Janna dalla sua patria di Shurima fino a Zaun. Ora che è la matriarca del tempio di Zaun, si dedica a portare la buona novella di Janna ai giovani e agli oppressi.",
+    "artistName": "Envar Studio",
+    "name": "Maryam, la custode del tempio",
+    "cardCode": "08PZ008T3",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Nessuno",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unità",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08PZ008T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08PZ008T2-full.png"
+      }
+    ],
+    "regions": [
+      "Piltover e Zaun"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 3,
+    "description": "<link=vocab.Play><style=Vocab>Gioca</style></link>: <link=vocab.Updraft><style=Vocab>Ricircola</style></link> 1 carta per pescarne 1.",
+    "descriptionRaw": "Gioca: Ricircola 1 carta per pescarne 1.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Convinta di essere stata salvata da piccola dallo spirito del vento, Maryam ha predicato le virtù di Janna dalla sua patria di Shurima fino a Zaun. Ora che è la matriarca del tempio di Zaun, si dedica a portare la buona novella di Janna ai giovani e agli oppressi.",
+    "artistName": "Envar Studio",
+    "name": "Maryam, la custode del tempio",
+    "cardCode": "08PZ008T2",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Nessuno",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unità",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08PZ020.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08PZ020-full.png"
+      }
+    ],
+    "regions": [
+      "Piltover e Zaun"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 3,
+    "cost": 5,
+    "health": 2,
+    "description": "Se hai pescato 3+ carte in questo turno, costo 2 in meno.\r\nQuando vengo evocato, pesca 2 carte al prossimo <link=vocab.RoundStart><style=Vocab>Inizio del turno</style></link>.",
+    "descriptionRaw": "Se hai pescato 3+ carte in questo turno, costo 2 in meno.\r\nQuando vengo evocato, pesca 2 carte al prossimo Inizio del turno.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Caro Zefiro. Discendi dalle nuvole e posati un po' sulla mia spalla, che ne dici?\" - Janna",
+    "artistName": "Envar Studio",
+    "name": "Vento glorioso",
+    "cardCode": "08PZ020",
+    "keywords": [
+      "Attacco rapido"
+    ],
+    "keywordRefs": [
+      "QuickStrike"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "RARA",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unità",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08FR002T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08FR012.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08FR012-full.png"
+      }
+    ],
+    "regions": [
+      "Freljord"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "Pesca 1 carta.\r\nEvoca 1 <link=card.summon><style=AssociatedCard>Sigillo della tempesta</style></link>.",
+    "descriptionRaw": "Pesca 1 carta.\r\nEvoca 1 Sigillo della tempesta.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"In nome di Valhir, portiamo questa offerta...\" - Profeta di Valhir",
+    "artistName": "Polar Engine",
+    "name": "Invocazione del tuono",
+    "cardCode": "08FR012",
+    "keywords": [
+      "Lento"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "Lento",
+    "spellSpeedRef": "Slow",
+    "rarity": "COMUNE",
+    "rarityRef": "Common",
+    "subtypes": [
+      "ELEMENTALE"
+    ],
+    "supertype": "",
+    "type": "Incantesimo",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08FR019.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08FR019-full.png"
+      }
+    ],
+    "regions": [
+      "Freljord"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "Fornisci +1|+3 a un alleato per questo turno.",
+    "descriptionRaw": "Fornisci +1|+3 a un alleato per questo turno.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Avvolto dalle nubi e circondato dai fulmini, il dio orso resta intoccabile nel cuore della tempesta.",
+    "artistName": "Polar Engine",
+    "name": "Spaccacielo",
+    "cardCode": "08FR019",
+    "keywords": [
+      "Raffica"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Raffica",
+    "spellSpeedRef": "Burst",
+    "rarity": "COMUNE",
+    "rarityRef": "Common",
+    "subtypes": [
+      "ELEMENTALE"
+    ],
+    "supertype": "",
+    "type": "Incantesimo",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08FR001T3",
+      "08FR001T1",
+      "08FR001T2"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08FR001.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08FR001-full.png"
+      }
+    ],
+    "regions": [
+      "Freljord"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 10,
+    "cost": 9,
+    "health": 10,
+    "description": "<link=keyword.Elemental Skill><sprite name=ElementalSkill><style=Keyword>Gioca</style></link>: Gioca <link=card.skill><style=AssociatedCard>Tempesta implacabile</style></link> 3 volte. Ognuno bersaglia un nemico casuale diverso. Se non ce ne sono, bersaglia il Nexus nemico.",
+    "descriptionRaw": "Gioca: Gioca Tempesta implacabile 3 volte. Ognuno bersaglia un nemico casuale diverso. Se non ce ne sono, bersaglia il Nexus nemico.",
+    "levelupDescription": "<link=vocab.RoundEnd><style=Vocab>Fine del turno</style></link>: Hai inflitto 50+ danni.<style=Variable></style>",
+    "levelupDescriptionRaw": "Fine del turno: Hai inflitto 50+ danni.",
+    "flavorText": "\"Inginocchiati mortale, e potrei risparmiarti! Sei debole, ma forse potresti comunque servirmi. Inginocchiati, o scompari dalla faccia della terra!\"",
+    "artistName": "Envar Studio",
+    "name": "Volibear",
+    "cardCode": "08FR001",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Campione",
+    "rarityRef": "Champion",
+    "subtypes": [],
+    "supertype": "Campione",
+    "type": "Unità",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08FR001T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08FR001T3-full.png"
+      }
+    ],
+    "regions": [
+      "Freljord"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "Infliggi 4 a un'unità. Se non c'è più o è morta, infliggi invece 2 al Nexus nemico.",
+    "descriptionRaw": "Infliggi 4 a un'unità. Se non c'è più o è morta, infliggi invece 2 al Nexus nemico.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Con questi artigli, dilanio il mondo!\" - Volibear",
+    "artistName": "Polar Engine",
+    "name": "Tempesta implacabile",
+    "cardCode": "08FR001T3",
+    "keywords": [
+      "Abilità Elementale"
+    ],
+    "keywordRefs": [
+      "ElementalSkill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Nessuno",
+    "rarityRef": "None",
+    "subtypes": [
+      "ELEMENTALE"
+    ],
+    "supertype": "",
+    "type": "Abilità",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08FR001",
+      "08FR001T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08FR001T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08FR001T2-full.png"
+      }
+    ],
+    "regions": [
+      "Freljord"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 0,
+    "cost": 8,
+    "health": 0,
+    "description": "Infliggi 4 a TUTTE le unità tranne agli alleati <link=vocab.Titanic><style=Vocab>Titanici</style></link>.\r\nCrea 1 <link=card.level1><style=AssociatedCard>Volibear</style></link> nel tuo mazzo.",
+    "descriptionRaw": "Infliggi 4 a TUTTE le unità tranne agli alleati Titanici.\r\nCrea 1 Volibear nel tuo mazzo.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Che la tundra si tinga di rosso!\" - Volibear",
+    "artistName": "Polar Engine",
+    "name": "Incarna della tempesta di Volibear",
+    "cardCode": "08FR001T2",
+    "keywords": [
+      "Lento"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "Lento",
+    "spellSpeedRef": "Slow",
+    "rarity": "Nessuno",
+    "rarityRef": "None",
+    "subtypes": [
+      "ELEMENTALE"
+    ],
+    "supertype": "Campione",
+    "type": "Incantesimo",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08FR001",
+      "08FR001T2",
+      "08FR001T3"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08FR001T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08FR001T1-full.png"
+      }
+    ],
+    "regions": [
+      "Freljord"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 11,
+    "cost": 9,
+    "health": 11,
+    "description": "<link=keyword.Elemental Skill><sprite name=ElementalSkill><style=Keyword>Gioca</style></link> o <link=vocab.Attack><style=Vocab>Attacca</style></link>: Gioca <link=card.skill><style=AssociatedCard>Tempesta implacabile</style></link> 3 volte Ognuno bersaglia un nemico casuale diverso. Se non ce ne sono, bersaglia il Nexus nemico.\r\nGli altri alleati hanno <link=keyword.Overwhelm><sprite name=Overwhelm><style=Keyword>Sopraffare</style></link>.",
+    "descriptionRaw": "Gioca o Attacca: Gioca Tempesta implacabile 3 volte Ognuno bersaglia un nemico casuale diverso. Se non ce ne sono, bersaglia il Nexus nemico.\r\nGli altri alleati hanno Sopraffare.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Osi insultarmi con una sfida? Ragazzina di una terra lontana. Io sono il cuore della tundra! Io sono la tempesta, e ti prometto una morte insignificante!\"",
+    "artistName": "Envar Studio",
+    "name": "Volibear",
+    "cardCode": "08FR001T1",
+    "keywords": [
+      "Sopraffare",
+      "Missing Translation"
+    ],
+    "keywordRefs": [
+      "Overwhelm",
+      "AuraVisualFakeKeyword"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Campione",
+    "rarityRef": "Champion",
+    "subtypes": [],
+    "supertype": "Campione",
+    "type": "Unità",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08FR018.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08FR018-full.png"
+      }
+    ],
+    "regions": [
+      "Freljord"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 0,
+    "cost": 16,
+    "health": 0,
+    "description": "Evoca 2 seguaci <link=vocab.Titanic><style=Vocab>Titanici</style></link> casuali.\r\nCosto 1 in meno per ogni incantesimo Elementale o <link=keyword.Elemental Skill><sprite name=ElementalSkill><style=Keyword>abilità</style></link> che hai giocato in questa partita <nobr>(massimo 10).",
+    "descriptionRaw": "Evoca 2 seguaci Titanici casuali.\r\nCosto 1 in meno per ogni incantesimo Elementale o abilità che hai giocato in questa partita (massimo 10).",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Con questo corpo ho scolpito le montagne. Con il fuoco delle sue fauci, ho scavato migliaia di fiordi.\" - Volibear",
+    "artistName": "Polar Engine",
+    "name": "Scontro di giganti",
+    "cardCode": "08FR018",
+    "keywords": [
+      "Lento"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "Lento",
+    "spellSpeedRef": "Slow",
+    "rarity": "EPICO",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "ELEMENTALE"
+    ],
+    "supertype": "",
+    "type": "Incantesimo",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08FR011.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08FR011-full.png"
+      }
+    ],
+    "regions": [
+      "Freljord"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 3,
+    "cost": 4,
+    "health": 2,
+    "description": "Quando giochi un incantesimo Elementale o un'<link=keyword.Elemental Skill><sprite name=ElementalSkill><style=Keyword>abilità</style></link>, <link=vocab.Forge><style=Vocab>Forgiami</style></link>.",
+    "descriptionRaw": "Quando giochi un incantesimo Elementale o un'abilità, Forgiami.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Il signore della fucina ha promesso un cambiamento, e invece non ha fatto nulla. Coloro che venerano un dio debole, sono deboli anch'essi. Solo grazie alla potenza di Valhir raggiungeremo la gloria!\"",
+    "artistName": "Envar Studio",
+    "name": "Caprino evocatore della fiamma",
+    "cardCode": "08FR011",
+    "keywords": [
+      "Tenacia"
+    ],
+    "keywordRefs": [
+      "Tough"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "RARA",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unità",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08FR008.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08FR008-full.png"
+      }
+    ],
+    "regions": [
+      "Freljord"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 0,
+    "cost": 8,
+    "health": 0,
+    "description": "Infliggi 4 a TUTTE le unità tranne agli alleati <link=vocab.Titanic><style=Vocab>Titanici</style></link>.",
+    "descriptionRaw": "Infliggi 4 a TUTTE le unità tranne agli alleati Titanici.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Che la tundra si tinga di rosso!\" - Volibear",
+    "artistName": "Polar Engine",
+    "name": "Incarna della tempesta",
+    "cardCode": "08FR008",
+    "keywords": [
+      "Lento"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "Lento",
+    "spellSpeedRef": "Slow",
+    "rarity": "RARA",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "ELEMENTALE"
+    ],
+    "supertype": "",
+    "type": "Incantesimo",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08FR002T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08FR015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08FR015-full.png"
+      }
+    ],
+    "regions": [
+      "Freljord"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 8,
+    "cost": 7,
+    "health": 6,
+    "description": "<link=vocab.Play><style=Vocab>Gioca</style></link>: Evoca 3 <link=card.summon><style=AssociatedCard>Sigilli della tempesta</style></link>.",
+    "descriptionRaw": "Gioca: Evoca 3 Sigilli della tempesta.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Anche se in pochi lo venerano ancora, tutti gli abitanti del Freljord conoscono la storia della grande battaglia di Volibear contro Rhond. Molto prima che un mortale mettesse piede nel gelido nord, questo scontro devastante plasmò i crinali e i fiumi della tundra stessa.",
+    "artistName": "Envar Studio",
+    "name": "Rhond, il serpente magmatico",
+    "cardCode": "08FR015",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "EPICO",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unità",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08FR002T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08FR002.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08FR002-full.png"
+      }
+    ],
+    "regions": [
+      "Freljord"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 2,
+    "cost": 3,
+    "health": 3,
+    "description": "Quando vengo evocato, evoca 1 <link=card.summon><style=AssociatedCard>Sigillo della tempesta</style></link>.",
+    "descriptionRaw": "Quando vengo evocato, evoca 1 Sigillo della tempesta.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Vedo ciò che gli altri non vedono: la tempesta che scuoterà la montagna, le ossa della terra che si frantumano. Il vecchio Freljord si rinnoverà nel sangue... è solo una questione di tempo.\"",
+    "artistName": "Envar Studio",
+    "name": "Profeta di Valhir",
+    "cardCode": "08FR002",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "COMUNE",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unità",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08FR002T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08FR002T1-full.png"
+      }
+    ],
+    "regions": [
+      "Freljord"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "Carica di Sigillo della tempesta.\r\nGli alleati <link=vocab.Titanic><style=Vocab>Titanici</style></link> costano <style=Variable>1</style> in meno. Distruggimi quando giochi un alleato <link=vocab.Titanic><style=Vocab>Titanico</style></link>.",
+    "descriptionRaw": "Carica di Sigillo della tempesta.\r\nGli alleati Titanici costano 1 in meno. Distruggimi quando giochi un alleato Titanico.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "In un pericoloso passo montano, un sigillo pende sospeso, ardendo nella notte. Per arrivare a questo punto è servito molto sangue e, con segni del genere, Volibear mostra sia la sua approvazione, sia il desiderio di averne di più...",
+    "artistName": "Envar Studio",
+    "name": "Sigillo della tempesta",
+    "cardCode": "08FR002T1",
+    "keywords": [
+      "Monumento",
+      "Missing Translation"
+    ],
+    "keywordRefs": [
+      "LandmarkVisualOnly",
+      "AuraVisualFakeKeyword"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Nessuno",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Monumento",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08FR002T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08FR003.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08FR003-full.png"
+      }
+    ],
+    "regions": [
+      "Freljord"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 5,
+    "cost": 6,
+    "health": 3,
+    "description": "Quando giochi un incantesimo o un'<link=keyword.Skill><sprite name=SkillMark><style=Keyword>abilità</style></link>, evoca 1 <link=card.summon><style=AssociatedCard>Sigillo della tempesta</style></link>.",
+    "descriptionRaw": "Quando giochi un incantesimo o un'abilità, evoca 1 Sigillo della tempesta.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "A volte i seguaci di Volibear si perdono talmente tanto nel loro fanatismo che iniziano ad assumere degli aspetti dell'orso. Nulla può opporsi alla volontà di Valhir, neanche coloro che, un tempo, gli Ursidi chiamavano compatrioti.",
+    "artistName": "Alessandro Poli",
+    "name": "Urside Berserker",
+    "cardCode": "08FR003",
+    "keywords": [
+      "Ispirazione"
+    ],
+    "keywordRefs": [
+      "Imbue"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "RARA",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unità",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08BW028T1",
+      "08BW028T2",
+      "08BW028T3",
+      "08BW028T4"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08DE006.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08DE006-full.png"
+      }
+    ],
+    "regions": [
+      "Demacia",
+      "Freljord"
+    ],
+    "regionRefs": [
+      "Demacia",
+      "Freljord"
+    ],
+    "attack": 2,
+    "cost": 3,
+    "health": 3,
+    "description": "<link=vocab.Play><style=Vocab>Gioca</style></link>: Scegli un incantesimo Esploratore da creare nella tua mano.",
+    "descriptionRaw": "Gioca: Scegli un incantesimo Esploratore da creare nella tua mano.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Fa freddo. Ho freddo. È tutto freddo, sempre. Ci sono dei posti in cui semplicemente non si può vivere. La prossima volta mandatemi in un posto caldo, vi prego.\" - Dal diario della spedizione della Gilda degli esploratori, divisione terre lontane, posizione: Freljord",
+    "artistName": "Envar Studio",
+    "name": "Pioniere istruito",
+    "cardCode": "08DE006",
+    "keywords": [
+      "Sfidante"
+    ],
+    "keywordRefs": [
+      "Challenger"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "RARA",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unità",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08DE010.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08DE010-full.png"
+      }
+    ],
+    "regions": [
+      "Demacia"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "Fornisci +0|+2 a un alleato.\r\nQuell'alleato e un nemico <link=vocab.Strike><style=Vocab>si colpiscono</style></link> a vicenda.",
+    "descriptionRaw": "Fornisci +0|+2 a un alleato.\r\nQuell'alleato e un nemico si colpiscono a vicenda.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"En garde, amico mio! Di certo non hai paura di un duello tra gentiluomini?\" - Chevalier dei Laurent",
+    "artistName": "Kudos Productions",
+    "name": "Duello tra gentiluomini",
+    "cardCode": "08DE010",
+    "keywords": [
+      "Veloce"
+    ],
+    "keywordRefs": [
+      "Fast"
+    ],
+    "spellSpeed": "Veloce",
+    "spellSpeedRef": "Fast",
+    "rarity": "COMUNE",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Incantesimo",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08NX011.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08NX011-full.png"
+      }
+    ],
+    "regions": [
+      "Noxus"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "Infliggi 1 al Nexus nemico. Infliggi 1 in più per ogni altro <link=card.selfref><style=AssociatedCard>Incendio</style></link> che hai giocato. Crea 1 <link=card.selfref><style=AssociatedCard>Incendio</style></link> nel tuo mazzo.",
+    "descriptionRaw": "Infliggi 1 al Nexus nemico. Infliggi 1 in più per ogni altro Incendio che hai giocato. Crea 1 Incendio nel tuo mazzo.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Cenere, cenere...\" - Annie",
+    "artistName": "Kudos Productions",
+    "name": "Incendio",
+    "cardCode": "08NX011",
+    "keywords": [
+      "Lento"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "Lento",
+    "spellSpeedRef": "Slow",
+    "rarity": "COMUNE",
+    "rarityRef": "Common",
+    "subtypes": [
+      "ELEMENTALE"
+    ],
+    "supertype": "",
+    "type": "Incantesimo",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08NX014.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08NX014-full.png"
+      }
+    ],
+    "regions": [
+      "Noxus"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 5,
+    "cost": 5,
+    "health": 5,
+    "description": "Gli effetti di <link=vocab.Attack><style=Vocab>Attacco</style></link> e <link=keyword.Support><style=Keyword>Supporto</style></link> alleati si attivano una volta in più.",
+    "descriptionRaw": "Gli effetti di Attacco e Supporto alleati si attivano una volta in più.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Il corso di disciplina personale della direttrice Telsi è pieno di compiti difficilissimi, bacchettate sulle mani e note disciplinari. È sempre stato obbligatorio per gli studenti del Conservatorio Ravenbloom... altrimenti non si iscriverebbe nessuno.",
+    "artistName": "Envar Studio",
+    "name": "Direttrice Telsi",
+    "cardCode": "08NX014",
+    "keywords": [
+      "Missing Translation"
+    ],
+    "keywordRefs": [
+      "AuraVisualFakeKeyword"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "EPICO",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unità",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08BW028T1",
+      "08BW028T2",
+      "08BW028T3",
+      "08BW028T4"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08NX012.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08NX012-full.png"
+      }
+    ],
+    "regions": [
+      "Noxus",
+      "Shurima"
+    ],
+    "regionRefs": [
+      "Noxus",
+      "Shurima"
+    ],
+    "attack": 3,
+    "cost": 2,
+    "health": 1,
+    "description": "<link=vocab.Play><style=Vocab>Gioca</style></link>: Scegli un incantesimo Esploratore da creare nella tua mano.",
+    "descriptionRaw": "Gioca: Scegli un incantesimo Esploratore da creare nella tua mano.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Si direbbe che scavare nel deserto sia più facile... e invece no! Se passa abbastanza tempo, la sabbia si trasforma in pietra. Torno a richiedere fondi per dei nuovi attrezzi.\" - Dal diario della spedizione della Gilda degli esploratori, divisione terre lontane, posizione: Shurima",
+    "artistName": "Kudos Productions",
+    "name": "Acquisitore armato",
+    "cardCode": "08NX012",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "RARA",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unità",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU001T3"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08SI021.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08SI021-full.png"
+      }
+    ],
+    "regions": [
+      "Isole Ombra"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 3,
+    "description": "Quando muore un altro alleato, o <nobr><link=keyword.Last Breath><sprite name=LastBreath><style=Keyword>Ultimo respiro</style></link>:</nobr> Piazza 4 <link=card.chime><style=AssociatedCard>Campanelle</style></link> nel tuo mazzo.",
+    "descriptionRaw": "Quando muore un altro alleato, o Ultimo respiro: Piazza 4 Campanelle nel tuo mazzo.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Non preoccuparti di quell'infausto suono, è solo il vecchio Melpanello che si fa un giro. È sempre felice quando arriva qualcuno... ma gli altri di sicuro non sono felici di vederlo.",
+    "artistName": "Bubble Cat",
+    "name": "Melpanello solitario",
+    "cardCode": "08SI021",
+    "keywords": [
+      "Ultimo respiro"
+    ],
+    "keywordRefs": [
+      "LastBreath"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "COMUNE",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unità",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08SI030.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08SI030-full.png"
+      }
+    ],
+    "regions": [
+      "Isole Ombra"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "<link=vocab.Obliterate><style=Vocab>Annienta</style></link> 6 carte dal fondo del mazzo nemico.",
+    "descriptionRaw": "Annienta 6 carte dal fondo del mazzo nemico.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Per alcuni dei mostri abissali di Runeterra, una nave è solo un leggero spuntino.",
+    "artistName": "Polar Engine",
+    "name": "Tomba d'acqua",
+    "cardCode": "08SI030",
+    "keywords": [
+      "Lento"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "Lento",
+    "spellSpeedRef": "Slow",
+    "rarity": "EPICO",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Incantesimo",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Solo comuni",
+      "Eternal",
+      "Carte con costo pari",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08BW028T1",
+      "08BW028T2",
+      "08BW028T3",
+      "08BW028T4"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08SI018.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08SI018-full.png"
+      }
+    ],
+    "regions": [
+      "Isole Ombra",
+      "Targon"
+    ],
+    "regionRefs": [
+      "ShadowIsles",
+      "Targon"
+    ],
+    "attack": 2,
+    "cost": 3,
+    "health": 2,
+    "description": "<link=vocab.Play><style=Vocab>Gioca</style></link>: Scegli un incantesimo Esploratore da creare nella tua mano.",
+    "descriptionRaw": "Gioca: Scegli un incantesimo Esploratore da creare nella tua mano.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Il terreno è imperscrutabile. La visibilità quasi inesistente. Ho incontrato nemici a ogni angolo... ma stranamente, anche alleati inaspettati.\" - Dal diario della spedizione della Gilda degli esploratori, divisione terre lontane, posizione: Isole Ombra",
+    "artistName": "Envar Studio",
+    "name": "Ispettore spettrale",
+    "cardCode": "08SI018",
+    "keywords": [
+      "Rubavita"
+    ],
+    "keywordRefs": [
+      "Lifesteal"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "RARA",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unità",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU001T3",
+      "01PZ022"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08BC005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08BC005-full.png"
+      }
+    ],
+    "regions": [
+      "Bandle City"
+    ],
+    "regionRefs": [
+      "BandleCity"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "Per ogni <link=card.selfref><style=AssociatedCard>Zaino pieno</style></link> che hai giocato in questa partita, piazza 4 <link=card.boon><style=AssociatedCard>Campanelle</style></link> nel tuo mazzo e 4 <link=card.trap><style=AssociatedCard>Scoppiettini velenosi</style></link> nel mazzo nemico. Crea 1 <link=card.selfref><style=AssociatedCard>Zaino pieno</style></link> nel tuo mazzo.",
+    "descriptionRaw": "Per ogni Zaino pieno che hai giocato in questa partita, piazza 4 Campanelle nel tuo mazzo e 4 Scoppiettini velenosi nel mazzo nemico. Crea 1 Zaino pieno nel tuo mazzo.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Regola 207: una Scout porta con sé solo quello che le serve!\" - Ava l'Ambiziosa",
+    "artistName": "Polar Engine",
+    "name": "Zaino pieno",
+    "cardCode": "08BC005",
+    "keywords": [
+      "Raffica"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Raffica",
+    "spellSpeedRef": "Burst",
+    "rarity": "RARA",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Incantesimo",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08BC002.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08BC002-full.png"
+      }
+    ],
+    "regions": [
+      "Bandle City"
+    ],
+    "regionRefs": [
+      "BandleCity"
+    ],
+    "attack": 1,
+    "cost": 2,
+    "health": 2,
+    "description": "<link=vocab.Play><style=Vocab>Gioca</style></link>: Scegli 1 di 2 carte non campioni dalla mano dell'avversario. La <link=keyword.Capture><sprite name=Capture><style=Keyword>catturo</style></link>.",
+    "descriptionRaw": "Gioca: Scegli 1 di 2 carte non campioni dalla mano dell'avversario. La catturo.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Sì, sono bellissimo, veloce e dal fascino imperturbabile. Non lo sai, vecchio? Io sono il re della barriera, e stai invadendo il mio regno!\"<br>\"A-aspetta! Torna subito qui! Ho bisogno di quel campione per le mie ricerche!\" - Concologo",
+    "artistName": "Caravan Studio",
+    "name": "Skip, \"Re della barriera\"",
+    "cardCode": "08BC002",
+    "keywords": [
+      "Elusione"
+    ],
+    "keywordRefs": [
+      "Elusive"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "EPICO",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unità",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08BW028T1",
+      "08BW028T2",
+      "08BW028T3",
+      "08BW028T4"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08BC006.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08BC006-full.png"
+      }
+    ],
+    "regions": [
+      "Bandle City",
+      "Ionia"
+    ],
+    "regionRefs": [
+      "BandleCity",
+      "Ionia"
+    ],
+    "attack": 1,
+    "cost": 2,
+    "health": 1,
+    "description": "<link=vocab.Play><style=Vocab>Gioca</style></link>: Scegli un incantesimo Esploratore da creare nella tua mano.",
+    "descriptionRaw": "Gioca: Scegli un incantesimo Esploratore da creare nella tua mano.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Sono preoccupato per Bunches! Oh, ultimamente è sempre più nervoso. Si preoccupa anche di un semplice salto nel portale! Non capisco perché.\" - Dal diario della spedizione della Gilda degli esploratori, divisione terre lontane, posizione: Bandle City",
+    "artistName": "Caravan Studio",
+    "name": "Pioniere del portale",
+    "cardCode": "08BC006",
+    "keywords": [
+      "Armonia"
+    ],
+    "keywordRefs": [
+      "Attune"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "RARA",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unità",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08SH004.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08SH004-full.png"
+      }
+    ],
+    "regions": [
+      "Shurima"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 4,
+    "cost": 4,
+    "health": 4,
+    "description": "<link=keyword.Daybreak><style=Keyword>Alba</style></link> o quando attivi un'altra <link=keyword.Daybreak><style=Keyword>Alba</style></link>: Conferisci <link=keyword.Vulnerable><sprite name=Vulnerable><style=Keyword>Vulnerabile</style></link> al nemico <link=keyword.Weakest><style=Keyword>più debole</style></link>.",
+    "descriptionRaw": "Alba o quando attivi un'altra Alba: Conferisci Vulnerabile al nemico più debole.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "I vasti eserciti di Shurima sono pronti a dimostrare la potenza del deserto. Quando ricevono un ordine, avanzano senza esitazione.",
+    "artistName": "Kudos Productions",
+    "name": "Generale delle dune",
+    "cardCode": "08SH004",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "RARA",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "ÉLITE"
+    ],
+    "supertype": "",
+    "type": "Unità",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08SH005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08SH005-full.png"
+      }
+    ],
+    "regions": [
+      "Shurima"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 2,
+    "description": "<link=keyword.Daybreak><style=Keyword>Alba</style></link>: Pesca 1 <link=card.me><style=AssociatedCard>Difensori del Disco solare</style></link>.",
+    "descriptionRaw": "Alba: Pesca 1 Difensori del Disco solare.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Siamo i custodi del deserto eterno, la storia vivente, e percorriamo il cammino dello splendore. Ci inginocchiamo davanti al Disco solare e nient'altro, così che il mondo si piegherà davanti alla gloria di Shurima.\" - Azir",
+    "artistName": "Kudos Productions",
+    "name": "Difensori del Disco solare",
+    "cardCode": "08SH005",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "COMUNE",
+    "rarityRef": "Common",
+    "subtypes": [
+      "ÉLITE"
+    ],
+    "supertype": "",
+    "type": "Unità",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08IO010.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08IO010-full.png"
+      }
+    ],
+    "regions": [
+      "Ionia"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 0,
+    "cost": 4,
+    "health": 0,
+    "description": "<link=keyword.Recall><style=Keyword>Richiama</style></link> un nemico per aumentare di 2 il costo della prossima unità giocata dal nemico in questo turno.",
+    "descriptionRaw": "Richiama un nemico per aumentare di 2 il costo della prossima unità giocata dal nemico in questo turno.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Chi vuole danneggiarci si ritroverà sul fondo del mare.\" - Dominatore del Fiume",
+    "artistName": "Polar Engine",
+    "name": "Ribaltamento",
+    "cardCode": "08IO010",
+    "keywords": [
+      "Lento"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "Lento",
+    "spellSpeedRef": "Slow",
+    "rarity": "COMUNE",
+    "rarityRef": "Common",
+    "subtypes": [
+      "ELEMENTALE"
+    ],
+    "supertype": "",
+    "type": "Incantesimo",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08MT027.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08MT027-full.png"
+      }
+    ],
+    "regions": [
+      "Targon"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 5,
+    "cost": 8,
+    "health": 8,
+    "description": "<link=vocab.Play><style=Vocab>Gioca</style></link>: Attiva gli effetti <link=keyword.Daybreak><style=Keyword>Alba</style></link> e <link=keyword.Nightfall><style=Keyword>Crepuscolo</style></link> degli altri alleati.\r\n<link=keyword.Daybreak><style=Keyword>Alba</style></link>: Conferiscimi <link=keyword.Overwhelm><sprite name=Overwhelm><style=Keyword>Sopraffare</style></link>.\r\n<link=keyword.Nightfall><style=Keyword>Crepuscolo</style></link>: Conferiscimi <link=keyword.SpellShield><sprite name=SpellShield><style=Keyword>Scudo magico</style></link>.",
+    "descriptionRaw": "Gioca: Attiva gli effetti Alba e Crepuscolo degli altri alleati.\r\nAlba: Conferiscimi Sopraffare.\r\nCrepuscolo: Conferiscimi Scudo magico.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"In alto arde un anello di fuoco. Nell'oscurità promessa, siamo tutti uguali.\" - Affatturatore Lunari",
+    "artistName": "Kudos Productions",
+    "name": "Messaggero della Convergenza celestiale",
+    "cardCode": "08MT027",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "EPICO",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "VOLATILE"
+    ],
+    "supertype": "",
+    "type": "Unità",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08MT025.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/it_it/img/cards/08MT025-full.png"
+      }
+    ],
+    "regions": [
+      "Targon"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 7,
+    "health": 0,
+    "description": "Se un'unità <link=vocab.Titanic><style=Vocab>Titanica</style></link> è <link=vocab.Behold><style=Vocab>visibile</style></link>, costo 3 in meno.\r\nInfliggi 7 a un'unità.",
+    "descriptionRaw": "Se un'unità Titanica è visibile, costo 3 in meno.\r\nInfliggi 7 a un'unità.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Ops, non ti devi preoccupare, è solo un problemino, niente di grave, NON PAPONE, NO! Andiamo avanti!\" - Chip",
+    "artistName": "Polar Engine",
+    "name": "Scheggia sismica",
+    "cardCode": "08MT025",
+    "keywords": [
+      "Lento"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "Lento",
+    "spellSpeedRef": "Slow",
+    "rarity": "COMUNE",
+    "rarityRef": "Common",
+    "subtypes": [
+      "ELEMENTALE"
+    ],
+    "supertype": "",
+    "type": "Incantesimo",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  }
+]
