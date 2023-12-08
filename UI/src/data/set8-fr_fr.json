@@ -2,14 +2,853 @@
   {
     "associatedCards": [],
     "associatedCardRefs": [
+      "08SI042T1",
+      "08SI042T5"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08SI042.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08SI042-full.png"
+      }
+    ],
+    "regions": [
+      "Noxus",
+      "Îles obscures"
+    ],
+    "regionRefs": [
+      "Noxus",
+      "ShadowIsles"
+    ],
+    "attack": 5,
+    "cost": 7,
+    "health": 8,
+    "description": "<link=vocab.Play><style=Vocab>Immédiat</style></link> : tuez jusqu'à 2 alliés.\r\nQuand vous <link=vocab.Slay><style=Vocab>vainquez</style></link> un autre allié, ranimez-le.",
+    "descriptionRaw": "Immédiat : tuez jusqu'à 2 alliés.\r\nQuand vous vainquez un autre allié, ranimez-le.",
+    "levelupDescription": "Au moins 15 alliés sont morts. Les alliés d'une puissance de 5 ou plus comptent double. <style=Variable></style>",
+    "levelupDescriptionRaw": "Au moins 15 alliés sont morts. Les alliés d'une puissance de 5 ou plus comptent double. ",
+    "flavorText": "Lié à son armure conservée au cœur du Bastion immortel, Mordekaiser s'est forgé un trône dans le Royaume gris. Pour chaque personne qui cherche à le détruire, il y en a davantage qui le serviront dans la vie comme dans la mort.",
+    "artistName": "Michal Ivan",
+    "name": "Mordekaiser",
+    "cardCode": "08SI042",
+    "keywords": [
+      "Challenger"
+    ],
+    "keywordRefs": [
+      "Challenger"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Champion",
+    "rarityRef": "Champion",
+    "subtypes": [],
+    "supertype": "Champion",
+    "type": "Unité",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Éternel",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08SI042",
+      "08SI042T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08SI042T5.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08SI042T5-full.png"
+      }
+    ],
+    "regions": [
+      "Îles obscures"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 0,
+    "cost": 10,
+    "health": 0,
+    "description": "Un allié déclare une attaque gratuite et <link=keyword.Challenger><sprite name=Challenger><style=Keyword>défie</style></link> l'ennemi <link=vocab.Strongest><style=Vocab>le plus fort</style></link>.\r\nTuez TOUTES les autres unités.\r\nCréez 1 <link=card.level1><style=AssociatedCard>Mordekaiser</style></link> dans votre deck.",
+    "descriptionRaw": "Un allié déclare une attaque gratuite et défie l'ennemi le plus fort.\r\nTuez TOUTES les autres unités.\r\nCréez 1 Mordekaiser dans votre deck.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« La mort est mon royaume. » - Mordekaiser",
+    "artistName": "Polar Engine",
+    "name": "Royaume des morts de Mordekaiser",
+    "cardCode": "08SI042T5",
+    "keywords": [
+      "Lent"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "Lent",
+    "spellSpeedRef": "Slow",
+    "rarity": "Aucune",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "Champion",
+    "type": "Sort",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Éternel",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08SI042T5"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08SI042T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08SI042T1-full.png"
+      }
+    ],
+    "regions": [
+      "Noxus",
+      "Îles obscures"
+    ],
+    "regionRefs": [
+      "Noxus",
+      "ShadowIsles"
+    ],
+    "attack": 6,
+    "cost": 7,
+    "health": 9,
+    "description": "<link=vocab.Play><style=Vocab>Immédiat</style></link> : tuez jusqu'à 2 alliés.\r\nQuand vous <link=vocab.Slay><style=Vocab>vainquez</style></link> un autre allié, ranimez-le.\r\n<link=vocab.Attack><style=Vocab>Attaque</style></link> : pour le reste de la partie, quand vous <link=vocab.Slay><style=Vocab>vainquez</style></link> une unité, <link=keyword.Drain><style=Keyword>drainez</style></link> 1 PV au Nexus ennemi.",
+    "descriptionRaw": "Immédiat : tuez jusqu'à 2 alliés.\r\nQuand vous vainquez un autre allié, ranimez-le.\r\nAttaque : pour le reste de la partie, quand vous vainquez une unité, drainez 1 PV au Nexus ennemi.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« Servez-moi ! Abandonnez vos âmes pitoyables. Je leur donnerai le fer éternel. Je suis l'oubli inévitable ! »",
+    "artistName": "Michal Ivan",
+    "name": "Mordekaiser",
+    "cardCode": "08SI042T1",
+    "keywords": [
+      "Challenger"
+    ],
+    "keywordRefs": [
+      "Challenger"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Champion",
+    "rarityRef": "Champion",
+    "subtypes": [],
+    "supertype": "Champion",
+    "type": "Unité",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Éternel",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08SI007.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08SI007-full.png"
+      }
+    ],
+    "regions": [
+      "Îles obscures"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 4,
+    "cost": 3,
+    "health": 2,
+    "description": "<link=vocab.Play><style=Vocab>Immédiat</style></link> : octroyez <link=keyword.Deathless><sprite name=Deathless><style=Keyword>Immortalité</style></link> à un allié de votre main.",
+    "descriptionRaw": "Immédiat : octroyez Immortalité à un allié de votre main.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "La forme d'une âme avant son emprisonnement dans le Royaume gris n'a aucune espèce d'importance. Ici, l'individualité n'a pas sa place. La Légion, sans visage et sans peur, sert le Revenant de fer de par son uniformité.",
+    "artistName": "Bubble Cat",
+    "name": "Légion des sectionnés",
+    "cardCode": "08SI007",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "COMMUN",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unité",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Éternel",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08SI003.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08SI003-full.png"
+      }
+    ],
+    "regions": [
+      "Îles obscures"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 1,
+    "cost": 1,
+    "health": 1,
+    "description": "<link=keyword.Last Breath><sprite name=LastBreath><style=Keyword>Dernier souffle</style></link> : la prochaine fois que vous ranimez un allié, créez une copie de moi dans votre main.",
+    "descriptionRaw": "Dernier souffle : la prochaine fois que vous ranimez un allié, créez une copie de moi dans votre main.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« Nous fûmes mis en chaîne il y a bien longtemps. Un jour vous comprendrez notre souffrance et nous souffrirons ensemble pour l'éternité, jusqu'à ce que le maître nous anéantisse tous... »",
+    "artistName": "Michal Ivan",
+    "name": "Ghasts enchaînés",
+    "cardCode": "08SI003",
+    "keywords": [
+      "Dernier souffle"
+    ],
+    "keywordRefs": [
+      "LastBreath"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "RARE",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unité",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Éternel",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU001T3"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08SI021.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08SI021-full.png"
+      }
+    ],
+    "regions": [
+      "Îles obscures"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 3,
+    "description": "Quand un autre allié meurt, ou <nobr><link=keyword.Last Breath><sprite name=LastBreath><style=Keyword>Dernier souffle</style></link> :</nobr> placez 4 <link=card.chime><style=AssociatedCard>carillons</style></link> dans votre deck.",
+    "descriptionRaw": "Quand un autre allié meurt, ou Dernier souffle : placez 4 carillons dans votre deck.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Ne vous inquiétez pas pour ces sonneries lugubres, ce n'est que le limon résonnant qui fait ses rondes. Il attend avec impatience les nouveaux arrivants, mais ce n'est pas vraiment réciproque.",
+    "artistName": "Bubble Cat",
+    "name": "Limon résonnant solitaire",
+    "cardCode": "08SI021",
+    "keywords": [
+      "Dernier souffle"
+    ],
+    "keywordRefs": [
+      "LastBreath"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "COMMUN",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unité",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Éternel",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08SI030.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08SI030-full.png"
+      }
+    ],
+    "regions": [
+      "Îles obscures"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "<link=vocab.Obliterate><style=Vocab>Oblitérez</style></link> les 6 dernières cartes du deck ennemi.",
+    "descriptionRaw": "Oblitérez les 6 dernières cartes du deck ennemi.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Pour certains des monstres aquatiques vivant dans les plus profonds abysses, même de gros bateaux servent d'amuse-gueules.",
+    "artistName": "Polar Engine",
+    "name": "Sépulture aquatique",
+    "cardCode": "08SI030",
+    "keywords": [
+      "Lent"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "Lent",
+    "spellSpeedRef": "Slow",
+    "rarity": "ÉPIQUE",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Sort",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Communes uniquement",
+      "Éternel",
+      "Cartes au coût pair",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08SI037T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08SI037T1-full.png"
+      }
+    ],
+    "regions": [
+      "Îles obscures"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 8,
+    "cost": 6,
+    "health": 4,
+    "description": "",
+    "descriptionRaw": "",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Le cliquetis d'un millier de mains aux griffes de fer et le grincement de dents spectrales promettent une fin désastreuse à tous ceux qui refusent de servir.",
+    "artistName": "Envar Studio",
+    "name": "Assassin aux mille griffes",
+    "cardCode": "08SI037T1",
+    "keywords": [
+      "Redoutable"
+    ],
+    "keywordRefs": [
+      "Fearsome"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Aucune",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unité",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Communes uniquement",
+      "Éternel",
+      "Cartes au coût pair",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08SI037T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08SI037.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08SI037-full.png"
+      }
+    ],
+    "regions": [
+      "Îles obscures"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 5,
+    "cost": 6,
+    "health": 3,
+    "description": "Pour me jouer, tuez un allié.\r\nQuand je suis invoqué, invoquez 1 <link=card.summon><style=AssociatedCard>Assassin aux mille griffes</style></link>.",
+    "descriptionRaw": "Pour me jouer, tuez un allié.\r\nQuand je suis invoqué, invoquez 1 Assassin aux mille griffes.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Ces chiens n'oublient jamais l'odeur d'une personne qui a tenté de s'enfuir. Et lorsque les chiens coincent leur proie, un assassin n'est jamais loin derrière.",
+    "artistName": "Xavier Leroux",
+    "name": "Limier de fer spectral",
+    "cardCode": "08SI037",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "RARE",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unité",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Communes uniquement",
+      "Éternel",
+      "Cartes au coût pair",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08SI041.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08SI041-full.png"
+      }
+    ],
+    "regions": [
+      "Îles obscures"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "Tuez un allié pour infliger 5 pt(s) de dégâts à une unité.",
+    "descriptionRaw": "Tuez un allié pour infliger 5 pt(s) de dégâts à une unité.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« Les ténèbres sont le destin de tous, mis à part moi. »<br>- Mordekaiser",
+    "artistName": "Polar Engine",
+    "name": "Emprise funeste",
+    "cardCode": "08SI041",
+    "keywords": [
+      "Rapide"
+    ],
+    "keywordRefs": [
+      "Fast"
+    ],
+    "spellSpeed": "Rapide",
+    "spellSpeedRef": "Fast",
+    "rarity": "COMMUN",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Sort",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Éternel",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08SI026T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08SI036.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08SI036-full.png"
+      }
+    ],
+    "regions": [
+      "Îles obscures"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "<link=vocab.Play><style=Vocab>Immédiat</style></link> : <link=keyword.Curse><sprite name=Curse><style=Keyword>maudissez</style></link> un ennemi, qui subit <link=card.curse><style=AssociatedCard>Terreur</style></link>.\r\nQuand vous invoquez un allié <link=vocab.Titanic><style=Vocab>titanesque</style></link>, détruisez-moi pour piocher 2 cartes.",
+    "descriptionRaw": "Immédiat : maudissez un ennemi, qui subit Terreur.\r\nQuand vous invoquez un allié titanesque, détruisez-moi pour piocher 2 cartes.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« Nous t'offrons ces âmes. Nous pavons cette route d'os devant tes pieds. Nous déchirons ces royaumes pour faire place à ton armée de fer éternel. » - Séide de la poigne mortelle",
+    "artistName": "Envar Studio",
+    "name": "Seuil du Royaume gris",
+    "cardCode": "08SI036",
+    "keywords": [
+      "Site"
+    ],
+    "keywordRefs": [
+      "LandmarkVisualOnly"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "RARE",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Site",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Communes uniquement",
+      "Éternel",
+      "Cartes au coût pair",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08SI004.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08SI004-full.png"
+      }
+    ],
+    "regions": [
+      "Îles obscures"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 0,
+    "cost": 10,
+    "health": 0,
+    "description": "Un allié déclare une attaque gratuite et <link=keyword.Challenger><sprite name=Challenger><style=Keyword>défie</style></link> l'ennemi <link=vocab.Strongest><style=Vocab>le plus fort</style></link>.\r\nTuez TOUTES les autres unités.",
+    "descriptionRaw": "Un allié déclare une attaque gratuite et défie l'ennemi le plus fort.\r\nTuez TOUTES les autres unités.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« La mort est mon royaume. » - Mordekaiser",
+    "artistName": "Polar Engine",
+    "name": "Royaume des morts",
+    "cardCode": "08SI004",
+    "keywords": [
+      "Lent"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "Lent",
+    "spellSpeedRef": "Slow",
+    "rarity": "ÉPIQUE",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Sort",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Éternel",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08SI026T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08SI026.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08SI026-full.png"
+      }
+    ],
+    "regions": [
+      "Îles obscures"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 3,
+    "cost": 4,
+    "health": 4,
+    "description": "Quand je suis invoquée ou quand vous invoquez un allié <link=vocab.Titanic><style=Vocab>titanesque</style></link>, <link=keyword.Curse><sprite name=Curse><style=Keyword>maudissez</style></link> l'ennemi <link=vocab.Strongest><style=Vocab>le plus fort</style></link>, qui subit <link=card.curse><style=AssociatedCard>Terreur</style></link>.",
+    "descriptionRaw": "Quand je suis invoquée ou quand vous invoquez un allié titanesque, maudissez l'ennemi le plus fort, qui subit Terreur.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Aux yeux de ses adeptes, le Revenant de fer est le seul espoir pour ceux qui cherchent à disparaître pour l'éternité. Ces fanatiques acceptent la paix par la domination à bras ouverts.",
+    "artistName": "Bubble Cat",
+    "name": "Séide de la poigne mortelle",
+    "cardCode": "08SI026",
+    "keywords": [
+      "Redoutable"
+    ],
+    "keywordRefs": [
+      "Fearsome"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "RARE",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unité",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Éternel",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08SI026T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08SI026T1-full.png"
+      }
+    ],
+    "regions": [
+      "Îles obscures"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "Tant que je suis dans votre main, <style=Variable>l'unité maudite</style> subit<nobr> -<style=Variable>3</style>|-0.</nobr>",
+    "descriptionRaw": "Tant que je suis dans votre main, l'unité maudite subit -3|-0.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Vous ressentez un sentiment d'effroi écrasant.",
+    "artistName": "Polar Engine",
+    "name": "Terreur",
+    "cardCode": "08SI026T1",
+    "keywords": [
+      "Focalisé",
+      "Malédiction"
+    ],
+    "keywordRefs": [
+      "Focus",
+      "Curse"
+    ],
+    "spellSpeed": "Instantané",
+    "spellSpeedRef": "Burst",
+    "rarity": "Aucune",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Sort",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Éternel",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08BW028T1",
+      "08BW028T2",
+      "08BW028T3",
+      "08BW028T4"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08SI018.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08SI018-full.png"
+      }
+    ],
+    "regions": [
+      "Îles obscures",
+      "Targon"
+    ],
+    "regionRefs": [
+      "ShadowIsles",
+      "Targon"
+    ],
+    "attack": 2,
+    "cost": 3,
+    "health": 2,
+    "description": "<link=vocab.Play><style=Vocab>Immédiat</style></link> : choisissez un sort Explorateur à créer dans votre main.",
+    "descriptionRaw": "Immédiat : choisissez un sort Explorateur à créer dans votre main.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« Le terrain est insondable. Il n'y a aucune visibilité. On ne peut pas faire un pas sans rencontrer un ennemi. Mais parfois, on tombe sur des alliés inattendus. » - Tiré du journal de la Division des expéditions lointaines de la Guilde des explorateurs, allocation : Îles obscures",
+    "artistName": "Envar Studio",
+    "name": "Inspecteur spectral",
+    "cardCode": "08SI018",
+    "keywords": [
+      "Vol de vie"
+    ],
+    "keywordRefs": [
+      "Lifesteal"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "RARE",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unité",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Éternel",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08SI015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08SI015-full.png"
+      }
+    ],
+    "regions": [
+      "Îles obscures"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 5,
+    "cost": 5,
+    "health": 3,
+    "description": "Pour me jouer, tuez un allié.\r\n<link=keyword.Last Breath><sprite name=LastBreath><style=Keyword>Dernier souffle</style></link> : rendez 2 PV à votre Nexus.",
+    "descriptionRaw": "Pour me jouer, tuez un allié.\r\nDernier souffle : rendez 2 PV à votre Nexus.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Les bêtes de guerre sont utiles dans toutes les armées. Dans le Royaume gris, ce sont des amalgames d'âmes torturées, toutes plus violentes les unes que les autres de par leur manque total de sentiments. ",
+    "artistName": "Michal Ivan",
+    "name": "Amalgame de vils rites",
+    "cardCode": "08SI015",
+    "keywords": [
+      "Dernier souffle",
+      "Immortalité"
+    ],
+    "keywordRefs": [
+      "LastBreath",
+      "Deathless"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ÉPIQUE",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unité",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Éternel",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
       "08BW008T1",
       "08BW008T5",
       "08BW008T3"
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08BW008.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08BW008-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08BW008.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08BW008-full.png"
       }
     ],
     "regions": [
@@ -58,8 +897,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08BW008T3.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08BW008T3-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08BW008T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08BW008T3-full.png"
       }
     ],
     "regions": [
@@ -114,8 +953,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08BW008T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08BW008T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08BW008T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08BW008T1-full.png"
       }
     ],
     "regions": [
@@ -127,8 +966,8 @@
     "attack": 3,
     "cost": 2,
     "health": 4,
-    "description": "<link=vocab.Attack><style=Vocab>Attaque</style></link> : créez 1 <link=card.create><style=AssociatedCard>Torrent</style></link> dans les 6 premières cartes de votre deck et infligez 2 pt(s) de dégâts à tous les ennemis et au Nexus ennemi. Leurs PV ne peuvent pas tomber an dessous de 1 à cause de ces dégâts.",
-    "descriptionRaw": "Attaque : créez 1 Torrent dans les 6 premières cartes de votre deck et infligez 2 pt(s) de dégâts à tous les ennemis et au Nexus ennemi. Leurs PV ne peuvent pas tomber an dessous de 1 à cause de ces dégâts.",
+    "description": "<link=vocab.Attack><style=Vocab>Attaque</style></link> : créez 1 <link=card.create><style=AssociatedCard>Torrent</style></link> dans les 6 premières cartes de votre deck et infligez 2 pt(s) de dégâts à tous les ennemis et au Nexus ennemi. Leurs PV ne peuvent pas tomber en dessous de 1 à cause de ces dégâts.",
+    "descriptionRaw": "Attaque : créez 1 Torrent dans les 6 premières cartes de votre deck et infligez 2 pt(s) de dégâts à tous les ennemis et au Nexus ennemi. Leurs PV ne peuvent pas tomber en dessous de 1 à cause de ces dégâts.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "« Monstre ! Je suis Nilah de la Septième strate ! C'est de mon nom, et non du tien, qu'on se souviendra. »",
@@ -167,8 +1006,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08BW008T5.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08BW008T5-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08BW008T5.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08BW008T5-full.png"
       }
     ],
     "regions": [
@@ -219,8 +1058,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08BW032.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08BW032-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08BW032.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08BW032-full.png"
       }
     ],
     "regions": [
@@ -273,8 +1112,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08BW015.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08BW015-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08BW015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08BW015-full.png"
       }
     ],
     "regions": [
@@ -319,8 +1158,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08BW002.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08BW002-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08BW002.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08BW002-full.png"
       }
     ],
     "regions": [
@@ -371,8 +1210,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08BW025.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08BW025-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08BW025.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08BW025-full.png"
       }
     ],
     "regions": [
@@ -417,8 +1256,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08BW026.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08BW026-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08BW026.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08BW026-full.png"
       }
     ],
     "regions": [
@@ -429,7 +1268,7 @@
     ],
     "attack": 2,
     "cost": 4,
-    "health": 1,
+    "health": 2,
     "description": "Quand je suis invoqué, <link=vocab.Updraft><style=Vocab>soufflez</style></link> votre main et octroyez-moi +1|+1 pour chaque carte <link=vocab.Updraft><style=Vocab>soufflée</style></link>, puis piochez 2 cartes.",
     "descriptionRaw": "Quand je suis invoqué, soufflez votre main et octroyez-moi +1|+1 pour chaque carte soufflée, puis piochez 2 cartes.",
     "levelupDescription": "",
@@ -468,8 +1307,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08BW028.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08BW028-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08BW028.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08BW028-full.png"
       }
     ],
     "regions": [
@@ -520,8 +1359,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08BW028T4.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08BW028T4-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08BW028T4.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08BW028T4-full.png"
       }
     ],
     "regions": [
@@ -576,8 +1415,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08BW028T3.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08BW028T3-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08BW028T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08BW028T3-full.png"
       }
     ],
     "regions": [
@@ -626,8 +1465,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08BW028T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08BW028T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08BW028T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08BW028T1-full.png"
       }
     ],
     "regions": [
@@ -680,8 +1519,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08BW028T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08BW028T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08BW028T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08BW028T2-full.png"
       }
     ],
     "regions": [
@@ -734,8 +1573,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08BW009.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08BW009-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08BW009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08BW009-full.png"
       }
     ],
     "regions": [
@@ -780,8 +1619,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08BW010.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08BW010-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08BW010.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08BW010-full.png"
       }
     ],
     "regions": [
@@ -829,13 +1668,174 @@
   },
   {
     "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08BW031.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08BW031-full.png"
+      }
+    ],
+    "regions": [
+      "Bilgewater"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 8,
+    "cost": 8,
+    "health": 7,
+    "description": "Quand vous dépensez du mana pour jouer une autre unité, créez une carte aléatoire dans votre main d'un coût égal à cette unité. Son coût est de 0 et elle est <link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>fugace</style></link>.",
+    "descriptionRaw": "Quand vous dépensez du mana pour jouer une autre unité, créez une carte aléatoire dans votre main d'un coût égal à cette unité. Son coût est de 0 et elle est fugace.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Malgré l'appétit certain des habitants de Bilgewater pour les bêtes marines les plus étranges, il y a des monstres que même les capitaines les plus expérimentés ne chasseront pas. Ils parlent de Sefirsa à voix basse, comme d'une lumière hypnotique se déplaçant sous les vagues, un monstre perché sur un charnier de navires coulés et d'hommes noyés.",
+    "artistName": "Envar Studio",
+    "name": "Sefirsa, fléau des profondeurs",
+    "cardCode": "08BW031",
+    "keywords": [
+      "Profondeurs"
+    ],
+    "keywordRefs": [
+      "Deep"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ÉPIQUE",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "MONSTRE MARIN",
+      "DRAGON"
+    ],
+    "supertype": "",
+    "type": "Unité",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Éternel",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08BW037.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08BW037-full.png"
+      }
+    ],
+    "regions": [
+      "Bilgewater"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 1,
+    "cost": 3,
+    "health": 3,
+    "description": "Quand vous jouez une carte d'un coût égal à ma puissance, octroyez-moi +1|+1.",
+    "descriptionRaw": "Quand vous jouez une carte d'un coût égal à ma puissance, octroyez-moi +1|+1.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« Sérieux, tu ne veux pas mettre un peu plus ? La fortune sourit aux audacieux, tu sais. Je suis sûr que cette table va te porter chance. Et la maison est réglo dans cette bicoque. Si si, je te jure, sur la langue de ma mère. »",
+    "artistName": "Caravan Studio",
+    "name": "Croupier honnête",
+    "cardCode": "08BW037",
+    "keywords": [
+      "Impétuosité"
+    ],
+    "keywordRefs": [
+      "Brash"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "RARE",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unité",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Communes uniquement",
+      "Éternel",
+      "Cartes au coût pair",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08BW036.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08BW036-full.png"
+      }
+    ],
+    "regions": [
+      "Bilgewater"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "Quand vous dépensez du mana pour jouer une unité, remplissez 1 gemme.",
+    "descriptionRaw": "Quand vous dépensez du mana pour jouer une unité, remplissez 1 gemme.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« Le récif est à la fois un refuge et un allié. Il nous protège, comme nous le protégeons, pour qu'aucun d'entre nous ne sombre dans l'obscurité. » - Matriarche marai",
+    "artistName": "Envar Studio",
+    "name": "Flèche du récif marai",
+    "cardCode": "08BW036",
+    "keywords": [
+      "Site"
+    ],
+    "keywordRefs": [
+      "LandmarkVisualOnly"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "COMMUN",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Site",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Communes uniquement",
+      "Éternel",
+      "Cartes au coût pair",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
     "associatedCardRefs": [
       "08BW008T3"
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08BW023.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08BW023-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08BW023.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08BW023-full.png"
       }
     ],
     "regions": [
@@ -888,8 +1888,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08PZ007.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08PZ007-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08PZ007.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08PZ007-full.png"
       }
     ],
     "regions": [
@@ -940,8 +1940,62 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08PZ005.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08PZ005-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08PZ031.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08PZ031-full.png"
+      }
+    ],
+    "regions": [
+      "Piltover & Zaun"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "Choisissez un adepte allié. Transformez mon porteur en sa copie exacte tant que nous sommes équipées.",
+    "descriptionRaw": "Choisissez un adepte allié. Transformez mon porteur en sa copie exacte tant que nous sommes équipées.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Ne vous demandez pas comment ça marche.",
+    "artistName": "Polar Engine",
+    "name": "Lunettes louches",
+    "cardCode": "08PZ031",
+    "keywords": [
+      "Équipement"
+    ],
+    "keywordRefs": [
+      "Equipment"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "RARE",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Équipement",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Communes uniquement",
+      "Éternel",
+      "Cartes au coût pair",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08PZ005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08PZ005-full.png"
       }
     ],
     "regions": [
@@ -992,8 +2046,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08PZ019.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08PZ019-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08PZ019.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08PZ019-full.png"
       }
     ],
     "regions": [
@@ -1005,8 +2059,8 @@
     "attack": 0,
     "cost": 5,
     "health": 0,
-    "description": "Si vous avez pioché au moins 3 cartes lors de ce round, mon coût est réduit de 2.\r\nInfligez 3 pt(s) de dégâts à une unité et 2 pt(s) de dégâts au Nexus ennemi.",
-    "descriptionRaw": "Si vous avez pioché au moins 3 cartes lors de ce round, mon coût est réduit de 2.\r\nInfligez 3 pt(s) de dégâts à une unité et 2 pt(s) de dégâts au Nexus ennemi.",
+    "description": "Si vous avez pioché au moins 3 cartes lors de ce round, mon coût est réduit de 2.\r\nInfligez 3 pt(s) de dégâts à une unité et 1 pt(s) de dégâts au Nexus ennemi.",
+    "descriptionRaw": "Si vous avez pioché au moins 3 cartes lors de ce round, mon coût est réduit de 2.\r\nInfligez 3 pt(s) de dégâts à une unité et 1 pt(s) de dégâts au Nexus ennemi.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "« La tempête est à mes ordres. » - Janna",
@@ -1041,14 +2095,62 @@
   },
   {
     "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08PZ028.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08PZ028-full.png"
+      }
+    ],
+    "regions": [
+      "Piltover & Zaun"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 8,
+    "cost": 8,
+    "health": 6,
+    "description": "Quand vous lancez un sort, piochez une carte. Quand vous piochez alors que votre main est pleine, infligez 1 pt(s) de dégâts au Nexus ennemi.",
+    "descriptionRaw": "Quand vous lancez un sort, piochez une carte. Quand vous piochez alors que votre main est pleine, infligez 1 pt(s) de dégâts au Nexus ennemi.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Zaun exige l'adaptation, et le dragon techno-chimique ne fait pas exception. Baignant dans la lumière verte et maladive des optimisations, il s'accroche aux bas-fonds de la ville. Les ombres jumelles des ailes en ruine du dragon se profilent le long des passages sombres, annonciatrices d'une fureur née de l'angoisse provoquée par sa propre corruption.",
+    "artistName": "Caravan Studio",
+    "name": "Dragon techno-chimique",
+    "cardCode": "08PZ028",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ÉPIQUE",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "DRAGON"
+    ],
+    "supertype": "",
+    "type": "Unité",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Éternel",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
     "associatedCardRefs": [
       "08PZ001T3",
       "08PZ001T1"
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08PZ001.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08PZ001-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08PZ001.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08PZ001-full.png"
       }
     ],
     "regions": [
@@ -1062,8 +2164,8 @@
     "health": 4,
     "description": "<link=vocab.Play><style=Vocab>Immédiat</style></link> : <link=vocab.Updraft><style=Vocab>soufflez</style></link> 2 cartes pour piocher 2 cartes au <link=vocab.RoundStart><style=Vocab>début du prochain round</style></link>.\r\nLes 3 premières fois que vous piochez une carte à chaque round, réduisez son coût de 1 pour ce round. <style=Variable></style>",
     "descriptionRaw": "Immédiat : soufflez 2 cartes pour piocher 2 cartes au début du prochain round.\r\nLes 3 premières fois que vous piochez une carte à chaque round, réduisez son coût de 1 pour ce round. ",
-    "levelupDescription": "Je vous ai vu jouer 6 cartes dont le coût a été réduit.<style=Variable></style>",
-    "levelupDescriptionRaw": "Je vous ai vu jouer 6 cartes dont le coût a été réduit.",
+    "levelupDescription": "Je vous ai vu jouer 8 cartes dont le coût a été réduit.<style=Variable></style>",
+    "levelupDescriptionRaw": "Je vous ai vu jouer 8 cartes dont le coût a été réduit.",
     "flavorText": "« Zaun est plus proche de Janna que n'importe quel autre endroit au monde. Après tout, c'est elle qui a sauvé les pauvres âmes abandonnées par Piltover. Oui, si je veux des réponses, c'est ici que je les trouverai. » - Marin surfeur des vents",
     "artistName": "Envar Studio",
     "name": "Janna",
@@ -1096,8 +2198,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08PZ001T3.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08PZ001T3-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08PZ001T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08PZ001T3-full.png"
       }
     ],
     "regions": [
@@ -1149,8 +2251,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08PZ001T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08PZ001T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08PZ001T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08PZ001T1-full.png"
       }
     ],
     "regions": [
@@ -1203,8 +2305,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08PZ026.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08PZ026-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08PZ026.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08PZ026-full.png"
       }
     ],
     "regions": [
@@ -1255,8 +2357,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08PZ006.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08PZ006-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08PZ006.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08PZ006-full.png"
       }
     ],
     "regions": [
@@ -1305,8 +2407,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08PZ018.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08PZ018-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08PZ018.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08PZ018-full.png"
       }
     ],
     "regions": [
@@ -1355,8 +2457,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08PZ008.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08PZ008-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08PZ008.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08PZ008-full.png"
       }
     ],
     "regions": [
@@ -1401,8 +2503,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08PZ026T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08PZ026T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08PZ026T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08PZ026T1-full.png"
       }
     ],
     "regions": [
@@ -1449,8 +2551,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08PZ009.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08PZ009-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08PZ009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08PZ009-full.png"
       }
     ],
     "regions": [
@@ -1499,8 +2601,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08PZ002.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08PZ002-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08PZ002.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08PZ002-full.png"
       }
     ],
     "regions": [
@@ -1551,8 +2653,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08PZ008T3.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08PZ008T3-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08PZ008T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08PZ008T3-full.png"
       }
     ],
     "regions": [
@@ -1597,8 +2699,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08PZ008T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08PZ008T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08PZ008T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08PZ008T2-full.png"
       }
     ],
     "regions": [
@@ -1643,8 +2745,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08PZ020.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08PZ020-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08PZ024.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08PZ024-full.png"
       }
     ],
     "regions": [
@@ -1653,7 +2755,53 @@
     "regionRefs": [
       "PiltoverZaun"
     ],
-    "attack": 3,
+    "attack": 4,
+    "cost": 4,
+    "health": 4,
+    "description": "<link=vocab.RoundStart><style=Vocab>Début du round</style></link> : TOUS les joueurs piochent 1 carte, puis octroyez <link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>fugace</style></link> à la carte de votre adversaire.",
+    "descriptionRaw": "Début du round : TOUS les joueurs piochent 1 carte, puis octroyez fugace à la carte de votre adversaire.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« Aujourd'hui seulement, deux pour le prix d'un ! Du poisson frais, attrapé au moins ce mois-ci ! Deux pour le prix d'un ! Comment ça, vous ne voulez pas du deuxième ? Il est gratuit ! »",
+    "artistName": "Envar Studio",
+    "name": "Poissonnier charlatan",
+    "cardCode": "08PZ024",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "COMMUN",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unité",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Éternel",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08PZ020.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08PZ020-full.png"
+      }
+    ],
+    "regions": [
+      "Piltover & Zaun"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 2,
     "cost": 5,
     "health": 2,
     "description": "Si vous avez pioché au moins 3 cartes lors de ce round, mon coût est réduit de 2.\r\nQuand je suis invoqué, piochez 2 cartes au <link=vocab.RoundStart><style=Vocab>début du prochain round</style></link>.",
@@ -1695,8 +2843,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08FR012.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08FR012-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08FR012.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08FR012-full.png"
       }
     ],
     "regions": [
@@ -1747,8 +2895,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08FR019.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08FR019-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08FR019.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08FR019-full.png"
       }
     ],
     "regions": [
@@ -1803,8 +2951,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08FR001.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08FR001-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08FR001.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08FR001-full.png"
       }
     ],
     "regions": [
@@ -1849,8 +2997,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08FR001T3.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08FR001T3-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08FR001T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08FR001T3-full.png"
       }
     ],
     "regions": [
@@ -1904,8 +3052,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08FR001T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08FR001T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08FR001T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08FR001T2-full.png"
       }
     ],
     "regions": [
@@ -1960,8 +3108,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08FR001T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08FR001T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08FR001T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08FR001T1-full.png"
       }
     ],
     "regions": [
@@ -2012,8 +3160,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08FR018.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08FR018-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08FR018.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08FR018-full.png"
       }
     ],
     "regions": [
@@ -2064,8 +3212,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08FR011.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08FR011-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08FR011.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08FR011-full.png"
       }
     ],
     "regions": [
@@ -2074,9 +3222,9 @@
     "regionRefs": [
       "Freljord"
     ],
-    "attack": 3,
+    "attack": 2,
     "cost": 4,
-    "health": 2,
+    "health": 3,
     "description": "Quand vous lancez un sort ou une <link=keyword.Elemental Skill><sprite name=ElementalSkill><style=Keyword>compétence</style></link> élémentaire, <link=vocab.Forge><style=Vocab>forgez</style></link>-moi.",
     "descriptionRaw": "Quand vous lancez un sort ou une compétence élémentaire, forgez-moi.",
     "levelupDescription": "",
@@ -2114,8 +3262,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08FR008.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08FR008-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08FR008.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08FR008-full.png"
       }
     ],
     "regions": [
@@ -2163,13 +3311,61 @@
   },
   {
     "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08FR024.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08FR024-full.png"
+      }
+    ],
+    "regions": [
+      "Freljord"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 3,
+    "description": "<link=vocab.Attack><style=Vocab>Attaque</style></link> : octroyez +1|+1 aux 2 premiers alliés de votre deck.",
+    "descriptionRaw": "Attaque : octroyez +1|+1 aux 2 premiers alliés de votre deck.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Même s'ils viennent de Yadulsk, ces chiots ont été domestiqués dans de nombreuses tribus freljordiennes pour aider à la traque, la chasse et le sauvetage après une avalanche. Robustes et toujours joyeux, ils sont adulés dans toutes les toundras et taïgas.",
+    "artistName": "Envar Studio",
+    "name": "Chien des neiges yadulski",
+    "cardCode": "08FR024",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "COMMUN",
+    "rarityRef": "Common",
+    "subtypes": [
+      "CHIEN"
+    ],
+    "supertype": "",
+    "type": "Unité",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Éternel",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
     "associatedCardRefs": [
       "08FR002T1"
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08FR015.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08FR015-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08FR015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08FR015-full.png"
       }
     ],
     "regions": [
@@ -2212,12 +3408,66 @@
   {
     "associatedCards": [],
     "associatedCardRefs": [
+      "04FR001"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08FR030.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08FR030-full.png"
+      }
+    ],
+    "regions": [
+      "Freljord"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 8,
+    "cost": 8,
+    "health": 8,
+    "description": "Quand je suis invoquée, invoquez 2 <link=card.summon><style=AssociatedCard>Serviteurs de glace</style></link> et <link=vocab.Advance><style=Vocab>réduisez leur Décompte</style></link> à <nobr>2</nobr>.",
+    "descriptionRaw": "Quand je suis invoquée, invoquez 2 Serviteurs de glace et réduisez leur Décompte à 2.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« Elle était v-vicieuse ! Des serviteurs réduits en glace noire, des avalanches sous ses griffes, un rugissement qui faisait s'écrouler la neige des montagnes ! C'est une reine guerrière, vous dis-je ! S-Seule une reine guerrière serait capable de tuer des serviteurs. » - Bjerg le babillard",
+    "artistName": "Caravan Studio",
+    "name": "Boadir à la glace noire",
+    "cardCode": "08FR030",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ÉPIQUE",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "DRAGON"
+    ],
+    "supertype": "",
+    "type": "Unité",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Communes uniquement",
+      "Éternel",
+      "Cartes au coût pair",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
       "08FR002T1"
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08FR002.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08FR002-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08FR002.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08FR002-full.png"
       }
     ],
     "regions": [
@@ -2262,8 +3512,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08FR002T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08FR002T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08FR002T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08FR002T1-full.png"
       }
     ],
     "regions": [
@@ -2311,13 +3561,11 @@
   },
   {
     "associatedCards": [],
-    "associatedCardRefs": [
-      "08FR002T1"
-    ],
+    "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08FR003.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08FR003-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08FR028.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08FR028-full.png"
       }
     ],
     "regions": [
@@ -2326,9 +3574,65 @@
     "regionRefs": [
       "Freljord"
     ],
-    "attack": 5,
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "J'ai +1|+0 pour chaque sous-type différent que vous avez invoqué durant la partie. <style=Variable></style>",
+    "descriptionRaw": "J'ai +1|+0 pour chaque sous-type différent que vous avez invoqué durant la partie. ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« Il y a certaines bêtes que même les avalanches n'arrêtent pas. C'est pourquoi on ne lésine jamais sur le prix d'un bon harnais. » - Trappeur avarosan",
+    "artistName": "Polar Engine",
+    "name": "Harnais pratique",
+    "cardCode": "08FR028",
+    "keywords": [
+      "Équipement"
+    ],
+    "keywordRefs": [
+      "Equipment"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ÉPIQUE",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Équipement",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Communes uniquement",
+      "Éternel",
+      "Cartes au coût pair",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08FR002T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08FR003.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08FR003-full.png"
+      }
+    ],
+    "regions": [
+      "Freljord"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 6,
     "cost": 6,
-    "health": 3,
+    "health": 4,
     "description": "Quand vous lancez un sort ou une <link=keyword.Skill><sprite name=SkillMark><style=Keyword>compétence</style></link>, invoquez 1 <link=card.summon><style=AssociatedCard>Sceau de la tempête</style></link>.",
     "descriptionRaw": "Quand vous lancez un sort ou une compétence, invoquez 1 Sceau de la tempête.",
     "levelupDescription": "",
@@ -2364,42 +3668,726 @@
   {
     "associatedCards": [],
     "associatedCardRefs": [
-      "08BW028T1",
-      "08BW028T2",
-      "08BW028T3",
-      "08BW028T4"
+      "08RU014T9",
+      "08RU014T8",
+      "08RU014T3",
+      "08RU014T6",
+      "08RU014T5",
+      "08RU014T1",
+      "08RU014T7",
+      "08RU014T4",
+      "08RU014T2"
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08DE006.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08DE006-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08RU014.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08RU014-full.png"
       }
     ],
     "regions": [
-      "Demacia",
-      "Freljord"
+      "Runeterra"
     ],
     "regionRefs": [
-      "Demacia",
-      "Freljord"
+      "Runeterra"
     ],
-    "attack": 2,
-    "cost": 3,
-    "health": 3,
-    "description": "<link=vocab.Play><style=Vocab>Immédiat</style></link> : choisissez un sort Explorateur à créer dans votre main.",
-    "descriptionRaw": "Immédiat : choisissez un sort Explorateur à créer dans votre main.",
+    "attack": 10,
+    "cost": 12,
+    "health": 10,
+    "description": "<link=vocab.Origin><style=Vocab>Origine</style></link> : <link=card.origin><style=AssociatedCard>Aspect du dragon</style></link>. <style=Variable></style>\r\nMon coût est réduit de 1 pour chaque bénédiction de dragon que vous avez lancée durant la partie.\r\n<link=keyword.PlaySkillMark><sprite name=SkillMark><style=Keyword>Immédiat</style></link> : lancez toutes les bénédictions de dragon sur moi.",
+    "descriptionRaw": "Origine : Aspect du dragon. \r\nMon coût est réduit de 1 pour chaque bénédiction de dragon que vous avez lancée durant la partie.\r\nImmédiat : lancez toutes les bénédictions de dragon sur moi.",
+    "levelupDescription": "Les alliés ont attaqué avec une puissance totale de 75 ou plus. <style=Variable></style>",
+    "levelupDescriptionRaw": "Les alliés ont attaqué avec une puissance totale de 75 ou plus. ",
+    "flavorText": "« La légende raconte que ce dragon est le plus vieux de tous, qu'il est le roi de toutes les bêtes ailées. Si nous arrivons à le soumettre... Alatis, rien ne pourra plus nous arrêter. Le monde comprendra enfin que les hommes et les dragons sont plus forts ensemble. » - Volix, Dragonnier",
+    "artistName": "Envar Studio",
+    "name": "Dragon ancestral",
+    "cardCode": "08RU014",
+    "keywords": [
+      "Fureur"
+    ],
+    "keywordRefs": [
+      "Fury"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Champion",
+    "rarityRef": "Champion",
+    "subtypes": [
+      "DRAGON"
+    ],
+    "supertype": "Champion",
+    "type": "Unité",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Éternel",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08RU014T5.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08RU014T5-full.png"
+      }
+    ],
+    "regions": [
+      "Runeterra"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "Octroyez +1|+1 et <link=keyword.Fearsome><sprite name=Fearsome><style=Keyword>Redoutable</style></link>.",
+    "descriptionRaw": "Octroyez +1|+1 et Redoutable.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "« Il fait froid. J'ai froid. Tout est froid, tout le temps. Il y a des endroits où les gens ne sont pas supposés vivre. Par pitié, envoyez-moi dans un endroit chaud, la prochaine fois. » - Tiré du journal de la Division des expéditions lointaines de la Guilde des explorateurs, allocation : Freljord",
+    "flavorText": "Les flammes de la colère infernale grandissent toujours plus.",
+    "artistName": "Polar Engine",
+    "name": "Puissance infernale",
+    "cardCode": "08RU014T5",
+    "keywords": [
+      "Compétence"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Aucune",
+    "rarityRef": "None",
+    "subtypes": [
+      "ÉLÉMENTAIRE"
+    ],
+    "supertype": "",
+    "type": "Compétence",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Éternel",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08RU014T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08RU014T3-full.png"
+      }
+    ],
+    "regions": [
+      "Runeterra"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "Vous pouvez ajouter n'importe quel adepte d'un coût de 6 ou plus lors de la construction de votre deck. Quand vous jouez une unité d'un coût de base de 6 ou plus, choisissez une bénédiction de dragon parmi deux et lancez-la sur l'unité.",
+    "descriptionRaw": "Vous pouvez ajouter n'importe quel adepte d'un coût de 6 ou plus lors de la construction de votre deck. Quand vous jouez une unité d'un coût de base de 6 ou plus, choisissez une bénédiction de dragon parmi deux et lancez-la sur l'unité.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Les dragons octroient des bénédictions aussi puissantes que terribles.",
     "artistName": "Envar Studio",
-    "name": "Pionnier érudit",
-    "cardCode": "08DE006",
+    "name": "Aspect du dragon",
+    "cardCode": "08RU014T3",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Aucune",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Compétence",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Éternel",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08RU014",
+      "08RU014T8",
+      "08RU014T3",
+      "08RU014T6",
+      "08RU014T5",
+      "08RU014T1",
+      "08RU014T7",
+      "08RU014T4",
+      "08RU014T2"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08RU014T9.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08RU014T9-full.png"
+      }
+    ],
+    "regions": [
+      "Runeterra"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 30,
+    "cost": 12,
+    "health": 30,
+    "description": "\r\n\r\n\r\n\r\nPERSONNE NE PEUT M'ARRÊTER",
+    "descriptionRaw": "\r\n\r\n\r\n\r\nPERSONNE NE PEUT M'ARRÊTER",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Une chaleur sans pareille s'échappa de la gueule du dragon ancestral. Alatis s'envola aussitôt. « Tenez vos positions, » s'est écrié Volix, « nous resterons gravés dans l'histoire pour avoir soumis le roi des bêtes ! »",
+    "artistName": "Envar Studio",
+    "name": "Dragon ancestral",
+    "cardCode": "08RU014T9",
+    "keywords": [
+      "Fureur"
+    ],
+    "keywordRefs": [
+      "Fury"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Champion",
+    "rarityRef": "Champion",
+    "subtypes": [
+      "DRAGON"
+    ],
+    "supertype": "Champion",
+    "type": "Unité",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Éternel",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08RU014T4.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08RU014T4-full.png"
+      }
+    ],
+    "regions": [
+      "Runeterra"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "Octroyez +1|+1 et 2x <link=keyword.Impact><sprite name=Impact><style=Keyword>Impact</style></link>.",
+    "descriptionRaw": "Octroyez +1|+1 et 2x Impact.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Ce que la nature crée, l'Hextech améliore.\n",
+    "artistName": "Polar Engine",
+    "name": "Prouesse Hextech",
+    "cardCode": "08RU014T4",
+    "keywords": [
+      "Compétence"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Aucune",
+    "rarityRef": "None",
+    "subtypes": [
+      "ÉLÉMENTAIRE"
+    ],
+    "supertype": "",
+    "type": "Compétence",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Éternel",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08RU014T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08RU014T2-full.png"
+      }
+    ],
+    "regions": [
+      "Runeterra"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "Octroyez <link=keyword.Deathless><sprite name=Deathless><style=Keyword>Immortalité</style></link>.",
+    "descriptionRaw": "Octroyez Immortalité.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Ce que certains considèrent comme du poison est source de puissance pour d'autres.",
+    "artistName": "Polar Engine",
+    "name": "Fléau techno-chimique",
+    "cardCode": "08RU014T2",
+    "keywords": [
+      "Compétence"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Aucune",
+    "rarityRef": "None",
+    "subtypes": [
+      "ÉLÉMENTAIRE"
+    ],
+    "supertype": "",
+    "type": "Compétence",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Éternel",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08RU014T7.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08RU014T7-full.png"
+      }
+    ],
+    "regions": [
+      "Runeterra"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "Octroyez <link=keyword.Challenger><sprite name=Challenger><style=Keyword>Challenger</style></link>.",
+    "descriptionRaw": "Octroyez Challenger.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Aussi agile que la brise et aussi féroce que la tempête. ",
+    "artistName": "Polar Engine",
+    "name": "Grâce du Faiseur de nuages",
+    "cardCode": "08RU014T7",
+    "keywords": [
+      "Compétence"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Aucune",
+    "rarityRef": "None",
+    "subtypes": [
+      "ÉLÉMENTAIRE"
+    ],
+    "supertype": "",
+    "type": "Compétence",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Éternel",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08RU014T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08RU014T1-full.png"
+      }
+    ],
+    "regions": [
+      "Runeterra"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "Octroyez +1|+1 et <link=keyword.Tough><sprite name=Tough><style=Keyword>Robuste</style></link>.",
+    "descriptionRaw": "Octroyez +1|+1 et Robuste.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "La peau du dragon des montagnes résiste à n'importe quelle tempête.",
+    "artistName": "Polar Engine",
+    "name": "Vigueur des montagnes",
+    "cardCode": "08RU014T1",
+    "keywords": [
+      "Compétence"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Aucune",
+    "rarityRef": "None",
+    "subtypes": [
+      "ÉLÉMENTAIRE"
+    ],
+    "supertype": "",
+    "type": "Compétence",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Éternel",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08RU014",
+      "08RU014T9"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08RU014T8.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08RU014T8-full.png"
+      }
+    ],
+    "regions": [
+      "Runeterra"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 8,
+    "health": 0,
+    "description": "Remplissez entièrement votre mana. Piochez tous les adeptes d'un coût de 6 ou plus dans les 6 premières cartes de votre deck.\r\nCréez 1 <link=card.level1><style=AssociatedCard>Dragon ancestral</style></link> dans votre deck.",
+    "descriptionRaw": "Remplissez entièrement votre mana. Piochez tous les adeptes d'un coût de 6 ou plus dans les 6 premières cartes de votre deck.\r\nCréez 1 Dragon ancestral dans votre deck.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« C'est un appel primitif. Je vois un royaume de nuages. Je vois un terrible hôte ailé. » - Ottrani adoratrice de dragons",
+    "artistName": "Polar Engine",
+    "name": "Rugissement primordial du Dragon ancestral",
+    "cardCode": "08RU014T8",
+    "keywords": [
+      "Instantané"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Instantané",
+    "spellSpeedRef": "Burst",
+    "rarity": "Aucune",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "Champion",
+    "type": "Sort",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Éternel",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08RU014T6.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08RU014T6-full.png"
+      }
+    ],
+    "regions": [
+      "Runeterra"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "Rendez 2 PV aux alliés et au Nexus.",
+    "descriptionRaw": "Rendez 2 PV aux alliés et au Nexus.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Ces ailes aqueuses soignent tous les maux.",
+    "artistName": "Polar Engine",
+    "name": "Volonté des océans",
+    "cardCode": "08RU014T6",
+    "keywords": [
+      "Compétence"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Aucune",
+    "rarityRef": "None",
+    "subtypes": [
+      "ÉLÉMENTAIRE"
+    ],
+    "supertype": "",
+    "type": "Compétence",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Éternel",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08RU015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08RU015-full.png"
+      }
+    ],
+    "regions": [
+      "Runeterra"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 8,
+    "health": 0,
+    "description": "Remplissez entièrement votre mana. Piochez tous les adeptes d'un coût de 6 ou plus dans les 6 premières cartes de votre deck.",
+    "descriptionRaw": "Remplissez entièrement votre mana. Piochez tous les adeptes d'un coût de 6 ou plus dans les 6 premières cartes de votre deck.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« C'est un appel primitif. Je vois un royaume de nuages. Je vois un terrible hôte ailé. » - Ottrani adoratrice de dragons",
+    "artistName": "Polar Engine",
+    "name": "Rugissement primordial",
+    "cardCode": "08RU015",
+    "keywords": [
+      "Instantané"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Instantané",
+    "spellSpeedRef": "Burst",
+    "rarity": "Aucune",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Sort",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Éternel",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08NX003T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08NX003.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08NX003-full.png"
+      }
+    ],
+    "regions": [
+      "Noxus"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 8,
+    "cost": 6,
+    "health": 4,
+    "description": "<link=keyword.Elemental Skill><sprite name=ElementalSkill><style=Keyword>Immédiat</style></link> : infligez 2 pt(s) de dégâts à un ennemi et 2 pt(s) de dégâts au Nexus ennemi.",
+    "descriptionRaw": "Immédiat : infligez 2 pt(s) de dégâts à un ennemi et 2 pt(s) de dégâts au Nexus ennemi.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "L'expansion noxienne a entraîné la disparition d'un grand nombre de peuples, de colonies et de cultures. Les créatures sauvages se retrouvent elles aussi souvent à la merci de leur machine de guerre. Mais dans le cas de ce dragon, chaque avancée brutale de Noxus est accueillie par un brasier de rage tout aussi brutal.",
+    "artistName": "Envar Studio",
+    "name": "Cracheur de feu enragé",
+    "cardCode": "08NX003",
     "keywords": [
       "Challenger"
     ],
     "keywordRefs": [
       "Challenger"
     ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ÉPIQUE",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "DRAGON"
+    ],
+    "supertype": "",
+    "type": "Unité",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Éternel",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08NX003"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08NX003T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08NX003T1-full.png"
+      }
+    ],
+    "regions": [
+      "Noxus"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "Infligez 2 pt(s) de dégâts à un ennemi et 2 pt(s) de dégâts au Nexus ennemi.",
+    "descriptionRaw": "Infligez 2 pt(s) de dégâts à un ennemi et 2 pt(s) de dégâts au Nexus ennemi.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Le bois, l'acier, la chair, tout fond à proximité de la rage caustique du cracheur de feu.",
+    "artistName": "Polar Engine",
+    "name": "Crachat de feu",
+    "cardCode": "08NX003T1",
+    "keywords": [
+      "Compétence élémentaire"
+    ],
+    "keywordRefs": [
+      "ElementalSkill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Aucune",
+    "rarityRef": "None",
+    "subtypes": [
+      "ÉLÉMENTAIRE"
+    ],
+    "supertype": "",
+    "type": "Compétence",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Éternel",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08NX024T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08NX024.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08NX024-full.png"
+      }
+    ],
+    "regions": [
+      "Noxus"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 5,
+    "cost": 3,
+    "health": 1,
+    "description": "<link=keyword.PlaySkillMark><sprite name=SkillMark><style=Keyword>Immédiat</style></link> : infligez 3 pt(s) de dégâts à un allié pour en infliger 3 à un ennemi.",
+    "descriptionRaw": "Immédiat : infligez 3 pt(s) de dégâts à un allié pour en infliger 3 à un ennemi.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« Libérez leurs âmes des cages que sont leurs corps ! »<br>- Mordekaiser",
+    "artistName": "Caravan Studio",
+    "name": "Légionnaire de fer",
+    "cardCode": "08NX024",
+    "keywords": [],
+    "keywordRefs": [],
     "spellSpeed": "",
     "spellSpeedRef": "",
     "rarity": "RARE",
@@ -2423,48 +4411,54 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08DE010.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08DE010-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08NX024T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08NX024T1-full.png"
       }
     ],
     "regions": [
-      "Demacia"
+      "Noxus"
     ],
     "regionRefs": [
-      "Demacia"
+      "Noxus"
     ],
     "attack": 0,
-    "cost": 3,
+    "cost": 0,
     "health": 0,
-    "description": "Conférez +0|+2 à un allié.\r\nCet allié et un ennemi se <link=vocab.Strike><style=Vocab>frappent</style></link> mutuellement.",
-    "descriptionRaw": "Conférez +0|+2 à un allié.\r\nCet allié et un ennemi se frappent mutuellement.",
+    "description": "Infligez 3 pt(s) de dégâts à un allié pour en infliger 3 à un ennemi.",
+    "descriptionRaw": "Infligez 3 pt(s) de dégâts à un allié pour en infliger 3 à un ennemi.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "« En garde, mon ami ! Vous ne seriez pas suffisamment lâche pour refuser un duel entre gentilshommes ? » - Chevalier des Laurent",
-    "artistName": "Kudos Productions",
-    "name": "Duel de gentilshommes",
-    "cardCode": "08DE010",
+    "flavorText": "« Il coupe, il blesse... dans cette vie comme dans la suivante... et celle d'après... » - Ghasts enchaînés",
+    "artistName": "Polar Engine",
+    "name": "Hachoir des âmes",
+    "cardCode": "08NX024T1",
     "keywords": [
-      "Rapide"
+      "Compétence"
     ],
     "keywordRefs": [
-      "Fast"
+      "Skill"
     ],
-    "spellSpeed": "Rapide",
-    "spellSpeedRef": "Fast",
-    "rarity": "COMMUN",
-    "rarityRef": "Common",
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Aucune",
+    "rarityRef": "None",
     "subtypes": [],
     "supertype": "",
-    "type": "Sort",
-    "collectible": true,
+    "type": "Compétence",
+    "collectible": false,
     "set": "Set8",
     "formats": [
+      "Communes uniquement",
       "Éternel",
+      "Cartes au coût pair",
+      "Unicarte",
       "Classique"
     ],
     "formatRefs": [
+      "client_Formats_CommonsOnly_name",
       "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Deckbuilder_RulesFilters_Singleton",
       "client_Formats_Standard_name"
     ]
   },
@@ -2473,8 +4467,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08NX011.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08NX011-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08NX011.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08NX011-full.png"
       }
     ],
     "regions": [
@@ -2484,7 +4478,7 @@
       "Noxus"
     ],
     "attack": 0,
-    "cost": 1,
+    "cost": 2,
     "health": 0,
     "description": "Infligez 1 pt(s) de dégâts au Nexus ennemi. Ces dégâts sont augmentés de 1 pour chaque autre <link=card.selfref><style=AssociatedCard>Feu de forêt</style></link> que vous avez lancé. Créez 1 <link=card.selfref><style=AssociatedCard>Feu de forêt</style></link> dans votre deck.",
     "descriptionRaw": "Infligez 1 pt(s) de dégâts au Nexus ennemi. Ces dégâts sont augmentés de 1 pour chaque autre Feu de forêt que vous avez lancé. Créez 1 Feu de forêt dans votre deck.",
@@ -2525,8 +4519,164 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08NX014.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08NX014-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08NX028.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08NX028-full.png"
+      }
+    ],
+    "regions": [
+      "Noxus"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "Octroyez <link=keyword.Deathless><sprite name=Deathless><style=Keyword>Immortalité</style></link> à un allié.",
+    "descriptionRaw": "Octroyez Immortalité à un allié.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« Le fer éternel. » - Mordekaiser",
+    "artistName": "Polar Engine",
+    "name": "Indestructible",
+    "cardCode": "08NX028",
+    "keywords": [
+      "Instantané"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Instantané",
+    "spellSpeedRef": "Burst",
+    "rarity": "COMMUN",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Sort",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Éternel",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08NX019T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08NX019.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08NX019-full.png"
+      }
+    ],
+    "regions": [
+      "Noxus"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 4,
+    "cost": 4,
+    "health": 4,
+    "description": "<link=vocab.NexusStrike><style=Vocab>Frappe du Nexus</style></link> : <link=keyword.Curse><sprite name=Curse><style=Keyword>maudissez</style></link> votre adversaire, qui subit <link=card.curse><style=AssociatedCard>Ichor</style></link>.",
+    "descriptionRaw": "Frappe du Nexus : maudissez votre adversaire, qui subit Ichor.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Même s'ils ont leur place sur les champs de bataille noxiens, les sauriens géants sont surtout très appréciés pour les combats d'arène de la capitale. Peu d'adversaires, humains ou animaux, se risquent à les affronter. De fait, les rares combats des sauriens géants attirent des spectateurs venus de loin.",
+    "artistName": "Envar Studio",
+    "name": "Saurien géant à pics rouges",
+    "cardCode": "08NX019",
+    "keywords": [
+      "Surpuissance"
+    ],
+    "keywordRefs": [
+      "Overwhelm"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "COMMUN",
+    "rarityRef": "Common",
+    "subtypes": [
+      "REPTILE"
+    ],
+    "supertype": "",
+    "type": "Unité",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Éternel",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08NX019T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08NX019T1-full.png"
+      }
+    ],
+    "regions": [
+      "Noxus"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "Tant que je suis dans votre main, <link=vocab.RoundStart><style=Vocab>Début du round</style></link> : infligez <style=Variable>1</style> pt(s) de dégâts à votre Nexus.",
+    "descriptionRaw": "Tant que je suis dans votre main, Début du round : infligez 1 pt(s) de dégâts à votre Nexus.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Vous saignez. Pas trop... mais ça n'a pas l'air de s'arrêter.",
+    "artistName": "Polar Engine",
+    "name": "Ichor",
+    "cardCode": "08NX019T1",
+    "keywords": [
+      "Focalisé",
+      "Malédiction"
+    ],
+    "keywordRefs": [
+      "Focus",
+      "Curse"
+    ],
+    "spellSpeed": "Instantané",
+    "spellSpeedRef": "Burst",
+    "rarity": "Aucune",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Sort",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Éternel",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08NX014.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08NX014-full.png"
       }
     ],
     "regions": [
@@ -2580,8 +4730,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08NX012.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08NX012-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08NX012.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08NX012-full.png"
       }
     ],
     "regions": [
@@ -2625,37 +4775,35 @@
   },
   {
     "associatedCards": [],
-    "associatedCardRefs": [
-      "06RU001T3"
-    ],
+    "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08SI021.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08SI021-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08NX009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08NX009-full.png"
       }
     ],
     "regions": [
-      "Îles obscures"
+      "Noxus"
     ],
     "regionRefs": [
-      "ShadowIsles"
+      "Noxus"
     ],
-    "attack": 2,
-    "cost": 2,
-    "health": 3,
-    "description": "Quand un autre allié meurt, ou <nobr><link=keyword.Last Breath><sprite name=LastBreath><style=Keyword>Dernier souffle</style></link> :</nobr> placez 4 <link=card.chime><style=AssociatedCard>carillons</style></link> dans votre deck.",
-    "descriptionRaw": "Quand un autre allié meurt, ou Dernier souffle : placez 4 carillons dans votre deck.",
+    "attack": 5,
+    "cost": 4,
+    "health": 2,
+    "description": "",
+    "descriptionRaw": "",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "Ne vous inquiétez pas pour ces sonneries lugubres, ce n'est que le limon résonnant qui fait ses rondes. Il attend avec impatience les nouveaux arrivants, mais ce n'est pas vraiment réciproque.",
-    "artistName": "Bubble Cat",
-    "name": "Limon résonnant solitaire",
-    "cardCode": "08SI021",
+    "flavorText": "« Il a fallu des siècles pour mettre en place le sceau qui retient aujourd'hui cet effroyable belliciste. Et vous et vos petits amis, vous croyez pouvoir le vaincre avec le pouvoir de la « joie » ? Petite sotte. Vous ne ferez qu'attiser la colère du revenant et provoquer notre perte. »",
+    "artistName": "Wild Blue",
+    "name": "Seigneur Mallat",
+    "cardCode": "08NX009",
     "keywords": [
-      "Dernier souffle"
+      "Immortalité"
     ],
     "keywordRefs": [
-      "LastBreath"
+      "Deathless"
     ],
     "spellSpeed": "",
     "spellSpeedRef": "",
@@ -2680,93 +4828,32 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08SI030.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08SI030-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08NX025.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08NX025-full.png"
       }
     ],
     "regions": [
-      "Îles obscures"
+      "Noxus"
     ],
     "regionRefs": [
-      "ShadowIsles"
-    ],
-    "attack": 0,
-    "cost": 3,
-    "health": 0,
-    "description": "<link=vocab.Obliterate><style=Vocab>Oblitérez</style></link> les 6 dernières cartes du deck ennemi.",
-    "descriptionRaw": "Oblitérez les 6 dernières cartes du deck ennemi.",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "Pour certains des monstres aquatiques vivant dans les plus profonds abysses, même de gros bateaux servent d'amuse-gueules.",
-    "artistName": "Polar Engine",
-    "name": "Sépulture aquatique",
-    "cardCode": "08SI030",
-    "keywords": [
-      "Lent"
-    ],
-    "keywordRefs": [
-      "Slow"
-    ],
-    "spellSpeed": "Lent",
-    "spellSpeedRef": "Slow",
-    "rarity": "ÉPIQUE",
-    "rarityRef": "Epic",
-    "subtypes": [],
-    "supertype": "",
-    "type": "Sort",
-    "collectible": true,
-    "set": "Set8",
-    "formats": [
-      "Communes uniquement",
-      "Éternel",
-      "Cartes au coût pair",
-      "Classique"
-    ],
-    "formatRefs": [
-      "client_Formats_CommonsOnly_name",
-      "client_Formats_Eternal_name",
-      "client_Formats_EvenCostCards_name",
-      "client_Formats_Standard_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [
-      "08BW028T1",
-      "08BW028T2",
-      "08BW028T3",
-      "08BW028T4"
-    ],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08SI018.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08SI018-full.png"
-      }
-    ],
-    "regions": [
-      "Îles obscures",
-      "Targon"
-    ],
-    "regionRefs": [
-      "ShadowIsles",
-      "Targon"
+      "Noxus"
     ],
     "attack": 2,
     "cost": 3,
-    "health": 2,
-    "description": "<link=vocab.Play><style=Vocab>Immédiat</style></link> : choisissez un sort Explorateur à créer dans votre main.",
-    "descriptionRaw": "Immédiat : choisissez un sort Explorateur à créer dans votre main.",
+    "health": 3,
+    "description": "Quand un allié est ranimé, octroyez-lui <link=keyword.Challenger><sprite name=Challenger><style=Keyword>Challenger</style></link>.",
+    "descriptionRaw": "Quand un allié est ranimé, octroyez-lui Challenger.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "« Le terrain est insondable. Il n'y a aucune visibilité. On ne peut pas faire un pas sans rencontrer un ennemi. Mais parfois, on tombe sur des alliés inattendus. » - Tiré du journal de la Division des expéditions lointaines de la Guilde des explorateurs, allocation : Îles obscures",
+    "flavorText": "« Vous souriez, mais je vois la vraie nature de vos cœurs de traître ! Ils m'ont regardé en souriant et ils ont mangé à ma table en préparant leurs épées pour me poignarder dans le dos. Je ne me ferai pas avoir de nouveau. Vous allez mourir comme les autres : en hurlant vos excuses ! »",
     "artistName": "Envar Studio",
-    "name": "Inspecteur spectral",
-    "cardCode": "08SI018",
+    "name": "Revenant percé de lames",
+    "cardCode": "08NX025",
     "keywords": [
-      "Vol de vie"
+      "Immortalité"
     ],
     "keywordRefs": [
-      "Lifesteal"
+      "Deathless"
     ],
     "spellSpeed": "",
     "spellSpeedRef": "",
@@ -2789,13 +4876,2028 @@
   {
     "associatedCards": [],
     "associatedCardRefs": [
+      "08SI026T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08SH009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08SH009-full.png"
+      }
+    ],
+    "regions": [
+      "Shurima"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "<link=keyword.Curse><sprite name=Curse><style=Keyword>Maudissez</style></link> un ennemi, qui subit <link=card.curse><style=AssociatedCard>Terreur</style></link>.",
+    "descriptionRaw": "Maudissez un ennemi, qui subit Terreur.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Certaines choses devraient rester enfouies sous les sables.",
+    "artistName": "Polar Engine",
+    "name": "Malédiction antique",
+    "cardCode": "08SH009",
+    "keywords": [
+      "Instantané"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Instantané",
+    "spellSpeedRef": "Burst",
+    "rarity": "COMMUN",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Sort",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Éternel",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08SH004.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08SH004-full.png"
+      }
+    ],
+    "regions": [
+      "Shurima"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 4,
+    "cost": 4,
+    "health": 4,
+    "description": "<link=keyword.Daybreak><style=Keyword>Aurore</style></link> ou quand vous activez un autre effet <link=keyword.Daybreak><style=Keyword>Aurore</style></link> : octroyez <link=keyword.Vulnerable><sprite name=Vulnerable><style=Keyword>Vulnérabilité</style></link> à l'ennemi <link=keyword.Weakest><style=Keyword>le plus faible</style></link>.",
+    "descriptionRaw": "Aurore ou quand vous activez un autre effet Aurore : octroyez Vulnérabilité à l'ennemi le plus faible.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Les innombrables armées de Shurima sont prêtes à montrer la puissance du désert. Quand l'ordre est donné, elles avancent sans la moindre hésitation.",
+    "artistName": "Kudos Productions",
+    "name": "Général des dunes",
+    "cardCode": "08SH004",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "RARE",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "ÉLITE"
+    ],
+    "supertype": "",
+    "type": "Unité",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Éternel",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08SH005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08SH005-full.png"
+      }
+    ],
+    "regions": [
+      "Shurima"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 2,
+    "description": "<link=keyword.Daybreak><style=Keyword>Aurore</style></link> : piochez 1 <link=card.me><style=AssociatedCard>Défenseurs du Disque solaire</style></link>.",
+    "descriptionRaw": "Aurore : piochez 1 Défenseurs du Disque solaire.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« Nous sommes les gardiens du désert éternel, l'histoire vivante, les arpenteurs du chemin éclairé. Nous ne plions le genou que devant le Disque solaire, pour que le monde s'agenouille devant Shurima. » - Azir",
+    "artistName": "Kudos Productions",
+    "name": "Défenseurs du Disque solaire",
+    "cardCode": "08SH005",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "COMMUN",
+    "rarityRef": "Common",
+    "subtypes": [
+      "ÉLITE"
+    ],
+    "supertype": "",
+    "type": "Unité",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Éternel",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "04SH098"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08SH012.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08SH012-full.png"
+      }
+    ],
+    "regions": [
+      "Shurima"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 3,
+    "cost": 3,
+    "health": 2,
+    "description": "La première fois qu'un autre allié meurt à chaque round, ou <link=keyword.Last Breath><sprite name=LastBreath><style=Keyword>Dernier souffle</style></link> : créez 1 <link=card.create><style=AssociatedCard>Trouvaille fortunée</style></link> dans votre main.",
+    "descriptionRaw": "La première fois qu'un autre allié meurt à chaque round, ou Dernier souffle : créez 1 Trouvaille fortunée dans votre main.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« C'est une belle prise, Barb. Je savais que je pouvais compter sur toi. Attends, comment ça ils t'ont vue ? » - Colosse de Vekaura",
+    "artistName": "Caravan Studio",
+    "name": "Barbara, pilleuse de tombe",
+    "cardCode": "08SH012",
+    "keywords": [
+      "Dernier souffle"
+    ],
+    "keywordRefs": [
+      "LastBreath"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "RARE",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "REPTILE"
+    ],
+    "supertype": "",
+    "type": "Unité",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Éternel",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08SH002.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08SH002-full.png"
+      }
+    ],
+    "regions": [
+      "Shurima"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 9,
+    "cost": 5,
+    "health": 6,
+    "description": "Pour me jouer, tuez un allié ou détruisez un emplacement de mana, 3 fois.",
+    "descriptionRaw": "Pour me jouer, tuez un allié ou détruisez un emplacement de mana, 3 fois.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "L'avaleur de dunes dort à des profondeurs bien plus grandes que ses plus petits cousins Xer'Sai. Connue pour dévorer avec aisance les autres prédateurs Xer'Sai, cette créature est très peu documentée. Cela est sans doute dû au fait qu'elle peut avaler des dunes entières, et tous les témoins au passage. ",
+    "artistName": "Envar Studio",
+    "name": "Avaleur de dunes",
+    "cardCode": "08SH002",
+    "keywords": [
+      "Bouclier antisorts",
+      "Redoutable"
+    ],
+    "keywordRefs": [
+      "SpellShield",
+      "Fearsome"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ÉPIQUE",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unité",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Éternel",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08MT003T3",
+      "08MT003T4",
+      "08MT003T11",
+      "08MT003T12"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08MT003.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08MT003-full.png"
+      }
+    ],
+    "regions": [
+      "Targon",
+      "Demacia"
+    ],
+    "regionRefs": [
+      "Targon",
+      "Demacia"
+    ],
+    "attack": 3,
+    "cost": 5,
+    "health": 4,
+    "description": "<link=vocab.Play><style=Vocab>Immédiat</style></link> : <link=keyword.Curse><sprite name=Curse><style=Keyword>maudissez</style></link> un ennemi, qui subit <link=card.curse><style=AssociatedCard>Chaînes</style></link> deux fois.",
+    "descriptionRaw": "Immédiat : maudissez un ennemi, qui subit Chaînes deux fois.",
+    "levelupDescription": "Vous avez ciblé des unités au moins 8 fois. <style=Variable></style>",
+    "levelupDescriptionRaw": "Vous avez ciblé des unités au moins 8 fois. ",
+    "flavorText": "« Vous venez me voir, plaies ouvertes, et jamais je n'ai vu si joyeuse contenance. Vous êtes une femme bien étrange, mais vous êtes ici en sécurité. Reposez-vous, et quand vous vous en sentirez la force, j'aimerais entendre votre histoire. »",
+    "artistName": "Envar Studio",
+    "name": "Morgana",
+    "cardCode": "08MT003",
+    "keywords": [
+      "Vol de vie"
+    ],
+    "keywordRefs": [
+      "Lifesteal"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Champion",
+    "rarityRef": "Champion",
+    "subtypes": [],
+    "supertype": "Champion",
+    "type": "Unité",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Éternel",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08MT003T3",
+      "08MT003",
+      "08MT003T11",
+      "08MT003T12"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08MT003T4.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08MT003T4-full.png"
+      }
+    ],
+    "regions": [
+      "Targon",
+      "Demacia"
+    ],
+    "regionRefs": [
+      "Targon",
+      "Demacia"
+    ],
+    "attack": 4,
+    "cost": 5,
+    "health": 5,
+    "description": "<link=vocab.Play><style=Vocab>Immédiat</style></link> : <link=keyword.Curse><sprite name=Curse><style=Keyword>maudissez</style></link> un ennemi, qui subit <link=card.curse><style=AssociatedCard>Chaînes</style></link> deux fois.\r\n<link=vocab.Attack><style=Vocab>Attaque</style></link> : <link=keyword.Curse><sprite name=Curse><style=Keyword>maudissez</style></link> l'ennemi <link=vocab.Strongest><style=Vocab>le plus fort</style></link> qui n'est pas <link=keyword.Curse><sprite name=Curse><style=Keyword>maudit</style></link>. Il subit <link=card.curse><style=AssociatedCard>Chaînes</style></link>. Infligez 3 pt(s) de dégâts aux ennemis <link=keyword.Curse><sprite name=Curse><style=Keyword>maudits</style></link> et infligez 2 pt(s) de dégâts au Nexus ennemi.",
+    "descriptionRaw": "Immédiat : maudissez un ennemi, qui subit Chaînes deux fois.\r\nAttaque : maudissez l'ennemi le plus fort qui n'est pas maudit. Il subit Chaînes. Infligez 3 pt(s) de dégâts aux ennemis maudits et infligez 2 pt(s) de dégâts au Nexus ennemi.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« Vous regretterez votre transgression ! Croyez-moi, vous allez sentir la souffrance que vous avez infligée aux autres, tel un étau sur votre âme. Vous allez admettre vos péchés ou ils vous étoufferont. »",
+    "artistName": "Envar Studio",
+    "name": "Morgana",
+    "cardCode": "08MT003T4",
+    "keywords": [
+      "Vol de vie"
+    ],
+    "keywordRefs": [
+      "Lifesteal"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Champion",
+    "rarityRef": "Champion",
+    "subtypes": [],
+    "supertype": "Champion",
+    "type": "Unité",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Éternel",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08MT003",
+      "08MT003T4",
+      "08MT003T11"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08MT003T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08MT003T3-full.png"
+      }
+    ],
+    "regions": [
+      "Targon"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "<link=keyword.Stun><sprite name=Stunned><style=Keyword>Étourdissez</style></link> un ennemi et <link=keyword.Curse><sprite name=Curse><style=Keyword>maudissez</style></link>-le. Il subit <link=card.curse><style=AssociatedCard>Chaînes</style></link>.\r\nCréez 1 <link=card.level1><style=AssociatedCard>Morgana</style></link> dans votre deck.",
+    "descriptionRaw": "Étourdissez un ennemi et maudissez-le. Il subit Chaînes.\r\nCréez 1 Morgana dans votre deck.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« Souffre comme tu les as fait souffrir ! » - Morgana",
+    "artistName": "Polar Engine",
+    "name": "Entrave sombre de Morgana",
+    "cardCode": "08MT003T3",
+    "keywords": [
+      "Rapide"
+    ],
+    "keywordRefs": [
+      "Fast"
+    ],
+    "spellSpeed": "Rapide",
+    "spellSpeedRef": "Fast",
+    "rarity": "Champion",
+    "rarityRef": "Champion",
+    "subtypes": [],
+    "supertype": "Champion",
+    "type": "Sort",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Communes uniquement",
+      "Éternel",
+      "Cartes au coût pair",
+      "Unicarte",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Deckbuilder_RulesFilters_Singleton",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08MT003T11.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08MT003T11-full.png"
+      }
+    ],
+    "regions": [
+      "Targon"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "Tant que je suis dans votre main, <style=Variable>l'unité maudite</style> est <link=keyword.Immobile><sprite name=Immobile><sprite name=Reckless><style=Keyword>Immobile</style></link>.",
+    "descriptionRaw": "Tant que je suis dans votre main, l'unité maudite est Immobile.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« La vérité vous lie ! » - Morgana",
+    "artistName": "Polar Engine",
+    "name": "Chaînes",
+    "cardCode": "08MT003T11",
+    "keywords": [
+      "Focalisé",
+      "Malédiction"
+    ],
+    "keywordRefs": [
+      "Focus",
+      "Curse"
+    ],
+    "spellSpeed": "Instantané",
+    "spellSpeedRef": "Burst",
+    "rarity": "Aucune",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Sort",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Éternel",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08MT003T12.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08MT003T12-full.png"
+      }
+    ],
+    "regions": [
+      "Targon"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "Infligez 3 pt(s) de dégâts aux ennemis <link=keyword.Curse><sprite name=Curse><style=Keyword>maudits</style></link> et 2 pt(s) de dégâts au Nexus ennemi.",
+    "descriptionRaw": "Infligez 3 pt(s) de dégâts aux ennemis maudits et 2 pt(s) de dégâts au Nexus ennemi.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« J'incarne votre supplice, délivré mille fois ! » - Morgana",
+    "artistName": "Polar Engine",
+    "name": "Chaînes spirituelles",
+    "cardCode": "08MT003T12",
+    "keywords": [
+      "Compétence"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Aucune",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Compétence",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Éternel",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08MT003T11"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08MT005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08MT005-full.png"
+      }
+    ],
+    "regions": [
+      "Targon"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 6,
+    "cost": 8,
+    "health": 8,
+    "description": "<link=vocab.Play><style=Vocab>Immédiat</style></link> : <link=keyword.Curse><sprite name=Curse><style=Keyword>maudissez</style></link> 2 ennemis, qui subissent <link=card.curse><style=AssociatedCard>Chaînes</style></link> deux fois.",
+    "descriptionRaw": "Immédiat : maudissez 2 ennemis, qui subissent Chaînes deux fois.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« C'est au nom de mes filles que j'ai accepté la divinité. C'est pour ma famille que j'ai renoncé à mon humanité, afin que mon épée enflammée puisse forger un nouveau monde, vrai et juste. »",
+    "artistName": "Envar Studio",
+    "name": "Mihira, Manifestation ascendante",
+    "cardCode": "08MT005",
+    "keywords": [
+      "Surpuissance"
+    ],
+    "keywordRefs": [
+      "Overwhelm"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ÉPIQUE",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unité",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Éternel",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08MT003T11"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08MT042.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08MT042-full.png"
+      }
+    ],
+    "regions": [
+      "Targon"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 6,
+    "health": 0,
+    "description": "<link=keyword.Curse><sprite name=Curse><style=Keyword>Maudissez</style></link> un ennemi, qui subit <link=card.curse><style=AssociatedCard>Chaînes</style></link>.\r\nAugmentez de 1 le coût des malédictions ennemies, <link=vocab.Everywhere><style=Vocab>où qu'elles soient</style></link>.",
+    "descriptionRaw": "Maudissez un ennemi, qui subit Chaînes.\r\nAugmentez de 1 le coût des malédictions ennemies, où qu'elles soient.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« Pour trouver votre liberté, vous devez reconnaître votre part d'ombre. » - Morgana",
+    "artistName": "Polar Engine",
+    "name": "Étau du pécheur",
+    "cardCode": "08MT042",
+    "keywords": [
+      "Lent"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "Lent",
+    "spellSpeedRef": "Slow",
+    "rarity": "RARE",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Sort",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Communes uniquement",
+      "Éternel",
+      "Cartes au coût pair",
+      "Unicarte",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Deckbuilder_RulesFilters_Singleton",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08MT024.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08MT024-full.png"
+      }
+    ],
+    "regions": [
+      "Targon"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 2,
+    "description": "<link=vocab.Play><style=Vocab>Immédiat</style></link> : octroyez <link=keyword.SpellShield><sprite name=SpellShield><style=Keyword>Bouclier antisorts</style></link> ou <link=keyword.Overwhelm><sprite name=Overwhelm><style=Keyword>Surpuissance</style></link> à un allié de votre main.",
+    "descriptionRaw": "Immédiat : octroyez Bouclier antisorts ou Surpuissance à un allié de votre main.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« N'ayez pas peur ! Poursuivez, et ne vous retournez pas ! Nous avons également fait ce voyage, autrefois. Il est désormais de notre devoir de protéger le vôtre. Atteignez vite son sanctuaire, et la Voilée vous offrira la protection que vous convoitez. »",
+    "artistName": "Envar Studio",
+    "name": "Sorcier aux yeux vermeils",
+    "cardCode": "08MT024",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "COMMUN",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unité",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Éternel",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08MT024T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08MT024T1-full.png"
+      }
+    ],
+    "regions": [
+      "Targon"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 2,
+    "description": "<link=vocab.Play><style=Vocab>Immédiat</style></link> : octroyez <link=keyword.Overwhelm><sprite name=Overwhelm><style=Keyword>Surpuissance</style></link> à un allié de votre main.",
+    "descriptionRaw": "Immédiat : octroyez Surpuissance à un allié de votre main.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« N'ayez pas peur ! Poursuivez, et ne vous retournez pas ! Nous avons également fait ce voyage, autrefois. Il est désormais de notre devoir de protéger le vôtre. Atteignez vite son sanctuaire, et la Voilée vous offrira la protection que vous convoitez. »",
+    "artistName": "Envar Studio",
+    "name": "Sorcier aux yeux vermeils",
+    "cardCode": "08MT024T1",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Aucune",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unité",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Éternel",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08MT024T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08MT024T2-full.png"
+      }
+    ],
+    "regions": [
+      "Targon"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 2,
+    "description": "<link=vocab.Play><style=Vocab>Immédiat</style></link> : octroyez <link=keyword.SpellShield><sprite name=SpellShield><style=Keyword>Bouclier antisorts</style></link> à un allié de votre main.",
+    "descriptionRaw": "Immédiat : octroyez Bouclier antisorts à un allié de votre main.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« N'ayez pas peur ! Poursuivez, et ne vous retournez pas ! Nous avons également fait ce voyage, autrefois. Il est désormais de notre devoir de protéger le vôtre. Atteignez vite son sanctuaire, et la Voilée vous offrira la protection que vous convoitez. »",
+    "artistName": "Envar Studio",
+    "name": "Sorcier aux yeux vermeils",
+    "cardCode": "08MT024T2",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "COMMUN",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unité",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Éternel",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08MT003T11"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08MT015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08MT015-full.png"
+      }
+    ],
+    "regions": [
+      "Targon"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 2,
+    "cost": 3,
+    "health": 3,
+    "description": "<link=vocab.Play><style=Vocab>Immédiat</style></link> : <link=keyword.Curse><sprite name=Curse><style=Keyword>maudissez</style></link> un ennemi, qui subit <link=card.curse><style=AssociatedCard>Chaînes</style></link>.",
+    "descriptionRaw": "Immédiat : maudissez un ennemi, qui subit Chaînes.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« Regarde, Poupette ! Je fais tout comme tu me l'as appris. Tu crois qu'on pourra montrer tout ce qu'on sait faire à maman, un jour ? Elle le sait déjà ? Tu crois vraiment ? J'espère que tu as raison. » - Lisa",
+    "artistName": "Envar Studio",
+    "name": "Lisa et Poupette",
+    "cardCode": "08MT015",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "COMMUN",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unité",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Éternel",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08MT030.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08MT030-full.png"
+      }
+    ],
+    "regions": [
+      "Targon"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 6,
+    "cost": 6,
+    "health": 5,
+    "description": "Quand vous lancez un sort <link=keyword.Fast><sprite name=Fast><style=Keyword>rapide</style></link>, un sort <link=keyword.Slow><sprite name=Slow><style=Keyword>lent</style></link> ou une <link=keyword.Skill><sprite name=SkillMark><style=Keyword>compétence</style></link>, octroyez +1|+1 aux autres dragons alliés.",
+    "descriptionRaw": "Quand vous lancez un sort rapide, un sort lent ou une compétence, octroyez +1|+1 aux autres dragons alliés.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Les dragons peuvent être très variés, qu'il s'agisse de leur caractère ou de leur apparence. Les dragons infernaux sont une espèce particulièrement destructive. Il existe toutefois aussi des espèces qui protègent avec ferveur leurs familles et leurs habitats, tels que les dragons à gemmes, aussi lents qu'ils sont affectueux.",
+    "artistName": "Polar Engine",
+    "name": "Dragon à gemmes doux",
+    "cardCode": "08MT030",
+    "keywords": [
+      "Fureur"
+    ],
+    "keywordRefs": [
+      "Fury"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "RARE",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "DRAGON"
+    ],
+    "supertype": "",
+    "type": "Unité",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Éternel",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08MT003T11"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08MT023.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08MT023-full.png"
+      }
+    ],
+    "regions": [
+      "Targon"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "<link=keyword.Stun><sprite name=Stunned><style=Keyword>Étourdissez</style></link> un ennemi et <link=keyword.Curse><sprite name=Curse><style=Keyword>maudissez</style></link>-le. Il subit <link=card.curse><style=AssociatedCard>Chaînes</style></link>.",
+    "descriptionRaw": "Étourdissez un ennemi et maudissez-le. Il subit Chaînes.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« Souffre comme tu les as fait souffrir ! » - Morgana",
+    "artistName": "Polar Engine",
+    "name": "Entrave sombre",
+    "cardCode": "08MT023",
+    "keywords": [
+      "Rapide"
+    ],
+    "keywordRefs": [
+      "Fast"
+    ],
+    "spellSpeed": "Rapide",
+    "spellSpeedRef": "Fast",
+    "rarity": "RARE",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Sort",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Éternel",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08MT031.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08MT031-full.png"
+      }
+    ],
+    "regions": [
+      "Targon"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 3,
+    "cost": 4,
+    "health": 3,
+    "description": "Quand je suis invoquée, rendez 2 PV à votre Nexus et obtenez un emplacement de mana supplémentaire au prochain round.",
+    "descriptionRaw": "Quand je suis invoquée, rendez 2 PV à votre Nexus et obtenez un emplacement de mana supplémentaire au prochain round.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Sur les versants du mont Targon, une Ottrani solitaire a consacré sa vie aux dragons. Elle se pare d'écailles et de vieux os, et décide de la voie à suivre en fonction de la disposition des dents de dragon et de la forme des volutes de fumée qui s'envolent vers le sommet de la montagne.",
+    "artistName": "Polar Engine",
+    "name": "Ottrani adoratrice de dragons",
+    "cardCode": "08MT031",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ÉPIQUE",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unité",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Éternel",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08MT009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08MT009-full.png"
+      }
+    ],
+    "regions": [
+      "Targon"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 4,
+    "cost": 5,
+    "health": 5,
+    "description": "Quand je suis invoqué ou quand vous invoquez un allié <link=vocab.Titanic><style=Vocab>titanesque</style></link>, rendez 3 PV à votre Nexus.",
+    "descriptionRaw": "Quand je suis invoqué ou quand vous invoquez un allié titanesque, rendez 3 PV à votre Nexus.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Ce protecteur voilé n'a pas oublié la bénédiction qui l'a distingué des simples bêtes. Il s'acquitte de cette dette en veillant à ce que tous ceux qui cherchent un certain sanctuaire sur les pentes du mont Targon fassent le voyage indemnes.",
+    "artistName": "Envar Studio",
+    "name": "Protecteur voilé",
+    "cardCode": "08MT009",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "RARE",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unité",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Éternel",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08MT003T11"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08MT006.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08MT006-full.png"
+      }
+    ],
+    "regions": [
+      "Targon"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "Conférez <link=keyword.SpellShield><sprite name=SpellShield><style=Keyword>Bouclier antisorts</style></link> à un allié pour ce round et <link=keyword.Curse><sprite name=Curse><style=Keyword>maudissez</style></link>-le. Il subit <link=card.curse><style=AssociatedCard>Chaînes</style></link>.",
+    "descriptionRaw": "Conférez Bouclier antisorts à un allié pour ce round et maudissez-le. Il subit Chaînes.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« La persécution ne t'atteindra pas ! » - Morgana",
+    "artistName": "Polar Engine",
+    "name": "Bouclier noir",
+    "cardCode": "08MT006",
+    "keywords": [
+      "Instantané"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Instantané",
+    "spellSpeedRef": "Burst",
+    "rarity": "RARE",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Sort",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Éternel",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08MT027.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08MT027-full.png"
+      }
+    ],
+    "regions": [
+      "Targon"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 5,
+    "cost": 8,
+    "health": 8,
+    "description": "<link=vocab.Play><style=Vocab>Immédiat</style></link> : activez les effets d'<link=keyword.Daybreak><style=Keyword>Aurore</style></link> et de <link=keyword.Nightfall><style=Keyword>Crépuscule</style></link> de vos autres alliés.\r\n<link=keyword.Daybreak><style=Keyword>Aurore</style></link> : octroyez-moi <link=keyword.Overwhelm><sprite name=Overwhelm><style=Keyword>Surpuissance</style></link>.\r\n<link=keyword.Nightfall><style=Keyword>Crépuscule</style></link> : octroyez-moi <link=keyword.SpellShield><sprite name=SpellShield><style=Keyword>Bouclier antisorts</style></link>.",
+    "descriptionRaw": "Immédiat : activez les effets d'Aurore et de Crépuscule de vos autres alliés.\r\nAurore : octroyez-moi Surpuissance.\r\nCrépuscule : octroyez-moi Bouclier antisorts.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« Un cercle de feu embrase les cieux. Dans les ténèbres annoncées, nous sommes tous des pairs. » - Oracle du déclin",
+    "artistName": "Kudos Productions",
+    "name": "Héraut de la convergence céleste",
+    "cardCode": "08MT027",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ÉPIQUE",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "OISEAU"
+    ],
+    "supertype": "",
+    "type": "Unité",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Éternel",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08MT025.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08MT025-full.png"
+      }
+    ],
+    "regions": [
+      "Targon"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 7,
+    "health": 0,
+    "description": "Si vous avez une unité <link=vocab.Titanic><style=Vocab>titanesque</style></link> <link=vocab.Behold><style=Vocab>visible</style></link>, mon coût est réduit de 3.\r\nInfligez 7 pt(s) de dégâts à une unité.",
+    "descriptionRaw": "Si vous avez une unité titanesque visible, mon coût est réduit de 3.\r\nInfligez 7 pt(s) de dégâts à une unité.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« Ouuupz. Alors, euh, on z'occupe pas de za, z'est pas un problème. Ya pas de fizure, zuste une petite lézarde. Tout à fait normal. Z'est pas la faute de papa, non, PAS DU TOUT ! Bref, pazons à la zuite ! » - Pierre",
+    "artistName": "Polar Engine",
+    "name": "Éclat sismique",
+    "cardCode": "08MT025",
+    "keywords": [
+      "Lent"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "Lent",
+    "spellSpeedRef": "Slow",
+    "rarity": "COMMUN",
+    "rarityRef": "Common",
+    "subtypes": [
+      "ÉLÉMENTAIRE"
+    ],
+    "supertype": "",
+    "type": "Sort",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Éternel",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08BW028T1",
+      "08BW028T2",
+      "08BW028T3",
+      "08BW028T4"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08DE006.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08DE006-full.png"
+      }
+    ],
+    "regions": [
+      "Demacia",
+      "Freljord"
+    ],
+    "regionRefs": [
+      "Demacia",
+      "Freljord"
+    ],
+    "attack": 2,
+    "cost": 3,
+    "health": 3,
+    "description": "<link=vocab.Play><style=Vocab>Immédiat</style></link> : choisissez un sort Explorateur à créer dans votre main.",
+    "descriptionRaw": "Immédiat : choisissez un sort Explorateur à créer dans votre main.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« Il fait froid. J'ai froid. Tout est froid, tout le temps. Il y a des endroits où les gens ne sont pas supposés vivre. Par pitié, envoyez-moi dans un endroit chaud, la prochaine fois. » - Tiré du journal de la Division des expéditions lointaines de la Guilde des explorateurs, allocation : Freljord",
+    "artistName": "Envar Studio",
+    "name": "Pionnier érudit",
+    "cardCode": "08DE006",
+    "keywords": [
+      "Challenger"
+    ],
+    "keywordRefs": [
+      "Challenger"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "RARE",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unité",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Éternel",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08DE017T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08DE020.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08DE020-full.png"
+      }
+    ],
+    "regions": [
+      "Demacia"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "Octroyez +0|+2 à un allié. <link=keyword.Curse><sprite name=Curse><style=Keyword>Maudissez</style></link> votre adversaire, qui subit <link=card.curse><style=AssociatedCard>Neutralisation</style></link>.",
+    "descriptionRaw": "Octroyez +0|+2 à un allié. Maudissez votre adversaire, qui subit Neutralisation.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« Découvre le poids de tes péchés ! » - Morgana",
+    "artistName": "Polar Engine",
+    "name": "Entrave magique",
+    "cardCode": "08DE020",
+    "keywords": [
+      "Lent"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "Lent",
+    "spellSpeedRef": "Slow",
+    "rarity": "COMMUN",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Sort",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Éternel",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08DE017T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08DE017.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08DE017-full.png"
+      }
+    ],
+    "regions": [
+      "Demacia"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 3,
+    "cost": 4,
+    "health": 2,
+    "description": "Quand je suis invoqué, <link=keyword.Curse><sprite name=Curse><style=Keyword>maudissez</style></link> votre adversaire, qui subit <link=card.curse><style=AssociatedCard>Neutralisation</style></link>.",
+    "descriptionRaw": "Quand je suis invoqué, maudissez votre adversaire, qui subit Neutralisation.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« Ils ne doivent pas atteindre le sanctuaire de la sœur déchue. Sa magie est ancienne et corrompue. Je suis incapable de la neutraliser. Allez, ramenez ces monstres à bord du navire puis poursuivez ceux qui restent dans la montagne ! »",
+    "artistName": "Envar Studio",
+    "name": "Traqueur de mages inquisiteur",
+    "cardCode": "08DE017",
+    "keywords": [
+      "Challenger",
+      "Robuste"
+    ],
+    "keywordRefs": [
+      "Challenger",
+      "Tough"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "RARE",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unité",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Éternel",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08DE017T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08DE017T1-full.png"
+      }
+    ],
+    "regions": [
+      "Demacia"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "Tant que je suis dans votre main, vous ne pouvez pas lancer d'autre sort que <link=card.selfref><style=AssociatedCard>Neutralisation</style></link>.",
+    "descriptionRaw": "Tant que je suis dans votre main, vous ne pouvez pas lancer d'autre sort que Neutralisation.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Vous n'êtes pas maître de la magie.",
+    "artistName": "Polar Engine",
+    "name": "Neutralisation",
+    "cardCode": "08DE017T1",
+    "keywords": [
+      "Focalisé",
+      "Malédiction"
+    ],
+    "keywordRefs": [
+      "Focus",
+      "Curse"
+    ],
+    "spellSpeed": "Instantané",
+    "spellSpeedRef": "Burst",
+    "rarity": "Aucune",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Sort",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Éternel",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08DE025.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08DE025-full.png"
+      }
+    ],
+    "regions": [
+      "Demacia"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 6,
+    "cost": 6,
+    "health": 6,
+    "description": "Quand je suis invoqué, réduisez de 1 le coût de toutes les unités alliées en main.",
+    "descriptionRaw": "Quand je suis invoqué, réduisez de 1 le coût de toutes les unités alliées en main.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Grâce à sa fourrure épaisse et foisonnante, ce dragon peut atteindre des altitudes bien plus élevées que les autres. Malgré leur attitude pour le moins animée, les dragons sont assez durs à repérer. On peut parfois les apercevoir très haut, fendant les nuages en un coup de vent.",
+    "artistName": "Wild Blue",
+    "name": "Dragon des nuages",
+    "cardCode": "08DE025",
+    "keywords": [
+      "Fureur"
+    ],
+    "keywordRefs": [
+      "Fury"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ÉPIQUE",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "DRAGON"
+    ],
+    "supertype": "",
+    "type": "Unité",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Communes uniquement",
+      "Éternel",
+      "Cartes au coût pair",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08DE010.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08DE010-full.png"
+      }
+    ],
+    "regions": [
+      "Demacia"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "Conférez +0|+2 à un allié.\r\nCet allié et un ennemi se <link=vocab.Strike><style=Vocab>frappent</style></link> mutuellement.",
+    "descriptionRaw": "Conférez +0|+2 à un allié.\r\nCet allié et un ennemi se frappent mutuellement.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« En garde, mon ami ! Vous ne seriez pas suffisamment lâche pour refuser un duel entre gentilshommes ? » - Chevalier des Laurent",
+    "artistName": "Kudos Productions",
+    "name": "Duel de gentilshommes",
+    "cardCode": "08DE010",
+    "keywords": [
+      "Rapide"
+    ],
+    "keywordRefs": [
+      "Fast"
+    ],
+    "spellSpeed": "Rapide",
+    "spellSpeedRef": "Fast",
+    "rarity": "COMMUN",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Sort",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Éternel",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08DE022.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08DE022-full.png"
+      }
+    ],
+    "regions": [
+      "Demacia"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 8,
+    "cost": 9,
+    "health": 8,
+    "description": "Quand je suis invoqué, piochez 1 copie de chaque champion de votre deck.\r\nLa première fois que vous invoquez un champion à chaque round, <link=vocab.Rally><style=Vocab>ralliez-vous</style></link>.",
+    "descriptionRaw": "Quand je suis invoqué, piochez 1 copie de chaque champion de votre deck.\r\nLa première fois que vous invoquez un champion à chaque round, ralliez-vous.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« N'oublie pas, mon fils. La poursuite de tout horizon doit être au service du foyer que nous laissons derrière nous. » - Roi Jarvan III",
+    "artistName": "Envar Studio",
+    "name": "Le Martin-pêcheur",
+    "cardCode": "08DE022",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ÉPIQUE",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unité",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Éternel",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08DE026.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08DE026-full.png"
+      }
+    ],
+    "regions": [
+      "Demacia"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 7,
+    "cost": 7,
+    "health": 6,
+    "description": "Vos bénédictions de dragon ciblent tous les dragons alliés.",
+    "descriptionRaw": "Vos bénédictions de dragon ciblent tous les dragons alliés.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« Je n'ai pas toujours été un dragonnier, vous savez ? C'est ce cher Alatis qui m'a convaincu, la première fois qu'il m'a sauvé la vie. J'ai beaucoup appris de lui. Mais le plus grand enseignement, c'est qu'il n'y a pas mieux que de servir Demacia à dos de dragon. » - Dragonnier",
+    "artistName": "Envar Studio",
+    "name": "Alatis le vaillant",
+    "cardCode": "08DE026",
+    "keywords": [
+      "Fureur"
+    ],
+    "keywordRefs": [
+      "Fury"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ÉPIQUE",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "DRAGON"
+    ],
+    "supertype": "",
+    "type": "Unité",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Communes uniquement",
+      "Éternel",
+      "Cartes au coût pair",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08DE013.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08DE013-full.png"
+      }
+    ],
+    "regions": [
+      "Demacia"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 3,
+    "description": "Quand je suis invoqué, piochez 1 dragon si vous avez un dragon <link=vocab.Behold><style=Vocab>visible</style></link>.",
+    "descriptionRaw": "Quand je suis invoqué, piochez 1 dragon si vous avez un dragon visible.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« Ça me fait mal de l'admettre, vieux frère, mais on va avoir du mal à le dresser seuls, celui-là. On a fait ce qu'on pouvait. Je vais contacter le général. Avec la puissance de Demacia pour nous couvrir, nous allons mettre cette fantastique bête à genoux. »",
+    "artistName": "Envar Studio",
+    "name": "Dragonnier",
+    "cardCode": "08DE013",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "COMMUN",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unité",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Éternel",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08IO012.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08IO012-full.png"
+      }
+    ],
+    "regions": [
+      "Ionia"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 3,
+    "cost": 6,
+    "health": 5,
+    "description": "Quand vous lancez un sort <link=keyword.Fast><sprite name=Fast><style=Keyword>rapide</style></link>, un sort <link=keyword.Slow><sprite name=Slow><style=Keyword>lent</style></link> ou une <link=keyword.Skill><sprite name=SkillMark><style=Keyword>compétence</style></link>, rendez 1 PV à votre Nexus.",
+    "descriptionRaw": "Quand vous lancez un sort rapide, un sort lent ou une compétence, rendez 1 PV à votre Nexus.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« Quelle bête magnifique ! Je vois la joie dans l'écume de tes griffes sur les vagues. Si un jour tu décides de chasser autre chose que des oiseaux et des poissons, sache que je serais ravie de t'affronter. » - Nilah",
+    "artistName": "Caravan Studio",
+    "name": "Dragon des océans",
+    "cardCode": "08IO012",
+    "keywords": [
+      "Insaisissable"
+    ],
+    "keywordRefs": [
+      "Elusive"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "RARE",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "DRAGON"
+    ],
+    "supertype": "",
+    "type": "Unité",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Éternel",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08IO014.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08IO014-full.png"
+      }
+    ],
+    "regions": [
+      "Ionia"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 9,
+    "cost": 9,
+    "health": 9,
+    "description": "Le coût de la première carte que vous jouez à chaque round est réduit de 9.",
+    "descriptionRaw": "Le coût de la première carte que vous jouez à chaque round est réduit de 9.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Pour les habitants de ce village ionien, Heisho est aussi bien un vénérable protecteur qu'un ami. Il porte leurs maisons sur son dos depuis des temps immémoriaux et les habitants lui font confiance pour trouver des rivages paisibles quand les temps sont troubles.",
+    "artistName": "Envar Studio",
+    "name": "Heisho, carapace du monde",
+    "cardCode": "08IO014",
+    "keywords": [
+      "Bouclier antisorts"
+    ],
+    "keywordRefs": [
+      "SpellShield"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ÉPIQUE",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unité",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Éternel",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "01IO030"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08IO021.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08IO021-full.png"
+      }
+    ],
+    "regions": [
+      "Ionia"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 0,
+    "cost": 9,
+    "health": 0,
+    "description": "Bloquez un sort <link=keyword.Fast><sprite name=Fast><style=Keyword>rapide</style></link>, un sort <link=keyword.Slow><sprite name=Slow><style=Keyword>lent</style></link> ou une <link=keyword.Skill><sprite name=SkillMark><style=Keyword>compétence</style></link> ennemis, <link=keyword.Recall><style=Keyword>rappelez</style></link> un ennemi et invoquez 1 <link=card.summon><style=AssociatedCard>L'Empyréen</style></link>.",
+    "descriptionRaw": "Bloquez un sort rapide, un sort lent ou une compétence ennemis, rappelez un ennemi et invoquez 1 L'Empyréen.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« Cette danse est notre vœu de mémoire. » - Irelia",
+    "artistName": "Polar Engine",
+    "name": "Danse de l'Empyréen",
+    "cardCode": "08IO021",
+    "keywords": [
+      "Rapide"
+    ],
+    "keywordRefs": [
+      "Fast"
+    ],
+    "spellSpeed": "Rapide",
+    "spellSpeedRef": "Fast",
+    "rarity": "RARE",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Sort",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Communes uniquement",
+      "Éternel",
+      "Cartes au coût pair",
+      "Unicarte",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Deckbuilder_RulesFilters_Singleton",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08IO019T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08IO019.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08IO019-full.png"
+      }
+    ],
+    "regions": [
+      "Ionia"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 3,
+    "cost": 4,
+    "health": 3,
+    "description": "Quand je suis invoqué, invoquez 1 <link=card.summon><style=AssociatedCard>Oiseleurs d'Adnere</style></link>.",
+    "descriptionRaw": "Quand je suis invoqué, invoquez 1 Oiseleurs d'Adnere.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« Cet endroit est plein de leçons. N'oubliez jamais : le passage de chaque saison doit être célébré, car ce n'est qu'à la fin d'une chose qu'un nouveau commencement peut naître. »",
+    "artistName": "Envar Studio",
+    "name": "Adnere",
+    "cardCode": "08IO019",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "RARE",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unité",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Communes uniquement",
+      "Éternel",
+      "Cartes au coût pair",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08IO019T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08IO019T1-full.png"
+      }
+    ],
+    "regions": [
+      "Ionia"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 1,
+    "cost": 1,
+    "health": 1,
+    "description": "<link=keyword.Support><style=Keyword>Support</style></link> : renforcez mes stats pour qu'elles soient égales à celles de l'allié que je soutiens pour ce round.",
+    "descriptionRaw": "Support : renforcez mes stats pour qu'elles soient égales à celles de l'allié que je soutiens pour ce round.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« Regarde ! Les oiseaux de papa éclosent à nouveau ! »<br>« Ouah ! Encore un ! Pourquoi ils sont si nombreux ? »<br>« Tu demandes ça TOUS LES ANS, Arya. »<br>« Mais personne ne me répond jamais ! »<br>« Chut, tu vas les effrayer. Et dis-moi exactement combien il y en a. On va devoir trouver beaucoup de noms. »",
+    "artistName": "Envar Studio",
+    "name": "Oiseleurs d'Adnere",
+    "cardCode": "08IO019T1",
+    "keywords": [
+      "Support"
+    ],
+    "keywordRefs": [
+      "Support"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Aucune",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unité",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Communes uniquement",
+      "Éternel",
+      "Cartes au coût pair",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08IO010.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08IO010-full.png"
+      }
+    ],
+    "regions": [
+      "Ionia"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 0,
+    "cost": 4,
+    "health": 0,
+    "description": "<link=keyword.Recall><style=Keyword>Rappelez</style></link> un ennemi pour augmenter de 2 le coût de la prochaine unité jouée par votre adversaire lors de ce round.",
+    "descriptionRaw": "Rappelez un ennemi pour augmenter de 2 le coût de la prochaine unité jouée par votre adversaire lors de ce round.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« Ceux qui nous font du mal trouveront le repos au fond de la mer. » - Façonneur de rivière",
+    "artistName": "Polar Engine",
+    "name": "Chavirement",
+    "cardCode": "08IO010",
+    "keywords": [
+      "Lent"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "Lent",
+    "spellSpeedRef": "Slow",
+    "rarity": "COMMUN",
+    "rarityRef": "Common",
+    "subtypes": [
+      "ÉLÉMENTAIRE"
+    ],
+    "supertype": "",
+    "type": "Sort",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Éternel",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08BC020.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08BC020-full.png"
+      }
+    ],
+    "regions": [
+      "Bandle"
+    ],
+    "regionRefs": [
+      "BandleCity"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "Votre adversaire défausse la carte la plus chère de sa main.",
+    "descriptionRaw": "Votre adversaire défausse la carte la plus chère de sa main.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "« Imagine un peu, t'es un ver de terre et ces yeux sont la dernière chose que tu voies avant de mourir. Comment ça ? Les vers sont aveugles ? Bah, ça vaut mieux pour eux. » - Elle, Voyageuse désabusée",
+    "artistName": "Polar Engine",
+    "name": "Appétit matinal",
+    "cardCode": "08BC020",
+    "keywords": [
+      "Lent"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "Lent",
+    "spellSpeedRef": "Slow",
+    "rarity": "COMMUN",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Sort",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Communes uniquement",
+      "Éternel",
+      "Cartes au coût pair",
+      "Classique"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
       "06RU001T3",
       "01PZ022"
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08BC005.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08BC005-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08BC005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08BC005-full.png"
       }
     ],
     "regions": [
@@ -2844,8 +6946,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08BC002.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08BC002-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08BC002.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08BC002-full.png"
       }
     ],
     "regions": [
@@ -2899,8 +7001,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08BC006.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08BC006-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08BC006.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08BC006-full.png"
       }
     ],
     "regions": [
@@ -2932,54 +7034,8 @@
     "spellSpeedRef": "",
     "rarity": "RARE",
     "rarityRef": "Rare",
-    "subtypes": [],
-    "supertype": "",
-    "type": "Unité",
-    "collectible": true,
-    "set": "Set8",
-    "formats": [
-      "Éternel",
-      "Classique"
-    ],
-    "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08SH004.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08SH004-full.png"
-      }
-    ],
-    "regions": [
-      "Shurima"
-    ],
-    "regionRefs": [
-      "Shurima"
-    ],
-    "attack": 4,
-    "cost": 4,
-    "health": 4,
-    "description": "<link=keyword.Daybreak><style=Keyword>Aurore</style></link> ou quand vous activez un autre effet <link=keyword.Daybreak><style=Keyword>Aurore</style></link> : octroyez <link=keyword.Vulnerable><sprite name=Vulnerable><style=Keyword>Vulnérabilité</style></link> à l'ennemi <link=keyword.Weakest><style=Keyword>le plus faible</style></link>.",
-    "descriptionRaw": "Aurore ou quand vous activez un autre effet Aurore : octroyez Vulnérabilité à l'ennemi le plus faible.",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "Les innombrables armées de Shurima sont prêtes à montrer la puissance du désert. Quand l'ordre est donné, elles avancent sans la moindre hésitation.",
-    "artistName": "Kudos Productions",
-    "name": "Général des dunes",
-    "cardCode": "08SH004",
-    "keywords": [],
-    "keywordRefs": [],
-    "spellSpeed": "",
-    "spellSpeedRef": "",
-    "rarity": "RARE",
-    "rarityRef": "Rare",
     "subtypes": [
-      "ÉLITE"
+      "YORDLE"
     ],
     "supertype": "",
     "type": "Unité",
@@ -2999,127 +7055,27 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08SH005.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08SH005-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08BC004.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08BC004-full.png"
       }
     ],
     "regions": [
-      "Shurima"
+      "Bandle"
     ],
     "regionRefs": [
-      "Shurima"
+      "BandleCity"
     ],
-    "attack": 2,
-    "cost": 2,
-    "health": 2,
-    "description": "<link=keyword.Daybreak><style=Keyword>Aurore</style></link> : piochez 1 <link=card.me><style=AssociatedCard>Défenseurs du Disque solaire</style></link>.",
-    "descriptionRaw": "Aurore : piochez 1 Défenseurs du Disque solaire.",
+    "attack": 9,
+    "cost": 9,
+    "health": 9,
+    "description": "<link=vocab.Play><style=Vocab>Immédiat</style></link> : <link=vocab.Manifest><style=Vocab>matérialisez</style></link> un adepte <link=vocab.Titanic><style=Vocab>titanesque</style></link>, et fixez ses stats sur 1|1 et son coût sur 0. ",
+    "descriptionRaw": "Immédiat : matérialisez un adepte titanesque, et fixez ses stats sur 1|1 et son coût sur 0. ",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "« Nous sommes les gardiens du désert éternel, l'histoire vivante, les arpenteurs du chemin éclairé. Nous ne plions le genou que devant le Disque solaire, pour que le monde s'agenouille devant Shurima. » - Azir",
-    "artistName": "Kudos Productions",
-    "name": "Défenseurs du Disque solaire",
-    "cardCode": "08SH005",
-    "keywords": [],
-    "keywordRefs": [],
-    "spellSpeed": "",
-    "spellSpeedRef": "",
-    "rarity": "COMMUN",
-    "rarityRef": "Common",
-    "subtypes": [
-      "ÉLITE"
-    ],
-    "supertype": "",
-    "type": "Unité",
-    "collectible": true,
-    "set": "Set8",
-    "formats": [
-      "Éternel",
-      "Classique"
-    ],
-    "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08IO010.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08IO010-full.png"
-      }
-    ],
-    "regions": [
-      "Ionia"
-    ],
-    "regionRefs": [
-      "Ionia"
-    ],
-    "attack": 0,
-    "cost": 4,
-    "health": 0,
-    "description": "<link=keyword.Recall><style=Keyword>Rappelez</style></link> un ennemi pour augmenter de 2 le coût de la prochaine unité jouée par votre adversaire lors de ce round.",
-    "descriptionRaw": "Rappelez un ennemi pour augmenter de 2 le coût de la prochaine unité jouée par votre adversaire lors de ce round.",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "« Ceux qui nous font du mal trouveront le repos au fond de la mer. » - Façonneur de rivière",
-    "artistName": "Polar Engine",
-    "name": "Chavirement",
-    "cardCode": "08IO010",
-    "keywords": [
-      "Lent"
-    ],
-    "keywordRefs": [
-      "Slow"
-    ],
-    "spellSpeed": "Lent",
-    "spellSpeedRef": "Slow",
-    "rarity": "COMMUN",
-    "rarityRef": "Common",
-    "subtypes": [
-      "ÉLÉMENTAIRE"
-    ],
-    "supertype": "",
-    "type": "Sort",
-    "collectible": true,
-    "set": "Set8",
-    "formats": [
-      "Éternel",
-      "Classique"
-    ],
-    "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08MT027.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08MT027-full.png"
-      }
-    ],
-    "regions": [
-      "Targon"
-    ],
-    "regionRefs": [
-      "Targon"
-    ],
-    "attack": 5,
-    "cost": 8,
-    "health": 8,
-    "description": "<link=vocab.Play><style=Vocab>Immédiat</style></link> : activez les effets d'<link=keyword.Daybreak><style=Keyword>Aurore</style></link> et de <link=keyword.Nightfall><style=Keyword>Crépuscule</style></link> de vos autres alliés.\r\n<link=keyword.Daybreak><style=Keyword>Aurore</style></link> : octroyez-moi <link=keyword.Overwhelm><sprite name=Overwhelm><style=Keyword>Surpuissance</style></link>.\r\n<link=keyword.Nightfall><style=Keyword>Crépuscule</style></link> : octroyez-moi <link=keyword.SpellShield><sprite name=SpellShield><style=Keyword>Bouclier antisorts</style></link>.",
-    "descriptionRaw": "Immédiat : activez les effets d'Aurore et de Crépuscule de vos autres alliés.\r\nAurore : octroyez-moi Surpuissance.\r\nCrépuscule : octroyez-moi Bouclier antisorts.",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "« Un cercle de feu embrase les cieux. Dans les ténèbres annoncées, nous sommes tous des pairs. » - Oracle du déclin",
-    "artistName": "Kudos Productions",
-    "name": "Héraut de la convergence céleste",
-    "cardCode": "08MT027",
+    "flavorText": "« Évidemment que je connais la vieille Portia ! Elle est un peu à l'ouest, mais elle peut vous ouvrir un portail vers n'importe quel endroit. Un tour de queue, et c'est parti ! » - Pionnière des portails",
+    "artistName": "Bubble Cat",
+    "name": "Portia la fantasque",
+    "cardCode": "08BC004",
     "keywords": [],
     "keywordRefs": [],
     "spellSpeed": "",
@@ -3127,7 +7083,7 @@
     "rarity": "ÉPIQUE",
     "rarityRef": "Epic",
     "subtypes": [
-      "OISEAU"
+      "DRAGON"
     ],
     "supertype": "",
     "type": "Unité",
@@ -3147,27 +7103,27 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08MT025.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/fr_fr/img/cards/08MT025-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08BC018.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/fr_fr/img/cards/08BC018-full.png"
       }
     ],
     "regions": [
-      "Targon"
+      "Bandle"
     ],
     "regionRefs": [
-      "Targon"
+      "BandleCity"
     ],
     "attack": 0,
-    "cost": 7,
+    "cost": 8,
     "health": 0,
-    "description": "Si vous avez une unité <link=vocab.Titanic><style=Vocab>titanesque</style></link> <link=vocab.Behold><style=Vocab>visible</style></link>, mon coût est réduit de 3.\r\nInfligez 7 pt(s) de dégâts à une unité.",
-    "descriptionRaw": "Si vous avez une unité titanesque visible, mon coût est réduit de 3.\r\nInfligez 7 pt(s) de dégâts à une unité.",
+    "description": "Placez un allié en dessous de votre deck pour invoquer le premier allié de votre deck.",
+    "descriptionRaw": "Placez un allié en dessous de votre deck pour invoquer le premier allié de votre deck.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "« Ouuupz. Alors, euh, on z'occupe pas de za, z'est pas un problème. Ya pas de fizure, zuste une petite lézarde. Tout à fait normal. Z'est pas la faute de papa, non, PAS DU TOUT ! Bref, pazons à la zuite ! » - Pierre",
+    "flavorText": "« Règle 571 : un éclaireur doit toujours faire preuve de vigilance. Il est important de bien faire la différence entre un bon repas et un piège. » - Recrue Ava",
     "artistName": "Polar Engine",
-    "name": "Éclat sismique",
-    "cardCode": "08MT025",
+    "name": "Piège délicieux",
+    "cardCode": "08BC018",
     "keywords": [
       "Lent"
     ],
@@ -3176,21 +7132,23 @@
     ],
     "spellSpeed": "Lent",
     "spellSpeedRef": "Slow",
-    "rarity": "COMMUN",
-    "rarityRef": "Common",
-    "subtypes": [
-      "ÉLÉMENTAIRE"
-    ],
+    "rarity": "RARE",
+    "rarityRef": "Rare",
+    "subtypes": [],
     "supertype": "",
     "type": "Sort",
     "collectible": true,
     "set": "Set8",
     "formats": [
+      "Communes uniquement",
       "Éternel",
+      "Cartes au coût pair",
       "Classique"
     ],
     "formatRefs": [
+      "client_Formats_CommonsOnly_name",
       "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
       "client_Formats_Standard_name"
     ]
   }

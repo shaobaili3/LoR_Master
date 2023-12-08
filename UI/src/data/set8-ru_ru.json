@@ -2,14 +2,853 @@
   {
     "associatedCards": [],
     "associatedCardRefs": [
+      "08SI042T1",
+      "08SI042T5"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08SI042.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08SI042-full.png"
+      }
+    ],
+    "regions": [
+      "Ноксус",
+      "Сумрачные острова"
+    ],
+    "regionRefs": [
+      "Noxus",
+      "ShadowIsles"
+    ],
+    "attack": 5,
+    "cost": 7,
+    "health": 8,
+    "description": "<link=vocab.Play><style=Vocab>Разыгрывая карту</style></link>: убейте до 2 союзников.\r\n<link=vocab.Slay><style=Vocab>Сразив</style></link> другого союзника, воскресите его.",
+    "descriptionRaw": "Разыгрывая карту: убейте до 2 союзников.\r\nСразив другого союзника, воскресите его.",
+    "levelupDescription": "Погибло 15+ союзников. Союзники с силой 5+ считаются за двоих.<style=Variable></style>",
+    "levelupDescriptionRaw": "Погибло 15+ союзников. Союзники с силой 5+ считаются за двоих.",
+    "flavorText": "Пока Мордекайзер был прикован к своим доспехам, что хранятся в самом сердце Бессмертного бастиона, он изготовил для себя трон правителя Серого царства. На каждого, кто попытается его одолеть, найдется множество тех, кто станет служить ему при жизни и после смерти.",
+    "artistName": "Michal Ivan",
+    "name": "Мордекайзер",
+    "cardCode": "08SI042",
+    "keywords": [
+      "Выбор противника"
+    ],
+    "keywordRefs": [
+      "Challenger"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Чемпион",
+    "rarityRef": "Champion",
+    "subtypes": [],
+    "supertype": "Чемпион",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08SI042",
+      "08SI042T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08SI042T5.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08SI042T5-full.png"
+      }
+    ],
+    "regions": [
+      "Сумрачные острова"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 0,
+    "cost": 10,
+    "health": 0,
+    "description": "Союзник идет в самостоятельную атаку, <link=keyword.Challenger><sprite name=Challenger><style=Keyword>выбирая противником</style></link> <link=vocab.Strongest><style=Vocab>сильнейшего</style></link> врага.\r\nУбейте ВСЕХ остальных бойцов.\r\nСоздайте в своей колоде карту <link=card.level1><style=AssociatedCard>Мордекайзер</style></link>.",
+    "descriptionRaw": "Союзник идет в самостоятельную атаку, выбирая противником сильнейшего врага.\r\nУбейте ВСЕХ остальных бойцов.\r\nСоздайте в своей колоде карту Мордекайзер.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Смерть – вот моя вотчина\". – Мордекайзер",
+    "artistName": "Polar Engine",
+    "name": "Царство смерти Мордекайзера",
+    "cardCode": "08SI042T5",
+    "keywords": [
+      "Медленное"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "Медленное",
+    "spellSpeedRef": "Slow",
+    "rarity": "Нет",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "Чемпион",
+    "type": "Заклинание",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08SI042T5"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08SI042T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08SI042T1-full.png"
+      }
+    ],
+    "regions": [
+      "Ноксус",
+      "Сумрачные острова"
+    ],
+    "regionRefs": [
+      "Noxus",
+      "ShadowIsles"
+    ],
+    "attack": 6,
+    "cost": 7,
+    "health": 9,
+    "description": "<link=vocab.Play><style=Vocab>Разыгрывая карту</style></link>: убейте до 2 союзников.\r\n<link=vocab.Slay><style=Vocab>Сразив</style></link> другого союзника, воскресите его.\r\n<link=vocab.Attack><style=Vocab>Атака</style></link>: до конца игры, <link=vocab.Slay><style=Vocab>сражая</style></link> бойца, <link=keyword.Drain><style=Keyword>истощайте</style></link> вражеский нексус на 1 ед. здоровья.",
+    "descriptionRaw": "Разыгрывая карту: убейте до 2 союзников.\r\nСразив другого союзника, воскресите его.\r\nАтака: до конца игры, сражая бойца, истощайте вражеский нексус на 1 ед. здоровья.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Служите мне! Уступите свои жалкие душонки. Я скреплю их неразрушимым металлом. Я – неотвратимое забвение!\"",
+    "artistName": "Michal Ivan",
+    "name": "Мордекайзер",
+    "cardCode": "08SI042T1",
+    "keywords": [
+      "Выбор противника"
+    ],
+    "keywordRefs": [
+      "Challenger"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Чемпион",
+    "rarityRef": "Champion",
+    "subtypes": [],
+    "supertype": "Чемпион",
+    "type": "Боец",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08SI007.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08SI007-full.png"
+      }
+    ],
+    "regions": [
+      "Сумрачные острова"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 4,
+    "cost": 3,
+    "health": 2,
+    "description": "<link=vocab.Play><style=Vocab>Разыгрывая карту</style></link>: даруйте союзнику в руке <link=keyword.Deathless><sprite name=Deathless><style=Keyword>Посмертие</style></link>.",
+    "descriptionRaw": "Разыгрывая карту: даруйте союзнику в руке Посмертие.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Неважно, какую форму приняли души перед тем, как угодить в плен Серого царства. Личность там почти ничего не значит. Став безликим и бесстрашным, Легион еще лучше служит Железному призраку.",
+    "artistName": "Bubble Cat",
+    "name": "Легион Растерзанных",
+    "cardCode": "08SI007",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ОБЫЧНОЕ",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08SI003.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08SI003-full.png"
+      }
+    ],
+    "regions": [
+      "Сумрачные острова"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 1,
+    "cost": 1,
+    "health": 1,
+    "description": "<link=keyword.Last Breath><sprite name=LastBreath><style=Keyword>Предсмертный вздох</style></link>: при следующем воскрешении союзника создайте в руке мою копию.",
+    "descriptionRaw": "Предсмертный вздох: при следующем воскрешении союзника создайте в руке мою копию.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Нас сковали цепями давным-давно. Вскоре и вы познаете наши страдания, и все мы будем мучиться веки вечные – пока длань Хозяина не дарует нам блаженство забытья...\"",
+    "artistName": "Michal Ivan",
+    "name": "Навь прикованная",
+    "cardCode": "08SI003",
+    "keywords": [
+      "Предсмертный вздох"
+    ],
+    "keywordRefs": [
+      "LastBreath"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "РЕДКОЕ",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU001T3"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08SI021.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08SI021-full.png"
+      }
+    ],
+    "regions": [
+      "Сумрачные острова"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 3,
+    "description": "<nobr><link=keyword.Last Breath><sprite name=LastBreath><style=Keyword>Предсмертный вздох</style></link></nobr> или когда умирает другой союзник: прикрепите в вашей колоде 4 <link=card.chime><style=AssociatedCard>Колокольчика</style></link>.",
+    "descriptionRaw": "Предсмертный вздох или когда умирает другой союзник: прикрепите в вашей колоде 4 Колокольчика.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Не переживайте из-за этого зловещего позвякивания. Это просто старый Слизнезвон совершает свой обход. Он всегда рад вновь прибывшим, но вот они его видеть точно не рады.",
+    "artistName": "Bubble Cat",
+    "name": "Одинокий Слизнезвон",
+    "cardCode": "08SI021",
+    "keywords": [
+      "Предсмертный вздох"
+    ],
+    "keywordRefs": [
+      "LastBreath"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ОБЫЧНОЕ",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08SI030.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08SI030-full.png"
+      }
+    ],
+    "regions": [
+      "Сумрачные острова"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "<link=vocab.Obliterate><style=Vocab>Уничтожьте</style></link> 6 карт снизу вражеской колоды.",
+    "descriptionRaw": "Уничтожьте 6 карт снизу вражеской колоды.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Для некоторых глубоководных чудовищ Рунтерры рыболовное судно – просто легкая закуска.",
+    "artistName": "Polar Engine",
+    "name": "Могила под водой",
+    "cardCode": "08SI030",
+    "keywords": [
+      "Медленное"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "Медленное",
+    "spellSpeedRef": "Slow",
+    "rarity": "ЭПИЧЕСКОЕ",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Заклинание",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Только обычные",
+      "Вечный",
+      "Карты четной стоимости",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08SI037T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08SI037T1-full.png"
+      }
+    ],
+    "regions": [
+      "Сумрачные острова"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 8,
+    "cost": 6,
+    "health": 4,
+    "description": "",
+    "descriptionRaw": "",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Топот тысячи лап со стальными когтями и клацанье призрачных зубов сулят мучительную гибель всякому, кто откажется служить.",
+    "artistName": "Envar Studio",
+    "name": "Тысячецапый смертоверт",
+    "cardCode": "08SI037T1",
+    "keywords": [
+      "Устрашение"
+    ],
+    "keywordRefs": [
+      "Fearsome"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Нет",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Только обычные",
+      "Вечный",
+      "Карты четной стоимости",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08SI037T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08SI037.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08SI037-full.png"
+      }
+    ],
+    "regions": [
+      "Сумрачные острова"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 5,
+    "cost": 6,
+    "health": 3,
+    "description": "Чтобы сыграть меня, убейте союзника.\r\nПризвав меня, призовите карту <link=card.summon><style=AssociatedCard>Тысячецапый смертоверт</style></link>.",
+    "descriptionRaw": "Чтобы сыграть меня, убейте союзника.\r\nПризвав меня, призовите карту Тысячецапый смертоверт.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Эти псы никогда не собьются со следа того, кто попытался убежать. Когда жертва будет загнана в угол, смертоверт окажется неподалеку.",
+    "artistName": "Xavier Leroux",
+    "name": "Призрачный сталепес",
+    "cardCode": "08SI037",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "РЕДКОЕ",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Только обычные",
+      "Вечный",
+      "Карты четной стоимости",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08SI041.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08SI041-full.png"
+      }
+    ],
+    "regions": [
+      "Сумрачные острова"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "Убейте союзника, чтобы нанести бойцу 5 ед. урона.",
+    "descriptionRaw": "Убейте союзника, чтобы нанести бойцу 5 ед. урона.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Тьма – вот что ждет каждого кроме меня\".<br>– Мордекайзер",
+    "artistName": "Polar Engine",
+    "name": "Смертельная хватка",
+    "cardCode": "08SI041",
+    "keywords": [
+      "Быстрое"
+    ],
+    "keywordRefs": [
+      "Fast"
+    ],
+    "spellSpeed": "Быстрое",
+    "spellSpeedRef": "Fast",
+    "rarity": "ОБЫЧНОЕ",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Заклинание",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08SI026T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08SI036.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08SI036-full.png"
+      }
+    ],
+    "regions": [
+      "Сумрачные острова"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "<link=vocab.Play><style=Vocab>Разыгрывая карту</style></link>: <link=keyword.Curse><sprite name=Curse><style=Keyword>прокляните</style></link> врага с помощью карты <link=card.curse><style=AssociatedCard>Ужас</style></link>.\r\nПризвав <link=vocab.Titanic><style=Vocab>титанического</style></link> союзника, разрушьте меня, чтобы вытянуть 2 карты.",
+    "descriptionRaw": "Разыгрывая карту: прокляните врага с помощью карты Ужас.\r\nПризвав титанического союзника, разрушьте меня, чтобы вытянуть 2 карты.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Эти души мы жертвуем тебе. Этот путь мы устелем костями для тебя. Эти царства мы разорвем на куски, дабы проложить дорогу твоему войску из неразрушимого металла\". – Культистка Смертельной хватки",
+    "artistName": "Envar Studio",
+    "name": "Преддверие Серого царства",
+    "cardCode": "08SI036",
+    "keywords": [
+      "Место силы"
+    ],
+    "keywordRefs": [
+      "LandmarkVisualOnly"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "РЕДКОЕ",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Место силы",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Только обычные",
+      "Вечный",
+      "Карты четной стоимости",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08SI004.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08SI004-full.png"
+      }
+    ],
+    "regions": [
+      "Сумрачные острова"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 0,
+    "cost": 10,
+    "health": 0,
+    "description": "Союзник идет в самостоятельную атаку, <link=keyword.Challenger><sprite name=Challenger><style=Keyword>выбирая противником</style></link> <link=vocab.Strongest><style=Vocab>сильнейшего</style></link> врага.\r\nУбейте ВСЕХ остальных бойцов.",
+    "descriptionRaw": "Союзник идет в самостоятельную атаку, выбирая противником сильнейшего врага.\r\nУбейте ВСЕХ остальных бойцов.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Смерть – вот моя вотчина\". – Мордекайзер",
+    "artistName": "Polar Engine",
+    "name": "Царство смерти",
+    "cardCode": "08SI004",
+    "keywords": [
+      "Медленное"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "Медленное",
+    "spellSpeedRef": "Slow",
+    "rarity": "ЭПИЧЕСКОЕ",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Заклинание",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08SI026T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08SI026.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08SI026-full.png"
+      }
+    ],
+    "regions": [
+      "Сумрачные острова"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 3,
+    "cost": 4,
+    "health": 4,
+    "description": "Призвав меня или <link=vocab.Titanic><style=Vocab>титанического</style></link> союзника, <link=keyword.Curse><sprite name=Curse><style=Keyword>прокляните</style></link> <link=vocab.Strongest><style=Vocab>сильнейшего</style></link> врага с помощью карты <link=card.curse><style=AssociatedCard>Ужас</style></link>.",
+    "descriptionRaw": "Призвав меня или титанического союзника, прокляните сильнейшего врага с помощью карты Ужас.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "В глазах своих приверженцев Железный призрак – единственная надежда тех, кто ищет забытья. Мир воцарится с обретением владычества. Культисты желают этого всей душой.",
+    "artistName": "Bubble Cat",
+    "name": "Культистка Смертельной хватки",
+    "cardCode": "08SI026",
+    "keywords": [
+      "Устрашение"
+    ],
+    "keywordRefs": [
+      "Fearsome"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "РЕДКОЕ",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08SI026T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08SI026T1-full.png"
+      }
+    ],
+    "regions": [
+      "Сумрачные острова"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "Когда я в руке, <style=Variable>проклятый боец</style> получает <nobr>-<style=Variable>3</style>|-0</nobr> к характеристикам.",
+    "descriptionRaw": "Когда я в руке, проклятый боец получает -3|-0 к характеристикам.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Вы чувствуете, как вас одолевает страх.",
+    "artistName": "Polar Engine",
+    "name": "Ужас",
+    "cardCode": "08SI026T1",
+    "keywords": [
+      "Мгновенное",
+      "Проклятие"
+    ],
+    "keywordRefs": [
+      "Focus",
+      "Curse"
+    ],
+    "spellSpeed": "Взрывное",
+    "spellSpeedRef": "Burst",
+    "rarity": "Нет",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Заклинание",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08BW028T1",
+      "08BW028T2",
+      "08BW028T3",
+      "08BW028T4"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08SI018.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08SI018-full.png"
+      }
+    ],
+    "regions": [
+      "Сумрачные острова",
+      "Таргон"
+    ],
+    "regionRefs": [
+      "ShadowIsles",
+      "Targon"
+    ],
+    "attack": 2,
+    "cost": 3,
+    "health": 2,
+    "description": "<link=vocab.Play><style=Vocab>Разыгрывая карту</style></link>: выберите заклинание Исследователя, чтобы создать его в руке.",
+    "descriptionRaw": "Разыгрывая карту: выберите заклинание Исследователя, чтобы создать его в руке.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Эта местность мне непонятна. Видимость здесь почти нулевая. Врагов я тут встречаю на каждом шагу. Но что странно – попадаются и неожиданные союзники\". – Из записок экспедиции, снаряженной Подразделением Дальних Краев Гильдии Исследователей, пункт назначения: Сумрачные острова",
+    "artistName": "Envar Studio",
+    "name": "Призрачный землемер",
+    "cardCode": "08SI018",
+    "keywords": [
+      "Вампиризм"
+    ],
+    "keywordRefs": [
+      "Lifesteal"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "РЕДКОЕ",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08SI015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08SI015-full.png"
+      }
+    ],
+    "regions": [
+      "Сумрачные острова"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 5,
+    "cost": 5,
+    "health": 3,
+    "description": "Чтобы сыграть меня, убейте союзника.\r\n<link=keyword.Last Breath><sprite name=LastBreath><style=Keyword>Предсмертный вздох</style></link>: восстановите 2 ед. здоровья своему нексусу.",
+    "descriptionRaw": "Чтобы сыграть меня, убейте союзника.\r\nПредсмертный вздох: восстановите 2 ед. здоровья своему нексусу.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Боевые чудовища ценятся в любом войске. В Сером царстве они представляют собой совокупности измученных душ, каждая из которых в своем бесчувствии жестока и разрушительна. ",
+    "artistName": "Michal Ivan",
+    "name": "Слияние нечистых обрядов",
+    "cardCode": "08SI015",
+    "keywords": [
+      "Предсмертный вздох",
+      "Посмертие"
+    ],
+    "keywordRefs": [
+      "LastBreath",
+      "Deathless"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ЭПИЧЕСКОЕ",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
       "08BW008T1",
       "08BW008T5",
       "08BW008T3"
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08BW008.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08BW008-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08BW008.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08BW008-full.png"
       }
     ],
     "regions": [
@@ -58,8 +897,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08BW008T3.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08BW008T3-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08BW008T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08BW008T3-full.png"
       }
     ],
     "regions": [
@@ -114,8 +953,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08BW008T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08BW008T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08BW008T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08BW008T1-full.png"
       }
     ],
     "regions": [
@@ -167,8 +1006,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08BW008T5.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08BW008T5-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08BW008T5.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08BW008T5-full.png"
       }
     ],
     "regions": [
@@ -219,8 +1058,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08BW032.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08BW032-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08BW032.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08BW032-full.png"
       }
     ],
     "regions": [
@@ -273,8 +1112,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08BW015.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08BW015-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08BW015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08BW015-full.png"
       }
     ],
     "regions": [
@@ -292,7 +1131,7 @@
     "levelupDescriptionRaw": "",
     "flavorText": "\"Ходят слухи, что этот странноватый корабль – самый быстрый из всех, что видел Билджвотер. Еще и маневренный. Капитанша у него своеобразная, но сдается мне – она свое дело знает туго. Может, попозже еще что-то узнаем\". – Билджвотерский бартендер",
     "artistName": "Kudos Productions",
-    "name": "Танцующая в волнах",
+    "name": "Танцующая на волнах",
     "cardCode": "08BW015",
     "keywords": [],
     "keywordRefs": [],
@@ -319,8 +1158,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08BW002.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08BW002-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08BW002.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08BW002-full.png"
       }
     ],
     "regions": [
@@ -371,8 +1210,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08BW025.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08BW025-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08BW025.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08BW025-full.png"
       }
     ],
     "regions": [
@@ -390,7 +1229,7 @@
     "levelupDescriptionRaw": "",
     "flavorText": "\"Эй, дружище, что за переполох? Расслабься! В воде нет ничего такого, с чем бы мы не справились!\" – Служитель Вызова",
     "artistName": "Bubble Cat",
-    "name": "Матерый стремщик",
+    "name": "Главный впередсмотрящий",
     "cardCode": "08BW025",
     "keywords": [],
     "keywordRefs": [],
@@ -417,8 +1256,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08BW026.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08BW026-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08BW026.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08BW026-full.png"
       }
     ],
     "regions": [
@@ -429,7 +1268,7 @@
     ],
     "attack": 2,
     "cost": 4,
-    "health": 1,
+    "health": 2,
     "description": "Призвав меня, примените <link=vocab.Updraft><style=Vocab>Порыв</style></link>, чтобы даровать мне +1|+1 за каждую карту, к которой был применен <link=vocab.Updraft><style=Vocab>Порыв</style></link>, и вытяните 2 карты.",
     "descriptionRaw": "Призвав меня, примените Порыв, чтобы даровать мне +1|+1 за каждую карту, к которой был применен Порыв, и вытяните 2 карты.",
     "levelupDescription": "",
@@ -468,8 +1307,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08BW028.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08BW028-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08BW028.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08BW028-full.png"
       }
     ],
     "regions": [
@@ -520,8 +1359,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08BW028T4.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08BW028T4-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08BW028T4.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08BW028T4-full.png"
       }
     ],
     "regions": [
@@ -576,8 +1415,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08BW028T3.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08BW028T3-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08BW028T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08BW028T3-full.png"
       }
     ],
     "regions": [
@@ -626,8 +1465,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08BW028T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08BW028T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08BW028T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08BW028T1-full.png"
       }
     ],
     "regions": [
@@ -680,8 +1519,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08BW028T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08BW028T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08BW028T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08BW028T2-full.png"
       }
     ],
     "regions": [
@@ -734,8 +1573,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08BW009.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08BW009-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08BW009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08BW009-full.png"
       }
     ],
     "regions": [
@@ -780,8 +1619,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08BW010.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08BW010-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08BW010.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08BW010-full.png"
       }
     ],
     "regions": [
@@ -829,13 +1668,174 @@
   },
   {
     "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08BW031.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08BW031-full.png"
+      }
+    ],
+    "regions": [
+      "Билджвотер"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 8,
+    "cost": 8,
+    "health": 7,
+    "description": "Потратив ману на розыгрыш другого бойца, создайте в руке случайную карту той же стоимости. Ее стоимость равна 0, она <link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>мимолетная</style></link>. ",
+    "descriptionRaw": "Потратив ману на розыгрыш другого бойца, создайте в руке случайную карту той же стоимости. Ее стоимость равна 0, она мимолетная. ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Есть кое-какие монстры, на которых не охотятся даже опытнейшие билджвотерские капитаны – несмотря на желание добыть даже самых необыкновенных морских чудищ. Упоминая Сефирсу, мореходы приглушают голос и рассказывают о чарующем свете, пробивающемся из глубин сквозь толщу волн. Говорят, это чудовище громоздится на огромном могильнике из затопленных кораблей и погибших моряков.",
+    "artistName": "Envar Studio",
+    "name": "Сефирса, Кара из глубин",
+    "cardCode": "08BW031",
+    "keywords": [
+      "Глубина"
+    ],
+    "keywordRefs": [
+      "Deep"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ЭПИЧЕСКОЕ",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "МОРСКОЕ ЧУДОВИЩЕ",
+      "ДРАКОН"
+    ],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08BW037.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08BW037-full.png"
+      }
+    ],
+    "regions": [
+      "Билджвотер"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 1,
+    "cost": 3,
+    "health": 3,
+    "description": "Разыграв карту, стоимость которой равна моей силе, даруйте мне +1|+1.",
+    "descriptionRaw": "Разыграв карту, стоимость которой равна моей силе, даруйте мне +1|+1.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Скажите-ка, вы... ну как бы... не хотите поставить побольше? Без риска нет награды, сами знаете. Сегодня это счастливый стол, вот что я хочу сказать. И в этом милом заведении игра ведется честно. Клянусь языком моей матушки!\"",
+    "artistName": "Caravan Studio",
+    "name": "Правдивый крупье",
+    "cardCode": "08BW037",
+    "keywords": [
+      "Вспыльчивость"
+    ],
+    "keywordRefs": [
+      "Brash"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "РЕДКОЕ",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Только обычные",
+      "Вечный",
+      "Карты четной стоимости",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08BW036.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08BW036-full.png"
+      }
+    ],
+    "regions": [
+      "Билджвотер"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "Потратив ману, чтобы разыграть бойца, восполните 1 ед. маны заклинаний.",
+    "descriptionRaw": "Потратив ману, чтобы разыграть бойца, восполните 1 ед. маны заклинаний.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Этот риф издавна был убежищем и союзником. Он заботится о нас, а мы – о нем, чтобы никто из нас не утонул во тьме Мрака\". – Праматерь мараи",
+    "artistName": "Envar Studio",
+    "name": "Рифовый шпиль мараи",
+    "cardCode": "08BW036",
+    "keywords": [
+      "Место силы"
+    ],
+    "keywordRefs": [
+      "LandmarkVisualOnly"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ОБЫЧНОЕ",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Место силы",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Только обычные",
+      "Вечный",
+      "Карты четной стоимости",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
     "associatedCardRefs": [
       "08BW008T3"
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08BW023.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08BW023-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08BW023.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08BW023-full.png"
       }
     ],
     "regions": [
@@ -888,8 +1888,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08PZ007.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08PZ007-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08PZ007.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08PZ007-full.png"
       }
     ],
     "regions": [
@@ -940,8 +1940,62 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08PZ005.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08PZ005-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08PZ031.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08PZ031-full.png"
+      }
+    ],
+    "regions": [
+      "Пилтовер и Заун"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "Выберите союзного сторонника. Превратите моего носителя в его точную копию, снаряжая его мною.",
+    "descriptionRaw": "Выберите союзного сторонника. Превратите моего носителя в его точную копию, снаряжая его мною.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Не спрашивайте, как это работает.",
+    "artistName": "Polar Engine",
+    "name": "Затемненные очки",
+    "cardCode": "08PZ031",
+    "keywords": [
+      "Снаряжение"
+    ],
+    "keywordRefs": [
+      "Equipment"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "РЕДКОЕ",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Снаряжение",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Только обычные",
+      "Вечный",
+      "Карты четной стоимости",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08PZ005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08PZ005-full.png"
       }
     ],
     "regions": [
@@ -992,8 +2046,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08PZ019.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08PZ019-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08PZ019.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08PZ019-full.png"
       }
     ],
     "regions": [
@@ -1005,8 +2059,8 @@
     "attack": 0,
     "cost": 5,
     "health": 0,
-    "description": "Если в этом раунде вы вытянули 3+ карты, моя стоимость снижается на 2.\r\nНанесите 3 ед. урона бойцу и<br>2 ед. урона вражескому нексусу.",
-    "descriptionRaw": "Если в этом раунде вы вытянули 3+ карты, моя стоимость снижается на 2.\r\nНанесите 3 ед. урона бойцу и2 ед. урона вражескому нексусу.",
+    "description": "Если в этом раунде вы вытянули 3+ карты, моя стоимость снижается на 2.\r\nНанесите 3 ед. урона бойцу и <nobr>1 ед.</nobr> урона вражескому нексусу.",
+    "descriptionRaw": "Если в этом раунде вы вытянули 3+ карты, моя стоимость снижается на 2.\r\nНанесите 3 ед. урона бойцу и 1 ед. урона вражескому нексусу.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "\"В храме распоряжаюсь я\". – Жанна",
@@ -1041,14 +2095,62 @@
   },
   {
     "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08PZ028.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08PZ028-full.png"
+      }
+    ],
+    "regions": [
+      "Пилтовер и Заун"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 8,
+    "cost": 8,
+    "health": 6,
+    "description": "Разыграв заклинание, вытяните 1 карту. Если вы вытягиваете карту, имея полную руку карт, нанесите 1 ед. урона вражескому нексусу.",
+    "descriptionRaw": "Разыграв заклинание, вытяните 1 карту. Если вы вытягиваете карту, имея полную руку карт, нанесите 1 ед. урона вражескому нексусу.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "В Зауне без адаптации никуда. Не исключение и этот химтековый дракон, переливающийся болезненным зеленым светом аугментаций и обитающий в самом чреве города. Двойная тень от обломанных крыльев дракона скользит вдоль мрачных переулков словно предвестница ярости, порожденной муками от собственной скверны.",
+    "artistName": "Caravan Studio",
+    "name": "Химтековый дракон",
+    "cardCode": "08PZ028",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ЭПИЧЕСКОЕ",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "ДРАКОН"
+    ],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
     "associatedCardRefs": [
       "08PZ001T3",
       "08PZ001T1"
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08PZ001.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08PZ001-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08PZ001.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08PZ001-full.png"
       }
     ],
     "regions": [
@@ -1062,8 +2164,8 @@
     "health": 4,
     "description": "<link=vocab.Play><style=Vocab>Разыгрывая карту</style></link>: примените <link=vocab.Updraft><style=Vocab>Порыв</style></link> x2, чтобы вытянуть 2 карты <link=vocab.RoundStart><style=Vocab>в начале следующего раунда</style></link>.\r\nКогда вы вытягиваете каждую из 3 первых карт за раунд, снижайте ее стоимость на 1 до конца раунда. <style=Variable></style>",
     "descriptionRaw": "Разыгрывая карту: примените Порыв x2, чтобы вытянуть 2 карты в начале следующего раунда.\r\nКогда вы вытягиваете каждую из 3 первых карт за раунд, снижайте ее стоимость на 1 до конца раунда. ",
-    "levelupDescription": "На моих глазах вы разыграли 6 карт со сниженной стоимостью.<style=Variable></style>",
-    "levelupDescriptionRaw": "На моих глазах вы разыграли 6 карт со сниженной стоимостью.",
+    "levelupDescription": "На моих глазах вы разыграли 8 карт со сниженной стоимостью.<style=Variable></style>",
+    "levelupDescriptionRaw": "На моих глазах вы разыграли 8 карт со сниженной стоимостью.",
     "flavorText": "\"Из Зауна добраться до Жанны будет проще, чем откуда-либо еще. В конце концов, это же она спасла тех бедолаг, что пилтоверцы бросили помирать. Точно. Если где и сыщутся ответы, то только там\". – Моряк-ветрогон",
     "artistName": "Envar Studio",
     "name": "Жанна",
@@ -1096,8 +2198,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08PZ001T3.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08PZ001T3-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08PZ001T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08PZ001T3-full.png"
       }
     ],
     "regions": [
@@ -1149,8 +2251,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08PZ001T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08PZ001T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08PZ001T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08PZ001T1-full.png"
       }
     ],
     "regions": [
@@ -1203,8 +2305,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08PZ026.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08PZ026-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08PZ026.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08PZ026-full.png"
       }
     ],
     "regions": [
@@ -1255,8 +2357,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08PZ006.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08PZ006-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08PZ006.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08PZ006-full.png"
       }
     ],
     "regions": [
@@ -1305,8 +2407,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08PZ018.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08PZ018-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08PZ018.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08PZ018-full.png"
       }
     ],
     "regions": [
@@ -1355,8 +2457,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08PZ008.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08PZ008-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08PZ008.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08PZ008-full.png"
       }
     ],
     "regions": [
@@ -1401,8 +2503,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08PZ026T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08PZ026T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08PZ026T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08PZ026T1-full.png"
       }
     ],
     "regions": [
@@ -1449,8 +2551,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08PZ009.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08PZ009-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08PZ009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08PZ009-full.png"
       }
     ],
     "regions": [
@@ -1499,8 +2601,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08PZ002.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08PZ002-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08PZ002.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08PZ002-full.png"
       }
     ],
     "regions": [
@@ -1551,8 +2653,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08PZ008T3.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08PZ008T3-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08PZ008T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08PZ008T3-full.png"
       }
     ],
     "regions": [
@@ -1597,8 +2699,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08PZ008T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08PZ008T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08PZ008T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08PZ008T2-full.png"
       }
     ],
     "regions": [
@@ -1643,8 +2745,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08PZ020.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08PZ020-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08PZ024.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08PZ024-full.png"
       }
     ],
     "regions": [
@@ -1653,7 +2755,53 @@
     "regionRefs": [
       "PiltoverZaun"
     ],
-    "attack": 3,
+    "attack": 4,
+    "cost": 4,
+    "health": 4,
+    "description": "<link=vocab.RoundStart><style=Vocab>Начало раунда</style></link>: оба игрока вытягивают по 1 карте, затем даруйте карте противника <link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>Мимолетность</style></link>.",
+    "descriptionRaw": "Начало раунда: оба игрока вытягивают по 1 карте, затем даруйте карте противника Мимолетность.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Сегодня две по цене одной – и только сегодня! Рыбка свежая, выловил прямо... в этом месяце вроде? Две по цене одной! То есть как это – \"не хочу вторую\"?  Бесплатно же!\"",
+    "artistName": "Envar Studio",
+    "name": "Рыбник-пройдоха",
+    "cardCode": "08PZ024",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ОБЫЧНОЕ",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08PZ020.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08PZ020-full.png"
+      }
+    ],
+    "regions": [
+      "Пилтовер и Заун"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 2,
     "cost": 5,
     "health": 2,
     "description": "Если в этом раунде вы вытянули 3+ карты, моя стоимость снижается на 2.\r\nПризвав меня, вытяните 2 карты <link=vocab.RoundStart><style=Vocab>в начале следующего раунда</style></link>.",
@@ -1695,8 +2843,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08FR012.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08FR012-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08FR012.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08FR012-full.png"
       }
     ],
     "regions": [
@@ -1747,8 +2895,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08FR019.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08FR019-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08FR019.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08FR019-full.png"
       }
     ],
     "regions": [
@@ -1803,8 +2951,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08FR001.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08FR001-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08FR001.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08FR001-full.png"
       }
     ],
     "regions": [
@@ -1849,8 +2997,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08FR001T3.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08FR001T3-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08FR001T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08FR001T3-full.png"
       }
     ],
     "regions": [
@@ -1904,8 +3052,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08FR001T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08FR001T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08FR001T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08FR001T2-full.png"
       }
     ],
     "regions": [
@@ -1960,8 +3108,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08FR001T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08FR001T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08FR001T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08FR001T1-full.png"
       }
     ],
     "regions": [
@@ -2012,8 +3160,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08FR018.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08FR018-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08FR018.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08FR018-full.png"
       }
     ],
     "regions": [
@@ -2064,8 +3212,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08FR011.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08FR011-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08FR011.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08FR011-full.png"
       }
     ],
     "regions": [
@@ -2074,9 +3222,9 @@
     "regionRefs": [
       "Freljord"
     ],
-    "attack": 3,
+    "attack": 2,
     "cost": 4,
-    "health": 2,
+    "health": 3,
     "description": "Разыгрывая стихийное заклинание или <link=keyword.Elemental Skill><sprite name=ElementalSkill><style=Keyword>способность</style></link>, примените ко мне <link=vocab.Forge><style=Vocab>Кузницу</style></link>.",
     "descriptionRaw": "Разыгрывая стихийное заклинание или способность, примените ко мне Кузницу.",
     "levelupDescription": "",
@@ -2114,8 +3262,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08FR008.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08FR008-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08FR008.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08FR008-full.png"
       }
     ],
     "regions": [
@@ -2163,13 +3311,61 @@
   },
   {
     "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08FR024.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08FR024-full.png"
+      }
+    ],
+    "regions": [
+      "Фрельйорд"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 3,
+    "description": "<link=vocab.Attack><style=Vocab>Атака</style></link>: даруйте двум верхним союзникам в вашей колоде +1|+1.",
+    "descriptionRaw": "Атака: даруйте двум верхним союзникам в вашей колоде +1|+1.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Хотя выведена порода в Ядулске, этих щенков приручают во многих фрельйордских племенах, ценящих их за нюх, охотничьи навыки и умение спасать попавших под лавину. За крепкий стан и дружелюбную игривость этих псов любят повсюду – от тайги до тундры.",
+    "artistName": "Envar Studio",
+    "name": "Ядулский снегопес",
+    "cardCode": "08FR024",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ОБЫЧНОЕ",
+    "rarityRef": "Common",
+    "subtypes": [
+      "ПЕС"
+    ],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
     "associatedCardRefs": [
       "08FR002T1"
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08FR015.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08FR015-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08FR015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08FR015-full.png"
       }
     ],
     "regions": [
@@ -2212,12 +3408,66 @@
   {
     "associatedCards": [],
     "associatedCardRefs": [
+      "04FR001"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08FR030.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08FR030-full.png"
+      }
+    ],
+    "regions": [
+      "Фрельйорд"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 8,
+    "cost": 8,
+    "health": 8,
+    "description": "Призвав меня, призовите 2 <link=card.summon><style=AssociatedCard>Ледяных рабов</style></link> и <link=vocab.Advance><style=Vocab>продвиньте их счетчики</style></link> <nobr>до значения 2.</nobr>",
+    "descriptionRaw": "Призвав меня, призовите 2 Ледяных рабов и продвиньте их счетчики до значения 2.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Она была з-з-злобная! Рабы, впаянные в черный лед... В когтях у нее лавины... Рев такой, что снег с гор сшибает! Королева воинов, истинно вам говорю! Уб-б-б-бивать рабов – это работа для королевы воинов\". – Бормочущий Бьорг",
+    "artistName": "Caravan Studio",
+    "name": "Боадир из Черненого льда",
+    "cardCode": "08FR030",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ЭПИЧЕСКОЕ",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "ДРАКОН"
+    ],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Только обычные",
+      "Вечный",
+      "Карты четной стоимости",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
       "08FR002T1"
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08FR002.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08FR002-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08FR002.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08FR002-full.png"
       }
     ],
     "regions": [
@@ -2262,8 +3512,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08FR002T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08FR002T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08FR002T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08FR002T1-full.png"
       }
     ],
     "regions": [
@@ -2311,13 +3561,11 @@
   },
   {
     "associatedCards": [],
-    "associatedCardRefs": [
-      "08FR002T1"
-    ],
+    "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08FR003.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08FR003-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08FR028.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08FR028-full.png"
       }
     ],
     "regions": [
@@ -2326,9 +3574,65 @@
     "regionRefs": [
       "Freljord"
     ],
-    "attack": 5,
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "У меня +1|+0 за каждый отдельный подтип, призванный вами в этом матче. <style=Variable></style>",
+    "descriptionRaw": "У меня +1|+0 за каждый отдельный подтип, призванный вами в этом матче. ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Наверху есть звери, которым и лавина не помеха. Вот почему добрая привязь всегда стоит своих денег\".<br>– Зверолов из племени аваросан",
+    "artistName": "Polar Engine",
+    "name": "Удобная привязь",
+    "cardCode": "08FR028",
+    "keywords": [
+      "Снаряжение"
+    ],
+    "keywordRefs": [
+      "Equipment"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ЭПИЧЕСКОЕ",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Снаряжение",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Только обычные",
+      "Вечный",
+      "Карты четной стоимости",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08FR002T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08FR003.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08FR003-full.png"
+      }
+    ],
+    "regions": [
+      "Фрельйорд"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 6,
     "cost": 6,
-    "health": 3,
+    "health": 4,
     "description": "Разыгрывая заклинание или <link=keyword.Skill><sprite name=SkillMark><style=Keyword>способность</style></link>, призовите карту <link=card.summon><style=AssociatedCard>Сигил Бури</style></link>.",
     "descriptionRaw": "Разыгрывая заклинание или способность, призовите карту Сигил Бури.",
     "levelupDescription": "",
@@ -2364,42 +3668,726 @@
   {
     "associatedCards": [],
     "associatedCardRefs": [
-      "08BW028T1",
-      "08BW028T2",
-      "08BW028T3",
-      "08BW028T4"
+      "08RU014T9",
+      "08RU014T8",
+      "08RU014T3",
+      "08RU014T6",
+      "08RU014T5",
+      "08RU014T1",
+      "08RU014T7",
+      "08RU014T4",
+      "08RU014T2"
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08DE006.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08DE006-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08RU014.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08RU014-full.png"
       }
     ],
     "regions": [
-      "Демасия",
-      "Фрельйорд"
+      "Рунтерра"
     ],
     "regionRefs": [
-      "Demacia",
-      "Freljord"
+      "Runeterra"
     ],
-    "attack": 2,
-    "cost": 3,
-    "health": 3,
-    "description": "<link=vocab.Play><style=Vocab>Разыгрывая карту</style></link>: выберите заклинание Исследователя, чтобы создать его в руке.",
-    "descriptionRaw": "Разыгрывая карту: выберите заклинание Исследователя, чтобы создать его в руке.",
+    "attack": 10,
+    "cost": 12,
+    "health": 10,
+    "description": "<link=vocab.Origin><style=Vocab>Исток</style></link>: <link=card.origin><style=AssociatedCard>Сущность дракона</style></link>. <style=Variable></style>\r\nМоя стоимость снижается на 1 за каждое уникальное драконье поощрение, разыгранное вами в этом матче.\r\n<link=keyword.PlaySkillMark><sprite name=SkillMark><style=Keyword>Разыгрывая карту</style></link>: примените ко мне все драконьи поощрения.",
+    "descriptionRaw": "Исток: Сущность дракона. \r\nМоя стоимость снижается на 1 за каждое уникальное драконье поощрение, разыгранное вами в этом матче.\r\nРазыгрывая карту: примените ко мне все драконьи поощрения.",
+    "levelupDescription": "Ваши союзники атаковали с суммарным значением силы 75+.<style=Variable></style>",
+    "levelupDescriptionRaw": "Ваши союзники атаковали с суммарным значением силы 75+.",
+    "flavorText": "\"Легенда гласит, что этот дракон – старейший из всех, что он царь всех крылатых тварей. Если мы укротим его... Что такое, Алатис, что еще может нам помешать? Весь мир наконец осознает, что человек и дракон вместе сильнее всего на свете\". – Воликс, драконий адепт",
+    "artistName": "Envar Studio",
+    "name": "Старший дракон",
+    "cardCode": "08RU014",
+    "keywords": [
+      "Ярость"
+    ],
+    "keywordRefs": [
+      "Fury"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Чемпион",
+    "rarityRef": "Champion",
+    "subtypes": [
+      "ДРАКОН"
+    ],
+    "supertype": "Чемпион",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08RU014T5.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08RU014T5-full.png"
+      }
+    ],
+    "regions": [
+      "Рунтерра"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "Даруйте +1|+1 и <link=keyword.Fearsome><sprite name=Fearsome><style=Keyword>Устрашение</style></link>.",
+    "descriptionRaw": "Даруйте +1|+1 и Устрашение.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "\"Очень холодно. Мне холодно. Вокруг все время холодно. Есть на свете места, где жить просто невозможно. Отправьте меня, пожалуйста, куда-нибудь, где тепло\".<br>– Из записок экспедиции, снаряженной Подразделением Дальних Краев Гильдии Исследователей, пункт назначения: Фрельйорд",
+    "flavorText": "Пламя адской ярости вздымается еще выше.",
+    "artistName": "Polar Engine",
+    "name": "Огненная мощь",
+    "cardCode": "08RU014T5",
+    "keywords": [
+      "Способность"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Нет",
+    "rarityRef": "None",
+    "subtypes": [
+      "СТИХИЯ"
+    ],
+    "supertype": "",
+    "type": "Способность",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08RU014T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08RU014T3-full.png"
+      }
+    ],
+    "regions": [
+      "Рунтерра"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "В колоду можно добавлять любые карты сторонников стоимостью 6+. Разыгрывая бойца с базовой стоимостью 6+, выберите 1 или 2 драконьих поощрения, чтобы разыграть их на нем.",
+    "descriptionRaw": "В колоду можно добавлять любые карты сторонников стоимостью 6+. Разыгрывая бойца с базовой стоимостью 6+, выберите 1 или 2 драконьих поощрения, чтобы разыграть их на нем.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Благословения, которыми одаряют драконы, грандиозны, но ужасающи.",
     "artistName": "Envar Studio",
-    "name": "Образованный первопроходец",
-    "cardCode": "08DE006",
+    "name": "Сущность дракона",
+    "cardCode": "08RU014T3",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Нет",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Способность",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08RU014",
+      "08RU014T8",
+      "08RU014T3",
+      "08RU014T6",
+      "08RU014T5",
+      "08RU014T1",
+      "08RU014T7",
+      "08RU014T4",
+      "08RU014T2"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08RU014T9.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08RU014T9-full.png"
+      }
+    ],
+    "regions": [
+      "Рунтерра"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 30,
+    "cost": 12,
+    "health": 30,
+    "description": "\r\n\r\n\r\n\r\nМЕНЯ НЕ ОСТАНОВИТЬ",
+    "descriptionRaw": "\r\n\r\n\r\n\r\nМЕНЯ НЕ ОСТАНОВИТЬ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Из пасти Старшего дракона излилось пламя, пылу которого нет равных. Алатис взмыл в воздух. \"Не отступать! – крикнул Воликс. – Держать строй! Весь мир будет знать нас как людей, укротивших царя чудовищ!\"",
+    "artistName": "Envar Studio",
+    "name": "Старший дракон",
+    "cardCode": "08RU014T9",
+    "keywords": [
+      "Ярость"
+    ],
+    "keywordRefs": [
+      "Fury"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Чемпион",
+    "rarityRef": "Champion",
+    "subtypes": [
+      "ДРАКОН"
+    ],
+    "supertype": "Чемпион",
+    "type": "Боец",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08RU014T4.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08RU014T4-full.png"
+      }
+    ],
+    "regions": [
+      "Рунтерра"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "Даруйте +1|+1 и дважды примените <link=keyword.Impact><sprite name=Impact><style=Keyword>Таран</style></link>.",
+    "descriptionRaw": "Даруйте +1|+1 и дважды примените Таран.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "То, что сотворила природа, сможет улучшить хекстек.\n",
+    "artistName": "Polar Engine",
+    "name": "Хекстековая смекалка",
+    "cardCode": "08RU014T4",
+    "keywords": [
+      "Способность"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Нет",
+    "rarityRef": "None",
+    "subtypes": [
+      "СТИХИЯ"
+    ],
+    "supertype": "",
+    "type": "Способность",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08RU014T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08RU014T2-full.png"
+      }
+    ],
+    "regions": [
+      "Рунтерра"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "Даруйте <link=keyword.Deathless><sprite name=Deathless><style=Keyword>Посмертие</style></link>.",
+    "descriptionRaw": "Даруйте Посмертие.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Что для одних яд, для других – сила.",
+    "artistName": "Polar Engine",
+    "name": "Химтековая скверна",
+    "cardCode": "08RU014T2",
+    "keywords": [
+      "Способность"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Нет",
+    "rarityRef": "None",
+    "subtypes": [
+      "СТИХИЯ"
+    ],
+    "supertype": "",
+    "type": "Способность",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08RU014T7.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08RU014T7-full.png"
+      }
+    ],
+    "regions": [
+      "Рунтерра"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "Даруйте <link=keyword.Challenger><sprite name=Challenger><style=Keyword>Выбор противника</style></link>.",
+    "descriptionRaw": "Даруйте Выбор противника.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Юркость бриза, решительность шторма. ",
+    "artistName": "Polar Engine",
+    "name": "Облачная ловкость",
+    "cardCode": "08RU014T7",
+    "keywords": [
+      "Способность"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Нет",
+    "rarityRef": "None",
+    "subtypes": [
+      "СТИХИЯ"
+    ],
+    "supertype": "",
+    "type": "Способность",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08RU014T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08RU014T1-full.png"
+      }
+    ],
+    "regions": [
+      "Рунтерра"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "Даруйте +1|+1 и <link=keyword.Tough><sprite name=Tough><style=Keyword>Стойкость</style></link>.",
+    "descriptionRaw": "Даруйте +1|+1 и Стойкость.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Шкура обитателя гор выдержит любую бурю.",
+    "artistName": "Polar Engine",
+    "name": "Горная выносливость",
+    "cardCode": "08RU014T1",
+    "keywords": [
+      "Способность"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Нет",
+    "rarityRef": "None",
+    "subtypes": [
+      "СТИХИЯ"
+    ],
+    "supertype": "",
+    "type": "Способность",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08RU014",
+      "08RU014T9"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08RU014T8.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08RU014T8-full.png"
+      }
+    ],
+    "regions": [
+      "Рунтерра"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 8,
+    "health": 0,
+    "description": "Восполните свою ману до макс. значения. Вытяните всех сторонников стоимостью 6+ среди шести верхних карт вашей колоды.\r\nСоздайте в вашей колоде карту <link=card.level1><style=AssociatedCard>Старший дракон</style></link>.",
+    "descriptionRaw": "Восполните свою ману до макс. значения. Вытяните всех сторонников стоимостью 6+ среди шести верхних карт вашей колоды.\r\nСоздайте в вашей колоде карту Старший дракон.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Этот зов – древнее всего. Я вижу облачное царство. Я вижу страшного крылатого хозяина\". – Оттрани, Чтящая драконов",
+    "artistName": "Polar Engine",
+    "name": "Первозданный рык Старшего дракона",
+    "cardCode": "08RU014T8",
+    "keywords": [
+      "Взрывное"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Взрывное",
+    "spellSpeedRef": "Burst",
+    "rarity": "Нет",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "Чемпион",
+    "type": "Заклинание",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08RU014T6.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08RU014T6-full.png"
+      }
+    ],
+    "regions": [
+      "Рунтерра"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "Восстановите союзникам и своему нексусу по 2 ед. здоровья.",
+    "descriptionRaw": "Восстановите союзникам и своему нексусу по 2 ед. здоровья.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Эти водяные крылья омоют любые раны.",
+    "artistName": "Polar Engine",
+    "name": "Морская воля",
+    "cardCode": "08RU014T6",
+    "keywords": [
+      "Способность"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Нет",
+    "rarityRef": "None",
+    "subtypes": [
+      "СТИХИЯ"
+    ],
+    "supertype": "",
+    "type": "Способность",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08RU015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08RU015-full.png"
+      }
+    ],
+    "regions": [
+      "Рунтерра"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 8,
+    "health": 0,
+    "description": "Восполните свою ману до макс. значения. Вытяните всех сторонников стоимостью 6+ среди шести верхних карт вашей колоды.",
+    "descriptionRaw": "Восполните свою ману до макс. значения. Вытяните всех сторонников стоимостью 6+ среди шести верхних карт вашей колоды.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Этот зов – древнее всего. Я вижу облачное царство. Я вижу страшного крылатого хозяина\". – Оттрани, Чтящая драконов",
+    "artistName": "Polar Engine",
+    "name": "Первозданный рык",
+    "cardCode": "08RU015",
+    "keywords": [
+      "Взрывное"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Взрывное",
+    "spellSpeedRef": "Burst",
+    "rarity": "Нет",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Заклинание",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08NX003T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08NX003.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08NX003-full.png"
+      }
+    ],
+    "regions": [
+      "Ноксус"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 8,
+    "cost": 6,
+    "health": 4,
+    "description": "<link=keyword.Elemental Skill><sprite name=ElementalSkill><style=Keyword>Разыгрывая карту</style></link>: нанесите<br>2 ед. урона врагу и 2 ед. урона вражескому нексусу.",
+    "descriptionRaw": "Разыгрывая карту: нанесите2 ед. урона врагу и 2 ед. урона вражескому нексусу.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Ноксианская экспансия подмяла под себя множество народов, поселений и культур. Создания природы зачастую тоже оказываются во власти военной машины. Однако в случае с этим драконом любая решительная мера, принимаемая Ноксусом, натыкается на столь же яростную вспышку гнева.",
+    "artistName": "Envar Studio",
+    "name": "Разъяренный огнеплюй",
+    "cardCode": "08NX003",
     "keywords": [
       "Выбор противника"
     ],
     "keywordRefs": [
       "Challenger"
     ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ЭПИЧЕСКОЕ",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "ДРАКОН"
+    ],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08NX003"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08NX003T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08NX003T1-full.png"
+      }
+    ],
+    "regions": [
+      "Ноксус"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "Нанесите 2 ед. урона врагу и <nobr>2 ед.</nobr> урона вражескому нексусу.",
+    "descriptionRaw": "Нанесите 2 ед. урона врагу и 2 ед. урона вражескому нексусу.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Дерево, сталь, плоть – столкнувшись со жгучей яростью огнеплюя, расплавится все.",
+    "artistName": "Polar Engine",
+    "name": "Плевок огнем",
+    "cardCode": "08NX003T1",
+    "keywords": [
+      "Стихийная способность"
+    ],
+    "keywordRefs": [
+      "ElementalSkill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Нет",
+    "rarityRef": "None",
+    "subtypes": [
+      "СТИХИЯ"
+    ],
+    "supertype": "",
+    "type": "Способность",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08NX024T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08NX024.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08NX024-full.png"
+      }
+    ],
+    "regions": [
+      "Ноксус"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 5,
+    "cost": 3,
+    "health": 1,
+    "description": "<link=keyword.PlaySkillMark><sprite name=SkillMark><style=Keyword>Разыгрывая карту</style></link>: нанесите союзнику 3 ед. урона, а затем<br>3 ед. урона врагу.",
+    "descriptionRaw": "Разыгрывая карту: нанесите союзнику 3 ед. урона, а затем3 ед. урона врагу.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Вырвите эти души из темниц их тел!\" – Мордекайзер",
+    "artistName": "Caravan Studio",
+    "name": "Железный легионер",
+    "cardCode": "08NX024",
+    "keywords": [],
+    "keywordRefs": [],
     "spellSpeed": "",
     "spellSpeedRef": "",
     "rarity": "РЕДКОЕ",
@@ -2423,58 +4411,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08DE010.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08DE010-full.png"
-      }
-    ],
-    "regions": [
-      "Демасия"
-    ],
-    "regionRefs": [
-      "Demacia"
-    ],
-    "attack": 0,
-    "cost": 3,
-    "health": 0,
-    "description": "Дайте союзнику +0|+2.\r\nЭтот союзник и враг <link=vocab.Strike><style=Vocab>наносят удар</style></link> друг другу.",
-    "descriptionRaw": "Дайте союзнику +0|+2.\r\nЭтот союзник и враг наносят удар друг другу.",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "\"К бою, друг мой! Вы же не из тех трусов, что избегают джентльменской дуэли?\" – Шевалье Лоранов",
-    "artistName": "Kudos Productions",
-    "name": "Джентльменская дуэль",
-    "cardCode": "08DE010",
-    "keywords": [
-      "Быстрое"
-    ],
-    "keywordRefs": [
-      "Fast"
-    ],
-    "spellSpeed": "Быстрое",
-    "spellSpeedRef": "Fast",
-    "rarity": "ОБЫЧНОЕ",
-    "rarityRef": "Common",
-    "subtypes": [],
-    "supertype": "",
-    "type": "Заклинание",
-    "collectible": true,
-    "set": "Set8",
-    "formats": [
-      "Вечный",
-      "Стандартный"
-    ],
-    "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08NX011.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08NX011-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08NX024T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08NX024T1-full.png"
       }
     ],
     "regions": [
@@ -2484,7 +4422,63 @@
       "Noxus"
     ],
     "attack": 0,
-    "cost": 1,
+    "cost": 0,
+    "health": 0,
+    "description": "Нанесите союзнику 3 ед. урона, а затем 3 ед. урона врагу.",
+    "descriptionRaw": "Нанесите союзнику 3 ед. урона, а затем 3 ед. урона врагу.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Он режет... Он мучает... И в этом измерении, и в другом... и в следующем...\" – Навь прикованная",
+    "artistName": "Polar Engine",
+    "name": "Душерез",
+    "cardCode": "08NX024T1",
+    "keywords": [
+      "Способность"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Нет",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Способность",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Только обычные",
+      "Вечный",
+      "Карты четной стоимости",
+      "Бесповторные",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Deckbuilder_RulesFilters_Singleton",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08NX011.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08NX011-full.png"
+      }
+    ],
+    "regions": [
+      "Ноксус"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 2,
     "health": 0,
     "description": "Нанесите 1 ед. урона вражескому нексусу и увеличьте этот урон на 1 ед. за каждую сыгранную вами карту <link=card.selfref><style=AssociatedCard>Лесной пожар</style></link>. Создайте в своей колоде карту <link=card.selfref><style=AssociatedCard>Лесной пожар</style></link>.",
     "descriptionRaw": "Нанесите 1 ед. урона вражескому нексусу и увеличьте этот урон на 1 ед. за каждую сыгранную вами карту Лесной пожар. Создайте в своей колоде карту Лесной пожар.",
@@ -2525,8 +4519,164 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08NX014.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08NX014-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08NX028.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08NX028-full.png"
+      }
+    ],
+    "regions": [
+      "Ноксус"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "Даруйте союзнику <link=keyword.Deathless><sprite name=Deathless><style=Keyword>Посмертие</style></link>.",
+    "descriptionRaw": "Даруйте союзнику Посмертие.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Вечный металл!\" – Мордекайзер",
+    "artistName": "Polar Engine",
+    "name": "Несокрушимый",
+    "cardCode": "08NX028",
+    "keywords": [
+      "Взрывное"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Взрывное",
+    "spellSpeedRef": "Burst",
+    "rarity": "ОБЫЧНОЕ",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Заклинание",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08NX019T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08NX019.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08NX019-full.png"
+      }
+    ],
+    "regions": [
+      "Ноксус"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 4,
+    "cost": 4,
+    "health": 4,
+    "description": "<link=vocab.NexusStrike><style=Vocab>Удар по нексусу</style></link>: <link=keyword.Curse><sprite name=Curse><style=Keyword>прокляните</style></link> противника с помощью карты <link=card.curse><style=AssociatedCard>Ихор</style></link>.",
+    "descriptionRaw": "Удар по нексусу: прокляните противника с помощью карты Ихор.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Острошкур не только приносит пользу военной машине Ноксуса, но и высоко ценится в бойцовых ямах столицы. Мало кто из людей или зверей осмеливается выйти на арену против этого чудища, и поэтому редкие бои с участием острошкура собирают толпы зрителей со всех концов города.",
+    "artistName": "Envar Studio",
+    "name": "Красношипый острошкур",
+    "cardCode": "08NX019",
+    "keywords": [
+      "Пробивание"
+    ],
+    "keywordRefs": [
+      "Overwhelm"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ОБЫЧНОЕ",
+    "rarityRef": "Common",
+    "subtypes": [
+      "РЕПТИЛИЯ"
+    ],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08NX019T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08NX019T1-full.png"
+      }
+    ],
+    "regions": [
+      "Ноксус"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "Когда я в руке, <link=vocab.RoundStart><style=Vocab>начало раунда</style></link>: нанесите <style=Variable>1</style> ед. урона своему нексусу.",
+    "descriptionRaw": "Когда я в руке, начало раунда: нанесите 1 ед. урона своему нексусу.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Ты истекаешь кровью. Она уходит медленно... но безостановочно.",
+    "artistName": "Polar Engine",
+    "name": "Ихор",
+    "cardCode": "08NX019T1",
+    "keywords": [
+      "Мгновенное",
+      "Проклятие"
+    ],
+    "keywordRefs": [
+      "Focus",
+      "Curse"
+    ],
+    "spellSpeed": "Взрывное",
+    "spellSpeedRef": "Burst",
+    "rarity": "Нет",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Заклинание",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08NX014.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08NX014-full.png"
       }
     ],
     "regions": [
@@ -2580,8 +4730,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08NX012.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08NX012-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08NX012.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08NX012-full.png"
       }
     ],
     "regions": [
@@ -2625,37 +4775,35 @@
   },
   {
     "associatedCards": [],
-    "associatedCardRefs": [
-      "06RU001T3"
-    ],
+    "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08SI021.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08SI021-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08NX009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08NX009-full.png"
       }
     ],
     "regions": [
-      "Сумрачные острова"
+      "Ноксус"
     ],
     "regionRefs": [
-      "ShadowIsles"
+      "Noxus"
     ],
-    "attack": 2,
-    "cost": 2,
-    "health": 3,
-    "description": "<nobr><link=keyword.Last Breath><sprite name=LastBreath><style=Keyword>Предсмертный вздох</style></link></nobr> или когда умирает другой союзник: прикрепите в вашей колоде 4 <link=card.chime><style=AssociatedCard>Колокольчика</style></link>.",
-    "descriptionRaw": "Предсмертный вздох или когда умирает другой союзник: прикрепите в вашей колоде 4 Колокольчика.",
+    "attack": 5,
+    "cost": 4,
+    "health": 2,
+    "description": "",
+    "descriptionRaw": "",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "Не переживайте из-за этого зловещего позвякивания. Это просто старый Слизнезвон совершает свой обход. Он всегда рад вновь прибывшим, но вот они его видеть точно не рады.",
-    "artistName": "Bubble Cat",
-    "name": "Одинокий Слизнезвон",
-    "cardCode": "08SI021",
+    "flavorText": "\"Целые века ушли на то, чтобы придумать, как пленить этого кошмарного воителя, – а теперь ваши жалкие друзья намереваются победить его какой-то там \"радостью\"? Ох и глупая же ты девчонка. Этим ты лишь навлечешь на себя гнев Призрака – и в то же время поставишь под удар нас всех\".",
+    "artistName": "Wild Blue",
+    "name": "Лорд Маллат",
+    "cardCode": "08NX009",
     "keywords": [
-      "Предсмертный вздох"
+      "Посмертие"
     ],
     "keywordRefs": [
-      "LastBreath"
+      "Deathless"
     ],
     "spellSpeed": "",
     "spellSpeedRef": "",
@@ -2680,93 +4828,32 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08SI030.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08SI030-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08NX025.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08NX025-full.png"
       }
     ],
     "regions": [
-      "Сумрачные острова"
+      "Ноксус"
     ],
     "regionRefs": [
-      "ShadowIsles"
-    ],
-    "attack": 0,
-    "cost": 3,
-    "health": 0,
-    "description": "<link=vocab.Obliterate><style=Vocab>Уничтожьте</style></link> 6 карт снизу вражеской колоды.",
-    "descriptionRaw": "Уничтожьте 6 карт снизу вражеской колоды.",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "Для некоторых глубоководных чудовищ Рунтерры рыболовное судно – просто легкая закуска.",
-    "artistName": "Polar Engine",
-    "name": "Могила под водой",
-    "cardCode": "08SI030",
-    "keywords": [
-      "Медленное"
-    ],
-    "keywordRefs": [
-      "Slow"
-    ],
-    "spellSpeed": "Медленное",
-    "spellSpeedRef": "Slow",
-    "rarity": "ЭПИЧЕСКОЕ",
-    "rarityRef": "Epic",
-    "subtypes": [],
-    "supertype": "",
-    "type": "Заклинание",
-    "collectible": true,
-    "set": "Set8",
-    "formats": [
-      "Только обычные",
-      "Вечный",
-      "Карты четной стоимости",
-      "Стандартный"
-    ],
-    "formatRefs": [
-      "client_Formats_CommonsOnly_name",
-      "client_Formats_Eternal_name",
-      "client_Formats_EvenCostCards_name",
-      "client_Formats_Standard_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [
-      "08BW028T1",
-      "08BW028T2",
-      "08BW028T3",
-      "08BW028T4"
-    ],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08SI018.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08SI018-full.png"
-      }
-    ],
-    "regions": [
-      "Сумрачные острова",
-      "Таргон"
-    ],
-    "regionRefs": [
-      "ShadowIsles",
-      "Targon"
+      "Noxus"
     ],
     "attack": 2,
     "cost": 3,
-    "health": 2,
-    "description": "<link=vocab.Play><style=Vocab>Разыгрывая карту</style></link>: выберите заклинание Исследователя, чтобы создать его в руке.",
-    "descriptionRaw": "Разыгрывая карту: выберите заклинание Исследователя, чтобы создать его в руке.",
+    "health": 3,
+    "description": "Воскресив союзника, даруйте ему <link=keyword.Challenger><sprite name=Challenger><style=Keyword>Выбор противника</style></link>.",
+    "descriptionRaw": "Воскресив союзника, даруйте ему Выбор противника.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "\"Эта местность мне непонятна. Видимость здесь почти нулевая. Врагов я тут встречаю на каждом шагу. Но что странно – попадаются и неожиданные союзники\". – Из записок экспедиции, снаряженной Подразделением Дальних Краев Гильдии Исследователей, пункт назначения: Сумрачные острова",
+    "flavorText": "\"Ты улыбаешься, но я знаю, как вероломно твое сердце! Они улыбались мне и ели за одним столом со мной, даже когда уже задумали вонзить меч мне в спину. Теперь меня не провести. Ты умрешь так же, как остальные: с воплем раскаяния на устах!\"",
     "artistName": "Envar Studio",
-    "name": "Призрачный землемер",
-    "cardCode": "08SI018",
+    "name": "Пронзенный призрак",
+    "cardCode": "08NX025",
     "keywords": [
-      "Вампиризм"
+      "Посмертие"
     ],
     "keywordRefs": [
-      "Lifesteal"
+      "Deathless"
     ],
     "spellSpeed": "",
     "spellSpeedRef": "",
@@ -2789,13 +4876,2028 @@
   {
     "associatedCards": [],
     "associatedCardRefs": [
+      "08SI026T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08SH009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08SH009-full.png"
+      }
+    ],
+    "regions": [
+      "Шурима"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "<link=keyword.Curse><sprite name=Curse><style=Keyword>Прокляните</style></link> врага с помощью карты <link=card.curse><style=AssociatedCard>Ужас</style></link>.",
+    "descriptionRaw": "Прокляните врага с помощью карты Ужас.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Некоторым вещам лучше оставаться в толще песков.",
+    "artistName": "Polar Engine",
+    "name": "Древнее проклятие",
+    "cardCode": "08SH009",
+    "keywords": [
+      "Взрывное"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Взрывное",
+    "spellSpeedRef": "Burst",
+    "rarity": "ОБЫЧНОЕ",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Заклинание",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08SH004.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08SH004-full.png"
+      }
+    ],
+    "regions": [
+      "Шурима"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 4,
+    "cost": 4,
+    "health": 4,
+    "description": "<link=keyword.Daybreak><style=Keyword>День</style></link> или при активации другого <link=keyword.Daybreak><style=Keyword>дневного</style></link> эффекта: даруйте <link=keyword.Weakest><style=Keyword>слабейшему</style></link> врагу <link=keyword.Vulnerable><sprite name=Vulnerable><style=Keyword>Уязвимость</style></link>.",
+    "descriptionRaw": "День или при активации другого дневного эффекта: даруйте слабейшему врагу Уязвимость.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Огромные шуримские армии готовы доказать могущество пустыни. Когда будет отдан приказ, они пойдут вперед без колебаний.",
+    "artistName": "Kudos Productions",
+    "name": "Генерал дюн",
+    "cardCode": "08SH004",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "РЕДКОЕ",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "ЭЛИТА"
+    ],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08SH005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08SH005-full.png"
+      }
+    ],
+    "regions": [
+      "Шурима"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 2,
+    "description": "<link=keyword.Daybreak><style=Keyword>День</style></link>: вытяните карту <link=card.me><style=AssociatedCard>Защитники Солнечного диска</style></link>.",
+    "descriptionRaw": "День: вытяните карту Защитники Солнечного диска.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Мы хранители вечно сущей пустыни, мы живая история, мы путники на сияющей дороге. Мы преклоняем колена пред Солнечным диском – и ни пред чем иным, так что пусть весь мир падет на колени пред сиянием шуримской славы\". – Азир",
+    "artistName": "Kudos Productions",
+    "name": "Защитники Солнечного диска",
+    "cardCode": "08SH005",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ОБЫЧНОЕ",
+    "rarityRef": "Common",
+    "subtypes": [
+      "ЭЛИТА"
+    ],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "04SH098"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08SH012.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08SH012-full.png"
+      }
+    ],
+    "regions": [
+      "Шурима"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 3,
+    "cost": 3,
+    "health": 2,
+    "description": "После гибели первого другого союзника в каждом раунде, а также <link=keyword.Last Breath><sprite name=LastBreath><style=Keyword>Предсмертный вздох</style></link>: создайте в руке карту <link=card.create><style=AssociatedCard>Удачная находка</style></link>.",
+    "descriptionRaw": "После гибели первого другого союзника в каждом раунде, а также Предсмертный вздох: создайте в руке карту Удачная находка.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Вот это хабар что надо, Барб. Я знал, что на тебя можно положиться. Стоп... В каком это смысле \"тебя заметили\"?!\" – Векаурский воин",
+    "artistName": "Caravan Studio",
+    "name": "Барбара-Расхитительница",
+    "cardCode": "08SH012",
+    "keywords": [
+      "Предсмертный вздох"
+    ],
+    "keywordRefs": [
+      "LastBreath"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "РЕДКОЕ",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "РЕПТИЛИЯ"
+    ],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08SH002.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08SH002-full.png"
+      }
+    ],
+    "regions": [
+      "Шурима"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 9,
+    "cost": 5,
+    "health": 6,
+    "description": "Чтобы сыграть меня, трижды убейте союзника или разрушьте свой кристалл маны.",
+    "descriptionRaw": "Чтобы сыграть меня, трижды убейте союзника или разрушьте свой кристалл маны.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Дюноглот дремлет на куда большей глубине, нежели его более мелкие родичи зер'сай. Он известен тем, что легко съедает прочих хищников-зер'сай, однако случаев встречи с ним описано мало. Видимо, из-за того, что он способен проглотить целую дюну (а вместе с ней и всех очевидцев). ",
+    "artistName": "Envar Studio",
+    "name": "Дюноглот",
+    "cardCode": "08SH002",
+    "keywords": [
+      "Щит от магии",
+      "Устрашение"
+    ],
+    "keywordRefs": [
+      "SpellShield",
+      "Fearsome"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ЭПИЧЕСКОЕ",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08MT003T3",
+      "08MT003T4",
+      "08MT003T11",
+      "08MT003T12"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08MT003.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08MT003-full.png"
+      }
+    ],
+    "regions": [
+      "Таргон",
+      "Демасия"
+    ],
+    "regionRefs": [
+      "Targon",
+      "Demacia"
+    ],
+    "attack": 3,
+    "cost": 5,
+    "health": 4,
+    "description": "<link=vocab.Play><style=Vocab>Разыгрывая карту</style></link>: дважды <link=keyword.Curse><sprite name=Curse><style=Keyword>прокляните</style></link> врага с помощью карты <link=card.curse><style=AssociatedCard>Оковы</style></link>.",
+    "descriptionRaw": "Разыгрывая карту: дважды прокляните врага с помощью карты Оковы.",
+    "levelupDescription": "Вы 8+ раз выбрали целью бойцов.<style=Variable></style>",
+    "levelupDescriptionRaw": "Вы 8+ раз выбрали целью бойцов.",
+    "flavorText": "\"Ты пришла ко мне в синяках и порезах – и все равно выказывала невиданное торжество самообладания. Ты, без сомнения, странная женщина – но здесь ты в безопасности. Отдохни как следует, а когда поправишься – я охотно выслушаю твою историю\".",
+    "artistName": "Envar Studio",
+    "name": "Моргана",
+    "cardCode": "08MT003",
+    "keywords": [
+      "Вампиризм"
+    ],
+    "keywordRefs": [
+      "Lifesteal"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Чемпион",
+    "rarityRef": "Champion",
+    "subtypes": [],
+    "supertype": "Чемпион",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08MT003T3",
+      "08MT003",
+      "08MT003T11",
+      "08MT003T12"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08MT003T4.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08MT003T4-full.png"
+      }
+    ],
+    "regions": [
+      "Таргон",
+      "Демасия"
+    ],
+    "regionRefs": [
+      "Targon",
+      "Demacia"
+    ],
+    "attack": 4,
+    "cost": 5,
+    "health": 5,
+    "description": "<link=vocab.Play><style=Vocab>Разыгрывая карту</style></link>: дважды <link=keyword.Curse><sprite name=Curse><style=Keyword>прокляните</style></link> врага с помощью карты <link=card.curse><style=AssociatedCard>Оковы</style></link>.\r\n<link=vocab.Attack><style=Vocab>Атака</style></link>: <link=keyword.Curse><sprite name=Curse><style=Keyword>прокляните</style></link> <link=vocab.Strongest><style=Vocab>сильнейшего</style></link> врага, который не <link=keyword.Curse><sprite name=Curse><style=Keyword>проклят</style></link> с помощью карты <link=card.curse><style=AssociatedCard>Оковы</style></link>, и нанесите 3 ед. урона <link=keyword.Curse><sprite name=Curse><style=Keyword>проклятым</style></link> врагам и 2 ед. урона – вражескому нексусу.",
+    "descriptionRaw": "Разыгрывая карту: дважды прокляните врага с помощью карты Оковы.\r\nАтака: прокляните сильнейшего врага, который не проклят с помощью карты Оковы, и нанесите 3 ед. урона проклятым врагам и 2 ед. урона – вражескому нексусу.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Ты пожалеешь об этом нарушении! Уж в чем-чем, а в одном будь уверен: ты прочувствуешь те муки, что причинил другим, и будут они сродни тискам, сжавшим твою душу. Ты признаешь свои грехи – или они тебя придушат\".",
+    "artistName": "Envar Studio",
+    "name": "Моргана",
+    "cardCode": "08MT003T4",
+    "keywords": [
+      "Вампиризм"
+    ],
+    "keywordRefs": [
+      "Lifesteal"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Чемпион",
+    "rarityRef": "Champion",
+    "subtypes": [],
+    "supertype": "Чемпион",
+    "type": "Боец",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08MT003",
+      "08MT003T4",
+      "08MT003T11"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08MT003T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08MT003T3-full.png"
+      }
+    ],
+    "regions": [
+      "Таргон"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "<link=keyword.Stun><sprite name=Stunned><style=Keyword>Оглушите</style></link> врага и <link=keyword.Curse><sprite name=Curse><style=Keyword>прокляните</style></link> его с помощью карты <link=card.curse><style=AssociatedCard>Оковы</style></link>.\r\nСоздайте в своей колоде карту <link=card.level1><style=AssociatedCard>Моргана</style></link>.",
+    "descriptionRaw": "Оглушите врага и прокляните его с помощью карты Оковы.\r\nСоздайте в своей колоде карту Моргана.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Страдай так, как из-за тебя страдали другие!\" – Моргана",
+    "artistName": "Polar Engine",
+    "name": "Темные узы Морганы",
+    "cardCode": "08MT003T3",
+    "keywords": [
+      "Быстрое"
+    ],
+    "keywordRefs": [
+      "Fast"
+    ],
+    "spellSpeed": "Быстрое",
+    "spellSpeedRef": "Fast",
+    "rarity": "Чемпион",
+    "rarityRef": "Champion",
+    "subtypes": [],
+    "supertype": "Чемпион",
+    "type": "Заклинание",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Только обычные",
+      "Вечный",
+      "Карты четной стоимости",
+      "Бесповторные",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Deckbuilder_RulesFilters_Singleton",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08MT003T11.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08MT003T11-full.png"
+      }
+    ],
+    "regions": [
+      "Таргон"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "Когда я в руке, <style=Variable>проклятый боец</style> получает <link=keyword.Immobile><sprite name=Immobile><sprite name=Reckless><style=Keyword>Неподвижность</style></link>.",
+    "descriptionRaw": "Когда я в руке, проклятый боец получает Неподвижность.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Да пленит тебя истина!\" – Моргана",
+    "artistName": "Polar Engine",
+    "name": "Оковы",
+    "cardCode": "08MT003T11",
+    "keywords": [
+      "Мгновенное",
+      "Проклятие"
+    ],
+    "keywordRefs": [
+      "Focus",
+      "Curse"
+    ],
+    "spellSpeed": "Взрывное",
+    "spellSpeedRef": "Burst",
+    "rarity": "Нет",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Заклинание",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08MT003T12.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08MT003T12-full.png"
+      }
+    ],
+    "regions": [
+      "Таргон"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "Нанесите 3 ед. урона <link=keyword.Curse><sprite name=Curse><style=Keyword>проклятым</style></link> врагам и 2 ед. урона – вражескому нексусу.",
+    "descriptionRaw": "Нанесите 3 ед. урона проклятым врагам и 2 ед. урона – вражескому нексусу.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Я твоя пытка, усиленная тысячекратно!\" – Моргана",
+    "artistName": "Polar Engine",
+    "name": "Оковы души",
+    "cardCode": "08MT003T12",
+    "keywords": [
+      "Способность"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Нет",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Способность",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08MT003T11"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08MT005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08MT005-full.png"
+      }
+    ],
+    "regions": [
+      "Таргон"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 6,
+    "cost": 8,
+    "health": 8,
+    "description": "<link=vocab.Play><style=Vocab>Разыгрывая карту</style></link>: дважды <link=keyword.Curse><sprite name=Curse><style=Keyword>прокляните</style></link> 2 врагов с помощью карты <link=card.curse><style=AssociatedCard>Оковы</style></link>.",
+    "descriptionRaw": "Разыгрывая карту: дважды прокляните 2 врагов с помощью карты Оковы.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Я приняла божественное обличье только во имя моих дочерей. Лишь ради семьи я отказалась от рода человеческого, чтобы этим пылающим мечом заново выковать мир правды и справедливости\".",
+    "artistName": "Envar Studio",
+    "name": "Михира, Вознесшаяся сущность",
+    "cardCode": "08MT005",
+    "keywords": [
+      "Пробивание"
+    ],
+    "keywordRefs": [
+      "Overwhelm"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ЭПИЧЕСКОЕ",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08MT003T11"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08MT042.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08MT042-full.png"
+      }
+    ],
+    "regions": [
+      "Таргон"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 6,
+    "health": 0,
+    "description": "<link=keyword.Curse><sprite name=Curse><style=Keyword>Прокляните</style></link> врага с помощью карты <link=card.curse><style=AssociatedCard>Оковы</style></link>.\r\nПовысьте стоимость вражеских Проклятий <link=vocab.Everywhere><style=Vocab>везде</style></link> на 1.",
+    "descriptionRaw": "Прокляните врага с помощью карты Оковы.\r\nПовысьте стоимость вражеских Проклятий везде на 1.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Чтобы обрести свободу, признай, что внутри живет тьма\". – Моргана",
+    "artistName": "Polar Engine",
+    "name": "Плен грешника",
+    "cardCode": "08MT042",
+    "keywords": [
+      "Медленное"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "Медленное",
+    "spellSpeedRef": "Slow",
+    "rarity": "РЕДКОЕ",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Заклинание",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Только обычные",
+      "Вечный",
+      "Карты четной стоимости",
+      "Бесповторные",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Deckbuilder_RulesFilters_Singleton",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08MT024.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08MT024-full.png"
+      }
+    ],
+    "regions": [
+      "Таргон"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 2,
+    "description": "<link=vocab.Play><style=Vocab>Разыгрывая карту</style></link>: даруйте союзнику в руке <link=keyword.SpellShield><sprite name=SpellShield><style=Keyword>Щит от магии</style></link> или <link=keyword.Overwhelm><sprite name=Overwhelm><style=Keyword>Пробивание</style></link>.",
+    "descriptionRaw": "Разыгрывая карту: даруйте союзнику в руке Щит от магии или Пробивание.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Не бойся! Иди вперед и не оглядывайся! Когда-то мы тоже проделали этот путь. Теперь наш долг – помочь тебе пройти его. Скорее ступай в ее святилище – и Госпожа в вуали даст тебе защиту, которая тебе нужна\".",
+    "artistName": "Envar Studio",
+    "name": "Рубиноокий заклинатель",
+    "cardCode": "08MT024",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ОБЫЧНОЕ",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08MT024T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08MT024T1-full.png"
+      }
+    ],
+    "regions": [
+      "Таргон"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 2,
+    "description": "<link=vocab.Play><style=Vocab>Разыгрывая карту</style></link>: даруйте союзнику в руке <link=keyword.Overwhelm><sprite name=Overwhelm><style=Keyword>Пробивание</style></link>.",
+    "descriptionRaw": "Разыгрывая карту: даруйте союзнику в руке Пробивание.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Не бойся! Иди вперед и не оглядывайся! Когда-то мы тоже проделали этот путь. Теперь наш долг – помочь тебе пройти его. Скорее ступай в ее святилище – и Госпожа в вуали даст тебе защиту, которая тебе нужна\".",
+    "artistName": "Envar Studio",
+    "name": "Рубиноокий заклинатель",
+    "cardCode": "08MT024T1",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Нет",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08MT024T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08MT024T2-full.png"
+      }
+    ],
+    "regions": [
+      "Таргон"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 2,
+    "description": "<link=vocab.Play><style=Vocab>Разыгрывая карту</style></link>: даруйте союзнику в руке <link=keyword.SpellShield><sprite name=SpellShield><style=Keyword>Щит от магии</style></link>.",
+    "descriptionRaw": "Разыгрывая карту: даруйте союзнику в руке Щит от магии.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Не бойся! Иди вперед и не оглядывайся! Когда-то мы тоже проделали этот путь. Теперь наш долг – помочь тебе пройти его. Скорее ступай в ее святилище – и Госпожа в вуали даст тебе защиту, которая тебе нужна\".",
+    "artistName": "Envar Studio",
+    "name": "Рубиноокий заклинатель",
+    "cardCode": "08MT024T2",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ОБЫЧНОЕ",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08MT003T11"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08MT015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08MT015-full.png"
+      }
+    ],
+    "regions": [
+      "Таргон"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 2,
+    "cost": 3,
+    "health": 3,
+    "description": "<link=vocab.Play><style=Vocab>Разыгрывая карту</style></link>: <link=keyword.Curse><sprite name=Curse><style=Keyword>прокляните</style></link> врага с помощью карты <link=card.curse><style=AssociatedCard>Оковы</style></link>.",
+    "descriptionRaw": "Разыгрывая карту: прокляните врага с помощью карты Оковы.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Смотри, Долли! Я делаю ровно так, как ты меня учила! Как думаешь – получится когда-нибудь показать маме, сколько всего мы усвоили? Думаешь, она уже знает? Правда?! Надеюсь, ты права\". – Лиза",
+    "artistName": "Envar Studio",
+    "name": "Лиза и Долли",
+    "cardCode": "08MT015",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ОБЫЧНОЕ",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08MT030.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08MT030-full.png"
+      }
+    ],
+    "regions": [
+      "Таргон"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 6,
+    "cost": 6,
+    "health": 5,
+    "description": "Разыгрывая <link=keyword.Fast><sprite name=Fast><style=Keyword>быстрое</style></link> либо <link=keyword.Slow><sprite name=Slow><style=Keyword>медленное</style></link> заклинание или <link=keyword.Skill><sprite name=SkillMark><style=Keyword>способность</style></link>, даруйте остальным союзникам-драконам +1|+1.",
+    "descriptionRaw": "Разыгрывая быстрое либо медленное заклинание или способность, даруйте остальным союзникам-драконам +1|+1.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Характеры драконов могут различаться так же разительно, как и их облик. На каждый вид, склонный к самозабвенному разрушению, – вроде огненных дракончиков – найдется вид, оберегающий свою семью и окружающую местность — подобно тому, как это делает медлительный и доброжелательный самоцветный дракон.",
+    "artistName": "Polar Engine",
+    "name": "Самоцветный дракон",
+    "cardCode": "08MT030",
+    "keywords": [
+      "Ярость"
+    ],
+    "keywordRefs": [
+      "Fury"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "РЕДКОЕ",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "ДРАКОН"
+    ],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08MT003T11"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08MT023.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08MT023-full.png"
+      }
+    ],
+    "regions": [
+      "Таргон"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "<link=keyword.Stun><sprite name=Stunned><style=Keyword>Оглушите</style></link> врага и <link=keyword.Curse><sprite name=Curse><style=Keyword>прокляните</style></link> его с помощью карты <link=card.curse><style=AssociatedCard>Оковы</style></link>.",
+    "descriptionRaw": "Оглушите врага и прокляните его с помощью карты Оковы.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Страдай так, как из-за тебя страдали другие!\" – Моргана",
+    "artistName": "Polar Engine",
+    "name": "Темные узы",
+    "cardCode": "08MT023",
+    "keywords": [
+      "Быстрое"
+    ],
+    "keywordRefs": [
+      "Fast"
+    ],
+    "spellSpeed": "Быстрое",
+    "spellSpeedRef": "Fast",
+    "rarity": "РЕДКОЕ",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Заклинание",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08MT031.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08MT031-full.png"
+      }
+    ],
+    "regions": [
+      "Таргон"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 3,
+    "cost": 4,
+    "health": 3,
+    "description": "Призвав меня, восстановите 2 ед. здоровья своему нексусу и получите дополнительный кристалл маны в следующем раунде.",
+    "descriptionRaw": "Призвав меня, восстановите 2 ед. здоровья своему нексусу и получите дополнительный кристалл маны в следующем раунде.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Одинокая оттрани, живущая высоко на склонах Таргона, посвятила свою жизнь драконам. Она украшает свое одеяние отпавшими чешуйками и древними костями, прокладывая себе путь в гору сквозь россыпь драконьих зубов и клубы дыма.",
+    "artistName": "Polar Engine",
+    "name": "Оттрани, Чтящая драконов",
+    "cardCode": "08MT031",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ЭПИЧЕСКОЕ",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08MT009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08MT009-full.png"
+      }
+    ],
+    "regions": [
+      "Таргон"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 4,
+    "cost": 5,
+    "health": 5,
+    "description": "Призвав меня или <link=vocab.Titanic><style=Vocab>титанического</style></link> союзника, восстановите вашему нексусу 3 ед. здоровья.",
+    "descriptionRaw": "Призвав меня или титанического союзника, восстановите вашему нексусу 3 ед. здоровья.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Этот таинственный защитник не забыл то благословение, что вознесло его над прочими зверями. Он отплачивает за награду, делая путь безопасным для всех, кто ищет прибежища на склонах Таргона.",
+    "artistName": "Envar Studio",
+    "name": "Таинственный защитник",
+    "cardCode": "08MT009",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "РЕДКОЕ",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08MT003T11"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08MT006.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08MT006-full.png"
+      }
+    ],
+    "regions": [
+      "Таргон"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "Дайте союзнику <link=keyword.SpellShield><sprite name=SpellShield><style=Keyword>Щит от магии</style></link> до конца раунда и <link=keyword.Curse><sprite name=Curse><style=Keyword>прокляните</style></link> его с помощью карты <link=card.curse><style=AssociatedCard>Оковы</style></link>.",
+    "descriptionRaw": "Дайте союзнику Щит от магии до конца раунда и прокляните его с помощью карты Оковы.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Защита от преследования!\" – Моргана",
+    "artistName": "Polar Engine",
+    "name": "Черный щит",
+    "cardCode": "08MT006",
+    "keywords": [
+      "Взрывное"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Взрывное",
+    "spellSpeedRef": "Burst",
+    "rarity": "РЕДКОЕ",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Заклинание",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08MT027.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08MT027-full.png"
+      }
+    ],
+    "regions": [
+      "Таргон"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 5,
+    "cost": 8,
+    "health": 8,
+    "description": "<link=vocab.Play><style=Vocab>Разыгрывая карту</style></link>: активируйте <link=keyword.Daybreak><style=Keyword>дневные</style></link> и <link=keyword.Nightfall><style=Keyword>ночные</style></link> эффекты остальных союзников.\r\n<link=keyword.Daybreak><style=Keyword>День</style></link>: даруйте мне <link=keyword.Overwhelm><sprite name=Overwhelm><style=Keyword>Пробивание</style></link>.\r\n<link=keyword.Nightfall><style=Keyword>Ночь</style></link>: даруйте мне <link=keyword.SpellShield><sprite name=SpellShield><style=Keyword>Щит от магии</style></link>.",
+    "descriptionRaw": "Разыгрывая карту: активируйте дневные и ночные эффекты остальных союзников.\r\nДень: даруйте мне Пробивание.\r\nНочь: даруйте мне Щит от магии.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Кольцо из огня пылает в вышине. В предсказанной тьме все мы одинаковы\". – Певец убывающей луны",
+    "artistName": "Kudos Productions",
+    "name": "Вестница Небесной конвергенции",
+    "cardCode": "08MT027",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ЭПИЧЕСКОЕ",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "ПТИЦА"
+    ],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08MT025.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08MT025-full.png"
+      }
+    ],
+    "regions": [
+      "Таргон"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 7,
+    "health": 0,
+    "description": "Если вы <link=vocab.Behold><style=Vocab>владеете</style></link> <link=vocab.Titanic><style=Vocab>титаническим</style></link> бойцом, моя стоимость снижается на 3.\r\nНанесите бойцу 7 ед. урона.",
+    "descriptionRaw": "Если вы владеете титаническим бойцом, моя стоимость снижается на 3.\r\nНанесите бойцу 7 ед. урона.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Ай-яй, ой-ей-ей, не войнуйтесь насчет вот этого всего, п'осто майенькая т'ещина в скайах, небойшое п'оисшествие, это не Папа, НЕ-А! Впейод!\" – Скол",
+    "artistName": "Polar Engine",
+    "name": "Сейсмический осколок",
+    "cardCode": "08MT025",
+    "keywords": [
+      "Медленное"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "Медленное",
+    "spellSpeedRef": "Slow",
+    "rarity": "ОБЫЧНОЕ",
+    "rarityRef": "Common",
+    "subtypes": [
+      "СТИХИЯ"
+    ],
+    "supertype": "",
+    "type": "Заклинание",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08BW028T1",
+      "08BW028T2",
+      "08BW028T3",
+      "08BW028T4"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08DE006.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08DE006-full.png"
+      }
+    ],
+    "regions": [
+      "Демасия",
+      "Фрельйорд"
+    ],
+    "regionRefs": [
+      "Demacia",
+      "Freljord"
+    ],
+    "attack": 2,
+    "cost": 3,
+    "health": 3,
+    "description": "<link=vocab.Play><style=Vocab>Разыгрывая карту</style></link>: выберите заклинание Исследователя, чтобы создать его в руке.",
+    "descriptionRaw": "Разыгрывая карту: выберите заклинание Исследователя, чтобы создать его в руке.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Очень холодно. Мне холодно. Вокруг все время холодно. Есть на свете места, где жить просто невозможно. Отправьте меня, пожалуйста, куда-нибудь, где тепло\".<br>– Из записок экспедиции, снаряженной Подразделением Дальних Краев Гильдии Исследователей, пункт назначения: Фрельйорд",
+    "artistName": "Envar Studio",
+    "name": "Образованный первопроходец",
+    "cardCode": "08DE006",
+    "keywords": [
+      "Выбор противника"
+    ],
+    "keywordRefs": [
+      "Challenger"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "РЕДКОЕ",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08DE017T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08DE020.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08DE020-full.png"
+      }
+    ],
+    "regions": [
+      "Демасия"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "Даруйте союзнику +0|+2. <link=keyword.Curse><sprite name=Curse><style=Keyword>Прокляните</style></link> противника с помощью карты <link=card.curse><style=AssociatedCard>Подавление</style></link>.",
+    "descriptionRaw": "Даруйте союзнику +0|+2. Прокляните противника с помощью карты Подавление.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Узнай тяжесть своих грехов!\" – Моргана",
+    "artistName": "Polar Engine",
+    "name": "Волшебные путы",
+    "cardCode": "08DE020",
+    "keywords": [
+      "Медленное"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "Медленное",
+    "spellSpeedRef": "Slow",
+    "rarity": "ОБЫЧНОЕ",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Заклинание",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08DE017T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08DE017.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08DE017-full.png"
+      }
+    ],
+    "regions": [
+      "Демасия"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 3,
+    "cost": 4,
+    "health": 2,
+    "description": "Призвав меня, <link=keyword.Curse><sprite name=Curse><style=Keyword>прокляните</style></link> противника с помощью карты <link=card.curse><style=AssociatedCard>Подавление</style></link>.",
+    "descriptionRaw": "Призвав меня, прокляните противника с помощью карты Подавление.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Мы не можем позволить им добраться до святилища падшей сестры. Там живет ее древняя и мудреная магия, которую даже я не сумею подавить. Скорее отведите этих чудищ обратно на корабль, а потом идите в горы и догоняйте остальных!\"",
+    "artistName": "Envar Studio",
+    "name": "Охотник на магов – инквизитор",
+    "cardCode": "08DE017",
+    "keywords": [
+      "Выбор противника",
+      "Стойкость"
+    ],
+    "keywordRefs": [
+      "Challenger",
+      "Tough"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "РЕДКОЕ",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08DE017T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08DE017T1-full.png"
+      }
+    ],
+    "regions": [
+      "Демасия"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "Когда я в руке, вы не можете разыгрывать никакие заклинания кроме заклинания <link=card.selfref><style=AssociatedCard>Подавление</style></link>.",
+    "descriptionRaw": "Когда я в руке, вы не можете разыгрывать никакие заклинания кроме заклинания Подавление.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Магия не внемлет зову.",
+    "artistName": "Polar Engine",
+    "name": "Подавление",
+    "cardCode": "08DE017T1",
+    "keywords": [
+      "Мгновенное",
+      "Проклятие"
+    ],
+    "keywordRefs": [
+      "Focus",
+      "Curse"
+    ],
+    "spellSpeed": "Взрывное",
+    "spellSpeedRef": "Burst",
+    "rarity": "Нет",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Заклинание",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08DE025.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08DE025-full.png"
+      }
+    ],
+    "regions": [
+      "Демасия"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 6,
+    "cost": 6,
+    "health": 6,
+    "description": "Призвав меня, снизьте стоимость всех союзных бойцов в руке на 1.",
+    "descriptionRaw": "Призвав меня, снизьте стоимость всех союзных бойцов в руке на 1.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Благодаря пучкам плотной шерсти, предохраняющей от холода, этот дракон может забираться в куда более высокие слои атмосферы, нежели его сородичи. Эти драконы резвы и изворотливы. Чаще всего их можно увидеть в небесной вышине – взрезая крыльями облака, они перемещаются вместе с порывами шквалистого ветра.",
+    "artistName": "Wild Blue",
+    "name": "Облачный дракон",
+    "cardCode": "08DE025",
+    "keywords": [
+      "Ярость"
+    ],
+    "keywordRefs": [
+      "Fury"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ЭПИЧЕСКОЕ",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "ДРАКОН"
+    ],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Только обычные",
+      "Вечный",
+      "Карты четной стоимости",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08DE010.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08DE010-full.png"
+      }
+    ],
+    "regions": [
+      "Демасия"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "Дайте союзнику +0|+2.\r\nЭтот союзник и враг <link=vocab.Strike><style=Vocab>наносят удар</style></link> друг другу.",
+    "descriptionRaw": "Дайте союзнику +0|+2.\r\nЭтот союзник и враг наносят удар друг другу.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"К бою, друг мой! Вы же не из тех трусов, что избегают джентльменской дуэли?\" – Шевалье Лоранов",
+    "artistName": "Kudos Productions",
+    "name": "Джентльменская дуэль",
+    "cardCode": "08DE010",
+    "keywords": [
+      "Быстрое"
+    ],
+    "keywordRefs": [
+      "Fast"
+    ],
+    "spellSpeed": "Быстрое",
+    "spellSpeedRef": "Fast",
+    "rarity": "ОБЫЧНОЕ",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Заклинание",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08DE022.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08DE022-full.png"
+      }
+    ],
+    "regions": [
+      "Демасия"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 8,
+    "cost": 9,
+    "health": 8,
+    "description": "Призвав меня, вытяните по 1 карте каждого чемпиона из своей колоды. \r\nВпервые призвав чемпиона в каждом раунде, примените <link=vocab.Rally><style=Vocab>Рвение</style></link>.",
+    "descriptionRaw": "Призвав меня, вытяните по 1 карте каждого чемпиона из своей колоды. \r\nВпервые призвав чемпиона в каждом раунде, примените Рвение.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Всегда помни, сын мой, что путешествия к далекому горизонту должны совершаться лишь во имя родной страны, остающейся за спиною\". – Король Джарван III",
+    "artistName": "Envar Studio",
+    "name": "Зимородок",
+    "cardCode": "08DE022",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ЭПИЧЕСКОЕ",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08DE026.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08DE026-full.png"
+      }
+    ],
+    "regions": [
+      "Демасия"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 7,
+    "cost": 7,
+    "health": 6,
+    "description": "Ваши драконьи поощрения действуют на всех союзных драконов.",
+    "descriptionRaw": "Ваши драконьи поощрения действуют на всех союзных драконов.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Честно говоря, я не всегда был драконьим адептом. Стать им меня убедил Алатис – когда впервые спас мне жизнь. Он многому меня научил, но знаешь, что самое важное? Нет житья краше, чем служба Демасии верхом на драконе\". – Драконий адепт",
+    "artistName": "Envar Studio",
+    "name": "Алатис Величавый",
+    "cardCode": "08DE026",
+    "keywords": [
+      "Ярость"
+    ],
+    "keywordRefs": [
+      "Fury"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ЭПИЧЕСКОЕ",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "ДРАКОН"
+    ],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Только обычные",
+      "Вечный",
+      "Карты четной стоимости",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08DE013.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08DE013-full.png"
+      }
+    ],
+    "regions": [
+      "Демасия"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 3,
+    "description": "Призвав меня, вытяните дракона, если <link=vocab.Behold><style=Vocab>владеете</style></link> драконом.",
+    "descriptionRaw": "Призвав меня, вытяните дракона, если владеете драконом.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Ты знаешь, мне больно это признавать, старина, но одни мы его не укротим. Мы уже сделали все, что могли. Я пошлю весточку генералу. Заручившись мощью Демасии, мы наверняка поставим этого фантастического зверя на колени\".",
+    "artistName": "Envar Studio",
+    "name": "Драконий адепт",
+    "cardCode": "08DE013",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ОБЫЧНОЕ",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08IO012.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08IO012-full.png"
+      }
+    ],
+    "regions": [
+      "Иония"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 3,
+    "cost": 6,
+    "health": 5,
+    "description": "Разыгрывая <link=keyword.Fast><sprite name=Fast><style=Keyword>быстрое</style></link> либо <link=keyword.Slow><sprite name=Slow><style=Keyword>медленное</style></link> заклинание или <link=keyword.Skill><sprite name=SkillMark><style=Keyword>способность</style></link>, восстановите<br>1 ед. здоровья своему нексусу.",
+    "descriptionRaw": "Разыгрывая быстрое либо медленное заклинание или способность, восстановите1 ед. здоровья своему нексусу.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Ты великий зверь! Столько радости в твоем скольжении над волнами! Если когда-нибудь ты решишь поохотиться на кого-то покрупнее, чем рыбы и морские птицы, я с удовольствием сойдусь с тобою в поединке\". – Нила",
+    "artistName": "Caravan Studio",
+    "name": "Морской дракон",
+    "cardCode": "08IO012",
+    "keywords": [
+      "Изворотливость"
+    ],
+    "keywordRefs": [
+      "Elusive"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "РЕДКОЕ",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "ДРАКОН"
+    ],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08IO014.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08IO014-full.png"
+      }
+    ],
+    "regions": [
+      "Иония"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 9,
+    "cost": 9,
+    "health": 9,
+    "description": "В каждом раунде стоимость первой разыгранной вами карты снижается на 9.",
+    "descriptionRaw": "В каждом раунде стоимость первой разыгранной вами карты снижается на 9.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Для обитателей этой ионийской деревни Хейшо – и почитаемый хранитель, и друг. С незапамятных времен он носит на своей спине дома жителей – и потому они могут доверить ему поиск тихого пристанища во времена невзгод.",
+    "artistName": "Envar Studio",
+    "name": "Хейшо, Мировой панцирь",
+    "cardCode": "08IO014",
+    "keywords": [
+      "Щит от магии"
+    ],
+    "keywordRefs": [
+      "SpellShield"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ЭПИЧЕСКОЕ",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "01IO030"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08IO021.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08IO021-full.png"
+      }
+    ],
+    "regions": [
+      "Иония"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 0,
+    "cost": 9,
+    "health": 0,
+    "description": "Остановите вражеское <link=keyword.Fast><sprite name=Fast><style=Keyword>быстрое</style></link> заклинание, <link=keyword.Slow><sprite name=Slow><style=Keyword>медленное</style></link> заклинание или <link=keyword.Skill><sprite name=SkillMark><style=Keyword>способность</style></link>, <link=keyword.Recall><style=Keyword>верните</style></link> врага и призовите карту <link=card.summon><style=AssociatedCard>Небесный змей</style></link>.",
+    "descriptionRaw": "Остановите вражеское быстрое заклинание, медленное заклинание или способность, верните врага и призовите карту Небесный змей.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Этот танец и есть наше воспоминание\". – Ирелия",
+    "artistName": "Polar Engine",
+    "name": "Танец Небесного змея",
+    "cardCode": "08IO021",
+    "keywords": [
+      "Быстрое"
+    ],
+    "keywordRefs": [
+      "Fast"
+    ],
+    "spellSpeed": "Быстрое",
+    "spellSpeedRef": "Fast",
+    "rarity": "РЕДКОЕ",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Заклинание",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Только обычные",
+      "Вечный",
+      "Карты четной стоимости",
+      "Бесповторные",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Deckbuilder_RulesFilters_Singleton",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08IO019T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08IO019.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08IO019-full.png"
+      }
+    ],
+    "regions": [
+      "Иония"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 3,
+    "cost": 4,
+    "health": 3,
+    "description": "Призвав меня, призовите карту <link=card.summon><style=AssociatedCard>Птицеводы Аднера</style></link>.",
+    "descriptionRaw": "Призвав меня, призовите карту Птицеводы Аднера.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Эта земля таит в себе множество уроков. Всегда помните: окончание любого времени года – это праздник, ибо лишь в завершении рождается новое начало\".",
+    "artistName": "Envar Studio",
+    "name": "Честный Аднер",
+    "cardCode": "08IO019",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "РЕДКОЕ",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Только обычные",
+      "Вечный",
+      "Карты четной стоимости",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08IO019T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08IO019T1-full.png"
+      }
+    ],
+    "regions": [
+      "Иония"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 1,
+    "cost": 1,
+    "health": 1,
+    "description": "<link=keyword.Support><style=Keyword>Поддержка</style></link>: увеличьте мои характеристики до показателей союзника, которого я поддерживаю, до конца раунда.",
+    "descriptionRaw": "Поддержка: увеличьте мои характеристики до показателей союзника, которого я поддерживаю, до конца раунда.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Смотри! У папиных птиц снова вылупляются птенцы!\"<br>\"Ого! И еще один! Зачем их так много?\"<br>\"Ты это КАЖДЫЙ ГОД спрашиваешь, Арья!\"<br>\"Никто никогда не отвечает!\"<br>\"Тс-с-с, не спугни их. И посчитай, сколько их там. Нам нужно будет много имен придумать\".",
+    "artistName": "Envar Studio",
+    "name": "Птицеводы Аднера",
+    "cardCode": "08IO019T1",
+    "keywords": [
+      "Поддержка"
+    ],
+    "keywordRefs": [
+      "Support"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Нет",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Боец",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Только обычные",
+      "Вечный",
+      "Карты четной стоимости",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08IO010.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08IO010-full.png"
+      }
+    ],
+    "regions": [
+      "Иония"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 0,
+    "cost": 4,
+    "health": 0,
+    "description": "<link=keyword.Recall><style=Keyword>Верните</style></link> врага, чтобы повысить на 2 стоимость следующего бойца, разыгрываемого вашим оппонентом в этом раунде.",
+    "descriptionRaw": "Верните врага, чтобы повысить на 2 стоимость следующего бойца, разыгрываемого вашим оппонентом в этом раунде.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Те, кто желает нам зла, упокоятся на дне морском\".<br>– Повелитель рек",
+    "artistName": "Polar Engine",
+    "name": "Вверх дном",
+    "cardCode": "08IO010",
+    "keywords": [
+      "Медленное"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "Медленное",
+    "spellSpeedRef": "Slow",
+    "rarity": "ОБЫЧНОЕ",
+    "rarityRef": "Common",
+    "subtypes": [
+      "СТИХИЯ"
+    ],
+    "supertype": "",
+    "type": "Заклинание",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Вечный",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08BC020.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08BC020-full.png"
+      }
+    ],
+    "regions": [
+      "Бандл Сити"
+    ],
+    "regionRefs": [
+      "BandleCity"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "Противник сбрасывает карту с самой высокой стоимостью.",
+    "descriptionRaw": "Противник сбрасывает карту с самой высокой стоимостью.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Представьте, что вы червь. Последнее, что вы успеваете увидеть перед смертью, – вот эти глаза. А, у червей нет зрения? Ну, это, пожалуй, даже к лучшему\". – Элли, Надменная странница",
+    "artistName": "Polar Engine",
+    "name": "Ранняя пташка",
+    "cardCode": "08BC020",
+    "keywords": [
+      "Медленное"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "Медленное",
+    "spellSpeedRef": "Slow",
+    "rarity": "ОБЫЧНОЕ",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Заклинание",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Только обычные",
+      "Вечный",
+      "Карты четной стоимости",
+      "Стандартный"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
       "06RU001T3",
       "01PZ022"
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08BC005.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08BC005-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08BC005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08BC005-full.png"
       }
     ],
     "regions": [
@@ -2844,8 +6946,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08BC002.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08BC002-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08BC002.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08BC002-full.png"
       }
     ],
     "regions": [
@@ -2899,8 +7001,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08BC006.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08BC006-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08BC006.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08BC006-full.png"
       }
     ],
     "regions": [
@@ -2932,54 +7034,8 @@
     "spellSpeedRef": "",
     "rarity": "РЕДКОЕ",
     "rarityRef": "Rare",
-    "subtypes": [],
-    "supertype": "",
-    "type": "Боец",
-    "collectible": true,
-    "set": "Set8",
-    "formats": [
-      "Вечный",
-      "Стандартный"
-    ],
-    "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08SH004.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08SH004-full.png"
-      }
-    ],
-    "regions": [
-      "Шурима"
-    ],
-    "regionRefs": [
-      "Shurima"
-    ],
-    "attack": 4,
-    "cost": 4,
-    "health": 4,
-    "description": "<link=keyword.Daybreak><style=Keyword>День</style></link> или при активации другого <link=keyword.Daybreak><style=Keyword>дневного</style></link> эффекта: даруйте <link=keyword.Weakest><style=Keyword>слабейшему</style></link> врагу <link=keyword.Vulnerable><sprite name=Vulnerable><style=Keyword>Уязвимость</style></link>.",
-    "descriptionRaw": "День или при активации другого дневного эффекта: даруйте слабейшему врагу Уязвимость.",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "Огромные шуримские армии готовы доказать могущество пустыни. Когда будет отдан приказ, они пойдут вперед без колебаний.",
-    "artistName": "Kudos Productions",
-    "name": "Генерал дюн",
-    "cardCode": "08SH004",
-    "keywords": [],
-    "keywordRefs": [],
-    "spellSpeed": "",
-    "spellSpeedRef": "",
-    "rarity": "РЕДКОЕ",
-    "rarityRef": "Rare",
     "subtypes": [
-      "ЭЛИТА"
+      "ЙОРДЛ"
     ],
     "supertype": "",
     "type": "Боец",
@@ -2999,127 +7055,27 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08SH005.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08SH005-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08BC004.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08BC004-full.png"
       }
     ],
     "regions": [
-      "Шурима"
+      "Бандл Сити"
     ],
     "regionRefs": [
-      "Shurima"
+      "BandleCity"
     ],
-    "attack": 2,
-    "cost": 2,
-    "health": 2,
-    "description": "<link=keyword.Daybreak><style=Keyword>День</style></link>: вытяните карту <link=card.me><style=AssociatedCard>Защитники Солнечного диска</style></link>.",
-    "descriptionRaw": "День: вытяните карту Защитники Солнечного диска.",
+    "attack": 9,
+    "cost": 9,
+    "health": 9,
+    "description": "<link=vocab.Play><style=Vocab>Разыгрывая карту</style></link>: <link=vocab.Manifest><style=Vocab>воплотите</style></link> <link=vocab.Titanic><style=Vocab>титанического</style></link> сторонника и сделайте его характеристики равными 1|1, а стоимость – равной 0. ",
+    "descriptionRaw": "Разыгрывая карту: воплотите титанического сторонника и сделайте его характеристики равными 1|1, а стоимость – равной 0. ",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "\"Мы хранители вечно сущей пустыни, мы живая история, мы путники на сияющей дороге. Мы преклоняем колена пред Солнечным диском – и ни пред чем иным, так что пусть весь мир падет на колени пред сиянием шуримской славы\". – Азир",
-    "artistName": "Kudos Productions",
-    "name": "Защитники Солнечного диска",
-    "cardCode": "08SH005",
-    "keywords": [],
-    "keywordRefs": [],
-    "spellSpeed": "",
-    "spellSpeedRef": "",
-    "rarity": "ОБЫЧНОЕ",
-    "rarityRef": "Common",
-    "subtypes": [
-      "ЭЛИТА"
-    ],
-    "supertype": "",
-    "type": "Боец",
-    "collectible": true,
-    "set": "Set8",
-    "formats": [
-      "Вечный",
-      "Стандартный"
-    ],
-    "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08IO010.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08IO010-full.png"
-      }
-    ],
-    "regions": [
-      "Иония"
-    ],
-    "regionRefs": [
-      "Ionia"
-    ],
-    "attack": 0,
-    "cost": 4,
-    "health": 0,
-    "description": "<link=keyword.Recall><style=Keyword>Верните</style></link> врага, чтобы повысить на 2 стоимость следующего бойца, разыгрываемого вашим оппонентом в этом раунде.",
-    "descriptionRaw": "Верните врага, чтобы повысить на 2 стоимость следующего бойца, разыгрываемого вашим оппонентом в этом раунде.",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "\"Те, кто желает нам зла, упокоятся на дне морском\".<br>– Повелитель рек",
-    "artistName": "Polar Engine",
-    "name": "Вверх дном",
-    "cardCode": "08IO010",
-    "keywords": [
-      "Медленное"
-    ],
-    "keywordRefs": [
-      "Slow"
-    ],
-    "spellSpeed": "Медленное",
-    "spellSpeedRef": "Slow",
-    "rarity": "ОБЫЧНОЕ",
-    "rarityRef": "Common",
-    "subtypes": [
-      "СТИХИЯ"
-    ],
-    "supertype": "",
-    "type": "Заклинание",
-    "collectible": true,
-    "set": "Set8",
-    "formats": [
-      "Вечный",
-      "Стандартный"
-    ],
-    "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08MT027.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08MT027-full.png"
-      }
-    ],
-    "regions": [
-      "Таргон"
-    ],
-    "regionRefs": [
-      "Targon"
-    ],
-    "attack": 5,
-    "cost": 8,
-    "health": 8,
-    "description": "<link=vocab.Play><style=Vocab>Разыгрывая карту</style></link>: активируйте <link=keyword.Daybreak><style=Keyword>дневные</style></link> и <link=keyword.Nightfall><style=Keyword>ночные</style></link> эффекты остальных союзников.\r\n<link=keyword.Daybreak><style=Keyword>День</style></link>: даруйте мне <link=keyword.Overwhelm><sprite name=Overwhelm><style=Keyword>Пробивание</style></link>.\r\n<link=keyword.Nightfall><style=Keyword>Ночь</style></link>: даруйте мне <link=keyword.SpellShield><sprite name=SpellShield><style=Keyword>Щит от магии</style></link>.",
-    "descriptionRaw": "Разыгрывая карту: активируйте дневные и ночные эффекты остальных союзников.\r\nДень: даруйте мне Пробивание.\r\nНочь: даруйте мне Щит от магии.",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "\"Кольцо из огня пылает в вышине. В предсказанной тьме все мы одинаковы\". – Певец убывающей луны",
-    "artistName": "Kudos Productions",
-    "name": "Вестница Небесной конвергенции",
-    "cardCode": "08MT027",
+    "flavorText": "\"Конечно, я знаю старую Порцию! Она слегка с прибабахом, но портал она вам обеспечит до любой точки, если будет надо.  Один взмах хвоста – и понеслось!\" – Портальный первопроходец",
+    "artistName": "Bubble Cat",
+    "name": "Порция Чудаковатая",
+    "cardCode": "08BC004",
     "keywords": [],
     "keywordRefs": [],
     "spellSpeed": "",
@@ -3127,7 +7083,7 @@
     "rarity": "ЭПИЧЕСКОЕ",
     "rarityRef": "Epic",
     "subtypes": [
-      "ПТИЦА"
+      "ДРАКОН"
     ],
     "supertype": "",
     "type": "Боец",
@@ -3147,27 +7103,27 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08MT025.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ru_ru/img/cards/08MT025-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08BC018.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ru_ru/img/cards/08BC018-full.png"
       }
     ],
     "regions": [
-      "Таргон"
+      "Бандл Сити"
     ],
     "regionRefs": [
-      "Targon"
+      "BandleCity"
     ],
     "attack": 0,
-    "cost": 7,
+    "cost": 8,
     "health": 0,
-    "description": "Если вы <link=vocab.Behold><style=Vocab>владеете</style></link> <link=vocab.Titanic><style=Vocab>титаническим</style></link> бойцом, моя стоимость снижается на 3.\r\nНанесите бойцу 7 ед. урона.",
-    "descriptionRaw": "Если вы владеете титаническим бойцом, моя стоимость снижается на 3.\r\nНанесите бойцу 7 ед. урона.",
+    "description": "Поместите союзника вниз своей колоды, чтобы призвать верхнего союзника из своей колоды.",
+    "descriptionRaw": "Поместите союзника вниз своей колоды, чтобы призвать верхнего союзника из своей колоды.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "\"Ай-яй, ой-ей-ей, не войнуйтесь насчет вот этого всего, п'осто майенькая т'ещина в скайах, небойшое п'оисшествие, это не Папа, НЕ-А! Впейод!\" – Скол",
+    "flavorText": "\"Правило 571: скаут всегда должен быть начеку. Никогда не знаешь, где тебя ждет вкусное угощение, а где поджидает ловушка\". – Целеустремленная Эйва",
     "artistName": "Polar Engine",
-    "name": "Сейсмический осколок",
-    "cardCode": "08MT025",
+    "name": "Сладкая западня",
+    "cardCode": "08BC018",
     "keywords": [
       "Медленное"
     ],
@@ -3176,21 +7132,23 @@
     ],
     "spellSpeed": "Медленное",
     "spellSpeedRef": "Slow",
-    "rarity": "ОБЫЧНОЕ",
-    "rarityRef": "Common",
-    "subtypes": [
-      "СТИХИЯ"
-    ],
+    "rarity": "РЕДКОЕ",
+    "rarityRef": "Rare",
+    "subtypes": [],
     "supertype": "",
     "type": "Заклинание",
     "collectible": true,
     "set": "Set8",
     "formats": [
+      "Только обычные",
       "Вечный",
+      "Карты четной стоимости",
       "Стандартный"
     ],
     "formatRefs": [
+      "client_Formats_CommonsOnly_name",
       "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
       "client_Formats_Standard_name"
     ]
   }
