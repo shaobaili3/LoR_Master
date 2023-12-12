@@ -2,14 +2,853 @@
   {
     "associatedCards": [],
     "associatedCardRefs": [
+      "08SI042T1",
+      "08SI042T5"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08SI042.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08SI042-full.png"
+      }
+    ],
+    "regions": [
+      "ノクサス",
+      "シャドウ<nobr>アイル</nobr>"
+    ],
+    "regionRefs": [
+      "Noxus",
+      "ShadowIsles"
+    ],
+    "attack": 5,
+    "cost": 7,
+    "health": 8,
+    "description": "<link=vocab.Play><style=Vocab>プレイ</style></link>: 最大2体の味方をキルする。\r\n他の味方を<link=vocab.Slay><style=Vocab>撃破</style></link>した時、それを蘇生させる。",
+    "descriptionRaw": "プレイ: 最大2体の味方をキルする。\r\n他の味方を撃破した時、それを蘇生させる。",
+    "levelupDescription": "味方が15体以上力尽きた時。攻撃力が5以上の味方は2体分カウントされる<style=Variable></style>。",
+    "levelupDescriptionRaw": "味方が15体以上力尽きた時。攻撃力が5以上の味方は2体分カウントされる。",
+    "flavorText": "イモータル・バスティオンの中心にある鎧に封じられたモルデカイザーは、灰色の領域で自らの玉座を作り出した。モルデカイザーを滅ぼさんとする者は多くいるが、仕える者の数はさらに多い──そしてそれらは、死後も彼に仕え続ける。",
+    "artistName": "Michal Ivan",
+    "name": "モルデカイザー",
+    "cardCode": "08SI042",
+    "keywords": [
+      "チャレンジャー"
+    ],
+    "keywordRefs": [
+      "Challenger"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "チャンピオン",
+    "rarityRef": "Champion",
+    "subtypes": [],
+    "supertype": "チャンピオン",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08SI042",
+      "08SI042T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08SI042T5.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08SI042T5-full.png"
+      }
+    ],
+    "regions": [
+      "シャドウ<nobr>アイル</nobr>"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 0,
+    "cost": 10,
+    "health": 0,
+    "description": "味方1体が<link=vocab.Strongest><style=Vocab>最も強い</style></link>敵を<link=keyword.Challenger><sprite name=Challenger><style=Keyword>チャレンジャー</style></link>で指定してトークンなしでアタックを開始する。\r\nそれ以外のユニットすべてをキルする。\r\nデッキに<link=card.level1><style=AssociatedCard>モルデカイザー</style></link>を1枚生成する。",
+    "descriptionRaw": "味方1体が最も強い敵をチャレンジャーで指定してトークンなしでアタックを開始する。\r\nそれ以外のユニットすべてをキルする。\r\nデッキにモルデカイザーを1枚生成する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「死は我が領地なり」<br>- モルデカイザー",
+    "artistName": "Polar Engine",
+    "name": "モルデカイザーの「死の国」",
+    "cardCode": "08SI042T5",
+    "keywords": [
+      "スロウ"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "スロウ",
+    "spellSpeedRef": "Slow",
+    "rarity": "なし",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "チャンピオン",
+    "type": "スペル",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08SI042T5"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08SI042T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08SI042T1-full.png"
+      }
+    ],
+    "regions": [
+      "ノクサス",
+      "シャドウ<nobr>アイル</nobr>"
+    ],
+    "regionRefs": [
+      "Noxus",
+      "ShadowIsles"
+    ],
+    "attack": 6,
+    "cost": 7,
+    "health": 9,
+    "description": "<link=vocab.Play><style=Vocab>プレイ</style></link>: 最大2体の味方をキルする。\r\n他の味方を<link=vocab.Slay><style=Vocab>撃破</style></link>した時、それを蘇生させる。\r\n<link=vocab.Attack><style=Vocab>アタック</style></link>: このゲームが終了するまで、ユニットを<link=vocab.Slay><style=Vocab>撃破</style></link>する時、敵のネクサスから体力を1<link=keyword.Drain><style=Keyword>吸収</style></link>する。",
+    "descriptionRaw": "プレイ: 最大2体の味方をキルする。\r\n他の味方を撃破した時、それを蘇生させる。\r\nアタック: このゲームが終了するまで、ユニットを撃破する時、敵のネクサスから体力を1吸収する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「その卑しき魂を放棄し、我の前に跪け！お前の魂に永遠の鋼をやろう。我こそが避けられぬ滅びである！」",
+    "artistName": "Michal Ivan",
+    "name": "モルデカイザー",
+    "cardCode": "08SI042T1",
+    "keywords": [
+      "チャレンジャー"
+    ],
+    "keywordRefs": [
+      "Challenger"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "チャンピオン",
+    "rarityRef": "Champion",
+    "subtypes": [],
+    "supertype": "チャンピオン",
+    "type": "ユニット",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08SI007.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08SI007-full.png"
+      }
+    ],
+    "regions": [
+      "シャドウ<nobr>アイル</nobr>"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 4,
+    "cost": 3,
+    "health": 2,
+    "description": "<link=vocab.Play><style=Vocab>プレイ</style></link>: 手札の味方1体に<link=keyword.Deathless><sprite name=Deathless><style=Keyword>デスレス</style></link>を付与する。",
+    "descriptionRaw": "プレイ: 手札の味方1体にデスレスを付与する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "灰色の領域に投獄される前に、魂がどのような形を取っていたかは関係ない。ここでは個性に価値などなく、鋼の魂奪者に仕える兵士たちは、みな等しく顔がなく、怖れ知らずであるべきだ。",
+    "artistName": "Bubble Cat",
+    "name": "断頭の軍団兵",
+    "cardCode": "08SI007",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "コモン",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08SI003.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08SI003-full.png"
+      }
+    ],
+    "regions": [
+      "シャドウ<nobr>アイル</nobr>"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 1,
+    "cost": 1,
+    "health": 1,
+    "description": "<link=keyword.Last Breath><sprite name=LastBreath><style=Keyword>ラストブレス</style></link>: 次に味方を蘇生した時、このユニットのコピーを手札に1枚生成する。",
+    "descriptionRaw": "ラストブレス: 次に味方を蘇生した時、このユニットのコピーを手札に1枚生成する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「我々が鎖に繋がれたのは随分昔のことだ。そして、お前もすぐにこの苦痛を味わうことになる。誰もが永遠に苦しむのだ…主が滅びを授けて下さるその時までな」",
+    "artistName": "Michal Ivan",
+    "name": "囚われの亡霊",
+    "cardCode": "08SI003",
+    "keywords": [
+      "ラストブレス"
+    ],
+    "keywordRefs": [
+      "LastBreath"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "レア",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU001T3"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08SI021.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08SI021-full.png"
+      }
+    ],
+    "regions": [
+      "シャドウ<nobr>アイル</nobr>"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 3,
+    "description": "他の味方が力尽きる時、または<nobr><link=keyword.Last Breath><sprite name=LastBreath><style=Keyword>ラストブレス</style></link>:</nobr> デッキに<link=card.chime><style=AssociatedCard>チャイム</style></link>を4枚設置する。",
+    "descriptionRaw": "他の味方が力尽きる時、またはラストブレス: デッキにチャイムを4枚設置する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "聞こえてくる鐘の音は確かに不吉で禍々しいが、何も心配する必要はない。齢を重ねたチャイムスライムが、ただ散歩をしているだけなのだから。彼はいつだって来訪者を歓迎してくれる。来訪者の方は、彼を受け入れられないようだが…",
+    "artistName": "Bubble Cat",
+    "name": "孤独なチャイムスライム",
+    "cardCode": "08SI021",
+    "keywords": [
+      "ラストブレス"
+    ],
+    "keywordRefs": [
+      "LastBreath"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "コモン",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08SI030.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08SI030-full.png"
+      }
+    ],
+    "regions": [
+      "シャドウ<nobr>アイル</nobr>"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "敵のデッキの下から6枚を<link=vocab.Obliterate><style=Vocab>ゲームから除外</style></link>する。",
+    "descriptionRaw": "敵のデッキの下から6枚をゲームから除外する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "深き深き海の底をねぐらとする獣にとって、自らを狙う狩猟船などただの軽食に過ぎない。",
+    "artistName": "Polar Engine",
+    "name": "水面の墓穴",
+    "cardCode": "08SI030",
+    "keywords": [
+      "スロウ"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "スロウ",
+    "spellSpeedRef": "Slow",
+    "rarity": "エピック",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スペル",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "コモンオンリー",
+      "エターナル",
+      "イーブンコスト",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08SI037T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08SI037T1-full.png"
+      }
+    ],
+    "regions": [
+      "シャドウ<nobr>アイル</nobr>"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 8,
+    "cost": 6,
+    "health": 4,
+    "description": "",
+    "descriptionRaw": "",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "餌となることを拒んだ者は、逃げ出した先の袋小路で、うごめく千の鉄爪を見る。それから実体のない牙が軋む音を聞き、己の無残な死に様を悟る。",
+    "artistName": "Envar Studio",
+    "name": "千爪のデスワインダー",
+    "cardCode": "08SI037T1",
+    "keywords": [
+      "フィアサム"
+    ],
+    "keywordRefs": [
+      "Fearsome"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "なし",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "コモンオンリー",
+      "エターナル",
+      "イーブンコスト",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08SI037T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08SI037.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08SI037-full.png"
+      }
+    ],
+    "regions": [
+      "シャドウ<nobr>アイル</nobr>"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 5,
+    "cost": 6,
+    "health": 3,
+    "description": "このカードをプレイするには、味方を1体キルする。\r\n召喚時、<link=card.summon><style=AssociatedCard>千爪のデスワインダー</style></link>を1体召喚する。",
+    "descriptionRaw": "このカードをプレイするには、味方を1体キルする。\r\n召喚時、千爪のデスワインダーを1体召喚する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "亡霊犬は逃げ出した獲物のにおいを決して忘れない。そうして追い詰められた獲物は、やがて更なる絶望と出会う。",
+    "artistName": "Xavier Leroux",
+    "name": "黒鉄の亡霊犬",
+    "cardCode": "08SI037",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "レア",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "コモンオンリー",
+      "エターナル",
+      "イーブンコスト",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08SI041.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08SI041-full.png"
+      }
+    ],
+    "regions": [
+      "シャドウ<nobr>アイル</nobr>"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "味方1体をキルすることで、ユニット1体に5ダメージを与える。",
+    "descriptionRaw": "味方1体をキルすることで、ユニット1体に5ダメージを与える。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「我以外のあらゆる者に、果てなき闇をもたらそう」<br>- モルデカイザー",
+    "artistName": "Polar Engine",
+    "name": "死の呪縛",
+    "cardCode": "08SI041",
+    "keywords": [
+      "ファスト"
+    ],
+    "keywordRefs": [
+      "Fast"
+    ],
+    "spellSpeed": "ファスト",
+    "spellSpeedRef": "Fast",
+    "rarity": "コモン",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スペル",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08SI026T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08SI036.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08SI036-full.png"
+      }
+    ],
+    "regions": [
+      "シャドウ<nobr>アイル</nobr>"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "<link=vocab.Play><style=Vocab>プレイ</style></link>: 敵1体に<link=card.curse><style=AssociatedCard>恐慌</style></link>による<link=keyword.Curse><sprite name=Curse><style=Keyword>呪い</style></link>をかける。\r\n<link=vocab.Titanic><style=Vocab>タイタン</style></link>の味方を召喚する時、このカードを破壊してカードを2枚引く。",
+    "descriptionRaw": "プレイ: 敵1体に恐慌による呪いをかける。\r\nタイタンの味方を召喚する時、このカードを破壊してカードを2枚引く。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「この魂をお受け取りください。あなたの前に骨を敷き、領域に裂け目を入れ、永遠なる鋼の軍団の道としましょう」<br>- 死縛の狂信者",
+    "artistName": "Envar Studio",
+    "name": "灰色の境界口",
+    "cardCode": "08SI036",
+    "keywords": [
+      "ランドマーク"
+    ],
+    "keywordRefs": [
+      "LandmarkVisualOnly"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "レア",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ランドマーク",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "コモンオンリー",
+      "エターナル",
+      "イーブンコスト",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08SI004.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08SI004-full.png"
+      }
+    ],
+    "regions": [
+      "シャドウ<nobr>アイル</nobr>"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 0,
+    "cost": 10,
+    "health": 0,
+    "description": "味方1体が<link=vocab.Strongest><style=Vocab>最も強い</style></link>敵を<link=keyword.Challenger><sprite name=Challenger><style=Keyword>チャレンジャー</style></link>で指定してトークンなしでアタックを開始する。\r\nそれ以外のユニットすべてをキルする。",
+    "descriptionRaw": "味方1体が最も強い敵をチャレンジャーで指定してトークンなしでアタックを開始する。\r\nそれ以外のユニットすべてをキルする。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「死は我が領地なり」<br>- モルデカイザー",
+    "artistName": "Polar Engine",
+    "name": "死の国",
+    "cardCode": "08SI004",
+    "keywords": [
+      "スロウ"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "スロウ",
+    "spellSpeedRef": "Slow",
+    "rarity": "エピック",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スペル",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08SI026T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08SI026.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08SI026-full.png"
+      }
+    ],
+    "regions": [
+      "シャドウ<nobr>アイル</nobr>"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 3,
+    "cost": 4,
+    "health": 4,
+    "description": "召喚時、または<link=vocab.Titanic><style=Vocab>タイタン</style></link>の味方を召喚する時、<link=vocab.Strongest><style=Vocab>最も強い</style></link>敵に<link=card.curse><style=AssociatedCard>恐慌</style></link>による<link=keyword.Curse><sprite name=Curse><style=Keyword>呪い</style></link>をかける。",
+    "descriptionRaw": "召喚時、またはタイタンの味方を召喚する時、最も強い敵に恐慌による呪いをかける。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "信者たちにとって、鋼の魂奪者は破滅をもたらす唯一の希望だ。支配による平穏──信者たちはそれを両腕を広げて迎え入れるだろう。",
+    "artistName": "Bubble Cat",
+    "name": "死縛の狂信者",
+    "cardCode": "08SI026",
+    "keywords": [
+      "フィアサム"
+    ],
+    "keywordRefs": [
+      "Fearsome"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "レア",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08SI026T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08SI026T1-full.png"
+      }
+    ],
+    "regions": [
+      "シャドウ<nobr>アイル</nobr>"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "このカードが手札にある間、<style=Variable>呪いを受けたユニット</style>は<nobr>-<style=Variable>3</style>|-0</nobr>を持つ。",
+    "descriptionRaw": "このカードが手札にある間、呪いを受けたユニットは-3|-0を持つ。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "恐怖は思考を支配する。",
+    "artistName": "Polar Engine",
+    "name": "恐慌",
+    "cardCode": "08SI026T1",
+    "keywords": [
+      "フォーカス",
+      "呪い"
+    ],
+    "keywordRefs": [
+      "Focus",
+      "Curse"
+    ],
+    "spellSpeed": "バースト",
+    "spellSpeedRef": "Burst",
+    "rarity": "なし",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スペル",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08BW028T1",
+      "08BW028T2",
+      "08BW028T3",
+      "08BW028T4"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08SI018.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08SI018-full.png"
+      }
+    ],
+    "regions": [
+      "シャドウ<nobr>アイル</nobr>",
+      "ターゴン"
+    ],
+    "regionRefs": [
+      "ShadowIsles",
+      "Targon"
+    ],
+    "attack": 2,
+    "cost": 3,
+    "health": 2,
+    "description": "<link=vocab.Play><style=Vocab>プレイ</style></link>: 「探検家」のスペルを1枚指定して手札に生成する。",
+    "descriptionRaw": "プレイ: 「探検家」のスペルを1枚指定して手札に生成する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「この島の地形はなんとも不可解だ。視界はほぼ無し。道を曲がるたびに敵意を持った存在に遭遇したが、一方で予期せぬ友人との新たな出会いもあった」<br>- 探検家ギルド 最果て支部の探索記録 シャドウアイルにて",
+    "artistName": "Envar Studio",
+    "name": "霊気測定師",
+    "cardCode": "08SI018",
+    "keywords": [
+      "ライフスティール"
+    ],
+    "keywordRefs": [
+      "Lifesteal"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "レア",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08SI015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08SI015-full.png"
+      }
+    ],
+    "regions": [
+      "シャドウ<nobr>アイル</nobr>"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 5,
+    "cost": 5,
+    "health": 3,
+    "description": "このユニットをプレイするには、味方を1体キルする。\r\n<link=keyword.Last Breath><sprite name=LastBreath><style=Keyword>ラストブレス</style></link>: ネクサスの体力を2回復する。",
+    "descriptionRaw": "このユニットをプレイするには、味方を1体キルする。\r\nラストブレス: ネクサスの体力を2回復する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "どんな軍隊でも獣は戦に重用されるが、灰色の領域では、苦悶に満たされた魂の融合体が獣となる。それは思考を持たず、ただひたすらに魂を貪る。 ",
+    "artistName": "Michal Ivan",
+    "name": "卑しき魂の融合体",
+    "cardCode": "08SI015",
+    "keywords": [
+      "ラストブレス",
+      "デスレス"
+    ],
+    "keywordRefs": [
+      "LastBreath",
+      "Deathless"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "エピック",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
       "08BW008T1",
       "08BW008T5",
       "08BW008T3"
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08BW008.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08BW008-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08BW008.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08BW008-full.png"
       }
     ],
     "regions": [
@@ -58,8 +897,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08BW008T3.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08BW008T3-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08BW008T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08BW008T3-full.png"
       }
     ],
     "regions": [
@@ -114,8 +953,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08BW008T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08BW008T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08BW008T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08BW008T1-full.png"
       }
     ],
     "regions": [
@@ -167,8 +1006,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08BW008T5.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08BW008T5-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08BW008T5.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08BW008T5-full.png"
       }
     ],
     "regions": [
@@ -219,8 +1058,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08BW032.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08BW032-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08BW032.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08BW032-full.png"
       }
     ],
     "regions": [
@@ -273,8 +1112,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08BW015.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08BW015-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08BW015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08BW015-full.png"
       }
     ],
     "regions": [
@@ -319,8 +1158,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08BW002.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08BW002-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08BW002.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08BW002-full.png"
       }
     ],
     "regions": [
@@ -371,8 +1210,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08BW025.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08BW025-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08BW025.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08BW025-full.png"
       }
     ],
     "regions": [
@@ -384,8 +1223,8 @@
     "attack": 2,
     "cost": 1,
     "health": 1,
-    "description": "このゲーム中に1ラウンドで3枚以上のカードをプレイしている場合、このユニットに+1|+1と<link=keyword.Brash><sprite name=Brash><style=Keyword>ブラッシュ</style></link>を付与する。",
-    "descriptionRaw": "このゲーム中に1ラウンドで3枚以上のカードをプレイしている場合、このユニットに+1|+1とブラッシュを付与する。",
+    "description": "このゲーム中に1ラウンドで3枚以上のカードを引いたことがある場合、このユニットに+1|+1と<link=keyword.Brash><sprite name=Brash><style=Keyword>ブラッシュ</style></link>を付与する。",
+    "descriptionRaw": "このゲーム中に1ラウンドで3枚以上のカードを引いたことがある場合、このユニットに+1|+1とブラッシュを付与する。",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "「なんの騒ぎだか知らねえが、一体何をそんなに慌ててんだ？この海に俺たちの手に余るものなんてありゃしねえさ！」<br>- 飽くなき挑戦者",
@@ -417,8 +1256,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08BW026.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08BW026-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08BW026.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08BW026-full.png"
       }
     ],
     "regions": [
@@ -429,7 +1268,7 @@
     ],
     "attack": 2,
     "cost": 4,
-    "health": 1,
+    "health": 2,
     "description": "召喚時、手札をすべて<link=vocab.Updraft><style=Vocab>アップドラフト</style></link>し、<link=vocab.Updraft><style=Vocab>アップドラフト</style></link>したカード1枚につきこのユニットに+1|+1を付与する。カードを2枚引く。",
     "descriptionRaw": "召喚時、手札をすべてアップドラフトし、アップドラフトしたカード1枚につきこのユニットに+1|+1を付与する。カードを2枚引く。",
     "levelupDescription": "",
@@ -468,8 +1307,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08BW028.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08BW028-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08BW028.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08BW028-full.png"
       }
     ],
     "regions": [
@@ -520,8 +1359,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08BW028T4.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08BW028T4-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08BW028T4.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08BW028T4-full.png"
       }
     ],
     "regions": [
@@ -576,8 +1415,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08BW028T3.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08BW028T3-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08BW028T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08BW028T3-full.png"
       }
     ],
     "regions": [
@@ -626,8 +1465,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08BW028T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08BW028T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08BW028T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08BW028T1-full.png"
       }
     ],
     "regions": [
@@ -680,8 +1519,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08BW028T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08BW028T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08BW028T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08BW028T2-full.png"
       }
     ],
     "regions": [
@@ -734,8 +1573,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08BW009.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08BW009-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08BW009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08BW009-full.png"
       }
     ],
     "regions": [
@@ -780,8 +1619,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08BW010.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08BW010-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08BW010.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08BW010-full.png"
       }
     ],
     "regions": [
@@ -829,13 +1668,174 @@
   },
   {
     "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08BW031.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08BW031-full.png"
+      }
+    ],
+    "regions": [
+      "ビルジ<nobr>ウォーター</nobr>"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 8,
+    "cost": 8,
+    "health": 7,
+    "description": "他のユニットをプレイするためにマナを消費する時、そのコストと同じランダムなカードを手札に1枚生成する。そのコストは0で、<link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>フリーティング</style></link>を持つ。",
+    "descriptionRaw": "他のユニットをプレイするためにマナを消費する時、そのコストと同じランダムなカードを手札に1枚生成する。そのコストは0で、フリーティングを持つ。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "ビルジウォーターの人々はどんな奇怪な海獣をも平らげるほど貪欲だが、経験豊富な船乗りでさえ決して手を出さない海獣も中には存在する。船乗りたちは声を潜めてその噂を語り合う。深い深い海の底、沈んだ船と船員どもの巨大な墓と化したそれは、仄明るい光を揺らしながら、今も獲物を誘っているのだと…",
+    "artistName": "Envar Studio",
+    "name": "深海の災厄 セフィルサ",
+    "cardCode": "08BW031",
+    "keywords": [
+      "ディープ"
+    ],
+    "keywordRefs": [
+      "Deep"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "エピック",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "海獣",
+      "ドラゴン"
+    ],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08BW037.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08BW037-full.png"
+      }
+    ],
+    "regions": [
+      "ビルジ<nobr>ウォーター</nobr>"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 1,
+    "cost": 3,
+    "health": 3,
+    "description": "このカードの攻撃力と同じコストのカードをプレイする時、このカードに+1|+1を付与する。",
+    "descriptionRaw": "このカードの攻撃力と同じコストのカードをプレイする時、このカードに+1|+1を付与する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「あんた、もうちょいとだけ大胆に賭けてみちゃあどうだい？リスクを取らなきゃ勝ちは来ないって言うだろう？それにここだけの話、今日このテーブルはツイてるんだ。この遊び場はえらく良心的だしな。嘘じゃねえって。母親の名に誓ってもいいぜ」",
+    "artistName": "Caravan Studio",
+    "name": "正直者のクルーピエ",
+    "cardCode": "08BW037",
+    "keywords": [
+      "ブラッシュ"
+    ],
+    "keywordRefs": [
+      "Brash"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "レア",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "コモンオンリー",
+      "エターナル",
+      "イーブンコスト",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08BW036.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08BW036-full.png"
+      }
+    ],
+    "regions": [
+      "ビルジ<nobr>ウォーター</nobr>"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "マナを消費してユニットをプレイする時、スペルマナを1回復する。",
+    "descriptionRaw": "マナを消費してユニットをプレイする時、スペルマナを1回復する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「珊瑚は遠い昔から、我々にとって隠れ家であると同時に仲間でもあった。珊瑚は我々を護り、我々は珊瑚を護ってきた。お互いが昏き穴の闇に落ちてしまわないようにね」<br>- マライの長老",
+    "artistName": "Envar Studio",
+    "name": "マライの珊瑚楼",
+    "cardCode": "08BW036",
+    "keywords": [
+      "ランドマーク"
+    ],
+    "keywordRefs": [
+      "LandmarkVisualOnly"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "コモン",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ランドマーク",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "コモンオンリー",
+      "エターナル",
+      "イーブンコスト",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
     "associatedCardRefs": [
       "08BW008T3"
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08BW023.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08BW023-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08BW023.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08BW023-full.png"
       }
     ],
     "regions": [
@@ -888,8 +1888,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08PZ007.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08PZ007-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08PZ007.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08PZ007-full.png"
       }
     ],
     "regions": [
@@ -940,8 +1940,62 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08PZ005.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08PZ005-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08PZ031.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08PZ031-full.png"
+      }
+    ],
+    "regions": [
+      "ピルトーヴァー<nobr> & ゾウン</nobr>"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "味方のフォロワーを1体指定する。このカードを装備中、装備者をそのフォロワーとまったく同じコピーに変化させる。",
+    "descriptionRaw": "味方のフォロワーを1体指定する。このカードを装備中、装備者をそのフォロワーとまったく同じコピーに変化させる。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "仕組みについては聞かないこと。",
+    "artistName": "Polar Engine",
+    "name": "怪しい眼鏡",
+    "cardCode": "08PZ031",
+    "keywords": [
+      "武具"
+    ],
+    "keywordRefs": [
+      "Equipment"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "レア",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "武具",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "コモンオンリー",
+      "エターナル",
+      "イーブンコスト",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08PZ005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08PZ005-full.png"
       }
     ],
     "regions": [
@@ -992,8 +2046,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08PZ019.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08PZ019-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08PZ019.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08PZ019-full.png"
       }
     ],
     "regions": [
@@ -1005,8 +2059,8 @@
     "attack": 0,
     "cost": 5,
     "health": 0,
-    "description": "このラウンド中にカードを3枚以上引いている場合、コストが2減少する。\r\nユニット1体に3ダメージと、敵のネクサスに2ダメージを与える。",
-    "descriptionRaw": "このラウンド中にカードを3枚以上引いている場合、コストが2減少する。\r\nユニット1体に3ダメージと、敵のネクサスに2ダメージを与える。",
+    "description": "このラウンド中にカードを3枚以上引いている場合、コストが2減少する。\r\nユニット1体に3ダメージと、敵のネクサスに1ダメージを与える。",
+    "descriptionRaw": "このラウンド中にカードを3枚以上引いている場合、コストが2減少する。\r\nユニット1体に3ダメージと、敵のネクサスに1ダメージを与える。",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "「この嵐は私のしもべ」<br>- ジャンナ",
@@ -1041,14 +2095,62 @@
   },
   {
     "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08PZ028.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08PZ028-full.png"
+      }
+    ],
+    "regions": [
+      "ピルトーヴァー<nobr> & ゾウン</nobr>"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 8,
+    "cost": 8,
+    "health": 6,
+    "description": "スペルをプレイする時、カードを1枚引く。手札がいっぱいの状態でカードを引く時、敵のネクサスに1ダメージを与える。",
+    "descriptionRaw": "スペルをプレイする時、カードを1枚引く。手札がいっぱいの状態でカードを引く時、敵のネクサスに1ダメージを与える。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "ゾウンで生きるには、その環境に適応せねばならない。それは龍であっても例外ではなく、ケミテックドレイクは身体拡張によって得た粘り気のある燐光を纏い、地下都市の深部を縄張りとする。腐り落ちた両の翼は暗い通路にさらに暗い影を落とし、異形と果てた憤怒を撒き散らす先を求め彷徨っている。",
+    "artistName": "Caravan Studio",
+    "name": "ケミテックドレイク",
+    "cardCode": "08PZ028",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "エピック",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "ドラゴン"
+    ],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
     "associatedCardRefs": [
       "08PZ001T3",
       "08PZ001T1"
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08PZ001.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08PZ001-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08PZ001.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08PZ001-full.png"
       }
     ],
     "regions": [
@@ -1062,8 +2164,8 @@
     "health": 4,
     "description": "<link=vocab.Play><style=Vocab>プレイ</style></link>: カードを2枚<link=vocab.Updraft><style=Vocab>アップドラフト</style></link>することで、次の<link=vocab.RoundStart><style=Vocab>ラウンド開始時</style></link>にカードを2枚引く。\r\n各ラウンドで最初に引いた3枚目までのカードのコストを、このラウンド中1減少させる。<style=Variable></style>",
     "descriptionRaw": "プレイ: カードを2枚アップドラフトすることで、次のラウンド開始時にカードを2枚引く。\r\n各ラウンドで最初に引いた3枚目までのカードのコストを、このラウンド中1減少させる。",
-    "levelupDescription": "このユニットが場にいる状態で、コストが減少したカードを合計6枚以上プレイした時<style=Variable></style>。",
-    "levelupDescriptionRaw": "このユニットが場にいる状態で、コストが減少したカードを合計6枚以上プレイした時。",
+    "levelupDescription": "このユニットが場にいる状態で、コストが減少したカードを合計8枚以上プレイした時<style=Variable></style>。",
+    "levelupDescriptionRaw": "このユニットが場にいる状態で、コストが減少したカードを合計8枚以上プレイした時。",
     "flavorText": "「ゾウンは他のどこよりジャンナに近い場所だと言っていい。ピルトーヴァーに見捨てられた哀れな魂を救ったのは、結局のところジャンナなんだからな。もしも答えがあるのなら──ここでなら見つけられるはずだ」<br>- 風追いの船乗り",
     "artistName": "Envar Studio",
     "name": "ジャンナ",
@@ -1096,8 +2198,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08PZ001T3.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08PZ001T3-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08PZ001T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08PZ001T3-full.png"
       }
     ],
     "regions": [
@@ -1149,8 +2251,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08PZ001T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08PZ001T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08PZ001T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08PZ001T1-full.png"
       }
     ],
     "regions": [
@@ -1203,8 +2305,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08PZ026.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08PZ026-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08PZ026.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08PZ026-full.png"
       }
     ],
     "regions": [
@@ -1255,8 +2357,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08PZ006.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08PZ006-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08PZ006.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08PZ006-full.png"
       }
     ],
     "regions": [
@@ -1305,8 +2407,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08PZ018.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08PZ018-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08PZ018.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08PZ018-full.png"
       }
     ],
     "regions": [
@@ -1355,8 +2457,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08PZ008.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08PZ008-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08PZ008.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08PZ008-full.png"
       }
     ],
     "regions": [
@@ -1401,8 +2503,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08PZ026T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08PZ026T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08PZ026T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08PZ026T1-full.png"
       }
     ],
     "regions": [
@@ -1449,8 +2551,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08PZ009.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08PZ009-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08PZ009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08PZ009-full.png"
       }
     ],
     "regions": [
@@ -1499,8 +2601,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08PZ002.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08PZ002-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08PZ002.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08PZ002-full.png"
       }
     ],
     "regions": [
@@ -1551,8 +2653,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08PZ008T3.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08PZ008T3-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08PZ008T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08PZ008T3-full.png"
       }
     ],
     "regions": [
@@ -1597,8 +2699,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08PZ008T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08PZ008T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08PZ008T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08PZ008T2-full.png"
       }
     ],
     "regions": [
@@ -1643,8 +2745,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08PZ020.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08PZ020-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08PZ024.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08PZ024-full.png"
       }
     ],
     "regions": [
@@ -1653,7 +2755,53 @@
     "regionRefs": [
       "PiltoverZaun"
     ],
-    "attack": 3,
+    "attack": 4,
+    "cost": 4,
+    "health": 4,
+    "description": "<link=vocab.RoundStart><style=Vocab>ラウンド開始時</style></link>: すべてのプレイヤーがカードを1枚引き、その後相手の引いたカードに<link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>フリーティング</style></link>を付与する。",
+    "descriptionRaw": "ラウンド開始時: すべてのプレイヤーがカードを1枚引き、その後相手の引いたカードにフリーティングを付与する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「1匹買えば1匹おまけだ！今日だけだぞ！今朝…いや、今月だったか？獲れたばかりの新鮮なやつだ！とにかく2匹セットでお得だぜ！…あン？2匹目はいらないってなぁどういうこった？タダなんだから貰っとけ！」",
+    "artistName": "Envar Studio",
+    "name": "モグリの魚屋",
+    "cardCode": "08PZ024",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "コモン",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08PZ020.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08PZ020-full.png"
+      }
+    ],
+    "regions": [
+      "ピルトーヴァー<nobr> & ゾウン</nobr>"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 2,
     "cost": 5,
     "health": 2,
     "description": "このラウンド中にカードを3枚以上引いている場合、コストが2減少する。\r\nこのユニットが召喚された次の<link=vocab.RoundStart><style=Vocab>ラウンド開始時</style></link>にカードを2枚引く。",
@@ -1695,8 +2843,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08FR012.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08FR012-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08FR012.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08FR012-full.png"
       }
     ],
     "regions": [
@@ -1747,8 +2895,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08FR019.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08FR019-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08FR019.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08FR019-full.png"
       }
     ],
     "regions": [
@@ -1803,8 +2951,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08FR001.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08FR001-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08FR001.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08FR001-full.png"
       }
     ],
     "regions": [
@@ -1849,8 +2997,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08FR001T3.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08FR001T3-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08FR001T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08FR001T3-full.png"
       }
     ],
     "regions": [
@@ -1904,8 +3052,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08FR001T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08FR001T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08FR001T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08FR001T2-full.png"
       }
     ],
     "regions": [
@@ -1960,8 +3108,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08FR001T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08FR001T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08FR001T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08FR001T1-full.png"
       }
     ],
     "regions": [
@@ -2012,8 +3160,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08FR018.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08FR018-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08FR018.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08FR018-full.png"
       }
     ],
     "regions": [
@@ -2064,8 +3212,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08FR011.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08FR011-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08FR011.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08FR011-full.png"
       }
     ],
     "regions": [
@@ -2074,9 +3222,9 @@
     "regionRefs": [
       "Freljord"
     ],
-    "attack": 3,
+    "attack": 2,
     "cost": 4,
-    "health": 2,
+    "health": 3,
     "description": "「エレメンタル」のスペルまたは<link=keyword.Elemental Skill><sprite name=ElementalSkill><style=Keyword>スキル</style></link>をプレイする時、このユニットを<link=vocab.Forge><style=Vocab>鍛錬</style></link>する。",
     "descriptionRaw": "「エレメンタル」のスペルまたはスキルをプレイする時、このユニットを鍛錬する。",
     "levelupDescription": "",
@@ -2114,8 +3262,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08FR008.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08FR008-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08FR008.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08FR008-full.png"
       }
     ],
     "regions": [
@@ -2163,13 +3311,61 @@
   },
   {
     "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08FR024.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08FR024-full.png"
+      }
+    ],
+    "regions": [
+      "フレヨルド"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 3,
+    "description": "<link=vocab.Attack><style=Vocab>アタック</style></link>: デッキの上から2体の味方に+1|+1を付与する。",
+    "descriptionRaw": "アタック: デッキの上から2体の味方に+1|+1を付与する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "この種の犬たちは元々はヤダルスク地方に生息していたが、追跡や狩猟、雪崩後の救助を目的に、フレヨルドの部族に飼われるようになった。思いやり深くて遊びが大好きな気質を持つ彼らは誰からも愛され、ツンドラからタイガまで広く重用されている。",
+    "artistName": "Envar Studio",
+    "name": "ヤダルスクのユキイヌ",
+    "cardCode": "08FR024",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "コモン",
+    "rarityRef": "Common",
+    "subtypes": [
+      "犬"
+    ],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
     "associatedCardRefs": [
       "08FR002T1"
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08FR015.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08FR015-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08FR015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08FR015-full.png"
       }
     ],
     "regions": [
@@ -2212,12 +3408,66 @@
   {
     "associatedCards": [],
     "associatedCardRefs": [
+      "04FR001"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08FR030.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08FR030-full.png"
+      }
+    ],
+    "regions": [
+      "フレヨルド"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 8,
+    "cost": 8,
+    "health": 8,
+    "description": "召喚時、<link=card.summon><style=AssociatedCard>氷漬けの奴隷兵</style></link>を2枚召喚し、そのカウントを2まで<link=vocab.Advance><style=Vocab>進行</style></link>させる。",
+    "descriptionRaw": "召喚時、氷漬けの奴隷兵を2枚召喚し、そのカウントを2まで進行させる。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「わ、わ、わしはとんでもないものを見てしまった！奴隷兵どもを覆った氷は黒く焼け、爪の先では雪崩が起き、その咆哮は山脈中の雪を吹き飛ばしてしまったんじゃ！あれは邪悪なもんに違いない！せ、戦士の女王よ！奴隷兵を始末するのは、戦士の女王の責務であるぞ！」<br>- 妄言のビョーグ",
+    "artistName": "Caravan Studio",
+    "name": "黒氷のボアディール",
+    "cardCode": "08FR030",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "エピック",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "ドラゴン"
+    ],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "コモンオンリー",
+      "エターナル",
+      "イーブンコスト",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
       "08FR002T1"
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08FR002.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08FR002-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08FR002.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08FR002-full.png"
       }
     ],
     "regions": [
@@ -2262,8 +3512,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08FR002T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08FR002T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08FR002T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08FR002T1-full.png"
       }
     ],
     "regions": [
@@ -2311,13 +3561,11 @@
   },
   {
     "associatedCards": [],
-    "associatedCardRefs": [
-      "08FR002T1"
-    ],
+    "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08FR003.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08FR003-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08FR028.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08FR028-full.png"
       }
     ],
     "regions": [
@@ -2326,9 +3574,65 @@
     "regionRefs": [
       "Freljord"
     ],
-    "attack": 5,
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "このゲーム中に召喚したサブタイプ1種類につき、このユニットは+1|+0を持つ。<style=Variable></style>",
+    "descriptionRaw": "このゲーム中に召喚したサブタイプ1種類につき、このユニットは+1|+0を持つ。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「ここには雪崩を食らってもびくともしない獣が存在する。だからこそ、ここに金を惜しむべきじゃない」<br>- アヴァローサンの罠師",
+    "artistName": "Polar Engine",
+    "name": "良質なくびき",
+    "cardCode": "08FR028",
+    "keywords": [
+      "武具"
+    ],
+    "keywordRefs": [
+      "Equipment"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "エピック",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "武具",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "コモンオンリー",
+      "エターナル",
+      "イーブンコスト",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08FR002T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08FR003.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08FR003-full.png"
+      }
+    ],
+    "regions": [
+      "フレヨルド"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 6,
     "cost": 6,
-    "health": 3,
+    "health": 4,
     "description": "スペルまたは<link=keyword.Skill><sprite name=SkillMark><style=Keyword>スキル</style></link>をプレイする時、<link=card.summon><style=AssociatedCard>嵐の紋章</style></link>を1枚召喚する。",
     "descriptionRaw": "スペルまたはスキルをプレイする時、嵐の紋章を1枚召喚する。",
     "levelupDescription": "",
@@ -2364,42 +3668,726 @@
   {
     "associatedCards": [],
     "associatedCardRefs": [
-      "08BW028T1",
-      "08BW028T2",
-      "08BW028T3",
-      "08BW028T4"
+      "08RU014T9",
+      "08RU014T8",
+      "08RU014T3",
+      "08RU014T6",
+      "08RU014T5",
+      "08RU014T1",
+      "08RU014T7",
+      "08RU014T4",
+      "08RU014T2"
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08DE006.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08DE006-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08RU014.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08RU014-full.png"
       }
     ],
     "regions": [
-      "デマーシア",
-      "フレヨルド"
+      "ルーンテラ"
     ],
     "regionRefs": [
-      "Demacia",
-      "Freljord"
+      "Runeterra"
     ],
-    "attack": 2,
-    "cost": 3,
-    "health": 3,
-    "description": "<link=vocab.Play><style=Vocab>プレイ</style></link>: 「探検家」のスペルを1枚指定して手札に生成する。",
-    "descriptionRaw": "プレイ: 「探検家」のスペルを1枚指定して手札に生成する。",
+    "attack": 10,
+    "cost": 12,
+    "health": 10,
+    "description": "<link=vocab.Origin><style=Vocab>オリジン</style></link>: <link=card.origin><style=AssociatedCard>ドラゴンの神髄</style></link>。<style=Variable></style>\r\nこのゲーム中にプレイした<nobr>「ドラゴンの加護」</nobr>1種類につき、コストが1減少する。\r\n<link=keyword.PlaySkillMark><sprite name=SkillMark><style=Keyword>プレイ</style></link>: このカードを対象に、すべての「ドラゴンの加護」をプレイする。",
+    "descriptionRaw": "オリジン: ドラゴンの神髄。\r\nこのゲーム中にプレイした「ドラゴンの加護」1種類につき、コストが1減少する。\r\nプレイ: このカードを対象に、すべての「ドラゴンの加護」をプレイする。",
+    "levelupDescription": "アタックした味方の攻撃力の合計が75以上になった時<style=Variable></style>。",
+    "levelupDescriptionRaw": "アタックした味方の攻撃力の合計が75以上になった時。",
+    "flavorText": "「伝説ではこのドラゴンこそが最も古きドラゴンであり、すべての有翼獣の王であるという。それを手懐けることが出来れば…アラティス、俺たちに楯突く者なんていなくなるよな？そうすれば、世界はようやく認めることになる。人間とドラゴンが一緒になれば、どんな敵にも負けやしないとな」<br>- ドラゴンの忠士 ヴォリックス",
+    "artistName": "Envar Studio",
+    "name": "エルダードラゴン",
+    "cardCode": "08RU014",
+    "keywords": [
+      "フューリー"
+    ],
+    "keywordRefs": [
+      "Fury"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "チャンピオン",
+    "rarityRef": "Champion",
+    "subtypes": [
+      "ドラゴン"
+    ],
+    "supertype": "チャンピオン",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08RU014T5.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08RU014T5-full.png"
+      }
+    ],
+    "regions": [
+      "ルーンテラ"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "+1|+1と<link=keyword.Fearsome><sprite name=Fearsome><style=Keyword>フィアサム</style></link>を付与する。",
+    "descriptionRaw": "+1|+1とフィアサムを付与する。",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "「空気は凍てつき、体は冷え切っている。ここはとにかく、ありとあらゆるものが熱を失っている。この世には人が住むには適さない場所も存在するということだ。次はどこか暖かいところへ送ってくれ」<br>- 探検家ギルド 最果て支部の探索記録 フレヨルドにて",
+    "flavorText": "怒りの業火が天高く燃え立つ。",
+    "artistName": "Polar Engine",
+    "name": "灼炎の剛力",
+    "cardCode": "08RU014T5",
+    "keywords": [
+      "スキル"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "なし",
+    "rarityRef": "None",
+    "subtypes": [
+      "エレメンタル"
+    ],
+    "supertype": "",
+    "type": "スキル",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08RU014T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08RU014T3-full.png"
+      }
+    ],
+    "regions": [
+      "ルーンテラ"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "デッキ構築の際、コスト6以上のフォロワーはどれでも採用できる。基本コストが6以上のユニットをプレイする時、2枚の「ドラゴンの加護」から1枚を指定してプレイする。",
+    "descriptionRaw": "デッキ構築の際、コスト6以上のフォロワーはどれでも採用できる。基本コストが6以上のユニットをプレイする時、2枚の「ドラゴンの加護」から1枚を指定してプレイする。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "ドラゴンが授ける祝福は、良くも悪くも計り知れない。",
     "artistName": "Envar Studio",
-    "name": "開拓する学徒",
-    "cardCode": "08DE006",
+    "name": "ドラゴンの神髄",
+    "cardCode": "08RU014T3",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "なし",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スキル",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08RU014",
+      "08RU014T8",
+      "08RU014T3",
+      "08RU014T6",
+      "08RU014T5",
+      "08RU014T1",
+      "08RU014T7",
+      "08RU014T4",
+      "08RU014T2"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08RU014T9.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08RU014T9-full.png"
+      }
+    ],
+    "regions": [
+      "ルーンテラ"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 30,
+    "cost": 12,
+    "health": 30,
+    "description": "このユニットは阻止されない。",
+    "descriptionRaw": "このユニットは阻止されない。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "比類なき灼熱の塊がエルダードラゴンの口から放たれ、アラティスは宙へ飛び上がる。<br>「怯むな！」<br>ヴォリックスが声を張り上げる。<br>「陣形をしっかり保て！獣の王を手懐けた者として、世界に我々の名を知らしめる時だ！」",
+    "artistName": "Envar Studio",
+    "name": "エルダードラゴン",
+    "cardCode": "08RU014T9",
+    "keywords": [
+      "フューリー"
+    ],
+    "keywordRefs": [
+      "Fury"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "チャンピオン",
+    "rarityRef": "Champion",
+    "subtypes": [
+      "ドラゴン"
+    ],
+    "supertype": "チャンピオン",
+    "type": "ユニット",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08RU014T4.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08RU014T4-full.png"
+      }
+    ],
+    "regions": [
+      "ルーンテラ"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "<link=keyword.Impact><sprite name=Impact><style=Keyword>インパクト</style></link>を2回と+1|+1を付与する。",
+    "descriptionRaw": "インパクトを2回と+1|+1を付与する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "自然は生み出し、ヘクステックは改善する。\n",
+    "artistName": "Polar Engine",
+    "name": "ヘクステックの叡智",
+    "cardCode": "08RU014T4",
+    "keywords": [
+      "スキル"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "なし",
+    "rarityRef": "None",
+    "subtypes": [
+      "エレメンタル"
+    ],
+    "supertype": "",
+    "type": "スキル",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08RU014T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08RU014T2-full.png"
+      }
+    ],
+    "regions": [
+      "ルーンテラ"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "<link=keyword.Deathless><sprite name=Deathless><style=Keyword>デスレス</style></link>を付与する。",
+    "descriptionRaw": "デスレスを付与する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "ある者はそれを毒と呼び、ある者はそれを力と呼ぶ。",
+    "artistName": "Polar Engine",
+    "name": "ケミテックの疫病",
+    "cardCode": "08RU014T2",
+    "keywords": [
+      "スキル"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "なし",
+    "rarityRef": "None",
+    "subtypes": [
+      "エレメンタル"
+    ],
+    "supertype": "",
+    "type": "スキル",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08RU014T7.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08RU014T7-full.png"
+      }
+    ],
+    "regions": [
+      "ルーンテラ"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "<link=keyword.Challenger><sprite name=Challenger><style=Keyword>チャレンジャー</style></link>を付与する。",
+    "descriptionRaw": "チャレンジャーを付与する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "そよ風のように捉え難く、疾風のように鋭き一陣。 ",
+    "artistName": "Polar Engine",
+    "name": "天雲の恩寵",
+    "cardCode": "08RU014T7",
+    "keywords": [
+      "スキル"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "なし",
+    "rarityRef": "None",
+    "subtypes": [
+      "エレメンタル"
+    ],
+    "supertype": "",
+    "type": "スキル",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08RU014T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08RU014T1-full.png"
+      }
+    ],
+    "regions": [
+      "ルーンテラ"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "+1|+1と<link=keyword.Tough><sprite name=Tough><style=Keyword>タフ</style></link>を付与する。",
+    "descriptionRaw": "+1|+1とタフを付与する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "この山地の地表はどんな嵐にも耐える。",
+    "artistName": "Polar Engine",
+    "name": "山嶺の活力",
+    "cardCode": "08RU014T1",
+    "keywords": [
+      "スキル"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "なし",
+    "rarityRef": "None",
+    "subtypes": [
+      "エレメンタル"
+    ],
+    "supertype": "",
+    "type": "スキル",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08RU014",
+      "08RU014T9"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08RU014T8.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08RU014T8-full.png"
+      }
+    ],
+    "regions": [
+      "ルーンテラ"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 8,
+    "health": 0,
+    "description": "マナを全回復する。デッキの上から6枚の中にあるコスト6以上のフォロワーをすべて引く。\r\nデッキに<link=card.level1><style=AssociatedCard>エルダードラゴン</style></link>を1枚生成する。",
+    "descriptionRaw": "マナを全回復する。デッキの上から6枚の中にあるコスト6以上のフォロワーをすべて引く。\r\nデッキにエルダードラゴンを1枚生成する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「この呼び声は原始のもの。私には雲上の王国が見える。そしてそこには、翼を持った恐ろしい主が御座す」<br>- オットラーニ族の龍信者",
+    "artistName": "Polar Engine",
+    "name": "エルダードラゴンの「原始の咆哮」",
+    "cardCode": "08RU014T8",
+    "keywords": [
+      "バースト"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "バースト",
+    "spellSpeedRef": "Burst",
+    "rarity": "なし",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "チャンピオン",
+    "type": "スペル",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08RU014T6.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08RU014T6-full.png"
+      }
+    ],
+    "regions": [
+      "ルーンテラ"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "ネクサスと味方すべての体力を2回復する。",
+    "descriptionRaw": "ネクサスと味方すべての体力を2回復する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "清らかな水の翼が、あらゆる傷を洗い流す。",
+    "artistName": "Polar Engine",
+    "name": "大洋の意志",
+    "cardCode": "08RU014T6",
+    "keywords": [
+      "スキル"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "なし",
+    "rarityRef": "None",
+    "subtypes": [
+      "エレメンタル"
+    ],
+    "supertype": "",
+    "type": "スキル",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08RU015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08RU015-full.png"
+      }
+    ],
+    "regions": [
+      "ルーンテラ"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 8,
+    "health": 0,
+    "description": "マナを全回復する。デッキの上から6枚の中にあるコスト6以上のフォロワーをすべて引く。",
+    "descriptionRaw": "マナを全回復する。デッキの上から6枚の中にあるコスト6以上のフォロワーをすべて引く。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「この呼び声は原始のもの。私には雲上の王国が見える。そしてそこには、翼を持った恐ろしい主が御座す」<br>- オットラーニ族の龍信者",
+    "artistName": "Polar Engine",
+    "name": "原始の咆哮",
+    "cardCode": "08RU015",
+    "keywords": [
+      "バースト"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "バースト",
+    "spellSpeedRef": "Burst",
+    "rarity": "なし",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スペル",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08NX003T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08NX003.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08NX003-full.png"
+      }
+    ],
+    "regions": [
+      "ノクサス"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 8,
+    "cost": 6,
+    "health": 4,
+    "description": "<link=keyword.Elemental Skill><sprite name=ElementalSkill><style=Keyword>プレイ</style></link>: 敵1体に2ダメージと敵のネクサスに2ダメージを与える。",
+    "descriptionRaw": "プレイ: 敵1体に2ダメージと敵のネクサスに2ダメージを与える。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "ノクサスは領土を拡大し、多様な民と土地と文化を手に入れた。各地に生息する野生の獣は手懐けられ、広く兵器として用いられた。しかし、この龍は他の獣とは全く違った──ノクサス軍が侵略の歩をひとつ進めるたびに、それと同じだけの怒りと炎で大軍に応じた。",
+    "artistName": "Envar Studio",
+    "name": "怒れる噴炎龍",
+    "cardCode": "08NX003",
     "keywords": [
       "チャレンジャー"
     ],
     "keywordRefs": [
       "Challenger"
     ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "エピック",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "ドラゴン"
+    ],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08NX003"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08NX003T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08NX003T1-full.png"
+      }
+    ],
+    "regions": [
+      "ノクサス"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "敵1体に2ダメージと敵のネクサスに2ダメージを与える。",
+    "descriptionRaw": "敵1体に2ダメージと敵のネクサスに2ダメージを与える。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "木も、鉄も、肉も──燃え盛る怒りの前にすべて等しく溶けていった。",
+    "artistName": "Polar Engine",
+    "name": "憤怒の炎",
+    "cardCode": "08NX003T1",
+    "keywords": [
+      "エレメンタルスキル"
+    ],
+    "keywordRefs": [
+      "ElementalSkill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "なし",
+    "rarityRef": "None",
+    "subtypes": [
+      "エレメンタル"
+    ],
+    "supertype": "",
+    "type": "スキル",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08NX024T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08NX024.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08NX024-full.png"
+      }
+    ],
+    "regions": [
+      "ノクサス"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 5,
+    "cost": 3,
+    "health": 1,
+    "description": "<link=keyword.PlaySkillMark><sprite name=SkillMark><style=Keyword>プレイ</style></link>: 味方1体に3ダメージを与えることで、敵1体に3ダメージを与える。",
+    "descriptionRaw": "プレイ: 味方1体に3ダメージを与えることで、敵1体に3ダメージを与える。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「奴らの魂を、肉体の檻から引き剥がせ！」<br>- モルデカイザー",
+    "artistName": "Caravan Studio",
+    "name": "鋼の軍団兵",
+    "cardCode": "08NX024",
+    "keywords": [],
+    "keywordRefs": [],
     "spellSpeed": "",
     "spellSpeedRef": "",
     "rarity": "レア",
@@ -2423,58 +4411,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08DE010.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08DE010-full.png"
-      }
-    ],
-    "regions": [
-      "デマーシア"
-    ],
-    "regionRefs": [
-      "Demacia"
-    ],
-    "attack": 0,
-    "cost": 3,
-    "health": 0,
-    "description": "味方1体に+0|+2を付与する。\r\nその味方と敵1体が互いに<link=vocab.Strike><style=Vocab>ストライク</style></link>する。",
-    "descriptionRaw": "味方1体に+0|+2を付与する。\r\nその味方と敵1体が互いにストライクする。",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "「構えたまえ！君は男同士の決闘を拒むような腰抜けではないだろう？」<br>- ローラン家の騎兵",
-    "artistName": "Kudos Productions",
-    "name": "紳士の決闘",
-    "cardCode": "08DE010",
-    "keywords": [
-      "ファスト"
-    ],
-    "keywordRefs": [
-      "Fast"
-    ],
-    "spellSpeed": "ファスト",
-    "spellSpeedRef": "Fast",
-    "rarity": "コモン",
-    "rarityRef": "Common",
-    "subtypes": [],
-    "supertype": "",
-    "type": "スペル",
-    "collectible": true,
-    "set": "Set8",
-    "formats": [
-      "エターナル",
-      "スタンダード"
-    ],
-    "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08NX011.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08NX011-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08NX024T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08NX024T1-full.png"
       }
     ],
     "regions": [
@@ -2484,7 +4422,63 @@
       "Noxus"
     ],
     "attack": 0,
-    "cost": 1,
+    "cost": 0,
+    "health": 0,
+    "description": "味方1体に3ダメージを与えることで、敵1体に3ダメージを与える。",
+    "descriptionRaw": "味方1体に3ダメージを与えることで、敵1体に3ダメージを与える。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「その傷と痛みは消えることがない…次の世でも、その次の世でも…」<br>- 囚われの亡霊",
+    "artistName": "Polar Engine",
+    "name": "ソウルクリーバー",
+    "cardCode": "08NX024T1",
+    "keywords": [
+      "スキル"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "なし",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スキル",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "コモンオンリー",
+      "エターナル",
+      "イーブンコスト",
+      "シングルトン",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Deckbuilder_RulesFilters_Singleton",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08NX011.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08NX011-full.png"
+      }
+    ],
+    "regions": [
+      "ノクサス"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 2,
     "health": 0,
     "description": "敵のネクサスに1ダメージを与える。すでにプレイした<link=card.selfref><style=AssociatedCard>野火</style></link>1枚につき、このダメージは1増加する。\r\nデッキに<link=card.selfref><style=AssociatedCard>野火</style></link>を1枚生成する。",
     "descriptionRaw": "敵のネクサスに1ダメージを与える。すでにプレイした野火1枚につき、このダメージは1増加する。\r\nデッキに野火を1枚生成する。",
@@ -2525,8 +4519,164 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08NX014.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08NX014-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08NX028.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08NX028-full.png"
+      }
+    ],
+    "regions": [
+      "ノクサス"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "味方1体に<link=keyword.Deathless><sprite name=Deathless><style=Keyword>デスレス</style></link>を付与する。",
+    "descriptionRaw": "味方1体にデスレスを付与する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「鋼は不滅だ」<br>- モルデカイザー",
+    "artistName": "Polar Engine",
+    "name": "不滅の鎧",
+    "cardCode": "08NX028",
+    "keywords": [
+      "バースト"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "バースト",
+    "spellSpeedRef": "Burst",
+    "rarity": "コモン",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スペル",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08NX019T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08NX019.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08NX019-full.png"
+      }
+    ],
+    "regions": [
+      "ノクサス"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 4,
+    "cost": 4,
+    "health": 4,
+    "description": "<link=vocab.NexusStrike><style=Vocab>ネクサスストライク</style></link>: 相手に<link=card.curse><style=AssociatedCard>血の膿</style></link>による<link=keyword.Curse><sprite name=Curse><style=Keyword>呪い</style></link>をかける。",
+    "descriptionRaw": "ネクサスストライク: 相手に血の膿による呪いをかける。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "レイザーメイスはノクサス軍にとって有用な獣だが、首都の闘技場でも重宝されている。人間であれ動物であれ、闘技場でレイザーメイスを相手にしたがる者はほとんどいない。だからこそ、その戦いが行われるとなれば、街中から観客が集まってくる。",
+    "artistName": "Envar Studio",
+    "name": "赤棘のレイザーメイス",
+    "cardCode": "08NX019",
+    "keywords": [
+      "オーバーパワー"
+    ],
+    "keywordRefs": [
+      "Overwhelm"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "コモン",
+    "rarityRef": "Common",
+    "subtypes": [
+      "爬虫類"
+    ],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08NX019T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08NX019T1-full.png"
+      }
+    ],
+    "regions": [
+      "ノクサス"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "このカードが手札にある間、<link=vocab.RoundStart><style=Vocab>ラウンド開始時</style></link>: あなたのネクサスに<style=Variable>1</style>ダメージを与える。",
+    "descriptionRaw": "このカードが手札にある間、ラウンド開始時: あなたのネクサスに1ダメージを与える。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "流れる血はゆっくりと…しかし止まる気配はない。",
+    "artistName": "Polar Engine",
+    "name": "血の膿",
+    "cardCode": "08NX019T1",
+    "keywords": [
+      "フォーカス",
+      "呪い"
+    ],
+    "keywordRefs": [
+      "Focus",
+      "Curse"
+    ],
+    "spellSpeed": "バースト",
+    "spellSpeedRef": "Burst",
+    "rarity": "なし",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スペル",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08NX014.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08NX014-full.png"
       }
     ],
     "regions": [
@@ -2580,8 +4730,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08NX012.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08NX012-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08NX012.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08NX012-full.png"
       }
     ],
     "regions": [
@@ -2625,37 +4775,35 @@
   },
   {
     "associatedCards": [],
-    "associatedCardRefs": [
-      "06RU001T3"
-    ],
+    "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08SI021.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08SI021-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08NX009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08NX009-full.png"
       }
     ],
     "regions": [
-      "シャドウ<nobr>アイル</nobr>"
+      "ノクサス"
     ],
     "regionRefs": [
-      "ShadowIsles"
+      "Noxus"
     ],
-    "attack": 2,
-    "cost": 2,
-    "health": 3,
-    "description": "他の味方が力尽きる時、または<nobr><link=keyword.Last Breath><sprite name=LastBreath><style=Keyword>ラストブレス</style></link>:</nobr> デッキに<link=card.chime><style=AssociatedCard>チャイム</style></link>を4枚設置する。",
-    "descriptionRaw": "他の味方が力尽きる時、またはラストブレス: デッキにチャイムを4枚設置する。",
+    "attack": 5,
+    "cost": 4,
+    "health": 2,
+    "description": "",
+    "descriptionRaw": "",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "聞こえてくる鐘の音は確かに不吉で禍々しいが、何も心配する必要はない。齢を重ねたチャイムスライムが、ただ散歩をしているだけなのだから。彼はいつだって来訪者を歓迎してくれる。来訪者の方は、彼を受け入れられないようだが…",
-    "artistName": "Bubble Cat",
-    "name": "孤独なチャイムスライム",
-    "cardCode": "08SI021",
+    "flavorText": "「あの戦の権化を封印するのには、数世紀に及ぶ計画が必要だった。それをお前のお友達は“喜び”なんぞで倒すつもりだったのか？愚かな小娘よ…お前は鋼の魂奪者の怒りを買い──我々すべてが危険に晒されることになる」",
+    "artistName": "Wild Blue",
+    "name": "マラット卿",
+    "cardCode": "08NX009",
     "keywords": [
-      "ラストブレス"
+      "デスレス"
     ],
     "keywordRefs": [
-      "LastBreath"
+      "Deathless"
     ],
     "spellSpeed": "",
     "spellSpeedRef": "",
@@ -2680,93 +4828,32 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08SI030.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08SI030-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08NX025.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08NX025-full.png"
       }
     ],
     "regions": [
-      "シャドウ<nobr>アイル</nobr>"
+      "ノクサス"
     ],
     "regionRefs": [
-      "ShadowIsles"
-    ],
-    "attack": 0,
-    "cost": 3,
-    "health": 0,
-    "description": "敵のデッキの下から6枚を<link=vocab.Obliterate><style=Vocab>ゲームから除外</style></link>する。",
-    "descriptionRaw": "敵のデッキの下から6枚をゲームから除外する。",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "深き深き海の底をねぐらとする獣にとって、自らを狙う狩猟船などただの軽食に過ぎない。",
-    "artistName": "Polar Engine",
-    "name": "水面の墓穴",
-    "cardCode": "08SI030",
-    "keywords": [
-      "スロウ"
-    ],
-    "keywordRefs": [
-      "Slow"
-    ],
-    "spellSpeed": "スロウ",
-    "spellSpeedRef": "Slow",
-    "rarity": "エピック",
-    "rarityRef": "Epic",
-    "subtypes": [],
-    "supertype": "",
-    "type": "スペル",
-    "collectible": true,
-    "set": "Set8",
-    "formats": [
-      "コモンオンリー",
-      "エターナル",
-      "イーブンコスト",
-      "スタンダード"
-    ],
-    "formatRefs": [
-      "client_Formats_CommonsOnly_name",
-      "client_Formats_Eternal_name",
-      "client_Formats_EvenCostCards_name",
-      "client_Formats_Standard_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [
-      "08BW028T1",
-      "08BW028T2",
-      "08BW028T3",
-      "08BW028T4"
-    ],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08SI018.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08SI018-full.png"
-      }
-    ],
-    "regions": [
-      "シャドウ<nobr>アイル</nobr>",
-      "ターゴン"
-    ],
-    "regionRefs": [
-      "ShadowIsles",
-      "Targon"
+      "Noxus"
     ],
     "attack": 2,
     "cost": 3,
-    "health": 2,
-    "description": "<link=vocab.Play><style=Vocab>プレイ</style></link>: 「探検家」のスペルを1枚指定して手札に生成する。",
-    "descriptionRaw": "プレイ: 「探検家」のスペルを1枚指定して手札に生成する。",
+    "health": 3,
+    "description": "味方が蘇生された時、その味方に<link=keyword.Challenger><sprite name=Challenger><style=Keyword>チャレンジャー</style></link>を付与する。",
+    "descriptionRaw": "味方が蘇生された時、その味方にチャレンジャーを付与する。",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "「この島の地形はなんとも不可解だ。視界はほぼ無し。道を曲がるたびに敵意を持った存在に遭遇したが、一方で予期せぬ友人との新たな出会いもあった」<br>- 探検家ギルド 最果て支部の探索記録 シャドウアイルにて",
+    "flavorText": "「私は知っているぞ。その笑みに隠された裏切りの心を！奴らは私と食卓を囲み、笑顔で私の背後を刺した。私はもう二度と騙されぬ。お前は死ぬのだ──他の者どもと同じように、謝罪の言葉を叫びながらな！」",
     "artistName": "Envar Studio",
-    "name": "霊気測定師",
-    "cardCode": "08SI018",
+    "name": "剣貫の生霊",
+    "cardCode": "08NX025",
     "keywords": [
-      "ライフスティール"
+      "デスレス"
     ],
     "keywordRefs": [
-      "Lifesteal"
+      "Deathless"
     ],
     "spellSpeed": "",
     "spellSpeedRef": "",
@@ -2789,13 +4876,2024 @@
   {
     "associatedCards": [],
     "associatedCardRefs": [
+      "08SI026T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08SH009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08SH009-full.png"
+      }
+    ],
+    "regions": [
+      "シュリーマ"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "敵1体に<link=card.curse><style=AssociatedCard>恐慌</style></link>による<link=keyword.Curse><sprite name=Curse><style=Keyword>呪い</style></link>をかける。",
+    "descriptionRaw": "敵1体に恐慌による呪いをかける。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "世の中には、砂の下に埋もれさせておいた方が良い物もある。",
+    "artistName": "Polar Engine",
+    "name": "古の呪言",
+    "cardCode": "08SH009",
+    "keywords": [
+      "バースト"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "バースト",
+    "spellSpeedRef": "Burst",
+    "rarity": "コモン",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スペル",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08SH004.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08SH004-full.png"
+      }
+    ],
+    "regions": [
+      "シュリーマ"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 4,
+    "cost": 4,
+    "health": 4,
+    "description": "<link=keyword.Daybreak><style=Keyword>デイブレイク</style></link>、またはこのユニット以外の<link=keyword.Daybreak><style=Keyword>デイブレイク</style></link>を発動させる時: <link=keyword.Weakest><style=Keyword>最も弱い</style></link>敵に<link=keyword.Vulnerable><sprite name=Vulnerable><style=Keyword>無防備</style></link>を付与する。",
+    "descriptionRaw": "デイブレイク、またはこのユニット以外のデイブレイクを発動させる時: 最も弱い敵に無防備を付与する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "広大な砂漠の上には、おびただしい数のシュリーマ軍が待機していた。ひとたび命令が下れば彼らは迷いなく前進し、その力を世界に示すだろう。",
+    "artistName": "Kudos Productions",
+    "name": "砂丘の将軍",
+    "cardCode": "08SH004",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "レア",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "精鋭"
+    ],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08SH005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08SH005-full.png"
+      }
+    ],
+    "regions": [
+      "シュリーマ"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 2,
+    "description": "<link=keyword.Daybreak><style=Keyword>デイブレイク</style></link>: <link=card.me><style=AssociatedCard>太陽の近衛兵団</style></link>を1枚引く。",
+    "descriptionRaw": "デイブレイク: 太陽の近衛兵団を1枚引く。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「我らは悠久なる砂漠の守護者。生ける歴史にして、輝ける道を歩む者。我らが仕えるは太陽の円盤のみであり、故に世界はシュリーマの栄光にひれ伏すであろう」<br>- アジール",
+    "artistName": "Kudos Productions",
+    "name": "太陽の近衛兵団",
+    "cardCode": "08SH005",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "コモン",
+    "rarityRef": "Common",
+    "subtypes": [
+      "精鋭"
+    ],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "04SH098"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08SH012.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08SH012-full.png"
+      }
+    ],
+    "regions": [
+      "シュリーマ"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 3,
+    "cost": 3,
+    "health": 2,
+    "description": "各ラウンドで初めて他の味方が力尽きる時、または<link=keyword.Last Breath><sprite name=LastBreath><style=Keyword>ラストブレス</style></link>: 手札に<link=card.create><style=AssociatedCard>掘り出し物</style></link>を1枚生成する。",
+    "descriptionRaw": "各ラウンドで初めて他の味方が力尽きる時、またはラストブレス: 手札に掘り出し物を1枚生成する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「でかしたぞバーブ！こりゃ相当な値打ちもんだ──ん？おいおい…やつらに姿を見られただって！？」<br>- ベカウラの巨漢",
+    "artistName": "Caravan Studio",
+    "name": "墓荒らしのバーバラ",
+    "cardCode": "08SH012",
+    "keywords": [
+      "ラストブレス"
+    ],
+    "keywordRefs": [
+      "LastBreath"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "レア",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "爬虫類"
+    ],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08SH002.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08SH002-full.png"
+      }
+    ],
+    "regions": [
+      "シュリーマ"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 9,
+    "cost": 5,
+    "health": 6,
+    "description": "このユニットをプレイするには、合計3回、味方をキルするかマナジェムを破壊する。",
+    "descriptionRaw": "このユニットをプレイするには、合計3回、味方をキルするかマナジェムを破壊する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "それは砂中の遥か深くに潜み、同族であるゼル＝サイをいとも容易く捕食する。その巨体にかかってしまえば、捕食者であるはずのゼル=サイも、ただの獲物へと成り下がる。その大きさは砂丘を丸ごと呑み込んでしまうほどだと言うが、目撃記録は極めて少ない。目撃記録の少なさは、即ち生きて帰った目撃者の少なさであり、この噂が事実であることの証左と言えるだろう。 ",
+    "artistName": "Envar Studio",
+    "name": "砂丘を呑む捕食者",
+    "cardCode": "08SH002",
+    "keywords": [
+      "スペルシールド",
+      "フィアサム"
+    ],
+    "keywordRefs": [
+      "SpellShield",
+      "Fearsome"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "エピック",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08MT003T3",
+      "08MT003T4",
+      "08MT003T11",
+      "08MT003T12"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08MT003.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08MT003-full.png"
+      }
+    ],
+    "regions": [
+      "ターゴン",
+      "デマーシア"
+    ],
+    "regionRefs": [
+      "Targon",
+      "Demacia"
+    ],
+    "attack": 3,
+    "cost": 5,
+    "health": 4,
+    "description": "<link=vocab.Play><style=Vocab>プレイ</style></link>: 敵1体に<link=card.curse><style=AssociatedCard>束縛の鎖</style></link>による<link=keyword.Curse><sprite name=Curse><style=Keyword>呪い</style></link>を2回かける。",
+    "descriptionRaw": "プレイ: 敵1体に束縛の鎖による呪いを2回かける。",
+    "levelupDescription": "あなたがユニットを8回以上対象に選んだ時<style=Variable></style>。",
+    "levelupDescriptionRaw": "あなたがユニットを8回以上対象に選んだ時。",
+    "flavorText": "「お前は全身アザだらけで、血を流しながらここへ辿り着いたというのに、私がこれまでに見たことがないほど喜びに満ちた顔をしている。なんとも奇妙なやつではあるが…なんにせよ、ここにいれば安全だ。ゆっくりと休むがいい。傷が癒えたら、話を聞かせてもらうことにしよう」",
+    "artistName": "Envar Studio",
+    "name": "モルガナ",
+    "cardCode": "08MT003",
+    "keywords": [
+      "ライフスティール"
+    ],
+    "keywordRefs": [
+      "Lifesteal"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "チャンピオン",
+    "rarityRef": "Champion",
+    "subtypes": [],
+    "supertype": "チャンピオン",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08MT003T3",
+      "08MT003",
+      "08MT003T11",
+      "08MT003T12"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08MT003T4.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08MT003T4-full.png"
+      }
+    ],
+    "regions": [
+      "ターゴン",
+      "デマーシア"
+    ],
+    "regionRefs": [
+      "Targon",
+      "Demacia"
+    ],
+    "attack": 4,
+    "cost": 5,
+    "health": 5,
+    "description": "<link=vocab.Play><style=Vocab>プレイ</style></link>: 敵1体に<link=card.curse><style=AssociatedCard>束縛の鎖</style></link>による<link=keyword.Curse><sprite name=Curse><style=Keyword>呪い</style></link>を2回かける。\r\n<link=vocab.Attack><style=Vocab>アタック</style></link>: <link=card.curse><style=AssociatedCard>束縛の鎖</style></link>による<link=keyword.Curse><sprite name=Curse><style=Keyword>呪い</style></link>を受けていない敵のうち<link=vocab.Strongest><style=Vocab>最も強い</style></link>敵に<link=keyword.Curse><sprite name=Curse><style=Keyword>呪い</style></link>をかけ、<link=keyword.Curse><sprite name=Curse><style=Keyword>呪い</style></link>を受けている敵に3ダメージを与え、敵のネクサスに2ダメージを与える。",
+    "descriptionRaw": "プレイ: 敵1体に束縛の鎖による呪いを2回かける。\r\nアタック: 束縛の鎖による呪いを受けていない敵のうち最も強い敵に呪いをかけ、呪いを受けている敵に3ダメージを与え、敵のネクサスに2ダメージを与える。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「悔いるがいい！これからお前が受ける苦痛は、これまでお前が与えてきたもの。それがお前自身を締め上げるのだ。己の罪を認めないのなら、お前は罪に絞め殺されることになる」",
+    "artistName": "Envar Studio",
+    "name": "モルガナ",
+    "cardCode": "08MT003T4",
+    "keywords": [
+      "ライフスティール"
+    ],
+    "keywordRefs": [
+      "Lifesteal"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "チャンピオン",
+    "rarityRef": "Champion",
+    "subtypes": [],
+    "supertype": "チャンピオン",
+    "type": "ユニット",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08MT003",
+      "08MT003T4",
+      "08MT003T11"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08MT003T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08MT003T3-full.png"
+      }
+    ],
+    "regions": [
+      "ターゴン"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "敵1体を<link=keyword.Stun><sprite name=Stunned><style=Keyword>スタン</style></link>させ、<link=card.curse><style=AssociatedCard>束縛の鎖</style></link>による<link=keyword.Curse><sprite name=Curse><style=Keyword>呪い</style></link>をかける。\r\nデッキに<link=card.level1><style=AssociatedCard>モルガナ</style></link>を1枚生成する。",
+    "descriptionRaw": "敵1体をスタンさせ、束縛の鎖による呪いをかける。\r\nデッキにモルガナを1枚生成する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「与えた苦しみの分だけ、お前も苦しむがいい！」<br>- モルガナ",
+    "artistName": "Polar Engine",
+    "name": "モルガナの「ダークバインド」",
+    "cardCode": "08MT003T3",
+    "keywords": [
+      "ファスト"
+    ],
+    "keywordRefs": [
+      "Fast"
+    ],
+    "spellSpeed": "ファスト",
+    "spellSpeedRef": "Fast",
+    "rarity": "チャンピオン",
+    "rarityRef": "Champion",
+    "subtypes": [],
+    "supertype": "チャンピオン",
+    "type": "スペル",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "コモンオンリー",
+      "エターナル",
+      "イーブンコスト",
+      "シングルトン",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Deckbuilder_RulesFilters_Singleton",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08MT003T11.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08MT003T11-full.png"
+      }
+    ],
+    "regions": [
+      "ターゴン"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": " このカードが手札にある間、<style=Variable>呪いを受けたユニット</style>は<link=keyword.Immobile><sprite name=Immobile><sprite name=Reckless><style=Keyword>行動不可</style></link>になる。",
+    "descriptionRaw": " このカードが手札にある間、呪いを受けたユニットは行動不可になる。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「真実に拘束されるがいい！」<br>- モルガナ",
+    "artistName": "Polar Engine",
+    "name": "束縛の鎖",
+    "cardCode": "08MT003T11",
+    "keywords": [
+      "フォーカス",
+      "呪い"
+    ],
+    "keywordRefs": [
+      "Focus",
+      "Curse"
+    ],
+    "spellSpeed": "バースト",
+    "spellSpeedRef": "Burst",
+    "rarity": "なし",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スペル",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08MT003T12.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08MT003T12-full.png"
+      }
+    ],
+    "regions": [
+      "ターゴン"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "<link=keyword.Curse><sprite name=Curse><style=Keyword>呪い</style></link>を受けている敵に3ダメージを与え、敵のネクサスに2ダメージを与える。",
+    "descriptionRaw": "呪いを受けている敵に3ダメージを与え、敵のネクサスに2ダメージを与える。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「お前がこれまで与えてきた苦しみを、千回重ねた苦悶をくれてやろう」<br>- モルガナ",
+    "artistName": "Polar Engine",
+    "name": "魂の足枷",
+    "cardCode": "08MT003T12",
+    "keywords": [
+      "スキル"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "なし",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スキル",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08MT003T11"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08MT005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08MT005-full.png"
+      }
+    ],
+    "regions": [
+      "ターゴン"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 6,
+    "cost": 8,
+    "health": 8,
+    "description": "<link=vocab.Play><style=Vocab>プレイ</style></link>: 敵2体に<link=card.curse><style=AssociatedCard>束縛の鎖</style></link>による<link=keyword.Curse><sprite name=Curse><style=Keyword>呪い</style></link>を2回かける。",
+    "descriptionRaw": "プレイ: 敵2体に束縛の鎖による呪いを2回かける。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「我が神性は娘たちの名の下にある。私は私の家族のために、人としての姿を捨てた。炎を纏うこの剣で、世界を真実と正義の下に新生させるために」",
+    "artistName": "Envar Studio",
+    "name": "超越せし神髄 ミヒラ",
+    "cardCode": "08MT005",
+    "keywords": [
+      "オーバーパワー"
+    ],
+    "keywordRefs": [
+      "Overwhelm"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "エピック",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08MT003T11"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08MT042.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08MT042-full.png"
+      }
+    ],
+    "regions": [
+      "ターゴン"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 6,
+    "health": 0,
+    "description": "敵1体に<link=card.curse><style=AssociatedCard>束縛の鎖</style></link>による<link=keyword.Curse><sprite name=Curse><style=Keyword>呪い</style></link>をかける。\r\n<link=vocab.Everywhere><style=Vocab>あらゆる場所</style></link>にある敵の呪いのコストを1上昇させる。",
+    "descriptionRaw": "敵1体に束縛の鎖による呪いをかける。\r\nあらゆる場所にある敵の呪いのコストを1上昇させる。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「自由を見つけたいなら、己の内なる闇を認めよ」<br>- モルガナ",
+    "artistName": "Polar Engine",
+    "name": "罪の束縛",
+    "cardCode": "08MT042",
+    "keywords": [
+      "スロウ"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "スロウ",
+    "spellSpeedRef": "Slow",
+    "rarity": "レア",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スペル",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "コモンオンリー",
+      "エターナル",
+      "イーブンコスト",
+      "シングルトン",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Deckbuilder_RulesFilters_Singleton",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08MT024.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08MT024-full.png"
+      }
+    ],
+    "regions": [
+      "ターゴン"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 2,
+    "description": "<link=vocab.Play><style=Vocab>プレイ</style></link>: 手札の味方1体に<link=keyword.SpellShield><sprite name=SpellShield><style=Keyword>スペルシールド</style></link>または<link=keyword.Overwhelm><sprite name=Overwhelm><style=Keyword>オーバーパワー</style></link>を付与する。",
+    "descriptionRaw": "プレイ: 手札の味方1体にスペルシールドまたはオーバーパワーを付与する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「何も恐れることはない！振り向かず、進み続けなさい！あなた達の旅路は、かつて我々も歩んだ道。そして今、その旅路を護ることが我々の務め。さぁ、急いで聖域へ。ヴェールの御方がきっとあなた達を守ってくれる」",
+    "artistName": "Envar Studio",
+    "name": "紅眼の呪術師",
+    "cardCode": "08MT024",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "コモン",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08MT024T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08MT024T1-full.png"
+      }
+    ],
+    "regions": [
+      "ターゴン"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 2,
+    "description": "<link=vocab.Play><style=Vocab>プレイ</style></link>: 手札の味方1体に<link=keyword.Overwhelm><sprite name=Overwhelm><style=Keyword>オーバーパワー</style></link>を付与する。",
+    "descriptionRaw": "プレイ: 手札の味方1体にオーバーパワーを付与する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「何も恐れることはない！振り向かず、進み続けなさい！あなた達の旅路は、かつて我々も歩んだ道。そして今、その旅路を護ることが我々の務め。さぁ、急いで聖域へ。ヴェールの御方がきっとあなた達を守ってくれる」",
+    "artistName": "Envar Studio",
+    "name": "紅眼の呪術師",
+    "cardCode": "08MT024T1",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "なし",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08MT024T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08MT024T2-full.png"
+      }
+    ],
+    "regions": [
+      "ターゴン"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 2,
+    "description": "<link=vocab.Play><style=Vocab>プレイ</style></link>: 手札の味方1体に<link=keyword.SpellShield><sprite name=SpellShield><style=Keyword>スペルシールド</style></link>を付与する。",
+    "descriptionRaw": "プレイ: 手札の味方1体にスペルシールドを付与する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「何も恐れることはない！振り向かず、進み続けなさい！あなた達の旅路は、かつて我々も歩んだ道。そして今、その旅路を護ることが我々の務め。さぁ、急いで聖域へ。ヴェールの御方がきっとあなた達を守ってくれる」",
+    "artistName": "Envar Studio",
+    "name": "紅眼の呪術師",
+    "cardCode": "08MT024T2",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "コモン",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08MT003T11"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08MT015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08MT015-full.png"
+      }
+    ],
+    "regions": [
+      "ターゴン"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 2,
+    "cost": 3,
+    "health": 3,
+    "description": "<link=vocab.Play><style=Vocab>プレイ</style></link>: 敵1体に<link=card.curse><style=AssociatedCard>束縛の鎖</style></link>による<link=keyword.Curse><sprite name=Curse><style=Keyword>呪い</style></link>をかける。",
+    "descriptionRaw": "プレイ: 敵1体に束縛の鎖による呪いをかける。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「見て、ドリー！教えてもらったとおりにできたよ！いつかママにも見てもらえるかな？…えっ？ママはもう知ってるだろうって？ほんと！？ふふ、そうだといいなぁ！」<br>- リサ",
+    "artistName": "Envar Studio",
+    "name": "リサとドリー",
+    "cardCode": "08MT015",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "コモン",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08MT030.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08MT030-full.png"
+      }
+    ],
+    "regions": [
+      "ターゴン"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 6,
+    "cost": 6,
+    "health": 5,
+    "description": "<link=keyword.Fast><sprite name=Fast><style=Keyword>ファスト</style></link>スペル、<link=keyword.Slow><sprite name=Slow><style=Keyword>スロウ</style></link>スペル、または<link=keyword.Skill><sprite name=SkillMark><style=Keyword>スキル</style></link>をプレイする時、他の味方の「ドラゴン」すべてに+1|+1を付与する。",
+    "descriptionRaw": "ファストスペル、スロウスペル、またはスキルをプレイする時、他の味方の「ドラゴン」すべてに+1|+1を付与する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "その姿形と同様に、ドラゴンの気質は種によって大きく異なる。インファーナルドレイクのようにすべてを破壊しようとする種が存在する一方で、家族や周囲の環境を守ろうとする種も存在する──優雅に動き、愛情あふれるジェムドラゴンのように。",
+    "artistName": "Polar Engine",
+    "name": "温和なるジェムドラゴン",
+    "cardCode": "08MT030",
+    "keywords": [
+      "フューリー"
+    ],
+    "keywordRefs": [
+      "Fury"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "レア",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "ドラゴン"
+    ],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08MT003T11"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08MT023.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08MT023-full.png"
+      }
+    ],
+    "regions": [
+      "ターゴン"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "敵1体を<link=keyword.Stun><sprite name=Stunned><style=Keyword>スタン</style></link>させ、<link=card.curse><style=AssociatedCard>束縛の鎖</style></link>による<link=keyword.Curse><sprite name=Curse><style=Keyword>呪い</style></link>をかける。",
+    "descriptionRaw": "敵1体をスタンさせ、束縛の鎖による呪いをかける。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「与えた苦しみの分だけ、お前も苦しむがいい！」<br>- モルガナ",
+    "artistName": "Polar Engine",
+    "name": "ダークバインド",
+    "cardCode": "08MT023",
+    "keywords": [
+      "ファスト"
+    ],
+    "keywordRefs": [
+      "Fast"
+    ],
+    "spellSpeed": "ファスト",
+    "spellSpeedRef": "Fast",
+    "rarity": "レア",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スペル",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08MT031.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08MT031-full.png"
+      }
+    ],
+    "regions": [
+      "ターゴン"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 3,
+    "cost": 4,
+    "health": 3,
+    "description": "召喚時、ネクサスの体力を2回復し、次のラウンドに追加のマナジェムを1つ獲得する。",
+    "descriptionRaw": "召喚時、ネクサスの体力を2回復し、次のラウンドに追加のマナジェムを1つ獲得する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "ターゴンの険しい山肌の上、オットラーニ族はただ静かに、その一生を龍に捧げる。剥がれ落ちた鱗と古い骨を身に着け、龍の牙に入るひび割れと渦巻く煙で進むべき道を占い、霊峰の頂を目指すのだ。",
+    "artistName": "Polar Engine",
+    "name": "オットラーニ族の龍信者",
+    "cardCode": "08MT031",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "エピック",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08MT009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08MT009-full.png"
+      }
+    ],
+    "regions": [
+      "ターゴン"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 4,
+    "cost": 5,
+    "health": 5,
+    "description": "このユニットの召喚時、または<link=vocab.Titanic><style=Vocab>タイタン</style></link>の味方を召喚する時、ネクサスの体力を3回復する。",
+    "descriptionRaw": "このユニットの召喚時、またはタイタンの味方を召喚する時、ネクサスの体力を3回復する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "単なる獣に過ぎなかったそれは、祝福を受けて守護者となった。その大恩に報いるため、聖地を目指して霊峰を登る者たちを、守護者は今日も護り続ける。",
+    "artistName": "Envar Studio",
+    "name": "朧気なる守護者",
+    "cardCode": "08MT009",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "レア",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08MT003T11"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08MT006.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08MT006-full.png"
+      }
+    ],
+    "regions": [
+      "ターゴン"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "味方1体に<link=keyword.SpellShield><sprite name=SpellShield><style=Keyword>スペルシールド</style></link>をこのラウンド中付与し、<link=card.curse><style=AssociatedCard>束縛の鎖</style></link>による<link=keyword.Curse><sprite name=Curse><style=Keyword>呪い</style></link>をかける。",
+    "descriptionRaw": "味方1体にスペルシールドをこのラウンド中付与し、束縛の鎖による呪いをかける。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「迫害から守る盾となろう！」<br>- モルガナ",
+    "artistName": "Polar Engine",
+    "name": "ブラックシールド",
+    "cardCode": "08MT006",
+    "keywords": [
+      "バースト"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "バースト",
+    "spellSpeedRef": "Burst",
+    "rarity": "レア",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スペル",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08MT027.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08MT027-full.png"
+      }
+    ],
+    "regions": [
+      "ターゴン"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 5,
+    "cost": 8,
+    "health": 8,
+    "description": "<link=vocab.Play><style=Vocab>プレイ</style></link>: 他の味方すべての<link=keyword.Daybreak><style=Keyword>デイブレイク</style></link>と<link=keyword.Nightfall><style=Keyword>ナイトフォール</style></link>の効果を発動させる。\r\n<link=keyword.Daybreak><style=Keyword>デイブレイク</style></link>: このユニットに<link=keyword.Overwhelm><sprite name=Overwhelm><style=Keyword>オーバーパワー</style></link>を付与する。\r\n<link=keyword.Nightfall><style=Keyword>ナイトフォール</style></link>: このユニットに<link=keyword.SpellShield><sprite name=SpellShield><style=Keyword>スペルシールド</style></link>を付与する。",
+    "descriptionRaw": "プレイ: 他の味方すべてのデイブレイクとナイトフォールの効果を発動させる。\r\nデイブレイク: このユニットにオーバーパワーを付与する。\r\nナイトフォール: このユニットにスペルシールドを付与する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「空に炎の輪が燃える。やがて訪れる闇の下では、我らは皆同じ」<br>- 朔月の神託者",
+    "artistName": "Kudos Productions",
+    "name": "重なる天を告げる者",
+    "cardCode": "08MT027",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "エピック",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "鳥"
+    ],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08MT025.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08MT025-full.png"
+      }
+    ],
+    "regions": [
+      "ターゴン"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 7,
+    "health": 0,
+    "description": "<link=vocab.Titanic><style=Vocab>タイタン</style></link>のユニットを<link=vocab.Behold><style=Vocab>保持</style></link>している場合、このカードのコストが3減少する。\r\nユニット1体に7ダメージを与える。",
+    "descriptionRaw": "タイタンのユニットを保持している場合、このカードのコストが3減少する。\r\nユニット1体に7ダメージを与える。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「オットット、心配シナイデ。タマタマ、チョッピリオッキナ岩ガ落チテキタダケ。パッパノセイジャ、ナイカラネェ！サア、先ニ進モウ！」<br>- チップ",
+    "artistName": "Polar Engine",
+    "name": "サイズミックシャード",
+    "cardCode": "08MT025",
+    "keywords": [
+      "スロウ"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "スロウ",
+    "spellSpeedRef": "Slow",
+    "rarity": "コモン",
+    "rarityRef": "Common",
+    "subtypes": [
+      "エレメンタル"
+    ],
+    "supertype": "",
+    "type": "スペル",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08BW028T1",
+      "08BW028T2",
+      "08BW028T3",
+      "08BW028T4"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08DE006.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08DE006-full.png"
+      }
+    ],
+    "regions": [
+      "デマーシア",
+      "フレヨルド"
+    ],
+    "regionRefs": [
+      "Demacia",
+      "Freljord"
+    ],
+    "attack": 2,
+    "cost": 3,
+    "health": 3,
+    "description": "<link=vocab.Play><style=Vocab>プレイ</style></link>: 「探検家」のスペルを1枚指定して手札に生成する。",
+    "descriptionRaw": "プレイ: 「探検家」のスペルを1枚指定して手札に生成する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「空気は凍てつき、体は冷え切っている。ここはとにかく、ありとあらゆるものが熱を失っている。この世には人が住むには適さない場所も存在するということだ。次はどこか暖かいところへ送ってくれ」<br>- 探検家ギルド 最果て支部の探索記録 フレヨルドにて",
+    "artistName": "Envar Studio",
+    "name": "開拓する学徒",
+    "cardCode": "08DE006",
+    "keywords": [
+      "チャレンジャー"
+    ],
+    "keywordRefs": [
+      "Challenger"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "レア",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08DE017T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08DE020.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08DE020-full.png"
+      }
+    ],
+    "regions": [
+      "デマーシア"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "味方1体に+0|+2を付与する。相手に<link=card.curse><style=AssociatedCard>抑圧の紋章</style></link>による<link=keyword.Curse><sprite name=Curse><style=Keyword>呪い</style></link>をかける。",
+    "descriptionRaw": "味方1体に+0|+2を付与する。相手に抑圧の紋章による呪いをかける。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「罪の重さを知るがいい！」<br>- モルガナ",
+    "artistName": "Polar Engine",
+    "name": "魔力の鎖",
+    "cardCode": "08DE020",
+    "keywords": [
+      "スロウ"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "スロウ",
+    "spellSpeedRef": "Slow",
+    "rarity": "コモン",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スペル",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08DE017T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08DE017.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08DE017-full.png"
+      }
+    ],
+    "regions": [
+      "デマーシア"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 3,
+    "cost": 4,
+    "health": 2,
+    "description": "召喚時、相手に<link=card.curse><style=AssociatedCard>抑圧の紋章</style></link>による<link=keyword.Curse><sprite name=Curse><style=Keyword>呪い</style></link>をかける。",
+    "descriptionRaw": "召喚時、相手に抑圧の紋章による呪いをかける。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「こいつらを堕天使の下に逃がすようなことは決してあってはならん。やつの魔法は古く、いびつで、私の力をもってしても抑えることができないからな。さぁ急げ！この化け物どもを船に連れ戻し、お仲間が待っている山の上に囲い込むんだ！」",
+    "artistName": "Envar Studio",
+    "name": "メイジ狩りの審問官",
+    "cardCode": "08DE017",
+    "keywords": [
+      "チャレンジャー",
+      "タフ"
+    ],
+    "keywordRefs": [
+      "Challenger",
+      "Tough"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "レア",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08DE017T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08DE017T1-full.png"
+      }
+    ],
+    "regions": [
+      "デマーシア"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "このカードが手札にある間、あなたは<link=card.selfref><style=AssociatedCard>抑圧の紋章</style></link>以外のスペルをプレイできない。",
+    "descriptionRaw": "このカードが手札にある間、あなたは抑圧の紋章以外のスペルをプレイできない。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "その紋章の前では、一切の魔法は応えない。",
+    "artistName": "Polar Engine",
+    "name": "抑圧の紋章",
+    "cardCode": "08DE017T1",
+    "keywords": [
+      "フォーカス",
+      "呪い"
+    ],
+    "keywordRefs": [
+      "Focus",
+      "Curse"
+    ],
+    "spellSpeed": "バースト",
+    "spellSpeedRef": "Burst",
+    "rarity": "なし",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スペル",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08DE025.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08DE025-full.png"
+      }
+    ],
+    "regions": [
+      "デマーシア"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 6,
+    "cost": 6,
+    "health": 6,
+    "description": "召喚時、手札の味方ユニットすべてのコストを1減少させる。",
+    "descriptionRaw": "召喚時、手札の味方ユニットすべてのコストを1減少させる。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "クラウドドレイクは寒さを防ぐための分厚い房のような毛皮を持っており、一般的なドラゴンよりも高い高度まで到達することができる。活動的ではあるが人の近くに姿を見せることは滅多になく、遥か上空で翼を広げて雲を切り裂きながら、より強い風を求めて飛んでいる姿が目撃されることがほとんどである。",
+    "artistName": "Wild Blue",
+    "name": "クラウドドレイク",
+    "cardCode": "08DE025",
+    "keywords": [
+      "フューリー"
+    ],
+    "keywordRefs": [
+      "Fury"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "エピック",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "ドラゴン"
+    ],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "コモンオンリー",
+      "エターナル",
+      "イーブンコスト",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08DE010.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08DE010-full.png"
+      }
+    ],
+    "regions": [
+      "デマーシア"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "このラウンド中、味方1体に+0|+2を付与する。その味方と敵1体が互いに<link=vocab.Strike><style=Vocab>ストライク</style></link>する。",
+    "descriptionRaw": "このラウンド中、味方1体に+0|+2を付与する。その味方と敵1体が互いにストライクする。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「構えたまえ！君は男同士の決闘を拒むような腰抜けではないだろう？」<br>- ローラン家の騎兵",
+    "artistName": "Kudos Productions",
+    "name": "紳士の決闘",
+    "cardCode": "08DE010",
+    "keywords": [
+      "ファスト"
+    ],
+    "keywordRefs": [
+      "Fast"
+    ],
+    "spellSpeed": "ファスト",
+    "spellSpeedRef": "Fast",
+    "rarity": "コモン",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スペル",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08DE022.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08DE022-full.png"
+      }
+    ],
+    "regions": [
+      "デマーシア"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 8,
+    "cost": 9,
+    "health": 8,
+    "description": "召喚時、デッキ内の各チャンピオンを1枚引く。\r\n各ラウンド中、初めてチャンピオンを召喚する時、<link=vocab.Rally><style=Vocab>奮起</style></link>する。",
+    "descriptionRaw": "召喚時、デッキ内の各チャンピオンを1枚引く。\r\n各ラウンド中、初めてチャンピオンを召喚する時、奮起する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「息子よ、ゆめゆめ忘れるでないぞ。水平線を目指すべきは、船尾に見える祖国に奉仕する時のみであると」<br>- 国王ジャーヴァン三世",
+    "artistName": "Envar Studio",
+    "name": "キングフィッシャー号",
+    "cardCode": "08DE022",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "エピック",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08DE026.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08DE026-full.png"
+      }
+    ],
+    "regions": [
+      "デマーシア"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 7,
+    "cost": 7,
+    "health": 6,
+    "description": "味方の「ドラゴンの加護」は、味方の「ドラゴン」すべてを対象とする。",
+    "descriptionRaw": "味方の「ドラゴンの加護」は、味方の「ドラゴン」すべてを対象とする。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「俺だって、最初からドラゴンのことを仲間と認めていたわけじゃない。ここにいるアラティスに説き伏せられたのさ。こいつに初めて命を救われた時にな。アラティスからは色々学んだが、最も重要なことは、ドラゴンに乗ってデマーシアのために戦えるのは、この上なく幸いな人生だってことだ」<br>- ドラゴンの忠士",
+    "artistName": "Envar Studio",
+    "name": "勇敢なるアラティス",
+    "cardCode": "08DE026",
+    "keywords": [
+      "フューリー"
+    ],
+    "keywordRefs": [
+      "Fury"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "エピック",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "ドラゴン"
+    ],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "コモンオンリー",
+      "エターナル",
+      "イーブンコスト",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08DE013.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08DE013-full.png"
+      }
+    ],
+    "regions": [
+      "デマーシア"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 3,
+    "description": "召喚時に「ドラゴン」を<link=vocab.Behold><style=Vocab>保持</style></link>している場合、「ドラゴン」を1枚引く。",
+    "descriptionRaw": "召喚時に「ドラゴン」を保持している場合、「ドラゴン」を1枚引く。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「認めたくはないが、俺たちだけであいつを手懐けるのは不可能だ。やれることはすべてやった。将軍に一筆したためるとしよう。勇敢なるデマーシア軍が味方につけば、必ずあの壮麗な獣を手懐けることができるはずだってな」",
+    "artistName": "Envar Studio",
+    "name": "ドラゴンの忠士",
+    "cardCode": "08DE013",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "コモン",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08IO012.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08IO012-full.png"
+      }
+    ],
+    "regions": [
+      "アイオニア"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 3,
+    "cost": 6,
+    "health": 5,
+    "description": "<link=keyword.Fast><sprite name=Fast><style=Keyword>ファスト</style></link>スペル、<link=keyword.Slow><sprite name=Slow><style=Keyword>スロウ</style></link>スペル、または<link=keyword.Skill><sprite name=SkillMark><style=Keyword>スキル</style></link>をプレイする時、ネクサスの体力を1回復する。",
+    "descriptionRaw": "ファストスペル、スロウスペル、またはスキルをプレイする時、ネクサスの体力を1回復する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「波間を滑るお前の爪からは喜びを感じる。偉大なる獣よ、魚や海鳥を狩るだけで満足できなくなったなら、いつでも私が相手になろう！」<br>- ニーラ",
+    "artistName": "Caravan Studio",
+    "name": "オーシャンドレイク",
+    "cardCode": "08IO012",
+    "keywords": [
+      "イルーシブ"
+    ],
+    "keywordRefs": [
+      "Elusive"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "レア",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "ドラゴン"
+    ],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08IO014.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08IO014-full.png"
+      }
+    ],
+    "regions": [
+      "アイオニア"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 9,
+    "cost": 10,
+    "health": 9,
+    "description": "各ラウンドであなたが初めてプレイするカードのコストは9減少する。",
+    "descriptionRaw": "各ラウンドであなたが初めてプレイするカードのコストは9減少する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "村の住民たちにとって、ヘイショーは敬うべき世話人であると当時に、親しき友人でもある。悠久の昔から家々をその背に載せて運び、危機が迫った時には安全な岸辺まで運んでくれる彼に、村人たちは心からの信頼を寄せている。",
+    "artistName": "Envar Studio",
+    "name": "世界の甲羅 ヘイショー",
+    "cardCode": "08IO014",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "エピック",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "01IO030"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08IO021.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08IO021-full.png"
+      }
+    ],
+    "regions": [
+      "アイオニア"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 0,
+    "cost": 9,
+    "health": 0,
+    "description": "敵の<link=keyword.Fast><sprite name=Fast><style=Keyword>ファスト</style></link>スペル、<link=keyword.Slow><sprite name=Slow><style=Keyword>スロウ</style></link>スペル、または<link=keyword.Skill><sprite name=SkillMark><style=Keyword>スキル</style></link>を1つ阻止し、敵1体を<link=keyword.Recall><style=Keyword>リコール</style></link>させて、<link=card.summon><style=AssociatedCard>天なる竜</style></link>を1体召喚する。",
+    "descriptionRaw": "敵のファストスペル、スロウスペル、またはスキルを1つ阻止し、敵1体をリコールさせて、天なる竜を1体召喚する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「これは…追悼の舞だ」<br>- イレリア",
+    "artistName": "Polar Engine",
+    "name": "天なる舞",
+    "cardCode": "08IO021",
+    "keywords": [
+      "ファスト"
+    ],
+    "keywordRefs": [
+      "Fast"
+    ],
+    "spellSpeed": "ファスト",
+    "spellSpeedRef": "Fast",
+    "rarity": "レア",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スペル",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "コモンオンリー",
+      "エターナル",
+      "イーブンコスト",
+      "シングルトン",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Deckbuilder_RulesFilters_Singleton",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08IO019T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08IO019.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08IO019-full.png"
+      }
+    ],
+    "regions": [
+      "アイオニア"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 3,
+    "cost": 4,
+    "health": 3,
+    "description": "召喚時、<link=card.summon><style=AssociatedCard>アドネアの鳥見番</style></link>を召喚する。",
+    "descriptionRaw": "召喚時、アドネアの鳥見番を召喚する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「世界は教訓に溢れている。よく覚えておくんだよ。過ぎ行く季節があるのなら、喜んで送り出すべきなんだ。それは新たな季節の到来でもあるのだからね」",
+    "artistName": "Envar Studio",
+    "name": "誠実なるアドネア",
+    "cardCode": "08IO019",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "レア",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "コモンオンリー",
+      "エターナル",
+      "イーブンコスト",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08IO019T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08IO019T1-full.png"
+      }
+    ],
+    "regions": [
+      "アイオニア"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 1,
+    "cost": 1,
+    "health": 1,
+    "description": "<link=keyword.Support><style=Keyword>サポート</style></link>: このラウンド中、このユニットがサポートする味方のステータスまで、このユニットを成長させる。",
+    "descriptionRaw": "サポート: このラウンド中、このユニットがサポートする味方のステータスまで、このユニットを成長させる。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「ほらそこ！パパの子たちがまた孵化してる！」<br>「わっ、すごい！なんでこんなにたくさん産まれるんだろう？」<br>「アーリャ、毎年同じこと言ってるね」<br>「だって、誰も教えてくれないんだもん！」<br>「しーっ…静かに。ヒナたちがビックリしちゃうだろ。ほら、そんなことより何羽孵ったのか数えて。今年もたくさん名前を考えないと」",
+    "artistName": "Envar Studio",
+    "name": "アドネアの鳥見番",
+    "cardCode": "08IO019T1",
+    "keywords": [
+      "サポート"
+    ],
+    "keywordRefs": [
+      "Support"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "なし",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ユニット",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "コモンオンリー",
+      "エターナル",
+      "イーブンコスト",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08IO010.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08IO010-full.png"
+      }
+    ],
+    "regions": [
+      "アイオニア"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 0,
+    "cost": 4,
+    "health": 0,
+    "description": "敵1体を<link=keyword.Recall><style=Keyword>リコール</style></link>させることで、このラウンド中、相手が次にプレイするユニットのコストを2増加させる。",
+    "descriptionRaw": "敵1体をリコールさせることで、このラウンド中、相手が次にプレイするユニットのコストを2増加させる。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「我らに害をなす者に、水底の安寧を与えよう」<br>- リバーシェイパー",
+    "artistName": "Polar Engine",
+    "name": "転覆",
+    "cardCode": "08IO010",
+    "keywords": [
+      "スロウ"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "スロウ",
+    "spellSpeedRef": "Slow",
+    "rarity": "コモン",
+    "rarityRef": "Common",
+    "subtypes": [
+      "エレメンタル"
+    ],
+    "supertype": "",
+    "type": "スペル",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "エターナル",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08BC020.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08BC020-full.png"
+      }
+    ],
+    "regions": [
+      "バンドル<nobr>シティ</nobr>"
+    ],
+    "regionRefs": [
+      "BandleCity"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "相手はコストが最も高いカードを破棄する。",
+    "descriptionRaw": "相手はコストが最も高いカードを破棄する。",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "「もしも自分が芋虫でさ、死ぬ前に見たものがあの目だったらどんな気持ちなのかな？…え、芋虫は目が見えないって？へぇ～、ならよかったね」<br>- 不仲な旅人 エル",
+    "artistName": "Polar Engine",
+    "name": "早起き鳥",
+    "cardCode": "08BC020",
+    "keywords": [
+      "スロウ"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "スロウ",
+    "spellSpeedRef": "Slow",
+    "rarity": "コモン",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "スペル",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "コモンオンリー",
+      "エターナル",
+      "イーブンコスト",
+      "スタンダード"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
       "06RU001T3",
       "01PZ022"
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08BC005.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08BC005-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08BC005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08BC005-full.png"
       }
     ],
     "regions": [
@@ -2844,8 +6942,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08BC002.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08BC002-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08BC002.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08BC002-full.png"
       }
     ],
     "regions": [
@@ -2899,8 +6997,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08BC006.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08BC006-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08BC006.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08BC006-full.png"
       }
     ],
     "regions": [
@@ -2932,54 +7030,8 @@
     "spellSpeedRef": "",
     "rarity": "レア",
     "rarityRef": "Rare",
-    "subtypes": [],
-    "supertype": "",
-    "type": "ユニット",
-    "collectible": true,
-    "set": "Set8",
-    "formats": [
-      "エターナル",
-      "スタンダード"
-    ],
-    "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08SH004.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08SH004-full.png"
-      }
-    ],
-    "regions": [
-      "シュリーマ"
-    ],
-    "regionRefs": [
-      "Shurima"
-    ],
-    "attack": 4,
-    "cost": 4,
-    "health": 4,
-    "description": "<link=keyword.Daybreak><style=Keyword>デイブレイク</style></link>、またはこのユニット以外の<link=keyword.Daybreak><style=Keyword>デイブレイク</style></link>を発動させる時: <link=keyword.Weakest><style=Keyword>最も弱い</style></link>敵に<link=keyword.Vulnerable><sprite name=Vulnerable><style=Keyword>無防備</style></link>を付与する。",
-    "descriptionRaw": "デイブレイク、またはこのユニット以外のデイブレイクを発動させる時: 最も弱い敵に無防備を付与する。",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "広大な砂漠の上には、おびただしい数のシュリーマ軍が待機していた。ひとたび命令が下れば彼らは迷いなく前進し、その力を世界に示すだろう。",
-    "artistName": "Kudos Productions",
-    "name": "砂丘の将軍",
-    "cardCode": "08SH004",
-    "keywords": [],
-    "keywordRefs": [],
-    "spellSpeed": "",
-    "spellSpeedRef": "",
-    "rarity": "レア",
-    "rarityRef": "Rare",
     "subtypes": [
-      "精鋭"
+      "ヨードル"
     ],
     "supertype": "",
     "type": "ユニット",
@@ -2999,127 +7051,27 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08SH005.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08SH005-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08BC004.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08BC004-full.png"
       }
     ],
     "regions": [
-      "シュリーマ"
+      "バンドル<nobr>シティ</nobr>"
     ],
     "regionRefs": [
-      "Shurima"
+      "BandleCity"
     ],
-    "attack": 2,
-    "cost": 2,
-    "health": 2,
-    "description": "<link=keyword.Daybreak><style=Keyword>デイブレイク</style></link>: <link=card.me><style=AssociatedCard>太陽の近衛兵団</style></link>を1枚引く。",
-    "descriptionRaw": "デイブレイク: 太陽の近衛兵団を1枚引く。",
+    "attack": 9,
+    "cost": 9,
+    "health": 9,
+    "description": "<link=vocab.Play><style=Vocab>プレイ</style></link>: <link=vocab.Titanic><style=Vocab>タイタン</style></link>のフォロワーを1枚<link=vocab.Manifest><style=Vocab>選定</style></link>し、そのステータスを1|1に、コストを0にする。 ",
+    "descriptionRaw": "プレイ: タイタンのフォロワーを1枚選定し、そのステータスを1|1に、コストを0にする。 ",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "「我らは悠久なる砂漠の守護者。生ける歴史にして、輝ける道を歩む者。我らが仕えるは太陽の円盤のみであり、故に世界はシュリーマの栄光にひれ伏すであろう」<br>- アジール",
-    "artistName": "Kudos Productions",
-    "name": "太陽の近衛兵団",
-    "cardCode": "08SH005",
-    "keywords": [],
-    "keywordRefs": [],
-    "spellSpeed": "",
-    "spellSpeedRef": "",
-    "rarity": "コモン",
-    "rarityRef": "Common",
-    "subtypes": [
-      "精鋭"
-    ],
-    "supertype": "",
-    "type": "ユニット",
-    "collectible": true,
-    "set": "Set8",
-    "formats": [
-      "エターナル",
-      "スタンダード"
-    ],
-    "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08IO010.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08IO010-full.png"
-      }
-    ],
-    "regions": [
-      "アイオニア"
-    ],
-    "regionRefs": [
-      "Ionia"
-    ],
-    "attack": 0,
-    "cost": 4,
-    "health": 0,
-    "description": "敵1体を<link=keyword.Recall><style=Keyword>リコール</style></link>させることで、このラウンド中、相手が次にプレイするユニットのコストを2増加させる。",
-    "descriptionRaw": "敵1体をリコールさせることで、このラウンド中、相手が次にプレイするユニットのコストを2増加させる。",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "「我らに害をなす者に、水底の安寧を与えよう」<br>- リバーシェイパー",
-    "artistName": "Polar Engine",
-    "name": "転覆",
-    "cardCode": "08IO010",
-    "keywords": [
-      "スロウ"
-    ],
-    "keywordRefs": [
-      "Slow"
-    ],
-    "spellSpeed": "スロウ",
-    "spellSpeedRef": "Slow",
-    "rarity": "コモン",
-    "rarityRef": "Common",
-    "subtypes": [
-      "エレメンタル"
-    ],
-    "supertype": "",
-    "type": "スペル",
-    "collectible": true,
-    "set": "Set8",
-    "formats": [
-      "エターナル",
-      "スタンダード"
-    ],
-    "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08MT027.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08MT027-full.png"
-      }
-    ],
-    "regions": [
-      "ターゴン"
-    ],
-    "regionRefs": [
-      "Targon"
-    ],
-    "attack": 5,
-    "cost": 8,
-    "health": 8,
-    "description": "<link=vocab.Play><style=Vocab>プレイ</style></link>: 他の味方すべての<link=keyword.Daybreak><style=Keyword>デイブレイク</style></link>と<link=keyword.Nightfall><style=Keyword>ナイトフォール</style></link>の効果を発動させる。\r\n<link=keyword.Daybreak><style=Keyword>デイブレイク</style></link>: このユニットに<link=keyword.Overwhelm><sprite name=Overwhelm><style=Keyword>オーバーパワー</style></link>を付与する。\r\n<link=keyword.Nightfall><style=Keyword>ナイトフォール</style></link>: このユニットに<link=keyword.SpellShield><sprite name=SpellShield><style=Keyword>スペルシールド</style></link>を付与する。",
-    "descriptionRaw": "プレイ: 他の味方すべてのデイブレイクとナイトフォールの効果を発動させる。\r\nデイブレイク: このユニットにオーバーパワーを付与する。\r\nナイトフォール: このユニットにスペルシールドを付与する。",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "「空に炎の輪が燃える。やがて訪れる闇の下では、我らは皆同じ」<br>- 朔月の神託者",
-    "artistName": "Kudos Productions",
-    "name": "重なる天を告げる者",
-    "cardCode": "08MT027",
+    "flavorText": "「ああ、ポルティアばあさんのことならよく知ってるよ。ちょっとおかしなところはあるけど、どんな場所へもポータルを繋げてくれるんだ。あの尻尾をちょちょいと振れば、気付いた時には新しい場所に立ってるのさ！」<br>- ポータル開拓者",
+    "artistName": "Bubble Cat",
+    "name": "風変わりなポルティア",
+    "cardCode": "08BC004",
     "keywords": [],
     "keywordRefs": [],
     "spellSpeed": "",
@@ -3127,7 +7079,7 @@
     "rarity": "エピック",
     "rarityRef": "Epic",
     "subtypes": [
-      "鳥"
+      "ドラゴン"
     ],
     "supertype": "",
     "type": "ユニット",
@@ -3147,27 +7099,27 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08MT025.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ja_jp/img/cards/08MT025-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08BC018.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ja_jp/img/cards/08BC018-full.png"
       }
     ],
     "regions": [
-      "ターゴン"
+      "バンドル<nobr>シティ</nobr>"
     ],
     "regionRefs": [
-      "Targon"
+      "BandleCity"
     ],
     "attack": 0,
-    "cost": 7,
+    "cost": 8,
     "health": 0,
-    "description": "<link=vocab.Titanic><style=Vocab>タイタン</style></link>のユニットを<link=vocab.Behold><style=Vocab>保持</style></link>している場合、このカードのコストが3減少する。\r\nユニット1体に7ダメージを与える。",
-    "descriptionRaw": "タイタンのユニットを保持している場合、このカードのコストが3減少する。\r\nユニット1体に7ダメージを与える。",
+    "description": "味方1体をデッキの一番下に戻すことで、デッキの一番上の味方を召喚する。",
+    "descriptionRaw": "味方1体をデッキの一番下に戻すことで、デッキの一番上の味方を召喚する。",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "「オットット、心配シナイデ。タマタマ、チョッピリオッキナ岩ガ落チテキタダケ。パッパノセイジャ、ナイカラネェ！サア、先ニ進モウ！」<br>- チップ",
+    "flavorText": "「バンドル偵察兵の掟、第571条──偵察兵は常に警戒を怠ってはならない。何が美味しいおやつで、何が罠なのかは誰にもわからない」<br>- 期待の新兵 エイヴァ",
     "artistName": "Polar Engine",
-    "name": "サイズミックシャード",
-    "cardCode": "08MT025",
+    "name": "甘い罠",
+    "cardCode": "08BC018",
     "keywords": [
       "スロウ"
     ],
@@ -3176,21 +7128,23 @@
     ],
     "spellSpeed": "スロウ",
     "spellSpeedRef": "Slow",
-    "rarity": "コモン",
-    "rarityRef": "Common",
-    "subtypes": [
-      "エレメンタル"
-    ],
+    "rarity": "レア",
+    "rarityRef": "Rare",
+    "subtypes": [],
     "supertype": "",
     "type": "スペル",
     "collectible": true,
     "set": "Set8",
     "formats": [
+      "コモンオンリー",
       "エターナル",
+      "イーブンコスト",
       "スタンダード"
     ],
     "formatRefs": [
+      "client_Formats_CommonsOnly_name",
       "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
       "client_Formats_Standard_name"
     ]
   }

@@ -2,14 +2,853 @@
   {
     "associatedCards": [],
     "associatedCardRefs": [
+      "08SI042T1",
+      "08SI042T5"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08SI042.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08SI042-full.png"
+      }
+    ],
+    "regions": [
+      "녹서스",
+      "그림자 군도"
+    ],
+    "regionRefs": [
+      "Noxus",
+      "ShadowIsles"
+    ],
+    "attack": 5,
+    "cost": 7,
+    "health": 8,
+    "description": "<link=vocab.Play><style=Vocab>사용</style></link>: 아군 유닛을 둘까지 처치합니다.\r\n다른 아군을 <link=vocab.Slay><style=Vocab>살해</style></link>할 때마다 해당 아군을 부활시킵니다.",
+    "descriptionRaw": "사용: 아군 유닛을 둘까지 처치합니다.\r\n다른 아군을 살해할 때마다 해당 아군을 부활시킵니다.",
+    "levelupDescription": "아군이 열 다섯 이상 사망해야 합니다. 공격력이 5 이상인 아군은 두 배로 계산됩니다. <style=Variable></style>",
+    "levelupDescriptionRaw": "아군이 열 다섯 이상 사망해야 합니다. 공격력이 5 이상인 아군은 두 배로 계산됩니다. ",
+    "flavorText": "불멸의 요새 심장부에 보관되어 있던 그의 갑옷에 구속된 모데카이저는 회색 세계에 자신만의 왕좌를 만들었습니다. 그를 파괴하려는 자들의 수보다 삶과 죽음을 뛰어 넘어 그를 섬길 이들의 수가 언제나 더 많습니다.",
+    "artistName": "Michal Ivan",
+    "name": "모데카이저",
+    "cardCode": "08SI042",
+    "keywords": [
+      "도전자"
+    ],
+    "keywordRefs": [
+      "Challenger"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "챔피언",
+    "rarityRef": "Champion",
+    "subtypes": [],
+    "supertype": "챔피언",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08SI042",
+      "08SI042T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08SI042T5.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08SI042T5-full.png"
+      }
+    ],
+    "regions": [
+      "그림자 군도"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 0,
+    "cost": 10,
+    "health": 0,
+    "description": "아군 하나가 <link=vocab.Strongest><style=Vocab>최강</style></link>인 적을 자유 공격하며 <link=keyword.Challenger><sprite name=Challenger><style=Keyword>도전</style></link>합니다.\r\n다른 모든 유닛을 처치합니다.\r\n내 덱에 <link=card.level1><style=AssociatedCard>모데카이저</style></link> 1장을 생성합니다.",
+    "descriptionRaw": "아군 하나가 최강인 적을 자유 공격하며 도전합니다.\r\n다른 모든 유닛을 처치합니다.\r\n내 덱에 모데카이저 1장을 생성합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"죽음은 내가 지배한다.\"\n- 모데카이저",
+    "artistName": "Polar Engine",
+    "name": "모데카이저의 죽음의 세계",
+    "cardCode": "08SI042T5",
+    "keywords": [
+      "집중"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "집중",
+    "spellSpeedRef": "Slow",
+    "rarity": "없음",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "챔피언",
+    "type": "주문",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08SI042T5"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08SI042T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08SI042T1-full.png"
+      }
+    ],
+    "regions": [
+      "녹서스",
+      "그림자 군도"
+    ],
+    "regionRefs": [
+      "Noxus",
+      "ShadowIsles"
+    ],
+    "attack": 6,
+    "cost": 7,
+    "health": 9,
+    "description": "<link=vocab.Play><style=Vocab>사용</style></link>: 아군 유닛을 둘까지 처치합니다.\r\n다른 아군을 <link=vocab.Slay><style=Vocab>살해</style></link>할 때마다 해당 아군을 부활시킵니다.\r\n<link=vocab.Attack><style=Vocab>공격</style></link>: 게임 종료까지 유닛을 <link=vocab.Slay><style=Vocab>살해</style></link>할 때마다 적 넥서스의 체력을 1 <link=keyword.Drain><style=Keyword>흡수</style></link>합니다.",
+    "descriptionRaw": "사용: 아군 유닛을 둘까지 처치합니다.\r\n다른 아군을 살해할 때마다 해당 아군을 부활시킵니다.\r\n공격: 게임 종료까지 유닛을 살해할 때마다 적 넥서스의 체력을 1 흡수합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"나를 섬기고 너희들의 보잘 것 없는 영혼을 버려라! 영원한 강철을 선사하리니, 내가 바로 피할 수 없는 망각이다!\"",
+    "artistName": "Michal Ivan",
+    "name": "모데카이저",
+    "cardCode": "08SI042T1",
+    "keywords": [
+      "도전자"
+    ],
+    "keywordRefs": [
+      "Challenger"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "챔피언",
+    "rarityRef": "Champion",
+    "subtypes": [],
+    "supertype": "챔피언",
+    "type": "유닛",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08SI007.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08SI007-full.png"
+      }
+    ],
+    "regions": [
+      "그림자 군도"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 4,
+    "cost": 3,
+    "health": 2,
+    "description": "<link=vocab.Play><style=Vocab>사용</style></link>: 손에 든 아군 하나에게 <link=keyword.Deathless><sprite name=Deathless><style=Keyword>불사</style></link> 효과를 부여합니다.",
+    "descriptionRaw": "사용: 손에 든 아군 하나에게 불사 효과를 부여합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "회색 세계에 갇히기 전에 영혼들이 어떤 형태를 취했는지는 중요하지 않습니다. 여기서 각각의 개성은 중요치 않기 때문입니다. 얼굴과 공포를 잃어버린 군단은 통일된 모습으로 인해 강철의 망령을 더욱 잘 섬깁니다.",
+    "artistName": "Bubble Cat",
+    "name": "절단된 자의 군단",
+    "cardCode": "08SI007",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "일반급",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08SI003.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08SI003-full.png"
+      }
+    ],
+    "regions": [
+      "그림자 군도"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 1,
+    "cost": 1,
+    "health": 1,
+    "description": "<link=keyword.Last Breath><sprite name=LastBreath><style=Keyword>최후의 숨결</style></link>: 다음에 아군을 부활시키면 손에 이 유닛의 복사본을 생성합니다.",
+    "descriptionRaw": "최후의 숨결: 다음에 아군을 부활시키면 손에 이 유닛의 복사본을 생성합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"사슬로 묶인 것은 오래 전 일이다. 너도 곧 우리의 고통을 <nobr>알게 되겠지.</nobr> 그리고 모두 함께 고통을 받는 거다, 영원토록. 주인님의 손에 의해 망각을 선물받기 전까지...\"",
+    "artistName": "Michal Ivan",
+    "name": "족쇄를 찬 유령",
+    "cardCode": "08SI003",
+    "keywords": [
+      "최후의 숨결"
+    ],
+    "keywordRefs": [
+      "LastBreath"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "희귀급",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU001T3"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08SI021.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08SI021-full.png"
+      }
+    ],
+    "regions": [
+      "그림자 군도"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 3,
+    "description": "다른 아군 사망 또는 <nobr><link=keyword.Last Breath><sprite name=LastBreath><style=Keyword>최후의 숨결</style></link>:</nobr> <nobr>내 덱에</nobr> <link=card.chime><style=AssociatedCard>고대의 종</style></link> 넷을 설치합니다.",
+    "descriptionRaw": "다른 아군 사망 또는 최후의 숨결: 내 덱에 고대의 종 넷을 설치합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "불길한 방울 소리는 신경쓰지 않아도 됩니다. 늙은 방울슬라임이 지나가는 소리일 뿐이니까요. 새로 도착한 자들을 만나는 걸 무척 좋아한답니다. 다만, 다른 이들이 별로 좋아하지 않을 뿐이죠.",
+    "artistName": "Bubble Cat",
+    "name": "외로운 방울슬라임",
+    "cardCode": "08SI021",
+    "keywords": [
+      "최후의 숨결"
+    ],
+    "keywordRefs": [
+      "LastBreath"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "일반급",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08SI030.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08SI030-full.png"
+      }
+    ],
+    "regions": [
+      "그림자 군도"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "적 덱의 맨 아래에 있는 카드 6장을 <link=vocab.Obliterate><style=Vocab>소멸</style></link>시킵니다.",
+    "descriptionRaw": "적 덱의 맨 아래에 있는 카드 6장을 소멸시킵니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "룬테라에서 가장 깊은 심해에 사는 일부 바다 괴물에게 자울치잡이 배는 가벼운 간식입니다.",
+    "artistName": "Polar Engine",
+    "name": "수중 무덤",
+    "cardCode": "08SI030",
+    "keywords": [
+      "집중"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "집중",
+    "spellSpeedRef": "Slow",
+    "rarity": "서사급",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "주문",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "일반급 대전",
+      "영원",
+      "짝수 비용 카드",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08SI037T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08SI037T1-full.png"
+      }
+    ],
+    "regions": [
+      "그림자 군도"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 8,
+    "cost": 6,
+    "health": 4,
+    "description": "",
+    "descriptionRaw": "",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "강철 발톱이 달린 천 개의 발이 달그락대는 소리와 유령 이빨이 부딪히는 소리를 듣고도 복종하지 않는 자는 반드시 끔찍한 결말을 맞게 됩니다.",
+    "artistName": "Envar Studio",
+    "name": "천 개의 발톱 죽음감개",
+    "cardCode": "08SI037T1",
+    "keywords": [
+      "공포"
+    ],
+    "keywordRefs": [
+      "Fearsome"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "없음",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "일반급 대전",
+      "영원",
+      "짝수 비용 카드",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08SI037T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08SI037.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08SI037-full.png"
+      }
+    ],
+    "regions": [
+      "그림자 군도"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 5,
+    "cost": 6,
+    "health": 3,
+    "description": "사용하려면 아군 하나를 처치해야 합니다.\r\n소환 시 <link=card.summon><style=AssociatedCard>천 개의 발톱 죽음감개</style></link> 하나를 소환합니다.",
+    "descriptionRaw": "사용하려면 아군 하나를 처치해야 합니다.\r\n소환 시 천 개의 발톱 죽음감개 하나를 소환합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "이 사냥개들은 도망친 자들의 냄새를 절대 잊어버리지 않습니다. 마침내 먹이를 궁지에 몰아넣으면, 언제나 죽음감개가 근처에 있습니다.",
+    "artistName": "Xavier Leroux",
+    "name": "유령 강철사냥개",
+    "cardCode": "08SI037",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "희귀급",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "일반급 대전",
+      "영원",
+      "짝수 비용 카드",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08SI041.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08SI041-full.png"
+      }
+    ],
+    "regions": [
+      "그림자 군도"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "아군 하나를 처치한 후 유닛 하나에게 피해를 5 입힙니다.",
+    "descriptionRaw": "아군 하나를 처치한 후 유닛 하나에게 피해를 5 입힙니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"어둠은 나를 제외한 모든 이들의 운명이다.\"\n- 모데카이저",
+    "artistName": "Polar Engine",
+    "name": "죽음의 손아귀",
+    "cardCode": "08SI041",
+    "keywords": [
+      "신속"
+    ],
+    "keywordRefs": [
+      "Fast"
+    ],
+    "spellSpeed": "신속",
+    "spellSpeedRef": "Fast",
+    "rarity": "일반급",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "주문",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08SI026T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08SI036.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08SI036-full.png"
+      }
+    ],
+    "regions": [
+      "그림자 군도"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "<link=vocab.Play><style=Vocab>사용</style></link>: 적 하나에게 <link=card.curse><style=AssociatedCard>두려움</style></link> <link=keyword.Curse><sprite name=Curse><style=Keyword>저주</style></link>를 겁니다.\r\n<link=vocab.Titanic><style=Vocab>거대</style></link> 아군을 소환하면 이 명소를 파괴한 후 카드를 2장 뽑습니다.",
+    "descriptionRaw": "사용: 적 하나에게 두려움 저주를 겁니다.\r\n거대 아군을 소환하면 이 명소를 파괴한 후 카드를 2장 뽑습니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"이 영혼들을 바칩니다. 뼈로 이 길을 포장하여 준비했습니다. 이 세계를 산산이 찢어 영원한 강철의 군대를 모십니다.\"\n- 죽음손아귀 광신도",
+    "artistName": "Envar Studio",
+    "name": "회색의 경계",
+    "cardCode": "08SI036",
+    "keywords": [
+      "명소"
+    ],
+    "keywordRefs": [
+      "LandmarkVisualOnly"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "희귀급",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "명소",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "일반급 대전",
+      "영원",
+      "짝수 비용 카드",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08SI004.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08SI004-full.png"
+      }
+    ],
+    "regions": [
+      "그림자 군도"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 0,
+    "cost": 10,
+    "health": 0,
+    "description": "아군 하나가 <link=vocab.Strongest><style=Vocab>최강</style></link>인 적을 <nobr>자유 공격하며</nobr> <link=keyword.Challenger><sprite name=Challenger><style=Keyword>도전</style></link>합니다.\r\n다른 모든 유닛을 처치합니다.",
+    "descriptionRaw": "아군 하나가 최강인 적을 자유 공격하며 도전합니다.\r\n다른 모든 유닛을 처치합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"죽음은 내가 지배한다.\"\n- 모데카이저",
+    "artistName": "Polar Engine",
+    "name": "죽음의 세계",
+    "cardCode": "08SI004",
+    "keywords": [
+      "집중"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "집중",
+    "spellSpeedRef": "Slow",
+    "rarity": "서사급",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "주문",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08SI026T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08SI026.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08SI026-full.png"
+      }
+    ],
+    "regions": [
+      "그림자 군도"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 3,
+    "cost": 4,
+    "health": 4,
+    "description": "소환 시 또는 <link=vocab.Titanic><style=Vocab>거대</style></link> 아군 소환 시 <link=vocab.Strongest><style=Vocab>최강</style></link>인 적에게 <link=card.curse><style=AssociatedCard>두려움</style></link> <link=keyword.Curse><sprite name=Curse><style=Keyword>저주</style></link>를 겁니다.",
+    "descriptionRaw": "소환 시 또는 거대 아군 소환 시 최강인 적에게 두려움 저주를 겁니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "추종자들에게 강철의 망령은 망각에 이르는 유일한 길입니다. 이 광신도들은 지배를 통한 평화를 두 팔 벌려 환영합니다.",
+    "artistName": "Bubble Cat",
+    "name": "죽음손아귀 광신도",
+    "cardCode": "08SI026",
+    "keywords": [
+      "공포"
+    ],
+    "keywordRefs": [
+      "Fearsome"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "희귀급",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08SI026T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08SI026T1-full.png"
+      }
+    ],
+    "regions": [
+      "그림자 군도"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "이 카드가 손에 있을 때 <style=Variable>저주받은</style> 유닛은 <nobr>-<style=Variable>3</style>|-0을</nobr> 가집니다.",
+    "descriptionRaw": "이 카드가 손에 있을 때 저주받은 유닛은 -3|-0을 가집니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "압도적 공포를 느낍니다.",
+    "artistName": "Polar Engine",
+    "name": "두려움",
+    "cardCode": "08SI026T1",
+    "keywords": [
+      "몰입",
+      "저주"
+    ],
+    "keywordRefs": [
+      "Focus",
+      "Curse"
+    ],
+    "spellSpeed": "즉발",
+    "spellSpeedRef": "Burst",
+    "rarity": "없음",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "주문",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08BW028T1",
+      "08BW028T2",
+      "08BW028T3",
+      "08BW028T4"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08SI018.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08SI018-full.png"
+      }
+    ],
+    "regions": [
+      "그림자 군도",
+      "타곤"
+    ],
+    "regionRefs": [
+      "ShadowIsles",
+      "Targon"
+    ],
+    "attack": 2,
+    "cost": 3,
+    "health": 2,
+    "description": "<link=vocab.Play><style=Vocab>사용</style></link>: 탐험가 주문 1장을 선택하고 손에 생성합니다.",
+    "descriptionRaw": "사용: 탐험가 주문 1장을 선택하고 손에 생성합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"지형 측량 불가. 한 치 앞도 보이지 않는다. 길목을 돌 때마다 적과 마주치지만, 희한하게도 예상치 못한 아군을 만나기도 한다.\"\n- 탐험가 길드의 장거리 탐사부 탐험 일지, 그림자 군도 편에서 발췌",
+    "artistName": "Envar Studio",
+    "name": "유령 측량사",
+    "cardCode": "08SI018",
+    "keywords": [
+      "체력 흡수"
+    ],
+    "keywordRefs": [
+      "Lifesteal"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "희귀급",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08SI015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08SI015-full.png"
+      }
+    ],
+    "regions": [
+      "그림자 군도"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 5,
+    "cost": 5,
+    "health": 3,
+    "description": "사용하려면 아군 하나를 처치해야 합니다.\r\n<link=keyword.Last Breath><sprite name=LastBreath><style=Keyword>최후의 숨결</style></link>: 아군 넥서스의 체력을 2 회복합니다.",
+    "descriptionRaw": "사용하려면 아군 하나를 처치해야 합니다.\r\n최후의 숨결: 아군 넥서스의 체력을 2 회복합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "전쟁에 쓰이는 야수는 어느 군대에서든 가치가 높습니다. <nobr>회색 세계에서</nobr> 이들은 고문받은 영혼의 혼합체이며, 자각 없이 난폭하게 스스로를 갉아먹습니다.",
+    "artistName": "Michal Ivan",
+    "name": "사악한 의식의 혼합체",
+    "cardCode": "08SI015",
+    "keywords": [
+      "최후의 숨결",
+      "불사"
+    ],
+    "keywordRefs": [
+      "LastBreath",
+      "Deathless"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "서사급",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
       "08BW008T1",
       "08BW008T5",
       "08BW008T3"
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BW008.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BW008-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08BW008.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08BW008-full.png"
       }
     ],
     "regions": [
@@ -58,8 +897,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BW008T3.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BW008T3-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08BW008T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08BW008T3-full.png"
       }
     ],
     "regions": [
@@ -114,8 +953,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BW008T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BW008T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08BW008T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08BW008T1-full.png"
       }
     ],
     "regions": [
@@ -167,8 +1006,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BW008T5.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BW008T5-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08BW008T5.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08BW008T5-full.png"
       }
     ],
     "regions": [
@@ -219,8 +1058,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BW032.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BW032-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08BW032.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08BW032-full.png"
       }
     ],
     "regions": [
@@ -273,8 +1112,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BW015.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BW015-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08BW015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08BW015-full.png"
       }
     ],
     "regions": [
@@ -319,8 +1158,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BW002.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BW002-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08BW002.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08BW002-full.png"
       }
     ],
     "regions": [
@@ -371,8 +1210,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BW025.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BW025-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08BW025.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08BW025-full.png"
       }
     ],
     "regions": [
@@ -417,8 +1256,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BW026.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BW026-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08BW026.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08BW026-full.png"
       }
     ],
     "regions": [
@@ -429,7 +1268,7 @@
     ],
     "attack": 2,
     "cost": 4,
-    "health": 1,
+    "health": 2,
     "description": "소환 시 손에 든 카드를 모두 <link=vocab.Updraft><style=Vocab>상승</style></link>시키고 <link=vocab.Updraft><style=Vocab>상승</style></link>시킨 카드 1장당 +1|+1을 얻습니다. 카드 2장을 뽑습니다.",
     "descriptionRaw": "소환 시 손에 든 카드를 모두 상승시키고 상승시킨 카드 1장당 +1|+1을 얻습니다. 카드 2장을 뽑습니다.",
     "levelupDescription": "",
@@ -468,8 +1307,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BW028.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BW028-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08BW028.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08BW028-full.png"
       }
     ],
     "regions": [
@@ -520,8 +1359,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BW028T4.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BW028T4-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08BW028T4.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08BW028T4-full.png"
       }
     ],
     "regions": [
@@ -576,8 +1415,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BW028T3.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BW028T3-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08BW028T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08BW028T3-full.png"
       }
     ],
     "regions": [
@@ -626,8 +1465,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BW028T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BW028T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08BW028T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08BW028T1-full.png"
       }
     ],
     "regions": [
@@ -680,8 +1519,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BW028T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BW028T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08BW028T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08BW028T2-full.png"
       }
     ],
     "regions": [
@@ -734,8 +1573,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BW009.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BW009-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08BW009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08BW009-full.png"
       }
     ],
     "regions": [
@@ -780,8 +1619,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BW010.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BW010-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08BW010.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08BW010-full.png"
       }
     ],
     "regions": [
@@ -829,13 +1668,174 @@
   },
   {
     "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08BW031.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08BW031-full.png"
+      }
+    ],
+    "regions": [
+      "빌지워터"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 8,
+    "cost": 8,
+    "health": 7,
+    "description": "마나를 소모하여 다른 유닛을 사용하면 손에 비용이 같은 무작위 카드를 1장 생성합니다. 생성된 카드는 비용이 0이며 <link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>일회용</style></link>입니다.",
+    "descriptionRaw": "마나를 소모하여 다른 유닛을 사용하면 손에 비용이 같은 무작위 카드를 1장 생성합니다. 생성된 카드는 비용이 0이며 일회용입니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "아무리 이상한 바다 괴물이라도 가리지 않는 빌지워터지만, 가장 노련한 선장들조차도 사냥하기를 꺼리는 괴물들이 있습니다. 파도 아래 깊은 곳에서 헤엄치며 사람을 홀리는 빛이자 가라앉은 배와 빠져 죽은 사람들의 거대한 묘지 위에 서식하는 괴물인 세피르사에 대한 이야기가 속삭이듯 전해집니다.",
+    "artistName": "Envar Studio",
+    "name": "심해의 무법자 세피르사",
+    "cardCode": "08BW031",
+    "keywords": [
+      "침몰"
+    ],
+    "keywordRefs": [
+      "Deep"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "서사급",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "바다괴물",
+      "용"
+    ],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08BW037.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08BW037-full.png"
+      }
+    ],
+    "regions": [
+      "빌지워터"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 1,
+    "cost": 3,
+    "health": 3,
+    "description": "이 유닛의 공격력과 비용이 같은 카드를 사용하면 +1|+1을 얻습니다.",
+    "descriptionRaw": "이 유닛의 공격력과 비용이 같은 카드를 사용하면 +1|+1을 얻습니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"혹시, 음... 더 걸고 싶은 생각은 없나요? 아시다시피 위험을 무릅쓰지 않는다면 보상도 얻을 수 없죠. 오늘 이 테이블은 행운이 따른다니까요. 훌륭한 시설을 갖춘 저희 하우스에서는 공정하게 패를 분배한답니다. 어머니의 이름을 걸고 맹세하죠.\"",
+    "artistName": "Caravan Studio",
+    "name": "정직한 딜러",
+    "cardCode": "08BW037",
+    "keywords": [
+      "패기"
+    ],
+    "keywordRefs": [
+      "Brash"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "희귀급",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "일반급 대전",
+      "영원",
+      "짝수 비용 카드",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08BW036.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08BW036-full.png"
+      }
+    ],
+    "regions": [
+      "빌지워터"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "마나를 소모하여 유닛을 사용하면 주문 마나를 1 회복합니다.",
+    "descriptionRaw": "마나를 소모하여 유닛을 사용하면 주문 마나를 1 회복합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"이 암초는 오랜 기간 우리의 보금자리이자 아군이었어. 암초는 우리가, 우리는 암초가 어둠의 그림자에 굴복하지 않게 보살피지.\"\n- 마라이 대모",
+    "artistName": "Envar Studio",
+    "name": "마라이 암초 첨탑",
+    "cardCode": "08BW036",
+    "keywords": [
+      "명소"
+    ],
+    "keywordRefs": [
+      "LandmarkVisualOnly"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "일반급",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "명소",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "일반급 대전",
+      "영원",
+      "짝수 비용 카드",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
     "associatedCardRefs": [
       "08BW008T3"
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BW023.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BW023-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08BW023.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08BW023-full.png"
       }
     ],
     "regions": [
@@ -888,8 +1888,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08PZ007.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08PZ007-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08PZ007.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08PZ007-full.png"
       }
     ],
     "regions": [
@@ -940,8 +1940,62 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08PZ005.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08PZ005-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08PZ031.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08PZ031-full.png"
+      }
+    ],
+    "regions": [
+      "필트오버 & 자운"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "아군 추종자 하나를 선택합니다. 이 카드를 장착한 아군을 장착이 해제될 때까지 선택한 추종자와 똑같은 복사본으로 변신시킵니다.",
+    "descriptionRaw": "아군 추종자 하나를 선택합니다. 이 카드를 장착한 아군을 장착이 해제될 때까지 선택한 추종자와 똑같은 복사본으로 변신시킵니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "작동 원리는 묻지 마세요.",
+    "artistName": "Polar Engine",
+    "name": "수상한 안경",
+    "cardCode": "08PZ031",
+    "keywords": [
+      "장비"
+    ],
+    "keywordRefs": [
+      "Equipment"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "희귀급",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "장비",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "일반급 대전",
+      "영원",
+      "짝수 비용 카드",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08PZ005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08PZ005-full.png"
       }
     ],
     "regions": [
@@ -992,8 +2046,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08PZ019.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08PZ019-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08PZ019.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08PZ019-full.png"
       }
     ],
     "regions": [
@@ -1005,8 +2059,8 @@
     "attack": 0,
     "cost": 5,
     "health": 0,
-    "description": "이 라운드에 카드를 3장 이상 뽑았으면 비용이 2 감소합니다.\r\n유닛 하나에게 피해를 3 입히고 적 넥서스에 피해를 2 입힙니다.",
-    "descriptionRaw": "이 라운드에 카드를 3장 이상 뽑았으면 비용이 2 감소합니다.\r\n유닛 하나에게 피해를 3 입히고 적 넥서스에 피해를 2 입힙니다.",
+    "description": "이 라운드에 카드를 3장 이상 뽑았으면<br>비용이 2 감소합니다.\r\n유닛 하나에게 피해를 3 입히고<br>적 넥서스에 피해를 1 입힙니다.",
+    "descriptionRaw": "이 라운드에 카드를 3장 이상 뽑았으면비용이 2 감소합니다.\r\n유닛 하나에게 피해를 3 입히고적 넥서스에 피해를 1 입힙니다.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "\"폭풍은 제 명을 따릅니다.\"\n- 잔나",
@@ -1041,14 +2095,62 @@
   },
   {
     "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08PZ028.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08PZ028-full.png"
+      }
+    ],
+    "regions": [
+      "필트오버 & 자운"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 8,
+    "cost": 8,
+    "health": 6,
+    "description": "주문을 사용하면 카드를 1장 뽑습니다. 손이 가득 찼을 때 카드를 뽑으면 적 넥서스에 피해를 1 입힙니다.",
+    "descriptionRaw": "주문을 사용하면 카드를 1장 뽑습니다. 손이 가득 찼을 때 카드를 뽑으면 적 넥서스에 피해를 1 입힙니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "자운은 적응을 강요합니다. 도시의 어두운 구석에 매달린 화학공학 드래곤도 예외 없이 증강체의 끔찍한 녹색 불빛에 감싸여 있죠. 손상된 날개의 쌍둥이 그림자는 마치 자신의 타락에 의한 고통으로부터 비롯된 분노를 예고하듯, 어두운 골목을 따라 드리워져 있습니다.",
+    "artistName": "Caravan Studio",
+    "name": "화학공학 드래곤",
+    "cardCode": "08PZ028",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "서사급",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "용"
+    ],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
     "associatedCardRefs": [
       "08PZ001T3",
       "08PZ001T1"
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08PZ001.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08PZ001-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08PZ001.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08PZ001-full.png"
       }
     ],
     "regions": [
@@ -1062,8 +2164,8 @@
     "health": 4,
     "description": "<link=vocab.Play><style=Vocab>사용</style></link>: 카드 2장을 <link=vocab.Updraft><style=Vocab>상승</style></link>시키고 다음 <nobr><link=vocab.RoundStart><style=Vocab>라운드 시작</style></link></nobr> 시 카드 2장을 뽑습니다.\r\n라운드마다 처음으로 뽑는 카드 3장의 비용이 이 라운드에 1 감소합니다. <style=Variable></style>",
     "descriptionRaw": "사용: 카드 2장을 상승시키고 다음 라운드 시작 시 카드 2장을 뽑습니다.\r\n라운드마다 처음으로 뽑는 카드 3장의 비용이 이 라운드에 1 감소합니다. ",
-    "levelupDescription": "비용이 감소된 카드를 6장 사용해야 합니다. <style=Variable></style>",
-    "levelupDescriptionRaw": "비용이 감소된 카드를 6장 사용해야 합니다. ",
+    "levelupDescription": "소환된 상태에서 비용이 감소된 카드를 8장 사용해야 합니다. <style=Variable></style>",
+    "levelupDescriptionRaw": "소환된 상태에서 비용이 감소된 카드를 8장 사용해야 합니다. ",
     "flavorText": "\"다른 곳보다는 자운이 잔나에게 있어 가장 친밀하다고 할 수 있지. 결국에는 필트오버가 죽도록 내버려둔 이들을 구한 게 바로 그녀니까 말야. 그래, 해답이란 게 있다면 분명 난 이곳에서 찾게 되겠지.\"\n- 바람을 따르는 뱃사람",
     "artistName": "Envar Studio",
     "name": "잔나",
@@ -1096,8 +2198,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08PZ001T3.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08PZ001T3-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08PZ001T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08PZ001T3-full.png"
       }
     ],
     "regions": [
@@ -1149,8 +2251,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08PZ001T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08PZ001T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08PZ001T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08PZ001T1-full.png"
       }
     ],
     "regions": [
@@ -1162,8 +2264,8 @@
     "attack": 0,
     "cost": 4,
     "health": 0,
-    "description": "이 라운드에 아군 하나에게 +2|+0을 <nobr>일시 부여합니다.</nobr>\r\n카드 2장을 뽑습니다.\r\n손에 <link=card.level1><style=AssociatedCard>잔나</style></link> 1장을 생성합니다.",
-    "descriptionRaw": "이 라운드에 아군 하나에게 +2|+0을 일시 부여합니다.\r\n카드 2장을 뽑습니다.\r\n손에 잔나 1장을 생성합니다.",
+    "description": "이 라운드에 아군 하나에게 +2|+0을 <nobr>일시 부여합니다.</nobr>\r\n카드 2장을 뽑습니다.\r\n내 덱에 <link=card.level1><style=AssociatedCard>잔나</style></link> 1장을 생성합니다.",
+    "descriptionRaw": "이 라운드에 아군 하나에게 +2|+0을 일시 부여합니다.\r\n카드 2장을 뽑습니다.\r\n내 덱에 잔나 1장을 생성합니다.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "\"염려 마세요! 폭풍이 주위로 휘몰아치겠지만, 여러분을 해치지 않을 거예요.\"\n- 잔나",
@@ -1203,8 +2305,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08PZ026.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08PZ026-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08PZ026.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08PZ026-full.png"
       }
     ],
     "regions": [
@@ -1255,8 +2357,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08PZ006.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08PZ006-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08PZ006.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08PZ006-full.png"
       }
     ],
     "regions": [
@@ -1305,8 +2407,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08PZ018.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08PZ018-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08PZ018.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08PZ018-full.png"
       }
     ],
     "regions": [
@@ -1355,8 +2457,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08PZ008.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08PZ008-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08PZ008.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08PZ008-full.png"
       }
     ],
     "regions": [
@@ -1401,8 +2503,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08PZ026T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08PZ026T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08PZ026T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08PZ026T1-full.png"
       }
     ],
     "regions": [
@@ -1449,8 +2551,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08PZ009.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08PZ009-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08PZ009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08PZ009-full.png"
       }
     ],
     "regions": [
@@ -1499,8 +2601,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08PZ002.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08PZ002-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08PZ002.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08PZ002-full.png"
       }
     ],
     "regions": [
@@ -1551,8 +2653,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08PZ008T3.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08PZ008T3-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08PZ008T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08PZ008T3-full.png"
       }
     ],
     "regions": [
@@ -1597,8 +2699,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08PZ008T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08PZ008T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08PZ008T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08PZ008T2-full.png"
       }
     ],
     "regions": [
@@ -1643,8 +2745,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08PZ020.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08PZ020-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08PZ024.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08PZ024-full.png"
       }
     ],
     "regions": [
@@ -1653,14 +2755,60 @@
     "regionRefs": [
       "PiltoverZaun"
     ],
-    "attack": 3,
+    "attack": 4,
+    "cost": 4,
+    "health": 4,
+    "description": "<link=vocab.RoundStart><style=Vocab>라운드 시작</style></link>: 양쪽 플레이어 모두 카드 1장을 뽑고, 상대가 뽑은 카드에 <link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>일회용</style></link> 상태를 부여합니다.",
+    "descriptionRaw": "라운드 시작: 양쪽 플레이어 모두 카드 1장을 뽑고, 상대가 뽑은 카드에 일회용 상태를 부여합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"하나 가격에 두 마리를 가져 가세요. 오늘만입니다! 신선한 생선이에요. 이번... 달에 잡았나? 두 마리 드려요. 두 마리는 필요 없다니 무슨 말이죠? 공짜라고요!\"",
+    "artistName": "Envar Studio",
+    "name": "사기꾼 생선 장수",
+    "cardCode": "08PZ024",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "일반급",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08PZ020.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08PZ020-full.png"
+      }
+    ],
+    "regions": [
+      "필트오버 & 자운"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 2,
     "cost": 5,
     "health": 2,
     "description": "이 라운드에 카드를 3장 이상 뽑았으면 비용이 2 감소합니다.\r\n소환 후 다음 <link=vocab.RoundStart><style=Vocab>라운드 시작</style></link> 시 카드 2장을 뽑습니다.",
     "descriptionRaw": "이 라운드에 카드를 3장 이상 뽑았으면 비용이 2 감소합니다.\r\n소환 후 다음 라운드 시작 시 카드 2장을 뽑습니다.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "\"소중한 나의 서풍아, 그만 구름에서 내려와 내 어깨 위에서 날개를 쉬어가지 않겠니?\"\n- 잔나",
+    "flavorText": "\"소중한 나의 서풍이여, 그만 구름에서 내려와 제 어깨에서 날개를 쉬어가세요.\"\n- 잔나",
     "artistName": "Envar Studio",
     "name": "고귀한 구름감개",
     "cardCode": "08PZ020",
@@ -1695,8 +2843,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08FR012.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08FR012-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08FR012.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08FR012-full.png"
       }
     ],
     "regions": [
@@ -1747,8 +2895,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08FR019.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08FR019-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08FR019.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08FR019-full.png"
       }
     ],
     "regions": [
@@ -1803,8 +2951,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08FR001.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08FR001-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08FR001.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08FR001-full.png"
       }
     ],
     "regions": [
@@ -1849,8 +2997,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08FR001T3.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08FR001T3-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08FR001T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08FR001T3-full.png"
       }
     ],
     "regions": [
@@ -1904,8 +3052,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08FR001T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08FR001T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08FR001T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08FR001T2-full.png"
       }
     ],
     "regions": [
@@ -1960,8 +3108,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08FR001T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08FR001T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08FR001T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08FR001T1-full.png"
       }
     ],
     "regions": [
@@ -2012,8 +3160,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08FR018.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08FR018-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08FR018.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08FR018-full.png"
       }
     ],
     "regions": [
@@ -2064,8 +3212,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08FR011.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08FR011-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08FR011.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08FR011-full.png"
       }
     ],
     "regions": [
@@ -2074,9 +3222,9 @@
     "regionRefs": [
       "Freljord"
     ],
-    "attack": 3,
+    "attack": 2,
     "cost": 4,
-    "health": 2,
+    "health": 3,
     "description": "원소 주문이나 <link=keyword.Elemental Skill><sprite name=ElementalSkill><style=Keyword>스킬</style></link>을 사용하면 <nobr>이 유닛을</nobr> <link=vocab.Forge><style=Vocab>단련</style></link>합니다.",
     "descriptionRaw": "원소 주문이나 스킬을 사용하면 이 유닛을 단련합니다.",
     "levelupDescription": "",
@@ -2114,8 +3262,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08FR008.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08FR008-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08FR008.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08FR008-full.png"
       }
     ],
     "regions": [
@@ -2163,13 +3311,61 @@
   },
   {
     "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08FR024.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08FR024-full.png"
+      }
+    ],
+    "regions": [
+      "프렐요드"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 3,
+    "description": "<link=vocab.Attack><style=Vocab>공격</style></link>: 내 덱의 맨 위에 있는 아군 둘에게 +1|+1을 부여합니다.",
+    "descriptionRaw": "공격: 내 덱의 맨 위에 있는 아군 둘에게 +1|+1을 부여합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "야둘스크에서 온 이 강아지들은 여러 프렐요드 부족에게 길들여져 추적, 사냥 그리고 눈사태 복구를 돕습니다. 원기 왕성한 체질과 장난치기를 좋아하는 성격 덕에 이들은 툰드라에서 타이가까지 모든 곳에서 사랑받습니다.",
+    "artistName": "Envar Studio",
+    "name": "야둘스크 설견",
+    "cardCode": "08FR024",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "일반급",
+    "rarityRef": "Common",
+    "subtypes": [
+      "개"
+    ],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
     "associatedCardRefs": [
       "08FR002T1"
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08FR015.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08FR015-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08FR015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08FR015-full.png"
       }
     ],
     "regions": [
@@ -2212,12 +3408,66 @@
   {
     "associatedCards": [],
     "associatedCardRefs": [
+      "04FR001"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08FR030.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08FR030-full.png"
+      }
+    ],
+    "regions": [
+      "프렐요드"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 8,
+    "cost": 8,
+    "health": 8,
+    "description": "소환 시 <link=card.summon><style=AssociatedCard>얼음 노예</style></link> 둘을 소환하고 <nobr>2로</nobr> <link=vocab.Advance><style=Vocab>진행</style></link>시킵니다.",
+    "descriptionRaw": "소환 시 얼음 노예 둘을 소환하고 2로 진행시킵니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"그녀는 무척 사-사나웠어! 노예들이 불타 검은 얼음이 되고, 발톱 아래로는 눈사태가 일어났지. 울음소리에는 산에 쌓인 눈이 무너졌어. 전사 여왕이라니까! 노-노예들을 죽인 건 전사 여왕이라고!\"\n- 주절대는 비에르그",
+    "artistName": "Caravan Studio",
+    "name": "검게 물든 얼음의 보디르",
+    "cardCode": "08FR030",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "서사급",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "용"
+    ],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "일반급 대전",
+      "영원",
+      "짝수 비용 카드",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
       "08FR002T1"
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08FR002.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08FR002-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08FR002.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08FR002-full.png"
       }
     ],
     "regions": [
@@ -2262,8 +3512,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08FR002T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08FR002T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08FR002T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08FR002T1-full.png"
       }
     ],
     "regions": [
@@ -2311,13 +3561,11 @@
   },
   {
     "associatedCards": [],
-    "associatedCardRefs": [
-      "08FR002T1"
-    ],
+    "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08FR003.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08FR003-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08FR028.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08FR028-full.png"
       }
     ],
     "regions": [
@@ -2326,9 +3574,65 @@
     "regionRefs": [
       "Freljord"
     ],
-    "attack": 5,
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "이 게임에서 내가 소환한 서로 다른 종족 하나당 +1|+0을 가집니다.<br><style=Variable></style>",
+    "descriptionRaw": "이 게임에서 내가 소환한 서로 다른 종족 하나당 +1|+0을 가집니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"저 위에는 눈사태도 멈출 수 없는 야수들이 있다네. 그래서 좋은 마구에 쓰는 돈은 전혀 아깝지 않지.\"\n- 아바로사 함정꾼",
+    "artistName": "Polar Engine",
+    "name": "유용한 마구",
+    "cardCode": "08FR028",
+    "keywords": [
+      "장비"
+    ],
+    "keywordRefs": [
+      "Equipment"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "서사급",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "장비",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "일반급 대전",
+      "영원",
+      "짝수 비용 카드",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08FR002T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08FR003.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08FR003-full.png"
+      }
+    ],
+    "regions": [
+      "프렐요드"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 6,
     "cost": 6,
-    "health": 3,
+    "health": 4,
     "description": "주문이나 <link=keyword.Skill><sprite name=SkillMark><style=Keyword>스킬</style></link>을 사용하면 <link=card.summon><style=AssociatedCard>폭풍의 인장</style></link> 하나를 소환합니다.",
     "descriptionRaw": "주문이나 스킬을 사용하면 폭풍의 인장 하나를 소환합니다.",
     "levelupDescription": "",
@@ -2364,42 +3668,726 @@
   {
     "associatedCards": [],
     "associatedCardRefs": [
-      "08BW028T1",
-      "08BW028T2",
-      "08BW028T3",
-      "08BW028T4"
+      "08RU014T9",
+      "08RU014T8",
+      "08RU014T3",
+      "08RU014T6",
+      "08RU014T5",
+      "08RU014T1",
+      "08RU014T7",
+      "08RU014T4",
+      "08RU014T2"
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08DE006.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08DE006-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08RU014.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08RU014-full.png"
       }
     ],
     "regions": [
-      "데마시아",
-      "프렐요드"
+      "룬테라"
     ],
     "regionRefs": [
-      "Demacia",
-      "Freljord"
+      "Runeterra"
     ],
-    "attack": 2,
-    "cost": 3,
-    "health": 3,
-    "description": "<link=vocab.Play><style=Vocab>사용</style></link>: 탐험가 주문 1장을 선택하고 손에 생성합니다.",
-    "descriptionRaw": "사용: 탐험가 주문 1장을 선택하고 손에 생성합니다.",
+    "attack": 10,
+    "cost": 12,
+    "health": 10,
+    "description": "<link=vocab.Origin><style=Vocab>근원</style></link>: <link=card.origin><style=AssociatedCard>드래곤의 성위</style></link>. <style=Variable></style>\r\n이 게임에서 사용한 서로 다른 용의 은혜 하나당 비용이 1 감소합니다.\r\n<link=keyword.PlaySkillMark><sprite name=SkillMark><style=Keyword>사용</style></link>: 이 유닛에게 모든 용의 은혜를 사용합니다.",
+    "descriptionRaw": "근원: 드래곤의 성위. \r\n이 게임에서 사용한 서로 다른 용의 은혜 하나당 비용이 1 감소합니다.\r\n사용: 이 유닛에게 모든 용의 은혜를 사용합니다.",
+    "levelupDescription": "공격한 아군 공격력의 합이 75 이상이어야 합니다. <style=Variable></style>",
+    "levelupDescriptionRaw": "공격한 아군 공격력의 합이 75 이상이어야 합니다. ",
+    "flavorText": "\"전설에 따르면 가장 오래된 용이라고 하더군. 날개 달린 야수의 왕이라고. 우리가 길들인다면... 뭐야, 알라티스, 안 될 게 <nobr>뭐 있어?</nobr> 인간과 용이 함께 한다면 가장 강하다는 걸 세상이 <nobr>알게 될</nobr> 거야.\"\n- 용 포섭 대원 볼릭스",
+    "artistName": "Envar Studio",
+    "name": "장로 드래곤",
+    "cardCode": "08RU014",
+    "keywords": [
+      "분노"
+    ],
+    "keywordRefs": [
+      "Fury"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "챔피언",
+    "rarityRef": "Champion",
+    "subtypes": [
+      "용"
+    ],
+    "supertype": "챔피언",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08RU014T5.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08RU014T5-full.png"
+      }
+    ],
+    "regions": [
+      "룬테라"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "+1|+1 및 <link=keyword.Fearsome><sprite name=Fearsome><style=Keyword>공포</style></link> 효과를 부여합니다.",
+    "descriptionRaw": "+1|+1 및 공포 효과를 부여합니다.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "\"날씨가 춥다. 나도 춥다. 모든 것이 차갑다, 늘 변함없이. 사람이 살아선 안 될 장소도 있는 거야. 일정이 끝나면 제발 나를 따뜻한 곳으로 보내 줘.\"\n- 탐험가 길드의 장거리 탐사부 탐험 일지, 프렐요드 편에서 발췌",
+    "flavorText": "타오르는 화염의 분노가 한없이 솟구칩니다.",
+    "artistName": "Polar Engine",
+    "name": "화염의 힘",
+    "cardCode": "08RU014T5",
+    "keywords": [
+      "스킬"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "없음",
+    "rarityRef": "None",
+    "subtypes": [
+      "원소"
+    ],
+    "supertype": "",
+    "type": "스킬",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08RU014T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08RU014T3-full.png"
+      }
+    ],
+    "regions": [
+      "룬테라"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "덱 구성 시 비용이 6 이상인 어떤 추종자든 덱에 추가할 수 있습니다. 기본 비용이 6 이상인 유닛을 사용하면 용의 은혜 2개 중 1개를 선택해 <nobr>해당 유닛에게</nobr> 사용합니다.",
+    "descriptionRaw": "덱 구성 시 비용이 6 이상인 어떤 추종자든 덱에 추가할 수 있습니다. 기본 비용이 6 이상인 유닛을 사용하면 용의 은혜 2개 중 1개를 선택해 해당 유닛에게 사용합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "용이 내리는 축복은 대단하면서도 끔찍합니다.",
     "artistName": "Envar Studio",
-    "name": "학술적 선구자",
-    "cardCode": "08DE006",
+    "name": "드래곤의 성위",
+    "cardCode": "08RU014T3",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "없음",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "스킬",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08RU014",
+      "08RU014T8",
+      "08RU014T3",
+      "08RU014T6",
+      "08RU014T5",
+      "08RU014T1",
+      "08RU014T7",
+      "08RU014T4",
+      "08RU014T2"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08RU014T9.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08RU014T9-full.png"
+      }
+    ],
+    "regions": [
+      "룬테라"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 30,
+    "cost": 12,
+    "health": 30,
+    "description": "\r\n\r\n\r\n\r\n막을 수 없습니다.",
+    "descriptionRaw": "\r\n\r\n\r\n\r\n막을 수 없습니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "가장 강력한 열기가 장로 드래곤의 아귀에서 뿜어져 나옵니다. 알라티스가 공중으로 날아오릅니다. \"위치를 고수해!\"라고 볼릭스가 외쳤습니다. \"물러서지 마! 우리는 야수의 왕을 길들인 자들로 세상에 기억될 거야!\"",
+    "artistName": "Envar Studio",
+    "name": "장로 드래곤",
+    "cardCode": "08RU014T9",
+    "keywords": [
+      "분노"
+    ],
+    "keywordRefs": [
+      "Fury"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "챔피언",
+    "rarityRef": "Champion",
+    "subtypes": [
+      "용"
+    ],
+    "supertype": "챔피언",
+    "type": "유닛",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08RU014T4.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08RU014T4-full.png"
+      }
+    ],
+    "regions": [
+      "룬테라"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "+1|+1 및 <link=keyword.Impact><sprite name=Impact><style=Keyword>여파</style></link> 효과를 두 번 부여합니다.",
+    "descriptionRaw": "+1|+1 및 여파 효과를 두 번 부여합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "자연이 설계한다면 마법공학은 개선합니다.\n",
+    "artistName": "Polar Engine",
+    "name": "마법공학 우월성",
+    "cardCode": "08RU014T4",
+    "keywords": [
+      "스킬"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "없음",
+    "rarityRef": "None",
+    "subtypes": [
+      "원소"
+    ],
+    "supertype": "",
+    "type": "스킬",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08RU014T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08RU014T2-full.png"
+      }
+    ],
+    "regions": [
+      "룬테라"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "<link=keyword.Deathless><sprite name=Deathless><style=Keyword>불사</style></link> 효과를 부여합니다.",
+    "descriptionRaw": "불사 효과를 부여합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "누군가의 독이, 어떤 이에게는 힘이 됩니다.",
+    "artistName": "Polar Engine",
+    "name": "화학공학 역병",
+    "cardCode": "08RU014T2",
+    "keywords": [
+      "스킬"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "없음",
+    "rarityRef": "None",
+    "subtypes": [
+      "원소"
+    ],
+    "supertype": "",
+    "type": "스킬",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08RU014T7.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08RU014T7-full.png"
+      }
+    ],
+    "regions": [
+      "룬테라"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "<link=keyword.Challenger><sprite name=Challenger><style=Keyword>도전자</style></link> 효과를 부여합니다.",
+    "descriptionRaw": "도전자 효과를 부여합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "산들바람처럼 날렵하고 돌풍처럼 단호합니다. ",
+    "artistName": "Polar Engine",
+    "name": "구름소환사의 품위",
+    "cardCode": "08RU014T7",
+    "keywords": [
+      "스킬"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "없음",
+    "rarityRef": "None",
+    "subtypes": [
+      "원소"
+    ],
+    "supertype": "",
+    "type": "스킬",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08RU014T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08RU014T1-full.png"
+      }
+    ],
+    "regions": [
+      "룬테라"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "+1|+1 및 <link=keyword.Tough><sprite name=Tough><style=Keyword>강인함</style></link> 효과를 부여합니다.",
+    "descriptionRaw": "+1|+1 및 강인함 효과를 부여합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "대지를 닮은 가죽은 어떤 폭풍이든 견뎌냅니다.",
+    "artistName": "Polar Engine",
+    "name": "대지의 활기",
+    "cardCode": "08RU014T1",
+    "keywords": [
+      "스킬"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "없음",
+    "rarityRef": "None",
+    "subtypes": [
+      "원소"
+    ],
+    "supertype": "",
+    "type": "스킬",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08RU014",
+      "08RU014T9"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08RU014T8.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08RU014T8-full.png"
+      }
+    ],
+    "regions": [
+      "룬테라"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 8,
+    "health": 0,
+    "description": "마나를 모두 회복합니다. 내 덱의 맨 위에 있는 카드 6장 중 비용이 6 이상인 추종자를 모두 뽑습니다.\r\n내 덱에 <link=card.level1><style=AssociatedCard>장로 드래곤</style></link> 1장을 생성합니다.",
+    "descriptionRaw": "마나를 모두 회복합니다. 내 덱의 맨 위에 있는 카드 6장 중 비용이 6 이상인 추종자를 모두 뽑습니다.\r\n내 덱에 장로 드래곤 1장을 생성합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"이것은 원시적인 부름이다. 구름의 왕국이 보이고, 날개 달린 끔찍한 주인도 보인다.\"\n- 오트라니 용 숭배자",
+    "artistName": "Polar Engine",
+    "name": "장로 드래곤의 원시 포효",
+    "cardCode": "08RU014T8",
+    "keywords": [
+      "즉발"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "즉발",
+    "spellSpeedRef": "Burst",
+    "rarity": "없음",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "챔피언",
+    "type": "주문",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08RU014T6.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08RU014T6-full.png"
+      }
+    ],
+    "regions": [
+      "룬테라"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "아군 유닛들과 아군 넥서스의 체력을 2 회복합니다.",
+    "descriptionRaw": "아군 유닛들과 아군 넥서스의 체력을 2 회복합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "여기, 물의 날개들이 모든 상처를 씻어냅니다.",
+    "artistName": "Polar Engine",
+    "name": "바다의 의지",
+    "cardCode": "08RU014T6",
+    "keywords": [
+      "스킬"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "없음",
+    "rarityRef": "None",
+    "subtypes": [
+      "원소"
+    ],
+    "supertype": "",
+    "type": "스킬",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08RU015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08RU015-full.png"
+      }
+    ],
+    "regions": [
+      "룬테라"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 8,
+    "health": 0,
+    "description": "마나를 모두 회복합니다. 내 덱의 <nobr>맨 위에</nobr> 있는 카드 6장 중 비용이 <nobr>6 이상인</nobr> 추종자를 모두 뽑습니다.",
+    "descriptionRaw": "마나를 모두 회복합니다. 내 덱의 맨 위에 있는 카드 6장 중 비용이 6 이상인 추종자를 모두 뽑습니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"이것은 원시적인 부름이다. 구름의 왕국이 보이고, 날개 달린 끔찍한 주인도 보인다.\"\n- 오트라니 용 숭배자",
+    "artistName": "Polar Engine",
+    "name": "원시 포효",
+    "cardCode": "08RU015",
+    "keywords": [
+      "즉발"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "즉발",
+    "spellSpeedRef": "Burst",
+    "rarity": "없음",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "주문",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08NX003T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08NX003.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08NX003-full.png"
+      }
+    ],
+    "regions": [
+      "녹서스"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 8,
+    "cost": 6,
+    "health": 4,
+    "description": "<link=keyword.Elemental Skill><sprite name=ElementalSkill><style=Keyword>사용</style></link>: 적 유닛 하나에 피해를 2 입히고 적 넥서스에 피해를 2 입힙니다.",
+    "descriptionRaw": "사용: 적 유닛 하나에 피해를 2 입히고 적 넥서스에 피해를 2 입힙니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "녹서스의 팽창은 많은 민족과 거주지 그리고 문화를 집어삼켰습니다. 야생 생물들도 전쟁 기계의 위협을 받는 일이 자주 발생하지만, 이 용은 다릅니다. 녹서스가 잔혹한 걸음을 내딛을 때마다 그만큼 잔혹한 분노의 불길을 마주해야만 하죠.",
+    "artistName": "Envar Studio",
+    "name": "성난 화염불꽃",
+    "cardCode": "08NX003",
     "keywords": [
       "도전자"
     ],
     "keywordRefs": [
       "Challenger"
     ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "서사급",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "용"
+    ],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08NX003"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08NX003T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08NX003T1-full.png"
+      }
+    ],
+    "regions": [
+      "녹서스"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "적 유닛 하나에 피해를 2 입히고 <nobr>적 넥서스에</nobr> 피해를 2 입힙니다.",
+    "descriptionRaw": "적 유닛 하나에 피해를 2 입히고 적 넥서스에 피해를 2 입힙니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "나무, 강철, 육신... 그 무엇이든 화염불꽃의 맹렬한 분노 앞에서 녹아내립니다.",
+    "artistName": "Polar Engine",
+    "name": "불뿜기",
+    "cardCode": "08NX003T1",
+    "keywords": [
+      "원소 스킬"
+    ],
+    "keywordRefs": [
+      "ElementalSkill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "없음",
+    "rarityRef": "None",
+    "subtypes": [
+      "원소"
+    ],
+    "supertype": "",
+    "type": "스킬",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08NX024T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08NX024.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08NX024-full.png"
+      }
+    ],
+    "regions": [
+      "녹서스"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 5,
+    "cost": 3,
+    "health": 1,
+    "description": "<link=keyword.PlaySkillMark><sprite name=SkillMark><style=Keyword>사용</style></link>: 아군 하나에게 피해를 3 입힌 후 적 하나에게 피해를 3 입힙니다.",
+    "descriptionRaw": "사용: 아군 하나에게 피해를 3 입힌 후 적 하나에게 피해를 3 입힙니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"육신의 감옥으로부터 저들의 영혼을 찢어내라!\"\n- 모데카이저",
+    "artistName": "Caravan Studio",
+    "name": "강철 군단병",
+    "cardCode": "08NX024",
+    "keywords": [],
+    "keywordRefs": [],
     "spellSpeed": "",
     "spellSpeedRef": "",
     "rarity": "희귀급",
@@ -2423,58 +4411,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08DE010.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08DE010-full.png"
-      }
-    ],
-    "regions": [
-      "데마시아"
-    ],
-    "regionRefs": [
-      "Demacia"
-    ],
-    "attack": 0,
-    "cost": 3,
-    "health": 0,
-    "description": "아군 하나에게 +0|+2를 일시 부여합니다.\r\n해당 아군과 적 하나가 서로를 <link=vocab.Strike><style=Vocab>타격</style></link>합니다.",
-    "descriptionRaw": "아군 하나에게 +0|+2를 일시 부여합니다.\r\n해당 아군과 적 하나가 서로를 타격합니다.",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "\"준비 태세를 취하게, 친구여! 신사의 결투를 거부할 정도로 겁쟁이는 아니겠지?\"\n- 로렌트가 기사",
-    "artistName": "Kudos Productions",
-    "name": "신사의 결투",
-    "cardCode": "08DE010",
-    "keywords": [
-      "신속"
-    ],
-    "keywordRefs": [
-      "Fast"
-    ],
-    "spellSpeed": "신속",
-    "spellSpeedRef": "Fast",
-    "rarity": "일반급",
-    "rarityRef": "Common",
-    "subtypes": [],
-    "supertype": "",
-    "type": "주문",
-    "collectible": true,
-    "set": "Set8",
-    "formats": [
-      "영원",
-      "정규"
-    ],
-    "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08NX011.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08NX011-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08NX024T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08NX024T1-full.png"
       }
     ],
     "regions": [
@@ -2484,7 +4422,63 @@
       "Noxus"
     ],
     "attack": 0,
-    "cost": 1,
+    "cost": 0,
+    "health": 0,
+    "description": "아군 하나에게 피해를 3 입힌 후 <nobr>적 하나에게</nobr> 피해를 3 입힙니다.",
+    "descriptionRaw": "아군 하나에게 피해를 3 입힌 후 적 하나에게 피해를 3 입힙니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"그것은 벤다... 아프다... 이 세계에서도 다음 세계에서도... 그다음 세계에서도...\"\n- 족쇄를 찬 유령",
+    "artistName": "Polar Engine",
+    "name": "영혼 식칼",
+    "cardCode": "08NX024T1",
+    "keywords": [
+      "스킬"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "없음",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "스킬",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "일반급 대전",
+      "영원",
+      "짝수 비용 카드",
+      "싱글톤",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Deckbuilder_RulesFilters_Singleton",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08NX011.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08NX011-full.png"
+      }
+    ],
+    "regions": [
+      "녹서스"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 2,
     "health": 0,
     "description": "적 넥서스에 피해를 1 입힙니다. 사용한 <link=card.selfref><style=AssociatedCard>들불</style></link> 하나당 입히는 피해가 1 증가합니다. 내 덱에 <link=card.selfref><style=AssociatedCard>들불</style></link> 1장을 생성합니다.",
     "descriptionRaw": "적 넥서스에 피해를 1 입힙니다. 사용한 들불 하나당 입히는 피해가 1 증가합니다. 내 덱에 들불 1장을 생성합니다.",
@@ -2525,8 +4519,164 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08NX014.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08NX014-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08NX028.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08NX028-full.png"
+      }
+    ],
+    "regions": [
+      "녹서스"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "아군 하나에게 <link=keyword.Deathless><sprite name=Deathless><style=Keyword>불사</style></link> 효과를 부여합니다.",
+    "descriptionRaw": "아군 하나에게 불사 효과를 부여합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"영겁의 강철로!\"\n- 모데카이저",
+    "artistName": "Polar Engine",
+    "name": "불멸",
+    "cardCode": "08NX028",
+    "keywords": [
+      "즉발"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "즉발",
+    "spellSpeedRef": "Burst",
+    "rarity": "일반급",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "주문",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08NX019T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08NX019.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08NX019-full.png"
+      }
+    ],
+    "regions": [
+      "녹서스"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 4,
+    "cost": 4,
+    "health": 4,
+    "description": "<link=vocab.NexusStrike><style=Vocab>넥서스 타격</style></link>: 상대에게 <link=card.curse><style=AssociatedCard>영액</style></link> <link=keyword.Curse><sprite name=Curse><style=Keyword>저주</style></link>를 겁니다.",
+    "descriptionRaw": "넥서스 타격: 상대에게 영액 저주를 겁니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "녹서스의 전쟁기계에도 유용하지만, 칼날곤봉은 수도의 투기장에서도 인기 만점입니다. 인간이든 동물이든 이 야수를 상대로 투기장에 들어가려는 자는 거의 없습니다. 그래서 칼날곤봉이 드물게 등장하는 날이면 도시 전체에서 구경꾼이 모여들죠.",
+    "artistName": "Envar Studio",
+    "name": "붉은 미늘 칼날곤봉",
+    "cardCode": "08NX019",
+    "keywords": [
+      "압도"
+    ],
+    "keywordRefs": [
+      "Overwhelm"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "일반급",
+    "rarityRef": "Common",
+    "subtypes": [
+      "파충류"
+    ],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08NX019T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08NX019T1-full.png"
+      }
+    ],
+    "regions": [
+      "녹서스"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "이 카드가 손에 있을 때, <link=vocab.RoundStart><style=Vocab>라운드 시작</style></link>: 아군 넥서스에 피해를 <style=Variable>1</style> 입힙니다.",
+    "descriptionRaw": "이 카드가 손에 있을 때, 라운드 시작: 아군 넥서스에 피해를 1 입힙니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "피를 흘리는군. 느리지만, 멈출 기미는 보이지 않아.",
+    "artistName": "Polar Engine",
+    "name": "영액",
+    "cardCode": "08NX019T1",
+    "keywords": [
+      "몰입",
+      "저주"
+    ],
+    "keywordRefs": [
+      "Focus",
+      "Curse"
+    ],
+    "spellSpeed": "즉발",
+    "spellSpeedRef": "Burst",
+    "rarity": "없음",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "주문",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08NX014.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08NX014-full.png"
       }
     ],
     "regions": [
@@ -2580,8 +4730,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08NX012.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08NX012-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08NX012.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08NX012-full.png"
       }
     ],
     "regions": [
@@ -2625,37 +4775,35 @@
   },
   {
     "associatedCards": [],
-    "associatedCardRefs": [
-      "06RU001T3"
-    ],
+    "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08SI021.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08SI021-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08NX009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08NX009-full.png"
       }
     ],
     "regions": [
-      "그림자 군도"
+      "녹서스"
     ],
     "regionRefs": [
-      "ShadowIsles"
+      "Noxus"
     ],
-    "attack": 2,
-    "cost": 2,
-    "health": 3,
-    "description": "다른 아군 사망 또는 <nobr><link=keyword.Last Breath><sprite name=LastBreath><style=Keyword>최후의 숨결</style></link>:</nobr> <nobr>내 덱에</nobr> <link=card.chime><style=AssociatedCard>고대의 종</style></link> 넷을 설치합니다.",
-    "descriptionRaw": "다른 아군 사망 또는 최후의 숨결: 내 덱에 고대의 종 넷을 설치합니다.",
+    "attack": 5,
+    "cost": 4,
+    "health": 2,
+    "description": "",
+    "descriptionRaw": "",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "불길한 방울 소리는 신경쓰지 않아도 됩니다. 늙은 방울슬라임이 지나가는 소리일 뿐이니까요. 새로 도착한 자들을 만나는 걸 무척 좋아한답니다. 다만, 다른 이들이 별로 좋아하지 않을 뿐이죠.",
-    "artistName": "Bubble Cat",
-    "name": "외로운 방울슬라임",
-    "cardCode": "08SI021",
+    "flavorText": "\"그 끔찍한 전쟁광을 봉인하는 데 수백 년이 걸렸어. 그런데 한심한 네 친구들이 '기쁨'으로 녀석을 무찌를 수 있다고? 아둔한 소녀 같으니. 망령의 분노만 사게 될 거다. 그러면 우리 목숨도 위험해지겠지.\"",
+    "artistName": "Wild Blue",
+    "name": "말라트 경",
+    "cardCode": "08NX009",
     "keywords": [
-      "최후의 숨결"
+      "불사"
     ],
     "keywordRefs": [
-      "LastBreath"
+      "Deathless"
     ],
     "spellSpeed": "",
     "spellSpeedRef": "",
@@ -2680,93 +4828,32 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08SI030.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08SI030-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08NX025.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08NX025-full.png"
       }
     ],
     "regions": [
-      "그림자 군도"
+      "녹서스"
     ],
     "regionRefs": [
-      "ShadowIsles"
-    ],
-    "attack": 0,
-    "cost": 3,
-    "health": 0,
-    "description": "적 덱의 맨 아래에 있는 카드 6장을 <link=vocab.Obliterate><style=Vocab>소멸</style></link>시킵니다.",
-    "descriptionRaw": "적 덱의 맨 아래에 있는 카드 6장을 소멸시킵니다.",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "룬테라에서 가장 깊은 심해에 사는 일부 바다 괴물에게 자울치잡이 배는 가벼운 간식입니다.",
-    "artistName": "Polar Engine",
-    "name": "수중 무덤",
-    "cardCode": "08SI030",
-    "keywords": [
-      "집중"
-    ],
-    "keywordRefs": [
-      "Slow"
-    ],
-    "spellSpeed": "집중",
-    "spellSpeedRef": "Slow",
-    "rarity": "서사급",
-    "rarityRef": "Epic",
-    "subtypes": [],
-    "supertype": "",
-    "type": "주문",
-    "collectible": true,
-    "set": "Set8",
-    "formats": [
-      "일반급 대전",
-      "영원",
-      "짝수 비용 카드",
-      "정규"
-    ],
-    "formatRefs": [
-      "client_Formats_CommonsOnly_name",
-      "client_Formats_Eternal_name",
-      "client_Formats_EvenCostCards_name",
-      "client_Formats_Standard_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [
-      "08BW028T1",
-      "08BW028T2",
-      "08BW028T3",
-      "08BW028T4"
-    ],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08SI018.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08SI018-full.png"
-      }
-    ],
-    "regions": [
-      "그림자 군도",
-      "타곤"
-    ],
-    "regionRefs": [
-      "ShadowIsles",
-      "Targon"
+      "Noxus"
     ],
     "attack": 2,
     "cost": 3,
-    "health": 2,
-    "description": "<link=vocab.Play><style=Vocab>사용</style></link>: 탐험가 주문 1장을 선택하고 손에 생성합니다.",
-    "descriptionRaw": "사용: 탐험가 주문 1장을 선택하고 손에 생성합니다.",
+    "health": 3,
+    "description": "아군이 부활하면 <link=keyword.Challenger><sprite name=Challenger><style=Keyword>도전자</style></link> 효과를 부여합니다.",
+    "descriptionRaw": "아군이 부활하면 도전자 효과를 부여합니다.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "\"지형 측량 불가. 한 치 앞도 보이지 않는다. 길목을 돌 때마다 적과 마주치지만, 희한하게도 예상치 못한 아군을 만나기도 한다.\"\n- 탐험가 길드의 장거리 탐사부 탐험 일지, 그림자 군도 편에서 발췌",
+    "flavorText": "\"웃고 있어도 나는 너의 시커먼 속을 다 알고 있다! 녀석들은 내게 웃음을 지어 보이고서는 내 식탁의 음식을 먹었지. 심지어 내 등에 칼을 꽂을 셈이었어. 다신 속지 않을 테다. 나머지 녀석들과 같은 죽음을 맞이하게 해 주지. 비명과 함께 용서를 빌면서 말이다.\"",
     "artistName": "Envar Studio",
-    "name": "유령 측량사",
-    "cardCode": "08SI018",
+    "name": "검에 찔린 망령",
+    "cardCode": "08NX025",
     "keywords": [
-      "체력 흡수"
+      "불사"
     ],
     "keywordRefs": [
-      "Lifesteal"
+      "Deathless"
     ],
     "spellSpeed": "",
     "spellSpeedRef": "",
@@ -2789,13 +4876,2024 @@
   {
     "associatedCards": [],
     "associatedCardRefs": [
+      "08SI026T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08SH009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08SH009-full.png"
+      }
+    ],
+    "regions": [
+      "슈리마"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "적 하나에게 <link=card.curse><style=AssociatedCard>두려움</style></link> <link=keyword.Curse><sprite name=Curse><style=Keyword>저주</style></link>를 겁니다.",
+    "descriptionRaw": "적 하나에게 두려움 저주를 겁니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "모래 아래에 묻혀 있는 편이 나은 것들도 있습니다.",
+    "artistName": "Polar Engine",
+    "name": "고대의 저주",
+    "cardCode": "08SH009",
+    "keywords": [
+      "즉발"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "즉발",
+    "spellSpeedRef": "Burst",
+    "rarity": "일반급",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "주문",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08SH004.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08SH004-full.png"
+      }
+    ],
+    "regions": [
+      "슈리마"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 4,
+    "cost": 4,
+    "health": 4,
+    "description": "<link=keyword.Daybreak><style=Keyword>해오름</style></link> 또는 다른 카드의 <link=keyword.Daybreak><style=Keyword>해오름</style></link> 효과 발동: <link=keyword.Weakest><style=Keyword>최약</style></link>인 적에게 <link=keyword.Vulnerable><sprite name=Vulnerable><style=Keyword>약점 노출</style></link> 상태를 부여합니다.",
+    "descriptionRaw": "해오름 또는 다른 카드의 해오름 효과 발동: 최약인 적에게 약점 노출 상태를 부여합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "슈리마의 장대한 군대는 언제나 사막의 힘을 증명할 준비가 되어 있습니다. 명령이 주어지면 이들은 주저 없이 전진합니다.",
+    "artistName": "Kudos Productions",
+    "name": "모래 언덕의 장군",
+    "cardCode": "08SH004",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "희귀급",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "정예"
+    ],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08SH005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08SH005-full.png"
+      }
+    ],
+    "regions": [
+      "슈리마"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 2,
+    "description": "<link=keyword.Daybreak><style=Keyword>해오름</style></link>: <link=card.me><style=AssociatedCard>태양 원판 수호병</style></link> 1장을 뽑습니다.",
+    "descriptionRaw": "해오름: 태양 원판 수호병 1장을 뽑습니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"우리는 변치 않는 사막의 수호자이며, 살아 있는 역사이자, 광명의 길을 걷는 자들이다. 오로지 태양 원판 앞에 무릎을 꿇을지니, 이는 슈리마의 영광 앞에 세상이 무릎 꿇게 하기 위함이다.\"\n- 아지르",
+    "artistName": "Kudos Productions",
+    "name": "태양 원판 수호병",
+    "cardCode": "08SH005",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "일반급",
+    "rarityRef": "Common",
+    "subtypes": [
+      "정예"
+    ],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "04SH098"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08SH012.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08SH012-full.png"
+      }
+    ],
+    "regions": [
+      "슈리마"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 3,
+    "cost": 3,
+    "health": 2,
+    "description": "라운드마다 처음으로 다른 아군이 사망 또는 <link=keyword.Last Breath><sprite name=LastBreath><style=Keyword>최후의 숨결</style></link>: 손에 <link=card.create><style=AssociatedCard>횡재</style></link> 1장을 생성합니다.",
+    "descriptionRaw": "라운드마다 처음으로 다른 아군이 사망 또는 최후의 숨결: 손에 횡재 1장을 생성합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"엄청난 걸 건졌네, 바바라. 역시 믿고 있었다고. 잠깐, 녀석들이 널 봤다는 게 무슨 말이야?!\"\n- 베커라 폭력배",
+    "artistName": "Caravan Studio",
+    "name": "도굴꾼 바바라",
+    "cardCode": "08SH012",
+    "keywords": [
+      "최후의 숨결"
+    ],
+    "keywordRefs": [
+      "LastBreath"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "희귀급",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "파충류"
+    ],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08SH002.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08SH002-full.png"
+      }
+    ],
+    "regions": [
+      "슈리마"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 9,
+    "cost": 5,
+    "health": 6,
+    "description": "사용하려면 아군을 처치한 횟수나 내 마나 보석을 파괴한 횟수의 총합이 3이 되어야 합니다.",
+    "descriptionRaw": "사용하려면 아군을 처치한 횟수나 내 마나 보석을 파괴한 횟수의 총합이 3이 되어야 합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "모래언덕을 삼키는 자는 비슷한 종족이지만 더 작은 제르사이보다 훨씬 깊은 곳에서 동면합니다. 다른 제르사이 포식자들을 손쉬운 먹잇감으로 삼는 것으로 알려졌지만, 기록은 많이 남아 있지 않습니다. 모래언덕 전체와 목격자를 모두 삼켜버리기 때문이죠. ",
+    "artistName": "Envar Studio",
+    "name": "모래언덕을 삼키는 자",
+    "cardCode": "08SH002",
+    "keywords": [
+      "주문 방어막",
+      "공포"
+    ],
+    "keywordRefs": [
+      "SpellShield",
+      "Fearsome"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "서사급",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08MT003T3",
+      "08MT003T4",
+      "08MT003T11",
+      "08MT003T12"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08MT003.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08MT003-full.png"
+      }
+    ],
+    "regions": [
+      "타곤",
+      "데마시아"
+    ],
+    "regionRefs": [
+      "Targon",
+      "Demacia"
+    ],
+    "attack": 3,
+    "cost": 5,
+    "health": 4,
+    "description": "<link=vocab.Play><style=Vocab>사용</style></link>: 적 하나에게 <link=card.curse><style=AssociatedCard>족쇄</style></link> <link=keyword.Curse><sprite name=Curse><style=Keyword>저주</style></link>를 두 번 겁니다.",
+    "descriptionRaw": "사용: 적 하나에게 족쇄 저주를 두 번 겁니다.",
+    "levelupDescription": "유닛을 여덟 번 이상 대상으로 지정해야 합니다. <style=Variable></style>",
+    "levelupDescriptionRaw": "유닛을 여덟 번 이상 대상으로 지정해야 합니다. ",
+    "flavorText": "\"나에게 왔을 때 너는 멍들고 피를 흘리고 있었지만 네 얼굴은 본 적이 없을 정도로 밝았지. 너는 대단히 특이한 여자지만 여기서는 안전할 것이다. 부디 휴식을 취하고 기분이 나아지면 네 이야기가 듣고 싶구나.\"",
+    "artistName": "Envar Studio",
+    "name": "모르가나",
+    "cardCode": "08MT003",
+    "keywords": [
+      "체력 흡수"
+    ],
+    "keywordRefs": [
+      "Lifesteal"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "챔피언",
+    "rarityRef": "Champion",
+    "subtypes": [],
+    "supertype": "챔피언",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08MT003T3",
+      "08MT003",
+      "08MT003T11",
+      "08MT003T12"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08MT003T4.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08MT003T4-full.png"
+      }
+    ],
+    "regions": [
+      "타곤",
+      "데마시아"
+    ],
+    "regionRefs": [
+      "Targon",
+      "Demacia"
+    ],
+    "attack": 4,
+    "cost": 5,
+    "health": 5,
+    "description": "<link=vocab.Play><style=Vocab>사용</style></link>: 적 하나에게 <link=card.curse><style=AssociatedCard>족쇄</style></link> <link=keyword.Curse><sprite name=Curse><style=Keyword>저주</style></link>를 두 번 겁니다.\r\n<link=vocab.Attack><style=Vocab>공격</style></link>: <link=keyword.Curse><sprite name=Curse><style=Keyword>저주</style></link>받지 않은 <link=vocab.Strongest><style=Vocab>최강</style></link>인 적에게 <link=card.curse><style=AssociatedCard>족쇄</style></link> <link=keyword.Curse><sprite name=Curse><style=Keyword>저주</style></link>를 걸고 <link=keyword.Curse><sprite name=Curse><style=Keyword>저주</style></link>받은 적에게 피해를 3, 적 넥서스에 피해를 2 입힙니다.",
+    "descriptionRaw": "사용: 적 하나에게 족쇄 저주를 두 번 겁니다.\r\n공격: 저주받지 않은 최강인 적에게 족쇄 저주를 걸고 저주받은 적에게 피해를 3, 적 넥서스에 피해를 2 입힙니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"이 불경한 행동을 후회하게 될 것이다! 똑똑히 알아 둬라. <nobr>다른 이에게</nobr> 초래한 고통은 마치 네 영혼에 씌워진 족쇄처럼 너에게도 그대로 느껴질 것이다. 스스로의 죄를 인정하거나, 죄에 파묻혀 질식해라.\"",
+    "artistName": "Envar Studio",
+    "name": "모르가나",
+    "cardCode": "08MT003T4",
+    "keywords": [
+      "체력 흡수"
+    ],
+    "keywordRefs": [
+      "Lifesteal"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "챔피언",
+    "rarityRef": "Champion",
+    "subtypes": [],
+    "supertype": "챔피언",
+    "type": "유닛",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08MT003",
+      "08MT003T4",
+      "08MT003T11"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08MT003T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08MT003T3-full.png"
+      }
+    ],
+    "regions": [
+      "타곤"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "적 하나를 <link=keyword.Stun><sprite name=Stunned><style=Keyword>기절</style></link>시키고 <link=card.curse><style=AssociatedCard>족쇄</style></link> <link=keyword.Curse><sprite name=Curse><style=Keyword>저주</style></link>를 겁니다.\r\n내 덱에 <link=card.level1><style=AssociatedCard>모르가나</style></link> 1장을 생성합니다.",
+    "descriptionRaw": "적 하나를 기절시키고 족쇄 저주를 겁니다.\r\n내 덱에 모르가나 1장을 생성합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"고통받아라, 네가 다른 이에게 준 고통만큼!\"\n- 모르가나",
+    "artistName": "Polar Engine",
+    "name": "모르가나의 어둠의 속박",
+    "cardCode": "08MT003T3",
+    "keywords": [
+      "신속"
+    ],
+    "keywordRefs": [
+      "Fast"
+    ],
+    "spellSpeed": "신속",
+    "spellSpeedRef": "Fast",
+    "rarity": "챔피언",
+    "rarityRef": "Champion",
+    "subtypes": [],
+    "supertype": "챔피언",
+    "type": "주문",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "일반급 대전",
+      "영원",
+      "짝수 비용 카드",
+      "싱글톤",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Deckbuilder_RulesFilters_Singleton",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08MT003T11.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08MT003T11-full.png"
+      }
+    ],
+    "regions": [
+      "타곤"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "이 카드가 손에 있을 때 <style=Variable>저주받은</style> 유닛은 <link=keyword.Immobile><sprite name=Immobile><sprite name=Reckless><style=Keyword>행동불가</style></link> 상태입니다.",
+    "descriptionRaw": "이 카드가 손에 있을 때 저주받은 유닛은 행동불가 상태입니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"진실의 속박!\"\n- 모르가나",
+    "artistName": "Polar Engine",
+    "name": "족쇄",
+    "cardCode": "08MT003T11",
+    "keywords": [
+      "몰입",
+      "저주"
+    ],
+    "keywordRefs": [
+      "Focus",
+      "Curse"
+    ],
+    "spellSpeed": "즉발",
+    "spellSpeedRef": "Burst",
+    "rarity": "없음",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "주문",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08MT003T12.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08MT003T12-full.png"
+      }
+    ],
+    "regions": [
+      "타곤"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "<link=keyword.Curse><sprite name=Curse><style=Keyword>저주</style></link>받은 적에게 피해를 3 입히고 적 넥서스에 피해를 2 입힙니다.",
+    "descriptionRaw": "저주받은 적에게 피해를 3 입히고 적 넥서스에 피해를 2 입힙니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"내가 바로 천 배로 투영된 네 고통이다!\"\n- 모르가나",
+    "artistName": "Polar Engine",
+    "name": "영혼의 족쇄",
+    "cardCode": "08MT003T12",
+    "keywords": [
+      "스킬"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "없음",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "스킬",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08MT003T11"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08MT005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08MT005-full.png"
+      }
+    ],
+    "regions": [
+      "타곤"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 6,
+    "cost": 8,
+    "health": 8,
+    "description": "<link=vocab.Play><style=Vocab>사용</style></link>: 적 둘에게 <link=card.curse><style=AssociatedCard>족쇄</style></link> <link=keyword.Curse><sprite name=Curse><style=Keyword>저주</style></link>를 두 번 겁니다.",
+    "descriptionRaw": "사용: 적 둘에게 족쇄 저주를 두 번 겁니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"딸들의 이름으로 신성을 받아들였지. 인간성을 포기한 것은 가족을 위해서였다. 이 불타는 검으로 진실과 정의의 세계를 건설하기 위해서다.\"",
+    "artistName": "Envar Studio",
+    "name": "승천한 성위 미히라",
+    "cardCode": "08MT005",
+    "keywords": [
+      "압도"
+    ],
+    "keywordRefs": [
+      "Overwhelm"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "서사급",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08MT003T11"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08MT042.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08MT042-full.png"
+      }
+    ],
+    "regions": [
+      "타곤"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 6,
+    "health": 0,
+    "description": "적 하나에게 <link=card.curse><style=AssociatedCard>족쇄</style></link> <link=keyword.Curse><sprite name=Curse><style=Keyword>저주</style></link>를 겁니다.\r\n적 저주의 비용을 <link=vocab.Everywhere><style=Vocab>어디에 있든</style></link> 1 증가시킵니다.",
+    "descriptionRaw": "적 하나에게 족쇄 저주를 겁니다.\r\n적 저주의 비용을 어디에 있든 1 증가시킵니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"자유를 찾으려면 내면의 어둠을 받아들여야만 한다.\"\n- 모르가나",
+    "artistName": "Polar Engine",
+    "name": "죄인의 구속구",
+    "cardCode": "08MT042",
+    "keywords": [
+      "집중"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "집중",
+    "spellSpeedRef": "Slow",
+    "rarity": "희귀급",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "주문",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "일반급 대전",
+      "영원",
+      "짝수 비용 카드",
+      "싱글톤",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Deckbuilder_RulesFilters_Singleton",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08MT024.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08MT024-full.png"
+      }
+    ],
+    "regions": [
+      "타곤"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 2,
+    "description": "<link=vocab.Play><style=Vocab>사용</style></link>: 손에 든 아군 하나에게 <link=keyword.SpellShield><sprite name=SpellShield><style=Keyword>주문 방어막</style></link> 또는 <link=keyword.Overwhelm><sprite name=Overwhelm><style=Keyword>압도</style></link> 효과를 부여합니다.",
+    "descriptionRaw": "사용: 손에 든 아군 하나에게 주문 방어막 또는 압도 효과를 부여합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"두려워 말고 나아가라. 그리고 뒤돌아보지 마라! 우리도 이 길을 떠난 적이 있었지. 이제 너의 여정을 보호할 차례구나. 어서 그녀의 안식처로 가라. 가려진 자가 네가 바라던 대로 보호해줄 것이다.\"",
+    "artistName": "Envar Studio",
+    "name": "홍옥안의 요술사",
+    "cardCode": "08MT024",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "일반급",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08MT024T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08MT024T1-full.png"
+      }
+    ],
+    "regions": [
+      "타곤"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 2,
+    "description": "<link=vocab.Play><style=Vocab>사용</style></link>: 손에 든 아군 하나에게 <link=keyword.Overwhelm><sprite name=Overwhelm><style=Keyword>압도</style></link> 효과를 부여합니다.",
+    "descriptionRaw": "사용: 손에 든 아군 하나에게 압도 효과를 부여합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"두려워 말고 나아가라. 그리고 뒤돌아보지 마라! 우리도 이 길을 떠난 적이 있었지. 이제 너의 여정을 보호할 차례구나. 어서 그녀의 안식처로 가라. 가려진 자가 네가 바라던 대로 보호해줄 것이다.\"",
+    "artistName": "Envar Studio",
+    "name": "홍옥안의 요술사",
+    "cardCode": "08MT024T1",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "없음",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08MT024T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08MT024T2-full.png"
+      }
+    ],
+    "regions": [
+      "타곤"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 2,
+    "description": "<link=vocab.Play><style=Vocab>사용</style></link>: 손에 든 아군 하나에게<br><link=keyword.SpellShield><sprite name=SpellShield><style=Keyword>주문 방어막</style></link>을 부여합니다.",
+    "descriptionRaw": "사용: 손에 든 아군 하나에게주문 방어막을 부여합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"두려워 말고 나아가라. 그리고 뒤돌아보지 마라! 우리도 이 길을 떠난 적이 있었지. 이제 너의 여정을 보호할 차례구나. 어서 그녀의 안식처로 가라. 가려진 자가 네가 바라던 대로 보호해줄 것이다.\"",
+    "artistName": "Envar Studio",
+    "name": "홍옥안의 요술사",
+    "cardCode": "08MT024T2",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "일반급",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08MT003T11"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08MT015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08MT015-full.png"
+      }
+    ],
+    "regions": [
+      "타곤"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 2,
+    "cost": 3,
+    "health": 3,
+    "description": "<link=vocab.Play><style=Vocab>사용</style></link>: 적 하나에게 <link=card.curse><style=AssociatedCard>족쇄</style></link> <link=keyword.Curse><sprite name=Curse><style=Keyword>저주</style></link>를 겁니다.",
+    "descriptionRaw": "사용: 적 하나에게 족쇄 저주를 겁니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"이것 좀 봐, 돌리! 네가 가르쳐준 대로 해내고 있어! <nobr>내가 얼마나</nobr> 늘었는지 엄마한테 보여드릴 수 있을까? 벌써 <nobr>알고 계실</nobr> 거라고? 정말?! 그랬음 좋겠네.\"\n- 리사",
+    "artistName": "Envar Studio",
+    "name": "리사와 돌리",
+    "cardCode": "08MT015",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "일반급",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08MT030.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08MT030-full.png"
+      }
+    ],
+    "regions": [
+      "타곤"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 6,
+    "cost": 6,
+    "health": 5,
+    "description": "<link=keyword.Fast><sprite name=Fast><style=Keyword>신속</style></link> 또는 <link=keyword.Slow><sprite name=Slow><style=Keyword>집중</style></link> 주문, <link=keyword.Skill><sprite name=SkillMark><style=Keyword>스킬</style></link>을 사용하면 다른 용 아군들에게 +1|+1을 부여합니다.",
+    "descriptionRaw": "신속 또는 집중 주문, 스킬을 사용하면 다른 용 아군들에게 +1|+1을 부여합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "용들은 그 외형처럼 성미도 각양각색입니다. 화염의 드래곤처럼 모든 것을 집어삼키는 파괴를 일삼는 부류가 있는 한편 느릿하고 다정한 보석용처럼 가족과 환경을 보호하는 부류도 있습니다.",
+    "artistName": "Polar Engine",
+    "name": "온화한 보석용",
+    "cardCode": "08MT030",
+    "keywords": [
+      "분노"
+    ],
+    "keywordRefs": [
+      "Fury"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "희귀급",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "용"
+    ],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08MT003T11"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08MT023.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08MT023-full.png"
+      }
+    ],
+    "regions": [
+      "타곤"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "적 하나를 <link=keyword.Stun><sprite name=Stunned><style=Keyword>기절</style></link>시키고 <link=card.curse><style=AssociatedCard>족쇄</style></link> <link=keyword.Curse><sprite name=Curse><style=Keyword>저주</style></link>를 겁니다.",
+    "descriptionRaw": "적 하나를 기절시키고 족쇄 저주를 겁니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"고통받아라, 네가 다른 이에게 준 고통만큼!\"\n- 모르가나",
+    "artistName": "Polar Engine",
+    "name": "어둠의 속박",
+    "cardCode": "08MT023",
+    "keywords": [
+      "신속"
+    ],
+    "keywordRefs": [
+      "Fast"
+    ],
+    "spellSpeed": "신속",
+    "spellSpeedRef": "Fast",
+    "rarity": "희귀급",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "주문",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08MT031.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08MT031-full.png"
+      }
+    ],
+    "regions": [
+      "타곤"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 3,
+    "cost": 4,
+    "health": 3,
+    "description": "소환 시 아군 넥서스의 체력을 2 회복하고 다음 라운드에 추가 마나 보석 하나를 얻습니다.",
+    "descriptionRaw": "소환 시 아군 넥서스의 체력을 2 회복하고 다음 라운드에 추가 마나 보석 하나를 얻습니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "타곤 산 높은 곳 어딘가, 용에게 일생을 바친 오트라니가 있습니다. 떨어진 비늘과 오래된 뼈로 스스로를 장식하고 용 이빨이 부서지는 모양과 산 위로 퍼지는 연기의 모양으로 미래를 점칩니다.",
+    "artistName": "Polar Engine",
+    "name": "오트라니 용 숭배자",
+    "cardCode": "08MT031",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "서사급",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08MT009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08MT009-full.png"
+      }
+    ],
+    "regions": [
+      "타곤"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 4,
+    "cost": 5,
+    "health": 5,
+    "description": "소환 시 또는 <link=vocab.Titanic><style=Vocab>거대</style></link> 아군 소환 시 아군 넥서스의 체력을 3 회복합니다.",
+    "descriptionRaw": "소환 시 또는 거대 아군 소환 시 아군 넥서스의 체력을 3 회복합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "베일에 싸인 수호자는 자신을 단순한 짐승 이상의 존재로 만들어 준 축복을 잊지 않았습니다. 그리고 그 은혜를 갚기 위해 타곤의 경사로 어딘가에 존재하는 안식처를 찾는 이들이 안전하게 도달할 수 있도록 돕습니다.",
+    "artistName": "Envar Studio",
+    "name": "베일에 싸인 수호자",
+    "cardCode": "08MT009",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "희귀급",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08MT003T11"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08MT006.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08MT006-full.png"
+      }
+    ],
+    "regions": [
+      "타곤"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "이 라운드에 아군 하나에게<br><link=keyword.SpellShield><sprite name=SpellShield><style=Keyword>주문 방어막</style></link>을 일시 부여하고 <nobr><link=card.curse><style=AssociatedCard>족쇄</style></link> <link=keyword.Curse><sprite name=Curse><style=Keyword>저주</style></link>를</nobr> 겁니다.",
+    "descriptionRaw": "이 라운드에 아군 하나에게주문 방어막을 일시 부여하고 족쇄 저주를 겁니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"박해로부터 보호한다!\"\n- 모르가나",
+    "artistName": "Polar Engine",
+    "name": "칠흑의 방패",
+    "cardCode": "08MT006",
+    "keywords": [
+      "즉발"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "즉발",
+    "spellSpeedRef": "Burst",
+    "rarity": "희귀급",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "주문",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08MT027.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08MT027-full.png"
+      }
+    ],
+    "regions": [
+      "타곤"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 5,
+    "cost": 8,
+    "health": 8,
+    "description": "<link=vocab.Play><style=Vocab>사용</style></link>: 다른 모든 아군의 <link=keyword.Daybreak><style=Keyword>해오름</style></link> 및 <link=keyword.Nightfall><style=Keyword>어스름</style></link> 효과를 발동시킵니다.\r\n<link=keyword.Daybreak><style=Keyword>해오름</style></link>: <link=keyword.Overwhelm><sprite name=Overwhelm><style=Keyword>압도</style></link> 효과를 얻습니다.\r\n<link=keyword.Nightfall><style=Keyword>어스름</style></link>: <link=keyword.SpellShield><sprite name=SpellShield><style=Keyword>주문 방어막</style></link>을 얻습니다.",
+    "descriptionRaw": "사용: 다른 모든 아군의 해오름 및 어스름 효과를 발동시킵니다.\r\n해오름: 압도 효과를 얻습니다.\r\n어스름: 주문 방어막을 얻습니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"저 높이 불의 고리가 타오릅니다. 예견된 어둠 속에서 우리는 모두 평등합니다.\"\n- 루나리 소멸의 연설가",
+    "artistName": "Kudos Productions",
+    "name": "천체 교차의 전령",
+    "cardCode": "08MT027",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "서사급",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "새"
+    ],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08MT025.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08MT025-full.png"
+      }
+    ],
+    "regions": [
+      "타곤"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 7,
+    "health": 0,
+    "description": "<link=vocab.Titanic><style=Vocab>거대</style></link> 유닛이 <link=vocab.Behold><style=Vocab>등장</style></link>한 상태면 비용이 3 감소합니다.\r\n유닛 하나에게 피해를 7 입힙니다.",
+    "descriptionRaw": "거대 유닛이 등장한 상태면 비용이 3 감소합니다.\r\n유닛 하나에게 피해를 7 입힙니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"우왓, 이런... 저건 신경쓰지 마세요. 바위에 잔물결이 이는 것뿐이니까요. 작은 사고인 거죠. 아빠가 아니라... 아닙니다! 다들 이동하시죠!\"\n- 칩",
+    "artistName": "Polar Engine",
+    "name": "지진의 파편",
+    "cardCode": "08MT025",
+    "keywords": [
+      "집중"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "집중",
+    "spellSpeedRef": "Slow",
+    "rarity": "일반급",
+    "rarityRef": "Common",
+    "subtypes": [
+      "원소"
+    ],
+    "supertype": "",
+    "type": "주문",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08BW028T1",
+      "08BW028T2",
+      "08BW028T3",
+      "08BW028T4"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08DE006.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08DE006-full.png"
+      }
+    ],
+    "regions": [
+      "데마시아",
+      "프렐요드"
+    ],
+    "regionRefs": [
+      "Demacia",
+      "Freljord"
+    ],
+    "attack": 2,
+    "cost": 3,
+    "health": 3,
+    "description": "<link=vocab.Play><style=Vocab>사용</style></link>: 탐험가 주문 1장을 선택하고 손에 생성합니다.",
+    "descriptionRaw": "사용: 탐험가 주문 1장을 선택하고 손에 생성합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"날씨가 춥다. 나도 춥다. 모든 것이 차갑다, 늘 변함없이. 사람이 살아선 안 될 장소도 있는 거야. 일정이 끝나면 제발 나를 따뜻한 곳으로 보내 줘.\"\n- 탐험가 길드의 장거리 탐사부 탐험 일지, 프렐요드 편에서 발췌",
+    "artistName": "Envar Studio",
+    "name": "학술적 선구자",
+    "cardCode": "08DE006",
+    "keywords": [
+      "도전자"
+    ],
+    "keywordRefs": [
+      "Challenger"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "희귀급",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08DE017T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08DE020.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08DE020-full.png"
+      }
+    ],
+    "regions": [
+      "데마시아"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "아군에게 +0|+2를 부여합니다. 상대에게 <link=card.curse><style=AssociatedCard>제압</style></link> <link=keyword.Curse><sprite name=Curse><style=Keyword>저주</style></link>를 겁니다.",
+    "descriptionRaw": "아군에게 +0|+2를 부여합니다. 상대에게 제압 저주를 겁니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"네 죄의 무게를 알라!\"\n- 모르가나",
+    "artistName": "Polar Engine",
+    "name": "마법의 속박",
+    "cardCode": "08DE020",
+    "keywords": [
+      "집중"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "집중",
+    "spellSpeedRef": "Slow",
+    "rarity": "일반급",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "주문",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08DE017T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08DE017.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08DE017-full.png"
+      }
+    ],
+    "regions": [
+      "데마시아"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 3,
+    "cost": 4,
+    "health": 2,
+    "description": "소환 시 상대에게 <link=card.curse><style=AssociatedCard>제압</style></link> <link=keyword.Curse><sprite name=Curse><style=Keyword>저주</style></link>를 겁니다.",
+    "descriptionRaw": "소환 시 상대에게 제압 저주를 겁니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"저들이 타락한 자매의 안식처에 이르게 둘 수 없다. 그녀는 고대의 뒤틀린 마법을 사용해. 나조차도 제압할 수 있는 수준이 아니지. 어서, 이 괴생명체들을 데리고 배로 돌아가고 나머지를 따라 산 위로 쫓아가라!\"",
+    "artistName": "Envar Studio",
+    "name": "마력척결단 심판관",
+    "cardCode": "08DE017",
+    "keywords": [
+      "도전자",
+      "강인함"
+    ],
+    "keywordRefs": [
+      "Challenger",
+      "Tough"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "희귀급",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08DE017T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08DE017T1-full.png"
+      }
+    ],
+    "regions": [
+      "데마시아"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "이 카드가 손에 있을 때 <link=card.selfref><style=AssociatedCard>제압</style></link> 외 다른 주문을 사용할 수 없습니다.",
+    "descriptionRaw": "이 카드가 손에 있을 때 제압 외 다른 주문을 사용할 수 없습니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "어떤 마법도 당신의 뜻을 따르지 않습니다.",
+    "artistName": "Polar Engine",
+    "name": "제압",
+    "cardCode": "08DE017T1",
+    "keywords": [
+      "몰입",
+      "저주"
+    ],
+    "keywordRefs": [
+      "Focus",
+      "Curse"
+    ],
+    "spellSpeed": "즉발",
+    "spellSpeedRef": "Burst",
+    "rarity": "없음",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "주문",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08DE025.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08DE025-full.png"
+      }
+    ],
+    "regions": [
+      "데마시아"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 6,
+    "cost": 6,
+    "health": 6,
+    "description": "소환 시 손에 든 모든 아군 유닛의 비용을 1 감소시킵니다.",
+    "descriptionRaw": "소환 시 손에 든 모든 아군 유닛의 비용을 1 감소시킵니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "추위를 막아주는 두껍고 촘촘한 털 덕분에 이 드래곤은 다른 용들보다 훨씬 높이 비행할 수 있습니다. 활기차지만 쉽게 볼 수 없는 바람의 드래곤은 보통 하늘 높은 곳에서 바람을 타고 날개로 구름을 가르는 모습으로 발견됩니다.",
+    "artistName": "Wild Blue",
+    "name": "바람의 드래곤",
+    "cardCode": "08DE025",
+    "keywords": [
+      "분노"
+    ],
+    "keywordRefs": [
+      "Fury"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "서사급",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "용"
+    ],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "일반급 대전",
+      "영원",
+      "짝수 비용 카드",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08DE010.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08DE010-full.png"
+      }
+    ],
+    "regions": [
+      "데마시아"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "아군 하나에게 +0|+2를 일시 부여합니다.\r\n해당 아군과 적 하나가 서로를 <link=vocab.Strike><style=Vocab>타격</style></link>합니다.",
+    "descriptionRaw": "아군 하나에게 +0|+2를 일시 부여합니다.\r\n해당 아군과 적 하나가 서로를 타격합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"준비 태세를 취하게, 친구여! 신사의 결투를 거부할 정도로 겁쟁이는 아니겠지?\"\n- 로렌트가 기사",
+    "artistName": "Kudos Productions",
+    "name": "신사의 결투",
+    "cardCode": "08DE010",
+    "keywords": [
+      "신속"
+    ],
+    "keywordRefs": [
+      "Fast"
+    ],
+    "spellSpeed": "신속",
+    "spellSpeedRef": "Fast",
+    "rarity": "일반급",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "주문",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08DE022.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08DE022-full.png"
+      }
+    ],
+    "regions": [
+      "데마시아"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 8,
+    "cost": 9,
+    "health": 8,
+    "description": "소환 시 내 덱에서 각 챔피언을 1장씩 뽑습니다.\r\n라운드마다 처음으로 챔피언을 소환하면 <link=vocab.Rally><style=Vocab>결집</style></link>합니다.",
+    "descriptionRaw": "소환 시 내 덱에서 각 챔피언을 1장씩 뽑습니다.\r\n라운드마다 처음으로 챔피언을 소환하면 결집합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"기억하도록 해라, 내 아들아. 어떤 목표를 쫓든, 항상 떠나온 고향을 위한 것이어야 한다.\"\n- 국왕 자르반 3세",
+    "artistName": "Envar Studio",
+    "name": "물총새",
+    "cardCode": "08DE022",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "서사급",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08DE026.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08DE026-full.png"
+      }
+    ],
+    "regions": [
+      "데마시아"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 7,
+    "cost": 7,
+    "health": 6,
+    "description": "내 용의 은혜가 모든 아군 용을 대상으로 합니다.",
+    "descriptionRaw": "내 용의 은혜가 모든 아군 용을 대상으로 합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"정확히 말하자면, 내가 항상 용 포섭 대원이었던 건 아냐. 이 알라티스가 처음 내 목숨을 구해줬을 때 설득당해 버렸지. 그는 내게 많은 것을 가르쳐 줬지만, 가장 중요한 게 뭐였는지 아나? 용의 등에 타고 데마시아를 위해 일하는 것만큼 훌륭한 삶은 없다는 거야.\"\n- 용 포섭 대원",
+    "artistName": "Envar Studio",
+    "name": "용맹한 알라티스",
+    "cardCode": "08DE026",
+    "keywords": [
+      "분노"
+    ],
+    "keywordRefs": [
+      "Fury"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "서사급",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "용"
+    ],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "일반급 대전",
+      "영원",
+      "짝수 비용 카드",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08DE013.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08DE013-full.png"
+      }
+    ],
+    "regions": [
+      "데마시아"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 3,
+    "description": "소환 시 용이 <link=vocab.Behold><style=Vocab>등장</style></link>한 상태면 용 하나를 뽑습니다.",
+    "descriptionRaw": "소환 시 용이 등장한 상태면 용 하나를 뽑습니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"인정하긴 싫지만, 나이 든 친구. 우리만으로는 그 녀석을 길들일 수 없어. 할 수 있는 건 이미 다 해봤지. 장군님께 말은 전해 뒀어. 데마시아의 힘과 함께라면 분명 이 환상적인 야수를 굴복시킬 수 있을 거야.\"",
+    "artistName": "Envar Studio",
+    "name": "용 포섭 대원",
+    "cardCode": "08DE013",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "일반급",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08IO012.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08IO012-full.png"
+      }
+    ],
+    "regions": [
+      "아이오니아"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 3,
+    "cost": 6,
+    "health": 5,
+    "description": "<link=keyword.Fast><sprite name=Fast><style=Keyword>신속</style></link> 또는 <link=keyword.Slow><sprite name=Slow><style=Keyword>집중</style></link> 주문, <link=keyword.Skill><sprite name=SkillMark><style=Keyword>스킬</style></link>을 사용하면 아군 넥서스의 체력을 1 회복합니다.",
+    "descriptionRaw": "신속 또는 집중 주문, 스킬을 사용하면 아군 넥서스의 체력을 1 회복합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"멋진 야수로구나! 파도를 스치는 갈퀴에는 기쁨이 묻어나는군. 하지만 물고기와 바다새가 아닌 다른 것을 먹이로 삼는다면, <nobr>내 기꺼이</nobr> 너를 상대해 주마.\"\n- 닐라",
+    "artistName": "Caravan Studio",
+    "name": "바다의 드래곤",
+    "cardCode": "08IO012",
+    "keywords": [
+      "포착 불가"
+    ],
+    "keywordRefs": [
+      "Elusive"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "희귀급",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "용"
+    ],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08IO014.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08IO014-full.png"
+      }
+    ],
+    "regions": [
+      "아이오니아"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 9,
+    "cost": 10,
+    "health": 9,
+    "description": "라운드마다 처음으로 사용하는 카드의 비용이 9 감소합니다.",
+    "descriptionRaw": "라운드마다 처음으로 사용하는 카드의 비용이 9 감소합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "이 아이오니아 마을의 주민들에게 헤이쇼는 추앙받는 보호자이자 친구입니다. 주민들은 위기가 닥쳤을 때 태고적부터 자신들의 보금자리를 등에 지고 다닌 헤이쇼가 평화로운 해변으로 인도할 것이라고 믿습니다.",
+    "artistName": "Envar Studio",
+    "name": "세계의 등껍질 헤이쇼",
+    "cardCode": "08IO014",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "서사급",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "01IO030"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08IO021.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08IO021-full.png"
+      }
+    ],
+    "regions": [
+      "아이오니아"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 0,
+    "cost": 9,
+    "health": 0,
+    "description": "적의 <link=keyword.Fast><sprite name=Fast><style=Keyword>신속</style></link> 또는 <link=keyword.Slow><sprite name=Slow><style=Keyword>집중</style></link> 주문, <link=keyword.Skill><sprite name=SkillMark><style=Keyword>스킬</style></link> 하나를 중지시킵니다. 적 하나를 <link=keyword.Recall><style=Keyword>귀환</style></link>시키고 <link=card.summon><style=AssociatedCard>창공</style></link> 하나를 소환합니다.",
+    "descriptionRaw": "적의 신속 또는 집중 주문, 스킬 하나를 중지시킵니다. 적 하나를 귀환시키고 창공 하나를 소환합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"이 춤이 우리의 추모다.\"\n- 이렐리아",
+    "artistName": "Polar Engine",
+    "name": "창공의 춤",
+    "cardCode": "08IO021",
+    "keywords": [
+      "신속"
+    ],
+    "keywordRefs": [
+      "Fast"
+    ],
+    "spellSpeed": "신속",
+    "spellSpeedRef": "Fast",
+    "rarity": "희귀급",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "주문",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "일반급 대전",
+      "영원",
+      "짝수 비용 카드",
+      "싱글톤",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Deckbuilder_RulesFilters_Singleton",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08IO019T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08IO019.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08IO019-full.png"
+      }
+    ],
+    "regions": [
+      "아이오니아"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 3,
+    "cost": 4,
+    "health": 3,
+    "description": "소환 시 <link=card.summon><style=AssociatedCard>아드네어의 새 조련사</style></link> 하나를 소환합니다.",
+    "descriptionRaw": "소환 시 아드네어의 새 조련사 하나를 소환합니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"이 땅은 많은 교훈을 품고 있단다. 각 계절이 지나는 것은 축하할 일이라는 사실을 항상 기억하렴. 끝이 있어야 새로운 시작이 탄생할 수 있기 때문이지.\"",
+    "artistName": "Envar Studio",
+    "name": "신뢰받는 아드네어",
+    "cardCode": "08IO019",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "희귀급",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "일반급 대전",
+      "영원",
+      "짝수 비용 카드",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08IO019T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08IO019T1-full.png"
+      }
+    ],
+    "regions": [
+      "아이오니아"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 1,
+    "cost": 1,
+    "health": 1,
+    "description": "<link=keyword.Support><style=Keyword>지원</style></link>: 이 라운드에 이 유닛으로부터 지원을 받는 아군과 동일한 수치로 이 유닛의 능력치를 증가시킵니다.",
+    "descriptionRaw": "지원: 이 라운드에 이 유닛으로부터 지원을 받는 아군과 동일한 수치로 이 유닛의 능력치를 증가시킵니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"봐! 아빠의 새들이 또 알을 깨고 나오고 있어!\"<br>\"우와! 또 태어났네! 왜 이렇게 많은 거야?\"<br>\"아리아, 매년 똑같은 걸 묻잖아.\"<br>\"아무도 대답을 안 해주니 그렇지!\"<br>\"쉿, 겁주면 안 돼. 몇 마리인지 알려 줘. 붙여줄 이름을 잔뜩 생각해내야 할 테니까.\"",
+    "artistName": "Envar Studio",
+    "name": "아드네어의 새 조련사",
+    "cardCode": "08IO019T1",
+    "keywords": [
+      "지원"
+    ],
+    "keywordRefs": [
+      "Support"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "없음",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "유닛",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "일반급 대전",
+      "영원",
+      "짝수 비용 카드",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08IO010.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08IO010-full.png"
+      }
+    ],
+    "regions": [
+      "아이오니아"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 0,
+    "cost": 4,
+    "health": 0,
+    "description": "적 하나를 <link=keyword.Recall><style=Keyword>귀환</style></link>시키고 이 라운드에 상대방이 다음으로 사용하는 유닛의 비용을 2 증가시킵니다.",
+    "descriptionRaw": "적 하나를 귀환시키고 이 라운드에 상대방이 다음으로 사용하는 유닛의 비용을 2 증가시킵니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"우리에게 위협을 가하는 이들은 바다 밑바닥에서 편히 쉬게 될 것입니다.\"\n- 강을 만드는 자",
+    "artistName": "Polar Engine",
+    "name": "전복",
+    "cardCode": "08IO010",
+    "keywords": [
+      "집중"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "집중",
+    "spellSpeedRef": "Slow",
+    "rarity": "일반급",
+    "rarityRef": "Common",
+    "subtypes": [
+      "원소"
+    ],
+    "supertype": "",
+    "type": "주문",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "영원",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08BC020.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08BC020-full.png"
+      }
+    ],
+    "regions": [
+      "밴들 시티"
+    ],
+    "regionRefs": [
+      "BandleCity"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "상대가 가장 비용이 높은 카드를 버립니다.",
+    "descriptionRaw": "상대가 가장 비용이 높은 카드를 버립니다.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"벌레의 입장을 상상해 봐. 죽기 직전에 보이는 게 저 눈인 거지. 벌레는 앞을 볼 수 없다고? 음, 그래서 다행일지도 몰라.\"\n- 시큰둥한 여행자 엘",
+    "artistName": "Polar Engine",
+    "name": "일찍 일어나는 새",
+    "cardCode": "08BC020",
+    "keywords": [
+      "집중"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "집중",
+    "spellSpeedRef": "Slow",
+    "rarity": "일반급",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "주문",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "일반급 대전",
+      "영원",
+      "짝수 비용 카드",
+      "정규"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
       "06RU001T3",
       "01PZ022"
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BC005.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BC005-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08BC005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08BC005-full.png"
       }
     ],
     "regions": [
@@ -2844,8 +6942,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BC002.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BC002-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08BC002.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08BC002-full.png"
       }
     ],
     "regions": [
@@ -2899,8 +6997,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BC006.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08BC006-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08BC006.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08BC006-full.png"
       }
     ],
     "regions": [
@@ -2932,54 +7030,8 @@
     "spellSpeedRef": "",
     "rarity": "희귀급",
     "rarityRef": "Rare",
-    "subtypes": [],
-    "supertype": "",
-    "type": "유닛",
-    "collectible": true,
-    "set": "Set8",
-    "formats": [
-      "영원",
-      "정규"
-    ],
-    "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08SH004.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08SH004-full.png"
-      }
-    ],
-    "regions": [
-      "슈리마"
-    ],
-    "regionRefs": [
-      "Shurima"
-    ],
-    "attack": 4,
-    "cost": 4,
-    "health": 4,
-    "description": "<link=keyword.Daybreak><style=Keyword>해오름</style></link> 또는 다른 카드의 <link=keyword.Daybreak><style=Keyword>해오름</style></link> 효과 발동: <link=keyword.Weakest><style=Keyword>최약</style></link>인 적에게 <link=keyword.Vulnerable><sprite name=Vulnerable><style=Keyword>약점 노출</style></link> 상태를 부여합니다.",
-    "descriptionRaw": "해오름 또는 다른 카드의 해오름 효과 발동: 최약인 적에게 약점 노출 상태를 부여합니다.",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "슈리마의 장대한 군대는 언제나 사막의 힘을 증명할 준비가 되어 있습니다. 명령이 주어지면 이들은 주저 없이 전진합니다.",
-    "artistName": "Kudos Productions",
-    "name": "모래 언덕의 장군",
-    "cardCode": "08SH004",
-    "keywords": [],
-    "keywordRefs": [],
-    "spellSpeed": "",
-    "spellSpeedRef": "",
-    "rarity": "희귀급",
-    "rarityRef": "Rare",
     "subtypes": [
-      "정예"
+      "요들"
     ],
     "supertype": "",
     "type": "유닛",
@@ -2999,127 +7051,27 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08SH005.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08SH005-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08BC004.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08BC004-full.png"
       }
     ],
     "regions": [
-      "슈리마"
+      "밴들 시티"
     ],
     "regionRefs": [
-      "Shurima"
+      "BandleCity"
     ],
-    "attack": 2,
-    "cost": 2,
-    "health": 2,
-    "description": "<link=keyword.Daybreak><style=Keyword>해오름</style></link>: <link=card.me><style=AssociatedCard>태양 원판 수호병</style></link> 1장을 뽑습니다.",
-    "descriptionRaw": "해오름: 태양 원판 수호병 1장을 뽑습니다.",
+    "attack": 9,
+    "cost": 9,
+    "health": 9,
+    "description": "<link=vocab.Play><style=Vocab>사용</style></link>: <link=vocab.Titanic><style=Vocab>거대</style></link> 추종자 하나를 <link=vocab.Manifest><style=Vocab>시현</style></link>하고 능력치를 1|1로, 비용을 0으로 만듭니다. ",
+    "descriptionRaw": "사용: 거대 추종자 하나를 시현하고 능력치를 1|1로, 비용을 0으로 만듭니다. ",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "\"우리는 변치 않는 사막의 수호자이며, 살아 있는 역사이자, 광명의 길을 걷는 자들이다. 오로지 태양 원판 앞에 무릎을 꿇을지니, 이는 슈리마의 영광 앞에 세상이 무릎 꿇게 하기 위함이다.\"\n- 아지르",
-    "artistName": "Kudos Productions",
-    "name": "태양 원판 수호병",
-    "cardCode": "08SH005",
-    "keywords": [],
-    "keywordRefs": [],
-    "spellSpeed": "",
-    "spellSpeedRef": "",
-    "rarity": "일반급",
-    "rarityRef": "Common",
-    "subtypes": [
-      "정예"
-    ],
-    "supertype": "",
-    "type": "유닛",
-    "collectible": true,
-    "set": "Set8",
-    "formats": [
-      "영원",
-      "정규"
-    ],
-    "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08IO010.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08IO010-full.png"
-      }
-    ],
-    "regions": [
-      "아이오니아"
-    ],
-    "regionRefs": [
-      "Ionia"
-    ],
-    "attack": 0,
-    "cost": 4,
-    "health": 0,
-    "description": "적 하나를 <link=keyword.Recall><style=Keyword>귀환</style></link>시키고 이 라운드에 상대방이 다음으로 사용하는 유닛의 비용을 2 증가시킵니다.",
-    "descriptionRaw": "적 하나를 귀환시키고 이 라운드에 상대방이 다음으로 사용하는 유닛의 비용을 2 증가시킵니다.",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "\"우리에게 위협을 가하는 이들은 바다 밑바닥에서 편히 쉬게 될 것입니다.\"\n- 강을 만드는 자",
-    "artistName": "Polar Engine",
-    "name": "전복",
-    "cardCode": "08IO010",
-    "keywords": [
-      "집중"
-    ],
-    "keywordRefs": [
-      "Slow"
-    ],
-    "spellSpeed": "집중",
-    "spellSpeedRef": "Slow",
-    "rarity": "일반급",
-    "rarityRef": "Common",
-    "subtypes": [
-      "원소"
-    ],
-    "supertype": "",
-    "type": "주문",
-    "collectible": true,
-    "set": "Set8",
-    "formats": [
-      "영원",
-      "정규"
-    ],
-    "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08MT027.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08MT027-full.png"
-      }
-    ],
-    "regions": [
-      "타곤"
-    ],
-    "regionRefs": [
-      "Targon"
-    ],
-    "attack": 5,
-    "cost": 8,
-    "health": 8,
-    "description": "<link=vocab.Play><style=Vocab>사용</style></link>: 다른 모든 아군의 <link=keyword.Daybreak><style=Keyword>해오름</style></link> 및 <link=keyword.Nightfall><style=Keyword>어스름</style></link> 효과를 발동시킵니다.\r\n<link=keyword.Daybreak><style=Keyword>해오름</style></link>: <link=keyword.Overwhelm><sprite name=Overwhelm><style=Keyword>압도</style></link> 효과를 얻습니다.\r\n<link=keyword.Nightfall><style=Keyword>어스름</style></link>: <link=keyword.SpellShield><sprite name=SpellShield><style=Keyword>주문 방어막</style></link>을 얻습니다.",
-    "descriptionRaw": "사용: 다른 모든 아군의 해오름 및 어스름 효과를 발동시킵니다.\r\n해오름: 압도 효과를 얻습니다.\r\n어스름: 주문 방어막을 얻습니다.",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "\"저 높이 불의 고리가 타오릅니다. 예견된 어둠 속에서 우리는 모두 평등합니다.\"\n- 루나리 소멸의 연설가",
-    "artistName": "Kudos Productions",
-    "name": "천체 교차의 전령",
-    "cardCode": "08MT027",
+    "flavorText": "\"나이 든 포셔를 아냐고? 당연하지! 약간 정신 없어 보여도 어디로든 차원문을 열어줄 수 있다니까, 그것도 순식간에. 꼬리만 한 번 흔들면 바로 출발하는 거야!\"\n- 차원문 개척자",
+    "artistName": "Bubble Cat",
+    "name": "이상한 포셔",
+    "cardCode": "08BC004",
     "keywords": [],
     "keywordRefs": [],
     "spellSpeed": "",
@@ -3127,7 +7079,7 @@
     "rarity": "서사급",
     "rarityRef": "Epic",
     "subtypes": [
-      "새"
+      "용"
     ],
     "supertype": "",
     "type": "유닛",
@@ -3147,27 +7099,27 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08MT025.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/ko_kr/img/cards/08MT025-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08BC018.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/ko_kr/img/cards/08BC018-full.png"
       }
     ],
     "regions": [
-      "타곤"
+      "밴들 시티"
     ],
     "regionRefs": [
-      "Targon"
+      "BandleCity"
     ],
     "attack": 0,
-    "cost": 7,
+    "cost": 8,
     "health": 0,
-    "description": "<link=vocab.Titanic><style=Vocab>거대</style></link> 유닛이 <link=vocab.Behold><style=Vocab>등장</style></link>한 상태면 비용이 3 감소합니다.\r\n유닛 하나에게 피해를 7 입힙니다.",
-    "descriptionRaw": "거대 유닛이 등장한 상태면 비용이 3 감소합니다.\r\n유닛 하나에게 피해를 7 입힙니다.",
+    "description": "아군 하나를 내 덱의 맨 아래에 넣고 내 덱의 맨 위에 있는 아군을 소환합니다.",
+    "descriptionRaw": "아군 하나를 내 덱의 맨 아래에 넣고 내 덱의 맨 위에 있는 아군을 소환합니다.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "\"우왓, 이런... 저건 신경쓰지 마세요. 바위에 잔물결이 이는 것뿐이니까요. 작은 사고인 거죠. 아빠가 아니라... 아닙니다! 다들 이동하시죠!\"\n- 칩",
+    "flavorText": "\"규칙 제571조: 정찰대원은 언제나 방심해선 안 된다. 앞에 놓인 것이 맛있는 간식일지 함정일지 아무도 모르기 때문이다.\"\n- 열정 대원 에이바",
     "artistName": "Polar Engine",
-    "name": "지진의 파편",
-    "cardCode": "08MT025",
+    "name": "달콤한 함정",
+    "cardCode": "08BC018",
     "keywords": [
       "집중"
     ],
@@ -3176,21 +7128,23 @@
     ],
     "spellSpeed": "집중",
     "spellSpeedRef": "Slow",
-    "rarity": "일반급",
-    "rarityRef": "Common",
-    "subtypes": [
-      "원소"
-    ],
+    "rarity": "희귀급",
+    "rarityRef": "Rare",
+    "subtypes": [],
     "supertype": "",
     "type": "주문",
     "collectible": true,
     "set": "Set8",
     "formats": [
+      "일반급 대전",
       "영원",
+      "짝수 비용 카드",
       "정규"
     ],
     "formatRefs": [
+      "client_Formats_CommonsOnly_name",
       "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
       "client_Formats_Standard_name"
     ]
   }

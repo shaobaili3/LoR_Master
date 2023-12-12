@@ -2,14 +2,853 @@
   {
     "associatedCards": [],
     "associatedCardRefs": [
+      "08SI042T1",
+      "08SI042T5"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08SI042.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08SI042-full.png"
+      }
+    ],
+    "regions": [
+      "น็อก<zwsp>ซัส",
+      "เกาะ<zwsp>แห่ง<zwsp>เงา"
+    ],
+    "regionRefs": [
+      "Noxus",
+      "ShadowIsles"
+    ],
+    "attack": 5,
+    "cost": 7,
+    "health": 8,
+    "description": "<link=vocab.Play><style=Vocab>เล่น</style></link>: สังหารพันธมิตรสูงสุด 2 ใบ\r\nเมื่อคุณ<link=vocab.Slay><style=Vocab>กำจัด</style></link>พันธมิตรใบอื่น ให้ฟื้นคืนชีพมัน",
+    "descriptionRaw": "เล่น: สังหารพันธมิตรสูงสุด 2 ใบ\r\nเมื่อคุณกำจัดพันธมิตรใบอื่น ให้ฟื้นคืนชีพมัน",
+    "levelupDescription": "พันธมิตร 15 ใบขึ้นไปได้ตายไป พันธมิตรที่มีพลังโจมตี 5 หน่วยขึ้นไปนับเป็นสองเท่า <style=Variable></style>",
+    "levelupDescriptionRaw": "พันธมิตร 15 ใบขึ้นไปได้ตายไป พันธมิตรที่มีพลังโจมตี 5 หน่วยขึ้นไปนับเป็นสองเท่า ",
+    "flavorText": "แม้ถูกพันธนาการอยู่ภายใต้เกราะเหล็กใจกลางป้อมปราการไร้พ่าย Mordekaiser ก็ได้ก่อร่างบัลลังก์ของเขาขึ้นมาอีกครั้งภายในมิติสีเทา เพราะสำหรับใครก็ตามที่หมายจะทำลายเขา ก็ยังมีคนอีกมากที่ต้องการจะรับใช้เขาไปทั้งในโลกนี้และโลกหน้า",
+    "artistName": "Michal Ivan",
+    "name": "Mordekaiser",
+    "cardCode": "08SI042",
+    "keywords": [
+      "ผู้ท้าชิง"
+    ],
+    "keywordRefs": [
+      "Challenger"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "แชมเปี้ยน",
+    "rarityRef": "Champion",
+    "subtypes": [],
+    "supertype": "แชมเปี้ยน",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08SI042",
+      "08SI042T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08SI042T5.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08SI042T5-full.png"
+      }
+    ],
+    "regions": [
+      "เกาะ<zwsp>แห่ง<zwsp>เงา"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 0,
+    "cost": 10,
+    "health": 0,
+    "description": "พันธมิตรหนึ่งใบเริ่มโจมตีฟรีพร้อม<br><link=keyword.Challenger><sprite name=Challenger><style=Keyword>ท้าชิง</style></link>ศัตรูที่<link=vocab.Strongest><style=Vocab>แข็งแกร่งที่สุด</style></link><br>สังหารยูนิตใบอื่นทั้งหมด<br>สร้าง <link=card.level1><style=AssociatedCard>Mordekaiser</style></link> หนึ่งใบในเด็คของคุณ",
+    "descriptionRaw": "พันธมิตรหนึ่งใบเริ่มโจมตีฟรีพร้อมท้าชิงศัตรูที่แข็งแกร่งที่สุดสังหารยูนิตใบอื่นทั้งหมดสร้าง Mordekaiser หนึ่งใบในเด็คของคุณ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"ความตายคืออาณาจักรของข้า\" - Mordekaiser",
+    "artistName": "Polar Engine",
+    "name": "Mordekaiser's Realm of Death",
+    "cardCode": "08SI042T5",
+    "keywords": [
+      "ช้า"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "ช้า",
+    "spellSpeedRef": "Slow",
+    "rarity": "ไม่มี",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "แชมเปี้ยน",
+    "type": "เวท",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08SI042T5"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08SI042T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08SI042T1-full.png"
+      }
+    ],
+    "regions": [
+      "น็อก<zwsp>ซัส",
+      "เกาะ<zwsp>แห่ง<zwsp>เงา"
+    ],
+    "regionRefs": [
+      "Noxus",
+      "ShadowIsles"
+    ],
+    "attack": 6,
+    "cost": 7,
+    "health": 9,
+    "description": "<link=vocab.Play><style=Vocab>เล่น</style></link>: สังหารพันธมิตรสูงสุด 2 ใบ\r\nเมื่อคุณ<link=vocab.Slay><style=Vocab>กำจัด</style></link>พันธมิตรใบอื่น ให้ฟื้นคืนชีพมัน\r\n<link=vocab.Attack><style=Vocab>โจมตี</style></link>: จากนี้ไปจนจบเกม เมื่อคุณ<link=vocab.Slay><style=Vocab>กำจัด</style></link>ยูนิต <link=keyword.Drain><style=Keyword>ดูดพลัง</style></link> 1 หน่วยจากเน็กซัสของศัตรู",
+    "descriptionRaw": "เล่น: สังหารพันธมิตรสูงสุด 2 ใบ\r\nเมื่อคุณกำจัดพันธมิตรใบอื่น ให้ฟื้นคืนชีพมัน\r\nโจมตี: จากนี้ไปจนจบเกม เมื่อคุณกำจัดยูนิต ดูดพลัง 1 หน่วยจากเน็กซัสของศัตรู",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"จงรับใช้ข้า! จงปลดปล่อยดวงวิญญาณแสนน่าสมเพชของเจ้า ข้าจักมอบความเป็นนิรันดร์แห่งเหล็กกล้า เพราะข้าคือความว่างเปล่าที่ไม่อาจเลี่ยง!\"",
+    "artistName": "Michal Ivan",
+    "name": "Mordekaiser",
+    "cardCode": "08SI042T1",
+    "keywords": [
+      "ผู้ท้าชิง"
+    ],
+    "keywordRefs": [
+      "Challenger"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "แชมเปี้ยน",
+    "rarityRef": "Champion",
+    "subtypes": [],
+    "supertype": "แชมเปี้ยน",
+    "type": "ยูนิต",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08SI007.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08SI007-full.png"
+      }
+    ],
+    "regions": [
+      "เกาะ<zwsp>แห่ง<zwsp>เงา"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 4,
+    "cost": 3,
+    "health": 2,
+    "description": "<link=vocab.Play><style=Vocab>เล่น</style></link>: มอบ<link=keyword.Deathless><sprite name=Deathless><style=Keyword>ไม่มีวันตาย</style></link><br>ให้กับพันธมิตรหนึ่งใบในมือ",
+    "descriptionRaw": "เล่น: มอบไม่มีวันตายให้กับพันธมิตรหนึ่งใบในมือ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "ไม่สำคัญหรอกว่าสภาพดวงวิญญาณจะเป็นอย่างไรก่อนที่จะ<br>ถูกจองจำในมิติสีเทา เพราะที่นั่น ความเป็นปัจเจกนั้นมิได้สลักสำคัญอะไร ทั้งไร้ใบหน้าและไร้ความกลัว กองทัพนี้มีหน้าที่เดียวคือการรับใช้ขุนศึกเหล็กผู้หวนคืน<br>เพื่อสร้างความเอกรูปไปชั่วกาล",
+    "artistName": "Bubble Cat",
+    "name": "Legion of the Severed",
+    "cardCode": "08SI007",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "คอมมอน",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08SI003.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08SI003-full.png"
+      }
+    ],
+    "regions": [
+      "เกาะ<zwsp>แห่ง<zwsp>เงา"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 1,
+    "cost": 1,
+    "health": 1,
+    "description": "<link=keyword.Last Breath><sprite name=LastBreath><style=Keyword>สิ้นลม</style></link>: ครั้งถัดไปที่คุณฟื้นคืนชีพพันธมิตร สร้างการ์ดเสมือนของการ์ดใบนี้<br>หนึ่งใบในมือ",
+    "descriptionRaw": "สิ้นลม: ครั้งถัดไปที่คุณฟื้นคืนชีพพันธมิตร สร้างการ์ดเสมือนของการ์ดใบนี้หนึ่งใบในมือ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"มันช่างนานมากแล้วที่เราต้องถูกพันธนาการ อีกไม่นานเจ้าเองก็จะต้องทุกข์ทรมาน เราทั้งหมดจะทรมานไปด้วยกัน จากนี้ไปจนนิรันดร์ จนกว่าจะถึงวันที่พวกเราได้กลับคืนสู่ความว่างเปล่าด้วยน้ำมือของนายท่าน...\"",
+    "artistName": "Michal Ivan",
+    "name": "Shackled Ghasts",
+    "cardCode": "08SI003",
+    "keywords": [
+      "สิ้นลม"
+    ],
+    "keywordRefs": [
+      "LastBreath"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "แรร์",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU001T3"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08SI021.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08SI021-full.png"
+      }
+    ],
+    "regions": [
+      "เกาะ<zwsp>แห่ง<zwsp>เงา"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 3,
+    "description": "เมื่อพันธมิตรใบอื่นถูกสังหาร หรือ<nobr><link=keyword.Last Breath><sprite name=LastBreath><style=Keyword>สิ้นลม</style></link>:</nobr> ติด <link=card.chime><style=AssociatedCard>Chime</style></link> 4 ใบในเด็คของคุณ",
+    "descriptionRaw": "เมื่อพันธมิตรใบอื่นถูกสังหาร หรือสิ้นลม: ติด Chime 4 ใบในเด็คของคุณ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "ไม่ต้องกังวลเรื่องเสียงกังวานประหลาดนั่นหรอก นั่นก็แค่เสียงของตาแก่ Chimeslime น่ะ เขามักจะมีความสุขเสมอเมื่อมีคนมาใหม่ แต่คนเหล่านั้นกลับไม่ได้คิดเช่นนั้นน่ะสิ",
+    "artistName": "Bubble Cat",
+    "name": "Lonely Chimeslime",
+    "cardCode": "08SI021",
+    "keywords": [
+      "สิ้นลม"
+    ],
+    "keywordRefs": [
+      "LastBreath"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "คอมมอน",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08SI030.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08SI030-full.png"
+      }
+    ],
+    "regions": [
+      "เกาะ<zwsp>แห่ง<zwsp>เงา"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "<link=vocab.Obliterate><style=Vocab>ทำลายล้าง</style></link>การ์ด 6 ใบจากด้านล่างสุดของเด็คศัตรู",
+    "descriptionRaw": "ทำลายล้างการ์ด 6 ใบจากด้านล่างสุดของเด็คศัตรู",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "สำหรับสัตว์ใต้ทะเลที่ลึกที่สุดของรูนเทอร์รา เรือนักล่าก็เป็นได้แค่ขนมรองท้องเท่านั้น",
+    "artistName": "Polar Engine",
+    "name": "Watery Grave",
+    "cardCode": "08SI030",
+    "keywords": [
+      "ช้า"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "ช้า",
+    "spellSpeedRef": "Slow",
+    "rarity": "อีปิค",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "เวท",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "ระดับคอมมอนเท่านั้น",
+      "Eternal",
+      "การ์ดที่ใช้มานาเท่ากัน",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08SI037T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08SI037T1-full.png"
+      }
+    ],
+    "regions": [
+      "เกาะ<zwsp>แห่ง<zwsp>เงา"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 8,
+    "cost": 6,
+    "health": 4,
+    "description": "",
+    "descriptionRaw": "",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "เสียงสะบัดไปมาของกรงเล็บเหล็กกล้านับพันและเสียงขบเคี้ยว<br>จากคมเขี้ยวปีศาจคือคำสัญญาแห่งจุดจบสำหรับใครก็ตามที่<br>กล้าปฏิเสธรับใช้และบูชา",
+    "artistName": "Envar Studio",
+    "name": "Thousand-Clawed Deathwinder",
+    "cardCode": "08SI037T1",
+    "keywords": [
+      "น่าสะพรึง"
+    ],
+    "keywordRefs": [
+      "Fearsome"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ไม่มี",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "ระดับคอมมอนเท่านั้น",
+      "Eternal",
+      "การ์ดที่ใช้มานาเท่ากัน",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08SI037T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08SI037.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08SI037-full.png"
+      }
+    ],
+    "regions": [
+      "เกาะ<zwsp>แห่ง<zwsp>เงา"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 5,
+    "cost": 6,
+    "health": 3,
+    "description": "เพื่อเล่นการ์ดใบนี้ สังหารพันธมิตรหนึ่งใบ\r\nเมื่อการ์ดใบนี้ถูกอัญเชิญ อัญเชิญ <link=card.summon><style=AssociatedCard>Thousand-Clawed Deathwinder</style></link> หนึ่งใบ",
+    "descriptionRaw": "เพื่อเล่นการ์ดใบนี้ สังหารพันธมิตรหนึ่งใบ\r\nเมื่อการ์ดใบนี้ถูกอัญเชิญ อัญเชิญ Thousand-Clawed Deathwinder หนึ่งใบ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "หมาล่าเนื้อเหล่านี้ไม่เคยลืมกลิ่นของผู้ที่พยายามจะหลบหนี และเมื่อพวกมันไล่เหยื่อจนจนมุม Deathwinder ก็จะตามมาอยู่ไม่ไกล",
+    "artistName": "Xavier Leroux",
+    "name": "Spectral Ironhound",
+    "cardCode": "08SI037",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "แรร์",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "ระดับคอมมอนเท่านั้น",
+      "Eternal",
+      "การ์ดที่ใช้มานาเท่ากัน",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08SI041.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08SI041-full.png"
+      }
+    ],
+    "regions": [
+      "เกาะ<zwsp>แห่ง<zwsp>เงา"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "สังหารพันธมิตรหนึ่งใบเพื่อสร้างความเสียหาย 5 หน่วยแก่ยูนิตหนึ่งใบ",
+    "descriptionRaw": "สังหารพันธมิตรหนึ่งใบเพื่อสร้างความเสียหาย 5 หน่วยแก่ยูนิตหนึ่งใบ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"ความมืดมิดคือชะตาของทุกคนยกเว้นข้า\" - Mordekaiser",
+    "artistName": "Polar Engine",
+    "name": "Death's Grasp",
+    "cardCode": "08SI041",
+    "keywords": [
+      "เร็ว"
+    ],
+    "keywordRefs": [
+      "Fast"
+    ],
+    "spellSpeed": "เร็ว",
+    "spellSpeedRef": "Fast",
+    "rarity": "คอมมอน",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "เวท",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08SI026T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08SI036.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08SI036-full.png"
+      }
+    ],
+    "regions": [
+      "เกาะ<zwsp>แห่ง<zwsp>เงา"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "<link=vocab.Play><style=Vocab>เล่น</style></link>: <link=keyword.Curse><sprite name=Curse><style=Keyword>สาป</style></link>ศัตรูหนึ่งใบด้วย <link=card.curse><style=AssociatedCard>Terror</style></link>\r\nเมื่อคุณอัญเชิญพันธมิตร<link=vocab.Titanic><style=Vocab>มหึมา</style></link> ทำลายการ์ดใบนี้เพื่อจั่วการ์ด 2 ใบ",
+    "descriptionRaw": "เล่น: สาปศัตรูหนึ่งใบด้วย Terror\r\nเมื่อคุณอัญเชิญพันธมิตรมหึมา ทำลายการ์ดใบนี้เพื่อจั่วการ์ด 2 ใบ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"ดวงวิญญาณเหล่านี้เราขอน้อมถวาย ถนนหนทางเหล่านี้เราขอเบิกทางด้วยเถ้ากระดูก มิติเหล่านี้เราขอฉีกกระชากให้สิ้น เพื่อเปิดทางให้กองทัพเหล็กแห่งนิรันดร์ของท่านที่กำลังจะมา\" - Deathgrasp Cultist",
+    "artistName": "Envar Studio",
+    "name": "Threshold of the Grey",
+    "cardCode": "08SI036",
+    "keywords": [
+      "แลนด์มาร์ค"
+    ],
+    "keywordRefs": [
+      "LandmarkVisualOnly"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "แรร์",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "แลนด์มาร์ค",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "ระดับคอมมอนเท่านั้น",
+      "Eternal",
+      "การ์ดที่ใช้มานาเท่ากัน",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08SI004.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08SI004-full.png"
+      }
+    ],
+    "regions": [
+      "เกาะ<zwsp>แห่ง<zwsp>เงา"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 0,
+    "cost": 10,
+    "health": 0,
+    "description": "พันธมิตรหนึ่งใบเริ่มโจมตีฟรีพร้อม<br><link=keyword.Challenger><sprite name=Challenger><style=Keyword>ท้าชิง</style></link>ศัตรูที่<link=vocab.Strongest><style=Vocab>แข็งแกร่งที่สุด</style></link><br>สังหารยูนิตใบอื่นทั้งหมด",
+    "descriptionRaw": "พันธมิตรหนึ่งใบเริ่มโจมตีฟรีพร้อมท้าชิงศัตรูที่แข็งแกร่งที่สุดสังหารยูนิตใบอื่นทั้งหมด",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"ความตายคืออาณาจักรของข้า\" - Mordekaiser",
+    "artistName": "Polar Engine",
+    "name": "Realm of Death",
+    "cardCode": "08SI004",
+    "keywords": [
+      "ช้า"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "ช้า",
+    "spellSpeedRef": "Slow",
+    "rarity": "อีปิค",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "เวท",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08SI026T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08SI026.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08SI026-full.png"
+      }
+    ],
+    "regions": [
+      "เกาะ<zwsp>แห่ง<zwsp>เงา"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 3,
+    "cost": 4,
+    "health": 4,
+    "description": "เมื่อการ์ดใบนี้ถูกอัญเชิญหรือคุณอัญเชิญพันธมิตร<link=vocab.Titanic><style=Vocab>มหึมา</style></link> <link=keyword.Curse><sprite name=Curse><style=Keyword>สาป</style></link>ศัตรูที่<link=vocab.Strongest><style=Vocab>แข็งแกร่งที่สุด</style></link>ด้วย <link=card.curse><style=AssociatedCard>Terror</style></link>",
+    "descriptionRaw": "เมื่อการ์ดใบนี้ถูกอัญเชิญหรือคุณอัญเชิญพันธมิตรมหึมา สาปศัตรูที่แข็งแกร่งที่สุดด้วย Terror",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "ในสายตาผู้ติดตามของเขา ขุนศึกเหล็กผู้หวนคืนคือความหวังเดียวสำหรับผู้เสาะหาความ<br>ว่างเปล่า คือความสงบสุขท่ามกลางการปกครอง<br>และลัทธิเหล่านั้นก็พร้อมจะอ้าแขนต้อนรับอย่างเต็มใจ",
+    "artistName": "Bubble Cat",
+    "name": "Deathgrasp Cultist",
+    "cardCode": "08SI026",
+    "keywords": [
+      "น่าสะพรึง"
+    ],
+    "keywordRefs": [
+      "Fearsome"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "แรร์",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08SI026T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08SI026T1-full.png"
+      }
+    ],
+    "regions": [
+      "เกาะ<zwsp>แห่ง<zwsp>เงา"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "ในขณะที่การ์ดใบนี้อยู่ในมือ <style=Variable>ยูนิตต้องสาป</style> จะได้รับ <nobr> -<style=Variable>3</style>|-0</nobr>",
+    "descriptionRaw": "ในขณะที่การ์ดใบนี้อยู่ในมือ ยูนิตต้องสาป จะได้รับ  -3|-0",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "จงรับรู้รสชาติแห่งความตายอันพรั่งพรู",
+    "artistName": "Polar Engine",
+    "name": "Terror",
+    "cardCode": "08SI026T1",
+    "keywords": [
+      "โฟกัส",
+      "สาป"
+    ],
+    "keywordRefs": [
+      "Focus",
+      "Curse"
+    ],
+    "spellSpeed": "ฉับพลัน",
+    "spellSpeedRef": "Burst",
+    "rarity": "ไม่มี",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "เวท",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08BW028T1",
+      "08BW028T2",
+      "08BW028T3",
+      "08BW028T4"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08SI018.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08SI018-full.png"
+      }
+    ],
+    "regions": [
+      "เกาะ<zwsp>แห่ง<zwsp>เงา",
+      "ทาร์<zwsp>กอน"
+    ],
+    "regionRefs": [
+      "ShadowIsles",
+      "Targon"
+    ],
+    "attack": 2,
+    "cost": 3,
+    "health": 2,
+    "description": "<link=vocab.Play><style=Vocab>เล่น</style></link>: เลือกเวท Explorer หนึ่งใบเพื่อสร้างในมือ",
+    "descriptionRaw": "เล่น: เลือกเวท Explorer หนึ่งใบเพื่อสร้างในมือ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"ลักษณะพื้นที่ของที่นี้นั้นยากที่จะเข้าใจ ภูมิทัศน์การมองเห็นก็แทบจะไม่มี ข้าได้เผชิญหน้ากับศัตรูในแทบทุกซอกมุม แต่ก็น่าประหลาดที่ข้าได้พบพานกับเหล่าพันธมิตร<br>มากมายเช่นกัน\" - จากรายงานการสำรวจของหน่วยไกลปืนเที่ยงของ<br>กิลด์นักสำรวจ ภูมิภาค: เกาะแห่งเงา",
+    "artistName": "Envar Studio",
+    "name": "Spectral Surveyor",
+    "cardCode": "08SI018",
+    "keywords": [
+      "ดูดเลือด"
+    ],
+    "keywordRefs": [
+      "Lifesteal"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "แรร์",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08SI015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08SI015-full.png"
+      }
+    ],
+    "regions": [
+      "เกาะ<zwsp>แห่ง<zwsp>เงา"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 5,
+    "cost": 5,
+    "health": 3,
+    "description": "เพื่อเล่นการ์ดใบนี้ สังหารพันธมิตรหนึ่งใบ\r\n<link=keyword.Last Breath><sprite name=LastBreath><style=Keyword>สิ้นลม</style></link>: ฮีลเน็กซัสของคุณ 2 หน่วย",
+    "descriptionRaw": "เพื่อเล่นการ์ดใบนี้ สังหารพันธมิตรหนึ่งใบ\r\nสิ้นลม: ฮีลเน็กซัสของคุณ 2 หน่วย",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "สัตว์ร้ายแห่งสงครามนั้นมีค่าต่อทุกกองทัพ และในมิติสีเทา พวกมันก็คือดวงวิญญาณทรมานที่ถูกมัดรวมเข้าด้วยกัน แต่ละตัวพลางกลืนกินทุกสิ่งอย่างโดยไร้ความรู้สึกใด ",
+    "artistName": "Michal Ivan",
+    "name": "Amalgamation Of Vile Rites",
+    "cardCode": "08SI015",
+    "keywords": [
+      "สิ้นลม",
+      "ไม่มีวันตาย"
+    ],
+    "keywordRefs": [
+      "LastBreath",
+      "Deathless"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "อีปิค",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
       "08BW008T1",
       "08BW008T5",
       "08BW008T3"
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08BW008.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08BW008-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08BW008.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08BW008-full.png"
       }
     ],
     "regions": [
@@ -58,8 +897,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08BW008T3.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08BW008T3-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08BW008T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08BW008T3-full.png"
       }
     ],
     "regions": [
@@ -114,8 +953,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08BW008T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08BW008T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08BW008T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08BW008T1-full.png"
       }
     ],
     "regions": [
@@ -167,8 +1006,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08BW008T5.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08BW008T5-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08BW008T5.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08BW008T5-full.png"
       }
     ],
     "regions": [
@@ -219,8 +1058,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08BW032.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08BW032-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08BW032.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08BW032-full.png"
       }
     ],
     "regions": [
@@ -273,8 +1112,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08BW015.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08BW015-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08BW015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08BW015-full.png"
       }
     ],
     "regions": [
@@ -319,8 +1158,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08BW002.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08BW002-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08BW002.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08BW002-full.png"
       }
     ],
     "regions": [
@@ -371,8 +1210,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08BW025.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08BW025-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08BW025.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08BW025-full.png"
       }
     ],
     "regions": [
@@ -417,8 +1256,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08BW026.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08BW026-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08BW026.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08BW026-full.png"
       }
     ],
     "regions": [
@@ -429,7 +1268,7 @@
     ],
     "attack": 2,
     "cost": 4,
-    "health": 1,
+    "health": 2,
     "description": "เมื่อการ์ดใบนี้ถูกอัญเชิญ <link=vocab.Updraft><style=Vocab>ลมหวน</style></link>การ์ดทั้งหมดในมือของคุณและมอบ +1|+1 ให้กับการ์ดใบนี้ตามจำนวนการ์ดที่ถูก<br><link=vocab.Updraft><style=Vocab>ลมหวน</style></link>ไป จากนั้นจั่วการ์ด 2 ใบ",
     "descriptionRaw": "เมื่อการ์ดใบนี้ถูกอัญเชิญ ลมหวนการ์ดทั้งหมดในมือของคุณและมอบ +1|+1 ให้กับการ์ดใบนี้ตามจำนวนการ์ดที่ถูกลมหวนไป จากนั้นจั่วการ์ด 2 ใบ",
     "levelupDescription": "",
@@ -468,8 +1307,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08BW028.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08BW028-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08BW028.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08BW028-full.png"
       }
     ],
     "regions": [
@@ -520,8 +1359,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08BW028T4.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08BW028T4-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08BW028T4.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08BW028T4-full.png"
       }
     ],
     "regions": [
@@ -576,8 +1415,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08BW028T3.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08BW028T3-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08BW028T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08BW028T3-full.png"
       }
     ],
     "regions": [
@@ -626,8 +1465,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08BW028T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08BW028T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08BW028T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08BW028T1-full.png"
       }
     ],
     "regions": [
@@ -680,8 +1519,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08BW028T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08BW028T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08BW028T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08BW028T2-full.png"
       }
     ],
     "regions": [
@@ -734,8 +1573,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08BW009.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08BW009-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08BW009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08BW009-full.png"
       }
     ],
     "regions": [
@@ -780,8 +1619,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08BW010.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08BW010-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08BW010.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08BW010-full.png"
       }
     ],
     "regions": [
@@ -829,13 +1668,174 @@
   },
   {
     "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08BW031.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08BW031-full.png"
+      }
+    ],
+    "regions": [
+      "บิลจ์<zwsp>วอ<zwsp>เตอร์"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 8,
+    "cost": 8,
+    "health": 7,
+    "description": "เมื่อคุณใช้มานาเพื่อเล่นยูนิตใบอื่น สร้างการ์ดแบบสุ่มหนึ่งใบในมือที่มีค่าร่าย<br>เท่ากัน การ์ดใบนั้นมีค่าร่าย 0 หน่วยและได้รับ<link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>ชั่วคราว</style></link>",
+    "descriptionRaw": "เมื่อคุณใช้มานาเพื่อเล่นยูนิตใบอื่น สร้างการ์ดแบบสุ่มหนึ่งใบในมือที่มีค่าร่ายเท่ากัน การ์ดใบนั้นมีค่าร่าย 0 หน่วยและได้รับชั่วคราว",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "แม้จะกระหายไล่ล่ากระทั่งสัตว์ร้ายใต้ท้องทะเลที่<br>แปลกประหลาดที่สุด<br>แต่ก็ยังมีสัตว์ประหลาดบางชนิดที่แม้แต่กัปตันผู้มาก<br>ประสบการณ์ที่สุดแห่งบิลจ์วอเตอร์ก็ไม่กล้าเข้าใกล้ พวกเขาต่างกระซิบถึงการมีอยู่ของ Sefirsa ดวงไฟสะกดจิตที่เคลื่อนไหวอยู่ใต้เกลียวคลื่น ผู้อาศัยอยู่ท่ามกลางสุสานเรืออับปางและซากศพของมนุษย์นับร้อยนับพัน",
+    "artistName": "Envar Studio",
+    "name": "Sefirsa, Scourge of the Deep",
+    "cardCode": "08BW031",
+    "keywords": [
+      "ดำดิ่ง"
+    ],
+    "keywordRefs": [
+      "Deep"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "อีปิค",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "สัตว์ใต้ท้องทะเล",
+      "มังกร"
+    ],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08BW037.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08BW037-full.png"
+      }
+    ],
+    "regions": [
+      "บิลจ์<zwsp>วอ<zwsp>เตอร์"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 1,
+    "cost": 3,
+    "health": 3,
+    "description": "เมื่อคุณเล่นการ์ดที่มีค่าร่าย<br>เท่ากับพลังโจมตีของการ์ดใบนี้<br>มอบ +1|+1 ให้กับการ์ดใบนี้",
+    "descriptionRaw": "เมื่อคุณเล่นการ์ดที่มีค่าร่ายเท่ากับพลังโจมตีของการ์ดใบนี้มอบ +1|+1 ให้กับการ์ดใบนี้",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"แบบว่า เอ่อ ไม่อยากลองใส่เงินเพิ่มสักหน่อยหรอ? ไม่ลองเสี่ยงก็ไม่ได้รางวัลหรอกนะ และคืนนี้เนี่ยโต๊ะเรามือขึ้นสุด ๆ ข้าขอบอก แถมไพ่กองกลางก็จัดว่าเหมาะเจาะพร้อมรวยสุด ๆ เอาชื่อแม่ข้าเป็นประกันได้เลย\"",
+    "artistName": "Caravan Studio",
+    "name": "Honest Croupier",
+    "cardCode": "08BW037",
+    "keywords": [
+      "บ้าระห่ำ"
+    ],
+    "keywordRefs": [
+      "Brash"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "แรร์",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "ระดับคอมมอนเท่านั้น",
+      "Eternal",
+      "การ์ดที่ใช้มานาเท่ากัน",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08BW036.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08BW036-full.png"
+      }
+    ],
+    "regions": [
+      "บิลจ์<zwsp>วอ<zwsp>เตอร์"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "เมื่อคุณใช้มานาเพื่อเล่นยูนิต เติมมานาเวท 1 หน่วย",
+    "descriptionRaw": "เมื่อคุณใช้มานาเพื่อเล่นยูนิต เติมมานาเวท 1 หน่วย",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"แนวปะการังถือเป็นทั้งที่หลบภัยและพันธมิตรของพวกเรามา<br>ช้านาน พวกมันดูแลเรา อย่างที่เราดูแลมัน เพื่อให้ไม่มีใครต้องจมดิ่งลงไปสู่เงามืดอันน่าสะพรึง\" - Marai Greatmother",
+    "artistName": "Envar Studio",
+    "name": "Marai Reef Spire",
+    "cardCode": "08BW036",
+    "keywords": [
+      "แลนด์มาร์ค"
+    ],
+    "keywordRefs": [
+      "LandmarkVisualOnly"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "คอมมอน",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "แลนด์มาร์ค",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "ระดับคอมมอนเท่านั้น",
+      "Eternal",
+      "การ์ดที่ใช้มานาเท่ากัน",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
     "associatedCardRefs": [
       "08BW008T3"
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08BW023.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08BW023-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08BW023.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08BW023-full.png"
       }
     ],
     "regions": [
@@ -888,8 +1888,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08PZ007.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08PZ007-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08PZ007.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08PZ007-full.png"
       }
     ],
     "regions": [
@@ -940,8 +1940,62 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08PZ005.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08PZ005-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08PZ031.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08PZ031-full.png"
+      }
+    ],
+    "regions": [
+      "พิล<zwsp>โท<zwsp>เวอร์ <zwsp>& <zwsp>ซอน"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "เลือกผู้ติดตามพันธมิตรหนึ่งใบ แปลงการ์ดที่ติดตั้งการ์ดใบนี้<br>ให้กลายเป็นการ์ดเสมือนทุกประการ<br>ของพันธมิตรนั้นในขณะที่<br>ติดตั้งการ์ดใบนี้อยู่",
+    "descriptionRaw": "เลือกผู้ติดตามพันธมิตรหนึ่งใบ แปลงการ์ดที่ติดตั้งการ์ดใบนี้ให้กลายเป็นการ์ดเสมือนทุกประการของพันธมิตรนั้นในขณะที่ติดตั้งการ์ดใบนี้อยู่",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "อย่าถามเลยว่ามันทำงานยังไง",
+    "artistName": "Polar Engine",
+    "name": "Shady Spectacles",
+    "cardCode": "08PZ031",
+    "keywords": [
+      "อุปกรณ์"
+    ],
+    "keywordRefs": [
+      "Equipment"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "แรร์",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "อุปกรณ์",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "ระดับคอมมอนเท่านั้น",
+      "Eternal",
+      "การ์ดที่ใช้มานาเท่ากัน",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08PZ005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08PZ005-full.png"
       }
     ],
     "regions": [
@@ -992,8 +2046,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08PZ019.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08PZ019-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08PZ019.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08PZ019-full.png"
       }
     ],
     "regions": [
@@ -1005,8 +2059,8 @@
     "attack": 0,
     "cost": 5,
     "health": 0,
-    "description": "หากคุณจั่วการ์ด 3 ใบขึ้นไปในรอบนี้ การ์ดใบนี้ค่าร่ายลดลง 2 หน่วย\r\nสร้างความเสียหาย 3 หน่วยแก่ยูนิตหนึ่งใบ และ 2 หน่วยแก่เน็กซัสของศัตรู",
-    "descriptionRaw": "หากคุณจั่วการ์ด 3 ใบขึ้นไปในรอบนี้ การ์ดใบนี้ค่าร่ายลดลง 2 หน่วย\r\nสร้างความเสียหาย 3 หน่วยแก่ยูนิตหนึ่งใบ และ 2 หน่วยแก่เน็กซัสของศัตรู",
+    "description": "หากคุณจั่วการ์ด 3 ใบขึ้นไปในรอบนี้ การ์ดใบนี้ค่าร่ายลดลง 2 หน่วย\r\nสร้างความเสียหาย 3 หน่วยแก่ยูนิตหนึ่งใบ และ 1 หน่วยแก่เน็กซัสของศัตรู",
+    "descriptionRaw": "หากคุณจั่วการ์ด 3 ใบขึ้นไปในรอบนี้ การ์ดใบนี้ค่าร่ายลดลง 2 หน่วย\r\nสร้างความเสียหาย 3 หน่วยแก่ยูนิตหนึ่งใบ และ 1 หน่วยแก่เน็กซัสของศัตรู",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "\"พายุโหมกระหน่ำอยู่ใต้บัญชาข้า\" - JANNA",
@@ -1041,14 +2095,62 @@
   },
   {
     "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08PZ028.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08PZ028-full.png"
+      }
+    ],
+    "regions": [
+      "พิล<zwsp>โท<zwsp>เวอร์ <zwsp>& <zwsp>ซอน"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 8,
+    "cost": 8,
+    "health": 6,
+    "description": "เมื่อคุณเล่นเวท จั่วการ์ด 1 ใบ เมื่อคุณจั่วการ์ดในขณะที่มีการ์ดเต็มมือ สร้างความเสียหาย 1 หน่วยแก่เน็กซัสของศัตรู",
+    "descriptionRaw": "เมื่อคุณเล่นเวท จั่วการ์ด 1 ใบ เมื่อคุณจั่วการ์ดในขณะที่มีการ์ดเต็มมือ สร้างความเสียหาย 1 หน่วยแก่เน็กซัสของศัตรู",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "ซอนนั้นใฝ่หาการปรับตัว และ Chemtech Drake ก็ไม่ใช่ข้อยกเว้น ตอนนี้มันถูกห่อหุ้มไปด้วยแสงสีเขียวแห่งการเติมแต่งและปีนป่ายอยู่ตามมุมมืดของเมืองเบื้องล่าง ในขณะที่เงามืดจากปีกทั้งสองข้างคอยทอดปกคลุม<br>ไปตามทางเดินอันมืดมิด<br>สิ่งมีชีวิตนี้ได้กลายเป็นดั่งตัวแทนแห่งโทสะผู้เกิดขึ้นจากความ<br>ทุกข์ทรมานและความเสื่อมโทรมที่สั่งสมอยู่ในจิตใจ<zwsp>ตน",
+    "artistName": "Caravan Studio",
+    "name": "Chemtech Drake",
+    "cardCode": "08PZ028",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "อีปิค",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "มังกร"
+    ],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
     "associatedCardRefs": [
       "08PZ001T3",
       "08PZ001T1"
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08PZ001.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08PZ001-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08PZ001.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08PZ001-full.png"
       }
     ],
     "regions": [
@@ -1062,8 +2164,8 @@
     "health": 4,
     "description": "<link=vocab.Play><style=Vocab>เล่น</style></link>: <link=vocab.Updraft><style=Vocab>ลมหวน</style></link>การ์ด 2 ใบเพื่อจั่วการ์ด 2 ใบเมื่อ<link=vocab.RoundStart><style=Vocab>เริ่มรอบ</style></link>ถัดไป\r\nในแต่ละรอบ 3 ครั้งแรกที่คุณจั่วการ์ด ให้ลดค่าร่ายของมันลง 1 หน่วยในรอบนี้ <style=Variable></style>",
     "descriptionRaw": "เล่น: ลมหวนการ์ด 2 ใบเพื่อจั่วการ์ด 2 ใบเมื่อเริ่มรอบถัดไป\r\nในแต่ละรอบ 3 ครั้งแรกที่คุณจั่วการ์ด ให้ลดค่าร่ายของมันลง 1 หน่วยในรอบนี้ ",
-    "levelupDescription": "การ์ดใบนี้เห็นคุณเล่นการ์ดที่ถูก<br>ลดค่าร่าย 6 ใบ<style=Variable></style>",
-    "levelupDescriptionRaw": "การ์ดใบนี้เห็นคุณเล่นการ์ดที่ถูกลดค่าร่าย 6 ใบ",
+    "levelupDescription": "การ์ดใบนี้เห็นคุณเล่นการ์ดที่ถูกลด<br>ค่าร่าย 8 ใบ<style=Variable></style>",
+    "levelupDescriptionRaw": "การ์ดใบนี้เห็นคุณเล่นการ์ดที่ถูกลดค่าร่าย 8 ใบ",
     "flavorText": "\"ซอนคือสถานที่ที่ Janna ใกล้ชิดมากที่สุดยิ่งกว่าดินแดนไหน เพราะอย่างไร นางก็คือผู้ช่วยเหลือชาวพิลโทเวอร์ผู้น่าสงสารเหล่านี้ และใช่ หากข้าต้องการจะหาคำตอบ มันก็ต้องเป็นที่นี่แหละ\" - Windborne Mariner",
     "artistName": "Envar Studio",
     "name": "Janna",
@@ -1096,8 +2198,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08PZ001T3.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08PZ001T3-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08PZ001T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08PZ001T3-full.png"
       }
     ],
     "regions": [
@@ -1149,8 +2251,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08PZ001T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08PZ001T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08PZ001T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08PZ001T1-full.png"
       }
     ],
     "regions": [
@@ -1203,8 +2305,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08PZ026.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08PZ026-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08PZ026.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08PZ026-full.png"
       }
     ],
     "regions": [
@@ -1255,8 +2357,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08PZ006.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08PZ006-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08PZ006.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08PZ006-full.png"
       }
     ],
     "regions": [
@@ -1305,8 +2407,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08PZ018.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08PZ018-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08PZ018.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08PZ018-full.png"
       }
     ],
     "regions": [
@@ -1355,8 +2457,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08PZ008.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08PZ008-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08PZ008.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08PZ008-full.png"
       }
     ],
     "regions": [
@@ -1401,8 +2503,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08PZ026T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08PZ026T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08PZ026T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08PZ026T1-full.png"
       }
     ],
     "regions": [
@@ -1449,8 +2551,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08PZ009.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08PZ009-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08PZ009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08PZ009-full.png"
       }
     ],
     "regions": [
@@ -1499,8 +2601,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08PZ002.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08PZ002-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08PZ002.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08PZ002-full.png"
       }
     ],
     "regions": [
@@ -1551,8 +2653,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08PZ008T3.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08PZ008T3-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08PZ008T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08PZ008T3-full.png"
       }
     ],
     "regions": [
@@ -1597,8 +2699,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08PZ008T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08PZ008T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08PZ008T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08PZ008T2-full.png"
       }
     ],
     "regions": [
@@ -1643,8 +2745,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08PZ020.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08PZ020-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08PZ024.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08PZ024-full.png"
       }
     ],
     "regions": [
@@ -1653,7 +2755,53 @@
     "regionRefs": [
       "PiltoverZaun"
     ],
-    "attack": 3,
+    "attack": 4,
+    "cost": 4,
+    "health": 4,
+    "description": "<link=vocab.RoundStart><style=Vocab>เริ่มรอบ</style></link>: ผู้เล่นทุกคนจั่วการ์ด 1 ใบ จากนั้นมอบ<link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>ชั่วคราว</style></link>ให้กับ<br>การ์ดของคู่ต่อสู้",
+    "descriptionRaw": "เริ่มรอบ: ผู้เล่นทุกคนจั่วการ์ด 1 ใบ จากนั้นมอบชั่วคราวให้กับการ์ดของคู่ต่อสู้",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"ซื้อหนึ่งแถมหนึ่งเฉพาะวันนี้ วันนี้เท่านั้น! ปลาสด ๆ เพิ่งจับได้เอ่อ... ในเดือนนี้? ซื้อหนึ่งแถมหนึ่ง! หมายความว่าไงไม่อยากได้ตัวที่สอง? เราให้ฟรีเลยนะ!\"",
+    "artistName": "Envar Studio",
+    "name": "Charlatan Fishmonger",
+    "cardCode": "08PZ024",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "คอมมอน",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08PZ020.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08PZ020-full.png"
+      }
+    ],
+    "regions": [
+      "พิล<zwsp>โท<zwsp>เวอร์ <zwsp>& <zwsp>ซอน"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 2,
     "cost": 5,
     "health": 2,
     "description": "หากคุณจั่วการ์ด 3 ใบขึ้นไปในรอบนี้ การ์ดใบนี้ค่าร่ายลดลง 2 หน่วย\r\nเมื่อการ์ดใบนี้ถูกอัญเชิญ จั่วการ์ด 2 ใบเมื่อ<link=vocab.RoundStart><style=Vocab>เริ่มรอบ</style></link>ถัดไป",
@@ -1695,8 +2843,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08FR012.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08FR012-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08FR012.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08FR012-full.png"
       }
     ],
     "regions": [
@@ -1747,8 +2895,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08FR019.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08FR019-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08FR019.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08FR019-full.png"
       }
     ],
     "regions": [
@@ -1803,8 +2951,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08FR001.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08FR001-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08FR001.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08FR001-full.png"
       }
     ],
     "regions": [
@@ -1849,8 +2997,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08FR001T3.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08FR001T3-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08FR001T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08FR001T3-full.png"
       }
     ],
     "regions": [
@@ -1904,8 +3052,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08FR001T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08FR001T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08FR001T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08FR001T2-full.png"
       }
     ],
     "regions": [
@@ -1960,8 +3108,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08FR001T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08FR001T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08FR001T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08FR001T1-full.png"
       }
     ],
     "regions": [
@@ -2012,8 +3160,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08FR018.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08FR018-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08FR018.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08FR018-full.png"
       }
     ],
     "regions": [
@@ -2064,8 +3212,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08FR011.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08FR011-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08FR011.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08FR011-full.png"
       }
     ],
     "regions": [
@@ -2074,9 +3222,9 @@
     "regionRefs": [
       "Freljord"
     ],
-    "attack": 3,
+    "attack": 2,
     "cost": 4,
-    "health": 2,
+    "health": 3,
     "description": "เมื่อคุณเล่นเวทหรือ<link=keyword.Elemental Skill><sprite name=ElementalSkill><style=Keyword>สกิล</style></link>สรรพธาตุ <link=vocab.Forge><style=Vocab>เสริมแกร่ง</style></link>การ์ดใบนี้",
     "descriptionRaw": "เมื่อคุณเล่นเวทหรือสกิลสรรพธาตุ เสริมแกร่งการ์ดใบนี้",
     "levelupDescription": "",
@@ -2114,8 +3262,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08FR008.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08FR008-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08FR008.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08FR008-full.png"
       }
     ],
     "regions": [
@@ -2163,13 +3311,61 @@
   },
   {
     "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08FR024.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08FR024-full.png"
+      }
+    ],
+    "regions": [
+      "เฟรล<zwsp>ยอร์ด"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 3,
+    "description": "<link=vocab.Attack><style=Vocab>โจมตี</style></link>: มอบ +1|+1 ให้กับพันธมิตร 2 ใบบนสุดในเด็คของคุณ",
+    "descriptionRaw": "โจมตี: มอบ +1|+1 ให้กับพันธมิตร 2 ใบบนสุดในเด็คของคุณ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "แม้ว่าจะมีถิ่นกำเนิดมาจากยาดัสก์ แต่เจ้าหมาน้อยเหล่านี้ก็ได้รับการเลี้ยงดูโดยเผ่าชาวเฟรลยอร์ดมากมายเพื่อแกะรอย ล่าสัตว์ และฟื้นฟูสภาพหิมะถล่ม ด้วยทั้งรูปร่างที่แข็งแกร่งและนิสัยรักความสนุกสนาน พวกมันจึงกลายเป็นที่รักไปทั่วนับตั้งแต่ทุ่งทุนดราไปจนถึงพื้นที่ป่าสน",
+    "artistName": "Envar Studio",
+    "name": "Yadulski Snowdog",
+    "cardCode": "08FR024",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "คอมมอน",
+    "rarityRef": "Common",
+    "subtypes": [
+      "สุนัข"
+    ],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
     "associatedCardRefs": [
       "08FR002T1"
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08FR015.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08FR015-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08FR015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08FR015-full.png"
       }
     ],
     "regions": [
@@ -2212,12 +3408,66 @@
   {
     "associatedCards": [],
     "associatedCardRefs": [
+      "04FR001"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08FR030.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08FR030-full.png"
+      }
+    ],
+    "regions": [
+      "เฟรล<zwsp>ยอร์ด"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 8,
+    "cost": 8,
+    "health": 8,
+    "description": "เมื่อการ์ดใบนี้ถูกอัญเชิญ อัญเชิญ <link=card.summon><style=AssociatedCard>Frozen Thrall</style></link> 2 ใบ และ<link=vocab.Advance><style=Vocab>เร่งเวลา</style></link>พวกมัน<nobr>ให้เหลือ 2 รอบ</nobr>",
+    "descriptionRaw": "เมื่อการ์ดใบนี้ถูกอัญเชิญ อัญเชิญ Frozen Thrall 2 ใบ และเร่งเวลาพวกมันให้เหลือ 2 รอบ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"เธอนั้นช่างป่าเถื่อน! ทั้งเหล่า Thrall ที่ถูกเผากลายเป็นน้ำแข็งสีดำทมิฬ ทั้งหิมะถล่มภายใต้การสะบัดกรงเล็บ ทั้งเสียงคำรามที่สามารถทลายหิมะออกจากขุนเขา! เธอนี่แหละคือราชินีนักรบ! และการสังหารเหล่า Thrall ก็คืองานของราชินีนักรบนั่นไง\" - Babbling Bjerg",
+    "artistName": "Caravan Studio",
+    "name": "Boadir of Blackened Ice",
+    "cardCode": "08FR030",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "อีปิค",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "มังกร"
+    ],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "ระดับคอมมอนเท่านั้น",
+      "Eternal",
+      "การ์ดที่ใช้มานาเท่ากัน",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
       "08FR002T1"
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08FR002.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08FR002-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08FR002.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08FR002-full.png"
       }
     ],
     "regions": [
@@ -2262,8 +3512,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08FR002T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08FR002T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08FR002T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08FR002T1-full.png"
       }
     ],
     "regions": [
@@ -2311,13 +3561,11 @@
   },
   {
     "associatedCards": [],
-    "associatedCardRefs": [
-      "08FR002T1"
-    ],
+    "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08FR003.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08FR003-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08FR028.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08FR028-full.png"
       }
     ],
     "regions": [
@@ -2326,9 +3574,65 @@
     "regionRefs": [
       "Freljord"
     ],
-    "attack": 5,
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "การ์ดใบนี้มี +1|+0<br>ตามจำนวนประเภทย่อย<br>ที่ต่างกันที่คุณได้อัญเชิญไปในเกมนี้<br><style=Variable></style>",
+    "descriptionRaw": "การ์ดใบนี้มี +1|+0ตามจำนวนประเภทย่อยที่ต่างกันที่คุณได้อัญเชิญไปในเกมนี้",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"ยังมีสัตว์ร้ายบนนี้ที่แม้แต่หิมะถล่มก็มิอาจหยุดยั้งพวกมันได้ นั่นจึงเป็นสาเหตุว่าทำไมการหาสายจูงที่ดีนั้นจึงคุ้มค่ากับ<br>ทุกเหรียญที่เสียไป\" - Avarosan Trapper",
+    "artistName": "Polar Engine",
+    "name": "Handy Harness",
+    "cardCode": "08FR028",
+    "keywords": [
+      "อุปกรณ์"
+    ],
+    "keywordRefs": [
+      "Equipment"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "อีปิค",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "อุปกรณ์",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "ระดับคอมมอนเท่านั้น",
+      "Eternal",
+      "การ์ดที่ใช้มานาเท่ากัน",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08FR002T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08FR003.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08FR003-full.png"
+      }
+    ],
+    "regions": [
+      "เฟรล<zwsp>ยอร์ด"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 6,
     "cost": 6,
-    "health": 3,
+    "health": 4,
     "description": "เมื่อคุณเล่นเวทหรือ<link=keyword.Skill><sprite name=SkillMark><style=Keyword>สกิล</style></link> อัญเชิญ <link=card.summon><style=AssociatedCard>Sigil of the Storm</style></link> หนึ่งใบ",
     "descriptionRaw": "เมื่อคุณเล่นเวทหรือสกิล อัญเชิญ Sigil of the Storm หนึ่งใบ",
     "levelupDescription": "",
@@ -2364,42 +3668,726 @@
   {
     "associatedCards": [],
     "associatedCardRefs": [
-      "08BW028T1",
-      "08BW028T2",
-      "08BW028T3",
-      "08BW028T4"
+      "08RU014T9",
+      "08RU014T8",
+      "08RU014T3",
+      "08RU014T6",
+      "08RU014T5",
+      "08RU014T1",
+      "08RU014T7",
+      "08RU014T4",
+      "08RU014T2"
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08DE006.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08DE006-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08RU014.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08RU014-full.png"
       }
     ],
     "regions": [
-      "เด<zwsp>มา<zwsp>เซีย",
-      "เฟรล<zwsp>ยอร์ด"
+      "รูนเทอร์รา"
     ],
     "regionRefs": [
-      "Demacia",
-      "Freljord"
+      "Runeterra"
     ],
-    "attack": 2,
-    "cost": 3,
-    "health": 3,
-    "description": "<link=vocab.Play><style=Vocab>เล่น</style></link>: เลือกเวท Explorer หนึ่งใบเพื่อสร้างในมือ",
-    "descriptionRaw": "เล่น: เลือกเวท Explorer หนึ่งใบเพื่อสร้างในมือ",
+    "attack": 10,
+    "cost": 12,
+    "health": 10,
+    "description": "<link=vocab.Origin><style=Vocab>ต้นกำเนิด</style></link>: <link=card.origin><style=AssociatedCard>Aspect of the Dragon</style></link> <style=Variable></style>\r\nการ์ดใบนี้มีค่าร่ายลดลง 1 หน่วยตามจำนวนพรแห่งมังกรที่ต่างกัน<br>ที่คุณเล่นไปในเกมนี้<br><link=keyword.PlaySkillMark><sprite name=SkillMark><style=Keyword>เล่น</style></link>: เล่นพรแห่งมังกร<br>ทั้งหมดใส่การ์ดใบนี้",
+    "descriptionRaw": "ต้นกำเนิด: Aspect of the Dragon \r\nการ์ดใบนี้มีค่าร่ายลดลง 1 หน่วยตามจำนวนพรแห่งมังกรที่ต่างกันที่คุณเล่นไปในเกมนี้เล่น: เล่นพรแห่งมังกรทั้งหมดใส่การ์ดใบนี้",
+    "levelupDescription": "พันธมิตรของคุณได้โจมตีด้วย<br>พลังโจมตีรวม 75 หน่วยขึ้นไป<br><style=Variable></style>",
+    "levelupDescriptionRaw": "พันธมิตรของคุณได้โจมตีด้วยพลังโจมตีรวม 75 หน่วยขึ้นไป",
+    "flavorText": "\"ตำนานกล่าวไว้ว่ามังกรตนนี้คือมังกรที่เก่าแก่ที่สุด คือราชาแห่งสัตว์ร้ายมีปีกทั้งมวล ถ้าเราทำให้มันเชื่อฟังได้... ว่าไง Alatis จะมีอะไรที่มาขวางเราได้อีก? โลกนี้จะได้เข้าใจเสียทีว่ามนุษย์และมังกรนั้นแข็งแกร่งที่สุดเมื่ออยู่ร่วมกัน\" - Volix, Dragon Allegiant",
+    "artistName": "Envar Studio",
+    "name": "Elder Dragon",
+    "cardCode": "08RU014",
+    "keywords": [
+      "โทสะ"
+    ],
+    "keywordRefs": [
+      "Fury"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "แชมเปี้ยน",
+    "rarityRef": "Champion",
+    "subtypes": [
+      "มังกร"
+    ],
+    "supertype": "แชมเปี้ยน",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08RU014T5.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08RU014T5-full.png"
+      }
+    ],
+    "regions": [
+      "รูนเทอร์รา"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "มอบ +1|+1 และ<link=keyword.Fearsome><sprite name=Fearsome><style=Keyword>น่าสะพรึง</style></link>",
+    "descriptionRaw": "มอบ +1|+1 และน่าสะพรึง",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "\"ที่นี่ช่างหนาวเหน็บ ข้าหนาวเหลือเกิน ทุกสิ่งทุกอย่างเย็นยะเยือกอยู่ตลอดเวลา โลกนี้มันมีสถานที่ที่ไม่ควรอาศัยอยู่นะ หลังจากนี้ได้โปรดส่งข้าไปที่อุ่น ๆ หน่อยเถอะ\" - จากรายงานการสำรวจของหน่วยไกลปืนเที่ยงของกิลด์<br>นักสำรวจ ภูมิภาค: เฟรลยอร์ด",
+    "flavorText": "เปลวเพลิงพิโรธจากนรกลุกโชติช่วงขจรไกล",
+    "artistName": "Polar Engine",
+    "name": "Infernal Might",
+    "cardCode": "08RU014T5",
+    "keywords": [
+      "สกิล"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ไม่มี",
+    "rarityRef": "None",
+    "subtypes": [
+      "สรรพธาตุ"
+    ],
+    "supertype": "",
+    "type": "ความสามารถ",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08RU014T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08RU014T3-full.png"
+      }
+    ],
+    "regions": [
+      "รูนเทอร์รา"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "คุณสามารถเพิ่มผู้ติดตามใบใดก็ได้ที่มีค่าร่าย 6 หน่วยขึ้นไปใส่ในเด็คของคุณในช่วงการจัดเด็ค เมื่อคุณเล่นยูนิตที่มีค่าร่ายพื้นฐาน 6 หน่วยขึ้นไป เลือก 1 ใน 2 พรแห่งมังกรเพื่อเล่นใส่ยูนิตนั้น",
+    "descriptionRaw": "คุณสามารถเพิ่มผู้ติดตามใบใดก็ได้ที่มีค่าร่าย 6 หน่วยขึ้นไปใส่ในเด็คของคุณในช่วงการจัดเด็ค เมื่อคุณเล่นยูนิตที่มีค่าร่ายพื้นฐาน 6 หน่วยขึ้นไป เลือก 1 ใน 2 พรแห่งมังกรเพื่อเล่นใส่ยูนิตนั้น",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "พรที่ประทานโดยเหล่ามังกรนั้นทั้งน่ายำเกรงและน่าหวาดหวั่น",
     "artistName": "Envar Studio",
-    "name": "Scholarly Pioneer",
-    "cardCode": "08DE006",
+    "name": "Aspect of the Dragon",
+    "cardCode": "08RU014T3",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ไม่มี",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ความสามารถ",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08RU014",
+      "08RU014T8",
+      "08RU014T3",
+      "08RU014T6",
+      "08RU014T5",
+      "08RU014T1",
+      "08RU014T7",
+      "08RU014T4",
+      "08RU014T2"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08RU014T9.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08RU014T9-full.png"
+      }
+    ],
+    "regions": [
+      "รูนเทอร์รา"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 30,
+    "cost": 12,
+    "health": 30,
+    "description": "\r\n\r\n\r\n\r\nการ์ดใบนี้ไม่สามารถถูกหยุดยั้ง",
+    "descriptionRaw": "\r\n\r\n\r\n\r\nการ์ดใบนี้ไม่สามารถถูกหยุดยั้ง",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "ความร้อนไร้ใครเทียมพวยพุ่งออกมาจากปากของ Elder Dragon จากนั้น Alatis ก็กระโจนขึ้นสู่กลางอากาศ \"จงยืนหยัด\" Volix ตะโกน \"รักษาตำแหน่งเอาไว้! บัดนี้โลกจะสลักชื่อพวกเราในฐานะมนุษย์ผู้พิชิตราชาแห่ง<br>สัตว์ร้าย!\"",
+    "artistName": "Envar Studio",
+    "name": "Elder Dragon",
+    "cardCode": "08RU014T9",
+    "keywords": [
+      "โทสะ"
+    ],
+    "keywordRefs": [
+      "Fury"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "แชมเปี้ยน",
+    "rarityRef": "Champion",
+    "subtypes": [
+      "มังกร"
+    ],
+    "supertype": "แชมเปี้ยน",
+    "type": "ยูนิต",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08RU014T4.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08RU014T4-full.png"
+      }
+    ],
+    "regions": [
+      "รูนเทอร์รา"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "มอบ +1|+1 และ<link=keyword.Impact><sprite name=Impact><style=Keyword>สะเทือน</style></link>สองครั้ง",
+    "descriptionRaw": "มอบ +1|+1 และสะเทือนสองครั้ง",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "ธรรมชาติออกแบบ เฮ็กซ์เทคพัฒนา\n",
+    "artistName": "Polar Engine",
+    "name": "Hextech Prowess",
+    "cardCode": "08RU014T4",
+    "keywords": [
+      "สกิล"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ไม่มี",
+    "rarityRef": "None",
+    "subtypes": [
+      "สรรพธาตุ"
+    ],
+    "supertype": "",
+    "type": "ความสามารถ",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08RU014T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08RU014T2-full.png"
+      }
+    ],
+    "regions": [
+      "รูนเทอร์รา"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "มอบ<link=keyword.Deathless><sprite name=Deathless><style=Keyword>ไม่มีวันตาย</style></link>",
+    "descriptionRaw": "มอบไม่มีวันตาย",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "บางคนเรียกยาพิษ บางคนเรียกมันว่าพลัง",
+    "artistName": "Polar Engine",
+    "name": "Chemtech Blight",
+    "cardCode": "08RU014T2",
+    "keywords": [
+      "สกิล"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ไม่มี",
+    "rarityRef": "None",
+    "subtypes": [
+      "สรรพธาตุ"
+    ],
+    "supertype": "",
+    "type": "ความสามารถ",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08RU014T7.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08RU014T7-full.png"
+      }
+    ],
+    "regions": [
+      "รูนเทอร์รา"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "มอบ<link=keyword.Challenger><sprite name=Challenger><style=Keyword>ผู้ท้าชิง</style></link>",
+    "descriptionRaw": "มอบผู้ท้าชิง",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "ว่องไวดุจลมโชย และหนักแน่นดุจลมพายุ ",
+    "artistName": "Polar Engine",
+    "name": "Cloudbringer's Grace",
+    "cardCode": "08RU014T7",
+    "keywords": [
+      "สกิล"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ไม่มี",
+    "rarityRef": "None",
+    "subtypes": [
+      "สรรพธาตุ"
+    ],
+    "supertype": "",
+    "type": "ความสามารถ",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08RU014T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08RU014T1-full.png"
+      }
+    ],
+    "regions": [
+      "รูนเทอร์รา"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "มอบ +1|+1 และ<link=keyword.Tough><sprite name=Tough><style=Keyword>ทนทาน</style></link>",
+    "descriptionRaw": "มอบ +1|+1 และทนทาน",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "เนื้อหนังแห่งขุนเขาทนทานพายุได้ทุกรูปแบบ",
+    "artistName": "Polar Engine",
+    "name": "Mountainous Vigor",
+    "cardCode": "08RU014T1",
+    "keywords": [
+      "สกิล"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ไม่มี",
+    "rarityRef": "None",
+    "subtypes": [
+      "สรรพธาตุ"
+    ],
+    "supertype": "",
+    "type": "ความสามารถ",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08RU014",
+      "08RU014T9"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08RU014T8.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08RU014T8-full.png"
+      }
+    ],
+    "regions": [
+      "รูนเทอร์รา"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 8,
+    "health": 0,
+    "description": "เติมมานาของคุณจนเต็ม จั่วผู้ติดตามค่าร่าย 6 หน่วยขึ้นไปทุกใบจากการ์ด 6 ใบบนสุดในเด็คของคุณ\r\nสร้าง <link=card.level1><style=AssociatedCard>Elder Dragon</style></link> หนึ่งใบในเด็คของคุณ",
+    "descriptionRaw": "เติมมานาของคุณจนเต็ม จั่วผู้ติดตามค่าร่าย 6 หน่วยขึ้นไปทุกใบจากการ์ด 6 ใบบนสุดในเด็คของคุณ\r\nสร้าง Elder Dragon หนึ่งใบในเด็คของคุณ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"เสียงเรียกนี้ มันคือเสียงเรียกแห่งต้นกำเนิด ข้าพลันมองเห็นอาณาจักรแห่งมวลเมฆ ข้าพลันมองเห็นร่างมีปีกขนาดยักษ์\" - Ottrani Dragon-Worshiper",
+    "artistName": "Polar Engine",
+    "name": "Elder Dragon's Primordial Roar",
+    "cardCode": "08RU014T8",
+    "keywords": [
+      "ฉับพลัน"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "ฉับพลัน",
+    "spellSpeedRef": "Burst",
+    "rarity": "ไม่มี",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "แชมเปี้ยน",
+    "type": "เวท",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08RU014T6.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08RU014T6-full.png"
+      }
+    ],
+    "regions": [
+      "รูนเทอร์รา"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "ฮีลพันธมิตรทั้งหมดและเน็กซัสของคุณ 2 หน่วย",
+    "descriptionRaw": "ฮีลพันธมิตรทั้งหมดและเน็กซัสของคุณ 2 หน่วย",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "ปีกคู่แห่งสายธารจักชะล้างบาดแผลทั้งมวล",
+    "artistName": "Polar Engine",
+    "name": "Oceanic Will",
+    "cardCode": "08RU014T6",
+    "keywords": [
+      "สกิล"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ไม่มี",
+    "rarityRef": "None",
+    "subtypes": [
+      "สรรพธาตุ"
+    ],
+    "supertype": "",
+    "type": "ความสามารถ",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08RU015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08RU015-full.png"
+      }
+    ],
+    "regions": [
+      "รูนเทอร์รา"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 8,
+    "health": 0,
+    "description": "เติมมานาของคุณจนเต็ม จั่วผู้ติดตามค่าร่าย 6 หน่วยขึ้นไปทุกใบจากการ์ด 6 ใบบนสุดในเด็คของคุณ",
+    "descriptionRaw": "เติมมานาของคุณจนเต็ม จั่วผู้ติดตามค่าร่าย 6 หน่วยขึ้นไปทุกใบจากการ์ด 6 ใบบนสุดในเด็คของคุณ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"เสียงเรียกนี้ มันคือเสียงเรียกแห่งต้นกำเนิด ข้าพลันมองเห็นอาณาจักรแห่งมวลเมฆ ข้าพลันมองเห็นร่างมีปีกขนาดยักษ์\" - Ottrani Dragon-Worshiper",
+    "artistName": "Polar Engine",
+    "name": "Primordial Roar",
+    "cardCode": "08RU015",
+    "keywords": [
+      "ฉับพลัน"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "ฉับพลัน",
+    "spellSpeedRef": "Burst",
+    "rarity": "ไม่มี",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "เวท",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08NX003T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08NX003.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08NX003-full.png"
+      }
+    ],
+    "regions": [
+      "น็อก<zwsp>ซัส"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 8,
+    "cost": 6,
+    "health": 4,
+    "description": "<link=keyword.Elemental Skill><sprite name=ElementalSkill><style=Keyword>เล่น</style></link>: สร้างความเสียหาย 2 หน่วยแก่ศัตรูหนึ่งใบ และ 2 หน่วยแก่เน็กซัสของศัตรู",
+    "descriptionRaw": "เล่น: สร้างความเสียหาย 2 หน่วยแก่ศัตรูหนึ่งใบ และ 2 หน่วยแก่เน็กซัสของศัตรู",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "การขยายอาณาจักรของชาวน็อกซัสทำให้พวกเขาได้มาซึ่งผู้คน ถิ่นฐาน และวัฒนธรรมมากมาย และบ่อยครั้งสิ่งมีชีวิตดุร้ายก็พลันต้องตกเป็นเหยื่อของ<br>เครื่องจักรสงคราม แต่ไม่ใช่กับมังกรตนนี้ เพราะทุก ๆ ก้าวรุกรานของน็อกซัสก็จักต้องปะทะกับเพลิงโทสะนรกที่รุนแรงไม่แพ้กัน",
+    "artistName": "Envar Studio",
+    "name": "Enraged Firespitter",
+    "cardCode": "08NX003",
     "keywords": [
       "ผู้ท้าชิง"
     ],
     "keywordRefs": [
       "Challenger"
     ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "อีปิค",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "มังกร"
+    ],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08NX003"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08NX003T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08NX003T1-full.png"
+      }
+    ],
+    "regions": [
+      "น็อก<zwsp>ซัส"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "สร้างความเสียหาย 2 หน่วยแก่ศัตรูหนึ่งใบ และ 2 หน่วยแก่เน็กซัสของศัตรู",
+    "descriptionRaw": "สร้างความเสียหาย 2 หน่วยแก่ศัตรูหนึ่งใบ และ 2 หน่วยแก่เน็กซัสของศัตรู",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "ไม้ เหล็ก เลือดเนื้อ--ทุกอย่างหลอมละลายรวมเป็นหนึ่งเมื่อเข้ามาอยู่ในระยะโทสะกัดกร่อนของผู้พ่นเปลวเพลิง",
+    "artistName": "Polar Engine",
+    "name": "Spitfire",
+    "cardCode": "08NX003T1",
+    "keywords": [
+      "สกิลสรรพธาตุ"
+    ],
+    "keywordRefs": [
+      "ElementalSkill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ไม่มี",
+    "rarityRef": "None",
+    "subtypes": [
+      "สรรพธาตุ"
+    ],
+    "supertype": "",
+    "type": "ความสามารถ",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08NX024T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08NX024.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08NX024-full.png"
+      }
+    ],
+    "regions": [
+      "น็อก<zwsp>ซัส"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 5,
+    "cost": 3,
+    "health": 1,
+    "description": "<link=keyword.PlaySkillMark><sprite name=SkillMark><style=Keyword>เล่น</style></link>: สร้างความเสียหาย 3 หน่วยแก่พันธมิตรหนึ่งใบ เพื่อสร้างความเสียหาย 3 หน่วยแก่ศัตรูหนึ่งใบ",
+    "descriptionRaw": "เล่น: สร้างความเสียหาย 3 หน่วยแก่พันธมิตรหนึ่งใบ เพื่อสร้างความเสียหาย 3 หน่วยแก่ศัตรูหนึ่งใบ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"กระชากดวงวิญญาณของพวกมันออกจากกรงขังที่มีชื่อว่า<br>ร่างเนื้อ!\" - Mordekaiser",
+    "artistName": "Caravan Studio",
+    "name": "Iron Legionary",
+    "cardCode": "08NX024",
+    "keywords": [],
+    "keywordRefs": [],
     "spellSpeed": "",
     "spellSpeedRef": "",
     "rarity": "แรร์",
@@ -2423,58 +4411,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08DE010.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08DE010-full.png"
-      }
-    ],
-    "regions": [
-      "เด<zwsp>มา<zwsp>เซีย"
-    ],
-    "regionRefs": [
-      "Demacia"
-    ],
-    "attack": 0,
-    "cost": 3,
-    "health": 0,
-    "description": "มอบ +0|+2 ให้กับพันธมิตรหนึ่งใบ\r\nพันธมิตรใบนั้นและศัตรูหนึ่งใบทำการ<link=vocab.Strike><style=Vocab>จู่โจม</style></link>กันและกัน",
-    "descriptionRaw": "มอบ +0|+2 ให้กับพันธมิตรหนึ่งใบ\r\nพันธมิตรใบนั้นและศัตรูหนึ่งใบทำการจู่โจมกันและกัน",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "\"ตั้งท่าซะสหาย! เจ้าคงไม่ปอดแหกเกินที่จะปฏิเสธการประลองของลูกผู้ชายใช่มั้ย\" - Laurent Chevalier",
-    "artistName": "Kudos Productions",
-    "name": "Gentlemen's Duel",
-    "cardCode": "08DE010",
-    "keywords": [
-      "เร็ว"
-    ],
-    "keywordRefs": [
-      "Fast"
-    ],
-    "spellSpeed": "เร็ว",
-    "spellSpeedRef": "Fast",
-    "rarity": "คอมมอน",
-    "rarityRef": "Common",
-    "subtypes": [],
-    "supertype": "",
-    "type": "เวท",
-    "collectible": true,
-    "set": "Set8",
-    "formats": [
-      "Eternal",
-      "Standard"
-    ],
-    "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08NX011.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08NX011-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08NX024T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08NX024T1-full.png"
       }
     ],
     "regions": [
@@ -2484,7 +4422,63 @@
       "Noxus"
     ],
     "attack": 0,
-    "cost": 1,
+    "cost": 0,
+    "health": 0,
+    "description": "สร้างความเสียหาย 3 หน่วยแก่พันธมิตรหนึ่งใบ เพื่อสร้างความเสียหาย 3 หน่วยแก่ศัตรูหนึ่งใบ",
+    "descriptionRaw": "สร้างความเสียหาย 3 หน่วยแก่พันธมิตรหนึ่งใบ เพื่อสร้างความเสียหาย 3 หน่วยแก่ศัตรูหนึ่งใบ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"ทั้งเชือดเฉือน... ทั้งเจ็บปวด... ทั้งในมิติแห่งนี้และมิติภายภาคหน้า... ภาคหน้า...\" - Shackled Ghasts",
+    "artistName": "Polar Engine",
+    "name": "Soul Cleaver",
+    "cardCode": "08NX024T1",
+    "keywords": [
+      "สกิล"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ไม่มี",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ความสามารถ",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "ระดับคอมมอนเท่านั้น",
+      "Eternal",
+      "การ์ดที่ใช้มานาเท่ากัน",
+      "การ์ดไม่ซ้ำ",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Deckbuilder_RulesFilters_Singleton",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08NX011.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08NX011-full.png"
+      }
+    ],
+    "regions": [
+      "น็อก<zwsp>ซัส"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 2,
     "health": 0,
     "description": "สร้างความเสียหาย 1 หน่วยแก่เน็กซัสของศัตรู เพิ่มขึ้น 1 หน่วยตามจำนวน <link=card.selfref><style=AssociatedCard>Wildfire</style></link> ใบอื่นที่คุณได้เล่นไป สร้าง <link=card.selfref><style=AssociatedCard>Wildfire</style></link> หนึ่งใบในเด็คของคุณ",
     "descriptionRaw": "สร้างความเสียหาย 1 หน่วยแก่เน็กซัสของศัตรู เพิ่มขึ้น 1 หน่วยตามจำนวน Wildfire ใบอื่นที่คุณได้เล่นไป สร้าง Wildfire หนึ่งใบในเด็คของคุณ",
@@ -2525,8 +4519,164 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08NX014.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08NX014-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08NX028.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08NX028-full.png"
+      }
+    ],
+    "regions": [
+      "น็อก<zwsp>ซัส"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "มอบ<link=keyword.Deathless><sprite name=Deathless><style=Keyword>ไม่มีวันตาย</style></link>ให้กับพันธมิตรหนึ่งใบ",
+    "descriptionRaw": "มอบไม่มีวันตายให้กับพันธมิตรหนึ่งใบ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"เหล็กกล้าชั่วนิรันดร์\" - Mordekaiser",
+    "artistName": "Polar Engine",
+    "name": "Indestructible",
+    "cardCode": "08NX028",
+    "keywords": [
+      "ฉับพลัน"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "ฉับพลัน",
+    "spellSpeedRef": "Burst",
+    "rarity": "คอมมอน",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "เวท",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08NX019T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08NX019.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08NX019-full.png"
+      }
+    ],
+    "regions": [
+      "น็อก<zwsp>ซัส"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 4,
+    "cost": 4,
+    "health": 4,
+    "description": "<link=vocab.NexusStrike><style=Vocab>จู่โจมเน็กซัส</style></link>: <link=keyword.Curse><sprite name=Curse><style=Keyword>สาป</style></link>คู่ต่อสู้ของคุณด้วย <link=card.curse><style=AssociatedCard>Ichor</style></link>",
+    "descriptionRaw": "จู่โจมเน็กซัส: สาปคู่ต่อสู้ของคุณด้วย Ichor",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "แม้จะมีประโยชน์อย่างมากในฐานะเครื่องจักรสงครามของ<br>น็อกซัส แต่ Razormace<br>ก็ยังได้รับการยกย่องจากสนามต่อสู้ภายในเมืองหลวงด้วยเช่นกัน เพราะมีคู่ต่อสู้ไม่กี่คนเท่านั้น ไม่ว่าจะมนุษย์หรือสัตว์ ที่จะหาญกล้าพอเข้าประลองกับสัตว์ร้ายตนนี้ ดังนั้นการต่อสู้สุดหายากของ Razormace จึงดึงดูดผู้คนได้จากทั่วสารทิศ",
+    "artistName": "Envar Studio",
+    "name": "Red-Barbed Razormace",
+    "cardCode": "08NX019",
+    "keywords": [
+      "ทะลวง"
+    ],
+    "keywordRefs": [
+      "Overwhelm"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "คอมมอน",
+    "rarityRef": "Common",
+    "subtypes": [
+      "สัตว์เลื้อยคลาน"
+    ],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08NX019T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08NX019T1-full.png"
+      }
+    ],
+    "regions": [
+      "น็อก<zwsp>ซัส"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "ในขณะที่การ์ดใบนี้อยู่ในมือ <link=vocab.RoundStart><style=Vocab>เริ่มรอบ</style></link>: สร้างความเสียหาย <style=Variable>1</style> หน่วยแก่เน็กซัสของคุณ",
+    "descriptionRaw": "ในขณะที่การ์ดใบนี้อยู่ในมือ เริ่มรอบ: สร้างความเสียหาย 1 หน่วยแก่เน็กซัสของคุณ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "เจ้ากำลังเลือดไหล ไหลอย่างช้า ๆ... แต่ไม่มีทีท่าจะหยุดเลย",
+    "artistName": "Polar Engine",
+    "name": "Ichor",
+    "cardCode": "08NX019T1",
+    "keywords": [
+      "โฟกัส",
+      "สาป"
+    ],
+    "keywordRefs": [
+      "Focus",
+      "Curse"
+    ],
+    "spellSpeed": "ฉับพลัน",
+    "spellSpeedRef": "Burst",
+    "rarity": "ไม่มี",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "เวท",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08NX014.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08NX014-full.png"
       }
     ],
     "regions": [
@@ -2580,8 +4730,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08NX012.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08NX012-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08NX012.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08NX012-full.png"
       }
     ],
     "regions": [
@@ -2625,37 +4775,35 @@
   },
   {
     "associatedCards": [],
-    "associatedCardRefs": [
-      "06RU001T3"
-    ],
+    "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08SI021.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08SI021-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08NX009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08NX009-full.png"
       }
     ],
     "regions": [
-      "เกาะ<zwsp>แห่ง<zwsp>เงา"
+      "น็อก<zwsp>ซัส"
     ],
     "regionRefs": [
-      "ShadowIsles"
+      "Noxus"
     ],
-    "attack": 2,
-    "cost": 2,
-    "health": 3,
-    "description": "เมื่อพันธมิตรใบอื่นถูกสังหาร หรือ<nobr><link=keyword.Last Breath><sprite name=LastBreath><style=Keyword>สิ้นลม</style></link>:</nobr> ติด <link=card.chime><style=AssociatedCard>Chime</style></link> 4 ใบในเด็คของคุณ",
-    "descriptionRaw": "เมื่อพันธมิตรใบอื่นถูกสังหาร หรือสิ้นลม: ติด Chime 4 ใบในเด็คของคุณ",
+    "attack": 5,
+    "cost": 4,
+    "health": 2,
+    "description": "",
+    "descriptionRaw": "",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "ไม่ต้องกังวลเรื่องเสียงกังวานประหลาดนั่นหรอก นั่นก็แค่เสียงของตาแก่ Chimeslime น่ะ เขามักจะมีความสุขเสมอเมื่อมีคนมาใหม่ แต่คนเหล่านั้นกลับไม่ได้คิดเช่นนั้นน่ะสิ",
-    "artistName": "Bubble Cat",
-    "name": "Lonely Chimeslime",
-    "cardCode": "08SI021",
+    "flavorText": "\"ต้องใช้เวลาวางแผนกว่าศตวรรษเพื่อที่จะผนึกจ้าวสงคราม<br>แสนชั่วร้าย แต่สหายน่าสมเพชของเจ้าต้องการที่จะชนะเขา<zwsp>ด้วย 'ความรื่นเริง' เนี่ยนะ? ยัยเด็กหน้าโง่เอ๊ย สิ่งที่เจ้าทำได้มีเพียงไปกระตุ้นความพิโรธของขุนศึกผู้นั้น และเมื่อวันนั้นมาถึง เจ้าก็จะพาความพินาศมาสู่พวกเราทุกคน\"",
+    "artistName": "Wild Blue",
+    "name": "Lord Mallat",
+    "cardCode": "08NX009",
     "keywords": [
-      "สิ้นลม"
+      "ไม่มีวันตาย"
     ],
     "keywordRefs": [
-      "LastBreath"
+      "Deathless"
     ],
     "spellSpeed": "",
     "spellSpeedRef": "",
@@ -2680,93 +4828,32 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08SI030.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08SI030-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08NX025.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08NX025-full.png"
       }
     ],
     "regions": [
-      "เกาะ<zwsp>แห่ง<zwsp>เงา"
+      "น็อก<zwsp>ซัส"
     ],
     "regionRefs": [
-      "ShadowIsles"
-    ],
-    "attack": 0,
-    "cost": 3,
-    "health": 0,
-    "description": "<link=vocab.Obliterate><style=Vocab>ทำลายล้าง</style></link>การ์ด 6 ใบจากด้านล่างสุดของเด็คศัตรู",
-    "descriptionRaw": "ทำลายล้างการ์ด 6 ใบจากด้านล่างสุดของเด็คศัตรู",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "สำหรับสัตว์ใต้ทะเลที่ลึกที่สุดของรูนเทอร์รา เรือนักล่าก็เป็นได้แค่ขนมรองท้องเท่านั้น",
-    "artistName": "Polar Engine",
-    "name": "Watery Grave",
-    "cardCode": "08SI030",
-    "keywords": [
-      "ช้า"
-    ],
-    "keywordRefs": [
-      "Slow"
-    ],
-    "spellSpeed": "ช้า",
-    "spellSpeedRef": "Slow",
-    "rarity": "อีปิค",
-    "rarityRef": "Epic",
-    "subtypes": [],
-    "supertype": "",
-    "type": "เวท",
-    "collectible": true,
-    "set": "Set8",
-    "formats": [
-      "ระดับคอมมอนเท่านั้น",
-      "Eternal",
-      "การ์ดที่ใช้มานาเท่ากัน",
-      "Standard"
-    ],
-    "formatRefs": [
-      "client_Formats_CommonsOnly_name",
-      "client_Formats_Eternal_name",
-      "client_Formats_EvenCostCards_name",
-      "client_Formats_Standard_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [
-      "08BW028T1",
-      "08BW028T2",
-      "08BW028T3",
-      "08BW028T4"
-    ],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08SI018.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08SI018-full.png"
-      }
-    ],
-    "regions": [
-      "เกาะ<zwsp>แห่ง<zwsp>เงา",
-      "ทาร์<zwsp>กอน"
-    ],
-    "regionRefs": [
-      "ShadowIsles",
-      "Targon"
+      "Noxus"
     ],
     "attack": 2,
     "cost": 3,
-    "health": 2,
-    "description": "<link=vocab.Play><style=Vocab>เล่น</style></link>: เลือกเวท Explorer หนึ่งใบเพื่อสร้างในมือ",
-    "descriptionRaw": "เล่น: เลือกเวท Explorer หนึ่งใบเพื่อสร้างในมือ",
+    "health": 3,
+    "description": "เมื่อพันธมิตรฟื้นคืนชีพ มอบ<link=keyword.Challenger><sprite name=Challenger><style=Keyword>ผู้ท้าชิง</style></link>ให้กับมัน",
+    "descriptionRaw": "เมื่อพันธมิตรฟื้นคืนชีพ มอบผู้ท้าชิงให้กับมัน",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "\"ลักษณะพื้นที่ของที่นี้นั้นยากที่จะเข้าใจ ภูมิทัศน์การมองเห็นก็แทบจะไม่มี ข้าได้เผชิญหน้ากับศัตรูในแทบทุกซอกมุม แต่ก็น่าประหลาดที่ข้าได้พบพานกับเหล่าพันธมิตร<br>มากมายเช่นกัน\" - จากรายงานการสำรวจของหน่วยไกลปืนเที่ยงของ<br>กิลด์นักสำรวจ ภูมิภาค: เกาะแห่งเงา",
+    "flavorText": "\"เจ้ากำลังยิ้ม แต่ข้ารู้ดีถึงความจริงภายใต้จิตใจทรยศของพวกเจ้า! พวกมันยิ้มให้ข้าแถมยังกินอาหารจากโต๊ะของข้า ทั้งที่พวกมันต่างก็หมายปองที่จะแทงข้างหลังข้าอยู่ตลอดเวลา ข้าจะไม่ยอมถูกหลอกอีกครั้ง เจ้าจักตายแบบเดียวกับพวกมัน พร้อมตะโกนกรีดร้องให้ข้าให้อภัย!\"",
     "artistName": "Envar Studio",
-    "name": "Spectral Surveyor",
-    "cardCode": "08SI018",
+    "name": "Bladepierced Revenant",
+    "cardCode": "08NX025",
     "keywords": [
-      "ดูดเลือด"
+      "ไม่มีวันตาย"
     ],
     "keywordRefs": [
-      "Lifesteal"
+      "Deathless"
     ],
     "spellSpeed": "",
     "spellSpeedRef": "",
@@ -2789,13 +4876,2024 @@
   {
     "associatedCards": [],
     "associatedCardRefs": [
+      "08SI026T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08SH009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08SH009-full.png"
+      }
+    ],
+    "regions": [
+      "ชู<zwsp>ริ<zwsp>ม่า"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "<link=keyword.Curse><sprite name=Curse><style=Keyword>สาป</style></link>ศัตรูหนึ่งใบด้วย <link=card.curse><style=AssociatedCard>Terror</style></link>",
+    "descriptionRaw": "สาปศัตรูหนึ่งใบด้วย Terror",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "บางสิ่งก็เหมาะสมแล้วที่จะถูกฝังไว้ใต้ผืนทราย",
+    "artistName": "Polar Engine",
+    "name": "Ancient Malediction",
+    "cardCode": "08SH009",
+    "keywords": [
+      "ฉับพลัน"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "ฉับพลัน",
+    "spellSpeedRef": "Burst",
+    "rarity": "คอมมอน",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "เวท",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08SH004.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08SH004-full.png"
+      }
+    ],
+    "regions": [
+      "ชู<zwsp>ริ<zwsp>ม่า"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 4,
+    "cost": 4,
+    "health": 4,
+    "description": "<link=keyword.Daybreak><style=Keyword>รุ่งอรุณ</style></link>หรือเมื่อคุณเปิดใช้งาน<br>เอฟเฟกต์<link=keyword.Daybreak><style=Keyword>รุ่งอรุณ</style></link>ใบอื่น:<br>มอบ<link=keyword.Vulnerable><sprite name=Vulnerable><style=Keyword>เปราะบาง</style></link>แก่ศัตรูที่<link=keyword.Weakest><style=Keyword>อ่อนแอที่สุด</style></link>",
+    "descriptionRaw": "รุ่งอรุณหรือเมื่อคุณเปิดใช้งานเอฟเฟกต์รุ่งอรุณใบอื่น:มอบเปราะบางแก่ศัตรูที่อ่อนแอที่สุด",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "กองทัพอันเกรียงไกรของชูริม่ายืนตระหง่านเตรียมพร้อมพิสูจน์อำนาจแห่งทะเลทราย เมื่อไหร่ก็ตามที่ได้รับคำสั่ง พวกเขาก็จักเดินทัพโดยไม่ลังเล",
+    "artistName": "Kudos Productions",
+    "name": "General of the Dunes",
+    "cardCode": "08SH004",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "แรร์",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "ทหารชั้นยอด"
+    ],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08SH005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08SH005-full.png"
+      }
+    ],
+    "regions": [
+      "ชู<zwsp>ริ<zwsp>ม่า"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 2,
+    "description": "<link=keyword.Daybreak><style=Keyword>รุ่งอรุณ</style></link>: จั่ว <link=card.me><style=AssociatedCard>Defenders of the Sun Disc</style></link> หนึ่งใบ",
+    "descriptionRaw": "รุ่งอรุณ: จั่ว Defenders of the Sun Disc หนึ่งใบ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"พวกเราคือผู้ปกปักทะเลทรายชั่วนิรันดร์ คือประวัติศาสตร์มีชีวิต คือผู้เดินไปบนทางแห่งแสงสว่าง เราจักคุกเข่าแก่จักรสุริยะเพียงผู้เดียว ดังนั้นโลกใบนี้ก็จักต้องคุกเข่าต่อหน้าเกียรติยศแห่งชูริม่า\" -Azir",
+    "artistName": "Kudos Productions",
+    "name": "Defenders of the Sun Disc",
+    "cardCode": "08SH005",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "คอมมอน",
+    "rarityRef": "Common",
+    "subtypes": [
+      "ทหารชั้นยอด"
+    ],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "04SH098"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08SH012.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08SH012-full.png"
+      }
+    ],
+    "regions": [
+      "ชู<zwsp>ริ<zwsp>ม่า"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 3,
+    "cost": 3,
+    "health": 2,
+    "description": "ในแต่ละรอบ ครั้งแรกที่พันธมิตรใบอื่นตาย หรือ<link=keyword.Last Breath><sprite name=LastBreath><style=Keyword>สิ้นลม</style></link>: สร้าง <link=card.create><style=AssociatedCard>Lucky Find</style></link> หนึ่งใบในมือ",
+    "descriptionRaw": "ในแต่ละรอบ ครั้งแรกที่พันธมิตรใบอื่นตาย หรือสิ้นลม: สร้าง Lucky Find หนึ่งใบในมือ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"งานนี้ของจริงเลยล่ะ Barb รู้อยู่แล้วว่าหวังพึ่งเจ้าได้ เดี๋ยวนะ หมายความว่าไงที่บอกว่าพวกมันเห็นเจ้า?!\" - Vekauran Bruiser",
+    "artistName": "Caravan Studio",
+    "name": "Tomb-Raider Barbara",
+    "cardCode": "08SH012",
+    "keywords": [
+      "สิ้นลม"
+    ],
+    "keywordRefs": [
+      "LastBreath"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "แรร์",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "สัตว์เลื้อยคลาน"
+    ],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08SH002.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08SH002-full.png"
+      }
+    ],
+    "regions": [
+      "ชู<zwsp>ริ<zwsp>ม่า"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 9,
+    "cost": 5,
+    "health": 6,
+    "description": "เพื่อเล่นการ์ดใบนี้ สังหารพันธมิตรหรือหนึ่งในอัญมณีมานา<br>ของคุณ 3 ครั้ง",
+    "descriptionRaw": "เพื่อเล่นการ์ดใบนี้ สังหารพันธมิตรหรือหนึ่งในอัญมณีมานาของคุณ 3 ครั้ง",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "หากเทียบกับเครือญาติ Xer'sai ตัวจิ๋วของมันแล้ว Duneswallower นั้นหลับใหลอยู่ลึกลงไปยิ่งกว่านั้นมากนัก มันถูกกล่าวขานว่าสามารถกัดกินนักล่า Xer'sai ตัวอื่น ๆ ได้อย่างง่ายดาย ซึ่งเป็นเหตุผลว่าทำไมชื่อของมันถึงแทบไม่ถูกบันทึกไว้ เพราะความเป็นจริงมันสามารถกลืนกินได้ทั้งเนินทราย (และผู้พบเห็น) ให้หายวับไปตลอดกาล ",
+    "artistName": "Envar Studio",
+    "name": "Dune Swallower",
+    "cardCode": "08SH002",
+    "keywords": [
+      "โล่เวท",
+      "น่าสะพรึง"
+    ],
+    "keywordRefs": [
+      "SpellShield",
+      "Fearsome"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "อีปิค",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08MT003T3",
+      "08MT003T4",
+      "08MT003T11",
+      "08MT003T12"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08MT003.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08MT003-full.png"
+      }
+    ],
+    "regions": [
+      "ทาร์<zwsp>กอน",
+      "เด<zwsp>มา<zwsp>เซีย"
+    ],
+    "regionRefs": [
+      "Targon",
+      "Demacia"
+    ],
+    "attack": 3,
+    "cost": 5,
+    "health": 4,
+    "description": "<link=vocab.Play><style=Vocab>เล่น</style></link>: <link=keyword.Curse><sprite name=Curse><style=Keyword>สาป</style></link>ศัตรูหนึ่งใบด้วย <link=card.curse><style=AssociatedCard>Shackles</style></link> สองครั้ง",
+    "descriptionRaw": "เล่น: สาปศัตรูหนึ่งใบด้วย Shackles สองครั้ง",
+    "levelupDescription": "คุณเล็งเป้าหมายยูนิต 8 ครั้งขึ้นไป <style=Variable></style>",
+    "levelupDescriptionRaw": "คุณเล็งเป้าหมายยูนิต 8 ครั้งขึ้นไป ",
+    "flavorText": "\"เจ้ามาหาข้าพร้อมร่างที่บอบช้ำและชุ่มไปด้วยเลือด แต่ทว่าข้ากลับไม่เคยเห็นสีหน้าที่ดูสุขสมหวังขนาดนี้มาก่อน เจ้าต้องเป็นหญิงประหลาดเป็นแน่แท้ แต่อยู่ที่นี่เจ้าจะปลอดภัย จงพักผ่อนเสีย และเมื่อเจ้าอาการดีขึ้น ข้าก็อยากจะฟังเรื่องราวของเจ้าสักหน่อย\"",
+    "artistName": "Envar Studio",
+    "name": "Morgana",
+    "cardCode": "08MT003",
+    "keywords": [
+      "ดูดเลือด"
+    ],
+    "keywordRefs": [
+      "Lifesteal"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "แชมเปี้ยน",
+    "rarityRef": "Champion",
+    "subtypes": [],
+    "supertype": "แชมเปี้ยน",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08MT003T3",
+      "08MT003",
+      "08MT003T11",
+      "08MT003T12"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08MT003T4.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08MT003T4-full.png"
+      }
+    ],
+    "regions": [
+      "ทาร์<zwsp>กอน",
+      "เด<zwsp>มา<zwsp>เซีย"
+    ],
+    "regionRefs": [
+      "Targon",
+      "Demacia"
+    ],
+    "attack": 4,
+    "cost": 5,
+    "health": 5,
+    "description": "<link=vocab.Play><style=Vocab>เล่น</style></link>: <link=keyword.Curse><sprite name=Curse><style=Keyword>สาป</style></link>ศัตรูหนึ่งใบด้วย <link=card.curse><style=AssociatedCard>Shackles</style></link> สองครั้ง\r\n<link=vocab.Attack><style=Vocab>โจมตี</style></link>: <link=keyword.Curse><sprite name=Curse><style=Keyword>สาป</style></link>ศัตรูที่<link=vocab.Strongest><style=Vocab>แข็งแกร่งที่สุด</style></link>ที่ยังไม่ถูก<link=keyword.Curse><sprite name=Curse><style=Keyword>สาป</style></link>ด้วย <link=card.curse><style=AssociatedCard>Shackles</style></link> และสร้างความเสียหาย 3 หน่วยแก่ศัตรูที่ถูก<link=keyword.Curse><sprite name=Curse><style=Keyword>สาป</style></link>ทั้งหมด และสร้างความเสียหาย 2 หน่วยแก่เน็กซัสของศัตรู",
+    "descriptionRaw": "เล่น: สาปศัตรูหนึ่งใบด้วย Shackles สองครั้ง\r\nโจมตี: สาปศัตรูที่แข็งแกร่งที่สุดที่ยังไม่ถูกสาปด้วย Shackles และสร้างความเสียหาย 3 หน่วยแก่ศัตรูที่ถูกสาปทั้งหมด และสร้างความเสียหาย 2 หน่วยแก่เน็กซัสของศัตรู",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"แล้วเจ้าจะเสียใจที่ริอาจเข้ามาล่วงล้ำ! มั่นใจไว้เถิดว่าหากไม่มีอะไรอื่น เจ้าก็จักรู้สึกทุกข์ทรมานจากสิ่งที่เจ้าทำกับผู้อื่นราวกับมีพันธนาการรั้งวิญญาณของเจ้าเอาไว้ เจ้าจักยอมจำนนกับบาปของเจ้า หรือไม่ก็ทนทุกข์ไปกับบาปที่เจ้าก่อชั่วกาล\"",
+    "artistName": "Envar Studio",
+    "name": "Morgana",
+    "cardCode": "08MT003T4",
+    "keywords": [
+      "ดูดเลือด"
+    ],
+    "keywordRefs": [
+      "Lifesteal"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "แชมเปี้ยน",
+    "rarityRef": "Champion",
+    "subtypes": [],
+    "supertype": "แชมเปี้ยน",
+    "type": "ยูนิต",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08MT003",
+      "08MT003T4",
+      "08MT003T11"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08MT003T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08MT003T3-full.png"
+      }
+    ],
+    "regions": [
+      "ทาร์<zwsp>กอน"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "<link=keyword.Stun><sprite name=Stunned><style=Keyword>สตัน</style></link>ศัตรูหนึ่งใบ และ<link=keyword.Curse><sprite name=Curse><style=Keyword>สาป</style></link>มันด้วย <link=card.curse><style=AssociatedCard>Shackles</style></link>\r\nสร้าง <link=card.level1><style=AssociatedCard>Morgana</style></link> หนึ่งใบในเด็คของคุณ",
+    "descriptionRaw": "สตันศัตรูหนึ่งใบ และสาปมันด้วย Shackles\r\nสร้าง Morgana หนึ่งใบในเด็คของคุณ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"จงทรมาน ดั่งที่เจ้าทำให้พวกเขาต้องทุกข์ทน!\" - Morgana",
+    "artistName": "Polar Engine",
+    "name": "Morgana's Dark Binding",
+    "cardCode": "08MT003T3",
+    "keywords": [
+      "เร็ว"
+    ],
+    "keywordRefs": [
+      "Fast"
+    ],
+    "spellSpeed": "เร็ว",
+    "spellSpeedRef": "Fast",
+    "rarity": "แชมเปี้ยน",
+    "rarityRef": "Champion",
+    "subtypes": [],
+    "supertype": "แชมเปี้ยน",
+    "type": "เวท",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "ระดับคอมมอนเท่านั้น",
+      "Eternal",
+      "การ์ดที่ใช้มานาเท่ากัน",
+      "การ์ดไม่ซ้ำ",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Deckbuilder_RulesFilters_Singleton",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08MT003T11.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08MT003T11-full.png"
+      }
+    ],
+    "regions": [
+      "ทาร์<zwsp>กอน"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "ในขณะที่การ์ดใบนี้อยู่บนมือ <style=Variable>ยูนิตต้องสาป</style> จะ<link=keyword.Immobile><sprite name=Immobile><sprite name=Reckless><style=Keyword>เคลื่อนไหวไม่ได้</style></link>",
+    "descriptionRaw": "ในขณะที่การ์ดใบนี้อยู่บนมือ ยูนิตต้องสาป จะเคลื่อนไหวไม่ได้",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"จงถูกพันธนาการด้วยความจริง!\" - Morgana",
+    "artistName": "Polar Engine",
+    "name": "Shackles",
+    "cardCode": "08MT003T11",
+    "keywords": [
+      "โฟกัส",
+      "สาป"
+    ],
+    "keywordRefs": [
+      "Focus",
+      "Curse"
+    ],
+    "spellSpeed": "ฉับพลัน",
+    "spellSpeedRef": "Burst",
+    "rarity": "ไม่มี",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "เวท",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08MT003T12.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08MT003T12-full.png"
+      }
+    ],
+    "regions": [
+      "ทาร์<zwsp>กอน"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "สร้างความเสียหาย 3 หน่วยแก่ศัตรูที่ถูก<link=keyword.Curse><sprite name=Curse><style=Keyword>สาป</style></link>ทั้งหมด และสร้างความเสียหาย 2 หน่วยแก่เน็กซัสของศัตรู",
+    "descriptionRaw": "สร้างความเสียหาย 3 หน่วยแก่ศัตรูที่ถูกสาปทั้งหมด และสร้างความเสียหาย 2 หน่วยแก่เน็กซัสของศัตรู",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"ข้าคือความทุกข์ทรมานของเจ้า ที่สะท้อนออกมานับพันเท่า!\" - Morgana",
+    "artistName": "Polar Engine",
+    "name": "Soul Shackles",
+    "cardCode": "08MT003T12",
+    "keywords": [
+      "สกิล"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ไม่มี",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ความสามารถ",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08MT003T11"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08MT005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08MT005-full.png"
+      }
+    ],
+    "regions": [
+      "ทาร์<zwsp>กอน"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 6,
+    "cost": 8,
+    "health": 8,
+    "description": "<link=vocab.Play><style=Vocab>เล่น</style></link>: <link=keyword.Curse><sprite name=Curse><style=Keyword>สาป</style></link>ศัตรู 2 ใบด้วย <link=card.curse><style=AssociatedCard>Shackles</style></link> สองครั้ง",
+    "descriptionRaw": "เล่น: สาปศัตรู 2 ใบด้วย Shackles สองครั้ง",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"ด้วยนามของลูกสาวข้า ข้าจึงโอบรับพลังแห่งเทพ และก็เพื่อครอบครัวของข้า ข้าจึงละทิ้งความเป็นมนุษย์ไปจนสิ้น เพื่อที่ว่าด้วยดาบเพลิงเล่มนี้ ข้าจะได้สร้างโลกแห่งความจริงและความยุติธรรมใบใหม่ขึ้นมาในที่สุด\"",
+    "artistName": "Envar Studio",
+    "name": "Mihira, Aspect Ascendant",
+    "cardCode": "08MT005",
+    "keywords": [
+      "ทะลวง"
+    ],
+    "keywordRefs": [
+      "Overwhelm"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "อีปิค",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08MT003T11"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08MT042.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08MT042-full.png"
+      }
+    ],
+    "regions": [
+      "ทาร์<zwsp>กอน"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 6,
+    "health": 0,
+    "description": "<link=keyword.Curse><sprite name=Curse><style=Keyword>สาป</style></link>ศัตรูหนึ่งใบด้วย <link=card.curse><style=AssociatedCard>Shackles</style></link>\r\nเพิ่มค่าร่ายของคำสาปศัตรูใน<link=vocab.Everywhere><style=Vocab>ทุกหนแห่ง</style></link>ขึ้น 1 หน่วย",
+    "descriptionRaw": "สาปศัตรูหนึ่งใบด้วย Shackles\r\nเพิ่มค่าร่ายของคำสาปศัตรูในทุกหนแห่งขึ้น 1 หน่วย",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"หากต้องการตามหาอิสรภาพ เจ้าก็ต้องยอมรับความมืดภายในจิตใจ\" - Morgana",
+    "artistName": "Polar Engine",
+    "name": "Sinner's Vise",
+    "cardCode": "08MT042",
+    "keywords": [
+      "ช้า"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "ช้า",
+    "spellSpeedRef": "Slow",
+    "rarity": "แรร์",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "เวท",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "ระดับคอมมอนเท่านั้น",
+      "Eternal",
+      "การ์ดที่ใช้มานาเท่ากัน",
+      "การ์ดไม่ซ้ำ",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Deckbuilder_RulesFilters_Singleton",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08MT024.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08MT024-full.png"
+      }
+    ],
+    "regions": [
+      "ทาร์<zwsp>กอน"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 2,
+    "description": "<link=vocab.Play><style=Vocab>เล่น</style></link>: มอบ<link=keyword.SpellShield><sprite name=SpellShield><style=Keyword>โล่เวท</style></link> หรือ<link=keyword.Overwhelm><sprite name=Overwhelm><style=Keyword>ทะลวง</style></link>ให้กับพันธมิตรหนึ่งใบในมือ",
+    "descriptionRaw": "เล่น: มอบโล่เวท หรือทะลวงให้กับพันธมิตรหนึ่งใบในมือ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"อย่ากลัวไปเลย! จงไปต่อและอย่าหันหลังกลับมา! เราผ่านการผจญภัยแบบนี้มาแล้วครั้งหนึ่ง ตอนนี้เป็นหน้าที่ของเราที่ต้องปกป้องเจ้า จงรีบไปที่อารามของนาง และผู้เร้นกายในม่านหมอกจะมอบการคุ้มกันที่เจ้าตามหาให้เอง\"",
+    "artistName": "Envar Studio",
+    "name": "Ruby-Eyed Conjurer",
+    "cardCode": "08MT024",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "คอมมอน",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08MT024T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08MT024T1-full.png"
+      }
+    ],
+    "regions": [
+      "ทาร์<zwsp>กอน"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 2,
+    "description": "<link=vocab.Play><style=Vocab>เล่น</style></link>: มอบ<link=keyword.Overwhelm><sprite name=Overwhelm><style=Keyword>ทะลวง</style></link>ให้กับพันธมิตรหนึ่งใบในมือ",
+    "descriptionRaw": "เล่น: มอบทะลวงให้กับพันธมิตรหนึ่งใบในมือ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"อย่ากลัวไปเลย! จงไปต่อและอย่าหันหลังกลับมา! เราผ่านการผจญภัยแบบนี้มาแล้วครั้งหนึ่ง ตอนนี้เป็นหน้าที่ของเราที่ต้องปกป้องเจ้า จงรีบไปที่อารามของนาง และผู้เร้นกายในม่านหมอกจะมอบการคุ้มกันที่เจ้าตามหาให้เอง\"",
+    "artistName": "Envar Studio",
+    "name": "Ruby-Eyed Conjurer",
+    "cardCode": "08MT024T1",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ไม่มี",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08MT024T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08MT024T2-full.png"
+      }
+    ],
+    "regions": [
+      "ทาร์<zwsp>กอน"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 2,
+    "description": "<link=vocab.Play><style=Vocab>เล่น</style></link>: มอบ<link=keyword.SpellShield><sprite name=SpellShield><style=Keyword>โล่เวท</style></link>ให้กับพันธมิตรหนึ่งใบในมือ",
+    "descriptionRaw": "เล่น: มอบโล่เวทให้กับพันธมิตรหนึ่งใบในมือ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"อย่ากลัวไปเลย! จงไปต่อและอย่าหันหลังกลับมา! เราผ่านการผจญภัยแบบนี้มาแล้วครั้งหนึ่ง ตอนนี้เป็นหน้าที่ของเราที่ต้องปกป้องเจ้า จงรีบไปที่อารามของนาง และผู้เร้นกายในม่านหมอกจะมอบการคุ้มกันที่เจ้าตามหาให้เอง\"",
+    "artistName": "Envar Studio",
+    "name": "Ruby-Eyed Conjurer",
+    "cardCode": "08MT024T2",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "คอมมอน",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08MT003T11"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08MT015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08MT015-full.png"
+      }
+    ],
+    "regions": [
+      "ทาร์<zwsp>กอน"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 2,
+    "cost": 3,
+    "health": 3,
+    "description": "<link=vocab.Play><style=Vocab>เล่น</style></link>: <link=keyword.Curse><sprite name=Curse><style=Keyword>สาป</style></link>ศัตรูหนึ่งใบด้วย <link=card.curse><style=AssociatedCard>Shackles</style></link>",
+    "descriptionRaw": "เล่น: สาปศัตรูหนึ่งใบด้วย Shackles",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"ดูสิ Dolly! ข้าทำได้ เหมือนอย่างที่เจ้าสอนข้าเลย! เจ้าว่าเราจะได้แสดงให้ท่านแม่เห็นไหมว่าข้าเรียนรู้มามากขนาด<br>ไหนแล้ว? เจ้าว่าท่านแม่รู้แล้วงั้นหรอ? จริงหรอ?! หวังว่าเจ้าจะคิดถูกนะ\" - Lisa",
+    "artistName": "Envar Studio",
+    "name": "Lisa and Dolly",
+    "cardCode": "08MT015",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "คอมมอน",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08MT030.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08MT030-full.png"
+      }
+    ],
+    "regions": [
+      "ทาร์<zwsp>กอน"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 6,
+    "cost": 6,
+    "health": 5,
+    "description": "เมื่อคุณเล่นเวท<link=keyword.Fast><sprite name=Fast><style=Keyword>เร็ว</style></link> เวท<link=keyword.Slow><sprite name=Slow><style=Keyword>ช้า</style></link> หรือ<link=keyword.Skill><sprite name=SkillMark><style=Keyword>สกิล</style></link> มอบ +1|+1 ให้กับพันธมิตรมังกรใบอื่นทั้งหมด",
+    "descriptionRaw": "เมื่อคุณเล่นเวทเร็ว เวทช้า หรือสกิล มอบ +1|+1 ให้กับพันธมิตรมังกรใบอื่นทั้งหมด",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "มังกรนั้นมีนิสัยที่แตกต่างกันออกไปไม่ต่างจากรูปลักษณ์ของ<br>พวกมัน ไม่ว่าจะเป็นสายพันธุ์ที่คิดอยากจะทำลายล้างทุกอย่างที่<br>ขวางหน้าอย่างมังกรเพลิง หรือแม้แต่สายพันธุ์ที่หวงแหนครอบครัวและสิ่งแวดล้อม<br>รอบกายอย่างเจ้ามังกรอัญมณีที่เคลื่อนไหวช้าและ<br>น่าหลงใหลตนนี้",
+    "artistName": "Polar Engine",
+    "name": "Gentle Gemdragon",
+    "cardCode": "08MT030",
+    "keywords": [
+      "โทสะ"
+    ],
+    "keywordRefs": [
+      "Fury"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "แรร์",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "มังกร"
+    ],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08MT003T11"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08MT023.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08MT023-full.png"
+      }
+    ],
+    "regions": [
+      "ทาร์<zwsp>กอน"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "<link=keyword.Stun><sprite name=Stunned><style=Keyword>สตัน</style></link>ศัตรูหนึ่งใบ และ<link=keyword.Curse><sprite name=Curse><style=Keyword>สาป</style></link>มันด้วย <link=card.curse><style=AssociatedCard>Shackles</style></link>",
+    "descriptionRaw": "สตันศัตรูหนึ่งใบ และสาปมันด้วย Shackles",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"จงทรมาน ดั่งที่เจ้าทำให้พวกเขาต้องทุกข์ทน!\" - Morgana",
+    "artistName": "Polar Engine",
+    "name": "Dark Binding",
+    "cardCode": "08MT023",
+    "keywords": [
+      "เร็ว"
+    ],
+    "keywordRefs": [
+      "Fast"
+    ],
+    "spellSpeed": "เร็ว",
+    "spellSpeedRef": "Fast",
+    "rarity": "แรร์",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "เวท",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08MT031.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08MT031-full.png"
+      }
+    ],
+    "regions": [
+      "ทาร์<zwsp>กอน"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 3,
+    "cost": 4,
+    "health": 3,
+    "description": "เมื่อการ์ดใบนี้ถูกอัญเชิญ ฮีลเน็กซัสของคุณ 2 หน่วย และได้รับอัญมณีมานาเพิ่มหนึ่งเม็ด<br>ในรอบถัดไป",
+    "descriptionRaw": "เมื่อการ์ดใบนี้ถูกอัญเชิญ ฮีลเน็กซัสของคุณ 2 หน่วย และได้รับอัญมณีมานาเพิ่มหนึ่งเม็ดในรอบถัดไป",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "ท่ามกลางหุบเขาอันสูงชันของทาร์กอน ยังมี Ottrani ผู้เดียวดายผู้อุทิศชีวิตของตนให้กับเหล่ามังกร เขาผู้ซึ่งประดับประดาไปด้วยเกล็ดลอกคราบและกระดูกชิ้นเก่า<br>ของเหล่ามังกร ทั้งทำนายเส้นทางแห่งอนาคตของตนจากเศษซากฟันและ<br>กลุ่มควันที่ลอยฟุ้งขึ้นไปบนภูเขาแห่งนี้",
+    "artistName": "Polar Engine",
+    "name": "Ottrani Dragon-Worshiper",
+    "cardCode": "08MT031",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "อีปิค",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08MT009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08MT009-full.png"
+      }
+    ],
+    "regions": [
+      "ทาร์<zwsp>กอน"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 4,
+    "cost": 5,
+    "health": 5,
+    "description": "เมื่อการ์ดใบนี้ถูกอัญเชิญหรือคุณอัญเชิญพันธมิตร<link=vocab.Titanic><style=Vocab>มหึมา</style></link> ฮีลเน็กซัสของคุณ 3 หน่วย",
+    "descriptionRaw": "เมื่อการ์ดใบนี้ถูกอัญเชิญหรือคุณอัญเชิญพันธมิตรมหึมา ฮีลเน็กซัสของคุณ 3 หน่วย",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Veiled Protector ไม่มีวันลืมคำอวยพรที่ช่วยยกระดับตัวตนของมันให้เป็นมากกว่าสัตว์ร้าย มันจึงเลือกตอบแทนบุญคุณครั้งนี้ด้วยการทำให้มั่นใจว่าใครก็<br>ตามที่ออกเสาะหาวิหารอยู่บนเนินเขาแห่งทาร์กอนจะได้<br>ออกเดินทางโดยไร้รอยขีดข่วนใด",
+    "artistName": "Envar Studio",
+    "name": "Veiled Protector",
+    "cardCode": "08MT009",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "แรร์",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08MT003T11"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08MT006.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08MT006-full.png"
+      }
+    ],
+    "regions": [
+      "ทาร์<zwsp>กอน"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "มอบ<link=keyword.SpellShield><sprite name=SpellShield><style=Keyword>โล่เวท</style></link>ให้กับพันธมิตรหนึ่งใบในรอบนี้ และ<link=keyword.Curse><sprite name=Curse><style=Keyword>สาป</style></link>มันด้วย <link=card.curse><style=AssociatedCard>Shackles</style></link>",
+    "descriptionRaw": "มอบโล่เวทให้กับพันธมิตรหนึ่งใบในรอบนี้ และสาปมันด้วย Shackles",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"ปกป้องจากภยันตราย!\" - Morgana",
+    "artistName": "Polar Engine",
+    "name": "Black Shield",
+    "cardCode": "08MT006",
+    "keywords": [
+      "ฉับพลัน"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "ฉับพลัน",
+    "spellSpeedRef": "Burst",
+    "rarity": "แรร์",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "เวท",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08MT027.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08MT027-full.png"
+      }
+    ],
+    "regions": [
+      "ทาร์<zwsp>กอน"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 5,
+    "cost": 8,
+    "health": 8,
+    "description": "<link=vocab.Play><style=Vocab>เล่น</style></link>: เปิดใช้งานเอฟเฟกต์<link=keyword.Daybreak><style=Keyword>รุ่งอรุณ</style></link><br>และ<link=keyword.Nightfall><style=Keyword>พลบค่ำ</style></link>ของพันธมิตรใบอื่นทั้งหมด<br><link=keyword.Daybreak><style=Keyword>รุ่งอรุณ</style></link>: มอบ<link=keyword.Overwhelm><sprite name=Overwhelm><style=Keyword>ทะลวง</style></link>ให้กับการ์ดใบนี้\r\n<link=keyword.Nightfall><style=Keyword>พลบค่ำ</style></link>: มอบ<link=keyword.SpellShield><sprite name=SpellShield><style=Keyword>โล่เวท</style></link>ให้กับการ์ดใบนี้",
+    "descriptionRaw": "เล่น: เปิดใช้งานเอฟเฟกต์รุ่งอรุณและพลบค่ำของพันธมิตรใบอื่นทั้งหมดรุ่งอรุณ: มอบทะลวงให้กับการ์ดใบนี้\r\nพลบค่ำ: มอบโล่เวทให้กับการ์ดใบนี้",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"วงแหวนแห่งเปลวเพลิงเผาไหม้อยู่เบื้องบน แม้นภายใต้เสียงประกาศแห่งความมืดมิด เราทุกคนก็มิได้ต่างกันไกล\" - ประกาศกแสงจันทร์แห่ง Lunari",
+    "artistName": "Kudos Productions",
+    "name": "Herald of Celestial Convergence",
+    "cardCode": "08MT027",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "อีปิค",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "นก"
+    ],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08MT025.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08MT025-full.png"
+      }
+    ],
+    "regions": [
+      "ทาร์<zwsp>กอน"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 7,
+    "health": 0,
+    "description": "หากคุณ<link=vocab.Behold><style=Vocab>ประจักษ์</style></link>ยูนิต<link=vocab.Titanic><style=Vocab>มหึมา</style></link> การ์ดใบนี้มีค่าร่ายลดลง 3 หน่วย\r\nสร้างความเสียหาย 7 หน่วยแก่ยูนิตหนึ่งใบ",
+    "descriptionRaw": "หากคุณประจักษ์ยูนิตมหึมา การ์ดใบนี้มีค่าร่ายลดลง 3 หน่วย\r\nสร้างความเสียหาย 7 หน่วยแก่ยูนิตหนึ่งใบ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"อุ๊ปส์ เอ่อ ๆ ม่ายต้องกังวลปายหรอก น่านก็แค่รอยเล็กน้อยน่า แค่อุบัดติเหตุเอง ไม่ใช้เพาะป่าป๊าหรอกนะ! ไปกานต่อดีก่า!\" - Chip",
+    "artistName": "Polar Engine",
+    "name": "Seismic Shard",
+    "cardCode": "08MT025",
+    "keywords": [
+      "ช้า"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "ช้า",
+    "spellSpeedRef": "Slow",
+    "rarity": "คอมมอน",
+    "rarityRef": "Common",
+    "subtypes": [
+      "สรรพธาตุ"
+    ],
+    "supertype": "",
+    "type": "เวท",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08BW028T1",
+      "08BW028T2",
+      "08BW028T3",
+      "08BW028T4"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08DE006.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08DE006-full.png"
+      }
+    ],
+    "regions": [
+      "เด<zwsp>มา<zwsp>เซีย",
+      "เฟรล<zwsp>ยอร์ด"
+    ],
+    "regionRefs": [
+      "Demacia",
+      "Freljord"
+    ],
+    "attack": 2,
+    "cost": 3,
+    "health": 3,
+    "description": "<link=vocab.Play><style=Vocab>เล่น</style></link>: เลือกเวท Explorer หนึ่งใบเพื่อสร้างในมือ",
+    "descriptionRaw": "เล่น: เลือกเวท Explorer หนึ่งใบเพื่อสร้างในมือ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"ที่นี่ช่างหนาวเหน็บ ข้าหนาวเหลือเกิน ทุกสิ่งทุกอย่างเย็นยะเยือกอยู่ตลอดเวลา โลกนี้มันมีสถานที่ที่ไม่ควรอาศัยอยู่นะ หลังจากนี้ได้โปรดส่งข้าไปที่อุ่น ๆ หน่อยเถอะ\" - จากรายงานการสำรวจของหน่วยไกลปืนเที่ยงของกิลด์<br>นักสำรวจ ภูมิภาค: เฟรลยอร์ด",
+    "artistName": "Envar Studio",
+    "name": "Scholarly Pioneer",
+    "cardCode": "08DE006",
+    "keywords": [
+      "ผู้ท้าชิง"
+    ],
+    "keywordRefs": [
+      "Challenger"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "แรร์",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08DE017T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08DE020.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08DE020-full.png"
+      }
+    ],
+    "regions": [
+      "เด<zwsp>มา<zwsp>เซีย"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "มอบ +0|+2 ให้กับพันธมิตรหนึ่งใบ <link=keyword.Curse><sprite name=Curse><style=Keyword>สาป</style></link>คู่ต่อสู้ของคุณด้วย <link=card.curse><style=AssociatedCard>Suppression</style></link>",
+    "descriptionRaw": "มอบ +0|+2 ให้กับพันธมิตรหนึ่งใบ สาปคู่ต่อสู้ของคุณด้วย Suppression",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"จงรับรู้บาปที่เจ้าได้ก่อไว้!\" - Morgana",
+    "artistName": "Polar Engine",
+    "name": "Magical Fettering",
+    "cardCode": "08DE020",
+    "keywords": [
+      "ช้า"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "ช้า",
+    "spellSpeedRef": "Slow",
+    "rarity": "คอมมอน",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "เวท",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08DE017T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08DE017.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08DE017-full.png"
+      }
+    ],
+    "regions": [
+      "เด<zwsp>มา<zwsp>เซีย"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 3,
+    "cost": 4,
+    "health": 2,
+    "description": "เมื่อการ์ดใบนี้ถูกอัญเชิญ <link=keyword.Curse><sprite name=Curse><style=Keyword>สาป</style></link>คู่ต่อสู้ของคุณด้วย <link=card.curse><style=AssociatedCard>Suppression</style></link>",
+    "descriptionRaw": "เมื่อการ์ดใบนี้ถูกอัญเชิญ สาปคู่ต่อสู้ของคุณด้วย Suppression",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"เรามิอาจให้พวกเขาเข้าไปยังอารามของพี่น้องผู้วายชนม์ เวทมนตร์ของนางช่างเก่าแก่และบิดเบี้ยว เหนือเกินกว่าที่ข้าจะสะกดไว้ได้ เร็วเข้า พาเจ้าสิ่งชั่วร้ายเหล่านี้กลับไปที่เรือ จากนั้นก็ขึ้นไปที่ภูเขาตามหลังพวกที่เหลือไป!\"",
+    "artistName": "Envar Studio",
+    "name": "Mageseeker Inquisitor",
+    "cardCode": "08DE017",
+    "keywords": [
+      "ผู้ท้าชิง",
+      "ทนทาน"
+    ],
+    "keywordRefs": [
+      "Challenger",
+      "Tough"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "แรร์",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08DE017T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08DE017T1-full.png"
+      }
+    ],
+    "regions": [
+      "เด<zwsp>มา<zwsp>เซีย"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "ในขณะที่การ์ดใบนี้อยู่ในมือ คุณไม่สามารถเล่นเวทอื่นนอกจาก <link=card.selfref><style=AssociatedCard>Suppression</style></link>",
+    "descriptionRaw": "ในขณะที่การ์ดใบนี้อยู่ในมือ คุณไม่สามารถเล่นเวทอื่นนอกจาก Suppression",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "ไร้ซึ่งเวทใดใช้งานในยามที่ต้องการ",
+    "artistName": "Polar Engine",
+    "name": "Suppression",
+    "cardCode": "08DE017T1",
+    "keywords": [
+      "โฟกัส",
+      "สาป"
+    ],
+    "keywordRefs": [
+      "Focus",
+      "Curse"
+    ],
+    "spellSpeed": "ฉับพลัน",
+    "spellSpeedRef": "Burst",
+    "rarity": "ไม่มี",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "เวท",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08DE025.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08DE025-full.png"
+      }
+    ],
+    "regions": [
+      "เด<zwsp>มา<zwsp>เซีย"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 6,
+    "cost": 6,
+    "health": 6,
+    "description": "เมื่อการ์ดใบนี้ถูกอัญเชิญ ลดค่าร่ายของยูนิตพันธมิตรทั้งหมดในมือ<br>ลง 1 หน่วย",
+    "descriptionRaw": "เมื่อการ์ดใบนี้ถูกอัญเชิญ ลดค่าร่ายของยูนิตพันธมิตรทั้งหมดในมือลง 1 หน่วย",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "ด้วยขนหนาเป็นกระจุกที่ทำหน้าที่ช่วยบรรเทาความหนาว ส่งผลให้มังกรตัวนี้สามารถบินบนชั้นฟ้าที่สูงกว่ามังกรตัวอื่น ทั้งดูมีชีวิตชีวาแถมยังปราดเปรียว มังกรตัวนี้มักจะพบเห็นได้บนท้องฟ้าเหนือศีรษะกว้างไกล พร้อมกางปีกตัดทะลุเมฆและทะยานสร้างลมกระโชกให้กลับกลายไปเป็นพายุหมุน",
+    "artistName": "Wild Blue",
+    "name": "Cloud Drake",
+    "cardCode": "08DE025",
+    "keywords": [
+      "โทสะ"
+    ],
+    "keywordRefs": [
+      "Fury"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "อีปิค",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "มังกร"
+    ],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "ระดับคอมมอนเท่านั้น",
+      "Eternal",
+      "การ์ดที่ใช้มานาเท่ากัน",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08DE010.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08DE010-full.png"
+      }
+    ],
+    "regions": [
+      "เด<zwsp>มา<zwsp>เซีย"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "มอบ +0|+2 ให้กับพันธมิตรหนึ่งใบ\r\nพันธมิตรใบนั้นและศัตรูหนึ่งใบทำการ<link=vocab.Strike><style=Vocab>จู่โจม</style></link>กันและกัน",
+    "descriptionRaw": "มอบ +0|+2 ให้กับพันธมิตรหนึ่งใบ\r\nพันธมิตรใบนั้นและศัตรูหนึ่งใบทำการจู่โจมกันและกัน",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"ตั้งท่าซะสหาย! เจ้าคงไม่ปอดแหกเกินที่จะปฏิเสธการประลองของลูกผู้ชายใช่มั้ย\" - Laurent Chevalier",
+    "artistName": "Kudos Productions",
+    "name": "Gentlemen's Duel",
+    "cardCode": "08DE010",
+    "keywords": [
+      "เร็ว"
+    ],
+    "keywordRefs": [
+      "Fast"
+    ],
+    "spellSpeed": "เร็ว",
+    "spellSpeedRef": "Fast",
+    "rarity": "คอมมอน",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "เวท",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08DE022.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08DE022-full.png"
+      }
+    ],
+    "regions": [
+      "เด<zwsp>มา<zwsp>เซีย"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 8,
+    "cost": 9,
+    "health": 8,
+    "description": "เมื่อการ์ดใบนี้ถูกอัญเชิญ จั่วแชมเปี้ยนแต่ละใบ<br>ในเด็คของคุณอย่างละ 1 ใบ<br>ในแต่ละรอบ ครั้งแรกที่คุณอัญเชิญแชมเปี้ยน ทำการ<link=vocab.Rally><style=Vocab>ปลุกระดม</style></link>",
+    "descriptionRaw": "เมื่อการ์ดใบนี้ถูกอัญเชิญ จั่วแชมเปี้ยนแต่ละใบในเด็คของคุณอย่างละ 1 ใบในแต่ละรอบ ครั้งแรกที่คุณอัญเชิญแชมเปี้ยน ทำการปลุกระดม",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"จงจำเอาไว้ บุตรแห่งข้า ว่าการไล่ล่าสิ่งใดไปจนสุดเส้นขอบฟ้าล้วนต้องทำเพื่อบ้านเกิดที่เราทิ้งไว้เบื้องหลังเสมอ\" - King Jarvan III",
+    "artistName": "Envar Studio",
+    "name": "The Kingfisher",
+    "cardCode": "08DE022",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "อีปิค",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08DE026.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08DE026-full.png"
+      }
+    ],
+    "regions": [
+      "เด<zwsp>มา<zwsp>เซีย"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 7,
+    "cost": 7,
+    "health": 6,
+    "description": "พรแห่งมังกรของคุณจะส่งผลแก่พันธมิตรมังกรทั้งหมด",
+    "descriptionRaw": "พรแห่งมังกรของคุณจะส่งผลแก่พันธมิตรมังกรทั้งหมด",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"บอกไว้ก่อนเลย ข้าไม่เคยเป็นผู้ภักดีต่อมังกร แต่ Alatis ผู้นี้คือผู้ที่โน้มน้าวข้าในครั้งแรกที่เขาช่วยชีวิตข้าไว้ เขาสอนบทเรียนข้ามากมาย แต่บทเรียนที่สำคัญที่สุดน่ะหรือ? คือไม่มีชีวิตใดที่จะสง่างามไปกว่าการได้รับใช้เดมาเซียจากแผ่นหลังของมังกรอีกแล้ว\" - Dragon Allegiant",
+    "artistName": "Envar Studio",
+    "name": "Alatis the Gallant",
+    "cardCode": "08DE026",
+    "keywords": [
+      "โทสะ"
+    ],
+    "keywordRefs": [
+      "Fury"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "อีปิค",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "มังกร"
+    ],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "ระดับคอมมอนเท่านั้น",
+      "Eternal",
+      "การ์ดที่ใช้มานาเท่ากัน",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08DE013.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08DE013-full.png"
+      }
+    ],
+    "regions": [
+      "เด<zwsp>มา<zwsp>เซีย"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 3,
+    "description": "เมื่อการ์ดใบนี้ถูกอัญเชิญ หากคุณ<link=vocab.Behold><style=Vocab>ประจักษ์</style></link>การ์ดมังกร จั่วการ์ดมังกรหนึ่งใบ",
+    "descriptionRaw": "เมื่อการ์ดใบนี้ถูกอัญเชิญ หากคุณประจักษ์การ์ดมังกร จั่วการ์ดมังกรหนึ่งใบ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"เจ้าก็รู้ดีว่าข้าเจ็บปวดที่จะยอมรับมัน หนุ่มน้อย แต่เราฝึกเขาด้วยตัวคนเดียวไม่ได้ เราทำเท่าที่ทำได้ไปแล้ว ข้าจะส่งข้อความไปยังท่านนายพล และด้วยพลังแห่งเดมาเซียคอยหนุนหลังเรา ก็มั่นใจได้เลยว่าเจ้าสัตว์มหัศจรรย์ตนนี้จะยอมสยบแทบเท้า<br>เราเป็นแน่\"",
+    "artistName": "Envar Studio",
+    "name": "Dragon Allegiant",
+    "cardCode": "08DE013",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "คอมมอน",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08IO012.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08IO012-full.png"
+      }
+    ],
+    "regions": [
+      "ไอ<zwsp>โอ<zwsp>เนีย"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 3,
+    "cost": 6,
+    "health": 5,
+    "description": "เมื่อคุณเล่นเวท<link=keyword.Fast><sprite name=Fast><style=Keyword>เร็ว</style></link> เวท<link=keyword.Slow><sprite name=Slow><style=Keyword>ช้า</style></link>หรือ<link=keyword.Skill><sprite name=SkillMark><style=Keyword>สกิล</style></link> ฮีลเน็กซัสของคุณ 1 หน่วย",
+    "descriptionRaw": "เมื่อคุณเล่นเวทเร็ว เวทช้าหรือสกิล ฮีลเน็กซัสของคุณ 1 หน่วย",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"เจ้าคือสัตว์ร้ายผู้ยิ่งใหญ่! ผู้เพลิดเพลินไปกับการวาดกรงเล็บไปบนเกลียวคลื่น หากเจ้าตัดสินใจจะล่าอะไรที่ยิ่งใหญ่ไปกว่าปลาและนกทะเลแล้วล่ะก็ ข้าก็ยินดีที่จะเผชิญหน้ากับเจ้าเอง\" - Nilah",
+    "artistName": "Caravan Studio",
+    "name": "Ocean Drake",
+    "cardCode": "08IO012",
+    "keywords": [
+      "ว่องไว"
+    ],
+    "keywordRefs": [
+      "Elusive"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "แรร์",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "มังกร"
+    ],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08IO014.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08IO014-full.png"
+      }
+    ],
+    "regions": [
+      "ไอ<zwsp>โอ<zwsp>เนีย"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 9,
+    "cost": 10,
+    "health": 9,
+    "description": "ในแต่ละรอบ การ์ดใบแรกที่คุณเล่นจะมีค่าร่ายลดลง 9 หน่วย",
+    "descriptionRaw": "ในแต่ละรอบ การ์ดใบแรกที่คุณเล่นจะมีค่าร่ายลดลง 9 หน่วย",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "สำหรับผู้อยู่อาศัยภายในหมู่บ้านไอโอเนียแห่งนี้ Heisho นั้นเป็นทั้งผู้ดูแลและมิตรสหายผู้ทรงเกียรติ จากการที่เขาแบกรับบ้านเกิดแห่งนี้ไว้บนหลังมา<br>นับตั้งแต่อดีตกาล<br>พวกเขาจึงไว้ใจได้ว่าผู้แบกรับหมู่บ้านตนนี้จะสามารถเสาะหา<br>ชายฝั่งอันสงบสุขได้ในเวลาคับขันอย่างแน่นอน",
+    "artistName": "Envar Studio",
+    "name": "Heisho, Shell of the World",
+    "cardCode": "08IO014",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "อีปิค",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "01IO030"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08IO021.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08IO021-full.png"
+      }
+    ],
+    "regions": [
+      "ไอ<zwsp>โอ<zwsp>เนีย"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 0,
+    "cost": 9,
+    "health": 0,
+    "description": "หยุดยั้งเวท<link=keyword.Fast><sprite name=Fast><style=Keyword>เร็ว</style></link> เวท<link=keyword.Slow><sprite name=Slow><style=Keyword>ช้า </style></link> หรือ<link=keyword.Skill><sprite name=SkillMark><style=Keyword>สกิล</style></link>ของศัตรู <link=keyword.Recall><style=Keyword>เรียกกลับ</style></link>ศัตรูหนึ่งใบ และอัญเชิญ <link=card.summon><style=AssociatedCard>The Empyrean</style></link>",
+    "descriptionRaw": "หยุดยั้งเวทเร็ว เวทช้า  หรือสกิลของศัตรู เรียกกลับศัตรูหนึ่งใบ และอัญเชิญ The Empyrean",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"การร่ายรำนี้จะเป็นที่จดจำของผองเรา\" - Irelia",
+    "artistName": "Polar Engine",
+    "name": "Empyrean Dance",
+    "cardCode": "08IO021",
+    "keywords": [
+      "เร็ว"
+    ],
+    "keywordRefs": [
+      "Fast"
+    ],
+    "spellSpeed": "เร็ว",
+    "spellSpeedRef": "Fast",
+    "rarity": "แรร์",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "เวท",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "ระดับคอมมอนเท่านั้น",
+      "Eternal",
+      "การ์ดที่ใช้มานาเท่ากัน",
+      "การ์ดไม่ซ้ำ",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Deckbuilder_RulesFilters_Singleton",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08IO019T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08IO019.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08IO019-full.png"
+      }
+    ],
+    "regions": [
+      "ไอ<zwsp>โอ<zwsp>เนีย"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 3,
+    "cost": 4,
+    "health": 3,
+    "description": "เมื่อการ์ดใบนี้ถูกอัญเชิญ อัญเชิญ <link=card.summon><style=AssociatedCard>Adnere's Aviarists</style></link>",
+    "descriptionRaw": "เมื่อการ์ดใบนี้ถูกอัญเชิญ อัญเชิญ Adnere's Aviarists",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"ดินแดนแห่งนี้ล้วนเต็มไปด้วยบทเรียน จงจำไว้เสมอ ว่าเราจักเฉลิมฉลองแก่ทุกการผันเปลี่ยนของฤดูกาล เพราะมีเพียงจุดสิ้นสุดเท่านั้นที่จะนำพามาซึ่งการเริ่มต้นใหม่ได้<br>อีกครั้ง\"",
+    "artistName": "Envar Studio",
+    "name": "Trusty Adnere",
+    "cardCode": "08IO019",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "แรร์",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "ระดับคอมมอนเท่านั้น",
+      "Eternal",
+      "การ์ดที่ใช้มานาเท่ากัน",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08IO019T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08IO019T1-full.png"
+      }
+    ],
+    "regions": [
+      "ไอ<zwsp>โอ<zwsp>เนีย"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 1,
+    "cost": 1,
+    "health": 1,
+    "description": "<link=keyword.Support><style=Keyword>สนับสนุน</style></link>: เพิ่มค่าพลังของการ์ดใบนี้ให้เท่ากับค่าพลังของพันธมิตรที่การ์ดใบนี้สนับสนุนในรอบนี้",
+    "descriptionRaw": "สนับสนุน: เพิ่มค่าพลังของการ์ดใบนี้ให้เท่ากับค่าพลังของพันธมิตรที่การ์ดใบนี้สนับสนุนในรอบนี้",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"ดูสิ! นกของปะป๊ากำลังจะฟักแล้ว!\"<br>\"โว้ว! อีกตัวก็ฟักเหมือนกัน! ทำไมมีเยอะขนาดนี้?\"<br>\"ถามได้ทุกปีเลยนะ Arya\"<br>\"ก็ไม่มีใครเคยตอบข้าเลยนี่!\"<br>\"ชู่ว เดี๋ยวเจ้าก็ทำให้มันกลัวหรอก เอาล่ะบอกข้าหน่อยสิว่ามันมีกี่ตัว เพราะเราต้องคิดชื่อเยอะเลยล่ะ\"",
+    "artistName": "Envar Studio",
+    "name": "Adnere's Aviarists",
+    "cardCode": "08IO019T1",
+    "keywords": [
+      "สนับสนุน"
+    ],
+    "keywordRefs": [
+      "Support"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ไม่มี",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "ยูนิต",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "ระดับคอมมอนเท่านั้น",
+      "Eternal",
+      "การ์ดที่ใช้มานาเท่ากัน",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08IO010.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08IO010-full.png"
+      }
+    ],
+    "regions": [
+      "ไอ<zwsp>โอ<zwsp>เนีย"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 0,
+    "cost": 4,
+    "health": 0,
+    "description": "<link=keyword.Recall><style=Keyword>เรียกกลับ</style></link>ศัตรูหนึ่งใบ<br>เพื่อเพิ่มค่าร่ายของยูนิตใบถัดไป<br>ที่คู่ต่อสู้จะเล่นในรอบนี้ขึ้น 2 หน่วย",
+    "descriptionRaw": "เรียกกลับศัตรูหนึ่งใบเพื่อเพิ่มค่าร่ายของยูนิตใบถัดไปที่คู่ต่อสู้จะเล่นในรอบนี้ขึ้น 2 หน่วย",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"ผู้ใดก็ตามที่ปองร้ายเราจักได้ไปสู่สุคติอยู่ใต้ก้นทะเล\" - Rivershaper",
+    "artistName": "Polar Engine",
+    "name": "Capsize",
+    "cardCode": "08IO010",
+    "keywords": [
+      "ช้า"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "ช้า",
+    "spellSpeedRef": "Slow",
+    "rarity": "คอมมอน",
+    "rarityRef": "Common",
+    "subtypes": [
+      "สรรพธาตุ"
+    ],
+    "supertype": "",
+    "type": "เวท",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08BC020.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08BC020-full.png"
+      }
+    ],
+    "regions": [
+      "แบน<zwsp>เดิล<zwsp>ซิ<zwsp>ตี้"
+    ],
+    "regionRefs": [
+      "BandleCity"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "คู่ต่อสู้ของคุณทิ้งการ์ดที่มีค่าร่ายมากที่สุด",
+    "descriptionRaw": "คู่ต่อสู้ของคุณทิ้งการ์ดที่มีค่าร่ายมากที่สุด",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"ลองจินตนาการว่าเจ้าเป็นหนอน และสิ่งสุดท้ายที่เจ้าเห็นก่อนตายก็คือดวงตาคู่นั้น โอ้ แต่หนอนมันไม่มีตาไม่ใช่หรอ? แบบว่าถ้าอย่างงั้น ก็ถือเป็นเรื่องดีแล้วล่ะ\" - Elle, Aloof Traveler",
+    "artistName": "Polar Engine",
+    "name": "Early Bird",
+    "cardCode": "08BC020",
+    "keywords": [
+      "ช้า"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "ช้า",
+    "spellSpeedRef": "Slow",
+    "rarity": "คอมมอน",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "เวท",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "ระดับคอมมอนเท่านั้น",
+      "Eternal",
+      "การ์ดที่ใช้มานาเท่ากัน",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
       "06RU001T3",
       "01PZ022"
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08BC005.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08BC005-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08BC005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08BC005-full.png"
       }
     ],
     "regions": [
@@ -2844,8 +6942,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08BC002.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08BC002-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08BC002.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08BC002-full.png"
       }
     ],
     "regions": [
@@ -2899,8 +6997,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08BC006.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08BC006-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08BC006.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08BC006-full.png"
       }
     ],
     "regions": [
@@ -2932,54 +7030,8 @@
     "spellSpeedRef": "",
     "rarity": "แรร์",
     "rarityRef": "Rare",
-    "subtypes": [],
-    "supertype": "",
-    "type": "ยูนิต",
-    "collectible": true,
-    "set": "Set8",
-    "formats": [
-      "Eternal",
-      "Standard"
-    ],
-    "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08SH004.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08SH004-full.png"
-      }
-    ],
-    "regions": [
-      "ชู<zwsp>ริ<zwsp>ม่า"
-    ],
-    "regionRefs": [
-      "Shurima"
-    ],
-    "attack": 4,
-    "cost": 4,
-    "health": 4,
-    "description": "<link=keyword.Daybreak><style=Keyword>รุ่งอรุณ</style></link>หรือเมื่อคุณเปิดใช้งาน<br>เอฟเฟกต์<link=keyword.Daybreak><style=Keyword>รุ่งอรุณ</style></link>ใบอื่น:<br>มอบ<link=keyword.Vulnerable><sprite name=Vulnerable><style=Keyword>เปราะบาง</style></link>แก่ศัตรูที่<link=keyword.Weakest><style=Keyword>อ่อนแอที่สุด</style></link>",
-    "descriptionRaw": "รุ่งอรุณหรือเมื่อคุณเปิดใช้งานเอฟเฟกต์รุ่งอรุณใบอื่น:มอบเปราะบางแก่ศัตรูที่อ่อนแอที่สุด",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "กองทัพอันเกรียงไกรของชูริม่ายืนตระหง่านเตรียมพร้อมพิสูจน์อำนาจแห่งทะเลทราย เมื่อไหร่ก็ตามที่ได้รับคำสั่ง พวกเขาก็จักเดินทัพโดยไม่ลังเล",
-    "artistName": "Kudos Productions",
-    "name": "General of the Dunes",
-    "cardCode": "08SH004",
-    "keywords": [],
-    "keywordRefs": [],
-    "spellSpeed": "",
-    "spellSpeedRef": "",
-    "rarity": "แรร์",
-    "rarityRef": "Rare",
     "subtypes": [
-      "ทหารชั้นยอด"
+      "ยอร์เดิล"
     ],
     "supertype": "",
     "type": "ยูนิต",
@@ -2999,127 +7051,27 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08SH005.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08SH005-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08BC004.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08BC004-full.png"
       }
     ],
     "regions": [
-      "ชู<zwsp>ริ<zwsp>ม่า"
+      "แบน<zwsp>เดิล<zwsp>ซิ<zwsp>ตี้"
     ],
     "regionRefs": [
-      "Shurima"
+      "BandleCity"
     ],
-    "attack": 2,
-    "cost": 2,
-    "health": 2,
-    "description": "<link=keyword.Daybreak><style=Keyword>รุ่งอรุณ</style></link>: จั่ว <link=card.me><style=AssociatedCard>Defenders of the Sun Disc</style></link> หนึ่งใบ",
-    "descriptionRaw": "รุ่งอรุณ: จั่ว Defenders of the Sun Disc หนึ่งใบ",
+    "attack": 9,
+    "cost": 9,
+    "health": 9,
+    "description": "<link=vocab.Play><style=Vocab>เล่น</style></link>: <link=vocab.Manifest><style=Vocab>ก่อกำเนิด</style></link>ผู้ติดตาม<link=vocab.Titanic><style=Vocab>มหึมา</style></link>หนึ่งใบ ตั้งค่าพลังของมันเป็น 1|1 และค่าร่าย 0 หน่วย ",
+    "descriptionRaw": "เล่น: ก่อกำเนิดผู้ติดตามมหึมาหนึ่งใบ ตั้งค่าพลังของมันเป็น 1|1 และค่าร่าย 0 หน่วย ",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "\"พวกเราคือผู้ปกปักทะเลทรายชั่วนิรันดร์ คือประวัติศาสตร์มีชีวิต คือผู้เดินไปบนทางแห่งแสงสว่าง เราจักคุกเข่าแก่จักรสุริยะเพียงผู้เดียว ดังนั้นโลกใบนี้ก็จักต้องคุกเข่าต่อหน้าเกียรติยศแห่งชูริม่า\" -Azir",
-    "artistName": "Kudos Productions",
-    "name": "Defenders of the Sun Disc",
-    "cardCode": "08SH005",
-    "keywords": [],
-    "keywordRefs": [],
-    "spellSpeed": "",
-    "spellSpeedRef": "",
-    "rarity": "คอมมอน",
-    "rarityRef": "Common",
-    "subtypes": [
-      "ทหารชั้นยอด"
-    ],
-    "supertype": "",
-    "type": "ยูนิต",
-    "collectible": true,
-    "set": "Set8",
-    "formats": [
-      "Eternal",
-      "Standard"
-    ],
-    "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08IO010.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08IO010-full.png"
-      }
-    ],
-    "regions": [
-      "ไอ<zwsp>โอ<zwsp>เนีย"
-    ],
-    "regionRefs": [
-      "Ionia"
-    ],
-    "attack": 0,
-    "cost": 4,
-    "health": 0,
-    "description": "<link=keyword.Recall><style=Keyword>เรียกกลับ</style></link>ศัตรูหนึ่งใบ<br>เพื่อเพิ่มค่าร่ายของยูนิตใบถัดไป<br>ที่คู่ต่อสู้จะเล่นในรอบนี้ขึ้น 2 หน่วย",
-    "descriptionRaw": "เรียกกลับศัตรูหนึ่งใบเพื่อเพิ่มค่าร่ายของยูนิตใบถัดไปที่คู่ต่อสู้จะเล่นในรอบนี้ขึ้น 2 หน่วย",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "\"ผู้ใดก็ตามที่ปองร้ายเราจักได้ไปสู่สุคติอยู่ใต้ก้นทะเล\" - Rivershaper",
-    "artistName": "Polar Engine",
-    "name": "Capsize",
-    "cardCode": "08IO010",
-    "keywords": [
-      "ช้า"
-    ],
-    "keywordRefs": [
-      "Slow"
-    ],
-    "spellSpeed": "ช้า",
-    "spellSpeedRef": "Slow",
-    "rarity": "คอมมอน",
-    "rarityRef": "Common",
-    "subtypes": [
-      "สรรพธาตุ"
-    ],
-    "supertype": "",
-    "type": "เวท",
-    "collectible": true,
-    "set": "Set8",
-    "formats": [
-      "Eternal",
-      "Standard"
-    ],
-    "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08MT027.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08MT027-full.png"
-      }
-    ],
-    "regions": [
-      "ทาร์<zwsp>กอน"
-    ],
-    "regionRefs": [
-      "Targon"
-    ],
-    "attack": 5,
-    "cost": 8,
-    "health": 8,
-    "description": "<link=vocab.Play><style=Vocab>เล่น</style></link>: เปิดใช้งานเอฟเฟกต์<link=keyword.Daybreak><style=Keyword>รุ่งอรุณ</style></link><br>และ<link=keyword.Nightfall><style=Keyword>พลบค่ำ</style></link>ของพันธมิตรใบอื่นทั้งหมด<br><link=keyword.Daybreak><style=Keyword>รุ่งอรุณ</style></link>: มอบ<link=keyword.Overwhelm><sprite name=Overwhelm><style=Keyword>ทะลวง</style></link>ให้กับการ์ดใบนี้\r\n<link=keyword.Nightfall><style=Keyword>พลบค่ำ</style></link>: มอบ<link=keyword.SpellShield><sprite name=SpellShield><style=Keyword>โล่เวท</style></link>ให้กับการ์ดใบนี้",
-    "descriptionRaw": "เล่น: เปิดใช้งานเอฟเฟกต์รุ่งอรุณและพลบค่ำของพันธมิตรใบอื่นทั้งหมดรุ่งอรุณ: มอบทะลวงให้กับการ์ดใบนี้\r\nพลบค่ำ: มอบโล่เวทให้กับการ์ดใบนี้",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "\"วงแหวนแห่งเปลวเพลิงเผาไหม้อยู่เบื้องบน แม้นภายใต้เสียงประกาศแห่งความมืดมิด เราทุกคนก็มิได้ต่างกันไกล\" - ประกาศกแสงจันทร์แห่ง Lunari",
-    "artistName": "Kudos Productions",
-    "name": "Herald of Celestial Convergence",
-    "cardCode": "08MT027",
+    "flavorText": "\"แน่นอนว่าข้ารู้จัก Portia เป็นอย่างดี! นางอาจจะไม่ค่อยรู้เรื่องรู้ราวสักเท่าไหร่ แต่นางสามารถเปิดประตูมิติพาเจ้าหนีได้อย่างรวดเร็วเลยนะ ขอแค่เพียงสะบัดหาง เจ้าก็จะหายวับไป!\" - Portal Pioneer",
+    "artistName": "Bubble Cat",
+    "name": "Portia the Peculiar",
+    "cardCode": "08BC004",
     "keywords": [],
     "keywordRefs": [],
     "spellSpeed": "",
@@ -3127,7 +7079,7 @@
     "rarity": "อีปิค",
     "rarityRef": "Epic",
     "subtypes": [
-      "นก"
+      "มังกร"
     ],
     "supertype": "",
     "type": "ยูนิต",
@@ -3147,27 +7099,27 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08MT025.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/th_th/img/cards/08MT025-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08BC018.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/th_th/img/cards/08BC018-full.png"
       }
     ],
     "regions": [
-      "ทาร์<zwsp>กอน"
+      "แบน<zwsp>เดิล<zwsp>ซิ<zwsp>ตี้"
     ],
     "regionRefs": [
-      "Targon"
+      "BandleCity"
     ],
     "attack": 0,
-    "cost": 7,
+    "cost": 8,
     "health": 0,
-    "description": "หากคุณ<link=vocab.Behold><style=Vocab>ประจักษ์</style></link>ยูนิต<link=vocab.Titanic><style=Vocab>มหึมา</style></link> การ์ดใบนี้มีค่าร่ายลดลง 3 หน่วย\r\nสร้างความเสียหาย 7 หน่วยแก่ยูนิตหนึ่งใบ",
-    "descriptionRaw": "หากคุณประจักษ์ยูนิตมหึมา การ์ดใบนี้มีค่าร่ายลดลง 3 หน่วย\r\nสร้างความเสียหาย 7 หน่วยแก่ยูนิตหนึ่งใบ",
+    "description": "สับพันธมิตรหนึ่งใบเข้าไปในด้านล่างสุดของเด็ค เพื่ออัญเชิญพันธมิตรใบบนสุดในเด็คของคุณ",
+    "descriptionRaw": "สับพันธมิตรหนึ่งใบเข้าไปในด้านล่างสุดของเด็ค เพื่ออัญเชิญพันธมิตรใบบนสุดในเด็คของคุณ",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "\"อุ๊ปส์ เอ่อ ๆ ม่ายต้องกังวลปายหรอก น่านก็แค่รอยเล็กน้อยน่า แค่อุบัดติเหตุเอง ไม่ใช้เพาะป่าป๊าหรอกนะ! ไปกานต่อดีก่า!\" - Chip",
+    "flavorText": "\"กฎข้อที่ 571: หน่วยสอดแนมควรจะระมัดระวังอยู่เสมอ เพราะไม่มีใครรู้หรอกว่าเราจะได้เจอกับอาหารอันโอชะ หรือเจอเข้ากับกับดักอันแยบยล\" - Ava Achiever",
     "artistName": "Polar Engine",
-    "name": "Seismic Shard",
-    "cardCode": "08MT025",
+    "name": "Sugary Snare",
+    "cardCode": "08BC018",
     "keywords": [
       "ช้า"
     ],
@@ -3176,21 +7128,23 @@
     ],
     "spellSpeed": "ช้า",
     "spellSpeedRef": "Slow",
-    "rarity": "คอมมอน",
-    "rarityRef": "Common",
-    "subtypes": [
-      "สรรพธาตุ"
-    ],
+    "rarity": "แรร์",
+    "rarityRef": "Rare",
+    "subtypes": [],
     "supertype": "",
     "type": "เวท",
     "collectible": true,
     "set": "Set8",
     "formats": [
+      "ระดับคอมมอนเท่านั้น",
       "Eternal",
+      "การ์ดที่ใช้มานาเท่ากัน",
       "Standard"
     ],
     "formatRefs": [
+      "client_Formats_CommonsOnly_name",
       "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
       "client_Formats_Standard_name"
     ]
   }

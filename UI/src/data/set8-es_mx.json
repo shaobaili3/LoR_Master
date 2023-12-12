@@ -2,14 +2,853 @@
   {
     "associatedCards": [],
     "associatedCardRefs": [
+      "08SI042T1",
+      "08SI042T5"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08SI042.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08SI042-full.png"
+      }
+    ],
+    "regions": [
+      "Noxus",
+      "Islas de la Sombra"
+    ],
+    "regionRefs": [
+      "Noxus",
+      "ShadowIsles"
+    ],
+    "attack": 5,
+    "cost": 7,
+    "health": 8,
+    "description": "<link=vocab.Play><style=Vocab>Al jugar</style></link>: Mato hasta 2 aliados.\r\nCuando <link=vocab.Slay><style=Vocab>Mates</style></link> a otro aliado, lo revivo.",
+    "descriptionRaw": "Al jugar: Mato hasta 2 aliados.\r\nCuando Mates a otro aliado, lo revivo.",
+    "levelupDescription": "Si 15+ aliados han muerto. Los aliados con 5+ de poder cuentan el doble. <style=Variable></style>",
+    "levelupDescriptionRaw": "Si 15+ aliados han muerto. Los aliados con 5+ de poder cuentan el doble. ",
+    "flavorText": "Atado a su armadura, en lo más profundo del Bastión Inmortal, Mordekaiser ha forjado su propio trono en el Reino Gris. Por cada necio que pretenda destruirlo, habrá cientos más dispuestos a servirle tanto en la vida como en la muerte.",
+    "artistName": "Michal Ivan",
+    "name": "Mordekaiser",
+    "cardCode": "08SI042",
+    "keywords": [
+      "Desafío"
+    ],
+    "keywordRefs": [
+      "Challenger"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Campeón",
+    "rarityRef": "Champion",
+    "subtypes": [],
+    "supertype": "Campeón",
+    "type": "Unidad",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08SI042",
+      "08SI042T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08SI042T5.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08SI042T5-full.png"
+      }
+    ],
+    "regions": [
+      "Islas de la Sombra"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 0,
+    "cost": 10,
+    "health": 0,
+    "description": "Un aliado inicia un ataque gratis que <link=keyword.Challenger><sprite name=Challenger><style=Keyword>Desafía</style></link> al enemigo <link=vocab.Strongest><style=Vocab>más fuerte</style></link>.\r\nMato a TODAS las demás unidades.\r\nCreo 1 <link=card.level1><style=AssociatedCard>Mordekaiser</style></link> en tu mazo.",
+    "descriptionRaw": "Un aliado inicia un ataque gratis que Desafía al enemigo más fuerte.\r\nMato a TODAS las demás unidades.\r\nCreo 1 Mordekaiser en tu mazo.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''La muerte es mi dominio''. —Mordekaiser",
+    "artistName": "Polar Engine",
+    "name": "Reino de la Muerte de Mordekaiser",
+    "cardCode": "08SI042T5",
+    "keywords": [
+      "Lento"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "Lento",
+    "spellSpeedRef": "Slow",
+    "rarity": "Ninguno",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "Campeón",
+    "type": "Hechizo",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08SI042T5"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08SI042T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08SI042T1-full.png"
+      }
+    ],
+    "regions": [
+      "Noxus",
+      "Islas de la Sombra"
+    ],
+    "regionRefs": [
+      "Noxus",
+      "ShadowIsles"
+    ],
+    "attack": 6,
+    "cost": 7,
+    "health": 9,
+    "description": "<link=vocab.Play><style=Vocab>Al jugar</style></link>: Mato hasta 2 aliados.\r\nCuando <link=vocab.Slay><style=Vocab>Mates</style></link> a otro aliado, lo revivo.\r\n<link=vocab.Attack><style=Vocab>Al atacar</style></link>: Durante el resto de la partida, cuando <link=vocab.Slay><style=Vocab>Mates</style></link> a una unidad, <link=keyword.Drain><style=Keyword>Dreno</style></link> 1 del nexo enemigo.",
+    "descriptionRaw": "Al jugar: Mato hasta 2 aliados.\r\nCuando Mates a otro aliado, lo revivo.\r\nAl atacar: Durante el resto de la partida, cuando Mates a una unidad, Dreno 1 del nexo enemigo.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''¡Sírvanme! Renuncien a sus patéticas almas. Yo les daré hierro eterno. ¡Soy el olvido inevitable!''.",
+    "artistName": "Michal Ivan",
+    "name": "Mordekaiser",
+    "cardCode": "08SI042T1",
+    "keywords": [
+      "Desafío"
+    ],
+    "keywordRefs": [
+      "Challenger"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Campeón",
+    "rarityRef": "Champion",
+    "subtypes": [],
+    "supertype": "Campeón",
+    "type": "Unidad",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08SI007.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08SI007-full.png"
+      }
+    ],
+    "regions": [
+      "Islas de la Sombra"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 4,
+    "cost": 3,
+    "health": 2,
+    "description": "<link=vocab.Play><style=Vocab>Al jugar</style></link>: Otorgo <link=keyword.Deathless><sprite name=Deathless><style=Keyword>Inmortal</style></link> a un aliado en la mano.",
+    "descriptionRaw": "Al jugar: Otorgo Inmortal a un aliado en la mano.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "No importa qué forma tenían las almas antes de su encarcelamiento en el Reino Gris. La individualidad tiene poco valor ahí. Sin rostro y sin miedo, la Legión sirve al Renacido de Hierro mucho mejor gracias a su uniformidad.",
+    "artistName": "Bubble Cat",
+    "name": "Legión de los Cercenados",
+    "cardCode": "08SI007",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "COMÚN",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unidad",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08SI003.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08SI003-full.png"
+      }
+    ],
+    "regions": [
+      "Islas de la Sombra"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 1,
+    "cost": 1,
+    "health": 1,
+    "description": "<link=keyword.Last Breath><sprite name=LastBreath><style=Keyword>Último Aliento</style></link>: La próxima vez que revivas a un aliado, creo una copia mía en la mano.",
+    "descriptionRaw": "Último Aliento: La próxima vez que revivas a un aliado, creo una copia mía en la mano.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''Hace mucho tiempo fuimos encadenados. Pronto tú también conocerás nuestro sufrimiento, y todos sufriremos, por los siglos de los siglos, hasta que la mano del Maestro nos conceda el olvido...''",
+    "artistName": "Michal Ivan",
+    "name": "Espíritus Encadenados",
+    "cardCode": "08SI003",
+    "keywords": [
+      "Último Aliento"
+    ],
+    "keywordRefs": [
+      "LastBreath"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "RARA",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unidad",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "06RU001T3"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08SI021.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08SI021-full.png"
+      }
+    ],
+    "regions": [
+      "Islas de la Sombra"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 3,
+    "description": "Cuando otro aliado muere o se activa <nobr><link=keyword.Last Breath><sprite name=LastBreath><style=Keyword>Último Aliento</style></link>:</nobr> Planto 4 <link=card.chime><style=AssociatedCard>Campanillas</style></link> en tu mazo.",
+    "descriptionRaw": "Cuando otro aliado muere o se activa Último Aliento: Planto 4 Campanillas en tu mazo.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "No te preocupes por ese inquietante tintineo: Es el viejo Tintineante haciendo su recorrido. Siempre se alegra de ver a los recién llegados, pero ellos no se alegran de verlo a él.",
+    "artistName": "Bubble Cat",
+    "name": "Tintineante Solitario",
+    "cardCode": "08SI021",
+    "keywords": [
+      "Último Aliento"
+    ],
+    "keywordRefs": [
+      "LastBreath"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "COMÚN",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unidad",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08SI030.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08SI030-full.png"
+      }
+    ],
+    "regions": [
+      "Islas de la Sombra"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "Lanzo <link=vocab.Obliterate><style=Vocab>Aniquilar</style></link> a 6 cartas del fondo del mazo enemigo.",
+    "descriptionRaw": "Lanzo Aniquilar a 6 cartas del fondo del mazo enemigo.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "En las profundidades de Runaterra, existen monstruos para los que una embarcación jaull es un simple aperitivo.",
+    "artistName": "Polar Engine",
+    "name": "Tumba Acuática",
+    "cardCode": "08SI030",
+    "keywords": [
+      "Lento"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "Lento",
+    "spellSpeedRef": "Slow",
+    "rarity": "ÉPICA",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Hechizo",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Solo comunes",
+      "Eterno",
+      "Cartas del mismo costo",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08SI037T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08SI037T1-full.png"
+      }
+    ],
+    "regions": [
+      "Islas de la Sombra"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 8,
+    "cost": 6,
+    "health": 4,
+    "description": "",
+    "descriptionRaw": "",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "El zumbido de mil manos con garras de hierro y el crujir de dientes espectrales auguran un desagradable final para quien se niegue a servir.",
+    "artistName": "Envar Studio",
+    "name": "Muerte a Mil Garras",
+    "cardCode": "08SI037T1",
+    "keywords": [
+      "Temible"
+    ],
+    "keywordRefs": [
+      "Fearsome"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Ninguno",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unidad",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Solo comunes",
+      "Eterno",
+      "Cartas del mismo costo",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08SI037T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08SI037.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08SI037-full.png"
+      }
+    ],
+    "regions": [
+      "Islas de la Sombra"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 5,
+    "cost": 6,
+    "health": 3,
+    "description": "Para usarme, mata a un aliado.\r\nCuando me invocan, invoco 1 <link=card.summon><style=AssociatedCard>Muerte a Mil Garras</style></link>.",
+    "descriptionRaw": "Para usarme, mata a un aliado.\r\nCuando me invocan, invoco 1 Muerte a Mil Garras.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Estos sabuesos nunca olvidan el rastro de quien intentó huir... y cuando acorralan a su presa, un mortífago nunca está lejos.",
+    "artistName": "Xavier Leroux",
+    "name": "Sabueso Férrico Espectral",
+    "cardCode": "08SI037",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "RARA",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unidad",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Solo comunes",
+      "Eterno",
+      "Cartas del mismo costo",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08SI041.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08SI041-full.png"
+      }
+    ],
+    "regions": [
+      "Islas de la Sombra"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "Mato a un aliado para infligir 5 de daño a una unidad.",
+    "descriptionRaw": "Mato a un aliado para infligir 5 de daño a una unidad.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''La oscuridad es el destino de todos, menos el mío''. —Mordekaiser",
+    "artistName": "Polar Engine",
+    "name": "Garra del Inframundo",
+    "cardCode": "08SI041",
+    "keywords": [
+      "Rápido"
+    ],
+    "keywordRefs": [
+      "Fast"
+    ],
+    "spellSpeed": "Rápido",
+    "spellSpeedRef": "Fast",
+    "rarity": "COMÚN",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Hechizo",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08SI026T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08SI036.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08SI036-full.png"
+      }
+    ],
+    "regions": [
+      "Islas de la Sombra"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "<link=vocab.Play><style=Vocab>Al jugar</style></link>: <link=keyword.Curse><sprite name=Curse><style=Keyword>Maldigo</style></link> a un enemigo con <link=card.curse><style=AssociatedCard>Terror</style></link>.\r\nCuando juegues un aliado <link=vocab.Titanic><style=Vocab>Titánico</style></link>, destrúyeme para robar 2.",
+    "descriptionRaw": "Al jugar: Maldigo a un enemigo con Terror.\r\nCuando juegues un aliado Titánico, destrúyeme para robar 2.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''Te ofrecemos estas almas. Con huesos pavimentamos este camino ante ti. Desgarramos estos reinos para abrir paso a tu ejército de hierro eterno.''. —Cultista de la Garra del Inframundo",
+    "artistName": "Envar Studio",
+    "name": "Umbral del Gris",
+    "cardCode": "08SI036",
+    "keywords": [
+      "Hito"
+    ],
+    "keywordRefs": [
+      "LandmarkVisualOnly"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "RARA",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Hito",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Solo comunes",
+      "Eterno",
+      "Cartas del mismo costo",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08SI004.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08SI004-full.png"
+      }
+    ],
+    "regions": [
+      "Islas de la Sombra"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 0,
+    "cost": 10,
+    "health": 0,
+    "description": "Un aliado inicia un ataque gratis que <link=keyword.Challenger><sprite name=Challenger><style=Keyword>Desafía</style></link> al enemigo <link=vocab.Strongest><style=Vocab>más fuerte</style></link>.\r\nMato a TODAS las demás unidades.",
+    "descriptionRaw": "Un aliado inicia un ataque gratis que Desafía al enemigo más fuerte.\r\nMato a TODAS las demás unidades.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''La muerte es mi dominio''. —Mordekaiser",
+    "artistName": "Polar Engine",
+    "name": "Reino de la Muerte",
+    "cardCode": "08SI004",
+    "keywords": [
+      "Lento"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "Lento",
+    "spellSpeedRef": "Slow",
+    "rarity": "ÉPICA",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Hechizo",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08SI026T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08SI026.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08SI026-full.png"
+      }
+    ],
+    "regions": [
+      "Islas de la Sombra"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 3,
+    "cost": 4,
+    "health": 4,
+    "description": "Cuando me invocan o invocas a un aliado <link=vocab.Titanic><style=Vocab>Titánico</style></link>, <link=keyword.Curse><sprite name=Curse><style=Keyword>Maldigo</style></link> al enemigo <link=vocab.Strongest><style=Vocab>más fuerte</style></link> con <link=card.curse><style=AssociatedCard>Terror</style></link>.",
+    "descriptionRaw": "Cuando me invocan o invocas a un aliado Titánico, Maldigo al enemigo más fuerte con Terror.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "A los ojos de sus fieles, el Renacido de Hierro es la única esperanza para aquellos que anhelan el olvido. Estos sectarios reciben la paz a través de la dominación con los brazos abiertos.",
+    "artistName": "Bubble Cat",
+    "name": "Cultista de la Garra del Inframundo",
+    "cardCode": "08SI026",
+    "keywords": [
+      "Temible"
+    ],
+    "keywordRefs": [
+      "Fearsome"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "RARA",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unidad",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08SI026T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08SI026T1-full.png"
+      }
+    ],
+    "regions": [
+      "Islas de la Sombra"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "Mientras yo esté en tu mano, <style=Variable>la unidad maldita</style> tiene <nobr>-<style=Variable>3</style>|-0.</nobr>",
+    "descriptionRaw": "Mientras yo esté en tu mano, la unidad maldita tiene -3|-0.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Sientes una abrumadora sensación de terror.",
+    "artistName": "Polar Engine",
+    "name": "Terror",
+    "cardCode": "08SI026T1",
+    "keywords": [
+      "Enfoque",
+      "Maldición"
+    ],
+    "keywordRefs": [
+      "Focus",
+      "Curse"
+    ],
+    "spellSpeed": "Ráfaga",
+    "spellSpeedRef": "Burst",
+    "rarity": "Ninguno",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Hechizo",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08BW028T1",
+      "08BW028T2",
+      "08BW028T3",
+      "08BW028T4"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08SI018.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08SI018-full.png"
+      }
+    ],
+    "regions": [
+      "Islas de la Sombra",
+      "Targón"
+    ],
+    "regionRefs": [
+      "ShadowIsles",
+      "Targon"
+    ],
+    "attack": 2,
+    "cost": 3,
+    "health": 2,
+    "description": "<link=vocab.Play><style=Vocab>Al jugar</style></link>: Elige un hechizo de Explorador para crearlo en la mano.",
+    "descriptionRaw": "Al jugar: Elige un hechizo de Explorador para crearlo en la mano.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''El terreno es indescifrable. La visibilidad, casi nula. Encuentro enemigos a cada paso... pero, extrañamente, también aliados inesperados''. —De los registros de expedición de la División de Reinos Lejanos del Gremio del Explorador, asignación: Islas de la Sombra",
+    "artistName": "Envar Studio",
+    "name": "Oteador Espectral",
+    "cardCode": "08SI018",
+    "keywords": [
+      "Robo de Vida"
+    ],
+    "keywordRefs": [
+      "Lifesteal"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "RARA",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unidad",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08SI015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08SI015-full.png"
+      }
+    ],
+    "regions": [
+      "Islas de la Sombra"
+    ],
+    "regionRefs": [
+      "ShadowIsles"
+    ],
+    "attack": 5,
+    "cost": 5,
+    "health": 3,
+    "description": "Para usarme, mata a un aliado.\r\n<link=keyword.Last Breath><sprite name=LastBreath><style=Keyword>Último Aliento</style></link>: Curo 2 a tu nexo.",
+    "descriptionRaw": "Para usarme, mata a un aliado.\r\nÚltimo Aliento: Curo 2 a tu nexo.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Las bestias de guerra son valiosas para cualquier ejército. En el Reino Gris, son amalgamas de almas torturadas, y cada una de ellas se consume violentamente en su insensibilidad. ",
+    "artistName": "Michal Ivan",
+    "name": "Amalgama de Ritos Infames",
+    "cardCode": "08SI015",
+    "keywords": [
+      "Último Aliento",
+      "Inmortal"
+    ],
+    "keywordRefs": [
+      "LastBreath",
+      "Deathless"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ÉPICA",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unidad",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
       "08BW008T1",
       "08BW008T5",
       "08BW008T3"
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08BW008.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08BW008-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08BW008.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08BW008-full.png"
       }
     ],
     "regions": [
@@ -58,8 +897,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08BW008T3.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08BW008T3-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08BW008T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08BW008T3-full.png"
       }
     ],
     "regions": [
@@ -114,8 +953,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08BW008T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08BW008T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08BW008T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08BW008T1-full.png"
       }
     ],
     "regions": [
@@ -167,8 +1006,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08BW008T5.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08BW008T5-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08BW008T5.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08BW008T5-full.png"
       }
     ],
     "regions": [
@@ -219,8 +1058,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08BW032.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08BW032-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08BW032.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08BW032-full.png"
       }
     ],
     "regions": [
@@ -273,8 +1112,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08BW015.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08BW015-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08BW015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08BW015-full.png"
       }
     ],
     "regions": [
@@ -319,8 +1158,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08BW002.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08BW002-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08BW002.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08BW002-full.png"
       }
     ],
     "regions": [
@@ -371,8 +1210,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08BW025.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08BW025-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08BW025.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08BW025-full.png"
       }
     ],
     "regions": [
@@ -417,8 +1256,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08BW026.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08BW026-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08BW026.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08BW026-full.png"
       }
     ],
     "regions": [
@@ -429,7 +1268,7 @@
     ],
     "attack": 2,
     "cost": 4,
-    "health": 1,
+    "health": 2,
     "description": "Cuando me invocan, <link=vocab.Updraft><style=Vocab>Arremolino</style></link> tu mano para recibir +1|+1 por cada carta <link=vocab.Updraft><style=Vocab>Arremolinada</style></link> y roba 2.",
     "descriptionRaw": "Cuando me invocan, Arremolino tu mano para recibir +1|+1 por cada carta Arremolinada y roba 2.",
     "levelupDescription": "",
@@ -468,8 +1307,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08BW028.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08BW028-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08BW028.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08BW028-full.png"
       }
     ],
     "regions": [
@@ -520,8 +1359,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08BW028T4.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08BW028T4-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08BW028T4.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08BW028T4-full.png"
       }
     ],
     "regions": [
@@ -576,8 +1415,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08BW028T3.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08BW028T3-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08BW028T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08BW028T3-full.png"
       }
     ],
     "regions": [
@@ -626,8 +1465,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08BW028T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08BW028T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08BW028T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08BW028T1-full.png"
       }
     ],
     "regions": [
@@ -680,8 +1519,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08BW028T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08BW028T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08BW028T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08BW028T2-full.png"
       }
     ],
     "regions": [
@@ -734,8 +1573,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08BW009.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08BW009-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08BW009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08BW009-full.png"
       }
     ],
     "regions": [
@@ -780,8 +1619,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08BW010.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08BW010-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08BW010.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08BW010-full.png"
       }
     ],
     "regions": [
@@ -829,13 +1668,174 @@
   },
   {
     "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08BW031.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08BW031-full.png"
+      }
+    ],
+    "regions": [
+      "Aguasturbias"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 8,
+    "cost": 8,
+    "health": 7,
+    "description": "Cuando gastas maná para jugar otra unidad, creo una carta al azar en la mano del mismo costo. Cuesta 0 y es <link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>Fugaz</style></link>.",
+    "descriptionRaw": "Cuando gastas maná para jugar otra unidad, creo una carta al azar en la mano del mismo costo. Cuesta 0 y es Fugaz.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "A pesar de su apetito por las bestias marinas más extrañas, hay algunos monstruos que ni siquiera los capitanes más experimentados de Aguasturbias se atreven a molestar. Hablan de Sefirsa en voz baja, como una luz hipnótica que se mueve en lo profundo de las olas; un monstruo que se alza sobre una fosa común de barcos hundidos y hombres ahogados.",
+    "artistName": "Envar Studio",
+    "name": "Sefirsa, Azote de las Profundidades",
+    "cardCode": "08BW031",
+    "keywords": [
+      "Profundidad"
+    ],
+    "keywordRefs": [
+      "Deep"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ÉPICA",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "MONSTRUO MARINO",
+      "DRAGÓN"
+    ],
+    "supertype": "",
+    "type": "Unidad",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08BW037.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08BW037-full.png"
+      }
+    ],
+    "regions": [
+      "Aguasturbias"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 1,
+    "cost": 3,
+    "health": 3,
+    "description": "Cuando juegas una carta con un costo igual a mi Poder, recibo +1|+1.",
+    "descriptionRaw": "Cuando juegas una carta con un costo igual a mi Poder, recibo +1|+1.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''Oye, ¿no quieres apostar un poco más? ¡El que no arriesga no gana! Esta mesa tiene suerte esta noche, te lo aseguro. Y la casa reparte justamente en este honrado establecimiento: lo juro por la lengua de mi má''.",
+    "artistName": "Caravan Studio",
+    "name": "Croupier Honesto",
+    "cardCode": "08BW037",
+    "keywords": [
+      "Imprudente"
+    ],
+    "keywordRefs": [
+      "Brash"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "RARA",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unidad",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Solo comunes",
+      "Eterno",
+      "Cartas del mismo costo",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08BW036.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08BW036-full.png"
+      }
+    ],
+    "regions": [
+      "Aguasturbias"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "Cuando gastas maná para jugar una unidad, restablezco 1 de maná de hechizos.",
+    "descriptionRaw": "Cuando gastas maná para jugar una unidad, restablezco 1 de maná de hechizos.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''Desde hace mucho tiempo, el arrecife ha sido a la vez un refugio y un aliado. Cuida de nosotros, como nosotros cuidamos de él, para que ninguno de los dos caiga en la oscuridad''. —Abuela Marai",
+    "artistName": "Envar Studio",
+    "name": "Chapitel del Arrecife Marai",
+    "cardCode": "08BW036",
+    "keywords": [
+      "Hito"
+    ],
+    "keywordRefs": [
+      "LandmarkVisualOnly"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "COMÚN",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Hito",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Solo comunes",
+      "Eterno",
+      "Cartas del mismo costo",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
     "associatedCardRefs": [
       "08BW008T3"
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08BW023.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08BW023-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08BW023.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08BW023-full.png"
       }
     ],
     "regions": [
@@ -888,8 +1888,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08PZ007.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08PZ007-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08PZ007.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08PZ007-full.png"
       }
     ],
     "regions": [
@@ -940,8 +1940,62 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08PZ005.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08PZ005-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08PZ031.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08PZ031-full.png"
+      }
+    ],
+    "regions": [
+      "Piltóver y Zaun"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "Elige un seguidor aliado. Transformo a mi portador en una copia exacta mientras esté equipado.",
+    "descriptionRaw": "Elige un seguidor aliado. Transformo a mi portador en una copia exacta mientras esté equipado.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "No preguntes cómo funcionan.",
+    "artistName": "Polar Engine",
+    "name": "Gafas Sospechosas",
+    "cardCode": "08PZ031",
+    "keywords": [
+      "Equipo"
+    ],
+    "keywordRefs": [
+      "Equipment"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "RARA",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Equipo",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Solo comunes",
+      "Eterno",
+      "Cartas del mismo costo",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08PZ005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08PZ005-full.png"
       }
     ],
     "regions": [
@@ -992,8 +2046,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08PZ019.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08PZ019-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08PZ019.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08PZ019-full.png"
       }
     ],
     "regions": [
@@ -1005,8 +2059,8 @@
     "attack": 0,
     "cost": 5,
     "health": 0,
-    "description": "Si robaste 3+ cartas en esta ronda, cuesto 2 menos.\r\nInflijo 3 de daño a una unidad y 2 de daño al nexo enemigo.",
-    "descriptionRaw": "Si robaste 3+ cartas en esta ronda, cuesto 2 menos.\r\nInflijo 3 de daño a una unidad y 2 de daño al nexo enemigo.",
+    "description": "Si robaste 3+ cartas en esta ronda, cuesto 2 menos.\r\nInflijo 3 de daño a una unidad y 1 de daño al nexo enemigo.",
+    "descriptionRaw": "Si robaste 3+ cartas en esta ronda, cuesto 2 menos.\r\nInflijo 3 de daño a una unidad y 1 de daño al nexo enemigo.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "''La tempestad está a mi disposición''. —Janna",
@@ -1041,14 +2095,62 @@
   },
   {
     "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08PZ028.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08PZ028-full.png"
+      }
+    ],
+    "regions": [
+      "Piltóver y Zaun"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 8,
+    "cost": 8,
+    "health": 6,
+    "description": "Cuando juegas un hechizo, roba 1. Cuando robas mientras tienes completa la mano, inflijo 1 de daño al nexo enemigo.",
+    "descriptionRaw": "Cuando juegas un hechizo, roba 1. Cuando robas mientras tienes completa la mano, inflijo 1 de daño al nexo enemigo.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Zaun requiere adaptación, y la dragona quimtech no es una excepción, envuelta en la enfermiza luz verde de los aumentos mientras se aferra a las profundidades de la ciudad. Las sombras gemelas de las alas arruinadas de la dragona recorren los pasadizos oscuros, heraldos de una furia nacida de la angustia ante su propia corrupción.",
+    "artistName": "Caravan Studio",
+    "name": "Dragona Quimtech",
+    "cardCode": "08PZ028",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ÉPICA",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "DRAGÓN"
+    ],
+    "supertype": "",
+    "type": "Unidad",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
     "associatedCardRefs": [
       "08PZ001T3",
       "08PZ001T1"
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08PZ001.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08PZ001-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08PZ001.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08PZ001-full.png"
       }
     ],
     "regions": [
@@ -1062,8 +2164,8 @@
     "health": 4,
     "description": "<link=vocab.Play><style=Vocab>Al jugar</style></link>: <link=vocab.Updraft><style=Vocab>Arremolina</style></link> 2 para robar 2 cartas en el siguiente <link=vocab.RoundStart><style=Vocab>Inicio de la ronda</style></link>.\r\nCada ronda, las 3 primeras veces que robes una carta, reduzco su costo en 1 en esta ronda. <style=Variable></style>",
     "descriptionRaw": "Al jugar: Arremolina 2 para robar 2 cartas en el siguiente Inicio de la ronda.\r\nCada ronda, las 3 primeras veces que robes una carta, reduzco su costo en 1 en esta ronda. ",
-    "levelupDescription": "Si te he visto jugar 6 cartas con costo reducido.<style=Variable></style>",
-    "levelupDescriptionRaw": "Si te he visto jugar 6 cartas con costo reducido.",
+    "levelupDescription": "Te he visto jugar 8 cartas con costo reducido.<style=Variable></style>",
+    "levelupDescriptionRaw": "Te he visto jugar 8 cartas con costo reducido.",
     "flavorText": "''Zaun ocupa un lugar especial en el corazón de Janna; más que cualquier otro. Después de todo, ella fue quien salvó a las pobres almas que Piltóver dejó morir. Sí... Si hay respuestas que encontrar, las obtendré aquí''. —Marinero del Viento",
     "artistName": "Envar Studio",
     "name": "Janna",
@@ -1096,8 +2198,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08PZ001T3.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08PZ001T3-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08PZ001T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08PZ001T3-full.png"
       }
     ],
     "regions": [
@@ -1149,8 +2251,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08PZ001T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08PZ001T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08PZ001T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08PZ001T1-full.png"
       }
     ],
     "regions": [
@@ -1203,8 +2305,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08PZ026.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08PZ026-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08PZ026.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08PZ026-full.png"
       }
     ],
     "regions": [
@@ -1255,8 +2357,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08PZ006.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08PZ006-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08PZ006.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08PZ006-full.png"
       }
     ],
     "regions": [
@@ -1305,8 +2407,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08PZ018.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08PZ018-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08PZ018.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08PZ018-full.png"
       }
     ],
     "regions": [
@@ -1355,8 +2457,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08PZ008.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08PZ008-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08PZ008.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08PZ008-full.png"
       }
     ],
     "regions": [
@@ -1401,8 +2503,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08PZ026T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08PZ026T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08PZ026T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08PZ026T1-full.png"
       }
     ],
     "regions": [
@@ -1449,8 +2551,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08PZ009.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08PZ009-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08PZ009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08PZ009-full.png"
       }
     ],
     "regions": [
@@ -1499,8 +2601,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08PZ002.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08PZ002-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08PZ002.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08PZ002-full.png"
       }
     ],
     "regions": [
@@ -1551,8 +2653,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08PZ008T3.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08PZ008T3-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08PZ008T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08PZ008T3-full.png"
       }
     ],
     "regions": [
@@ -1597,8 +2699,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08PZ008T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08PZ008T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08PZ008T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08PZ008T2-full.png"
       }
     ],
     "regions": [
@@ -1643,8 +2745,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08PZ020.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08PZ020-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08PZ024.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08PZ024-full.png"
       }
     ],
     "regions": [
@@ -1653,7 +2755,53 @@
     "regionRefs": [
       "PiltoverZaun"
     ],
-    "attack": 3,
+    "attack": 4,
+    "cost": 4,
+    "health": 4,
+    "description": "<link=vocab.RoundStart><style=Vocab>Inicio de la ronda</style></link>: TODOS los jugadores roban 1, después otorgo <link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>Fugaz</style></link> a la carta del oponente.",
+    "descriptionRaw": "Inicio de la ronda: TODOS los jugadores roban 1, después otorgo Fugaz a la carta del oponente.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''Hoy es dos por uno, ¡dos por uno solo hoy! Pescado fresco, pescado este mismo... eh, ¿mes? ¡Dos por uno! ¿Cómo que no quieres el segundo? ¡Es gratis!''.",
+    "artistName": "Envar Studio",
+    "name": "Pescadero Charlatán",
+    "cardCode": "08PZ024",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "COMÚN",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unidad",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08PZ020.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08PZ020-full.png"
+      }
+    ],
+    "regions": [
+      "Piltóver y Zaun"
+    ],
+    "regionRefs": [
+      "PiltoverZaun"
+    ],
+    "attack": 2,
     "cost": 5,
     "health": 2,
     "description": "Si robaste 3+ cartas en esta ronda, cuesto 2 menos.\r\nCuando me invocan, roba 2 cartas en el siguiente <link=vocab.RoundStart><style=Vocab>Inicio de la ronda</style></link>.",
@@ -1695,8 +2843,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08FR012.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08FR012-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08FR012.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08FR012-full.png"
       }
     ],
     "regions": [
@@ -1747,8 +2895,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08FR019.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08FR019-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08FR019.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08FR019-full.png"
       }
     ],
     "regions": [
@@ -1803,8 +2951,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08FR001.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08FR001-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08FR001.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08FR001-full.png"
       }
     ],
     "regions": [
@@ -1849,8 +2997,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08FR001T3.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08FR001T3-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08FR001T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08FR001T3-full.png"
       }
     ],
     "regions": [
@@ -1904,8 +3052,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08FR001T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08FR001T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08FR001T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08FR001T2-full.png"
       }
     ],
     "regions": [
@@ -1960,8 +3108,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08FR001T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08FR001T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08FR001T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08FR001T1-full.png"
       }
     ],
     "regions": [
@@ -2012,8 +3160,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08FR018.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08FR018-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08FR018.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08FR018-full.png"
       }
     ],
     "regions": [
@@ -2064,8 +3212,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08FR011.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08FR011-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08FR011.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08FR011-full.png"
       }
     ],
     "regions": [
@@ -2074,9 +3222,9 @@
     "regionRefs": [
       "Freljord"
     ],
-    "attack": 3,
+    "attack": 2,
     "cost": 4,
-    "health": 2,
+    "health": 3,
     "description": "Cuando juegas un hechizo Elemental o una <link=keyword.Elemental Skill><sprite name=ElementalSkill><style=Keyword>Habilidad</style></link>, <link=vocab.Forge><style=Vocab>Fórjame</style></link>.",
     "descriptionRaw": "Cuando juegas un hechizo Elemental o una Habilidad, Fórjame.",
     "levelupDescription": "",
@@ -2114,8 +3262,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08FR008.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08FR008-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08FR008.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08FR008-full.png"
       }
     ],
     "regions": [
@@ -2163,13 +3311,61 @@
   },
   {
     "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08FR024.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08FR024-full.png"
+      }
+    ],
+    "regions": [
+      "El Fréljord"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 3,
+    "description": "<link=vocab.Attack><style=Vocab>Al atacar</style></link>: Otorgo +1|+1 a los primeros 2 aliados de tu mazo.",
+    "descriptionRaw": "Al atacar: Otorgo +1|+1 a los primeros 2 aliados de tu mazo.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Aunque son originarios de Yadulsk, estos cachorros han sido domesticados por varias tribus del Fréljord para rastrear, cazar y rescatar víctimas de avalanchas. Con una complexión robusta y un fuerte apetito por la diversión, son muy queridos desde la tundra hasta la taiga.",
+    "artistName": "Envar Studio",
+    "name": "Nevicán de Yadulsk",
+    "cardCode": "08FR024",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "COMÚN",
+    "rarityRef": "Common",
+    "subtypes": [
+      "PERRO"
+    ],
+    "supertype": "",
+    "type": "Unidad",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
     "associatedCardRefs": [
       "08FR002T1"
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08FR015.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08FR015-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08FR015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08FR015-full.png"
       }
     ],
     "regions": [
@@ -2212,12 +3408,66 @@
   {
     "associatedCards": [],
     "associatedCardRefs": [
+      "04FR001"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08FR030.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08FR030-full.png"
+      }
+    ],
+    "regions": [
+      "El Fréljord"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 8,
+    "cost": 8,
+    "health": 8,
+    "description": "Cuando me invocan, invoco 2 <link=card.summon><style=AssociatedCard>Siervos Congelados</style></link> y los hago <link=vocab.Advance><style=Vocab>Avanzar</style></link> <nobr>2.</nobr>",
+    "descriptionRaw": "Cuando me invocan, invoco 2 Siervos Congelados y los hago Avanzar 2.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''¡Era fe-feroz! Esbirros quemados hasta convertirse en hielo negro, avalanchas bajo sus garras, ¡un rugido que arrancaba la nieve de las montañas! ¡Una reina guerrera, te lo aseguro! Ma-matar esclavos es el trabajo de una reina guerrera''. — Bjerg Balbuceante",
+    "artistName": "Caravan Studio",
+    "name": "Boadir del Hielo Oscuro",
+    "cardCode": "08FR030",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ÉPICA",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "DRAGÓN"
+    ],
+    "supertype": "",
+    "type": "Unidad",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Solo comunes",
+      "Eterno",
+      "Cartas del mismo costo",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
       "08FR002T1"
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08FR002.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08FR002-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08FR002.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08FR002-full.png"
       }
     ],
     "regions": [
@@ -2262,8 +3512,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08FR002T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08FR002T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08FR002T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08FR002T1-full.png"
       }
     ],
     "regions": [
@@ -2311,13 +3561,11 @@
   },
   {
     "associatedCards": [],
-    "associatedCardRefs": [
-      "08FR002T1"
-    ],
+    "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08FR003.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08FR003-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08FR028.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08FR028-full.png"
       }
     ],
     "regions": [
@@ -2326,9 +3574,65 @@
     "regionRefs": [
       "Freljord"
     ],
-    "attack": 5,
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "Recibo +1|+0 por cada aliado con un subtipo diferente que hayas invocado en esta partida. <style=Variable></style>",
+    "descriptionRaw": "Recibo +1|+0 por cada aliado con un subtipo diferente que hayas invocado en esta partida. ",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''Aquí arriba hay bestias que ni una avalancha puede detener. Por eso un buen arnés vale cada moneda''. —Trampero Avarosano",
+    "artistName": "Polar Engine",
+    "name": "Arnés Práctico",
+    "cardCode": "08FR028",
+    "keywords": [
+      "Equipo"
+    ],
+    "keywordRefs": [
+      "Equipment"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ÉPICA",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Equipo",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Solo comunes",
+      "Eterno",
+      "Cartas del mismo costo",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08FR002T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08FR003.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08FR003-full.png"
+      }
+    ],
+    "regions": [
+      "El Fréljord"
+    ],
+    "regionRefs": [
+      "Freljord"
+    ],
+    "attack": 6,
     "cost": 6,
-    "health": 3,
+    "health": 4,
     "description": "Cuando juegas un hechizo o una <link=keyword.Skill><sprite name=SkillMark><style=Keyword>Habilidad</style></link>, invoco 1 <link=card.summon><style=AssociatedCard>Sello de la Tormenta</style></link>.",
     "descriptionRaw": "Cuando juegas un hechizo o una Habilidad, invoco 1 Sello de la Tormenta.",
     "levelupDescription": "",
@@ -2364,42 +3668,726 @@
   {
     "associatedCards": [],
     "associatedCardRefs": [
-      "08BW028T1",
-      "08BW028T2",
-      "08BW028T3",
-      "08BW028T4"
+      "08RU014T9",
+      "08RU014T8",
+      "08RU014T3",
+      "08RU014T6",
+      "08RU014T5",
+      "08RU014T1",
+      "08RU014T7",
+      "08RU014T4",
+      "08RU014T2"
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08DE006.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08DE006-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08RU014.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08RU014-full.png"
       }
     ],
     "regions": [
-      "Demacia",
-      "El Fréljord"
+      "Runaterra"
     ],
     "regionRefs": [
-      "Demacia",
-      "Freljord"
+      "Runeterra"
     ],
-    "attack": 2,
-    "cost": 3,
-    "health": 3,
-    "description": "<link=vocab.Play><style=Vocab>Al jugar</style></link>: Elige un hechizo de Explorador para crearlo en la mano.",
-    "descriptionRaw": "Al jugar: Elige un hechizo de Explorador para crearlo en la mano.",
+    "attack": 10,
+    "cost": 12,
+    "health": 10,
+    "description": "<link=vocab.Origin><style=Vocab>Origen</style></link>: <link=card.origin><style=AssociatedCard>Aspecto del Dragón</style></link>. <style=Variable></style>\r\nCuesto 1 menos por cada Bendición de Dragón diferente que hayas jugado en esta partida.\r\n<link=keyword.PlaySkillMark><sprite name=SkillMark><style=Keyword>Al jugar</style></link>: Juega todas las Bendiciones de Dragón sobre mí.",
+    "descriptionRaw": "Origen: Aspecto del Dragón. \r\nCuesto 1 menos por cada Bendición de Dragón diferente que hayas jugado en esta partida.\r\nAl jugar: Juega todas las Bendiciones de Dragón sobre mí.",
+    "levelupDescription": "Si los aliados atacaron con 75+ de poder total. <style=Variable></style>",
+    "levelupDescriptionRaw": "Si los aliados atacaron con 75+ de poder total. ",
+    "flavorText": "''Cuenta la leyenda que este dragón es el más antiguo de todos, que es el rey de todas las bestias aladas. Si lo domamos... ¿qué otra cosa podría interponerse en nuestro camino, Alatis? El mundo comprenderá por fin que el hombre y el dragón son más fuertes juntos''. —Volix, Amigo de Dragones",
+    "artistName": "Envar Studio",
+    "name": "Dragón Ancestral",
+    "cardCode": "08RU014",
+    "keywords": [
+      "Furia"
+    ],
+    "keywordRefs": [
+      "Fury"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Campeón",
+    "rarityRef": "Champion",
+    "subtypes": [
+      "DRAGÓN"
+    ],
+    "supertype": "Campeón",
+    "type": "Unidad",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08RU014T5.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08RU014T5-full.png"
+      }
+    ],
+    "regions": [
+      "Runaterra"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "Otorgo +1|+1 y <link=keyword.Fearsome><sprite name=Fearsome><style=Keyword>Temible</style></link>.",
+    "descriptionRaw": "Otorgo +1|+1 y Temible.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "''Hace frío. Tengo frío. Todo está frío, todo el tiempo. Hay lugares en los que la gente no está destinada a vivir. Por favor, envíenme a un lugar cálido después de esto''. —De los registros de expedición de la División de Reinos Lejanos del Gremio del Explorador, asignación: El Fréljord",
+    "flavorText": "Las llamas de la furia infernal se elevan cada vez más.",
+    "artistName": "Polar Engine",
+    "name": "Poder Infernal",
+    "cardCode": "08RU014T5",
+    "keywords": [
+      "Habilidad"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Ninguno",
+    "rarityRef": "None",
+    "subtypes": [
+      "ELEMENTAL"
+    ],
+    "supertype": "",
+    "type": "Habilidad",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08RU014T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08RU014T3-full.png"
+      }
+    ],
+    "regions": [
+      "Runaterra"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "Durante el armado de mazos puedes incluir a cualquier seguidor de 6+ de costo. Al jugar una unidad con un costo básico de 6+, elige 1 de 2 Bendiciones de Dragón para otorgarle.",
+    "descriptionRaw": "Durante el armado de mazos puedes incluir a cualquier seguidor de 6+ de costo. Al jugar una unidad con un costo básico de 6+, elige 1 de 2 Bendiciones de Dragón para otorgarle.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Los dragones otorgan bendiciones tanto asombrosas como terribles.",
     "artistName": "Envar Studio",
-    "name": "Pionero Erudito",
-    "cardCode": "08DE006",
+    "name": "Aspecto del Dragón",
+    "cardCode": "08RU014T3",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Ninguno",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Habilidad",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08RU014",
+      "08RU014T8",
+      "08RU014T3",
+      "08RU014T6",
+      "08RU014T5",
+      "08RU014T1",
+      "08RU014T7",
+      "08RU014T4",
+      "08RU014T2"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08RU014T9.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08RU014T9-full.png"
+      }
+    ],
+    "regions": [
+      "Runaterra"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 30,
+    "cost": 12,
+    "health": 30,
+    "description": "\r\n\r\n\r\n\r\nNO PUEDEN DETENERME",
+    "descriptionRaw": "\r\n\r\n\r\n\r\nNO PUEDEN DETENERME",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "De las fauces del Dragón Ancestral brotó un calor sin igual. Alatis emprendió el vuelo. ''¡Resistan!'', gritó Volix. ''¡Mantengan sus posiciones! ¡Pasaremos a la historia como los hombres que domaron al rey de las bestias!''.",
+    "artistName": "Envar Studio",
+    "name": "Dragón Ancestral",
+    "cardCode": "08RU014T9",
+    "keywords": [
+      "Furia"
+    ],
+    "keywordRefs": [
+      "Fury"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Campeón",
+    "rarityRef": "Champion",
+    "subtypes": [
+      "DRAGÓN"
+    ],
+    "supertype": "Campeón",
+    "type": "Unidad",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08RU014T4.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08RU014T4-full.png"
+      }
+    ],
+    "regions": [
+      "Runaterra"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "Otorgo +1|+1 e <link=keyword.Impact><sprite name=Impact><style=Keyword>Impacto</style></link> dos veces.",
+    "descriptionRaw": "Otorgo +1|+1 e Impacto dos veces.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Lo que la naturaleza diseña, Hextech lo mejora.\n",
+    "artistName": "Polar Engine",
+    "name": "Destreza Hextech",
+    "cardCode": "08RU014T4",
+    "keywords": [
+      "Habilidad"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Ninguno",
+    "rarityRef": "None",
+    "subtypes": [
+      "ELEMENTAL"
+    ],
+    "supertype": "",
+    "type": "Habilidad",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08RU014T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08RU014T2-full.png"
+      }
+    ],
+    "regions": [
+      "Runaterra"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "Otorgo <link=keyword.Deathless><sprite name=Deathless><style=Keyword>Inmortal</style></link>.",
+    "descriptionRaw": "Otorgo Inmortal.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Lo que para algunos es veneno, para otros es poder.",
+    "artistName": "Polar Engine",
+    "name": "Plaga Quimtech",
+    "cardCode": "08RU014T2",
+    "keywords": [
+      "Habilidad"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Ninguno",
+    "rarityRef": "None",
+    "subtypes": [
+      "ELEMENTAL"
+    ],
+    "supertype": "",
+    "type": "Habilidad",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08RU014T7.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08RU014T7-full.png"
+      }
+    ],
+    "regions": [
+      "Runaterra"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "Otorgo <link=keyword.Challenger><sprite name=Challenger><style=Keyword>Desafío</style></link>.",
+    "descriptionRaw": "Otorgo Desafío.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Ágil como la brisa, contundente como la ventisca. ",
+    "artistName": "Polar Engine",
+    "name": "Gracia del Nublador",
+    "cardCode": "08RU014T7",
+    "keywords": [
+      "Habilidad"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Ninguno",
+    "rarityRef": "None",
+    "subtypes": [
+      "ELEMENTAL"
+    ],
+    "supertype": "",
+    "type": "Habilidad",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08RU014T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08RU014T1-full.png"
+      }
+    ],
+    "regions": [
+      "Runaterra"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "Otorgo +1|+1 y <link=keyword.Tough><sprite name=Tough><style=Keyword>Dureza</style></link>.",
+    "descriptionRaw": "Otorgo +1|+1 y Dureza.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "La piel montañosa resiste cualquier tormenta.",
+    "artistName": "Polar Engine",
+    "name": "Vigor de la Montaña",
+    "cardCode": "08RU014T1",
+    "keywords": [
+      "Habilidad"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Ninguno",
+    "rarityRef": "None",
+    "subtypes": [
+      "ELEMENTAL"
+    ],
+    "supertype": "",
+    "type": "Habilidad",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08RU014",
+      "08RU014T9"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08RU014T8.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08RU014T8-full.png"
+      }
+    ],
+    "regions": [
+      "Runaterra"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 8,
+    "health": 0,
+    "description": "Restablezco por completo tu maná. Robo todos los seguidores de 6+ de costo de las 6 primeras cartas de tu mazo.\r\nCreo 1 <link=card.level1><style=AssociatedCard>Dragón Ancestral</style></link> en tu mazo.",
+    "descriptionRaw": "Restablezco por completo tu maná. Robo todos los seguidores de 6+ de costo de las 6 primeras cartas de tu mazo.\r\nCreo 1 Dragón Ancestral en tu mazo.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''Es un llamado... primigenio. Veo un reino de nubes. Veo un terrible ejército alado''. —Adorador de dragones Ottrani",
+    "artistName": "Polar Engine",
+    "name": "Rugido Primigenio del Dragón Ancestral",
+    "cardCode": "08RU014T8",
+    "keywords": [
+      "Ráfaga"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Ráfaga",
+    "spellSpeedRef": "Burst",
+    "rarity": "Ninguno",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "Campeón",
+    "type": "Hechizo",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08RU014T6.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08RU014T6-full.png"
+      }
+    ],
+    "regions": [
+      "Runaterra"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "Curo 2 a los aliados y al nexo.",
+    "descriptionRaw": "Curo 2 a los aliados y al nexo.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Estas alas de agua limpian cualquier herida.",
+    "artistName": "Polar Engine",
+    "name": "Voluntad Oceánica",
+    "cardCode": "08RU014T6",
+    "keywords": [
+      "Habilidad"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Ninguno",
+    "rarityRef": "None",
+    "subtypes": [
+      "ELEMENTAL"
+    ],
+    "supertype": "",
+    "type": "Habilidad",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08RU015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08RU015-full.png"
+      }
+    ],
+    "regions": [
+      "Runaterra"
+    ],
+    "regionRefs": [
+      "Runeterra"
+    ],
+    "attack": 0,
+    "cost": 8,
+    "health": 0,
+    "description": "Restablezco por completo tu maná. Robo todos los seguidores de 6+ de costo de las 6 primeras cartas de tu mazo.",
+    "descriptionRaw": "Restablezco por completo tu maná. Robo todos los seguidores de 6+ de costo de las 6 primeras cartas de tu mazo.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''Es un llamado... primigenio. Veo un reino de nubes. Veo un terrible ejército alado''. —Adorador de dragones Ottrani",
+    "artistName": "Polar Engine",
+    "name": "Rugido Primigenio",
+    "cardCode": "08RU015",
+    "keywords": [
+      "Ráfaga"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Ráfaga",
+    "spellSpeedRef": "Burst",
+    "rarity": "Ninguno",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Hechizo",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08NX003T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08NX003.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08NX003-full.png"
+      }
+    ],
+    "regions": [
+      "Noxus"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 8,
+    "cost": 6,
+    "health": 4,
+    "description": "<link=keyword.Elemental Skill><sprite name=ElementalSkill><style=Keyword>Al jugar</style></link>: Inflijo 2 de daño a un enemigo y 2 de daño al nexo enemigo.",
+    "descriptionRaw": "Al jugar: Inflijo 2 de daño a un enemigo y 2 de daño al nexo enemigo.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "La expansión noxiana ha conquistado muchos pueblos, asentamientos y culturas diferentes. A menudo, las criaturas salvajes también están a merced de la máquina de guerra, pero este dragón responde a cada avance de Noxus con la misma furia violenta e infernal.",
+    "artistName": "Envar Studio",
+    "name": "Escupefuego Iracundo",
+    "cardCode": "08NX003",
     "keywords": [
       "Desafío"
     ],
     "keywordRefs": [
       "Challenger"
     ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ÉPICA",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "DRAGÓN"
+    ],
+    "supertype": "",
+    "type": "Unidad",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08NX003"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08NX003T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08NX003T1-full.png"
+      }
+    ],
+    "regions": [
+      "Noxus"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "Inflijo 2 de daño a un enemigo y 2 de daño al nexo enemigo.",
+    "descriptionRaw": "Inflijo 2 de daño a un enemigo y 2 de daño al nexo enemigo.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Madera, acero, carne... todo se funde ante la cáustica furia del escupefuego.",
+    "artistName": "Polar Engine",
+    "name": "Escupefuego",
+    "cardCode": "08NX003T1",
+    "keywords": [
+      "Habilidad Elemental"
+    ],
+    "keywordRefs": [
+      "ElementalSkill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Ninguno",
+    "rarityRef": "None",
+    "subtypes": [
+      "ELEMENTAL"
+    ],
+    "supertype": "",
+    "type": "Habilidad",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08NX024T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08NX024.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08NX024-full.png"
+      }
+    ],
+    "regions": [
+      "Noxus"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 5,
+    "cost": 3,
+    "health": 1,
+    "description": "<link=keyword.PlaySkillMark><sprite name=SkillMark><style=Keyword>Al jugar</style></link>: Inflijo 3 de daño a un aliado para infligir 3 de daño a un enemigo.",
+    "descriptionRaw": "Al jugar: Inflijo 3 de daño a un aliado para infligir 3 de daño a un enemigo.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''¡Arranca sus almas de sus prisiones de carne y hueso!''. —Mordekaiser",
+    "artistName": "Caravan Studio",
+    "name": "Legionario de Hierro",
+    "cardCode": "08NX024",
+    "keywords": [],
+    "keywordRefs": [],
     "spellSpeed": "",
     "spellSpeedRef": "",
     "rarity": "RARA",
@@ -2423,48 +4411,54 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08DE010.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08DE010-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08NX024T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08NX024T1-full.png"
       }
     ],
     "regions": [
-      "Demacia"
+      "Noxus"
     ],
     "regionRefs": [
-      "Demacia"
+      "Noxus"
     ],
     "attack": 0,
-    "cost": 3,
+    "cost": 0,
     "health": 0,
-    "description": "Doy +0|+2 a un aliado.\r\nDicho aliado y un enemigo se <link=vocab.Strike><style=Vocab>golpean</style></link> entre sí.",
-    "descriptionRaw": "Doy +0|+2 a un aliado.\r\nDicho aliado y un enemigo se golpean entre sí.",
+    "description": "Inflijo 3 de daño a un aliado para infligir 3 de daño a un enemigo.",
+    "descriptionRaw": "Inflijo 3 de daño a un aliado para infligir 3 de daño a un enemigo.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "''¡En garde, colega! Imagino que no eres tan cobarde como para rechazar un duelo con un caballero''. —Caballero Laurent",
-    "artistName": "Kudos Productions",
-    "name": "Duelo de Caballeros",
-    "cardCode": "08DE010",
+    "flavorText": "''Corta... duele... en este mundo y en el que sigue... y en el que sigue...''. —Espíritus Encadenados",
+    "artistName": "Polar Engine",
+    "name": "Cortaalmas",
+    "cardCode": "08NX024T1",
     "keywords": [
-      "Rápido"
+      "Habilidad"
     ],
     "keywordRefs": [
-      "Fast"
+      "Skill"
     ],
-    "spellSpeed": "Rápido",
-    "spellSpeedRef": "Fast",
-    "rarity": "COMÚN",
-    "rarityRef": "Common",
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Ninguno",
+    "rarityRef": "None",
     "subtypes": [],
     "supertype": "",
-    "type": "Hechizo",
-    "collectible": true,
+    "type": "Habilidad",
+    "collectible": false,
     "set": "Set8",
     "formats": [
+      "Solo comunes",
       "Eterno",
+      "Cartas del mismo costo",
+      "Singleton",
       "Estándar"
     ],
     "formatRefs": [
+      "client_Formats_CommonsOnly_name",
       "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Deckbuilder_RulesFilters_Singleton",
       "client_Formats_Standard_name"
     ]
   },
@@ -2473,8 +4467,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08NX011.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08NX011-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08NX011.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08NX011-full.png"
       }
     ],
     "regions": [
@@ -2484,7 +4478,7 @@
       "Noxus"
     ],
     "attack": 0,
-    "cost": 1,
+    "cost": 2,
     "health": 0,
     "description": "Inflijo 1 de daño al nexo enemigo, el cual se incrementa en 1 por cada <link=card.selfref><style=AssociatedCard>Fuego Salvaje</style></link> adicional que hayas jugado. Creo 1 <link=card.selfref><style=AssociatedCard>Fuego Salvaje</style></link> en tu mazo.",
     "descriptionRaw": "Inflijo 1 de daño al nexo enemigo, el cual se incrementa en 1 por cada Fuego Salvaje adicional que hayas jugado. Creo 1 Fuego Salvaje en tu mazo.",
@@ -2525,8 +4519,164 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08NX014.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08NX014-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08NX028.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08NX028-full.png"
+      }
+    ],
+    "regions": [
+      "Noxus"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "Otorgo <link=keyword.Deathless><sprite name=Deathless><style=Keyword>Inmortal</style></link> a un aliado.",
+    "descriptionRaw": "Otorgo Inmortal a un aliado.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''Hierro eterno''. —Mordekaiser",
+    "artistName": "Polar Engine",
+    "name": "Indestructible",
+    "cardCode": "08NX028",
+    "keywords": [
+      "Ráfaga"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Ráfaga",
+    "spellSpeedRef": "Burst",
+    "rarity": "COMÚN",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Hechizo",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08NX019T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08NX019.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08NX019-full.png"
+      }
+    ],
+    "regions": [
+      "Noxus"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 4,
+    "cost": 4,
+    "health": 4,
+    "description": "<link=vocab.NexusStrike><style=Vocab>Golpe al Nexo</style></link>: <link=keyword.Curse><sprite name=Curse><style=Keyword>Maldigo</style></link> a tu oponente con <link=card.curse><style=AssociatedCard>Icor</style></link>.",
+    "descriptionRaw": "Golpe al Nexo: Maldigo a tu oponente con Icor.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Aunque son útiles para el ejército de Noxus, los mazanavajas también son muy codiciados en las arenas de batalla del capitolio. Pocos oponentes, ya sean humanos o animales, se atreven a enfrentarse a esta bestia, por lo que los escasos combates contra manzanavajas atraen multitudes de toda la ciudad.",
+    "artistName": "Envar Studio",
+    "name": "Mazanavaja de Cuerno Rojo",
+    "cardCode": "08NX019",
+    "keywords": [
+      "Arrollar"
+    ],
+    "keywordRefs": [
+      "Overwhelm"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "COMÚN",
+    "rarityRef": "Common",
+    "subtypes": [
+      "REPTIL"
+    ],
+    "supertype": "",
+    "type": "Unidad",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08NX019T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08NX019T1-full.png"
+      }
+    ],
+    "regions": [
+      "Noxus"
+    ],
+    "regionRefs": [
+      "Noxus"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "Mientras esté en tu mano, al <link=vocab.RoundStart><style=Vocab>Inicio de la ronda</style></link>: Inflijo <style=Variable>1</style> de daño a tu nexo.",
+    "descriptionRaw": "Mientras esté en tu mano, al Inicio de la ronda: Inflijo 1 de daño a tu nexo.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Estás sangrando. Lentamente... pero no parece que vaya a parar.",
+    "artistName": "Polar Engine",
+    "name": "Icor",
+    "cardCode": "08NX019T1",
+    "keywords": [
+      "Enfoque",
+      "Maldición"
+    ],
+    "keywordRefs": [
+      "Focus",
+      "Curse"
+    ],
+    "spellSpeed": "Ráfaga",
+    "spellSpeedRef": "Burst",
+    "rarity": "Ninguno",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Hechizo",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08NX014.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08NX014-full.png"
       }
     ],
     "regions": [
@@ -2580,8 +4730,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08NX012.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08NX012-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08NX012.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08NX012-full.png"
       }
     ],
     "regions": [
@@ -2625,37 +4775,35 @@
   },
   {
     "associatedCards": [],
-    "associatedCardRefs": [
-      "06RU001T3"
-    ],
+    "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08SI021.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08SI021-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08NX009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08NX009-full.png"
       }
     ],
     "regions": [
-      "Islas de la Sombra"
+      "Noxus"
     ],
     "regionRefs": [
-      "ShadowIsles"
+      "Noxus"
     ],
-    "attack": 2,
-    "cost": 2,
-    "health": 3,
-    "description": "Cuando otro aliado muere o se activa <nobr><link=keyword.Last Breath><sprite name=LastBreath><style=Keyword>Último Aliento</style></link>:</nobr> Planto 4 <link=card.chime><style=AssociatedCard>Campanillas</style></link> en tu mazo.",
-    "descriptionRaw": "Cuando otro aliado muere o se activa Último Aliento: Planto 4 Campanillas en tu mazo.",
+    "attack": 5,
+    "cost": 4,
+    "health": 2,
+    "description": "",
+    "descriptionRaw": "",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "No te preocupes por ese inquietante tintineo: Es el viejo Tintineante haciendo su recorrido. Siempre se alegra de ver a los recién llegados, pero ellos no se alegran de verlo a él.",
-    "artistName": "Bubble Cat",
-    "name": "Tintineante Solitario",
-    "cardCode": "08SI021",
+    "flavorText": "''Hicieron falta siglos de planificación para encerrar a ese temible belicista... ¿y tus patéticos amigos piensan derrotarlo con 'alegría'? Niña tonta. No harás más que provocar la ira del Renacido y, al hacerlo, nos pondrás en peligro a todos''.",
+    "artistName": "Wild Blue",
+    "name": "Lord Mallat",
+    "cardCode": "08NX009",
     "keywords": [
-      "Último Aliento"
+      "Inmortal"
     ],
     "keywordRefs": [
-      "LastBreath"
+      "Deathless"
     ],
     "spellSpeed": "",
     "spellSpeedRef": "",
@@ -2680,93 +4828,32 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08SI030.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08SI030-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08NX025.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08NX025-full.png"
       }
     ],
     "regions": [
-      "Islas de la Sombra"
+      "Noxus"
     ],
     "regionRefs": [
-      "ShadowIsles"
-    ],
-    "attack": 0,
-    "cost": 3,
-    "health": 0,
-    "description": "Lanzo <link=vocab.Obliterate><style=Vocab>Aniquilar</style></link> a 6 cartas del fondo del mazo enemigo.",
-    "descriptionRaw": "Lanzo Aniquilar a 6 cartas del fondo del mazo enemigo.",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "En las profundidades de Runaterra, existen monstruos para los que una embarcación jaull es un simple aperitivo.",
-    "artistName": "Polar Engine",
-    "name": "Tumba Acuática",
-    "cardCode": "08SI030",
-    "keywords": [
-      "Lento"
-    ],
-    "keywordRefs": [
-      "Slow"
-    ],
-    "spellSpeed": "Lento",
-    "spellSpeedRef": "Slow",
-    "rarity": "ÉPICA",
-    "rarityRef": "Epic",
-    "subtypes": [],
-    "supertype": "",
-    "type": "Hechizo",
-    "collectible": true,
-    "set": "Set8",
-    "formats": [
-      "Solo comunes",
-      "Eterno",
-      "Cartas del mismo costo",
-      "Estándar"
-    ],
-    "formatRefs": [
-      "client_Formats_CommonsOnly_name",
-      "client_Formats_Eternal_name",
-      "client_Formats_EvenCostCards_name",
-      "client_Formats_Standard_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [
-      "08BW028T1",
-      "08BW028T2",
-      "08BW028T3",
-      "08BW028T4"
-    ],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08SI018.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08SI018-full.png"
-      }
-    ],
-    "regions": [
-      "Islas de la Sombra",
-      "Targón"
-    ],
-    "regionRefs": [
-      "ShadowIsles",
-      "Targon"
+      "Noxus"
     ],
     "attack": 2,
     "cost": 3,
-    "health": 2,
-    "description": "<link=vocab.Play><style=Vocab>Al jugar</style></link>: Elige un hechizo de Explorador para crearlo en la mano.",
-    "descriptionRaw": "Al jugar: Elige un hechizo de Explorador para crearlo en la mano.",
+    "health": 3,
+    "description": "Cuando se revive a un aliado, le otorgo <link=keyword.Challenger><sprite name=Challenger><style=Keyword>Desafío</style></link>.",
+    "descriptionRaw": "Cuando se revive a un aliado, le otorgo Desafío.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "''El terreno es indescifrable. La visibilidad, casi nula. Encuentro enemigos a cada paso... pero, extrañamente, también aliados inesperados''. —De los registros de expedición de la División de Reinos Lejanos del Gremio del Explorador, asignación: Islas de la Sombra",
+    "flavorText": "''¡Sonríes, pero yo conozco la verdad de tu corazón traicionero! Me sonreían y comían de mi mesa, incluso mientras ya habían decidido apuñalarme por la espalda. Nadie volverá a engañarme. Morirás como los demás: ¡pidiendo perdón a gritos!''.",
     "artistName": "Envar Studio",
-    "name": "Oteador Espectral",
-    "cardCode": "08SI018",
+    "name": "Espectro Acuchillado",
+    "cardCode": "08NX025",
     "keywords": [
-      "Robo de Vida"
+      "Inmortal"
     ],
     "keywordRefs": [
-      "Lifesteal"
+      "Deathless"
     ],
     "spellSpeed": "",
     "spellSpeedRef": "",
@@ -2789,13 +4876,2024 @@
   {
     "associatedCards": [],
     "associatedCardRefs": [
+      "08SI026T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08SH009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08SH009-full.png"
+      }
+    ],
+    "regions": [
+      "Shurima"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "<link=keyword.Curse><sprite name=Curse><style=Keyword>Maldigo</style></link> a un enemigo con <link=card.curse><style=AssociatedCard>Terror</style></link>.",
+    "descriptionRaw": "Maldigo a un enemigo con Terror.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Hay cosas que es mejor no desenterrar.",
+    "artistName": "Polar Engine",
+    "name": "Maldición Ancestral",
+    "cardCode": "08SH009",
+    "keywords": [
+      "Ráfaga"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Ráfaga",
+    "spellSpeedRef": "Burst",
+    "rarity": "COMÚN",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Hechizo",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08SH004.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08SH004-full.png"
+      }
+    ],
+    "regions": [
+      "Shurima"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 4,
+    "cost": 4,
+    "health": 4,
+    "description": "<link=keyword.Daybreak><style=Keyword>Amanecer</style></link> o cuando activas otro <link=keyword.Daybreak><style=Keyword>Amanecer</style></link>: Otorgo <link=keyword.Vulnerable><sprite name=Vulnerable><style=Keyword>Vulnerable</style></link> al enemigo <link=keyword.Weakest><style=Keyword>Más débil</style></link>.",
+    "descriptionRaw": "Amanecer o cuando activas otro Amanecer: Otorgo Vulnerable al enemigo Más débil.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Los vastos ejércitos de Shurima están preparados para demostrar el poder del desierto. Cuando se da la orden, avanzan sin titubear.",
+    "artistName": "Kudos Productions",
+    "name": "General de las Dunas",
+    "cardCode": "08SH004",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "RARA",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "ÉLITE"
+    ],
+    "supertype": "",
+    "type": "Unidad",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08SH005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08SH005-full.png"
+      }
+    ],
+    "regions": [
+      "Shurima"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 2,
+    "description": "<link=keyword.Daybreak><style=Keyword>Amanecer</style></link>: Roba 1 <link=card.me><style=AssociatedCard>Defensores del Disco Solar</style></link>.",
+    "descriptionRaw": "Amanecer: Roba 1 Defensores del Disco Solar.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''Somos los guardianes del desierto eterno, la historia viviente, los caminantes del sendero de la luz. Nos arrodillamos ante el Disco Solar y ante nada más, para que el mundo se arrodille ante la gloria de Shurima''. —Azir",
+    "artistName": "Kudos Productions",
+    "name": "Defensores del Disco Solar",
+    "cardCode": "08SH005",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "COMÚN",
+    "rarityRef": "Common",
+    "subtypes": [
+      "ÉLITE"
+    ],
+    "supertype": "",
+    "type": "Unidad",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "04SH098"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08SH012.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08SH012-full.png"
+      }
+    ],
+    "regions": [
+      "Shurima"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 3,
+    "cost": 3,
+    "health": 2,
+    "description": "Cuando muera otro aliado o se active <link=keyword.Last Breath><sprite name=LastBreath><style=Keyword>Último Aliento</style></link> por primera vez en cada ronda: Creo 1 <link=card.create><style=AssociatedCard>Hallazgo Fortuito</style></link> en la mano.",
+    "descriptionRaw": "Cuando muera otro aliado o se active Último Aliento por primera vez en cada ronda: Creo 1 Hallazgo Fortuito en la mano.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''Eso sí que es un botín, Barb. Sabía que podía contar contigo. Espera... ¿cómo que te vieron?''. —Matón Vekaurano",
+    "artistName": "Caravan Studio",
+    "name": "Bárbara Saqueatumbas",
+    "cardCode": "08SH012",
+    "keywords": [
+      "Último Aliento"
+    ],
+    "keywordRefs": [
+      "LastBreath"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "RARA",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "REPTIL"
+    ],
+    "supertype": "",
+    "type": "Unidad",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08SH002.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08SH002-full.png"
+      }
+    ],
+    "regions": [
+      "Shurima"
+    ],
+    "regionRefs": [
+      "Shurima"
+    ],
+    "attack": 9,
+    "cost": 5,
+    "health": 6,
+    "description": "Para usarme, mata a un aliado o una de tus gemas de maná 3 veces.",
+    "descriptionRaw": "Para usarme, mata a un aliado o una de tus gemas de maná 3 veces.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "El tragadunas duerme a profundidades mucho mayores que sus primos xer'sai más pequeños. Conocido por convertir en comida fácil a otros depredadores xer'sai, rara vez se le ha documentado, probablemente por el hecho de que puede tragarse dunas enteras (y a cualquier testigo). ",
+    "artistName": "Envar Studio",
+    "name": "Tragadunas",
+    "cardCode": "08SH002",
+    "keywords": [
+      "Escudo Antihechizos",
+      "Temible"
+    ],
+    "keywordRefs": [
+      "SpellShield",
+      "Fearsome"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ÉPICA",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unidad",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08MT003T3",
+      "08MT003T4",
+      "08MT003T11",
+      "08MT003T12"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08MT003.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08MT003-full.png"
+      }
+    ],
+    "regions": [
+      "Targón",
+      "Demacia"
+    ],
+    "regionRefs": [
+      "Targon",
+      "Demacia"
+    ],
+    "attack": 3,
+    "cost": 5,
+    "health": 4,
+    "description": "<link=vocab.Play><style=Vocab>Al jugar</style></link>: <link=keyword.Curse><sprite name=Curse><style=Keyword>Maldigo</style></link> a un enemigo con <link=card.curse><style=AssociatedCard>Grilletes</style></link> dos veces.",
+    "descriptionRaw": "Al jugar: Maldigo a un enemigo con Grilletes dos veces.",
+    "levelupDescription": "Si seleccionaste unidades como objetivo 8+ veces. <style=Variable></style>",
+    "levelupDescriptionRaw": "Si seleccionaste unidades como objetivo 8+ veces. ",
+    "flavorText": "''Vienes ante mí herida y sangrando, y sin embargo nunca he visto un semblante más alegre. Eres una mujer muy extraña, pero aquí estarás a salvo. Descansa, y cuando te sientas mejor, me gustaría escuchar tu historia''.",
+    "artistName": "Envar Studio",
+    "name": "Morgana",
+    "cardCode": "08MT003",
+    "keywords": [
+      "Robo de Vida"
+    ],
+    "keywordRefs": [
+      "Lifesteal"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Campeón",
+    "rarityRef": "Champion",
+    "subtypes": [],
+    "supertype": "Campeón",
+    "type": "Unidad",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08MT003T3",
+      "08MT003",
+      "08MT003T11",
+      "08MT003T12"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08MT003T4.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08MT003T4-full.png"
+      }
+    ],
+    "regions": [
+      "Targón",
+      "Demacia"
+    ],
+    "regionRefs": [
+      "Targon",
+      "Demacia"
+    ],
+    "attack": 4,
+    "cost": 5,
+    "health": 5,
+    "description": "<link=vocab.Play><style=Vocab>Al jugar</style></link>: <link=keyword.Curse><sprite name=Curse><style=Keyword>Maldigo</style></link> a un enemigo con <link=card.curse><style=AssociatedCard>Grilletes</style></link> dos veces.\r\n<link=vocab.Attack><style=Vocab>Al atacar</style></link>: <link=keyword.Curse><sprite name=Curse><style=Keyword>Maldigo</style></link> al enemigo <link=vocab.Strongest><style=Vocab>más fuerte</style></link> que no esté <link=keyword.Curse><sprite name=Curse><style=Keyword>Maldito</style></link> con <link=card.curse><style=AssociatedCard>Grilletes</style></link> e inflijo 3 a los enemigos <link=keyword.Curse><sprite name=Curse><style=Keyword>Malditos</style></link> y 2 al nexo enemigo.",
+    "descriptionRaw": "Al jugar: Maldigo a un enemigo con Grilletes dos veces.\r\nAl atacar: Maldigo al enemigo más fuerte que no esté Maldito con Grilletes e inflijo 3 a los enemigos Malditos y 2 al nexo enemigo.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''¡Te arrepentirás de esta transgresión! Ten por seguro esto: sentirás el sufrimiento que has infligido a los demás, como grilletes que se aprietan alrededor de tu alma. Admitirás tus pecados o te asfixiarán''.",
+    "artistName": "Envar Studio",
+    "name": "Morgana",
+    "cardCode": "08MT003T4",
+    "keywords": [
+      "Robo de Vida"
+    ],
+    "keywordRefs": [
+      "Lifesteal"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Campeón",
+    "rarityRef": "Champion",
+    "subtypes": [],
+    "supertype": "Campeón",
+    "type": "Unidad",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08MT003",
+      "08MT003T4",
+      "08MT003T11"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08MT003T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08MT003T3-full.png"
+      }
+    ],
+    "regions": [
+      "Targón"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "<link=keyword.Stun><sprite name=Stunned><style=Keyword>Aturdo</style></link> a un enemigo y lo <link=keyword.Curse><sprite name=Curse><style=Keyword>Maldigo</style></link> con <link=card.curse><style=AssociatedCard>Grilletes</style></link>.\r\nCreo 1 <link=card.level1><style=AssociatedCard>Morgana</style></link> en tu mazo.",
+    "descriptionRaw": "Aturdo a un enemigo y lo Maldigo con Grilletes.\r\nCreo 1 Morgana en tu mazo.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''¡Sufre, tal como tú has hecho sufrir!''. —Morgana",
+    "artistName": "Polar Engine",
+    "name": "Hechizo Oscuro de Morgana",
+    "cardCode": "08MT003T3",
+    "keywords": [
+      "Rápido"
+    ],
+    "keywordRefs": [
+      "Fast"
+    ],
+    "spellSpeed": "Rápido",
+    "spellSpeedRef": "Fast",
+    "rarity": "Campeón",
+    "rarityRef": "Champion",
+    "subtypes": [],
+    "supertype": "Campeón",
+    "type": "Hechizo",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Solo comunes",
+      "Eterno",
+      "Cartas del mismo costo",
+      "Singleton",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Deckbuilder_RulesFilters_Singleton",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08MT003T11.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08MT003T11-full.png"
+      }
+    ],
+    "regions": [
+      "Targón"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "Mientras esté en tu mano, <style=Variable>la unidad maldita</style> permanece <link=keyword.Immobile><sprite name=Immobile><sprite name=Reckless><style=Keyword>Inmóvil</style></link>.",
+    "descriptionRaw": "Mientras esté en tu mano, la unidad maldita permanece Inmóvil.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''¡Unidos por la verdad!''. —Morgana",
+    "artistName": "Polar Engine",
+    "name": "Grilletes",
+    "cardCode": "08MT003T11",
+    "keywords": [
+      "Enfoque",
+      "Maldición"
+    ],
+    "keywordRefs": [
+      "Focus",
+      "Curse"
+    ],
+    "spellSpeed": "Ráfaga",
+    "spellSpeedRef": "Burst",
+    "rarity": "Ninguno",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Hechizo",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08MT003T12.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08MT003T12-full.png"
+      }
+    ],
+    "regions": [
+      "Targón"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 0,
+    "health": 0,
+    "description": "Inflijo 3 de daño a los enemigos <link=keyword.Curse><sprite name=Curse><style=Keyword>Malditos</style></link> y 2 de daño al nexo enemigo.",
+    "descriptionRaw": "Inflijo 3 de daño a los enemigos Malditos y 2 de daño al nexo enemigo.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''¡Soy tu tormento, mil veces reflejado!''. —Morgana",
+    "artistName": "Polar Engine",
+    "name": "Grilletes del Alma",
+    "cardCode": "08MT003T12",
+    "keywords": [
+      "Habilidad"
+    ],
+    "keywordRefs": [
+      "Skill"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Ninguno",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Habilidad",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08MT003T11"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08MT005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08MT005-full.png"
+      }
+    ],
+    "regions": [
+      "Targón"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 6,
+    "cost": 8,
+    "health": 8,
+    "description": "<link=vocab.Play><style=Vocab>Al jugar</style></link>: <link=keyword.Curse><sprite name=Curse><style=Keyword>Maldigo</style></link> a 2 enemigos con <link=card.curse><style=AssociatedCard>Grilletes</style></link> dos veces.",
+    "descriptionRaw": "Al jugar: Maldigo a 2 enemigos con Grilletes dos veces.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''Fue por el bien de mis hijas que acepté la divinidad. Fue por mi familia por lo que renuncié a mi propia humanidad, para que con esta espada llameante pudiera forjar un mundo nuevo, regido por la verdad y la justicia''.",
+    "artistName": "Envar Studio",
+    "name": "Mihira, Aspecto Ascendente",
+    "cardCode": "08MT005",
+    "keywords": [
+      "Arrollar"
+    ],
+    "keywordRefs": [
+      "Overwhelm"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ÉPICA",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unidad",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08MT003T11"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08MT042.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08MT042-full.png"
+      }
+    ],
+    "regions": [
+      "Targón"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 6,
+    "health": 0,
+    "description": "<link=keyword.Curse><sprite name=Curse><style=Keyword>Maldigo</style></link> a un enemigo con <link=card.curse><style=AssociatedCard>Grilletes</style></link>.\r\nIncremento en 1 el costo de las maldiciones del enemigo <link=vocab.Everywhere><style=Vocab>en todas partes</style></link>.",
+    "descriptionRaw": "Maldigo a un enemigo con Grilletes.\r\nIncremento en 1 el costo de las maldiciones del enemigo en todas partes.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''Para encontrar tu libertad, debes reconocer la oscuridad que hay en tu interior''. —Morgana",
+    "artistName": "Polar Engine",
+    "name": "Ataduras para Pecadores",
+    "cardCode": "08MT042",
+    "keywords": [
+      "Lento"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "Lento",
+    "spellSpeedRef": "Slow",
+    "rarity": "RARA",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Hechizo",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Solo comunes",
+      "Eterno",
+      "Cartas del mismo costo",
+      "Singleton",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Deckbuilder_RulesFilters_Singleton",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08MT024.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08MT024-full.png"
+      }
+    ],
+    "regions": [
+      "Targón"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 2,
+    "description": "<link=vocab.Play><style=Vocab>Al jugar</style></link>: Otorgo <link=keyword.SpellShield><sprite name=SpellShield><style=Keyword>Escudo Antihechizos</style></link> o <link=keyword.Overwhelm><sprite name=Overwhelm><style=Keyword>Arrollar</style></link> a un aliado en la mano.",
+    "descriptionRaw": "Al jugar: Otorgo Escudo Antihechizos o Arrollar a un aliado en la mano.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''¡No tengas miedo! ¡Sigue adelante y no mires atrás! Nosotros también hicimos este viaje alguna vez. Ahora es nuestro deber proteger el tuyo. Ve rápido a su santuario y la Dama del Velo te concederá la protección que buscas''.",
+    "artistName": "Envar Studio",
+    "name": "Conjurador Ojo de Rubí",
+    "cardCode": "08MT024",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "COMÚN",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unidad",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08MT024T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08MT024T1-full.png"
+      }
+    ],
+    "regions": [
+      "Targón"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 2,
+    "description": "<link=vocab.Play><style=Vocab>Al jugar</style></link>: Otorgo <link=keyword.Overwhelm><sprite name=Overwhelm><style=Keyword>Arrollar</style></link> a un aliado en la mano.",
+    "descriptionRaw": "Al jugar: Otorgo Arrollar a un aliado en la mano.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''¡No tengas miedo! ¡Sigue adelante y no mires atrás! Nosotros también hicimos este viaje alguna vez. Ahora es nuestro deber proteger el tuyo. Ve rápido a su santuario y la Dama del Velo te concederá la protección que buscas''.",
+    "artistName": "Envar Studio",
+    "name": "Conjurador Ojo de Rubí",
+    "cardCode": "08MT024T1",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Ninguno",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unidad",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08MT024T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08MT024T2-full.png"
+      }
+    ],
+    "regions": [
+      "Targón"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 2,
+    "description": "<link=vocab.Play><style=Vocab>Al jugar</style></link>: Otorgo <link=keyword.SpellShield><sprite name=SpellShield><style=Keyword>Escudo Antihechizos</style></link> a un aliado en la mano.",
+    "descriptionRaw": "Al jugar: Otorgo Escudo Antihechizos a un aliado en la mano.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''¡No tengas miedo! ¡Sigue adelante y no mires atrás! Nosotros también hicimos este viaje alguna vez. Ahora es nuestro deber proteger el tuyo. Ve rápido a su santuario y la Dama del Velo te concederá la protección que buscas''.",
+    "artistName": "Envar Studio",
+    "name": "Conjurador Ojo de Rubí",
+    "cardCode": "08MT024T2",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "COMÚN",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unidad",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08MT003T11"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08MT015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08MT015-full.png"
+      }
+    ],
+    "regions": [
+      "Targón"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 2,
+    "cost": 3,
+    "health": 3,
+    "description": "<link=vocab.Play><style=Vocab>Al jugar</style></link>: <link=keyword.Curse><sprite name=Curse><style=Keyword>Maldigo</style></link> a un enemigo con <link=card.curse><style=AssociatedCard>Grilletes</style></link>.",
+    "descriptionRaw": "Al jugar: Maldigo a un enemigo con Grilletes.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''¡Mira, Dolly! ¡Mira lo que hago! ¡Como tú me enseñaste! ¿Crees que alguna vez podremos enseñarle a mamá lo mucho que he aprendido? ¿Crees que ya lo sabe? ¿En serio? Espero que tengas razón''. —Lisa",
+    "artistName": "Envar Studio",
+    "name": "Lisa y Dolly",
+    "cardCode": "08MT015",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "COMÚN",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unidad",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08MT030.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08MT030-full.png"
+      }
+    ],
+    "regions": [
+      "Targón"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 6,
+    "cost": 6,
+    "health": 5,
+    "description": "Otorgo +1|+1 a los Dragones aliados cuando juegues un hechizo <link=keyword.Fast><sprite name=Fast><style=Keyword>Rápido</style></link>, <link=keyword.Slow><sprite name=Slow><style=Keyword>Lento</style></link> o una <link=keyword.Skill><sprite name=SkillMark><style=Keyword>Habilidad</style></link>.",
+    "descriptionRaw": "Otorgo +1|+1 a los Dragones aliados cuando juegues un hechizo Rápido, Lento o una Habilidad.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Los dragones pueden variar tanto en temperamento como en aspecto. Por cada especie propensa a la destrucción violenta, como los dragones infernales, hay otra igualmente dedicada a la protección de sus familias y entornos, como el lento y cariñoso dragón gemagentil.",
+    "artistName": "Polar Engine",
+    "name": "Dragón Gemagentil",
+    "cardCode": "08MT030",
+    "keywords": [
+      "Furia"
+    ],
+    "keywordRefs": [
+      "Fury"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "RARA",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "DRAGÓN"
+    ],
+    "supertype": "",
+    "type": "Unidad",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08MT003T11"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08MT023.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08MT023-full.png"
+      }
+    ],
+    "regions": [
+      "Targón"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "<link=keyword.Stun><sprite name=Stunned><style=Keyword>Aturdo</style></link> a un enemigo y lo <link=keyword.Curse><sprite name=Curse><style=Keyword>Maldigo</style></link> con <link=card.curse><style=AssociatedCard>Grilletes</style></link>.",
+    "descriptionRaw": "Aturdo a un enemigo y lo Maldigo con Grilletes.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''¡Sufre, tal como tú has hecho sufrir!''. —Morgana",
+    "artistName": "Polar Engine",
+    "name": "Hechizo Oscuro",
+    "cardCode": "08MT023",
+    "keywords": [
+      "Rápido"
+    ],
+    "keywordRefs": [
+      "Fast"
+    ],
+    "spellSpeed": "Rápido",
+    "spellSpeedRef": "Fast",
+    "rarity": "RARA",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Hechizo",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08MT031.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08MT031-full.png"
+      }
+    ],
+    "regions": [
+      "Targón"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 3,
+    "cost": 4,
+    "health": 3,
+    "description": "Cuando me invocan, curo 2 a tu nexo y obtienes una gema de maná adicional en la siguiente ronda.",
+    "descriptionRaw": "Cuando me invocan, curo 2 a tu nexo y obtienes una gema de maná adicional en la siguiente ronda.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "En lo alto de las montañas de Targón, un solitario Ottrani ha dedicado su vida a los dragones. Se atavía con escamas y huesos viejos, adivinando el camino a seguir por los dientes de dragón desperdigados y los rizos de humo que ascienden por la montaña.",
+    "artistName": "Polar Engine",
+    "name": "Adorador de Dragones Ottrani",
+    "cardCode": "08MT031",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ÉPICA",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unidad",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08MT009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08MT009-full.png"
+      }
+    ],
+    "regions": [
+      "Targón"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 4,
+    "cost": 5,
+    "health": 5,
+    "description": "Cuando me invocan o invocas a un aliado <link=vocab.Titanic><style=Vocab>Titánico</style></link>, curo 3 a tu nexo.",
+    "descriptionRaw": "Cuando me invocan o invocas a un aliado Titánico, curo 3 a tu nexo.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Este protector oculto no ha olvidado la bendición que lo elevó más allá de ser una simple bestia, y paga esta deuda asegurándose de que cualquiera que busque cierto santuario en las laderas de Targón emprenda el viaje ileso.",
+    "artistName": "Envar Studio",
+    "name": "Protector Carioculto",
+    "cardCode": "08MT009",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "RARA",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unidad",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08MT003T11"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08MT006.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08MT006-full.png"
+      }
+    ],
+    "regions": [
+      "Targón"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "Doy <link=keyword.SpellShield><sprite name=SpellShield><style=Keyword>Escudo Antihechizos</style></link> a un aliado en esta ronda y lo <link=keyword.Curse><sprite name=Curse><style=Keyword>Maldigo</style></link> con <link=card.curse><style=AssociatedCard>Grilletes</style></link>.",
+    "descriptionRaw": "Doy Escudo Antihechizos a un aliado en esta ronda y lo Maldigo con Grilletes.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''¡Protegidos de la persecución!''. —Morgana",
+    "artistName": "Polar Engine",
+    "name": "Escudo Negro",
+    "cardCode": "08MT006",
+    "keywords": [
+      "Ráfaga"
+    ],
+    "keywordRefs": [
+      "Burst"
+    ],
+    "spellSpeed": "Ráfaga",
+    "spellSpeedRef": "Burst",
+    "rarity": "RARA",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Hechizo",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08MT027.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08MT027-full.png"
+      }
+    ],
+    "regions": [
+      "Targón"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 5,
+    "cost": 8,
+    "health": 8,
+    "description": "<link=vocab.Play><style=Vocab>Al jugar</style></link>: Activo los efectos de <link=keyword.Daybreak><style=Keyword>Amanecer</style></link> y <link=keyword.Nightfall><style=Keyword>Anochecer</style></link> de los otros aliados.\r\n<link=keyword.Daybreak><style=Keyword>Amanecer</style></link>: Me otorgo <link=keyword.Overwhelm><sprite name=Overwhelm><style=Keyword>Arrollar</style></link>.\r\n<link=keyword.Nightfall><style=Keyword>Anochecer</style></link>: Me otorgo <link=keyword.SpellShield><sprite name=SpellShield><style=Keyword>Escudo Antihechizos</style></link>.",
+    "descriptionRaw": "Al jugar: Activo los efectos de Amanecer y Anochecer de los otros aliados.\r\nAmanecer: Me otorgo Arrollar.\r\nAnochecer: Me otorgo Escudo Antihechizos.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''Un anillo de fuego arde sobre nosotros. En la oscuridad presagiada, todos somos iguales''. —Orador Menguante Lunari",
+    "artistName": "Kudos Productions",
+    "name": "Heraldo de la Convergencia Celestial",
+    "cardCode": "08MT027",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ÉPICA",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "AVE"
+    ],
+    "supertype": "",
+    "type": "Unidad",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08MT025.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08MT025-full.png"
+      }
+    ],
+    "regions": [
+      "Targón"
+    ],
+    "regionRefs": [
+      "Targon"
+    ],
+    "attack": 0,
+    "cost": 7,
+    "health": 0,
+    "description": "Si <link=vocab.Behold><style=Vocab>Contemplas</style></link> una unidad <link=vocab.Titanic><style=Vocab>Titánica</style></link>, cuesto 3 menos.\r\nInflijo 7 de daño a una unidad.",
+    "descriptionRaw": "Si Contemplas una unidad Titánica, cuesto 3 menos.\r\nInflijo 7 de daño a una unidad.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''Ups, ay, no te preocupes por eso, solo fue un pequeño temblor, solo un accidente, ¡no papá, NOP! ¡Sigamos!''. —Chip",
+    "artistName": "Polar Engine",
+    "name": "Fragmento Sísmico",
+    "cardCode": "08MT025",
+    "keywords": [
+      "Lento"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "Lento",
+    "spellSpeedRef": "Slow",
+    "rarity": "COMÚN",
+    "rarityRef": "Common",
+    "subtypes": [
+      "ELEMENTAL"
+    ],
+    "supertype": "",
+    "type": "Hechizo",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08BW028T1",
+      "08BW028T2",
+      "08BW028T3",
+      "08BW028T4"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08DE006.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08DE006-full.png"
+      }
+    ],
+    "regions": [
+      "Demacia",
+      "El Fréljord"
+    ],
+    "regionRefs": [
+      "Demacia",
+      "Freljord"
+    ],
+    "attack": 2,
+    "cost": 3,
+    "health": 3,
+    "description": "<link=vocab.Play><style=Vocab>Al jugar</style></link>: Elige un hechizo de Explorador para crearlo en la mano.",
+    "descriptionRaw": "Al jugar: Elige un hechizo de Explorador para crearlo en la mano.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''Hace frío. Tengo frío. Todo está frío, todo el tiempo. Hay lugares en los que la gente no está destinada a vivir. Por favor, envíenme a un lugar cálido después de esto''. —De los registros de expedición de la División de Reinos Lejanos del Gremio del Explorador, asignación: El Fréljord",
+    "artistName": "Envar Studio",
+    "name": "Pionero Erudito",
+    "cardCode": "08DE006",
+    "keywords": [
+      "Desafío"
+    ],
+    "keywordRefs": [
+      "Challenger"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "RARA",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unidad",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08DE017T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08DE020.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08DE020-full.png"
+      }
+    ],
+    "regions": [
+      "Demacia"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "Otorgo +0|+2 a un aliado. <link=keyword.Curse><sprite name=Curse><style=Keyword>Maldigo</style></link> a tu oponente con <link=card.curse><style=AssociatedCard>Supresión</style></link>.",
+    "descriptionRaw": "Otorgo +0|+2 a un aliado. Maldigo a tu oponente con Supresión.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''¡Siente el peso de tus pecados!''. —Morgana",
+    "artistName": "Polar Engine",
+    "name": "Cadenas Mágicas",
+    "cardCode": "08DE020",
+    "keywords": [
+      "Lento"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "Lento",
+    "spellSpeedRef": "Slow",
+    "rarity": "COMÚN",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Hechizo",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08DE017T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08DE017.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08DE017-full.png"
+      }
+    ],
+    "regions": [
+      "Demacia"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 3,
+    "cost": 4,
+    "health": 2,
+    "description": "Cuando me invocan, <link=keyword.Curse><sprite name=Curse><style=Keyword>Maldigo</style></link> a tu oponente con <link=card.curse><style=AssociatedCard>Supresión</style></link>.",
+    "descriptionRaw": "Cuando me invocan, Maldigo a tu oponente con Supresión.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''No podemos permitir que lleguen al santuario de la hermana caída. Su magia es tan antigua y perversa, que ni siquiera yo puedo suprimirla. ¡Rápido, lleva a estas abominaciones de vuelta al barco y luego sigue al resto montaña arriba'.",
+    "artistName": "Envar Studio",
+    "name": "Inquisidor Cazamagos",
+    "cardCode": "08DE017",
+    "keywords": [
+      "Desafío",
+      "Dureza"
+    ],
+    "keywordRefs": [
+      "Challenger",
+      "Tough"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "RARA",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unidad",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08DE017T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08DE017T1-full.png"
+      }
+    ],
+    "regions": [
+      "Demacia"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "Mientras esté en tu mano, no puedes jugar otros hechizos que no sean <link=card.selfref><style=AssociatedCard>Supresión</style></link>.",
+    "descriptionRaw": "Mientras esté en tu mano, no puedes jugar otros hechizos que no sean Supresión.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "La magia no responde a tu invocación.",
+    "artistName": "Polar Engine",
+    "name": "Supresión",
+    "cardCode": "08DE017T1",
+    "keywords": [
+      "Enfoque",
+      "Maldición"
+    ],
+    "keywordRefs": [
+      "Focus",
+      "Curse"
+    ],
+    "spellSpeed": "Ráfaga",
+    "spellSpeedRef": "Burst",
+    "rarity": "Ninguno",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Hechizo",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08DE025.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08DE025-full.png"
+      }
+    ],
+    "regions": [
+      "Demacia"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 6,
+    "cost": 6,
+    "health": 6,
+    "description": "Cuando me invocan, reduzco en 1 el costo de todos los aliados en tu mano.",
+    "descriptionRaw": "Cuando me invocan, reduzco en 1 el costo de todos los aliados en tu mano.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Con su espeso pelaje para aislarse del frío, este dragón puede alcanzar altitudes mucho mayores que la mayoría de los demás dragones. Vivaces y esquivos, los dragones suelen ser vistos en las alturas, cortando las nubes con sus alas mientras vuelan de ráfaga en ráfaga.",
+    "artistName": "Wild Blue",
+    "name": "Dragón de las Nubes",
+    "cardCode": "08DE025",
+    "keywords": [
+      "Furia"
+    ],
+    "keywordRefs": [
+      "Fury"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ÉPICA",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "DRAGÓN"
+    ],
+    "supertype": "",
+    "type": "Unidad",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Solo comunes",
+      "Eterno",
+      "Cartas del mismo costo",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08DE010.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08DE010-full.png"
+      }
+    ],
+    "regions": [
+      "Demacia"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 0,
+    "cost": 3,
+    "health": 0,
+    "description": "Doy +0|+2 a un aliado.\r\nDicho aliado y un enemigo se <link=vocab.Strike><style=Vocab>golpean</style></link> entre sí.",
+    "descriptionRaw": "Doy +0|+2 a un aliado.\r\nDicho aliado y un enemigo se golpean entre sí.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''¡En garde, colega! Imagino que no eres tan cobarde como para rechazar un duelo con un caballero''. —Caballero Laurent",
+    "artistName": "Kudos Productions",
+    "name": "Duelo de Caballeros",
+    "cardCode": "08DE010",
+    "keywords": [
+      "Rápido"
+    ],
+    "keywordRefs": [
+      "Fast"
+    ],
+    "spellSpeed": "Rápido",
+    "spellSpeedRef": "Fast",
+    "rarity": "COMÚN",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Hechizo",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08DE022.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08DE022-full.png"
+      }
+    ],
+    "regions": [
+      "Demacia"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 8,
+    "cost": 9,
+    "health": 8,
+    "description": "Cuando me invocan, roba 1 de cada campeón de tu mazo.\r\nEn cada ronda, la primera vez que invoques a un campeón, lanzo <link=vocab.Rally><style=Vocab>Preparar</style></link>.",
+    "descriptionRaw": "Cuando me invocan, roba 1 de cada campeón de tu mazo.\r\nEn cada ronda, la primera vez que invoques a un campeón, lanzo Preparar.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''Recuerda, hijo mío, que si hemos de perseguir un horizonte, debemos hacerlo al servicio del hogar que dejamos atrás''. — Rey Jarvan III",
+    "artistName": "Envar Studio",
+    "name": "El Alción",
+    "cardCode": "08DE022",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ÉPICA",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unidad",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08DE026.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08DE026-full.png"
+      }
+    ],
+    "regions": [
+      "Demacia"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 7,
+    "cost": 7,
+    "health": 6,
+    "description": "Tus Bendiciones de Dragón afectan a todos los aliados Dragón.",
+    "descriptionRaw": "Tus Bendiciones de Dragón afectan a todos los aliados Dragón.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''Que quede claro: no siempre fui amigo de los dragones. El buen Alatis me convenció esa primera vez que me salvó la vida. Me ha enseñado muchas cosas, pero la más importante es esta: no hay mejor vida que servir a Demacia desde el lomo de un dragón''. —Amigo de Dragones",
+    "artistName": "Envar Studio",
+    "name": "Alatis el Gallardo",
+    "cardCode": "08DE026",
+    "keywords": [
+      "Furia"
+    ],
+    "keywordRefs": [
+      "Fury"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ÉPICA",
+    "rarityRef": "Epic",
+    "subtypes": [
+      "DRAGÓN"
+    ],
+    "supertype": "",
+    "type": "Unidad",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Solo comunes",
+      "Eterno",
+      "Cartas del mismo costo",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08DE013.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08DE013-full.png"
+      }
+    ],
+    "regions": [
+      "Demacia"
+    ],
+    "regionRefs": [
+      "Demacia"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 3,
+    "description": "Cuando me invocan, roba un Dragón si <link=vocab.Behold><style=Vocab>Contemplas</style></link> un Dragón.",
+    "descriptionRaw": "Cuando me invocan, roba un Dragón si Contemplas un Dragón.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''Sabes que odio admitirlo, viejo amigo, pero no podemos domarlo solos. Ya hicimos todo lo que pudimos. Avisaré al general y, respaldados por el poder de Demacia, seguro que pondremos de rodillas a esa fantástica bestia''.",
+    "artistName": "Envar Studio",
+    "name": "Amigo de Dragones",
+    "cardCode": "08DE013",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "COMÚN",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unidad",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08IO012.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08IO012-full.png"
+      }
+    ],
+    "regions": [
+      "Jonia"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 3,
+    "cost": 6,
+    "health": 5,
+    "description": "Cuando juegas un hechizo <link=keyword.Fast><sprite name=Fast><style=Keyword>Rápido</style></link>, <link=keyword.Slow><sprite name=Slow><style=Keyword>Lento</style></link> o una <link=keyword.Skill><sprite name=SkillMark><style=Keyword>Habilidad</style></link>, curo 1 a tu nexo.",
+    "descriptionRaw": "Cuando juegas un hechizo Rápido, Lento o una Habilidad, curo 1 a tu nexo.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''¡Eres una bestia formidable! Hay alegría en el roce de tus garras sobre las olas. Si alguna vez decides cazar algo más que peces y aves marinas, me encantaría enfrentarme a ti''. —Nilah",
+    "artistName": "Caravan Studio",
+    "name": "Dragón de los Océanos",
+    "cardCode": "08IO012",
+    "keywords": [
+      "Evasión"
+    ],
+    "keywordRefs": [
+      "Elusive"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "RARA",
+    "rarityRef": "Rare",
+    "subtypes": [
+      "DRAGÓN"
+    ],
+    "supertype": "",
+    "type": "Unidad",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08IO014.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08IO014-full.png"
+      }
+    ],
+    "regions": [
+      "Jonia"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 9,
+    "cost": 10,
+    "health": 9,
+    "description": "En cada ronda, la primera carta que juegues cuesta 9 menos.",
+    "descriptionRaw": "En cada ronda, la primera carta que juegues cuesta 9 menos.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Para los habitantes de este pueblo jonio, Heisho es a la vez un respetado cuidador y un amigo. Tras haber llevado sus hogares sobre su espalda desde tiempos inmemoriales, pueden confiar en que el portador de su pueblo buscará costas pacíficas en épocas turbulentas.",
+    "artistName": "Envar Studio",
+    "name": "Heisho, Caparazón del Mundo",
+    "cardCode": "08IO014",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "ÉPICA",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unidad",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "01IO030"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08IO021.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08IO021-full.png"
+      }
+    ],
+    "regions": [
+      "Jonia"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 0,
+    "cost": 9,
+    "health": 0,
+    "description": "Detengo un hechizo <link=keyword.Fast><sprite name=Fast><style=Keyword>Rápido</style></link>, uno <link=keyword.Slow><sprite name=Slow><style=Keyword>Lento</style></link> o una <link=keyword.Skill><sprite name=SkillMark><style=Keyword>Habilidad</style></link>, lanzo <link=keyword.Recall><style=Keyword>Retirada</style></link> hacia un enemigo, e invoco 1 <link=card.summon><style=AssociatedCard>El Empíreo</style></link>.",
+    "descriptionRaw": "Detengo un hechizo Rápido, uno Lento o una Habilidad, lanzo Retirada hacia un enemigo, e invoco 1 El Empíreo.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''Esta es nuestra danza de conmemoración''. —Irelia",
+    "artistName": "Polar Engine",
+    "name": "Danza Empírea",
+    "cardCode": "08IO021",
+    "keywords": [
+      "Rápido"
+    ],
+    "keywordRefs": [
+      "Fast"
+    ],
+    "spellSpeed": "Rápido",
+    "spellSpeedRef": "Fast",
+    "rarity": "RARA",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Hechizo",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Solo comunes",
+      "Eterno",
+      "Cartas del mismo costo",
+      "Singleton",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Deckbuilder_RulesFilters_Singleton",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "08IO019T1"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08IO019.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08IO019-full.png"
+      }
+    ],
+    "regions": [
+      "Jonia"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 3,
+    "cost": 4,
+    "health": 3,
+    "description": "Cuando me invocan, invoco 1 <link=card.summon><style=AssociatedCard>Avicultores de Adnere</style></link>.",
+    "descriptionRaw": "Cuando me invocan, invoco 1 Avicultores de Adnere.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''Esta tierra está llena de lecciones. Siempre recuerda: el paso de cada estación debe celebrarse, pues solo al final puede surgir un nuevo comienzo''.",
+    "artistName": "Envar Studio",
+    "name": "Adnere el Confiable",
+    "cardCode": "08IO019",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "RARA",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unidad",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Solo comunes",
+      "Eterno",
+      "Cartas del mismo costo",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08IO019T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08IO019T1-full.png"
+      }
+    ],
+    "regions": [
+      "Jonia"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 1,
+    "cost": 1,
+    "health": 1,
+    "description": "<link=keyword.Support><style=Keyword>Al apoyar</style></link>: Subo mis estadísticas para igualar las del aliado al que esté apoyando esta ronda.",
+    "descriptionRaw": "Al apoyar: Subo mis estadísticas para igualar las del aliado al que esté apoyando esta ronda.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''¡Mira! ¡Los pájaros de papá están saliendo de sus cascarones otra vez!''.<br>''¡Guau! ¡Otro! ¿Por qué hay tantos?''.<br>''Preguntas eso TODOS los años, Arya''.<br>''¡Pues es que nadie me responde!''.<br>''Shhh, no los asustes. Y dime cuántos son, porque vamos a tener que pensar en muchos nombres''.",
+    "artistName": "Envar Studio",
+    "name": "Avicultores de Adnere",
+    "cardCode": "08IO019T1",
+    "keywords": [
+      "Apoyo"
+    ],
+    "keywordRefs": [
+      "Support"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Ninguno",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unidad",
+    "collectible": false,
+    "set": "Set8",
+    "formats": [
+      "Solo comunes",
+      "Eterno",
+      "Cartas del mismo costo",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08IO010.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08IO010-full.png"
+      }
+    ],
+    "regions": [
+      "Jonia"
+    ],
+    "regionRefs": [
+      "Ionia"
+    ],
+    "attack": 0,
+    "cost": 4,
+    "health": 0,
+    "description": "Lanzo <link=keyword.Recall><style=Keyword>Retirada</style></link> a un enemigo para aumentar en 2 el costo de la siguiente unidad que tu oponente juegue esta ronda.",
+    "descriptionRaw": "Lanzo Retirada a un enemigo para aumentar en 2 el costo de la siguiente unidad que tu oponente juegue esta ronda.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''Aquellos que pretendan hacernos daño descansarán en el fondo del mar''. —Moldeador de Ríos",
+    "artistName": "Polar Engine",
+    "name": "Vuelco",
+    "cardCode": "08IO010",
+    "keywords": [
+      "Lento"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "Lento",
+    "spellSpeedRef": "Slow",
+    "rarity": "COMÚN",
+    "rarityRef": "Common",
+    "subtypes": [
+      "ELEMENTAL"
+    ],
+    "supertype": "",
+    "type": "Hechizo",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Eterno",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08BC020.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08BC020-full.png"
+      }
+    ],
+    "regions": [
+      "Ciudad de Bandle"
+    ],
+    "regionRefs": [
+      "BandleCity"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "Tu oponente descarta su carta de mayor costo.",
+    "descriptionRaw": "Tu oponente descarta su carta de mayor costo.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "''Imagina ser un gusano y que lo último que ves antes de morir sean esos ojos. Ah, ¿los gusanos no pueden ver? Probablemente sea mejor así''. —Elle, Viajera Apática",
+    "artistName": "Polar Engine",
+    "name": "Madrugador",
+    "cardCode": "08BC020",
+    "keywords": [
+      "Lento"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "Lento",
+    "spellSpeedRef": "Slow",
+    "rarity": "COMÚN",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Hechizo",
+    "collectible": true,
+    "set": "Set8",
+    "formats": [
+      "Solo comunes",
+      "Eterno",
+      "Cartas del mismo costo",
+      "Estándar"
+    ],
+    "formatRefs": [
+      "client_Formats_CommonsOnly_name",
+      "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
       "06RU001T3",
       "01PZ022"
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08BC005.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08BC005-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08BC005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08BC005-full.png"
       }
     ],
     "regions": [
@@ -2844,8 +6942,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08BC002.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08BC002-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08BC002.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08BC002-full.png"
       }
     ],
     "regions": [
@@ -2899,8 +6997,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08BC006.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08BC006-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08BC006.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08BC006-full.png"
       }
     ],
     "regions": [
@@ -2932,54 +7030,8 @@
     "spellSpeedRef": "",
     "rarity": "RARA",
     "rarityRef": "Rare",
-    "subtypes": [],
-    "supertype": "",
-    "type": "Unidad",
-    "collectible": true,
-    "set": "Set8",
-    "formats": [
-      "Eterno",
-      "Estándar"
-    ],
-    "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08SH004.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08SH004-full.png"
-      }
-    ],
-    "regions": [
-      "Shurima"
-    ],
-    "regionRefs": [
-      "Shurima"
-    ],
-    "attack": 4,
-    "cost": 4,
-    "health": 4,
-    "description": "<link=keyword.Daybreak><style=Keyword>Amanecer</style></link> o cuando activas otro <link=keyword.Daybreak><style=Keyword>Amanecer</style></link>: Otorgo <link=keyword.Vulnerable><sprite name=Vulnerable><style=Keyword>Vulnerable</style></link> al enemigo <link=keyword.Weakest><style=Keyword>Más débil</style></link>.",
-    "descriptionRaw": "Amanecer o cuando activas otro Amanecer: Otorgo Vulnerable al enemigo Más débil.",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "Los vastos ejércitos de Shurima están preparados para demostrar el poder del desierto. Cuando se da la orden, avanzan sin titubear.",
-    "artistName": "Kudos Productions",
-    "name": "General de las Dunas",
-    "cardCode": "08SH004",
-    "keywords": [],
-    "keywordRefs": [],
-    "spellSpeed": "",
-    "spellSpeedRef": "",
-    "rarity": "RARA",
-    "rarityRef": "Rare",
     "subtypes": [
-      "ÉLITE"
+      "YORDLE"
     ],
     "supertype": "",
     "type": "Unidad",
@@ -2999,127 +7051,27 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08SH005.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08SH005-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08BC004.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08BC004-full.png"
       }
     ],
     "regions": [
-      "Shurima"
+      "Ciudad de Bandle"
     ],
     "regionRefs": [
-      "Shurima"
+      "BandleCity"
     ],
-    "attack": 2,
-    "cost": 2,
-    "health": 2,
-    "description": "<link=keyword.Daybreak><style=Keyword>Amanecer</style></link>: Roba 1 <link=card.me><style=AssociatedCard>Defensores del Disco Solar</style></link>.",
-    "descriptionRaw": "Amanecer: Roba 1 Defensores del Disco Solar.",
+    "attack": 9,
+    "cost": 9,
+    "health": 9,
+    "description": "<link=vocab.Play><style=Vocab>Al jugar</style></link>: <link=vocab.Manifest><style=Vocab>Manifiesto</style></link> a un seguidor <link=vocab.Titanic><style=Vocab>Titánico</style></link> y fijo sus estadísticas en 1|1 y su costo en 0. ",
+    "descriptionRaw": "Al jugar: Manifiesto a un seguidor Titánico y fijo sus estadísticas en 1|1 y su costo en 0. ",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "''Somos los guardianes del desierto eterno, la historia viviente, los caminantes del sendero de la luz. Nos arrodillamos ante el Disco Solar y ante nada más, para que el mundo se arrodille ante la gloria de Shurima''. —Azir",
-    "artistName": "Kudos Productions",
-    "name": "Defensores del Disco Solar",
-    "cardCode": "08SH005",
-    "keywords": [],
-    "keywordRefs": [],
-    "spellSpeed": "",
-    "spellSpeedRef": "",
-    "rarity": "COMÚN",
-    "rarityRef": "Common",
-    "subtypes": [
-      "ÉLITE"
-    ],
-    "supertype": "",
-    "type": "Unidad",
-    "collectible": true,
-    "set": "Set8",
-    "formats": [
-      "Eterno",
-      "Estándar"
-    ],
-    "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08IO010.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08IO010-full.png"
-      }
-    ],
-    "regions": [
-      "Jonia"
-    ],
-    "regionRefs": [
-      "Ionia"
-    ],
-    "attack": 0,
-    "cost": 4,
-    "health": 0,
-    "description": "Lanzo <link=keyword.Recall><style=Keyword>Retirada</style></link> a un enemigo para aumentar en 2 el costo de la siguiente unidad que tu oponente juegue esta ronda.",
-    "descriptionRaw": "Lanzo Retirada a un enemigo para aumentar en 2 el costo de la siguiente unidad que tu oponente juegue esta ronda.",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "''Aquellos que pretendan hacernos daño descansarán en el fondo del mar''. —Moldeador de Ríos",
-    "artistName": "Polar Engine",
-    "name": "Vuelco",
-    "cardCode": "08IO010",
-    "keywords": [
-      "Lento"
-    ],
-    "keywordRefs": [
-      "Slow"
-    ],
-    "spellSpeed": "Lento",
-    "spellSpeedRef": "Slow",
-    "rarity": "COMÚN",
-    "rarityRef": "Common",
-    "subtypes": [
-      "ELEMENTAL"
-    ],
-    "supertype": "",
-    "type": "Hechizo",
-    "collectible": true,
-    "set": "Set8",
-    "formats": [
-      "Eterno",
-      "Estándar"
-    ],
-    "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08MT027.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08MT027-full.png"
-      }
-    ],
-    "regions": [
-      "Targón"
-    ],
-    "regionRefs": [
-      "Targon"
-    ],
-    "attack": 5,
-    "cost": 8,
-    "health": 8,
-    "description": "<link=vocab.Play><style=Vocab>Al jugar</style></link>: Activo los efectos de <link=keyword.Daybreak><style=Keyword>Amanecer</style></link> y <link=keyword.Nightfall><style=Keyword>Anochecer</style></link> de los otros aliados.\r\n<link=keyword.Daybreak><style=Keyword>Amanecer</style></link>: Me otorgo <link=keyword.Overwhelm><sprite name=Overwhelm><style=Keyword>Arrollar</style></link>.\r\n<link=keyword.Nightfall><style=Keyword>Anochecer</style></link>: Me otorgo <link=keyword.SpellShield><sprite name=SpellShield><style=Keyword>Escudo Antihechizos</style></link>.",
-    "descriptionRaw": "Al jugar: Activo los efectos de Amanecer y Anochecer de los otros aliados.\r\nAmanecer: Me otorgo Arrollar.\r\nAnochecer: Me otorgo Escudo Antihechizos.",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "''Un anillo de fuego arde sobre nosotros. En la oscuridad presagiada, todos somos iguales''. —Orador Menguante Lunari",
-    "artistName": "Kudos Productions",
-    "name": "Heraldo de la Convergencia Celestial",
-    "cardCode": "08MT027",
+    "flavorText": "''¡Claro que conozco a la vieja Portia! Un poco despistada, pero puede conseguirte un portal a cualquier parte, en caso necesario. Un giro con su cola y ¡listo!''. — Pionera de Portales",
+    "artistName": "Bubble Cat",
+    "name": "Portia la Peculiar",
+    "cardCode": "08BC004",
     "keywords": [],
     "keywordRefs": [],
     "spellSpeed": "",
@@ -3127,7 +7079,7 @@
     "rarity": "ÉPICA",
     "rarityRef": "Epic",
     "subtypes": [
-      "AVE"
+      "DRAGÓN"
     ],
     "supertype": "",
     "type": "Unidad",
@@ -3147,27 +7099,27 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08MT025.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_9_0/set8/es_mx/img/cards/08MT025-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08BC018.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/4_12_0/set8/es_mx/img/cards/08BC018-full.png"
       }
     ],
     "regions": [
-      "Targón"
+      "Ciudad de Bandle"
     ],
     "regionRefs": [
-      "Targon"
+      "BandleCity"
     ],
     "attack": 0,
-    "cost": 7,
+    "cost": 8,
     "health": 0,
-    "description": "Si <link=vocab.Behold><style=Vocab>Contemplas</style></link> una unidad <link=vocab.Titanic><style=Vocab>Titánica</style></link>, cuesto 3 menos.\r\nInflijo 7 de daño a una unidad.",
-    "descriptionRaw": "Si Contemplas una unidad Titánica, cuesto 3 menos.\r\nInflijo 7 de daño a una unidad.",
+    "description": "Coloca un aliado en la parte inferior de tu mazo para invocar al aliado de la parte superior de tu mazo.",
+    "descriptionRaw": "Coloca un aliado en la parte inferior de tu mazo para invocar al aliado de la parte superior de tu mazo.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "''Ups, ay, no te preocupes por eso, solo fue un pequeño temblor, solo un accidente, ¡no papá, NOP! ¡Sigamos!''. —Chip",
+    "flavorText": "''Regla 571: una exploradora siempre debe estar alerta. Nunca sabes qué puede ser una deliciosa sorpresa y qué puede ser una trampa''. —Ava Sionada",
     "artistName": "Polar Engine",
-    "name": "Fragmento Sísmico",
-    "cardCode": "08MT025",
+    "name": "Trampa Azucarada",
+    "cardCode": "08BC018",
     "keywords": [
       "Lento"
     ],
@@ -3176,21 +7128,23 @@
     ],
     "spellSpeed": "Lento",
     "spellSpeedRef": "Slow",
-    "rarity": "COMÚN",
-    "rarityRef": "Common",
-    "subtypes": [
-      "ELEMENTAL"
-    ],
+    "rarity": "RARA",
+    "rarityRef": "Rare",
+    "subtypes": [],
     "supertype": "",
     "type": "Hechizo",
     "collectible": true,
     "set": "Set8",
     "formats": [
+      "Solo comunes",
       "Eterno",
+      "Cartas del mismo costo",
       "Estándar"
     ],
     "formatRefs": [
+      "client_Formats_CommonsOnly_name",
       "client_Formats_Eternal_name",
+      "client_Formats_EvenCostCards_name",
       "client_Formats_Standard_name"
     ]
   }
