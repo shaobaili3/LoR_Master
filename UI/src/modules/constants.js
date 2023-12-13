@@ -19,7 +19,8 @@ export const regionRefID = {
   Aatrox: 19,
   Ryze: 20,
   Neeko: 21,
-  PoroKing: 22
+  PoroKing: 22,
+  ElderDragon: 23,
 }
 
 export const regionNames = {
@@ -43,7 +44,8 @@ export const regionNames = {
   19: "faction_Aatrox_Name",
   20: "faction_Ryze_Name",
   21: "faction_Neeko_Name",
-  22: "faction_PoroKing_Name"
+  22: "faction_PoroKing_Name",
+  23: "card_08RU014_Name", // Official name seems to be card_08RU014_Name
 }
 
 export const factionNames = {
@@ -67,5 +69,6 @@ export const factionNames = {
   19: "Aatrox",
   20: "Ryze",
   21: "Neeko",
-  22: "Poro King"
+  22: "Poro King",
+  23: "Elder Dragon",
 }

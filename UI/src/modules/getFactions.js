@@ -41,6 +41,8 @@ const getFactions = (code) => {
           regionID = regionRefID.Neeko
         } else if (card.name == "The Poro King") {
           regionID = regionRefID.PoroKing
+        } else if (card.name == "Elder Dragon") {
+          regionID = regionRefID.ElderDragon
         }
 
         if (champFactions.indexOf(regionID) == -1) {
@@ -254,6 +256,26 @@ const getFactions = (code) => {
     }
   }
 
+  const getFollowerFactionsElderDragon = () => {
+    for (var j in cards) {
+      // Second loop to get followerFactions
+      var card = baseStore.sets_en[cards[j].code]
+      if (
+        card &&
+        card.rarityRef != "Champion" &&
+        card.regions &&
+        card.regions.length == 1 &&
+        !(card.cost >= 6) && // Filter out all cards that cost 6+
+        card.collectible
+      ) {
+        var regionID = regionRefID[card.regionRefs[0]]
+        if (factionIDs.indexOf(regionID) == -1) {
+          factionIDs.push(regionID)
+        }
+      }
+    }
+  }
+
   if (factionIDs.includes(regionRefID.Bard)) {
     getFollowerFactionsBard()
   } else if (factionIDs.includes(regionRefID.Jhin)) {
@@ -274,6 +296,8 @@ const getFactions = (code) => {
     getFollowerFactionsPoroKing()
   } else if (factionIDs.includes(regionRefID.Neeko)) {
     getFollowerFactionsNeeko()
+  } else if (factionIDs.includes(regionRefID.ElderDragon)) {
+    getFollowerFactionsElderDragon()
   }
   else {
     for (var j in cards) {
