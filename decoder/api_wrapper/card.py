@@ -12,15 +12,17 @@ print('data_dir: ', data_dir)
 # print(Path("./data/data/set1-en_us.json").exists())
 
 MAX_SET_NUM = 9
+expansions = ['tpoc','set1','set2','set3','set4','set5','set6','set6cde','set7','set7b','set8','set9']
 
-for num in range(MAX_SET_NUM):
-    if len(list(data_dir.glob(f"set{num + 1}*.json"))) == 0:
-        write_json_file(get_card_set_online(num + 1, region="en_us"),
-                        Path(__file__).parent.parent.parent / f"Resource/set{num+1}-en_us.json")
+for expansion in expansions:
+    if len(list(data_dir.glob(f"{expansion}*.json"))) == 0:
+        write_json_file(get_card_set_online(expansion, region="en_us"),
+                        Path(__file__).parent.parent.parent / f"Resource/{expansion}-en_us.json")
 
 
 try:
-    cards_files = data_dir.glob("set*.json")
+    cards_files = list(data_dir.glob("set*.json"))
+    cards_files += list(data_dir.glob("tpoc*.json"))
     cards = []
     for f in cards_files:
         f_json = read_json_file(f)
@@ -34,17 +36,17 @@ def downloadAllSet():
     regions = ['de_de', 'en_us', 'es_es', 'es_mx', 'fr_fr', 'it_it',
                'ja_jp', 'ko_kr', 'pl_pl', 'pt_br', 'th_th', 'tr_tr', 'ru_ru', 'zh_tw']
     for region in regions:
-        for num in range(MAX_SET_NUM):
-            setData.append(get_card_set_online(num + 1, region=region))
+        for expansion in expansions:
+            setData.append(get_card_set_online(expansion, region=region))
         write_json_file(setData, Path(
             __file__).parent.parent.parent / 'Resource' / (region + '.json'))
         setData = []
 
 # update en set and global jsons
 def downloadRawSet():
-    for num in range(MAX_SET_NUM):
-        write_json_file(get_card_set_online(num + 1, region="en_us"),
-                        Path(__file__).parent.parent.parent / f"Resource/set{num+1}-en_us.json")
+    for expansion in expansions:
+        write_json_file(get_card_set_online(expansion, region="en_us"),
+                        Path(__file__).parent.parent.parent / f"Resource/{expansion}-en_us.json")
     data_globals = get_lor_globals()
     globals_file = Path(__file__).parent.parent.parent / "Resource/globals-en_us.json"
     write_json_file(data_globals, globals_file)
@@ -55,13 +57,17 @@ class Card:
         self.id = kwargs.get("CardID", None)
         self.cardCode = kwargs.get("CardCode", card)
         self.card_set = int(self.cardCode[:2])
+        if self.card_set == 98:
+            self.card_set = str("tpoc")
+        else:
+            self.card_set = f"set{self.card_set}"
         self.count = int(kwargs.get("count", 1))
         self._card_data = self.card_info()
 
         # self.image_path = f"/img/cards/{self.cardCode}.png"
         # self.image_path_full = f"./static/img/cards/{self.cardCode}-full.png"
 
-        self.image_online = f"https://dd.b.pvp.net/latest/set{self.card_set}/en_us/img/cards/{self.cardCode}.png"
+        self.image_online = f"https://dd.b.pvp.net/latest/{self.card_set}/en_us/img/cards/{self.cardCode}.png"
 
         self.image_online_full = self.image_online.replace(".png", "-full.png")
 

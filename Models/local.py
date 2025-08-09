@@ -199,9 +199,9 @@ class Local:
         except Exception as e:
             print('updateMyDeck Error: ', e)
             return
-        if details['CardsInDeck'] is None:
+        """ if details['CardsInDeck'] is None:
             print('updateMyDeck Match is not start')
-            return
+            return """
         currentCards = details['CardsInDeck']
         currentCards = self.updateLeftCards(currentCards)
         currentDeckCode = getDeckCode(currentCards)
@@ -244,9 +244,13 @@ class Local:
             # save game result here
             if self.startTime is not None:
                 self.getResult()
-            self.reset()
-            self.trackJson['positional_rectangles'] = self.positional_rectangles
-            return self.trackJson
+                self.reset()
+                self.trackJson['positional_rectangles'] = self.positional_rectangles
+                return self.trackJson
+        if self.positional_rectangles['GameState'] == 'Menus':
+            self.updateTracker()
+            self.updateMyDeck()
+            print(self.trackerDict)
 
         self.trackJson['positional_rectangles'] = self.positional_rectangles
         self.trackJson['deck_tracker'] = self.trackerDict

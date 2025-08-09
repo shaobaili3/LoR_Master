@@ -10,7 +10,7 @@
       unknown: card.typeRef == 'Unkown',
       'mt-0 mb-1 overflow-hidden rounded': noPreview,
     }"
-    :style="{ background: getCardPreviewBackgroundStyle() }"
+    :style="{ background: getCardPreviewBackgroundStyle(), backgroundSize: getCardPreviewBackgroundSize() }"
     ref="container"
     @mouseenter="onMouseEnter"
     @mouseleave="onMouseLeave"
@@ -150,6 +150,9 @@ export default {
     onMouseLeave() {
       if (this.$refs.image) this.$refs.image.style.opacity = "0"
     },
+    getCardPreviewBackgroundSize() {
+      return "auto, 100% auto"
+    },
     getCardPreviewBackgroundStyle() {
       // const champImageBaseUrl = 'https://raw.githubusercontent.com/painttist/lor-champ-icons/master/images/cards/cropped/';
       // const unkown = 'https://cdn-lor.mobalytics.gg/production/images/subscribe-banner.jpg'
@@ -163,7 +166,8 @@ export default {
         return `${colored2}`
       }
 
-      const cardPreviewUrlBase = "https://cdn-lor.mobalytics.gg/production/images/cards-preview/"
+      const cardPreviewUrlBase = "https://dd.b.pvp.net/latest/" 
+      const setUrlSnippet = this.set.toLowerCase() + "/en_us/img/cards/"
 
       // const gradient = "linear-gradient(90deg, rgb(191, 176, 131) 30%, rgba(191, 176, 131, 0) 70%),"
       var gradient
@@ -173,7 +177,7 @@ export default {
         gradient = `${grayOverlay},`
       }
 
-      return gradient + "url(" + cardPreviewUrlBase + this.code + ".webp) right top no-repeat"
+      return gradient + "url(" + cardPreviewUrlBase + setUrlSnippet + this.code + "-full.png) center center no-repeat"
     },
   },
 }

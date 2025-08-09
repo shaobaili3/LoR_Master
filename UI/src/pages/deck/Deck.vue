@@ -572,6 +572,12 @@ export default {
             this.handleGameStart()
           }
         }
+        else if (data.deck_tracker.cardsInDeck) {
+          this.makeWindowVisible()
+        }
+        else {
+          this.hideWindow()
+        }
 
         let startingCards, myGraveCards, myPlayedCards, oppoGraveCards
         try {

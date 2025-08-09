@@ -4,8 +4,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07PZ009.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07PZ009-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07PZ009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07PZ009-full.png"
       }
     ],
     "regions": [
@@ -56,8 +56,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07PZ017.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07PZ017-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07PZ017.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07PZ017-full.png"
       }
     ],
     "regions": [
@@ -93,12 +93,10 @@
     "collectible": true,
     "set": "Set7",
     "formats": [
-      "Eternal",
-      "Standard"
+      "Eternal"
     ],
     "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
+      "client_Formats_Eternal_name"
     ]
   },
   {
@@ -106,8 +104,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07PZ005.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07PZ005-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07PZ005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07PZ005-full.png"
       }
     ],
     "regions": [
@@ -143,12 +141,10 @@
     "collectible": true,
     "set": "Set7",
     "formats": [
-      "Eternal",
-      "Standard"
+      "Eternal"
     ],
     "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
+      "client_Formats_Eternal_name"
     ]
   },
   {
@@ -156,8 +152,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07NX009.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07NX009-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07NX009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07NX009-full.png"
       }
     ],
     "regions": [
@@ -193,12 +189,10 @@
     "collectible": true,
     "set": "Set7",
     "formats": [
-      "Eternal",
-      "Standard"
+      "Eternal"
     ],
     "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
+      "client_Formats_Eternal_name"
     ]
   },
   {
@@ -206,8 +200,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07NX008.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07NX008-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07NX008.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07NX008-full.png"
       }
     ],
     "regions": [
@@ -246,13 +240,11 @@
     "set": "Set7",
     "formats": [
       "Eternal",
-      "Standard",
-      "Commons Only"
+      "Standard"
     ],
     "formatRefs": [
       "client_Formats_Eternal_name",
-      "client_Formats_Standard_name",
-      "client_Formats_CommonsOnly_name"
+      "client_Formats_Standard_name"
     ]
   },
   {
@@ -260,8 +252,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07NX014.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07NX014-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07NX014.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07NX014-full.png"
       }
     ],
     "regions": [
@@ -271,10 +263,10 @@
       "Noxus"
     ],
     "attack": 0,
-    "cost": 2,
+    "cost": 3,
     "health": 0,
-    "description": "<link=keyword.Plunder><style=Keyword>Plunder</style></link>: I cost 1 less.\r\nDeal 1 to anything and <link=keyword.Stun><sprite name=Stunned><style=Keyword>Stun</style></link> an enemy.\r\n",
-    "descriptionRaw": "Plunder: I cost 1 less.\r\nDeal 1 to anything and Stun an enemy.\r\n",
+    "description": "<link=keyword.Plunder><style=Keyword>Plunder</style></link>: I cost 2 less.\r\nDeal 1 to anything and <link=keyword.Stun><sprite name=Stunned><style=Keyword>Stun</style></link> an enemy.\r\n",
+    "descriptionRaw": "Plunder: I cost 2 less.\r\nDeal 1 to anything and Stun an enemy.\r\n",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "“What? I was stretching. Don’t tell me you died to me stretching.” - Elegant Edge",
@@ -316,8 +308,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07NX007.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07NX007-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07NX007.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07NX007-full.png"
       }
     ],
     "regions": [
@@ -329,8 +321,8 @@
     "attack": 2,
     "cost": 2,
     "health": 2,
-    "description": "When I'm summoned or <link=vocab.Strike><style=Vocab>strike</style></link>: Create a <link=card.create><style=AssociatedCard>Flair</style></link> in hand if you don't have one.",
-    "descriptionRaw": "When I'm summoned or strike: Create a Flair in hand if you don't have one.",
+    "description": "<link=keyword.Plunder><style=Keyword>Plunder</style></link> or <link=vocab.Strike><style=Vocab>strike</style></link>: Create a <link=card.create><style=AssociatedCard>Flair</style></link> in hand if you don't already have one.",
+    "descriptionRaw": "Plunder or strike: Create a Flair in hand if you don't already have one.",
     "levelupDescription": "I've seen you play 6 cards. Resets when you start a round with the attack token.<style=Variable></style>",
     "levelupDescriptionRaw": "I've seen you play 6 cards. Resets when you start a round with the attack token.",
     "flavorText": "“I'm always running down some mark who ran up debts he couldn’t pay. And running from those debts makes you the wrong kind of enemies--the ones who call me.”",
@@ -338,10 +330,12 @@
     "name": "Samira",
     "cardCode": "07NX007",
     "keywords": [
-      "Quick Attack"
+      "Quick Attack",
+      "Plunder"
     ],
     "keywordRefs": [
-      "QuickStrike"
+      "QuickStrike",
+      "Plunder"
     ],
     "spellSpeed": "",
     "spellSpeedRef": "",
@@ -353,14 +347,10 @@
     "collectible": true,
     "set": "Set7",
     "formats": [
-      "Eternal",
-      "Standard",
-      "Commons Only"
+      "Eternal"
     ],
     "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name",
-      "client_Formats_CommonsOnly_name"
+      "client_Formats_Eternal_name"
     ]
   },
   {
@@ -370,8 +360,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07NX007T8.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07NX007T8-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07NX007T8.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07NX007T8-full.png"
       }
     ],
     "regions": [
@@ -383,8 +373,8 @@
     "attack": 0,
     "cost": 1,
     "health": 0,
-    "description": "Deal 1 to the enemy Nexus or give an allied <link=card.samira><style=AssociatedCard>Samira</style></link> <link=keyword.Challenger><sprite name=Challenger><style=Keyword>Challenger</style></link> this round.\r\n",
-    "descriptionRaw": "Deal 1 to the enemy Nexus or give an allied Samira Challenger this round.\r\n",
+    "description": "Give an allied <link=card.samira><style=AssociatedCard>Samira</style></link> <link=keyword.Challenger><sprite name=Challenger><style=Keyword>Challenger</style></link> this round or deal 1 to the enemy Nexus.\r\n",
+    "descriptionRaw": "Give an allied Samira Challenger this round or deal 1 to the enemy Nexus.\r\n",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "“Get too close, you’ll get the steel. Stray too far, you get the lead.” -Samira",
@@ -423,8 +413,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07NX007T6.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07NX007T6-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07NX007T6.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07NX007T6-full.png"
       }
     ],
     "regions": [
@@ -476,8 +466,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07NX007T5.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07NX007T5-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07NX007T5.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07NX007T5-full.png"
       }
     ],
     "regions": [
@@ -528,8 +518,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07NX007T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07NX007T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07NX007T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07NX007T2-full.png"
       }
     ],
     "regions": [
@@ -584,8 +574,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07NX007T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07NX007T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07NX007T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07NX007T1-full.png"
       }
     ],
     "regions": [
@@ -597,8 +587,8 @@
     "attack": 3,
     "cost": 2,
     "health": 3,
-    "description": "When I'm summoned or <link=vocab.Strike><style=Vocab>strike</style></link>: Create a 0 cost <link=card.create><style=AssociatedCard>Flair</style></link> in hand.\r\nWhen you play 6 cards, <link=vocab.Rally><style=Vocab>Rally</style></link>. Resets when you start a round with the attack token. <style=Variable></style>",
-    "descriptionRaw": "When I'm summoned or strike: Create a 0 cost Flair in hand.\r\nWhen you play 6 cards, Rally. Resets when you start a round with the attack token. ",
+    "description": "<link=keyword.Plunder><style=Keyword>Plunder</style></link> or <link=vocab.Strike><style=Vocab>strike</style></link>: Create a <link=card.create><style=AssociatedCard>Flair</style></link> in hand if you don't already have one.\r\nWhen you play 6 cards, <link=vocab.Rally><style=Vocab>Rally</style></link>. Resets when you start a round with the attack token. <style=Variable></style>",
+    "descriptionRaw": "Plunder or strike: Create a Flair in hand if you don't already have one.\r\nWhen you play 6 cards, Rally. Resets when you start a round with the attack token. ",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "“Had a feeling there was more going on here than a little debt evader.  Indari calls these ‘complications.’ I call them flavor.”",
@@ -606,10 +596,12 @@
     "name": "Samira",
     "cardCode": "07NX007T1",
     "keywords": [
-      "Quick Attack"
+      "Quick Attack",
+      "Plunder"
     ],
     "keywordRefs": [
-      "QuickStrike"
+      "QuickStrike",
+      "Plunder"
     ],
     "spellSpeed": "",
     "spellSpeedRef": "",
@@ -634,8 +626,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07NX006.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07NX006-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07NX006.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07NX006-full.png"
       }
     ],
     "regions": [
@@ -644,11 +636,11 @@
     "regionRefs": [
       "Noxus"
     ],
-    "attack": 1,
-    "cost": 3,
+    "attack": 2,
+    "cost": 4,
     "health": 4,
-    "description": "<link=keyword.Plunder><style=Keyword>Plunder</style></link>: Grant me +3|+0.",
-    "descriptionRaw": "Plunder: Grant me +3|+0.",
+    "description": "<link=keyword.Plunder><style=Keyword>Plunder</style></link>: Double my power.",
+    "descriptionRaw": "Plunder: Double my power.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": " “Look, normally I like to set down some rules--like \"paws off the hair and face\", but who am I kidding? You won’t lay a finger on me.”",
@@ -673,14 +665,10 @@
     "collectible": true,
     "set": "Set7",
     "formats": [
-      "Eternal",
-      "Standard",
-      "Commons Only"
+      "Eternal"
     ],
     "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name",
-      "client_Formats_CommonsOnly_name"
+      "client_Formats_Eternal_name"
     ]
   },
   {
@@ -688,8 +676,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07NX015.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07NX015-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07NX015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07NX015-full.png"
       }
     ],
     "regions": [
@@ -701,8 +689,8 @@
     "attack": 3,
     "cost": 3,
     "health": 3,
-    "description": "<link=keyword.Plunder><style=Keyword>Plunder</style></link>: Grant all allies +1|+0.",
-    "descriptionRaw": "Plunder: Grant all allies +1|+0.",
+    "description": "<link=keyword.Plunder><style=Keyword>Plunder</style></link>: Grant allies +1|+0.",
+    "descriptionRaw": "Plunder: Grant allies +1|+0.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "“Ah, Dame. She has a flair for the dramatic, that one. Some might turn their nose up at a little pageantry, but when she’s in her element, we’re all getting paid.” - Elegant Edge",
@@ -710,10 +698,12 @@
     "name": "Dame the Despoiler",
     "cardCode": "07NX015",
     "keywords": [
-      "Plunder"
+      "Plunder",
+      "Overwhelm"
     ],
     "keywordRefs": [
-      "Plunder"
+      "Plunder",
+      "Overwhelm"
     ],
     "spellSpeed": "",
     "spellSpeedRef": "",
@@ -725,14 +715,10 @@
     "collectible": true,
     "set": "Set7",
     "formats": [
-      "Eternal",
-      "Standard",
-      "Commons Only"
+      "Eternal"
     ],
     "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name",
-      "client_Formats_CommonsOnly_name"
+      "client_Formats_Eternal_name"
     ]
   },
   {
@@ -740,8 +726,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07NX003.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07NX003-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07NX003.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07NX003-full.png"
       }
     ],
     "regions": [
@@ -779,14 +765,10 @@
     "collectible": true,
     "set": "Set7",
     "formats": [
-      "Eternal",
-      "Standard",
-      "Commons Only"
+      "Eternal"
     ],
     "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name",
-      "client_Formats_CommonsOnly_name"
+      "client_Formats_Eternal_name"
     ]
   },
   {
@@ -794,8 +776,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07NX004.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07NX004-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07NX004.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07NX004-full.png"
       }
     ],
     "regions": [
@@ -806,7 +788,7 @@
     ],
     "attack": 5,
     "cost": 5,
-    "health": 3,
+    "health": 4,
     "description": "When I'm summoned, activate all ally <link=keyword.Plunder><style=Keyword>Plunder</style></link> effects.",
     "descriptionRaw": "When I'm summoned, activate all ally Plunder effects.",
     "levelupDescription": "",
@@ -831,12 +813,10 @@
     "collectible": true,
     "set": "Set7",
     "formats": [
-      "Eternal",
-      "Standard"
+      "Eternal"
     ],
     "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
+      "client_Formats_Eternal_name"
     ]
   },
   {
@@ -844,8 +824,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07NX001.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07NX001-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07NX001.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07NX001-full.png"
       }
     ],
     "regions": [
@@ -877,12 +857,10 @@
     "collectible": true,
     "set": "Set7",
     "formats": [
-      "Eternal",
-      "Standard"
+      "Eternal"
     ],
     "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
+      "client_Formats_Eternal_name"
     ]
   },
   {
@@ -890,8 +868,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07NX001T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07NX001T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07NX001T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07NX001T1-full.png"
       }
     ],
     "regions": [
@@ -936,8 +914,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07NX001T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07NX001T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07NX001T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07NX001T2-full.png"
       }
     ],
     "regions": [
@@ -982,8 +960,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07NX005.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07NX005-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07NX005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07NX005-full.png"
       }
     ],
     "regions": [
@@ -1021,6 +999,461 @@
     "collectible": true,
     "set": "Set7",
     "formats": [
+      "Eternal"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07BW018.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07BW018-full.png"
+      }
+    ],
+    "regions": [
+      "Bilgewater"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 3,
+    "description": "When you refill mana, grant me +1|+0 for each mana refilled.",
+    "descriptionRaw": "When you refill mana, grant me +1|+0 for each mana refilled.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Little Jack darling, see here! I find something that interest you, yes?\"",
+    "artistName": "Envar Studio",
+    "name": "Mad Ol' Babs",
+    "cardCode": "07BW018",
+    "keywords": [
+      "Attune"
+    ],
+    "keywordRefs": [
+      "Attune"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "COMMON",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unit",
+    "collectible": true,
+    "set": "Set7",
+    "formats": [
+      "Eternal"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07BW021.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07BW021-full.png"
+      }
+    ],
+    "regions": [
+      "Bilgewater"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 3,
+    "cost": 3,
+    "health": 2,
+    "description": "<link=keyword.Plunder><style=Keyword>Plunder</style></link>: Summon a random 1 cost follower and grant it <link=keyword.Brash><sprite name=Brash><style=Keyword>Brash</style></link>.",
+    "descriptionRaw": "Plunder: Summon a random 1 cost follower and grant it Brash.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "“I’d steer clear of her if I were you. She’s got a real nasty habit of making her problems other people’s.” - Samira",
+    "artistName": "Kudos Productions",
+    "name": "Brazen Buccaneer",
+    "cardCode": "07BW021",
+    "keywords": [
+      "Plunder",
+      "Brash"
+    ],
+    "keywordRefs": [
+      "Plunder",
+      "Brash"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "COMMON",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unit",
+    "collectible": true,
+    "set": "Set7",
+    "formats": [
+      "Eternal"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "07BW002T1",
+      "07BW002T2",
+      "07IO011T5"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07BW002.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07BW002-full.png"
+      }
+    ],
+    "regions": [
+      "Bilgewater"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 4,
+    "cost": 4,
+    "health": 5,
+    "description": "<link=vocab.Strike><style=Vocab>Strike</style></link>: Create a <link=card.create><style=AssociatedCard>Coin</style></link> in hand.\r\nWhen you refill mana, heal me 1 for each mana refilled.",
+    "descriptionRaw": "Strike: Create a Coin in hand.\r\nWhen you refill mana, heal me 1 for each mana refilled.",
+    "levelupDescription": "You've spent 12+ mana in one round.<style=Variable></style>",
+    "levelupDescriptionRaw": "You've spent 12+ mana in one round.",
+    "flavorText": "\"You've got to be brave or dumb to stand against me, but either way, the outcome's the same. My advice: worry about making it out alive.\"",
+    "artistName": "Envar Studio",
+    "name": "Jack",
+    "cardCode": "07BW002",
+    "keywords": [
+      "Brash"
+    ],
+    "keywordRefs": [
+      "Brash"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "Champion",
+    "rarityRef": "Champion",
+    "subtypes": [],
+    "supertype": "Champion",
+    "type": "Unit",
+    "collectible": true,
+    "set": "Set7",
+    "formats": [
+      "Eternal"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "07BW002",
+      "07BW002T1",
+      "07IO011T5"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07BW002T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07BW002T2-full.png"
+      }
+    ],
+    "regions": [
+      "Bilgewater"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 5,
+    "cost": 4,
+    "health": 6,
+    "description": "<link=vocab.Strike><style=Vocab>Strike</style></link>: Create 2 <link=card.create><style=AssociatedCard>Coins</style></link> in hand.\r\nWhen you refill mana, grant me +1|+0 and heal me 1 for each mana refilled.",
+    "descriptionRaw": "Strike: Create 2 Coins in hand.\r\nWhen you refill mana, grant me +1|+0 and heal me 1 for each mana refilled.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "“Jack ain’t all bad. In fact, the few who’ve earned his respect might even call him charming, almost decent. But once he gets that blood smell in his nose, well... I don't think there's a more dangerous man alive.” - Bull",
+    "artistName": "Envar Studio",
+    "name": "Jack",
+    "cardCode": "07BW002T2",
+    "keywords": [
+      "Overwhelm",
+      "Brash"
+    ],
+    "keywordRefs": [
+      "Overwhelm",
+      "Brash"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "None",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "Champion",
+    "type": "Unit",
+    "collectible": false,
+    "set": "Set7",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "07BW002",
+      "07BW002T2",
+      "07IO011T5"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07BW002T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07BW002T1-full.png"
+      }
+    ],
+    "regions": [
+      "Bilgewater"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 4,
+    "health": 0,
+    "description": "Deal 3 to a unit. If this kills it, create 2 <link=card.create><style=AssociatedCard>Coins</style></link> in hand.\r\nCreate a <link=card.level1><style=AssociatedCard>Jack</style></link> in your deck.",
+    "descriptionRaw": "Deal 3 to a unit. If this kills it, create 2 Coins in hand.\r\nCreate a Jack in your deck.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "“Nothing ventured, nothing gained--and these jaws are built for ventures.” - Jack",
+    "artistName": "Kudos Productions",
+    "name": "Jack's Risky Venture",
+    "cardCode": "07BW002T1",
+    "keywords": [
+      "Slow"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "Slow",
+    "spellSpeedRef": "Slow",
+    "rarity": "None",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "Champion",
+    "type": "Spell",
+    "collectible": false,
+    "set": "Set7",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "07BW040T1",
+      "07BW040T2"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07BW040.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07BW040-full.png"
+      }
+    ],
+    "regions": [
+      "Bilgewater"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 1,
+    "description": "When I'm summoned, create a <link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>Fleeting</style></link> <link=card.create><style=AssociatedCard>Mako</style></link> in hand.",
+    "descriptionRaw": "When I'm summoned, create a Fleeting Mako in hand.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "“Little nick ‘ere, little slice there, all in good fun. Bit ‘o blood in the water never hurt anybody. Well, not me anyways.” - Nukkle",
+    "artistName": "Envar Studio",
+    "name": "Nukkle",
+    "cardCode": "07BW040",
+    "keywords": [
+      "Elusive"
+    ],
+    "keywordRefs": [
+      "Elusive"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "RARE",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unit",
+    "collectible": true,
+    "set": "Set7",
+    "formats": [
+      "Eternal"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07BW001.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07BW001-full.png"
+      }
+    ],
+    "regions": [
+      "Bilgewater"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 4,
+    "cost": 4,
+    "health": 4,
+    "description": "When you refill mana, create a <link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>Fleeting</style></link> random follower in hand you can exactly afford.",
+    "descriptionRaw": "When you refill mana, create a Fleeting random follower in hand you can exactly afford.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "“If you want the crimson, then you want Jack. You wanna know the where, the when, the who, and  how much? You talk to me.”",
+    "artistName": "Envar Studio",
+    "name": "Perfidious Promoter",
+    "cardCode": "07BW001",
+    "keywords": [],
+    "keywordRefs": [],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "RARE",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unit",
+    "collectible": true,
+    "set": "Set7",
+    "formats": [
+      "Eternal"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "07BW040T2"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07BW040T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07BW040T1-full.png"
+      }
+    ],
+    "regions": [
+      "Bilgewater"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 4,
+    "cost": 4,
+    "health": 4,
+    "description": "When I'm summoned, create a <link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>Fleeting</style></link> <link=card.create><style=AssociatedCard>Bull</style></link> in hand.",
+    "descriptionRaw": "When I'm summoned, create a Fleeting Bull in hand.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "“You’re a small fish. I’d keep swimming.”",
+    "artistName": "Envar Studio",
+    "name": "Mako",
+    "cardCode": "07BW040T1",
+    "keywords": [
+      "Brash"
+    ],
+    "keywordRefs": [
+      "Brash"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "None",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unit",
+    "collectible": false,
+    "set": "Set7",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07BW040T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07BW040T2-full.png"
+      }
+    ],
+    "regions": [
+      "Bilgewater"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 7,
+    "cost": 6,
+    "health": 6,
+    "description": "When I'm summoned, <link=vocab.Rally><style=Vocab>Rally</style></link>.",
+    "descriptionRaw": "When I'm summoned, Rally.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "His body a tapestry of scars and ink telling his brutal legend, Bull now serves as mentor and sparring partner to Jack. He's saving that last bit of fighting spirit for an opponent worthy enough to merit one last scrap.",
+    "artistName": "Envar Studio",
+    "name": "Bull",
+    "cardCode": "07BW040T2",
+    "keywords": [
+      "Overwhelm"
+    ],
+    "keywordRefs": [
+      "Overwhelm"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "None",
+    "rarityRef": "None",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unit",
+    "collectible": false,
+    "set": "Set7",
+    "formats": [
       "Eternal",
       "Standard"
     ],
@@ -1036,8 +1469,519 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07IO020.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07IO020-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07BW003.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07BW003-full.png"
+      }
+    ],
+    "regions": [
+      "Bilgewater"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 2,
+    "cost": 1,
+    "health": 1,
+    "description": "<link=keyword.Last Breath><sprite name=LastBreath><style=Keyword>Last Breath</style></link>: Create a <link=card.create><style=AssociatedCard>Coin</style></link> in hand.\r\n",
+    "descriptionRaw": "Last Breath: Create a Coin in hand.\r\n",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"Oi, get back here, slimeball! That's my potato money!\" - Angel",
+    "artistName": "Caravan Studio",
+    "name": "Pocket Picker",
+    "cardCode": "07BW003",
+    "keywords": [
+      "Last Breath"
+    ],
+    "keywordRefs": [
+      "LastBreath"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "COMMON",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unit",
+    "collectible": true,
+    "set": "Set7",
+    "formats": [
+      "Eternal"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "07BW008"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07BW014.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07BW014-full.png"
+      }
+    ],
+    "regions": [
+      "Bilgewater"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 4,
+    "cost": 3,
+    "health": 1,
+    "description": "When I'm summoned, create a <link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>Fleeting</style></link> <link=card.create><style=AssociatedCard>Prize Fight</style></link> in hand.",
+    "descriptionRaw": "When I'm summoned, create a Fleeting Prize Fight in hand.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "“That’s the way, Jackie Boy! Keep dolin’ out the ol' Bilgewater charm, and I’ll keep ye fightin' fit. Ahh, this reminds me of my golden days, when they used to call me 'Pretty-As-A-Picture Pablo'... They didnae, ye say? They did, too! That knock to yer head must've fouled yer memory.” - Five-Punch Pablo",
+    "artistName": "Envar Studio",
+    "name": "Five-Punch Pablo",
+    "cardCode": "07BW014",
+    "keywords": [
+      "Attune"
+    ],
+    "keywordRefs": [
+      "Attune"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "COMMON",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unit",
+    "collectible": true,
+    "set": "Set7",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "07IO011T5"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07BW013.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07BW013-full.png"
+      }
+    ],
+    "regions": [
+      "Bilgewater"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 5,
+    "cost": 5,
+    "health": 5,
+    "description": "<link=keyword.Plunder><style=Keyword>Plunder</style></link>: Create 3 <link=card.create><style=AssociatedCard>Coins</style></link> in hand.",
+    "descriptionRaw": "Plunder: Create 3 Coins in hand.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "\"That the best you got? Cute. Now it's my turn.\"",
+    "artistName": "Kudos Productions",
+    "name": "Angel",
+    "cardCode": "07BW013",
+    "keywords": [
+      "Brash",
+      "Plunder"
+    ],
+    "keywordRefs": [
+      "Brash",
+      "Plunder"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "COMMON",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unit",
+    "collectible": true,
+    "set": "Set7",
+    "formats": [
+      "Eternal"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "07IO011T5"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07BW006.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07BW006-full.png"
+      }
+    ],
+    "regions": [
+      "Bilgewater"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 4,
+    "health": 0,
+    "description": "Deal 3 to a unit. If this kills it, create 2 <link=card.create><style=AssociatedCard>Coins</style></link> in hand.",
+    "descriptionRaw": "Deal 3 to a unit. If this kills it, create 2 Coins in hand.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "“Nothing ventured, nothing gained--and these jaws are built for ventures.” - Jack",
+    "artistName": "Kudos Productions",
+    "name": "Risky Venture",
+    "cardCode": "07BW006",
+    "keywords": [
+      "Slow"
+    ],
+    "keywordRefs": [
+      "Slow"
+    ],
+    "spellSpeed": "Slow",
+    "spellSpeedRef": "Slow",
+    "rarity": "EPIC",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Spell",
+    "collectible": true,
+    "set": "Set7",
+    "formats": [
+      "Eternal"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07BW026.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07BW026-full.png"
+      }
+    ],
+    "regions": [
+      "Bilgewater"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 4,
+    "health": 0,
+    "description": "<link=keyword.Plunder><style=Keyword>Plunder</style></link>: I cost 2 less.\r\nDraw 2 at the next <link=vocab.RoundStart><style=Vocab>Round Start</style></link> and grant them <link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>Fleeting</style></link>.",
+    "descriptionRaw": "Plunder: I cost 2 less.\r\nDraw 2 at the next Round Start and grant them Fleeting.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "By the time you hear the rattling, it’s already too late to run.",
+    "artistName": "Kudos Productions",
+    "name": "Barbed Chain",
+    "cardCode": "07BW026",
+    "keywords": [
+      "Burst",
+      "Plunder"
+    ],
+    "keywordRefs": [
+      "Burst",
+      "Plunder"
+    ],
+    "spellSpeed": "Burst",
+    "spellSpeedRef": "Burst",
+    "rarity": "RARE",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Spell",
+    "collectible": true,
+    "set": "Set7",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07BW027.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07BW027-full.png"
+      }
+    ],
+    "regions": [
+      "Bilgewater"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 2,
+    "cost": 2,
+    "health": 1,
+    "description": "<link=keyword.Plunder><style=Keyword>Plunder</style></link>: Refill 1 spell mana and create a random 1 cost spell from your regions in hand.",
+    "descriptionRaw": "Plunder: Refill 1 spell mana and create a random 1 cost spell from your regions in hand.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Father Fury's origins are as thick as a thundercloud, and even when they've asked, no one's ever heard a straight answer--at least, not one they could hear over the din of his destruction.",
+    "artistName": "Kudos Productions",
+    "name": "Father Fury",
+    "cardCode": "07BW027",
+    "keywords": [
+      "Plunder",
+      "Elusive"
+    ],
+    "keywordRefs": [
+      "Plunder",
+      "Elusive"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "RARE",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unit",
+    "collectible": true,
+    "set": "Set7",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07BW008.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07BW008-full.png"
+      }
+    ],
+    "regions": [
+      "Bilgewater"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 1,
+    "health": 0,
+    "description": "An ally and an enemy <link=vocab.Strike><style=Vocab>strike</style></link> each other. They can't drop below 1 Health from this <link=vocab.Strike><style=Vocab>strike</style></link>.",
+    "descriptionRaw": "An ally and an enemy strike each other. They can't drop below 1 Health from this strike.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Sometimes you trade in coin and lamp oil, and sometimes you trade in knuckles and teeth. That’s just the way it is, but an even exchange? That’s good business!",
+    "artistName": "Kudos Productions",
+    "name": "Prize Fight",
+    "cardCode": "07BW008",
+    "keywords": [
+      "Fast"
+    ],
+    "keywordRefs": [
+      "Fast"
+    ],
+    "spellSpeed": "Fast",
+    "spellSpeedRef": "Fast",
+    "rarity": "COMMON",
+    "rarityRef": "Common",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Spell",
+    "collectible": true,
+    "set": "Set7",
+    "formats": [
+      "Eternal",
+      "Standard"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "07IO011T5"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07BW041.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07BW041-full.png"
+      }
+    ],
+    "regions": [
+      "Bilgewater"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 0,
+    "cost": 2,
+    "health": 0,
+    "description": "<link=vocab.Strike><style=Vocab>Strike</style></link>: Create a <link=card.create><style=AssociatedCard>Coin</style></link> in hand.",
+    "descriptionRaw": "Strike: Create a Coin in hand.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "“Hmmm, now I know they’re not the most traditional piece of kit, yeah I’ll grant you that. But do give ‘em a try, they really grow on ya.” - Bull",
+    "artistName": "Kudos Productions",
+    "name": "Barknuckles",
+    "cardCode": "07BW041",
+    "keywords": [
+      "Equipment",
+      "Brash"
+    ],
+    "keywordRefs": [
+      "Equipment",
+      "Brash"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "RARE",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Equipment",
+    "collectible": true,
+    "set": "Set7",
+    "formats": [
+      "Eternal"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "07BW008",
+      "07BW002"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07BW004.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07BW004-full.png"
+      }
+    ],
+    "regions": [
+      "Bilgewater"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 7,
+    "cost": 7,
+    "health": 5,
+    "description": "When I'm summoned, draw a <link=card.champ1><style=AssociatedCard>Jack</style></link>.\r\nWhen you summon an ally, create a <link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>Fleeting</style></link> <link=card.create><style=AssociatedCard>Prize Fight</style></link> in hand.\r\nWhen an ally survives damage, grant it <link=keyword.Brash><sprite name=Brash><style=Keyword>Brash</style></link>.",
+    "descriptionRaw": "When I'm summoned, draw a Jack.\r\nWhen you summon an ally, create a Fleeting Prize Fight in hand.\r\nWhen an ally survives damage, grant it Brash.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "Jack’s personal vessel has borne him and his ilk across Runeterra's waters, from Bilgewater to Ionia. How it travels underneath the water without sinking is anyone’s guess, but it’s been said that beneath the surface is where the real danger lies...",
+    "artistName": "Envar Studio",
+    "name": "The King's Court",
+    "cardCode": "07BW004",
+    "keywords": [
+      "Attune",
+      "Brash"
+    ],
+    "keywordRefs": [
+      "Attune",
+      "Brash"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "EPIC",
+    "rarityRef": "Epic",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unit",
+    "collectible": true,
+    "set": "Set7",
+    "formats": [
+      "Eternal"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07BW025.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07BW025-full.png"
+      }
+    ],
+    "regions": [
+      "Bilgewater"
+    ],
+    "regionRefs": [
+      "Bilgewater"
+    ],
+    "attack": 1,
+    "cost": 4,
+    "health": 4,
+    "description": "When you activate <link=keyword.Plunder><style=Keyword>Plunder</style></link>, draw 1 and grant it <link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>Fleeting</style></link>.",
+    "descriptionRaw": "When you activate Plunder, draw 1 and grant it Fleeting.",
+    "levelupDescription": "",
+    "levelupDescriptionRaw": "",
+    "flavorText": "“There are certain advantages to being a pyromaniac at sea. Water  doesn’t let a flame get outta hand, and it never asks for a cut.”",
+    "artistName": "Kudos Productions",
+    "name": "Inferna",
+    "cardCode": "07BW025",
+    "keywords": [
+      "Elusive"
+    ],
+    "keywordRefs": [
+      "Elusive"
+    ],
+    "spellSpeed": "",
+    "spellSpeedRef": "",
+    "rarity": "RARE",
+    "rarityRef": "Rare",
+    "subtypes": [],
+    "supertype": "",
+    "type": "Unit",
+    "collectible": true,
+    "set": "Set7",
+    "formats": [
+      "Eternal"
+    ],
+    "formatRefs": [
+      "client_Formats_Eternal_name"
+    ]
+  },
+  {
+    "associatedCards": [],
+    "associatedCardRefs": [
+      "07IO011T5"
+    ],
+    "assets": [
+      {
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07IO020.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07IO020-full.png"
       }
     ],
     "regions": [
@@ -1086,8 +2030,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07IO014.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07IO014-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07IO014.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07IO014-full.png"
       }
     ],
     "regions": [
@@ -1138,8 +2082,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07IO023.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07IO023-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07IO023.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07IO023-full.png"
       }
     ],
     "regions": [
@@ -1175,12 +2119,10 @@
     "collectible": true,
     "set": "Set7",
     "formats": [
-      "Eternal",
-      "Standard"
+      "Eternal"
     ],
     "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
+      "client_Formats_Eternal_name"
     ]
   },
   {
@@ -1193,8 +2135,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07IO011.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07IO011-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07IO011.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07IO011-full.png"
       }
     ],
     "regions": [
@@ -1231,13 +2173,11 @@
     "set": "Set7",
     "formats": [
       "Eternal",
-      "Standard",
-      "Commons Only"
+      "Standard"
     ],
     "formatRefs": [
       "client_Formats_Eternal_name",
-      "client_Formats_Standard_name",
-      "client_Formats_CommonsOnly_name"
+      "client_Formats_Standard_name"
     ]
   },
   {
@@ -1249,8 +2189,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07IO011T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07IO011T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07IO011T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07IO011T1-full.png"
       }
     ],
     "regions": [
@@ -1299,8 +2239,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07IO011T5.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07IO011T5-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07IO011T5.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07IO011T5-full.png"
       }
     ],
     "regions": [
@@ -1321,10 +2261,10 @@
     "name": "Coin",
     "cardCode": "07IO011T5",
     "keywords": [
-      "Burst"
+      "Focus"
     ],
     "keywordRefs": [
-      "Burst"
+      "Focus"
     ],
     "spellSpeed": "Burst",
     "spellSpeedRef": "Burst",
@@ -1351,8 +2291,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07IO011T4.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07IO011T4-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07IO011T4.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07IO011T4-full.png"
       }
     ],
     "regions": [
@@ -1407,8 +2347,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07IO011T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07IO011T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07IO011T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07IO011T2-full.png"
       }
     ],
     "regions": [
@@ -1457,8 +2397,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07IO046.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07IO046-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07IO046.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07IO046-full.png"
       }
     ],
     "regions": [
@@ -1513,8 +2453,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07IO009.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07IO009-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07IO009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07IO009-full.png"
       }
     ],
     "regions": [
@@ -1565,8 +2505,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07IO019.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07IO019-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07IO019.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07IO019-full.png"
       }
     ],
     "regions": [
@@ -1599,13 +2539,11 @@
     "set": "Set7",
     "formats": [
       "Eternal",
-      "Standard",
-      "Commons Only"
+      "Standard"
     ],
     "formatRefs": [
       "client_Formats_Eternal_name",
-      "client_Formats_Standard_name",
-      "client_Formats_CommonsOnly_name"
+      "client_Formats_Standard_name"
     ]
   },
   {
@@ -1615,8 +2553,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07IO017.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07IO017-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07IO017.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07IO017-full.png"
       }
     ],
     "regions": [
@@ -1653,13 +2591,11 @@
     "set": "Set7",
     "formats": [
       "Eternal",
-      "Standard",
-      "Commons Only"
+      "Standard"
     ],
     "formatRefs": [
       "client_Formats_Eternal_name",
-      "client_Formats_Standard_name",
-      "client_Formats_CommonsOnly_name"
+      "client_Formats_Standard_name"
     ]
   },
   {
@@ -1667,8 +2603,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07IO047.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07IO047-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07IO047.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07IO047-full.png"
       }
     ],
     "regions": [
@@ -1680,8 +2616,8 @@
     "attack": 4,
     "cost": 7,
     "health": 7,
-    "description": "Each round, the first time you summon another follower, summon an exact copy of it. If your board is full, grant its stats and keywords to me instead.",
-    "descriptionRaw": "Each round, the first time you summon another follower, summon an exact copy of it. If your board is full, grant its stats and keywords to me instead.",
+    "description": "Each round, the first time you play another follower, summon an exact copy of it. If your board is full, grant its stats and keywords to me instead.",
+    "descriptionRaw": "Each round, the first time you play another follower, summon an exact copy of it. If your board is full, grant its stats and keywords to me instead.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "\"Think these flowers are worth anything? And don't call me crazy, but do they look like they're... dancing?\" - Piltovan Poacher",
@@ -1702,12 +2638,10 @@
     "collectible": true,
     "set": "Set7",
     "formats": [
-      "Eternal",
-      "Standard"
+      "Eternal"
     ],
     "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
+      "client_Formats_Eternal_name"
     ]
   },
   {
@@ -1715,8 +2649,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07IO023T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07IO023T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07IO023T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07IO023T1-full.png"
       }
     ],
     "regions": [
@@ -1767,8 +2701,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07IO013.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07IO013-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07IO013.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07IO013-full.png"
       }
     ],
     "regions": [
@@ -1801,13 +2735,11 @@
     "set": "Set7",
     "formats": [
       "Eternal",
-      "Standard",
-      "Commons Only"
+      "Standard"
     ],
     "formatRefs": [
       "client_Formats_Eternal_name",
-      "client_Formats_Standard_name",
-      "client_Formats_CommonsOnly_name"
+      "client_Formats_Standard_name"
     ]
   },
   {
@@ -1817,8 +2749,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07IO020T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07IO020T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07IO020T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07IO020T1-full.png"
       }
     ],
     "regions": [
@@ -1869,8 +2801,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07IO020T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07IO020T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07IO020T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07IO020T2-full.png"
       }
     ],
     "regions": [
@@ -1919,8 +2851,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07IO012.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07IO012-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07IO012.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07IO012-full.png"
       }
     ],
     "regions": [
@@ -1952,12 +2884,10 @@
     "collectible": true,
     "set": "Set7",
     "formats": [
-      "Eternal",
-      "Standard"
+      "Eternal"
     ],
     "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
+      "client_Formats_Eternal_name"
     ]
   },
   {
@@ -1967,8 +2897,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07IO007.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07IO007-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07IO007.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07IO007-full.png"
       }
     ],
     "regions": [
@@ -2005,13 +2935,11 @@
     "set": "Set7",
     "formats": [
       "Eternal",
-      "Standard",
-      "Commons Only"
+      "Standard"
     ],
     "formatRefs": [
       "client_Formats_Eternal_name",
-      "client_Formats_Standard_name",
-      "client_Formats_CommonsOnly_name"
+      "client_Formats_Standard_name"
     ]
   },
   {
@@ -2019,8 +2947,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07SH023.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07SH023-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07SH023.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07SH023-full.png"
       }
     ],
     "regions": [
@@ -2069,8 +2997,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07SH018.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07SH018-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07SH018.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07SH018-full.png"
       }
     ],
     "regions": [
@@ -2102,12 +3030,10 @@
     "collectible": true,
     "set": "Set7",
     "formats": [
-      "Eternal",
-      "Standard"
+      "Eternal"
     ],
     "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
+      "client_Formats_Eternal_name"
     ]
   },
   {
@@ -2117,8 +3043,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07SH008.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07SH008-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07SH008.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07SH008-full.png"
       }
     ],
     "regions": [
@@ -2154,1001 +3080,6 @@
     "collectible": true,
     "set": "Set7",
     "formats": [
-      "Commons Only",
-      "Eternal",
-      "Standard"
-    ],
-    "formatRefs": [
-      "client_Formats_CommonsOnly_name",
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07BW018.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07BW018-full.png"
-      }
-    ],
-    "regions": [
-      "Bilgewater"
-    ],
-    "regionRefs": [
-      "Bilgewater"
-    ],
-    "attack": 1,
-    "cost": 2,
-    "health": 3,
-    "description": "When you refill mana, grant me +1|+0 for each mana refilled.",
-    "descriptionRaw": "When you refill mana, grant me +1|+0 for each mana refilled.",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "\"Little Jack darling, see here! I find something that interest you, yes?\"",
-    "artistName": "Envar Studio",
-    "name": "Mad Ol' Babs",
-    "cardCode": "07BW018",
-    "keywords": [],
-    "keywordRefs": [],
-    "spellSpeed": "",
-    "spellSpeedRef": "",
-    "rarity": "COMMON",
-    "rarityRef": "Common",
-    "subtypes": [],
-    "supertype": "",
-    "type": "Unit",
-    "collectible": true,
-    "set": "Set7",
-    "formats": [
-      "Eternal",
-      "Standard",
-      "Commons Only"
-    ],
-    "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name",
-      "client_Formats_CommonsOnly_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07BW021.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07BW021-full.png"
-      }
-    ],
-    "regions": [
-      "Bilgewater"
-    ],
-    "regionRefs": [
-      "Bilgewater"
-    ],
-    "attack": 3,
-    "cost": 3,
-    "health": 2,
-    "description": "<link=keyword.Plunder><style=Keyword>Plunder</style></link>: Summon a random 1 cost follower and grant it <link=keyword.Brash><sprite name=Brash><style=Keyword>Brash</style></link>.",
-    "descriptionRaw": "Plunder: Summon a random 1 cost follower and grant it Brash.",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "“I’d steer clear of her if I were you. She’s got a real nasty habit of making her problems other people’s.” - Samira",
-    "artistName": "Kudos Productions",
-    "name": "Brazen Buccaneer",
-    "cardCode": "07BW021",
-    "keywords": [
-      "Plunder",
-      "Brash"
-    ],
-    "keywordRefs": [
-      "Plunder",
-      "Brash"
-    ],
-    "spellSpeed": "",
-    "spellSpeedRef": "",
-    "rarity": "COMMON",
-    "rarityRef": "Common",
-    "subtypes": [],
-    "supertype": "",
-    "type": "Unit",
-    "collectible": true,
-    "set": "Set7",
-    "formats": [
-      "Eternal",
-      "Standard",
-      "Commons Only"
-    ],
-    "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name",
-      "client_Formats_CommonsOnly_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [
-      "07BW002T1",
-      "07BW002T2",
-      "07IO011T5"
-    ],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07BW002.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07BW002-full.png"
-      }
-    ],
-    "regions": [
-      "Bilgewater"
-    ],
-    "regionRefs": [
-      "Bilgewater"
-    ],
-    "attack": 4,
-    "cost": 4,
-    "health": 5,
-    "description": "<link=vocab.Strike><style=Vocab>Strike</style></link>: Create a <link=card.create><style=AssociatedCard>Coin</style></link> in hand.",
-    "descriptionRaw": "Strike: Create a Coin in hand.",
-    "levelupDescription": "You've spent 12+ mana in one round.<style=Variable></style>",
-    "levelupDescriptionRaw": "You've spent 12+ mana in one round.",
-    "flavorText": "\"You've got to be brave or dumb to stand against me, but either way, the outcome's the same. My advice: worry about making it out alive.\"",
-    "artistName": "Envar Studio",
-    "name": "Jack",
-    "cardCode": "07BW002",
-    "keywords": [
-      "Brash"
-    ],
-    "keywordRefs": [
-      "Brash"
-    ],
-    "spellSpeed": "",
-    "spellSpeedRef": "",
-    "rarity": "Champion",
-    "rarityRef": "Champion",
-    "subtypes": [],
-    "supertype": "Champion",
-    "type": "Unit",
-    "collectible": true,
-    "set": "Set7",
-    "formats": [
-      "Eternal",
-      "Standard"
-    ],
-    "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [
-      "07BW002",
-      "07BW002T1",
-      "07IO011T5"
-    ],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07BW002T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07BW002T2-full.png"
-      }
-    ],
-    "regions": [
-      "Bilgewater"
-    ],
-    "regionRefs": [
-      "Bilgewater"
-    ],
-    "attack": 5,
-    "cost": 4,
-    "health": 6,
-    "description": "<link=vocab.Strike><style=Vocab>Strike</style></link>: Create 2 <link=card.create><style=AssociatedCard>Coins</style></link> in hand.\r\nWhen you refill mana, grant me +1|+0 for each mana refilled.",
-    "descriptionRaw": "Strike: Create 2 Coins in hand.\r\nWhen you refill mana, grant me +1|+0 for each mana refilled.",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "“Jack ain’t all bad. In fact, the few who’ve earned his respect might even call him charming, almost decent. But once he gets that blood smell in his nose, well... I don't think there's a more dangerous man alive.” - Bull",
-    "artistName": "Envar Studio",
-    "name": "Jack",
-    "cardCode": "07BW002T2",
-    "keywords": [
-      "Overwhelm",
-      "Brash"
-    ],
-    "keywordRefs": [
-      "Overwhelm",
-      "Brash"
-    ],
-    "spellSpeed": "",
-    "spellSpeedRef": "",
-    "rarity": "None",
-    "rarityRef": "None",
-    "subtypes": [],
-    "supertype": "Champion",
-    "type": "Unit",
-    "collectible": false,
-    "set": "Set7",
-    "formats": [
-      "Eternal",
-      "Standard"
-    ],
-    "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [
-      "07BW002",
-      "07BW002T2",
-      "07IO011T5"
-    ],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07BW002T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07BW002T1-full.png"
-      }
-    ],
-    "regions": [
-      "Bilgewater"
-    ],
-    "regionRefs": [
-      "Bilgewater"
-    ],
-    "attack": 0,
-    "cost": 3,
-    "health": 0,
-    "description": "Deal 2 to a unit. If this kills it, create 2 <link=card.create><style=AssociatedCard>Coins</style></link> in hand.\r\nCreate a <link=card.level1><style=AssociatedCard>Jack</style></link> in your deck.",
-    "descriptionRaw": "Deal 2 to a unit. If this kills it, create 2 Coins in hand.\r\nCreate a Jack in your deck.",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "“Nothing ventured, nothing gained--and these jaws are built for ventures.” - Jack",
-    "artistName": "Kudos Productions",
-    "name": "Jack's Risky Venture",
-    "cardCode": "07BW002T1",
-    "keywords": [
-      "Slow"
-    ],
-    "keywordRefs": [
-      "Slow"
-    ],
-    "spellSpeed": "Slow",
-    "spellSpeedRef": "Slow",
-    "rarity": "None",
-    "rarityRef": "None",
-    "subtypes": [],
-    "supertype": "Champion",
-    "type": "Spell",
-    "collectible": false,
-    "set": "Set7",
-    "formats": [
-      "Eternal",
-      "Standard"
-    ],
-    "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [
-      "07BW040T1",
-      "07BW040T2"
-    ],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07BW040.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07BW040-full.png"
-      }
-    ],
-    "regions": [
-      "Bilgewater"
-    ],
-    "regionRefs": [
-      "Bilgewater"
-    ],
-    "attack": 2,
-    "cost": 2,
-    "health": 1,
-    "description": "When I'm summoned, create a <link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>Fleeting</style></link> <link=card.create><style=AssociatedCard>Mako</style></link> in hand.",
-    "descriptionRaw": "When I'm summoned, create a Fleeting Mako in hand.",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "“Little nick ‘ere, little slice there, all in good fun. Bit ‘o blood in the water never hurt anybody. Well, not me anyways.” - Nukkle",
-    "artistName": "Envar Studio",
-    "name": "Nukkle",
-    "cardCode": "07BW040",
-    "keywords": [
-      "Elusive"
-    ],
-    "keywordRefs": [
-      "Elusive"
-    ],
-    "spellSpeed": "",
-    "spellSpeedRef": "",
-    "rarity": "RARE",
-    "rarityRef": "Rare",
-    "subtypes": [],
-    "supertype": "",
-    "type": "Unit",
-    "collectible": true,
-    "set": "Set7",
-    "formats": [
-      "Eternal",
-      "Standard"
-    ],
-    "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07BW001.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07BW001-full.png"
-      }
-    ],
-    "regions": [
-      "Bilgewater"
-    ],
-    "regionRefs": [
-      "Bilgewater"
-    ],
-    "attack": 4,
-    "cost": 4,
-    "health": 4,
-    "description": "When you refill mana, create a <link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>Fleeting</style></link> random follower in hand you can exactly afford.",
-    "descriptionRaw": "When you refill mana, create a Fleeting random follower in hand you can exactly afford.",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "“If you want the crimson, then you want Jack. You wanna know the where, the when, the who, and  how much? You talk to me.”",
-    "artistName": "Envar Studio",
-    "name": "Perfidious Promoter",
-    "cardCode": "07BW001",
-    "keywords": [],
-    "keywordRefs": [],
-    "spellSpeed": "",
-    "spellSpeedRef": "",
-    "rarity": "RARE",
-    "rarityRef": "Rare",
-    "subtypes": [],
-    "supertype": "",
-    "type": "Unit",
-    "collectible": true,
-    "set": "Set7",
-    "formats": [
-      "Eternal",
-      "Standard"
-    ],
-    "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [
-      "07BW040T2"
-    ],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07BW040T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07BW040T1-full.png"
-      }
-    ],
-    "regions": [
-      "Bilgewater"
-    ],
-    "regionRefs": [
-      "Bilgewater"
-    ],
-    "attack": 4,
-    "cost": 4,
-    "health": 4,
-    "description": "When I'm summoned, create a <link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>Fleeting</style></link> <link=card.create><style=AssociatedCard>Bull</style></link> in hand.",
-    "descriptionRaw": "When I'm summoned, create a Fleeting Bull in hand.",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "“You’re a small fish. I’d keep swimming.”",
-    "artistName": "Envar Studio",
-    "name": "Mako",
-    "cardCode": "07BW040T1",
-    "keywords": [
-      "Overwhelm"
-    ],
-    "keywordRefs": [
-      "Overwhelm"
-    ],
-    "spellSpeed": "",
-    "spellSpeedRef": "",
-    "rarity": "None",
-    "rarityRef": "None",
-    "subtypes": [],
-    "supertype": "",
-    "type": "Unit",
-    "collectible": false,
-    "set": "Set7",
-    "formats": [
-      "Eternal",
-      "Standard"
-    ],
-    "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07BW040T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07BW040T2-full.png"
-      }
-    ],
-    "regions": [
-      "Bilgewater"
-    ],
-    "regionRefs": [
-      "Bilgewater"
-    ],
-    "attack": 6,
-    "cost": 6,
-    "health": 6,
-    "description": "When I'm summoned, <link=vocab.Rally><style=Vocab>Rally</style></link>.",
-    "descriptionRaw": "When I'm summoned, Rally.",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "His body a tapestry of scars and ink telling his brutal legend, Bull now serves as mentor and sparring partner to Jack. He's saving that last bit of fighting spirit for an opponent worthy enough to merit one last scrap.",
-    "artistName": "Envar Studio",
-    "name": "Bull",
-    "cardCode": "07BW040T2",
-    "keywords": [
-      "Brash"
-    ],
-    "keywordRefs": [
-      "Brash"
-    ],
-    "spellSpeed": "",
-    "spellSpeedRef": "",
-    "rarity": "None",
-    "rarityRef": "None",
-    "subtypes": [],
-    "supertype": "",
-    "type": "Unit",
-    "collectible": false,
-    "set": "Set7",
-    "formats": [
-      "Eternal",
-      "Standard"
-    ],
-    "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [
-      "07IO011T5"
-    ],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07BW003.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07BW003-full.png"
-      }
-    ],
-    "regions": [
-      "Bilgewater"
-    ],
-    "regionRefs": [
-      "Bilgewater"
-    ],
-    "attack": 2,
-    "cost": 1,
-    "health": 1,
-    "description": "<link=keyword.Last Breath><sprite name=LastBreath><style=Keyword>Last Breath</style></link>: Create a <link=card.create><style=AssociatedCard>Coin</style></link> in hand.\r\n",
-    "descriptionRaw": "Last Breath: Create a Coin in hand.\r\n",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "\"Oi, get back here, slimeball! That's my potato money!\" - Angel",
-    "artistName": "Caravan Studio",
-    "name": "Pocket Picker",
-    "cardCode": "07BW003",
-    "keywords": [
-      "Last Breath"
-    ],
-    "keywordRefs": [
-      "LastBreath"
-    ],
-    "spellSpeed": "",
-    "spellSpeedRef": "",
-    "rarity": "COMMON",
-    "rarityRef": "Common",
-    "subtypes": [],
-    "supertype": "",
-    "type": "Unit",
-    "collectible": true,
-    "set": "Set7",
-    "formats": [
-      "Eternal",
-      "Standard",
-      "Commons Only"
-    ],
-    "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name",
-      "client_Formats_CommonsOnly_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [
-      "07BW008"
-    ],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07BW014.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07BW014-full.png"
-      }
-    ],
-    "regions": [
-      "Bilgewater"
-    ],
-    "regionRefs": [
-      "Bilgewater"
-    ],
-    "attack": 4,
-    "cost": 3,
-    "health": 1,
-    "description": "When I'm summoned, create a <link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>Fleeting</style></link> <link=card.create><style=AssociatedCard>Prize Fight</style></link> in hand.",
-    "descriptionRaw": "When I'm summoned, create a Fleeting Prize Fight in hand.",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "“That’s the way, Jackie Boy! Keep dolin’ out the ol' Bilgewater charm, and I’ll keep ye fightin' fit. Ahh, this reminds me of my golden days, when they used to call me 'Pretty-As-A-Picture Pablo'... They didnae, ye say? They did, too! That knock to yer head must've fouled yer memory.” - Five-Punch Pablo",
-    "artistName": "Envar Studio",
-    "name": "Five-Punch Pablo",
-    "cardCode": "07BW014",
-    "keywords": [
-      "Attune"
-    ],
-    "keywordRefs": [
-      "Attune"
-    ],
-    "spellSpeed": "",
-    "spellSpeedRef": "",
-    "rarity": "COMMON",
-    "rarityRef": "Common",
-    "subtypes": [],
-    "supertype": "",
-    "type": "Unit",
-    "collectible": true,
-    "set": "Set7",
-    "formats": [
-      "Eternal",
-      "Standard",
-      "Commons Only"
-    ],
-    "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name",
-      "client_Formats_CommonsOnly_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07BW013.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07BW013-full.png"
-      }
-    ],
-    "regions": [
-      "Bilgewater"
-    ],
-    "regionRefs": [
-      "Bilgewater"
-    ],
-    "attack": 6,
-    "cost": 5,
-    "health": 5,
-    "description": "",
-    "descriptionRaw": "",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "\"That the best you got? Cute. Now it's my turn.\"",
-    "artistName": "Kudos Productions",
-    "name": "Angel",
-    "cardCode": "07BW013",
-    "keywords": [
-      "Brash"
-    ],
-    "keywordRefs": [
-      "Brash"
-    ],
-    "spellSpeed": "",
-    "spellSpeedRef": "",
-    "rarity": "COMMON",
-    "rarityRef": "Common",
-    "subtypes": [],
-    "supertype": "",
-    "type": "Unit",
-    "collectible": true,
-    "set": "Set7",
-    "formats": [
-      "Eternal",
-      "Standard",
-      "Commons Only"
-    ],
-    "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name",
-      "client_Formats_CommonsOnly_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [
-      "07IO011T5"
-    ],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07BW006.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07BW006-full.png"
-      }
-    ],
-    "regions": [
-      "Bilgewater"
-    ],
-    "regionRefs": [
-      "Bilgewater"
-    ],
-    "attack": 0,
-    "cost": 3,
-    "health": 0,
-    "description": "Deal 2 to a unit. If this kills it, create 2 <link=card.create><style=AssociatedCard>Coins</style></link> in hand.",
-    "descriptionRaw": "Deal 2 to a unit. If this kills it, create 2 Coins in hand.",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "“Nothing ventured, nothing gained--and these jaws are built for ventures.” - Jack",
-    "artistName": "Kudos Productions",
-    "name": "Risky Venture",
-    "cardCode": "07BW006",
-    "keywords": [
-      "Slow"
-    ],
-    "keywordRefs": [
-      "Slow"
-    ],
-    "spellSpeed": "Slow",
-    "spellSpeedRef": "Slow",
-    "rarity": "EPIC",
-    "rarityRef": "Epic",
-    "subtypes": [],
-    "supertype": "",
-    "type": "Spell",
-    "collectible": true,
-    "set": "Set7",
-    "formats": [
-      "Eternal",
-      "Standard"
-    ],
-    "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07BW026.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07BW026-full.png"
-      }
-    ],
-    "regions": [
-      "Bilgewater"
-    ],
-    "regionRefs": [
-      "Bilgewater"
-    ],
-    "attack": 0,
-    "cost": 4,
-    "health": 0,
-    "description": "<link=keyword.Plunder><style=Keyword>Plunder</style></link>: I cost 2 less.\r\nDraw 2 at the next <link=vocab.RoundStart><style=Vocab>Round Start</style></link> and give them <link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>Fleeting</style></link>.",
-    "descriptionRaw": "Plunder: I cost 2 less.\r\nDraw 2 at the next Round Start and give them Fleeting.",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "By the time you hear the rattling, it’s already too late to run.",
-    "artistName": "Kudos Productions",
-    "name": "Barbed Chain",
-    "cardCode": "07BW026",
-    "keywords": [
-      "Burst",
-      "Plunder"
-    ],
-    "keywordRefs": [
-      "Burst",
-      "Plunder"
-    ],
-    "spellSpeed": "Burst",
-    "spellSpeedRef": "Burst",
-    "rarity": "RARE",
-    "rarityRef": "Rare",
-    "subtypes": [],
-    "supertype": "",
-    "type": "Spell",
-    "collectible": true,
-    "set": "Set7",
-    "formats": [
-      "Eternal",
-      "Standard"
-    ],
-    "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07BW027.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07BW027-full.png"
-      }
-    ],
-    "regions": [
-      "Bilgewater"
-    ],
-    "regionRefs": [
-      "Bilgewater"
-    ],
-    "attack": 2,
-    "cost": 2,
-    "health": 1,
-    "description": "<link=keyword.Plunder><style=Keyword>Plunder</style></link>: Refill 1 spell mana and create a random 1 cost spell from your regions in hand.",
-    "descriptionRaw": "Plunder: Refill 1 spell mana and create a random 1 cost spell from your regions in hand.",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "Father Fury's origins are as thick as a thundercloud, and even when they've asked, no one's ever heard a straight answer--at least, not one they could hear over the din of his destruction.",
-    "artistName": "Kudos Productions",
-    "name": "Father Fury",
-    "cardCode": "07BW027",
-    "keywords": [
-      "Plunder",
-      "Elusive"
-    ],
-    "keywordRefs": [
-      "Plunder",
-      "Elusive"
-    ],
-    "spellSpeed": "",
-    "spellSpeedRef": "",
-    "rarity": "RARE",
-    "rarityRef": "Rare",
-    "subtypes": [],
-    "supertype": "",
-    "type": "Unit",
-    "collectible": true,
-    "set": "Set7",
-    "formats": [
-      "Eternal",
-      "Standard"
-    ],
-    "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07BW008.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07BW008-full.png"
-      }
-    ],
-    "regions": [
-      "Bilgewater"
-    ],
-    "regionRefs": [
-      "Bilgewater"
-    ],
-    "attack": 0,
-    "cost": 1,
-    "health": 0,
-    "description": "An ally and an enemy <link=vocab.Strike><style=Vocab>strike</style></link> each other. They can't drop below 1 Health from this <link=vocab.Strike><style=Vocab>strike</style></link>.",
-    "descriptionRaw": "An ally and an enemy strike each other. They can't drop below 1 Health from this strike.",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "Sometimes you trade in coin and lamp oil, and sometimes you trade in knuckles and teeth. That’s just the way it is, but an even exchange? That’s good business!",
-    "artistName": "Kudos Productions",
-    "name": "Prize Fight",
-    "cardCode": "07BW008",
-    "keywords": [
-      "Fast"
-    ],
-    "keywordRefs": [
-      "Fast"
-    ],
-    "spellSpeed": "Fast",
-    "spellSpeedRef": "Fast",
-    "rarity": "COMMON",
-    "rarityRef": "Common",
-    "subtypes": [],
-    "supertype": "",
-    "type": "Spell",
-    "collectible": true,
-    "set": "Set7",
-    "formats": [
-      "Eternal",
-      "Standard",
-      "Commons Only"
-    ],
-    "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name",
-      "client_Formats_CommonsOnly_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [
-      "07IO011T5"
-    ],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07BW041.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07BW041-full.png"
-      }
-    ],
-    "regions": [
-      "Bilgewater"
-    ],
-    "regionRefs": [
-      "Bilgewater"
-    ],
-    "attack": 0,
-    "cost": 2,
-    "health": 0,
-    "description": "<link=vocab.Strike><style=Vocab>Strike</style></link>: Create a <link=card.create><style=AssociatedCard>Coin</style></link> in hand.",
-    "descriptionRaw": "Strike: Create a Coin in hand.",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "“Hmmm, now I know they’re not the most traditional piece of kit, yeah I’ll grant you that. But do give ‘em a try, they really grow on ya.” - Bull",
-    "artistName": "Kudos Productions",
-    "name": "Barknuckles",
-    "cardCode": "07BW041",
-    "keywords": [
-      "Equipment",
-      "Brash"
-    ],
-    "keywordRefs": [
-      "Equipment",
-      "Brash"
-    ],
-    "spellSpeed": "",
-    "spellSpeedRef": "",
-    "rarity": "RARE",
-    "rarityRef": "Rare",
-    "subtypes": [],
-    "supertype": "",
-    "type": "Equipment",
-    "collectible": true,
-    "set": "Set7",
-    "formats": [
-      "Eternal",
-      "Standard"
-    ],
-    "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [
-      "07BW008"
-    ],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07BW004.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07BW004-full.png"
-      }
-    ],
-    "regions": [
-      "Bilgewater"
-    ],
-    "regionRefs": [
-      "Bilgewater"
-    ],
-    "attack": 7,
-    "cost": 7,
-    "health": 5,
-    "description": "When you summon an ally, create a <link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>Fleeting</style></link> <link=card.create><style=AssociatedCard>Prize Fight</style></link> in hand.\r\nWhen an ally survives damage, grant it <link=keyword.Brash><sprite name=Brash><style=Keyword>Brash</style></link>.",
-    "descriptionRaw": "When you summon an ally, create a Fleeting Prize Fight in hand.\r\nWhen an ally survives damage, grant it Brash.",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "Jack’s personal vessel has borne him and his ilk across Runeterra's waters, from Bilgewater to Ionia. How it travels underneath the water without sinking is anyone’s guess, but it’s been said that beneath the surface is where the real danger lies...",
-    "artistName": "Envar Studio",
-    "name": "The King's Court",
-    "cardCode": "07BW004",
-    "keywords": [
-      "Attune",
-      "Brash"
-    ],
-    "keywordRefs": [
-      "Attune",
-      "Brash"
-    ],
-    "spellSpeed": "",
-    "spellSpeedRef": "",
-    "rarity": "EPIC",
-    "rarityRef": "Epic",
-    "subtypes": [],
-    "supertype": "",
-    "type": "Unit",
-    "collectible": true,
-    "set": "Set7",
-    "formats": [
-      "Eternal",
-      "Standard"
-    ],
-    "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
-    ]
-  },
-  {
-    "associatedCards": [],
-    "associatedCardRefs": [],
-    "assets": [
-      {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07BW025.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07BW025-full.png"
-      }
-    ],
-    "regions": [
-      "Bilgewater"
-    ],
-    "regionRefs": [
-      "Bilgewater"
-    ],
-    "attack": 1,
-    "cost": 4,
-    "health": 4,
-    "description": "When you activate <link=keyword.Plunder><style=Keyword>Plunder</style></link>, draw 1 and give it <link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>Fleeting</style></link>.",
-    "descriptionRaw": "When you activate Plunder, draw 1 and give it Fleeting.",
-    "levelupDescription": "",
-    "levelupDescriptionRaw": "",
-    "flavorText": "“There are certain advantages to being a pyromaniac at sea. Water  doesn’t let a flame get outta hand, and it never asks for a cut.”",
-    "artistName": "Kudos Productions",
-    "name": "Inferna",
-    "cardCode": "07BW025",
-    "keywords": [
-      "Elusive"
-    ],
-    "keywordRefs": [
-      "Elusive"
-    ],
-    "spellSpeed": "",
-    "spellSpeedRef": "",
-    "rarity": "RARE",
-    "rarityRef": "Rare",
-    "subtypes": [],
-    "supertype": "",
-    "type": "Unit",
-    "collectible": true,
-    "set": "Set7",
-    "formats": [
       "Eternal",
       "Standard"
     ],
@@ -3164,8 +3095,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07FR008.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07FR008-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07FR008.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07FR008-full.png"
       }
     ],
     "regions": [
@@ -3200,13 +3131,11 @@
     "set": "Set7",
     "formats": [
       "Eternal",
-      "Standard",
-      "Commons Only"
+      "Standard"
     ],
     "formatRefs": [
       "client_Formats_Eternal_name",
-      "client_Formats_Standard_name",
-      "client_Formats_CommonsOnly_name"
+      "client_Formats_Standard_name"
     ]
   },
   {
@@ -3214,8 +3143,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07FR009.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07FR009-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07FR009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07FR009-full.png"
       }
     ],
     "regions": [
@@ -3224,7 +3153,7 @@
     "regionRefs": [
       "Freljord"
     ],
-    "attack": 2,
+    "attack": 1,
     "cost": 3,
     "health": 2,
     "description": "When I'm summoned, I <link=vocab.Improvise><style=Vocab>Improvise</style></link>.\r\nEach round, the first time you <link=vocab.Forge><style=Vocab>Forge</style></link> or <link=vocab.Equip><style=Vocab>Equip</style></link> an ally, heal your Nexus 1.",
@@ -3249,12 +3178,10 @@
     "collectible": true,
     "set": "Set7",
     "formats": [
-      "Eternal",
-      "Standard"
+      "Eternal"
     ],
     "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
+      "client_Formats_Eternal_name"
     ]
   },
   {
@@ -3264,8 +3191,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07FR008T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07FR008T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07FR008T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07FR008T2-full.png"
       }
     ],
     "regions": [
@@ -3314,8 +3241,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07FR008T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07FR008T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07FR008T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07FR008T1-full.png"
       }
     ],
     "regions": [
@@ -3366,8 +3293,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07FR005.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07FR005-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07FR005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07FR005-full.png"
       }
     ],
     "regions": [
@@ -3379,8 +3306,8 @@
     "attack": 3,
     "cost": 3,
     "health": 4,
-    "description": "I don't take damage from allied spells or skills.",
-    "descriptionRaw": "I don't take damage from allied spells or skills.",
+    "description": "I don't take damage from allied spells or <link=keyword.Skill><sprite name=SkillMark><style=Keyword>Skills</style></link>.",
+    "descriptionRaw": "I don't take damage from allied spells or Skills.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "“The avalanche, once begun, cannot be stopped.” - Lissandra",
@@ -3412,8 +3339,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07SI002.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07SI002-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07SI002.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07SI002-full.png"
       }
     ],
     "regions": [
@@ -3462,8 +3389,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07SI002T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07SI002T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07SI002T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07SI002T2-full.png"
       }
     ],
     "regions": [
@@ -3512,8 +3439,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07SI002T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07SI002T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07SI002T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07SI002T1-full.png"
       }
     ],
     "regions": [
@@ -3562,8 +3489,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07SI001.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07SI001-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07SI001.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07SI001-full.png"
       }
     ],
     "regions": [
@@ -3573,7 +3500,7 @@
       "ShadowIsles"
     ],
     "attack": 0,
-    "cost": 6,
+    "cost": 5,
     "health": 0,
     "description": "Kill ALL units with 3 or less Power.",
     "descriptionRaw": "Kill ALL units with 3 or less Power.",
@@ -3612,8 +3539,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07SI007.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07SI007-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07SI007.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07SI007-full.png"
       }
     ],
     "regions": [
@@ -3648,13 +3575,11 @@
     "set": "Set7",
     "formats": [
       "Eternal",
-      "Standard",
-      "Commons Only"
+      "Standard"
     ],
     "formatRefs": [
       "client_Formats_Eternal_name",
-      "client_Formats_Standard_name",
-      "client_Formats_CommonsOnly_name"
+      "client_Formats_Standard_name"
     ]
   },
   {
@@ -3662,8 +3587,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07MT003.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07MT003-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07MT003.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07MT003-full.png"
       }
     ],
     "regions": [
@@ -3708,8 +3633,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07MT001.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07MT001-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07MT001.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07MT001-full.png"
       }
     ],
     "regions": [
@@ -3746,13 +3671,11 @@
     "set": "Set7",
     "formats": [
       "Eternal",
-      "Standard",
-      "Commons Only"
+      "Standard"
     ],
     "formatRefs": [
       "client_Formats_Eternal_name",
-      "client_Formats_Standard_name",
-      "client_Formats_CommonsOnly_name"
+      "client_Formats_Standard_name"
     ]
   },
   {
@@ -3760,8 +3683,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07MT007.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07MT007-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07MT007.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07MT007-full.png"
       }
     ],
     "regions": [
@@ -3797,12 +3720,10 @@
     "collectible": true,
     "set": "Set7",
     "formats": [
-      "Eternal",
-      "Standard"
+      "Eternal"
     ],
     "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
+      "client_Formats_Eternal_name"
     ]
   },
   {
@@ -3810,8 +3731,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07BC005.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07BC005-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07BC005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07BC005-full.png"
       }
     ],
     "regions": [
@@ -3852,13 +3773,11 @@
     "set": "Set7",
     "formats": [
       "Eternal",
-      "Standard",
-      "Commons Only"
+      "Standard"
     ],
     "formatRefs": [
       "client_Formats_Eternal_name",
-      "client_Formats_Standard_name",
-      "client_Formats_CommonsOnly_name"
+      "client_Formats_Standard_name"
     ]
   },
   {
@@ -3868,8 +3787,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07BC009.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07BC009-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07BC009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07BC009-full.png"
       }
     ],
     "regions": [
@@ -3906,13 +3825,11 @@
     "set": "Set7",
     "formats": [
       "Eternal",
-      "Standard",
-      "Commons Only"
+      "Standard"
     ],
     "formatRefs": [
       "client_Formats_Eternal_name",
-      "client_Formats_Standard_name",
-      "client_Formats_CommonsOnly_name"
+      "client_Formats_Standard_name"
     ]
   },
   {
@@ -3920,8 +3837,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07BC009T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07BC009T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07BC009T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07BC009T1-full.png"
       }
     ],
     "regions": [
@@ -3970,8 +3887,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07BC015.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07BC015-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07BC015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07BC015-full.png"
       }
     ],
     "regions": [
@@ -3981,7 +3898,7 @@
       "BandleCity"
     ],
     "attack": 0,
-    "cost": 2,
+    "cost": 3,
     "health": 0,
     "description": "Pick a follower. Create a 1 cost copy of it in hand and set its stats to 1|1.",
     "descriptionRaw": "Pick a follower. Create a 1 cost copy of it in hand and set its stats to 1|1.",
@@ -4020,8 +3937,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07DE002.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07DE002-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07DE002.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07DE002-full.png"
       }
     ],
     "regions": [
@@ -4057,12 +3974,10 @@
     "collectible": true,
     "set": "Set7",
     "formats": [
-      "Eternal",
-      "Standard"
+      "Eternal"
     ],
     "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
+      "client_Formats_Eternal_name"
     ]
   },
   {
@@ -4070,8 +3985,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07DE005.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07DE005-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07DE005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07DE005-full.png"
       }
     ],
     "regions": [
@@ -4108,13 +4023,11 @@
     "set": "Set7",
     "formats": [
       "Eternal",
-      "Standard",
-      "Commons Only"
+      "Standard"
     ],
     "formatRefs": [
       "client_Formats_Eternal_name",
-      "client_Formats_Standard_name",
-      "client_Formats_CommonsOnly_name"
+      "client_Formats_Standard_name"
     ]
   },
   {
@@ -4122,8 +4035,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07DE002T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07DE002T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07DE002T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07DE002T1-full.png"
       }
     ],
     "regions": [
@@ -4172,8 +4085,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07DE002T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07DE002T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07DE002T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07DE002T2-full.png"
       }
     ],
     "regions": [
@@ -4222,8 +4135,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07DE008.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/4_6_0/set7/en_us/img/cards/07DE008-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07DE008.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set7/en_us/img/cards/07DE008-full.png"
       }
     ],
     "regions": [

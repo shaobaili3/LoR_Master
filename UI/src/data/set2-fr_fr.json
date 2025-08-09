@@ -4,8 +4,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02PZ001.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02PZ001-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02PZ001.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02PZ001-full.png"
       }
     ],
     "regions": [
@@ -56,8 +56,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02PZ010.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02PZ010-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02PZ010.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02PZ010-full.png"
       }
     ],
     "regions": [
@@ -91,14 +91,10 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Communes uniquement",
-      "Éternel",
-      "Classique"
+      "Éternel"
     ],
     "formatRefs": [
-      "client_Formats_CommonsOnly_name",
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
+      "client_Formats_Eternal_name"
     ]
   },
   {
@@ -106,8 +102,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02PZ006.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02PZ006-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02PZ006.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02PZ006-full.png"
       }
     ],
     "regions": [
@@ -143,12 +139,10 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Communes uniquement",
       "Éternel",
       "Classique"
     ],
     "formatRefs": [
-      "client_Formats_CommonsOnly_name",
       "client_Formats_Eternal_name",
       "client_Formats_Standard_name"
     ]
@@ -158,8 +152,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02PZ004.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02PZ004-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02PZ004.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02PZ004-full.png"
       }
     ],
     "regions": [
@@ -175,7 +169,7 @@
     "descriptionRaw": "Conférez +2|+0 à un allié pour ce round.\r\nCréez 1 Brise-coffre fugace dans votre main.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "«<nbsp>Je vais laisser mes poings parler.<nbsp>» -<nbsp>Vi",
+    "flavorText": "« Je vais laisser mes poings parler. »<br>- Vi",
     "artistName": "Kudos Productions",
     "name": "Brise-coffre",
     "cardCode": "02PZ004",
@@ -195,10 +189,12 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Éternel"
+      "Éternel",
+      "Classique"
     ],
     "formatRefs": [
-      "client_Formats_Eternal_name"
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
     ]
   },
   {
@@ -206,8 +202,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02PZ007.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02PZ007-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02PZ007.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02PZ007-full.png"
       }
     ],
     "regions": [
@@ -223,7 +219,7 @@
     "descriptionRaw": "Quand vous jouez une carte d'un coût de 2, piochez 1 carte et rendez-la fugace.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "«<nbsp>Tous les policiers doivent pouvoir répondre à la situation, mais un bon policier l'anticipe. Un policier exemplaire, lui, l'empêche d'arriver.<nbsp>» -<nbsp>Le guide des Patrouilleurs",
+    "flavorText": "« Tous les policiers doivent pouvoir répondre à la situation, mais un bon policier l'anticipe. Un policier exemplaire, lui, l'empêche d'arriver. »<br>- Le guide des Patrouilleurs",
     "artistName": "SIXMOREVODKA",
     "name": "Jeune enquêtrice",
     "cardCode": "02PZ007",
@@ -239,10 +235,12 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Éternel"
+      "Éternel",
+      "Classique"
     ],
     "formatRefs": [
-      "client_Formats_Eternal_name"
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
     ]
   },
   {
@@ -250,8 +248,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02PZ002.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02PZ002-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02PZ002.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02PZ002-full.png"
       }
     ],
     "regions": [
@@ -299,8 +297,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02PZ008.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02PZ008-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02PZ008.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02PZ008-full.png"
       }
     ],
     "regions": [
@@ -316,7 +314,7 @@
     "descriptionRaw": "Quand vous jouez une autre carte alors que je suis en jeu ou dans votre main, octroyez-moi +1|+0 (max +8|+0). ",
     "levelupDescription": "J'ai <link=vocab.Strike><style=Vocab>frappé</style></link> et infligé au moins 10 pts de dégâts en une même <link=vocab.Strike><style=Vocab>frappe</style></link>.",
     "levelupDescriptionRaw": "J'ai frappé et infligé au moins 10 pts de dégâts en une même frappe.",
-    "flavorText": "«<nbsp>Vi, s'il vous plaît<nbsp>! Pensez aux citoyens<nbsp>! Aux dommages collatéraux<nbsp>! ET À LA PAPERASSE QUI EN DÉCOULE, BON SANG<nbsp>!<nbsp>» -<nbsp>Jeune enquêtrice",
+    "flavorText": "« Vi, s'il vous plaît ! Pensez aux citoyens ! Aux dommages collatéraux ! ET À LA PAPERASSE QUI EN DÉCOULE, BON SANG ! »<br>- Jeune enquêtrice",
     "artistName": "SIXMOREVODKA",
     "name": "Vi",
     "cardCode": "02PZ008",
@@ -338,12 +336,12 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Communes uniquement",
-      "Éternel"
+      "Éternel",
+      "Classique"
     ],
     "formatRefs": [
-      "client_Formats_CommonsOnly_name",
-      "client_Formats_Eternal_name"
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
     ]
   },
   {
@@ -351,8 +349,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02PZ009.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02PZ009-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02PZ009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02PZ009-full.png"
       }
     ],
     "regions": [
@@ -364,8 +362,8 @@
     "attack": 0,
     "cost": 2,
     "health": 0,
-    "description": "Créez dans votre main une carte aléatoire d'un coût de 2 provenant de l'une de vos régions. Son coût est de 0 pour ce round.",
-    "descriptionRaw": "Créez dans votre main une carte aléatoire d'un coût de 2 provenant de l'une de vos régions. Son coût est de 0 pour ce round.",
+    "description": "Créez dans votre main une carte aléatoire d'un coût de 2 provenant de l'une de vos régions. Son coût est réduit de 2 pour ce round.",
+    "descriptionRaw": "Créez dans votre main une carte aléatoire d'un coût de 2 provenant de l'une de vos régions. Son coût est réduit de 2 pour ce round.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "«<nbsp>C'est pourquoi,<nbsp>» annonça l'officier Harknor, «<nbsp>la piste nous mène droit vers...<nbsp>»",
@@ -388,12 +386,12 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Communes uniquement",
-      "Éternel"
+      "Éternel",
+      "Classique"
     ],
     "formatRefs": [
-      "client_Formats_CommonsOnly_name",
-      "client_Formats_Eternal_name"
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
     ]
   },
   {
@@ -401,8 +399,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02PZ003.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02PZ003-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02PZ003.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02PZ003-full.png"
       }
     ],
     "regions": [
@@ -418,7 +416,7 @@
     "descriptionRaw": "Quand vous me piochez, mon coût est réduit de 2 pour ce round.\r\nRenforcez les stats d'un allié jusqu'à 4|4.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "«<nbsp>On a un problème sur les docks<nbsp>! Prenez ça et passez-leur mes amitiés.<nbsp>» -<nbsp>Chef mécanicien Zevi",
+    "flavorText": "« On a un problème sur les docks ! Prenez ça et passez-leur mes amitiés. »<br>- Chef mécanicien Zevi",
     "artistName": "Kudos Productions",
     "name": "Équipement !",
     "cardCode": "02PZ003",
@@ -438,10 +436,12 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Éternel"
+      "Éternel",
+      "Classique"
     ],
     "formatRefs": [
-      "client_Formats_Eternal_name"
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
     ]
   },
   {
@@ -452,8 +452,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02PZ008T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02PZ008T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02PZ008T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02PZ008T2-full.png"
       }
     ],
     "regions": [
@@ -507,8 +507,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02PZ008T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02PZ008T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02PZ008T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02PZ008T1-full.png"
       }
     ],
     "regions": [
@@ -524,7 +524,7 @@
     "descriptionRaw": "Conférez +2|+0 à un allié pour ce round.\r\nCréez 1 Brise-coffre fugace dans votre main.\r\nCréez 1 Vi dans votre deck.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "«<nbsp>Je vais laisser mes poings parler.<nbsp>» -<nbsp>Vi",
+    "flavorText": "« Je vais laisser mes poings parler. »<br>- Vi",
     "artistName": "Kudos Productions",
     "name": "Brise-coffre de Vi",
     "cardCode": "02PZ008T1",
@@ -557,8 +557,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02PZ005.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02PZ005-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02PZ005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02PZ005-full.png"
       }
     ],
     "regions": [
@@ -590,11 +590,9 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Communes uniquement",
       "Éternel"
     ],
     "formatRefs": [
-      "client_Formats_CommonsOnly_name",
       "client_Formats_Eternal_name"
     ]
   },
@@ -603,8 +601,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW040.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW040-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW040.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW040-full.png"
       }
     ],
     "regions": [
@@ -620,7 +618,7 @@
     "descriptionRaw": "",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "«<nbsp>MON GRO POING FAUR, SES DE SAVOUAR GUIDÉ LÉ JENS DU PETI PEUPLE. ON DI AUSSY QUE MON ORTAUGRAF É INPEKABLE.<nbsp>» -<nbsp>Message inscrit dans le sable",
+    "flavorText": "« MON GRO POING FAUR, SES DE SAVOUAR GUIDÉ LÉ JENS DU PETI PEUPLE. ON DI AUSSY QUE MON ORTAUGRAF É INPEKABLE. »<br>- Message inscrit dans le sable",
     "artistName": "Kudos Productions",
     "name": "Tortues tordues ",
     "cardCode": "02BW040",
@@ -640,12 +638,10 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Communes uniquement",
       "Éternel",
       "Classique"
     ],
     "formatRefs": [
-      "client_Formats_CommonsOnly_name",
       "client_Formats_Eternal_name",
       "client_Formats_Standard_name"
     ]
@@ -655,8 +651,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW057.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW057-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW057.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW057-full.png"
       }
     ],
     "regions": [
@@ -672,7 +668,7 @@
     "descriptionRaw": "",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "«<nbsp>Je vous jure que j'ai vu des choses bien étranges, par-delà le récif, capitaine. Je voudrais bien savoir ce que ce crétin a mis dans nos oranges...<nbsp>» -<nbsp>Officier mesquin",
+    "flavorText": "« Je vous jure que j'ai vu des choses bien étranges, par-delà le récif, capitaine. Je voudrais bien savoir ce que ce crétin a mis dans nos oranges... »<br>- Officier mesquin",
     "artistName": "Kudos Productions",
     "name": "Barboteur des profondeurs",
     "cardCode": "02BW057",
@@ -694,12 +690,10 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Communes uniquement",
       "Éternel",
       "Classique"
     ],
     "formatRefs": [
-      "client_Formats_CommonsOnly_name",
       "client_Formats_Eternal_name",
       "client_Formats_Standard_name"
     ]
@@ -709,8 +703,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW041.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW041-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW041.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW041-full.png"
       }
     ],
     "regions": [
@@ -726,7 +720,7 @@
     "descriptionRaw": "",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "«<nbsp>Ne craignez pas la bête proche de vous.\nCar certains survivent à ses assauts,\nMais qu'en est-il de ceux qui brisent la proue,\nEt voient leurs âmes couler par le fond<nbsp>?<nbsp>» -<nbsp>Note égratignée sur la poutre d'une taverne de Bilgewater",
+    "flavorText": "« Ne craignez pas la bête proche de vous.\nCar certains survivent à ses assauts,\nMais qu'en est-il de ceux qui brisent la proue,\nEt voient leurs âmes couler par le fond ? »<br>- Note égratignée sur la poutre d'une taverne de Bilgewater",
     "artistName": "SIXMOREVODKA",
     "name": "Bête des profondeurs",
     "cardCode": "02BW041",
@@ -748,12 +742,10 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Communes uniquement",
       "Éternel",
       "Classique"
     ],
     "formatRefs": [
-      "client_Formats_CommonsOnly_name",
       "client_Formats_Eternal_name",
       "client_Formats_Standard_name"
     ]
@@ -763,8 +755,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW013.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW013-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW013.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW013-full.png"
       }
     ],
     "regions": [
@@ -802,11 +794,9 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Communes uniquement",
       "Éternel"
     ],
     "formatRefs": [
-      "client_Formats_CommonsOnly_name",
       "client_Formats_Eternal_name"
     ]
   },
@@ -817,8 +807,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW034.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW034-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW034.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW034-full.png"
       }
     ],
     "regions": [
@@ -834,7 +824,7 @@
     "descriptionRaw": "Début du round : infligez-moi 2 pt(s) de dégâts et invoquez 1 Tamarin d'eau douce.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "«<nbsp>C'est un vieux souvenir... Mes gars l'ont piqué à l'un de mes anciens rivaux. Ce vieux fou n'arrêtait pas de parler d'un pouvoir mystérieux et antique... Il n'était peut-être pas si fou que ça...<nbsp>» -<nbsp>Miss Fortune",
+    "flavorText": "« C'est un vieux souvenir... Mes gars l'ont piqué à l'un de mes anciens rivaux. Ce vieux fou n'arrêtait pas de parler d'un pouvoir mystérieux et antique... Il n'était peut-être pas si fou que ça... »<br>- Miss Fortune",
     "artistName": "Kudos Productions",
     "name": "Idole simiesque",
     "cardCode": "02BW034",
@@ -865,8 +855,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW034T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW034T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW034T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW034T1-full.png"
       }
     ],
     "regions": [
@@ -919,8 +909,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW056.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW056-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW056.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW056-full.png"
       }
     ],
     "regions": [
@@ -936,7 +926,7 @@
     "descriptionRaw": "Immédiat : oblitérez un ennemi qui a moins de PV que moi.\r\n",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "«<nbsp>L'autre jour, je naviguais,\nJe quittais Bilgewater par la grande baie,\nQuand, tout droit venue des abysses, elle vint me rencontrer,\nLa Noyée aux oreilles ailées...<nbsp>» -<nbsp>«<nbsp>Ballade de la Noyée aux oreilles ailées<nbsp>»",
+    "flavorText": "« L'autre jour, je naviguais,\nJe quittais Bilgewater par la grande baie,\nQuand, tout droit venue des abysses, elle vint me rencontrer,\nLa Noyée aux oreilles ailées... »<br>- « Ballade de la Noyée aux oreilles ailées »",
     "artistName": "Kudos Productions",
     "name": "Dévoreur des profondeurs",
     "cardCode": "02BW056",
@@ -971,8 +961,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW056T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW056T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW056T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW056T1-full.png"
       }
     ],
     "regions": [
@@ -988,7 +978,7 @@
     "descriptionRaw": "Oblitérez un ennemi qui a moins de PV que moi.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "«<nbsp>Elle m'a englouti tout entier, navire et âme ont chaviré,\nAlors, au creux de son ventre, je continue à chanter,\nEt j'attends, j'attends ma destinée,\nDans l'antre de la Noyée aux oreilles ailées.<nbsp>» -<nbsp>«<nbsp>Ballade de la Noyée aux oreilles ailées<nbsp>»",
+    "flavorText": "« Elle m'a englouti tout entier, navire et âme ont chaviré,\nAlors, au creux de son ventre, je continue à chanter,\nEt j'attends, j'attends ma destinée,\nDans l'antre de la Noyée aux oreilles ailées. »<br>- « Ballade de la Noyée aux oreilles ailées »",
     "artistName": "Kudos Productions",
     "name": "Dévoration",
     "cardCode": "02BW056T1",
@@ -1023,8 +1013,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW060.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW060-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW060.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW060-full.png"
       }
     ],
     "regions": [
@@ -1058,14 +1048,10 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Communes uniquement",
-      "Éternel",
-      "Classique"
+      "Éternel"
     ],
     "formatRefs": [
-      "client_Formats_CommonsOnly_name",
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
+      "client_Formats_Eternal_name"
     ]
   },
   {
@@ -1075,8 +1061,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW011.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW011-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW011.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW011-full.png"
       }
     ],
     "regions": [
@@ -1110,10 +1096,12 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Éternel"
+      "Éternel",
+      "Classique"
     ],
     "formatRefs": [
-      "client_Formats_Eternal_name"
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
     ]
   },
   {
@@ -1126,8 +1114,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW030.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW030-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW030.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW030-full.png"
       }
     ],
     "regions": [
@@ -1143,7 +1131,7 @@
     "descriptionRaw": "Quand je suis invoqué, jetez 2 cartes puis créez 2 trésors dans votre deck.\r\n",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "«<nbsp>Ces derniers temps, il y a plus de butin sous l'eau que dans les cales, pour sûr. Il y aurait de quoi être plein aux as, mais tant qu'elle rôde...<nbsp>» -<nbsp>Bourreau pas commode",
+    "flavorText": "« Ces derniers temps, il y a plus de butin sous l'eau que dans les cales, pour sûr. Il y aurait de quoi être plein aux as, mais tant qu'elle rôde... »<br>- Bourreau pas commode",
     "artistName": "Kudos Productions",
     "name": "Gardien des naufragés",
     "cardCode": "02BW030",
@@ -1178,8 +1166,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW030T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW030T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW030T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW030T2-full.png"
       }
     ],
     "regions": [
@@ -1230,8 +1218,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW030T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW030T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW030T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW030T1-full.png"
       }
     ],
     "regions": [
@@ -1282,8 +1270,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW030T4.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW030T4-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW030T4.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW030T4-full.png"
       }
     ],
     "regions": [
@@ -1338,8 +1326,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW030T3.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW030T3-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW030T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW030T3-full.png"
       }
     ],
     "regions": [
@@ -1390,8 +1378,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW019.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW019-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW019.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW019-full.png"
       }
     ],
     "regions": [
@@ -1429,11 +1417,9 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Communes uniquement",
       "Éternel"
     ],
     "formatRefs": [
-      "client_Formats_CommonsOnly_name",
       "client_Formats_Eternal_name"
     ]
   },
@@ -1442,8 +1428,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW007.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW007-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW007.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW007-full.png"
       }
     ],
     "regions": [
@@ -1492,8 +1478,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW014.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW014-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW014.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW014-full.png"
       }
     ],
     "regions": [
@@ -1542,8 +1528,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW055.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW055-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW055.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW055-full.png"
       }
     ],
     "regions": [
@@ -1592,8 +1578,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW017.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW017-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW017.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW017-full.png"
       }
     ],
     "regions": [
@@ -1629,12 +1615,10 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Éternel",
-      "Classique"
+      "Éternel"
     ],
     "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
+      "client_Formats_Eternal_name"
     ]
   },
   {
@@ -1642,8 +1626,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW038.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW038-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW038.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW038-full.png"
       }
     ],
     "regions": [
@@ -1692,8 +1676,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW021.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW021-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW021.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW021-full.png"
       }
     ],
     "regions": [
@@ -1709,7 +1693,7 @@
     "descriptionRaw": "Immédiat : octroyez Vulnérabilité à un ennemi.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "«<nbsp>J'ai entendu dire qu'il peut traverser des océans à la nage pour trouver sa cible, et qu'il ne manque jamais son tir. Je ne sais pas si c'est un homme ou un poisson, mais pour sûr, il connaît ces eaux bien mieux que nous.<nbsp>» -<nbsp>Bourreau pas commode",
+    "flavorText": "« J'ai entendu dire qu'il peut traverser des océans à la nage pour trouver sa cible, et qu'il ne manque jamais son tir. Je ne sais pas si c'est un homme ou un poisson, mais pour sûr, il connaît ces eaux bien mieux que nous. »<br>- Bourreau pas commode",
     "artistName": "Alex Heath",
     "name": "Chasseur écailles-rasoir",
     "cardCode": "02BW021",
@@ -1729,12 +1713,10 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Éternel",
-      "Classique"
+      "Éternel"
     ],
     "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
+      "client_Formats_Eternal_name"
     ]
   },
   {
@@ -1742,8 +1724,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW035.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW035-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW035.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW035-full.png"
       }
     ],
     "regions": [
@@ -1788,8 +1770,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW058.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW058-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW058.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW058-full.png"
       }
     ],
     "regions": [
@@ -1825,14 +1807,10 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Communes uniquement",
-      "Éternel",
-      "Classique"
+      "Éternel"
     ],
     "formatRefs": [
-      "client_Formats_CommonsOnly_name",
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
+      "client_Formats_Eternal_name"
     ]
   },
   {
@@ -1842,8 +1820,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW028.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW028-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW028.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW028-full.png"
       }
     ],
     "regions": [
@@ -1859,7 +1837,7 @@
     "descriptionRaw": "Pillage : lancez 7x Tir de barrage sur des ennemis ciblés aléatoirement.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "«<nbsp>Par-delà les marins, par-delà les épaves, naviguez,\nCar la bataille est terminée.\nLa fumée s'est dissipée, leur capitaine est face à Rex,\nEt leur navire, réduit en miettes<nbsp>» -<nbsp>«<nbsp>Avec toi, Sally<nbsp>»",
+    "flavorText": "« Par-delà les marins, par-delà les épaves, naviguez,\nCar la bataille est terminée.\nLa fumée s'est dissipée, leur capitaine est face à Rex,\nEt leur navire, réduit en miettes »<br>- « Avec toi, Sally »",
     "artistName": "MAR Studio",
     "name": "Grand méchant Rex",
     "cardCode": "02BW028",
@@ -1892,8 +1870,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW028T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW028T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW028T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW028T1-full.png"
       }
     ],
     "regions": [
@@ -1942,8 +1920,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW037.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW037-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW037.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW037-full.png"
       }
     ],
     "regions": [
@@ -1959,7 +1937,7 @@
     "descriptionRaw": "Frappe du Nexus : piochez une carte.\r\n",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "«<nbsp>Oyé oyé, ils voguèrent vers d'autres contrées,\nIls mirent voile vers la cité de Nashramae,\nMais la nature, par vengeance, enragea l'océan,\nEt les rares survivants se trouvèrent devant l'œil clairvoyant<nbsp>!<nbsp>» -<nbsp>«<nbsp>L'Œil clairvoyant<nbsp>»",
+    "flavorText": "« Oyé oyé, ils voguèrent vers d'autres contrées,\nIls mirent voile vers la cité de Nashramae,\nMais la nature, par vengeance, enragea l'océan,\nEt les rares survivants se trouvèrent devant l'œil clairvoyant ! »<br>- « L'Œil clairvoyant »",
     "artistName": "Kudos Productions",
     "name": "Regard des profondeurs",
     "cardCode": "02BW037",
@@ -1998,8 +1976,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW008.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW008-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW008.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW008-full.png"
       }
     ],
     "regions": [
@@ -2048,8 +2026,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW008T02.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW008T02-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW008T02.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW008T02-full.png"
       }
     ],
     "regions": [
@@ -2098,8 +2076,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW008T01.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW008T01-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW008T01.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW008T01-full.png"
       }
     ],
     "regions": [
@@ -2146,8 +2124,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW047.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW047-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW047.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW047-full.png"
       }
     ],
     "regions": [
@@ -2179,12 +2157,10 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Communes uniquement",
       "Éternel",
       "Classique"
     ],
     "formatRefs": [
-      "client_Formats_CommonsOnly_name",
       "client_Formats_Eternal_name",
       "client_Formats_Standard_name"
     ]
@@ -2196,8 +2172,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW004.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW004-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW004.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW004-full.png"
       }
     ],
     "regions": [
@@ -2229,12 +2205,10 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Communes uniquement",
       "Éternel",
       "Classique"
     ],
     "formatRefs": [
-      "client_Formats_CommonsOnly_name",
       "client_Formats_Eternal_name",
       "client_Formats_Standard_name"
     ]
@@ -2246,8 +2220,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW002.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW002-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW002.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW002-full.png"
       }
     ],
     "regions": [
@@ -2259,11 +2233,11 @@
     "attack": 4,
     "cost": 8,
     "health": 6,
-    "description": "Quand je suis invoquée, piochez 1 <link=card.champ1><style=AssociatedCard>Gangplank</style></link>. Doublez tous les dégâts infligés par vos sorts, <link=keyword.Skill><sprite name=SkillMark><style=Keyword>compétences</style></link> et alliés.",
-    "descriptionRaw": "Quand je suis invoquée, piochez 1 Gangplank. Doublez tous les dégâts infligés par vos sorts, compétences et alliés.",
+    "description": "Quand je suis invoquée, piochez <link=card.champ1><style=AssociatedCard>Gangplank</style></link>. \r\nDoublez tous les dégâts infligés par vos sorts, <link=keyword.Skill><sprite name=SkillMark><style=Keyword>compétences</style></link> et alliés.",
+    "descriptionRaw": "Quand je suis invoquée, piochez Gangplank. \r\nDoublez tous les dégâts infligés par vos sorts, compétences et alliés.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "«<nbsp>Ohhhh, mieux vaut faire vos adieux et lever les voiles\nLa Dernière ombre s'en vient.\nDirection les profondeurs, où les tombes sont pleines,\nCar la Dernière ombre s'en vient !<nbsp>» -<nbsp>«<nbsp>La Dernière ombre s'en vient<nbsp>»",
+    "flavorText": "« Ohhhh, mieux vaut faire vos adieux et lever les voiles\nLa Dernière ombre s'en vient.\nDirection les profondeurs, où les tombes sont pleines,\nCar la Dernière ombre s'en vient ! »<br>- « La Dernière ombre s'en vient »",
     "artistName": "SIXMOREVODKA",
     "name": "La Dernière ombre",
     "cardCode": "02BW002",
@@ -2285,10 +2259,12 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Éternel"
+      "Éternel",
+      "Classique"
     ],
     "formatRefs": [
-      "client_Formats_Eternal_name"
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
     ]
   },
   {
@@ -2296,8 +2272,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW016.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW016-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW016.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW016-full.png"
       }
     ],
     "regions": [
@@ -2344,8 +2320,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW027.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW027-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW027.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW027-full.png"
       }
     ],
     "regions": [
@@ -2377,11 +2353,9 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Communes uniquement",
       "Éternel"
     ],
     "formatRefs": [
-      "client_Formats_CommonsOnly_name",
       "client_Formats_Eternal_name"
     ]
   },
@@ -2390,8 +2364,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW050.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW050-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW050.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW050-full.png"
       }
     ],
     "regions": [
@@ -2407,7 +2381,7 @@
     "descriptionRaw": "Pillage : réduisez de 2 le coût des alliés dans votre main et dans votre deck.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "«<nbsp>Venez profiter d'un voyage magique<nbsp>! Écoutez des musiques venues des quatre coins de Runeterra<nbsp>! Mais n'oubliez pas... La place vaut une pièce et les pourboires sont grandement appréciés...<nbsp>» -<nbsp>Promoteur de spectacles",
+    "flavorText": "« Venez profiter d'un voyage magique ! Écoutez des musiques venues des quatre coins de Runeterra ! Mais n'oubliez pas... La place vaut une pièce et les pourboires sont grandement appréciés... »<br>- Promoteur de spectacles",
     "artistName": "Chin LikHui",
     "name": "Soliste insidieuse",
     "cardCode": "02BW050",
@@ -2442,8 +2416,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW015.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW015-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW015.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW015-full.png"
       }
     ],
     "regions": [
@@ -2455,8 +2429,8 @@
     "attack": 3,
     "cost": 7,
     "health": 7,
-    "description": "Quand je suis invoqué, piochez 1 <link=card.champ1><style=AssociatedCard>Miss Fortune</style></link>.\r\nTant que j'attaque, tous vos sorts et <link=keyword.Skill><sprite name=SkillMark><style=Keyword>compétences</style></link> infligent 1 pt de dégâts supplémentaire.",
-    "descriptionRaw": "Quand je suis invoqué, piochez 1 Miss Fortune.\r\nTant que j'attaque, tous vos sorts et compétences infligent 1 pt de dégâts supplémentaire.",
+    "description": "Quand je suis invoqué, piochez <link=card.champ1><style=AssociatedCard>Miss Fortune</style></link>.\r\nTant que j'attaque, tous vos sorts et <link=keyword.Skill><sprite name=SkillMark><style=Keyword>compétences</style></link> infligent 1 pt de dégâts supplémentaire.",
+    "descriptionRaw": "Quand je suis invoqué, piochez Miss Fortune.\r\nTant que j'attaque, tous vos sorts et compétences infligent 1 pt de dégâts supplémentaire.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "Aucun navire ne ressemble au Syren. Ses larges voiles nacrées et sa charpente polie le rendent aussi élégant que le capitaine à sa barre.",
@@ -2479,12 +2453,10 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Éternel",
-      "Classique"
+      "Éternel"
     ],
     "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
+      "client_Formats_Eternal_name"
     ]
   },
   {
@@ -2492,8 +2464,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW010.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW010-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW010.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW010-full.png"
       }
     ],
     "regions": [
@@ -2531,12 +2503,10 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Communes uniquement",
       "Éternel",
       "Classique"
     ],
     "formatRefs": [
-      "client_Formats_CommonsOnly_name",
       "client_Formats_Eternal_name",
       "client_Formats_Standard_name"
     ]
@@ -2546,8 +2516,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW009.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW009-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW009-full.png"
       }
     ],
     "regions": [
@@ -2579,12 +2549,10 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Communes uniquement",
       "Éternel",
       "Classique"
     ],
     "formatRefs": [
-      "client_Formats_CommonsOnly_name",
       "client_Formats_Eternal_name",
       "client_Formats_Standard_name"
     ]
@@ -2594,8 +2562,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW005.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW005-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW005-full.png"
       }
     ],
     "regions": [
@@ -2627,12 +2595,10 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Communes uniquement",
       "Éternel",
       "Classique"
     ],
     "formatRefs": [
-      "client_Formats_CommonsOnly_name",
       "client_Formats_Eternal_name",
       "client_Formats_Standard_name"
     ]
@@ -2642,8 +2608,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW039.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW039-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW039.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW039-full.png"
       }
     ],
     "regions": [
@@ -2692,8 +2658,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW006.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW006-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW006.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW006-full.png"
       }
     ],
     "regions": [
@@ -2736,8 +2702,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW036.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW036-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW036.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW036-full.png"
       }
     ],
     "regions": [
@@ -2775,11 +2741,9 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Communes uniquement",
       "Éternel"
     ],
     "formatRefs": [
-      "client_Formats_CommonsOnly_name",
       "client_Formats_Eternal_name"
     ]
   },
@@ -2788,8 +2752,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW033.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW033-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW033.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW033-full.png"
       }
     ],
     "regions": [
@@ -2825,10 +2789,12 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Éternel"
+      "Éternel",
+      "Classique"
     ],
     "formatRefs": [
-      "client_Formats_Eternal_name"
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
     ]
   },
   {
@@ -2836,8 +2802,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW060T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW060T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW060T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW060T1-full.png"
       }
     ],
     "regions": [
@@ -2853,7 +2819,7 @@
     "descriptionRaw": "Infligez 1 pt(s) de dégâts au Nexus ennemi.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "«<nbsp>Ordre du capitaine<nbsp>: visez la tête<nbsp>!<nbsp>» -<nbsp>Corsaire œil de faucon",
+    "flavorText": "« Ordre du capitaine : visez la tête ! »<br>- Corsaire œil de faucon",
     "artistName": "Kudos Productions",
     "name": "Œil de faucon",
     "cardCode": "02BW060T1",
@@ -2891,8 +2857,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW032.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW032-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW032.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW032-full.png"
       }
     ],
     "regions": [
@@ -2908,7 +2874,7 @@
     "descriptionRaw": "Quand je suis invoqué, invoquez 1 Baril de poudre.",
     "levelupDescription": "Vous avez infligé des dégâts au Nexus ennemi pendant au moins 5 rounds distincts.<style=Variable></style>",
     "levelupDescriptionRaw": "Vous avez infligé des dégâts au Nexus ennemi pendant au moins 5 rounds distincts.",
-    "flavorText": "«<nbsp>Ne le regarde pas trop longtemps, ou il te remarquera. Ne dis pas de mal de lui, parce qu'il sait tout ce qui se dit à Bilgewater. Le voilà. Baisse la tête. Baisse les yeux.<nbsp>» -<nbsp>Matelot de la Dernière ombre",
+    "flavorText": "« Ne le regarde pas trop longtemps, ou il te remarquera. Ne dis pas de mal de lui, parce qu'il sait tout ce qui se dit à Bilgewater. Le voilà. Baisse la tête. Baisse les yeux. »<br>- Matelot de la Dernière ombre",
     "artistName": "SIXMOREVODKA",
     "name": "Gangplank",
     "cardCode": "02BW032",
@@ -2928,12 +2894,12 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Communes uniquement",
-      "Éternel"
+      "Éternel",
+      "Classique"
     ],
     "formatRefs": [
-      "client_Formats_CommonsOnly_name",
-      "client_Formats_Eternal_name"
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
     ]
   },
   {
@@ -2944,8 +2910,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW032T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW032T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW032T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW032T2-full.png"
       }
     ],
     "regions": [
@@ -2999,8 +2965,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW032T3.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW032T3-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW032T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW032T3-full.png"
       }
     ],
     "regions": [
@@ -3012,11 +2978,11 @@
     "attack": 6,
     "cost": 5,
     "health": 5,
-    "description": "Quand je suis invoqué ou au <link=vocab.RoundStart><style=Vocab>début du round</style></link> : invoquez 1 <link=card.summon><style=AssociatedCard>Baril de poudre</style></link>.\r\n<link=keyword.AttackSkillMark><sprite name=SkillMark><style=Keyword>Attaque</style></link> : infligez 1 pt(s) de dégâts à tous les ennemis et au Nexus ennemi.",
-    "descriptionRaw": "Quand je suis invoqué ou au début du round : invoquez 1 Baril de poudre.\r\nAttaque : infligez 1 pt(s) de dégâts à tous les ennemis et au Nexus ennemi.",
+    "description": "Quand je suis invoqué ou <link=vocab.RoundStart><style=Vocab>Début du round</style></link> : invoquez 1 <link=card.summon><style=AssociatedCard>Baril de poudre</style></link>.\r\n<link=keyword.AttackSkillMark><sprite name=SkillMark><style=Keyword>Attaque</style></link> : infligez 1 pt(s) de dégâts à tous les ennemis et au Nexus ennemi.",
+    "descriptionRaw": "Quand je suis invoqué ou Début du round : invoquez 1 Baril de poudre.\r\nAttaque : infligez 1 pt(s) de dégâts à tous les ennemis et au Nexus ennemi.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "«<nbsp>J'ai assez vu ses yeux pour le savoir. On y trouve rien d'autre que de la colère. Un jour, le patron fera à Bilgewater ce que Bilgewater lui a fait.<nbsp>» -<nbsp>Officier mesquin",
+    "flavorText": "« J'ai assez vu ses yeux pour le savoir. On y trouve rien d'autre que de la colère. Un jour, le patron fera à Bilgewater ce que Bilgewater lui a fait. »<br>- Officier mesquin",
     "artistName": "SIXMOREVODKA",
     "name": "Gangplank",
     "cardCode": "02BW032T3",
@@ -3049,8 +3015,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW032T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW032T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW032T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW032T1-full.png"
       }
     ],
     "regions": [
@@ -3066,7 +3032,7 @@
     "descriptionRaw": "Les Barils de poudre se cumulent.\r\nTous vos sorts et compétences infligent 1 pt(s) de dégâts supplémentaire(s).\r\nLorsqu'une compétence ou un sort allié inflige des dégâts aux ennemis ou au Nexus ennemi, détruisez-moi.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "«<nbsp>Tant que la faim nous appelle, il faut manger.<nbsp>» -<nbsp>Dicton de Bilgewater",
+    "flavorText": "« Tant que la faim nous appelle, il faut manger. »<br>- Dicton de Bilgewater",
     "artistName": "Kudos Productions",
     "name": "Baril de poudre",
     "cardCode": "02BW032T1",
@@ -3103,8 +3069,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW032T4.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW032T4-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW032T4.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW032T4-full.png"
       }
     ],
     "regions": [
@@ -3120,7 +3086,7 @@
     "descriptionRaw": "Infligez 1 pt(s) de dégâts à tous les ennemis et au Nexus ennemi.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "«<nbsp>Envoyez-les par le fond<nbsp>!<nbsp>» -<nbsp>Gangplank",
+    "flavorText": "« Envoyez-les par le fond ! »<br>- Gangplank",
     "artistName": "Kudos Productions",
     "name": "Explosion de poudre",
     "cardCode": "02BW032T4",
@@ -3158,8 +3124,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW022.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW022-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW022.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW022-full.png"
       }
     ],
     "regions": [
@@ -3191,14 +3157,10 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Communes uniquement",
-      "Éternel",
-      "Classique"
+      "Éternel"
     ],
     "formatRefs": [
-      "client_Formats_CommonsOnly_name",
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
+      "client_Formats_Eternal_name"
     ]
   },
   {
@@ -3209,8 +3171,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW022T3.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW022T3-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW022T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW022T3-full.png"
       }
     ],
     "regions": [
@@ -3226,7 +3188,7 @@
     "descriptionRaw": "Infligez 1 pt(s) de dégâts à 3 ennemis ciblés aléatoirement ou au Nexus ennemi.\r\nCréez 1 Miss Fortune dans votre deck.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "«<nbsp>Ça sent la poudre. !<nbsp>» -<nbsp>Miss Fortune",
+    "flavorText": "« Ça sent la poudre ! »<br>- Miss Fortune",
     "artistName": "Kudos Productions",
     "name": "Pluie de balles de Miss Fortune",
     "cardCode": "02BW022T3",
@@ -3263,8 +3225,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW022T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW022T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW022T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW022T2-full.png"
       }
     ],
     "regions": [
@@ -3313,8 +3275,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW022T4.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW022T4-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW022T4.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW022T4-full.png"
       }
     ],
     "regions": [
@@ -3363,8 +3325,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW022T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW022T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW022T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW022T1-full.png"
       }
     ],
     "regions": [
@@ -3380,7 +3342,7 @@
     "descriptionRaw": "Infligez 1 pt(s) de dégâts à tous les ennemis au combat et au Nexus ennemi.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "«<nbsp>Un petit souvenir, de ma part.<nbsp>» -<nbsp>Miss Fortune",
+    "flavorText": "« Un petit souvenir, de ma part. »<br>- Miss Fortune",
     "artistName": "Kudos Productions",
     "name": "Cœur volage",
     "cardCode": "02BW022T1",
@@ -3418,17 +3380,17 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW046.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW046-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW046.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW046-full.png"
       }
     ],
     "regions": [
-      "Bilgewater",
-      "Bandle"
+      "Bandle",
+      "Bilgewater"
     ],
     "regionRefs": [
-      "Bilgewater",
-      "BandleCity"
+      "BandleCity",
+      "Bilgewater"
     ],
     "attack": 2,
     "cost": 1,
@@ -3459,12 +3421,10 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Communes uniquement",
       "Éternel",
       "Classique"
     ],
     "formatRefs": [
-      "client_Formats_CommonsOnly_name",
       "client_Formats_Eternal_name",
       "client_Formats_Standard_name"
     ]
@@ -3479,17 +3439,17 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW046T3.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW046T3-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW046T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW046T3-full.png"
       }
     ],
     "regions": [
-      "Bilgewater",
-      "Bandle"
+      "Bandle",
+      "Bilgewater"
     ],
     "regionRefs": [
-      "Bilgewater",
-      "BandleCity"
+      "BandleCity",
+      "Bilgewater"
     ],
     "attack": 3,
     "cost": 1,
@@ -3533,8 +3493,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW046T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW046T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW046T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW046T2-full.png"
       }
     ],
     "regions": [
@@ -3586,8 +3546,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW046T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW046T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW046T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW046T1-full.png"
       }
     ],
     "regions": [
@@ -3603,7 +3563,7 @@
     "descriptionRaw": "Retirez un assaillant allié du combat pour vous rallier.\r\nCréez 1 Fizz dans votre deck.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "« J'ai toujours un bond d'avance. » - Fizz",
+    "flavorText": "« J'ai toujours un bond d'avance. »<br>- Fizz",
     "artistName": "Max Grecke",
     "name": "Joueur/Filou de Fizz",
     "cardCode": "02BW046T1",
@@ -3642,8 +3602,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW026.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW026-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW026.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW026-full.png"
       }
     ],
     "regions": [
@@ -3679,12 +3639,12 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Communes uniquement",
-      "Éternel"
+      "Éternel",
+      "Classique"
     ],
     "formatRefs": [
-      "client_Formats_CommonsOnly_name",
-      "client_Formats_Eternal_name"
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
     ]
   },
   {
@@ -3692,8 +3652,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW026T5.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW026T5-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW026T5.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW026T5-full.png"
       }
     ],
     "regions": [
@@ -3705,11 +3665,11 @@
     "attack": 0,
     "cost": 0,
     "health": 0,
-    "description": "Infligez 2 pt(s) de dégâts à l'ennemi <link=vocab.Strongest><style=Vocab>le plus fort</style></link> et <link=keyword.Stun><sprite name=Stunned><style=Keyword>étourdissez</style></link>-le.",
-    "descriptionRaw": "Infligez 2 pt(s) de dégâts à l'ennemi le plus fort et étourdissez-le.",
+    "description": "Infligez 2 pt(s) de dégâts à l'ennemi <link=vocab.Strongest><style=Vocab>le plus fort</style></link> et <link=keyword.Stun><sprite name=Stunned><style=Keyword>étourdissez</style></link>-le.",
+    "descriptionRaw": "Infligez 2 pt(s) de dégâts à l'ennemi le plus fort et étourdissez-le.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "«<nbsp>Aussi brillant que l'or.<nbsp>» -<nbsp>Twisted Fate",
+    "flavorText": "« Aussi brillant que l'or. »<br>- Twisted Fate",
     "artistName": "Kudos Productions",
     "name": "Carte or",
     "cardCode": "02BW026T5",
@@ -3748,8 +3708,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW026T3.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW026T3-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW026T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW026T3-full.png"
       }
     ],
     "regions": [
@@ -3801,8 +3761,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW026T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW026T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW026T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW026T1-full.png"
       }
     ],
     "regions": [
@@ -3818,7 +3778,7 @@
     "descriptionRaw": "Pour me jouer, placez une carte de votre main dans votre deck.\r\nPiochez 2 cartes au début du prochain round et rendez-les fugaces.\r\nCréez 1 Twisted Fate dans votre deck.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "«<nbsp>Je crée mon propre chemin.<nbsp>» -<nbsp>Twisted Fate",
+    "flavorText": "« Je crée mon propre chemin. »<br>- Twisted Fate",
     "artistName": "Kudos Productions",
     "name": "Bonne pioche de Twisted Fate",
     "cardCode": "02BW026T1",
@@ -3851,8 +3811,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW026T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW026T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW026T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW026T2-full.png"
       }
     ],
     "regions": [
@@ -3864,11 +3824,11 @@
     "attack": 0,
     "cost": 0,
     "health": 0,
-    "description": "Regagnez 1 gemme.\r\nPiochez 1 carte.",
-    "descriptionRaw": "Regagnez 1 gemme.\r\nPiochez 1 carte.",
+    "description": "Remplissez <style=Variable>1</style> gemme(s).\r\nPiochez <style=Variable>1</style> carte(s).",
+    "descriptionRaw": "Remplissez 1 gemme(s).\r\nPiochez 1 carte(s).",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "«<nbsp>Bleu comme la Serpentine.<nbsp>» -<nbsp>Twisted Fate",
+    "flavorText": "« Bleu comme la Serpentine. »<br>- Twisted Fate",
     "artistName": "Kudos Productions",
     "name": "Carte bleue",
     "cardCode": "02BW026T2",
@@ -3901,8 +3861,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW026T4.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW026T4-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW026T4.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW026T4-full.png"
       }
     ],
     "regions": [
@@ -3918,7 +3878,7 @@
     "descriptionRaw": "Infligez 1 pt(s) de dégâts à tous les ennemis et au Nexus ennemi.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "«Tout le monde y trouve son bonheur.<nbsp>» -<nbsp>Twisted Fate",
+    "flavorText": "« Tout le monde y trouve son bonheur. »<br>- Twisted Fate",
     "artistName": "Kudos Productions",
     "name": "Carte rouge",
     "cardCode": "02BW026T4",
@@ -3954,8 +3914,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW053.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW053-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW053.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW053-full.png"
       }
     ],
     "regions": [
@@ -3971,7 +3931,7 @@
     "descriptionRaw": "",
     "levelupDescription": "Quand vous avez atteint les <link=keyword.Deep><sprite name=Deep><style=Keyword>profondeurs</style></link>. <style=Variable></style> Quand je monte de niveau, copiez les alliés <link=vocab.Toss><style=Vocab>jetés</style></link> d'un coût de 4 ou plus dans votre deck.",
     "levelupDescriptionRaw": "Quand vous avez atteint les profondeurs.  Quand je monte de niveau, copiez les alliés jetés d'un coût de 4 ou plus dans votre deck.",
-    "flavorText": "«<nbsp>C'est une ancre qui a démoli le Rancœur. Elle a envoyé Finn par le fond. Il nous reste qu'une poignée d'hommes, et la nuit approche… et avec elle, le froid. Pardon, maman. Tu avais raison. Le Titan existe.<nbsp>» -<nbsp>Lettre retrouvée",
+    "flavorText": "« C'est une ancre qui a démoli le Rancœur. Elle a envoyé Finn par le fond. Il nous reste qu'une poignée d'hommes, et la nuit approche… et avec elle, le froid. Pardon, maman. Tu avais raison. Le Titan existe. »<br>- Lettre retrouvée",
     "artistName": "SIXMOREVODKA",
     "name": "Nautilus",
     "cardCode": "02BW053",
@@ -3993,12 +3953,10 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Communes uniquement",
       "Éternel",
       "Classique"
     ],
     "formatRefs": [
-      "client_Formats_CommonsOnly_name",
       "client_Formats_Eternal_name",
       "client_Formats_Standard_name"
     ]
@@ -4011,8 +3969,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW053T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW053T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW053T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW053T2-full.png"
       }
     ],
     "regions": [
@@ -4028,7 +3986,7 @@
     "descriptionRaw": "Étourdissez une unité ennemie.\r\nPlacez-la dans le deck ennemi si vous avez 1 Nautilus.\r\nCréez 1 Nautilus dans votre deck.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "«<nbsp>Attirez-les dans les abysses.<nbsp>» -<nbsp>Nautilus",
+    "flavorText": "« Attirez-les dans les abysses. »<br>- Nautilus",
     "artistName": "Kudos Productions",
     "name": "Répliques de Nautilus",
     "cardCode": "02BW053T2",
@@ -4064,8 +4022,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW053T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW053T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW053T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW053T1-full.png"
       }
     ],
     "regions": [
@@ -4118,8 +4076,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW061.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW061-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW061.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW061-full.png"
       }
     ],
     "regions": [
@@ -4135,7 +4093,7 @@
     "descriptionRaw": "Quand vous me piochez, mon coût est réduit de 1 pour ce round.\r\nOctroyez +2|+1 à un allié.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "«<nbsp>Rien de mieux qu'une série de victoires pour appâter vos adversaires.<nbsp>» -<nbsp>Twisted Fate",
+    "flavorText": "« Rien de mieux qu'une série de victoires pour appâter vos adversaires. »<br>- Twisted Fate",
     "artistName": "Kudos Productions",
     "name": "As de poche",
     "cardCode": "02BW061",
@@ -4155,12 +4113,12 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Communes uniquement",
-      "Éternel"
+      "Éternel",
+      "Classique"
     ],
     "formatRefs": [
-      "client_Formats_CommonsOnly_name",
-      "client_Formats_Eternal_name"
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
     ]
   },
   {
@@ -4168,8 +4126,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW024.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW024-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW024.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW024-full.png"
       }
     ],
     "regions": [
@@ -4185,7 +4143,7 @@
     "descriptionRaw": "Invoquez 2 adeptes aléatoires d'un coût de 1.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "«<nbsp>Hé, Gav, c'est pas lui qu'on cherche ? Il s'est trouvé un copain, on dirait.<nbsp>»\n«<nbsp>Ce... Ce serait pas un homme-requin, ça, Baz ?<nbsp>»\n«<nbsp>C'est surtout une bonne grosse bourse pleine d'or, mon gars. On y va...<nbsp>» -<nbsp>Baz et Gav, chasseurs de prime en herbe",
+    "flavorText": "« Hé, Gav, c'est pas lui qu'on cherche ? Il s'est trouvé un copain, on dirait. »\n« Ce... Ce serait pas un homme-requin, ça, Baz ? »\n« C'est surtout une bonne grosse bourse pleine d'or, mon gars. On y va... »<br>- Baz et Gav, chasseurs de prime en herbe",
     "artistName": "Kudos Productions",
     "name": "Grabuge",
     "cardCode": "02BW024",
@@ -4218,8 +4176,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW003.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW003-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW003.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW003-full.png"
       }
     ],
     "regions": [
@@ -4235,7 +4193,7 @@
     "descriptionRaw": "Pillage : rappelez N'IMPORTE QUEL adepte dans votre main.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "«<nbsp>Tu bosses pour nous, maintenant !<nbsp>» -<nbsp>Officier mesquin",
+    "flavorText": "« Tu bosses pour nous, maintenant ! »<br>- Officier mesquin",
     "artistName": "Kudos Productions",
     "name": "Bras de fer",
     "cardCode": "02BW003",
@@ -4270,8 +4228,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW025.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW025-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW025.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW025-full.png"
       }
     ],
     "regions": [
@@ -4287,7 +4245,7 @@
     "descriptionRaw": "Octroyez Vulnérabilité à un ennemi et invoquez Dents de la mer.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "«<nbsp>Requin !<nbsp>» -<nbsp>Fizz",
+    "flavorText": "« Requin ! »<br>- Fizz",
     "artistName": "Kudos Productions",
     "name": "Pêche au gros",
     "cardCode": "02BW025",
@@ -4307,12 +4265,10 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Communes uniquement",
       "Éternel",
       "Classique"
     ],
     "formatRefs": [
-      "client_Formats_CommonsOnly_name",
       "client_Formats_Eternal_name",
       "client_Formats_Standard_name"
     ]
@@ -4324,8 +4280,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW012.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW012-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW012.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW012-full.png"
       }
     ],
     "regions": [
@@ -4341,7 +4297,7 @@
     "descriptionRaw": "Invoquez 2 Barils de poudre.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "«<nbsp>Baril !<nbsp>» -<nbsp>Gangplank",
+    "flavorText": "« Baril ! »<br>- Gangplank",
     "artistName": "Kudos Productions",
     "name": "Plus de poudre !",
     "cardCode": "02BW012",
@@ -4361,12 +4317,10 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Communes uniquement",
       "Éternel",
       "Classique"
     ],
     "formatRefs": [
-      "client_Formats_CommonsOnly_name",
       "client_Formats_Eternal_name",
       "client_Formats_Standard_name"
     ]
@@ -4376,8 +4330,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW018.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW018-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW018.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW018-full.png"
       }
     ],
     "regions": [
@@ -4413,12 +4367,10 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Communes uniquement",
       "Éternel",
       "Classique"
     ],
     "formatRefs": [
-      "client_Formats_CommonsOnly_name",
       "client_Formats_Eternal_name",
       "client_Formats_Standard_name"
     ]
@@ -4428,8 +4380,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW048.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW048-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW048.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW048-full.png"
       }
     ],
     "regions": [
@@ -4445,7 +4397,7 @@
     "descriptionRaw": "Invoquez un adepte aléatoire coûtant 1.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "«<nbsp>Qu'est-ce que t'en dit, Baz<nbsp>? Il a pas l'air trop fort.<nbsp>»\n«<nbsp>T'es sûr, Gav<nbsp>? Il s'est évadé de prison...<nbsp>»\n«<nbsp>Ça veut dire qu'il est malin, pas coriace. On y va<nbsp>!<nbsp>» -<nbsp>Baz et Gav, chasseurs de prime en herbe",
+    "flavorText": "« Qu'est-ce que t'en dit, Baz ? Il a pas l'air trop fort. »\n« T'es sûr, Gav ? Il s'est évadé de prison... »\n« Ça veut dire qu'il est malin, pas coriace. On y va ! »<br>- Baz et Gav, chasseurs de prime en herbe",
     "artistName": "Kudos Productions",
     "name": "Évasion",
     "cardCode": "02BW048",
@@ -4465,12 +4417,10 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Communes uniquement",
       "Éternel",
       "Classique"
     ],
     "formatRefs": [
-      "client_Formats_CommonsOnly_name",
       "client_Formats_Eternal_name",
       "client_Formats_Standard_name"
     ]
@@ -4480,8 +4430,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW043.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW043-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW043.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW043-full.png"
       }
     ],
     "regions": [
@@ -4497,7 +4447,7 @@
     "descriptionRaw": "Pour me jouer, placez une carte de votre main dans votre deck.\r\nPiochez 2 cartes au début du prochain round et rendez-les fugaces.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "«<nbsp>Je crée mon propre chemin.<nbsp>» -<nbsp>Twisted Fate",
+    "flavorText": "« Je crée mon propre chemin. »<br>- Twisted Fate",
     "artistName": "Kudos Productions",
     "name": "Bonne pioche",
     "cardCode": "02BW043",
@@ -4517,10 +4467,12 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Éternel"
+      "Éternel",
+      "Classique"
     ],
     "formatRefs": [
-      "client_Formats_Eternal_name"
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
     ]
   },
   {
@@ -4528,8 +4480,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW051.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW051-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW051.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW051-full.png"
       }
     ],
     "regions": [
@@ -4545,7 +4497,7 @@
     "descriptionRaw": "Retirez un assaillant allié du combat pour vous rallier.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "« J'ai toujours un bond d'avance. » - Fizz",
+    "flavorText": "« J'ai toujours un bond d'avance. »<br>- Fizz",
     "artistName": "Max Grecke",
     "name": "Joueur/Filou",
     "cardCode": "02BW051",
@@ -4580,8 +4532,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW054.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW054-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW054.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW054-full.png"
       }
     ],
     "regions": [
@@ -4597,7 +4549,7 @@
     "descriptionRaw": "Étourdissez un ennemi.\r\nPlacez cette unité dans le deck ennemi si vous avez 1 Nautilus.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "«<nbsp>Attirez-les dans les abysses.<nbsp>» -<nbsp>Nautilus",
+    "flavorText": "« Attirez-les dans les abysses. »<br>- Nautilus",
     "artistName": "Kudos Productions",
     "name": "Répliques",
     "cardCode": "02BW054",
@@ -4630,8 +4582,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW042.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW042-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW042.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW042-full.png"
       }
     ],
     "regions": [
@@ -4643,8 +4595,8 @@
     "attack": 0,
     "cost": 7,
     "health": 0,
-    "description": "Pendant ce round, renforcez la puissance et les PV de tous vos alliés pour atteindre un montant équivalent au nombre d'autres sorts que vous avez lancés lors de la partie. <style=Variable></style>",
-    "descriptionRaw": "Pendant ce round, renforcez la puissance et les PV de tous vos alliés pour atteindre un montant équivalent au nombre d'autres sorts que vous avez lancés lors de la partie. ",
+    "description": "Pour ce round, renforcez la puissance et les PV des alliés pour atteindre un montant équivalent au nombre d'autres sorts que vous avez lancés lors de la partie. <style=Variable></style>",
+    "descriptionRaw": "Pour ce round, renforcez la puissance et les PV des alliés pour atteindre un montant équivalent au nombre d'autres sorts que vous avez lancés lors de la partie. ",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "Les marins craignent à juste titre les marées et les courants de Bilgewater, car ils sont puissants et capricieux. Mais pas l'un d'entre eux ne connaît la véritable puissance de ces eaux.",
@@ -4678,8 +4630,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW059.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW059-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW059.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW059-full.png"
       }
     ],
     "regions": [
@@ -4695,7 +4647,7 @@
     "descriptionRaw": "Jetez 3 cartes.\r\nInfligez 7 pt(s) de dégâts à une unité.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "«<nbsp>Si ça les fait couler, ça valait le coup.<nbsp>» -<nbsp>Dicton de Bilgewater",
+    "flavorText": "« Si ça les fait couler, ça valait le coup. »<br>- Dicton de Bilgewater",
     "artistName": "Kudos Productions",
     "name": "Tir de ferraille",
     "cardCode": "02BW059",
@@ -4715,12 +4667,10 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Éternel",
-      "Classique"
+      "Éternel"
     ],
     "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
+      "client_Formats_Eternal_name"
     ]
   },
   {
@@ -4728,8 +4678,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW023.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW023-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW023.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW023-full.png"
       }
     ],
     "regions": [
@@ -4778,8 +4728,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW031.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW031-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW031.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW031-full.png"
       }
     ],
     "regions": [
@@ -4795,7 +4745,7 @@
     "descriptionRaw": "Infligez 2 pt(s) de dégâts à un ennemi.\r\nSi le coup est fatal, infligez 4 pt(s) de dégâts au Nexus ennemi.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "«<nbsp>C'est moi la plus rapide.<nbsp>» -<nbsp>Miss Fortune",
+    "flavorText": "« C'est moi la plus rapide. »<br>- Miss Fortune",
     "artistName": "Kudos Productions",
     "name": "Double dose",
     "cardCode": "02BW031",
@@ -4815,10 +4765,12 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Éternel"
+      "Éternel",
+      "Classique"
     ],
     "formatRefs": [
-      "client_Formats_Eternal_name"
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
     ]
   },
   {
@@ -4826,8 +4778,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW029.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW029-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW029.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW029-full.png"
       }
     ],
     "regions": [
@@ -4863,12 +4815,10 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Communes uniquement",
       "Éternel",
       "Classique"
     ],
     "formatRefs": [
-      "client_Formats_CommonsOnly_name",
       "client_Formats_Eternal_name",
       "client_Formats_Standard_name"
     ]
@@ -4878,8 +4828,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW049.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW049-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW049.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW049-full.png"
       }
     ],
     "regions": [
@@ -4917,12 +4867,12 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Communes uniquement",
-      "Éternel"
+      "Éternel",
+      "Classique"
     ],
     "formatRefs": [
-      "client_Formats_CommonsOnly_name",
-      "client_Formats_Eternal_name"
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
     ]
   },
   {
@@ -4930,8 +4880,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW001.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW001-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW001.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW001-full.png"
       }
     ],
     "regions": [
@@ -4947,7 +4897,7 @@
     "descriptionRaw": "Conférez Vulnérabilité à un ennemi pour ce round. S'il meurt lors de ce round, piochez une carte.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "«<nbsp>Garde ta bonne humeur et la tête haute, mon gars ! Si le capitaine te voit baisser les bras, il va te hisser tout là-haut, t'ouvrir le bide et te laisser en pâture aux mouettes. Alors, bouge-toi, et plus vite que ça !<nbsp>» -<nbsp>Matelot de la Dernière ombre",
+    "flavorText": "« Garde ta bonne humeur et la tête haute, mon gars ! Si le capitaine te voit baisser les bras, il va te hisser tout là-haut, t'ouvrir le bide et te laisser en pâture aux mouettes. Alors, bouge-toi, et plus vite que ça ! »<br>- Matelot de la Dernière ombre",
     "artistName": "Greg Faillace",
     "name": "T'étais prév'nu",
     "cardCode": "02BW001",
@@ -4967,12 +4917,12 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Communes uniquement",
-      "Éternel"
+      "Éternel",
+      "Classique"
     ],
     "formatRefs": [
-      "client_Formats_CommonsOnly_name",
-      "client_Formats_Eternal_name"
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
     ]
   },
   {
@@ -4980,8 +4930,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW063.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW063-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW063.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW063-full.png"
       }
     ],
     "regions": [
@@ -4997,7 +4947,7 @@
     "descriptionRaw": "Pillage : piochez 1 carte non-champion aléatoire dans la main de votre adversaire.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "«<nbsp>Il est pas question de chance aux cartes. C'est les gens qui importent. Si vous réussissez à faire douter ceux qui sont à votre table, autant leur prendre tout ce qu'ils ont.<nbsp>» -<nbsp>Twisted Fate",
+    "flavorText": "« Il est pas question de chance aux cartes. C'est les gens qui importent. Si vous réussissez à faire douter ceux qui sont à votre table, autant leur prendre tout ce qu'ils ont. »<br>- Twisted Fate",
     "artistName": "Kudos Productions",
     "name": "Tour de magie",
     "cardCode": "02BW063",
@@ -5019,10 +4969,12 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Éternel"
+      "Éternel",
+      "Classique"
     ],
     "formatRefs": [
-      "client_Formats_Eternal_name"
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
     ]
   },
   {
@@ -5030,8 +4982,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW045.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW045-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW045.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW045-full.png"
       }
     ],
     "regions": [
@@ -5047,7 +4999,7 @@
     "descriptionRaw": "Infligez 1 pt(s) de dégâts à 3 ennemis ciblés aléatoirement ou au Nexus ennemi.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "«<nbsp>Ça sent la poudre !<nbsp>» -<nbsp>Miss Fortune",
+    "flavorText": "« Ça sent la poudre ! »<br>- Miss Fortune",
     "artistName": "Kudos Productions",
     "name": "Pluie de balles",
     "cardCode": "02BW045",
@@ -5067,12 +5019,10 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Communes uniquement",
       "Éternel",
       "Classique"
     ],
     "formatRefs": [
-      "client_Formats_CommonsOnly_name",
       "client_Formats_Eternal_name",
       "client_Formats_Standard_name"
     ]
@@ -5082,8 +5032,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW020.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW020-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW020.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW020-full.png"
       }
     ],
     "regions": [
@@ -5099,7 +5049,7 @@
     "descriptionRaw": "Infligez 1 pt(s) de dégâts au Nexus ennemi.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "«<nbsp>T'es censé tirer en même temps que nous, mon gars ! C'est ça, une salve !<nbsp>» -<nbsp>Officier mesquin",
+    "flavorText": "« T'es censé tirer en même temps que nous, mon gars ! C'est ça, une salve ! »<br>- Officier mesquin",
     "artistName": "Kudos Productions",
     "name": "Coup de semonce",
     "cardCode": "02BW020",
@@ -5119,12 +5069,10 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Communes uniquement",
       "Éternel",
       "Classique"
     ],
     "formatRefs": [
-      "client_Formats_CommonsOnly_name",
       "client_Formats_Eternal_name",
       "client_Formats_Standard_name"
     ]
@@ -5134,8 +5082,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW044.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW044-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW044.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW044-full.png"
       }
     ],
     "regions": [
@@ -5184,8 +5132,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW062.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02BW062-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW062.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02BW062-full.png"
       }
     ],
     "regions": [
@@ -5221,12 +5169,10 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Éternel",
-      "Classique"
+      "Éternel"
     ],
     "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
+      "client_Formats_Eternal_name"
     ]
   },
   {
@@ -5234,8 +5180,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02FR009.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02FR009-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02FR009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02FR009-full.png"
       }
     ],
     "regions": [
@@ -5273,12 +5219,10 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Communes uniquement",
       "Éternel",
       "Classique"
     ],
     "formatRefs": [
-      "client_Formats_CommonsOnly_name",
       "client_Formats_Eternal_name",
       "client_Formats_Standard_name"
     ]
@@ -5288,8 +5232,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02FR004.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02FR004-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02FR004.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02FR004-full.png"
       }
     ],
     "regions": [
@@ -5305,7 +5249,7 @@
     "descriptionRaw": "Gelez et conférez Vulnérabilité à un ennemi pour ce round.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "«<nbsp>Ces sangs-chauds ne tiendraient pas une seule journée à Freljord<nbsp>!<nbsp>» -<nbsp>Sejuani",
+    "flavorText": "« Ces sangs-chauds ne tiendraient pas une seule journée à Freljord ! »<br>- Sejuani",
     "artistName": "Kudos Productions",
     "name": "Piège de glace",
     "cardCode": "02FR004",
@@ -5341,8 +5285,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02FR002.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02FR002-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02FR002.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02FR002-full.png"
       }
     ],
     "regions": [
@@ -5378,12 +5322,10 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Communes uniquement",
       "Éternel",
       "Classique"
     ],
     "formatRefs": [
-      "client_Formats_CommonsOnly_name",
       "client_Formats_Eternal_name",
       "client_Formats_Standard_name"
     ]
@@ -5393,8 +5335,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02FR001.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02FR001-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02FR001.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02FR001-full.png"
       }
     ],
     "regions": [
@@ -5426,10 +5368,12 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Éternel"
+      "Éternel",
+      "Classique"
     ],
     "formatRefs": [
-      "client_Formats_Eternal_name"
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
     ]
   },
   {
@@ -5439,8 +5383,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02FR005.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02FR005-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02FR005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02FR005-full.png"
       }
     ],
     "regions": [
@@ -5476,12 +5420,10 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Communes uniquement",
       "Éternel",
       "Classique"
     ],
     "formatRefs": [
-      "client_Formats_CommonsOnly_name",
       "client_Formats_Eternal_name",
       "client_Formats_Standard_name"
     ]
@@ -5493,8 +5435,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02FR005T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02FR005T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02FR005T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02FR005T1-full.png"
       }
     ],
     "regions": [
@@ -5545,8 +5487,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02FR010.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02FR010-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02FR010.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02FR010-full.png"
       }
     ],
     "regions": [
@@ -5562,7 +5504,7 @@
     "descriptionRaw": "Octroyez +1|+1 aux 3 premières unités de votre deck.\r\nPillage : piochez une de ces cartes.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "«<nbsp>Ne garde pas tout pour toi.<nbsp>» -<nbsp>Guerrière impitoyable",
+    "flavorText": "« Ne garde pas tout pour toi. »<br>- Guerrière impitoyable",
     "artistName": "Kudos Productions",
     "name": "Butin partagé",
     "cardCode": "02FR010",
@@ -5600,8 +5542,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02FR008.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02FR008-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02FR008.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02FR008-full.png"
       }
     ],
     "regions": [
@@ -5613,11 +5555,11 @@
     "attack": 7,
     "cost": 8,
     "health": 8,
-    "description": "Quand je suis invoqué, piochez 1 <link=card.champ1><style=AssociatedCard>Sejuani</style></link>.\r\n<link=keyword.Plunder><style=Keyword>Pillage</style></link> : doublez la puissance et les PV des alliés dans votre deck.",
-    "descriptionRaw": "Quand je suis invoqué, piochez 1 Sejuani.\r\nPillage : doublez la puissance et les PV des alliés dans votre deck.",
+    "description": "Quand je suis invoqué, piochez <link=card.champ1><style=AssociatedCard>Sejuani</style></link>.\r\n<link=keyword.Plunder><style=Keyword>Pillage</style></link> : doublez la puissance et les PV des alliés dans votre deck.",
+    "descriptionRaw": "Quand je suis invoqué, piochez Sejuani.\r\nPillage : doublez la puissance et les PV des alliés dans votre deck.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "«<nbsp>Quand le printemps réchauffe la terre et que nous commençons à planter, les galères arrivent à leur tour... et le grain auparavant abondant se fait rare.<nbsp>» -<nbsp>Âtregarde avarosan",
+    "flavorText": "« Quand le printemps réchauffe la terre et que nous commençons à planter, les galères arrivent à leur tour... et le grain auparavant abondant se fait rare. »<br>- Âtregarde avarosan",
     "artistName": "SIXMOREVODKA",
     "name": "Drakkar faucheur",
     "cardCode": "02FR008",
@@ -5653,8 +5595,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02FR002T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02FR002T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02FR002T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02FR002T1-full.png"
       }
     ],
     "regions": [
@@ -5670,7 +5612,7 @@
     "descriptionRaw": "Conférez +3|+4 à un allié pour ce round.\r\nCréez 1 Sejuani dans votre deck.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "«<nbsp>Acceptez votre bête intérieure<nbsp>!<nbsp>» -<nbsp>Sejuani",
+    "flavorText": "« Acceptez votre bête intérieure ! »<br>- Sejuani",
     "artistName": "Kudos Productions",
     "name": "Fureur du nord de Sejuani",
     "cardCode": "02FR002T1",
@@ -5706,8 +5648,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02FR002T3.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02FR002T3-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02FR002T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02FR002T3-full.png"
       }
     ],
     "regions": [
@@ -5756,8 +5698,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02FR007.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02FR007-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02FR007.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02FR007-full.png"
       }
     ],
     "regions": [
@@ -5773,7 +5715,7 @@
     "descriptionRaw": "Conférez +3|+4 à un allié pour ce round.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "«<nbsp>Acceptez votre bête intérieure<nbsp>!<nbsp>» -<nbsp>Sejuani",
+    "flavorText": "« Acceptez votre bête intérieure ! »<br>- Sejuani",
     "artistName": "Kudos Productions",
     "name": "Fureur du nord",
     "cardCode": "02FR007",
@@ -5793,12 +5735,10 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Communes uniquement",
       "Éternel",
       "Classique"
     ],
     "formatRefs": [
-      "client_Formats_CommonsOnly_name",
       "client_Formats_Eternal_name",
       "client_Formats_Standard_name"
     ]
@@ -5808,8 +5748,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02FR006.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02FR006-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02FR006.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02FR006-full.png"
       }
     ],
     "regions": [
@@ -5847,14 +5787,10 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Communes uniquement",
-      "Éternel",
-      "Classique"
+      "Éternel"
     ],
     "formatRefs": [
-      "client_Formats_CommonsOnly_name",
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
+      "client_Formats_Eternal_name"
     ]
   },
   {
@@ -5864,8 +5800,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02FR003.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02FR003-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02FR003.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02FR003-full.png"
       }
     ],
     "regions": [
@@ -5881,7 +5817,7 @@
     "descriptionRaw": "Créez 2 Poros aléatoires et 2 Poro-Snax dans votre main.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "« Quand vous faites un vœu près d'un Poro,\nEt que vous regardez le ciel nocturne,\nVous verrez un Poro-Snax,\nQui brille de mille feux parmi les étoiles » - Jeune Ingvar",
+    "flavorText": "« Quand vous faites un vœu près d'un Poro,\nEt que vous regardez le ciel nocturne,\nVous verrez un Poro-Snax,\nQui brille de mille feux parmi les étoiles »<br>- Jeune Ingvar",
     "artistName": "Kudos Productions",
     "name": "Aurore Poréale",
     "cardCode": "02FR003",
@@ -5916,8 +5852,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02NX001.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02NX001-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02NX001.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02NX001-full.png"
       }
     ],
     "regions": [
@@ -5929,8 +5865,8 @@
     "attack": 5,
     "cost": 7,
     "health": 7,
-    "description": "Quand je suis invoqué, piochez 1 <link=card.champ1><style=AssociatedCard>Swain</style></link>.\r\n<link=vocab.RoundStart><style=Vocab>Début du round </style></link>: infligez 2x 1 pt(s) de dégâts au Nexus ennemi.",
-    "descriptionRaw": "Quand je suis invoqué, piochez 1 Swain.\r\nDébut du round : infligez 2x 1 pt(s) de dégâts au Nexus ennemi.",
+    "description": "Quand je suis invoqué, piochez <link=card.champ1><style=AssociatedCard>Swain</style></link>.\r\n<link=vocab.RoundStart><style=Vocab>Début du round</style></link> : infligez 2x1 pt(s) de dégâts au Nexus ennemi.",
+    "descriptionRaw": "Quand je suis invoqué, piochez Swain.\r\nDébut du round : infligez 2x1 pt(s) de dégâts au Nexus ennemi.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "Lorsque les Ioniens l'ont vu émerger à l'horizon, ils ont pensé que c'était un monstre. Ils n'étaient pas loin de la vérité. Le navire de métal était terrifiant. Il s'agissait du plus grand exploit d'ingénierie navale jamais réalisé par Noxus.",
@@ -5969,8 +5905,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02NX007.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02NX007-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02NX007.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02NX007-full.png"
       }
     ],
     "regions": [
@@ -6006,12 +5942,10 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Communes uniquement",
       "Éternel",
       "Classique"
     ],
     "formatRefs": [
-      "client_Formats_CommonsOnly_name",
       "client_Formats_Eternal_name",
       "client_Formats_Standard_name"
     ]
@@ -6024,8 +5958,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02NX007T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02NX007T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02NX007T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02NX007T2-full.png"
       }
     ],
     "regions": [
@@ -6079,8 +6013,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02NX007T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02NX007T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02NX007T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02NX007T1-full.png"
       }
     ],
     "regions": [
@@ -6129,8 +6063,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02NX006.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02NX006-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02NX006.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02NX006-full.png"
       }
     ],
     "regions": [
@@ -6175,8 +6109,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02NX002.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02NX002-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02NX002.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02NX002-full.png"
       }
     ],
     "regions": [
@@ -6221,8 +6155,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02NX009.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02NX009-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02NX009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02NX009-full.png"
       }
     ],
     "regions": [
@@ -6258,10 +6192,12 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Éternel"
+      "Éternel",
+      "Classique"
     ],
     "formatRefs": [
-      "client_Formats_Eternal_name"
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
     ]
   },
   {
@@ -6271,8 +6207,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02NX004.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02NX004-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02NX004.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02NX004-full.png"
       }
     ],
     "regions": [
@@ -6304,12 +6240,10 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Communes uniquement",
       "Éternel",
       "Classique"
     ],
     "formatRefs": [
-      "client_Formats_CommonsOnly_name",
       "client_Formats_Eternal_name",
       "client_Formats_Standard_name"
     ]
@@ -6319,8 +6253,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02NX003.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02NX003-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02NX003.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02NX003-full.png"
       }
     ],
     "regions": [
@@ -6336,7 +6270,7 @@
     "descriptionRaw": "Infligez 3 pt(s) de dégâts à un allié pour en infliger 3 à n'importe quelle cible.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "«<nbsp>Des sacrifices sont inévitables.<nbsp>» -<nbsp>Jericho Swain",
+    "flavorText": "« Des sacrifices sont inévitables. »<br>- Jericho Swain",
     "artistName": "Kudos Productions",
     "name": "Ferveur noxienne",
     "cardCode": "02NX003",
@@ -6356,12 +6290,10 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Communes uniquement",
       "Éternel",
       "Classique"
     ],
     "formatRefs": [
-      "client_Formats_CommonsOnly_name",
       "client_Formats_Eternal_name",
       "client_Formats_Standard_name"
     ]
@@ -6371,8 +6303,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02NX010.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02NX010-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02NX010.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02NX010-full.png"
       }
     ],
     "regions": [
@@ -6408,12 +6340,10 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Éternel",
-      "Classique"
+      "Éternel"
     ],
     "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
+      "client_Formats_Eternal_name"
     ]
   },
   {
@@ -6421,8 +6351,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02NX004T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02NX004T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02NX004T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02NX004T1-full.png"
       }
     ],
     "regions": [
@@ -6471,8 +6401,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02NX008.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02NX008-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02NX008.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02NX008-full.png"
       }
     ],
     "regions": [
@@ -6488,7 +6418,7 @@
     "descriptionRaw": "Infligez 2 pt(s) de dégâts à un ennemi et 1 pt(s) de dégâts au Nexus ennemi.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "«<nbsp>Essaie de mourir dignement.<nbsp>» -<nbsp>Swain",
+    "flavorText": "« Essaie de mourir dignement. »<br>- Swain",
     "artistName": "Kudos Productions",
     "name": "Poigne mortifère",
     "cardCode": "02NX008",
@@ -6508,12 +6438,12 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Communes uniquement",
-      "Éternel"
+      "Éternel",
+      "Classique"
     ],
     "formatRefs": [
-      "client_Formats_CommonsOnly_name",
-      "client_Formats_Eternal_name"
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
     ]
   },
   {
@@ -6521,8 +6451,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02NX005.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02NX005-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02NX005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02NX005-full.png"
       }
     ],
     "regions": [
@@ -6558,12 +6488,10 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Communes uniquement",
       "Éternel",
       "Classique"
     ],
     "formatRefs": [
-      "client_Formats_CommonsOnly_name",
       "client_Formats_Eternal_name",
       "client_Formats_Standard_name"
     ]
@@ -6573,8 +6501,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02DE003.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02DE003-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02DE003.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02DE003-full.png"
       }
     ],
     "regions": [
@@ -6606,11 +6534,9 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Communes uniquement",
       "Éternel"
     ],
     "formatRefs": [
-      "client_Formats_CommonsOnly_name",
       "client_Formats_Eternal_name"
     ]
   },
@@ -6619,8 +6545,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02DE008.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02DE008-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02DE008.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02DE008-full.png"
       }
     ],
     "regions": [
@@ -6656,11 +6582,9 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Communes uniquement",
       "Éternel"
     ],
     "formatRefs": [
-      "client_Formats_CommonsOnly_name",
       "client_Formats_Eternal_name"
     ]
   },
@@ -6669,8 +6593,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02DE004.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02DE004-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02DE004.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02DE004-full.png"
       }
     ],
     "regions": [
@@ -6710,14 +6634,10 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Communes uniquement",
-      "Éternel",
-      "Classique"
+      "Éternel"
     ],
     "formatRefs": [
-      "client_Formats_CommonsOnly_name",
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
+      "client_Formats_Eternal_name"
     ]
   },
   {
@@ -6729,8 +6649,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02DE006.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02DE006-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02DE006.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02DE006-full.png"
       }
     ],
     "regions": [
@@ -6746,7 +6666,7 @@
     "descriptionRaw": "Quand je suis invoquée, invoquez Valor.",
     "levelupDescription": "Je vous ai vu attaquer 4 fois.<style=Variable></style>",
     "levelupDescriptionRaw": "Je vous ai vu attaquer 4 fois.",
-    "flavorText": "«<nbsp>Notre Quinn a toujours été un chevalier-éclaireur intrépide. Avec Valor qui surveille ses arrières depuis le ciel, rien ne peut les arrêter.<nbsp>» -<nbsp>Geneviève Cœur d'orme, chevalier-éclaireur",
+    "flavorText": "« Notre Quinn a toujours été un chevalier-éclaireur intrépide. Avec Valor qui surveille ses arrières depuis le ciel, rien ne peut les arrêter. »<br>- Geneviève Cœur d'orme, chevalier-éclaireur",
     "artistName": "SIXMOREVODKA",
     "name": "Quinn",
     "cardCode": "02DE006",
@@ -6766,14 +6686,10 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Communes uniquement",
-      "Éternel",
-      "Classique"
+      "Éternel"
     ],
     "formatRefs": [
-      "client_Formats_CommonsOnly_name",
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
+      "client_Formats_Eternal_name"
     ]
   },
   {
@@ -6785,8 +6701,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02DE006T3.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02DE006T3-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02DE006T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02DE006T3-full.png"
       }
     ],
     "regions": [
@@ -6802,7 +6718,7 @@
     "descriptionRaw": "Invoquez 1 Valor.\r\nCréez 1 Quinn dans votre deck.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "« C'est dans mes cheveux ! C'EST DANS MES CHEVEUX !<br>- Maraudeur de la Légion",
+    "flavorText": "« C'est dans mes cheveux ! C'EST DANS MES CHEVEUX ! »<br>- Maraudeur de la Légion",
     "artistName": "Kudos Productions",
     "name": "Assaut aveuglant de Quinn",
     "cardCode": "02DE006T3",
@@ -6835,8 +6751,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02DE006T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02DE006T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02DE006T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02DE006T2-full.png"
       }
     ],
     "regions": [
@@ -6893,8 +6809,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02DE006T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02DE006T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02DE006T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02DE006T1-full.png"
       }
     ],
     "regions": [
@@ -6945,8 +6861,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02DE009.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02DE009-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02DE009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02DE009-full.png"
       }
     ],
     "regions": [
@@ -6986,12 +6902,10 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Éternel",
-      "Classique"
+      "Éternel"
     ],
     "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
+      "client_Formats_Eternal_name"
     ]
   },
   {
@@ -6999,8 +6913,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02DE005.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02DE005-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02DE005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02DE005-full.png"
       }
     ],
     "regions": [
@@ -7036,12 +6950,10 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Éternel",
-      "Classique"
+      "Éternel"
     ],
     "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
+      "client_Formats_Eternal_name"
     ]
   },
   {
@@ -7051,8 +6963,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02DE002.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02DE002-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02DE002.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02DE002-full.png"
       }
     ],
     "regions": [
@@ -7068,7 +6980,7 @@
     "descriptionRaw": "Invoquez Valor.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "« C'est dans mes cheveux ! C'EST DANS MES CHEVEUX !<br>- Maraudeur de la Légion",
+    "flavorText": "« C'est dans mes cheveux ! C'EST DANS MES CHEVEUX ! »<br>- Maraudeur de la Légion",
     "artistName": "Kudos Productions",
     "name": "Assaut aveuglant",
     "cardCode": "02DE002",
@@ -7088,12 +7000,10 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Éternel",
-      "Classique"
+      "Éternel"
     ],
     "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
+      "client_Formats_Eternal_name"
     ]
   },
   {
@@ -7101,8 +7011,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02DE010.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02DE010-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02DE010.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02DE010-full.png"
       }
     ],
     "regions": [
@@ -7140,12 +7050,10 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Éternel",
-      "Classique"
+      "Éternel"
     ],
     "formatRefs": [
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
+      "client_Formats_Eternal_name"
     ]
   },
   {
@@ -7153,8 +7061,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02DE007.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02DE007-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02DE007.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02DE007-full.png"
       }
     ],
     "regions": [
@@ -7166,11 +7074,11 @@
     "attack": 0,
     "cost": 1,
     "health": 0,
-    "description": "Conférez <link=keyword.Tough><sprite name=Tough><style=Keyword>Robuste</style></link> à tous les alliés pour ce round.",
-    "descriptionRaw": "Conférez Robuste à tous les alliés pour ce round.",
+    "description": "Confère <link=keyword.Tough><sprite name=Tough><style=Keyword>Robuste</style></link> aux alliés pour ce round.",
+    "descriptionRaw": "Confère Robuste aux alliés pour ce round.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "«<nbsp>Quand l'ennemi approche, ne laissez pas la peur s'emparer de votre cœur, car les arbres nous protègent.<nbsp>» -<nbsp>Patrouilleur des Crocs Verts",
+    "flavorText": "« Quand l'ennemi approche, ne laissez pas la peur s'emparer de votre cœur, car les arbres nous protègent. »<br>- Patrouilleur des Crocs Verts",
     "artistName": "Kudos Productions",
     "name": "Détermination du rôdeur",
     "cardCode": "02DE007",
@@ -7201,8 +7109,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02DE001.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02DE001-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02DE001.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02DE001-full.png"
       }
     ],
     "regions": [
@@ -7218,7 +7126,7 @@
     "descriptionRaw": "Choisissez un ennemi. 2 alliés le frappent l'un après l'autre.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "«<nbsp>Avec moi, tous ensemble<nbsp>!<nbsp>» -<nbsp>Patrouilleur des Crocs Verts",
+    "flavorText": "« Avec moi, tous ensemble ! »<br>- Patrouilleur des Crocs Verts",
     "artistName": "Kudos Productions",
     "name": "Frappe coordonnée",
     "cardCode": "02DE001",
@@ -7238,12 +7146,12 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Communes uniquement",
-      "Éternel"
+      "Éternel",
+      "Classique"
     ],
     "formatRefs": [
-      "client_Formats_CommonsOnly_name",
-      "client_Formats_Eternal_name"
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
     ]
   },
   {
@@ -7251,8 +7159,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02SI005.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02SI005-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02SI005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02SI005-full.png"
       }
     ],
     "regions": [
@@ -7264,11 +7172,11 @@
     "attack": 0,
     "cost": 3,
     "health": 0,
-    "description": "<link=vocab.Toss><style=Vocab>Jetez</style></link> 3 cartes.\r\nRendez 3 PV à tous les alliés.",
-    "descriptionRaw": "Jetez 3 cartes.\r\nRendez 3 PV à tous les alliés.",
+    "description": "<link=vocab.Toss><style=Vocab>Jetez</style></link> 3 cartes.\r\nRendez 3 PV aux alliés.",
+    "descriptionRaw": "Jetez 3 cartes.\r\nRendez 3 PV aux alliés.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "«<nbsp>Les Îles seront purifiées<nbsp>!<nbsp>» -<nbsp>Maokai",
+    "flavorText": "« Les Îles seront purifiées ! »<br>- Maokai",
     "artistName": "Kudos Productions",
     "name": "Sève magique",
     "cardCode": "02SI005",
@@ -7301,8 +7209,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02SI010.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02SI010-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02SI010.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02SI010-full.png"
       }
     ],
     "regions": [
@@ -7318,7 +7226,7 @@
     "descriptionRaw": "Quand je suis invoqué, jetez 3 cartes.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "«<nbsp>Le grand tréant a continué à montrer... créatures. Celle-ci... pour disséminer la vie sur son chemin... si remarquable... ici. Ce sont bien des Îles bénies<nbsp>!<nbsp>» -<nbsp>Journal retrouvé",
+    "flavorText": "« Le grand tréant a continué à montrer... créatures. Celle-ci... pour disséminer la vie sur son chemin... si remarquable... ici. Ce sont bien des Îles bénies ! »<br>- Journal retrouvé",
     "artistName": "Slawomir Maniak",
     "name": "Vagabond funeste",
     "cardCode": "02SI010",
@@ -7338,12 +7246,10 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Communes uniquement",
       "Éternel",
       "Classique"
     ],
     "formatRefs": [
-      "client_Formats_CommonsOnly_name",
       "client_Formats_Eternal_name",
       "client_Formats_Standard_name"
     ]
@@ -7357,8 +7263,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02SI008.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02SI008-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02SI008.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02SI008-full.png"
       }
     ],
     "regions": [
@@ -7390,12 +7296,10 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Communes uniquement",
       "Éternel",
       "Classique"
     ],
     "formatRefs": [
-      "client_Formats_CommonsOnly_name",
       "client_Formats_Eternal_name",
       "client_Formats_Standard_name"
     ]
@@ -7405,8 +7309,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02SI008T3.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02SI008T3-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02SI008T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02SI008T3-full.png"
       }
     ],
     "regions": [
@@ -7422,7 +7326,7 @@
     "descriptionRaw": "",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "«<nbsp>La vie ici... sans effort. Des forêts verdoyantes... fleurissent dans la nuit... exquis. Quelle terre magnifique. Il faut la préserver... générations.<nbsp>» -<nbsp>Journal retrouvé",
+    "flavorText": "« La vie ici... sans effort. Des forêts verdoyantes... fleurissent dans la nuit... exquis. Quelle terre magnifique. Il faut la préserver... générations. »<br>- Journal retrouvé",
     "artistName": "MAR Studio",
     "name": "Arbrisseau",
     "cardCode": "02SI008T3",
@@ -7461,8 +7365,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02SI008T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02SI008T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02SI008T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02SI008T1-full.png"
       }
     ],
     "regions": [
@@ -7474,11 +7378,11 @@
     "attack": 0,
     "cost": 3,
     "health": 0,
-    "description": "<link=vocab.Toss><style=Vocab>Jetez</style></link> 3 cartes.\r\nRendez 3 PV à tous les alliés.\r\nCréez 1 <link=card.level1><style=AssociatedCard>Maokai</style></link> dans votre deck.",
-    "descriptionRaw": "Jetez 3 cartes.\r\nRendez 3 PV à tous les alliés.\r\nCréez 1 Maokai dans votre deck.",
+    "description": "<link=vocab.Toss><style=Vocab>Jetez</style></link> 3 cartes.\r\nRendez 3 PV aux alliés.\r\nCréez 1 <link=card.level1><style=AssociatedCard>Maokai</style></link> dans votre deck.",
+    "descriptionRaw": "Jetez 3 cartes.\r\nRendez 3 PV aux alliés.\r\nCréez 1 Maokai dans votre deck.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "«<nbsp>Les Îles seront purifiées<nbsp>!<nbsp>» -<nbsp>Maokai",
+    "flavorText": "« Les Îles seront purifiées ! »<br>- Maokai",
     "artistName": "Kudos Productions",
     "name": "Sève magique de Maokai",
     "cardCode": "02SI008T1",
@@ -7515,8 +7419,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02SI008T2.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02SI008T2-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02SI008T2.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02SI008T2-full.png"
       }
     ],
     "regions": [
@@ -7565,8 +7469,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02SI007.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02SI007-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02SI007.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02SI007-full.png"
       }
     ],
     "regions": [
@@ -7602,12 +7506,12 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Communes uniquement",
-      "Éternel"
+      "Éternel",
+      "Classique"
     ],
     "formatRefs": [
-      "client_Formats_CommonsOnly_name",
-      "client_Formats_Eternal_name"
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
     ]
   },
   {
@@ -7615,8 +7519,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02SI003.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02SI003-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02SI003.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02SI003-full.png"
       }
     ],
     "regions": [
@@ -7667,8 +7571,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02SI001.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02SI001-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02SI001.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02SI001-full.png"
       }
     ],
     "regions": [
@@ -7684,7 +7588,7 @@
     "descriptionRaw": "Quand un autre allié meurt, drainez 1 PV au Nexus ennemi.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "«<nbsp>Je suis tombé sur Niven ce... le nouveau batelier ! Il nous a hâlés... au... Il chante comme personne. Avant... je dois l'inviter à souper bientôt.<nbsp>» -<nbsp>Journal retrouvé",
+    "flavorText": "« Je suis tombé sur Niven ce... le nouveau batelier ! Il nous a hâlés... au... Il chante comme personne. Avant... je dois l'inviter à souper bientôt. »<br>- Journal retrouvé",
     "artistName": "Kudos Productions",
     "name": "Fossoyeur des marais",
     "cardCode": "02SI001",
@@ -7721,8 +7625,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02SI002.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02SI002-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02SI002.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02SI002-full.png"
       }
     ],
     "regions": [
@@ -7773,8 +7677,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02SI004.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02SI004-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02SI004.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02SI004-full.png"
       }
     ],
     "regions": [
@@ -7817,8 +7721,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02SI006.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02SI006-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02SI006.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02SI006-full.png"
       }
     ],
     "regions": [
@@ -7850,14 +7754,10 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Communes uniquement",
-      "Éternel",
-      "Classique"
+      "Éternel"
     ],
     "formatRefs": [
-      "client_Formats_CommonsOnly_name",
-      "client_Formats_Eternal_name",
-      "client_Formats_Standard_name"
+      "client_Formats_Eternal_name"
     ]
   },
   {
@@ -7867,8 +7767,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02SI009.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02SI009-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02SI009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02SI009-full.png"
       }
     ],
     "regions": [
@@ -7884,7 +7784,7 @@
     "descriptionRaw": "Invoquez 1 Arbrisseau au début du prochain round.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "«<nbsp>Ouiiiiii<nbsp>!<nbsp>» -<nbsp>Arbrisseau",
+    "flavorText": "« Ouiiiiii ! »<br>- Arbrisseau",
     "artistName": "Kudos Productions",
     "name": "Jet d'arbrisseau",
     "cardCode": "02SI009",
@@ -7904,12 +7804,10 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Communes uniquement",
       "Éternel",
       "Classique"
     ],
     "formatRefs": [
-      "client_Formats_CommonsOnly_name",
       "client_Formats_Eternal_name",
       "client_Formats_Standard_name"
     ]
@@ -7921,8 +7819,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02IO008.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02IO008-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02IO008.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02IO008-full.png"
       }
     ],
     "regions": [
@@ -7938,7 +7836,7 @@
     "descriptionRaw": "Conférez Challenger à un allié pour ce round.\r\nCréez 1 Coup résonant fugace dans votre main.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "«<nbsp>Maîtrise de soi...<nbsp>» -<nbsp>Lee Sin",
+    "flavorText": "« Maîtrise de soi... »<br>- Lee Sin",
     "artistName": "Kudos Productions",
     "name": "Onde sonore",
     "cardCode": "02IO008",
@@ -7958,12 +7856,10 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Communes uniquement",
       "Éternel",
       "Classique"
     ],
     "formatRefs": [
-      "client_Formats_CommonsOnly_name",
       "client_Formats_Eternal_name",
       "client_Formats_Standard_name"
     ]
@@ -7973,8 +7869,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02IO008T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02IO008T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02IO008T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02IO008T1-full.png"
       }
     ],
     "regions": [
@@ -7990,7 +7886,7 @@
     "descriptionRaw": "Conférez +2|+0 à un allié pour ce round.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "« ... maîtrise de l'ennemi. » - Lee Sin",
+    "flavorText": "« ... maîtrise de l'ennemi. »<br>- Lee Sin",
     "artistName": "Kudos Productions",
     "name": "Coup résonant",
     "cardCode": "02IO008T1",
@@ -8027,8 +7923,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02IO002.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02IO002-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02IO002.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02IO002-full.png"
       }
     ],
     "regions": [
@@ -8060,12 +7956,10 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Communes uniquement",
       "Éternel",
       "Classique"
     ],
     "formatRefs": [
-      "client_Formats_CommonsOnly_name",
       "client_Formats_Eternal_name",
       "client_Formats_Standard_name"
     ]
@@ -8077,8 +7971,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02IO002T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02IO002T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02IO002T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02IO002T1-full.png"
       }
     ],
     "regions": [
@@ -8094,7 +7988,7 @@
     "descriptionRaw": "Octroyez +0|+3 à un allié.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "«<nbsp>Le dragon vous protégera.<nbsp>» -<nbsp>Écailles du dragon",
+    "flavorText": "« Le dragon vous protégera. »<br>- Écailles du dragon",
     "artistName": "Kudos Productions",
     "name": "Protection du dragon",
     "cardCode": "02IO002T1",
@@ -8132,8 +8026,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02IO006.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02IO006-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02IO006.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02IO006-full.png"
       }
     ],
     "regions": [
@@ -8169,12 +8063,12 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Communes uniquement",
-      "Éternel"
+      "Éternel",
+      "Classique"
     ],
     "formatRefs": [
-      "client_Formats_CommonsOnly_name",
-      "client_Formats_Eternal_name"
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
     ]
   },
   {
@@ -8186,8 +8080,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02IO011.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02IO011-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02IO011.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02IO011-full.png"
       }
     ],
     "regions": [
@@ -8203,7 +8097,7 @@
     "descriptionRaw": "Conférez Challenger à un allié pour ce round.\r\nCréez 1 Coup résonant fugace dans votre main.\r\nCréez 1 Lee Sin dans votre deck.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "«<nbsp>Maîtrise de soi...<nbsp>» -<nbsp>Lee Sin",
+    "flavorText": "« Maîtrise de soi... »<br>- Lee Sin",
     "artistName": "Kudos Productions",
     "name": "Onde sonore de Lee Sin",
     "cardCode": "02IO011",
@@ -8241,8 +8135,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02IO006T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02IO006T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02IO006T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02IO006T1-full.png"
       }
     ],
     "regions": [
@@ -8291,8 +8185,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02IO006T3.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02IO006T3-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02IO006T3.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02IO006T3-full.png"
       }
     ],
     "regions": [
@@ -8341,8 +8235,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02IO004.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02IO004-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02IO004.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02IO004-full.png"
       }
     ],
     "regions": [
@@ -8358,7 +8252,7 @@
     "descriptionRaw": "",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "«<nbsp>L'élève doit lutter de toutes ses forces, car le dragon a tiré la terre de sous les mers et nous a donné une île pour en faire notre foyer.<nbsp>» -<nbsp>Enseignements du dragon",
+    "flavorText": "« L'élève doit lutter de toutes ses forces, car le dragon a tiré la terre de sous les mers et nous a donné une île pour en faire notre foyer. »<br>- Enseignements du dragon",
     "artistName": "JiHun Lee",
     "name": "Cornes du dragon",
     "cardCode": "02IO004",
@@ -8378,12 +8272,10 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Communes uniquement",
       "Éternel",
       "Classique"
     ],
     "formatRefs": [
-      "client_Formats_CommonsOnly_name",
       "client_Formats_Eternal_name",
       "client_Formats_Standard_name"
     ]
@@ -8395,8 +8287,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02IO003.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02IO003-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02IO003.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02IO003-full.png"
       }
     ],
     "regions": [
@@ -8434,10 +8326,12 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Éternel"
+      "Éternel",
+      "Classique"
     ],
     "formatRefs": [
-      "client_Formats_Eternal_name"
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
     ]
   },
   {
@@ -8445,8 +8339,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02IO003T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02IO003T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02IO003T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02IO003T1-full.png"
       }
     ],
     "regions": [
@@ -8462,7 +8356,7 @@
     "descriptionRaw": "",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "« L'esprit est généreux avec ceux qui l'écoutent. » - Œil du dragon",
+    "flavorText": "« L'esprit est généreux avec ceux qui l'écoutent. »<br>- Œil du dragon",
     "artistName": "Dao Le",
     "name": "Dragonneau",
     "cardCode": "02IO003T1",
@@ -8499,8 +8393,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02IO001.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02IO001-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02IO001.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02IO001-full.png"
       }
     ],
     "regions": [
@@ -8532,12 +8426,12 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Communes uniquement",
-      "Éternel"
+      "Éternel",
+      "Classique"
     ],
     "formatRefs": [
-      "client_Formats_CommonsOnly_name",
-      "client_Formats_Eternal_name"
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
     ]
   },
   {
@@ -8547,8 +8441,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02IO005.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02IO005-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02IO005.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02IO005-full.png"
       }
     ],
     "regions": [
@@ -8564,7 +8458,7 @@
     "descriptionRaw": "Étourdissez un ennemi pour invoquer 1 Queue du dragon.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
-    "flavorText": "«<nbsp>Vous ne m'avez pas vu partir, et vous ne me verrez pas revenir.<nbsp>» -<nbsp>Queue du dragon",
+    "flavorText": "« Vous ne m'avez pas vu partir, et vous ne me verrez pas revenir. »<br>- Queue du dragon",
     "artistName": "Kudos Productions",
     "name": "Paume étourdissante",
     "cardCode": "02IO005",
@@ -8599,8 +8493,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02IO010.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02IO010-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02IO010.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02IO010-full.png"
       }
     ],
     "regions": [
@@ -8649,8 +8543,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02IO007.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02IO007-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02IO007.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02IO007-full.png"
       }
     ],
     "regions": [
@@ -8686,10 +8580,12 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Éternel"
+      "Éternel",
+      "Classique"
     ],
     "formatRefs": [
-      "client_Formats_Eternal_name"
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
     ]
   },
   {
@@ -8699,8 +8595,8 @@
     ],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02IO005T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02IO005T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02IO005T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02IO005T1-full.png"
       }
     ],
     "regions": [
@@ -8745,8 +8641,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02IO010T1.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02IO010T1-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02IO010T1.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02IO010T1-full.png"
       }
     ],
     "regions": [
@@ -8797,8 +8693,8 @@
     "associatedCardRefs": [],
     "assets": [
       {
-        "gameAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02IO009.png",
-        "fullAbsolutePath": "http://dd.b.pvp.net/5_0_0/set2/fr_fr/img/cards/02IO009-full.png"
+        "gameAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02IO009.png",
+        "fullAbsolutePath": "http://dd.b.pvp.net/6_7_0/set2/fr_fr/img/cards/02IO009-full.png"
       }
     ],
     "regions": [
@@ -8836,10 +8732,12 @@
     "collectible": true,
     "set": "Set2",
     "formats": [
-      "Éternel"
+      "Éternel",
+      "Classique"
     ],
     "formatRefs": [
-      "client_Formats_Eternal_name"
+      "client_Formats_Eternal_name",
+      "client_Formats_Standard_name"
     ]
   }
 ]

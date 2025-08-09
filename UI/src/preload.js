@@ -115,16 +115,11 @@ window.toggleShrinkWindow = function () {
     clientHeight = h
     h = headerHeight
   } else {
-    if (h > headerHeight) {
-      // shrink to min when too small but no record
-      h = headerHeight
-    } else {
-      // expand to recorded height
-      if (clientHeight <= headerHeight) {
-        clientHeight = defaultHeight
-      }
-      h = clientHeight
+    // expand to recorded height
+    if (clientHeight <= minHeight) {
+      clientHeight = minHeight
     }
+    h = clientHeight
   }
 
   win.setSize(w, h, false)
